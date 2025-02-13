@@ -1,0 +1,113 @@
+:root {
+  --al-color: #5cc07f;
+  --ig-color: #5c6bc0;
+  --background-color: #eef2f3;
+  --text-color: #333;
+  --box-color: #fff;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #eef2f3, #d6e6f2);
+  color: var(--text-color);
+  padding: 20px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Header */
+header {
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 1.2em;
+  color: #5c6bc0;
+}
+
+/* Buttons Container */
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.logo img {
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  font-size: 1.2em;
+  padding: 15px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  transition: all 0.3s ease;
+  width: 250px;
+  text-align: center;
+}
+
+.AL-button {
+  background-color: var(--al-color);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.IG-button {
+  background-color: var(--ig-color);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  font-size: 0.9em;
+  background-color: var(--box-color);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 480px) {
+  .buttons-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .btn {
+    padding: 12px 25px;
+    font-size: 1.1em;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .description {
+    font-size: 1.1em;
+  }
+
+  footer {
+    font-size: 0.8em;
+  }
+}

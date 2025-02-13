@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+  <header>
+    <a href="/"><img src="https://www.kcisec.site/assets/images/school-logo.svg"
+        title="KangChiao International School East Campus Logo" style="max-width: 100px;height: auto;"></a>
+    <h1>A-Level Homepage</h1>
+    <p class="description">
+      <span class="ig-desc">Blue represents IGCSE subjects</span>;<br>
+      <span class="al-desc">Green represents A-Level subjects</span>.
+    </p>
+  </header>
+
+  {% include banner.html %}
+
+  <nav class="subject-nav">
+    <button class="IG-button" onclick="window.location.href='./Mathematics/'">📘 IG Math</button>
+    <button class="AL-button" onclick="window.location.href='./AS_Mathematics/'">📗 AS Math</button>
+    <button class="IG-button" onclick="window.location.href='./Physics/'">📘 IG Physics</button>
+    <button class="IG-button" onclick="window.location.href='./Chemistry/'">📘 IG Chemistry</button>
+    <button class="IG-button-disabled" onclick="engUnderConstruction()">🚧 IG Biology</button>
+    <button class="IG-button" onclick="window.location.href='./Economics/'">📘 IG Economics</button>
+    <button class="IG-button-disabled" onclick="engUnderConstruction()">🚧 IG ESL</button>
+    <button class="IG-button" onclick="window.location.href='https://kcisec.site/Computer_Science'">🖥️ IG Computer
+      Science</button>
+  </nav>
+
+  <section class="exam-date">
+    <h2>Upcoming Exam Dates</h2>
+    <div class="exam-timetable">
+      <h3>A-Level Official Exams</h3>
+      <a href="/files/OxfordAQA_Exam_Timetable_Jan25.pdf" target="_blank">
+        📅 OxfordAQA Exam Timetable January 25
+      </a>
+      <br>
+      <h3>G10 Final Term</h3>
+      <a href="/files/OxfordAQA_Exam_Timetable_Jan25.pdf" target="_blank">
+        📅 KCISEC G10 Final Term Exam Timetable
+      </a>
+    </div>
+  </section>
+
+  {% include footer.html %}
+</body>
+
+</html>
