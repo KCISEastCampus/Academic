@@ -1,47 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 {% include head.html %}
 
 <body>
-  <header>
+  <header class="text-center py-4 bg-dark text-light">
     <a href="/"><img src="https://www.kcisec.site/assets/images/school-logo.svg"
-        title="KangChiao International School East Campus Logo" style="max-width: 100px;height: auto;"></a>
-    <h1>A-Level Homepage</h1>
-    <p class="description">
-      <span class="ig-desc">Blue represents IGCSE subjects</span>;<br>
-      <span class="al-desc">Green represents A-Level subjects</span>.
+        title="KangChiao International School East Campus Logo" class="img-fluid" style="max-width: 100px;"></a>
+    <h1 class="mt-3">A-Level Homepage</h1>
+    <p class="lead">
+      <span class="text-primary">Blue represents IGCSE subjects</span>;<br>
+      <span class="text-success">Green represents A-Level subjects</span>.
     </p>
   </header>
 
   {% include banner.html %}
 
-  <nav class="subject-nav">
-    <button class="IG-button" onclick="window.location.href='./Mathematics/'">📘 IG Math</button>
-    <button class="AL-button" onclick="window.location.href='./AS_Mathematics/'">📗 AS Math</button>
-    <button class="IG-button" onclick="window.location.href='./Physics/'">📘 IG Physics</button>
-    <button class="IG-button" onclick="window.location.href='./Chemistry/'">📘 IG Chemistry</button>
-    <button class="IG-button-disabled" onclick="engUnderConstruction()">🚧 IG Biology</button>
-    <button class="IG-button" onclick="window.location.href='./Economics/'">📘 IG Economics</button>
-    <button class="IG-button-disabled" onclick="engUnderConstruction()">🚧 IG ESL</button>
-    <button class="IG-button" onclick="window.location.href='https://kcisec.site/Computer_Science'">🖥️ IG Computer
-      Science</button>
+  <nav class="nav justify-content-center flex-wrap py-3">
+    <a class="btn btn-outline-primary m-2" href="./Mathematics/">📘 IG Math</a>
+    <a class="btn btn-outline-success m-2" href="./AS_Mathematics/">📗 AS Math</a>
+    <a class="btn btn-outline-primary m-2" href="./Physics/">📘 IG Physics</a>
+    <a class="btn btn-outline-primary m-2" href="./Chemistry/">📘 IG Chemistry</a>
+    <a class="btn btn-outline-secondary m-2" href="#" onclick="engUnderConstruction()">🚧 IG Biology</a>
+    <a class="btn btn-outline-primary m-2" href="./Economics/">📘 IG Economics</a>
+    <a class="btn btn-outline-secondary m-2" href="#" onclick="engUnderConstruction()">🚧 IG ESL</a>
+    <a class="btn btn-outline-primary m-2" href="https://kcisec.site/Computer_Science">🖥️ IG Computer Science</a>
   </nav>
 
-  <section class="exam-date">
-    <h2>Upcoming Exam Dates</h2>
-    <div class="exam-timetable">
-      <h3>A-Level Official Exams</h3>
-      <a href="/files/OxfordAQA_Exam_Timetable_Jan25.pdf" target="_blank">
-        📅 OxfordAQA Exam Timetable January 25
-      </a>
-      <br>
-      <h3>G10 Final Term</h3>
-      <a href="/files/OxfordAQA_Exam_Timetable_Jan25.pdf" target="_blank">
-        📅 KCISEC G10 Final Term Exam Timetable
-      </a>
+  <div class="container my-5 text-center">
+    <h2 class="mb-4">Upcoming Exam Dates</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6 mb-4">
+        <h3>A-Level Official Exams</h3>
+        <a href="/files/OxfordAQA_Exam_Timetable_Jan25.pdf" target="_blank" class="btn btn-outline-info">
+          📅 OxfordAQA Exam Timetable January 25
+        </a>
+      </div>
+      <div class="col-md-6 mb-4">
+        <h3>G10 Final Term</h3>
+        <a href="/files/OxfordAQA_Exam_Timetable_Jan25.pdf" target="_blank" class="btn btn-outline-info">
+          📅 KCISEC G10 Final Term Exam Timetable
+        </a>
+      </div>
     </div>
-  </section>
+  </div>
+
 
   {% include footer.html %}
 </body>
