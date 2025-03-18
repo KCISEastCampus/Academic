@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ '/files/favicon.ico' | relative_url }}">
+    <title>{{ page.title | default: site.title }}</title>
+    <style>
+    /* Reset styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        background-color: #f9fafc;
+        color: #333;
+        padding: 20px;
+        line-height: 1.6;
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    /* 返回按钮样式 */
+    .return-button {
+        display: inline-block;
+        background-color: #3498db;
+        color: #fff !important;
+        padding: 10px 15px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-size: 0.95em;
+        transition: background-color 0.3s, transform 0.2s;
+        margin: 15px 0 25px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .return-button:hover {
+        background-color: #217dbb;
+        transform: scale(1.02);
+    }
+
+    /* 列表样式修复 */
+    ul, ol {
+        margin: 20px 0;
+        padding-left: 40px;
+    }
+
+    ul {
+        list-style-type: disc;
+    }
+
+    ol {
+        list-style-type: decimal;
+    }
+
+    li {
+        background-color: #fff;
+        padding: 8px 12px;
+        margin-bottom: 8px;
+        border-left: 3px solid #3498db;
+        transition: background-color 0.2s;
+        border-radius: 4px;
+    }
+
+    /* 嵌套列表样式 */
+    ul ul, ol ol {
+        margin: 8px 0;
+        padding-left: 30px;
+    }
+
+    ul ul {
+        list-style-type: circle;
+    }
+
+    ol ol {
+        list-style-type: lower-alpha;
+    }
+
+    ul ul li, ol ol li {
+        background-color: #f8f9fa;
+        border-left-color: #d1d5da;
+    }
+
+    /* 数学公式容器 */
+    .math {
+        padding: 2px 4px;
+        background-color: #f8f9fa;
+        border-radius: 3px;
+        font-size: 1.1em;
+    }
+
+    /* 标题样式 */
+    h1 { 
+        text-align: center;
+        margin: 30px 0;
+        font-size: 2.2em;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #3498db;
+    }
+
+    h2 {
+        margin: 35px 0 20px;
+        font-size: 1.8em;
+        color: #2c3e50;
+        padding-bottom: 5px;
+    }
+
+    h3 {
+        margin: 25px 0 15px;
+        font-size: 1.4em;
+    }
+
+    /* 页脚样式 */
+    footer {
+        margin-top: 50px;
+        padding: 25px 0;
+        border-top: 1px solid #eaecef;
+        font-size: 0.9em;
+        color: #666;
+        text-align: center;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- 返回按钮 -->
+    <a href="{{ '/' | relative_url }}" class="return-button">← Back to Home</a>
+
+    <!-- 主要内容区域 -->
+    <main class="content-wrapper">
+        {{ content }}
+    </main>
+
+    <!-- MathJax配置 -->
+    <script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
+            processEscapes: true
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        },
+        svg: {
+            fontCache: 'global'
+        }
+    };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script"></script>
+</body>
+</html>
