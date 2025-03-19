@@ -2,7 +2,8 @@
 layout: subjects
 title: AS Mathematics
 mathjax: true
-subject: as
+grade: as
+subject: math
 ---
 
 # AS Mathematics
@@ -13,6 +14,8 @@ AS Mathematics is part of A-Level Mathematics. At AS level, two papers are asses
 - International AS Unit PSM1 (Pure Maths, Statistics and Mechanics)  
 
 You can view all the detailed specifications [here](./files/A-Level%20Mathematics%20Specification.pdf).
+
+---
 
 ## Revision Resources
 
@@ -65,6 +68,7 @@ Cubic functions take the form \\( y = ax^3 + bx^2 + cx + d \\). Procedure:
    - Solve \\( y' = 0 \\) for critical points
 
 3. **Δ (\\( b^2 - 3ac \\)) Interpretation**
+
    | Condition       | Graph Characteristics          |
    |-----------------|---------------------------------|
    | \\( Δ > 0 \\)  | Two turning points (S-shaped)  |
