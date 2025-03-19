@@ -18,8 +18,10 @@ title: Test Page
 
 ## 数学公式测试
 行内公式：$E = mc^2$
-
 块级公式：
 $$
 f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi
 $$
+
+## 链接测试
+[爸爸C我](https://baidu.com/)
