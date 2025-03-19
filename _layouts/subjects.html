@@ -2,377 +2,383 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="theme-color" content="#3498db">
-    <link rel="shortcut icon" href="{{ '/files/favicon.ico' | relative_url }}">
-    <title>{{ page.title | default: site.title }}</title>
-    <style>
-        /* ===== 基础变量和重置 ===== */
-        :root {
-            --primary-color: #2ecc71;
-            --secondary-color: #27ae60;
-            --background-color: #f9fafc;
-            --theme-accent: rgba(46, 204, 112, 0.5);
-            --text-color: #333;
-            --border-radius: 4px;
-            --transition-duration: 0.3s;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta name="theme-color" content="#3498db">
+  <link rel="shortcut icon" href="{{ '/files/favicon.ico' | relative_url }}">
+  <title>{{ page.title | default: site.title }}</title>
+  <style>
+    /* ===== 基础变量和重置 ===== */
+    :root {
+      --primary-color: #2ecc71;
+      --secondary-color: #27ae60;
+      --background-color: #f9fafc;
+      --theme-accent: rgba(46, 204, 112, 0.5);
+      --text-color: #333;
+      --border-radius: 4px;
+      --transition-duration: 0.3s;
+    }
 
-        {% if page.grade=="igcse" %}
+      {
+      % if page.grade=="igcse" %
+    }
 
-        :root {
-            --primary-color: #3498db;
-            /* IGCSE主题覆盖 */
-            --secondary-color: #2980b9;
-            --theme-accent: rgba(52, 152, 219, 0.5);
-        }
+    :root {
+      --primary-color: #3498db;
+      /* IGCSE主题覆盖 */
+      --secondary-color: #2980b9;
+      --theme-accent: rgba(52, 152, 219, 0.5);
+    }
 
-        {% endif %}
+      {
+      % endif %
+    }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        /* ===== 基础排版 ===== */
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: var(--background-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+    /* ===== 基础排版 ===== */
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
 
-        a {
-            color: var(--primary-color);
-            text-decoration: none;
-            border-bottom: 1px solid var(--theme-accent);
-            transition:
-                color var(--transition-duration),
-                border-color var(--transition-duration);
-        }
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+      border-bottom: 1px solid var(--theme-accent);
+      transition:
+        color var(--transition-duration),
+        border-color var(--transition-duration);
+    }
 
-        a:hover {
-            color: var(--secondary-color);
-            border-bottom-color: currentColor;
-        }
+    a:hover {
+      color: var(--secondary-color);
+      border-bottom-color: currentColor;
+    }
 
-        a:active {
-            color: #1a5a8a;
-            transform: translateY(1px);
-        }
+    a:active {
+      color: #1a5a8a;
+      transform: translateY(1px);
+    }
 
-        a:visited {
-            color: #6a5acd;
-            /* 紫色系保持专业感 */
-            border-bottom-color: rgba(106, 90, 205, 0.3);
-        }
+    a:visited {
+      color: #6a5acd;
+      /* 紫色系保持专业感 */
+      border-bottom-color: rgba(106, 90, 205, 0.3);
+    }
 
-        /* ===== 响应式设计 ===== */
-        @media (max-width: 768px) {
-            body {
-                padding: 15px;
-            }
+    /* ===== 响应式设计 ===== */
+    @media (max-width: 768px) {
+      body {
+        padding: 15px;
+      }
 
-            h1 {
-                font-size: 1.8em;
-            }
+      h1 {
+        font-size: 1.8em;
+      }
 
-            .return-button {
-                width: 100%;
-                text-align: center;
-            }
-        }
+      .return-button {
+        width: 100%;
+        text-align: center;
+      }
+    }
 
-        @media (max-width: 480px) {
+    @media (max-width: 480px) {
 
-            ul,
-            ol {
-                padding-left: 25px;
-            }
-        }
+      ul,
+      ol {
+        padding-left: 25px;
+      }
+    }
 
-        /* ===== 组件样式 ===== */
-        /* 返回按钮 */
-        .return-button {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: #fff !important;
-            padding: 10px 15px;
-            border-radius: var(--border-radius);
-            text-decoration: none;
-            font-size: 0.95em;
-            transition:
-                background-color var(--transition-duration),
-                transform 0.2s;
-            margin: 15px 0 25px;
-            border: none;
-            cursor: pointer;
-            position: relative;
-        }
+    /* ===== 组件样式 ===== */
+    /* 返回按钮 */
+    .return-button {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: #fff !important;
+      padding: 10px 15px;
+      border-radius: var(--border-radius);
+      text-decoration: none;
+      font-size: 0.95em;
+      transition:
+        background-color var(--transition-duration),
+        transform 0.2s;
+      margin: 15px 0 25px;
+      border: none;
+      cursor: pointer;
+      position: relative;
+    }
 
-        .return-button:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-1px);
-        }
+    .return-button:hover {
+      background-color: var(--secondary-color);
+      transform: translateY(-1px);
+    }
 
-        /* ===== 列表系统 ===== */
-        ul,
-        ol {
-            margin: 15px 0;
-            padding-left: 1.5em;
-            position: relative;
-        }
+    /* ===== 列表系统 ===== */
+    ul,
+    ol {
+      margin: 15px 0;
+      padding-left: 1.5em;
+      position: relative;
+    }
 
-        /* 嵌套列表缩进系统 */
-        ul ul,
-        ol ol,
-        ul ol,
-        ol ul {
-            padding-left: 2em;
-            margin: 8px 0;
-        }
+    /* 嵌套列表缩进系统 */
+    ul ul,
+    ol ol,
+    ul ol,
+    ol ul {
+      padding-left: 2em;
+      margin: 8px 0;
+    }
 
-        /* 多级列表符号系统 */
-        ol {
-            list-style-type: decimal;
-        }
+    /* 多级列表符号系统 */
+    ol {
+      list-style-type: decimal;
+    }
 
-        ol ol {
-            list-style-type: lower-alpha;
-        }
+    ol ol {
+      list-style-type: lower-alpha;
+    }
 
-        ol ol ol {
-            list-style-type: lower-roman;
-        }
+    ol ol ol {
+      list-style-type: lower-roman;
+    }
 
-        /* 列表项增强样式 */
-        li {
-            padding: 12px 15px;
-            margin-bottom: 6px;
-            background-color: rgba(255, 255, 255, 0.9);
-            border-left: 3px solid var(--primary-color);
-            position: relative;
-            border-radius: 2px;
-        }
+    /* 列表项增强样式 */
+    li {
+      padding: 12px 15px;
+      margin-bottom: 6px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-left: 3px solid var(--primary-color);
+      position: relative;
+      border-radius: 2px;
+    }
 
-        /* 嵌套列表项样式调整 */
-        li li {
-            background-color: rgba(255, 255, 255, 0.7);
-            border-left-width: 2px;
-            border-left-color: var(--theme-accent);
-        }
+    /* 嵌套列表项样式调整 */
+    li li {
+      background-color: rgba(255, 255, 255, 0.7);
+      border-left-width: 2px;
+      border-left-color: var(--theme-accent);
+    }
 
-        li li li {
-            background-color: rgba(255, 255, 255, 0.5);
-            border-left-color: var(--theme-accent);
-        }
+    li li li {
+      background-color: rgba(255, 255, 255, 0.5);
+      border-left-color: var(--theme-accent);
+    }
 
-        /* 数学公式容器 */
-        .math {
-            padding: 2px 4px;
-            background-color: #f8f9fa;
-            border-radius: 3px;
-            overflow-x: auto;
-        }
+    /* 数学公式容器 */
+    .math {
+      padding: 2px 4px;
+      background-color: #f8f9fa;
+      border-radius: 3px;
+      overflow-x: auto;
+    }
 
-        /* 标题系统 */
-        h1 {
-            text-align: center;
-            margin: 2rem 0;
-            font-size: 2.2em;
-            padding-bottom: 1rem;
-            border-bottom: 2px solid var(--primary-color);
-        }
+    /* 标题系统 */
+    h1 {
+      text-align: center;
+      margin: 2rem 0;
+      font-size: 2.2em;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--primary-color);
+    }
 
-        h2 {
-            margin: 1.75rem 0 1.25rem;
-            font-size: 2em;
-            color: #2c3e50;
-        }
+    h2 {
+      margin: 1.75rem 0 1.25rem;
+      font-size: 2em;
+      color: #2c3e50;
+    }
 
-        h3, h4, h5 {
-            margin: 1.5rem 0 0;
-        }
+    h3,
+    h4,
+    h5 {
+      margin: 1.5rem 0 0;
+    }
 
-        h3 {
-            font-size: 1.6em;
-        }
+    h3 {
+      font-size: 1.6em;
+    }
 
-        h4 {
-            font-size: 1.4em;
-        }
+    h4 {
+      font-size: 1.4em;
+    }
 
-        h5 {
-            font-size: 1.2em;
-        }
+    h5 {
+      font-size: 1.2em;
+    }
 
-        /* ===== 分隔符样式 ===== */
-        hr {
-            margin: 30px 0;
-            height: 1px;
-            background: linear-gradient(to right,
-                    transparent,
-                    var(--primary-color),
-                    transparent);
-            position: relative;
-            overflow: visible;
-        }
+    /* ===== 分隔符样式 ===== */
+    hr {
+      margin: 30px 0;
+      height: 1px;
+      background: linear-gradient(to right,
+          transparent,
+          var(--primary-color),
+          transparent);
+      position: relative;
+      overflow: visible;
+    }
 
-        hr::before {
-            content: '•';
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            background-color: var(--background-color);
-            color: var(--primary-color);
-            padding: 0 10px;
-            font-size: 1.2em;
-        }
+    hr::before {
+      content: '•';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: var(--background-color);
+      color: var(--primary-color);
+      padding: 0 10px;
+      font-size: 1.2em;
+    }
 
-        /* 可选的动画效果 */
-        @keyframes pulse {
-            0% {
-                transform: translate(-50%, -50%) scale(1);
-            }
+    /* 可选的动画效果 */
+    @keyframes pulse {
+      0% {
+        transform: translate(-50%, -50%) scale(1);
+      }
 
-            50% {
-                transform: translate(-50%, -50%) scale(1.2);
-            }
+      50% {
+        transform: translate(-50%, -50%) scale(1.2);
+      }
 
-            100% {
-                transform: translate(-50%, -50%) scale(1);
-            }
-        }
+      100% {
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
 
-        hr:hover::before {
-            animation: pulse 1s infinite;
-        }
-
-
-        /* ===== 表格样式 ===== */
-        table {
-            width: 100%;
-            border-collapse: separate;
-            /* 改为separate以支持列间距 */
-            border-spacing: 0;
-            margin: 20px 0;
-            background-color: #fff;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        }
-
-        th,
-        td {
-            padding: 12px 15px;
-            text-align: left;
-            border-bottom: 1px solid var(--theme-accent);
-            border-right: 1px solid rgba(52, 152, 219, 0.15);
-            /* 新增列分隔线 */
-            position: relative;
-        }
-
-        /* 最后一列移除右边框 */
-        th:last-child,
-        td:last-child {
-            border-right: none;
-        }
-
-        th {
-            background-color: var(--primary-color);
-            color: #fff;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            border-bottom: 2px solid var(--secondary-color);
-            /* 加粗表头底边 */
-        }
-
-        /* 斑马纹效果（可选） */
-        tr:nth-child(even) {
-            background-color: rgba(241, 241, 241, 0.3);
-        }
-
-        /* 响应式表格 */
-        @media (max-width: 768px) {
-            table {
-                display: block;
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
-            }
-
-            th,
-            td {
-                min-width: 120px;
-                border-right: 1px solid rgba(0, 0, 0, 0.05);
-                /* 移动端更细的分隔线 */
-            }
-        }
+    hr:hover::before {
+      animation: pulse 1s infinite;
+    }
 
 
-        /* ===== 工具类 ===== */
-        .content-wrapper {
-            animation: fadeIn 0.5s ease-in;
-        }
+    /* ===== 表格样式 ===== */
+    table {
+      width: 100%;
+      border-collapse: separate;
+      /* 改为separate以支持列间距 */
+      border-spacing: 0;
+      margin: 20px 0;
+      background-color: #fff;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
+    th,
+    td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid var(--theme-accent);
+      border-right: 1px solid rgba(52, 152, 219, 0.15);
+      /* 新增列分隔线 */
+      position: relative;
+    }
 
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
+    /* 最后一列移除右边框 */
+    th:last-child,
+    td:last-child {
+      border-right: none;
+    }
+
+    th {
+      background-color: var(--primary-color);
+      color: #fff;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 2px solid var(--secondary-color);
+      /* 加粗表头底边 */
+    }
+
+    /* 斑马纹效果（可选） */
+    tr:nth-child(even) {
+      background-color: rgba(241, 241, 241, 0.3);
+    }
+
+    /* 响应式表格 */
+    @media (max-width: 768px) {
+      table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      th,
+      td {
+        min-width: 120px;
+        border-right: 1px solid rgba(0, 0, 0, 0.05);
+        /* 移动端更细的分隔线 */
+      }
+    }
+
+
+    /* ===== 工具类 ===== */
+    .content-wrapper {
+      animation: fadeIn 0.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <a href="{{ '/' | relative_url }}" class="return-button" aria-label="Return to homepage">← Back to Home</a>
+  <a href="{{ '/' | relative_url }}" class="return-button" aria-label="Return to homepage">← Back to Home</a>
 
-    <main class="content-wrapper">
-        {{ content }}
-    </main>
+  <main class="content-wrapper">
+    {{ content }}
+  </main>
 
-    {% if page.subject=="math" %}
-        {% include mathFooter.html %}
-    {% else %}
-        {% include basicFooter.html %}
-    {% endif %}
+  {% if page.subject=="math" %}
+  {% include math_footer.html %}
+  {% else %}
+  {% include basic_footer.html %}
+  {% endif %}
 
-    <!-- 延迟加载MathJax -->
-    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script"></script>
-    <script>
-        window.MathJax = {
-            startup: {
-                ready: () => {
-                    MathJax.startup.defaultReady();
-                    MathJax.startup.promise.then(() => {
-                        document.dispatchEvent(new Event('mathjaxLoaded'));
-                    });
-                }
-            },
-            tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']],
-                tags: 'ams',
-                tagSide: 'right',
-                packages: { '[+]': ['physics'] }
-            },
-            options: {
-                enableMenu: false,
-                ignoreHtmlClass: 'tex-ignore',
-                processHtmlClass: 'tex-process'
-            }
-        };
-    </script>
+  <!-- 延迟加载MathJax -->
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script"></script>
+  <script>
+    window.MathJax = {
+      startup: {
+        ready: () => {
+          MathJax.startup.defaultReady();
+          MathJax.startup.promise.then(() => {
+            document.dispatchEvent(new Event('mathjaxLoaded'));
+          });
+        }
+      },
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        tags: 'ams',
+        tagSide: 'right',
+        packages: {'[+]': ['physics']}
+      },
+      options: {
+        enableMenu: false,
+        ignoreHtmlClass: 'tex-ignore',
+        processHtmlClass: 'tex-process'
+      }
+    };
+  </script>
 </body>
 
 </html>

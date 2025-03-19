@@ -4,7 +4,7 @@
 {% include head.html %}
 
 <body>
-  <header class="text-center py-4 bg-dark text-light">
+  <header class="text-center py-4">
     <a href="/"><img src="https://www.kcisec.site/assets/images/school-logo.svg"
         title="KangChiao International School East Campus Logo" class="img-fluid" style="max-width: 100px;"></a>
     <h1 class="mt-3">A-Level Homepage</h1>
@@ -29,7 +29,7 @@
 
   <div class="container my-5 text-center">
     <h2 class="mb-4">Upcoming Exam Dates</h2>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center shadow p-3 mb-5 bg-body-tertiary rounded">
       <div class="col-md-6 mb-4">
         <h3>A Levels and IGCSEs Official Exams</h3>
         <a href="/assets/pdf/Confirmed-6Y25-and-6X25-TT-v1.1-1.pdf" target="_blank" class="btn btn-outline-info">
@@ -39,7 +39,10 @@
     </div>
   </div>
 
+  {% include theme_button.html %}
+
   {% include footer.html %}
 </body>
 <script src="/assets/js/script.js"></script>
+
 </html>
