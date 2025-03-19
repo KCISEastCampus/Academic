@@ -6,6 +6,10 @@
   --box-color: #fff;
 }
 
+html {
+  font-size: 20px;
+}
+
 * {
   transition: 0.5;
   font-family: 'Jua', sans-serif;

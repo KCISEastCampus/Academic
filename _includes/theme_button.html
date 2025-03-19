@@ -1,0 +1,54 @@
+<i class="bi bi-sun" id="theme_button"></i>
+
+<style>
+  #theme_button {
+    position: fixed;
+    bottom: 30px;
+    left: 40px;
+    font-size: 2rem;
+  }
+
+  #theme_button::before {
+    transition: 0.5s;
+  }
+
+  #theme_button.bi-moon:hover::before {
+    transform: rotate(360deg);
+  }
+
+  #theme_button.bi-sun:hover::before {
+    transform: rotate(180deg);
+  }
+</style>
+
+<script>
+  var colorMode = window.matchMedia("(prefers-color-scheme: dark)").matches ?
+    "dark" :
+    "light";
+  const html_element = document.querySelector("html"),
+    theme_button = document.getElementById("theme_button");
+  html_element.setAttribute("data-bs-theme", colorMode);
+  function isDarkTheme() {
+    return html_element.getAttribute("data-bs-theme") == "dark";
+  }
+  function updateThemeButtonStatus() {
+    if (isDarkTheme()) {
+      theme_button.classList.remove("bi-moon");
+      theme_button.classList.add("bi-sun");
+    }
+    else {
+      theme_button.classList.remove("bi-sun");
+      theme_button.classList.add("bi-moon");
+    }
+  }
+  updateThemeButtonStatus();
+  theme_button.addEventListener('click', e => {
+    if (isDarkTheme()) {
+      html_element.setAttribute("data-bs-theme", "light");
+    }
+    else {
+      html_element.setAttribute("data-bs-theme", "dark");
+    }
+    updateThemeButtonStatus();
+  });
+</script>
