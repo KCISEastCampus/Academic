@@ -1,6 +1,7 @@
 ---
 layout: subjects
-subject: igcse
+grade: igcse
+title: IG Chemistry
 ---
 
 
