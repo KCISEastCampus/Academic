@@ -50,6 +50,7 @@ The website currently includes resources for the following subjects:
 │   └── index.html
 ├── assets                   # Static assets
 │   └── css
+│   └── js
 ├── AL                       # A-Level subjects
 ├── Mathematics              # IGCSE Mathematics
 ├── Physics                  # IGCSE Physics
