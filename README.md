@@ -54,7 +54,6 @@ The website currently includes resources for the following subjects:
 ├── Mathematics              # IGCSE Mathematics
 ├── Physics                  # IGCSE Physics
 ├── Chemistry                # IGCSE Chemistry
-├── Economics                # IGCSE Economics
 └── index.markdown           # Homepage
 ```
 
