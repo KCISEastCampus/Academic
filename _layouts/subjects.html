@@ -8,6 +8,15 @@
   <link rel="shortcut icon" href="/assets/favicon.ico">
   <title>{{ page.title | default: site.title }}</title>
   <link rel="stylesheet" href="/assets/css/subject.css">
+  <style>
+    {% if page.grade=="igcse" %}
+    :root {
+      --primary-color: #3498db;
+      --secondary-color: #2980b9;
+      --theme-accent: rgba(52, 152, 219, 0.5);
+    }
+    {% endif %}
+  </style>
 </head>
 
 <body>

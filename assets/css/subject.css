@@ -9,14 +9,6 @@
   --transition-duration: 0.3s;
 }
 
-{% if page.grade=="igcse" %}
-:root {
-  --primary-color: #3498db;
-  --secondary-color: #2980b9;
-  --theme-accent: rgba(52, 152, 219, 0.5);
-}
-{% endif %}
-
 * {
   margin: 0;
   padding: 0;
@@ -162,7 +154,7 @@ h1 {
 }
 
 h2 {
-  margin: 1.75rem 0 1.25rem;
+  margin: 1.75rem 0 0.75rem;
   font-size: 2em;
   color: #2c3e50;
 }
