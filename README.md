@@ -21,7 +21,7 @@ The website currently includes resources for the following subjects:
 - Mathematics
 - Physics
 - Chemistry
-- Economics
+- Economics (Coming Soon)
 - English as a Second Language (Coming Soon)
 - Biology (Coming Soon)
 - Computer Science
@@ -50,11 +50,12 @@ The website currently includes resources for the following subjects:
 │   └── index.html
 ├── assets                   # Static assets
 │   └── css
+│   └── js
+│   └── pdf
 ├── AL                       # A-Level subjects
 ├── Mathematics              # IGCSE Mathematics
 ├── Physics                  # IGCSE Physics
 ├── Chemistry                # IGCSE Chemistry
-├── Economics                # IGCSE Economics
 └── index.markdown           # Homepage
 ```
 
