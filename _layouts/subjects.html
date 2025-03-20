@@ -305,14 +305,14 @@
       position: fixed;
       top: 100px;
       right: 20px;
-      width: 250px;
-      max-height: 60vh;
+      width: 280px; /* 略微增加宽度 */
+      max-height: 70vh; /* 增加最大高度 */
       overflow-y: auto;
       background-color: #f8f9fa;
       border: 1px solid #e9ecef;
       border-radius: 5px;
-      padding: 15px;
-      font-size: 0.9em;
+      padding: 18px; /* 增加内边距 */
+      font-size: 1em; /* 增大基础字体大小 */
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       transition: all 0.3s ease;
     }
@@ -323,11 +323,11 @@
 
     .table-of-contents h2 {
       margin-top: 0;
-      font-size: 1.1em;
+      font-size: 1.2em; /* 增大标题字体 */
       color: var(--primary-color);
       border-bottom: 1px solid var(--primary-color);
-      padding-bottom: 5px;
-      margin-bottom: 10px;
+      padding-bottom: 8px;
+      margin-bottom: 12px;
     }
 
     .table-of-contents ul {
@@ -337,8 +337,8 @@
     }
 
     .table-of-contents li {
-      margin-bottom: 5px;
-      line-height: 1.4;
+      margin-bottom: 8px; /* 增加项目间距 */
+      line-height: 1.5; /* 增加行高 */
       background-color: transparent;
       border-left: none;
       padding: 0;
@@ -349,7 +349,7 @@
       text-decoration: none;
       transition: color 0.3s;
       display: block;
-      padding: 2px 0;
+      padding: 4px 0; /* 增加点击区域 */
       border-bottom: none;
     }
 
@@ -359,31 +359,74 @@
 
     .table-of-contents .toc-h2 {
       font-weight: bold;
+      font-size: 1.05em; /* 增大H2项目字体 */
     }
 
     .table-of-contents .toc-h3 {
       padding-left: 15px;
-      font-size: 0.95em;
+      font-size: 1em; /* 增大H3项目字体 */
     }
 
     .table-of-contents .toc-h4 {
       padding-left: 30px;
-      font-size: 0.9em;
+      font-size: 0.95em; /* 增大H4项目字体 */
     }
 
     .table-of-contents .toc-h5 {
       padding-left: 45px;
-      font-size: 0.85em;
+      font-size: 0.9em; /* 增大H5项目字体 */
     }
 
     .table-of-contents a.active {
       color: var(--primary-color);
       font-weight: bold;
+      /* 添加左边框标记活动项 */
+      border-left: 3px solid var(--primary-color);
+      padding-left: 8px;
+      margin-left: -11px; /* 补偿边框和padding造成的偏移 */
+    }
+
+    /* 为嵌套项目调整活动状态样式 */
+    .table-of-contents .toc-h3.active,
+    .table-of-contents .toc-h4.active,
+    .table-of-contents .toc-h5.active {
+      margin-left: 0; /* 不同层级需要不同的负边距 */
+    }
+
+    .table-of-contents .toc-h3.active {
+      margin-left: -11px;
+    }
+
+    .table-of-contents .toc-h4.active {
+      margin-left: -11px;
+    }
+
+    .table-of-contents .toc-h5.active {
+      margin-left: -11px;
+    }
+
+    /* 滚动条美化 */
+    .table-of-contents::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .table-of-contents::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 3px;
+    }
+
+    .table-of-contents::-webkit-scrollbar-thumb {
+      background: var(--theme-accent);
+      border-radius: 3px;
+    }
+
+    .table-of-contents::-webkit-scrollbar-thumb:hover {
+      background: var(--primary-color);
     }
 
     /* 调整主内容区域的宽度，为目录留出空间 */
     .content-wrapper {
-      max-width: calc(100% - 300px);
+      max-width: calc(100% - 320px); /* 调整以适应更宽的目录 */
     }
 
     /* 响应式设计 */
@@ -400,27 +443,6 @@
       }
     }
 
-    /* 响应式表格 */
-    @media (max-width: 768px) {
-      table {
-        display: block;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-      }
-
-      th,
-      td {
-        min-width: 120px;
-        border-right: 1px solid rgba(0, 0, 0, 0.05);
-        /* 移动端更细的分隔线 */
-      }
-    }
-
-
-    /* ===== 工具类 ===== */
-    .content-wrapper {
-      animation: fadeIn 0.5s ease-in;
-    }
 
     @keyframes fadeIn {
       from {
