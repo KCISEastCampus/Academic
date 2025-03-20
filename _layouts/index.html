@@ -4,32 +4,37 @@
 {% include head.html %}
 
 <style>
-.exam-links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  .exam-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 </style>
+
 <body>
   <header class="container text-center py-5">
     <a href="/">
-      <img src="https://www.kcisec.site/assets/images/school-logo.svg" alt="KangChiao International School East Campus Logo" class="img-fluid mb-4" style="max-width: 150px;">
+      <img src="https://www.kcisec.site/assets/images/school-logo.svg"
+        alt="KangChiao International School East Campus Logo" class="img-fluid mb-4" style="max-width: 150px;">
     </a>
-    <h1 class="display-4 mb-3">A-Level Homepage</h1>
-    <p class="lead">
-      <span class="text-primary">Blue represents IGCSE subjects</span><br>
-      <span class="text-success">Green represents A-Level subjects</span>
-    </p>
+    <p class="fs-1 display-4 mb-3">A-Level Homepage</p>
   </header>
 
   {% include banner.html %}
 
-  <nav class="container py-4">
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <div class="d-flex flex-wrap justify-content-center">
-          <a class="btn btn-outline-primary m-2" href="./Mathematics/">📘 IG Math</a>
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col text-start">
+          <p class="fs-3 text-success">A-Level Subjects</p>
           <a class="btn btn-outline-success m-2" href="./AS_Mathematics/">📗 AS Math</a>
+        </div>
+
+        <hr class="my-3">
+
+        <div class="col text-end">
+          <p class="fs-3 text-primary">IGCSE Subjects</p>
+          <a class="btn btn-outline-primary m-2" href="./Mathematics/">📘 IG Math</a>
           <a class="btn btn-outline-primary m-2" href="./Physics/">📘 IG Physics</a>
           <a class="btn btn-outline-primary m-2" href="./Chemistry/">📘 IG Chemistry</a>
           <a class="btn btn-outline-secondary m-2" href="#" onclick="engUnderConstruction()">🚧 IG Biology</a>
@@ -38,21 +43,20 @@
         </div>
       </div>
     </div>
-  </nav>
-
-  <section class="container my-5">
-    <h2 class="text-center mb-4">Upcoming Exam Dates</h2>
+  </div>
+  <section class="container my-5 text-center">
+    <p class="fs-3 text-center mb-4">Upcoming Exam Dates</p>
     <div class="row justify-content-center">
       <div class="col-md-6">
         <div class="card shadow">
           <div class="card-body">
             <h3 class="card-title">A Levels and IGCSEs Official Exams</h3>
             <div class="exam-links">
-              <a href="/assets/pdf/Confirmed-6Y25-and-6X25-TT-v1.1-1.pdf" target="_blank" class="btn btn-outline-info mt-3 exam-link">
-                <span class="exam-icon">📅</span> 
+              <a href="/assets/pdf/Confirmed-6Y25-and-6X25-TT-v1.1-1.pdf" target="_blank"
+                class="btn btn-outline-info mt-3 exam-link">
+                <span class="exam-icon">📅</span>
                 <span class="exam-title">OxfordAQA Exam Timetable May./Jan. 25</span>
               </a>
-
               <!-- 在这里添加更多考试链接 -->
             </div>
           </div>
@@ -61,7 +65,7 @@
     </div>
   </section>
 
-  
+
 
   {% include theme_button.html %}
 
