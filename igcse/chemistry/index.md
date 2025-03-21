@@ -103,7 +103,7 @@ Ammonia is produced through the **Haber Process**, with nitrogen and hydrogen as
 Sulfuric acid is produced through the **Contact Process**, which consists of three stages and uses **vanadium(V) oxide** as a catalyst.
 
 Reaction Stages:
-![](file://C:/Users/mi/Documents/Gridea/post-images/1741703773230.png)
+![](assets://C:/Users/mi/Documents/Gridea/post-images/1741703773230.png)
 ![](file://C:/Users/mi/Documents/Gridea/post-images/1741703779338.png)
 
 **Common Exam Questions**:
