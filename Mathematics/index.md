@@ -11,33 +11,33 @@ subject: math
 ## Revision Resources
 
 ### Angles
-[Angles](./Angles/Angles.pdf)
+[Angles](./assets/angles.pdf)
 
 ### Working in 2D/3D
-[Working in 2D](./Working in 2D/Working in 2D.pdf)  
-[Working in 3D](./Working in 3D/Working in 3D.pdf)
+[Working in 2D](./assets/working_in_2D.pdf)  
+[Working in 3D](./assets/working_in_3D.pdf)
 
 ### Caculations
-[Caculations](./Caculations/Caculations.pdf)
+[Caculations](./assets/caculations.pdf)
 
 ### Differentiation
-[Differentiation](./Differentiation/Differentiation.pdf)
+[Differentiation](./assets/differentiation.pdf)
 
 ### Transformations, Matrices and Vectors
-[Trigonometry & Vectors](./Transformations, Matrices and Vectors/Trigonometry & Vectors.pdf)  
-[Matrices](./Transformations, Matrices and Vectors/Matrices.pdf)
+[Trigonometry & Vectors](./assets/trigonometry_and_vectors.pdf)  
+[Matrices](./assets/matrices.pdf)
 
 ### Sequences (Linear Sequence, Quadratic Sequence)
-[Sequences](./Sequences/Sequences.pdf)
+[Sequences](./assets/sequences.pdf)
 
 ### Measures and Accuracy
-[Measures and Accuracy](./Measures and Accuracy/Measures and Accuracy.pdf)
+[Measures and Accuracy](./assets/measures_and_accuracy.pdf)
 
 ### Circles
-[Circles](./Circles/Circles.pdf)
+[Circles](./assets/circles.pdf)
 
 ## Past Papers (Topic Test, Mock Test, Homeworks)
 
 ### (Extend) Topic Test 1
-[(Extend) Topic Test 1 Paper](./Topic Test 1/IG Topic Test 1 Scanned.pdf)  
-[(Extend) Commentary](./Topic Test 1/Topic Test 1 Commentary.pdf)
+[(Extend) Topic Test 1 Paper](./assets/topic_test_1/IG_topic_test_1_scanned.pdf)  
+[(Extend) Commentary](./assets/topic_test_1/topic_test_1_commentary.pdf)
