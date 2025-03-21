@@ -10,10 +10,10 @@ grade: igcse
 ## Revision Resources
 
 ### Unit 1: Force & Motion
-[Force & Motion](./files/Force & Motion.pdf)
+[Force & Motion](./assets/force_motion.pdf)
 
 ### Unit 2: Energy
-[Energy](./files/Energy.pdf)
+[Energy](./assets/energy.pdf)
 
 ### Unit 3: Waves
-[Waves](./files/Waves.pdf)
+[Waves](./assets/waves.pdf)
