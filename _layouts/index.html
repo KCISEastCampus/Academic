@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
 
-{% include head.html %}
-
-<style>
-  .exam-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-</style>
+<head>
+  {% include head.html %}
+  <script src="/assets/js/pop_ups.js"></script>
+</head>
 
 <body>
   <header class="container text-center py-5">
@@ -27,19 +22,19 @@
       <div class="row">
         <div class="col text-start">
           <p class="fs-3 text-success">A Level Subjects</p>
-          <a class="btn btn-outline-success m-2" href="./AS_Mathematics/">📗 AS Math</a>
+          <a class="btn btn-outline-success m-2" href="/alevel/mathematics/">📗 AS Math</a>
         </div>
 
         <hr class="my-3">
 
         <div class="col text-end">
           <p class="fs-3 text-primary">IGCSE Subjects</p>
-          <a class="btn btn-outline-primary m-2" href="./Mathematics/">📘 IG Math</a>
-          <a class="btn btn-outline-primary m-2" href="./Physics/">📘 IG Physics</a>
-          <a class="btn btn-outline-primary m-2" href="./Chemistry/">📘 IG Chemistry</a>
+          <a class="btn btn-outline-primary m-2" href="/igcse/mathematics/">📘 IG Math</a>
+          <a class="btn btn-outline-primary m-2" href="/igcse/physics/">📘 IG Physics</a>
+          <a class="btn btn-outline-primary m-2" href="/igcse/chemistry/">📘 IG Chemistry</a>
           <!-- <a class="btn btn-outline-secondary m-2" href="#" onclick="engUnderConstruction()">🚧 IG Economics</a> -->
-          <a class="btn btn-outline-primary m-2" href="/Biology/">📘 IG Biology</a>
-          <a class="btn btn-outline-secondary m-2" href="#" onclick="engUnderConstruction()">🚧 IG ESL</a>
+          <a class="btn btn-outline-primary m-2" href="/igcse/biology/">📘 IG Biology</a>
+          <a class="btn btn-outline-secondary m-2" href="javascript:engUnderConstruction()">🚧 IG ESL</a>
         </div>
       </div>
     </div>
@@ -65,13 +60,10 @@
     </div>
   </section>
 
-
- 
   {% include theme_button.html %}
 
   {% include footer.html %}
 
-  <script src="/assets/js/script.js"></script>
 </body>
 
 </html>

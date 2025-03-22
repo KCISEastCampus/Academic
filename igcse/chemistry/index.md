@@ -4,9 +4,6 @@ grade: igcse
 title: IG Chemistry
 ---
 
-
-# IG Chemistry
-
 ## Topic Test Revision Guide
 
 Hi!

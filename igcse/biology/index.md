@@ -4,8 +4,6 @@ grade: igcse
 title: IG Biology
 ---
 
-# IG Biology
-
 ## Basic Intro
 
 ### 📝 Exam Structure

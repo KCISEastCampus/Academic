@@ -6,21 +6,20 @@ grade: as
 subject: math
 ---
 
-# AS Mathematics
-
 ## Basic Introduction to AS Mathematics
 AS Mathematics is part of A-Level Mathematics. At AS level, two papers are assessed:  
 - International AS Unit P1 (Pure Maths)  
 - International AS Unit PSM1 (Pure Maths, Statistics and Mechanics)  
 
-You can view all the detailed specifications [here](./files/A-Level%20Mathematics%20Specification.pdf).
+You can view all the detailed specifications [here](assets/alevel_mathematics_specification.pdf).
+
 
 ---
 
 ## Revision Resources
 
 ### Chapter 2: Quadratic
-[Quadratic PDF Notes](./files/Unit%202.%20Quadratic.pdf){:target="_blank"}
+[Quadratic PDF Notes](assets/unit_2_quadratic.pdf){:target="_blank"}
 
 ### Chapter 4: Functions and Graphs
 
@@ -84,3 +83,6 @@ Cubic functions take the form \\( y = ax^3 + bx^2 + cx + d \\). Procedure:
    - Plot intercepts and critical points
    - Follow end behavior pattern
    - Draw smooth connecting curve
+   - Draw smooth connecting curve
+
+> *Credit to Lynn for all the PDFs*

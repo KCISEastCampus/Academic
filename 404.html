@@ -3,23 +3,34 @@ permalink: /404.html
 layout: page
 ---
 
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
+<html>
 
-<div class="container">
-  <h1>404</h1>
+<head>
+  {% include head.html %}
+</head>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+<body>
+  {% include banner.html %}
+
+  <div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="text-center">
+      <p class="fs-1">404</p>
+
+      <p><strong>Page not found :(</strong></p>
+
+      <p class="text-secondary">
+        the page u requested may not be avaliable temporary.
+        <br />
+        pls try refreshing the page later, or u can return to the <a href="/">index</a>.
+        <br />stickers
+        if u believe this is a bug, <a href="https://github.com/KCISEastCampus/Academic/issues">pls report</a>.
+      </p>
+
+      <img src="https://http.cat/404" style="width: 500px;" />
+    </div>
+  </div>
+
+  {% include theme_button.html %}
+</body>
+
+</html>
