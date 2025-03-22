@@ -9,9 +9,7 @@
   <title>{{ page.title | default: site.title }}</title>
   <link rel="stylesheet" href="/assets/css/subject.css">
   <style>
-    {
-      % if page.grade=="igcse" %
-    }
+    {% if page.grade=="igcse" %}
 
     :root {
       --primary-color: #3498db;
@@ -19,9 +17,7 @@
       --theme-accent: rgba(52, 152, 219, 0.5);
     }
 
-      {
-      % endif %
-    }
+    {% endif %}
   </style>
 </head>
 
