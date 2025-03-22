@@ -13,7 +13,7 @@ AS Mathematics is part of A-Level Mathematics. At AS level, two papers are asses
 - International AS Unit P1 (Pure Maths)  
 - International AS Unit PSM1 (Pure Maths, Statistics and Mechanics)  
 
-You can view all the detailed specifications [here](./files/A-Level%20Mathematics%20Specification.pdf).
+You can view all the detailed specifications [here](./assets/a_level_mathematics_specification.pdf).
 
 ---
 
