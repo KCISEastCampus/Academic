@@ -2,26 +2,11 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <meta name="theme-color" content="#3498db">
-  <link rel="shortcut icon" href="/assets/favicon.ico">
   <title>{{ page.title | default: site.title }}</title>
   <link rel="stylesheet" href="/assets/css/subject.css">
-  <style>
-    {% if page.grade=="igcse" %}
-
-    :root {
-      --primary-color: #3498db;
-      --secondary-color: #2980b9;
-      --theme-accent: rgba(52, 152, 219, 0.5);
-    }
-
-    {% endif %}
-  </style>
+  {% include head.html %}
 </head>
 
-{% include head.html %}
 
 <body>
   <nav id="toc" class="table-of-contents">
@@ -42,10 +27,9 @@
   {% include basic_footer.html %}
   {% endif %}
 
-  {% include mathjax.html %}
   {% include theme_button.html %}
 
-<script src="/assets/js/subjects.js"></script>
+  <script src="/assets/js/subjects.js"></script>
 </body>
 
 </html>
