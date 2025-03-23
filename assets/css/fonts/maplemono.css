@@ -1,0 +1,35 @@
+/* Regular */
+@font-face {
+  font-family: 'MapleMono';
+  src: url('/assets/fonts/MapleMono-NF-CN-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bold */
+@font-face {
+  font-family: 'MapleMono';
+  src: url('/assets/fonts/MapleMono-NF-CN-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Italic */
+@font-face {
+  font-family: 'MapleMono';
+  src: url('/assets/fonts/MapleMono-NF-CN-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Bold Italic */
+@font-face {
+  font-family: 'MapleMono';
+  src: url('/assets/fonts/MapleMono-NF-CN-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
