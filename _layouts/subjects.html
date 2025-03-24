@@ -2,24 +2,38 @@
 <html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title | default: site.title }}</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/subject.css">
-  {% include head.html %}
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script"></script>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@catppuccin/highlightjs@1.0.0/css/catppuccin-frappe.css">
 </head>
 
-
 <body>
-  <nav id="toc" class="table-of-contents">
-    <h2>Contents</h2>
-    <div class="toc-content">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="return-button" href="{{ '/' | relative_url }}">← Back to Home</a>
     </div>
   </nav>
 
-  <a href="{{ '/' | relative_url }}" class="return-button" aria-label="Return to homepage">← Back to Home</a>
-
-  <main class="content-wrapper">
-    {{ content }}
-  </main>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9">
+        <main class="content-wrapper">
+          {{ content }}
+        </main>
+      </div>
+      <div class="col-lg-3">
+        <nav id="toc" class="table-of-contents">
+          <h2>Contents</h2>
+          <div class="toc-content">
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
 
   {% if page.subject=="math" %}
   {% include math_footer.html %}
@@ -29,6 +43,7 @@
 
   {% include theme_button.html %}
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="/assets/js/subjects.js"></script>
 </body>
 
