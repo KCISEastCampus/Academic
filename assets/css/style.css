@@ -4,15 +4,19 @@
   --background-color: #eef2f3;
   --text-color: #333;
   --box-color: #fff;
+  --ff: 'Jua', sans-serif;
 }
 
 html {
   font-size: 20px;
 }
 
-*:not(.MJX-TEX>*) {
-  transition: 0.5;
-  font-family: 'Jua', sans-serif;
+* {
+  font-family: var(--ff) !important;
+}
+
+.MJX-TEX * {
+  font-family: MJXZERO, MJXTEX !important;
 }
 
 .al-button {
