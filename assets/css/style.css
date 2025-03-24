@@ -20,7 +20,7 @@ html {
 }
 
 code>* {
-  font-family: 'MapleMono', 'Courier New', Courier, monospace;
+  font-family: 'MapleMono', 'Courier New', Courier, monospace !important;
   line-height: 0;
   white-space: break-spaces;
 }

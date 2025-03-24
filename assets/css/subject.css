@@ -73,3 +73,29 @@
   margin-bottom: 0.5rem;
   list-style: none;
 }
+
+img {
+  max-width: 35%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table {
+  margin: 1rem 0;
+  max-width: 60%;
+  min-width: 30%;
+  border-collapse: collapse;
+  overflow-x: auto;
+}
+
+th,
+td {
+  padding: 0.5rem;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  color: white;
+}
