@@ -13,7 +13,6 @@ AS Mathematics is part of A-Level Mathematics. At AS level, two papers are asses
 
 You can view all the detailed specifications [here](assets/alevel_mathematics_specification.pdf).
 
-
 ---
 
 ## Revision Resources
@@ -82,7 +81,6 @@ Cubic functions take the form \\( y = ax^3 + bx^2 + cx + d \\). Procedure:
 5. **Graph Construction**
    - Plot intercepts and critical points
    - Follow end behavior pattern
-   - Draw smooth connecting curve
    - Draw smooth connecting curve
 
 > *Credit to Lynn for all the PDFs*

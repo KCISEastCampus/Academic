@@ -8,6 +8,7 @@
   <script src="/assets/js/toc_generator.js"></script>
 </head>
 
+
 <body>
   <a href="{{ '/' | relative_url }}" class="btn btn-outline-info back-button" aria-label="Return to homepage">
     <i class="bi bi-caret-left-fill"></i>Back to Home
@@ -29,14 +30,12 @@
 
   {% include footer.html %}
 
-  {% include mathjax.html %}
-
   {% include theme_button.html %}
 
   <script>
     generateTOC();
   </script>
-
+  
 </body>
 
 </html>
