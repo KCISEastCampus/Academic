@@ -11,7 +11,7 @@ A responsive educational website built for KangChiao International School East C
 - **Curriculum Division**: Clear separation between IGCSE (blue) and A-Level (green) content
 - **Responsive Design**: Optimized for all devices from desktop to mobile
 - **Exam Information**: Up-to-date timetables and revision tips for upcoming exams
-- **Jekyll-powered**: Built using Jekyll static site generator for easy content management
+- **Jekyll-powered**: Built using Jekyll and other function to static site generator for easy content management
 
 ## 📚 Subject Coverage
 
