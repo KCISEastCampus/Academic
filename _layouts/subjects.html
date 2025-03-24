@@ -2,50 +2,40 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <meta name="theme-color" content="#3498db">
-  <link rel="shortcut icon" href="/assets/favicon.ico">
+  {% include head.html %}
   <title>{{ page.title | default: site.title }}</title>
   <link rel="stylesheet" href="/assets/css/subject.css">
-  <style>
-    {% if page.grade=="igcse" %}
-
-    :root {
-      --primary-color: #3498db;
-      --secondary-color: #2980b9;
-      --theme-accent: rgba(52, 152, 219, 0.5);
-    }
-
-    {% endif %}
-  </style>
+  <script src="/assets/js/toc_generator.js"></script>
 </head>
 
-{% include head.html %}
 
 <body>
-  <nav id="toc" class="table-of-contents">
-    <h2>Contents</h2>
-    <div class="toc-content">
+  <a href="{{ '/' | relative_url }}" class="btn btn-outline-info back-button" aria-label="Return to homepage">
+    <i class="bi bi-caret-left-fill"></i>Back to Home
+  </a>
+
+  <p class="fs-1 text-center mt-3">{{ page.title | default: site.title }}</p>
+  <hr class="mb-5" />
+
+  <div id="main-container" class="d-flex justify-content-evenly align-items-cente">
+    <div class="col-9" id="content-container">
+      {{ content }}
     </div>
-  </nav>
+    <div id="toc" class="table-of-contents text-end">
+      <h2 class="contents-list">Contents</h2>
+      <div class="toc-content">
+      </div>
+    </div>
+  </div>
 
-  <a href="{{ '/' | relative_url }}" class="return-button" aria-label="Return to homepage">← Back to Home</a>
+  {% include footer.html %}
 
-  <main class="content-wrapper">
-    {{ content }}
-  </main>
-
-  {% if page.subject=="math" %}
-  {% include math_footer.html %}
-  {% else %}
-  {% include basic_footer.html %}
-  {% endif %}
-
-  {% include mathjax.html %}
   {% include theme_button.html %}
 
-<script src="/assets/js/subjects.js"></script>
+  <script>
+    generateTOC();
+  </script>
+  
 </body>
 
 </html>

@@ -3,27 +3,33 @@ permalink: /404.html
 ---
 
 <html>
-{% include head.html %}
-{% include banner.html %}
 
-<div class="d-flex justify-content-center align-items-center vh-100">
-  <div class="text-center">
-    <p class="fs-1">404</p>
+<head>
+  {% include head.html %}
+</head>
 
-    <p><strong>Page not found :(</strong></p>
+<body>
+  {% include banner.html %}
 
-    <p class="text-secondary">
-      the page u requested may not be avaliable temporary.
-      <br />
-      pls try refreshing the page later, or u can return to the <a href="/">index</a>.
-      <br />stickers
-      if u believe this is a bug, <a href="https://github.com/KCISEastCampus/Academic/issues">pls report</a>.
-    </p>
+  <div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="text-center">
+      <p class="fs-1">404</p>
 
-    <img src="https://http.cat/404" style="width: 500px;" />
+      <p><strong>Page not found :(</strong></p>
+
+      <p class="text-secondary">
+        the page u requested may not be avaliable temporary.
+        <br />
+        pls try refreshing the page later, or u can return to the <a href="/">index</a>.
+        <br />stickers
+        if u believe this is a bug, <a href="https://github.com/KCISEastCampus/Academic/issues">pls report</a>.
+      </p>
+
+      <img src="https://http.cat/404" style="width: 500px;" />
+    </div>
   </div>
-</div>
 
-{% include theme_button.html %}
+  {% include theme_button.html %}
+</body>
 
 </html>

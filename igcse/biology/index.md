@@ -4,8 +4,6 @@ grade: igcse
 title: IG Biology
 ---
 
-# IG Biology
-
 ## Basic Intro
 
 ### 📝 Exam Structure
@@ -119,5 +117,6 @@ title: IG Biology
 
 ---
 
-**Good luck!** 🌟  
+**Good luck!** 🌟
+
 *For resources and updates, visit [OxfordAQA Biology (9201)](https://oxfordaqa.com/9201).*

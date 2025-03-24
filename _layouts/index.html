@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
 
-{% include head.html %}
-
-<style>
-  .exam-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-</style>
+<head>
+  {% include head.html %}
+  <script src="/assets/js/pop_ups.js"></script>
+</head>
 
 <body>
   <header class="container text-center py-5">
@@ -39,7 +34,7 @@
           <a class="btn btn-outline-primary m-2" href="/igcse/chemistry/">📘 IG Chemistry</a>
           <!-- <a class="btn btn-outline-secondary m-2" href="#" onclick="engUnderConstruction()">🚧 IG Economics</a> -->
           <a class="btn btn-outline-primary m-2" href="/igcse/biology/">📘 IG Biology</a>
-          <a class="btn btn-outline-secondary m-2" href="#" onclick="engUnderConstruction()">🚧 IG ESL</a>
+          <a class="btn btn-outline-secondary m-2" href="javascript:engUnderConstruction()">🚧 IG ESL</a>
         </div>
       </div>
     </div>
@@ -65,13 +60,10 @@
     </div>
   </section>
 
-
-
   {% include theme_button.html %}
 
   {% include footer.html %}
 
-  <script src="/assets/js/script.js"></script>
 </body>
 
 </html>
