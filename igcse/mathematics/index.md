@@ -6,8 +6,6 @@ grade: igcse
 subject: math
 ---
 
-# IG Mathematics
-
 ## Revision Resources
 
 ### Angles
@@ -41,3 +39,5 @@ subject: math
 ### (Extend) Topic Test 1
 [(Extend) Topic Test 1 Paper](./assets/topic_test_1/IG_topic_test_1_scanned.pdf)  
 [(Extend) Commentary](./assets/topic_test_1/topic_test_1_commentary.pdf)
+
+> *Credit to Lynn for all the PDFs*

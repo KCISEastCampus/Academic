@@ -5,8 +5,6 @@ mathjax: true
 grade: igcse
 ---
 
-# IG Physics
-
 ## Revision Resources
 
 ### Unit 1: Force & Motion

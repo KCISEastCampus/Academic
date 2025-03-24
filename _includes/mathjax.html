@@ -1,0 +1,23 @@
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script">
+  window.MathJax = {
+    startup: {
+      ready: () => {
+        MathJax.startup.defaultReady();
+        MathJax.startup.promise.then(() => {
+          document.dispatchEvent(new Event('mathjaxLoaded'));
+        });
+      }
+    },
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      tags: 'ams',
+      tagSide: 'right',
+      packages: {'[+]': ['physics']}
+    },
+    options: {
+      enableMenu: false,
+      ignoreHtmlClass: 'tex-ignore',
+      processHtmlClass: 'tex-process'
+    }
+  };
+</script>

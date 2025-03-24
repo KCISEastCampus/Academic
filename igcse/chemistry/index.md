@@ -4,9 +4,6 @@ grade: igcse
 title: IG Chemistry
 ---
 
-
-# IG Chemistry
-
 ## Topic Test Revision Guide
 
 Hi!
@@ -103,7 +100,6 @@ Ammonia is produced through the **Haber Process**, with nitrogen and hydrogen as
 Sulfuric acid is produced through the **Contact Process**, which consists of three stages and uses **vanadium(V) oxide** as a catalyst.
 
 Reaction Stages:
-![](assets://C:/Users/mi/Documents/Gridea/post-images/1741703773230.png)
 ![](file://C:/Users/mi/Documents/Gridea/post-images/1741703779338.png)
 
 **Common Exam Questions**:
@@ -170,5 +166,3 @@ This concludes the revision for this Chemistry Topic Test. I hope all of you can
 
 ## Archived Contents
 Some of the content has been archived because it is no longer considered relevant due to timeliness. If you would like to take a look anyway, please click the button below.
-
-[Archived Contents](./archived.html)
