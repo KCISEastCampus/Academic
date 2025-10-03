@@ -21,7 +21,7 @@
   <main id="main-content" class="container" role="main">
     <section class="row justify-content-center my-4" aria-labelledby="subjects-heading">
       <div class="col-12 col-md-10">
-  <div class="subjects-wrapper gap-3 p-4 rounded-3">
+        <div class="subjects-wrapper gap-3 p-4 rounded-3">
           <div class="flex-fill">
             <h2 id="subjects-heading" class="h4 text-success">A Level Subjects</h2>
             <div class="subject-list" aria-label="A Level subjects">
@@ -47,13 +47,42 @@
       <div class="col-12 col-md-8">
         <article class="card shadow-sm">
           <div class="card-body">
-            <h2 id="exams-heading" class="h5 card-title">A Levels and IGCSEs Official Exams</h2>
+            <h2 id="exams-heading" class="h5 card-title">A level and IGCSE Official Exams</h2>
             <p class="mb-2 text-muted">Official timetables and exam-related documents.</p>
             <div class="exam-links d-flex flex-column gap-2">
-              <a href="/assets/pdf/Confirmed-6Y25-and-6X25-TT-v1.1-1.pdf" target="_blank" rel="noopener" class="btn btn-outline-info exam-link text-start">
+              <a href="/assets/pdf/Confirmed-BY25-TT-v1.0.pdf" target="_blank" rel="noopener" class="btn btn-outline-info exam-link text-start">
                 <span class="exam-icon">📅</span>
-                <span class="exam-title">OxfordAQA Exam Timetable May./Jan. 25</span>
+                <span class="exam-title">OxfordAQA IGCSE Exam Timetable Nov. 2025</span>
               </a>
+              <a href="/assets/pdf/1X26-ConfimedTT-v1.0-1.pdf" target="_blank" rel="noopener" class="btn btn-outline-info exam-link text-start">
+                <span class="exam-icon">📅</span>
+                <span class="exam-title">OxfordAQA A level Exam Timetable Jan. 2026</span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="card-body">
+            <h2 class="h5 card-title">Department Exams</h2>
+            <p class="mb-2 text-muted">In-school exams and tests information.</p>
+            <div class="dept-exams" aria-label="Department exam schedule">
+              {% assign exams = site.data.department_exams %}
+              {% if exams and exams.size > 0 %}
+                <ul class="list-group list-group-flush">
+                  {% for ex in exams %}
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div>
+                        <div class="fw-semibold">{{ ex.title }}</div>
+                        <div class="small text-muted">Date: {{ ex.date }} · Duration: {{ ex.duration }}</div>
+                      </div>
+                    </li>
+                  {% endfor %}
+                </ul>
+                <p class="mt-2 small text-muted">If you have any questions, please contact the A-level Office or your subject teacher.</p>
+              {% else %}
+                <div class="alert alert-info mb-0" role="status">
+                  There are no in-school exams for now, or upcoming exams are not scheduled.
+                </div>
+              {% endif %}
             </div>
           </div>
         </article>
