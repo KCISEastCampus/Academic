@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en">
 
 <head>
   {% include head.html %}
@@ -7,61 +7,61 @@
 </head>
 
 <body>
-  <header class="container text-center py-5">
-    <a href="/">
-      <img src="//www.kcisec.site/assets/images/school-logo.svg" alt="KangChiao International School East Campus Logo"
-        class="img-fluid mb-4" style="max-width: 150px;">
+  <header class="container text-center py-5" role="banner">
+    <a href="/" aria-label="Homepage">
+      <img src="//www.kcisec.site/assets/images/school-logo.svg" alt="KangChiao International School East Campus Logo" class="img-fluid mb-4" style="max-width:150px;">
     </a>
-    <p class="fs-1 display-4 mb-3">A-Level Homepage</p>
+    <h1 class="fs-1 display-4 mb-3">A-Level Homepage</h1>
+    <p class="lead text-muted">Resources and links for A-Level and IGCSE students</p>
   </header>
 
   {% include banner.html %}
 
-  <div class="row justify-content-center">
-    <div class="w-75">
-      <div class="row">
-        <div class="col text-start">
-          <p class="fs-3 text-success">A Level Subjects</p>
-          <a class="btn btn-outline-success m-2" href="/alevel/mathematics/">📗 AS Math</a>
-        </div>
-
-        <hr class="my-3">
-
-        <div class="col text-end">
-          <p class="fs-3 text-primary">IGCSE Subjects</p>
-          <a class="btn btn-outline-primary m-2" href="/igcse/mathematics/">📘 IG Math</a>
-          <a class="btn btn-outline-primary m-2" href="/igcse/physics/">📘 IG Physics</a>
-          <a class="btn btn-outline-primary m-2" href="/igcse/chemistry/">📘 IG Chemistry</a>
-          <!-- <a class="btn btn-outline-secondary m-2" href="#" onclick="engUnderConstruction()">🚧 IG Economics</a> -->
-          <a class="btn btn-outline-primary m-2" href="/igcse/biology/">📘 IG Biology</a>
-          <a class="btn btn-outline-secondary m-2" href="javascript:engUnderConstruction()">🚧 IG ESL</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <section class="container my-5 text-center">
-    <p class="fs-3 text-center mb-4">Upcoming Exam Dates</p>
-    <div class="row justify-content-center">
-      <div class="col-md-6">
-        <div class="card shadow">
-          <div class="card-body">
-            <h3 class="card-title">A Levels and IGCSEs Official Exams</h3>
-            <div class="exam-links">
-              <a href="/assets/pdf/Confirmed-6Y25-and-6X25-TT-v1.1-1.pdf" target="_blank"
-                class="btn btn-outline-info mt-3 exam-link">
-                <span class="exam-icon">📅</span>
-                <span class="exam-title">OxfordAQA Exam Timetable May./Jan. 25</span>
-              </a>
-              <!-- 在这里添加更多考试链接 -->
+  <a class="skip-link sr-only-focusable" href="#main-content">Skip to main content</a>
+  <main id="main-content" class="container" role="main">
+    <section class="row justify-content-center my-4" aria-labelledby="subjects-heading">
+      <div class="col-12 col-md-10">
+  <div class="subjects-wrapper gap-3 p-4 rounded-3">
+          <div class="flex-fill">
+            <h2 id="subjects-heading" class="h4 text-success">A Level Subjects</h2>
+            <div class="subject-list" aria-label="A Level subjects">
+              <!-- future: loop over site data to render subjects -->
+              <a class="btn btn-outline-success" href="/alevel/mathematics/">📗 AS Math</a>
+            </div>
+          </div>
+          <div class="flex-fill">
+            <h2 class="h4 text-primary">IGCSE Subjects</h2>
+            <div class="subject-list" aria-label="IGCSE subjects">
+              <a class="btn btn-outline-primary" href="/igcse/mathematics/">📘 IG Math</a>
+              <a class="btn btn-outline-primary" href="/igcse/physics/">📘 IG Physics</a>
+              <a class="btn btn-outline-primary" href="/igcse/chemistry/">📘 IG Chemistry</a>
+              <a class="btn btn-outline-primary" href="/igcse/biology/">📘 IG Biology</a>
+              <a class="btn btn-outline-secondary" href="javascript:engUnderConstruction()">🚧 IG ESL</a>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="row justify-content-center my-5" aria-labelledby="exams-heading">
+      <div class="col-12 col-md-8">
+        <article class="card shadow-sm">
+          <div class="card-body">
+            <h2 id="exams-heading" class="h5 card-title">A Levels and IGCSEs Official Exams</h2>
+            <p class="mb-2 text-muted">Official timetables and exam-related documents.</p>
+            <div class="exam-links d-flex flex-column gap-2">
+              <a href="/assets/pdf/Confirmed-6Y25-and-6X25-TT-v1.1-1.pdf" target="_blank" rel="noopener" class="btn btn-outline-info exam-link text-start">
+                <span class="exam-icon">📅</span>
+                <span class="exam-title">OxfordAQA Exam Timetable May./Jan. 25</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
 
   {% include theme_button.html %}
-
   {% include footer.html %}
 
 </body>
