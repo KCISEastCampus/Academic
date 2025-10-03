@@ -1,4 +1,4 @@
-<i class="bi bi-sun" id="theme_button"></i>
+<i class="bi bi-sun" id="theme_button" aria-label="Toggle theme"></i>
 
 <style>
   #theme_button {
@@ -6,49 +6,44 @@
     bottom: 30px;
     right: 40px;
     font-size: 2rem;
+    z-index: 9999;
   }
 
-  #theme_button::before {
-    transition: 0.5s;
-  }
-
-  #theme_button.bi-moon:hover::before {
-    transform: rotate(360deg);
-  }
-
-  #theme_button.bi-sun:hover::before {
-    transform: rotate(180deg);
-  }
+  #theme_button::before { transition: 0.5s; }
+  #theme_button.bi-moon:hover::before { transform: rotate(360deg); }
+  #theme_button.bi-sun:hover::before { transform: rotate(180deg); }
 </style>
 
 <script>
-  var colorMode = window.matchMedia("(prefers-color-scheme: dark)").matches ?
-    "dark" :
-    "light";
-  const html_element = document.querySelector("html"),
-    theme_button = document.getElementById("theme_button");
-  html_element.setAttribute("data-bs-theme", colorMode);
-  function isDarkTheme() {
-    return html_element.getAttribute("data-bs-theme") == "dark";
-  }
-  function updateThemeButtonStatus() {
-    if (isDarkTheme()) {
-      theme_button.classList.remove("bi-moon");
-      theme_button.classList.add("bi-sun");
+  (function () {
+    const html_element = document.documentElement;
+    const theme_button = document.getElementById('theme_button');
+
+    function getPreferredTheme() {
+      const stored = localStorage.getItem('site-theme');
+      if (stored) return stored;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     }
-    else {
-      theme_button.classList.remove("bi-sun");
-      theme_button.classList.add("bi-moon");
+
+    function applyTheme(theme) {
+      html_element.setAttribute('data-bs-theme', theme);
+      localStorage.setItem('site-theme', theme);
+      updateThemeButtonStatus();
     }
-  }
-  updateThemeButtonStatus();
-  theme_button.addEventListener('click', e => {
-    if (isDarkTheme()) {
-      html_element.setAttribute("data-bs-theme", "light");
+
+    function isDarkTheme() { return html_element.getAttribute('data-bs-theme') === 'dark'; }
+
+    function updateThemeButtonStatus() {
+      if (!theme_button) return;
+      if (isDarkTheme()) { theme_button.classList.remove('bi-moon'); theme_button.classList.add('bi-sun'); }
+      else { theme_button.classList.remove('bi-sun'); theme_button.classList.add('bi-moon'); }
     }
-    else {
-      html_element.setAttribute("data-bs-theme", "dark");
-    }
-    updateThemeButtonStatus();
-  });
+
+    // initialize
+    applyTheme(getPreferredTheme());
+
+    theme_button && theme_button.addEventListener('click', () => {
+      applyTheme(isDarkTheme() ? 'light' : 'dark');
+    });
+  })();
 </script>
