@@ -31,7 +31,7 @@
   window.mermaidConfig = { startOnLoad: false, theme: 'dark' };
   window.MathJax = {
     tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], tags: 'ams', tagSide: 'right', packages: {'[+]': ['physics']} },
-    options: { enableMenu: false, ignoreHtmlClass: 'tex-ignore', processHtmlClass: 'tex-process' },
+    options: { enableMenu: false, ignoreHtmlClass: 'tex-ignore' },
     startup: { pageReady: () => { return Promise.resolve(); } }
   };
 </script>
@@ -48,6 +48,21 @@
     if (window.mermaid && window.mermaid.initialize) {
       try { window.mermaid.initialize(window.mermaidConfig || {}); } catch (e) { console.warn('mermaid init failed', e); }
       window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
+    }
+    // Trigger MathJax typeset when MathJax is available
+    if (window.MathJax && typeof MathJax.typesetPromise === 'function') {
+      MathJax.typesetPromise().then(() => {
+        document.dispatchEvent(new Event('mathjaxLoaded'));
+      }).catch((err) => { console.warn('MathJax typeset failed', err); });
+    } else {
+      // fallback: listen for MathJax startup promise
+      if (window.MathJax && MathJax.startup && MathJax.startup.promise) {
+        MathJax.startup.promise.then(() => {
+          if (typeof MathJax.typesetPromise === 'function') {
+            MathJax.typesetPromise().then(() => { document.dispatchEvent(new Event('mathjaxLoaded')); });
+          }
+        }).catch(() => {});
+      }
     }
     // notify when MathJax has finished typesetting: listen for mathjaxLoaded if needed elsewhere
     document.addEventListener('mathjaxLoaded', () => { /* placeholder hook */ });

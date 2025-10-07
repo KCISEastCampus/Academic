@@ -11,6 +11,15 @@
   --info: #17a2b8;
   --radius: 0.6rem;
   --container-max: 1100px;
+  /* spacing scale */
+  --space-xxs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  /* focus ring color */
+  --focus-ring: 100,150,255;
 }
 
 /* Light theme overrides */
@@ -74,6 +83,7 @@ html {
 body {
   background-color: var(--bg);
   color: var(--text);
+  line-height: 1.6;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -92,6 +102,61 @@ body {
 /* Card / surface */
 .card { background: var(--surface); border: 1px solid rgba(255,255,255,0.03); border-radius: var(--radius); color: var(--text); }
 .card .card-title { color: var(--text); }
+
+/* Headings: tighter scale and nicer weight */
+h1, .display-4 { font-weight: 700; letter-spacing: -0.01em; }
+h2, h3 { font-weight: 600; }
+
+/* Make subject buttons a little more prominent and consistent */
+.subject-list .btn { padding: .65rem 1.15rem; font-size: 1.05rem; border-radius: 0.6rem; }
+
+/* Ensure accessible focus rings */
+a:focus-visible, button:focus-visible, .btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(var(--focus-ring), 0.18);
+  border-radius: 0.6rem;
+}
+
+/* Theme toggle button visibility */
+#theme_button {
+  background: rgba(255,255,255,0.03);
+  padding: .35rem .45rem;
+  border-radius: 0.6rem;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+html[data-bs-theme="light"] #theme_button { background: rgba(0,0,0,0.04); }
+html[data-bs-theme="dark"] #theme_button { background: rgba(255,255,255,0.02); }
+
+/* Tables: ensure header text follows theme and has readable background/border */
+table thead th, .table thead th, .table th {
+  color: var(--text) !important;
+  background: transparent;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+/* Light theme: darker header text and subtle surface behind headers */
+html[data-bs-theme="light"] table thead th,
+html[data-bs-theme="light"] .table thead th,
+html[data-bs-theme="light"] .table th {
+  color: var(--text) !important;
+  background: #eef4fb; /* clearer light header surface */
+  border-bottom-color: rgba(0,0,0,0.12) !important;
+  padding: 0.9rem 1rem;
+  font-weight: 600;
+}
+
+/* Dark theme: lighter header text and subtle highlight */
+html[data-bs-theme="dark"] table thead th,
+html[data-bs-theme="dark"] .table thead th,
+html[data-bs-theme="dark"] .table th {
+  color: var(--text) !important;
+  background: rgba(255,255,255,0.03);
+  border-bottom-color: rgba(255,255,255,0.08) !important;
+  padding: 0.9rem 1rem;
+  font-weight: 600;
+}
+
+/* Make table rows slightly separated from header in both themes (no-op placeholder removed) */
 
 /* Buttons: improved outlines and focus */
 .btn { border-radius: 0.45rem; }
@@ -170,6 +235,12 @@ code>* {
   font-family: 'MapleMono', 'Courier New', Courier, monospace !important;
   line-height: 0;
   white-space: break-spaces;
+}
+
+/* Make Bootstrap Icons inherit text color so they respond to hover/active states; avoid overriding inline SVGs like the GitHub corner */
+.bi, .bi * {
+  color: currentColor !important;
+  fill: currentColor !important;
 }
 
 code.language-plaintext {
