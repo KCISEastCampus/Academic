@@ -41,10 +41,11 @@ html[data-bs-theme="light"] .highlight {
   color: var(--text) !important;
 }
 
-html[data-bs-theme="light"] .exam-link,
-html[data-bs-theme="light"] .subject-list .btn {
-  background: transparent !important;
-  color: inherit !important;
+/* Default (rest) state keep transparent in light mode, but allow :hover/:focus to override */
+html[data-bs-theme="light"] .exam-link:not(:hover):not(:focus),
+html[data-bs-theme="light"] .subject-list .btn:not(:hover):not(:focus) {
+  background: transparent;
+  color: inherit;
 }
 
 /* Dark explicit overrides too (in case third-party CSS forces light backgrounds) */
@@ -94,9 +95,49 @@ body {
 
 /* Buttons: improved outlines and focus */
 .btn { border-radius: 0.45rem; }
-.btn-outline-success { --bs-btn-border-color: var(--accent-al); color: var(--accent-al); border-color: rgba(92,192,127,0.8); }
-.btn-outline-primary { --bs-btn-border-color: var(--accent-ig); color: var(--accent-ig); border-color: rgba(92,107,192,0.8); }
-.btn-outline-info { color: var(--info); border-color: rgba(23,162,184,0.9); }
+.btn-outline-success {
+  /* default */
+  --bs-btn-color: var(--accent-al);
+  --bs-btn-border-color: var(--accent-al);
+  /* hover */
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--accent-al);
+  --bs-btn-hover-border-color: var(--accent-al);
+  /* active */
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--accent-al);
+  --bs-btn-active-border-color: var(--accent-al);
+  /* disabled */
+  --bs-btn-disabled-color: var(--accent-al);
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: var(--accent-al);
+}
+.btn-outline-primary {
+  --bs-btn-color: var(--accent-ig);
+  --bs-btn-border-color: var(--accent-ig);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--accent-ig);
+  --bs-btn-hover-border-color: var(--accent-ig);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--accent-ig);
+  --bs-btn-active-border-color: var(--accent-ig);
+  --bs-btn-disabled-color: var(--accent-ig);
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: var(--accent-ig);
+}
+.btn-outline-info {
+  --bs-btn-color: var(--info);
+  --bs-btn-border-color: var(--info);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--info);
+  --bs-btn-hover-border-color: var(--info);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--info);
+  --bs-btn-active-border-color: var(--info);
+  --bs-btn-disabled-color: var(--info);
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: var(--info);
+}
 .btn-outline-secondary { color: var(--muted); border-color: rgba(150,150,150,0.12); }
 .btn:focus { outline: 3px solid rgba(255,255,255,0.06); outline-offset: 2px; }
 
