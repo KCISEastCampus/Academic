@@ -1,0 +1,15 @@
+# exam_links.yml
+# Official exam timetables and documents
+# Update this file to add/modify exam links
+
+- id: igcse-nov-2025
+  title: OxfordAQA IGCSE Exam Timetable Nov. 2025
+  icon: "📅"
+  path: /assets/pdf/Confirmed-BY25-TT-v1.0.pdf
+  type: external
+
+- id: alevel-jan-2026
+  title: OxfordAQA A level Exam Timetable Jan. 2026
+  icon: "📅"
+  path: /assets/pdf/1X26-ConfimedTT-v1.0-1.pdf
+  type: external

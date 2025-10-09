@@ -1,0 +1,19 @@
+<!-- _includes/card.html -->
+<!-- Reusable card component -->
+<!-- Usage: {% include card.html title="Card Title" content="Card content here" classes="shadow-sm" %} -->
+
+<article class="card {{ include.classes }}">
+  {% if include.title %}
+  <div class="card-body">
+    <h2 class="{{ include.title_class | default: 'h5 card-title' }}">{{ include.title }}</h2>
+    {% if include.subtitle %}
+    <p class="mb-2 text-muted">{{ include.subtitle }}</p>
+    {% endif %}
+    {{ include.content }}
+  </div>
+  {% else %}
+  <div class="card-body">
+    {{ include.content }}
+  </div>
+  {% endif %}
+</article>
