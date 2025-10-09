@@ -7,13 +7,9 @@
 </head>
 
 <body>
-  <header class="container text-center py-5" role="banner">
-    <a href="/" aria-label="Homepage">
-      <img src="//www.kcisec.site/assets/images/school-logo.svg" alt="KangChiao International School East Campus Logo" class="img-fluid mb-4" style="max-width:150px;">
-    </a>
-    <h1 class="fs-1 display-4 mb-3">A-Level Homepage</h1>
-    <p class="lead text-muted">Resources and links for A-Level and IGCSE students</p>
-  </header>
+  {% include site_header.html 
+     title="A-Level Homepage" 
+     subtitle="Resources and links for A-Level and IGCSE students" %}
 
   {% include banner.html %}
 

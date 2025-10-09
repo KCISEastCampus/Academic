@@ -1,0 +1,16 @@
+<!-- _includes/site_header.html -->
+<!-- Site header with logo and title -->
+<!-- Usage: {% include site_header.html title="Page Title" subtitle="Page subtitle" %} -->
+
+<header class="container text-center py-5" role="banner">
+  <a href="/" aria-label="Homepage">
+    <img src="//www.kcisec.site/assets/images/school-logo.svg" 
+         alt="KangChiao International School East Campus Logo" 
+         class="img-fluid mb-4" 
+         style="max-width:150px;">
+  </a>
+  <h1 class="fs-1 display-4 mb-3">{{ include.title | default: "A-Level Homepage" }}</h1>
+  {% if include.subtitle %}
+  <p class="lead text-muted">{{ include.subtitle }}</p>
+  {% endif %}
+</header>
