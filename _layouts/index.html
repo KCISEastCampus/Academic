@@ -7,13 +7,9 @@
 </head>
 
 <body>
-  <header class="container text-center py-5" role="banner">
-    <a href="/" aria-label="Homepage">
-      <img src="//www.kcisec.site/assets/images/school-logo.svg" alt="KangChiao International School East Campus Logo" class="img-fluid mb-4" style="max-width:150px;">
-    </a>
-    <h1 class="fs-1 display-4 mb-3">A-Level Homepage</h1>
-    <p class="lead text-muted">Resources and links for A-Level and IGCSE students</p>
-  </header>
+  {% include site_header.html 
+     title="A-Level Homepage" 
+     subtitle="Resources and links for A-Level and IGCSE students" %}
 
   {% include banner.html %}
 
@@ -25,18 +21,17 @@
           <div class="flex-fill">
             <h2 id="subjects-heading" class="h4 text-success">A Level Subjects</h2>
             <div class="subject-list" aria-label="A Level subjects">
-              <!-- future: loop over site data to render subjects -->
-              <a class="btn btn-outline-success" href="/alevel/mathematics/">📗 AS Math</a>
+              {% for subject in site.data.subjects.alevel %}
+                {% include subject_button.html subject=subject %}
+              {% endfor %}
             </div>
           </div>
           <div class="flex-fill">
             <h2 class="h4 text-primary">IGCSE Subjects</h2>
             <div class="subject-list" aria-label="IGCSE subjects">
-              <a class="btn btn-outline-primary" href="/igcse/mathematics/">📘 IG Math</a>
-              <a class="btn btn-outline-primary" href="/igcse/physics/">📘 IG Physics</a>
-              <a class="btn btn-outline-primary" href="/igcse/chemistry/">📘 IG Chemistry</a>
-              <a class="btn btn-outline-primary" href="/igcse/biology/">📘 IG Biology</a>
-              <a class="btn btn-outline-secondary" href="javascript:engUnderConstruction()">🚧 IG ESL</a>
+              {% for subject in site.data.subjects.igcse %}
+                {% include subject_button.html subject=subject %}
+              {% endfor %}
             </div>
           </div>
         </div>
@@ -50,14 +45,9 @@
             <h2 id="exams-heading" class="h5 card-title">A level and IGCSE Official Exams</h2>
             <p class="mb-2 text-muted">Official timetables and exam-related documents.</p>
             <div class="exam-links d-flex flex-column gap-2">
-              <a href="/assets/pdf/Confirmed-BY25-TT-v1.0.pdf" target="_blank" rel="noopener" class="btn btn-outline-info exam-link text-start">
-                <span class="exam-icon">📅</span>
-                <span class="exam-title">OxfordAQA IGCSE Exam Timetable Nov. 2025</span>
-              </a>
-              <a href="/assets/pdf/1X26-ConfimedTT-v1.0-1.pdf" target="_blank" rel="noopener" class="btn btn-outline-info exam-link text-start">
-                <span class="exam-icon">📅</span>
-                <span class="exam-title">OxfordAQA A level Exam Timetable Jan. 2026</span>
-              </a>
+              {% for exam in site.data.exam_links %}
+                {% include exam_link.html exam=exam %}
+              {% endfor %}
             </div>
           </div>
           
