@@ -1,0 +1,10 @@
+<!-- _includes/exam_link.html -->
+<!-- Reusable exam link component -->
+<!-- Usage: {% include exam_link.html exam=exam %} -->
+
+<a href="{{ include.exam.path }}" 
+   {% if include.exam.type == 'external' %}target="_blank" rel="noopener"{% endif %} 
+   class="btn btn-outline-info exam-link text-start">
+  <span class="exam-icon">{{ include.exam.icon }}</span>
+  <span class="exam-title">{{ include.exam.title }}</span>
+</a>

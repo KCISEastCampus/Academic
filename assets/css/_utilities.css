@@ -1,0 +1,25 @@
+/* _utilities.css */
+/* Utility classes for common patterns */
+/* Reduces duplication and provides consistent spacing/styling */
+
+/* Flexbox utilities */
+.flex-center { display: flex; justify-content: center; align-items: center; }
+.flex-between { display: flex; justify-content: space-between; align-items: center; }
+.flex-column-gap { display: flex; flex-direction: column; gap: var(--space-sm); }
+
+/* Spacing utilities using design tokens */
+.gap-xxs { gap: var(--space-xxs); }
+.gap-xs { gap: var(--space-xs); }
+.gap-sm { gap: var(--space-sm); }
+.gap-md { gap: var(--space-md); }
+.gap-lg { gap: var(--space-lg); }
+.gap-xl { gap: var(--space-xl); }
+
+/* Border radius utilities */
+.rounded { border-radius: var(--radius); }
+
+/* Text utilities */
+.text-muted { color: var(--muted); }
+
+/* Surface utilities */
+.surface-bg { background-color: var(--surface); }

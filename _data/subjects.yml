@@ -1,0 +1,41 @@
+# subjects.yml
+# Define all subjects for A-Level and IGCSE programs
+# This data-driven approach makes it easy to add/remove subjects
+
+alevel:
+  - id: mathematics
+    name: AS Math
+    icon: "📗"
+    path: /alevel/mathematics/
+    color: success
+
+igcse:
+  - id: mathematics
+    name: IG Math
+    icon: "📘"
+    path: /igcse/mathematics/
+    color: primary
+  
+  - id: physics
+    name: IG Physics
+    icon: "📘"
+    path: /igcse/physics/
+    color: primary
+  
+  - id: chemistry
+    name: IG Chemistry
+    icon: "📘"
+    path: /igcse/chemistry/
+    color: primary
+  
+  - id: biology
+    name: IG Biology
+    icon: "📘"
+    path: /igcse/biology/
+    color: primary
+  
+  - id: esl
+    name: IG ESL
+    icon: "🚧"
+    path: "javascript:engUnderConstruction()"
+    color: secondary
