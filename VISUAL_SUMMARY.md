@@ -128,14 +128,14 @@ html[data-bs-theme="dark"] body { /* ... */ }
 **After (Modular Structure - 4 Files):**
 ```
 assets/css/
-  ├── _variables.css      (35 lines - design tokens only)
-  ├── _utilities.css      (25 lines - utility classes)
+  ├── variables.css       (35 lines - design tokens only)
+  ├── utilities.css       (25 lines - utility classes)
   ├── style.css          (190 lines - component styles)
   └── subject.css        (105 lines - subject page styles)
 ```
 
 ```css
-/* _variables.css - Design tokens */
+/* variables.css - Design tokens */
 :root {
   --bg: #0b1220;
   --surface: #0f1a2b;
@@ -143,7 +143,7 @@ assets/css/
   /* ... grouped by purpose ... */
 }
 
-/* _utilities.css - Reusable patterns */
+/* utilities.css - Reusable patterns */
 .flex-center { display: flex; justify-content: center; align-items: center; }
 .gap-md { gap: var(--space-md); }
 
@@ -220,8 +220,8 @@ _includes/
 **CSS Modules:**
 ```
 assets/css/
-  ├── _variables.css      (NEW - 35 lines)
-  ├── _utilities.css      (NEW - 25 lines)
+  ├── variables.css       (NEW - 35 lines)
+  ├── utilities.css       (NEW - 25 lines)
   ├── style.css          (modified - now 190 lines, was 227)
   └── subject.css        (modified - now uses variables)
 ```
@@ -282,7 +282,7 @@ assets/css/
 
 **After:** Edit one place
 ```css
-/* _variables.css */
+/* variables.css */
 :root {
   --accent-ig: #5c6bc0; /* Change this value */
 }

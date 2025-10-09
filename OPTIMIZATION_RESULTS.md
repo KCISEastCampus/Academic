@@ -50,8 +50,8 @@ Rendered with loop:
 ```
 
 **After:** Separated concerns
-- `_variables.css` - Design tokens only
-- `_utilities.css` - Reusable utility classes
+- `variables.css` - Design tokens only
+- `utilities.css` - Reusable utility classes
 - `style.css` - Component-specific styles
 - `subject.css` - Subject page styles (now uses variables)
 
