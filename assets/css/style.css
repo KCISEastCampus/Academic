@@ -251,19 +251,39 @@ mjx-mfrac {
   margin: 0.1em 0 !important;
 }
 
-/* Responsive math with better scaling */
+/* Responsive math with better scaling and wrapping */
 @media (max-width: 768px) {
   .MathJax, mjx-container {
-    font-size: 1.02em !important;
+    font-size: 0.95em !important;
+    max-width: 100% !important;
   }
   
   .MathJax_Display, mjx-container[display="true"] {
     margin: 1rem auto !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    /* Enable horizontal scrolling for long equations */
+    -webkit-overflow-scrolling: touch !important;
   }
   
   li > mjx-container[display="true"],
   li p > mjx-container[display="true"] {
     margin: 0.5rem 0 !important;
+    max-width: 100% !important;
+  }
+  
+  /* Force container width constraints */
+  #content-container .MathJax_Display,
+  #content-container mjx-container[display="true"] {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Improve readability of long equations */
+  mjx-math {
+    min-width: 0 !important;
+    word-wrap: break-word !important;
   }
 }
 
