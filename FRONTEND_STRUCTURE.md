@@ -92,3 +92,57 @@ Consider:
 - SCSS for nested styles and mixins
 - Atomic CSS framework (e.g., Tailwind) for utility-first approach
 - Additional data-driven sections (resources, announcements, etc.)
+- Component library expansion (alerts, badges, modals)
+
+## Quick Reference
+
+### Common Tasks
+
+**Add a new subject:**
+1. Edit `_data/subjects.yml`
+2. Add entry under `alevel:` or `igcse:`
+3. Page will automatically update
+
+**Update exam link:**
+1. Edit `_data/exam_links.yml`
+2. Change existing entry or add new one
+3. Links update automatically
+
+**Change theme colors:**
+1. Edit `assets/css/_variables.css`
+2. Modify color values in `:root` or theme-specific sections
+3. Changes apply site-wide
+
+**Add utility class:**
+1. Edit `assets/css/_utilities.css`
+2. Add new class using CSS variables
+3. Use class anywhere in templates
+
+### Example: Adding a New Subject
+
+```yaml
+# In _data/subjects.yml
+alevel:
+  - id: computer-science
+    name: AS Computer Science
+    icon: "💻"
+    path: /alevel/computer-science/
+    color: success
+```
+
+That's it! The homepage will automatically show the new subject button.
+
+### Example: Using the Card Component
+
+```liquid
+{% capture card_content %}
+  <p>This is custom content inside the card.</p>
+  <a href="/link" class="btn btn-primary">Learn More</a>
+{% endcapture %}
+
+{% include card.html 
+   title="My Card Title" 
+   subtitle="Optional description"
+   content=card_content
+   classes="shadow-sm mb-3" %}
+```
