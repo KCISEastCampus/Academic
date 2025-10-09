@@ -67,14 +67,14 @@ Located in `_includes/exam_link.html`. Handles external/internal links:
 
 ## CSS Organization
 
-### Variables (`assets/css/_variables.css`)
+### Variables (`assets/css/variables.css`)
 Central location for:
 - Theme colors (dark/light mode)
 - Spacing scale
 - Border radius
 - Container max-width
 
-### Utilities (`assets/css/_utilities.css`)
+### Utilities (`assets/css/utilities.css`)
 Common utility classes:
 - `.flex-center`, `.flex-between` - Flexbox layouts
 - `.gap-xs`, `.gap-sm`, `.gap-md`, etc. - Consistent spacing
@@ -115,12 +115,12 @@ Consider:
 3. Links update automatically
 
 **Change theme colors:**
-1. Edit `assets/css/_variables.css`
+1. Edit `assets/css/variables.css`
 2. Modify color values in `:root` or theme-specific sections
 3. Changes apply site-wide
 
 **Add utility class:**
-1. Edit `assets/css/_utilities.css`
+1. Edit `assets/css/utilities.css`
 2. Add new class using CSS variables
 3. Use class anywhere in templates
 

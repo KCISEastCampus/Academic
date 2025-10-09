@@ -60,8 +60,8 @@ The website currently includes resources for the following subjects:
 │   └── subjects.html
 ├── assets                   # Static assets
 │   ├── css
-│   │   ├── _variables.css   # NEW: CSS variables and design tokens
-│   │   ├── _utilities.css   # NEW: Utility classes
+│   │   ├── variables.css    # CSS variables and design tokens
+│   │   ├── utilities.css    # Utility classes
 │   │   ├── style.css        # Main styles
 │   │   └── subject.css      # Subject page styles
 │   ├── js
