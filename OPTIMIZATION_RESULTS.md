@@ -25,9 +25,11 @@ igcse:
 
 Rendered with loop:
 ```liquid
+{% raw %}
 {% for subject in site.data.subjects.igcse %}
   {% include subject_button.html subject=subject %}
 {% endfor %}
+{% endraw %}
 ```
 
 **Impact:** 
