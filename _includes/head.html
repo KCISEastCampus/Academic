@@ -45,14 +45,19 @@
         cosec: '\\csc'
       }
     },
-    // 使用CHTML输出，优化字体渲染
+    // 使用CHTML输出，优化字体渲染和响应式
     chtml: {
       scale: 1.05,
       displayAlign: 'center',
       displayIndent: '0',
       // 使用更现代的字体栈
       fontURL: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2',
-      adaptiveCSS: true
+      adaptiveCSS: true,
+      // 移动端自动换行支持
+      linebreaks: {
+        automatic: true,
+        width: 'container'
+      }
     },
     options: {
       ignoreHtmlClass: 'tex-ignore',

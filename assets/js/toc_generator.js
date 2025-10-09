@@ -21,11 +21,13 @@ function generateTOC() {
   // Enhanced scroll sync with improved active detection
   const tocLinks = document.querySelectorAll(".toc-content a");
   let isScrolling = false;
+  let lastUpdateTime = 0;
 
   // Intersection Observer for better active detection
   const observer = new IntersectionObserver(
     (entries) => {
-      if (isScrolling) return; // Don't update during programmatic scrolling
+      const now = Date.now();
+      if (isScrolling || now - lastUpdateTime < 100) return; // Don't update during programmatic scrolling or too frequently
       
       let activeEntry = null;
       entries.forEach((entry) => {
@@ -35,21 +37,24 @@ function generateTOC() {
       });
 
       if (activeEntry) {
+        lastUpdateTime = now;
         tocLinks.forEach((link) => link.classList.remove("active"));
         const activeLink = document.querySelector(`.toc-content a[href="#${activeEntry.target.id}"]`);
         if (activeLink) {
           activeLink.classList.add("active");
-          // Auto-scroll TOC to active item
-          activeLink.scrollIntoView({
-            behavior: 'smooth',
-            block: 'center'
-          });
+          // Auto-scroll TOC to active item (only on desktop)
+          if (window.innerWidth > 1024) {
+            activeLink.scrollIntoView({
+              behavior: 'smooth',
+              block: 'center'
+            });
+          }
         }
       }
     },
     { 
-      rootMargin: "-20% 0px -70% 0px", 
-      threshold: [0, 0.1, 0.3, 0.5, 0.7, 1.0]
+      rootMargin: "-10% 0px -80% 0px", 
+      threshold: [0, 0.5, 1.0]
     }
   );
 
@@ -88,16 +93,27 @@ function generateTOC() {
   });
 
   // Initialize TOC toggle functionality
-  initTOCToggle();
+  setTimeout(() => {
+    initTOCToggle();
+  }, 100);
 }
 
 function initTOCToggle() {
   const tocToggle = document.getElementById('tocToggle');
   const toc = document.getElementById('toc');
   
+  console.log('InitTOCToggle called', {tocToggle, toc});
+  
   if (tocToggle && toc) {
-    tocToggle.addEventListener('click', () => {
+    // Remove any existing event listeners
+    tocToggle.replaceWith(tocToggle.cloneNode(true));
+    const newTocToggle = document.getElementById('tocToggle');
+    
+    newTocToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
       const isVisible = toc.classList.contains('show');
+      console.log('TOC toggle clicked, isVisible:', isVisible);
       toggleTOC(!isVisible);
     });
     
@@ -105,11 +121,22 @@ function initTOCToggle() {
     document.addEventListener('click', (e) => {
       if (window.innerWidth <= 1024 && 
           !toc.contains(e.target) && 
-          !tocToggle.contains(e.target) &&
+          !newTocToggle.contains(e.target) &&
           toc.classList.contains('show')) {
         toggleTOC(false);
       }
     });
+    
+    // ESC key to close TOC on mobile
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && toc.classList.contains('show')) {
+        toggleTOC(false);
+      }
+    });
+    
+    console.log('TOC toggle initialized successfully');
+  } else {
+    console.error('TOC elements not found:', {tocToggle, toc});
   }
 }
 
@@ -117,13 +144,21 @@ function toggleTOC(show) {
   const toc = document.getElementById('toc');
   const tocToggle = document.getElementById('tocToggle');
   
+  if (!toc || !tocToggle) return;
+  
   if (show) {
     toc.classList.add('show');
     tocToggle.classList.add('active');
     tocToggle.innerHTML = '<i class="bi bi-x"></i>';
+    // Prevent body scroll when TOC is open on mobile
+    if (window.innerWidth <= 768) {
+      document.body.style.overflow = 'hidden';
+    }
   } else {
     toc.classList.remove('show');
     tocToggle.classList.remove('active');
     tocToggle.innerHTML = '<i class="bi bi-list"></i>';
+    // Restore body scroll
+    document.body.style.overflow = '';
   }
 }
