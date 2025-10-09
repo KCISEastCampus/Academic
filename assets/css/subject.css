@@ -1,14 +1,18 @@
+/* subject.css - Styles specific to subject pages */
+
+/* Math inline display */
 .math {
   padding: 2px 4px;
-  background-color: #f8f9fa;
-  border-radius: 3px;
+  background-color: var(--surface);
+  border-radius: var(--radius);
   overflow-x: auto;
 }
 
+/* Back button */
 .back-button {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: var(--space-lg);
+  left: var(--space-lg);
 }
 
 @media (max-width: 768px) {
@@ -24,6 +28,7 @@
   }
 }
 
+/* Table of Contents */
 .table-of-contents {
   position: sticky;
   top: 10px;
@@ -34,9 +39,10 @@
 }
 
 .table-of-contents a.active {
-  color: var(--bs-heading-color);
+  color: var(--text);
 }
 
+/* TOC hierarchy styles */
 .toc-h1 {
   font-size: 1.7rem;
   font-weight: bold;
@@ -54,8 +60,14 @@
   margin-right: 3rem;
 }
 
+.toc-item {
+  margin-bottom: var(--space-xs);
+  list-style: none;
+}
+
+/* Content containers */
 #content-container {
-  margin: 0 1rem;
+  margin: 0 var(--space-md);
 }
 
 #main-container {
@@ -63,11 +75,7 @@
   margin: 0 2%;
 }
 
-.toc-item {
-  margin-bottom: 0.5rem;
-  list-style: none;
-}
-
+/* Content styling */
 img {
   max-width: 35%;
   display: block;
@@ -76,7 +84,7 @@ img {
 }
 
 table {
-  margin: 1rem 0;
+  margin: var(--space-md) 0;
   max-width: 60%;
   min-width: 30%;
   border-collapse: collapse;
@@ -85,11 +93,13 @@ table {
 
 th,
 td {
-  padding: 0.5rem;
+  padding: var(--space-xs);
   text-align: left;
-  border: 1px solid #ddd;
+  border: 1px solid var(--muted);
 }
 
 th {
-  color: white;
+  color: var(--text);
+  font-weight: 600;
 }
+

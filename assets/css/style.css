@@ -1,7 +1,3 @@
-/* Import centralized variables and utilities */
-@import '_variables.css';
-@import '_utilities.css';
-
 /* Strong overrides to ensure backgrounds switch when theme changes (override third-party CSS) */
 html[data-bs-theme="light"] body,
 html[data-bs-theme="light"] .container,
