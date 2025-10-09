@@ -25,13 +25,21 @@ function initTableWrapper() {
       this.style.webkitOverflowScrolling = 'touch';
     });
     
-    // 滚动时隐藏提示
+    // 滚动时隐藏提示 - 添加防抖
+    let scrollTimeout;
     wrapper.addEventListener('scroll', function() {
-      if (this.scrollLeft > 10) {
-        this.classList.add('scrolled');
-      } else {
-        this.classList.remove('scrolled');
-      }
+      // 立即隐藏提示
+      this.classList.add('scrolled');
+      
+      // 清除之前的定时器
+      clearTimeout(scrollTimeout);
+      
+      // 延迟检查是否回到起始位置
+      scrollTimeout = setTimeout(() => {
+        if (this.scrollLeft <= 5) {
+          this.classList.remove('scrolled');
+        }
+      }, 150);
     });
   });
 }
