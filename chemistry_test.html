@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chemistry MathJax Test</title>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                packages: {'[+]': ['base', 'ams', 'mhchem']}
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; line-height: 1.6; }
+        .formula { background: #f8f9fa; padding: 15px; margin: 10px 0; border-left: 4px solid #007bff; }
+    </style>
+</head>
+<body>
+    <h1>Chemistry Formulas Test</h1>
+    
+    <div class="formula">
+        <h3>Concentration Formula</h3>
+        <p>Inline version: \(\text{Concentration} \, (\text{mol/dm}^3) = \frac{\text{number of moles}}{\text{volume of solution} \, (\text{dm}^3)}\)</p>
+        
+        <p>Display version:</p>
+        $$\text{Concentration} \, (\text{mol/dm}^3) = \frac{\text{number of moles}}{\text{volume of solution} \, (\text{dm}^3)}$$
+    </div>
+    
+    <div class="formula">
+        <h3>Moles Formula</h3>
+        <p>This is the problematic one:</p>
+        $$\text{moles} = \frac{\text{mass (g)}}{\text{molar mass (g/mol)}}$$
+    </div>
+    
+    <div class="formula">
+        <h3>Energy Formula</h3>
+        $$Q = mc\Delta T$$
+        <p>Where:</p>
+        <ul>
+            <li>\(Q\) = Energy (unit: J)</li>
+            <li>\(m\) = Mass (unit: kg)</li>
+            <li>\(c\) = Specific heat capacity (unit: J/kg°C)</li>
+            <li>\(\Delta T\) = Temperature change (unit: °C)</li>
+        </ul>
+    </div>
+    
+    <div class="formula">
+        <h3>Chemical Equations</h3>
+        <p>Haber Process:</p>
+        $$\ce{N2(g) + 3H2(g) \rightleftharpoons 2NH3(g)}$$
+        
+        <p>Example from image:</p>
+        $$\ce{CaCO3 + 2HCl -> CaCl2 + CO2 + H2O}$$
+    </div>
+    
+    <div class="formula">
+        <h3>Test Text Rendering</h3>
+        <p>Simple text: \(\text{hello world}\)</p>
+        <p>Text with symbols: \(\text{mol/dm}^3\)</p>
+        <p>Text with parentheses: \(\text{mass (g)}\)</p>
+        <p>Text with slash: \(\text{g/mol}\)</p>
+    </div>
+</body>
+</html>

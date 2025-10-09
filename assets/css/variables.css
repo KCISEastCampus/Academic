@@ -10,6 +10,8 @@
   --text: #e6eef6; /* primary text */
   --accent-al: #5cc07f; /* A-Level accent */
   --accent-ig: #5c6bc0; /* IGCSE accent */
+  --accent-al-rgb: 92, 192, 127;
+  --accent-ig-rgb: 92, 107, 192;
   --info: #17a2b8;
   
   /* Layout */
