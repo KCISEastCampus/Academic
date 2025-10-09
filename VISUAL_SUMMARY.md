@@ -20,11 +20,13 @@ This document provides a visual comparison of the changes made to optimize the f
 
 **After (Data-Driven - 6 lines HTML + 5 lines per subject in YAML):**
 ```html
+{% raw %}
 <div class="subject-list" aria-label="IGCSE subjects">
   {% for subject in site.data.subjects.igcse %}
     {% include subject_button.html subject=subject %}
   {% endfor %}
 </div>
+{% endraw %}
 ```
 
 ```yaml
@@ -65,11 +67,13 @@ igcse:
 
 **After (Data-Driven - 6 lines HTML + 4 lines per link in YAML):**
 ```html
+{% raw %}
 <div class="exam-links d-flex flex-column gap-2">
   {% for exam in site.data.exam_links %}
     {% include exam_link.html exam=exam %}
   {% endfor %}
 </div>
+{% endraw %}
 ```
 
 ```yaml
@@ -178,9 +182,11 @@ assets/css/
 
 **After (Reusable Component - 3 lines):**
 ```liquid
+{% raw %}
 {% include site_header.html 
    title="A-Level Homepage" 
    subtitle="Resources and links for A-Level and IGCSE students" %}
+{% endraw %}
 ```
 
 **Benefits:**
