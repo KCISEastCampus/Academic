@@ -3,6 +3,11 @@
 # This data-driven approach makes it easy to add/remove subjects
 
 alevel:
+  - id: a2mathematics
+    name: A2 Math
+    icon: "📕"
+    path: /alevel/a2mathematics/
+    color: success
   - id: mathematics
     name: AS Math
     icon: "📗"

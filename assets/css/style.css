@@ -195,41 +195,75 @@ a:focus, button:focus { box-shadow: 0 0 0 3px rgba(100,150,255,0.08); }
 .skip-link { position: absolute; left: -999px; top: auto; width: 1px; height: 1px; overflow: hidden; }
 .skip-link:focus, .sr-only-focusable:focus { position: static; left: 0; width: auto; height: auto; padding: .5rem .75rem; background: rgba(255,255,255,0.06); color: var(--text); border-radius: .25rem; z-index: 9999; }
 
-/* MathJax Enhanced Styling */
-.MathJax {
+/* MathJax Enhanced Styling - Modern Academic Typography */
+.MathJax, mjx-container {
   outline: 0 !important;
   color: var(--text) !important;
-  font-size: 1.05em !important;
+  font-size: 1.08em !important;
+  font-family: 'Latin Modern Math', 'STIX Two Math', 'Cambria Math', 'Times New Roman', serif !important;
+  line-height: 1.4 !important;
+}
+
+/* Inline math should blend seamlessly with text */
+mjx-container[jax="CHTML"][display="false"] {
+  vertical-align: -0.05em !important;
+  margin: 0 0.08em !important;
 }
 
 /* Display math styling */
-.MathJax_Display {
-  margin: 1.5rem 0 !important;
+.MathJax_Display, mjx-container[display="true"] {
+  margin: 1.5rem auto !important;
   text-align: center !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
 }
 
-/* Theme-aware MathJax colors */
-html[data-bs-theme="dark"] .MathJax {
-  color: #e0e0e0 !important;
+/* Ensure display math inside list items stays left-aligned with bullet text */
+li > .MathJax_Display,
+li p > .MathJax_Display,
+li > mjx-container[display="true"],
+li p > mjx-container[display="true"] {
+  text-align: left !important;
+  margin: 0.75rem 0 !important;
+  width: 100% !important;
 }
 
-html[data-bs-theme="light"] .MathJax {
-  color: #212529 !important;
+/* Theme-aware MathJax colors with better contrast */
+html[data-bs-theme="dark"] .MathJax,
+html[data-bs-theme="dark"] mjx-container {
+  color: #f0f0f0 !important;
 }
 
-/* Inline math alignment */
-.MathJax {
-  vertical-align: baseline !important;
+html[data-bs-theme="light"] .MathJax,
+html[data-bs-theme="light"] mjx-container {
+  color: #1a1a1a !important;
 }
 
-/* Responsive math */
+/* Mathematical symbols should be crisp */
+mjx-mi, mjx-mn, mjx-mo, mjx-mtext {
+  font-weight: 400 !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* Fractions should be properly sized */
+mjx-mfrac {
+  margin: 0.1em 0 !important;
+}
+
+/* Responsive math with better scaling */
 @media (max-width: 768px) {
-  .MathJax {
-    font-size: 1em !important;
+  .MathJax, mjx-container {
+    font-size: 1.02em !important;
   }
   
-  .MathJax_Display {
-    margin: 1rem 0 !important;
+  .MathJax_Display, mjx-container[display="true"] {
+    margin: 1rem auto !important;
+  }
+  
+  li > mjx-container[display="true"],
+  li p > mjx-container[display="true"] {
+    margin: 0.5rem 0 !important;
   }
 }
 
