@@ -1,4 +1,4 @@
-# Academic Website for KCISEC
+# Academic Website for KCISEC A-level
 
 [![Contributors](https://img.shields.io/github/contributors/KCISEastCampus/Academic)](https://github.com/KCISEastCampus/Academic/graphs/contributors)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
