@@ -537,7 +537,7 @@ th {
   }
   
   .table-wrapper::-webkit-scrollbar-thumb:hover {
-    background: var(--accent-al);
+    background: rgba(var(--accent-ig-rgb), 0.8);
   }
 }
 
