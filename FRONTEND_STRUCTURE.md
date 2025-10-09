@@ -40,23 +40,29 @@ Edit `_data/department_exams.yml`:
 ### Card Component
 Located in `_includes/card.html`. Use for consistent card styling:
 ```liquid
+{% raw %}
 {% include card.html 
    title="Card Title" 
    subtitle="Optional subtitle"
    content="Content here" 
    classes="shadow-sm" %}
+{% endraw %}
 ```
 
 ### Subject Button Component
 Located in `_includes/subject_button.html`. Automatically styled based on subject data:
 ```liquid
+{% raw %}
 {% include subject_button.html subject=subject %}
+{% endraw %}
 ```
 
 ### Exam Link Component
 Located in `_includes/exam_link.html`. Handles external/internal links:
 ```liquid
+{% raw %}
 {% include exam_link.html exam=exam %}
+{% endraw %}
 ```
 
 ## CSS Organization
@@ -135,6 +141,7 @@ That's it! The homepage will automatically show the new subject button.
 ### Example: Using the Card Component
 
 ```liquid
+{% raw %}
 {% capture card_content %}
   <p>This is custom content inside the card.</p>
   <a href="/link" class="btn btn-primary">Learn More</a>
@@ -145,4 +152,5 @@ That's it! The homepage will automatically show the new subject button.
    subtitle="Optional description"
    content=card_content
    classes="shadow-sm mb-3" %}
+{% endraw %}
 ```
