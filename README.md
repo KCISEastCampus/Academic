@@ -41,23 +41,56 @@ The website currently includes resources for the following subjects:
 
 ```
 ├── _config.yml              # Jekyll configuration
+├── _data                    # Data files (NEW: data-driven content)
+│   ├── subjects.yml         # Subject definitions
+│   ├── exam_links.yml       # Exam link definitions
+│   └── department_exams.yml # Department exam schedule
 ├── _includes                # Reusable HTML components
 │   ├── banner.html
 │   ├── breadcrumb.html
+│   ├── card.html            # NEW: Reusable card component
+│   ├── exam_link.html       # NEW: Exam link component
 │   ├── footer.html
-│   └── head.html
+│   ├── head.html
+│   ├── site_header.html     # NEW: Site header component
+│   ├── subject_button.html  # NEW: Subject button component
+│   └── theme_button.html
 ├── _layouts                 # Page templates
-│   └── index.html
+│   ├── index.html
+│   └── subjects.html
 ├── assets                   # Static assets
-│   └── css
-│   └── js
+│   ├── css
+│   │   ├── _variables.css   # NEW: CSS variables and design tokens
+│   │   ├── _utilities.css   # NEW: Utility classes
+│   │   ├── style.css        # Main styles
+│   │   └── subject.css      # Subject page styles
+│   ├── js
 │   └── pdf
-├── AL                       # A-Level subjects
-├── Mathematics              # IGCSE Mathematics
-├── Physics                  # IGCSE Physics
-├── Chemistry                # IGCSE Chemistry
+├── alevel                   # A-Level subjects
+├── igcse                    # IGCSE subjects
+│   ├── mathematics
+│   ├── physics
+│   ├── chemistry
+│   └── biology
+├── FRONTEND_STRUCTURE.md    # NEW: Frontend development guide
+├── OPTIMIZATION_RESULTS.md  # NEW: Optimization summary
 └── index.markdown           # Homepage
 ```
+
+## 📖 Documentation
+
+- **[FRONTEND_STRUCTURE.md](FRONTEND_STRUCTURE.md)** - Guide for maintaining and extending the frontend
+- **[OPTIMIZATION_RESULTS.md](OPTIMIZATION_RESULTS.md)** - Summary of recent optimizations
+
+### Recent Improvements
+
+The site has been optimized for better maintainability:
+- ✅ Data-driven content (subjects and exams defined in YAML)
+- ✅ Reusable components for consistent styling
+- ✅ Organized CSS with variables and utilities
+- ✅ Comprehensive documentation for developers
+
+See [OPTIMIZATION_RESULTS.md](OPTIMIZATION_RESULTS.md) for details.
 
 ## 🚀 Deployment
 
