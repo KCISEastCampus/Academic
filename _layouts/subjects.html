@@ -20,11 +20,16 @@ layout: none
   <p class="fs-1 text-center mt-3">{{ page.title | default: site.title }}</p>
   <hr class="mb-5" />
 
-  <div id="main-container" class="d-flex justify-content-evenly align-items-cente">
-    <div class="col-9" id="content-container">
+  <!-- TOC Toggle Button for Mobile -->
+  <button class="toc-toggle" id="tocToggle" aria-label="Toggle Table of Contents">
+    <i class="bi bi-list"></i>
+  </button>
+
+  <div id="main-container">
+    <div id="content-container">
       {{ content }}
     </div>
-    <div id="toc" class="table-of-contents text-end">
+    <div id="toc" class="table-of-contents">
       <h2 class="contents-list">Contents</h2>
       <div class="toc-content">
       </div>

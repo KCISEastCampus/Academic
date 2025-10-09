@@ -2,6 +2,7 @@
 layout: subjects
 grade: igcse
 title: IG Chemistry
+mathjax: true
 ---
 
 ## Topic Test Revision Guide
@@ -35,8 +36,16 @@ This Chemistry Topic Test will mainly cover the following content:
 
 This section mainly explains **titration** and how to measure the concentration of a solution.
 
-**Formula**:
-Concentration (mol/dm<sup>3</sup>) = number of moles/volume of solution (dm<sup>3</sup>).
+**Formulas**:
+
+Concentration calculation:
+$$\text{Concentration} \, (\text{mol/dm}^3) = \frac{\text{number of moles}}{\text{volume of solution} \, (\text{dm}^3)}$$
+
+Moles calculation:
+$$\text{moles} = \frac{\text{mass (g)}}{\text{molar mass (g/mol)}}$$
+
+Combined formula:
+$$\text{Concentration} = \frac{\text{mass (g)}}{\text{molar mass (g/mol)} \times \text{volume (dm}^3)}$$
 
 If the concentration of one reactant is known, the concentration of the other reactant can be determined through the results of **titration**.
 
@@ -83,6 +92,9 @@ For gaseous reactions:
 ##### Production of Ammonia
 
 Ammonia is produced through the **Haber Process**, with nitrogen and hydrogen as raw materials.
+
+**Chemical Equation**:
+$$\ce{N2(g) + 3H2(g) \rightleftharpoons 2NH3(g)} \quad \Delta H = -92 \text{ kJ/mol}$$
 
 ![Haber Process](https://upload.wikimedia.org/wikipedia/commons/d/db/Haber-Bosch-En.svg)
 
@@ -133,11 +145,13 @@ Understanding this principle is sufficient, as it may not be directly tested in 
 #### 9.2 Calculating and Explaining Energy Change
 
 **Energy Calculation Formula**:
-Q=mcΔT
-- **Q**: Energy (unit: J)
-- **m**: Mass (unit: kg)
-- **c**: Specific heat capacity (unit: J/kg℃)
-- **ΔT**: Temperature change (unit: ℃)
+$$Q = mc\Delta T$$
+
+Where:
+- $Q$ = Energy (unit: J)
+- $m$ = Mass (unit: kg) 
+- $c$ = Specific heat capacity (unit: J/kg°C)
+- $\Delta T$ = Temperature change (unit: °C)
 
 **Relationship between Bond Energy and Reaction Type**:
 

@@ -26,18 +26,49 @@
 <!-- Fonts -->
 <link href="/assets/css/fonts/maplemono.css" rel="stylesheet">
 
-<!-- Mermaid & MathJax: minimal inline config before loading scripts -->
+<!-- MathJax: Universal Markdown Math & Chemistry Support -->
 <script>
   window.mermaidConfig = { startOnLoad: false, theme: 'dark' };
+  
+  // MathJax 通用配置 - 支持标准Markdown数学和化学公式
   window.MathJax = {
-    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], tags: 'ams', tagSide: 'right', packages: {'[+]': ['physics']} },
-    options: { enableMenu: false, ignoreHtmlClass: 'tex-ignore' },
-    startup: { pageReady: () => { return Promise.resolve(); } }
+    tex: {
+      // 标准Markdown数学分隔符
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      // 核心包：基础数学 + AMS扩展 + 化学公式
+      packages: {'[+]': ['base', 'ams', 'newcommand', 'mhchem']},
+      // 不添加自定义宏，保持标准兼容性
+      macros: {}
+    },
+    // 使用CHTML输出，兼容性最好
+    chtml: {
+      scale: 1,
+      displayAlign: 'center',
+      displayIndent: '0'
+    },
+    options: {
+      ignoreHtmlClass: 'tex-ignore',
+      processHtmlClass: 'tex-process',
+      // 不显示菜单，保持简洁
+      enableMenu: false
+    },
+    startup: {
+      ready: () => {
+        console.log('MathJax (Universal Markdown) ready');
+        MathJax.startup.defaultReady();
+        MathJax.startup.promise.then(() => {
+          console.log('Math rendering completed');
+        });
+      }
+    }
   };
 </script>
 
 <script defer src="https://unpkg.com/mermaid@11.1.1/dist/mermaid.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script"></script>
 
 <!-- Site styles & favicon -->
 <link rel="stylesheet" href="/assets/css/variables.css">
@@ -47,27 +78,21 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
+    // Initialize Mermaid
     if (window.mermaid && window.mermaid.initialize) {
-      try { window.mermaid.initialize(window.mermaidConfig || {}); } catch (e) { console.warn('mermaid init failed', e); }
-      window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
-    }
-    // Trigger MathJax typeset when MathJax is available
-    if (window.MathJax && typeof MathJax.typesetPromise === 'function') {
-      MathJax.typesetPromise().then(() => {
-        document.dispatchEvent(new Event('mathjaxLoaded'));
-      }).catch((err) => { console.warn('MathJax typeset failed', err); });
-    } else {
-      // fallback: listen for MathJax startup promise
-      if (window.MathJax && MathJax.startup && MathJax.startup.promise) {
-        MathJax.startup.promise.then(() => {
-          if (typeof MathJax.typesetPromise === 'function') {
-            MathJax.typesetPromise().then(() => { document.dispatchEvent(new Event('mathjaxLoaded')); });
-          }
-        }).catch(() => {});
+      try { 
+        window.mermaid.initialize(window.mermaidConfig || {}); 
+        window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
+      } catch (e) { 
+        console.warn('Mermaid initialization failed:', e); 
       }
     }
-    // notify when MathJax has finished typesetting: listen for mathjaxLoaded if needed elsewhere
-    document.addEventListener('mathjaxLoaded', () => { /* placeholder hook */ });
+    
+    // MathJax will auto-initialize with the startup.ready config above
+    // Listen for the mathjaxLoaded event for any post-processing
+    document.addEventListener('mathjaxLoaded', () => {
+      console.log('MathJax processing completed for page');
+    });
   });
 
 </script>

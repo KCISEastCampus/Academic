@@ -8,6 +8,11 @@ alevel:
     icon: "📗"
     path: /alevel/mathematics/
     color: success
+  - id: chemistry
+    name: AS Chemistry
+    icon: "📗"
+    path: /alevel/chemistry/
+    color: success
 
 igcse:
   - id: mathematics

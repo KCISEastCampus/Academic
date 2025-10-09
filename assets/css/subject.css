@@ -15,6 +15,66 @@
   left: var(--space-lg);
 }
 
+/* TOC Toggle Button */
+.toc-toggle {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  z-index: 101;
+  background: var(--accent-ig);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  display: none;
+}
+
+.toc-toggle:hover {
+  transform: scale(1.1);
+  background: var(--accent-al);
+}
+
+.toc-toggle.active {
+  background: var(--accent-al);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .table-of-contents {
+    width: 260px;
+  }
+  
+  #content-container {
+    margin-right: 280px;
+    max-width: calc(100vw - 320px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .toc-toggle {
+    display: block;
+  }
+  
+  .table-of-contents {
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .table-of-contents.show {
+    transform: translateX(0);
+  }
+  
+  #content-container {
+    margin-right: var(--space-md);
+    max-width: calc(100vw - 40px);
+  }
+}
+
 @media (max-width: 768px) {
   .back-button {
     width: 96%;
@@ -22,57 +82,164 @@
     position: static;
     margin: 2%;
   }
-
-  #toc {
-    display: none;
+  
+  .table-of-contents {
+    width: 100vw;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    border-radius: 0;
+    padding: 80px 20px 20px;
+  }
+  
+  .toc-toggle {
+    right: 15px;
+    top: 15px;
+  }
+  
+  #content-container {
+    margin: 0 var(--space-md);
+    max-width: calc(100vw - 32px);
   }
 }
 
-/* Table of Contents */
+/* Enhanced Table of Contents - Fixed Sidebar */
 .table-of-contents {
-  position: sticky;
-  top: 10px;
-  left: 0;
-  height: fit-content;
-  overflow-x: auto;
-  display: block;
+  position: fixed;
+  top: 120px;
+  right: 20px;
+  width: 280px;
+  height: calc(100vh - 140px);
+  background: var(--surface);
+  border: 1px solid var(--muted);
+  border-radius: 8px;
+  padding: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
 }
 
-.table-of-contents a.active {
+/* TOC Header */
+.contents-list {
+  font-size: 1.2rem;
+  margin: 0 0 16px 0;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--accent-ig);
   color: var(--text);
+  font-weight: 600;
+  text-align: center;
 }
 
-/* TOC hierarchy styles */
-.toc-h1 {
-  font-size: 1.7rem;
-  font-weight: bold;
+/* TOC Content Container */
+.toc-content {
+  padding: 0;
 }
 
-.toc-h2 {
-  font-weight: bold;
-}
-
-.toc-h3 {
-  margin-right: 1.5rem;
-}
-
-.toc-h4 {
-  margin-right: 3rem;
-}
-
-.toc-item {
-  margin-bottom: var(--space-xs);
+.toc-content ul {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
-/* Content containers */
+/* TOC Links */
+.toc-content a {
+  display: block;
+  padding: 8px 12px;
+  margin: 2px 0;
+  text-decoration: none;
+  color: var(--muted);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.toc-content a:hover {
+  background-color: rgba(var(--accent-ig-rgb), 0.1);
+  color: var(--text);
+  transform: translateX(4px);
+}
+
+.toc-content a.active {
+  background-color: var(--accent-ig);
+  color: white;
+  border-left-color: var(--accent-al);
+  font-weight: 500;
+  transform: translateX(6px);
+}
+
+/* TOC Hierarchy Styles with Indentation */
+.toc-h1 a {
+  font-size: 1rem;
+  font-weight: 700;
+  padding-left: 12px;
+  color: var(--text);
+}
+
+.toc-h2 a {
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding-left: 20px;
+  border-left-width: 3px;
+}
+
+.toc-h3 a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding-left: 28px;
+  border-left-width: 2px;
+}
+
+.toc-h4 a {
+  font-size: 0.85rem;
+  font-weight: 400;
+  padding-left: 36px;
+  border-left-width: 2px;
+  color: var(--muted);
+}
+
+.toc-item {
+  margin: 0;
+  list-style: none;
+}
+
+/* Add visual hierarchy indicators */
+.toc-h1 a::before {
+  content: "📖 ";
+  margin-right: 6px;
+}
+
+.toc-h2 a::before {
+  content: "📝 ";
+  margin-right: 6px;
+}
+
+.toc-h3 a::before {
+  content: "▸ ";
+  margin-right: 4px;
+  color: var(--accent-ig);
+}
+
+.toc-h4 a::before {
+  content: "• ";
+  margin-right: 4px;
+  color: var(--muted);
+}
+
+/* Content containers - adjusted for fixed sidebar */
 #content-container {
-  margin: 0 var(--space-md);
+  margin: 0 320px 0 var(--space-md);
+  max-width: calc(100vw - 380px);
 }
 
 #main-container {
-  width: 96%;
-  margin: 0 2%;
+  width: 100%;
+  margin: 0;
+  display: block;
 }
 
 /* Content styling */

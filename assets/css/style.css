@@ -195,8 +195,42 @@ a:focus, button:focus { box-shadow: 0 0 0 3px rgba(100,150,255,0.08); }
 .skip-link { position: absolute; left: -999px; top: auto; width: 1px; height: 1px; overflow: hidden; }
 .skip-link:focus, .sr-only-focusable:focus { position: static; left: 0; width: auto; height: auto; padding: .5rem .75rem; background: rgba(255,255,255,0.06); color: var(--text); border-radius: .25rem; z-index: 9999; }
 
-.MJX-TEX * {
-  font-family: MJXZERO, MJXTEX !important;
+/* MathJax Enhanced Styling */
+.MathJax {
+  outline: 0 !important;
+  color: var(--text) !important;
+  font-size: 1.05em !important;
+}
+
+/* Display math styling */
+.MathJax_Display {
+  margin: 1.5rem 0 !important;
+  text-align: center !important;
+}
+
+/* Theme-aware MathJax colors */
+html[data-bs-theme="dark"] .MathJax {
+  color: #e0e0e0 !important;
+}
+
+html[data-bs-theme="light"] .MathJax {
+  color: #212529 !important;
+}
+
+/* Inline math alignment */
+.MathJax {
+  vertical-align: baseline !important;
+}
+
+/* Responsive math */
+@media (max-width: 768px) {
+  .MathJax {
+    font-size: 1em !important;
+  }
+  
+  .MathJax_Display {
+    margin: 1rem 0 !important;
+  }
 }
 
 code>* {
