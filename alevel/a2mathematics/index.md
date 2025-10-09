@@ -188,7 +188,7 @@ Combinations of:
 - Let $$u = 4x^3 + 7$$, then $$y = \ln u$$
 - $$\frac{du}{dx} = 12x^2$$
 - $$\frac{dy}{du} = \frac{1}{u}$$
-- $$\frac{dy}{dx} = \frac{1}{4x^3 + 7} \cdot 12x^2 = \frac{12x^2}{4x^3 + 7$$
+- $$\frac{dy}{dx} = \frac{1}{4x^3 + 7} \cdot 12x^2 = \frac{12x^2}{4x^3 + 7}$$
 
 ### Alternative Chain Rule Form
 - $$\frac{dy}{dx} = \frac{1}{\frac{dx}{dy}}$$
