@@ -40,14 +40,19 @@
       processEnvironments: true,
       // 核心包：基础数学 + AMS扩展 + 化学公式
       packages: {'[+]': ['base', 'ams', 'newcommand', 'mhchem']},
-      // 不添加自定义宏，保持标准兼容性
-      macros: {}
+      // 常用三角函数别名，避免数学教材写法导致报错
+      macros: {
+        cosec: '\\csc'
+      }
     },
-    // 使用CHTML输出，兼容性最好
+    // 使用CHTML输出，优化字体渲染
     chtml: {
-      scale: 1,
+      scale: 1.05,
       displayAlign: 'center',
-      displayIndent: '0'
+      displayIndent: '0',
+      // 使用更现代的字体栈
+      fontURL: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2',
+      adaptiveCSS: true
     },
     options: {
       ignoreHtmlClass: 'tex-ignore',
