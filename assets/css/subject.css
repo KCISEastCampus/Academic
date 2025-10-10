@@ -1,5 +1,68 @@
 /* subject.css - Styles specific to subject pages */
 
+/* Content heading spacing optimization */
+#content-container h1,
+#content-container h2,
+#content-container h3,
+#content-container h4 {
+  margin: 0.8rem 0 0.5rem 0 !important;
+}
+
+/* Clean horizontal rule styling */
+#content-container hr {
+  margin: 2rem 0 !important;
+  border: none !important;
+  height: 2px !important;
+  background: currentColor !important;
+  opacity: 0.25 !important;
+  border-radius: 1px !important;
+  width: 100% !important;
+}
+
+/* Page title separator - solid and prominent */
+body > hr {
+  margin: 2rem 0 !important;
+  border: none !important;
+  height: 3px !important;
+  border-radius: 1.5px !important;
+  width: 100% !important;
+  background: currentColor !important;
+}
+
+/* Theme-specific colors - solid colors */
+html[data-bs-theme="light"] body > hr {
+  background: rgba(0, 0, 0, 0.2) !important;
+}
+
+html[data-bs-theme="dark"] body > hr {
+  background: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Alternative: dotted style for content separators */
+#content-container hr.dotted {
+  background: none !important;
+  border: none !important;
+  border-top: 2px dotted currentColor !important;
+  opacity: 0.4 !important;
+  height: auto !important;
+}
+
+/* Modern shadow-based separator (GitHub-style) */
+#content-container hr.shadow,
+body > hr.shadow {
+  border: none !important;
+  height: 1px !important;
+  background: currentColor !important;
+  opacity: 0.15 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+  margin: 1.5rem 0 !important;
+}
+
+html[data-bs-theme="dark"] #content-container hr.shadow,
+html[data-bs-theme="dark"] body > hr.shadow {
+  box-shadow: 0 1px 3px rgba(255, 255, 255, 0.05) !important;
+}
+
 /* Math inline display */
 .math {
   padding: 2px 4px;
@@ -134,7 +197,7 @@
   #content-container h2,
   #content-container h3,
   #content-container h4 {
-    margin: 1.5rem 0 1rem 0 !important;
+    margin: 0.8rem 0 0.5rem 0 !important;
   }
   
   #content-container p {
