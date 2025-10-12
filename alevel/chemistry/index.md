@@ -132,9 +132,48 @@ $$A_r = \frac{\sum(\text{isotope mass} \times \text{relative abundance})}{\sum\t
 - **Successive Ionisation Energies**: Energy required to remove subsequent electrons
 
 ### 4.2 Factors Affecting Ionisation Energy
-1. **Distance from nucleus** - further = easier to remove
-2. **Nuclear charge** - more protons = harder to remove
-3. **Shielding** - more inner shells = easier to remove
+
+Three main factors determine the value of ionisation energy:
+
+#### 1. Atomic Radius (Distance from Nucleus)
+- **Effect**: As distance from nucleus increases, ionisation energy decreases
+- Greater distance = weaker electrostatic attraction = easier to remove electron
+
+#### 2. Nuclear Charge (Number of Protons)
+- **Effect**: As nuclear charge increases, ionisation energy increases
+- **Explanation**: More protons in nucleus = stronger positive charge  
+  Stronger attraction to electrons = harder to remove electrons
+- **Example**:  
+  - Hydrogen (1 proton): 1st IE = 1310 kJ/mol  
+  - Helium (2 protons): 1st IE = 2370 kJ/mol
+
+#### 3. Shielding Effect (Electron Repulsion)
+- **Effect**: As shielding increases, ionisation energy decreases
+- **Explanation**: Inner shell electrons repel outer shell electrons  
+  This reduces the effective nuclear charge experienced by outer electrons
+- **Shielding order**: s > p > d > f (s orbitals provide most effective shielding)
+
+#### Comparative Analysis:
+
+| Element | Electronic Configuration | 1st IE (kJ/mol) | Dominant Factor |
+|---------|--------------------------|-----------------|-----------------|
+| **Li** | 1s² 2s¹ | 519 | High shielding from 1s² electrons |
+| **Be** | 1s² 2s² | 900 | Increased nuclear charge, no extra shielding |
+| **B** | 1s² 2s² 2p¹ | 799 | Electron in higher energy p orbital |
+| **C** | 1s² 2s² 2p² | 1086 | Increased nuclear charge, unpaired electrons |
+| **Na** | [Ne] 3s¹ | 496 | Increased distance + more shielding |
+| **Mg** | [Ne] 3s² | 738 | Increased nuclear charge |
+
+#### Visual Summary:
+
+```
+HIGH IONISATION ENERGY              LOW IONISATION ENERGY
+     ↓                                       ↓
+Small atom                            Large atom
+High nuclear charge                   Low nuclear charge  
+Minimal shielding                     Extensive shielding
+Close to nucleus                      Far from nucleus
+```
 
 ### 4.3 Trends in Period 3
 
