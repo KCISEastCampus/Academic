@@ -15,9 +15,11 @@ alevel:
     color: success
   - id: asfurthermathematics
     name: AS Further Math
-    icon: "📗"
-    path: /alevel/asfm/
-    color: success
+    # icon: "📗"
+    icon: "🔃"
+    # path: /alevel/asfm/
+    path: "javascript:engUnderReview()"
+    color: secondary
   - id: chemistry
     name: AS Chemistry
     icon: "📗"
@@ -49,8 +51,8 @@ igcse:
     path: /igcse/biology/
     color: primary
   
-  - id: esl
-    name: IG ESL
-    icon: "🚧"
-    path: "javascript:engUnderConstruction()"
-    color: secondary
+  # - id: esl
+  #   name: IG ESL
+  #   icon: "🚧"
+  #   path: "javascript:engUnderConstruction()"
+  #   color: secondary
