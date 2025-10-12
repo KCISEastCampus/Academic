@@ -13,3 +13,11 @@ function engUnderConstruction() {
 function engPlaningConstruction() {
   alert("The content is being planned and constructed. If you are willing to provide help or ideas, please send an email to report@kcisec.site.")
 }
+
+function engNotAbletoAccess() {
+  alert("The content is temporarily inaccessible due to maintenance. Thank you for your understanding and support!")
+}
+
+function engUnderReview() {
+  alert("The content is under review and access is temporarily suspended. Thank you for your understanding and support!")
+}

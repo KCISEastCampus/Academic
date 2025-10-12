@@ -164,7 +164,7 @@ Three main factors determine the value of ionisation energy:
 | **Na** | [Ne] 3s¹ | 496 | Increased distance + more shielding |
 | **Mg** | [Ne] 3s² | 738 | Increased nuclear charge |
 
-#### Visual Summary:
+#### Visual Summary 97=
 
 ```
 HIGH IONISATION ENERGY              LOW IONISATION ENERGY
