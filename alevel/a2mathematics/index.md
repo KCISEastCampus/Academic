@@ -156,9 +156,11 @@ Combinations of:
 - $$\frac{d}{dx}\left[\frac{f(x)}{g(x)}\right] = \frac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}$$
 
 **Example**: Differentiate $$\frac{2x + 1}{3x - 2}$$
-- $$f(x) = 2x + 1$$, $$f'(x) = 2$$
-- $$g(x) = 3x - 2$$, $$g'(x) = 3$$
-- Derivative: $$\frac{2(3x - 2) - (2x + 1)3}{(3x - 2)^2} = \frac{6x - 4 - 6x - 3}{(3x - 2)^2} = \frac{-7}{(3x - 2)^2}$$
+- $f(x) = 2x + 1$, $f'(x) = 2$
+- $g(x) = 3x - 2$, $g'(x) = 3$
+- Derivative: 
+
+$$\frac{2(3x - 2) - (2x + 1)3}{(3x - 2)^2} = \frac{6x - 4 - 6x - 3}{(3x - 2)^2} = \frac{-7}{(3x - 2)^2}$$
 
 ### Chain Rule
 - $$\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx}$$
@@ -215,10 +217,10 @@ Combinations of:
 
 | Rule | Formula | When to Use |
 |------|---------|-------------|
-| Product | $\(\frac{d}{dx}[uv] = u'v + uv'\)$ | Two functions multiplied |
-| Quotient | $\(\frac{d}{dx}[\frac{u}{v}] = \frac{u'v - uv'}{v^2}\)$ | One function divided by another |
-| Chain | $\(\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx}\)$ | Composite functions |
-| Implicit | Differentiate both sides, include $\(\frac{dy}{dx}\)$ | Equations not in $\(y = f(x)\)$ form |
+| Product | $(uv)' = u'v + uv'$ | Two functions multiplied |
+| Quotient | $\left(\frac{u}{v}\right)' = \frac{u'v - uv'}{v^2}$ | One function divided by another |
+| Chain | $\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx}$ | Composite functions |
+| Implicit | Differentiate both sides, include $\frac{dy}{dx}$ | Equations not in $y = f(x)$ form |
 
 ---
 
@@ -262,20 +264,23 @@ Based on the product rule: $$\int u dv = uv - \int v du$$
 
 **LIATE rule** (priority for choosing u): Logarithmic, Inverse trigonometric, Algebraic, Trigonometric, Exponential
 
-**Example 1:** $$\int xe^{2x} dx$$
-- Let $$u = x$$, $$dv = e^{2x} dx$$
-- Then $$du = dx$$, $$v = \frac{1}{2}e^{2x}$$
-- $$\int xe^{2x} dx = \frac{1}{2}xe^{2x} - \int \frac{1}{2}e^{2x} dx = \frac{1}{2}xe^{2x} - \frac{1}{4}e^{2x} + c$$
+**Example 1:** $\int xe^{2x} dx$
+- Let $u = x$, $dv = e^{2x} dx$
+- Then $du = dx$, $v = \frac{1}{2}e^{2x}$
 
-**Example 2:** $$\int \ln x dx$$
-- Let $$u = \ln x$$, $$dv = dx$$
-- Then $$du = \frac{1}{x} dx$$, $$v = x$$
-- $$\int \ln x dx = x\ln x - \int x \cdot \frac{1}{x} dx = x\ln x - x + c$$
+$$\int xe^{2x} dx = \frac{1}{2}xe^{2x} - \int \frac{1}{2}e^{2x} dx = \frac{1}{2}xe^{2x} - \frac{1}{4}e^{2x} + c$$
 
-**Example 3:** $$\int x\sin 3x dx$$
-- Let $$u = x$$, $$dv = \sin 3x dx$$
-- Then $$du = dx$$, $$v = -\frac{1}{3}\cos 3x$$
-- $$\int x\sin 3x dx = -\frac{1}{3}x\cos 3x + \int \frac{1}{3}\cos 3x dx = -\frac{1}{3}x\cos 3x + \frac{1}{9}\sin 3x + c$$
+**Example 2:** $\int \ln x dx$
+- Let $u = \ln x$, $dv = dx$
+- Then $du = \frac{1}{x} dx$, $v = x$
+
+$$\int \ln x dx = x\ln x - \int x \cdot \frac{1}{x} dx = x\ln x - x + c$$
+
+**Example 3:** $\int x\sin 3x dx$
+- Let $u = x$, $dv = \sin 3x dx$
+- Then $du = dx$, $v = -\frac{1}{3}\cos 3x$
+
+$$\int x\sin 3x dx = -\frac{1}{3}x\cos 3x + \int \frac{1}{3}\cos 3x dx = -\frac{1}{3}x\cos 3x + \frac{1}{9}\sin 3x + c$$
 
 ### Special Forms
 
@@ -307,15 +312,17 @@ Then decompose the remainder into partial fractions and integrate.
 #### About the x-axis:
 $$V = \int_a^b \pi y^2 dx$$
 
-**Example:** Find volume when $$y = \sqrt{x}$$ from x = 1 to x = 4 is rotated about x-axis
-- $$V = \int_1^4 \pi (\sqrt{x})^2 dx = \pi \int_1^4 x dx = \pi \left[\frac{1}{2}x^2\right]_1^4 = \pi \left(8 - \frac{1}{2}\right) = \frac{15\pi}{2}$$
+**Example:** Find volume when $y = \sqrt{x}$ from x = 1 to x = 4 is rotated about x-axis
+
+$$V = \int_1^4 \pi (\sqrt{x})^2 dx = \pi \int_1^4 x dx = \pi \left[\frac{1}{2}x^2\right]_1^4 = \pi \left(8 - \frac{1}{2}\right) = \frac{15\pi}{2}$$
 
 #### About the y-axis:
 $$V = \int_c^d \pi x^2 dy$$
 
-**Example:** Find volume when $$y = x^2$$ from y = 0 to y = 4 is rotated about y-axis
-- $$x = \sqrt{y}$$
-- $$V = \int_0^4 \pi (\sqrt{y})^2 dy = \pi \int_0^4 y dy = \pi \left[\frac{1}{2}y^2\right]_0^4 = 8\pi$$
+**Example:** Find volume when $y = x^2$ from y = 0 to y = 4 is rotated about y-axis
+- $x = \sqrt{y}$
+
+$$V = \int_0^4 \pi (\sqrt{y})^2 dy = \pi \int_0^4 y dy = \pi \left[\frac{1}{2}y^2\right]_0^4 = 8\pi$$
 
 ### Definite Integration with Applications
 
@@ -331,9 +338,9 @@ $$A = \int_a^b [f(x) - g(x)] dx$$ where $$f(x) \geq g(x)$$
 
 | Method | Formula | When to Use |
 |--------|---------|-------------|
-| Substitution | $\(\int f(g(x))g'(x)dx = \int f(u)du\)$ | Composite functions |
-| By Parts | $\(\int udv = uv - \int vdu\)$ | Product of functions |
-| Partial Fractions | Decompose $\(\frac{P(x)}{Q(x)}\)$  | Rational functions |
+| Substitution | $\int f(g(x))g'(x)dx = \int f(u)du$ | Composite functions |
+| By Parts | $\int udv = uv - \int vdu$ | Product of functions |
+| Partial Fractions | Decompose $\frac{P(x)}{Q(x)}$ | Rational functions |
 
 <!-- ---
 

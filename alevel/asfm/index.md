@@ -44,9 +44,9 @@ subject: asfm
 
 **1. Finding Asymptotes:**
 - **Vertical asymptotes**: Set denominator = 0
-   - For $y = \frac{x+2}{x-3}$, vertical asymptote at $x = 3$
+   - For $$y = \frac{x+2}{x-3}$$, vertical asymptote at $x = 3$
 - **Horizontal asymptotes**: Compare degrees
-  - If degree(numerator) < degree(denominator): $$y = 0$$
+  - If degree(numerator) < degree(denominator): $y = 0$
   - If degrees equal: $$y = \frac{\text{leading coefficient of numerator}}{\text{leading coefficient of denominator}}$$
 
 **2. Finding Intercepts:**
@@ -54,48 +54,55 @@ subject: asfm
 - **y-intercepts**: Set x = 0
 
 **3. Stationary Points (Without Calculus):**
-For rational function $y = \frac{P(x)}{Q(x)}$:
-- Set $$y = k$$ ⇒ $$P(x) = kQ(x)$$
-- Rearrange to quadratic: $$Ax^2 + Bx + C = 0$$
-- Use discriminant: $$B^2 - 4AC ≥ 0$$ for real solutions
+For rational function $$y = \frac{P(x)}{Q(x)}$$:
+- Set $y = k$ ⇒ $P(x) = kQ(x)$
+- Rearrange to quadratic: $Ax^2 + Bx + C = 0$
+- Use discriminant: $B^2 - 4AC ≥ 0$ for real solutions
 - Solve for k-range to find stationary points
 
 **Example with Detailed Working:**
-For $y = \frac{x^2 + 2}{x^2 - 4x}$:
+For $$y = \frac{x^2 + 2}{x^2 - 4x}$$:
 
-1. **Vertical asymptote**: $$x^2 - 4x = 0$$ ⇒ $$x(x-4) = 0$$ ⇒ $$x = 0, 4$$
+1. **Vertical asymptote**: $x^2 - 4x = 0$ ⇒ $x(x-4) = 0$ ⇒ $x = 0, 4$
 2. **Horizontal asymptote**: Degrees equal ⇒ $$y = \frac{1}{1} = 1$$
-3. **Stationary points**: Set $$y = k$$
-   $$x^2 + 2 = k(x^2 - 4x)$$
-   $$x^2 + 2 = kx^2 - 4kx$$
-   $$(1-k)x^2 + 4kx + 2 = 0$$
-   
-   Discriminant: $$(4k)^2 - 4(1-k)(2) ≥ 0$$
-   $$16k^2 - 8(1-k) ≥ 0$$
-   $$16k^2 - 8 + 8k ≥ 0$$
-   $$16k^2 + 8k - 8 ≥ 0$$
-   $$2k^2 + k - 1 ≥ 0$$
-   $$(2k-1)(k+1) ≥ 0$$ ⇒ $$k ≤ -1$$ or $$k ≥ \frac{1}{2}$$
+3. **Stationary points**: Set $y = k$
 
-   Stationary points occur at boundaries: $$(1, -1)$$ and $$(-2, \frac{1}{2})$$
+$$x^2 + 2 = k(x^2 - 4x)$$
+$$x^2 + 2 = kx^2 - 4kx$$
+$$(1-k)x^2 + 4kx + 2 = 0$$
+
+   Discriminant: $(4k)^2 - 4(1-k)(2) ≥ 0$
+
+$$16k^2 - 8(1-k) ≥ 0$$
+$$16k^2 - 8 + 8k ≥ 0$$
+$$16k^2 + 8k - 8 ≥ 0$$
+$$2k^2 + k - 1 ≥ 0$$
+$$(2k-1)(k+1) ≥ 0$$
+
+   Therefore: $k ≤ -1$ or $k ≥ \frac{1}{2}$
+
+   Stationary points occur at boundaries: $(1, -1)$ and $(-2, \frac{1}{2})$
 
 #### 1.2 Conic Sections - Deep Understanding
 
-**Parabola**: $$y^2 = 4ax$$
-- Focus: $$(a, 0)$$
-- Directrix: $$x = -a$$
+**Parabola**: $y^2 = 4ax$
+- Focus: $(a, 0)$
+- Directrix: $x = -a$
 - All points equidistant from focus and directrix
 
-**Ellipse**: $$\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$$
-- Major axis length: $$2a$$
-- Minor axis length: $$2b$$
-- Foci: $$(±c, 0)$$ where $$c^2 = a^2 - b^2$$
+**Ellipse**: 
+$$\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$$
+- Major axis length: $2a$
+- Minor axis length: $2b$
+- Foci: $(±c, 0)$ where $c^2 = a^2 - b^2$
 
-**Hyperbola**: $$\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1$$
-- Asymptotes: $$y = ±\frac{b}{a}x$$
-- Foci: $$(±c, 0)$$ where $$c^2 = a^2 + b^2$$
+**Hyperbola**: 
+$$\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1$$
+- Asymptotes: $y = ±\frac{b}{a}x$
+- Foci: $(±c, 0)$ where $c^2 = a^2 + b^2$
 
-**Rectangular Hyperbola**: $$xy = c^2$$
+**Rectangular Hyperbola**: 
+$$xy = c^2$$
 - Asymptotes: $x = 0$, $y = 0$
 - Rotated 45° from standard hyperbola
 
