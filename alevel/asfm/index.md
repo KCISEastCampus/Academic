@@ -125,6 +125,8 @@ Find locus of points equidistant from $$(2, 3)$$ and line $$x = 4$$
 ### 3. Complex Numbers (FP1.3)
 #### 3.1 What are Complex Numbers?
 
+(Tips: Real Part function and Imaginary Part function looks like $$ \Re(z) $$ and $$ \Im(z) $$ in computer respectively.)
+
 **Foundation Concept**: $$\sqrt{-1} = i$$ where $$i^2 = -1$$
 
 **Standard Form**: $$z = x + iy$$
@@ -168,8 +170,6 @@ To divide $$\frac{a + bi}{c + di}$$:
 - $$z + z^* = 2\Re(z)$$
 - $$z - z^* = 2i\Im(z)$$
 - $zz^* = \lvert z\rvert^2 = x^2 + y^2$
-
-Tips: Real Part function and Imaginary Part function looks like $$ \Re(z) $$ and $$ \Im(z) $$ in computer respectively.
 
 #### 3.5 Argand Diagram and Loci
 
