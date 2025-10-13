@@ -211,14 +211,209 @@ Combinations of:
 - Finding tangents and normals for curves defined implicitly or parametrically
 - Equations of tangents at general points
 
----
-
 ## Key Differentiation Rules Summary
 
 | Rule | Formula | When to Use |
 |------|---------|-------------|
-| Product | $$\frac{d}{dx}[uv] = u'v + uv'$$ | Two functions multiplied |
-| Quotient | $$\frac{d}{dx}[\frac{u}{v}] = \frac{u'v - uv'}{v^2}$$ | One function divided by another |
-| Chain | $$\frac{dy}{dx} = \frac{dy}{du}\cdot\frac{du}{dx}$$ | Composite functions |
-| Implicit | Differentiate both sides, include $$\frac{dy}{dx}$$ | Equations not in y = f(x) form |
+| Product | $\(\frac{d}{dx}[uv] = u'v + uv'\)$ | Two functions multiplied |
+| Quotient | $\(\frac{d}{dx}[\frac{u}{v}] = \frac{u'v - uv'}{v^2}\)$ | One function divided by another |
+| Chain | $\(\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx}\)$ | Composite functions |
+| Implicit | Differentiate both sides, include $\(\frac{dy}{dx}\)$ | Equations not in $\(y = f(x)\)$ form |
 
+---
+
+## P2.7: Integration
+
+### Basic Integration
+
+| Function | Integral |
+|----------|----------|
+| $e^{kx}$ | $\frac{1}{k}e^{kx} + c$ |
+| $\frac{1}{x}$ | $\ln\lvert x\rvert + c \quad (x \neq 0)$ |
+| $\sin kx$ | $-\frac{1}{k}\cos kx + c$ |
+| $\cos kx$ | $\frac{1}{k}\sin kx + c$ |
+| $\tan kx$ | $\frac{1}{k}\ln\lvert\sec kx\rvert + c$ |
+
+### Integration by Inspection
+Recognizing derivatives and applying reverse chain rule:
+
+**Examples:**
+- $$\int e^{-3x} dx = -\frac{1}{3}e^{-3x} + c$$
+- $$\int \sin 4x dx = -\frac{1}{4}\cos 4x + c$$
+- $$\int \frac{1}{\sqrt{x}} dx = \int x^{-1/2} dx = 2\sqrt{x} + c$$
+
+### Integration by Substitution
+Used when you can spot a function and its derivative:
+
+**General form:** $$\int f(g(x))g'(x) dx = \int f(u) du$$ where $$u = g(x)$$
+
+**Example 1:** $$\int x(2 + x)^6 dx$$
+- Let $$u = 2 + x$$, then $$du = dx$$ and $$x = u - 2$$
+- $$\int (u - 2)u^6 du = \int (u^7 - 2u^6) du = \frac{1}{8}u^8 - \frac{2}{7}u^7 + c$$
+- $$= \frac{1}{8}(2 + x)^8 - \frac{2}{7}(2 + x)^7 + c$$
+
+**Example 2:** $$\int \frac{x}{\sqrt{x - 3}} dx$$
+- Let $$u = x - 3$$, then $$du = dx$$ and $$x = u + 3$$
+- $$\int \frac{u + 3}{\sqrt{u}} du = \int (u^{\frac{1}{2}} + 3u^{-\frac{1}{2}}) du = \frac{2}{3}u^{\frac{3}{2}} + 6u^{\frac{1}{2}} + c$$
+- $$= \frac{2}{3}(x - 3)^{\frac{3}{2}} + 6(x - 3)^{\frac{1}{2}} + c$$
+
+### Integration by Parts
+Based on the product rule: $$\int u dv = uv - \int v du$$
+
+**LIATE rule** (priority for choosing u): Logarithmic, Inverse trigonometric, Algebraic, Trigonometric, Exponential
+
+**Example 1:** $$\int xe^{2x} dx$$
+- Let $$u = x$$, $$dv = e^{2x} dx$$
+- Then $$du = dx$$, $$v = \frac{1}{2}e^{2x}$$
+- $$\int xe^{2x} dx = \frac{1}{2}xe^{2x} - \int \frac{1}{2}e^{2x} dx = \frac{1}{2}xe^{2x} - \frac{1}{4}e^{2x} + c$$
+
+**Example 2:** $$\int \ln x dx$$
+- Let $$u = \ln x$$, $$dv = dx$$
+- Then $$du = \frac{1}{x} dx$$, $$v = x$$
+- $$\int \ln x dx = x\ln x - \int x \cdot \frac{1}{x} dx = x\ln x - x + c$$
+
+**Example 3:** $$\int x\sin 3x dx$$
+- Let $$u = x$$, $$dv = \sin 3x dx$$
+- Then $$du = dx$$, $$v = -\frac{1}{3}\cos 3x$$
+- $$\int x\sin 3x dx = -\frac{1}{3}x\cos 3x + \int \frac{1}{3}\cos 3x dx = -\frac{1}{3}x\cos 3x + \frac{1}{9}\sin 3x + c$$
+
+### Special Forms
+
+$$\int \frac{f'(x)}{f(x)} dx = \ln \lvert f(x) \rvert + c$$
+
+**Examples:**
+- $\int \frac{2x}{x^2 + 1} dx = \ln\lvert x^2 + 1 \rvert + c$
+- $\int \tan x dx = \int \frac{\sin x}{\cos x} dx = -\ln\lvert \cos x \rvert + c$
+
+### Integration Using Partial Fractions
+For rational functions where denominator can be factored:
+
+**Example 1:** $$\int \frac{1 - 4x}{(3x - 4)(x + 3)^2} dx$$
+
+First decompose into partial fractions:
+$$\frac{1 - 4x}{(3x - 4)(x + 3)^2} = \frac{A}{3x - 4} + \frac{B}{x + 3} + \frac{C}{(x + 3)^2}$$
+
+Solve for A, B, C, then integrate each term separately.
+
+**Example 2:** $$\int \frac{x^2}{(x + 5)(x - 3)} dx$$
+
+Since degree of numerator ≥ degree of denominator, perform polynomial division first:
+$$\frac{x^2}{(x + 5)(x - 3)} = 1 + \frac{-2x + 15}{x^2 + 2x - 15}$$
+
+Then decompose the remainder into partial fractions and integrate.
+
+### Volumes of Revolution
+
+#### About the x-axis:
+$$V = \int_a^b \pi y^2 dx$$
+
+**Example:** Find volume when $$y = \sqrt{x}$$ from x = 1 to x = 4 is rotated about x-axis
+- $$V = \int_1^4 \pi (\sqrt{x})^2 dx = \pi \int_1^4 x dx = \pi \left[\frac{1}{2}x^2\right]_1^4 = \pi \left(8 - \frac{1}{2}\right) = \frac{15\pi}{2}$$
+
+#### About the y-axis:
+$$V = \int_c^d \pi x^2 dy$$
+
+**Example:** Find volume when $$y = x^2$$ from y = 0 to y = 4 is rotated about y-axis
+- $$x = \sqrt{y}$$
+- $$V = \int_0^4 \pi (\sqrt{y})^2 dy = \pi \int_0^4 y dy = \pi \left[\frac{1}{2}y^2\right]_0^4 = 8\pi$$
+
+### Definite Integration with Applications
+
+#### Area between curve and x-axis:
+$$A = \int_a^b y dx$$
+
+**Note:** If curve goes below x-axis, the integral gives negative value. For total area, take absolute values.
+
+#### Area between two curves:
+$$A = \int_a^b [f(x) - g(x)] dx$$ where $$f(x) \geq g(x)$$
+
+### Integration Methods
+
+| Method | Formula | When to Use |
+|--------|---------|-------------|
+| Substitution | $\(\int f(g(x))g'(x)dx = \int f(u)du\)$ | Composite functions |
+| By Parts | $\(\int udv = uv - \int vdu\)$ | Product of functions |
+| Partial Fractions | Decompose $\(\frac{P(x)}{Q(x)}\)$  | Rational functions |
+
+<!-- ---
+
+## P2.8 Differential Equations
+
+### Formation and Solution of First Order Differential Equations
+
+**Separable Variables:** Equations of the form $$\frac{dy}{dx} = f(x)g(y)$$
+
+**Solution method:**
+1. Separate variables: $$\frac{1}{g(y)} dy = f(x) dx$$
+2. Integrate both sides: $$\int \frac{1}{g(y)} dy = \int f(x) dx$$
+3. Solve for $y$ if possible
+
+**Example 1:** $$\frac{dy}{dx} = ky$$ (Exponential growth/decay)
+- $$\frac{1}{y} dy = k dx$$
+- $$\int \frac{1}{y} dy = \int k dx$$
+- $$\ln|y| = kx + c$$
+- $$y = Ae^{kx}$$ where $$A = e^c$$
+
+**Example 2:** $$\frac{dy}{dx} = x(1 + y^2)$$
+- $$\frac{1}{1 + y^2} dy = x dx$$
+- $$\int \frac{1}{1 + y^2} dy = \int x dx$$
+- $$\tan^{-1} y = \frac{1}{2}x^2 + c$$
+- $$y = \tan\left(\frac{1}{2}x^2 + c\right)$$ -->
+
+<!-- ---
+
+## P2.9 Numerical Methods
+
+### Location of Roots
+If $$f(x)$$ is continuous on $$[a, b]$$ and $$f(a)$$, $$f(b)$$ have opposite signs, then there exists at least one root in $$(a, b)$$.
+
+### Iterative Methods
+Recurrence relations of the form $$x_{n+1} = f(x_n)$$
+
+**Example:** Solve $$x^3 - x - 1 = 0$$
+- Rearrange to $$x = \sqrt[3]{x + 1}$$
+- Use $$x_{n+1} = \sqrt[3]{x_n + 1}$$
+- Start with $$x_0 = 1$$:
+  - $$x_1 = \sqrt[3]{1 + 1} = \sqrt[3]{2} \approx 1.2599$$
+  - $$x_2 = \sqrt[3]{1.2599 + 1} = \sqrt[3]{2.2599} \approx 1.3123$$
+  - Continue until convergence
+
+### Numerical Integration
+
+**Mid-ordinate Rule:**
+$$\int_a^b f(x) dx \approx h[f(x_{1/2}) + f(x_{3/2}) + \cdots + f(x_{n-1/2})]$$
+where $$h = \frac{b - a}{n}$$ and $$x_{i-1/2} = a + (i - \frac{1}{2})h$$
+
+**Simpson's Rule:**
+$$\int_a^b f(x) dx \approx \frac{h}{3}[f(x_0) + f(x_n) + 4(f(x_1) + f(x_3) + \cdots) + 2(f(x_2) + f(x_4) + \cdots)]$$
+where $$h = \frac{b - a}{n}$$ and n is even -->
+
+<!-- ---
+
+## P2.10 Vectors
+
+### Basic Operations
+- **Magnitude:** $\lvert \vec{a} \rvert = \sqrt{x^2 + y^2 + z^2}$
+- **Addition:** $\vec{a} + \vec{b} = (a_1 + b_1, a_2 + b_2, a_3 + b_3)$
+- **Scalar multiplication:** $k\vec{a} = (ka_1, ka_2, ka_3)$
+
+### Position Vectors and Lines
+- **Position vector:** $\vec{r} = x\vec{i} + y\vec{j} + z\vec{k}$
+- **Vector equation of line:** $\vec{r} = \vec{a} + \lambda\vec{b}$
+  where $$\vec{a}$$ is a point on the line and $$\vec{b}$$ is the direction vector
+
+**Example:** Line through (1, 0, 2) with direction (-1, 2, 3)
+$$\begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} 1 \\ 0 \\ 2 \end{bmatrix} + \lambda \begin{bmatrix} -1 \\ 2 \\ 3 \end{bmatrix}$$
+
+### Scalar Product
+$$\vec{a} \cdot \vec{b} = |\vec{a}||\vec{b}|\cos\theta = a_1b_1 + a_2b_2 + a_3b_3$$
+
+**Angle between vectors:**
+$$\cos\theta = \frac{\vec{a} \cdot \vec{b}}{|\vec{a}||\vec{b}|}$$
+
+**Perpendicular vectors:** $$\vec{a} \cdot \vec{b} = 0$$
+
+### Applications
+- Finding angle between two lines
+- Finding foot of perpendicular from point to line
+- Calculating perpendicular distance from point to line -->
