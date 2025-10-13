@@ -329,7 +329,7 @@ $$\frac{dP}{dt} = \frac{dP}{dV} × \frac{dV}{dt} = 3kV^2 × \frac{dV}{dt}$$
 **Example**: For $$y = 20x^{-2}$$, estimate change in y when x increases from 5 to 5.1
 
 1. $$\frac{dy}{dx} = -40x^{-3} = -\frac{40}{x^3}$$
-2. At $$x = 5: $$\frac{dy}{dx} = -\frac{40}{125} = -0.32$$
+2. At $x = 5$: $\frac{dy}{dx} = -\frac{40}{125} = -0.32$
 3. $$δx = 0.1$$
 4. $$δy ≈ -0.32 × 0.1 = -0.032$$
 
