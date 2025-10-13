@@ -312,14 +312,14 @@ Then decompose the remainder into partial fractions and integrate.
 #### About the x-axis:
 $$V = \int_a^b \pi y^2 dx$$
 
-**Example:** Find volume when $y = \sqrt{x}$ from x = 1 to x = 4 is rotated about x-axis
+**Example:** Find volume when $y = \sqrt{x}$ from $x = 1$ to $x = 4$ is rotated about x-axis
 
 $$V = \int_1^4 \pi (\sqrt{x})^2 dx = \pi \int_1^4 x dx = \pi \left[\frac{1}{2}x^2\right]_1^4 = \pi \left(8 - \frac{1}{2}\right) = \frac{15\pi}{2}$$
 
 #### About the y-axis:
 $$V = \int_c^d \pi x^2 dy$$
 
-**Example:** Find volume when $y = x^2$ from y = 0 to y = 4 is rotated about y-axis
+**Example:** Find volume when $y = x^2$ from $y = 0$ to $y = 4$ is rotated about y-axis
 - $x = \sqrt{y}$
 
 $$V = \int_0^4 \pi (\sqrt{y})^2 dy = \pi \int_0^4 y dy = \pi \left[\frac{1}{2}y^2\right]_0^4 = 8\pi$$
