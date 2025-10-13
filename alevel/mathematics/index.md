@@ -17,7 +17,7 @@ AS Mathematics forms the first part of the A-Level Mathematics qualification. Th
 ### Assessment Structure
 
 | Unit | Duration | Marks | Calculator | Weighting |
-          
+|-----|----------|-------|------------|-----------|
 | P1 | 1 hour 30 minutes | 80 marks | Allowed | 50% of AS |
 | PSM1 | 1 hour 30 minutes | 80 marks | Allowed | 50% of AS |
 
