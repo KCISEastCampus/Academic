@@ -15,10 +15,8 @@ alevel:
     color: success
   - id: asfurthermathematics
     name: AS Further Math
-    # icon: "📗"
-    icon: "🔃"
-    # path: /alevel/asfm/
-    path: "javascript:engUnderReview()"
+    icon: "📗"
+    path: /alevel/asfm/
     color: secondary
   - id: chemistry
     name: AS Chemistry
