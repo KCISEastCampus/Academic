@@ -1,4 +1,4 @@
-<script defer src="https://cdn.bootcdn.net/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js" id="MathJax-script">
+<script>
   window.MathJax = {
     startup: {
       ready: () => {
@@ -10,9 +10,10 @@
     },
     tex: {
       inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
       tags: 'ams',
       tagSide: 'right',
-      packages: {'[+]': ['physics']}
+      packages: {'[+]': ['physics', 'mhchem']}
     },
     options: {
       enableMenu: false,
@@ -21,3 +22,4 @@
     }
   };
 </script>
+<script defer src="https://cdn.bootcdn.net/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js" id="MathJax-script"></script>
