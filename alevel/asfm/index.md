@@ -107,23 +107,22 @@ For $$y = \frac{x^2 + 2}{x^2 - 4x}$$:
 
 **Distance Formulas:**
 - Distance between points: $$d = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$$
-- Distance from point to vertical line $$x = a$$: $$|x - a|$$
-- Distance from point to horizontal line $$y = b$$: $$|y - b|$$
+- Distance from point to vertical line $x = a$: $\lvert x - a\rvert$
+- Distance from point to horizontal line $y = b$: $\lvert y - b\rvert$
 
 **Example Problem:**
 Find locus of points equidistant from $$(2, 3)$$ and line $$x = 4$$
 
 1. **Distance to point**: $$\sqrt{(x-2)^2 + (y-3)^2}$$
-2. **Distance to line**: $$|x - 4|$$
-3. **Set equal**: $$\sqrt{(x-2)^2 + (y-3)^2} = |x - 4|$$
+2. **Distance to line**: $\lvert x - 4\rvert$
+3. **Set equal**: $\sqrt{(x-2)^2 + (y-3)^2} = \lvert x - 4\rvert$
 4. **Square both sides**: $$(x-2)^2 + (y-3)^2 = (x-4)^2$$
 5. **Expand**: $$x^2 - 4x + 4 + y^2 - 6y + 9 = x^2 - 8x + 16$$
 6. **Simplify**: $$4x + y^2 - 6y - 3 = 0$$
 
 ---
 
-### 3. Complex Numbers (FP1.3) - Complete Beginner's Guide
-
+### 3. Complex Numbers (FP1.3)
 #### 3.1 What are Complex Numbers?
 
 **Foundation Concept**: $$\sqrt{-1} = i$$ where $$i^2 = -1$$
@@ -154,7 +153,7 @@ To divide $$\frac{a + bi}{c + di}$$:
 **Cartesian Form**: $$z = x + iy$$
 
 **Polar Form**: $$z = r(\cos θ + i\sin θ)$$
-- Modulus: $$r = |z| = \sqrt{x^2 + y^2}$$
+- Modulus: $r = \lvert z\rvert = \sqrt{x^2 + y^2}$
 - Argument: $$θ = \arg(z) = \tan^{-1}(\frac{y}{x})$$ (adjusting for quadrant)
 
 **Conversion Examples**:
@@ -168,17 +167,19 @@ To divide $$\frac{a + bi}{c + di}$$:
 **Properties**:
 - $$z + z^* = 2\Re(z)$$
 - $$z - z^* = 2i\Im(z)$$
-- $$zz^* = |z|^2 = x^2 + y^2$$
+- $zz^* = \lvert z\rvert^2 = x^2 + y^2$
+
+Tips: Real Part function and Imaginary Part function looks like $$ \Re(z) $$ and $$ \Im(z) $$ in computer respectively.
 
 #### 3.5 Argand Diagram and Loci
 
 **Basic Loci**:
 
-1. **Circle**: $$|z - a| = r$$
+1. **Circle**: $\lvert z - a\rvert = r$
    - Center: point representing complex number a
    - Radius: r
 
-2. **Perpendicular Bisector**: $$|z - a| = |z - b|$$
+2. **Perpendicular Bisector**: $\lvert z - a\rvert = \lvert z - b\rvert$
    - Equidistant from points a and b
 
 3. **Ray from point**: $$\arg(z - a) = θ$$
@@ -186,13 +187,13 @@ To divide $$\frac{a + bi}{c + di}$$:
 
 **Example Problems**:
 
-1. $$|z - 2 - i| = 3$$: Circle center (2,1), radius 3
+1. $\lvert z - (2 + i)\rvert = 3$: Circle center (2,1), radius 3
 2. $$\arg(z - 1) = \frac{π}{4}$$: Ray from (1,0) at 45°
-3. $$|z - 3| = |z + 2i|$$: Perpendicular bisector of points (3,0) and (0,-2)
+3. $\lvert z - 3\rvert = \lvert z + 2i\rvert$: Perpendicular bisector of points (3,0) and (0,-2)
 
 ---
 
-### 4. Roots and Coefficients (FP1.4) - Relationship Mastery
+### 4. Roots and Coefficients (FP1.4)
 
 #### 4.1 Fundamental Relationships
 
@@ -200,7 +201,7 @@ For quadratic $$ax^2 + bx + c = 0$$ with roots α, β:
 - Sum of roots: $$α + β = -\frac{b}{a}$$
 - Product of roots: $$αβ = \frac{c}{a}$$
 
-#### 4.2 Advanced Manipulations - Systematic Approach
+#### 4.2 Advanced Manipulations
 
 **Common Expressions**:
 - $$α^2 + β^2 = (α + β)^2 - 2αβ$$
@@ -208,7 +209,7 @@ For quadratic $$ax^2 + bx + c = 0$$ with roots α, β:
 - $$α^4 + β^4 = (α^2 + β^2)^2 - 2(αβ)^2$$
 - $$\frac{1}{α} + \frac{1}{β} = \frac{α + β}{αβ}$$
 
-#### 4.3 Forming New Equations - Step-by-Step Method
+#### 4.3 Forming New Equations
 
 **Process for creating equations with transformed roots**:
 
@@ -224,7 +225,7 @@ For quadratic $$ax^2 + bx + c = 0$$ with roots α, β:
 
 ---
 
-### 5. Series (FP1.5) - Summation Techniques
+### 5. Series (FP1.5)
 
 #### 5.1 Essential Summation Formulas
 
@@ -233,7 +234,7 @@ For quadratic $$ax^2 + bx + c = 0$$ with roots α, β:
 - $$\sum_{r=1}^n r^2 = \frac{n(n+1)(2n+1)}{6}$$
 - $$\sum_{r=1}^n r^3 = \left[\frac{n(n+1)}{2}\right]^2$$
 
-#### 5.2 Method of Differences - Complete Methodology
+#### 5.2 Method of Differences
 
 **Principle**: Express terms as difference of consecutive terms in a sequence
 
@@ -275,13 +276,14 @@ For quadratic $$ax^2 + bx + c = 0$$ with roots α, β:
 #### 6.2 Exact Values - Must Know
 
 **Standard Angles**:
+
 | Angle | sin | cos | tan |
 |-------|-----|-----|-----|
-| 0° | 0 | 1 | 0 |
-| 30° | $$\frac{1}{2}$$ | $$\frac{\sqrt{3}}{2}$$ | $$\frac{1}{\sqrt{3}}$$ |
-| 45° | $$\frac{1}{\sqrt{2}}$$ | $$\frac{1}{\sqrt{2}}$$ | 1 |
-| 60° | $$\frac{\sqrt{3}}{2}$$ | $$\frac{1}{2}$$ | $$\sqrt{3}$$ |
-| 90° | 1 | 0 | ∞ |
+| $0^\circ$ | 0 | 1 | 0 |
+| $30^\circ$ | $\frac{1}{2}$ | $\frac{\sqrt{3}}{2}$ | $\frac{1}{\sqrt{3}}$ |
+| $45^\circ$ | $\frac{1}{\sqrt{2}}$ | $\frac{1}{\sqrt{2}}$ | 1 |
+| $60^\circ$ | $\frac{\sqrt{3}}{2}$ | $\frac{1}{2}$ | $\sqrt{3}$ |
+| $90^\circ$ | 1 | 0 | $\infty$ |
 
 #### 6.3 Worked Examples
 
@@ -300,7 +302,7 @@ For quadratic $$ax^2 + bx + c = 0$$ with roots α, β:
 
 ---
 
-### 7. Calculus (FP1.7) - Fundamental Concepts
+### 7. Calculus (FP1.7)
 
 #### 7.1 First Principles Differentiation
 
@@ -327,9 +329,9 @@ $$\frac{dP}{dt} = \frac{dP}{dV} × \frac{dV}{dt} = 3kV^2 × \frac{dV}{dt}$$
 **Example**: For $$y = 20x^{-2}$$, estimate change in y when x increases from 5 to 5.1
 
 1. $$\frac{dy}{dx} = -40x^{-3} = -\frac{40}{x^3}$$
-2. At x = 5: $$\frac{dy}{dx} = -\frac{40}{125} = -0.32$$
-3. δx = 0.1
-4. δy ≈ -0.32 × 0.1 = -0.032
+2. At $$x = 5: $$\frac{dy}{dx} = -\frac{40}{125} = -0.32$$
+3. $$δx = 0.1$$
+4. $$δy ≈ -0.32 × 0.1 = -0.032$$
 
 #### 7.4 Improper Integrals
 
@@ -340,87 +342,3 @@ $$\frac{dP}{dt} = \frac{dP}{dV} × \frac{dV}{dt} = 3kV^2 × \frac{dV}{dt}$$
 **Examples**:
 1. $$\int_0^4 \frac{1}{\sqrt{x}}dx = \lim_{a \to 0^+} \int_a^4 x^{-\frac{1}{2}}dx = \lim_{a \to 0^+} [2\sqrt{x}]_a^4 = 4$$
 2. $$\int_4^∞ x^{-\frac{3}{2}}dx = \lim_{b \to ∞} [-\frac{2}{\sqrt{x}}]_4^b = \frac{1}{2}$$
-
----
-
-## 📝 Exam Strategy and Common Mistakes
-
-### Time Management
-- 80 marks in 90 minutes = 1.125 minutes per mark
-- Allocate time proportionally to marks
-- Leave 10 minutes for checking
-
-### Common Pitfalls and Solutions
-
-1. **Complex Numbers**:
-   - Mistake: Forgetting i² = -1 in multiplication
-   - Solution: Write out all steps carefully
-
-2. **Series**:
-   - Mistake: Incorrect application of method of differences
-   - Solution: Write first 3 and last 3 terms to verify pattern
-
-3. **Rational Functions**:
-   - Mistake: Misidentifying asymptotes
-   - Solution: Always check degrees of numerator and denominator
-
-4. **Trigonometry**:
-   - Mistake: Using wrong general solution formula
-   - Solution: Memorize the three standard forms
-
----
-
-## 🔧 Essential Formula Sheet
-
-### Complex Numbers
-- $$|z| = \sqrt{x^2 + y^2}$$
-- $$\arg(z) = \tan^{-1}(\frac{y}{x})$$
-- $$z^{-1} = \frac{x - iy}{x^2 + y^2}$$
-- $$(r(\cos θ + i\sin θ))^n = r^n(\cos nθ + i\sin nθ)$$
-
-### Series
-- $$\sum_{r=1}^n r = \frac{n(n+1)}{2}$$
-- $$\sum_{r=1}^n r^2 = \frac{n(n+1)(2n+1)}{6}$$
-- $$\sum_{r=1}^n r^3 = \left[\frac{n(n+1)}{2}\right]^2$$
-
-### Calculus
-- First principles: $$f'(x) = \lim_{h \to 0} \frac{f(x+h)-f(x)}{h}$$
-- Small changes: $$δy ≈ \frac{dy}{dx}δx$$
-- Connected rates: $$\frac{dy}{dt} = \frac{dy}{dx}\frac{dx}{dt}$$
-
----
-
-## 📖 Study Plan for Different Levels
-
-### For Beginners (0-40% current level):
-1. Master complex number operations (2 weeks)
-2. Learn basic summation formulas (1 week)
-3. Practice rational function analysis (2 weeks)
-4. Review coordinate geometry fundamentals (1 week)
-
-### For Intermediate (40-70% current level):
-1. Focus on method of differences (1 week)
-2. Practice forming new equations from roots (1 week)
-3. Work on trigonometric general solutions (1 week)
-4. Review past papers (2 weeks)
-
-### For Advanced (70%+ current level):
-1. Challenge problems in all topics (2 weeks)
-2. Timed past paper practice (2 weeks)
-3. Focus on exam technique (1 week)
-
----
-
-## 🎯 Final Examination Tips
-
-1. **Show All Working**: Method marks can be awarded even with wrong final answer
-2. **Use Calculator Wisely**: Check complex number operations
-3. **Manage Time**: Don't spend more than 1.5 minutes per mark on any question
-4. **Check Units**: Especially in calculus applications
-5. **Review Loci**: Geometric interpretations often provide quick solutions
-
-**Remember**: FP1 builds the foundation for FP2 - mastery here pays dividends later!
-
----
-*Based on OxfordAQA International AS Further Mathematics Specification (9665) Version 5.2*
-```
