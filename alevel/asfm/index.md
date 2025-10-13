@@ -44,7 +44,7 @@ subject: asfm
 
 **1. Finding Asymptotes:**
 - **Vertical asymptotes**: Set denominator = 0
-  - For $$y = \frac{x+2}{x-3}$$, vertical asymptote at $$x = 3$$
+   - For $y = \frac{x+2}{x-3}$, vertical asymptote at $x = 3$
 - **Horizontal asymptotes**: Compare degrees
   - If degree(numerator) < degree(denominator): $$y = 0$$
   - If degrees equal: $$y = \frac{\text{leading coefficient of numerator}}{\text{leading coefficient of denominator}}$$
@@ -54,14 +54,14 @@ subject: asfm
 - **y-intercepts**: Set x = 0
 
 **3. Stationary Points (Without Calculus):**
-For rational function $$y = \frac{P(x)}{Q(x)}$$:
+For rational function $y = \frac{P(x)}{Q(x)}$:
 - Set $$y = k$$ ⇒ $$P(x) = kQ(x)$$
 - Rearrange to quadratic: $$Ax^2 + Bx + C = 0$$
 - Use discriminant: $$B^2 - 4AC ≥ 0$$ for real solutions
 - Solve for k-range to find stationary points
 
 **Example with Detailed Working:**
-For $$y = \frac{x^2 + 2}{x^2 - 4x}$$:
+For $y = \frac{x^2 + 2}{x^2 - 4x}$:
 
 1. **Vertical asymptote**: $$x^2 - 4x = 0$$ ⇒ $$x(x-4) = 0$$ ⇒ $$x = 0, 4$$
 2. **Horizontal asymptote**: Degrees equal ⇒ $$y = \frac{1}{1} = 1$$
@@ -96,7 +96,7 @@ For $$y = \frac{x^2 + 2}{x^2 - 4x}$$:
 - Foci: $$(±c, 0)$$ where $$c^2 = a^2 + b^2$$
 
 **Rectangular Hyperbola**: $$xy = c^2$$
-- Asymptotes: $$x = 0$$, $$y = 0$$
+- Asymptotes: $x = 0$, $y = 0$
 - Rotated 45° from standard hyperbola
 
 ---
@@ -143,7 +143,7 @@ Find locus of points equidistant from $$(2, 3)$$ and line $$x = 4$$
 $$(a + bi)(c + di) = ac + adi + bci + bdi^2 = (ac - bd) + (ad + bc)i$$
 
 **Division** - **CRITICAL METHOD**:
-To divide $$\frac{a + bi}{c + di}$$:
+To divide $\frac{a + bi}{c + di}$:
 1. Multiply numerator and denominator by conjugate of denominator
 2. Conjugate of $$c + di$$ is $$c - di$$
 3. $$\frac{a + bi}{c + di} × \frac{c - di}{c - di} = \frac{(a + bi)(c - di)}{c^2 + d^2}$$
@@ -159,12 +159,12 @@ To divide $$\frac{a + bi}{c + di}$$:
 - Argument: $$θ = \arg(z) = \tan^{-1}(\frac{y}{x})$$ (adjusting for quadrant)
 
 **Conversion Examples**:
-- Cartesian to Polar: $$3 + 4i$$ ⇒ $$r = \sqrt{9 + 16} = 5$$, $$θ = \tan^{-1}(\frac{4}{3}) ≈ 53.13°$$
-- Polar to Cartesian: $$2(\cos 60° + i\sin 60°) = 2(0.5 + i\frac{\sqrt{3}}{2}) = 1 + i\sqrt{3}$$
+- Cartesian to Polar: $3 + 4i$ ⇒ $r = \sqrt{9 + 16} = 5$, $θ = \tan^{-1}(\frac{4}{3}) ≈ 53.13°$
+- Polar to Cartesian: $2(\cos 60° + i\sin 60°) = 2(0.5 + i\frac{\sqrt{3}}{2}) = 1 + i\sqrt{3}$
 
 #### 3.4 Complex Conjugates
 
-**Definition**: If $$z = x + iy$$, then conjugate $$z^* = x - iy$$
+**Definition**: If $z = x + iy$, then conjugate $z^* = x - iy$
 
 **Properties**:
 - $$z + z^* = 2\Re(z)$$
@@ -188,7 +188,7 @@ To divide $$\frac{a + bi}{c + di}$$:
 **Example Problems**:
 
 1. $\lvert z - (2 + i)\rvert = 3$: Circle center (2,1), radius 3
-2. $$\arg(z - 1) = \frac{π}{4}$$: Ray from (1,0) at 45°
+2. $\arg(z - 1) = \frac{π}{4}$: Ray from (1,0) at 45°
 3. $\lvert z - 3\rvert = \lvert z + 2i\rvert$: Perpendicular bisector of points (3,0) and (0,-2)
 
 ---
@@ -213,7 +213,7 @@ For quadratic $$ax^2 + bx + c = 0$$ with roots α, β:
 
 **Process for creating equations with transformed roots**:
 
-1. **Identify original roots relationship**: $$S = α + β$$, $$P = αβ$$
+1. **Identify original roots relationship**: $S = α + β$, $P = αβ$
 2. **Express new sum and product in terms of S and P**
 3. **Construct new quadratic**: $$x^2 - (\text{new sum})x + (\text{new product}) = 0$$
 
@@ -326,7 +326,7 @@ $$\frac{dP}{dt} = \frac{dP}{dV} × \frac{dV}{dt} = 3kV^2 × \frac{dV}{dt}$$
 
 **Formula**: $$δy ≈ \frac{dy}{dx} × δx$$
 
-**Example**: For $$y = 20x^{-2}$$, estimate change in y when x increases from 5 to 5.1
+**Example**: For $y = 20x^{-2}$, estimate change in y when x increases from 5 to 5.1
 
 1. $$\frac{dy}{dx} = -40x^{-3} = -\frac{40}{x^3}$$
 2. At $x = 5$: $\frac{dy}{dx} = -\frac{40}{125} = -0.32$
