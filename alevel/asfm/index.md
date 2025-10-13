@@ -348,4 +348,4 @@ $$\frac{dP}{dt} = \frac{dP}{dV} × \frac{dV}{dt} = 3kV^2 × \frac{dV}{dt}$$
 
 **Examples**:
 1. $$\int_0^4 \frac{1}{\sqrt{x}}dx = \lim_{a \to 0^+} \int_a^4 x^{-\frac{1}{2}}dx = \lim_{a \to 0^+} [2\sqrt{x}]_a^4 = 4$$
-2. $$\int_4^∞ x^{-\frac{3}{2}}dx = \lim_{b \to ∞} [-\frac{2}{\sqrt{x}}]_4^b = \frac{1}{2}$$
+2. $$\int_4^∞ x^{-\frac{3}{2}}dx = \lim_{b \to ∞} [-\frac{2}{\sqrt{x}}]_4^b = 1$$
