@@ -199,9 +199,9 @@ Combinations of:
 - Therefore: $$\frac{dy}{dx} = \frac{1}{-2} = -\frac{1}{2}$$
 
 ### Implicit Differentiation
-- Differentiate both sides with respect to x
-- Treat y as a function of x
-- Use chain rule for y terms: $$\frac{d}{dx}[f(y)] = f'(y)\frac{dy}{dx}$$
+- Differentiate both sides with respect to $x$
+- Treat $y$ as a function of $x$
+- Use chain rule for $y$ terms: $$\frac{d}{dx}[f(y)] = f'(y)\frac{dy}{dx}$$
 
 ### Parametric Differentiation
 - Given $$x = f(t), y = g(t)$$
