@@ -17,7 +17,7 @@ AS Mathematics forms the first part of the A-Level Mathematics qualification. Th
 ### Assessment Structure
 
 | Unit | Duration | Marks | Calculator | Weighting |
-|------|----------|-------|------------|-----------|
+          
 | P1 | 1 hour 30 minutes | 80 marks | Allowed | 50% of AS |
 | PSM1 | 1 hour 30 minutes | 80 marks | Allowed | 50% of AS |
 
@@ -135,7 +135,7 @@ AS Mathematics forms the first part of the A-Level Mathematics qualification. Th
 - **Geometric Series**:
   - $u_n = ar^{n-1}$
   - $S_n = \frac{a(1 - r^n)}{1 - r}$ ($r \neq 1$)
-  - $$S_\infty = \frac{a}{1 - r} \quad (|r| < 1)$$
+  - $S_\infty = \frac{a}{1 - r} \quad (|r| < 1)$
 - **Binomial Expansion**:
   - $(1 + x)^n = 1 + nx + \frac{n(n-1)}{2!}x^2 + \cdots + x^n$
   - Notation: $n!$, $\binom{n}{r}$
@@ -202,7 +202,7 @@ AS Mathematics forms the first part of the A-Level Mathematics qualification. Th
 
 #### Conditional Probability and Independence
 - **Multiplication Law**:
-  - $$P(A \cap B) = P(A) \times P(B|A) = P(B) \times P(A|B)$$
+  - $P(A \cap B) = P(A) \times P(B|A) = P(B) \times P(A|B)$
   - Independent: $P(A \cap B) = P(A) \times P(B)$
 - **Application**: Direct application of probability laws, frequency tables
 
