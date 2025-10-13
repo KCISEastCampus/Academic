@@ -17,7 +17,7 @@ alevel:
     name: AS Further Math
     icon: "📗"
     path: /alevel/asfm/
-    color: secondary
+    color: success
   - id: chemistry
     name: AS Chemistry
     icon: "📗"
