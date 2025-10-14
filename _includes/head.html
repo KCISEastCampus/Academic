@@ -14,10 +14,10 @@
 <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 
 <!-- Preload critical resources -->
-<link rel="preload" href="/assets/vendorfiles/bootstrap/5.3.3/css/bootstrap.min.css" as="style">
+<link rel="preload" href="/assets/vendor/bootstrap/5.3.3/css/bootstrap.min.css" as="style">
 <link rel="preload" href="/assets/css/style.css" as="style">
 <!-- Preload MathJax for pages that need it -->
-<link rel="preload" href="/assets/vendorfiles/mathjax/3.2.2/tex-chtml.js" as="script">
+<link rel="preload" href="/assets/vendor/mathjax/3.2.2/tex-chtml.js" as="script">
 <!-- Preload critical MathJax fonts to avoid late rendering -->
 <link rel="preload" href="/assets/js/mathjax/fonts/woff-v2/MathJax_Main-Regular.woff" as="font" type="font/woff">
 <link rel="preload" href="/assets/js/mathjax/fonts/woff-v2/MathJax_Math-Italic.woff" as="font" type="font/woff">
@@ -28,7 +28,7 @@
 <link rel="preload" href="/assets/js/mathjax/fonts/woff-v2/MathJax_Zero.woff" as="font" type="font/woff">
 
 <!-- Bootstrap (Local with CDN fallback) -->
-<link href="/assets/vendorfiles/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet"
+<link href="/assets/vendor/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet"
   onload="console.log('Bootstrap CSS loaded locally')"
   onerror="this.href='https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css'; console.log('Bootstrap CSS loaded from BootCDN fallback')"
   crossorigin="anonymous">
@@ -149,7 +149,7 @@
     };
 
     // Primary: Local file
-    script.src = '/assets/vendorfiles/mathjax/3.2.2/tex-chtml.js';
+    script.src = '/assets/vendor/mathjax/3.2.2/tex-chtml.js';
     document.head.appendChild(script);
   };
 </script>
@@ -201,7 +201,7 @@
     };
 
     // Primary: Local file
-    script.src = '/assets/vendorfiles/bootstrap/5.3.3/js/bootstrap.bundle.min.js';
+    script.src = '/assets/vendor/bootstrap/5.3.3/js/bootstrap.bundle.min.js';
     document.head.appendChild(script);
   };
 </script>
