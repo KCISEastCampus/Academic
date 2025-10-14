@@ -14,10 +14,10 @@
 <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 
 <!-- Preload critical resources -->
-<link rel="preload" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" as="style">
+<link rel="preload" href="/assets/vendor/bootstrap/5.3.3/css/bootstrap.min.css" as="style">
 <link rel="preload" href="/assets/css/style.css" as="style">
 <!-- Preload MathJax for pages that need it -->
-<link rel="preload" href="https://cdn.bootcdn.net/ajax/libs/mathjax/3.2.2/es5/tex-chtml.js" as="script" crossorigin>
+<link rel="preload" href="/assets/vendor/mathjax/3.2.2/tex-chtml.js" as="script">
 <!-- Preload critical MathJax fonts to avoid late rendering -->
 <link rel="preload" href="/assets/js/mathjax/fonts/woff-v2/MathJax_Main-Regular.woff" as="font" type="font/woff">
 <link rel="preload" href="/assets/js/mathjax/fonts/woff-v2/MathJax_Math-Italic.woff" as="font" type="font/woff">
@@ -27,8 +27,10 @@
 <link rel="preload" href="/assets/js/mathjax/fonts/woff-v2/MathJax_Size3-Regular.woff" as="font" type="font/woff">
 <link rel="preload" href="/assets/js/mathjax/fonts/woff-v2/MathJax_Zero.woff" as="font" type="font/woff">
 
-<!-- Bootstrap (CDN) - BootCDN 优化中国大陆访问 -->
-<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet"
+<!-- Bootstrap (Local with CDN fallback) -->
+<link href="/assets/vendor/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet"
+  onload="console.log('Bootstrap CSS loaded locally')"
+  onerror="this.href='https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css'; console.log('Bootstrap CSS loaded from BootCDN fallback')"
   crossorigin="anonymous">
 
 <!-- Icons - BootCDN -->
@@ -107,35 +109,47 @@
     script.id = 'MathJax-script';
     script.defer = true;
     script.onload = function() {
-      console.log('MathJax loaded from BootCDN');
+      console.log('MathJax loaded locally');
     };
     script.onerror = function() {
-      console.warn('BootCDN MathJax load failed, trying Staticfile...');
-      // Fallback to Staticfile CDN
+      console.warn('Local MathJax load failed, trying BootCDN...');
+      // Fallback to BootCDN
       const fallbackScript = document.createElement('script');
-      fallbackScript.src = 'https://cdn.staticfile.net/mathjax/3.2.2/es5/tex-chtml.js';
+      fallbackScript.src = 'https://cdn.bootcdn.net/ajax/libs/mathjax/3.2.2/es5/tex-chtml.js';
       fallbackScript.id = 'MathJax-script-fallback';
       fallbackScript.defer = true;
       fallbackScript.onload = function() {
-        console.log('MathJax loaded from Staticfile CDN');
+        console.log('MathJax loaded from BootCDN');
       };
       fallbackScript.onerror = function() {
-        console.warn('Staticfile MathJax load failed, trying jsDelivr...');
-        // Third fallback to jsDelivr
-        const thirdScript = document.createElement('script');
-        thirdScript.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js';
-        thirdScript.id = 'MathJax-script-third';
-        thirdScript.defer = true;
-        thirdScript.onload = function() {
-          console.log('MathJax loaded from jsDelivr CDN');
+        console.warn('BootCDN MathJax load failed, trying Staticfile...');
+        // Second fallback to Staticfile CDN
+        const secondScript = document.createElement('script');
+        secondScript.src = 'https://cdn.staticfile.net/mathjax/3.2.2/es5/tex-chtml.js';
+        secondScript.id = 'MathJax-script-second';
+        secondScript.defer = true;
+        secondScript.onload = function() {
+          console.log('MathJax loaded from Staticfile CDN');
         };
-        document.head.appendChild(thirdScript);
+        secondScript.onerror = function() {
+          console.warn('Staticfile MathJax load failed, trying jsDelivr...');
+          // Third fallback to jsDelivr
+          const thirdScript = document.createElement('script');
+          thirdScript.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js';
+          thirdScript.id = 'MathJax-script-third';
+          thirdScript.defer = true;
+          thirdScript.onload = function() {
+            console.log('MathJax loaded from jsDelivr CDN');
+          };
+          document.head.appendChild(thirdScript);
+        };
+        document.head.appendChild(secondScript);
       };
       document.head.appendChild(fallbackScript);
     };
 
-    // Primary CDN: BootCDN
-    script.src = 'https://cdn.bootcdn.net/ajax/libs/mathjax/3.2.2/es5/tex-chtml.js';
+    // Primary: Local file
+    script.src = '/assets/vendor/mathjax/3.2.2/tex-chtml.js';
     document.head.appendChild(script);
   };
 </script>
@@ -150,33 +164,44 @@
     const script = document.createElement('script');
     script.crossOrigin = 'anonymous';
     script.onload = function() {
-      console.log('Bootstrap JS loaded from BootCDN');
+      console.log('Bootstrap JS loaded locally');
     };
     script.onerror = function() {
-      console.warn('BootCDN Bootstrap load failed, trying Staticfile...');
-      // Fallback to Staticfile CDN
+      console.warn('Local Bootstrap JS load failed, trying BootCDN...');
+      // Fallback to BootCDN
       const fallbackScript = document.createElement('script');
-      fallbackScript.src = 'https://cdn.staticfile.net/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js';
+      fallbackScript.src = 'https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js';
       fallbackScript.crossOrigin = 'anonymous';
       fallbackScript.onload = function() {
-        console.log('Bootstrap JS loaded from Staticfile CDN');
+        console.log('Bootstrap JS loaded from BootCDN');
       };
       fallbackScript.onerror = function() {
-        console.warn('Staticfile Bootstrap load failed, trying jsDelivr...');
-        // Third fallback to jsDelivr
-        const thirdScript = document.createElement('script');
-        thirdScript.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js';
-        thirdScript.crossOrigin = 'anonymous';
-        thirdScript.onload = function() {
-          console.log('Bootstrap JS loaded from jsDelivr CDN');
+        console.warn('BootCDN Bootstrap load failed, trying Staticfile...');
+        // Second fallback to Staticfile CDN
+        const secondScript = document.createElement('script');
+        secondScript.src = 'https://cdn.staticfile.net/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js';
+        secondScript.crossOrigin = 'anonymous';
+        secondScript.onload = function() {
+          console.log('Bootstrap JS loaded from Staticfile CDN');
         };
-        document.head.appendChild(thirdScript);
+        secondScript.onerror = function() {
+          console.warn('Staticfile Bootstrap load failed, trying jsDelivr...');
+          // Third fallback to jsDelivr
+          const thirdScript = document.createElement('script');
+          thirdScript.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js';
+          thirdScript.crossOrigin = 'anonymous';
+          thirdScript.onload = function() {
+            console.log('Bootstrap JS loaded from jsDelivr CDN');
+          };
+          document.head.appendChild(thirdScript);
+        };
+        document.head.appendChild(secondScript);
       };
       document.head.appendChild(fallbackScript);
     };
 
-    // Primary CDN: BootCDN
-    script.src = 'https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js';
+    // Primary: Local file
+    script.src = '/assets/vendor/bootstrap/5.3.3/js/bootstrap.bundle.min.js';
     document.head.appendChild(script);
   };
 </script>
