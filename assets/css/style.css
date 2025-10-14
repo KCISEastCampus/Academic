@@ -23,6 +23,15 @@ html[data-bs-theme="light"] .exam-link:not(:hover):not(:focus),
 html[data-bs-theme="light"] .subject-list .btn:not(:hover):not(:focus) {
   background: transparent;
   color: inherit;
+  transition: all 0.15s ease;
+}
+
+/* Ensure hover state also has transition for smooth fade-in */
+html[data-bs-theme="light"] .exam-link:hover,
+html[data-bs-theme="light"] .exam-link:focus,
+html[data-bs-theme="light"] .subject-list .btn:hover,
+html[data-bs-theme="light"] .subject-list .btn:focus {
+  transition: all 0.15s ease;
 }
 
 /* Dark explicit overrides too (in case third-party CSS forces light backgrounds) */
@@ -175,7 +184,13 @@ html[data-bs-theme="dark"] .table th {
 .btn:focus { outline: 3px solid rgba(255,255,255,0.06); outline-offset: 2px; }
 
 /* Exam link */
-.exam-link { display: inline-flex; align-items: center; gap: .6rem; padding: .6rem .9rem; }
+.exam-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .6rem .9rem;
+  transition: all 0.15s ease;
+}
 .exam-icon { font-size: 1.25rem; }
 
 /* Code and highlighting */
