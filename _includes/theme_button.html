@@ -1,42 +1,167 @@
-<i class="bi bi-sun" id="theme_button" aria-label="Toggle theme"></i>
+<button id="theme_button" class="theme-toggle-btn" aria-label="Toggle theme">
+  <i class="bi bi-sun theme-icon"></i>
+  <span class="theme-label">Light</span>
+</button>
 
 <style>
-  #theme_button {
+  .theme-toggle-btn {
     position: fixed;
+    /* 默认位置 - 用于学科页面 */
     top: 20px;
     right: 20px;
-    font-size: 2rem;
     z-index: 9999;
+    background: var(--surface);
+    border: 2px solid var(--muted);
+    border-radius: 50px;
+    padding: 8px 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
   }
 
-  #theme_button::before { transition: 0.5s; }
-  #theme_button.bi-moon:hover::before { transform: rotate(360deg); }
-  #theme_button.bi-sun:hover::before { transform: rotate(180deg); }
+  .theme-toggle-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border-color: var(--accent-ig);
+  }
+
+  .theme-toggle-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .theme-icon {
+    font-size: 1.2rem;
+    transition: transform 0.5s ease;
+  }
+
+  .theme-toggle-btn:hover .theme-icon {
+    transform: rotate(180deg);
+  }
+
+  .theme-label {
+    font-size: 0.85rem;
+    opacity: 0.8;
+  }
+
+  /* Dark theme adjustments */
+  html[data-bs-theme="dark"] .theme-toggle-btn {
+    background: var(--surface);
+    border-color: var(--muted);
+    color: var(--text);
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .theme-toggle-btn {
+      top: 15px;
+      right: 70px; /* 避免与TOC按钮重叠 */
+      padding: 6px 12px;
+      font-size: 0.8rem;
+    }
+
+    .theme-icon {
+      font-size: 1rem;
+    }
+
+    .theme-label {
+      display: none; /* 移动端隐藏文字，只显示图标 */
+    }
+
+    .theme-toggle-btn {
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      justify-content: center;
+      border-radius: 50%;
+    }
+  }
+
+  /* Respect prefers-reduced-motion */
+  @media (prefers-reduced-motion: reduce) {
+    .theme-icon {
+      transition: none;
+    }
+
+    .theme-toggle-btn {
+      transition: none;
+    }
+
+    .theme-toggle-btn:hover {
+      transform: none;
+    }
+
+    .theme-toggle-btn:active {
+      transform: none;
+    }
+  }
 </style>
 
 <script>
   (function () {
     const html_element = document.documentElement;
     const theme_button = document.getElementById('theme_button');
+    const theme_icon = theme_button?.querySelector('.theme-icon');
+    const theme_label = theme_button?.querySelector('.theme-label');
+
+    // 检测是否为index页面（有GitHub按钮）
+    const isIndexPage = document.querySelector('.github-corner') !== null;
+    
+    // 根据页面类型调整按钮位置
+    if (isIndexPage && theme_button) {
+      // 检查是否为移动端
+      const isMobile = window.innerWidth <= 768;
+      if (isMobile) {
+        theme_button.style.top = '85px';
+      } else {
+        theme_button.style.top = '90px';
+      }
+      theme_button.style.zIndex = '9998';
+    }
 
     function getPreferredTheme() {
-      const stored = localStorage.getItem('site-theme');
-      if (stored) return stored;
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      try {
+        const stored = localStorage.getItem('site-theme');
+        if (stored) return stored;
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      } catch (error) {
+        // localStorage 不可用时回退到系统偏好
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
     }
 
     function applyTheme(theme) {
-      html_element.setAttribute('data-bs-theme', theme);
-      localStorage.setItem('site-theme', theme);
-      updateThemeButtonStatus();
+      try {
+        html_element.setAttribute('data-bs-theme', theme);
+        localStorage.setItem('site-theme', theme);
+        updateThemeButtonStatus();
+      } catch (error) {
+        // 静默失败，不影响用户体验
+        console.warn('Failed to apply theme:', error);
+      }
     }
 
     function isDarkTheme() { return html_element.getAttribute('data-bs-theme') === 'dark'; }
 
     function updateThemeButtonStatus() {
-      if (!theme_button) return;
-      if (isDarkTheme()) { theme_button.classList.remove('bi-moon'); theme_button.classList.add('bi-sun'); }
-      else { theme_button.classList.remove('bi-sun'); theme_button.classList.add('bi-moon'); }
+      if (!theme_button || !theme_icon || !theme_label) return;
+
+      if (isDarkTheme()) {
+        theme_icon.classList.remove('bi-moon');
+        theme_icon.classList.add('bi-sun');
+        theme_label.textContent = 'Dark';
+      } else {
+        theme_icon.classList.remove('bi-sun');
+        theme_icon.classList.add('bi-moon');
+        theme_label.textContent = 'Light';
+      }
     }
 
     // initialize

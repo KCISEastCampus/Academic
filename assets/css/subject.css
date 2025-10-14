@@ -81,31 +81,62 @@ html[data-bs-theme="dark"] body > hr.shadow {
 /* TOC Toggle Button */
 .toc-toggle {
   position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1003;
-  background: var(--accent-ig);
-  color: white !important;
-  border: none;
+  top: 15px;
+  right: 15px;
+  z-index: 10000;
+  background: var(--surface);
+  border: 2px solid var(--muted);
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 1.2rem;
+  width: 44px;
+  height: 44px;
+  font-size: 1.1rem;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
   display: none;
   align-items: center;
   justify-content: center;
+  color: var(--text);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 .toc-toggle:hover {
-  transform: scale(1.1);
-  background: var(--accent-al);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border-color: var(--accent-ig);
+}
+
+.toc-toggle:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
 }
 
 .toc-toggle.active {
-  background: var(--accent-al);
+  background: var(--accent-ig);
+  color: white;
+  border-color: var(--accent-ig);
+}
+
+/* Dark theme adjustments for TOC button */
+html[data-bs-theme="dark"] .toc-toggle {
+  background: var(--surface);
+  border-color: var(--muted);
+  color: var(--text);
+}
+
+/* Respect prefers-reduced-motion for TOC button */
+@media (prefers-reduced-motion: reduce) {
+  .toc-toggle {
+    transition: none;
+  }
+
+  .toc-toggle:hover {
+    transform: none;
+  }
+
+  .toc-toggle:active {
+    transform: none;
+  }
 }
 
 /* Responsive Design */
@@ -154,9 +185,10 @@ html[data-bs-theme="dark"] body > hr.shadow {
     display: flex !important;
     right: 15px;
     top: 15px;
-    z-index: 1003;
-    width: 50px;
-    height: 50px;
+    z-index: 10000;
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
   }
   
   .table-of-contents {
