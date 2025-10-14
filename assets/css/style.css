@@ -132,8 +132,15 @@ html[data-bs-theme="dark"] #theme_button { background: rgba(255,255,255,0.02); }
 /* Tables: ensure header text follows theme and has readable background/border */
 table thead th, .table thead th, .table th {
   color: var(--text) !important;
-  background: transparent;
-  border-bottom: 1px solid rgba(0,0,0,0.06);
+  background: rgba(var(--accent-ig-rgb), 0.06);
+  border-bottom: 2px solid rgba(255,255,255,0.1);
+  border-right: 1px solid rgba(255,255,255,0.06);
+}
+
+table thead th:last-child,
+.table thead th:last-child,
+.table th:last-child {
+  border-right: none;
 }
 
 /* Light theme: darker header text and subtle surface behind headers */
@@ -141,10 +148,12 @@ html[data-bs-theme="light"] table thead th,
 html[data-bs-theme="light"] .table thead th,
 html[data-bs-theme="light"] .table th {
   color: var(--text) !important;
-  background: #eef4fb; /* clearer light header surface */
+  background: rgba(var(--accent-ig-rgb), 0.08);
   border-bottom-color: rgba(0,0,0,0.12) !important;
-  padding: 0.9rem 1rem;
+  border-right-color: rgba(0,0,0,0.06);
+  padding: 12px 16px;
   font-weight: 600;
+  letter-spacing: 0.3px;
 }
 
 /* Dark theme: lighter header text and subtle highlight */
@@ -152,13 +161,53 @@ html[data-bs-theme="dark"] table thead th,
 html[data-bs-theme="dark"] .table thead th,
 html[data-bs-theme="dark"] .table th {
   color: var(--text) !important;
-  background: rgba(255,255,255,0.03);
-  border-bottom-color: rgba(255,255,255,0.08) !important;
-  padding: 0.9rem 1rem;
+  background: rgba(255,255,255,0.04);
+  border-bottom-color: rgba(255,255,255,0.1) !important;
+  border-right-color: rgba(255,255,255,0.06);
+  padding: 12px 16px;
   font-weight: 600;
+  letter-spacing: 0.3px;
 }
 
-/* Make table rows slightly separated from header in both themes (no-op placeholder removed) */
+/* Table cells - add vertical dividers */
+table tbody td,
+.table tbody td {
+  border-right: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+html[data-bs-theme="light"] table tbody td,
+html[data-bs-theme="light"] .table tbody td {
+  border-right-color: rgba(0,0,0,0.06);
+  border-bottom-color: rgba(0,0,0,0.08);
+}
+
+table tbody td:last-child,
+.table tbody td:last-child {
+  border-right: none;
+}
+
+/* Table wrapper for subtle rounded corners */
+.table-wrapper,
+.table-responsive {
+  border-radius: 8px !important;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.06);
+  margin: 1.5rem 0;
+  background: transparent;
+}
+
+html[data-bs-theme="light"] .table-wrapper,
+html[data-bs-theme="light"] .table-responsive {
+  border-color: rgba(0,0,0,0.08);
+}
+
+/* Table row hover - subtle */
+table tbody tr:hover,
+.table tbody tr:hover {
+  background-color: rgba(var(--accent-ig-rgb), 0.03) !important;
+  transition: background-color 0.2s ease;
+}
 
 /* Buttons: improved outlines and focus */
 .btn { border-radius: 0.45rem; }
