@@ -68,7 +68,7 @@ body {
 }
 
 /* Card / surface */
-.card { background: var(--surface); border: 1px solid rgba(255,255,255,0.03); border-radius: var(--radius); color: var(--text); }
+.card { background: var(--surface); border: 1px solid rgba(255,255,255,0.03); border-radius: 0.4rem; color: var(--text); }
 .card .card-title { color: var(--text); }
 
 /* Headings: tighter scale and nicer weight */
@@ -370,4 +370,200 @@ div.highlight {
 
 @media (min-width: 768px) {
   .subject-list { gap: .75rem; }
+}
+
+/* ========================================
+   Interactive Effects Styles
+   ======================================== */
+
+/* Scroll Progress Bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-ig), var(--accent-al));
+  width: 0%;
+  transition: width 0.1s ease;
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  width: 3rem;
+  height: 3rem;
+  background: #ff8c42;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  color: #ffffff;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(255, 140, 66, 0.3);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(255, 140, 66, 0.4);
+  background: #ff7a28;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.back-to-top:active {
+  transform: translateY(-1px) scale(0.98);
+  background: #e66a1f;
+  border-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(230, 106, 31, 0.3);
+}
+
+/* Ripple Effect */
+.ripple-effect {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(0);
+  animation: ripple-animation 0.6s linear;
+  pointer-events: none;
+}
+
+@keyframes ripple-animation {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* Fade In Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Table Row Hover */
+.table-row-hover {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  transition: background-color 0.2s ease;
+}
+
+/* Subject Button Effects */
+.subject-btn-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.subject-btn-hover::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.subject-btn-hover:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* TOC Highlight */
+.toc-active {
+  position: relative;
+  font-weight: 600;
+  color: var(--accent-ig) !important;
+}
+
+.toc-active::before {
+  content: '';
+  position: absolute;
+  left: -1rem;
+  top: 0.25rem;
+  width: 4px;
+  height: 1rem;
+  background: var(--accent-ig);
+  border-radius: 2px;
+}
+
+/* Keyboard Navigation */
+.keyboard-navigation :focus-visible {
+  outline: 2px solid var(--accent-ig);
+  outline-offset: 2px;
+}
+
+/* Theme Toggle Enhancement */
+#theme_button:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 1rem;
+    left: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .scroll-progress {
+    height: 2px;
+  }
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in,
+  .scroll-progress-bar,
+  .ripple-effect,
+  #theme_button,
+  .subject-btn-hover::before {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .fade-in-visible {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .back-to-top {
+    transition: opacity 0.3s ease, visibility 0.3s ease !important;
+  }
+
+  .back-to-top:hover {
+    transform: none !important;
+  }
 }

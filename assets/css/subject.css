@@ -280,7 +280,7 @@ html[data-bs-theme="dark"] body > hr.shadow {
   top: 120px;
   right: 20px;
   width: 280px;
-  height: calc(100vh - 140px);
+  height: calc(100vh - 120px);
   background: var(--surface);
   border: 1px solid var(--muted);
   border-radius: 8px;
