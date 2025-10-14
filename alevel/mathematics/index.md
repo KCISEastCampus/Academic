@@ -202,7 +202,7 @@ AS Mathematics forms the first part of the A-Level Mathematics qualification. Th
 
 #### Conditional Probability and Independence
 - **Multiplication Law**:
-  - $P(A \cap B) = P(A) \times P(B|A) = P(B) \times P(A|B)$
+  - $P(A \cap B) = P(A) \times P(B\vert A) = P(B) \times P(A\vert B)$
   - Independent: $P(A \cap B) = P(A) \times P(B)$
 - **Application**: Direct application of probability laws, frequency tables
 
