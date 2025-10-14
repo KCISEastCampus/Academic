@@ -344,7 +344,7 @@ $$\frac{dP}{dt} = \frac{dP}{dV} × \frac{dV}{dt} = 3kV^2 × \frac{dV}{dt}$$
 
 **Type 1**: Infinite limits $$\int_a^∞ f(x)dx = \lim_{b \to ∞} \int_a^b f(x)dx$$
 
-**Type 2**: Infinite integrand $$\int_a^b f(x)dx$$ where f(x) → ∞ at some point
+**Type 2**: Infinite integrand $$\int_a^b f(x)dx$$ where $f(x) \rightarrow \inft$ at some point
 
 **Examples**:
 1. $$\int_0^4 \frac{1}{\sqrt{x}}dx = \lim_{a \to 0^+} \int_a^4 x^{-\frac{1}{2}}dx = \lim_{a \to 0^+} [2\sqrt{x}]_a^4 = 4$$
