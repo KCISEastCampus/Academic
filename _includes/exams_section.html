@@ -1,0 +1,66 @@
+<!-- _includes/exams_section.html -->
+<!-- Exams section component for index page -->
+<section class="row justify-content-center my-5" aria-labelledby="exams-heading">
+  <div class="col-12 col-md-10">
+    <article class="card shadow-sm fade-in">
+      <div class="card-body">
+        <h2 id="exams-heading" class="h5 card-title">A level and IGCSE Official Exams</h2>
+        <p class="mb-2 text-muted">Official timetables and exam-related documents.</p>
+        <div class="exam-links d-flex flex-column gap-2">
+          {% assign official_exams = site.data.exam_links %}
+          {% if official_exams and official_exams.size > 0 %}
+            {% if official_exams.size == 1 %}
+              <!-- Single exam: center it -->
+              <div class="d-flex justify-content-center">
+                {% for exam in official_exams %}
+                  {% include exam_link.html exam=exam %}
+                {% endfor %}
+              </div>
+            {% else %}
+              <!-- Multiple exams: grid layout -->
+              <div class="row g-2">
+                {% for exam in official_exams %}
+                  <div class="col-12 col-md-6">
+                    {% include exam_link.html exam=exam %}
+                  </div>
+                {% endfor %}
+              </div>
+            {% endif %}
+          {% else %}
+            <!-- No official exams -->
+            <div class="alert alert-info mb-0" role="status">
+              <i class="bi bi-info-circle me-2"></i>
+              No official exams are currently scheduled. Please check back later or contact the exam office for updates.
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="card-body">
+        <h2 class="h5 card-title">Department Exams</h2>
+        <p class="mb-2 text-muted">In-school exams and tests information.</p>
+        <div class="dept-exams" aria-label="Department exam schedule">
+          {% assign exams = site.data.department_exams %}
+          {% if exams and exams.size > 0 %}
+            <ul class="list-group list-group-flush">
+              {% for ex in exams %}
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <div>
+                    <div class="fw-semibold">{{ ex.title }}</div>
+                    <div class="small text-muted">Date: {{ ex.date }} · Duration: {{ ex.duration }}</div>
+                  </div>
+                </li>
+              {% endfor %}
+            </ul>
+            <p class="mt-2 small text-muted">If you have any questions, please contact the A-level Office or your subject teacher.</p>
+          {% else %}
+            <div class="alert alert-info mb-0" role="status">
+              <i class="bi bi-calendar-x me-2"></i>
+              There are no in-school exams scheduled at this time.
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </article>
+  </div>
+</section>

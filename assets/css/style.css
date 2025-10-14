@@ -18,6 +18,11 @@ html[data-bs-theme="light"] .highlight {
   color: var(--text) !important;
 }
 
+html[data-bs-theme="light"] .card {
+  border-radius: 0.75rem !important;
+  overflow: hidden !important;
+}
+
 /* Default (rest) state keep transparent in light mode, but allow :hover/:focus to override */
 html[data-bs-theme="light"] .exam-link:not(:hover):not(:focus),
 html[data-bs-theme="light"] .subject-list .btn:not(:hover):not(:focus) {
@@ -54,6 +59,11 @@ html[data-bs-theme="dark"] .highlight {
   color: var(--text) !important;
 }
 
+html[data-bs-theme="dark"] .card {
+  border-radius: 0.75rem !important;
+  overflow: hidden !important;
+}
+
 html {
   font-size: 20px;
 }
@@ -68,16 +78,31 @@ body {
 
 .container { max-width: var(--container-max); }
 
-/* Subjects wrapper: grid to keep two columns aligned even when item counts differ */
-.subjects-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; align-items: start; }
-.subjects-wrapper > .flex-fill { display:flex; flex-direction:column; gap:.5rem; }
+/* Subjects grid: grid to keep two columns aligned even when item counts differ */
+.subjects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+.subjects-grid > .flex-fill {
+  display:flex;
+  flex-direction:column;
+  gap:.5rem;
+}
 
 @media (max-width: 767px) {
-  .subjects-wrapper { grid-template-columns: 1fr; }
+  .subjects-grid { grid-template-columns: 1fr; }
 }
 
 /* Card / surface */
-.card { background: var(--surface); border: 1px solid rgba(255,255,255,0.03); border-radius: 0.4rem; color: var(--text); }
+.card {
+  background: var(--surface);
+  border: 1px solid rgba(255,255,255,0.03);
+  border-radius: 0.75rem !important;
+  color: var(--text);
+  overflow: hidden; /* Ensure children respect border-radius */
+}
 .card .card-title { color: var(--text); }
 
 /* Headings: tighter scale and nicer weight */
@@ -190,6 +215,8 @@ html[data-bs-theme="dark"] .table th {
   gap: .6rem;
   padding: .6rem .9rem;
   transition: all 0.15s ease;
+  border-radius: 0.5rem;
+  width: 100%;
 }
 .exam-icon { font-size: 1.25rem; }
 
@@ -460,9 +487,16 @@ div.highlight {
 
 /* Fade In Animation - 页面加载后立即应用 */
 .fade-in {
-  opacity: 1;
-  transform: translateY(0);
-  transition: none;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .fade-in-visible {
@@ -574,4 +608,12 @@ div.highlight {
   .back-to-top:hover {
     transform: none !important;
   }
+}
+
+/* Force card border-radius - Override Bootstrap */
+.card,
+.card.shadow-sm,
+article.card {
+  border-radius: 0.75rem !important;
+  overflow: hidden !important;
 }
