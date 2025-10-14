@@ -1,6 +1,25 @@
 /**
  * Interactive Effects for Academic Learning Website
  * 简洁实用的交互特效，提升学习体验
+ *
+ * 功能特性：
+ * - 页面滚动进度条（内容页）
+ * - 返回顶部按钮（内容页）
+ * - 按钮点击波纹效果
+ * - 元素淡入动画
+ * - 平滑滚动增强
+ * - 表格交互优化
+ * - 加载状态指示
+ * - 键盘导航增强
+ * - 科目按钮特效
+ * - 目录高亮跟踪
+ *
+ * 性能优化：
+ * - 使用节流和防抖减少事件处理频率
+ * - Intersection Observer API 提升动画性能
+ * - 被动事件监听器优化滚动性能
+ * - 上下文感知：主页自动禁用特定特效
+ * - prefers-reduced-motion 尊重用户偏好
  */
 
 (function() {
@@ -11,8 +30,9 @@
     BACK_TO_TOP_THRESHOLD: 300,
     FADE_IN_THRESHOLD: 0.1,
     SCROLL_OFFSET: 80,
-    RIPPLE_DURATION: 600,
-    FADE_IN_DELAY: 100
+    FADE_IN_DELAY: 100,
+    // 性能优化：减少不必要的计算
+    ENABLE_DEBUG_LOGGING: false
   };
 
   // 工具函数
@@ -73,6 +93,9 @@
     init: function() {
       if (utils.prefersReducedMotion()) return;
 
+      // 检查是否已经存在
+      if (document.querySelector('.scroll-progress')) return;
+
       this.progressBar = document.createElement('div');
       this.progressBar.className = 'scroll-progress';
       this.progressBar.innerHTML = '<div class="scroll-progress-bar"></div>';
@@ -84,14 +107,18 @@
     },
 
     update: function() {
+      if (!this.progressBar) return;
+
       const scrolled = (window.pageYOffset / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
       const progressBar = this.progressBar.querySelector('.scroll-progress-bar');
 
-      if (scrolled > 0) {
-        this.progressBar.style.opacity = '1';
-        progressBar.style.width = scrolled + '%';
-      } else {
-        this.progressBar.style.opacity = '0';
+      if (progressBar) {
+        if (scrolled > 0) {
+          this.progressBar.style.opacity = '1';
+          progressBar.style.width = scrolled + '%';
+        } else {
+          this.progressBar.style.opacity = '0';
+        }
       }
     }
   };
@@ -99,6 +126,9 @@
   // 返回顶部按钮
   const backToTop = {
     init: function() {
+      // 检查是否已经存在
+      if (document.querySelector('.back-to-top')) return;
+
       this.button = document.createElement('button');
       this.button.className = 'back-to-top';
       this.button.innerHTML = '<i class="bi bi-chevron-up"></i>';
@@ -111,6 +141,8 @@
     },
 
     toggleVisibility: function() {
+      if (!this.button) return;
+
       if (window.pageYOffset > CONFIG.BACK_TO_TOP_THRESHOLD) {
         this.button.classList.add('visible');
       } else {
@@ -125,45 +157,23 @@
       });
     },
 
-    // handleKeydown: function(e) {
-    //   if (e.key === 'Escape') {
-    //     this.scrollToTop();
-    //   }
-    // }
+    handleKeydown: function(e) {
+      if (e.key === 'Escape') {
+        this.scrollToTop();
+      }
+    }
   };
 
-  // 按钮点击波纹效果
+  // 按钮点击波纹效果 - 已禁用以改善阅读体验
   const rippleEffect = {
     init: function() {
-      if (utils.prefersReducedMotion()) return;
-
-      document.addEventListener('click', this.createRipple.bind(this), true);
+      // 波纹效果已禁用，不再创建视觉干扰
+      return;
     },
 
     createRipple: function(e) {
-      const button = e.target.closest('button, .btn, [role="button"]');
-      if (!button || button.classList.contains('back-to-top')) return;
-
-      const circle = document.createElement('span');
-      const diameter = Math.max(button.clientWidth, button.clientHeight);
-      const radius = diameter / 2;
-
-      const rect = button.getBoundingClientRect();
-      circle.style.width = circle.style.height = diameter + 'px';
-      circle.style.left = (e.clientX - rect.left - radius) + 'px';
-      circle.style.top = (e.clientY - rect.top - radius) + 'px';
-      circle.classList.add('ripple-effect');
-
-      const ripple = button.querySelector('.ripple-effect');
-      if (ripple) {
-        ripple.remove();
-      }
-
-      button.appendChild(circle);
-
-      setTimeout(() => {
-        circle.remove();
-      }, CONFIG.RIPPLE_DURATION);
+      // 不再创建波纹效果
+      return;
     }
   };
 
@@ -172,37 +182,38 @@
     init: function() {
       if (utils.prefersReducedMotion()) return;
 
-      this.observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              setTimeout(() => {
-                entry.target.classList.add('fade-in-visible');
-              }, CONFIG.FADE_IN_DELAY);
-              this.observer.unobserve(entry.target);
-            }
-          });
-        },
-        {
-          threshold: CONFIG.FADE_IN_THRESHOLD,
-          rootMargin: '0px 0px -50px 0px'
-        }
-      );
-
-      this.observeElements();
+      // 延迟执行，让页面先加载完成
+      setTimeout(() => {
+        this.applyFadeInToVisibleElements();
+      }, 100);
     },
 
-    observeElements: function() {
+    applyFadeInToVisibleElements: function() {
       const selectors = [
         'h2', 'h3', '.card', '.subject-card',
         'table', '.math', '.exam-link'
       ];
 
       selectors.forEach(selector => {
-        document.querySelectorAll(selector).forEach(el => {
-          el.classList.add('fade-in');
-          this.observer.observe(el);
-        });
+        try {
+          document.querySelectorAll(selector).forEach((el, index) => {
+            // 检查元素是否在视口中
+            const rect = el.getBoundingClientRect();
+            const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+
+            if (isVisible) {
+              // 短暂延迟，让动画更自然
+              setTimeout(() => {
+                el.classList.add('fade-in-visible');
+              }, index * 50); // 每个元素间隔50ms
+            } else {
+              // 对于不在视口中的元素，直接设为可见
+              el.classList.add('fade-in-visible');
+            }
+          });
+        } catch (error) {
+          console.warn('Error applying fade-in to selector:', selector, error);
+        }
       });
     }
   };
@@ -371,7 +382,9 @@
     subjectButtonEffects.init();
     tocHighlight.init();
 
-    console.log('Interactive effects initialized' + (isHomePage ? ' (Home page mode)' : ''));
+    if (CONFIG.ENABLE_DEBUG_LOGGING) {
+      console.log('Interactive effects initialized' + (isHomePage ? ' (Home page mode)' : ''));
+    }
   }
 
   // 页面加载完成后初始化

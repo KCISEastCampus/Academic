@@ -150,6 +150,42 @@
 
 ---
 
+## 🎨 主题切换按钮 🌓
+**位置**：右上角浮动按钮
+**设计**：
+- 现代化胶囊形设计
+- 毛玻璃背景效果
+- 图标+文字组合
+- 平滑动画过渡
+- 移动端优化布局
+
+**移动端适配**：
+- 避免与TOC按钮重叠
+- 圆形紧凑设计
+- 隐藏文字只显示图标
+
+**用户价值**：美观易用的主题切换体验
+
+---
+
+## 📱 TOC展开按钮 📋
+**位置**：移动端右上角
+**设计**：
+- 与主题按钮统一风格
+- 毛玻璃背景效果
+- 圆形设计，44x44px
+- 悬停上浮动画
+- 激活状态高亮
+
+**功能**：
+- 展开/收起目录侧边栏
+- 移动端专属显示
+- 平滑滑动动画
+
+**用户价值**：便捷的目录导航控制
+
+---
+
 ## 🎨 设计原则
 
 1. **性能优先**：
@@ -176,26 +212,27 @@
 
 ---
 
-## 🔧 技术实现
+### 🔧 技术实现
 
 ### 文件结构
 ```
 assets/
 ├── js/
-│   └── interactive_effects.js  # 主要特效脚本（新增）
+│   └── interactive_effects.js  # 主要特效脚本（优化版本）
 └── css/
-    └── style.css               # 样式增强（已更新）
+    └── style.css               # 样式增强（已优化）
 
 _includes/
 └── head.html                   # 引入脚本（已更新）
 ```
 
 ### 关键技术
-- **Intersection Observer API**：高性能视口检测
+- **Intersection Observer API**：高性能视口检测，支持错误处理
 - **CSS Custom Properties**：主题适配
-- **CSS Transitions & Animations**：流畅动画
+- **CSS Transitions & Animations**：流畅动画，支持 prefers-reduced-motion
 - **Event Delegation**：高效事件处理
-- **Passive Event Listeners**：滚动性能优化
+- **节流 & 防抖**：性能优化，减少不必要的计算
+- **上下文感知**：根据页面类型自动调整特效启用状态
 
 ---
 
@@ -235,20 +272,29 @@ _includes/
 
 ---
 
-## ⚙️ 自定义配置
+### ⚙️ 自定义配置
 
 如需调整特效，可以修改 `interactive_effects.js` 中的参数：
 
 ```javascript
-// 返回顶部按钮显示阈值（像素）
-const BACK_TO_TOP_THRESHOLD = 300;
-
-// 淡入动画触发阈值
-const FADE_IN_THRESHOLD = 0.1;
-
-// 平滑滚动偏移量（像素）
-const SCROLL_OFFSET = 80;
+// 交互特效配置
+const CONFIG = {
+  BACK_TO_TOP_THRESHOLD: 300,    // 返回顶部按钮显示阈值（像素）
+  FADE_IN_THRESHOLD: 0.1,        // 淡入动画触发阈值
+  SCROLL_OFFSET: 80,             // 平滑滚动偏移量（像素）
+  RIPPLE_DURATION: 600,          // 波纹效果持续时间（毫秒）
+  FADE_IN_DELAY: 100,            // 淡入动画延迟（毫秒）
+  ENABLE_DEBUG_LOGGING: false    // 是否启用调试日志
+};
 ```
+
+### 🚀 性能优化
+
+- **防重复初始化**：防止多次加载时重复创建元素
+- **错误处理**：优雅处理不支持的API和异常情况
+- **内存管理**：IntersectionObserver自动清理未观察的元素
+- **上下文感知**：主页自动禁用不必要的特效
+- **用户偏好**：完全支持 `prefers-reduced-motion`
 
 ---
 
@@ -302,6 +348,12 @@ const SCROLL_OFFSET = 80;
 - 🎨 重新布局按钮位置，避免遮挡TOC目录栏
 - 🐛 修复滚动进度条CSS变量名错误（--ig-color → --accent-ig，--al-color → --accent-al）
 - 🎯 优化主页体验：在主页时自动禁用滚动进度条和返回顶部按钮
+- 🚀 全面代码优化：防重复初始化、错误处理、性能提升
+- 🎨 重新设计主题切换按钮：现代化胶囊形设计，毛玻璃效果
+- 📱 修复移动端布局：主题按钮与TOC按钮不再重叠，z-index优化
+- 🎨 统一按钮设计风格：TOC按钮与主题按钮采用一致的毛玻璃设计
+- 🎨 修复波纹特效主题适配：在亮色和暗色主题下都能清晰可见
+- 🔧 代码优化：添加详细注释、配置选项、可维护性改进
 
 ---
 

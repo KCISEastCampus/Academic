@@ -440,33 +440,20 @@ div.highlight {
   box-shadow: 0 2px 8px rgba(230, 106, 31, 0.3);
 }
 
-/* Ripple Effect */
-.ripple-effect {
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.4);
-  transform: scale(0);
-  animation: ripple-animation 0.6s linear;
-  pointer-events: none;
-}
+/* Ripple Effect - 已禁用以改善阅读体验 */
+/* 波纹效果相关样式已移除，不再创建视觉干扰 */
 
-@keyframes ripple-animation {
-  to {
-    transform: scale(4);
-    opacity: 0;
-  }
-}
-
-/* Fade In Animation */
+/* Fade In Animation - 页面加载后立即应用 */
 .fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  opacity: 1;
+  transform: translateY(0);
+  transition: none;
 }
 
 .fade-in-visible {
   opacity: 1;
   transform: translateY(0);
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
 }
 
 /* Table Row Hover */
@@ -536,10 +523,19 @@ div.highlight {
     left: 1rem;
     width: 2.5rem;
     height: 2.5rem;
+    font-size: 1rem;
   }
 
   .scroll-progress {
     height: 2px;
+  }
+
+  .table-wrapper {
+    font-size: 0.9rem;
+  }
+
+  img {
+    max-width: 90%;
   }
 }
 
@@ -547,9 +543,9 @@ div.highlight {
 @media (prefers-reduced-motion: reduce) {
   .fade-in,
   .scroll-progress-bar,
-  .ripple-effect,
   #theme_button,
-  .subject-btn-hover::before {
+  .subject-btn-hover::before,
+  .back-to-top {
     animation: none !important;
     transition: none !important;
   }
@@ -557,10 +553,7 @@ div.highlight {
   .fade-in-visible {
     opacity: 1 !important;
     transform: none !important;
-  }
-
-  .back-to-top {
-    transition: opacity 0.3s ease, visibility 0.3s ease !important;
+    transition: none !important;
   }
 
   .back-to-top:hover {
