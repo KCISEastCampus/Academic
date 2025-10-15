@@ -135,7 +135,7 @@ AS Mathematics forms the first part of the A-Level Mathematics qualification. Th
 - **Geometric Series**:
   - $u_n = ar^{n-1}$
   - $S_n = \frac{a(1 - r^n)}{1 - r}$ ($r \neq 1$)
-  - $S_\infty = \frac{a}{1 - r} \quad (|r| < 1)$
+  - $S_\infty = \frac{a}{1 - r} \quad (\lvert r \rvert < 1)$
 - **Binomial Expansion**:
   - $(1 + x)^n = 1 + nx + \frac{n(n-1)}{2!}x^2 + \cdots + x^n$
   - Notation: $n!$, $\binom{n}{r}$
