@@ -8,12 +8,27 @@
         });
       }
     },
+    loader: {
+      // load additional MathJax files from our local vendor folder so
+      // packages like mhchem can be resolved when offline or blocked by CDN
+      paths: { mathjax: '/assets/vendor/mathjax/3.2.2' }
+    },
     tex: {
       inlineMath: [['$', '$'], ['\\(', '\\)']],
       displayMath: [['$$', '$$'], ['\\[', '\\]']],
       tags: 'ams',
       tagSide: 'right',
       packages: {'[+]': ['physics', 'mhchem']}
+    },
+    chtml: {
+      // Force MathJax to use proper math fonts for all content including \text{}
+      matchFontHeight: false,
+      scale: 1.0,
+      mtextInheritFont: false  // Prevent \text from inheriting page font
+    },
+    svg: {
+      fontCache: 'global',
+      mtextInheritFont: false
     },
     options: {
       enableMenu: false,
@@ -22,4 +37,5 @@
     }
   };
 </script>
-<script defer src="https://cdn.bootcdn.net/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js" id="MathJax-script"></script>
+<!-- Prefer local MathJax bundle (falls back to CDN if you change this) -->
+<script defer src="/assets/vendor/mathjax/3.2.2/es5/tex-mml-chtml.js" id="MathJax-script"></script>

@@ -67,6 +67,11 @@ function: $$f(x) = 1$$
 
 When a file is created on `/dev/sda` in Linux, the process involves the kernel's `VFS` (Virtual File System) interacting with the filesystem (e.g., `ext4`) on the device. The filesystem allocates an `inode` to store metadata (e.g., permissions, ownership) and assigns data blocks for the file's content. The directory entry is updated to link the filename to the `inode`. Filesystem metadata, like free space, is also updated. All operations are handled by the kernel, ensuring data integrity. For example, `touch /mnt/sda/file.txt` triggers this process, where `/mnt/sda` is the mount point for `/dev/sda`.
 
+
+```
+展示展示展示
+```
+
 ```c
 #include<stdio.h>
 void quicksort(int number[25],int first,int last){
