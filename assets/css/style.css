@@ -269,8 +269,104 @@ table tbody tr:hover,
 }
 .exam-icon { font-size: 1.25rem; }
 
-/* Code and highlighting */
-.highlight, pre { background: var(--surface); border-radius: .5rem; padding: .8rem; overflow: auto; color: var(--text); }
+/* Code and highlighting - Clean inline code blocks */
+.highlight, pre {
+  background: rgba(255,255,255,0.02);
+  border: none;
+  border-left: 3px solid rgba(var(--accent-ig-rgb), 0.4);
+  border-radius: 0;
+  padding: 1rem 1.5rem;
+  overflow: auto;
+  color: var(--text);
+  margin: 1.5rem 0;
+  box-shadow: none;
+  position: relative;
+  font-family: 'MapleMono', 'Fira Code', 'Courier New', Courier, monospace;
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+
+/* Light theme code blocks */
+html[data-bs-theme="light"] .highlight,
+html[data-bs-theme="light"] pre {
+  background: rgba(0,0,0,0.02);
+  border-left-color: rgba(var(--accent-ig-rgb), 0.5);
+  box-shadow: none;
+}
+
+/* Code block with language tag */
+.highlight pre {
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+/* Inline code styling */
+code:not(.highlight code):not(pre code) {
+  background: rgba(var(--accent-ig-rgb), 0.15);
+  color: var(--accent-ig);
+  padding: 0.2em 0.5em;
+  border-radius: 0.35rem;
+  font-family: 'MapleMono', 'Fira Code', 'Courier New', Courier, monospace;
+  font-size: 0.9em;
+  border: 1px solid rgba(var(--accent-ig-rgb), 0.25);
+}
+
+html[data-bs-theme="light"] code:not(.highlight code):not(pre code) {
+  background: rgba(var(--accent-ig-rgb), 0.12);
+  color: #4a5bb3;
+  border-color: rgba(var(--accent-ig-rgb), 0.3);
+}
+
+/* Scrollbar styling for code blocks */
+.highlight::-webkit-scrollbar,
+pre::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+.highlight::-webkit-scrollbar-track,
+pre::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.05);
+  border-radius: 4px;
+}
+
+.highlight::-webkit-scrollbar-thumb,
+pre::-webkit-scrollbar-thumb {
+  background: rgba(var(--accent-ig-rgb), 0.4);
+  border-radius: 4px;
+}
+
+.highlight::-webkit-scrollbar-thumb:hover,
+pre::-webkit-scrollbar-thumb:hover {
+  background: rgba(var(--accent-ig-rgb), 0.6);
+}
+
+html[data-bs-theme="light"] .highlight::-webkit-scrollbar-track,
+html[data-bs-theme="light"] pre::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.05);
+}
+
+html[data-bs-theme="light"] .highlight::-webkit-scrollbar-thumb,
+html[data-bs-theme="light"] pre::-webkit-scrollbar-thumb {
+  background: rgba(var(--accent-ig-rgb), 0.5);
+}
+
+/* Code block hover effect */
+.highlight:hover,
+pre:hover {
+  background: rgba(255,255,255,0.03);
+  border-left-color: rgba(var(--accent-ig-rgb), 0.6);
+  transition: all 0.2s ease;
+}
+
+html[data-bs-theme="light"] .highlight:hover,
+html[data-bs-theme="light"] pre:hover {
+  background: rgba(0,0,0,0.03);
+  border-left-color: rgba(var(--accent-ig-rgb), 0.7);
+}
 
 /* Focus states for keyboard navigation */
 a:focus, button:focus { box-shadow: 0 0 0 3px rgba(100,150,255,0.08); }
