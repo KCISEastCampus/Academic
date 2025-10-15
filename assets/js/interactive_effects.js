@@ -157,11 +157,11 @@
       });
     },
 
-    handleKeydown: function(e) {
-      if (e.key === 'Escape') {
-        this.scrollToTop();
-      }
-    }
+    // handleKeydown: function(e) {
+    //   if (e.key === 'Escape') {
+    //     this.scrollToTop();
+    //   }
+    // }
   };
 
   // 按钮点击波纹效果 - 已禁用以改善阅读体验
