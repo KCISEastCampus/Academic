@@ -538,51 +538,139 @@ img {
   }
 }
 
-/* 图片放大模态框 */
-.image-modal {
-  display: none;
+/* ========================================
+   图片模态框系统 - 重构版本
+   ======================================== */
+
+/* 模态框遮罩层 */
+.image-modal-overlay {
   position: fixed;
-  z-index: 2000;
-  left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  animation: fadeIn 0.3s ease;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  backdrop-filter: blur(4px);
 }
 
-.image-modal.active {
+.image-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 图片内容区域 - 白色背景容器 */
+.image-modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.image-modal img {
-  max-width: 95%;
-  max-height: 95%;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+.image-modal-content img {
+  display: block;
+  max-width: 100%;
+  max-height: calc(90vh - 3rem);
+  width: auto;
+  height: auto;
+  object-fit: contain;
   cursor: zoom-out;
+  border-radius: 4px;
 }
 
-.image-modal .close {
-  position: absolute;
+/* 关闭按钮 - 固定在视口右上角，使用 SVG 图标 */
+.image-modal-close {
+  position: fixed;
   top: 20px;
-  right: 30px;
-  color: white;
-  font-size: 40px;
-  font-weight: bold;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #1a1a1a;
+  border: none;
+  border-radius: 50%;
   cursor: pointer;
-  z-index: 2001;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  padding: 0;
+  margin: 0;
+  outline: none;
+  user-select: none;
 }
 
-.image-modal .close:hover {
-  opacity: 0.7;
+.image-modal-close svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.image-modal-close:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.image-modal-close:active {
+  transform: scale(0.95);
+}
+
+/* 深色主题下的关闭按钮 */
+html[data-bs-theme="dark"] .image-modal-close {
+  background: rgba(40, 40, 40, 0.95);
+  color: #ffffff;
+}
+
+html[data-bs-theme="dark"] .image-modal-close:hover {
+  background: rgba(50, 50, 50, 1);
+}
+
+/* 隐藏模态框打开时的主题切换按钮 */
+.image-modal-overlay.active ~ header #theme_button,
+body:has(.image-modal-overlay.active) #theme_button {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+/* 移动端优化 */
+@media (max-width: 768px) {
+  .image-modal-content {
+    max-width: 95vw;
+    max-height: 85vh;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+  .image-modal-content img {
+    max-height: calc(85vh - 2rem);
+  }
+  
+  .image-modal-close {
+    width: 44px;
+    height: 44px;
+    top: 16px;
+    right: 16px;
+    font-size: 28px;
+  }
 }
 
 /* 表格响应式包装器 - 融入内容的设计 */
