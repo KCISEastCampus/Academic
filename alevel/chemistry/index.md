@@ -233,92 +233,44 @@ Large jumps indicate change of main energy level:
 - **Lone pairs**: Electron pairs not used for bonding
 - **Repulsion strength**: Lone pair-Lone pair > Lone pair-Bond pair > Bond pair-Bond pair
 
-### 5.3 Regular Shapes (No Lone Pairs)
+### 5.3 Unified Shape Table (Electron groups — Bonding groups — Lone pairs — Geometry — Bond angles)
 
-| Bond Pairs | Shape | Bond Angle | Example |
-|------------|-------|-------------|----------|
-| 2 | Linear | $180^\circ$ | ${BeCl}_2$ |
-| 3 | Trigonal Planar | $120^\circ$ | ${AlCl}_3$ |
-| 4 | Tetrahedral | $109.5^\circ$ | ${CH}_4$ |
-| 5 | Trigonal Bipyramidal | $90^\circ$ & $120^\circ$ | ${PCl}_5$ |
-| 6 | Octahedral | $90^\circ$ | ${SF}_6$ |
+The table below lists total electron groups, bonding pairs, lone pairs, molecular geometries and typical bond angles in a single, unified view for quick reference and comparison:
 
-### 5.4 Irregular Shapes (With Lone Pairs)
+| Electron groups | Bonding groups | Lone Pairs | Molecular geometry | Bond angles |
+|------------------:|---------------:|-----------:|-------------------|-------------|
+| 2 | 2 | 0 | Linear | 180° |
+| 3 | 3 | 0 | Trigonal planar | 120° |
+| 3 | 2 | 1 | Bent (Angular) | < 120° |
+| 4 | 4 | 0 | Tetrahedral | 109.5° |
+| 4 | 3 | 1 | Trigonal pyramidal | ~107° |
+| 4 | 2 | 2 | Bent (Angular) | ~104.5° |
+| 5 | 5 | 0 | Trigonal bipyramidal | 120° (equatorial), 90° (axial) |
+| 5 | 4 | 1 | Seesaw (Sawhorse) | <120° (equatorial), <90° (axial) |
+| 5 | 3 | 2 | T-shaped | <90° |
+| 5 | 2 | 3 | Linear | 180° |
+| 6 | 6 | 0 | Octahedral | 90° |
+| 6 | 5 | 1 | Square pyramidal | <90° |
+| 6 | 4 | 2 | Square planar | 90° |
 
-#### Ammonia
-- **Bond pairs**: 3
-- **Lone pairs**: 1
-- **Total pairs**: 4
-- **Base shape**: Tetrahedral
-- **Actual shape**: Trigonal Pyramidal
-- **Bond angle**: $107^\circ$ (reduced from $109.5^\circ$ due to lone pair repulsion)
+### 5.4 Notes & Common Examples
+- Ammonia (${NH}_3$): Electron groups = 4, Bonding = 3, Lone pairs = 1 → Trigonal pyramidal, bond angle ≈ 107°.
+- Water (${H}_2O$): Electron groups = 4, Bonding = 2, Lone pairs = 2 → Bent (Angular), bond angle ≈ 104.5°.
+- Xenon tetrafluoride (${XeF}_4$): Electron groups = 6, Bonding = 4, Lone pairs = 2 → Square planar, bond angles = 90°.
+- Carbon dioxide (${CO}_2$): Double bonds are treated as bonding pairs in the VSEPR count → Linear, bond angle = 180°.
 
-#### Water
-- **Bond pairs**: 2
-- **Lone pairs**: 2
-- **Total pairs**: 4
-- **Base shape**: Tetrahedral
-- **Actual shape**: Angular/Bent
-- **Bond angle**: $104.5^\circ$ (further reduced due to two lone pairs)
+### 5.5 Ions and Counting Rules
+- For ions, add or remove electrons according to the ion charge before pairing. Example: ${NH}_4^+$ (remove 1 electron) → 4 bonding pairs, 0 lone pairs → Tetrahedral.
+- Double bonds are usually counted as a single bonding region for geometry purposes, although the electron density in a double bond can exert slightly greater repulsion than a single bond.
 
-#### Xenon Tetrafluoride
-- **Bond pairs**: 4
-- **Lone pairs**: 2
-- **Total pairs**: 6
-- **Base shape**: Octahedral
-- **Actual shape**: Square Planar
-- **Bond angle**: $90^\circ$
-
-### 5.5 Molecules with Double Bonds
-- Double bonds repel other bonds as if they were single bonds
-- Example: Carbon dioxide (${CO}_2$)
-  - **Double bond pairs**: 2
-  - **Lone pairs**: 0
-  - **Shape**: Linear
-  - **Bond angle**: $180^\circ$
-
-### 5.6 Shape of Ions
-**Method for determining ion shapes:**
-1. Draw outer shell electrons of central atom
-2. **For positive ions**: Remove electrons equal to the positive charge
-3. **For negative ions**: Add electrons equal to the negative charge
-4. Pair up electrons following normal rules
-5. Determine shape using electron pair repulsion theory
-
-**Examples:**
-- ${NH}_4^+$: Remove 1 electron → 4 bond pairs, 0 lone pairs → Tetrahedral ($109.5^\circ$)
-- ${NH}_2^-$: Add 1 electron → 2 bond pairs, 2 lone pairs → Angular ($104.5^\circ$)
-
-### 5.7 Special Cases & Exceptions
-
-#### Phosphorus(V) Fluoride (${PF}_5$)
-- Uses d orbitals to expand octet
-- **Shape**: Trigonal Bipyramidal
-- **Bond angles**: $120^\circ$ (equatorial) and $90^\circ$ (axial)
-
-#### Sulfur(VI) Fluoride (${SF}_6$)
-- Uses d orbitals to expand octet
-- **Shape**: Octahedral
-- **Bond angles**: $90^\circ$
-
-### 5.8 Key Shape Predictions
-
-| Molecule/Ion | Bond Pairs | Lone Pairs | Shape | Bond Angle |
-|--------------|------------|------------|-------|------------|
-| ${BF}_3$ | 3 | 0 | Trigonal Planar | $120^\circ$ |
-| ${SiCl}_4$ | 4 | 0 | Tetrahedral | $109.5^\circ$ |
-| ${PCl}_4^+$ | 4 | 0 | Tetrahedral | $109.5^\circ$ |
-| ${PCl}_6^-$ | 6 | 0 | Octahedral | $90^\circ$ |
-| ${H}_2{S}$ | 2 | 2 | Angular | $92^\circ$ |
-
-### Practical Tips
+### 5.6 Practical Tips
 
 #### Predicting Molecular Polarity
-- **Symmetric shapes** (linear, trigonal planar, tetrahedral, etc.): Often non-polar if all atoms are identical
-- **Asymmetric shapes**: Usually polar due to uneven charge distribution
-- Lone pairs often create molecular dipoles
+- Symmetric geometries (linear, trigonal planar, tetrahedral, octahedral, etc.) tend to be nonpolar when all substituents are identical.
+- Lone pairs or different substituents create a net dipole, making molecules polar.
 
-#### Bond Angle Trends
+#### Bond Angle Trends (4-pair base)
+As lone pairs increase, lone pair–bond pair repulsion grows stronger and bond angles decrease:
 
 <div style="background: var(--surface); padding: 2rem; border-radius: 12px; margin: 1.5rem 0; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border: 1px solid rgba(var(--accent-al-rgb), 0.25);">
   <h5 style="text-align: center; color: var(--accent-al); margin-top: 0;">📐 Tetrahedral Base (4 pairs)</h5>
@@ -344,11 +296,11 @@ Large jumps indicate change of main energy level:
       <small style="color: var(--muted);">2 lone pairs</small>
     </div>
   </div>
-  <p style="text-align: center; margin-top: 1.5rem; color: var(--muted); font-style: italic; margin-bottom: 0;">As lone pairs increase, bond angles decrease due to stronger repulsion</p>
+  <p style="text-align: center; margin-top: 1.5rem; color: var(--muted); font-style: italic; margin-bottom: 0;">As lone pairs increase, bond angles decrease due to stronger lone-pair repulsion.</p>
 </div>
 
-#### Quick Shape Determination
-1. Count total electron pairs around central atom
-2. Identify number of lone pairs
-3. Apply electron pair repulsion theory
-4. Adjust bond angles for lone pair effects
+#### Quick determination steps
+1. Count the total electron pairs around the central atom (bonding + lone pairs).
+2. Determine the number of lone pairs.
+3. Use the table above to find the base geometry.
+4. Adjust bond angles based on lone-pair count and relative repulsion (see values above).
