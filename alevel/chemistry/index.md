@@ -74,16 +74,20 @@ Example: **4s orbital fills before 3d**
   1 mole ${CaCO3}$ reacts with 2 moles ${HCl}$
 
 ### 2.4 Ideal Gas Equation
-$$PV = nRT$$
-Where:
-- P = Pressure (Pa)
-- V = Volume (m³)
-- n = Number of moles
-- R = Gas constant (8.31 J K⁻¹ mol⁻¹)
-- T = Temperature (K)
 
-**At room temperature and pressure (RTP):**  
-1 mole of any gas occupies approximately 24 dm³
+The relationship between pressure, volume, moles, and temperature:
+
+$$PV = nRT$$
+
+Where:
+- $P$ = Pressure (Pa)
+- $V$ = Volume (m³)
+- $n$ = Number of moles
+- $R$ = Gas constant (8.31 J K⁻¹ mol⁻¹)
+- $T$ = Temperature (K)
+
+**Molar Volume at RTP:**  
+At room temperature and pressure, 1 mole of any gas occupies approximately **24 dm³**
 
 ---
 
@@ -102,53 +106,78 @@ Where:
 ### 3.2 Time of Flight (TOF) Process
 
 #### Stage 1: Ionisation
-Two main methods:
+
+Electrons are removed from atoms using one of two methods:
+
 - **Electron Impact**: High-energy electrons knock out electrons to form 1+ ions  
-  $${X(g) + e- -> X+(g) + 2e-}$$
-- **Electrospray Ionisation**: Sample gains protons to form ${XH+}$ ions  
-  $${X(g) + H+ -> XH+(g)}$$
+  $$X_{(g)} + e^- \rightarrow X^+_{(g)} + 2e^-$$
+
+- **Electrospray Ionisation**: Sample gains protons to form $XH^+$ ions  
+  $$X_{(g)} + H^+ \rightarrow XH^+_{(g)}$$
 
 #### Stage 2: Acceleration
-- Positive ions accelerated by electric field
-- All ions given same kinetic energy:  
-  $$KE = \frac{1}{2}mv^2$$
+
+Positive ions are accelerated through an electric field, gaining kinetic energy:
+
+$$KE = \frac{1}{2}mv^2$$
+
+All ions receive the same kinetic energy regardless of their mass.
 
 #### Stage 3: Ion Drift
-- Ions travel through flight tube
-- Lighter ions travel faster:  
-  $$v = \sqrt{\frac{2KE}{m}}$$
+
+Ions travel through the flight tube at different speeds:
+
+$$v = \sqrt{\frac{2KE}{m}}$$
+
+**Key principle:** Lighter ions travel faster than heavier ions
 
 #### Stage 4: Detection
-- Ions hit detector plate
+
+The time taken for ions to reach the detector is measured:
+
+- Ions hit detector plate and produce a signal
 - Signal strength ∝ number of ions
-- Computer generates mass spectrum
+- Computer plots mass vs. intensity → **mass spectrum**
 
 ### 3.3 Calculating Relative Atomic Mass
+
+For an element with multiple isotopes:
+
 $$A_r = \frac{\sum(m_i \times a_i)}{\sum a_i}$$
-where $m_i$ is isotope mass and $a_i$ is relative abundance
+
+where:
+- $m_i$ = mass of isotope
+- $a_i$ = relative abundance (%)
 
 **Example - Chlorine:**
-- ${^{35}Cl}$ (75%), ${^{37}Cl}$ (25%)
-- $A_r = \frac{(35 \times 75) + (37 \times 25)}{100} = 35.5$
+
+With isotopes $^{35}Cl$ (75%) and $^{37}Cl$ (25%):
+
+$$A_r = \frac{(35 \times 75) + (37 \times 25)}{100} = 35.5$$
 
 ---
 
 ## 4. Ionisation Energy
 
 ### 4.1 Definitions
-- **First Ionisation Energy**: Energy required to remove one mole of electrons from one mole of gaseous atoms to form one mole of gaseous 1+ ions  
-  $${Na(g) -> Na+(g) + e-}$$
-- **Successive Ionisation Energies**: Energy required to remove subsequent electrons
+
+**First Ionisation Energy** is the energy required to remove one mole of electrons from one mole of gaseous atoms:
+
+$$Na_{(g)} \rightarrow Na^+_{(g)} + e^-$$
+
+$IE_1$ is always the easiest to remove.
+
+**Successive Ionisation Energies** ($IE_2$, $IE_3$, etc.) are the energies needed to remove subsequent electrons, and become progressively harder as electrons are removed from filled shells.
 
 ### 4.2 Factors Affecting Ionisation Energy
 
 Three main factors determine the value of ionisation energy:
 
-#### 1. Atomic Radius (Distance from Nucleus)
+1. Atomic Radius (Distance from Nucleus)
 - **Effect**: As distance from nucleus increases, ionisation energy decreases
 - Greater distance = weaker electrostatic attraction = easier to remove electron
 
-#### 2. Nuclear Charge (Number of Protons)
+2. Nuclear Charge (Number of Protons)
 - **Effect**: As nuclear charge increases, ionisation energy increases
 - **Explanation**: More protons in nucleus = stronger positive charge  
   Stronger attraction to electrons = harder to remove electrons
@@ -156,7 +185,7 @@ Three main factors determine the value of ionisation energy:
   - Hydrogen (1 proton): 1st IE = 1310 kJ/mol  
   - Helium (2 protons): 1st IE = 2370 kJ/mol
 
-#### 3. Shielding Effect (Electron Repulsion)
+3. Shielding Effect (Electron Repulsion)
 - **Effect**: As shielding increases, ionisation energy decreases
 - **Explanation**: Inner shell electrons repel outer shell electrons  
   This reduces the effective nuclear charge experienced by outer electrons
@@ -211,9 +240,9 @@ Three main factors determine the value of ionisation energy:
   - Outweighs increased nuclear charge
 
 ### 4.5 Using Successive Ionisation Energies
-<p>
-    <img src="https://cdn.savemyexams.com/uploads/2021/05/3.1.3-Ionization-Energies_-Trends-Successive-Ionisation-Energies-of-Calcium_1.png" alt="Successive Ionisation Energies" style="background: white; padding: 10px; border-radius: 5px;"/>
-</p>
+
+![Successive Ionisation Energies](https://cdn.savemyexams.com/uploads/2021/05/3.1.3-Ionization-Energies_-Trends-Successive-Ionisation-Energies-of-Calcium_1.png)
+
 Large jumps indicate change of main energy level:
 - Sodium: Large jump between 1st and 2nd IE (removing from inner shell)
 - Calcium: Large jumps after 2nd and 10th IEs
@@ -233,7 +262,7 @@ Large jumps indicate change of main energy level:
 - **Lone pairs**: Electron pairs not used for bonding
 - **Repulsion strength**: Lone pair-Lone pair > Lone pair-Bond pair > Bond pair-Bond pair
 
-### 5.3 Unified Shape Table (Electron groups — Bonding groups — Lone pairs — Geometry — Bond angles)
+### 5.3 Unified Shape Table
 
 The table below lists total electron groups, bonding pairs, lone pairs, molecular geometries and typical bond angles in a single, unified view for quick reference and comparison:
 
@@ -246,7 +275,7 @@ The table below lists total electron groups, bonding pairs, lone pairs, molecula
 | 4 | 3 | 1 | Trigonal pyramidal | ~107° |
 | 4 | 2 | 2 | Bent (Angular) | ~104.5° |
 | 5 | 5 | 0 | Trigonal bipyramidal | 120° (equatorial), 90° (axial) |
-| 5 | 4 | 1 | Seesaw (Sawhorse) | <120° (equatorial), <90° (axial) |
+| 5 | 4 | 1 | Seesaw | <120° (equatorial), <90° (axial) |
 | 5 | 3 | 2 | T-shaped | <90° |
 | 5 | 2 | 3 | Linear | 180° |
 | 6 | 6 | 0 | Octahedral | 90° |
@@ -304,3 +333,191 @@ As lone pairs increase, lone pair–bond pair repulsion grows stronger and bond 
 2. Determine the number of lone pairs.
 3. Use the table above to find the base geometry.
 4. Adjust bond angles based on lone-pair count and relative repulsion (see values above).
+
+## 6. Energetics
+
+### 6.1 Energy Changes in Reactions
+- **Exothermic**: Heat energy is released to surroundings (ΔH = –ve)
+  - Examples: Combustion, neutralisation, respiration
+  - Products have less energy than reactants
+- **Endothermic**: Heat energy is absorbed from surroundings (ΔH = +ve)
+  - Examples: Thermal decomposition, photosynthesis
+  - Products have more energy than reactants
+
+### 6.2 Enthalpy Change (ΔH)
+
+**Definition:** Heat energy change at constant pressure
+
+$$\Delta H = H_p - H_r$$
+
+where $p$ = products and $r$ = reactants
+
+**Standard conditions:** 100 kPa, 298 K, 1 mol dm⁻³ solutions
+
+---
+
+### 6.3 Enthalpy Profile Diagrams
+
+Reaction profiles show how energy changes during a reaction:
+
+#### Exothermic Reaction:
+![Exothermic Reaction](https://cdn.savemyexams.com/uploads/2020/11/1.8-Reaction-Kinetics-Exothermic-Reaction-Activation-Energy.png)
+
+Products have **lower** energy than reactants (ΔH = negative)
+
+#### Endothermic Reaction:
+![Endothermic Reaction](https://cdn.savemyexams.com/uploads/2020/11/1.8-Reaction-Kinetics-Endothermic-Reaction-Activation-Energy.png)
+
+Products have **higher** energy than reactants (ΔH = positive)
+
+
+### 6.4 Standard Enthalpy Changes
+
+#### Enthalpy of Formation (ΔH°f)
+
+**Definition:** Enthalpy change when 1 mole of compound is formed from its elements in standard states.
+
+Note: $\Delta H°_f = 0$ for elements in their standard state.
+
+**Example:**  
+
+$$C_{(graphite)} + O_{2(g)} \rightarrow CO_{2(g)}$$
+
+$$\Delta H°_f = -393 \text{ kJ mol}^{-1}$$
+
+---
+
+#### Enthalpy of Combustion (ΔH°c)
+
+**Definition:** Enthalpy change when 1 mole of substance is completely burned in oxygen.
+
+**Key characteristic:** Always exothermic (ΔH < 0)
+
+**Example:**  
+
+$$CH_{4(g)} + 2O_{2(g)} \rightarrow CO_{2(g)} + 2H_2O_{(l)}$$
+
+$$\Delta H°_c = -890 \text{ kJ mol}^{-1}$$
+
+### 6.5 Calorimetry
+
+#### Basic Principle
+
+When a reaction occurs in an insulated container, the heat released or absorbed changes the temperature of the surroundings:
+
+$$Q = m \times c \times \Delta T$$
+
+Where:
+- $Q$ = heat energy (J)
+- $m$ = mass of substance heated/cooled (g)
+- $c$ = specific heat capacity (J g⁻¹ K⁻¹)
+- $\Delta T$ = temperature change (K)
+
+#### For Water
+
+- **Specific heat capacity:** $c = 4.18 \text{ J g}^{-1}\text{ K}^{-1}$
+- **Density:** $\approx 1 \text{ g cm}^{-3}$ (1 mL ≈ 1 g)
+
+---
+
+#### Calculating Enthalpy Change from Calorimetry
+
+**Step 1:** Calculate heat energy released/absorbed
+
+$$Q = m \times c \times \Delta T$$
+
+**Step 2:** Calculate moles of limiting reactant
+
+**Step 3:** Calculate enthalpy per mole
+
+$$\Delta H = \frac{Q}{n}$$ (convert to $\text{kJ mol}^{-1}$)
+
+**Step 4:** Add the sign: negative for exothermic, positive for endothermic
+
+### 6.6 Hess's Law
+
+#### Principle
+
+"The total enthalpy change for a reaction is independent of the route taken, provided the starting materials and final products are the same."
+
+This law allows us to calculate enthalpy changes for reactions that may be difficult to measure directly.
+
+---
+
+#### Method 1: Using Enthalpies of Formation
+
+$$\Delta H°_{reaction} = \sum \Delta H°_f(products) - \sum \Delta H°_f(reactants)$$
+
+**Example - Complete combustion of methane:**
+
+$$CH_{4(g)} + 2O_{2(g)} \rightarrow CO_{2(g)} + 2H_2O_{(l)}$$
+
+$$\Delta H = [\Delta H°_f(CO_2) + 2 \times \Delta H°_f(H_2O)] - [\Delta H°_f(CH_4) + 2 \times \Delta H°_f(O_2)]$$
+
+$$= [-393 + 2 \times (-286)] - [-75 + 0] = -890 \text{ kJ mol}^{-1}$$
+
+---
+
+#### Method 2: Using Enthalpies of Combustion
+
+$$\Delta H°_{reaction} = \sum \Delta H°_c(reactants) - \sum \Delta H°_c(products)$$
+
+**Example - Formation of propane:**
+
+$$3C_{(s)} + 4H_{2(g)} \rightarrow C_3H_{8(g)}$$
+
+$$\Delta H = [3 \times \Delta H°_c(C) + 4 \times \Delta H°_c(H_2)] - [\Delta H°_c(C_3H_8)]$$
+
+### 6.7 Bond Enthalpies
+
+#### Definitions
+
+**Bond dissociation enthalpy:** The energy required to break 1 mole of gaseous bonds
+
+**Mean bond enthalpy:** The average energy for a particular bond type across different compounds
+
+Note: Values are averages because bond strengths vary slightly depending on the molecular environment.
+
+---
+
+#### Calculating ΔH from Bond Enthalpies
+
+$$\Delta H = \sum(\text{bonds broken}) - \sum(\text{bonds formed})$$
+
+**Key concept:**
+- Breaking bonds = ENDOTHERMIC (+ve)
+- Forming bonds = EXOTHERMIC (-ve)
+
+**Example - Hydrogenation of ethene:**
+
+$$C_2H_{4(g)} + H_{2(g)} \rightarrow C_2H_{6(g)}$$
+
+**Bonds broken:**
+- $1 \times C=C$ (611 kJ/mol)
+- $1 \times H-H$ (436 kJ/mol)
+
+**Bonds formed:**
+- $1 \times C-C$ (346 kJ/mol)  
+- $2 \times C-H$ ($2 \times 413 = 826$ kJ/mol)
+
+**Calculation:**
+
+$$\Delta H = (611 + 436) - (346 + 826) = -125 \text{ kJ mol}^{-1}$$
+
+### 6.8 Experimental Techniques
+
+#### Solution Calorimetry:
+- Use polystyrene cup as calorimeter
+- Measure temperature change of solution
+- Account for heat loss using cooling curves
+
+#### Fuel Calorimetry:
+- Burn fuel to heat known mass of water
+- Simple calorimeter: metal can + thermometer
+- Flame calorimeter: more accurate, reduces heat loss
+
+#### Improving Accuracy:
+- Use lids to reduce evaporation
+- Stir to ensure even temperature
+- Use draught screens
+- Plot cooling curves to account for heat loss
