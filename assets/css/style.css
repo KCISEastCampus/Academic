@@ -710,6 +710,20 @@ div.highlight {
   transition: transform 0.2s ease;
 }
 
+/* Image Styling - Block display with white background */
+#content-container img {
+  display: block;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 1rem 0;
+  max-width: 100%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  clear: both;
+  width: 550px;
+  height: auto;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .back-to-top {
