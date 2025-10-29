@@ -334,6 +334,8 @@ As lone pairs increase, lone pair–bond pair repulsion grows stronger and bond 
 3. Use the table above to find the base geometry.
 4. Adjust bond angles based on lone-pair count and relative repulsion (see values above).
 
+---
+
 ## 6. Energetics
 
 ### 6.1 Energy Changes in Reactions
@@ -353,8 +355,6 @@ $$\Delta H = H_p - H_r$$
 where $p$ = products and $r$ = reactants
 
 **Standard conditions:** 100 kPa, 298 K, 1 mol dm⁻³ solutions
-
----
 
 ### 6.3 Enthalpy Profile Diagrams
 
@@ -384,8 +384,6 @@ Note: $\Delta H°_f = 0$ for elements in their standard state.
 $$C_{(graphite)} + O_{2(g)} \rightarrow CO_{2(g)}$$
 
 $$\Delta H°_f = -393 \text{ kJ mol}^{-1}$$
-
----
 
 #### Enthalpy of Combustion (ΔH°c)
 
@@ -418,8 +416,6 @@ Where:
 - **Specific heat capacity:** $c = 4.18 \text{ J g}^{-1}\text{ K}^{-1}$
 - **Density:** $\approx 1 \text{ g cm}^{-3}$ (1 mL ≈ 1 g)
 
----
-
 #### Calculating Enthalpy Change from Calorimetry
 
 **Step 1:** Calculate heat energy released/absorbed
@@ -442,8 +438,6 @@ $$\Delta H = \frac{Q}{n}$$ (convert to $\text{kJ mol}^{-1}$)
 
 This law allows us to calculate enthalpy changes for reactions that may be difficult to measure directly.
 
----
-
 #### Method 1: Using Enthalpies of Formation
 
 $$\Delta H°_{reaction} = \sum \Delta H°_f(products) - \sum \Delta H°_f(reactants)$$
@@ -455,8 +449,6 @@ $$CH_{4(g)} + 2O_{2(g)} \rightarrow CO_{2(g)} + 2H_2O_{(l)}$$
 $$\Delta H = [\Delta H°_f(CO_2) + 2 \times \Delta H°_f(H_2O)] - [\Delta H°_f(CH_4) + 2 \times \Delta H°_f(O_2)]$$
 
 $$= [-393 + 2 \times (-286)] - [-75 + 0] = -890 \text{ kJ mol}^{-1}$$
-
----
 
 #### Method 2: Using Enthalpies of Combustion
 
@@ -477,8 +469,6 @@ $$\Delta H = [3 \times \Delta H°_c(C) + 4 \times \Delta H°_c(H_2)] - [\Delta H
 **Mean bond enthalpy:** The average energy for a particular bond type across different compounds
 
 Note: Values are averages because bond strengths vary slightly depending on the molecular environment.
-
----
 
 #### Calculating ΔH from Bond Enthalpies
 
