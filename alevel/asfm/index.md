@@ -649,7 +649,7 @@ Solve: $\begin{bmatrix} a & b \\\ c & d \end{bmatrix} \begin{bmatrix} x \\\ y \e
 
 This gives us $(a-1)x + by = 0$ and $cx + (d-1)y = 0$. If the determinant of the system is non-zero, the only solution is the origin $(0,0)$.
 
----
+<!-- ---
 
 ### 9. Linear Graphs (FPP1.2)
 
@@ -724,7 +724,7 @@ Using linear regression or graphical methods:
 - **Intercept** = $b$
 
 **Step 6: Express Results**
-The values of $a$ and $b$ give us the complete relationship: $y^2 = ax^3 + b$
+The values of $a$ and $b$ give us the complete relationship: $y^2 = ax^3 + b$ -->
 
 <!-- ---
 
