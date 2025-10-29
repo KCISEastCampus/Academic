@@ -137,7 +137,6 @@
 
       this.button.addEventListener('click', this.scrollToTop.bind(this));
       window.addEventListener('scroll', utils.throttle(this.toggleVisibility.bind(this), 100), { passive: true });
-      document.addEventListener('keydown', this.handleKeydown.bind(this));
     },
 
     toggleVisibility: function() {
