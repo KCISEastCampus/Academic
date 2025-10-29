@@ -9,8 +9,9 @@
       }
     },
     loader: {
-      // Load MathJax from CDN
-      paths: { mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3.2.2' }
+      // Try local first, fallback to CDN if needed
+      paths: { mathjax: '/assets/vendor/mathjax/3.2.2' },
+      load: ['[tex]/physics', '[tex]/mhchem']
     },
     tex: {
       inlineMath: [['$', '$'], ['\\(', '\\)']],
@@ -23,7 +24,8 @@
       // Force MathJax to use proper math fonts for all content including \text{}
       matchFontHeight: false,
       scale: 1.0,
-      mtextInheritFont: false  // Prevent \text from inheriting page font
+      mtextInheritFont: false,  // Prevent \text from inheriting page font
+      fontURL: '/assets/js/mathjax/fonts/woff-v2'  // Use local fonts
     },
     svg: {
       fontCache: 'global',
@@ -36,5 +38,9 @@
     }
   };
 </script>
-<!-- Load MathJax from CDN -->
-<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" id="MathJax-script"></script>
+<!-- Load MathJax: Local first, fallback to CDN -->
+<script defer 
+  src="/assets/vendor/mathjax/3.2.2/tex-chtml.js" 
+  id="MathJax-script"
+  onerror="console.warn('Local MathJax failed, loading from CDN...'); this.onerror=null; this.src='https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js';"
+  onload="console.log('MathJax loaded successfully')"></script>
