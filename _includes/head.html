@@ -70,8 +70,8 @@
         displayMath: [['$$', '$$'], ['\\[', '\\]']],
         processEscapes: true,
         processEnvironments: true,
-  // Load common packages, including chemistry support
-  packages: {'[+]': ['base', 'ams', 'newcommand', 'mhchem']},
+        // Load common packages, including chemistry support
+        packages: {'[+]': ['base', 'ams', 'amscd', 'newcommand', 'mhchem']},
         macros: { cosec: '\\csc' }
       },
       chtml: {
@@ -79,7 +79,7 @@
         displayAlign: 'center',
         displayIndent: '0',
   // Use locally hosted MathJax fonts
-  fontURL: '/assets/js/mathjax/fonts/woff-v2',
+  fontURL: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2',
         adaptiveCSS: true,
         linebreaks: { automatic: true, width: 'container' },
         fontCache: 'global',
