@@ -342,7 +342,7 @@ $$A = \int_a^b [f(x) - g(x)] dx$$ where $$f(x) \geq g(x)$$
 | By Parts | $\int udv = uv - \int vdu$ | Product of functions |
 | Partial Fractions | Decompose $\frac{P(x)}{Q(x)}$ | Rational functions |
 
-<!-- ---
+---
 
 ## P2.8 Differential Equations
 
@@ -365,9 +365,9 @@ $$A = \int_a^b [f(x) - g(x)] dx$$ where $$f(x) \geq g(x)$$
 - $$\frac{1}{1 + y^2} dy = x dx$$
 - $$\int \frac{1}{1 + y^2} dy = \int x dx$$
 - $$\tan^{-1} y = \frac{1}{2}x^2 + c$$
-- $$y = \tan\left(\frac{1}{2}x^2 + c\right)$$ -->
+- $$y = \tan\left(\frac{1}{2}x^2 + c\right)$$
 
-<!-- ---
+---
 
 ## P2.9 Numerical Methods
 
@@ -393,9 +393,9 @@ where $$h = \frac{b - a}{n}$$ and $$x_{i-1/2} = a + (i - \frac{1}{2})h$$
 
 **Simpson's Rule:**
 $$\int_a^b f(x) dx \approx \frac{h}{3}[f(x_0) + f(x_n) + 4(f(x_1) + f(x_3) + \cdots) + 2(f(x_2) + f(x_4) + \cdots)]$$
-where $$h = \frac{b - a}{n}$$ and n is even -->
+where $$h = \frac{b - a}{n}$$ and n is even
 
-<!-- ---
+---
 
 ## P2.10 Vectors
 
@@ -407,9 +407,10 @@ where $$h = \frac{b - a}{n}$$ and n is even -->
 ### Position Vectors and Lines
 - **Position vector:** $\vec{r} = x\vec{i} + y\vec{j} + z\vec{k}$
 - **Vector equation of line:** $\vec{r} = \vec{a} + \lambda\vec{b}$
-  where $$\vec{a}$$ is a point on the line and $$\vec{b}$$ is the direction vector
+  where $\vec{a}$ is a point on the line and $\vec{b}$ is the direction vector
 
 **Example:** Line through (1, 0, 2) with direction (-1, 2, 3)
+
 $$\begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} 1 \\ 0 \\ 2 \end{bmatrix} + \lambda \begin{bmatrix} -1 \\ 2 \\ 3 \end{bmatrix}$$
 
 ### Scalar Product
@@ -423,4 +424,4 @@ $$\cos\theta = \frac{\vec{a} \cdot \vec{b}}{|\vec{a}||\vec{b}|}$$
 ### Applications
 - Finding angle between two lines
 - Finding foot of perpendicular from point to line
-- Calculating perpendicular distance from point to line -->
+- Calculating perpendicular distance from point to line
