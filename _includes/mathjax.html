@@ -18,14 +18,16 @@
       displayMath: [['$$', '$$'], ['\\[', '\\]']],
       tags: 'ams',
       tagSide: 'right',
-      packages: {'[+]': ['physics', 'mhchem']}
+      packages: {'[+]': ['base', 'ams', 'physics', 'mhchem']},
+      processEscapes: true,
+      processEnvironments: true
     },
     chtml: {
       // Force MathJax to use proper math fonts for all content including \text{}
       matchFontHeight: false,
       scale: 1.0,
       mtextInheritFont: false,  // Prevent \text from inheriting page font
-      fontURL: '/assets/js/mathjax/fonts/woff-v2'  // Use local fonts
+  fontURL: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2'
     },
     svg: {
       fontCache: 'global',
