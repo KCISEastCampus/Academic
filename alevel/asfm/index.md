@@ -70,8 +70,6 @@ For rational function $$y = \frac{P(x)}{Q(x)}$$:
 3. For real solutions to exist: $B^2 - 4AC ≥ 0$
 4. Solve for range of $k$ to find stationary points
 
----
-
 **Example with Detailed Working:**
 
 Find asymptotes and stationary points of $$y = \frac{x^2 + 2}{x^2 - 4x}$$
@@ -110,8 +108,6 @@ The four main conic sections have distinct geometric properties:
 - **Directrix:** $x = -a$
 - **Key property:** All points equidistant from focus and directrix
 
----
-
 **Ellipse:** 
 
 $$\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$$
@@ -120,16 +116,12 @@ $$\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$$
 - **Minor axis length:** $2b$
 - **Foci:** $(±c, 0)$ where $c^2 = a^2 - b^2$
 
----
-
 **Hyperbola:** 
 
 $$\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1$$
 
 - **Asymptotes:** $y = ±\frac{b}{a}x$
 - **Foci:** $(±c, 0)$ where $c^2 = a^2 + b^2$
-
----
 
 **Rectangular Hyperbola:** 
 
@@ -154,8 +146,6 @@ $$d = \lvert x - a\rvert$$
 
 From point to horizontal line $y = b$:
 $$d = \lvert y - b\rvert$$
-
----
 
 **Example Problem:**
 
@@ -204,9 +194,7 @@ $$(a + bi) - (c + di) = (a - c) + (b - d)i$$
 
 **Multiplication:**
 $$(a + bi)(c + di) = ac + adi + bci + bdi^2 = (ac - bd) + (ad + bc)i$$
-
----
-
+Conversion 
 **Division - CRITICAL METHOD**
 
 To divide complex numbers, multiply both numerator and denominator by the conjugate of the denominator.
@@ -232,8 +220,6 @@ $$z = r(\cos θ + i\sin θ)$$
 where:
 - **Modulus:** $r = \lvert z\rvert = \sqrt{x^2 + y^2}$
 - **Argument:** $θ = \arg(z) = \tan^{-1}(y/x)$ (adjusted for quadrant)
-
----
 
 **Conversion Examples**
 
@@ -270,21 +256,15 @@ $$\lvert z - a\rvert = r$$
 - Center: point representing complex number $a$
 - Radius: $r$
 
----
-
 **Perpendicular Bisector:**
 $$\lvert z - a\rvert = \lvert z - b\rvert$$
 
 Points equidistant from $a$ and $b$
 
----
-
 **Ray from point:**
 $$\arg(z - a) = θ$$
 
 Fixed angle $θ$ emanating from point $a$
-
----
 
 **Example Problems**
 
@@ -366,8 +346,6 @@ $$\sum_{r=1}^n r^3 = \left[\frac{n(n+1)}{2}\right]^2$$
 2. Write out terms to see the cancellation pattern
 3. Sum telescopes to first minus last term
 
----
-
 **Classic Example:**
 
 Find $\sum_{r=1}^n \frac{1}{r(r+1)}$
@@ -381,6 +359,8 @@ $$\left(\frac{1}{1} - \frac{1}{2}\right) + \left(\frac{1}{2} - \frac{1}{3}\right
 **Step 3:** Telescoping cancellation
 $$1 - \frac{1}{n+1} = \frac{n}{n+1}$$
 
+---
+
 #### 5.3 Advanced Summation Examples
 
 **Example 1:**
@@ -392,8 +372,6 @@ $$r(r+1)(r+2) = \frac{1}{4}[r(r+1)(r+2)(r+3) - (r-1)r(r+1)(r+2)]$$
 
 Using telescoping sum:
 $$\sum_{r=1}^n r(r+1)(r+2) = \frac{1}{4}n(n+1)(n+2)(n+3)$$
-
----
 
 **Example 2:**
 
@@ -413,15 +391,15 @@ After applying the telescoping technique, the sum simplifies to a manageable for
 
 $$\sin θ = k \quad \Rightarrow \quad θ = nπ + (-1)^n α$$ 
 
-where $α = \sin^{-1}k$
+$$\text{where } α = \sin^{-1}k$$
 
 $$\cos θ = k \quad \Rightarrow \quad θ = 2nπ ± α$$ 
 
-where $α = \cos^{-1}k$
+$$\text{where } α = \cos^{-1}k$$
 
 $$\tan θ = k \quad \Rightarrow \quad θ = nπ + α$$ 
 
-where $α = \tan^{-1}k$
+$$\text{where } α = \tan^{-1}k$$
 
 ---
 
@@ -451,8 +429,6 @@ $$2x = nπ + (-1)^n\frac{π}{3}$$
 
 **Step 3:** Solve for $x$
 $$x = \frac{nπ}{2} + (-1)^n\frac{π}{6}$$
-
----
 
 **Example 2:** Solve $\cos(x + \frac{π}{6}) = -\frac{1}{\sqrt{2}}$
 
@@ -490,6 +466,8 @@ $$\lim_{h \to 0} (2x + h) = 2x$$
 
 Therefore, $f'(x) = 2x$
 
+---
+
 #### 7.2 Connected Rates of Change
 
 Using the chain rule to relate rates of change of different variables:
@@ -503,6 +481,8 @@ If $P = kV^3$ and volume $V$ is changing with time:
 $$\frac{dP}{dt} = \frac{dP}{dV} × \frac{dV}{dt} = 3kV^2 × \frac{dV}{dt}$$
 
 This shows how the rate of change of pressure depends on both the current volume and the rate at which volume is changing.
+
+---
 
 #### 7.3 Small Changes
 
@@ -527,6 +507,8 @@ $$δx = 5.1 - 5 = 0.1$$
 $$δy ≈ -0.32 × 0.1 = -0.032$$
 
 Therefore, $y$ decreases by approximately $0.032$ when $x$ increases to $5.1$.
+
+---
 
 #### 7.4 Improper Integrals
 
@@ -563,6 +545,8 @@ $$\begin{bmatrix} a & b \\ c & d \end{bmatrix} \begin{bmatrix} e & f \\ g & h \e
 
 **Important:** Matrix multiplication is not commutative—$AB \neq BA$ in general.
 
+---
+
 #### 8.2 Identity and Inverse Matrices
 
 **Identity Matrix ($I$):**
@@ -585,6 +569,8 @@ $$A^{-1} = \frac{1}{ad-bc} \begin{bmatrix} d & -b \\ -c & a \end{bmatrix}$$
 - $(AB)^T = B^TA^T$ (transpose reverses order similarly)
 - If $\det(A) = 0$, the matrix has no inverse (called singular)
 
+---
+
 #### 8.3 Determinants
 
 The determinant is a special number associated with a square matrix that tells us important properties about the matrix, particularly whether it has an inverse and how it scales areas/volumes.
@@ -601,6 +587,8 @@ $$\det\begin{bmatrix} a & b \\ c & d \end{bmatrix} = ad - bc$$
 $$\det(A) = (3)(4) - (2)(1) = 12 - 2 = 10$$
 
 This transformation scales areas by a factor of 10.
+
+---
 
 #### 8.4 Transformations in 2D
 
@@ -625,6 +613,8 @@ Shear transformations skew figures in a particular direction while preserving ar
 
 **Composition of Transformations:**
 When applying multiple transformations in sequence, multiply the transformation matrices in the order applied (right to left). For example, rotation followed by reflection is represented as $R_{\text{reflect}} × M_{\text{rotate}}$.
+
+---
 
 #### 8.5 Invariant Points and Lines
 
