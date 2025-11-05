@@ -18,7 +18,7 @@ subject: chem
 The table below summarizes the number and types of subshells present in each principal energy level:
 
 | Principal Level (n) | Number of Subshells | Subshell Types |
-|---------------------|---------------------|----------------|
+| ------------------- | ------------------- | -------------- |
 | 1                   | 1                   | s              |
 | 2                   | 2                   | s, p           |
 | 3                   | 3                   | s, p, d        |
@@ -27,12 +27,12 @@ The table below summarizes the number and types of subshells present in each pri
 ### 1.2 Atomic Orbitals
 #### Orbital Shapes & Numbers:
 
-| Orbital | Shape | Number per Principal Level |
-|---------|-------|----------------------------|
-| s       | Spherical | 1 (in every level)        |
-| p       | Dumbbell | 3 (from level 2 upwards)  |
-| d       | Various | 5 (from level 3 upwards)  |
-| f       | Various | 7 (from level 4 upwards)  |
+| Orbital | Shape     | Number per Principal Level |
+| ------- | --------- | -------------------------- |
+| s       | Spherical | 1 (in every level)         |
+| p       | Dumbbell  | 3 (from level 2 upwards)   |
+| d       | Various   | 5 (from level 3 upwards)   |
+| f       | Various   | 7 (from level 4 upwards)   |
 
 ### 1.3 Order of Filling Orbitals
 Orbitals are not filled in numerical order due to energy level overlap.  
@@ -193,14 +193,14 @@ Three main factors determine the value of ionisation energy:
 
 #### Comparative Analysis:
 
-| Element | Electronic Configuration | 1st IE (kJ/mol) | Dominant Factor |
-|---------|--------------------------|-----------------|-----------------|
-| **Li** | 1s² 2s¹ | 519 | High shielding from 1s² electrons |
-| **Be** | 1s² 2s² | 900 | Increased nuclear charge, no extra shielding |
-| **B** | 1s² 2s² 2p¹ | 799 | Electron in higher energy p orbital |
-| **C** | 1s² 2s² 2p² | 1086 | Increased nuclear charge, unpaired electrons |
-| **Na** | [${Ne}$] 3s¹ | 496 | Increased distance + more shielding |
-| **Mg** | [${Ne}$] 3s² | 738 | Increased nuclear charge |
+| Element | Electronic Configuration | 1st IE (kJ/mol) | Dominant Factor                              |
+| ------- | ------------------------ | --------------- | -------------------------------------------- |
+| **Li**  | 1s² 2s¹                  | 519             | High shielding from 1s² electrons            |
+| **Be**  | 1s² 2s²                  | 900             | Increased nuclear charge, no extra shielding |
+| **B**   | 1s² 2s² 2p¹              | 799             | Electron in higher energy p orbital          |
+| **C**   | 1s² 2s² 2p²              | 1086            | Increased nuclear charge, unpaired electrons |
+| **Na**  | [${Ne}$] 3s¹             | 496             | Increased distance + more shielding          |
+| **Mg**  | [${Ne}$] 3s²             | 738             | Increased nuclear charge                     |
 
 #### Visual Summary
 
@@ -266,21 +266,21 @@ Large jumps indicate change of main energy level:
 
 The table below lists total electron groups, bonding pairs, lone pairs, molecular geometries and typical bond angles in a single, unified view for quick reference and comparison:
 
-| Electron groups | Bonding groups | Lone Pairs | Molecular geometry | Bond angles |
-|------------------:|---------------:|-----------:|-------------------|-------------|
-| 2 | 2 | 0 | Linear | 180° |
-| 3 | 3 | 0 | Trigonal planar | 120° |
-| 3 | 2 | 1 | Bent (Angular) | < 120° |
-| 4 | 4 | 0 | Tetrahedral | 109.5° |
-| 4 | 3 | 1 | Trigonal pyramidal | ~107° |
-| 4 | 2 | 2 | Bent (Angular) | ~104.5° |
-| 5 | 5 | 0 | Trigonal bipyramidal | 120° (equatorial), 90° (axial) |
-| 5 | 4 | 1 | Seesaw | <120° (equatorial), <90° (axial) |
-| 5 | 3 | 2 | T-shaped | <90° |
-| 5 | 2 | 3 | Linear | 180° |
-| 6 | 6 | 0 | Octahedral | 90° |
-| 6 | 5 | 1 | Square pyramidal | <90° |
-| 6 | 4 | 2 | Square planar | 90° |
+| Electron groups | Bonding groups | Lone Pairs | Molecular geometry   | Bond angles                      |
+| --------------: | -------------: | ---------: | -------------------- | -------------------------------- |
+|               2 |              2 |          0 | Linear               | 180°                             |
+|               3 |              3 |          0 | Trigonal planar      | 120°                             |
+|               3 |              2 |          1 | Bent (Angular)       | < 120°                           |
+|               4 |              4 |          0 | Tetrahedral          | 109.5°                           |
+|               4 |              3 |          1 | Trigonal pyramidal   | ~107°                            |
+|               4 |              2 |          2 | Bent (Angular)       | ~104.5°                          |
+|               5 |              5 |          0 | Trigonal bipyramidal | 120° (equatorial), 90° (axial)   |
+|               5 |              4 |          1 | Seesaw               | <120° (equatorial), <90° (axial) |
+|               5 |              3 |          2 | T-shaped             | <90°                             |
+|               5 |              2 |          3 | Linear               | 180°                             |
+|               6 |              6 |          0 | Octahedral           | 90°                              |
+|               6 |              5 |          1 | Square pyramidal     | <90°                             |
+|               6 |              4 |          2 | Square planar        | 90°                              |
 
 ### 5.4 Notes & Common Examples
 - Ammonia (${NH}_3$): Electron groups = 4, Bonding = 3, Lone pairs = 1 → Trigonal pyramidal, bond angle ≈ 107°.
@@ -511,3 +511,450 @@ $$\Delta H = (611 + 436) - (346 + 826) = -125 \text{ kJ mol}^{-1}$$
 - Stir to ensure even temperature
 - Use draught screens
 - Plot cooling curves to account for heat loss
+
+---
+
+# Unit 2: Redox, Equilibria and Kinetics
+
+## 1. Redox Reactions
+
+### 1.1 Oxidation and Reduction Definitions
+
+#### Traditional Definitions:
+- **Oxidation**: Gain of oxygen or loss of hydrogen
+- **Reduction**: Loss of oxygen or gain of hydrogen
+
+**Examples:**
+- $$\ce{Mg(s) + 1/2O2(g) -> MgO(s)}$$ (Magnesium oxidized - gains oxygen)
+- $$\ce{C2H5OH(l) -> CH3CHO(l) + H2(g)}$$ (Ethanol oxidized - loses hydrogen)
+- $$\ce{C2H4(g) + H2(g) -> C2H6(g)}$$ (Ethene reduced - gains hydrogen)
+- $$\ce{CuO(s) + H2(g) -> Cu(s) + H2O(l)}$$ (Copper oxide reduced - loses oxygen)
+
+#### Modern Electron Transfer Definitions:
+- **Oxidation**: Loss of electrons (OIL - Oxidation Is Loss)
+- **Reduction**: Gain of electrons (RIG - Reduction Is Gain)
+- **Redox**: Both oxidation and reduction occur simultaneously
+
+**Memory Aid:**  
+**OIL RIG** - Oxidation Is Loss, Reduction Is Gain
+
+### 1.2 Half Equations
+
+**Example - Magnesium and Oxygen:**
+$$\ce{Mg -> Mg^{2+} + 2e^{-}}$$ (Oxidation - loss of electrons)
+$$\ce{1/2O2 + 2e^{-} -> O^{2-}}$$ (Reduction - gain of electrons)
+
+**Overall:** $$\ce{Mg + 1/2O2 -> Mg^{2+} + O^{2-}}$$
+
+### 1.3 Ionic Equations and Spectator Ions
+
+**Example Reaction:**
+$$\ce{CuCl2(aq) + Ca(s) -> Cu(s) + CaCl2(aq)}$$
+
+**Ionic Form:**
+$$\ce{(Cu^{2+} + 2Cl^{-}) + Ca -> Cu + (Ca^{2+} + 2Cl^{-})}$$
+
+**Half Equations:**
+- Reduction: $$\ce{Cu^{2+} + 2e^{-} -> Cu}$$
+- Oxidation: $$\ce{Ca -> Ca^{2+} + 2e^{-}}$$
+
+**Spectator Ion:** $$\ce{Cl^{-}}$$ (takes no part in reaction)
+
+**Net Ionic Equation:**
+$$\ce{Cu^{2+}(aq) + Ca(s) -> Cu(s) + Ca^{2+}(aq)}$$
+
+### 1.4 Oxidizing and Reducing Agents
+
+| Agent Type          | Function                         | Example                          |
+| ------------------- | -------------------------------- | -------------------------------- |
+| **Oxidizing Agent** | Accepts electrons, gets reduced  | $\ce{Cu^{2+}}$ in above reaction |
+| **Reducing Agent**  | Donates electrons, gets oxidized | $\ce{Ca}$ in above reaction      |
+
+**Key Principle:** The species that is reduced is the oxidizing agent; the species that is oxidized is the reducing agent.
+
+### 1.5 Practice Example
+
+For: $$\ce{Ca(s) + Br2(g) -> CaBr2(s)}$$
+
+- **Element gaining electrons:** $\ce{Br2}$ (reduced)
+- **Element losing electrons:** $\ce{Ca}$ (oxidized)
+- **Oxidizing agent:** $\ce{Br2}$
+- **Reducing agent:** $\ce{Ca}$
+- **Half equations:**
+  - Reduction: $$\ce{Br2 + 2e^{-} -> 2Br^{-}}$$
+  - Oxidation: $$\ce{Ca -> Ca^{2+} + 2e^{-}}$$
+
+---
+
+## 2. Oxidation States
+
+### 2.1 Definition and Rules
+
+**Oxidation State:** The charge an atom would have if all bonds were ionic
+
+#### Fundamental Rules:
+1. **Elements:** Oxidation state = 0 (e.g., $\ce{Na}$, $\ce{O2}$, $\ce{Cl2}$)
+2. **Simple Ions:** Oxidation state = charge (e.g., $\ce{Na+}$ = +1, $\ce{Cl-}$ = -1)
+3. **Molecules:** Sum of oxidation states = 0
+4. **Complex Ions:** Sum of oxidation states = ion charge
+
+#### Common Oxidation States:
+
+| Element     | Usual OS | Exceptions                                      |
+| ----------- | -------- | ----------------------------------------------- |
+| **H**       | +1       | -1 in metal hydrides ($\ce{NaH}$)               |
+| **O**       | -2       | -1 in peroxides ($\ce{H2O2}$), +2 in $\ce{F2O}$ |
+| **F**       | -1       | Always -1 in compounds                          |
+| **Group 1** | +1       | Always +1                                       |
+| **Group 2** | +2       | Always +2                                       |
+| **Al**      | +3       | Always +3                                       |
+| **Cl**      | -1       | +1, +3, +5, +7 with O and F                     |
+
+### 2.2 Calculating Oxidation States
+
+#### For Molecules (Sum = 0):
+**Example - CO₂:**
+- O = -2 each (total -4 for 2 oxygen atoms)
+- C must be +4 to make sum zero: $$+4 + 2(-2) = 0$$
+
+**Example - NH₃:**
+- H = +1 each (total +3 for 3 hydrogen atoms)
+- N must be -3 to make sum zero: $$-3 + 3(+1) = 0$$
+
+#### For Complex Ions (Sum = charge):
+**Example - SO₄²⁻:**
+- O = -2 each (total -8 for 4 oxygen atoms)
+- S must be +6 to make sum -2: $$+6 + 4(-2) = -2$$
+
+**Example - MnO₄⁻:**
+- O = -2 each (total -8 for 4 oxygen atoms)
+- Mn must be +7 to make sum -1: $$+7 + 4(-2) = -1$$
+
+### 2.3 Using Oxidation States in Naming
+
+**Examples:**
+
+- $\ce{PbO2}$: Lead(IV) oxide (Pb = +4)
+- $\ce{SnCl2}$: Tin(II) chloride (Sn = +2)
+- $\ce{TiCl4}$: Titanium(IV) chloride (Ti = +4)
+- $\ce{BrF5}$: Bromine(V) fluoride (Br = +5)
+
+### 2.4 Identifying Redox Reactions using Oxidation States
+
+**Oxidation:** Increase in oxidation state
+**Reduction:** Decrease in oxidation state
+
+**Practice Examples:**
+
+| Change                       | Oxidation State Change | Type      |
+| ---------------------------- | ---------------------- | --------- |
+| $\ce{Fe^{2+} -> Fe^{3+}}$    | +2 → +3                | Oxidation |
+| $\ce{I2 -> I^{-}}$           | 0 → -1                 | Reduction |
+| $\ce{H2O2 -> O2}$            | -1 → 0                 | Oxidation |
+| $\ce{H2O2 -> H2O}$           | -1 → -2                | Reduction |
+| $\ce{Cr2O7^{2-} -> Cr^{3+}}$ | +6 → +3                | Reduction |
+
+---
+
+## 3. Balancing Redox Equations
+
+### 3.1 Method for Balancing Half Equations
+
+**Five Step Process:**
+
+1. **Write species before/after** and balance atoms (except O and H)
+2. **Determine oxidation states** of element changing
+3. **Add electrons** to balance oxidation state change
+4. **Add H⁺ ions** to balance charge (if in acidic solution)
+5. **Add H₂O molecules** to balance oxygen and hydrogen
+
+### 3.2 Worked Examples
+
+#### Example 1: Simple Electron Transfer
+$$\ce{Fe^{2+} -> Fe^{3+}}$$
+
+**Step 1:** Atoms balanced  
+**Step 2:** +2 → +3 (oxidation)  
+**Step 3:** $$\ce{Fe^{2+} -> Fe^{3+} + e^{-}}$$  
+**Step 4-5:** Not needed - already balanced
+
+#### Example 2: Complex Reduction in Acid
+$$\ce{MnO4^{-} -> Mn^{2+}}$$ (in acidic solution)
+
+**Step 1:** Mn atoms balanced  
+**Step 2:** +7 → +2 (reduction)  
+**Step 3:** $$\ce{MnO4^{-} + 5e^{-} -> Mn^{2+}}$$  
+**Step 4:** $$\ce{MnO4^{-} + 5e^{-} + 8H^{+} -> Mn^{2+}}$$ (charge balanced)  
+**Step 5:** $$\ce{MnO4^{-} + 5e^{-} + 8H^{+} -> Mn^{2+} + 4H2O}$$
+
+#### Example 3: Multiple Atoms
+$$\ce{Cr2O7^{2-} -> Cr^{3+}}$$ (in acidic solution)
+
+**Step 1:** $$\ce{Cr2O7^{2-} -> 2Cr^{3+}}$$ (balance Cr atoms)  
+**Step 2:** 2@+6 → 2@+3 (each Cr reduced by 3 electrons)  
+**Step 3:** $$\ce{Cr2O7^{2-} + 6e^{-} -> 2Cr^{3+}}$$  
+**Step 4:** $$\ce{Cr2O7^{2-} + 6e^{-} + 14H^{+} -> 2Cr^{3+}}$$  
+**Step 5:** $$\ce{Cr2O7^{2-} + 6e^{-} + 14H^{+} -> 2Cr^{3+} + 7H2O}$$
+
+### 3.3 Combining Half Equations
+
+**Four Step Process:**
+
+1. **Write both half equations**
+2. **Multiply equations** so electron numbers match
+3. **Add equations** and cancel electrons
+4. **Cancel any other species** appearing on both sides
+
+**Example - Manganate(VII) with Iron(II):**
+
+**Step 1:**
+- Oxidation: $$\ce{Fe^{2+} -> Fe^{3+} + e^{-}}$$
+- Reduction: $$\ce{MnO4^{-} + 5e^{-} + 8H^{+} -> Mn^{2+} + 4H2O}$$
+
+**Step 2:** Multiply oxidation by 5:
+$$\ce{5Fe^{2+} -> 5Fe^{3+} + 5e^{-}}$$
+
+**Step 3:** Add equations:
+$$\ce{MnO4^{-} + 5e^{-} + 8H^{+} + 5Fe^{2+} -> Mn^{2+} + 4H2O + 5Fe^{3+} + 5e^{-}}$$
+
+**Step 4:** Cancel electrons:
+$$\ce{MnO4^{-} + 8H^{+} + 5Fe^{2+} -> Mn^{2+} + 4H2O + 5Fe^{3+}}$$
+
+---
+
+## 4. Disproportionation Reactions
+
+### 4.1 Definition
+A reaction where the same element is both oxidized and reduced
+
+### 4.2 Classic Example - Hydrogen Peroxide Decomposition
+$$\ce{2H2O2 -> 2H2O + O2}$$
+
+**Oxidation States:**
+- In $\ce{H2O2}$: O = -1
+- In $\ce{H2O}$: O = -2 (reduction)
+- In $\ce{O2}$: O = 0 (oxidation)
+
+**Explanation:** Two oxygen atoms reduce from -1 to -2, while two oxygen atoms oxidize from -1 to 0
+
+### 4.3 Other Examples
+
+**Copper(I) disproportionation:**
+$$\ce{2Cu^{+} -> Cu^{2+} + Cu}$$
++1 → +2 (oxidation) and +1 → 0 (reduction)
+
+**Iron disproportionation:**
+$$\ce{3Fe^{2+} -> 2Fe^{3+} + Fe}$$
++2 → +3 (oxidation) and +2 → 0 (reduction)
+
+---
+
+## 5. Chemical Kinetics
+
+### 5.1 Collision Theory
+
+**Three Requirements for Reaction:**
+1. **Collision** between particles
+2. **Sufficient energy** (≥ activation energy)
+3. **Correct orientation**
+
+**Activation Energy ($E_a$):** Minimum energy required for a successful collision
+
+### 5.2 Factors Affecting Reaction Rate
+
+#### Temperature:
+- **Effect:** Increases rate dramatically
+- **Reason:** More particles have energy ≥ $E_a$
+- **Rule of thumb:** 10°C increase ≈ doubles rate
+
+#### Concentration/Pressure:
+- **Effect:** Increases rate
+- **Reason:** More frequent collisions
+- **For gases:** Higher pressure = higher concentration
+
+#### Surface Area:
+- **Effect:** Increases rate for solids
+- **Reason:** More particles exposed for collision
+- **Example:** Powdered solid reacts faster than lumps
+
+#### Catalysts:
+- **Effect:** Increases rate
+- **Reason:** Provides alternative pathway with lower $E_a$
+- **Important:** Not consumed in reaction
+
+### 5.3 Maxwell-Boltzmann Distribution
+
+**Key Features:**
+- No particles have zero energy
+- Curve peaks at most probable energy
+- Average energy > most probable energy
+- Small fraction have very high energies (tail)
+
+**Temperature Effect:**
+- Higher temperature: curve broader, flatter, shifts right
+- More particles have energy ≥ $E_a$
+- Area under curve constant (total particles same)
+
+**Catalyst Effect:**
+- Lowers $E_a$ (moves activation energy left)
+- More particles have energy ≥ new lower $E_a$
+- Distribution curve unchanged
+
+### 5.4 Catalysts
+
+#### Types:
+- **Homogeneous:** Same phase as reactants (e.g., $\ce{H+}$ in esterification)
+- **Heterogeneous:** Different phase from reactants (e.g., Fe in Haber process)
+
+#### Industrial Importance:
+- Allow reactions at lower temperatures (save energy)
+- Reduce $\ce{CO2}$ emissions
+- Better atom economy
+- Used in production of polymers, sulfuric acid, ammonia, ethanol
+
+#### Examples:
+- **Haber process:** $\ce{Fe}$ catalyst
+- **Catalytic converters:** Pt, Rh, Pd
+- **Ozone depletion:** Cl atoms catalyze $\ce{O3}$ destruction
+
+---
+
+## 6. Chemical Equilibrium
+
+### 6.1 Dynamic Equilibrium
+
+**Characteristics:**
+- Forward and backward reactions occur simultaneously
+- Rates of forward and backward reactions are equal
+- Concentrations of all species remain constant
+- Can only occur in closed system
+
+**Example - Physical Equilibrium:**
+$$\ce{H2O(l) <=> H2O(g)}$$
+Rate of evaporation = Rate of condensation
+
+### 6.2 The Equilibrium Constant ($K_c$)
+
+#### General Form:
+For: $$\ce{mA + nB <=> pC + qD}$$
+
+$$K_c = \frac{[C]^p[D]^q}{[A]^m[B]^n}$$
+
+#### Important Notes:
+- Square brackets [] denote concentration in mol dm⁻³
+- Pure solids and liquids are omitted from expression
+- $K_c$ is constant at constant temperature
+- Units vary depending on reaction stoichiometry
+
+#### Examples:
+
+| Reaction                            | $K_c$ Expression             | Units     |
+| ----------------------------------- | ---------------------------- | --------- |
+| $\ce{H2 + I2 <=> 2HI}$              | $\frac{[HI]^2}{[H2][I2]}$    | None      |
+| $\ce{N2 + 3H2 <=> 2NH3}$            | $\frac{[NH3]^2}{[N2][H2]^3}$ | mol⁻² dm⁶ |
+| $\ce{CaCO3(s) <=> CaO(s) + CO2(g)}$ | $[CO2]$                      | mol dm⁻³  |
+
+### 6.3 Position of Equilibrium
+
+**Interpreting $K_c$ values:**
+- $K_c > 1$: Products favored (equilibrium lies to right)
+- $K_c < 1$: Reactants favored (equilibrium lies to left)
+- $K_c ≈ 1$: Significant amounts of both reactants and products
+
+### 6.4 Le Chatelier's Principle
+
+**Statement:** "When a system at equilibrium is subjected to a change, the position of equilibrium will shift to oppose that change."
+
+#### Effect of Concentration:
+- **Increase reactant:** Equilibrium shifts to right
+- **Increase product:** Equilibrium shifts to left
+- **Decrease reactant:** Equilibrium shifts to left  
+- **Decrease product:** Equilibrium shifts to right
+
+#### Effect of Pressure (gases only):
+- **Increase pressure:** Shifts to side with fewer gas molecules
+- **Decrease pressure:** Shifts to side with more gas molecules
+- **No effect:** Equal numbers of gas molecules on both sides
+
+#### Effect of Temperature:
+- **Increase temperature:** Shifts in endothermic direction
+- **Decrease temperature:** Shifts in exothermic direction
+
+#### Effect of Catalyst:
+- **No effect** on position of equilibrium
+- **Speeds up** rate at which equilibrium is reached
+- Affects forward and backward reactions equally
+
+### 6.5 Industrial Applications - Haber Process
+
+**Reaction:** $$\ce{N2(g) + 3H2(g) <=> 2NH3(g)} \quad \Delta H = -92 \text{ kJ mol}^{-1}$$
+
+**Optimum Conditions:**
+- **Pressure:** 200 atm (high - favors products, fewer gas molecules)
+- **Temperature:** 400-450°C (compromise - lower favors yield but slows rate)
+- **Catalyst:** Iron (speeds up rate)
+
+**Compromise Reasoning:**
+- **Equilibrium favors:** Low temperature, high pressure
+- **Kinetics favor:** High temperature, high pressure, catalyst
+- **Chosen conditions:** Balance between good yield and acceptable rate
+
+### 6.6 Calculating $K_c$ from Experimental Data
+
+**General Method:**
+1. Write balanced equation
+2. Construct ICE table (Initial, Change, Equilibrium)
+3. Calculate equilibrium concentrations
+4. Substitute into $K_c$ expression
+5. Calculate value with correct units
+
+**Example Calculation:**
+For: $$\ce{CH3COOH + C2H5OH <=> CH3COOC2H5 + H2O}$$
+
+Given: 1 mol acid + 1 mol alcohol, at equilibrium 2/3 acid reacted
+
+**ICE Table:**
+
+| Species | Initial | Change | Equilibrium |
+| ------- | ------- | ------ | ----------- |
+| Acid    | 1       | -2/3   | 1/3         |
+| Alcohol | 1       | -2/3   | 1/3         |
+| Ester   | 0       | +2/3   | 2/3         |
+| Water   | 0       | +2/3   | 2/3         |
+
+**Calculation:**
+$$K_c = \frac{[Ester][Water]}{[Acid][Alcohol]} = \frac{(2/3)(2/3)}{(1/3)(1/3)} = 4$$ (no units)
+
+---
+
+## 7. Summary Tables
+
+### 7.1 Redox Definitions Summary
+
+| Concept             | Definition                       | Example                        |
+| ------------------- | -------------------------------- | ------------------------------ |
+| **Oxidation**       | Loss of electrons                | $\ce{Fe -> Fe^{2+} + 2e^{-}}$  |
+| **Reduction**       | Gain of electrons                | $\ce{Cl2 + 2e^{-} -> 2Cl^{-}}$ |
+| **Oxidizing Agent** | Accepts electrons, gets reduced  | $\ce{MnO4^{-}}$ in redox       |
+| **Reducing Agent**  | Donates electrons, gets oxidized | $\ce{Fe^{2+}}$ in redox        |
+
+### 7.2 Equilibrium Factors Summary
+
+| Change                                 | Effect on Position        | Effect on $K_c$ |
+| -------------------------------------- | ------------------------- | --------------- |
+| **Increase reactant concentration**    | Shifts to products        | No change       |
+| **Increase product concentration**     | Shifts to reactants       | No change       |
+| **Increase pressure (gases)**          | Shifts to fewer molecules | No change       |
+| **Increase temperature (endothermic)** | Shifts to products        | Increases       |
+| **Increase temperature (exothermic)**  | Shifts to reactants       | Decreases       |
+| **Add catalyst**                       | No change                 | No change       |
+
+### 7.3 Reaction Rate Factors Summary
+
+| Factor                        | Effect on Rate | Reason                        |
+| ----------------------------- | -------------- | ----------------------------- |
+| **Increase temperature**      | Increases      | More particles have $E ≥ E_a$ |
+| **Increase concentration**    | Increases      | More frequent collisions      |
+| **Increase surface area**     | Increases      | More particles exposed        |
+| **Add catalyst**              | Increases      | Lower activation energy       |
+| **Increase pressure (gases)** | Increases      | More frequent collisions      |
