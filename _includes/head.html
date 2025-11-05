@@ -66,7 +66,7 @@
 
     window.MathJax = {
       loader: {
-        paths: { mathjax: '/assets/vendor/mathjax/3.2.2' }
+        paths: { mathjax: '/assets/vendor/mathjax/3.2.2', 'mhchem': '/assets/js/mhchem' }
       },
       tex: {
         inlineMath: [['$', '$'], ['\\(', '\\)']],
@@ -74,7 +74,7 @@
         processEscapes: true,
         processEnvironments: true,
         // Load common packages
-        packages: {'[+]': ['base', 'ams']},
+        packages: {'[+]': ['base', 'ams', 'mhchem']},
         macros: { cosec: '\\csc' }
       },
       chtml: {
