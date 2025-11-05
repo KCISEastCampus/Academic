@@ -94,7 +94,7 @@ For gaseous reactions:
 Ammonia is produced through the **Haber Process**, with nitrogen and hydrogen as raw materials.
 
 **Chemical Equation**:
-$$\ce{N2(g) + 3H2(g) \rightleftharpoons 2NH3(g)} \quad \Delta H = -92 \text{ kJ/mol}$$
+$$\mathrm{N_2(g) + 3H_2(g) \rightleftharpoons 2NH_3(g)} \quad \Delta H = -92 \text{ kJ/mol}$$
 
 ![Haber Process](https://upload.wikimedia.org/wikipedia/commons/d/db/Haber-Bosch-En.svg)
 
