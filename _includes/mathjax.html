@@ -1,5 +1,8 @@
 <script>
   window.MathJax = {
+    loader: {
+      load: ['[tex]/mhchem']
+    },
     startup: {
       ready: () => {
         MathJax.startup.defaultReady();
@@ -35,7 +38,6 @@
     }
   };
 </script>
-<script src="/assets/js/mhchem/mhchem.js"></script>
 <!-- Load MathJax from CDN -->
 <script defer
   src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"
