@@ -69,7 +69,7 @@ x^2 & \text{if } x \geq 0 \\
 
 ## 化学公式测试
 
-使用 mhchem 包：
-- 简单化学式：$\ce{H2SO4}$
-- 化学反应：$$\ce{2H2 + O2 -> 2H2O}$$
-- 平衡反应：$$\ce{N2(g) + 3H2(g) <=> 2NH3(g)}$$
+使用标准 LaTeX 格式（推荐）：
+- 简单化学式：$\mathrm{H_2SO_4}$
+- 化学反应：$$\mathrm{2H_2 + O_2 \rightarrow 2H_2O}$$
+- 平衡反应：$$\mathrm{N_2(g) + 3H_2(g) \rightleftharpoons 2NH_3(g)}$$
