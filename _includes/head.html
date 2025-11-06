@@ -17,15 +17,15 @@
 <link rel="preload" href="/assets/vendor/bootstrap/5.3.3/css/bootstrap.min.css" as="style">
 <link rel="preload" href="/assets/css/style.css" as="style">
 <!-- Preload MathJax for pages that need it -->
-<link rel="preload" href="/assets/vendor/mathjax/3.2.2/tex-chtml.js" as="script">
+<link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/tex-chtml-full.js" as="script">
 <!-- Preload critical MathJax fonts to avoid late rendering -->
-<link rel="preload" href="/assets/js/mathjax/fonts/woff-v2/MathJax_Main-Regular.woff" as="font" type="font/woff">
-<link rel="preload" href="/assets/js/mathjax/fonts/woff-v2/MathJax_Math-Italic.woff" as="font" type="font/woff">
-<link rel="preload" href="/assets/js/mathjax/fonts/woff-v2/MathJax_AMS-Regular.woff" as="font" type="font/woff">
-<link rel="preload" href="/assets/js/mathjax/fonts/woff-v2/MathJax_Size1-Regular.woff" as="font" type="font/woff">
-<link rel="preload" href="/assets/js/mathjax/fonts/woff-v2/MathJax_Size2-Regular.woff" as="font" type="font/woff">
-<link rel="preload" href="/assets/js/mathjax/fonts/woff-v2/MathJax_Size3-Regular.woff" as="font" type="font/woff">
-<link rel="preload" href="/assets/js/mathjax/fonts/woff-v2/MathJax_Zero.woff" as="font" type="font/woff">
+<link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+<link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff" as="font" type="font/woff" crossorigin="anonymous">
+<link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/output/chtml/fonts/woff-v2/MathJax_AMS-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+<link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/output/chtml/fonts/woff-v2/MathJax_Size1-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+<link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/output/chtml/fonts/woff-v2/MathJax_Size2-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+<link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/output/chtml/fonts/woff-v2/MathJax_Size3-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+<link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/output/chtml/fonts/woff-v2/MathJax_Zero.woff" as="font" type="font/woff" crossorigin="anonymous">
 
 <!-- Bootstrap (Local with CDN fallback) -->
 <link href="/assets/vendor/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet"
@@ -42,120 +42,6 @@
 <!-- Fonts -->
 <link href="/assets/css/fonts/maplemono.css" rel="stylesheet">
 
-<!-- MathJax: Conditional loading for pages with math -->
-<script>
-  // Detect if page contains math formulas - improved detection
-  window.hasMathContent = function() {
-    // Check for common math delimiters
-    const mathPatterns = [
-      /\$\$[\s\S]*?\$\$/g,  // $$...$$
-      /\$[^$\n]+\$/g,       // $...$
-      /\\\[[\s\S]*?\\\]/g,  // \[...\]
-      /\\\([\s\S]*?\\\)/g,  // \(...\)
-      /\\begin\{[^}]+\}[\s\S]*?\\end\{[^}]+\}/g, // \begin...\end
-      /\\[a-zA-Z]+\{[^}]*\}/g  // LaTeX commands like \frac{}{}
-    ];
-
-    const bodyText = document.body ? document.body.innerHTML : '';
-    return mathPatterns.some(pattern => pattern.test(bodyText));
-  };
-
-  // Load MathJax only if needed - optimized for China
-  window.loadMathJax = function() {
-    if (window.MathJax || window.hasMathContent() === false) return;
-
-    window.MathJax = {
-      loader: {
-        paths: { mathjax: '/assets/vendor/mathjax/3.2.2', 'mhchem': '/assets/js/mhchem' }
-      },
-      tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']],
-        displayMath: [['$$', '$$'], ['\\[', '\\]']],
-        processEscapes: true,
-        processEnvironments: true,
-        // Load common packages
-        packages: {'[+]': ['base', 'ams', 'mhchem']},
-        macros: { cosec: '\\csc' }
-      },
-      chtml: {
-        scale: 1.05,
-        displayAlign: 'center',
-        displayIndent: '0',
-  // Use locally hosted MathJax fonts
-  fontURL: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2',
-        adaptiveCSS: true,
-        linebreaks: { automatic: true, width: 'container' },
-        fontCache: 'global',
-        matchFontHeight: false,
-        mtextInheritFont: true
-      },
-      options: {
-        ignoreHtmlClass: 'tex-ignore',
-        processHtmlClass: 'tex-process',
-        enableMenu: false,
-        // Optimize for performance
-        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      },
-      startup: {
-        ready: () => {
-          console.log('MathJax loaded and ready');
-          MathJax.startup.defaultReady();
-          MathJax.startup.promise.then(() => {
-            console.log('Math rendering completed');
-            document.dispatchEvent(new Event('mathjaxLoaded'));
-          });
-        }
-      }
-    };
-
-    const script = document.createElement('script');
-    script.id = 'MathJax-script';
-    script.defer = true;
-    script.onload = function() {
-      console.log('MathJax loaded locally');
-    };
-    script.onerror = function() {
-      console.warn('Local MathJax load failed, trying BootCDN...');
-      // Fallback to BootCDN
-      const fallbackScript = document.createElement('script');
-      fallbackScript.src = 'https://cdn.bootcdn.net/ajax/libs/mathjax/3.2.2/es5/tex-chtml.js';
-      fallbackScript.id = 'MathJax-script-fallback';
-      fallbackScript.defer = true;
-      fallbackScript.onload = function() {
-        console.log('MathJax loaded from BootCDN');
-      };
-      fallbackScript.onerror = function() {
-        console.warn('BootCDN MathJax load failed, trying Staticfile...');
-        // Second fallback to Staticfile CDN
-        const secondScript = document.createElement('script');
-        secondScript.src = 'https://cdn.staticfile.net/mathjax/3.2.2/es5/tex-chtml.js';
-        secondScript.id = 'MathJax-script-second';
-        secondScript.defer = true;
-        secondScript.onload = function() {
-          console.log('MathJax loaded from Staticfile CDN');
-        };
-        secondScript.onerror = function() {
-          console.warn('Staticfile MathJax load failed, trying jsDelivr...');
-          // Third fallback to jsDelivr
-          const thirdScript = document.createElement('script');
-          thirdScript.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js';
-          thirdScript.id = 'MathJax-script-third';
-          thirdScript.defer = true;
-          thirdScript.onload = function() {
-            console.log('MathJax loaded from jsDelivr CDN');
-          };
-          document.head.appendChild(thirdScript);
-        };
-        document.head.appendChild(secondScript);
-      };
-      document.head.appendChild(fallbackScript);
-    };
-
-    // Primary: Local file
-    script.src = '/assets/vendor/mathjax/3.2.2/tex-chtml.js';
-    document.head.appendChild(script);
-  };
-</script>
 
 <script defer src="https://unpkg.com/mermaid@11.1.1/dist/mermaid.min.js"></script>
 
@@ -231,13 +117,6 @@
         console.warn('Mermaid initialization failed:', e);
       }
     }
-
-    // Load MathJax if page contains math - delayed check for accuracy
-    // setTimeout(function() {
-    //   if (window.hasMathContent()) {
-    //     window.loadMathJax();
-    //   }
-    // }, 500); // Wait 500ms for page to fully load
   });
 </script>
 

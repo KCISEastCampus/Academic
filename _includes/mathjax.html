@@ -1,5 +1,8 @@
 <script>
   window.MathJax = {
+    loader: {
+      load: ['[tex]/mhchem']
+    },
     startup: {
       ready: () => {
         MathJax.startup.defaultReady();
@@ -15,14 +18,15 @@
       tagSide: 'right',
       packages: {'[+]': ['base', 'ams', 'mhchem']},
       processEscapes: true,
-      processEnvironments: true
+      processEnvironments: true,
+      macros: { cosec: '\\csc' }
     },
     chtml: {
       // Force MathJax to use proper math fonts for all content including \text{}
-      matchFontHeight: false,
-      scale: 1.0,
-      mtextInheritFont: false,  // Prevent \text from inheriting page font
-      fontURL: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2'
+  matchFontHeight: false,
+  scale: 1.0,
+  mtextInheritFont: false,  // Prevent \text from inheriting page font
+  fontURL: '/assets/vendor/mathjax/3.2.2/es5/output/chtml/fonts/woff-v2'
     },
     svg: {
       fontCache: 'global',
@@ -35,21 +39,41 @@
     }
   };
 </script>
-<!-- Load MathJax (full bundle with mhchem included): Local first, fallback to CDNs -->
-<script defer
-  src="/assets/vendor/mathjax/3.2.2/es5/tex-chtml-full.js"
-  id="MathJax-script"
-  onload="console.log('MathJax loaded locally')"
-  onerror="console.warn('Local MathJax failed, trying BootCDN...'); this.onerror=null; this.src='https://cdn.bootcdn.net/ajax/libs/mathjax/3.2.2/es5/tex-chtml-full.js'; this.setAttribute('data-fallback','bootcdn');"></script>
+<!-- Load MathJax (full bundle with mhchem included): local first with CDN fallbacks -->
 <script>
   (function() {
-    const script = document.getElementById('MathJax-script');
-    script.addEventListener('error', function handler() {
-      if (script.getAttribute('data-fallback') === 'bootcdn') {
-        console.warn('BootCDN MathJax failed, trying jsDelivr...');
-        script.removeEventListener('error', handler);
-        script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js';
+    const sources = [
+      '/assets/vendor/mathjax/3.2.2/es5/tex-chtml-full.js',
+      'https://cdn.bootcdn.net/ajax/libs/mathjax/3.2.2/es5/tex-chtml-full.js',
+      'https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js'
+    ];
+
+    const script = document.createElement('script');
+    script.id = 'MathJax-script';
+    script.defer = true;
+    script.crossOrigin = 'anonymous';
+
+    let index = 0;
+    const tryNext = () => {
+      if (index >= sources.length) {
+        console.error('MathJax failed to load from all sources');
+        return;
       }
-    });
+      const src = sources[index++];
+  console.info('Loading MathJax from', src);
+      script.src = src;
+    };
+
+    script.onload = () => {
+      console.log('MathJax loaded from', script.src);
+    };
+
+    script.onerror = () => {
+      console.warn('MathJax failed to load from', script.src);
+      tryNext();
+    };
+
+    tryNext();
+    document.head.appendChild(script);
   })();
 </script>
