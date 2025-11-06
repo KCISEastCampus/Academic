@@ -38,8 +38,21 @@
     }
   };
 </script>
-<!-- Load MathJax from CDN -->
+<!-- Load MathJax: Local first, fallback to CDNs -->
 <script defer
-  src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"
+  src="/assets/vendor/mathjax/3.2.2/tex-chtml.js"
   id="MathJax-script"
-  onload="console.log('MathJax loaded successfully')"></script>
+  onload="console.log('MathJax loaded locally')"
+  onerror="console.warn('Local MathJax failed, trying BootCDN...'); this.onerror=null; this.src='https://cdn.bootcdn.net/ajax/libs/mathjax/3.2.2/es5/tex-chtml.js'; this.setAttribute('data-fallback','bootcdn');"></script>
+<script>
+  (function() {
+    const script = document.getElementById('MathJax-script');
+    script.addEventListener('error', function handler() {
+      if (script.getAttribute('data-fallback') === 'bootcdn') {
+        console.warn('BootCDN MathJax failed, trying jsDelivr...');
+        script.removeEventListener('error', handler);
+        script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js';
+      }
+    });
+  })();
+</script>
