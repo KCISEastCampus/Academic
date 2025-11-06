@@ -59,12 +59,22 @@
   }
 
   /* Mobile responsive */
+  @media (max-width: 1024px) {
+    .theme-toggle-btn {
+      right: 90px;
+    }
+  }
+
   @media (max-width: 768px) {
     .theme-toggle-btn {
       top: 15px;
-      right: 70px; /* 避免与TOC按钮重叠 */
-      padding: 6px 12px;
+      right: 88px; /* 避免与TOC按钮重叠 */
+      padding: 0;
       font-size: 0.8rem;
+      width: 46px;
+      height: 46px;
+      justify-content: center;
+      gap: 0;
     }
 
     .theme-icon {
@@ -76,11 +86,13 @@
     }
 
     .theme-toggle-btn {
-      width: 44px;
-      height: 44px;
-      padding: 0;
-      justify-content: center;
       border-radius: 50%;
+    }
+  }
+
+  @media (max-width: 540px) {
+    .theme-toggle-btn {
+      right: 82px;
     }
   }
 
@@ -123,6 +135,7 @@
       } else {
         theme_button.style.top = '90px';
       }
+      theme_button.style.right = '20px';
       theme_button.style.zIndex = '9998';
     }
 

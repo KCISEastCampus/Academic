@@ -18,7 +18,7 @@ function generateTOC() {
   tocHTML += "</ul>";
   tocContent.innerHTML = tocHTML;
 
-  // Enhanced scroll sync with improved active detection
+  // Scroll sync with active heading detection using IntersectionObserver
   const tocLinks = document.querySelectorAll(".toc-content a");
   let isScrolling = false;
   let lastUpdateTime = 0;
@@ -102,18 +102,17 @@ function initTOCToggle() {
   const tocToggle = document.getElementById('tocToggle');
   const toc = document.getElementById('toc');
   
-  console.log('InitTOCToggle called', {tocToggle, toc});
-  
   if (tocToggle && toc) {
     // Remove any existing event listeners
     tocToggle.replaceWith(tocToggle.cloneNode(true));
     const newTocToggle = document.getElementById('tocToggle');
+    newTocToggle.setAttribute('aria-expanded', 'false');
+    newTocToggle.setAttribute('aria-controls', 'toc');
     
     newTocToggle.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
       const isVisible = toc.classList.contains('show');
-      console.log('TOC toggle clicked, isVisible:', isVisible);
       toggleTOC(!isVisible);
     });
     
@@ -134,7 +133,6 @@ function initTOCToggle() {
       }
     });
     
-    console.log('TOC toggle initialized successfully');
   } else {
     console.error('TOC elements not found:', {tocToggle, toc});
   }
@@ -149,16 +147,30 @@ function toggleTOC(show) {
   if (show) {
     toc.classList.add('show');
     tocToggle.classList.add('active');
-    tocToggle.innerHTML = '<i class="bi bi-x"></i>';
+    tocToggle.innerHTML = '<i class="bi bi-x" aria-hidden="true"></i>';
+    tocToggle.setAttribute('aria-expanded', 'true');
     // Prevent body scroll when TOC is open on mobile
     if (window.innerWidth <= 768) {
       document.body.style.overflow = 'hidden';
     }
+
+    if (window.innerWidth <= 1024) {
+      const firstLink = toc.querySelector('a');
+      if (firstLink) {
+        setTimeout(() => firstLink.focus(), 120);
+      }
+    }
   } else {
     toc.classList.remove('show');
     tocToggle.classList.remove('active');
-    tocToggle.innerHTML = '<i class="bi bi-list"></i>';
+    tocToggle.innerHTML = '<i class="bi bi-list" aria-hidden="true"></i>';
+    tocToggle.setAttribute('aria-expanded', 'false');
     // Restore body scroll
     document.body.style.overflow = '';
+
+    if (document.activeElement && toc.contains(document.activeElement)) {
+      tocToggle.focus();
+    }
   }
 }
+

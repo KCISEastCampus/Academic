@@ -2,6 +2,11 @@
 <!-- Reusable subject button component -->
 <!-- Usage: include subject_button.html with subject=subject parameter -->
 
-<a class="btn btn-outline-{{ include.subject.color }}" href="{{ include.subject.path }}">
-  {{ include.subject.icon }} {{ include.subject.name }}
+{% assign subject_name = include.subject.name | default: 'Subject' %}
+<a class="btn btn-outline-{{ include.subject.color }}"
+   href="{{ include.subject.path }}"
+   data-subject-name="{{ subject_name | strip | escape }}"
+   {% if include.subject.grade %}data-subject-grade="{{ include.subject.grade | escape }}"{% endif %}
+   aria-label="Open resources for {{ subject_name | strip | escape }}">
+  {{ include.subject.icon }} {{ subject_name }}
 </a>

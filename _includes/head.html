@@ -1,4 +1,10 @@
 <meta charset="UTF-8">
+{% assign needs_mathjax = false %}
+{% if page.mathjax %}
+  {% assign needs_mathjax = true %}
+{% elsif page.layout == 'subjects' %}
+  {% assign needs_mathjax = true %}
+{% endif %}
 <!-- Immediately apply saved theme to avoid flash: reads localStorage before paint -->
 <script>try{(function(){var t=localStorage.getItem('site-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);} )();}catch(e){/* ignore */}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,20 +23,21 @@
 <link rel="preload" href="/assets/vendor/bootstrap/5.3.3/css/bootstrap.min.css" as="style">
 <link rel="preload" href="/assets/css/style.css" as="style">
 <!-- Preload MathJax for pages that need it -->
-<link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/tex-chtml-full.js" as="script">
-<!-- Preload critical MathJax fonts to avoid late rendering -->
-<link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
-<link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff" as="font" type="font/woff" crossorigin="anonymous">
-<link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/output/chtml/fonts/woff-v2/MathJax_AMS-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
-<link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/output/chtml/fonts/woff-v2/MathJax_Size1-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
-<link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/output/chtml/fonts/woff-v2/MathJax_Size2-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
-<link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/output/chtml/fonts/woff-v2/MathJax_Size3-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
-<link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/output/chtml/fonts/woff-v2/MathJax_Zero.woff" as="font" type="font/woff" crossorigin="anonymous">
+{% if needs_mathjax %}
+  <link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/tex-chtml-full.js" as="script">
+  <!-- Preload critical MathJax fonts to avoid late rendering -->
+  <link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/output/chtml/fonts/woff-v2/MathJax_AMS-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/output/chtml/fonts/woff-v2/MathJax_Size1-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/output/chtml/fonts/woff-v2/MathJax_Size2-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/output/chtml/fonts/woff-v2/MathJax_Size3-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/output/chtml/fonts/woff-v2/MathJax_Zero.woff" as="font" type="font/woff" crossorigin="anonymous">
+{% endif %}
 
 <!-- Bootstrap (Local with CDN fallback) -->
 <link href="/assets/vendor/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet"
-  onload="console.log('Bootstrap CSS loaded locally')"
-  onerror="this.href='https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css'; console.log('Bootstrap CSS loaded from BootCDN fallback')"
+  onerror="this.href='https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css'"
   crossorigin="anonymous">
 
 <!-- Icons - BootCDN -->
@@ -48,40 +55,22 @@
 <!-- Bootstrap JS: Load asynchronously after DOM ready - with CDN fallback -->
 <script>
   window.loadBootstrapJS = function() {
-    if (window.bootstrap) return; // Already loaded
+    if (window.bootstrap) return;
 
     const script = document.createElement('script');
     script.crossOrigin = 'anonymous';
-    script.onload = function() {
-      console.log('Bootstrap JS loaded locally');
-    };
     script.onerror = function() {
-      console.warn('Local Bootstrap JS load failed, trying BootCDN...');
-      // Fallback to BootCDN
       const fallbackScript = document.createElement('script');
       fallbackScript.src = 'https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js';
       fallbackScript.crossOrigin = 'anonymous';
-      fallbackScript.onload = function() {
-        console.log('Bootstrap JS loaded from BootCDN');
-      };
       fallbackScript.onerror = function() {
-        console.warn('BootCDN Bootstrap load failed, trying Staticfile...');
-        // Second fallback to Staticfile CDN
         const secondScript = document.createElement('script');
         secondScript.src = 'https://cdn.staticfile.net/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js';
         secondScript.crossOrigin = 'anonymous';
-        secondScript.onload = function() {
-          console.log('Bootstrap JS loaded from Staticfile CDN');
-        };
         secondScript.onerror = function() {
-          console.warn('Staticfile Bootstrap load failed, trying jsDelivr...');
-          // Third fallback to jsDelivr
           const thirdScript = document.createElement('script');
           thirdScript.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js';
           thirdScript.crossOrigin = 'anonymous';
-          thirdScript.onload = function() {
-            console.log('Bootstrap JS loaded from jsDelivr CDN');
-          };
           document.head.appendChild(thirdScript);
         };
         document.head.appendChild(secondScript);
@@ -89,7 +78,6 @@
       document.head.appendChild(fallbackScript);
     };
 
-    // Primary: Local file
     script.src = '/assets/vendor/bootstrap/5.3.3/js/bootstrap.bundle.min.js';
     document.head.appendChild(script);
   };
@@ -101,20 +89,18 @@
 <link rel="stylesheet" href="/assets/css/style.css">
 <link rel="shortcut icon" href="/assets/favicon.ico">
 
+<script defer src="/assets/js/image_lazy_load.js"></script>
+
 <script>
-  // Initialize after DOM content loaded
   document.addEventListener('DOMContentLoaded', function () {
-    // Load Bootstrap JS asynchronously
     setTimeout(window.loadBootstrapJS, 100);
 
-    // Initialize Mermaid if available
     if (window.mermaid && window.mermaid.initialize) {
       try {
         window.mermaid.initialize({ startOnLoad: false, theme: 'dark' });
         window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
-        console.log('Mermaid initialized');
       } catch (e) {
-        console.warn('Mermaid initialization failed:', e);
+        // Silently fail if mermaid initialization fails
       }
     }
   });

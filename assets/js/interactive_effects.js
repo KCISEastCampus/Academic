@@ -5,18 +5,15 @@
  * 功能特性：
  * - 页面滚动进度条（内容页）
  * - 返回顶部按钮（内容页）
- * - 按钮点击波纹效果
  * - 元素淡入动画
  * - 平滑滚动增强
  * - 表格交互优化
- * - 加载状态指示
+ * - PDF加载状态指示
  * - 键盘导航增强
  * - 科目按钮特效
- * - 目录高亮跟踪
  *
  * 性能优化：
  * - 使用节流和防抖减少事件处理频率
- * - Intersection Observer API 提升动画性能
  * - 被动事件监听器优化滚动性能
  * - 上下文感知：主页自动禁用特定特效
  * - prefers-reduced-motion 尊重用户偏好
@@ -163,25 +160,13 @@
     // }
   };
 
-  // 按钮点击波纹效果 - 已禁用以改善阅读体验
-  const rippleEffect = {
-    init: function() {
-      // 波纹效果已禁用，不再创建视觉干扰
-      return;
-    },
 
-    createRipple: function(e) {
-      // 不再创建波纹效果
-      return;
-    }
-  };
 
   // 元素淡入动画
   const fadeInAnimation = {
     init: function() {
       if (utils.prefersReducedMotion()) return;
 
-      // 延迟执行，让页面先加载完成
       setTimeout(() => {
         this.applyFadeInToVisibleElements();
       }, 100);
@@ -196,22 +181,18 @@
       selectors.forEach(selector => {
         try {
           document.querySelectorAll(selector).forEach((el, index) => {
-            // 检查元素是否在视口中
             const rect = el.getBoundingClientRect();
             const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
 
             if (isVisible) {
-              // 短暂延迟，让动画更自然
               setTimeout(() => {
                 el.classList.add('fade-in-visible');
-              }, index * 50); // 每个元素间隔50ms
-            } else {
-              // 对于不在视口中的元素，直接设为可见
-              el.classList.add('fade-in-visible');
+              }, index * 50);
             }
+            // 不可见元素不添加类，保持初始状态
           });
         } catch (error) {
-          console.warn('Error applying fade-in to selector:', selector, error);
+          // Silently handle errors
         }
       });
     }
@@ -269,17 +250,37 @@
     },
 
     handleClick: function(e) {
-      const link = e.target.closest('a[href$=".pdf"], a[target="_blank"]');
+      const link = e.target.closest('a');
       if (!link) return;
 
-      const icon = link.querySelector('i');
-      if (icon) {
-        const originalClass = icon.className;
-        icon.className = 'bi bi-hourglass-split';
-        setTimeout(() => {
-          icon.className = originalClass;
-        }, 2000);
+      const href = (link.getAttribute('href') || '').toLowerCase();
+      if (!href.endsWith('.pdf')) return;
+
+      if (link.classList.contains('loading-pdf')) {
+        e.preventDefault();
+        return;
       }
+
+      link.classList.add('loading-pdf');
+      link.setAttribute('aria-busy', 'true');
+      link.style.pointerEvents = 'none';
+
+      let loader = link.querySelector('.pdf-loader');
+      if (!loader) {
+        loader = document.createElement('span');
+        loader.className = 'pdf-loader';
+        loader.innerHTML = '<i class="bi bi-hourglass-split" aria-hidden="true"></i><span class="visually-hidden">Loading PDF</span>';
+        link.appendChild(loader);
+      }
+
+      setTimeout(() => {
+        link.classList.remove('loading-pdf');
+        link.removeAttribute('aria-busy');
+        link.style.pointerEvents = '';
+        if (loader && loader.parentElement === link) {
+          loader.remove();
+        }
+      }, 2000);
     }
   };
 
@@ -319,43 +320,7 @@
     }
   };
 
-  // 目录高亮跟踪
-  const tocHighlight = {
-    init: function() {
-      const toc = document.querySelector('.toc-content');
-      if (!toc) return;
 
-      this.headings = Array.from(document.querySelectorAll('h2, h3, h4'));
-      this.tocLinks = Array.from(toc.querySelectorAll('a[href^="#"]'));
-
-      if (this.headings.length === 0) return;
-
-      window.addEventListener('scroll', utils.throttle(this.updateHighlight.bind(this), 100), { passive: true });
-      this.updateHighlight();
-    },
-
-    updateHighlight: function() {
-      const scrollPosition = window.pageYOffset + CONFIG.SCROLL_OFFSET + 50;
-
-      let currentHeading = null;
-      for (let i = this.headings.length - 1; i >= 0; i--) {
-        if (this.headings[i].offsetTop <= scrollPosition) {
-          currentHeading = this.headings[i];
-          break;
-        }
-      }
-
-      if (currentHeading) {
-        const targetId = currentHeading.id;
-        this.tocLinks.forEach(link => {
-          link.classList.remove('toc-active');
-          if (link.getAttribute('href') === '#' + targetId) {
-            link.classList.add('toc-active');
-          }
-        });
-      }
-    }
-  };
 
   // 初始化所有特效
   function init() {
@@ -372,14 +337,12 @@
       backToTop.init();
     }
 
-    rippleEffect.init();
     fadeInAnimation.init();
     smoothScroll.init();
     tableInteraction.init();
     loadingIndicator.init();
     keyboardNavigation.init();
     subjectButtonEffects.init();
-    tocHighlight.init();
 
     if (CONFIG.ENABLE_DEBUG_LOGGING) {
       console.log('Interactive effects initialized' + (isHomePage ? ' (Home page mode)' : ''));

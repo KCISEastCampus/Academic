@@ -269,6 +269,28 @@ table tbody tr:hover,
 }
 .exam-icon { font-size: 1.25rem; }
 
+.loading-pdf {
+  opacity: 0.6;
+  cursor: wait;
+  position: relative;
+}
+
+.loading-pdf .pdf-loader {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  color: var(--accent-ig);
+  margin-left: 0.4rem;
+  animation: pdfPulse 1.6s ease-in-out infinite;
+}
+
+@keyframes pdfPulse {
+  0%,
+  100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+
 /* Code and highlighting - Clean inline code blocks */
 .highlight, pre {
   background: rgba(255,255,255,0.02);
@@ -704,10 +726,25 @@ div.highlight {
   outline-offset: 2px;
 }
 
+.card {
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.card:hover,
+.card:focus-within {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 30px rgba(10, 15, 35, 0.18) !important;
+}
+
 /* Theme Toggle Enhancement */
 #theme_button:hover {
   transform: scale(1.05);
   transition: transform 0.2s ease;
+}
+
+.btn:active {
+  transform: scale(0.97);
+  transition: transform 0.08s ease;
 }
 
 /* Image Styling - Block display with white background */
@@ -722,6 +759,16 @@ div.highlight {
   clear: both;
   width: 550px;
   height: auto;
+  transition: opacity 0.3s ease;
+}
+
+#content-container img[data-lazy-pending="true"] {
+  opacity: 0;
+}
+
+#content-container img.is-lazy-loaded,
+#content-container img[data-lazy-ignore] {
+  opacity: 1;
 }
 
 /* Responsive Adjustments */
