@@ -35,7 +35,7 @@ The website currently includes resources for the following subjects:
 ### A-Level Subjects
 - AS Mathematics
 
-## 🖥�?Technologies Used
+## 🖥�?Technologies Used
 
 - HTML5/CSS3
 - Jekyll
@@ -48,36 +48,36 @@ The website currently includes resources for the following subjects:
 ```
 ├── _config.yml              # Jekyll configuration
 ├── _data                    # Data files (NEW: data-driven content)
-�?  ├── subjects.yml         # Subject definitions
-�?  ├── exam_links.yml       # Exam link definitions
-�?  └── department_exams.yml # Department exam schedule
+�?  ├── subjects.yml         # Subject definitions
+�?  ├── exam_links.yml       # Exam link definitions
+�?  └── department_exams.yml # Department exam schedule
 ├── _includes                # Reusable HTML components
-�?  ├── banner.html
-�?  ├── breadcrumb.html
-�?  ├── card.html            # NEW: Reusable card component
-�?  ├── exam_link.html       # NEW: Exam link component
-�?  ├── footer.html
-�?  ├── head.html
-�?  ├── site_header.html     # NEW: Site header component
-�?  ├── subject_button.html  # NEW: Subject button component
-�?  └── theme_button.html
+�?  ├── banner.html
+�?  ├── breadcrumb.html
+�?  ├── card.html            # NEW: Reusable card component
+�?  ├── exam_link.html       # NEW: Exam link component
+�?  ├── footer.html
+�?  ├── head.html
+�?  ├── site_header.html     # NEW: Site header component
+�?  ├── subject_button.html  # NEW: Subject button component
+�?  └── theme_button.html
 ├── _layouts                 # Page templates
-�?  ├── index.html
-�?  └── subjects.html
+�?  ├── index.html
+�?  └── subjects.html
 ├── assets                   # Static assets
-�?  ├── css
-�?  �?  ├── variables.css    # CSS variables and design tokens
-�?  �?  ├── utilities.css    # Utility classes
-�?  �?  ├── style.css        # Main styles
-�?  �?  └── subject.css      # Subject page styles
-�?  ├── js
-�?  └── pdf
+�?  ├── css
+�?  �?  ├── variables.css    # CSS variables and design tokens
+�?  �?  ├── utilities.css    # Utility classes
+�?  �?  ├── style.css        # Main styles
+�?  �?  └── subject.css      # Subject page styles
+�?  ├── js
+�?  └── pdf
 ├── alevel                   # A-Level subjects
 ├── igcse                    # IGCSE subjects
-�?  ├── mathematics
-�?  ├── physics
-�?  ├── chemistry
-�?  └── biology
+�?  ├── mathematics
+�?  ├── physics
+�?  ├── chemistry
+�?  └── biology
 ├── FRONTEND_STRUCTURE.md    # NEW: Frontend development guide
 ├── OPTIMIZATION_RESULTS.md  # NEW: Optimization summary
 └── index.markdown           # Homepage
@@ -91,10 +91,10 @@ The website currently includes resources for the following subjects:
 ### Recent Improvements
 
 The site has been optimized for better maintainability:
-- �?Data-driven content (subjects and exams defined in YAML)
-- �?Reusable components for consistent styling
-- �?Organized CSS with variables and utilities
-- �?Comprehensive documentation for developers
+- �?Data-driven content (subjects and exams defined in YAML)
+- �?Reusable components for consistent styling
+- �?Organized CSS with variables and utilities
+- �?Comprehensive documentation for developers
 
 See [OPTIMIZATION_RESULTS.md](OPTIMIZATION_RESULTS.md) for details.
 
@@ -309,32 +309,32 @@ That's it! The homepage will automatically show the new subject button.
 ## 基本原则
 
 ### 1. 行内公式使用 `$...$`
-**适用场景�?*
-- 简单变量和常数�?x$, $y$, $\pi$, $e$
-- 简单运算符�?+$, $-$, $=$, $\neq$
+**适用场景�?*
+- 简单变量和常数�?x$, $y$, $\pi$, $e$
+- 简单运算符�?+$, $-$, $=$, $\neq$
 - 简单函数：$f(x)$, $\sin x$, $\cos x$
 - 简单指数：$x^2$, $e^x$
-- **单层简单分�?*�?\frac{1}{2}$, $\frac{x}{y}$
-- 区间和不等式�?x > 0$, $[0, 1]$
+- **单层简单分�?*�?\frac{1}{2}$, $\frac{x}{y}$
+- 区间和不等式�?x > 0$, $[0, 1]$
 
-**示例�?*
+**示例�?*
 ```markdown
-�?$x = 3$ 时，函数值为 $f(3) = 9$
-斜率�?$m = \frac{1}{2}$
-在区�?$x \in [0, \pi]$ �?
+�?$x = 3$ 时，函数值为 $f(3) = 9$
+斜率�?$m = \frac{1}{2}$
+在区�?$x \in [0, \pi]$ �?
 ```
 
 ### 2. 显示公式使用 `$$...$$`
-**适用场景�?*
-- **所有复杂分�?*（分子分母包含多项式、三角函数等�?
+**适用场景�?*
+- **所有复杂分�?*（分子分母包含多项式、三角函数等�?
 - 重要的定义和公式
-- 积分、求和、极限等复杂表达�?
-- 多层分式和嵌套结�?
+- 积分、求和、极限等复杂表达�?
+- 多层分式和嵌套结�?
 - 长的计算过程
 - 矩阵和行列式
 - 分段函数
 
-**示例�?*
+**示例�?*
 ```markdown
 $$\frac{x^2 + 2x + 1}{x^2 - 4x + 3}$$
 
@@ -345,8 +345,8 @@ $$\lvert x \rvert = \begin{cases} x & \text{if } x \geq 0 \\ -x & \text{if } x <
 
 ## 🔑 关键判断标准：分数复杂度
 
-### �?行内分数 `$\frac{...}{...}$`
-- 分子分母都是**单个字母或数�?*
+### �?行内分数 `$\frac{...}{...}$`
+- 分子分母都是**单个字母或数�?*
 - 分子分母都是**简单一次项**
 - 常见常数分数
 
@@ -354,12 +354,12 @@ $$\lvert x \rvert = \begin{cases} x & \text{if } x \geq 0 \\ -x & \text{if } x <
 $\frac{1}{2}$, $\frac{x}{y}$, $\frac{a}{b}$, $\frac{\pi}{4}$
 ```
 
-### �?显示分数 `$$\frac{...}{...}$$`
-- 分子或分母包�?*多项�?*
-- 分子或分母包�?*函数调用**
-- 分子或分母包�?*运算�?*
+### �?显示分数 `$$\frac{...}{...}$$`
+- 分子或分母包�?*多项�?*
+- 分子或分母包�?*函数调用**
+- 分子或分母包�?*运算�?*
 - **嵌套分数**
-- **长分�?*
+- **长分�?*
 
 ```markdown
 $$\frac{x^2 + 2x + 1}{x - 3}$$
@@ -372,38 +372,38 @@ $$\frac{1}{1 + \frac{1}{x}}$$
 
 ### 修复前后对比
 
-#### 案例1：基本函数定�?
-�?**错误�?*
+#### 案例1：基本函数定�?
+�?**错误�?*
 ```markdown
 - Linear/Linear: $$y = \frac{ax + b}{cx + d}$$
 ```
 
-�?**正确�?*
+�?**正确�?*
 ```markdown
 - Linear/Linear: $y = \frac{ax + b}{cx + d}$
 ```
 
-#### 案例2：复杂计算过�?
-�?**错误�?*
+#### 案例2：复杂计算过�?
+�?**错误�?*
 ```markdown
 **Example 1:** $$\int xe^{2x} dx$$
 - $$\int xe^{2x} dx = \frac{1}{2}xe^{2x} - \frac{1}{4}e^{2x} + c$$
 ```
 
-�?**正确�?*
+�?**正确�?*
 ```markdown
 **Example 1:** $\int xe^{2x} dx$
 
 $$\int xe^{2x} dx = \frac{1}{2}xe^{2x} - \frac{1}{4}e^{2x} + c$$
 ```
 
-#### 案例3：表格中的公�?
-�?**错误�?*
+#### 案例3：表格中的公�?
+�?**错误�?*
 ```markdown
 | Product | $\(\frac{d}{dx}[uv] = u'v + uv'\)$ | Two functions multiplied |
 ```
 
-�?**正确�?*
+�?**正确�?*
 ```markdown
 | Product | $\frac{d}{dx}[uv] = u'v + uv'$ | Two functions multiplied |
 ```
@@ -412,23 +412,23 @@ $$\int xe^{2x} dx = \frac{1}{2}xe^{2x} - \frac{1}{4}e^{2x} + c$$
 
 ### 1. MathJax配置优化
 - 修复了配置脚本的加载顺序
-- 添加�?`displayMath` 配置
-- 添加�?`mhchem` 包支持化学公�?
+- 添加�?`displayMath` 配置
+- 添加�?`mhchem` 包支持化学公�?
 
-### 2. 公式使用一致�?
+### 2. 公式使用一致�?
 - 将列表项中的公式定义改为行内模式
-- 将复杂计算步骤改为显示模�?
-- 修复了表格中的公式语法错�?
+- 将复杂计算步骤改为显示模�?
+- 修复了表格中的公式语法错�?
 
 ### 3. 语法错误修复
 - 移除了错误的 `$\(...\)$` 语法
-- 统一使用 `$...$` �?`$$...$$`
+- 统一使用 `$...$` �?`$$...$$`
 
-## 推荐的使用模�?
+## 推荐的使用模�?
 
 ### 文本中的变量引用
 ```markdown
-�?$x > 0$ 时，函数 $f(x) = x^2$ 是递增的�?
+�?$x > 0$ 时，函数 $f(x) = x^2$ 是递增的�?
 ```
 
 ### 公式定义
@@ -439,35 +439,35 @@ $$y^2 = 4ax$$
 
 ### 计算步骤
 ```markdown
-求解过程�?
+求解过程�?
 $$\begin{align}
 x^2 + 2x - 3 &= 0 \\
 (x + 3)(x - 1) &= 0 \\
-x &= -3 \text{ �?} x = 1
+x &= -3 \text{ �?} x = 1
 \end{align}$$
 ```
 
 ### 几何形状参数
 ```markdown
-**椭圆�?* $\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$
-- 长轴长度�?2a$
-- 短轴长度�?2b$
-- 焦点�?(±c, 0)$ 其中 $c^2 = a^2 - b^2$
+**椭圆�?* $\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$
+- 长轴长度�?2a$
+- 短轴长度�?2b$
+- 焦点�?(±c, 0)$ 其中 $c^2 = a^2 - b^2$
 ```
 
-## 最终决策规�?🎯
+## 最终决策规�?🎯
 
 ### 快速判断方法：
 1. **看分数复杂度**：如果分子或分母超过单个字符，用 `$$...$$`
-2. **看公式长�?*：如果公式超�?-4个符号，考虑�?`$$...$$`
-3. **看重要程�?*：定义、定理等重要公式�?`$$...$$`
-4. **看上下文**：如果影响阅读流畅性，�?`$$...$$`
+2. **看公式长�?*：如果公式超�?-4个符号，考虑�?`$$...$$`
+3. **看重要程�?*：定义、定理等重要公式�?`$$...$$`
+4. **看上下文**：如果影响阅读流畅性，�?`$$...$$`
 
-### 特殊情况处理�?
+### 特殊情况处理�?
 
-#### 表格中的公式�?
+#### 表格中的公式�?
 - 简单公式：$(uv)' = u'v + uv'$
-- 复杂公式：用 `\left(\right)` 增加可读�?
+- 复杂公式：用 `\left(\right)` 增加可读�?
 - 避免嵌套分数，可以用文字描述
 
 #### 长计算过程：
@@ -481,24 +481,24 @@ $$= \text{最终结果}$$
 ## 注意事项
 
 1. **分数优先原则**：复杂分数必须用显示模式 `$$...$$`
-2. **保持一致�?*：同类型公式使用相同模式
+2. **保持一致�?*：同类型公式使用相同模式
 3. **考虑阅读体验**：行内公式不应影响行间距
-4. **表格优化**：表格中避免过于复杂的公�?
-5. **化学公式**：使用标�?LaTeX 格式，如 `$\mathrm{H_2SO_4}$` �?`$\ce{H2SO4}$`（注意：mhchem 需要特殊配置）
+4. **表格优化**：表格中避免过于复杂的公�?
+5. **化学公式**：使用标�?LaTeX 格式，如 `$\mathrm{H_2SO_4}$` �?`$\ce{H2SO4}$`（注意：mhchem 需要特殊配置）
 
 ## 化学公式的标准表示法
 
 ### 推荐方式（无需特殊包）
-- 简单化学式：`$\mathrm{H_2O}$` �?$\mathrm{H_2O}$
-- 离子表示：`$\mathrm{Na^+}$` �?$\mathrm{Na^+}$
+- 简单化学式：`$\mathrm{H_2O}$` �?$\mathrm{H_2O}$
+- 离子表示：`$\mathrm{Na^+}$` �?$\mathrm{Na^+}$
 - 化学反应：`$$\mathrm{2H_2 + O_2 \rightarrow 2H_2O}$$`
 
 ### 使用 HTML 标签（备选）
-- 化学式：`H<sub>2</sub>SO<sub>4</sub>` �?H<sub>2</sub>SO<sub>4</sub>
-- 反应式：`N<sub>2</sub>(g) + 3H<sub>2</sub>(g) �?2NH<sub>3</sub>(g)`
+- 化学式：`H<sub>2</sub>SO<sub>4</sub>` �?H<sub>2</sub>SO<sub>4</sub>
+- 反应式：`N<sub>2</sub>(g) + 3H<sub>2</sub>(g) �?2NH<sub>3</sub>(g)`
 
 ## 验证方法
-创建了测试页�?`formula_test.md` 来验证公式显示效果，可以直接预览对比不同模式的显示效果�
+创建了测试页�?`formula_test.md` 来验证公式显示效果，可以直接预览对比不同模式的显示效果�
 
 ---
 
@@ -539,7 +539,7 @@ Rendered with loop:
 ```
 
 **Impact:** 
-- 18 lines of HTML �?3 lines of Liquid
+- 18 lines of HTML �?3 lines of Liquid
 - Adding a subject: edit 1 YAML file vs. 1 HTML file
 - Less duplication, easier maintenance
 
@@ -613,9 +613,9 @@ Rendered with loop:
 ## Metrics
 
 ### Code Reduction
-- **Subjects section:** 18 lines �?6 lines (67% reduction)
-- **Exam links section:** 14 lines �?6 lines (57% reduction)
-- **Header section:** 9 lines �?3 lines (67% reduction)
+- **Subjects section:** 18 lines �?6 lines (67% reduction)
+- **Exam links section:** 14 lines �?6 lines (57% reduction)
+- **Header section:** 9 lines �?3 lines (67% reduction)
 
 ### Files Created
 - 3 data files (subjects, exam_links, already had department_exams)
@@ -657,11 +657,11 @@ Based on the issue requirements, further improvements could include:
 ## Conclusion
 
 This optimization achieves the goals from the issue:
-- �?Extracted common components
-- �?Established unified style variables
-- �?Evaluated and improved structure (CSS separation)
-- �?Optimized content structure with data-driven approach
-- �?Improved development efficiency and scalability
+- �?Extracted common components
+- �?Established unified style variables
+- �?Evaluated and improved structure (CSS separation)
+- �?Optimized content structure with data-driven approach
+- �?Improved development efficiency and scalability
 
 ---
 
@@ -672,7 +672,7 @@ This optimization achieves the goals from the issue:
 ## Overview
 This document provides a visual comparison of the changes made to optimize the frontend structure.
 
-## Before �?After Comparisons
+## Before �?After Comparisons
 
 ### 1. Subject List (IGCSE Section)
 
@@ -709,10 +709,10 @@ igcse:
 ```
 
 **Benefits:**
-- �?Add new subject: edit 1 file (YAML) vs. 1 file (HTML)
-- �?Consistent button styling via component
-- �?Less duplication
-- �?Easier to maintain
+- �?Add new subject: edit 1 file (YAML) vs. 1 file (HTML)
+- �?Consistent button styling via component
+- �?Less duplication
+- �?Easier to maintain
 
 ---
 
@@ -755,9 +755,9 @@ igcse:
 ```
 
 **Benefits:**
-- �?Update links by editing YAML instead of HTML
-- �?Consistent styling through component
-- �?Automatic external link handling
+- �?Update links by editing YAML instead of HTML
+- �?Consistent styling through component
+- �?Automatic external link handling
 
 ---
 
@@ -827,10 +827,10 @@ assets/css/
 ```
 
 **Benefits:**
-- �?Easy to find and modify variables
-- �?Utility classes reduce duplication
-- �?Clear separation of concerns
-- �?subject.css now theme-aware
+- �?Easy to find and modify variables
+- �?Utility classes reduce duplication
+- �?Clear separation of concerns
+- �?subject.css now theme-aware
 
 ---
 
@@ -859,9 +859,9 @@ assets/css/
 ```
 
 **Benefits:**
-- �?Can reuse on other pages
-- �?Consistent styling
-- �?Easy to update (change once, apply everywhere)
+- �?Can reuse on other pages
+- �?Consistent styling
+- �?Easy to update (change once, apply everywhere)
 
 ---
 
@@ -974,11 +974,11 @@ assets/css/
 ## Conclusion
 
 This optimization successfully:
-- �?Reduced code duplication by ~60%
-- �?Made content updates 3x easier
-- �?Improved CSS organization and consistency
-- �?Created comprehensive documentation
-- �?Established patterns for future development
+- �?Reduced code duplication by ~60%
+- �?Made content updates 3x easier
+- �?Improved CSS organization and consistency
+- �?Created comprehensive documentation
+- �?Established patterns for future development
 
 The site is now easier to maintain, scale, and extend!
 
@@ -992,9 +992,9 @@ title: Universal Markdown Math & Chemistry Guide
 mathjax: true
 ---
 
-# 📚 通用Markdown数学与化学公式指�?
+# 📚 通用Markdown数学与化学公式指�?
 
-本指南展示了标准Markdown中数学和化学公式的正确写法，适用于GitHub、GitLab、Jekyll等所有支持MathJax的平台�?
+本指南展示了标准Markdown中数学和化学公式的正确写法，适用于GitHub、GitLab、Jekyll等所有支持MathJax的平台�?
 
 ---
 
@@ -1003,15 +1003,15 @@ mathjax: true
 ### 行内公式 (Inline Math)
 使用单个美元符号包围：`$公式$`
 
-**示例�?*
-- 质量能量关系�?E = mc^2$
-- 二次公式�?x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$
-- 摩尔浓度�?c = \frac{n}{V}$ (mol/L)
+**示例�?*
+- 质量能量关系�?E = mc^2$
+- 二次公式�?x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$
+- 摩尔浓度�?c = \frac{n}{V}$ (mol/L)
 
 ### 显示公式 (Display Math)
 使用双美元符号包围：`$$公式$$`
 
-**基础数学�?*
+**基础数学�?*
 $$\int_0^\infty e^{-x^2} dx = \frac{\sqrt{\pi}}{2}$$
 
 $$\sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}$$
@@ -1020,25 +1020,25 @@ $$\sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}$$
 
 ## 🔬 化学公式标准语法
 
-### 化学方程�?
-使用标准 LaTeX 格式（推荐）�?HTML 标签�?
+### 化学方程�?
+使用标准 LaTeX 格式（推荐）�?HTML 标签�?
 
 **基础反应（LaTeX）：**
 $$\mathrm{2H_2 + O_2 \rightarrow 2H_2O}$$
 
 $$\mathrm{CaCO_3 + 2HCl \rightarrow CaCl_2 + CO_2 + H_2O}$$
 
-**复杂反应（带状态标记）�?*
+**复杂反应（带状态标记）�?*
 $$\mathrm{N_2(g) + 3H_2(g) \rightleftharpoons 2NH_3(g)}$$
 
 **离子方程式：**
 $$\mathrm{Ag^+ + Cl^- \rightarrow AgCl \downarrow}$$
 
-**氧化还原�?*
+**氧化还原�?*
 $$\mathrm{Zn + Cu^{2+} \rightarrow Zn^{2+} + Cu}$$
 
 **备选（HTML）：**
-Ag<sup>+</sup> + Cl<sup>-</sup> �?AgCl�?
+Ag<sup>+</sup> + Cl<sup>-</sup> �?AgCl�?
 
 
 ---
@@ -1046,50 +1046,50 @@ Ag<sup>+</sup> + Cl<sup>-</sup> �?AgCl�?
 ## 📊 化学计算公式
 
 ### 浓度计算
-**摩尔浓度公式�?*
+**摩尔浓度公式�?*
 $$\text{Concentration (mol/dm}^3\text{)} = \frac{\text{number of moles}}{\text{volume of solution (dm}^3\text{)}}$$
 
-**质量浓度�?*
+**质量浓度�?*
 $$\text{moles} = \frac{\text{mass (g)}}{\text{molar mass (g/mol)}}$$
 
-**综合公式�?*
+**综合公式�?*
 $$c = \frac{m}{M \times V}$$
 
-其中�?
+其中�?
 - $c$ = 浓度 (mol/L)
 - $m$ = 质量 (g)  
 - $M$ = 摩尔质量 (g/mol)
 - $V$ = 体积 (L)
 
 ### 能量计算
-**热量公式�?*
+**热量公式�?*
 $$Q = mc\Delta T$$
 
-**分解�?*
+**分解�?*
 - $Q$ = 热量 (J)
 - $m$ = 质量 (kg)
-- $c$ = 比热�?(J/kg·°C)
+- $c$ = 比热�?(J/kg·°C)
 - $\Delta T$ = 温度变化 (°C)
 
-**焓变�?*
+**焓变�?*
 $$\Delta H = \sum \text{(bonds broken)} - \sum \text{(bonds formed)}$$
 
 ---
 
-## �?物理公式
+## �?物理公式
 
 ### 基础力学
-**牛顿第二定律�?*
+**牛顿第二定律�?*
 $$F = ma$$
 
-**动能公式�?*
+**动能公式�?*
 $$E_k = \frac{1}{2}mv^2$$
 
-**重力势能�?*
+**重力势能�?*
 $$E_p = mgh$$
 
 ### 电学公式  
-**欧姆定律�?*
+**欧姆定律�?*
 $$V = IR$$
 
 **电功率：**
@@ -1097,37 +1097,37 @@ $$P = VI = I^2R = \frac{V^2}{R}$$
 
 ---
 
-## 🎯 最佳实�?
+## 🎯 最佳实�?
 
-### �?推荐写法
+### �?推荐写法
 ```markdown
-1. 行内数学�?\text{速度} = \frac{\text{距离}}{\text{时间}}$
+1. 行内数学�?\text{速度} = \frac{\text{距离}}{\text{时间}}$
 2. 化学方程式：$$\mathrm{CH_4 + 2O_2 \rightarrow CO_2 + 2H_2O}$$
-3. 文本标记�?\text{单位：mol/L}$
+3. 文本标记�?\text{单位：mol/L}$
 4. 化学式：$\mathrm{H_2SO_4}$, $\mathrm{Ca(OH)_2}$
 ```
 
-### �?避免的写�?
+### �?避免的写�?
 ```markdown
-1. mhchem �?\ce{}：已不推荐（兼容性问题）
-2. 混合HTML�?sub>2</sub>H<sub>2</sub>O（用 $\mathrm{H_2O}$ 替代�?
-3. 纯文本化学：H2 + O2 -> H2O（用 $\mathrm{H_2 + O_2 \rightarrow H_2O}$ 替代�?
-3. 复杂自定义宏 (保持标准兼容�?
+1. mhchem �?\ce{}：已不推荐（兼容性问题）
+2. 混合HTML�?sub>2</sub>H<sub>2</sub>O（用 $\mathrm{H_2O}$ 替代�?
+3. 纯文本化学：H2 + O2 -> H2O（用 $\mathrm{H_2 + O_2 \rightarrow H_2O}$ 替代�?
+3. 复杂自定义宏 (保持标准兼容�?
 ```
 
 ---
 
-## 🌐 兼容�?
+## 🌐 兼容�?
 
 此配置兼容：
-- �?GitHub Markdown (with MathJax extension)
-- �?GitLab Markdown  
-- �?Jekyll静态网�?
-- �?Jupyter Notebook
-- �?Obsidian/Notion (部分)
-- �?大多数学术平�?
+- �?GitHub Markdown (with MathJax extension)
+- �?GitLab Markdown  
+- �?Jekyll静态网�?
+- �?Jupyter Notebook
+- �?Obsidian/Notion (部分)
+- �?大多数学术平�?
 
-**核心原则：使用标准语法，避免自定义扩展�?*
+**核心原则：使用标准语法，避免自定义扩展�?*
 
 ---
 
@@ -1143,47 +1143,47 @@ mathjax: true
 
 ## 行内公式测试 (使用 `$...$`)
 
-### �?适合行内显示的公式：
-- 简单变量：�?$x = 3$ �?
+### �?适合行内显示的公式：
+- 简单变量：�?$x = 3$ �?
 - 简单分数：斜率 $m = \frac{1}{2}$
 - 简单函数：$f(x) = x^2$
 - 简单指数：$e^x$, $x^n$
-- 区间�?x \in [0, 1]$
+- 区间�?x \in [0, 1]$
 
-### �?不适合行内的复杂分数：
-以下分数在行内会很难阅读�?
-- 多项式分数：$\frac{x^2 + 2x + 1}{x^2 - 4x + 3}$ �?这个太小�?
-- 三角函数分数�?\frac{\sin x + \cos x}{x^2 - 1}$ �?这个也很难看�?
-- 嵌套分数�?\frac{1}{1 + \frac{1}{x}}$ �?几乎看不�?
+### �?不适合行内的复杂分数：
+以下分数在行内会很难阅读�?
+- 多项式分数：$\frac{x^2 + 2x + 1}{x^2 - 4x + 3}$ �?这个太小�?
+- 三角函数分数�?\frac{\sin x + \cos x}{x^2 - 1}$ �?这个也很难看�?
+- 嵌套分数�?\frac{1}{1 + \frac{1}{x}}$ �?几乎看不�?
 
 ## 显示公式测试 (使用 `$$...$$`)
 
-### �?复杂分数应该用显示模式：
+### �?复杂分数应该用显示模式：
 
 多项式分数：
 $$\frac{x^2 + 2x + 1}{x^2 - 4x + 3}$$
 
-三角函数分数�?
+三角函数分数�?
 $$\frac{\sin x + \cos x}{x^2 - 1}$$
 
-嵌套分数�?
+嵌套分数�?
 $$\frac{1}{1 + \frac{1}{x}}$$
 
 商规则公式：
 $$\frac{d}{dx}\left[\frac{f(x)}{g(x)}\right] = \frac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}$$
 
-复杂计算�?
+复杂计算�?
 $$V = \int_1^4 \pi (\sqrt{x})^2 dx = \pi \int_1^4 x dx = \pi \left[\frac{1}{2}x^2\right]_1^4 = \frac{15\pi}{2}$$
 
 ## 对比效果
 
-### 同一个分数的不同显示方式�?
+### 同一个分数的不同显示方式�?
 
-行内：函�?$f(x) = \frac{x^2 + 2x + 1}{x^2 - 4x + 3}$ 的导�?..
+行内：函�?$f(x) = \frac{x^2 + 2x + 1}{x^2 - 4x + 3}$ 的导�?..
 
-显示：函�?
+显示：函�?
 $$f(x) = \frac{x^2 + 2x + 1}{x^2 - 4x + 3}$$
-的导�?..
+的导�?..
 
 明显可以看出，复杂分数用显示模式更清晰！
 
@@ -1191,8 +1191,8 @@ $$f(x) = \frac{x^2 + 2x + 1}{x^2 - 4x + 3}$$
 
 | 规则 | 公式 | 说明 |
 |------|------|------|
-| 乘积规则 | $(uv)' = u'v + uv'$ | 简化表�?|
-| 商规�?| $\left(\frac{u}{v}\right)' = \frac{u'v - uv'}{v^2}$ | 使用 \left( \right) |
+| 乘积规则 | $(uv)' = u'v + uv'$ | 简化表�?|
+| 商规�?| $\left(\frac{u}{v}\right)' = \frac{u'v - uv'}{v^2}$ | 使用 \left( \right) |
 | 链式规则 | $\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx}$ | 保持清晰 |
 
 ## 分段函数
@@ -1204,10 +1204,10 @@ x^2 & \text{if } x \geq 0 \\
 
 ## 化学公式测试
 
-使用标准 LaTeX 格式（推荐）�?
-- 简单化学式�?\mathrm{H_2SO_4}$
-- 化学反应�?$\mathrm{2H_2 + O_2 \rightarrow 2H_2O}$$
-- 平衡反应�?$\mathrm{N_2(g) + 3H_2(g) \rightleftharpoons 2NH_3(g)}$$
+使用标准 LaTeX 格式（推荐）�?
+- 简单化学式�?\mathrm{H_2SO_4}$
+- 化学反应�?$\mathrm{2H_2 + O_2 \rightarrow 2H_2O}$$
+- 平衡反应�?$\mathrm{N_2(g) + 3H_2(g) \rightleftharpoons 2NH_3(g)}$$
 
 ---
 
@@ -1468,14 +1468,14 @@ graph TD
 
 # 用户体验优化建议 (UX Optimization Recommendations)
 
-> 📅 生成日期: 2025�?1�?�? 
+> 📅 生成日期: 2025�?1�?�? 
 > 🎯 目标: 提升网站的用户体验和性能
 
 ---
 
-## 🏆 优先级分�?
+## 🏆 优先级分�?
 
-- 🔴 **高优先级**: 影响核心体验，建议立即实�?
+- 🔴 **高优先级**: 影响核心体验，建议立即实�?
 - 🟡 **中优先级**: 提升细节体验，建议短期内实施
 - 🟢 **低优先级**: 锦上添花，可长期规划
 
@@ -1485,14 +1485,14 @@ graph TD
 
 ### 1. 性能优化 - 条件加载MathJax资源
 
-**问题**: 所有页面都预加�?个MathJax字体，但主页不需要数学公式支�?
+**问题**: 所有页面都预加�?个MathJax字体，但主页不需要数学公式支�?
 
-**影响**: 首屏加载时间增加，浪费带�?
+**影响**: 首屏加载时间增加，浪费带�?
 
 **解决方案**:
 
 ```html
-<!-- �?_includes/head.html 中修�?-->
+<!-- �?_includes/head.html 中修�?-->
 <!-- 仅在需要MathJax的页面预加载字体 -->
 {% if page.mathjax %}
   <link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
@@ -1504,14 +1504,14 @@ graph TD
 
 ---
 
-### 2. 图片懒加�?+ 占位�?
+### 2. 图片懒加�?+ 占位�?
 
 **问题**: 图片同时加载，影响页面渲染性能
 
 **解决方案**:
 
 ```javascript
-// �?assets/js/image_lazy_load.js 创建新文�?
+// �?assets/js/image_lazy_load.js 创建新文�?
 document.addEventListener('DOMContentLoaded', function() {
   const images = document.querySelectorAll('#content-container img');
   
@@ -1535,7 +1535,7 @@ document.addEventListener('DOMContentLoaded', function() {
 ```
 
 ```css
-/* �?style.css 中添�?*/
+/* �?style.css 中添�?*/
 #content-container img {
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -1557,7 +1557,7 @@ document.addEventListener('DOMContentLoaded', function() {
 **解决方案**:
 
 ```css
-/* �?_includes/theme_button.html �?style 标签中修�?*/
+/* �?_includes/theme_button.html �?style 标签中修�?*/
 @media (max-width: 768px) {
   .theme-toggle-btn {
     top: 15px;
@@ -1584,14 +1584,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ---
 
-### 4. PDF链接加载状态优�?
+### 4. PDF链接加载状态优�?
 
 **问题**: 点击PDF链接后没有明确的加载反馈
 
 **解决方案**:
 
 ```javascript
-// �?assets/js/interactive_effects.js 中改进现有代�?
+// �?assets/js/interactive_effects.js 中改进现有代�?
 const loadingIndicator = {
   init: function() {
     document.addEventListener('click', this.handleClick.bind(this));
@@ -1601,11 +1601,11 @@ const loadingIndicator = {
     const link = e.target.closest('a[href$=".pdf"]');
     if (!link) return;
 
-    // 添加加载状�?
+    // 添加加载状�?
     link.classList.add('loading-pdf');
     const originalHTML = link.innerHTML;
     
-    // 创建加载指示�?
+    // 创建加载指示�?
     const loader = document.createElement('span');
     loader.className = 'pdf-loader';
     loader.innerHTML = '<i class="bi bi-hourglass-split"></i> Loading...';
@@ -1613,7 +1613,7 @@ const loadingIndicator = {
     link.appendChild(loader);
     link.style.pointerEvents = 'none';
     
-    // 2秒后恢复（或实际加载完成�?
+    // 2秒后恢复（或实际加载完成�?
     setTimeout(() => {
       link.classList.remove('loading-pdf');
       loader.remove();
@@ -1624,7 +1624,7 @@ const loadingIndicator = {
 ```
 
 ```css
-/* �?style.css 中添�?*/
+/* �?style.css 中添�?*/
 .loading-pdf {
   opacity: 0.6;
   position: relative;
@@ -1649,14 +1649,14 @@ const loadingIndicator = {
 
 ## 🟡 中优先级优化
 
-### 5. 无障碍访问改�?
+### 5. 无障碍访问改�?
 
 **问题**: 部分交互元素缺少完整的ARIA标签
 
 **解决方案**:
 
 ```html
-<!-- �?_includes/subject_button.html �?-->
+<!-- �?_includes/subject_button.html �?-->
 <a href="{{ subject.path }}" 
    class="btn btn-outline-{{ subject.color }}"
    role="button"
@@ -1664,7 +1664,7 @@ const loadingIndicator = {
   {{ subject.icon }} {{ subject.name }}
 </a>
 
-<!-- �?subjects.html �?-->
+<!-- �?subjects.html �?-->
 <button class="toc-toggle" 
         id="tocToggle" 
         aria-label="切换目录显示"
@@ -1675,14 +1675,14 @@ const loadingIndicator = {
 ```
 
 ```javascript
-// �?toc_generator.js 中添�?
+// �?toc_generator.js 中添�?
 function toggleTOC(show) {
   const toc = document.getElementById('toc');
   const tocToggle = document.getElementById('tocToggle');
   
   if (!toc || !tocToggle) return;
   
-  // 更新 ARIA 状�?
+  // 更新 ARIA 状�?
   tocToggle.setAttribute('aria-expanded', show ? 'true' : 'false');
   
   if (show) {
@@ -1700,14 +1700,14 @@ function toggleTOC(show) {
 
 ---
 
-### 6. 主题感知的图片背�?
+### 6. 主题感知的图片背�?
 
 **问题**: 图片背景始终是白色，深色模式下不协调
 
 **解决方案**:
 
 ```css
-/* �?style.css 中修�?*/
+/* �?style.css 中修�?*/
 #content-container img {
   display: block;
   background-color: white;
@@ -1723,7 +1723,7 @@ function toggleTOC(show) {
 html[data-bs-theme="dark"] #content-container img {
   background-color: #ffffff;
   box-shadow: 0 4px 16px rgba(0,0,0,0.3);
-  /* 可选：添加轻微的边�?*/
+  /* 可选：添加轻微的边�?*/
   border: 1px solid rgba(255,255,255,0.1);
 }
 
@@ -1734,18 +1734,18 @@ html[data-bs-theme="dark"] #content-container img.diagram {
 }
 ```
 
-**预期效果**: 图片在深色模式下更协�?
+**预期效果**: 图片在深色模式下更协�?
 
 ---
 
-### 7. TOC滚动进度指示�?
+### 7. TOC滚动进度指示�?
 
 **问题**: 用户不知道文章的阅读进度
 
 **解决方案**:
 
 ```javascript
-// �?toc_generator.js 中添�?
+// �?toc_generator.js 中添�?
 function initReadingProgress() {
   const progressBar = document.createElement('div');
   progressBar.className = 'reading-progress';
@@ -1770,12 +1770,12 @@ function initReadingProgress() {
   }, { passive: true });
 }
 
-// �?generateTOC() 函数末尾调用
+// �?generateTOC() 函数末尾调用
 initReadingProgress();
 ```
 
 ```css
-/* �?subject.css 中添�?*/
+/* �?subject.css 中添�?*/
 .reading-progress {
   width: 100%;
   height: 4px;
@@ -1798,9 +1798,9 @@ initReadingProgress();
 
 ---
 
-### 8. 代码块复制按�?
+### 8. 代码块复制按�?
 
-**问题**: 用户无法快速复制代�?
+**问题**: 用户无法快速复制代�?
 
 **解决方案**:
 
@@ -1844,7 +1844,7 @@ document.addEventListener('DOMContentLoaded', function() {
 ```
 
 ```css
-/* �?style.css 中添�?*/
+/* �?style.css 中添�?*/
 .code-block-wrapper {
   position: relative;
   margin: 1.5rem 0;
@@ -1879,7 +1879,7 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 ```
 
-**预期效果**: 提升代码复制的便利�?
+**预期效果**: 提升代码复制的便利�?
 
 ---
 
@@ -1887,10 +1887,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ### 9. 全站搜索功能
 
-**建议**: 集成 [Algolia DocSearch](https://docsearch.algolia.com/) 或简单的客户端搜�?
+**建议**: 集成 [Algolia DocSearch](https://docsearch.algolia.com/) 或简单的客户端搜�?
 
 ```javascript
-// 简单的客户端搜索实�?
+// 简单的客户端搜索实�?
 function initSimpleSearch() {
   const searchInput = document.createElement('input');
   searchInput.type = 'search';
@@ -1921,7 +1921,7 @@ function initSimpleSearch() {
 
 ---
 
-### 10. 微交互动画优�?
+### 10. 微交互动画优�?
 
 **建议**: 为关键交互添加细腻的动画反馈
 
@@ -1942,7 +1942,7 @@ function initSimpleSearch() {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
 }
 
-/* 链接下划线动�?*/
+/* 链接下划线动�?*/
 #content-container a {
   position: relative;
   text-decoration: none;
@@ -1967,14 +1967,14 @@ function initSimpleSearch() {
 
 ---
 
-### 11. 内容可读性优�?
+### 11. 内容可读性优�?
 
 **建议**: 优化排版参数
 
 ```css
-/* �?style.css 中调�?*/
+/* �?style.css 中调�?*/
 #content-container {
-  line-height: 1.8; /* �?1.6 增加�?1.8 */
+  line-height: 1.8; /* �?1.6 增加�?1.8 */
   font-size: 1.05rem; /* 略微增大字号 */
 }
 
@@ -1989,57 +1989,57 @@ function initSimpleSearch() {
   font-weight: 600;
 }
 
-/* 提升数学公式可读�?*/
+/* 提升数学公式可读�?*/
 .MathJax, mjx-container {
-  font-size: 1.12em !important; /* �?1.08 增加�?1.12 */
-  line-height: 1.5 !important; /* �?1.4 增加�?1.5 */
+  font-size: 1.12em !important; /* �?1.08 增加�?1.12 */
+  line-height: 1.5 !important; /* �?1.4 增加�?1.5 */
 }
 ```
 
 ---
 
-## 📊 实施优先级建�?
+## 📊 实施优先级建�?
 
 ### 第一阶段（立即实施）
-1. �?条件加载MathJax资源
-2. �?移动端按钮布局优化
-3. �?PDF链接加载状�?
+1. �?条件加载MathJax资源
+2. �?移动端按钮布局优化
+3. �?PDF链接加载状�?
 
-### 第二阶段�?-2周内�?
-4. �?图片懒加�?
-5. �?无障碍访问改�?
-6. �?主题感知图片背景
+### 第二阶段�?-2周内�?
+4. �?图片懒加�?
+5. �?无障碍访问改�?
+6. �?主题感知图片背景
 
 ### 第三阶段（长期规划）
-7. �?TOC阅读进度指示
-8. �?代码块复制功�?
-9. �?搜索功能
-10. �?微交互优�?
+7. �?TOC阅读进度指示
+8. �?代码块复制功�?
+9. �?搜索功能
+10. �?微交互优�?
 
 ---
 
 ## 🎯 预期总体效果
 
-实施这些优化后，预期能够实现�?
+实施这些优化后，预期能够实现�?
 
 - 📈 **首屏加载时间减少 30-40%**
-- 🎨 **用户满意度提�?20-30%**
-- �?**无障碍评分提升到 WCAG 2.1 AA�?*
-- 📱 **移动端体验评分从 85 提升�?95+**
-- 🚀 **整体性能评分�?Good 提升�?Excellent**
+- 🎨 **用户满意度提�?20-30%**
+- �?**无障碍评分提升到 WCAG 2.1 AA�?*
+- 📱 **移动端体验评分从 85 提升�?95+**
+- 🚀 **整体性能评分�?Good 提升�?Excellent**
 
 ---
 
 ## 📝 备注
 
-- 所有优化都应该在测试环境中先验�?
+- 所有优化都应该在测试环境中先验�?
 - 建议使用 Lighthouse 测试性能变化
 - 考虑用户反馈进行迭代改进
-- 保持与现有设计风格的一致�?
+- 保持与现有设计风格的一致�?
 
 ---
 
-**文档维护**: 请在实施每项优化后更新此文档的完成状�?
+**文档维护**: 请在实施每项优化后更新此文档的完成状�?
 
 ---
 
