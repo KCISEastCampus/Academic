@@ -95,12 +95,29 @@ At room temperature and pressure, 1 mole of any gas occupies approximately **24 
 
 ### 3.1 Instrument Components
 
-<div class="mass-spec-flow" style="display: flex; align-items: center; justify-content: center; gap: 1rem; padding: 2rem; background: var(--surface); border-radius: 12px; margin: 1.5rem 0; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border: 1px solid rgba(var(--accent-al-rgb), 0.2);">
-  <div style="background: rgba(var(--accent-al-rgb), 0.15); padding: 1rem 1.5rem; border-radius: 8px; font-weight: bold; color: var(--accent-al); box-shadow: 0 2px 8px rgba(0,0,0,0.1); border: 1px solid rgba(var(--accent-al-rgb), 0.3);">Ion Source</div>
-  <div style="color: var(--muted); font-size: 2em;">→</div>
-  <div style="background: rgba(var(--accent-al-rgb), 0.15); padding: 1rem 1.5rem; border-radius: 8px; font-weight: bold; color: var(--accent-al); box-shadow: 0 2px 8px rgba(0,0,0,0.1); border: 1px solid rgba(var(--accent-al-rgb), 0.3);">Analyser</div>
-  <div style="color: var(--muted); font-size: 2em;">→</div>
-  <div style="background: rgba(var(--accent-al-rgb), 0.15); padding: 1rem 1.5rem; border-radius: 8px; font-weight: bold; color: var(--accent-al); box-shadow: 0 2px 8px rgba(0,0,0,0.1); border: 1px solid rgba(var(--accent-al-rgb), 0.3);">Detector</div>
+<div class="row g-2 my-3 justify-content-center align-items-stretch">
+  <div class="col-12 col-md-3">
+    <div class="card h-100 text-center">
+      <div class="card-body fw-semibold">Ion Source</div>
+    </div>
+  </div>
+  <!-- arrow: horizontal on md+, vertical on xs/sm -->
+  <div class="col-auto d-none d-md-flex align-items-center fs-2 text-muted">→</div>
+  <div class="col-12 d-md-none text-center text-muted">↓</div>
+
+  <div class="col-12 col-md-3">
+    <div class="card h-100 text-center">
+      <div class="card-body fw-semibold">Analyser</div>
+    </div>
+  </div>
+  <div class="col-auto d-none d-md-flex align-items-center fs-2 text-muted">→</div>
+  <div class="col-12 d-md-none text-center text-muted">↓</div>
+
+  <div class="col-12 col-md-3">
+    <div class="card h-100 text-center">
+      <div class="card-body fw-semibold">Detector</div>
+    </div>
+  </div>
 </div>
 
 ### 3.2 Time of Flight (TOF) Process
@@ -204,24 +221,32 @@ Three main factors determine the value of ionisation energy:
 
 #### Visual Summary
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 1.5rem 0;">
-  <div style="background: var(--surface); padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border: 1px solid rgba(var(--accent-ig-rgb), 0.3);">
-    <h4 style="text-align: center; color: var(--accent-ig); margin-top: 0; font-size: 1.3em;">⚡ HIGH IONISATION ENERGY</h4>
-    <ul style="color: var(--text); line-height: 2; font-size: 1.05em; list-style: none; padding-left: 0;">
-      <li style="padding: 0.3rem 0; border-left: 3px solid var(--accent-ig); padding-left: 1rem; margin-bottom: 0.5rem;">✓ Small atom</li>
-      <li style="padding: 0.3rem 0; border-left: 3px solid var(--accent-ig); padding-left: 1rem; margin-bottom: 0.5rem;">✓ High nuclear charge</li>
-      <li style="padding: 0.3rem 0; border-left: 3px solid var(--accent-ig); padding-left: 1rem; margin-bottom: 0.5rem;">✓ Minimal shielding</li>
-      <li style="padding: 0.3rem 0; border-left: 3px solid var(--accent-ig); padding-left: 1rem;">✓ Close to nucleus</li>
-    </ul>
+<div class="row g-3 my-3">
+  <div class="col-12 col-md-6">
+    <div class="card h-100">
+      <div class="card-body">
+        <h4 class="text-center mb-3">⚡ HIGH IONISATION ENERGY</h4>
+        <ul class="list-unstyled mb-0">
+          <li>✓ Small atom</li>
+          <li>✓ High nuclear charge</li>
+          <li>✓ Minimal shielding</li>
+          <li>✓ Close to nucleus</li>
+        </ul>
+      </div>
+    </div>
   </div>
-  <div style="background: var(--surface); padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border: 1px solid rgba(var(--accent-al-rgb), 0.3);">
-    <h4 style="text-align: center; color: var(--accent-al); margin-top: 0; font-size: 1.3em;">🔋 LOW IONISATION ENERGY</h4>
-    <ul style="color: var(--text); line-height: 2; font-size: 1.05em; list-style: none; padding-left: 0;">
-      <li style="padding: 0.3rem 0; border-left: 3px solid var(--accent-al); padding-left: 1rem; margin-bottom: 0.5rem;">✓ Large atom</li>
-      <li style="padding: 0.3rem 0; border-left: 3px solid var(--accent-al); padding-left: 1rem; margin-bottom: 0.5rem;">✓ Low nuclear charge</li>
-      <li style="padding: 0.3rem 0; border-left: 3px solid var(--accent-al); padding-left: 1rem; margin-bottom: 0.5rem;">✓ Extensive shielding</li>
-      <li style="padding: 0.3rem 0; border-left: 3px solid var(--accent-al); padding-left: 1rem;">✓ Far from nucleus</li>
-    </ul>
+  <div class="col-12 col-md-6">
+    <div class="card h-100">
+      <div class="card-body">
+        <h4 class="text-center mb-3">🔋 LOW IONISATION ENERGY</h4>
+        <ul class="list-unstyled mb-0">
+          <li>✓ Large atom</li>
+          <li>✓ Low nuclear charge</li>
+          <li>✓ Extensive shielding</li>
+          <li>✓ Far from nucleus</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -301,31 +326,27 @@ The table below lists total electron groups, bonding pairs, lone pairs, molecula
 #### Bond Angle Trends (4-pair base)
 As lone pairs increase, lone pair–bond pair repulsion grows stronger and bond angles decrease:
 
-<div style="background: var(--surface); padding: 2rem; border-radius: 12px; margin: 1.5rem 0; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border: 1px solid rgba(var(--accent-al-rgb), 0.25);">
-  <h5 style="text-align: center; color: var(--accent-al); margin-top: 0;">📐 Tetrahedral Base (4 pairs)</h5>
-  <div style="display: flex; align-items: center; justify-content: center; gap: 1.5rem; margin-top: 1.5rem; flex-wrap: wrap;">
-    <div style="text-align: center;">
-      <div style="background: rgba(var(--accent-al-rgb), 0.2); padding: 1rem 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); margin-bottom: 0.5rem; border: 1px solid rgba(var(--accent-al-rgb), 0.4);">
-        <strong style="font-size: 1.3em; color: var(--accent-al);">109.5°</strong>
+<div class="card my-3">
+  <div class="card-body">
+    <h5 class="text-center mb-3">📐 Tetrahedral Base (4 pairs)</h5>
+    <div class="row text-center g-3 align-items-center justify-content-center">
+      <div class="col-12 col-md-3">
+        <div class="fs-3 fw-semibold">109.5°</div>
+        <small class="text-muted">0 lone pairs</small>
       </div>
-      <small style="color: var(--muted);">0 lone pairs</small>
-    </div>
-    <div style="font-size: 2em; color: var(--muted);">→</div>
-    <div style="text-align: center;">
-      <div style="background: rgba(var(--accent-ig-rgb), 0.2); padding: 1rem 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); margin-bottom: 0.5rem; border: 1px solid rgba(var(--accent-ig-rgb), 0.4);">
-        <strong style="font-size: 1.3em; color: var(--accent-ig);">107°</strong>
+      <div class="col-1 d-none d-md-flex justify-content-center fs-3 text-muted">→</div>
+      <div class="col-12 col-md-3">
+        <div class="fs-3 fw-semibold">107°</div>
+        <small class="text-muted">1 lone pair</small>
       </div>
-      <small style="color: var(--muted);">1 lone pair</small>
-    </div>
-    <div style="font-size: 2em; color: var(--muted);">→</div>
-    <div style="text-align: center;">
-      <div style="background: rgba(245, 87, 108, 0.2); padding: 1rem 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); margin-bottom: 0.5rem; border: 1px solid rgba(245, 87, 108, 0.4);">
-        <strong style="font-size: 1.3em; color: #f5576c;">104.5°</strong>
+      <div class="col-1 d-none d-md-flex justify-content-center fs-3 text-muted">→</div>
+      <div class="col-12 col-md-3">
+        <div class="fs-3 fw-semibold">104.5°</div>
+        <small class="text-muted">2 lone pairs</small>
       </div>
-      <small style="color: var(--muted);">2 lone pairs</small>
     </div>
+    <p class="text-center text-muted fst-italic mb-0 mt-3">As lone pairs increase, bond angles decrease due to stronger lone-pair repulsion.</p>
   </div>
-  <p style="text-align: center; margin-top: 1.5rem; color: var(--muted); font-style: italic; margin-bottom: 0;">As lone pairs increase, bond angles decrease due to stronger lone-pair repulsion.</p>
 </div>
 
 #### Quick determination steps
@@ -333,6 +354,77 @@ As lone pairs increase, lone pair–bond pair repulsion grows stronger and bond 
 2. Determine the number of lone pairs.
 3. Use the table above to find the base geometry.
 4. Adjust bond angles based on lone-pair count and relative repulsion (see values above).
+
+---
+
+## 5.7 Intermolecular Forces
+
+Understanding the forces between molecules is essential for explaining many physical properties (melting/boiling points, solubility, viscosity, vapour pressure). These forces are weaker than covalent or ionic bonds but have a large cumulative effect in bulk.
+
+### Types of intermolecular forces
+
+- London (dispersion) forces (Van der Waals' forces) — induced dipole / induced dipole
+  - Present in all molecules and atoms. Temporary fluctuations in electron density create instantaneous dipoles which induce dipoles in neighbours.
+  - Strength increases with: larger electron cloud (higher molar mass), more easily polarisable atoms (less electronegativity), and surface contact area (e.g., long-chain hydrocarbons have stronger dispersion forces than compact molecules of the same formula).
+  - Examples: Noble gases ($He$, $Ne$, $Ar$), halogens ($Cl_{2}$, $Br_{2}$, $I_{2}$), hydrocarbons.
+
+- Permanent dipole–dipole interactions
+  - Occur between molecules that have a permanent dipole (uneven distribution of electron density). Opposite ends of neighbouring dipoles attract.
+  - Important when molecules have polar bonds and an overall polar geometry (e.g., $HCl$, $SO_{2}$).
+
+- Hydrogen bonding
+  - A special, relatively strong type of dipole–dipole interaction that occurs when a hydrogen atom is covalently bonded to a highly electronegative atom (N, O or F) and is attracted to a lone pair on N, O or F in a neighbouring molecule.
+  - Typical pattern: $X–H···Y$ where $X,Y \in {N, O, F}$ (common examples: $O–H···O$ in water, $N–H···O$ in amides).
+  - Hydrogen bonds dramatically raise boiling points and solubility in water.
+
+### How intermolecular forces affect properties (examples)
+
+- Boiling point trends: stronger intermolecular forces → higher boiling point.
+  - Example: Compare $CH_{4}, HCl, H_{2}O$
+    - $CH_{4}$ (non-polar, only dispersion): $\mathrm{b.p.} \approx -161.5\,^{\circ}\mathrm{C}$
+    - $HCl$ (polar, dipole–dipole + dispersion): $\mathrm{b.p.} \approx -85.0\,^{\circ}\mathrm{C}$
+    - $H_{2}O$ (hydrogen bonding): $\mathrm{b.p.} = 100\,^{\circ}\mathrm{C}$
+  - Hydrogen bonding in water gives an unusually high boiling point for such a small molecule.
+
+- Solid vs gas at room temperature:
+  - $I_{2}$ is a solid because large electron cloud → strong dispersion forces; $Cl_{2}$ is a gas (smaller polarizability).
+
+- Solubility:
+  - Like dissolves like: polar solvents (water) solvate polar solutes via dipole interactions and hydrogen bonding; non-polar solvents dissolve non-polar solutes through dispersion forces.
+
+### Visual/diagrammatic intuition
+
+<div class="row gx-3 my-3">
+  <figure class="col-12 col-md-4 text-center">
+    <img src="/assets/img/intermolecular/london.svg" alt="London dispersion illustration" class="img-fluid" />
+    <figcaption style="margin-top:0.5rem;color:var(--muted);">London: instantaneous dipole → induced dipole</figcaption>
+  </figure>
+
+  <figure class="col-12 col-md-4 text-center">
+    <img src="/assets/img/intermolecular/dipole.svg" alt="Permanent dipole–dipole illustration" class="img-fluid" />
+    <figcaption style="margin-top:0.5rem;color:var(--muted);">Dipole–Dipole: permanent +/− ends attract</figcaption>
+  </figure>
+
+  <figure class="col-12 col-md-4 text-center">
+    <img src="/assets/img/intermolecular/hydrogen_bond.svg" alt="Hydrogen bond illustration" class="img-fluid" />
+    <figcaption style="margin-top:0.5rem;color:var(--muted);">Hydrogen bond: X–H···Y (X,Y = N/O/F)</figcaption>
+  </figure>
+</div>
+
+### Worked examples & practice
+
+1) Explain why ethanol (CH3CH2OH) has a higher boiling point than dimethyl ether (CH3OCH3), even though they have the same molecular formula (C2H6O).
+
+Answer: Ethanol can form hydrogen bonds (O–H···O) between molecules; dimethyl ether cannot (no O–H hydrogen). Both have similar dispersion contributions, but the hydrogen bonding in ethanol gives additional attractive energy, increasing the boiling point (ethanol $\mathrm{b.p.}\approx 78\,^{\circ}\mathrm{C}$, dimethyl ether $\mathrm{b.p.}\approx -24\,^{\circ}\mathrm{C}$).
+
+2) Predict which has the higher melting/boiling point: $I_2$ or $Br_2$ and explain briefly.
+
+Answer: $I_2$ has higher melting/boiling points than $Br_2$ because iodine atoms are larger and more polarisable, producing stronger London dispersion forces; therefore solid $I_2$ at room temperature, while $Br_2$ is a liquid at room temperature.
+
+3) Short calculation-style reasoning:
+  - Which of the following will have the highest boiling point: CH4, NH3, or HF? Rank and give reasons.
+
+Answer: $HF$ > $N_3$ > $CH_4$. $HF$ forms very strong hydrogen bonds (F is most electronegative), $NH_3$ forms hydrogen bonds but weaker on average (fewer/less strong H-bonds than $HF$ in bulk), $CH_4$  has only dispersion forces.
 
 ---
 
