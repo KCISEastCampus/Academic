@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 140" width="360" height="140" role="img" aria-labelledby="title-london">
+  <title id="title-london">London dispersion: instantaneous dipole induces neighbour</title>
+  <defs>
+    <style>
+      .mol{fill:#66a8ff;stroke:#1f5ea8;stroke-width:2.5;}
+      .arrow{fill:none;stroke:#1f5ea8;stroke-width:3;marker-end:url(#arr);} 
+      .lbl{font-family:Segoe UI,Arial,Helvetica,sans-serif;font-size:14px;fill:#0b2840;paint-order:stroke;stroke:#ffffff;stroke-width:3;stroke-linejoin:round;}
+      .cap{font-family:Segoe UI,Arial,Helvetica,sans-serif;font-size:12px;fill:#3b5872;paint-order:stroke;stroke:#ffffff;stroke-width:3;stroke-linejoin:round;}
+      @media (prefers-color-scheme: dark) {
+        .lbl{fill:#e6f2ff;stroke:#0b2840;}
+        .cap{fill:#9fb9d9;stroke:#0b2840;}
+        .arrow{stroke:#2f74d0;}
+        .mol{stroke:#2f74d0;}
+      }
+    </style>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2f74d0" />
+    </marker>
+  </defs>
+
+  <!-- molecules -->
+  <circle class="mol" cx="60" cy="70" r="22" />
+  <circle class="mol" cx="180" cy="70" r="22" />
+  <circle class="mol" cx="300" cy="70" r="22" />
+
+  <!-- instantaneous dipole halo on middle -->
+  <ellipse cx="180" cy="70" rx="30" ry="30" fill="#cfe6ff" opacity="0.45" />
+  <text x="180" y="34" text-anchor="middle" class="cap">instantaneous dipole</text>
+
+  <!-- induced arrows -->
+  <path class="arrow" d="M98 70 C125 55, 145 55, 168 66" />
+  <path class="arrow" d="M192 66 C215 55, 235 55, 262 70" />
+
+  <!-- captions below -->
+  <text x="60" y="112" text-anchor="middle" class="cap">molecule</text>
+  <text x="180" y="112" text-anchor="middle" class="cap">fluctuation</text>
+  <text x="300" y="112" text-anchor="middle" class="cap">induced neighbour</text>
+</svg>

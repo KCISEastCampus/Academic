@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 140" width="360" height="140" role="img" aria-labelledby="title-hbond">
+  <title id="title-hbond">Hydrogen bond: X–H···Y (X,Y = N/O/F)</title>
+  <style>
+    /* Base (works on light backgrounds) */
+    .ox{fill:#f2f8ff;stroke:#225a9b;stroke-width:2.5;}
+    .hy{fill:#ffeded;stroke:#b9322b;stroke-width:2.5;}
+    .lbl{font-family:Segoe UI,Arial,Helvetica,sans-serif;font-size:18px;fill:#0b2840;paint-order:stroke;stroke:#ffffff;stroke-width:3;stroke-linejoin:round;}
+    .cap{font-family:Segoe UI,Arial,Helvetica,sans-serif;font-size:14px;fill:#3b5872;paint-order:stroke;stroke:#ffffff;stroke-width:3;stroke-linejoin:round;}
+    .dash{stroke:#225a9b;stroke-width:3.5;stroke-dasharray:8 6;fill:none;marker-end:url(#arr);} 
+    /* Prefer dark scheme: invert text color and halo for contrast on dark UI */
+    @media (prefers-color-scheme: dark) {
+      .lbl{fill:#e6f2ff;stroke:#0b2840;}
+      .cap{fill:#9fb9d9;stroke:#0b2840;}
+      .dash{stroke:#2f74d0;}
+      .ox{fill:#e7f2ff;stroke:#2f74d0;}
+      .hy{fill:#ffe3e3;stroke:#cf4440;}
+    }
+  </style>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2f74d0" />
+    </marker>
+  </defs>
+
+  <!-- donor molecule (left) -->
+  <g transform="translate(110,70)">
+    <circle cx="-22" cy="0" r="20" class="ox" />
+    <text x="-22" y="6" text-anchor="middle" class="lbl">O</text>
+    <rect x="-6" y="-8" width="38" height="16" rx="8" class="hy" />
+    <text x="13" y="6" class="lbl">H</text>
+    <text x="-22" y="38" text-anchor="middle" class="cap">donor</text>
+  </g>
+
+  <!-- acceptor molecule (right) -->
+  <g transform="translate(250,70)">
+    <circle cx="22" cy="0" r="20" class="ox" />
+    <text x="22" y="6" text-anchor="middle" class="lbl">O</text>
+    <text x="22" y="38" text-anchor="middle" class="cap">acceptor</text>
+  </g>
+
+  <!-- hydrogen bond (dashed curve) -->
+  <path class="dash" d="M126 56 C168 40, 208 40, 250 56" />
+  <text x="180" y="28" text-anchor="middle" class="cap">H···O hydrogen bond</text>
+</svg>
