@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 140" width="360" height="140" role="img" aria-labelledby="title-dipole">
+  <title id="title-dipole">Permanent dipole–dipole: opposite ends attract</title>
+  <style>
+    .pos{fill:#ffb84d;stroke:#b25a00;stroke-width:2.5;}
+    .neg{fill:#8cc8ff;stroke:#1e6ad1;stroke-width:2.5;}
+    .lbl{font-family:Segoe UI,Arial,Helvetica,sans-serif;font-size:18px;fill:#0b2840;paint-order:stroke;stroke:#ffffff;stroke-width:3;stroke-linejoin:round;}
+    .cap{font-family:Segoe UI,Arial,Helvetica,sans-serif;font-size:12px;fill:#3b5872;paint-order:stroke;stroke:#ffffff;stroke-width:3;stroke-linejoin:round;}
+    .arrow{stroke:#2f74d0;stroke-width:3.5;fill:none;marker-end:url(#arr);} 
+    @media (prefers-color-scheme: dark) {
+      .lbl{fill:#e6f2ff;stroke:#0b2840;}
+      .cap{fill:#9fb9d9;stroke:#0b2840;}
+      .arrow{stroke:#9fb9d9;}
+    }
+  </style>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2f74d0" />
+    </marker>
+  </defs>
+
+  <!-- two polar molecules -->
+  <g transform="translate(90,65)">
+    <rect x="-35" y="-20" width="70" height="40" rx="10" class="neg" />
+    <text x="0" y="6" text-anchor="middle" class="lbl">δ−</text>
+    <text x="0" y="38" text-anchor="middle" class="cap">molecule A</text>
+  </g>
+
+  <g transform="translate(270,65)">
+    <rect x="-35" y="-20" width="70" height="40" rx="10" class="pos" />
+    <text x="0" y="6" text-anchor="middle" class="lbl">δ+</text>
+    <text x="0" y="38" text-anchor="middle" class="cap">molecule B</text>
+  </g>
+
+  <!-- arrow showing attraction -->
+  <path class="arrow" d="M135 65 C175 60, 215 60, 255 65" />
+  <text x="180" y="28" text-anchor="middle" class="cap">electrostatic attraction</text>
+</svg>
