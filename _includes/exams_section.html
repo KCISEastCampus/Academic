@@ -1,66 +1,76 @@
 <!-- _includes/exams_section.html -->
-<!-- Exams section component for index page -->
-<section class="row justify-content-center my-5" aria-labelledby="exams-heading">
-  <div class="col-12 col-md-10">
-    <article class="card shadow-sm fade-in">
-      <div class="card-body">
-        <h2 id="exams-heading" class="h5 card-title">A level and IGCSE Official Exams</h2>
-        <p class="mb-2 text-muted">Official timetables and exam-related documents.</p>
-        <div class="exam-links d-flex flex-column gap-2">
+<section class="mb-4 fade-in" style="animation-delay: 0.3s;" aria-labelledby="exams-heading">
+  <div class="section-header">
+    <h2 id="exams-heading" class="section-title">
+      <i class="bi bi-calendar-event text-info"></i>
+      Exam Dashboard
+    </h2>
+    <span class="section-badge" style="margin-left: 10px; --accent-rgb: 23, 162, 184; --accent-color: var(--info);">Schedules</span>
+  </div>
+
+  <div class="row g-3">
+    <!-- Official Exams Column -->
+    <div class="col-12 col-lg-6">
+      <div class="exam-dashboard-card">
+        <h3 class="h5 mb-2 d-flex align-items-center gap-2">
+          <i class="bi bi-file-earmark-text text-primary"></i>
+          Official Timetables
+        </h3>
+        
+        <div class="d-flex flex-column gap-2">
           {% assign official_exams = site.data.exam_links %}
           {% if official_exams and official_exams.size > 0 %}
-            {% if official_exams.size == 1 %}
-              <!-- Single exam: center it -->
-              <div class="d-flex justify-content-center">
-                {% for exam in official_exams %}
-                  {% include exam_link.html exam=exam %}
-                {% endfor %}
-              </div>
-            {% else %}
-              <!-- Multiple exams: grid layout -->
-              <div class="row g-2">
-                {% for exam in official_exams %}
-                  <div class="col-12 col-md-6">
-                    {% include exam_link.html exam=exam %}
-                  </div>
-                {% endfor %}
-              </div>
-            {% endif %}
+            {% for exam in official_exams %}
+              {% include exam_link.html exam=exam %}
+            {% endfor %}
           {% else %}
-            <!-- No official exams -->
             <div class="alert alert-info mb-0" role="status">
               <i class="bi bi-info-circle me-2"></i>
-              No official exams are currently scheduled. Please check back later or contact the exam office for updates.
+              No official exams are currently scheduled.
             </div>
           {% endif %}
         </div>
       </div>
+    </div>
 
-      <div class="card-body">
-        <h2 class="h5 card-title">Department Exams</h2>
-        <p class="mb-2 text-muted">In-school exams and tests information.</p>
-        <div class="dept-exams" aria-label="Department exam schedule">
+    <!-- Department Exams Column -->
+    <div class="col-12 col-lg-6">
+      <div class="exam-dashboard-card">
+        <h3 class="h5 mb-2 d-flex align-items-center gap-2">
+          <i class="bi bi-building text-success"></i>
+          Department Exams
+        </h3>
+        
+        <div class="dept-exams">
           {% assign exams = site.data.department_exams %}
           {% if exams and exams.size > 0 %}
-            <ul class="list-group list-group-flush">
+            <div class="d-flex flex-column gap-2">
               {% for ex in exams %}
-                <li class="list-group-item d-flex justify-content-between align-items-start">
-                  <div>
-                    <div class="fw-semibold">{{ ex.title }}</div>
-                    <div class="small text-muted">Date: {{ ex.date }} · Duration: {{ ex.duration }}</div>
+                <div class="exam-list-item">
+                  <div class="exam-date-badge">
+                    {% assign date_parts = ex.date | split: ' ' %}
+                    <span class="exam-date-day">{{ date_parts[0] | default: '?' }}</span>
+                    <span class="exam-date-month">{{ date_parts[1] | default: 'TBA' }}</span>
                   </div>
-                </li>
+                  <div>
+                    <div class="fw-bold">{{ ex.title }}</div>
+                    <div class="small text-muted">{{ ex.duration }}</div>
+                  </div>
+                </div>
               {% endfor %}
-            </ul>
-            <p class="mt-2 small text-muted">If you have any questions, please contact the A-level Office or your subject teacher.</p>
+            </div>
+            <p class="mt-3 small text-muted mb-0">
+              <i class="bi bi-info-circle me-1"></i>
+              Contact the A-level Office for details.
+            </p>
           {% else %}
-            <div class="alert alert-info mb-0" role="status">
+            <div class="alert alert-secondary mb-0" role="status">
               <i class="bi bi-calendar-x me-2"></i>
-              There are no in-school exams scheduled at this time.
+              No in-school exams scheduled.
             </div>
           {% endif %}
         </div>
       </div>
-    </article>
+    </div>
   </div>
 </section>
