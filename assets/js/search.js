@@ -44,7 +44,10 @@
       searchResults.style.display = 'block';
       results.slice(0, 10).forEach(result => {
         const item = document.createElement('a');
-        item.href = result.url;
+        // Append highlight parameter for robust client-side highlighting
+        // This works even if the browser's native text fragment support is flaky
+        const separator = result.url.includes('?') ? '&' : '?';
+        item.href = `${result.url}${separator}highlight=${encodeURIComponent(query)}`;
         item.classList.add('list-group-item', 'list-group-item-action');
         
         const title = document.createElement('div');

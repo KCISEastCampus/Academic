@@ -377,6 +377,123 @@
     }
   };
 
+  // 搜索高亮功能
+  const searchHighlight = {
+    init: function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const query = urlParams.get('highlight');
+      
+      if (!query) return;
+      
+      // 解码并清理查询词
+      const decodedQuery = decodeURIComponent(query).trim();
+      if (decodedQuery.length < 2) return;
+      
+      // 延迟执行以确保内容已加载
+      setTimeout(() => {
+        this.highlightText(decodedQuery);
+      }, 300);
+    },
+    
+    highlightText: function(text) {
+      const contentArea = document.querySelector('main') || document.body;
+      if (!contentArea) return;
+      
+      // 简单的文本节点遍历
+      const walker = document.createTreeWalker(
+        contentArea,
+        NodeFilter.SHOW_TEXT,
+        {
+          acceptNode: function(node) {
+            // 跳过脚本、样式和已高亮的元素
+            const parent = node.parentNode;
+            if (parent.tagName === 'SCRIPT' || 
+                parent.tagName === 'STYLE' || 
+                parent.tagName === 'MARK' ||
+                parent.classList.contains('no-highlight')) {
+              return NodeFilter.FILTER_REJECT;
+            }
+            return NodeFilter.FILTER_ACCEPT;
+          }
+        }
+      );
+      
+      const nodesToHighlight = [];
+      let node;
+      
+      // 查找包含文本的节点
+      while (node = walker.nextNode()) {
+        if (node.nodeValue.toLowerCase().includes(text.toLowerCase())) {
+          nodesToHighlight.push(node);
+        }
+      }
+      
+      // 应用高亮
+      let firstMatch = true;
+      nodesToHighlight.forEach(node => {
+        const parent = node.parentNode;
+        const content = node.nodeValue;
+        const lowerContent = content.toLowerCase();
+        const lowerText = text.toLowerCase();
+        
+        // 创建高亮后的HTML
+        const parts = [];
+        let lastIndex = 0;
+        let index = lowerContent.indexOf(lowerText);
+        
+        while (index !== -1) {
+          // 添加匹配前的文本
+          parts.push(document.createTextNode(content.substring(lastIndex, index)));
+          
+          // 添加高亮标记
+          const mark = document.createElement('mark');
+          mark.className = 'search-highlight fade-in-highlight';
+          mark.textContent = content.substring(index, index + text.length);
+          parts.push(mark);
+          
+          // 滚动到第一个匹配项
+          if (firstMatch) {
+            setTimeout(() => {
+              mark.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              mark.classList.add('active-highlight');
+            }, 100);
+            firstMatch = false;
+          }
+          
+          lastIndex = index + text.length;
+          index = lowerContent.indexOf(lowerText, lastIndex);
+        }
+        
+        // 添加剩余文本
+        parts.push(document.createTextNode(content.substring(lastIndex)));
+        
+        // 替换原节点
+        parts.forEach(part => {
+          parent.insertBefore(part, node);
+        });
+        parent.removeChild(node);
+      });
+
+      // 5秒后自动淡出高亮
+      setTimeout(() => {
+        document.querySelectorAll('.search-highlight').forEach(el => {
+          el.classList.add('fade-out');
+        });
+        
+        // 动画结束后移除高亮标签但保留文本
+        setTimeout(() => {
+          document.querySelectorAll('.search-highlight').forEach(el => {
+            const parent = el.parentNode;
+            if (parent) {
+              parent.replaceChild(document.createTextNode(el.textContent), el);
+              parent.normalize(); // 合并相邻文本节点
+            }
+          });
+        }, 1000);
+      }, 5000);
+    }
+  };
+
   // 初始化所有特效
   function init() {
     // 检查是否支持必要的API
@@ -399,6 +516,7 @@
     keyboardNavigation.init();
     subjectButtonEffects.init();
     codeCopy.init();
+    searchHighlight.init(); // 添加搜索高亮初始化
 
     if (CONFIG.ENABLE_DEBUG_LOGGING) {
       console.log('Interactive effects initialized' + (isHomePage ? ' (Home page mode)' : ''));

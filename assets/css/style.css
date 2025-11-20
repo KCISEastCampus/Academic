@@ -868,6 +868,31 @@ html[data-bs-theme="dark"] mark {
   color: #fff;
 }
 
+/* Active Search Highlight Animation */
+.search-highlight {
+  background-color: rgba(142, 68, 173, 0.25); /* Subtle Purple */
+  border-radius: 0.2em;
+  transition: background-color 1s ease;
+}
+
+.search-highlight.active-highlight {
+  background-color: rgba(142, 68, 173, 0.5); /* Slightly stronger for active match */
+}
+
+.search-highlight.fade-out {
+  background-color: transparent !important;
+  padding: 0;
+}
+
+html[data-bs-theme="dark"] .search-highlight {
+  background-color: rgba(155, 89, 182, 0.3);
+  color: inherit;
+}
+
+html[data-bs-theme="dark"] .search-highlight.active-highlight {
+  background-color: rgba(155, 89, 182, 0.5);
+}
+
 /* Code Copy Button Wrapper */
 .code-wrapper:hover .copy-btn {
   opacity: 1;
