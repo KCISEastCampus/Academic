@@ -14,34 +14,70 @@ layout: none
      title="A-level Homepage" 
      subtitle="Resources for KCISEC A-level and IGCSE students" %}
 
-  {% include banner.html %}
+  <!-- Hero Section -->
+  <!-- <section class="hero-section fade-in">
+    <div class="container">
+      <h1 class="hero-title display-4">Academic Resources</h1>
+      <p class="hero-subtitle">
+        Access past papers, textbooks, and study materials for A-Level and IGCSE subjects.
+      </p>
+    </div>
+  </section> -->
 
   <a class="skip-link sr-only-focusable" href="#main-content">Skip to main content</a>
   <main id="main-content" class="container" role="main">
-    <section class="row justify-content-center my-4" aria-labelledby="subjects-heading">
-      <div class="col-12 col-md-10">
-        <article class="card shadow-sm fade-in">
-          <div class="card-body">
-            <div class="subjects-grid">
-              <div class="flex-fill">
-                <h2 id="subjects-heading" class="h4 text-success mb-3">A Level Subjects</h2>
-                <div class="subject-list" aria-label="A Level subjects">
-                  {% for subject in site.data.subjects.alevel %}
-                    {% include subject_button.html subject=subject %}
-                  {% endfor %}
-                </div>
-              </div>
-              <div class="flex-fill">
-                <h2 class="h4 text-primary mb-3">IGCSE Subjects</h2>
-                <div class="subject-list" aria-label="IGCSE subjects">
-                  {% for subject in site.data.subjects.igcse %}
-                    {% include subject_button.html subject=subject %}
-                  {% endfor %}
-                </div>
-              </div>
+    
+    <!-- A Level Subjects -->
+    <section class="mb-4 fade-in" style="animation-delay: 0.1s;">
+      <div class="section-header">
+        <h2 class="section-title">
+          <i class="bi bi-mortarboard-fill text-success"></i>
+          A Level
+        </h2>
+        <span class="section-badge" style="margin-left: 10px; --accent-rgb: var(--accent-al-rgb); --accent-color: var(--accent-al);">OxfordAQA IAL</span>
+      </div>
+      
+      <div class="subjects-grid-modern">
+        {% for subject in site.data.subjects.alevel %}
+          {% assign subject_name = subject.name | default: 'Subject' %}
+          <a href="{{ subject.path }}" class="modern-subject-card" style="--accent-rgb: var(--accent-al-rgb); --accent-color: var(--accent-al);">
+            <div class="card-icon">
+              {{ subject.icon }}
             </div>
-          </div>
-        </article>
+            <div class="card-title">{{ subject_name }}</div>
+            <div class="card-meta">
+              <span>View Resources</span>
+              <i class="bi bi-arrow-right hover-arrow"></i>
+            </div>
+          </a>
+        {% endfor %}
+      </div>
+    </section>
+
+    <!-- IGCSE Subjects -->
+    <section class="mb-4 fade-in" style="animation-delay: 0.2s;">
+      <div class="section-header">
+        <h2 class="section-title">
+          <i class="bi bi-book-half text-primary"></i>
+          IGCSE
+        </h2>
+        <span class="section-badge" style="margin-left: 10px; --accent-rgb: var(--accent-ig-rgb); --accent-color: var(--accent-ig);">OxfordAQA IGCSE</span>
+      </div>
+      
+      <div class="subjects-grid-modern">
+        {% for subject in site.data.subjects.igcse %}
+          {% assign subject_name = subject.name | default: 'Subject' %}
+          <a href="{{ subject.path }}" class="modern-subject-card" style="--accent-rgb: var(--accent-ig-rgb); --accent-color: var(--accent-ig);">
+            <div class="card-icon">
+              {{ subject.icon }}
+            </div>
+            <div class="card-title">{{ subject_name }}</div>
+            <div class="card-meta">
+              <span>View Resources</span>
+              <i class="bi bi-arrow-right hover-arrow"></i>
+            </div>
+          </a>
+        {% endfor %}
       </div>
     </section>
 

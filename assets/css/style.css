@@ -539,7 +539,7 @@ div.highlight {
 /*   --bs-btn-focus-shadow-rgb: 13, 110, 253; */
 /*   --bs-btn-active-color: #fff; */
 /*   --bs-btn-active-bg: var(--al-color); */
-/*   --bs-btn-active-border-color: var(--al-color); */
+/*   --bs-btn-active-border-color: var,--al-color); */
 /*   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); */
 /*   --bs-btn-disabled-color: var(--al-color); */
 /*   --bs-btn-disabled-bg: transparent; */
@@ -552,11 +552,11 @@ div.highlight {
 /*   --bs-btn-border-color: var(--ig-color); */
 /*   --bs-btn-hover-color: #fff; */
 /*   --bs-btn-hover-bg: var(--ig-color); */
-/*   --bs-btn-hover-border-color: var(--ig-color); */
+/*   --bs-btn-hover-border-color: var,--ig-color); */
 /*   --bs-btn-focus-shadow-rgb: 13, 110, 253; */
 /*   --bs-btn-active-color: #fff; */
 /*   --bs-btn-active-bg: var(--ig-color); */
-/*   --bs-btn-active-border-color: var(--ig-color); */
+/*   --bs-btn-active-border-color: var,--ig-color); */
 /*   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); */
 /*   --bs-btn-disabled-color: var(--ig-color); */
 /*   --bs-btn-disabled-bg: transparent; */
@@ -823,3 +823,331 @@ article.card {
   border-radius: 0.75rem !important;
   overflow: hidden !important;
 }
+
+/* Print Styles */
+@media print {
+  header, footer, .back-to-top, .scroll-progress, #tocToggle, .theme-toggle, .back-button {
+    display: none !important;
+  }
+  
+  body, .container {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+    color: black !important;
+  }
+  
+  a {
+    text-decoration: none !important;
+    color: black !important;
+  }
+  
+  .card {
+    border: none !important;
+    box-shadow: none !important;
+  }
+  
+  /* Ensure math is visible */
+  .MathJax, mjx-container {
+    color: black !important;
+  }
+}
+
+/* Search Highlight */
+mark {
+  padding: 0.1em 0.2em;
+  background-color: rgba(255, 193, 7, 0.4);
+  color: inherit;
+  border-radius: 0.2em;
+}
+
+html[data-bs-theme="dark"] mark {
+  background-color: rgba(255, 193, 7, 0.5);
+  color: #fff;
+}
+
+/* Code Copy Button Wrapper */
+.code-wrapper:hover .copy-btn {
+  opacity: 1;
+}
+
+.copy-btn {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+  background-color: var(--surface);
+  border-color: rgba(128,128,128,0.3);
+}
+
+/* Search Input Styling */
+.search-wrapper {
+  background-color: var(--surface);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 2rem; /* Pill shape */
+  transition: all 0.2s ease;
+}
+
+.search-wrapper:focus-within {
+  border-color: var(--accent-ig);
+  box-shadow: 0 0 0 0.25rem rgba(var(--accent-ig-rgb), 0.25);
+  background-color: var(--surface);
+}
+
+html[data-bs-theme="light"] .search-wrapper {
+  border-color: rgba(0,0,0,0.1);
+  background-color: #fff;
+}
+
+html[data-bs-theme="light"] .search-wrapper:focus-within {
+  border-color: var(--accent-ig);
+  background-color: #fff;
+}
+
+#search-input {
+  color: var(--text);
+  font-size: 0.95rem;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+#search-input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: transparent;
+}
+
+#search-input::placeholder {
+  color: var(--muted);
+  opacity: 0.7;
+}
+
+/* Search Results Improvements */
+#search-results {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
+}
+
+#search-results::-webkit-scrollbar {
+  width: 6px;
+}
+
+#search-results::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#search-results::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 155, 155, 0.5);
+  border-radius: 20px;
+}
+
+#search-results .list-group-item {
+  border-left: none;
+  border-right: none;
+  padding: 0.75rem 1rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+#search-results .list-group-item small {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.4;
+  margin-top: 0.25rem;
+  opacity: 0.85;
+}
+
+/* Modern Index Page Styles */
+
+/* Hero Section */
+.hero-section {
+  padding: 2rem 0 1.5rem;
+  text-align: center;
+}
+
+.hero-title {
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, var(--accent-al), var(--accent-ig));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 2.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Modern Subject Card */
+.modern-subject-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1rem;
+  background: var(--surface);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 0.75rem;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  text-decoration: none;
+  color: var(--text);
+  position: relative;
+  overflow: hidden;
+}
+
+html[data-bs-theme="light"] .modern-subject-card {
+  border-color: rgba(0,0,0,0.08);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+
+.modern-subject-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+  border-color: var(--card-hover-border, rgba(255,255,255,0.1));
+}
+
+.modern-subject-card .card-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  background: rgba(var(--accent-rgb), 0.1);
+  color: var(--accent-color);
+  transition: transform 0.3s ease;
+}
+
+.modern-subject-card:hover .card-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.modern-subject-card .card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.modern-subject-card .card-meta {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.modern-subject-card .hover-arrow {
+  margin-left: auto;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+}
+
+.modern-subject-card:hover .hover-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Section Headers */
+.section-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+html[data-bs-theme="light"] .section-header {
+  border-bottom-color: rgba(0,0,0,0.05);
+}
+
+.section-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section-badge {
+  font-size: 0.7rem;
+  padding: 0.25em 0.5em;
+  border-radius: 2rem;
+  background: rgba(var(--accent-rgb), 0.15);
+  color: var(--accent-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Grid Layouts */
+.subjects-grid-modern {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+/* Exam Dashboard Cards */
+.exam-dashboard-card {
+  background: var(--surface);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  height: 100%;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+html[data-bs-theme="light"] .exam-dashboard-card {
+  border-color: rgba(0,0,0,0.08);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+
+.exam-list-item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  transition: background 0.2s ease;
+  text-decoration: none;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+}
+
+.exam-list-item:hover {
+  background: rgba(255,255,255,0.03);
+}
+
+html[data-bs-theme="light"] .exam-list-item:hover {
+  background: rgba(0,0,0,0.03);
+}
+
+.exam-date-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 3rem;
+  height: 3rem;
+  background: rgba(var(--accent-rgb), 0.1);
+  color: var(--accent-color);
+  border-radius: 0.4rem;
+  margin-right: 0.75rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.exam-date-day { font-size: 1.1rem; }
+.exam-date-month { font-size: 0.65rem; text-transform: uppercase; }

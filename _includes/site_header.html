@@ -2,15 +2,25 @@
 <!-- Site header with logo and title -->
 <!-- Usage: include site_header.html with title="Page Title" subtitle="Page subtitle" parameters -->
 
-<header class="container text-center py-5" role="banner">
+<header class="container text-center py-3" role="banner">
   <a href="/" aria-label="Homepage">
-    <img src="//www.kcisec.site/assets/images/school-logo.svg" 
+    <img src="https://www.kcisec.site/assets/images/school-logo.svg" 
          alt="KangChiao International School East Campus Logo" 
-         class="img-fluid mb-4" 
-         style="max-width:150px;">
+         class="img-fluid mb-2" 
+         style="max-width:120px;">
   </a>
   <h1 class="fs-1 display-4 mb-3">{{ include.title | default: "A-Level Homepage" }}</h1>
   {% if include.subtitle %}
   <p class="lead text-muted">{{ include.subtitle }}</p>
   {% endif %}
+
+  <div class="position-relative d-inline-block mt-2 mx-auto" style="width: 100%; max-width: 400px;">
+    <div class="search-wrapper d-flex align-items-center px-3 py-1">
+      <i class="bi bi-search text-muted me-2"></i>
+      <input type="text" id="search-input" class="form-control border-0 p-0 bg-transparent shadow-none" 
+             placeholder="Search topics..." aria-label="Search"
+             data-search-source="{{ '/assets/search.json' | relative_url }}">
+    </div>
+    <div id="search-results" class="list-group position-absolute w-100 mt-2 text-start" style="display: none; z-index: 1000; max-height: 300px; overflow-y: auto; overflow-x: hidden;"></div>
+  </div>
 </header>

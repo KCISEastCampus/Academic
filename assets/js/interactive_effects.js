@@ -322,6 +322,61 @@
 
 
 
+  // 代码块复制功能
+  const codeCopy = {
+    init: function() {
+      // 查找所有代码块
+      const codeBlocks = document.querySelectorAll('pre.highlight, .highlight > pre');
+      
+      codeBlocks.forEach(block => {
+        // 检查是否已经有复制按钮
+        if (block.querySelector('.copy-btn')) return;
+        
+        // 创建包装器（如果还没有）
+        let wrapper = block.parentElement;
+        if (!wrapper.classList.contains('code-wrapper')) {
+          wrapper = document.createElement('div');
+          wrapper.className = 'code-wrapper position-relative';
+          block.parentNode.insertBefore(wrapper, block);
+          wrapper.appendChild(block);
+        }
+        
+        // 创建复制按钮
+        const btn = document.createElement('button');
+        btn.className = 'btn btn-sm btn-outline-secondary copy-btn position-absolute top-0 end-0 m-2';
+        btn.innerHTML = '<i class="bi bi-clipboard"></i>';
+        btn.setAttribute('aria-label', 'Copy code');
+        btn.title = 'Copy to clipboard';
+        
+        // 添加点击事件
+        btn.addEventListener('click', () => {
+          const code = block.innerText;
+          navigator.clipboard.writeText(code).then(() => {
+            // 成功反馈
+            const originalHTML = btn.innerHTML;
+            btn.innerHTML = '<i class="bi bi-check2"></i>';
+            btn.classList.remove('btn-outline-secondary');
+            btn.classList.add('btn-success');
+            
+            setTimeout(() => {
+              btn.innerHTML = originalHTML;
+              btn.classList.remove('btn-success');
+              btn.classList.add('btn-outline-secondary');
+            }, 2000);
+          }).catch(err => {
+            console.error('Failed to copy:', err);
+            btn.innerHTML = '<i class="bi bi-x"></i>';
+            setTimeout(() => {
+              btn.innerHTML = '<i class="bi bi-clipboard"></i>';
+            }, 2000);
+          });
+        });
+        
+        wrapper.appendChild(btn);
+      });
+    }
+  };
+
   // 初始化所有特效
   function init() {
     // 检查是否支持必要的API
@@ -343,6 +398,7 @@
     loadingIndicator.init();
     keyboardNavigation.init();
     subjectButtonEffects.init();
+    codeCopy.init();
 
     if (CONFIG.ENABLE_DEBUG_LOGGING) {
       console.log('Interactive effects initialized' + (isHomePage ? ' (Home page mode)' : ''));
