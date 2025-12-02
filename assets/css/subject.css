@@ -48,6 +48,58 @@
   margin: 0.8rem 0 0.5rem 0 !important;
 }
 
+/* Info box / Callout box - 适配深色模式和移动端 */
+.info-box {
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  border-left: 5px solid var(--accent-ig);
+  border-radius: 0.5rem;
+  background-color: var(--surface);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+html[data-bs-theme="dark"] .info-box {
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.info-box:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+html[data-bs-theme="dark"] .info-box:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.info-box strong {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: var(--accent-ig);
+}
+
+html[data-bs-theme="dark"] .info-box strong {
+  color: var(--accent-al);
+}
+
+.info-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* 移动端优化 */
+@media (max-width: 768px) {
+  .info-box {
+    padding: 0.875rem 1rem;
+    margin: 1.25rem 0;
+    font-size: 0.95rem;
+  }
+  
+  .info-box strong {
+    font-size: 1.05rem;
+  }
+}
+
 /* Clean horizontal rule styling */
 #content-container hr {
   margin: 2rem 0 !important;

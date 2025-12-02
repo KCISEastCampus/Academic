@@ -4,9 +4,19 @@
 
 alevel:
   - id: a2mathematics
-    name: A2 Math
+    name: A2 Math - Pure
     icon: "📕"
     path: /alevel/a2mathematics/
+    color: success
+  - id: a2math_mechanics
+    name: A2 Math - Mech
+    icon: "📕"
+    path: javascript:engUnderConstruction()
+    color: success
+  - id: a2math_statistics
+    name: A2 Math - Statistics
+    icon: "📕"
+    path: javascript:engUnderConstruction()
     color: success
   - id: mathematics
     name: AS Math
