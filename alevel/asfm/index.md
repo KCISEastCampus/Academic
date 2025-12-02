@@ -108,24 +108,18 @@ The four main conic sections have distinct geometric properties:
 - **Directrix:** $x = -a$
 - **Key property:** All points equidistant from focus and directrix
 
-**Ellipse:** 
-
-$$\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$$
+**Ellipse:** $$\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$$
 
 - **Major axis length:** $2a$
 - **Minor axis length:** $2b$
 - **Foci:** $(±c, 0)$ where $c^2 = a^2 - b^2$
 
-**Hyperbola:** 
-
-$$\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1$$
+**Hyperbola:** $$\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1$$
 
 - **Asymptotes:** $y = ±\frac{b}{a}x$
 - **Foci:** $(±c, 0)$ where $c^2 = a^2 + b^2$
 
-**Rectangular Hyperbola:** 
-
-$$xy = c^2$$
+**Rectangular Hyperbola:** $$xy = c^2$$
 
 - **Asymptotes:** $x = 0$, $y = 0$ (the coordinate axes)
 - **Orientation:** Rotated 45° from standard hyperbola
@@ -176,9 +170,9 @@ This is the equation of a parabola.
 ### 3. Complex Numbers (FP1.3)
 #### 3.1 What are Complex Numbers?
 
-(Tips: Real Part function and Imaginary Part function looks like $$ \Re(z) $$ and $$ \Im(z) $$ in computer respectively.)
+(Tips: Real Part function and Imaginary Part function looks like $$\Re(z)$$ and $$\Im(z)$$ in computer respectively.)
 
-**Foundation Concept**: $$\sqrt{-1} = i$$ where $$i^2 = -1$$
+**Foundation Concept**: $$\sqrt{-1} = i$$where$$i^2 = -1$$
 
 **Standard Form**: $$z = x + iy$$
 - Real part: $$\Re(z) = x$$
@@ -269,13 +263,13 @@ Fixed angle $θ$ emanating from point $a$
 **Example Problems**
 
 1. $\lvert z - (2 + i)\rvert = 3$
-   - Circle center (2, 1), radius 3
+  - Circle center (2, 1), radius 3
 
 2. $\arg(z - 1) = \frac{π}{4}$
-   - Ray from (1, 0) at 45°
+  - Ray from (1, 0) at 45°
 
 3. $\lvert z - 3\rvert = \lvert z + 2i\rvert$
-   - Perpendicular bisector of points (3, 0) and (0, -2)
+  - Perpendicular bisector of points (3, 0) and (0, -2)
 
 ---
 
@@ -639,197 +633,241 @@ Solve: $\begin{bmatrix} a & b \\\ c & d \end{bmatrix} \begin{bmatrix} x \\\ y \e
 
 This gives us $(a-1)x + by = 0$ and $cx + (d-1)y = 0$. If the determinant of the system is non-zero, the only solution is the origin $(0,0)$.
 
-<!-- ---
+---
 
 ### 9. Linear Graphs (FPP1.2)
 
-Many experimental and natural relationships are non-linear. By clever manipulation of variables, we can transform these relationships into linear form, which enables us to easily extract parameters and test whether the relationship fits the expected model.
+<div class="info-box">
+  <strong>🎯 Objective:</strong> Reduce non-linear relationships to the linear form $$Y = mX + c$$ using **logarithmic** or algebraic substitutions to determine unknown constants ($m$ and $c$) graphically.
+</div>
 
 #### 9.1 Reducing Non-Linear Relationships to Linear Form
 
-**Power Law Relationships:** $y = ax^n$
+| Original Relation | Transformation Required | Linear Form $Y=mX+c$ | Plotting Variables | Parameters from Graph |
+| :--- | :--- | :--- | :--- | :--- |
+| **Power Law**<br>$$y = ax^n$$| Take $\log_{10}$ or $\ln$ |$$\log y = n \log x + \log a$$ | $Y = \log y$<br>$X = \log x$ | **Gradient** $m = n$<br>**Intercept** $c = \log a$ |
+| **Exponential**<br>$$y = ab^x$$| Take $\log_{10}$ or $\ln$ |$$\log y = (\log b)x + \log a$$ | $Y = \log y$<br>$X = x$ | **Gradient** $m = \log b$<br>**Intercept** $c = \log a$ |
+| **Polynomial Form**<br>$$y = ax^n + b$$| Algebraic Substitution |$$y = a(x^n) + b$$ | $Y = y$<br>$X = x^n$ | **Gradient** $m = a$<br>**Intercept** $c = b$ |
+| **Reciprocal**<br>$$\frac{1}{x} + \frac{1}{y} = k$$| Rearrange |$$\frac{1}{y} = -\frac{1}{x} + k$$ | $Y = \frac{1}{y}$<br>$X = \frac{1}{x}$ | **Gradient** $m = -1$<br>**Intercept** $c = k$ |
 
-When we suspect a power law relationship, take logarithms of both sides:
-$$\log y = \log a + n \log x$$
+#### 9.2 Worked Example: Finding Constants
 
-Setting $Y = \log y$ and $X = \log x$:
-$$Y = nX + \log a$$
+Experimental data is modeled by $P = A e^{kt}$. Find the linear form.
 
-This is linear! Plot $Y$ against $X$ to get a straight line where:
-- **Gradient** = $n$ (the power)
-- **Intercept** = $\log a$
+**Solution:**
 
-**Exponential Relationships:** $y = ab^x$
+1. Take the natural logarithm ($\ln$) of both sides:
+$$\ln P = \ln(A e^{kt})$$
+$$\ln P = \ln A + \ln(e^{kt})$$
+$$\ln P = kt + \ln A$$
 
-Taking logarithms:
-$$\log y = \log a + x \log b$$
+2. Identify the linear relationship:
+Let $Y = \ln P$ and $X = t$.
+$$Y = kX + \ln A$$
 
-Setting $Y = \log y$:
-$$Y = (\log b)x + \log a$$
+3. **Plotting:** Plot $\ln P$ (Y-axis) against $t$ (X-axis).
+   - The **Gradient** will give $k$.
+   - The **Y-intercept** will give $\ln A$ (from which $A = e^{\text{Intercept}}$).
 
-Plot $Y$ against $x$:
-- **Gradient** = $\log b$
-- **Intercept** = $\log a$
-
-**Polynomial Relationships:** $y = ax^3 + b$
-
-This is already close to linear. Let $X = x^3$:
-$$y = aX + b$$
-
-Plot $y$ against $X = x^3$ directly for a linear relationship.
-
-**Reciprocal Relationships:** $\frac{1}{x} + \frac{1}{y} = k$
-
-Rearrange to solve for one variable:
-$$\frac{1}{y} = k - \frac{1}{x}$$
-
-Let $Y = \frac{1}{y}$ and $X = \frac{1}{x}$:
-$$Y = -X + k$$
-
-Plot $Y$ against $X$ to obtain a straight line.
-
-#### 9.2 Worked Example
-
-Experimental data is suspected to follow the relationship $y^2 = ax^3 + b$, where $a$ and $b$ are constants to be determined. We measure several $(x,y)$ values and need to find both the relationship and the parameters.
-
-**Step 1: Identify the Transformation**
-The given relationship is $y^2 = ax^3 + b$, which is linear in $y^2$ and $x^3$.
-
-**Step 2: Transform the Variables**
-Let $Y = y^2$ and $X = x^3$. The relationship becomes:
-$$Y = aX + b$$
-
-**Step 3: Prepare the Data**
-For each measured pair $(x,y)$:
-- Calculate $X = x^3$
-- Calculate $Y = y^2$
-- Record the transformed pair $(X,Y)$
-
-**Step 4: Plot the Transformed Data**
-Plot all transformed points $(X,Y)$ on a graph. If the hypothesis is correct, these points should lie approximately on a straight line.
-
-**Step 5: Find the Line of Best Fit**
-Using linear regression or graphical methods:
-- **Gradient** = $a$
-- **Intercept** = $b$
-
-**Step 6: Express Results**
-The values of $a$ and $b$ give us the complete relationship: $y^2 = ax^3 + b$ -->
-
-<!-- ---
+---
 
 ### 10. Numerical Methods (FPP1.3)
 
-Numerical methods provide techniques to find approximate solutions to problems that are difficult or impossible to solve analytically. These include finding roots of equations, approximating values, and solving differential equations numerically.
+#### 10.1 Root Location
 
-#### 10.1 Root Location and the Intermediate Value Theorem
+**Sign Change Principle:** If $f(x)$ is **continuous** on $[a, b]$ and $f(a)$ and $f(b)$ have opposite signs, there is at least one root $\alpha$ such that $f(\alpha) = 0$ in the interval $(a, b)$.
 
-**Sign Change Method:**
-If a continuous function $f(x)$ has opposite signs at two points, there must be at least one root between them:
-
-$$\text{If } f(x) \text{ is continuous on } [a,b] \text{ and } f(a) × f(b) < 0, \text{ then } \exists c ∈ (a,b): f(c) = 0$$
-
-**Method:**
-1. Evaluate $f(a)$ and $f(b)$
-2. Check that signs are opposite (product is negative)
-3. A root exists between $a$ and $b$
-4. This is the starting point for root-finding algorithms
+**Method:** Calculate $f(a)$ and $f(b)$. If $f(a) \times f(b) < 0$, a root is present.
 
 #### 10.2 Root-Finding Algorithms
 
-**Method 1: Interval Bisection (Most Reliable)**
+**1. Interval Bisection (Reliable but Slow)**
+* **Process:** Repeatedly halve the interval $[a, b]$ containing the root, always keeping the half where the sign change occurs.
+* **New Interval Width:** $\frac{b-a}{2^n}$ after $n$ iterations.
 
-This method repeatedly halves the interval containing the root:
+**2. Linear Interpolation (Faster but can be less stable)**
+* **Concept:** Uses a straight line between $(a, f(a))$ and $(b, f(b))$ to find a better estimate, $x_1$, where the line crosses the x-axis.
+* **Formula:**
+$$x_{n+1} = x_n - f(x_n) \frac{x_n - x_{\text{prev}}}{f(x_n) - f(x_{\text{prev}})}$$
+*(Often simplified for the first step using $a$ and $b$)*
 
-**Step 1:** Start with interval $[a,b]$ where $f(a)f(b) < 0$
-
-**Step 2:** Calculate midpoint
-$$c = \frac{a+b}{2}$$
-
-**Step 3:** Evaluate $f(c)$
-- If $f(a)f(c) < 0$, the root is in $[a,c]$, set $b = c$
-- If $f(c)f(b) < 0$, the root is in $[c,b]$, set $a = c$
-
-**Step 4:** Repeat steps 2-3 until the interval is sufficiently small
-
-**Advantages:** Always converges; no derivative needed  
-**Disadvantages:** Slow convergence
-
-**Method 2: Linear Interpolation**
-
-Instead of bisecting at the midpoint, draw a straight line between $(a,f(a))$ and $(b,f(b))$ and find where it crosses the x-axis:
-
-$$c = a - f(a) × \frac{b-a}{f(b)-f(a)}$$
-
-**Step 1:** Calculate $c$ using the formula above
-
-**Step 2:** Evaluate $f(c)$ and use sign change to select new interval $[a,c]$ or $[c,b]$
-
-**Step 3:** Repeat until convergence
-
-**Advantages:** Faster than bisection when applicable  
-**Disadvantages:** Can fail if $f(b) ≈ f(a)$ (very flat)
-
-**Method 3: Newton-Raphson (Fastest, But Requires Care)**
-
-This method uses the derivative to predict the next approximation:
-
+**3. Newton-Raphson Method (Fastest, Requires Derivative)**
+* **Recurrence Relation:**
 $$x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$$
-
-**Step 1:** Choose initial estimate $x_0$ (must be reasonably close to root)
-
-**Step 2:** Calculate function value and derivative at $x_n$
-
-**Step 3:** Apply formula to get $x_{n+1}$
-
-**Step 4:** Repeat until $|x_{n+1} - x_n|$ is sufficiently small
-
-**Advantages:** Quadratic convergence (very fast) near the root  
-**Disadvantages:** Requires derivative; needs good initial guess; can diverge with poor starting point
+* **Geometric interpretation:** Finds the root of the tangent line at $x_n$.
+* **Cautions:** Requires a good starting point $x_0$; fails if $f'(x_n) = 0$ (horizontal tangent).
 
 #### 10.3 Numerical Differential Equations - Euler's Method
 
-For differential equations that don't have closed-form solutions, Euler's method provides a simple numerical approach. Starting from an initial condition, we take small steps and use the derivative to approximate the next value.
+Used to find an approximate solution to a first-order differential equation $\frac{dy}{dx} = f(x, y)$, given an initial point $(x_0, y_0)$ and a step size $h$.
 
 **The Algorithm:**
-Given a differential equation $\frac{dy}{dx} = f(x,y)$ with initial condition $(x_0, y_0)$ and step size $h$:
+$$\begin{cases} x_{n+1} = x_n + h \\ y_{n+1} = y_n + h \times f(x_n, y_n) \end{cases}$$
 
-$$x_{n+1} = x_n + h$$
-$$y_{n+1} = y_n + hf(x_n, y_n)$$
+**Interpretation:** The change in $y$ is approximated by the change in $x$ multiplied by the gradient calculated at the *start* of the interval.
 
-**Interpretation:**
-- At each point $(x_n, y_n)$, the slope is $f(x_n, y_n)$
-- We move horizontally by $h$
-- We move vertically by $h × \text{(slope)}$
-- The new point $(x_{n+1}, y_{n+1})$ is our approximation
+---
 
-**Worked Example:**
+# FPSM1: Statistics (FS1)
 
-Solve $\frac{dy}{dx} = x + y$, with $y(0) = 1$, using step size $h = 0.1$
+### 11. Discrete Probability Distributions
 
-**Starting Point:** $(x_0, y_0) = (0, 1)$
+#### 11.1 Conditional Probability and Bayes' Theorem (FS1.1)
 
-**Step 1:** 
-- Slope: $f(0,1) = 0 + 1 = 1$
-- $x_1 = 0 + 0.1 = 0.1$
-- $y_1 = 1 + 0.1(1) = 1.1$
-- Point: $(0.1, 1.1)$
+**Conditional Probability:**
+$$P(A|B) = \frac{P(A \cap B)}{P(B)}$$
 
-**Step 2:**
-- Slope: $f(0.1, 1.1) = 0.1 + 1.1 = 1.2$
-- $x_2 = 0.1 + 0.1 = 0.2$
-- $y_2 = 1.1 + 0.1(1.2) = 1.22$
-- Point: $(0.2, 1.22)$
+**Bayes' Theorem (Reversing Conditionality):**
+Used to find $P(A|B)$ when $P(B|A)$ is known.
+$$P(A|B) = \frac{P(B|A) P(A)}{P(B)}$$
+where $P(B)$ can be found using the Law of Total Probability:
+$$P(B) = P(B|A)P(A) + P(B|A')P(A')$$
 
-**Step 3:**
-- Slope: $f(0.2, 1.22) = 0.2 + 1.22 = 1.42$
-- $x_3 = 0.2 + 0.1 = 0.3$
-- $y_3 = 1.22 + 0.1(1.42) = 1.362$
-- Point: $(0.3, 1.362)$
+#### 11.2 Discrete Uniform Distribution (FS1.2)
 
-**Continue iteratively:** Repeat the process for additional steps, each time using the new values to calculate the next slope.
+A variable $X$ takes values $1, 2, ..., n$ with equal probability.
+* **PDF:** $P(X=x) = \frac{1}{n}$ for $x = 1, 2, ..., n$
+* **Mean:** $E(X) = \frac{n+1}{2}$
+* **Variance:** $Var(X) = \frac{n^2-1}{12}$
 
-**Accuracy Considerations:**
-- Smaller step size $h$ → more accurate but more computations
-- Larger step size $h$ → fewer computations but less accurate
-- Error accumulates as we take more steps (especially for larger intervals) -->
+#### 11.3 Geometric Distribution (FS1.3)
+
+$X$ is the number of independent trials needed to get the **first success** (with probability $p$).
+* **Notation:** $X \sim \text{Geo}(p)$
+* **Support:** $x = 1, 2, 3, ...$
+* **Formula:** $P(X=x) = p(1-p)^{x-1}$
+* **Mean:** $E(X) = \frac{1}{p}$
+* **Variance:** $Var(X) = \frac{1-p}{p^2}$
+* **Memoryless Property:** The probability of future successes is independent of past failures.
+
+---
+
+### 12. Moments and PGFs (FS1.4)
+
+#### 12.1 Probability Generating Functions (PGFs)
+
+The PGF of a discrete random variable $X$ is defined as:
+$$G_X(t) = E(t^X) = \sum_{x} P(X=x)t^x$$
+
+**PGF Properties (Derivatives at $t=1$):**
+- **$G_X(1) = 1$** (sum of all probabilities)
+- **Mean:** $E(X) = G'_X(1)$
+- **Second Moment:** $E(X(X-1)) = G''_X(1)$
+- **Variance:** $Var(X) = G''_X(1) + G'_X(1) - [G'_X(1)]^2$
+
+**Combining Independent Variables:**
+If $Z = X_1 + X_2 + \dots + X_n$ and all $X_i$ are independent, then:
+$$G_Z(t) = G_{X_1}(t) \times G_{X_2}(t) \times \cdots \times G_{X_n}(t)$$
+
+#### 12.2 Linear Combinations of Random Variables (FS1.5)
+
+For independent random variables $X$ and $Y$ and constants $a, b$:
+
+| Measure | Formula | Condition |
+| :--- | :--- | :--- |
+| **Expectation** of $aX + bY$ | $$E(aX + bY) = aE(X) + bE(Y)$$ | Always true |
+| **Variance** of $aX + bY$ | $$Var(aX + bY) = a^2Var(X) + b^2Var(Y)$$ | $X, Y$ must be independent |
+| **Expectation** of $aX + b$ | $$E(aX + b) = aE(X) + b$$ | Always true |
+| **Variance** of $aX + b$ | $$Var(aX + b) = a^2Var(X)$$ | Always true |
+
+---
+
+# FPSM1: Mechanics (FM1)
+
+### 13. Kinematics and Dynamics in 2D (FM1.1, FM1.2)
+
+#### 13.1 Vector Kinematics
+
+Position vector of a particle: $$\mathbf{r} = x\mathbf{i} + y\mathbf{j}$$
+
+$$\mathbf{v} = \frac{d\mathbf{r}}{dt} = \dot{\mathbf{r}} \quad \text{(Velocity)}$$
+$$\mathbf{a} = \frac{d\mathbf{v}}{dt} = \ddot{\mathbf{r}} \quad \text{(Acceleration)}$$
+
+**Integrating to find displacement/velocity:**
+$$\mathbf{v}(t) = \int \mathbf{a}(t) dt + \mathbf{C}_1$$
+$$\mathbf{r}(t) = \int \mathbf{v}(t) dt + \mathbf{C}_2$$
+*(Use initial conditions to find constant vectors $\mathbf{C}_1$ and $\mathbf{C}_2$)*
+
+**Constant Acceleration (Vector SUVAT):**
+$$\mathbf{v} = \mathbf{u} + \mathbf{a}t$$
+$$\mathbf{r} = \mathbf{u}t + \frac{1}{2}\mathbf{a}t^2 + \mathbf{r}_0$$
+*(where $\mathbf{r}_0$ is the initial position)*
+
+#### 13.2 Vector Dynamics
+
+**Newton's Second Law:**
+$$\mathbf{F} = m\mathbf{a} \quad \text{(Force is mass times vector acceleration)}$$
+
+**Total Force:**
+If multiple forces $\mathbf{F}_1, \mathbf{F}_2, \dots$ act on a particle, the resultant force $\mathbf{R}$ is the vector sum:
+$$\mathbf{R} = \sum \mathbf{F}_i = m\mathbf{a}$$
+
+---
+
+### 14. Work, Energy, and Power (FM1.3)
+
+#### 14.1 Work and Energy
+
+**Work Done by a Constant Force $\mathbf{F}$:**
+If a particle moves a constant distance vector $\mathbf{s}$:
+$$\text{Work Done} = \mathbf{F} \cdot \mathbf{s} \quad \text{(Scalar quantity)}$$
+
+**Work-Energy Principle:**
+$$\text{Work Done by Resultant Force} = \text{Change in Kinetic Energy}$$
+$$\mathbf{R} \cdot \mathbf{s} = \frac{1}{2}m v^2 - \frac{1}{2}m u^2$$
+
+**Kinetic Energy (KE):**
+$$KE = \frac{1}{2}m v^2 = \frac{1}{2}m (\mathbf{v} \cdot \mathbf{v})$$
+
+**Gravitational Potential Energy (GPE):**
+$$GPE = mgh \quad \text{(mass × gravity × height)}$$
+
+**Conservation of Energy (Non-Resisted Motion):**
+$$\text{Change in KE} + \text{Change in GPE} = 0$$
+
+#### 14.2 Power
+
+**Instantaneous Power:**
+The rate at which a force $\mathbf{F}$ is doing work when the velocity is $\mathbf{v}$:
+$$P = \mathbf{F} \cdot \mathbf{v} \quad \text{(Scalar quantity)}$$
+
+---
+
+### 15. Impulse and Collisions (FM1.4)
+
+#### 15.1 Impulse and Momentum
+
+**Linear Momentum ($\mathbf{p}$):**
+$$\mathbf{p} = m\mathbf{v}$$
+
+**Impulse ($\mathbf{I}$):**
+Impulse is the change in momentum caused by a force $\mathbf{F}$ acting over time $t$.
+$$\mathbf{I} = \int \mathbf{F} dt = \text{Change in Momentum}$$
+$$\mathbf{I} = m\mathbf{v} - m\mathbf{u}$$
+
+**Conservation of Momentum:**
+In a closed system (e.g., during a collision or explosion) where no external forces act:
+$$\sum m_i \mathbf{u}_i = \sum m_i \mathbf{v}_i$$
+
+#### 15.2 Direct Impact and Coefficient of Restitution
+
+For the direct collision of two particles $A$ and $B$:
+
+**1. Conservation of Momentum (CoM):**
+$$m_A u_A + m_B u_B = m_A v_A + m_B v_B$$
+*(Velocities are scalar components in the direction of collision)*
+
+**2. Newton's Law of Restitution (NLOR):**
+The coefficient of restitution, $e$ ($0 \le e \le 1$), relates relative speeds:
+$$v_B - v_A = -e(u_B - u_A)$$
+$$\text{Speed of Separation} = e \times \text{Speed of Approach}$$
+
+* **Elastic Collision ($e=1$):** KE is conserved.
+* **Inelastic Collision ($e<1$):** KE is lost.
+* **Perfectly Inelastic/Coalescing ($e=0$):** Particles stick together ($v_A = v_B$).
+
+---
+
+## 📚 Revision Complete
+
+This revision guide covers all topics for **AS Further Mathematics (FP1 and FPSM1)** according to the typical OxfordAQA specification structure.
