@@ -35,7 +35,7 @@ subject: chem
     5.  **Data analysis**: Flight time is used to calculate the mass-to-charge ratio ($m/z$) and relative abundance.
 
 
-![Image of time of flight mass spectrometer diagram](https://b-ac.co.uk/wp-content/uploads/2023/08/ToF-simple-diagram.png)
+![Image of time of flight mass spectrometer diagram](/assets/img/ToF-simple-diagram.png)
 
 
 ### 1.3 Electron Configuration
@@ -115,7 +115,7 @@ $$PV = nRT$$
 * **Repulsion order**: lone pair-lone pair > lone pair-bond pair > bond pair-bond pair.
 
 
-![Image of VSEPR molecule shapes and bond angles](https://www.pmt.education/wp-content/uploads/2025/09/vsepr-shapes-angles-lone-pairs-a-level-chemistry-1720x2247.png)
+![Image of VSEPR molecule shapes and bond angles](/assets/img/vsepr-shapes-angles-lone-pairs-a-level-chemistry-1720x2247.png)
 
 
 **Common shapes**:
