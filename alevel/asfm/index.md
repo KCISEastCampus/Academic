@@ -740,7 +740,7 @@ $X$ is the number of independent trials needed to get the **first success** (wit
 * **Variance:** $Var(X) = \frac{1-p}{p^2}$
 * **Memoryless Property:** The probability of future successes is independent of past failures.
 
----
+<!-- ---
 
 ### 12. Moments and PGFs (FS1.4)
 
@@ -864,10 +864,4 @@ $$\text{Speed of Separation} = e \times \text{Speed of Approach}$$
 
 * **Elastic Collision ($e=1$):** KE is conserved.
 * **Inelastic Collision ($e<1$):** KE is lost.
-* **Perfectly Inelastic/Coalescing ($e=0$):** Particles stick together ($v_A = v_B$).
-
----
-
-## 📚 Revision Complete
-
-This revision guide covers all topics for **AS Further Mathematics (FP1 and FPSM1)** according to the typical OxfordAQA specification structure.
+* **Perfectly Inelastic/Coalescing ($e=0$):** Particles stick together ($v_A = v_B$). -->
