@@ -268,3 +268,7 @@ $$\Delta H_{reaction} = \sum \Delta H_c^\circ(\text{reactants}) - \sum \Delta H_
 $$\Delta H = \sum(\text{bonds broken}) - \sum(\text{bonds formed})$$
 * **Breaking bonds**: Requires energy (Endothermic, **+ve**).
 * **Forming bonds**: Releases energy (Exothermic, **-ve**).
+
+---
+`ToF mass spectrometer image source: Bio-Analysis Centre`
+`VSEPR image source: Physics & Maths Tutor`
