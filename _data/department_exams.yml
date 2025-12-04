@@ -1,15 +1,41 @@
 ---
 # department_exams.yml
 # 编辑此文件以管理部门内部考试列表，模板会自动渲染到首页。
-# 格式如下
-# - id: math-y12-mock
-#   title: "Year 12 Mock Exam — Mathematics"
-#   date: 2025-11-12
-#   duration: "2 hours"
-#   location: "大礼堂"
-#   contact: "Mr. Smith"
+# 新格式：按周次(week)组织，更灵活管理
+#
+# 示例：
+# - week: "Week 15"              # 周次（必填）
+#   date_range: "Dec 9-13"       # 日期范围（可选）
+#   exams:
+#     - subject: "Mathematics"    # 科目名
+#       title: "AS Mock Exam 1"   # 考试标题
+#       type: "Mock"              # 类型: Mock/Quiz/Test
+#       duration: "1.5h"          # 时长
+#       grade: "AS"               # 年级（可选）
+#     - subject: "Physics"
+#       title: "Topic Test"
+#       type: "Test"
+#       duration: "1h"
 
-# - id: topic-test
-#   title: "IGCSE Grade 10 Topic Test for Mathematics"
-#   date: 2025-10-30
-#   duration: "1.5 hours"
+- week: "Week 15"
+  date_range: "Dec 9-13"
+  exams:
+    - subject: "Chemistry"
+      title: "Mock Exam 1"
+      type: "Mock"
+      duration: "1.5h"
+      grade: "AS"
+    - subject: "Further Mathematics"
+      title: "Quiz 6"
+      type: "Quiz"
+      duration: "1.5h"
+      grade: "AS"
+
+# - week: "Week 16"
+#   date_range: "Dec 16-20"
+#   exams:
+#     - subject: "Mathematics"
+#       title: "Final Assessment"
+#       type: "Test"
+#       duration: "2h"
+#       grade: "A2"

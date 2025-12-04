@@ -42,31 +42,43 @@
         </h3>
         
         <div class="dept-exams">
-          {% assign exams = site.data.department_exams %}
-          {% if exams and exams.size > 0 %}
-            <div class="d-flex flex-column gap-2">
-              {% for ex in exams %}
-                <div class="exam-list-item">
-                  <div class="exam-date-badge">
-                    {% assign date_parts = ex.date | split: ' ' %}
-                    <span class="exam-date-day">{{ date_parts[0] | default: '?' }}</span>
-                    <span class="exam-date-month">{{ date_parts[1] | default: 'TBA' }}</span>
-                  </div>
-                  <div>
-                    <div class="fw-bold">{{ ex.title }}</div>
-                    <div class="small text-muted">{{ ex.duration }}</div>
-                  </div>
+          {% assign exam_weeks = site.data.department_exams %}
+          {% if exam_weeks and exam_weeks.size > 0 %}
+            {% for week_data in exam_weeks %}
+              <div class="exam-week-group">
+                <div class="exam-week-header">
+                  <span class="exam-week-label">{{ week_data.week }}</span>
+                  {% if week_data.date_range %}
+                    <span class="exam-date-range">{{ week_data.date_range }}</span>
+                  {% endif %}
                 </div>
-              {% endfor %}
-            </div>
+                
+                <div class="exam-week-items">
+                  {% for exam in week_data.exams %}
+                    <div class="exam-item exam-type-{{ exam.type | downcase }}">
+                      <div class="exam-item-left">
+                        <div class="exam-subject">{{ exam.subject }}</div>
+                        <div class="exam-title">{{ exam.title }}</div>
+                      </div>
+                      <div class="exam-item-right">
+                        {% if exam.type %}<span class="exam-type">{{ exam.type }}</span>{% endif %}
+                        {% if exam.duration %}<span class="exam-duration">{{ exam.duration }}</span>{% endif %}
+                        {% if exam.grade %}<span class="exam-grade-badge">{{ exam.grade }}</span>{% endif %}
+                      </div>
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            {% endfor %}
+            
             <p class="mt-3 small text-muted mb-0">
               <i class="bi bi-info-circle me-1"></i>
-              Contact the A-level Office for details.
+              Exams may be off-timetable or sit with double-period classes. Please confirm with your subject teacher.
             </p>
           {% else %}
             <div class="alert alert-secondary mb-0" role="status">
               <i class="bi bi-calendar-x me-2"></i>
-              No in-school exams scheduled.
+              No in-school exams scheduled this week.
             </div>
           {% endif %}
         </div>
