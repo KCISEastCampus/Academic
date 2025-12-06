@@ -19,7 +19,9 @@
       packages: {'[+]': ['base', 'ams', 'mhchem']},
       processEscapes: true,
       processEnvironments: true,
-      macros: { cosec: '\\csc' }
+      macros: {
+        cosec: '\\operatorname{cosec}'
+      }
     },
     chtml: {
       // Force MathJax to use proper math fonts for all content including \text{}
