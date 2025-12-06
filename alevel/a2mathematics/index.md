@@ -1,5 +1,5 @@
 ---
-title: A2 Mathematics Pure Math
+title: A2 Math - Pure
 layout: subjects
 mathjax: true
 grade: a2
