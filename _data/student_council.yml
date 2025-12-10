@@ -1,0 +1,75 @@
+# Student Council Data
+# A-level Student Council (ALSC) - Managing IGCSE and A-level students
+
+# Council Information
+council:
+  name: "A-level Student Council"
+  short_name: "ALSC"
+  description: "The A-level Student Council (ALSC) aims to organize special events to let students release stress and help students study effectively."
+  mission: "TBA"
+
+# Core Members / Executive Team
+executives:
+  - name: "Eric Shi"
+    role: "Core"
+    bio: "From G11, with experience of leadership by being the class monitor for 3 years, since G8. Built and maintaining <a href=\"https://kcisec.site\">https://kcisec.site</a> since 2022."
+    groups:
+      - "Academic"
+
+  - name: "Marcia Ma"
+    role: "Core"
+    bio: "From G11, experienced in organizational management, and have successfully managed the school's \"Heartfelt Voice(心辅之声)\" program for years."
+    groups:
+      - "Publicity"
+
+  - name: "Jason Jiang"
+    role: "Core"
+    bio: "TBD"
+    groups:
+      - "Events"
+
+# Three Main Groups/Departments
+groups:
+  - id: "academic"
+    name: "Academic"
+    icon: "bi-book"
+    color: "#5cc07f"
+    description: "Organizing special academic activities and maintaining this website."
+    responsibilities:
+      - "Organize special academic events (e.g., Science Day)"
+      - "Maintain and update the Academic Resources website"
+      - "Create and curate study materials"
+
+  - id: "events"
+    name: "Events"
+    icon: "bi-calendar-event"
+    color: "#5c6bc0"
+    description: "Planning and executing events from concept to completion."
+    responsibilities:
+      - "Event planning and proposal development"
+      - "Mid-stage event execution and coordination"
+      - "Logistics and resource allocation"
+      - "Venue coordination and participant management"
+
+  - id: "publicity"
+    name: "Publicity"
+    icon: "bi-megaphone"
+    color: "#e67e22"
+    description: "Creating content, designing materials, and documenting our work."
+    responsibilities:
+      - "Write official documents and announcements"
+      - "Design posters and promotional materials"
+      - "Post-event documentation and summaries"
+      - "Social media management and outreach"
+
+# Recent Activities / Highlights
+highlights:
+  - title: "Established A-level Student Council"
+    date: "TBA"
+    description: "TBA"
+    group: "publicity"
+
+# Contact Information
+contact:
+  email: "ALSC@kcisec.site"
+  location: "A-level Office, 4th floor, Academic Building No.3"
