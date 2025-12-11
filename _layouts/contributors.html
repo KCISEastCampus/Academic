@@ -1,0 +1,109 @@
+---
+layout: none
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+  <link rel="stylesheet" href="/assets/css/contributors.css">
+  <title>{{ page.title | default: "Contributors" }}</title>
+</head>
+<body>
+  {% include site_header.html title="Contributors" subtitle="People who shaped the ALSC Academic site" %}
+
+  <a class="skip-link sr-only-focusable" href="#main-content">Skip to main content</a>
+  <main id="main-content" class="container contributors-container" role="main">
+    <a href="/" class="btn btn-outline-secondary btn-sm mb-3 fade-in" aria-label="Return to homepage">
+      <i class="bi bi-caret-left-fill"></i> Back to Home
+    </a>
+    <section class="contributors-hero fade-in">
+      <p class="eyebrow">Acknowledgements</p>
+      <h1 class="hero-headline">Every release stands on the shoulders of our contributors.</h1>
+      <p class="hero-subtitle">From code and design to content and operations, thank you.</p>
+    </section>
+
+    {% assign council = site.data.contributors.council %}
+    {% assign external = site.data.contributors.external %}
+
+    <section class="contrib-section fade-in" aria-labelledby="council-heading">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Core Team</p>
+          <h2 id="council-heading">{{ council.title }}</h2>
+          <p class="section-subtitle">{{ council.description }}</p>
+        </div>
+      </div>
+      <div class="contrib-grid">
+        {% for member in council.members %}
+        <article class="contrib-card" aria-label="{{ member.name }}">
+          <div class="card-top">
+            <div class="avatar-circle">
+              <i class="bi bi-person"></i>
+            </div>
+            <div>
+              <h3 class="contrib-name">{{ member.name }}</h3>
+              {% if member.title %}<p class="contrib-title">{{ member.title }}</p>{% endif %}
+              {% if member.period %}<p class="contrib-period">{{ member.period }}</p>{% endif %}
+            </div>
+          </div>
+          {% if member.contributions and member.contributions.size > 0 %}
+          <ul class="contrib-list" aria-label="Key contributions">
+            {% for item in member.contributions %}
+            <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="contrib-section fade-in" aria-labelledby="external-heading">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Alumni & Friends</p>
+          <h2 id="external-heading">{{ external.title }}</h2>
+          <p class="section-subtitle">{{ external.description }}</p>
+        </div>
+      </div>
+      <div class="contrib-grid">
+        {% for member in external.members %}
+        <article class="contrib-card" aria-label="{{ member.name }}">
+          <div class="card-top">
+            <div class="avatar-circle alt">
+              <i class="bi bi-people"></i>
+            </div>
+            <div>
+              <h3 class="contrib-name">{{ member.name }}</h3>
+              {% if member.title %}<p class="contrib-title">{{ member.title }}</p>{% endif %}
+              {% if member.period %}<p class="contrib-period">{{ member.period }}</p>{% endif %}
+            </div>
+          </div>
+          {% if member.contributions and member.contributions.size > 0 %}
+          <ul class="contrib-list" aria-label="Key contributions">
+            {% for item in member.contributions %}
+            <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="cta-section fade-in" aria-labelledby="cta-heading">
+      <div class="cta-card">
+        <div>
+          <p class="eyebrow">Explore more</p>
+          <h2 id="cta-heading">See the full history on GitHub.</h2>
+          <p class="section-subtitle">Commits, issues, and pull requests that built this site.</p>
+        </div>
+        <a class="btn btn-primary cta-btn" href="https://github.com/KCISEastCampus/Academic" target="_blank" rel="noopener">Open GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  {% include theme_button.html %}
+  {% include footer.html %}
+</body>
+</html>
