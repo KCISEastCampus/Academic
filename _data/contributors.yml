@@ -1,0 +1,35 @@
+# Contributors Data for Academic site
+# Maintainers and alumni who contributed to the A-level Student Council Academic resources
+
+council:
+  title: "ALSC Academic Group"
+  description: "Current student council academic team maintaining content, infrastructure, and UX."
+  members:
+    - name: "Eric Shi"
+      title: "Lead Developer"
+      period: "2024 - Present"
+      contributions:
+        - "Founder of Academic.kcisec.site"
+        - "Founder of kcisec.site"
+        - "Editor of subject contents: IGCSE: Physics, Chemistry; A-level: AS Chemistry, AS & A2 Math, AS Further Math"
+        - "Maintainer of site infrastructure and deployment"
+
+external:
+  title: "Contributors & Alumni"
+  description: "Friends and alumni who improved the site, content, or tooling."
+  members:
+    - name: "Idad Wind"
+      title: "Initial Developer"
+      period: "2024"
+      contributions:
+        - "Updated the Academic site with Jekyll styles"
+        - "Left a well-structured codebase for future maintainers"
+        - "Turns the HTML based content to Jekyll markdown format with MathJax support"
+    - name: "Lynn Liu"
+      title: "Content Contributor"
+      period: "2024 - Present"
+      contributions:
+        - "A-level Mathematics Teacher Team HOD"
+        - "Contributed to IGCSE Mathematics notes and resources"
+        - "Contributed to AS Mathematics notes and resources"
+        - "Supervised math content accuracy and clarity"

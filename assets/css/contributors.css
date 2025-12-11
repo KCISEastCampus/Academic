@@ -1,0 +1,214 @@
+/* Contributors page styles */
+
+:root {
+  --contrib-gradient: linear-gradient(135deg, #0f172a 0%, #111827 40%, #1f2937 100%);
+}
+
+body {
+  background: var(--bg);
+}
+
+.contributors-container {
+  padding-bottom: 3rem;
+}
+
+.contributors-hero {
+  background: var(--contrib-gradient);
+  color: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+html[data-bs-theme="light"] .contributors-hero {
+  background: linear-gradient(135deg, #edf2ff 0%, #eaf4ff 45%, #e8f1ff 100%);
+  color: var(--heading-color);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+}
+
+html[data-bs-theme="light"] .contributors-hero .hero-subtitle,
+html[data-bs-theme="light"] .contributors-hero .eyebrow {
+  color: var(--text-secondary);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.hero-headline {
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.hero-subtitle {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.85);
+  max-width: 720px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.contrib-section {
+  margin-bottom: 2.5rem;
+}
+
+.section-header h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0.1rem 0;
+}
+
+.section-subtitle {
+  color: var(--text-secondary);
+  margin: 0.2rem 0 0;
+}
+
+.contrib-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.contrib-card {
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 1.25rem;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.contrib-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px rgba(0,0,0,0.08);
+  border-color: rgba(var(--accent-ig-rgb), 0.4);
+}
+
+.card-top {
+  display: flex;
+  gap: 0.9rem;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.avatar-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: rgba(var(--accent-ig-rgb), 0.12);
+  color: var(--accent-ig);
+  font-size: 1.3rem;
+}
+
+.avatar-circle.alt {
+  background: rgba(var(--accent-al-rgb), 0.12);
+  color: var(--accent-al);
+}
+
+.contrib-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--heading-color);
+}
+
+.contrib-title {
+  margin: 0.1rem 0;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.contrib-period {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.contrib-list {
+  margin: 0.5rem 0 0;
+  padding-left: 1rem;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.contrib-list li {
+  margin: 0.15rem 0;
+}
+
+.cta-section {
+  margin-top: 2rem;
+}
+
+.cta-card {
+  background: linear-gradient(135deg, rgba(var(--accent-al-rgb),0.16), rgba(var(--accent-ig-rgb),0.18));
+  border-radius: 16px;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 2rem;
+  border: 1px solid rgba(var(--accent-ig-rgb), 0.25);
+}
+
+html[data-bs-theme="light"] .cta-card {
+  background: linear-gradient(135deg, rgba(var(--accent-al-rgb),0.08), rgba(var(--accent-ig-rgb),0.1));
+  border-color: rgba(15, 23, 42, 0.1);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+}
+
+.cta-card h2 {
+  margin: 0.2rem 0;
+  color: var(--text);
+}
+
+html[data-bs-theme="light"] .cta-card h2 {
+  color: var(--heading-color);
+}
+
+html[data-bs-theme="light"] .cta-card .eyebrow {
+  color: var(--text-secondary);
+}
+
+html[data-bs-theme="light"] .cta-card .section-subtitle {
+  color: var(--text-secondary);
+}
+
+.cta-card .eyebrow {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.cta-btn {
+  min-width: 160px;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .contributors-hero {
+    padding: 2rem;
+  }
+  .hero-headline {
+    font-size: 2rem;
+  }
+  .contrib-grid {
+    grid-template-columns: 1fr;
+  }
+  .cta-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .cta-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
