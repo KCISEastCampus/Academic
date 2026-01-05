@@ -5,28 +5,40 @@
 council:
   name: "A-level Student Council"
   short_name: "ALSC"
-  description: "The A-level Student Council (ALSC) aims to organize special events to let students release stress and help students study effectively."
-  mission: "TBA"
+  description: "The A-level Student Council (ALSC) aims to organize activities, provide resources, help students relieve stress, and help them learn effectively."
 
 # Core Members / Executive Team
 executives:
   - name: "Eric Shi"
     role: "Core"
+    grade: "G11"
+    class: "11I"
     bio: "From G11, with experience of leadership by being the class monitor for 3 years, since G8. Built and maintaining <a href=\"https://kcisec.site\">https://kcisec.site</a> since 2022."
     groups:
-      - "Academic"
+      - name: "Academic"
+        role: "Leader"
+      - name: "Publicity"
+        role: "Deputy Leader"
 
   - name: "Marcia Ma"
     role: "Core"
+    grade: "G11"
+    class: "11I"
     bio: "From G11, experienced in organizational management, and have successfully managed the school's \"Heartfelt Voice(心辅之声)\" program for years."
     groups:
-      - "Publicity"
+      - name: "Publicity"
+        role: "Leader"
+      - name: "Events"
+        role: "Deputy Leader"
 
   - name: "Jason Jiang"
     role: "Core"
+    grade: "G10"
+    class: "10K"
     bio: "TBD"
     groups:
-      - "Events"
+      - name: "Events"
+        role: "Leader"
 
 # Three Main Groups/Departments
 groups:
@@ -62,14 +74,7 @@ groups:
       - "Post-event documentation and summaries"
       - "Social media management and outreach"
 
-# Recent Activities / Highlights
-highlights:
-  - title: "Established A-level Student Council"
-    date: "TBA"
-    description: "TBA"
-    group: "publicity"
-
 # Contact Information
 contact:
   email: "ALSC@kcisec.site"
-  location: "A-level Office, 4th floor, Academic Building No.3"
+  location: "A-level Office"
