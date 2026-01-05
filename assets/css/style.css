@@ -753,7 +753,7 @@ div.highlight {
   background-color: white;
   padding: 10px;
   border-radius: 5px;
-  margin: 1rem auto;
+  margin: 1rem 0;
   max-width: 90%;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   clear: both;

@@ -424,7 +424,7 @@ where $h = \frac{b - a}{n}$ and **n must be even** (number of strips)
 - **Vector equation of line:** $\vec{r} = \vec{a} + \lambda\vec{b}$
   where $\vec{a}$ is a point on the line and $\vec{b}$ is the direction vector
 
-**Example:** Line through (1, 0, 2) with direction (-1, 2, 3)
+**Example:** Line through $$\begin{bmatrix} 1 \\ 0 \\ 2 \end{bmatrix}$$ with direction $$\begin{bmatrix} -1 \\ 2 \\ 3 \end{bmatrix}$$
 
 $$\begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} 1 \\ 0 \\ 2 \end{bmatrix} + \lambda \begin{bmatrix} -1 \\ 2 \\ 3 \end{bmatrix}$$
 
