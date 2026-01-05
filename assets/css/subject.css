@@ -401,13 +401,17 @@ html[data-bs-theme="dark"] .toc-toggle {
   }
 }
 
+:root {
+  --toc-offset: 300px;
+}
+
 /* Enhanced Table of Contents - Fixed Sidebar */
 .table-of-contents {
   position: fixed;
   top: 120px;
   right: 20px;
   width: 280px;
-  max-height: calc(100vh - 300px);
+  max-height: calc(100vh - var(--toc-offset));
   background: var(--surface);
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: 16px;
