@@ -34,16 +34,36 @@ layout: none
   
   <main id="main-content" class="container council-main" role="main">
     
-    <!-- Mission Statement -->
-    <section class="mission-section fade-in" style="animation-delay: 0.1s;">
-      <div class="mission-card">
-        <div class="mission-icon">
-          <i class="bi bi-flag"></i>
-        </div>
-        <div class="mission-content">
-          <h2>Our Mission</h2>
-          <p>{{ site.data.student_council.council.mission }}</p>
-        </div>
+    <!-- Latest News -->
+    <section class="news-section fade-in" style="animation-delay: 0.1s;">
+      <div class="section-header">
+        <h2 class="section-title">
+          <i class="bi bi-newspaper"></i>
+          Latest News
+        </h2>
+      </div>
+      
+      <div class="news-list">
+        {% assign news_pages = site.pages | where_exp: "item", "item.url contains '/student_council/news/'" | sort: 'date' | reverse %}
+        {% for post in news_pages limit:3 %}
+        <a href="{{ post.url }}" class="news-item">
+          <div class="news-date-badge">
+            <span class="day">{{ post.date | date: "%d" }}</span>
+            <span class="month">{{ post.date | date: "%b" }}</span>
+          </div>
+          <div class="news-info">
+            <h3 class="news-title">{{ post.title }}</h3>
+            <div class="news-meta-row">
+              {% if post.author %}
+              <span class="news-author"><i class="bi bi-person"></i> {{ post.author }}</span>
+              {% endif %}
+              <span class="read-more-link">Read Article <i class="bi bi-arrow-right"></i></span>
+            </div>
+          </div>
+        </a>
+        {% else %}
+        <p class="text-center text-muted">No news updates at the moment.</p>
+        {% endfor %}
       </div>
     </section>
 
@@ -66,21 +86,13 @@ layout: none
             <h3 class="dept-name">{{ group.name }}</h3>
           </div>
           <p class="dept-description">{{ group.description }}</p>
-          <ul class="dept-responsibilities">
-            {% for item in group.responsibilities %}
-            <li>
-              <i class="bi bi-check2"></i>
-              <span>{{ item }}</span>
-            </li>
-            {% endfor %}
-          </ul>
         </div>
         {% endfor %}
       </div>
     </section>
 
     <!-- Executive Team -->
-    <section class="team-section fade-in" style="animation-delay: 0.3s;">
+    <section class="team-section fade-in" style="animation-delay: 0.4s;">
       <div class="section-header">
         <h2 class="section-title">
           <i class="bi bi-star-fill"></i>
@@ -99,42 +111,35 @@ layout: none
           <div class="member-info">
             <h3 class="member-name">{{ member.name }}</h3>
             <span class="member-role">{{ member.role }}</span>
-            <p class="member-bio">{{ member.bio }}</p>
-            <div class="member-groups">
-              {% for group_name in member.groups %}
+            {% if member.grade and member.class %}
+            <div class="member-class-info">
+              <i class="bi bi-mortarboard-fill"></i>
+              <span>{{ member.grade }} {{ member.class }}</span>
+            </div>
+            {% endif %}
+            <div class="member-detailed-roles">
+              {% for group_item in member.groups %}
+                {% if group_item.name %}
+                  {% assign group_name = group_item.name %}
+                  {% assign group_role = group_item.role %}
+                {% else %}
+                  {% assign group_name = group_item %}
+                  {% assign group_role = nil %}
+                {% endif %}
+                
                 {% assign group_data = site.data.student_council.groups | where: "name", group_name | first %}
-                <span class="group-tag" style="--tag-color: {{ group_data.color | default: '#5c6bc0' }};">
-                  {{ group_name }}
-                </span>
+                <div class="role-badge" style="--role-color: {{ group_data.color | default: '#5c6bc0' }};">
+                  <i class="bi {{ group_data.icon | default: 'bi-circle-fill' }}"></i>
+                  <span class="role-text">
+                    {% if group_role and group_role != "Member" %}
+                      <strong>{{ group_role }}</strong> of {{ group_name }}
+                    {% else %}
+                      {{ group_name }} Team
+                    {% endif %}
+                  </span>
+                </div>
               {% endfor %}
             </div>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-    </section>
-
-    <!-- Recent Highlights -->
-    <section class="highlights-section fade-in" style="animation-delay: 0.4s;">
-      <div class="section-header">
-        <h2 class="section-title">
-          <i class="bi bi-lightning-fill"></i>
-          Recent Highlights
-        </h2>
-      </div>
-      
-      <div class="highlights-timeline">
-        {% for highlight in site.data.student_council.highlights %}
-          {% assign related_group = site.data.student_council.groups | where: "id", highlight.group | first %}
-        <div class="highlight-item" style="--highlight-color: {{ related_group.color | default: '#5c6bc0' }};">
-          <div class="highlight-marker">
-            <i class="bi {{ related_group.icon | default: 'bi-star' }}"></i>
-          </div>
-          <div class="highlight-content">
-            <div class="highlight-date">{{ highlight.date }}</div>
-            <h3 class="highlight-title">{{ highlight.title }}</h3>
-            <p class="highlight-description">{{ highlight.description }}</p>
-            <span class="highlight-tag">{{ related_group.name }}</span>
           </div>
         </div>
         {% endfor %}

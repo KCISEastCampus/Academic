@@ -1,0 +1,67 @@
+---
+layout: none
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% include head.html %}
+  {% include mathjax.html %}
+  <title>{{ page.title | default: site.title }}</title>
+  <link rel="stylesheet" href="/assets/css/subject.css">
+  <style>
+    /* Override image width for news posts to be larger than subject notes */
+    #content-container img {
+      max-width: 80%;
+    }
+    /* Allow full width if needed via class */
+    #content-container img.full-width {
+      max-width: 100%;
+    }
+    
+    .post-meta {
+      text-align: center;
+      color: #666;
+      margin-bottom: 2rem;
+      font-style: italic;
+    }
+    
+    .post-author {
+      font-weight: bold;
+    }
+  </style>
+  <script src="/assets/js/image_modal.js"></script>
+</head>
+
+
+<body>
+  <a href="/student_council/" class="btn btn-outline-info back-button" aria-label="Return to Student Council">
+    <i class="bi bi-caret-left-fill"></i>Back to Student Council
+  </a>
+
+  <p class="fs-1 text-center mt-3">{{ page.title }}</p>
+  
+  {% if page.author %}
+  <div class="post-meta">
+    <span>By <span class="post-author">{{ page.author }}</span></span>
+    {% if page.date %}
+    <span class="mx-2">|</span>
+    <span>{{ page.date | date: "%B %d, %Y" }}</span>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  <hr class="mb-2" />
+
+  <div id="main-container">
+    <div id="content-container">
+      {{ content }}
+    </div>
+  </div>
+
+  {% include footer.html %}
+
+  {% include theme_button.html %}
+
+</body>
+</html>

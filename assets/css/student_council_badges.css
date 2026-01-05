@@ -1,0 +1,21 @@
+
+/* Group Role Badge */
+.group-role-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  margin-left: 0.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  vertical-align: middle;
+}
+
+/* Adjust group tag to accommodate badge */
+.group-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.6rem 0.3rem 0.8rem;
+}

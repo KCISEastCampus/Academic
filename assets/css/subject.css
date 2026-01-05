@@ -407,7 +407,7 @@ html[data-bs-theme="dark"] .toc-toggle {
   top: 120px;
   right: 20px;
   width: 280px;
-  height: calc(100vh - 140px);
+  max-height: calc(100vh - 300px);
   background: var(--surface);
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: 16px;
