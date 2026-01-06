@@ -98,9 +98,9 @@ Independent effect of motion in horizontal and vertical directions.
 > A car of mass 1000 kg accelerates from rest to $20 \text{ m s}^{-1}$ in 10 s. Neglecting resistance, calculate the average power output.
 >
 > **Solution:**
-> 1.  Gain in KE $= \frac{1}{2} mv^2 = 0.5 \times 1000 \times 20^2 = 200,000 \text{ J}$.
-> 2.  Work Done = Gain in Energy = $200,000 \text{ J}$.
-> 3.  Average Power $P = \frac{W}{t} = \frac{200,000}{10} = 20,000 \text{ W} = 20 \text{ kW}$.
+> 1.  Gain in KE $= \frac{1}{2} mv^2 = 0.5 \times 1000 \times 20^2 = 200000 \text{ J}$.
+> 2.  Work Done = Gain in Energy = $200000 \text{ J}$.
+> 3.  Average Power $P = \frac{W}{t} = \frac{200000}{10} = 20000 \text{ W} = 20 \text{ kW}$.
 
 ---
 
