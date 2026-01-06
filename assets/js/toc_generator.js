@@ -96,6 +96,9 @@ function generateTOC() {
   setTimeout(() => {
     initTOCToggle();
   }, 100);
+
+  // Adjust TOC height only when footer is visible
+  setupTOCFooterObserver();
 }
 
 function initTOCToggle() {
@@ -172,5 +175,74 @@ function toggleTOC(show) {
       tocToggle.focus();
     }
   }
+}
+
+function setupTOCFooterObserver() {
+  const toc = document.getElementById('toc');
+  const footer = document.querySelector('footer');
+
+  if (!toc || !footer || !('IntersectionObserver' in window)) return;
+
+  let lastTocScroll = 0;
+  const userScrollCooldown = 800; // ms
+
+  const scrollTocToBottom = (sync = false) => {
+    // Respect recent user scroll interactions
+    if (Date.now() - lastTocScroll <= userScrollCooldown) return;
+
+    const doScroll = () => {
+      // Smoothly slide to the bottom; run twice to catch height transitions
+      toc.scrollTo({ top: toc.scrollHeight, behavior: 'smooth' });
+      setTimeout(() => {
+        toc.scrollTo({ top: toc.scrollHeight, behavior: 'smooth' });
+      }, 120);
+    };
+
+    // Align with the shrink transition so it feels like one motion
+    if (sync) {
+      requestAnimationFrame(() => {
+        doScroll();
+      });
+    } else {
+      doScroll();
+    }
+  };
+
+  // Track manual TOC scrolling to avoid fighting the user
+  toc.addEventListener('scroll', () => {
+    lastTocScroll = Date.now();
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        toc.classList.add('toc-footer-visible');
+        scrollTocToBottom(true);
+      } else {
+        toc.classList.remove('toc-footer-visible');
+      }
+    });
+  }, {
+    root: null,
+    threshold: 0,
+    rootMargin: '0px 0px 0px 0px'
+  });
+
+  observer.observe(footer);
+
+  // Keep TOC bottom-aligned on resize/zoom when footer is visible
+  const debouncedResize = (() => {
+    let timer = null;
+    return () => {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        if (toc.classList.contains('toc-footer-visible')) {
+          scrollTocToBottom();
+        }
+      }, 120);
+    };
+  })();
+
+  window.addEventListener('resize', debouncedResize);
 }
 
