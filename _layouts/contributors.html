@@ -17,9 +17,8 @@ layout: none
       <i class="bi bi-caret-left-fill"></i> Back to Home
     </a>
     <section class="contributors-hero fade-in">
-      <p class="eyebrow">Acknowledgements</p>
-      <h1 class="hero-headline">Every release stands on the shoulders of our contributors.</h1>
-      <p class="hero-subtitle">From code and design to content and operations, thank you.</p>
+      <h1 class="hero-headline">Our Contributors</h1>
+      <p class="hero-subtitle">The dedicated community behind ALSC Academic.</p>
     </section>
 
     {% assign council = site.data.contributors.council %}
@@ -40,7 +39,7 @@ layout: none
             <div class="avatar-circle">
               <i class="bi bi-person"></i>
             </div>
-            <div>
+            <div class="contrib-info">
               <h3 class="contrib-name">{{ member.name }}</h3>
               {% if member.title %}<p class="contrib-title">{{ member.title }}</p>{% endif %}
               {% if member.period %}<p class="contrib-period">{{ member.period }}</p>{% endif %}
@@ -73,7 +72,7 @@ layout: none
             <div class="avatar-circle alt">
               <i class="bi bi-people"></i>
             </div>
-            <div>
+            <div class="contrib-info">
               <h3 class="contrib-name">{{ member.name }}</h3>
               {% if member.title %}<p class="contrib-title">{{ member.title }}</p>{% endif %}
               {% if member.period %}<p class="contrib-period">{{ member.period }}</p>{% endif %}
