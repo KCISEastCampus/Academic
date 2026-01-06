@@ -48,6 +48,37 @@
   margin: 0.8rem 0 0.5rem 0 !important;
 }
 
+/* Markdown blockquotes -> styled example / callout cards */
+#content-container blockquote {
+  position: relative;
+  overflow: hidden;
+  margin: 1.75rem 0;
+  padding: 1.1rem 1.25rem 1.1rem 1.3rem;
+  border-left: 4px solid var(--accent-ig);
+  border-radius: 0.75rem;
+  background: linear-gradient(135deg, rgba(var(--accent-ig-rgb), 0.10), rgba(var(--accent-ig-rgb), 0.04));
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+html[data-bs-theme="dark"] #content-container blockquote {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+  border-left-color: var(--accent-al);
+}
+
+#content-container blockquote p {
+  margin: 0.35rem 0;
+  color: var(--text);
+}
+
+#content-container blockquote strong {
+  color: var(--accent-ig);
+}
+
+html[data-bs-theme="dark"] #content-container blockquote strong {
+  color: var(--accent-al);
+}
+
 /* Info box / Callout box - 适配深色模式和移动端 */
 .info-box {
   padding: 1rem 1.25rem;
@@ -402,16 +433,22 @@ html[data-bs-theme="dark"] .toc-toggle {
 }
 
 :root {
-  --toc-offset: 300px;
+  /* Reduce the offset so the TOC can grow taller without touching the footer */
+  --toc-offset: 140px;
+  /* Reserve space above the footer so the TOC never overlaps it */
+  --toc-footer-gap: 50px;
+  /* Extra gap only when footer is visible */
+  --toc-footer-gap-visible: 140px;
 }
 
 /* Enhanced Table of Contents - Fixed Sidebar */
 .table-of-contents {
   position: fixed;
-  top: 120px;
+  top: 96px;
+  bottom: var(--toc-footer-gap);
   right: 20px;
   width: 280px;
-  max-height: calc(100vh - var(--toc-offset));
+  max-height: calc(100vh - var(--toc-offset) - var(--toc-footer-gap));
   background: var(--surface);
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: 16px;
@@ -421,7 +458,20 @@ html[data-bs-theme="dark"] .toc-toggle {
   z-index: 100;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
   backdrop-filter: blur(20px);
-  transition: none !important;
+  transition: max-height 0.25s ease, bottom 0.25s ease;
+}
+
+/* Shrink only when the footer enters the viewport */
+.table-of-contents.toc-footer-visible {
+  bottom: var(--toc-footer-gap-visible);
+  max-height: calc(100vh - var(--toc-offset) - var(--toc-footer-gap-visible));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .table-of-contents,
+  .table-of-contents.toc-footer-visible {
+    transition: none;
+  }
 }
 
 /* Prevent any state changes on focus/hover */
