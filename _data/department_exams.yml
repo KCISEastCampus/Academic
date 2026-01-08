@@ -16,26 +16,3 @@
 #       title: "Topic Test"
 #       type: "Test"
 #       duration: "1h"
-
-- week: "Week 15"
-  date_range: "Dec 9-13"
-  exams:
-    - subject: "Chemistry"
-      title: "Mock Exam 1"
-      type: "Mock"
-      duration: "1.5h"
-      grade: "AS"
-    - subject: "Further Mathematics"
-      title: "Quiz 6"
-      type: "Quiz"
-      duration: "1.5h"
-      grade: "AS"
-
-# - week: "Week 16"
-#   date_range: "Dec 16-20"
-#   exams:
-#     - subject: "Mathematics"
-#       title: "Final Assessment"
-#       type: "Test"
-#       duration: "2h"
-#       grade: "A2"
