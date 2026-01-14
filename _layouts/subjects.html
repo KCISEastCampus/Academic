@@ -14,8 +14,13 @@ layout: none
   <script src="/assets/js/table_wrapper.js"></script>
 </head>
 
-
+{% if page.url contains '/igcse/' %}
+<body class="scheme-igcse">
+{% elsif page.url contains '/alevel/' %}
+<body class="scheme-alevel">
+{% else %}
 <body>
+{% endif %}
   <a href="{{ '/' | relative_url }}" class="btn btn-outline-info back-button" aria-label="Return to homepage">
     <i class="bi bi-caret-left-fill"></i>Back to Home
   </a>
@@ -33,7 +38,28 @@ layout: none
       {{ content }}
     </div>
     <div id="toc" class="table-of-contents">
-      <h2 class="contents-list">Contents</h2>
+      <div class="toc-header-fixed">
+        <h2 class="contents-list">Contents</h2>
+        
+        <!-- TOC Search Bar -->
+        <div class="toc-search-container">
+          <input type="text" 
+                 id="tocSearch" 
+                 class="toc-search-input" 
+                 placeholder="Search contents..."
+                 aria-label="Search table of contents">
+          <button id="tocSearchClear" class="toc-search-clear" aria-label="Clear search" style="display: none;">
+            <i class="bi bi-x-circle"></i>
+          </button>
+        </div>
+        
+        <!-- Reading Progress Bar -->
+        <div class="reading-progress-container">
+          <div class="reading-progress-bar" id="readingProgress"></div>
+          <span class="reading-progress-text" id="progressText">0%</span>
+        </div>
+      </div>
+      
       <div class="toc-content">
       </div>
     </div>

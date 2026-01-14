@@ -95,6 +95,8 @@ function generateTOC() {
   // Initialize TOC toggle functionality
   setTimeout(() => {
     initTOCToggle();
+    initTOCSearch();
+    initReadingProgress();
   }, 100);
 
   // Adjust TOC height only when footer is visible
@@ -244,5 +246,149 @@ function setupTOCFooterObserver() {
   })();
 
   window.addEventListener('resize', debouncedResize);
+}
+
+// TOC Search Functionality
+function initTOCSearch() {
+  const searchInput = document.getElementById('tocSearch');
+  const searchClear = document.getElementById('tocSearchClear');
+  const tocLinks = document.querySelectorAll('.toc-content a');
+  
+  if (!searchInput) return;
+  
+  searchInput.addEventListener('input', function() {
+    const searchTerm = this.value.toLowerCase().trim();
+    
+    // Show/hide clear button
+    searchClear.style.display = searchTerm ? 'flex' : 'none';
+    
+    // Filter TOC items
+    let visibleCount = 0;
+    tocLinks.forEach(link => {
+      // Always restore plain text to avoid stale markup
+      const href = link.getAttribute('href');
+      const targetId = href ? href.substring(1) : '';
+      const targetElement = targetId ? document.getElementById(targetId) : null;
+      const originalText = targetElement ? targetElement.textContent : link.textContent;
+      link.textContent = originalText;
+
+      const text = originalText.toLowerCase();
+      const listItem = link.closest('li');
+      if (text.includes(searchTerm)) {
+        listItem.style.display = '';
+        visibleCount++;
+        // Lightweight highlight without layout shift
+        if (searchTerm) {
+          const regex = new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+          link.innerHTML = originalText.replace(regex, '<span class="toc-match">$1</span>');
+        }
+      } else {
+        listItem.style.display = 'none';
+      }
+    });
+    
+    // Show "no results" message if needed
+    const noResultsMsg = document.getElementById('tocNoResults');
+    if (visibleCount === 0 && searchTerm) {
+      if (!noResultsMsg) {
+        const msg = document.createElement('div');
+        msg.id = 'tocNoResults';
+        msg.className = 'toc-no-results';
+        msg.innerHTML = '<i class="bi bi-search"></i> No matches found';
+        document.querySelector('.toc-content').appendChild(msg);
+      }
+    } else if (noResultsMsg) {
+      noResultsMsg.remove();
+    }
+    
+    // If no search term, restore original text
+    if (!searchTerm) {
+      tocLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        const targetId = href.substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          link.textContent = targetElement.textContent;
+        }
+      });
+    }
+  });
+  
+  // Clear button functionality
+  searchClear.addEventListener('click', function() {
+    searchInput.value = '';
+    searchInput.dispatchEvent(new Event('input'));
+    searchInput.focus();
+  });
+  
+  // ESC to clear search
+  searchInput.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      this.value = '';
+      this.dispatchEvent(new Event('input'));
+      this.blur();
+    }
+  });
+}
+
+// Reading Progress Indicator
+function initReadingProgress() {
+  const progressBar = document.getElementById('readingProgress');
+  const progressText = document.getElementById('progressText');
+  const contentContainer = document.getElementById('content-container');
+  
+  if (!progressBar || !contentContainer) return;
+  
+  function updateProgress() {
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    // Calculate content-specific progress
+    const contentTop = contentContainer.offsetTop;
+    const contentHeight = contentContainer.offsetHeight;
+    const contentBottom = contentTop + contentHeight;
+    
+    let progress = 0;
+    
+    if (scrollTop < contentTop) {
+      progress = 0;
+    } else if (scrollTop + windowHeight > contentBottom) {
+      progress = 100;
+    } else {
+      const contentScrolled = scrollTop - contentTop;
+      const contentScrollable = contentHeight - windowHeight;
+      progress = (contentScrolled / contentScrollable) * 100;
+    }
+    
+    progress = Math.max(0, Math.min(100, progress));
+    
+    progressBar.style.width = progress + '%';
+    progressText.textContent = Math.round(progress) + '%';
+    
+    // Change color based on progress
+    if (progress < 33) {
+      progressBar.style.background = 'linear-gradient(to right, #3b82f6, #06b6d4)';
+    } else if (progress < 66) {
+      progressBar.style.background = 'linear-gradient(to right, #06b6d4, #10b981)';
+    } else {
+      progressBar.style.background = 'linear-gradient(to right, #10b981, #22c55e)';
+    }
+  }
+  
+  // Update on scroll with throttling
+  let ticking = false;
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      window.requestAnimationFrame(function() {
+        updateProgress();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+  
+  // Initial update
+  updateProgress();
 }
 

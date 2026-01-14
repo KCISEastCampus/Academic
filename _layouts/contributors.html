@@ -9,95 +9,108 @@ layout: none
   <title>{{ page.title | default: "Contributors" }}</title>
 </head>
 <body>
-  {% include site_header.html title="Contributors" subtitle="People who shaped the ALSC Academic site" %}
-
   <a class="skip-link sr-only-focusable" href="#main-content">Skip to main content</a>
   <main id="main-content" class="container contributors-container" role="main">
-    <a href="/" class="btn btn-outline-secondary btn-sm mb-3 fade-in" aria-label="Return to homepage">
-      <i class="bi bi-caret-left-fill"></i> Back to Home
+    <a href="/" class="btn btn-outline-info btn-back fade-in" aria-label="Return to homepage">
+      <i class="bi bi-arrow-left"></i>
+      <span>Back to Home</span>
     </a>
+    
     <section class="contributors-hero fade-in">
-      <h1 class="hero-headline">Our Contributors</h1>
-      <p class="hero-subtitle">The dedicated community behind ALSC Academic.</p>
+      <div class="hero-content">
+        <h1 class="hero-headline">Contributors</h1>
+        <p class="hero-subtitle">Acknowledging the people who built and maintain this academic platform</p>
+      </div>
     </section>
 
     {% assign council = site.data.contributors.council %}
     {% assign external = site.data.contributors.external %}
 
-    <section class="contrib-section fade-in" aria-labelledby="council-heading">
+    <section class="contrib-section fade-in" style="animation-delay: 0.1s;" aria-labelledby="council-heading">
       <div class="section-header">
-        <div>
-          <p class="eyebrow">Core Team</p>
-          <h2 id="council-heading">{{ council.title }}</h2>
-          <p class="section-subtitle">{{ council.description }}</p>
-        </div>
+        <h2 id="council-heading" class="section-title">
+          <span class="section-icon"><i class="bi bi-shield-check"></i></span>
+          {{ council.title }}
+        </h2>
+        <p class="section-description">{{ council.description }}</p>
       </div>
       <div class="contrib-grid">
         {% for member in council.members %}
         <article class="contrib-card" aria-label="{{ member.name }}">
-          <div class="card-top">
-            <div class="avatar-circle">
-              <i class="bi bi-person"></i>
+          <div class="card-header">
+            <div class="avatar-icon">
+              <i class="bi bi-person-fill"></i>
             </div>
-            <div class="contrib-info">
-              <h3 class="contrib-name">{{ member.name }}</h3>
-              {% if member.title %}<p class="contrib-title">{{ member.title }}</p>{% endif %}
-              {% if member.period %}<p class="contrib-period">{{ member.period }}</p>{% endif %}
+            <div class="member-info">
+              <h3 class="member-name">{{ member.name }}</h3>
+              {% if member.title %}<p class="member-role">{{ member.title }}</p>{% endif %}
+              {% if member.period %}<p class="member-period"><i class="bi bi-calendar3"></i> {{ member.period }}</p>{% endif %}
             </div>
           </div>
           {% if member.contributions and member.contributions.size > 0 %}
-          <ul class="contrib-list" aria-label="Key contributions">
-            {% for item in member.contributions %}
-            <li>{{ item }}</li>
-            {% endfor %}
-          </ul>
+          <div class="card-body">
+            <h4 class="contributions-title">Key Contributions</h4>
+            <ul class="contributions-list">
+              {% for item in member.contributions %}
+              <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </div>
           {% endif %}
         </article>
         {% endfor %}
       </div>
     </section>
 
-    <section class="contrib-section fade-in" aria-labelledby="external-heading">
+    <section class="contrib-section fade-in" style="animation-delay: 0.2s;" aria-labelledby="external-heading">
       <div class="section-header">
-        <div>
-          <p class="eyebrow">Alumni & Friends</p>
-          <h2 id="external-heading">{{ external.title }}</h2>
-          <p class="section-subtitle">{{ external.description }}</p>
-        </div>
+        <h2 id="external-heading" class="section-title">
+          <span class="section-icon"><i class="bi bi-people-fill"></i></span>
+          {{ external.title }}
+        </h2>
+        <p class="section-description">{{ external.description }}</p>
       </div>
       <div class="contrib-grid">
         {% for member in external.members %}
         <article class="contrib-card" aria-label="{{ member.name }}">
-          <div class="card-top">
-            <div class="avatar-circle alt">
-              <i class="bi bi-people"></i>
+          <div class="card-header">
+            <div class="avatar-icon alumni">
+              <i class="bi bi-star-fill"></i>
             </div>
-            <div class="contrib-info">
-              <h3 class="contrib-name">{{ member.name }}</h3>
-              {% if member.title %}<p class="contrib-title">{{ member.title }}</p>{% endif %}
-              {% if member.period %}<p class="contrib-period">{{ member.period }}</p>{% endif %}
+            <div class="member-info">
+              <h3 class="member-name">{{ member.name }}</h3>
+              {% if member.title %}<p class="member-role">{{ member.title }}</p>{% endif %}
+              {% if member.period %}<p class="member-period"><i class="bi bi-calendar3"></i> {{ member.period }}</p>{% endif %}
             </div>
           </div>
           {% if member.contributions and member.contributions.size > 0 %}
-          <ul class="contrib-list" aria-label="Key contributions">
-            {% for item in member.contributions %}
-            <li>{{ item }}</li>
-            {% endfor %}
-          </ul>
+          <div class="card-body">
+            <h4 class="contributions-title">Key Contributions</h4>
+            <ul class="contributions-list">
+              {% for item in member.contributions %}
+              <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </div>
           {% endif %}
         </article>
         {% endfor %}
       </div>
     </section>
 
-    <section class="cta-section fade-in" aria-labelledby="cta-heading">
-      <div class="cta-card">
-        <div>
-          <p class="eyebrow">Explore more</p>
-          <h2 id="cta-heading">See the full history on GitHub.</h2>
-          <p class="section-subtitle">Commits, issues, and pull requests that built this site.</p>
+    <section class="github-section fade-in" style="animation-delay: 0.3s;" aria-labelledby="github-heading">
+      <div class="github-card">
+        <div class="github-icon">
+          <i class="bi bi-github"></i>
         </div>
-        <a class="btn btn-primary cta-btn" href="https://github.com/KCISEastCampus/Academic" target="_blank" rel="noopener">Open GitHub</a>
+        <div class="github-content">
+          <h2 id="github-heading">View Full History</h2>
+          <p>Explore commits, issues, and pull requests on GitHub</p>
+        </div>
+        <a class="github-btn" href="https://github.com/KCISEastCampus/Academic" target="_blank" rel="noopener">
+          <span>Open Repository</span>
+          <i class="bi bi-arrow-up-right"></i>
+        </a>
       </div>
     </section>
   </main>

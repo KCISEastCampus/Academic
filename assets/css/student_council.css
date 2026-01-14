@@ -1,103 +1,112 @@
-/* Student Council Page Styles */
-/* Follows the site's design system with custom enhancements */
+/* Student Council Page - unified subpage styling (accent-page) */
 
 /* ===== Hero Section ===== */
 .council-hero {
   position: relative;
-  padding: 3rem 0 4rem;
-  overflow: visible;
-  margin-bottom: 2rem;
-  background: transparent;
+  padding: 2.5rem 0 3rem;
+  background: radial-gradient(120% 120% at 20% 0%, rgba(var(--accent-page-rgb), 0.22), transparent 50%);
 }
 
-.hero-background {
-  display: none;
+.hero-shell {
+  background: linear-gradient(140deg, rgba(var(--accent-page-rgb), 0.14), rgba(255,255,255,0.03));
+  border: 1px solid rgba(var(--accent-page-rgb), 0.18);
+  border-radius: 1rem;
+  padding: 1.75rem 1.5rem;
+  box-shadow: 0 16px 44px rgba(0,0,0,0.18);
+  position: relative;
+  overflow: hidden;
 }
 
-.hero-pattern {
-  display: none;
+.hero-shell::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(120% 120% at 85% 20%, rgba(var(--accent-page-rgb), 0.16), transparent 55%);
+  pointer-events: none;
 }
 
-.hero-content {
+.hero-body {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hero-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  background: rgba(var(--accent-page-rgb), 0.18);
+  color: var(--accent-page);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  flex-shrink: 0;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.18);
+}
+
+.hero-text {
+  position: relative;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: rgba(var(--accent-page-rgb), 0.9);
+  margin: 0 0 0.35rem 0;
+}
+
+.hero-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.hero-subtitle {
+  font-size: 1.05rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 680px;
+}
+
+.page-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.6rem;
+  background: rgba(var(--accent-page-rgb), 0.08);
+  color: var(--accent-page);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
   position: relative;
   z-index: 1;
 }
 
-.back-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: var(--muted);
-  text-decoration: none;
-  font-size: 0.9rem;
-  margin-bottom: 1.5rem;
-  padding: 0;
-  border-radius: 0;
-  transition: color 0.2s ease;
+.page-back:hover {
+  transform: translateX(-3px);
+  background: rgba(var(--accent-page-rgb), 0.16);
 }
 
-.back-link:hover {
-  color: var(--accent-ig);
-}
-
-.back-link i {
+.page-back i {
   transition: transform 0.2s ease;
 }
 
-.back-link:hover i {
-  transform: translateX(-4px);
-}
-
-.hero-main {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.council-badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 80px;
-  height: 80px;
-  background: linear-gradient(135deg, var(--accent-al) 0%, var(--accent-ig) 100%);
-  border-radius: 50%;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 8px 32px rgba(92, 107, 192, 0.3);
-  animation: badgePulse 3s ease-in-out infinite;
-}
-
-@keyframes badgePulse {
-  0%, 100% { box-shadow: 0 8px 32px rgba(92, 107, 192, 0.3); }
-  50% { box-shadow: 0 12px 48px rgba(92, 192, 127, 0.4); }
-}
-
-.council-badge i {
-  font-size: 2.5rem;
-  color: var(--surface);
-}
-
-.hero-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  background: linear-gradient(135deg, var(--text) 0%, var(--muted) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.hero-subtitle {
-  font-size: 1.1rem;
-  color: var(--muted);
-  line-height: 1.7;
-  max-width: 600px;
-  margin: 0 auto;
+.page-back:hover i {
+  transform: translateX(-2px);
 }
 
 /* ===== Main Content ===== */
 .council-main {
-  padding-bottom: 3rem;
+  padding: 0 0 3.5rem 0;
 }
 
 /* ===== Section Headers ===== */
@@ -115,7 +124,7 @@
 }
 
 .section-title i {
-  color: var(--accent-ig);
+  color: var(--accent-page);
 }
 
 /* ===== Mission Section ===== */
@@ -128,7 +137,7 @@
   align-items: flex-start;
   gap: 1.5rem;
   background: var(--surface);
-  border: 1px solid rgba(var(--accent-al-rgb), 0.2);
+  border: 1px solid rgba(var(--accent-page-rgb), 0.16);
   border-radius: 1rem;
   padding: 2rem;
   position: relative;
@@ -142,7 +151,7 @@
   left: 0;
   width: 4px;
   height: 100%;
-  background: linear-gradient(180deg, var(--accent-al) 0%, var(--accent-ig) 100%);
+  background: linear-gradient(180deg, var(--accent-page) 0%, rgba(var(--accent-page-rgb), 0.35) 100%);
 }
 
 .mission-icon {
@@ -152,13 +161,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(var(--accent-al-rgb), 0.1);
+  background: rgba(var(--accent-page-rgb), 0.14);
   border-radius: 50%;
 }
 
 .mission-icon i {
   font-size: 1.75rem;
-  color: var(--accent-al);
+  color: var(--accent-page);
 }
 
 .mission-content h2 {
@@ -199,7 +208,7 @@
 
 .department-card {
   background: var(--surface);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(var(--accent-page-rgb), 0.12);
   border-radius: 1rem;
   padding: 1.5rem;
   transition: all 0.3s ease;
@@ -222,8 +231,8 @@
 
 .department-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(var(--accent-ig-rgb), 0.2);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  border-color: rgba(var(--accent-page-rgb), 0.26);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.16);
 }
 
 .department-card:hover::before {
@@ -243,7 +252,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(var(--accent-ig-rgb), 0.1);
+  background: rgba(var(--accent-page-rgb), 0.12);
   border-radius: 12px;
   transition: all 0.3s ease;
 }
@@ -332,7 +341,7 @@ html[data-bs-theme="light"] .dept-responsibilities li {
 
 .member-card {
   background: var(--surface);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(var(--accent-page-rgb), 0.12);
   border-radius: 1rem;
   padding: 1.5rem;
   text-align: center;
@@ -341,7 +350,8 @@ html[data-bs-theme="light"] .dept-responsibilities li {
 
 .member-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  border-color: rgba(var(--accent-page-rgb), 0.26);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.16);
 }
 
 .member-avatar {
@@ -355,20 +365,20 @@ html[data-bs-theme="light"] .dept-responsibilities li {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(var(--accent-al-rgb), 0.2) 0%, rgba(var(--accent-ig-rgb), 0.2) 100%);
+  background: linear-gradient(135deg, rgba(var(--accent-page-rgb), 0.22), rgba(var(--accent-page-rgb), 0.08));
   border-radius: 50%;
-  border: 3px solid rgba(var(--accent-ig-rgb), 0.3);
+  border: 3px solid rgba(var(--accent-page-rgb), 0.3);
   transition: all 0.3s ease;
 }
 
 .member-card:hover .avatar-placeholder {
-  border-color: var(--accent-ig);
+  border-color: var(--accent-page);
   transform: scale(1.05);
 }
 
 .avatar-placeholder i {
   font-size: 2rem;
-  color: var(--accent-ig);
+  color: var(--accent-page);
 }
 
 .member-info {
@@ -385,7 +395,7 @@ html[data-bs-theme="light"] .dept-responsibilities li {
 .member-role {
   display: inline-block;
   font-size: 0.85rem;
-  color: var(--accent-al);
+  color: var(--accent-page);
   font-weight: 500;
   margin-bottom: 0.75rem;
 }
@@ -414,7 +424,7 @@ html[data-bs-theme="light"] .dept-responsibilities li {
 }
 
 .member-class-info i {
-  color: var(--accent-ig);
+  color: var(--accent-page);
 }
 
 .member-detailed-roles {
@@ -430,7 +440,7 @@ html[data-bs-theme="light"] .dept-responsibilities li {
   align-items: center;
   gap: 0.6rem;
   padding: 0.4rem 0.8rem;
-  background: rgba(var(--accent-ig-rgb), 0.05);
+  background: rgba(var(--accent-page-rgb), 0.06);
   border-radius: 8px;
   font-size: 0.85rem;
   color: var(--text);
@@ -440,7 +450,7 @@ html[data-bs-theme="light"] .dept-responsibilities li {
 }
 
 .role-badge:hover {
-  background: rgba(var(--accent-ig-rgb), 0.1);
+  background: rgba(var(--accent-page-rgb), 0.12);
   transform: translateX(2px);
 }
 
@@ -476,10 +486,10 @@ html[data-bs-theme="light"] .dept-responsibilities li {
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(180deg, 
-    var(--accent-al) 0%, 
-    var(--accent-ig) 50%, 
-    rgba(var(--accent-ig-rgb), 0.2) 100%);
+  background: linear-gradient(180deg,
+    var(--accent-page) 0%,
+    rgba(var(--accent-page-rgb), 0.6) 50%,
+    rgba(var(--accent-page-rgb), 0.2) 100%);
   border-radius: 1px;
 }
 
@@ -521,8 +531,8 @@ html[data-bs-theme="light"] .dept-responsibilities li {
 }
 
 .highlight-content:hover {
-  border-color: rgba(var(--accent-ig-rgb), 0.2);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-color: rgba(var(--accent-page-rgb), 0.22);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .highlight-date {
@@ -549,7 +559,7 @@ html[data-bs-theme="light"] .dept-responsibilities li {
   display: inline-block;
   font-size: 0.75rem;
   padding: 0.2rem 0.6rem;
-  background: rgba(var(--accent-ig-rgb), 0.1);
+  background: rgba(var(--accent-page-rgb), 0.14);
   color: var(--highlight-color);
   border-radius: 12px;
   font-weight: 500;
@@ -564,10 +574,8 @@ html[data-bs-theme="light"] .dept-responsibilities li {
   display: flex;
   align-items: center;
   gap: 2rem;
-  background: linear-gradient(135deg, 
-    rgba(var(--accent-al-rgb), 0.08) 0%, 
-    rgba(var(--accent-ig-rgb), 0.08) 100%);
-  border: 1px solid rgba(var(--accent-ig-rgb), 0.2);
+  background: linear-gradient(135deg, rgba(var(--accent-page-rgb), 0.12), rgba(var(--accent-page-rgb), 0.06));
+  border: 1px solid rgba(var(--accent-page-rgb), 0.2);
   border-radius: 1rem;
   padding: 2rem;
 }
@@ -586,7 +594,7 @@ html[data-bs-theme="light"] .dept-responsibilities li {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--accent-al) 0%, var(--accent-ig) 100%);
+  background: rgba(var(--accent-page-rgb), 0.18);
   border-radius: 50%;
 }
 
@@ -627,7 +635,7 @@ html[data-bs-theme="light"] .dept-responsibilities li {
   gap: 0.5rem;
   padding: 0.5rem 1rem;
   background: var(--surface);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(var(--accent-page-rgb), 0.12);
   border-radius: 0.5rem;
   color: var(--text);
   text-decoration: none;
@@ -636,14 +644,14 @@ html[data-bs-theme="light"] .dept-responsibilities li {
 }
 
 .contact-link:hover {
-  border-color: var(--accent-ig);
-  color: var(--accent-ig);
+  border-color: var(--accent-page);
+  color: var(--accent-page);
   transform: translateY(-2px);
 }
 
 .contact-link i,
 .contact-info i {
-  color: var(--accent-ig);
+  color: var(--accent-page);
 }
 
 /* ===== Light Theme Adjustments ===== */
@@ -661,15 +669,13 @@ html[data-bs-theme="light"] .highlight-content:hover {
 }
 
 html[data-bs-theme="light"] .contact-card {
-  background: linear-gradient(135deg, 
-    rgba(var(--accent-al-rgb), 0.05) 0%, 
-    rgba(var(--accent-ig-rgb), 0.05) 100%);
-  border-color: rgba(var(--accent-ig-rgb), 0.15);
+  background: linear-gradient(135deg, rgba(var(--accent-page-rgb), 0.08), rgba(var(--accent-page-rgb), 0.04));
+  border-color: rgba(var(--accent-page-rgb), 0.18);
 }
 
 html[data-bs-theme="light"] .contact-link,
 html[data-bs-theme="light"] .contact-info {
-  border-color: rgba(0, 0, 0, 0.1);
+  border-color: rgba(var(--accent-page-rgb), 0.18);
 }
 
 html[data-bs-theme="light"] .hero-title {
@@ -749,21 +755,23 @@ html[data-bs-theme="light"] .hero-title {
 .news-item {
   display: flex;
   gap: 1rem;
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  padding: 1rem;
+  background: var(--surface);
+  border: 1px solid rgba(var(--accent-page-rgb), 0.12);
+  border-radius: 0.75rem;
+  padding: 1rem 1.1rem;
   text-decoration: none;
-  color: var(--text-main);
-  transition: all 0.2s ease;
+  color: var(--text);
+  transition: all 0.25s ease;
   align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .news-item:hover {
   transform: translateX(4px);
-  border-color: var(--accent-ig);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  color: var(--text-main);
+  border-color: rgba(var(--accent-page-rgb), 0.26);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  color: var(--text);
 }
 
 .news-date-badge {
@@ -773,9 +781,9 @@ html[data-bs-theme="light"] .hero-title {
   justify-content: center;
   min-width: 48px;
   height: 48px;
-  background: rgba(var(--accent-ig-rgb), 0.08);
+  background: rgba(var(--accent-page-rgb), 0.12);
   border-radius: 8px;
-  color: var(--accent-ig);
+  color: var(--accent-page);
   flex-shrink: 0;
 }
 
@@ -803,7 +811,7 @@ html[data-bs-theme="light"] .hero-title {
   font-size: 1.05rem;
   font-weight: 600;
   margin: 0 0 0.25rem 0;
-  color: var(--heading-color);
+  color: var(--text);
   line-height: 1.3;
 }
 
@@ -824,7 +832,7 @@ html[data-bs-theme="light"] .hero-title {
 
 .read-more-link {
   margin-left: auto;
-  color: var(--accent-ig);
+  color: var(--accent-page);
   font-weight: 500;
   display: flex;
   align-items: center;

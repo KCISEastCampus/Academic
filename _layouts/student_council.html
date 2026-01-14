@@ -10,22 +10,22 @@ layout: none
 </head>
 
 <body>
-  <!-- Custom Header for Student Council -->
+  <!-- Standalone Hero -->
   <header class="council-hero" role="banner">
-    <div class="hero-background">
-      <div class="hero-pattern"></div>
-    </div>
-    <div class="container hero-content">
-      <a href="/" class="back-link" aria-label="Back to Homepage">
+    <div class="container hero-shell">
+      <a href="/" class="page-back" aria-label="Back to Homepage">
         <i class="bi bi-arrow-left"></i>
         <span>Back to Homepage</span>
       </a>
-      <div class="hero-main">
-        <div class="council-badge">
+      <div class="hero-body">
+        <div class="hero-icon">
           <i class="bi bi-people-fill"></i>
         </div>
-        <h1 class="hero-title">{{ site.data.student_council.council.name }}</h1>
-        <p class="hero-subtitle">{{ site.data.student_council.council.description }}</p>
+        <div class="hero-text">
+          <p class="eyebrow">Student Council</p>
+          <h1 class="hero-title">{{ site.data.student_council.council.name }}</h1>
+          <p class="hero-subtitle">{{ site.data.student_council.council.description }}</p>
+        </div>
       </div>
     </div>
   </header>
@@ -67,7 +67,7 @@ layout: none
       </div>
     </section>
 
-    <!-- Three Departments/Groups -->
+    <!-- Departments/Groups -->
     <section class="departments-section fade-in" style="animation-delay: 0.2s;">
       <div class="section-header">
         <h2 class="section-title">
@@ -86,6 +86,13 @@ layout: none
             <h3 class="dept-name">{{ group.name }}</h3>
           </div>
           <p class="dept-description">{{ group.description }}</p>
+          {% if group.responsibilities %}
+          <ul class="dept-responsibilities">
+            {% for item in group.responsibilities %}
+            <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
         </div>
         {% endfor %}
       </div>
@@ -116,6 +123,9 @@ layout: none
               <i class="bi bi-mortarboard-fill"></i>
               <span>{{ member.grade }} {{ member.class }}</span>
             </div>
+            {% endif %}
+            {% if member.bio %}
+            <p class="member-bio">{{ member.bio }}</p>
             {% endif %}
             <div class="member-detailed-roles">
               {% for group_item in member.groups %}

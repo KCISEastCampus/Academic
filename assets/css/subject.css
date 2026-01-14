@@ -1,9 +1,69 @@
 /* subject.css - Styles specific to subject pages */
 
+/* === Animation Keyframes === */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+/* Smooth scrolling for better UX */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Smooth scroll with reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 #content-container {
   line-height: 1.75;
   font-size: 1.05rem;
   letter-spacing: 0.01em;
+  scroll-margin-top: 100px; /* Account for fixed elements */
+  animation: fadeIn 0.6s ease-out;
 }
 
 #content-container p {
@@ -40,30 +100,195 @@
   transform: scaleX(1);
 }
 
-/* Content heading spacing optimization */
+/* Content heading spacing and style optimization */
 #content-container h1,
 #content-container h2,
 #content-container h3,
 #content-container h4 {
-  margin: 0.8rem 0 0.5rem 0 !important;
+  margin: 1.5rem 0 0.75rem 0 !important;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  position: relative;
+  padding-left: 16px;
 }
 
-/* Markdown blockquotes -> styled example / callout cards */
+#content-container h1::before,
+#content-container h2::before,
+#content-container h3::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 2px;
+}
+
+/* H1: Thick accent bar, largest size, darkest color */
+#content-container h1 {
+  font-size: 2.2rem;
+  color: var(--text);
+  margin-top: 2.5rem !important;
+  margin-bottom: 1.2rem !important;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+#content-container h1::before {
+  width: 6px;
+  height: 85%;
+  background: var(--accent-ig);
+}
+
+/* IGCSE scheme: use IG accent color */
+body.scheme-igcse #content-container h1::before {
+  background: var(--accent-ig);
+}
+
+/* A-Level scheme: use A-Level accent color */
+body.scheme-alevel #content-container h1::before {
+  background: var(--accent-al);
+}
+
+html[data-bs-theme="dark"] #content-container h1::before {
+  background: var(--accent-ig);
+}
+
+html[data-bs-theme="dark"] body.scheme-alevel #content-container h1::before {
+  background: var(--accent-al);
+}
+
+/* H2: Medium accent bar, medium-large size */
+#content-container h2 {
+  font-size: 1.7rem;
+  color: var(--text);
+  margin-top: 2rem !important;
+  margin-bottom: 1rem !important;
+  font-weight: 700;
+  opacity: 0.95;
+}
+
+#content-container h2::before {
+  width: 5px;
+  height: 75%;
+  background: var(--accent-ig);
+  opacity: 0.85;
+}
+
+/* IGCSE scheme: use IG accent color */
+body.scheme-igcse #content-container h2::before {
+  background: var(--accent-ig);
+}
+
+/* A-Level scheme: use A-Level accent color */
+body.scheme-alevel #content-container h2::before {
+  background: var(--accent-al);
+}
+
+html[data-bs-theme="dark"] #content-container h2::before {
+  background: var(--accent-ig);
+}
+
+html[data-bs-theme="dark"] body.scheme-alevel #content-container h2::before {
+  background: var(--accent-al);
+}
+
+/* H3: Thin accent bar, smaller size, slightly muted */
+#content-container h3 {
+  font-size: 1.4rem;
+  color: var(--text);
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.8rem !important;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+#content-container h3::before {
+  width: 4px;
+  height: 65%;
+  background: var(--accent-ig);
+  opacity: 0.65;
+}
+
+/* IGCSE scheme: use IG accent color */
+body.scheme-igcse #content-container h3::before {
+  background: var(--accent-ig);
+}
+
+/* A-Level scheme: use A-Level accent color */
+body.scheme-alevel #content-container h3::before {
+  background: var(--accent-al);
+}
+
+html[data-bs-theme="dark"] #content-container h3::before {
+  background: var(--accent-ig);
+  opacity: 0.65;
+}
+
+html[data-bs-theme="dark"] body.scheme-alevel #content-container h3::before {
+  background: var(--accent-al);
+  opacity: 0.65;
+}
+
+#content-container h4 {
+  font-size: 1.15rem;
+  color: var(--muted);
+  font-weight: 600;
+  padding-left: 12px;
+}
+
+#content-container h4::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--accent-ig);
+  font-size: 0.9em;
+}
+
+/* Markdown blockquotes -> modern styled callout cards */
 #content-container blockquote {
   position: relative;
   overflow: hidden;
-  margin: 1.75rem 0;
-  padding: 1.1rem 1.25rem 1.1rem 1.3rem;
-  border-left: 4px solid var(--accent-ig);
-  border-radius: 0.75rem;
-  background: linear-gradient(135deg, rgba(var(--accent-ig-rgb), 0.10), rgba(var(--accent-ig-rgb), 0.04));
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  margin: 2rem 0;
+  padding: 1.25rem 1.5rem 1.25rem 1.5rem;
+  border-left: 5px solid var(--accent-ig);
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(var(--accent-ig-rgb), 0.12), rgba(var(--accent-ig-rgb), 0.06));
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+#content-container blockquote:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 html[data-bs-theme="dark"] #content-container blockquote {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.05));
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3);
   border-left-color: var(--accent-al);
+}
+
+/* IGCSE scheme blockquote */
+body.scheme-igcse #content-container blockquote {
+  border-left-color: var(--accent-ig);
+}
+
+body.scheme-igcse #content-container blockquote strong {
+  color: var(--accent-ig);
+}
+
+/* A-Level scheme blockquote */
+body.scheme-alevel #content-container blockquote {
+  border-left-color: var(--accent-al);
+}
+
+body.scheme-alevel #content-container blockquote strong {
+  color: var(--accent-al);
+}
+
+html[data-bs-theme="dark"] #content-container blockquote:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 #content-container blockquote p {
@@ -79,28 +304,42 @@ html[data-bs-theme="dark"] #content-container blockquote strong {
   color: var(--accent-al);
 }
 
-/* Info box / Callout box - 适配深色模式和移动端 */
+/* Info box / Callout box - Enhanced modern design */
 .info-box {
-  padding: 1rem 1.25rem;
-  margin: 1.5rem 0;
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
   border-left: 5px solid var(--accent-ig);
-  border-radius: 0.5rem;
-  background-color: var(--surface);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(var(--accent-ig-rgb), 0.08), transparent);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.info-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--accent-ig), var(--accent-al));
 }
 
 html[data-bs-theme="dark"] .info-box {
-  background-color: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35), 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 .info-box:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15), 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 html[data-bs-theme="dark"] .info-box:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .info-box strong {
@@ -194,57 +433,98 @@ html[data-bs-theme="dark"] body > hr.shadow {
   overflow-x: auto;
 }
 
-/* Back button */
+/* Back button - Modern design with icon */
 .back-button {
   position: absolute;
   top: var(--space-lg);
   left: var(--space-lg);
+  padding: 10px 20px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+  backdrop-filter: blur(12px);
+  border: 2px solid rgba(var(--accent-ig-rgb), 0.2);
+  color: var(--text);
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
-/* TOC Toggle Button */
+html[data-bs-theme="dark"] .back-button {
+  background: linear-gradient(135deg, rgba(40, 40, 40, 0.9), rgba(30, 30, 30, 0.8));
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.back-button:hover {
+  transform: translateX(-4px);
+  box-shadow: 0 6px 20px rgba(var(--accent-ig-rgb), 0.2);
+  border-color: var(--accent-ig);
+  background: linear-gradient(135deg, var(--accent-ig), var(--accent-al));
+  color: white;
+}
+
+.back-button i {
+  transition: transform 0.3s ease;
+}
+
+.back-button:hover i {
+  transform: translateX(-3px);
+}
+
+/* TOC Toggle Button - Modern Design */
 .toc-toggle {
   position: fixed;
   top: 15px;
   right: 15px;
   z-index: 10000;
-  background: var(--surface);
-  border: 2px solid var(--muted);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+  border: 2px solid rgba(var(--accent-ig-rgb), 0.3);
   border-radius: 50%;
-  width: 44px;
-  height: 44px;
-  font-size: 1.1rem;
+  width: 48px;
+  height: 48px;
+  font-size: 1.15rem;
   cursor: pointer;
   display: none;
   align-items: center;
   justify-content: center;
   color: var(--text);
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(12px) saturate(180%);
+}
+
+html[data-bs-theme="dark"] .toc-toggle {
+  background: linear-gradient(135deg, rgba(40, 40, 40, 0.9), rgba(30, 30, 30, 0.8));
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .toc-toggle:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 24px rgba(var(--accent-ig-rgb), 0.3), 0 3px 8px rgba(0, 0, 0, 0.1);
   border-color: var(--accent-ig);
+  background: linear-gradient(135deg, var(--accent-ig), var(--accent-al));
+  color: white;
 }
 
 .toc-toggle:active {
-  transform: translateY(0);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px) scale(1.02);
 }
 
 .toc-toggle.active {
-  background: var(--accent-ig);
+  background: linear-gradient(135deg, var(--accent-ig), var(--accent-al));
   color: white;
   border-color: var(--accent-ig);
+  box-shadow: 0 6px 24px rgba(var(--accent-ig-rgb), 0.4);
 }
 
-/* Dark theme adjustments for TOC button */
-html[data-bs-theme="dark"] .toc-toggle {
-  background: var(--surface);
-  border-color: var(--muted);
-  color: var(--text);
+.toc-toggle i {
+  transition: transform 0.3s ease;
+}
+
+.toc-toggle.active i {
+  transform: rotate(90deg);
 }
 
 /* Respect prefers-reduced-motion for TOC button */
@@ -283,6 +563,19 @@ html[data-bs-theme="dark"] .toc-toggle {
     transform: translateX(100%);
     transition: transform 0.3s ease;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .toc-header-fixed {
+    flex-shrink: 0;
+  }
+  
+  .toc-content {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
   
   .table-of-contents.show {
@@ -311,33 +604,71 @@ html[data-bs-theme="dark"] .toc-toggle {
     right: 15px;
     top: 15px;
     z-index: 10000;
-    width: 44px;
-    height: 44px;
-    font-size: 1.1rem;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
   }
   
   .table-of-contents {
     position: fixed;
-    width: 85vw;
+    width: 90vw;
+    max-width: 380px;
     right: 0;
     top: 0;
     height: 100vh;
     border-radius: 0;
-    padding: 80px 20px 40px;
-    background: var(--surface) !important;
+    padding: 70px 20px 40px 20px;
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(20px) saturate(180%);
     border: none !important;
     z-index: 1002;
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.15);
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
     transform: translateX(100%);
-    transition: transform 0.3s ease;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .toc-header-fixed {
+    flex-shrink: 0;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+  }
+  
+  .toc-content {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  
+  html[data-bs-theme="dark"] .table-of-contents {
+    background: rgba(20, 20, 20, 0.97) !important;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.4);
   }
   
   .table-of-contents.show {
     transform: translateX(0) !important;
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.15);
   }
   
-  /* 移动端背景遮罩 - 移除黑边 */
+  /* Mobile backdrop overlay */
+  .table-of-contents.show::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 90vw;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: -1;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
   
   #content-container {
     margin: 0 !important;
@@ -441,24 +772,33 @@ html[data-bs-theme="dark"] .toc-toggle {
   --toc-footer-gap-visible: 140px;
 }
 
-/* Enhanced Table of Contents - Fixed Sidebar */
+/* Enhanced Table of Contents - Fixed Sidebar with Modern Glassmorphism */
 .table-of-contents {
   position: fixed;
   top: 96px;
   bottom: var(--toc-footer-gap);
   right: 20px;
-  width: 280px;
+  width: 300px;
   max-height: calc(100vh - var(--toc-offset) - var(--toc-footer-gap));
-  background: var(--surface);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 16px;
-  padding: 24px 20px;
-  overflow-y: auto;
-  overflow-x: hidden;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  padding: 20px;
+  overflow: hidden; /* Changed from overflow-y: auto */
   z-index: 100;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
-  backdrop-filter: blur(20px);
-  transition: max-height 0.25s ease, bottom 0.25s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  transition: max-height 0.25s ease, bottom 0.25s ease, box-shadow 0.3s ease;
+  animation: slideInRight 0.6s ease-out;
+  display: flex;
+  flex-direction: column;
+}
+
+html[data-bs-theme="dark"] .table-of-contents {
+  background: rgba(30, 30, 30, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 2px 8px rgba(0, 0, 0, 0.3) !important;
 }
 
 /* Shrink only when the footer enters the viewport */
@@ -484,25 +824,172 @@ html[data-bs-theme="dark"] .toc-toggle {
   transition: none !important;
 }
 
-/* TOC Header */
+/* TOC Fixed Header Container */
+.toc-header-fixed {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  z-index: 10;
+  padding: 10px 0 10px 0;
+  margin-bottom: 0;
+}
+
+html[data-bs-theme="dark"] .toc-header-fixed {
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+/* TOC Header with gradient underline */
 .contents-list {
-  font-size: 1.2rem;
-  margin: 0 0 20px 0;
-  padding-bottom: 16px;
-  border-bottom: 2px solid var(--accent-ig);
+  font-size: 1.25rem;
+  margin: 0 0 16px 0;
+  padding-bottom: 12px;
+  border-bottom: 3px solid transparent;
+  background: linear-gradient(to right, var(--accent-ig), var(--accent-al)) bottom / 100% 3px no-repeat;
   color: var(--text);
-  font-weight: 600;
+  font-weight: 700;
   text-align: center;
   writing-mode: horizontal-tb !important;
   direction: ltr !important;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.8px;
+  position: relative;
 }
 
-/* TOC Content Container */
+.contents-list::before {
+  content: "📑 ";
+  margin-right: 8px;
+  opacity: 0.9;
+}
+
+/* TOC Search Bar - Compact design for fixed header */
+.toc-search-container {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.toc-search-input {
+  width: 100%;
+  padding: 8px 32px 8px 10px;
+  border: 2px solid rgba(var(--accent-ig-rgb), 0.2);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  color: var(--text);
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+html[data-bs-theme="dark"] .toc-search-input {
+  background: rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.toc-search-input:focus {
+  border-color: var(--accent-ig);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 0 3px rgba(var(--accent-ig-rgb), 0.1);
+}
+
+html[data-bs-theme="dark"] .toc-search-input:focus {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.toc-search-input::placeholder {
+  color: var(--muted);
+  opacity: 0.7;
+}
+
+.toc-search-clear {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 4px;
+  font-size: 1.1rem;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toc-search-clear:hover {
+  color: var(--accent-ig);
+}
+
+/* Reading Progress Bar - Compact */
+.reading-progress-container {
+  position: relative;
+  height: 5px;
+  background: rgba(var(--accent-ig-rgb), 0.15);
+  border-radius: 10px;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+
+.reading-progress-bar {
+  height: 100%;
+  background: linear-gradient(to right, var(--accent-ig), var(--accent-al));
+  border-radius: 10px;
+  width: 0%;
+  transition: width 0.3s ease;
+  box-shadow: 0 0 10px rgba(var(--accent-ig-rgb), 0.5);
+}
+
+.reading-progress-text {
+  position: absolute;
+  right: 6px;
+  top: -20px;
+  font-size: 0.7rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+/* TOC Search - No Results Message */
+.toc-no-results {
+  text-align: center;
+  padding: 20px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.toc-no-results i {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 8px;
+  opacity: 0.5;
+}
+
+
+/* Search match highlight - display: contents removes span from layout */
+.toc-match {
+  display: contents;
+  color: var(--accent-ig);
+}
+
+html[data-bs-theme="dark"] .toc-match {
+  display: contents;
+  color: var(--accent-al);
+}
+
+/* TOC Content Container - Scrollable */
 .toc-content {
-  padding: 0;
+  padding: 0 6px 0 0;
   writing-mode: horizontal-tb !important;
   direction: ltr !important;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex: 1;
+  margin-top: 2px;
 }
 
 .toc-content ul {
@@ -511,35 +998,100 @@ html[data-bs-theme="dark"] .toc-toggle {
   list-style: none;
 }
 
-/* TOC Links - Smooth transitions on links only */
+/* TOC Links - Enhanced micro-interactions */
 .toc-content a {
-  display: block;
-  padding: 10px 14px;
-  margin: 4px 0;
+  display: flex;
+  align-items: center;
+  padding: 12px 10px 12px 14px;
+  margin: 3px 0;
   text-decoration: none;
   color: var(--muted);
-  border-radius: 8px;
-  transition: background-color 0.2s ease, color 0.2s ease, border-left-color 0.2s ease, transform 0.2s ease;
+  border-radius: 10px;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   border-left: 3px solid transparent;
   font-size: 0.9rem;
   line-height: 1.5;
   position: relative;
   will-change: transform;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+/* Left border indicator on hover/active */
+.toc-content a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--accent-ig), var(--accent-al));
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .toc-content a:hover {
-  background-color: rgba(var(--accent-ig-rgb), 0.15);
+  background: linear-gradient(90deg, rgba(var(--accent-ig-rgb), 0.15), rgba(var(--accent-ig-rgb), 0.08));
   color: var(--text) !important;
-  border-left-color: var(--accent-ig);
   transform: translateX(4px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.toc-content a:hover::after {
+  transform: scaleY(1);
 }
 
 .toc-content a.active {
-  background: rgba(var(--accent-ig-rgb), 0.15);
+  background: linear-gradient(90deg, rgba(var(--accent-ig-rgb), 0.2), rgba(var(--accent-ig-rgb), 0.1));
   color: var(--accent-ig) !important;
-  border-left-color: var(--accent-ig);
   font-weight: 600;
   transform: translateX(4px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* IGCSE scheme active state */
+body.scheme-igcse .toc-content a.active {
+  background: linear-gradient(90deg, rgba(var(--accent-ig-rgb), 0.2), rgba(var(--accent-ig-rgb), 0.1));
+  color: var(--accent-ig) !important;
+}
+
+/* A-Level scheme active state */
+body.scheme-alevel .toc-content a.active {
+  background: linear-gradient(90deg, rgba(var(--accent-al-rgb), 0.2), rgba(var(--accent-al-rgb), 0.1));
+  color: var(--accent-al) !important;
+}
+
+.toc-content a.active::after {
+  transform: scaleY(1);
+}
+
+html[data-bs-theme="dark"] .toc-content a:hover {
+  background: linear-gradient(90deg, rgba(var(--accent-ig-rgb), 0.2), rgba(var(--accent-ig-rgb), 0.1));
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+html[data-bs-theme="dark"] body.scheme-igcse .toc-content a:hover {
+  background: linear-gradient(90deg, rgba(var(--accent-ig-rgb), 0.2), rgba(var(--accent-ig-rgb), 0.1));
+}
+
+html[data-bs-theme="dark"] body.scheme-alevel .toc-content a:hover {
+  background: linear-gradient(90deg, rgba(var(--accent-al-rgb), 0.2), rgba(var(--accent-al-rgb), 0.1));
+}
+
+html[data-bs-theme="dark"] .toc-content a.active {
+  background: linear-gradient(90deg, rgba(var(--accent-ig-rgb), 0.25), rgba(var(--accent-ig-rgb), 0.15));
+  color: var(--accent-ig) !important;
+}
+
+html[data-bs-theme="dark"] body.scheme-igcse .toc-content a.active {
+  background: linear-gradient(90deg, rgba(var(--accent-ig-rgb), 0.25), rgba(var(--accent-ig-rgb), 0.15));
+  color: var(--accent-ig) !important;
+}
+
+html[data-bs-theme="dark"] body.scheme-alevel .toc-content a.active {
+  background: linear-gradient(90deg, rgba(var(--accent-al-rgb), 0.25), rgba(var(--accent-al-rgb), 0.15));
+  color: var(--accent-al) !important;
 }
 
 /* TOC Hierarchy Styles with Indentation */
@@ -577,68 +1129,138 @@ html[data-bs-theme="dark"] .toc-toggle {
   list-style: none;
 }
 
-/* Add visual hierarchy indicators with enhanced contrast */
+/* Clear and Modern Hierarchy Indicators */
 .toc-h1 a::before {
-  content: "📖 ";
-  margin-right: 6px;
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: linear-gradient(135deg, var(--accent-ig), var(--accent-al));
+  border-radius: 50%;
+  margin-right: 10px;
   opacity: 0.9;
+  flex-shrink: 0;
+  align-self: center;
+  transition: all 0.3s ease;
 }
 
 .toc-h2 a::before {
-  content: "📝 ";
-  margin-right: 6px;
-  opacity: 0.9;
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background: var(--accent-ig);
+  border-radius: 50%;
+  margin-right: 10px;
+  opacity: 0.8;
+  flex-shrink: 0;
+  align-self: center;
+  transition: all 0.3s ease;
 }
 
 .toc-h3 a::before {
-  content: "▸ ";
-  margin-right: 4px;
-  color: var(--accent-ig);
-  font-weight: bold;
-  font-size: 1.1em;
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border: 2px solid var(--accent-ig);
+  border-radius: 50%;
+  margin-right: 10px;
+  opacity: 0.7;
+  background: transparent;
+  flex-shrink: 0;
+  align-self: center;
+  transition: all 0.3s ease;
 }
 
 .toc-h4 a::before {
-  content: "• ";
-  margin-right: 4px;
+  content: "—";
+  margin-right: 8px;
   color: var(--muted);
-  font-weight: bold;
+  font-weight: 400;
+  opacity: 0.6;
+  flex-shrink: 0;
+  align-self: center;
+  line-height: 1;
+  transition: all 0.3s ease;
 }
 
 /* Enhanced contrast for active/hover states */
 .toc-content a.active::before,
 .toc-content a:hover::before {
-  color: var(--accent-ig) !important;
   opacity: 1;
+}
+
+.toc-h1 a.active::before,
+.toc-h1 a:hover::before {
+  box-shadow: 0 0 10px rgba(var(--accent-ig-rgb), 0.6);
+  transform: scale(1.2);
+  transition: all 0.3s ease;
+}
+
+body.scheme-alevel .toc-h1 a.active::before,
+body.scheme-alevel .toc-h1 a:hover::before {
+  box-shadow: 0 0 10px rgba(var(--accent-al-rgb), 0.6);
+}
+
+.toc-h2 a.active::before,
+.toc-h2 a:hover::before {
+  box-shadow: 0 0 8px rgba(var(--accent-ig-rgb), 0.5);
+  transform: scale(1.15);
+  transition: all 0.3s ease;
+}
+
+body.scheme-alevel .toc-h2 a.active::before,
+body.scheme-alevel .toc-h2 a:hover::before {
+  box-shadow: 0 0 8px rgba(var(--accent-al-rgb), 0.5);
 }
 
 .toc-h3 a.active::before,
 .toc-h3 a:hover::before {
-  content: "▶ ";
+  background: var(--accent-ig);
+  border-color: var(--accent-ig);
+  box-shadow: 0 0 6px rgba(var(--accent-ig-rgb), 0.4);
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+body.scheme-alevel .toc-h3 a.active::before,
+body.scheme-alevel .toc-h3 a:hover::before {
+  background: var(--accent-al);
+  border-color: var(--accent-al);
+  box-shadow: 0 0 6px rgba(var(--accent-al-rgb), 0.4);
 }
 
 .toc-h4 a.active::before,
 .toc-h4 a:hover::before {
-  content: "◆ ";
+  color: var(--accent-ig);
+  opacity: 1;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
 }
 
-/* Custom Scrollbar for TOC */
-.table-of-contents::-webkit-scrollbar {
+body.scheme-alevel .toc-h4 a.active::before,
+body.scheme-alevel .toc-h4 a:hover::before {
+  color: var(--accent-al);
+}
+
+/* Custom Scrollbar for TOC Content */
+.toc-content::-webkit-scrollbar {
   width: 6px;
 }
 
-.table-of-contents::-webkit-scrollbar-track {
+.toc-content::-webkit-scrollbar-track {
   background: transparent;
   border-radius: 3px;
 }
 
-.table-of-contents::-webkit-scrollbar-thumb {
+.toc-content::-webkit-scrollbar-thumb {
   background: rgba(var(--accent-ig-rgb), 0.3);
   border-radius: 3px;
   transition: background 0.3s ease;
 }
 
-.table-of-contents::-webkit-scrollbar-thumb:hover {
+.toc-content::-webkit-scrollbar-thumb:hover {
   background: rgba(var(--accent-ig-rgb), 0.5);
 }
 
@@ -836,15 +1458,18 @@ table {
   border-collapse: collapse;
   margin: 0;
   background: var(--surface);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
 th,
 td {
-  padding: 12px 16px;
+  padding: 14px 18px;
   text-align: left;
   border-bottom: 1px solid rgba(255,255,255,0.08);
   white-space: nowrap;
-  transition: background-color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 /* 添加垂直分割线 */
@@ -855,20 +1480,40 @@ td:not(:last-child) {
 
 th {
   color: var(--text);
-  font-weight: 600;
-  background: rgba(var(--accent-ig-rgb), 0.06);
-  font-size: 0.9rem;
-  letter-spacing: 0.3px;
-  border-bottom: 2px solid rgba(255,255,255,0.1);
+  font-weight: 700;
+  background: linear-gradient(135deg, rgba(var(--accent-ig-rgb), 0.12), rgba(var(--accent-ig-rgb), 0.08));
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  border-bottom: 3px solid rgba(var(--accent-ig-rgb), 0.3);
+  text-transform: uppercase;
+  font-size: 0.85rem;
 }
 
-/* Table row hover effect - 更柔和 */
+/* Table row hover effect - Modern and smooth */
 tbody tr {
-  transition: background-color 0.2s ease;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+tbody tr::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--accent-ig), var(--accent-al));
+  opacity: 0;
+  transition: opacity 0.2s ease;
 }
 
 tbody tr:hover {
-  background-color: rgba(var(--accent-ig-rgb), 0.03);
+  background: rgba(var(--accent-ig-rgb), 0.08);
+  transform: scale(1.01);
+}
+
+tbody tr:hover::after {
+  opacity: 1;
 }
 
 /* 最后一行移除底部边框 */

@@ -12,6 +12,8 @@
   --accent-ig: #5c6bc0; /* IGCSE accent */
   --accent-al-rgb: 92, 192, 127;
   --accent-ig-rgb: 92, 107, 192;
+  --accent-page: #a78bfa; /* Subpages accent (purple) */
+  --accent-page-rgb: 167, 139, 250;
   --info: #17a2b8;
   
   /* Layout */
