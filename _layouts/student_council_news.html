@@ -30,7 +30,7 @@ layout: none
   </header>
 
   <main id="main-content" class="container council-main" role="main">
-    {% assign news_pages = site.pages | where_exp: "item", "item.url contains '/student_council/news/' and item.name != 'index.md'" | sort: 'date' | reverse %}
+    {% assign news_pages = site.pages | where_exp: "item", "item.url contains '/student_council/news/'" | where_exp: "item", "item.name != 'index.md'" | sort: 'date' | reverse %}
 
     <section class="news-section fade-in" style="animation-delay: 0.1s;">
       <div class="section-header">
