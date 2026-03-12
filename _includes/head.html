@@ -40,14 +40,31 @@
   onerror="this.href='https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css'"
   crossorigin="anonymous">
 
-<!-- Icons - BootCDN -->
+<!-- Icons - BootCDN with performance optimization -->
 <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<!-- Optimize font loading: use swap to show text immediately, then replace with icon font -->
+<style>
+  @font-face {
+    font-family: "bootstrap-icons";
+    font-synthesis: none;
+    font-variation-settings: normal;
+    font-display: swap;
+  }
+</style>
 
-<!-- Editor & highlighting themes -->
+<!-- Theme & styling -->
+<!-- Critical path CSS - Load synchronously -->
+<link href="/assets/css/variables.css" rel="stylesheet">
+<link href="/assets/css/style.css" rel="stylesheet">
+
+<!-- Non-critical CSS with media queries and async loading -->
 <link href="/assets/css/gruvbox_dark_rouge.css" rel="stylesheet" media="(prefers-color-scheme: dark)">
+<!-- Defer non-critical responsive CSS to avoid blocking render -->
+<link href="/assets/css/mobile-responsive.css" rel="stylesheet" media="all">
+<link href="/assets/css/utilities.css" rel="stylesheet">
 
-<!-- Fonts -->
-<link href="/assets/css/fonts/maplemono.css" rel="stylesheet">
+<!-- Custom fonts -->
+<link href="/assets/css/fonts/maplemono.css" rel="stylesheet" media="all">
 
 
 <script defer src="https://unpkg.com/mermaid@11.1.1/dist/mermaid.min.js"></script>
@@ -83,14 +100,12 @@
   };
 </script>
 
-<!-- Site styles & favicon -->
-<link rel="stylesheet" href="/assets/css/variables.css">
-<link rel="stylesheet" href="/assets/css/utilities.css">
-<link rel="stylesheet" href="/assets/css/style.css">
+<!-- Favicon -->
 <link rel="shortcut icon" href="/assets/favicon.ico">
 
 <script defer src="/assets/js/image_lazy_load.js"></script>
 <script defer src="/assets/js/search.js"></script>
+<script defer src="/assets/js/mobile-optimizations.js"></script>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
