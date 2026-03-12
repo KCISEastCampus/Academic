@@ -25,6 +25,11 @@ tags:
 
 A-level学生会
 
+<div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center;">
+  <img src="../../assets/img/recruitment_1.jpg" alt="Event Photo 1" style="width:400px; max-width:100%; height:auto;" />
+  <img src="../../assets/img/recruitment_2.jpg" alt="Event Photo 2" style="width:400px; max-width:100%; height:auto;" />
+</div>
+
 ---
 
 **A-level Student Council Recruitment Event Successfully Held**
@@ -36,3 +41,8 @@ During the interviews, the heads of each working group introduced the overall st
 Through this interview, the student council further understood the characteristics and intentions of the applicants, laying a foundation for subsequent team building and work division. The A-level Student Council thanks all students for their attention and support. In the future, the student council will continue to uphold the purpose of serving students and promoting communication, working together with all members to promote the smooth development of various activities and work, creating a richer and more diverse campus life.
 
 A-level Student Council
+
+<div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center;">
+  <img src="../../assets/img/recruitment_1.jpg" alt="Event Photo 1" style="width:400px; max-width:100%; height:auto;" />
+  <img src="../../assets/img/recruitment_2.jpg" alt="Event Photo 2" style="width:400px; max-width:100%; height:auto;" />
+</div>
