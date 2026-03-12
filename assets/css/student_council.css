@@ -687,6 +687,17 @@ html[data-bs-theme="light"] .dept-responsibilities li {
   font-size: 0.82rem;
 }
 
+.members-page-leader {
+  margin: 0 0 0.75rem;
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+
+.members-page-leader span {
+  color: var(--text);
+  font-weight: 600;
+}
+
 .members-page-list {
   list-style: none;
   margin: 0;

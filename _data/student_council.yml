@@ -44,6 +44,7 @@ executives:
 groups:
   - id: "academic"
     name: "Academic"
+    leader_name_cn: "石洪斌"
     icon: "bi-book"
     color: "#5cc07f"
     description: "Organizing special academic activities and maintaining this website."
@@ -54,6 +55,7 @@ groups:
 
   - id: "events"
     name: "Events"
+    leader_name_cn: "姜嘉鑫"
     icon: "bi-calendar-event"
     color: "#5c6bc0"
     description: "Planning and executing events from concept to completion."
@@ -65,6 +67,7 @@ groups:
 
   - id: "publicity"
     name: "Publicity"
+    leader_name_cn: "马艺涵"
     icon: "bi-megaphone"
     color: "#e67e22"
     description: "Creating content, designing materials, and documenting our work."

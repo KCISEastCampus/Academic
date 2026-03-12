@@ -31,7 +31,13 @@ layout: none
 
   <main id="main-content" class="container council-main" role="main">
     <section class="members-page-summary fade-in" style="animation-delay: 0.05s;">
-      {% assign total_members = site.data.student_council.members | size %}
+      {% assign leaders_count = 0 %}
+      {% for group in site.data.student_council.groups %}
+        {% if group.leader_name_cn %}
+          {% assign leaders_count = leaders_count | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+      {% assign total_members = site.data.student_council.members | size | plus: leaders_count %}
       <div class="members-page-summary-card">
         <div class="members-page-summary-item">
           <span class="label">Total Members</span>
@@ -47,6 +53,11 @@ layout: none
     <section class="members-page-grid fade-in" style="animation-delay: 0.1s;">
       {% for group in site.data.student_council.groups %}
         {% assign group_members = site.data.student_council.members | where_exp: "member", "member.groups contains group.name" %}
+        {% assign group_leader_display = group.leader_name_cn %}
+        {% assign group_member_count = group_members.size %}
+        {% if group_leader_display %}
+          {% assign group_member_count = group_member_count | plus: 1 %}
+        {% endif %}
         {% if group_members.size > 0 %}
         <article class="members-page-card" style="--group-color: {{ group.color }};">
           <div class="members-page-card-header">
@@ -55,9 +66,13 @@ layout: none
             </div>
             <div class="members-page-card-title-wrap">
               <h2 class="members-page-card-title">{{ group.name }}</h2>
-              <p class="members-page-card-subtitle">{{ group_members.size }} members</p>
+              <p class="members-page-card-subtitle">{{ group_member_count }} members</p>
             </div>
           </div>
+
+          {% if group_leader_display %}
+          <p class="members-page-leader"><span>Leader:</span> {{ group_leader_display }}</p>
+          {% endif %}
 
           <ul class="members-page-list">
             {% for member in group_members %}
