@@ -9,58 +9,261 @@ layout: none
   {% include mathjax.html %}
   <title>{{ page.title | default: site.title }}</title>
   <link rel="stylesheet" href="/assets/css/subject.css">
+  <link href="/assets/css/student_council.css" rel="stylesheet">
   <style>
-    /* Override image width for news posts to be larger than subject notes */
-    #content-container img {
-      max-width: 80%;
+    /* News Post Page Styling Override */
+    .post-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
     }
-    /* Allow full width if needed via class */
-    #content-container img.full-width {
-      max-width: 100%;
-    }
-    
-    .post-meta {
-      text-align: center;
-      color: #666;
+
+    .post-back-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.1rem;
       margin-bottom: 2rem;
-      font-style: italic;
+      border-radius: 0.6rem;
+      background: rgba(var(--accent-page-rgb), 0.08);
+      color: var(--accent-page);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: all 0.25s ease;
     }
-    
+
+    .post-back-button:hover {
+      background: rgba(var(--accent-page-rgb), 0.16);
+      transform: translateX(-3px);
+    }
+
+    .post-header {
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(var(--accent-page-rgb), 0.15);
+    }
+
+    .post-title {
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin: 0 0 1.5rem 0;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      line-height: 1.3;
+    }
+
+    .post-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      align-items: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .post-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .post-meta-divider {
+      width: 1px;
+      height: 1rem;
+      background: rgba(var(--accent-page-rgb), 0.2);
+    }
+
     .post-author {
-      font-weight: bold;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .post-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .post-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.4rem 0.75rem;
+      background: rgba(var(--accent-page-rgb), 0.12);
+      color: var(--accent-page);
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border-radius: 0.5rem;
+      transition: all 0.2s ease;
+      border: 1px solid rgba(var(--accent-page-rgb), 0.2);
+    }
+
+    .post-tag:hover {
+      background: rgba(var(--accent-page-rgb), 0.22);
+      border-color: rgba(var(--accent-page-rgb), 0.35);
+    }
+
+    .post-content {
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .post-content p {
+      margin-bottom: 1.2rem;
+    }
+
+    .post-content h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 1.8rem 0 0.8rem 0;
+      color: var(--text);
+    }
+
+    .post-content h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin: 1.5rem 0 0.6rem 0;
+      color: var(--text);
+    }
+
+    .post-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 0.6rem;
+      margin: 1.5rem 0;
+    }
+
+    .post-content blockquote {
+      margin: 2rem 0;
+      padding: 1.5rem 1.8rem;
+      background: linear-gradient(135deg, rgba(var(--accent-page-rgb), 0.06) 0%, rgba(var(--accent-page-rgb), 0.02) 100%);
+      border: 1px solid rgba(var(--accent-page-rgb), 0.15);
+      border-left: 4px solid rgba(var(--accent-page-rgb), 0.5);
+      border-radius: 0.6rem;
+      color: var(--text);
+      font-style: normal;
+      font-size: 1rem;
+      line-height: 1.7;
+      box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .post-content blockquote p {
+      margin: 0;
+    }
+
+    .post-content blockquote p:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    .post-footer {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(var(--accent-page-rgb), 0.15);
+      text-align: center;
+    }
+
+    .post-footer-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.8rem 1.5rem;
+      background: rgba(var(--accent-page-rgb), 0.1);
+      color: var(--accent-page);
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 0.6rem;
+      transition: all 0.25s ease;
+      border: 1px solid rgba(var(--accent-page-rgb), 0.2);
+    }
+
+    .post-footer-link:hover {
+      background: rgba(var(--accent-page-rgb), 0.18);
+      border-color: rgba(var(--accent-page-rgb), 0.35);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      .post-container {
+        padding: 1.5rem 1rem;
+      }
+
+      .post-title {
+        font-size: 1.7rem;
+        margin-bottom: 0.8rem;
+      }
+
+      .post-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+      }
+
+      .post-meta-divider {
+        display: none;
+      }
+
+      .post-content {
+        font-size: 1rem;
+      }
     }
   </style>
   <script src="/assets/js/image_modal.js"></script>
 </head>
 
-
 <body>
-  <a href="/student_council/" class="btn btn-outline-info back-button" aria-label="Return to Student Council">
-    <i class="bi bi-caret-left-fill"></i>Back to Student Council
-  </a>
+  <div class="post-container">
+    <a href="/student_council/" class="post-back-button" aria-label="Return to Student Council">
+      <i class="bi bi-arrow-left"></i>Back to Student Council
+    </a>
 
-  <p class="fs-1 text-center mt-3">{{ page.title }}</p>
-  
-  {% if page.author %}
-  <div class="post-meta">
-    <span>By <span class="post-author">{{ page.author }}</span></span>
-    {% if page.date %}
-    <span class="mx-2">|</span>
-    <span>{{ page.date | date: "%B %d, %Y" }}</span>
-    {% endif %}
-  </div>
-  {% endif %}
+    <header class="post-header">
+      <h1 class="post-title">{{ page.title }}</h1>
+      
+      {% if page.author or page.date or page.tags %}
+      <div class="post-meta">
+        {% if page.author %}
+        <div class="post-meta-item">
+          <i class="bi bi-person"></i>
+          <span>By <span class="post-author">{{ page.author }}</span></span>
+        </div>
+        {% endif %}
+        
+        {% if page.author and page.date %}
+        <div class="post-meta-divider"></div>
+        {% endif %}
+        
+        {% if page.date %}
+        <div class="post-meta-item">
+          <i class="bi bi-calendar3"></i>
+          <span>{{ page.date | date: "%B %d, %Y" }}</span>
+        </div>
+        {% endif %}
+      </div>
 
-  <hr class="mb-2" />
+      {% if page.tags and page.tags.size > 0 %}
+      <div class="post-tags" aria-label="News tags">
+        {% for tag in page.tags %}
+        <a href="/student_council/news/#tag-{{ tag | slugify }}" class="post-tag">{{ tag }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% endif %}
+    </header>
 
-  <div id="main-container">
-    <div id="content-container">
+    <article class="post-content">
       {{ content }}
+    </article>
+
+    <div class="post-footer">
+      <a href="/student_council/news/" class="post-footer-link" aria-label="View all news">
+        <i class="bi bi-newspaper"></i> View All News
+      </a>
     </div>
   </div>
 
   {% include footer.html %}
-
   {% include theme_button.html %}
 
 </body>
