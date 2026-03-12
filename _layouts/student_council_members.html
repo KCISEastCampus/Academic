@@ -1,0 +1,80 @@
+---
+layout: none
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% include head.html %}
+  <link href="/assets/css/student_council.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="council-hero" role="banner">
+    <div class="container hero-shell">
+      <a href="/student_council/" class="page-back" aria-label="Back to Student Council">
+        <i class="bi bi-arrow-left"></i>
+        <span>Back to Student Council</span>
+      </a>
+      <div class="hero-body">
+        <div class="hero-icon">
+          <i class="bi bi-people-fill"></i>
+        </div>
+        <div class="hero-text">
+          <p class="eyebrow">Members Directory</p>
+          <h1 class="hero-title">Current Student Council Members</h1>
+          <p class="hero-subtitle">Browse current members grouped by department.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="container council-main" role="main">
+    <section class="members-page-summary fade-in" style="animation-delay: 0.05s;">
+      {% assign total_members = site.data.student_council.members | size %}
+      <div class="members-page-summary-card">
+        <div class="members-page-summary-item">
+          <span class="label">Total Members</span>
+          <span class="value">{{ total_members }}</span>
+        </div>
+        <div class="members-page-summary-item">
+          <span class="label">Departments</span>
+          <span class="value">{{ site.data.student_council.groups | size }}</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="members-page-grid fade-in" style="animation-delay: 0.1s;">
+      {% for group in site.data.student_council.groups %}
+        {% assign group_members = site.data.student_council.members | where_exp: "member", "member.groups contains group.name" %}
+        {% if group_members.size > 0 %}
+        <article class="members-page-card" style="--group-color: {{ group.color }};">
+          <div class="members-page-card-header">
+            <div class="members-page-card-icon">
+              <i class="bi {{ group.icon }}"></i>
+            </div>
+            <div class="members-page-card-title-wrap">
+              <h2 class="members-page-card-title">{{ group.name }}</h2>
+              <p class="members-page-card-subtitle">{{ group_members.size }} members</p>
+            </div>
+          </div>
+
+          <ul class="members-page-list">
+            {% for member in group_members %}
+            <li class="members-page-list-item">
+              <span class="name">{{ member.name }}</span>
+              <span class="group-pill">{{ group.name }}</span>
+            </li>
+            {% endfor %}
+          </ul>
+        </article>
+        {% endif %}
+      {% endfor %}
+    </section>
+  </main>
+
+  {% include theme_button.html %}
+  {% include footer.html %}
+</body>
+
+</html>

@@ -74,6 +74,35 @@ groups:
       - "Post-event documentation and summaries"
       - "Social media management and outreach"
 
+# Regular Members
+members:
+  - name: "王铎"
+    groups: ["Academic"]
+  - name: "张梓涵"
+    groups: ["Events"]
+  - name: "刘卿竹"
+    groups: ["Events"]
+  - name: "谢秦一"
+    groups: ["Publicity"]
+  - name: "吴兆骐"
+    groups: ["Events"]
+  - name: "黄品汉"
+    groups: ["Events"]
+  - name: "陈渤翰"
+    groups: ["Publicity"]
+  - name: "游博文"
+    groups: ["Academic"]
+  - name: "解徐洺淏"
+    groups: ["Academic"]
+  - name: "岳心怡"
+    groups: ["Academic"]
+  - name: "杜翼陈"
+    groups: ["Academic"]
+  - name: "唐浩宇"
+    groups: ["Events"]
+  - name: "钱俊希"
+    groups: ["Events"]
+
 # Contact Information
 contact:
   email: "ALSC@kcisec.site"

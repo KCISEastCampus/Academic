@@ -36,15 +36,18 @@ layout: none
     
     <!-- Latest News -->
     <section class="news-section fade-in" style="animation-delay: 0.1s;">
-      <div class="section-header">
+      <div class="section-header section-header-with-action">
         <h2 class="section-title">
           <i class="bi bi-newspaper"></i>
           Latest News
         </h2>
+        <a href="/student_council/news/" class="section-action" aria-label="View all Student Council news">
+          View All News <i class="bi bi-arrow-right"></i>
+        </a>
       </div>
       
       <div class="news-list">
-        {% assign news_pages = site.pages | where_exp: "item", "item.url contains '/student_council/news/'" | sort: 'date' | reverse %}
+        {% assign news_pages = site.pages | where_exp: "item", "item.url contains '/student_council/news/'" | where_exp: "item", "item.url != '/student_council/news/'" | sort: 'date' | reverse %}
         {% for post in news_pages limit:3 %}
         <a href="{{ post.url }}" class="news-item">
           <div class="news-date-badge">
@@ -53,6 +56,13 @@ layout: none
           </div>
           <div class="news-info">
             <h3 class="news-title">{{ post.title }}</h3>
+            {% if post.tags and post.tags.size > 0 %}
+            <div class="news-tags" aria-label="News tags">
+              {% for tag in post.tags limit:3 %}
+              <span class="news-tag">{{ tag }}</span>
+              {% endfor %}
+            </div>
+            {% endif %}
             <div class="news-meta-row">
               {% if post.author %}
               <span class="news-author"><i class="bi bi-person"></i> {{ post.author }}</span>
@@ -153,6 +163,26 @@ layout: none
           </div>
         </div>
         {% endfor %}
+      </div>
+    </section>
+
+    <!-- Members Directory Entry -->
+    <section class="member-directory-section fade-in" style="animation-delay: 0.45s;">
+      {% assign total_members = site.data.student_council.members | size %}
+      <div class="member-directory-card">
+        <div class="member-directory-content">
+          <h2>
+            <i class="bi bi-people-fill"></i>
+            Members Directory
+          </h2>
+          <p>See all current members.</p>
+        </div>
+        <div class="member-directory-actions">
+          <span class="member-directory-count">{{ total_members }} Members</span>
+          <a href="/student_council/members/" class="section-action" aria-label="View all Student Council members">
+            View Members <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
       </div>
     </section>
 
