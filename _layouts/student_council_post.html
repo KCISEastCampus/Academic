@@ -214,7 +214,7 @@ layout: none
 
 <body>
   <div class="post-container">
-    <a href="/student_council/" class="post-back-button" aria-label="Return to Student Council">
+    <a id="post-back-button" href="/student_council/" class="post-back-button" aria-label="Return to Student Council">
       <i class="bi bi-arrow-left"></i>Back to Student Council
     </a>
 
@@ -265,6 +265,22 @@ layout: none
 
   {% include footer.html %}
   {% include theme_button.html %}
+  <script>
+    (function () {
+      var backButton = document.getElementById('post-back-button');
+      if (!backButton) return;
+
+      var params = new URLSearchParams(window.location.search);
+      var fromArchiveParam = params.get('from') === 'news_archive';
+      var fromArchiveReferrer = document.referrer && document.referrer.indexOf('/student_council/news/') !== -1;
+
+      if (fromArchiveParam || fromArchiveReferrer) {
+        backButton.setAttribute('href', '/student_council/news/');
+        backButton.setAttribute('aria-label', 'Back to All News');
+        backButton.innerHTML = '<i class="bi bi-arrow-left"></i>Back to All News';
+      }
+    })();
+  </script>
 
 </body>
 </html>

@@ -30,7 +30,7 @@ layout: none
   </header>
 
   <main id="main-content" class="container council-main" role="main">
-    {% assign news_pages = site.pages | where_exp: "item", "item.url contains '/student_council/news/'" | where_exp: "item", "item.name != 'index.md'" | sort: 'date' | reverse %}
+    {% assign news_pages = site.pages | where_exp: "item", "item.path contains 'student_council/news/'" | where_exp: "item", "item.name != 'index.md'" | sort: 'date' | reverse %}
 
     <section class="news-section fade-in" style="animation-delay: 0.1s;">
       <div class="section-header">
@@ -65,7 +65,7 @@ layout: none
           </div>
           <div class="news-info">
             <h3 class="news-title">
-              <a href="{{ post.url }}" class="news-title-link">{{ post.title }}</a>
+              <a href="{{ post.url }}?from=news_archive" class="news-title-link">{{ post.title }}</a>
             </h3>
             {% if post.tags and post.tags.size > 0 %}
             <div class="news-tags" aria-label="News tags">
@@ -79,7 +79,7 @@ layout: none
               <span class="news-author"><i class="bi bi-person"></i> {{ post.author }}</span>
               {% endif %}
               <span><i class="bi bi-calendar-event"></i> {{ post.date | date: "%B %d, %Y" }}</span>
-              <a href="{{ post.url }}" class="read-more-link read-more-link-inline">Read Article <i class="bi bi-arrow-right"></i></a>
+              <a href="{{ post.url }}?from=news_archive" class="read-more-link read-more-link-inline">Read Article <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
         </article>
@@ -106,7 +106,7 @@ layout: none
             {% for post in news_pages %}
               {% if post.tags contains tag %}
               <li>
-                <a href="{{ post.url }}">{{ post.title }}</a>
+                <a href="{{ post.url }}?from=news_archive">{{ post.title }}</a>
                 <span>{{ post.date | date: "%Y-%m-%d" }}</span>
               </li>
               {% endif %}

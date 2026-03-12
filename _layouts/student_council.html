@@ -47,7 +47,7 @@ layout: none
       </div>
       
       <div class="news-list">
-        {% assign news_pages = site.pages | where_exp: "item", "item.url contains '/student_council/news/'" | where_exp: "item", "item.url != '/student_council/news/'" | sort: 'date' | reverse %}
+        {% assign news_pages = site.pages | where_exp: "item", "item.path contains 'student_council/news/'" | where_exp: "item", "item.name != 'index.md'" | sort: 'date' | reverse %}
         {% for post in news_pages limit:3 %}
         <a href="{{ post.url }}" class="news-item">
           <div class="news-date-badge">

@@ -27,7 +27,15 @@ kramdown:
     block:
       line_numbers: false
 
-plugins: []
+plugins:
+  - jekyll-redirect-from
+
+defaults:
+  - scope:
+      path: "student_council/news"
+    values:
+      layout: student_council_post
+      permalink: /n/:basename/
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

@@ -3,6 +3,10 @@ layout: student_council_post
 title: Student Council Recruitment Event
 author: Eric Shi
 date: 2026-03-12
+permalink: /n/recruitment/
+redirect_from:
+  - /student_council/news/recruitment/
+  - /student_council/news/recruitment.html
 tags:
   - Academic
   - Events
