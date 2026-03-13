@@ -173,37 +173,27 @@
     },
 
     applyFadeInToVisibleElements: function() {
-      // 性能优化：批量读取，避免强制重排
-      // 读取阶段 - 一次性收集所有需要检查的元素和它们的位置信息
       const selectors = [
         'h2', 'h3', '.card', '.subject-card',
         'table', '.math', '.exam-link'
       ];
 
-      const visibleElements = [];
-      const viewportHeight = window.innerHeight;
-
-      // 第一阶段：批量读取（避免混合读写导致强制重排）
       selectors.forEach(selector => {
         try {
           document.querySelectorAll(selector).forEach((el, index) => {
             const rect = el.getBoundingClientRect();
-            const isVisible = rect.top < viewportHeight && rect.bottom > 0;
+            const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
 
             if (isVisible) {
-              visibleElements.push({ el, index });
+              setTimeout(() => {
+                el.classList.add('fade-in-visible');
+              }, index * 50);
             }
+            // 不可见元素不添加类，保持初始状态
           });
         } catch (error) {
           // Silently handle errors
         }
-      });
-
-      // 第二阶段：批量写入（分离读写操作）
-      visibleElements.forEach(({ el, index }) => {
-        setTimeout(() => {
-          el.classList.add('fade-in-visible');
-        }, index * 50);
       });
     }
   };

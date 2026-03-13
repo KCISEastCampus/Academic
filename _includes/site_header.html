@@ -3,34 +3,24 @@
 <!-- Usage: include site_header.html with title="Page Title" subtitle="Page subtitle" parameters -->
 
 <header class="container text-center py-3" role="banner">
-  <a href="/" aria-label="Homepage" class="header-logo-link">
+  <a href="/" aria-label="Homepage">
     <img src="https://www.kcisec.site/assets/images/school-logo.svg" 
          alt="KangChiao International School East Campus Logo" 
-         class="img-fluid mb-2 header-logo" 
-         style="max-width:120px; height: auto;"
-         fetchpriority="high"
-         loading="eager">
+         class="img-fluid mb-2" 
+         style="max-width:120px;">
   </a>
-  <h1 class="fs-2 display-5 mb-1 header-title">{{ include.title | default: "A-Level Homepage" }}</h1>
+  <h1 class="fs-2 display-5 mb-1">{{ include.title | default: "A-Level Homepage" }}</h1>
   {% if include.subtitle %}
-  <p class="lead text-muted fs-6 mb-2 header-subtitle">{{ include.subtitle }}</p>
+  <p class="lead text-muted fs-6 mb-2">{{ include.subtitle }}</p>
   {% endif %}
 
-  <div class="position-relative d-inline-block mt-2 mx-auto header-search-container" style="width: 100%; max-width: 500px;">
-    <div class="search-wrapper d-flex align-items-center px-3 py-2">
-      <i class="bi bi-search text-muted me-2 search-icon"></i>
-      <input type="text" 
-             id="search-input" 
-             class="form-control border-0 p-0 bg-transparent shadow-none search-input" 
-             placeholder="Search topics..." 
-             aria-label="Search"
-             aria-describedby="search-results"
+  <div class="position-relative d-inline-block mt-2 mx-auto" style="width: 100%; max-width: 400px;">
+    <div class="search-wrapper d-flex align-items-center px-3 py-1">
+      <i class="bi bi-search text-muted me-2"></i>
+      <input type="text" id="search-input" class="form-control border-0 p-0 bg-transparent shadow-none" 
+             placeholder="Search topics..." aria-label="Search"
              data-search-source="{{ '/assets/search.json' | relative_url }}">
     </div>
-    <div id="search-results" 
-         class="list-group position-absolute w-100 mt-2 text-start search-results" 
-         role="region"
-         aria-label="Search results"
-         style="display: none; z-index: 1000; max-height: 300px; overflow-y: auto; overflow-x: hidden; -webkit-overflow-scrolling: touch;"></div>
+    <div id="search-results" class="list-group position-absolute w-100 mt-2 text-start" style="display: none; z-index: 1000; max-height: 300px; overflow-y: auto; overflow-x: hidden;"></div>
   </div>
 </header>
