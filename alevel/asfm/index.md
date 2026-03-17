@@ -740,7 +740,7 @@ $X$ is the number of independent trials needed to get the **first success** (wit
 * **Variance:** $Var(X) = \frac{1-p}{p^2}$
 * **Memoryless Property:** The probability of future successes is independent of past failures.
 
-<!-- ---
+---
 
 ### 12. Moments and PGFs (FS1.4)
 
@@ -769,99 +769,3 @@ For independent random variables $X$ and $Y$ and constants $a, b$:
 | **Variance** of $aX + bY$ | $$Var(aX + bY) = a^2Var(X) + b^2Var(Y)$$ | $X, Y$ must be independent |
 | **Expectation** of $aX + b$ | $$E(aX + b) = aE(X) + b$$ | Always true |
 | **Variance** of $aX + b$ | $$Var(aX + b) = a^2Var(X)$$ | Always true |
-
----
-
-# FPSM1: Mechanics (FM1)
-
-### 13. Kinematics and Dynamics in 2D (FM1.1, FM1.2)
-
-#### 13.1 Vector Kinematics
-
-Position vector of a particle: $$\mathbf{r} = x\mathbf{i} + y\mathbf{j}$$
-
-$$\mathbf{v} = \frac{d\mathbf{r}}{dt} = \dot{\mathbf{r}} \quad \text{(Velocity)}$$
-$$\mathbf{a} = \frac{d\mathbf{v}}{dt} = \ddot{\mathbf{r}} \quad \text{(Acceleration)}$$
-
-**Integrating to find displacement/velocity:**
-$$\mathbf{v}(t) = \int \mathbf{a}(t) dt + \mathbf{C}_1$$
-$$\mathbf{r}(t) = \int \mathbf{v}(t) dt + \mathbf{C}_2$$
-*(Use initial conditions to find constant vectors $\mathbf{C}_1$ and $\mathbf{C}_2$)*
-
-**Constant Acceleration (Vector SUVAT):**
-$$\mathbf{v} = \mathbf{u} + \mathbf{a}t$$
-$$\mathbf{r} = \mathbf{u}t + \frac{1}{2}\mathbf{a}t^2 + \mathbf{r}_0$$
-*(where $\mathbf{r}_0$ is the initial position)*
-
-#### 13.2 Vector Dynamics
-
-**Newton's Second Law:**
-$$\mathbf{F} = m\mathbf{a} \quad \text{(Force is mass times vector acceleration)}$$
-
-**Total Force:**
-If multiple forces $\mathbf{F}_1, \mathbf{F}_2, \dots$ act on a particle, the resultant force $\mathbf{R}$ is the vector sum:
-$$\mathbf{R} = \sum \mathbf{F}_i = m\mathbf{a}$$
-
----
-
-### 14. Work, Energy, and Power (FM1.3)
-
-#### 14.1 Work and Energy
-
-**Work Done by a Constant Force $\mathbf{F}$:**
-If a particle moves a constant distance vector $\mathbf{s}$:
-$$\text{Work Done} = \mathbf{F} \cdot \mathbf{s} \quad \text{(Scalar quantity)}$$
-
-**Work-Energy Principle:**
-$$\text{Work Done by Resultant Force} = \text{Change in Kinetic Energy}$$
-$$\mathbf{R} \cdot \mathbf{s} = \frac{1}{2}m v^2 - \frac{1}{2}m u^2$$
-
-**Kinetic Energy (KE):**
-$$KE = \frac{1}{2}m v^2 = \frac{1}{2}m (\mathbf{v} \cdot \mathbf{v})$$
-
-**Gravitational Potential Energy (GPE):**
-$$GPE = mgh \quad \text{(mass × gravity × height)}$$
-
-**Conservation of Energy (Non-Resisted Motion):**
-$$\text{Change in KE} + \text{Change in GPE} = 0$$
-
-#### 14.2 Power
-
-**Instantaneous Power:**
-The rate at which a force $\mathbf{F}$ is doing work when the velocity is $\mathbf{v}$:
-$$P = \mathbf{F} \cdot \mathbf{v} \quad \text{(Scalar quantity)}$$
-
----
-
-### 15. Impulse and Collisions (FM1.4)
-
-#### 15.1 Impulse and Momentum
-
-**Linear Momentum ($\mathbf{p}$):**
-$$\mathbf{p} = m\mathbf{v}$$
-
-**Impulse ($\mathbf{I}$):**
-Impulse is the change in momentum caused by a force $\mathbf{F}$ acting over time $t$.
-$$\mathbf{I} = \int \mathbf{F} dt = \text{Change in Momentum}$$
-$$\mathbf{I} = m\mathbf{v} - m\mathbf{u}$$
-
-**Conservation of Momentum:**
-In a closed system (e.g., during a collision or explosion) where no external forces act:
-$$\sum m_i \mathbf{u}_i = \sum m_i \mathbf{v}_i$$
-
-#### 15.2 Direct Impact and Coefficient of Restitution
-
-For the direct collision of two particles $A$ and $B$:
-
-**1. Conservation of Momentum (CoM):**
-$$m_A u_A + m_B u_B = m_A v_A + m_B v_B$$
-*(Velocities are scalar components in the direction of collision)*
-
-**2. Newton's Law of Restitution (NLOR):**
-The coefficient of restitution, $e$ ($0 \le e \le 1$), relates relative speeds:
-$$v_B - v_A = -e(u_B - u_A)$$
-$$\text{Speed of Separation} = e \times \text{Speed of Approach}$$
-
-* **Elastic Collision ($e=1$):** KE is conserved.
-* **Inelastic Collision ($e<1$):** KE is lost.
-* **Perfectly Inelastic/Coalescing ($e=0$):** Particles stick together ($v_A = v_B$). -->
