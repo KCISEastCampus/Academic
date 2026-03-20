@@ -114,7 +114,8 @@ html {
 
 #content-container h1::before,
 #content-container h2::before,
-#content-container h3::before {
+#content-container h3::before,
+#content-container h4::before {
   content: '';
   position: absolute;
   left: 0;
@@ -192,21 +193,21 @@ html[data-bs-theme="dark"] body.scheme-alevel #content-container h2::before {
   background: var(--accent-al);
 }
 
-/* H3: Thin accent bar, smaller size, slightly muted */
+/* H3: Consistent with H1/H2 while preserving hierarchy */
 #content-container h3 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: var(--text);
-  margin-top: 1.5rem !important;
-  margin-bottom: 0.8rem !important;
-  font-weight: 600;
-  opacity: 0.9;
+  margin-top: 1.75rem !important;
+  margin-bottom: 0.9rem !important;
+  font-weight: 700;
+  opacity: 0.95;
 }
 
 #content-container h3::before {
   width: 4px;
-  height: 65%;
+  height: 72%;
   background: var(--accent-ig);
-  opacity: 0.65;
+  opacity: 0.8;
 }
 
 /* IGCSE scheme: use IG accent color */
@@ -221,27 +222,47 @@ body.scheme-alevel #content-container h3::before {
 
 html[data-bs-theme="dark"] #content-container h3::before {
   background: var(--accent-ig);
-  opacity: 0.65;
+  opacity: 0.8;
 }
 
 html[data-bs-theme="dark"] body.scheme-alevel #content-container h3::before {
   background: var(--accent-al);
-  opacity: 0.65;
+  opacity: 0.8;
 }
 
 #content-container h4 {
-  font-size: 1.15rem;
-  color: var(--muted);
+  font-size: 1.25rem;
+  color: var(--text);
+  margin-top: 1.25rem !important;
+  margin-bottom: 0.7rem !important;
   font-weight: 600;
-  padding-left: 12px;
+  opacity: 0.92;
+  padding-left: 14px;
 }
 
 #content-container h4::before {
-  content: '▸';
-  position: absolute;
-  left: 0;
-  color: var(--accent-ig);
-  font-size: 0.9em;
+  width: 3px;
+  height: 62%;
+  background: var(--accent-ig);
+  opacity: 0.75;
+}
+
+body.scheme-igcse #content-container h4::before {
+  background: var(--accent-ig);
+}
+
+body.scheme-alevel #content-container h4::before {
+  background: var(--accent-al);
+}
+
+html[data-bs-theme="dark"] #content-container h4::before {
+  background: var(--accent-ig);
+  opacity: 0.75;
+}
+
+html[data-bs-theme="dark"] body.scheme-alevel #content-container h4::before {
+  background: var(--accent-al);
+  opacity: 0.75;
 }
 
 /* Markdown blockquotes -> modern styled callout cards */
