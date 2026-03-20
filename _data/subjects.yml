@@ -38,6 +38,13 @@ alevel:
     icon: "📗"
     path: /alevel/as-physics/
     color: success
+    
+  - id: biology
+    name: AS Biology
+    icon: "📗"
+    path: /alevel/as-biology/
+    color: success
+
 
 igcse:
   - id: mathematics

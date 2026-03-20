@@ -2,17 +2,23 @@
 # Maintainers and alumni who contributed to the A-level Student Council Academic resources
 
 council:
-  title: "ALSC Academic Group"
+  title: "Student Council Academic Group"
   description: "Current student council academic team maintaining content, infrastructure, and UX."
   members:
     - name: "Eric Shi"
-      title: "Lead Developer"
+      title: "Leader"
       period: "2024 - Present"
       contributions:
-        - "Founder of Academic.kcisec.site"
+        - "Founder of this website"
         - "Founder of kcisec.site"
-        - "Currently the creator of all subject contents"
+        - "Currently the creator of all subject contents (unless otherwise stated)"
         - "Maintainer of site infrastructure and deployment"
+    
+    - name: "Kathy Yue"
+      title: "Member"
+      period: "2026 - Present"
+      contributions:
+        - "Creator of AS Biology notes"
 
 external:
   title: "Contributors & Alumni"
