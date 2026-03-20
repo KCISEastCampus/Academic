@@ -129,10 +129,19 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
 html[data-bs-theme="light"] #theme_button { background: rgba(0,0,0,0.04); }
 html[data-bs-theme="dark"] #theme_button { background: rgba(255,255,255,0.02); }
 
-/* Tables: ensure header text follows theme and has readable background/border */
+/* Tables: Clean and consistent styling */
+table, .table {
+  width: 100%;
+  margin: 1.5rem 0;
+  border-collapse: collapse;
+}
+
 table thead th, .table thead th, .table th {
   color: var(--text) !important;
-  background: rgba(var(--accent-ig-rgb), 0.06);
+  padding: 12px 16px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-align: left;
   border-bottom: 2px solid rgba(255,255,255,0.1);
   border-right: 1px solid rgba(255,255,255,0.06);
 }
@@ -143,37 +152,31 @@ table thead th:last-child,
   border-right: none;
 }
 
-/* Light theme: darker header text and subtle surface behind headers */
+/* Light theme: table headers */
 html[data-bs-theme="light"] table thead th,
 html[data-bs-theme="light"] .table thead th,
 html[data-bs-theme="light"] .table th {
-  color: var(--text) !important;
-  background: rgba(var(--accent-ig-rgb), 0.08);
+  background: rgba(0, 0, 0, 0.04);
   border-bottom-color: rgba(0,0,0,0.12) !important;
   border-right-color: rgba(0,0,0,0.06);
-  padding: 12px 16px;
-  font-weight: 600;
-  letter-spacing: 0.3px;
 }
 
-/* Dark theme: lighter header text and subtle highlight */
+/* Dark theme: table headers */
 html[data-bs-theme="dark"] table thead th,
 html[data-bs-theme="dark"] .table thead th,
 html[data-bs-theme="dark"] .table th {
-  color: var(--text) !important;
   background: rgba(255,255,255,0.04);
   border-bottom-color: rgba(255,255,255,0.1) !important;
   border-right-color: rgba(255,255,255,0.06);
-  padding: 12px 16px;
-  font-weight: 600;
-  letter-spacing: 0.3px;
 }
 
-/* Table cells - add vertical dividers */
+/* Table cells */
 table tbody td,
 .table tbody td {
+  padding: 12px 16px;
   border-right: 1px solid rgba(255,255,255,0.06);
   border-bottom: 1px solid rgba(255,255,255,0.08);
+  transition: background-color 0.2s ease;
 }
 
 html[data-bs-theme="light"] table tbody td,
@@ -202,11 +205,24 @@ html[data-bs-theme="light"] .table-responsive {
   border-color: rgba(0,0,0,0.08);
 }
 
-/* Table row hover - subtle */
+/* Table row hover - elegant */
+table tbody tr, .table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
 table tbody tr:hover,
 .table tbody tr:hover {
-  background-color: rgba(var(--accent-ig-rgb), 0.03) !important;
-  transition: background-color 0.2s ease;
+  background-color: rgba(128, 128, 128, 0.08) !important;
+}
+
+body.scheme-igcse table tbody tr:hover,
+body.scheme-igcse .table tbody tr:hover {
+  background-color: rgba(var(--accent-ig-rgb), 0.08) !important;
+}
+
+body.scheme-alevel table tbody tr:hover,
+body.scheme-alevel .table tbody tr:hover {
+  background-color: rgba(var(--accent-al-rgb), 0.08) !important;
 }
 
 /* Buttons: improved outlines and focus */
