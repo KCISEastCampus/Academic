@@ -11,12 +11,12 @@ alevel:
   - id: a2math_mechanics
     name: A2 Math - Mechanics
     icon: "📕"
-    path: /alevel/a2-mathematics/mechanics/
+    path: /alevel/a2-mathematics/mechanics
     color: success
   - id: a2math_statistics
     name: A2 Math - Statistics
     icon: "📕"
-    path: /alevel/a2-mathematics/statistics/
+    path: /alevel/a2-mathematics/statistics
     color: success
   - id: mathematics
     name: AS Math

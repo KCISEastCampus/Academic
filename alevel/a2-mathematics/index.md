@@ -13,8 +13,8 @@ redirect_from:
 > This is **Pure Mathematics** (MA03).
 > 
 > If you want to view the **MECHANICS** (MA05) or **STATISTICS** (MA04) revision notes, click the links below:
-> - [**(MA05)Mechanics**](/alevel/a2-mathematics/mechanics/)
-> - [**(MA04)Statistics**](/alevel/a2-mathematics/statistics/)
+> - [**(MA05)Mechanics**](/alevel/a2-mathematics/mechanics)
+> - [**(MA04)Statistics**](/alevel/a2-mathematics/statistics)
 
 # P2 (Pure Mathematics)
 ## P2.1: Algebra and Functions
