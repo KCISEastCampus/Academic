@@ -23,3 +23,14 @@
 
 /* Surface utilities */
 .surface-bg { background-color: var(--surface); }
+
+/* Image utilities */
+img {
+  max-height: 500px;
+  width: auto;
+}
+
+.img-sm { max-height: 300px; }
+.img-md { max-height: 400px; }
+.img-lg { max-height: 600px; }
+.img-full { max-height: none; }
