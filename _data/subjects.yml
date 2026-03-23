@@ -9,14 +9,14 @@ alevel:
     path: /alevel/a2-mathematics/
     color: success
   - id: a2math_mechanics
-    name: A2 Math - Mech
+    name: A2 Math - Mechanics
     icon: "📕"
-    path: javascript:engUnderConstruction()
+    path: /alevel/a2-mathematics/mechanics/
     color: success
   - id: a2math_statistics
     name: A2 Math - Statistics
     icon: "📕"
-    path: javascript:engUnderConstruction()
+    path: /alevel/a2-mathematics/statistics/
     color: success
   - id: mathematics
     name: AS Math
