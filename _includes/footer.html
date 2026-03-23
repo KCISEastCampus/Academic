@@ -10,7 +10,28 @@
         <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center justify-content-sm-end gap-2">
           <a class="text-decoration-none small" href="/contributors/">Contributors</a>
           <span class="text-muted d-none d-sm-inline">·</span>
-          <img src="https://hitscounter.dev/api/hit?url=academic.kcisec.site&label=Academic&icon=brilliance&color=%23198754&message=&style=flat&tz=Asia/Hong_Kong" alt="hits" style="max-width: 145px; width: 100%; height: auto;">
+          <img id="hitscounter-badge" src="https://hitscounter.dev/api/hit?url=academic.kcisec.site&label=Academic&icon=brilliance&color=%23198754&message=&style=flat&tz=Asia/Hong_Kong" alt="hits" style="max-width: 220px; width: 100%; height: auto;">
+          <script>
+            (function () {
+              var badge = document.getElementById('hitscounter-badge');
+              if (!badge) return;
+              var currentUrl = new URL(window.location.href);
+              var pageLabel = "{{ page.title | default: site.title | default: 'Academic' | escape }}";
+              currentUrl.hash = '';
+              var isHomePage = currentUrl.pathname === '/' || currentUrl.pathname === '/index.html';
+              var counterUrl = isHomePage ? 'academic.kcisec.site' : currentUrl.toString();
+              var counterLabel = isHomePage ? 'Academic' : pageLabel;
+              var api = new URL('https://hitscounter.dev/api/hit');
+              api.searchParams.set('url', counterUrl);
+              api.searchParams.set('label', counterLabel);
+              api.searchParams.set('icon', 'brilliance');
+              api.searchParams.set('color', '#198754');
+              api.searchParams.set('message', '');
+              api.searchParams.set('style', 'flat');
+              api.searchParams.set('tz', 'Asia/Hong_Kong');
+              badge.src = api.toString();
+            })();
+          </script>
         </div>
       </div>
     </div>
