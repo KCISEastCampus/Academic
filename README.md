@@ -46,7 +46,7 @@ A responsive educational website for KangChiao International School East Campus 
 ├─ docs/                   # project documentation
 ├─ igcse/                  # IGCSE subject pages
 ├─ alevel/                 # A-Level subject pages
-├─ student_council/        # student council pages/news
+├─ student-council/        # student council pages/news
 ├─ tests/                  # local test/demo pages
 └─ index.markdown          # homepage entry
 ```

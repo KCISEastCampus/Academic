@@ -214,7 +214,7 @@ layout: none
 
 <body>
   <div class="post-container">
-    <a id="post-back-button" href="/student_council/" class="post-back-button" aria-label="Return to Student Council">
+    <a id="post-back-button" href="/student-council/" class="post-back-button" aria-label="Return to Student Council">
       <i class="bi bi-arrow-left"></i>Back to Student Council
     </a>
 
@@ -245,7 +245,7 @@ layout: none
       {% if page.tags and page.tags.size > 0 %}
       <div class="post-tags" aria-label="News tags">
         {% for tag in page.tags %}
-        <a href="/student_council/news/#tag-{{ tag | slugify }}" class="post-tag">{{ tag }}</a>
+        <a href="/student-council/news/#tag-{{ tag | slugify }}" class="post-tag">{{ tag }}</a>
         {% endfor %}
       </div>
       {% endif %}
@@ -257,7 +257,7 @@ layout: none
     </article>
 
     <div class="post-footer">
-      <a href="/student_council/news/" class="post-footer-link" aria-label="View all news">
+      <a href="/student-council/news/" class="post-footer-link" aria-label="View all news">
         <i class="bi bi-newspaper"></i> View All News
       </a>
     </div>
@@ -272,10 +272,10 @@ layout: none
 
       var params = new URLSearchParams(window.location.search);
       var fromArchiveParam = params.get('from') === 'news_archive';
-      var fromArchiveReferrer = document.referrer && document.referrer.indexOf('/student_council/news/') !== -1;
+      var fromArchiveReferrer = document.referrer && document.referrer.indexOf('/student-council/news/') !== -1;
 
       if (fromArchiveParam || fromArchiveReferrer) {
-        backButton.setAttribute('href', '/student_council/news/');
+        backButton.setAttribute('href', '/student-council/news/');
         backButton.setAttribute('aria-label', 'Back to All News');
         backButton.innerHTML = '<i class="bi bi-arrow-left"></i>Back to All News';
       }

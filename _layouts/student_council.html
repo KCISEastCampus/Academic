@@ -41,13 +41,13 @@ layout: none
           <i class="bi bi-newspaper"></i>
           Latest News
         </h2>
-        <a href="/student_council/news/" class="section-action" aria-label="View all Student Council news">
+        <a href="/student-council/news/" class="section-action" aria-label="View all Student Council news">
           View All News <i class="bi bi-arrow-right"></i>
         </a>
       </div>
       
       <div class="news-list">
-        {% assign news_pages = site.pages | where_exp: "item", "item.path contains 'student_council/news/'" | where_exp: "item", "item.name != 'index.md'" | sort: 'date' | reverse %}
+        {% assign news_pages = site.pages | where_exp: "item", "item.path contains 'student-council/news/'" | where_exp: "item", "item.name != 'index.md'" | sort: 'date' | reverse %}
         {% for post in news_pages limit:3 %}
         <a href="{{ post.url }}" class="news-item">
           <div class="news-date-badge">
@@ -179,7 +179,7 @@ layout: none
         </div>
         <div class="member-directory-actions">
           <span class="member-directory-count">{{ total_members }} Members</span>
-          <a href="/student_council/members/" class="section-action" aria-label="View all Student Council members">
+          <a href="/student-council/members/" class="section-action" aria-label="View all Student Council members">
             View Members <i class="bi bi-arrow-right"></i>
           </a>
         </div>

@@ -6,7 +6,7 @@ alevel:
   - id: a2mathematics
     name: A2 Math - Pure
     icon: "📕"
-    path: /alevel/a2mathematics/
+    path: /alevel/a2-mathematics/
     color: success
   - id: a2math_mechanics
     name: A2 Math - Mech
@@ -21,12 +21,12 @@ alevel:
   - id: mathematics
     name: AS Math
     icon: "📗"
-    path: /alevel/mathematics/
+    path: /alevel/as-mathematics/
     color: success
   - id: asfurthermathematics
     name: AS Further Math
     icon: "📗"
-    path: /alevel/asfm/
+    path: /alevel/as-further-mathematics/
     color: success
   - id: chemistry
     name: AS Chemistry
