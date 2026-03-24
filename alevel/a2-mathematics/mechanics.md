@@ -91,6 +91,16 @@ $$\bar{x} = \frac{\sum m_i x_i}{\sum m_i}, \quad \bar{y} = \frac{\sum m_i y_i}{\
 
 **Composite bodies:** Find centre of mass by treating as sum of parts (subtract holes).
 
+### Exam-style Question
+<img src="/assets/img/MA05_example_q1.png" alt="Statics Example" style="width:500px; max-width:100%; height:auto;" />
+A uniform rod $AB$, of length $2a$, is resting with its end $A$ on rough horizontal ground and a point $T$ on the rod in contact with a rough fixed prism of semicircular cross-section, of radius $a$. The rod lies in a vertical plane which is perpendicular to the axis of the prism, as shown in the figure above.
+
+The coefficient of friction between the rod and the ground at $A$ and between the rod and the prism at $T$ is $\mu$, where $0 < \mu < 1$.
+
+When the rod is inclined at an angle $\theta$ to the horizontal, where $\tan \theta = \frac{3}{4}$, the rod is at the point of slipping.
+
+Determine the value of $\mu$.
+
 ---
 
 ## M2.4: Newton’s Laws of Motion
