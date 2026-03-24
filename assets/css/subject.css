@@ -800,13 +800,13 @@ html[data-bs-theme="dark"] .toc-toggle {
   top: 96px;
   bottom: var(--toc-footer-gap);
   right: 20px;
-  width: 300px;
+  width: 350px;
   max-height: calc(100vh - var(--toc-offset) - var(--toc-footer-gap));
   background: rgba(255, 255, 255, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 20px;
   padding: 20px;
-  overflow: hidden; /* Changed from overflow-y: auto */
+  overflow: visible;
   z-index: 100;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), 0 2px 8px rgba(0, 0, 0, 0.06) !important;
   backdrop-filter: blur(24px) saturate(180%);
@@ -1009,7 +1009,7 @@ html[data-bs-theme="dark"] .toc-match {
   writing-mode: horizontal-tb !important;
   direction: ltr !important;
   overflow-y: auto;
-  overflow-x: hidden;
+  overflow-x: auto;
   flex: 1;
   margin-top: 2px;
 }
@@ -1022,8 +1022,7 @@ html[data-bs-theme="dark"] .toc-match {
 
 /* TOC Links - Enhanced micro-interactions */
 .toc-content a {
-  display: flex;
-  align-items: center;
+  display: block;
   padding: 12px 10px 12px 14px;
   margin: 3px 0;
   text-decoration: none;
@@ -1036,7 +1035,15 @@ html[data-bs-theme="dark"] .toc-match {
   position: relative;
   will-change: transform;
   overflow: hidden;
+  word-wrap: break-word;
+  white-space: normal;
   max-width: 100%;
+  box-sizing: border-box;
+}
+
+.toc-content a mjx-container {
+  max-width: calc(100% - 24px);
+  margin: 0 auto;
 }
 
 /* Left border indicator on hover/active */
