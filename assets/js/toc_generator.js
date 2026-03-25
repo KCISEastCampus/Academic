@@ -5,68 +5,132 @@ function generateTOC() {
   if (!contentContainer || !tocContent) return;
 
   const headers = Array.from(contentContainer.querySelectorAll("h1, h2, h3, h4"));
-
   if (headers.length === 0) return;
 
-  // Assign IDs to all headers upfront
+  // Assign IDs to headers that don't already have one
   headers.forEach((header, index) => {
     if (!header.id) {
       header.id = `toc-heading-${index}`;
     }
   });
 
-  // Build a nested tree that mirrors the heading hierarchy
-  function buildTOCTree(headers) {
-    const root = { children: [], level: 0 };
+  // Build a nested tree from the flat heading list
+  function buildTree(headings) {
+    const root = { children: [], level: 0, heading: null };
     const stack = [root];
-
-    headers.forEach((header) => {
-      const level = parseInt(header.tagName.charAt(1));
-      const node = { id: header.id, text: header.textContent, level, children: [] };
-
-      // Pop until we find a node whose level is strictly less than the current one
+    headings.forEach(h => {
+      const level = parseInt(h.tagName[1], 10);
+      const node = { heading: h, level, children: [] };
       while (stack.length > 1 && stack[stack.length - 1].level >= level) {
         stack.pop();
       }
-
       stack[stack.length - 1].children.push(node);
       stack.push(node);
     });
-
-    return root.children;
+    return root;
   }
 
-  // Render the tree as nested <ul>/<li> HTML
-  function renderTOCTree(nodes) {
-    if (nodes.length === 0) return '';
-    let html = '<ul class="toc-list">';
-    nodes.forEach((node) => {
-      html += `<li class="toc-h${node.level} toc-item">`;
-      html += `<a href="#${node.id}">${node.text}</a>`;
-      if (node.children.length > 0) {
-        html += renderTOCTree(node.children);
+  // Recursively render the tree as nested <ul> elements
+  function renderTree(node) {
+    const ul = document.createElement('ul');
+    ul.className = 'toc-list';
+
+    node.children.forEach(child => {
+      const li = document.createElement('li');
+      li.className = `toc-item toc-h${child.level}`;
+      li.dataset.headingId = child.heading.id;
+      li.dataset.level = String(child.level);
+
+      const itemInner = document.createElement('div');
+      itemInner.className = 'toc-item-inner';
+
+      const hasChildren = child.children.length > 0;
+
+      if (hasChildren) {
+        const toggleBtn = document.createElement('button');
+        toggleBtn.className = 'toc-expand-btn';
+        toggleBtn.setAttribute('aria-label', 'Toggle section');
+        toggleBtn.setAttribute('type', 'button');
+        toggleBtn.setAttribute('aria-expanded', child.level <= 1 ? 'true' : 'false');
+        toggleBtn.innerHTML = child.level <= 1
+          ? '<i class="bi bi-chevron-down" aria-hidden="true"></i>'
+          : '<i class="bi bi-chevron-right" aria-hidden="true"></i>';
+        toggleBtn.addEventListener('click', e => {
+          e.preventDefault();
+          e.stopPropagation();
+          const isExpanded = li.classList.toggle('toc-expanded');
+          toggleBtn.querySelector('i').className = isExpanded
+            ? 'bi bi-chevron-down'
+            : 'bi bi-chevron-right';
+          toggleBtn.setAttribute('aria-expanded', String(isExpanded));
+        });
+        itemInner.appendChild(toggleBtn);
+      } else {
+        const placeholder = document.createElement('span');
+        placeholder.className = 'toc-expand-placeholder';
+        placeholder.setAttribute('aria-hidden', 'true');
+        itemInner.appendChild(placeholder);
       }
-      html += '</li>';
+
+      const a = document.createElement('a');
+      a.href = `#${child.heading.id}`;
+      a.textContent = child.heading.textContent;
+      itemInner.appendChild(a);
+
+      li.appendChild(itemInner);
+
+      if (hasChildren) {
+        li.classList.add('toc-has-children');
+        // H1 items start expanded; H2+ start collapsed
+        if (child.level <= 1) {
+          li.classList.add('toc-expanded');
+        }
+        const childUl = renderTree(child);
+        childUl.className = 'toc-list toc-children';
+        li.appendChild(childUl);
+      }
+
+      ul.appendChild(li);
     });
-    html += '</ul>';
-    return html;
+
+    return ul;
   }
 
-  tocContent.innerHTML = renderTOCTree(buildTOCTree(headers));
+  const tree = buildTree(headers);
+  const renderedTree = renderTree(tree);
+  tocContent.innerHTML = '';
+  tocContent.appendChild(renderedTree);
 
-  // Scroll sync with active heading detection using IntersectionObserver
-  const tocLinks = document.querySelectorAll(".toc-content a");
+  const tocLinks = Array.from(tocContent.querySelectorAll('a'));
   let isScrolling = false;
   let lastUpdateTime = 0;
 
-  // Intersection Observer for better active detection
+  // Expand all ancestor items for a given heading ID
+  function expandAncestors(headingId) {
+    const item = tocContent.querySelector(`.toc-item[data-heading-id="${headingId}"]`);
+    if (!item) return;
+    let parent = item.parentElement && item.parentElement.closest('.toc-item');
+    while (parent) {
+      if (parent.classList.contains('toc-has-children') && !parent.classList.contains('toc-expanded')) {
+        parent.classList.add('toc-expanded');
+        const btn = parent.querySelector(':scope > .toc-item-inner > .toc-expand-btn');
+        if (btn) {
+          btn.querySelector('i').className = 'bi bi-chevron-down';
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      }
+      parent = parent.parentElement && parent.parentElement.closest('.toc-item');
+    }
+  }
+
+  // Intersection Observer for scroll-synced active heading detection
   const observer = new IntersectionObserver(
-    (entries) => {
+    entries => {
       const now = Date.now();
-      if (isScrolling || now - lastUpdateTime < 100) return; // Don't update during programmatic scrolling or too frequently
-      
+      if (isScrolling || now - lastUpdateTime < 100) return;
+
       let activeEntry = null;
-      entries.forEach((entry) => {
+      entries.forEach(entry => {
         if (entry.isIntersecting) {
           activeEntry = entry;
         }
@@ -74,53 +138,43 @@ function generateTOC() {
 
       if (activeEntry) {
         lastUpdateTime = now;
-        tocLinks.forEach((link) => link.classList.remove("active"));
-        const activeLink = document.querySelector(`.toc-content a[href="#${activeEntry.target.id}"]`);
+        tocLinks.forEach(link => link.classList.remove('active'));
+        const activeLink = tocContent.querySelector(`a[href="#${activeEntry.target.id}"]`);
         if (activeLink) {
-          activeLink.classList.add("active");
-          // Auto-scroll TOC to active item (only on desktop)
+          activeLink.classList.add('active');
+          expandAncestors(activeEntry.target.id);
+          // Auto-scroll TOC to keep the active item in view (desktop only)
           if (window.innerWidth > 1024) {
-            activeLink.scrollIntoView({
-              behavior: 'smooth',
-              block: 'center'
-            });
+            activeLink.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
           }
         }
       }
     },
-    { 
-      rootMargin: "-10% 0px -80% 0px", 
+    {
+      rootMargin: "-10% 0px -80% 0px",
       threshold: [0, 0.5, 1.0]
     }
   );
 
-  headers.forEach((header) => observer.observe(header));
+  headers.forEach(header => observer.observe(header));
 
-  // Smooth scrolling for TOC links
-  tocLinks.forEach((link) => {
-    link.addEventListener('click', (e) => {
+  // Smooth scrolling when a TOC link is clicked
+  tocLinks.forEach(link => {
+    link.addEventListener('click', e => {
       e.preventDefault();
       const targetId = link.getAttribute('href').substring(1);
       const targetElement = document.getElementById(targetId);
-      
+
       if (targetElement) {
         isScrolling = true;
-        
-        targetElement.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-        
-        // Reset scrolling flag after animation
-        setTimeout(() => {
-          isScrolling = false;
-        }, 1000);
-        
-        // Update active state immediately
-        tocLinks.forEach((l) => l.classList.remove("active"));
-        link.classList.add("active");
-        
-        // Close mobile TOC if open
+        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setTimeout(() => { isScrolling = false; }, 1000);
+
+        tocLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+        expandAncestors(targetId);
+
+        // Close the mobile slide-in panel after navigation
         if (window.innerWidth <= 1024) {
           toggleTOC(false);
         }
@@ -128,11 +182,16 @@ function generateTOC() {
     });
   });
 
-  // Initialize TOC toggle functionality
+  // Initialise supporting UI after a short delay (allows DOM to settle)
   setTimeout(() => {
     initTOCToggle();
     initTOCSearch();
     initReadingProgress();
+
+    const initialHashId = decodeURIComponent(window.location.hash.replace('#', ''));
+    if (initialHashId && document.getElementById(initialHashId)) {
+      expandAncestors(initialHashId);
+    }
   }, 100);
 
   // Adjust TOC height only when footer is visible
@@ -288,79 +347,83 @@ function setupTOCFooterObserver() {
 function initTOCSearch() {
   const searchInput = document.getElementById('tocSearch');
   const searchClear = document.getElementById('tocSearchClear');
-  
-  if (!searchInput) return;
-  
-  searchInput.addEventListener('input', function() {
+  const tocContent = document.querySelector('.toc-content');
+
+  if (!searchInput || !tocContent) return;
+
+  searchInput.addEventListener('input', function () {
     const searchTerm = this.value.toLowerCase().trim();
-    const tocLinks = document.querySelectorAll('.toc-content a');
+    const tocLinks = Array.from(tocContent.querySelectorAll('a'));
 
     // Show/hide clear button
     searchClear.style.display = searchTerm ? 'flex' : 'none';
 
-    if (!searchTerm) {
-      // Reset all items to visible and restore original text
-      document.querySelectorAll('.toc-content li').forEach(li => { li.style.display = ''; });
+    if (searchTerm) {
+      // While searching, reveal all .toc-children containers so matches are visible
+      tocContent.classList.add('toc-searching');
+
+      let visibleCount = 0;
       tocLinks.forEach(link => {
-        const targetEl = document.getElementById((link.getAttribute('href') || '').substring(1));
-        if (targetEl) link.textContent = targetEl.textContent;
+        // Restore plain text before re-evaluating
+        const href = link.getAttribute('href');
+        const targetId = href ? href.substring(1) : '';
+        const targetElement = targetId ? document.getElementById(targetId) : null;
+        const originalText = targetElement ? targetElement.textContent : link.textContent;
+        link.textContent = originalText;
+
+        const text = originalText.toLowerCase();
+        const listItem = link.closest('li');
+        if (text.includes(searchTerm)) {
+          listItem.style.display = '';
+          visibleCount++;
+          // Highlight the matching substring
+          const regex = new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+          link.innerHTML = originalText.replace(regex, '<span class="toc-match">$1</span>');
+        } else {
+          listItem.style.display = 'none';
+        }
+      });
+
+      // Show "no results" message if needed
+      const noResultsMsg = document.getElementById('tocNoResults');
+      if (visibleCount === 0) {
+        if (!noResultsMsg) {
+          const msg = document.createElement('div');
+          msg.id = 'tocNoResults';
+          msg.className = 'toc-no-results';
+          msg.innerHTML = '<i class="bi bi-search"></i> No matches found';
+          tocContent.appendChild(msg);
+        }
+      } else if (noResultsMsg) {
+        noResultsMsg.remove();
+      }
+    } else {
+      // No search term — restore everything
+      tocContent.classList.remove('toc-searching');
+      tocLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        const targetId = href ? href.substring(1) : '';
+        const targetElement = targetId ? document.getElementById(targetId) : null;
+        if (targetElement) {
+          link.textContent = targetElement.textContent;
+        }
+        const listItem = link.closest('li');
+        if (listItem) listItem.style.display = '';
       });
       const noResultsMsg = document.getElementById('tocNoResults');
       if (noResultsMsg) noResultsMsg.remove();
-      return;
-    }
-
-    // Hide all list items first
-    document.querySelectorAll('.toc-content li').forEach(li => { li.style.display = 'none'; });
-
-    const escapedTerm = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    const searchRegex = new RegExp(`(${escapedTerm})`, 'gi');
-
-    let visibleCount = 0;
-    tocLinks.forEach(link => {
-      const href = link.getAttribute('href');
-      const targetId = href ? href.substring(1) : '';
-      const targetEl = targetId ? document.getElementById(targetId) : null;
-      const originalText = targetEl ? targetEl.textContent : link.textContent;
-      link.textContent = originalText;
-
-      if (originalText.toLowerCase().includes(searchTerm)) {
-        visibleCount++;
-        // Reveal this <li> and all ancestor <li> elements within .toc-content
-        let el = link.closest('li');
-        while (el && el.closest('.toc-content')) {
-          el.style.display = '';
-          el = el.parentElement ? el.parentElement.closest('li') : null;
-        }
-        // Highlight matched text
-        link.innerHTML = originalText.replace(searchRegex, '<span class="toc-match">$1</span>');
-      }
-    });
-
-    // Show/hide "no results" message
-    const noResultsMsg = document.getElementById('tocNoResults');
-    if (visibleCount === 0) {
-      if (!noResultsMsg) {
-        const msg = document.createElement('div');
-        msg.id = 'tocNoResults';
-        msg.className = 'toc-no-results';
-        msg.innerHTML = '<i class="bi bi-search"></i> No matches found';
-        document.querySelector('.toc-content').appendChild(msg);
-      }
-    } else if (noResultsMsg) {
-      noResultsMsg.remove();
     }
   });
-  
+
   // Clear button functionality
-  searchClear.addEventListener('click', function() {
+  searchClear.addEventListener('click', function () {
     searchInput.value = '';
     searchInput.dispatchEvent(new Event('input'));
     searchInput.focus();
   });
-  
+
   // ESC to clear search
-  searchInput.addEventListener('keydown', function(e) {
+  searchInput.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') {
       this.value = '';
       this.dispatchEvent(new Event('input'));
