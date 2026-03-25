@@ -4,19 +4,55 @@ function generateTOC() {
 
   if (!contentContainer || !tocContent) return;
 
-  const headers = contentContainer.querySelectorAll("h1, h2, h3, h4");
-  let tocHTML = "<ul>";
+  const headers = Array.from(contentContainer.querySelectorAll("h1, h2, h3, h4"));
 
+  if (headers.length === 0) return;
+
+  // Assign IDs to all headers upfront
   headers.forEach((header, index) => {
-    const id = header.id || `toc-heading-${index}`;
-    header.id = id; // assign an id if not present
-
-    const levelClass = "toc-" + header.tagName.toLowerCase();
-    tocHTML += `<li class="${levelClass} toc-item"><a href="#${id}">${header.textContent}</a></li>`;
+    if (!header.id) {
+      header.id = `toc-heading-${index}`;
+    }
   });
 
-  tocHTML += "</ul>";
-  tocContent.innerHTML = tocHTML;
+  // Build a nested tree that mirrors the heading hierarchy
+  function buildTOCTree(headers) {
+    const root = { children: [], level: 0 };
+    const stack = [root];
+
+    headers.forEach((header) => {
+      const level = parseInt(header.tagName.charAt(1));
+      const node = { id: header.id, text: header.textContent, level, children: [] };
+
+      // Pop until we find a node whose level is strictly less than the current one
+      while (stack.length > 1 && stack[stack.length - 1].level >= level) {
+        stack.pop();
+      }
+
+      stack[stack.length - 1].children.push(node);
+      stack.push(node);
+    });
+
+    return root.children;
+  }
+
+  // Render the tree as nested <ul>/<li> HTML
+  function renderTOCTree(nodes) {
+    if (nodes.length === 0) return '';
+    let html = '<ul class="toc-list">';
+    nodes.forEach((node) => {
+      html += `<li class="toc-h${node.level} toc-item">`;
+      html += `<a href="#${node.id}">${node.text}</a>`;
+      if (node.children.length > 0) {
+        html += renderTOCTree(node.children);
+      }
+      html += '</li>';
+    });
+    html += '</ul>';
+    return html;
+  }
+
+  tocContent.innerHTML = renderTOCTree(buildTOCTree(headers));
 
   // Scroll sync with active heading detection using IntersectionObserver
   const tocLinks = document.querySelectorAll(".toc-content a");
@@ -252,44 +288,58 @@ function setupTOCFooterObserver() {
 function initTOCSearch() {
   const searchInput = document.getElementById('tocSearch');
   const searchClear = document.getElementById('tocSearchClear');
-  const tocLinks = document.querySelectorAll('.toc-content a');
   
   if (!searchInput) return;
   
   searchInput.addEventListener('input', function() {
     const searchTerm = this.value.toLowerCase().trim();
-    
+    const tocLinks = document.querySelectorAll('.toc-content a');
+
     // Show/hide clear button
     searchClear.style.display = searchTerm ? 'flex' : 'none';
-    
-    // Filter TOC items
+
+    if (!searchTerm) {
+      // Reset all items to visible and restore original text
+      document.querySelectorAll('.toc-content li').forEach(li => { li.style.display = ''; });
+      tocLinks.forEach(link => {
+        const targetEl = document.getElementById((link.getAttribute('href') || '').substring(1));
+        if (targetEl) link.textContent = targetEl.textContent;
+      });
+      const noResultsMsg = document.getElementById('tocNoResults');
+      if (noResultsMsg) noResultsMsg.remove();
+      return;
+    }
+
+    // Hide all list items first
+    document.querySelectorAll('.toc-content li').forEach(li => { li.style.display = 'none'; });
+
+    const escapedTerm = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const searchRegex = new RegExp(`(${escapedTerm})`, 'gi');
+
     let visibleCount = 0;
     tocLinks.forEach(link => {
-      // Always restore plain text to avoid stale markup
       const href = link.getAttribute('href');
       const targetId = href ? href.substring(1) : '';
-      const targetElement = targetId ? document.getElementById(targetId) : null;
-      const originalText = targetElement ? targetElement.textContent : link.textContent;
+      const targetEl = targetId ? document.getElementById(targetId) : null;
+      const originalText = targetEl ? targetEl.textContent : link.textContent;
       link.textContent = originalText;
 
-      const text = originalText.toLowerCase();
-      const listItem = link.closest('li');
-      if (text.includes(searchTerm)) {
-        listItem.style.display = '';
+      if (originalText.toLowerCase().includes(searchTerm)) {
         visibleCount++;
-        // Lightweight highlight without layout shift
-        if (searchTerm) {
-          const regex = new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
-          link.innerHTML = originalText.replace(regex, '<span class="toc-match">$1</span>');
+        // Reveal this <li> and all ancestor <li> elements within .toc-content
+        let el = link.closest('li');
+        while (el && el.closest('.toc-content')) {
+          el.style.display = '';
+          el = el.parentElement ? el.parentElement.closest('li') : null;
         }
-      } else {
-        listItem.style.display = 'none';
+        // Highlight matched text
+        link.innerHTML = originalText.replace(searchRegex, '<span class="toc-match">$1</span>');
       }
     });
-    
-    // Show "no results" message if needed
+
+    // Show/hide "no results" message
     const noResultsMsg = document.getElementById('tocNoResults');
-    if (visibleCount === 0 && searchTerm) {
+    if (visibleCount === 0) {
       if (!noResultsMsg) {
         const msg = document.createElement('div');
         msg.id = 'tocNoResults';
@@ -299,18 +349,6 @@ function initTOCSearch() {
       }
     } else if (noResultsMsg) {
       noResultsMsg.remove();
-    }
-    
-    // If no search term, restore original text
-    if (!searchTerm) {
-      tocLinks.forEach(link => {
-        const href = link.getAttribute('href');
-        const targetId = href.substring(1);
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-          link.textContent = targetElement.textContent;
-        }
-      });
     }
   });
   

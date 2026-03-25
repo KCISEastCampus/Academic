@@ -735,8 +735,13 @@ html[data-bs-theme="dark"] .toc-toggle {
     writing-mode: horizontal-tb !important;
     direction: ltr !important;
     list-style: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
+  }
+
+  /* Keep nested indent/connector lines on mobile */
+  .toc-item > .toc-list {
+    margin-left: 8px !important;
+    padding-left: 8px !important;
+    border-left: 2px solid rgba(var(--accent-ig-rgb), 0.22) !important;
   }
   
   .toc-content li {
@@ -746,41 +751,37 @@ html[data-bs-theme="dark"] .toc-toggle {
   }
   
   .toc-content a {
-    padding: 14px 16px !important;
-    font-size: 1rem !important;
-    margin: 2px 0 !important;
-    border-radius: 6px !important;
+    padding: 11px 12px 11px 10px !important;
+    font-size: 0.95rem !important;
+    margin: 1px 0 !important;
     display: block !important;
-    white-space: nowrap !important;
+    white-space: normal !important;
     text-align: left !important;
     writing-mode: horizontal-tb !important;
     direction: ltr !important;
-    line-height: 1.3 !important;
-    text-overflow: ellipsis !important;
-    overflow: hidden !important;
+    line-height: 1.4 !important;
+    border-left-width: 3px !important;
   }
   
-  .toc-h1 a {
-    font-size: 1.1rem !important;
-    padding-left: 16px !important;
+  .toc-h1 > a {
+    font-size: 1.05rem !important;
     font-weight: 700 !important;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
   }
   
-  .toc-h2 a {
-    font-size: 1rem !important;
-    padding-left: 24px !important;
+  .toc-h2 > a {
+    font-size: 0.95rem !important;
     font-weight: 600 !important;
   }
   
-  .toc-h3 a {
-    font-size: 0.95rem !important;
-    padding-left: 32px !important;
-    font-weight: 500 !important;
+  .toc-h3 > a {
+    font-size: 0.9rem !important;
+    font-weight: 400 !important;
   }
   
-  .toc-h4 a {
-    font-size: 0.9rem !important;
-    padding-left: 40px !important;
+  .toc-h4 > a {
+    font-size: 0.85rem !important;
     font-weight: 400 !important;
   }
 }
@@ -1014,263 +1015,149 @@ html[data-bs-theme="dark"] .toc-match {
   margin-top: 2px;
 }
 
+/* Root and nested TOC lists */
+.toc-content > .toc-list,
 .toc-content ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-/* TOC Links - Enhanced micro-interactions */
+/* Nested list — indented + vertical connector line */
+.toc-item > .toc-list {
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 2px solid rgba(var(--accent-ig-rgb), 0.22);
+}
+
+.toc-item {
+  list-style: none;
+  margin: 0;
+}
+
+/* ── TOC Links base ──────────────────────────────── */
 .toc-content a {
   display: block;
-  padding: 12px 10px 12px 14px;
-  margin: 3px 0;
+  padding: 6px 8px 6px 10px;
+  margin: 1px 0;
   text-decoration: none;
   color: var(--muted);
-  border-radius: 10px;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   border-left: 3px solid transparent;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  position: relative;
-  will-change: transform;
-  overflow: hidden;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   word-wrap: break-word;
   white-space: normal;
   max-width: 100%;
   box-sizing: border-box;
+  position: relative;
 }
 
 .toc-content a mjx-container {
-  max-width: calc(100% - 24px);
+  max-width: calc(100% - 16px);
   margin: 0 auto;
 }
 
-/* Left border indicator on hover/active */
-.toc-content a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 3px;
-  background: linear-gradient(to bottom, var(--accent-ig), var(--accent-al));
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
+/* ── Hover ───────────────────────────────────────── */
 .toc-content a:hover {
-  background: linear-gradient(90deg, rgba(var(--accent-ig-rgb), 0.15), rgba(var(--accent-ig-rgb), 0.08));
+  background: rgba(var(--accent-ig-rgb), 0.10);
   color: var(--text) !important;
-  transform: translateX(4px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-
-.toc-content a:hover::after {
-  transform: scaleY(1);
-}
-
-.toc-content a.active {
-  background: linear-gradient(90deg, rgba(var(--accent-ig-rgb), 0.2), rgba(var(--accent-ig-rgb), 0.1));
-  color: var(--accent-ig) !important;
-  font-weight: 600;
-  transform: translateX(4px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* IGCSE scheme active state */
-body.scheme-igcse .toc-content a.active {
-  background: linear-gradient(90deg, rgba(var(--accent-ig-rgb), 0.2), rgba(var(--accent-ig-rgb), 0.1));
-  color: var(--accent-ig) !important;
-}
-
-/* A-Level scheme active state */
-body.scheme-alevel .toc-content a.active {
-  background: linear-gradient(90deg, rgba(var(--accent-al-rgb), 0.2), rgba(var(--accent-al-rgb), 0.1));
-  color: var(--accent-al) !important;
-}
-
-.toc-content a.active::after {
-  transform: scaleY(1);
+  border-left-color: rgba(var(--accent-ig-rgb), 0.5);
 }
 
 html[data-bs-theme="dark"] .toc-content a:hover {
-  background: linear-gradient(90deg, rgba(var(--accent-ig-rgb), 0.2), rgba(var(--accent-ig-rgb), 0.1));
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  background: rgba(var(--accent-ig-rgb), 0.15);
 }
 
-html[data-bs-theme="dark"] body.scheme-igcse .toc-content a:hover {
-  background: linear-gradient(90deg, rgba(var(--accent-ig-rgb), 0.2), rgba(var(--accent-ig-rgb), 0.1));
+/* ── Active ──────────────────────────────────────── */
+.toc-content a.active {
+  background: rgba(var(--accent-ig-rgb), 0.14);
+  color: var(--accent-ig) !important;
+  border-left-color: var(--accent-ig);
+  font-weight: 600;
 }
 
-html[data-bs-theme="dark"] body.scheme-alevel .toc-content a:hover {
-  background: linear-gradient(90deg, rgba(var(--accent-al-rgb), 0.2), rgba(var(--accent-al-rgb), 0.1));
+/* H1 keeps bold even when active */
+.toc-h1 > a.active {
+  font-weight: 700;
+}
+
+body.scheme-igcse .toc-content a.active {
+  background: rgba(var(--accent-ig-rgb), 0.14);
+  color: var(--accent-ig) !important;
+  border-left-color: var(--accent-ig);
+}
+
+body.scheme-alevel .toc-content a.active {
+  background: rgba(var(--accent-al-rgb), 0.14);
+  color: var(--accent-al) !important;
+  border-left-color: var(--accent-al);
 }
 
 html[data-bs-theme="dark"] .toc-content a.active {
-  background: linear-gradient(90deg, rgba(var(--accent-ig-rgb), 0.25), rgba(var(--accent-ig-rgb), 0.15));
+  background: rgba(var(--accent-ig-rgb), 0.20);
   color: var(--accent-ig) !important;
 }
 
 html[data-bs-theme="dark"] body.scheme-igcse .toc-content a.active {
-  background: linear-gradient(90deg, rgba(var(--accent-ig-rgb), 0.25), rgba(var(--accent-ig-rgb), 0.15));
+  background: rgba(var(--accent-ig-rgb), 0.20);
   color: var(--accent-ig) !important;
 }
 
 html[data-bs-theme="dark"] body.scheme-alevel .toc-content a.active {
-  background: linear-gradient(90deg, rgba(var(--accent-al-rgb), 0.25), rgba(var(--accent-al-rgb), 0.15));
+  background: rgba(var(--accent-al-rgb), 0.20);
   color: var(--accent-al) !important;
+  border-left-color: var(--accent-al);
 }
 
-/* TOC Hierarchy Styles with Indentation */
-.toc-h1 a {
-  font-size: 1rem;
+/* ── H1 — top-level section heading ─────────────── */
+.toc-h1 > a {
+  font-size: 0.98rem;
   font-weight: 700;
-  padding-left: 12px;
   color: var(--text);
+  padding: 8px 8px 8px 10px;
+  margin-top: 6px;
+  margin-bottom: 2px;
+  border-left-color: var(--accent-ig);
 }
 
-.toc-h2 a {
-  font-size: 0.95rem;
+.toc-h1:first-child > a {
+  margin-top: 0;
+}
+
+body.scheme-alevel .toc-h1 > a {
+  border-left-color: var(--accent-al);
+}
+
+/* ── H2 — primary sub-section ───────────────────── */
+.toc-h2 > a {
+  font-size: 0.91rem;
   font-weight: 600;
-  padding-left: 20px;
-  border-left-width: 3px;
+  color: var(--text);
+  padding: 6px 8px 6px 10px;
 }
 
-.toc-h3 a {
-  font-size: 0.9rem;
-  font-weight: 500;
-  padding-left: 28px;
-  border-left-width: 2px;
-}
-
-.toc-h4 a {
+/* ── H3 — secondary sub-section ─────────────────── */
+.toc-h3 > a {
   font-size: 0.85rem;
   font-weight: 400;
-  padding-left: 36px;
-  border-left-width: 2px;
   color: var(--muted);
+  padding: 5px 8px 5px 10px;
 }
 
-.toc-item {
-  margin: 0;
-  list-style: none;
-}
-
-/* Clear and Modern Hierarchy Indicators */
-.toc-h1 a::before {
-  content: "";
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  background: linear-gradient(135deg, var(--accent-ig), var(--accent-al));
-  border-radius: 50%;
-  margin-right: 10px;
-  opacity: 0.9;
-  flex-shrink: 0;
-  align-self: center;
-  transition: all 0.3s ease;
-}
-
-.toc-h2 a::before {
-  content: "";
-  display: inline-block;
-  width: 5px;
-  height: 5px;
-  background: var(--accent-ig);
-  border-radius: 50%;
-  margin-right: 10px;
-  opacity: 0.8;
-  flex-shrink: 0;
-  align-self: center;
-  transition: all 0.3s ease;
-}
-
-.toc-h3 a::before {
-  content: "";
-  display: inline-block;
-  width: 4px;
-  height: 4px;
-  border: 2px solid var(--accent-ig);
-  border-radius: 50%;
-  margin-right: 10px;
-  opacity: 0.7;
-  background: transparent;
-  flex-shrink: 0;
-  align-self: center;
-  transition: all 0.3s ease;
-}
-
-.toc-h4 a::before {
-  content: "—";
-  margin-right: 8px;
-  color: var(--muted);
+/* ── H4 — detail level ───────────────────────────── */
+.toc-h4 > a {
+  font-size: 0.82rem;
   font-weight: 400;
-  opacity: 0.6;
-  flex-shrink: 0;
-  align-self: center;
-  line-height: 1;
-  transition: all 0.3s ease;
+  color: var(--muted);
+  padding: 4px 8px 4px 10px;
+  opacity: 0.85;
 }
 
-/* Enhanced contrast for active/hover states */
-.toc-content a.active::before,
-.toc-content a:hover::before {
-  opacity: 1;
-}
-
-.toc-h1 a.active::before,
-.toc-h1 a:hover::before {
-  box-shadow: 0 0 10px rgba(var(--accent-ig-rgb), 0.6);
-  transform: scale(1.2);
-  transition: all 0.3s ease;
-}
-
-body.scheme-alevel .toc-h1 a.active::before,
-body.scheme-alevel .toc-h1 a:hover::before {
-  box-shadow: 0 0 10px rgba(var(--accent-al-rgb), 0.6);
-}
-
-.toc-h2 a.active::before,
-.toc-h2 a:hover::before {
-  box-shadow: 0 0 8px rgba(var(--accent-ig-rgb), 0.5);
-  transform: scale(1.15);
-  transition: all 0.3s ease;
-}
-
-body.scheme-alevel .toc-h2 a.active::before,
-body.scheme-alevel .toc-h2 a:hover::before {
-  box-shadow: 0 0 8px rgba(var(--accent-al-rgb), 0.5);
-}
-
-.toc-h3 a.active::before,
-.toc-h3 a:hover::before {
-  background: var(--accent-ig);
-  border-color: var(--accent-ig);
-  box-shadow: 0 0 6px rgba(var(--accent-ig-rgb), 0.4);
-  transform: scale(1.1);
-  transition: all 0.3s ease;
-}
-
-body.scheme-alevel .toc-h3 a.active::before,
-body.scheme-alevel .toc-h3 a:hover::before {
-  background: var(--accent-al);
-  border-color: var(--accent-al);
-  box-shadow: 0 0 6px rgba(var(--accent-al-rgb), 0.4);
-}
-
-.toc-h4 a.active::before,
-.toc-h4 a:hover::before {
-  color: var(--accent-ig);
-  opacity: 1;
-  transform: scale(1.1);
-  transition: all 0.3s ease;
-}
-
-body.scheme-alevel .toc-h4 a.active::before,
-body.scheme-alevel .toc-h4 a:hover::before {
-  color: var(--accent-al);
+/* ── Connecting-line colours (dark mode) ─────────── */
+html[data-bs-theme="dark"] .toc-item > .toc-list {
+  border-left-color: rgba(var(--accent-ig-rgb), 0.30);
 }
 
 /* Custom Scrollbar for TOC Content */
