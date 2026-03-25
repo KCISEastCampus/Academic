@@ -7,6 +7,17 @@
       ready: () => {
         MathJax.startup.defaultReady();
         MathJax.startup.promise.then(() => {
+          // Register a TeX preFilter that automatically promotes matrix environments
+          // inside inline math ($...$) to display style, preventing them from being
+          // compressed into the text baseline.
+          MathJax.startup.input[0].preFilters.add(({math}) => {
+            if (!math.display) {
+              math.math = math.math.replace(
+                /\\begin\{((?:p|b|B|v|V)?matrix|smallmatrix)\}/g,
+                '\\displaystyle\\begin{$1}'
+              );
+            }
+          });
           document.dispatchEvent(new Event('mathjaxLoaded'));
         });
       }

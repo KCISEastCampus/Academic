@@ -429,10 +429,14 @@ a:focus, button:focus { box-shadow: 0 0 0 3px rgba(100,150,255,0.08); }
   line-height: 1.4 !important;
 }
 
-/* Inline math should blend seamlessly with text */
+/* Inline math should blend seamlessly with text.
+   Do NOT override vertical-align here — MathJax dynamically sets it per-formula
+   via inline styles (e.g. style="vertical-align:-0.439em") to correctly position
+   each expression on the text baseline.  Forcing a fixed value breaks matrices and
+   other tall inline formulae by misaligning them relative to the surrounding text. */
 mjx-container[jax="CHTML"][display="false"] {
-  vertical-align: -0.05em !important;
   margin: 0 0.08em !important;
+  overflow: visible !important;
 }
 
 /* Display math styling */
@@ -440,7 +444,14 @@ mjx-container[jax="CHTML"][display="false"] {
   margin: 1.5rem auto !important;
   text-align: center !important;
   overflow-x: auto !important;
-  overflow-y: hidden !important;
+  overflow-y: visible !important;
+}
+
+/* Matrix environments (mjx-mtable / mjx-mtr / mjx-mtd) need to be visible
+   and not clipped by any ancestor's overflow settings. */
+mjx-mtable, mjx-mtr, mjx-mtd {
+  overflow: visible !important;
+  line-height: normal !important;
 }
 
 /* Ensure display math inside list items stays left-aligned with bullet text */
@@ -487,7 +498,7 @@ mjx-mfrac {
     margin: 1rem auto !important;
     max-width: 100% !important;
     overflow-x: auto !important;
-    overflow-y: hidden !important;
+    overflow-y: visible !important;
     /* Enable horizontal scrolling for long equations */
     -webkit-overflow-scrolling: touch !important;
   }
