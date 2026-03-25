@@ -557,7 +557,7 @@ $$I_2 = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}, \quad I_3 = \begin{pmatrix
 For any matrix $A$, $AI = IA = A$ (provided dimensions are compatible).
 
 #### Inverse of a $2 \times 2$ Matrix
-For $A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}$:
+For $A = \begin{pmatrix} a & b \\\\ c & d \end{pmatrix}$:
 - **Determinant**: $\det(A) = ad - bc$
 - If $\det(A) \neq 0$, $A$ is **non-singular** and has an inverse:
 $$A^{-1} = \frac{1}{ad - bc} \begin{pmatrix} d & -b \\ -c & a \end{pmatrix}$$
@@ -568,14 +568,14 @@ $$A^{-1} = \frac{1}{ad - bc} \begin{pmatrix} d & -b \\ -c & a \end{pmatrix}$$
 - $(A^{-1})^{-1} = A$
 - $\det(A^{-1}) = \frac{1}{\det(A)}$
 
-**Example**: Find the inverse of $A = \begin{pmatrix} 2 & 1 \\ 5 & 3 \end{pmatrix}$.
+**Example**: Find the inverse of $A = \begin{pmatrix} 2 & 1 \\\\ 5 & 3 \end{pmatrix}$.
 
 $\det(A) = 2\times3 - 1\times5 = 6 - 5 = 1$
 $$A^{-1} = \frac{1}{1} \begin{pmatrix} 3 & -1 \\ -5 & 2 \end{pmatrix} = \begin{pmatrix} 3 & -1 \\ -5 & 2 \end{pmatrix}$$
 
 #### Transpose of a Matrix
 The transpose $A^T$ is obtained by swapping rows and columns.
-- $(A^T)_{ij} = A_{ji}$
+- $(A^T)\_{ij} = A\_{ji}$
 - $(AB)^T = B^T A^T$
 - $(A^{-1})^T = (A^T)^{-1}$
 
@@ -591,22 +591,22 @@ $$\begin{pmatrix} x' \\ y' \end{pmatrix} = M \begin{pmatrix} x \\ y \end{pmatrix
 | Transformation | Matrix | Effect on Point |
 |----------------|--------|-----------------|
 | **Rotation** (anticlockwise) | | |
-| $90^\circ$ | $\begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}$ | $(x,y) \to (-y,x)$ |
-| $180^\circ$ | $\begin{pmatrix} -1 & 0 \\ 0 & -1 \end{pmatrix}$ | $(x,y) \to (-x,-y)$ |
-| $270^\circ$ ($-90^\circ$) | $\begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}$ | $(x,y) \to (y,-x)$ |
-| $\theta$ | $\begin{pmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix}$ | $(x,y) \to (x\cos\theta - y\sin\theta, x\sin\theta + y\cos\theta)$ |
+| $90^\circ$ | $\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \end{pmatrix}$ | $(x,y) \to (-y,x)$ |
+| $180^\circ$ | $\begin{pmatrix} -1 & 0 \\\\ 0 & -1 \end{pmatrix}$ | $(x,y) \to (-x,-y)$ |
+| $270^\circ$ ($-90^\circ$) | $\begin{pmatrix} 0 & 1 \\\\ -1 & 0 \end{pmatrix}$ | $(x,y) \to (y,-x)$ |
+| $\theta$ | $\begin{pmatrix} \cos\theta & -\sin\theta \\\\ \sin\theta & \cos\theta \end{pmatrix}$ | $(x,y) \to (x\cos\theta - y\sin\theta, x\sin\theta + y\cos\theta)$ |
 | **Reflection** | | |
-| In $x$-axis | $\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}$ | $(x,y) \to (x,-y)$ |
-| In $y$-axis | $\begin{pmatrix} -1 & 0 \\ 0 & 1 \end{pmatrix}$ | $(x,y) \to (-x,y)$ |
-| In $y = x$ | $\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$ | $(x,y) \to (y,x)$ |
-| In $y = -x$ | $\begin{pmatrix} 0 & -1 \\ -1 & 0 \end{pmatrix}$ | $(x,y) \to (-y,-x)$ |
+| In $x$-axis | $\begin{pmatrix} 1 & 0 \\\\ 0 & -1 \end{pmatrix}$ | $(x,y) \to (x,-y)$ |
+| In $y$-axis | $\begin{pmatrix} -1 & 0 \\\\ 0 & 1 \end{pmatrix}$ | $(x,y) \to (-x,y)$ |
+| In $y = x$ | $\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \end{pmatrix}$ | $(x,y) \to (y,x)$ |
+| In $y = -x$ | $\begin{pmatrix} 0 & -1 \\\\ -1 & 0 \end{pmatrix}$ | $(x,y) \to (-y,-x)$ |
 | **Stretch** | | |
-| $k$ parallel to $x$-axis | $\begin{pmatrix} k & 0 \\ 0 & 1 \end{pmatrix}$ | $(x,y) \to (kx,y)$ |
-| $k$ parallel to $y$-axis | $\begin{pmatrix} 1 & 0 \\ 0 & k \end{pmatrix}$ | $(x,y) \to (x,ky)$ |
-| **Enlargement** (scale factor $k$) | $\begin{pmatrix} k & 0 \\ 0 & k \end{pmatrix}$ | $(x,y) \to (kx,ky)$ |
+| $k$ parallel to $x$-axis | $\begin{pmatrix} k & 0 \\\\ 0 & 1 \end{pmatrix}$ | $(x,y) \to (kx,y)$ |
+| $k$ parallel to $y$-axis | $\begin{pmatrix} 1 & 0 \\\\ 0 & k \end{pmatrix}$ | $(x,y) \to (x,ky)$ |
+| **Enlargement** (scale factor $k$) | $\begin{pmatrix} k & 0 \\\\ 0 & k \end{pmatrix}$ | $(x,y) \to (kx,ky)$ |
 | **Shear** | | |
-| Parallel to $x$-axis (factor $k$) | $\begin{pmatrix} 1 & k \\ 0 & 1 \end{pmatrix}$ | $(x,y) \to (x+ky, y)$ |
-| Parallel to $y$-axis (factor $k$) | $\begin{pmatrix} 1 & 0 \\ k & 1 \end{pmatrix}$ | $(x,y) \to (x, kx+y)$ |
+| Parallel to $x$-axis (factor $k$) | $\begin{pmatrix} 1 & k \\\\ 0 & 1 \end{pmatrix}$ | $(x,y) \to (x+ky, y)$ |
+| Parallel to $y$-axis (factor $k$) | $\begin{pmatrix} 1 & 0 \\\\ k & 1 \end{pmatrix}$ | $(x,y) \to (x, kx+y)$ |
 
 #### Combinations of Transformations
 If transformation $T_1$ has matrix $M_1$ and $T_2$ has matrix $M_2$, then applying $T_1$ **followed by** $T_2$ gives:
@@ -615,9 +615,11 @@ $$\begin{pmatrix} x' \\ y' \end{pmatrix} = M_2 M_1 \begin{pmatrix} x \\ y \end{p
 
 **Example**: Find the matrix for a rotation of $90^\circ$ anticlockwise followed by a reflection in the $x$-axis.
 
-Rotation $90^\circ$: $R = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}$
-Reflection in $x$-axis: $S = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}$
-Combined: $SR = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} = \begin{pmatrix} 0 & -1 \\ -1 & 0 \end{pmatrix}$
+Rotation $90^\circ$: $R = \begin{pmatrix} 0 & -1 \\\\ 1 & 0 \end{pmatrix}$
+
+Reflection in $x$-axis: $S = \begin{pmatrix} 1 & 0 \\\\ 0 & -1 \end{pmatrix}$
+
+Combined: $SR = \begin{pmatrix} 1 & 0 \\\\ 0 & -1 \end{pmatrix} \begin{pmatrix} 0 & -1 \\\\ 1 & 0 \end{pmatrix} = \begin{pmatrix} 0 & -1 \\\\ -1 & 0 \end{pmatrix}$
 
 #### Determinant and Area Scale Factor
 For a $2 \times 2$ matrix $M$:
@@ -625,7 +627,7 @@ For a $2 \times 2$ matrix $M$:
 - If $\det(M) = 0$, the transformation maps the plane onto a line (singular)
 - If $\det(M) < 0$, orientation is reversed (e.g., includes a reflection)
 
-**Example**: The matrix $\begin{pmatrix} 2 & 0 \\ 0 & 3 \end{pmatrix}$ has determinant $6$, so area is multiplied by $6$.
+**Example**: The matrix $\begin{pmatrix} 2 & 0 \\\\ 0 & 3 \end{pmatrix}$ has determinant $6$, so area is multiplied by $6$.
 
 ---
 
@@ -636,11 +638,11 @@ A point $\mathbf{x}$ is **invariant** if $M\mathbf{x} = \mathbf{x}$.
 
 **Method**: Solve $(M - I)\mathbf{x} = \mathbf{0}$.
 
-**Example**: For $M = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$ (reflection in $y=x$):
+**Example**: For $M = \begin{pmatrix} 0 & 1 \\\\ 1 & 0 \end{pmatrix}$ (reflection in $y=x$):
 
-$(M - I) = \begin{pmatrix} -1 & 1 \\ 1 & -1 \end{pmatrix}$
+$(M - I) = \begin{pmatrix} -1 & 1 \\\\ 1 & -1 \end{pmatrix}$
 
-Solve $\begin{pmatrix} -1 & 1 \\ 1 & -1 \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix}$ gives $-x + y = 0$ and $x - y = 0$, so $y = x$.
+Solve $\begin{pmatrix} -1 & 1 \\\\ 1 & -1 \end{pmatrix} \begin{pmatrix} x \\\\ y \end{pmatrix} = \begin{pmatrix} 0 \\\\ 0 \end{pmatrix}$ gives $-x + y = 0$ and $x - y = 0$, so $y = x$.
 
 Thus all points on the line $y = x$ are invariant (the mirror line itself).
 
@@ -652,7 +654,7 @@ A line (through the origin) is **invariant** if every point on the line maps to 
 
 **Method**: Let the line be $y = mx$. Any point on it is $(t, mt)$. After transformation, we require the image to satisfy $y' = m x'$.
 
-**Example**: For $M = \begin{pmatrix} 2 & 0 \\ 0 & 1 \end{pmatrix}$ (stretch in $x$), find invariant lines.
+**Example**: For $M = \begin{pmatrix} 2 & 0 \\\\ 0 & 1 \end{pmatrix}$ (stretch in $x$), find invariant lines.
 
 Let $(x,y) = (t, mt)$. Then $(x',y') = (2t, mt)$.
 For this to lie on $y = mx$: $mt = m(2t) \Rightarrow mt = 2mt \Rightarrow mt(1-2) = 0 \Rightarrow -mt = 0$.
@@ -1024,7 +1026,7 @@ $= 4\times4 + 9\times9 + 12\times3 = 16 + 81 + 36 = 133$
 
 ### 1.1 Vector Representation
 
-Position vector: $\mathbf{r} = x\mathbf{i} + y\mathbf{j} = \begin{pmatrix} x \\ y \end{pmatrix}$
+Position vector: $\mathbf{r} = x\mathbf{i} + y\mathbf{j} = \begin{pmatrix} x \\\\ y \end{pmatrix}$
 
 Velocity vector: $\mathbf{v} = \frac{d\mathbf{r}}{dt} = v_x\mathbf{i} + v_y\mathbf{j}$
 
@@ -1257,9 +1259,9 @@ Both move in original direction.
 ### Pure Mathematics
 | Topic | Formula |
 |-------|---------|
-| $2\times2$ inverse | $\begin{pmatrix} a & b \\ c & d \end{pmatrix}^{-1} = \frac{1}{ad-bc}\begin{pmatrix} d & -b \\ -c & a \end{pmatrix}$ |
+| $2\times2$ inverse | $\begin{pmatrix} a & b \\\\ c & d \end{pmatrix}^{-1} = \frac{1}{ad-bc}\begin{pmatrix} d & -b \\\\ -c & a \end{pmatrix}$ |
 | Determinant | $\det(A) = ad - bc$ |
-| Rotation by $\theta$ | $\begin{pmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix}$ |
+| Rotation by $\theta$ | $\begin{pmatrix} \cos\theta & -\sin\theta \\\\ \sin\theta & \cos\theta \end{pmatrix}$ |
 | Newton-Raphson | $x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$ |
 | Euler's method | $y_{n+1} = y_n + h f(x_n, y_n)$ |
 
