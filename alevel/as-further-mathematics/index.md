@@ -657,9 +657,13 @@ A line (through the origin) is **invariant** if every point on the line maps to 
 **Example**: For $M = \begin{pmatrix} 2 & 0 \\\\ 0 & 1 \end{pmatrix}$ (stretch in $x$), find invariant lines.
 
 Let $(x,y) = (t, mt)$. Then $(x',y') = (2t, mt)$.
+
 For this to lie on $y = mx$: $mt = m(2t) \Rightarrow mt = 2mt \Rightarrow mt(1-2) = 0 \Rightarrow -mt = 0$.
+
 So either $m = 0$ or $t = 0$ (trivial). Thus $m = 0$ is a solution.
+
 Also check vertical lines $x = 0$: $(0,t) \to (0,t)$ maps to itself, so $x = 0$ is also invariant.
+
 Thus invariant lines: $y = 0$ and $x = 0$.
 
 ---
