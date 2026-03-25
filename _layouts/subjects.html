@@ -34,35 +34,38 @@ layout: none
   </button>
 
   <div id="main-container">
-    <div id="content-container">
+    <aside id="toc-sidebar" class="toc-sidebar">
+      <div id="toc" class="table-of-contents">
+        <div class="toc-header-fixed">
+          <h2 class="contents-list">Contents</h2>
+          
+          <!-- TOC Search Bar -->
+          <div class="toc-search-container">
+            <input type="text" 
+                   id="tocSearch" 
+                   class="toc-search-input" 
+                   placeholder="Search contents..."
+                   aria-label="Search table of contents">
+            <button id="tocSearchClear" class="toc-search-clear" aria-label="Clear search" style="display: none;">
+              <i class="bi bi-x-circle"></i>
+            </button>
+          </div>
+          
+          <!-- Reading Progress Bar -->
+          <div class="reading-progress-container">
+            <div class="reading-progress-bar" id="readingProgress"></div>
+            <span class="reading-progress-text" id="progressText">0%</span>
+          </div>
+        </div>
+        
+        <div class="toc-content">
+        </div>
+      </div>
+    </aside>
+
+    <main id="content-container">
       {{ content }}
-    </div>
-    <div id="toc" class="table-of-contents">
-      <div class="toc-header-fixed">
-        <h2 class="contents-list">Contents</h2>
-        
-        <!-- TOC Search Bar -->
-        <div class="toc-search-container">
-          <input type="text" 
-                 id="tocSearch" 
-                 class="toc-search-input" 
-                 placeholder="Search contents..."
-                 aria-label="Search table of contents">
-          <button id="tocSearchClear" class="toc-search-clear" aria-label="Clear search" style="display: none;">
-            <i class="bi bi-x-circle"></i>
-          </button>
-        </div>
-        
-        <!-- Reading Progress Bar -->
-        <div class="reading-progress-container">
-          <div class="reading-progress-bar" id="readingProgress"></div>
-          <span class="reading-progress-text" id="progressText">0%</span>
-        </div>
-      </div>
-      
-      <div class="toc-content">
-      </div>
-    </div>
+    </main>
   </div>
 
   {% include footer.html %}
