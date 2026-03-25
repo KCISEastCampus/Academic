@@ -20,7 +20,7 @@ redirect_from:
 ## P2.1: Algebra and Functions
 
 ### Algebraic Fractions
-- Manipulate algebraic fractions similarly to numeric fractions
+- Manipulate algebraic fractions similarly to numeric fractions$\pi$
 - **Addition example**: $\frac{x}{x+4} + \frac{4}{x-1} = \frac{x(x-1) + 4(x+4)}{(x+4)(x-1)} = \frac{x^2 + 3x + 16}{(x+4)(x-1)}$
 - **Multiplication example**: $\frac{x}{x+4} \times \frac{4}{x-1} = \frac{4x}{(x-1)(x+4)}$
 - **Division example**: $\frac{x}{x+4} \div \frac{4}{x-1} = \frac{x}{x+4} \times \frac{x-1}{4} = \frac{x(x-1)}{4(x+4)}$
