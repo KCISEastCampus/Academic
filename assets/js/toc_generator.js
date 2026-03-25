@@ -188,7 +188,15 @@ function generateTOC() {
     initTOCSearch();
     initReadingProgress();
 
-    const initialHashId = decodeURIComponent(window.location.hash.replace('#', ''));
+    let initialHashId = null;
+    if (window.location.hash) {
+      try {
+        initialHashId = decodeURIComponent(window.location.hash.replace('#', ''));
+      } catch (e) {
+        console.error('Failed to decode URL hash for TOC initialisation:', e);
+        initialHashId = null;
+      }
+    }
     if (initialHashId && document.getElementById(initialHashId)) {
       expandAncestors(initialHashId);
     }
@@ -362,6 +370,36 @@ function initTOCSearch() {
       // While searching, reveal all .toc-children containers so matches are visible
       tocContent.classList.add('toc-searching');
 
+      // Helper: safely highlight matching text using DOM nodes (avoids XSS via innerHTML)
+      function highlightText(link, originalText, term) {
+        link.textContent = '';
+        const regex = new RegExp(`(${term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+        let lastIndex = 0;
+        let match;
+        while ((match = regex.exec(originalText)) !== null) {
+          const matchStart = match.index;
+          const matchEnd = matchStart + match[0].length;
+          if (matchStart > lastIndex) {
+            link.appendChild(document.createTextNode(originalText.slice(lastIndex, matchStart)));
+          }
+          const span = document.createElement('span');
+          span.className = 'toc-match';
+          span.textContent = originalText.slice(matchStart, matchEnd);
+          link.appendChild(span);
+          lastIndex = matchEnd;
+        }
+        if (lastIndex < originalText.length) {
+          link.appendChild(document.createTextNode(originalText.slice(lastIndex)));
+        }
+      }
+
+      // First pass: restore text and determine direct matches per <li>
+      const allListItems = Array.from(tocContent.querySelectorAll('li'));
+      allListItems.forEach(li => {
+        li.style.display = 'none';
+        li.dataset.searchMatch = 'false';
+      });
+
       let visibleCount = 0;
       tocLinks.forEach(link => {
         // Restore plain text before re-evaluating
@@ -374,13 +412,23 @@ function initTOCSearch() {
         const text = originalText.toLowerCase();
         const listItem = link.closest('li');
         if (text.includes(searchTerm)) {
-          listItem.style.display = '';
+          listItem.dataset.searchMatch = 'true';
+          // Highlight the matching substring using safe DOM nodes
+          highlightText(link, originalText, searchTerm);
+        }
+      });
+
+      // Second pass: show each matching <li> and all its ancestor <li> items
+      allListItems.forEach(li => {
+        if (li.dataset.searchMatch === 'true') {
+          li.style.display = '';
           visibleCount++;
-          // Highlight the matching substring
-          const regex = new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
-          link.innerHTML = originalText.replace(regex, '<span class="toc-match">$1</span>');
-        } else {
-          listItem.style.display = 'none';
+          // Walk up the tree, showing ancestor <li> items so the match is reachable
+          let ancestor = li.parentElement && li.parentElement.closest('li');
+          while (ancestor) {
+            ancestor.style.display = '';
+            ancestor = ancestor.parentElement && ancestor.parentElement.closest('li');
+          }
         }
       });
 

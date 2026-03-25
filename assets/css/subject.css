@@ -1427,7 +1427,12 @@ body.scheme-alevel .toc-h4 > .toc-item-inner > a:hover::before {
     padding: 0;
   }
   .toc-sidebar {
-    display: contents; /* Let mobile .table-of-contents handle its own fixed positioning */
+    display: block; /* Keep <aside> as a real box; mobile .table-of-contents handles its own fixed positioning */
+    width: 100%;
+    margin-right: 0;
+    position: static;
+    top: auto;
+    height: auto;
   }
 }
 
