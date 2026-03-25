@@ -14,114 +14,56 @@ function generateTOC() {
     }
   });
 
-  // Build a nested tree from the flat heading list
-  function buildTree(headings) {
-    const root = { children: [], level: 0, heading: null };
-    const stack = [root];
-    headings.forEach(h => {
-      const level = parseInt(h.tagName[1], 10);
-      const node = { heading: h, level, children: [] };
-      while (stack.length > 1 && stack[stack.length - 1].level >= level) {
-        stack.pop();
-      }
-      stack[stack.length - 1].children.push(node);
-      stack.push(node);
-    });
-    return root;
-  }
+  // Determine the minimum heading level so numbering starts at 1
+  const minLevel = Math.min(...headers.map(h => parseInt(h.tagName[1], 10)));
+  const counters = [0, 0, 0, 0]; // max 4 levels deep
 
-  // Recursively render the tree as nested <ul> elements
-  function renderTree(node) {
-    const ul = document.createElement('ul');
-    ul.className = 'toc-list';
+  // Build flat ordered list — all items always visible, Wikipedia-style
+  const ol = document.createElement('ol');
+  ol.className = 'toc-list';
 
-    node.children.forEach(child => {
-      const li = document.createElement('li');
-      li.className = `toc-item toc-h${child.level}`;
-      li.dataset.headingId = child.heading.id;
-      li.dataset.level = String(child.level);
+  headers.forEach(header => {
+    const level = parseInt(header.tagName[1], 10);
+    const depth = Math.min(level - minLevel, 3); // 0-based depth, capped at 3
 
-      const itemInner = document.createElement('div');
-      itemInner.className = 'toc-item-inner';
+    // Increment counter at this depth, reset all deeper counters
+    counters[depth]++;
+    for (let i = depth + 1; i < 4; i++) {
+      counters[i] = 0;
+    }
 
-      const hasChildren = child.children.length > 0;
+    // Build section number string: "1", "1.1", "1.1.1", etc.
+    const numberStr = counters.slice(0, depth + 1).join('.');
 
-      if (hasChildren) {
-        const toggleBtn = document.createElement('button');
-        toggleBtn.className = 'toc-expand-btn';
-        toggleBtn.setAttribute('aria-label', 'Toggle section');
-        toggleBtn.setAttribute('type', 'button');
-        toggleBtn.setAttribute('aria-expanded', child.level <= 1 ? 'true' : 'false');
-        toggleBtn.innerHTML = child.level <= 1
-          ? '<i class="bi bi-chevron-down" aria-hidden="true"></i>'
-          : '<i class="bi bi-chevron-right" aria-hidden="true"></i>';
-        toggleBtn.addEventListener('click', e => {
-          e.preventDefault();
-          e.stopPropagation();
-          const isExpanded = li.classList.toggle('toc-expanded');
-          toggleBtn.querySelector('i').className = isExpanded
-            ? 'bi bi-chevron-down'
-            : 'bi bi-chevron-right';
-          toggleBtn.setAttribute('aria-expanded', String(isExpanded));
-        });
-        itemInner.appendChild(toggleBtn);
-      } else {
-        const placeholder = document.createElement('span');
-        placeholder.className = 'toc-expand-placeholder';
-        placeholder.setAttribute('aria-hidden', 'true');
-        itemInner.appendChild(placeholder);
-      }
+    const li = document.createElement('li');
+    li.className = `toc-item toc-h${level}`;
+    li.dataset.headingId = header.id;
+    li.dataset.level = String(level);
 
-      const a = document.createElement('a');
-      a.href = `#${child.heading.id}`;
-      a.textContent = child.heading.textContent;
-      itemInner.appendChild(a);
+    const a = document.createElement('a');
+    a.href = `#${header.id}`;
 
-      li.appendChild(itemInner);
+    const numSpan = document.createElement('span');
+    numSpan.className = 'toc-number';
+    numSpan.textContent = numberStr;
+    numSpan.setAttribute('aria-hidden', 'true');
 
-      if (hasChildren) {
-        li.classList.add('toc-has-children');
-        // H1 items start expanded; H2+ start collapsed
-        if (child.level <= 1) {
-          li.classList.add('toc-expanded');
-        }
-        const childUl = renderTree(child);
-        childUl.className = 'toc-list toc-children';
-        li.appendChild(childUl);
-      }
+    const textSpan = document.createElement('span');
+    textSpan.className = 'toc-text';
+    textSpan.textContent = header.textContent;
 
-      ul.appendChild(li);
-    });
+    a.appendChild(numSpan);
+    a.appendChild(textSpan);
+    li.appendChild(a);
+    ol.appendChild(li);
+  });
 
-    return ul;
-  }
-
-  const tree = buildTree(headers);
-  const renderedTree = renderTree(tree);
   tocContent.innerHTML = '';
-  tocContent.appendChild(renderedTree);
+  tocContent.appendChild(ol);
 
   const tocLinks = Array.from(tocContent.querySelectorAll('a'));
   let isScrolling = false;
   let lastUpdateTime = 0;
-
-  // Expand all ancestor items for a given heading ID
-  function expandAncestors(headingId) {
-    const item = tocContent.querySelector(`.toc-item[data-heading-id="${headingId}"]`);
-    if (!item) return;
-    let parent = item.parentElement && item.parentElement.closest('.toc-item');
-    while (parent) {
-      if (parent.classList.contains('toc-has-children') && !parent.classList.contains('toc-expanded')) {
-        parent.classList.add('toc-expanded');
-        const btn = parent.querySelector(':scope > .toc-item-inner > .toc-expand-btn');
-        if (btn) {
-          btn.querySelector('i').className = 'bi bi-chevron-down';
-          btn.setAttribute('aria-expanded', 'true');
-        }
-      }
-      parent = parent.parentElement && parent.parentElement.closest('.toc-item');
-    }
-  }
 
   // Intersection Observer for scroll-synced active heading detection
   const observer = new IntersectionObserver(
@@ -142,7 +84,6 @@ function generateTOC() {
         const activeLink = tocContent.querySelector(`a[href="#${activeEntry.target.id}"]`);
         if (activeLink) {
           activeLink.classList.add('active');
-          expandAncestors(activeEntry.target.id);
           // Auto-scroll TOC to keep the active item in view (desktop only)
           if (window.innerWidth > 1024) {
             activeLink.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -172,7 +113,6 @@ function generateTOC() {
 
         tocLinks.forEach(l => l.classList.remove('active'));
         link.classList.add('active');
-        expandAncestors(targetId);
 
         // Close the mobile slide-in panel after navigation
         if (window.innerWidth <= 1024) {
@@ -190,7 +130,8 @@ function generateTOC() {
 
     const initialHashId = decodeURIComponent(window.location.hash.replace('#', ''));
     if (initialHashId && document.getElementById(initialHashId)) {
-      expandAncestors(initialHashId);
+      const initialLink = tocContent.querySelector(`a[href="#${initialHashId}"]`);
+      if (initialLink) initialLink.classList.add('active');
     }
   }, 100);
 
@@ -359,26 +300,27 @@ function initTOCSearch() {
     searchClear.style.display = searchTerm ? 'flex' : 'none';
 
     if (searchTerm) {
-      // While searching, reveal all .toc-children containers so matches are visible
-      tocContent.classList.add('toc-searching');
-
       let visibleCount = 0;
       tocLinks.forEach(link => {
-        // Restore plain text before re-evaluating
         const href = link.getAttribute('href');
         const targetId = href ? href.substring(1) : '';
         const targetElement = targetId ? document.getElementById(targetId) : null;
-        const originalText = targetElement ? targetElement.textContent : link.textContent;
-        link.textContent = originalText;
+        const originalText = targetElement ? targetElement.textContent : '';
+
+        const textSpan = link.querySelector('.toc-text');
+        // Reset to plain text before re-evaluating
+        if (textSpan) textSpan.textContent = originalText;
 
         const text = originalText.toLowerCase();
         const listItem = link.closest('li');
         if (text.includes(searchTerm)) {
           listItem.style.display = '';
           visibleCount++;
-          // Highlight the matching substring
-          const regex = new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
-          link.innerHTML = originalText.replace(regex, '<span class="toc-match">$1</span>');
+          // Highlight the matching substring in the text span only
+          if (textSpan) {
+            const regex = new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+            textSpan.innerHTML = originalText.replace(regex, '<span class="toc-match">$1</span>');
+          }
         } else {
           listItem.style.display = 'none';
         }
@@ -399,13 +341,13 @@ function initTOCSearch() {
       }
     } else {
       // No search term — restore everything
-      tocContent.classList.remove('toc-searching');
       tocLinks.forEach(link => {
         const href = link.getAttribute('href');
         const targetId = href ? href.substring(1) : '';
         const targetElement = targetId ? document.getElementById(targetId) : null;
-        if (targetElement) {
-          link.textContent = targetElement.textContent;
+        const textSpan = link.querySelector('.toc-text');
+        if (textSpan && targetElement) {
+          textSpan.textContent = targetElement.textContent;
         }
         const listItem = link.closest('li');
         if (listItem) listItem.style.display = '';
@@ -442,13 +384,10 @@ function initReadingProgress() {
   
   function updateProgress() {
     const windowHeight = window.innerHeight;
-    const documentHeight = document.documentElement.scrollHeight;
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    
-    // Calculate content-specific progress
     const contentTop = contentContainer.offsetTop;
     const contentHeight = contentContainer.offsetHeight;
     const contentBottom = contentTop + contentHeight;
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     
     let progress = 0;
     
@@ -492,4 +431,3 @@ function initReadingProgress() {
   // Initial update
   updateProgress();
 }
-
