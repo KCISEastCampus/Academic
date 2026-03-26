@@ -444,7 +444,8 @@ mjx-container[jax="CHTML"][display="false"] {
   margin: 1.5rem auto !important;
   text-align: center !important;
   overflow-x: auto !important;
-  overflow-y: visible !important;
+  overflow-y: hidden !important;
+  padding: 0.5em 0 !important;
 }
 
 /* Matrix environments (mjx-mtable / mjx-mtr / mjx-mtd) need to be visible
@@ -498,7 +499,8 @@ mjx-mfrac {
     margin: 1rem auto !important;
     max-width: 100% !important;
     overflow-x: auto !important;
-    overflow-y: visible !important;
+    overflow-y: hidden !important;
+    padding: 0.5em 0 !important;
     /* Enable horizontal scrolling for long equations */
     -webkit-overflow-scrolling: touch !important;
   }
