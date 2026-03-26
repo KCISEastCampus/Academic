@@ -191,6 +191,168 @@ Digestion: is the process in which large molecules are hydrolysed by enzymes to 
 9. Triglycerides hydrolysed by enzyme
 10. Products diffuse into **body cells**
 
+## Chapter 14 Mammalian blood - defensive mechanisms
+### 14.1 Cell recognition and the cells of the immune system
+
+![Defence Mechanisms](../../assets/img/as-biology-C14-img1.png)
+Mammalian immune defence mechanisms are divided into two main categories, with specific responses mediated by **lymphocytes** (a type of white blood cell) in two forms:
+- **Non-specific response**: Immediate, identical for all pathogens (e.g., physical barriers like skin, phagocytosis)
+- **Specific response**: Slower, tailored to individual pathogens
+  - Cell-mediated response (involves T lymphocytes)
+  - Humoral response (involves B lymphocytes)
+
+#### Key recognition molecules
+Protein molecules enable the immune system to identify:
+- Pathogens
+- Non-self material
+- Toxins produced by pathogens
+- Abnormal body cells (e.g., cancer cells)
+
+### 14.2 Phagocytosis
+Phagocytosis is a core non-specific immune response that destroys pathogens via phagocytic white blood cells.
+
+![Phagocytosis](../../assets/img/as-biology-C14-img2.png)
+
+#### Phagocytosis process
+1. Chemicals released by pathogens/damaged/abnormal cells **attract phagocytes** (movement along a concentration gradient).
+2. Phagocytes bind to pathogen surface antigens via cell-surface receptors, then **engulf the pathogen** to form a **phagosome**.
+3. Lysosomes within the phagocyte fuse with the phagosome, releasing **lysozymes** that hydrolyse the pathogen’s cell wall and destroy it.
+4. Hydrolysis products of the pathogen are absorbed by the phagocyte; waste debris is eliminated.
+
+#### Core definitions
+##### Antigen
+Specific cell-surface molecules (usually **proteins** on cell membranes/walls) that act as cell identifiers. The immune system distinguishes **self** and **non-self** cells by recognizing unique antigen patterns.
+
+##### Lymphocytes
+Specialized white blood cells for specific immunity, maturing in different sites:
+- **B lymphocytes (B cells)**: Mature in the **bone marrow**; mediate **humoral immunity** (antibody-based).
+- **T lymphocytes (T cells)**: Mature in the **thymus gland**; mediate **cell-mediated immunity** (cell-to-cell interaction).
+
+### 14.3 Cell-mediated immune response
+This response targets **pathogen-infected body cells**, abnormal cells (e.g., cancer) and transplanted cells—all classified as **antigen-presenting cells** (display foreign antigens on their surface).
+
+#### Antigen-presenting cells (APCs)
+Cells that display foreign antigens on their surface include:
+- Phagocytes (after engulfing/hydrolysing pathogens)
+- Infected body cells
+- Transplanted cells (from the same species with different antigens)
+- Cancer cells (abnormal surface antigens)
+
+#### Cell-mediated response steps
+![Cell-mediated Response](../../assets/img/as-biology-C14-img3.png)
+1. Pathogens invade body cells or are engulfed by phagocytes.
+2. Phagocytes present pathogen antigens on their cell-surface membrane.
+3. Receptors on a **specific helper T cell (TH cell)** bind to these foreign antigens, activating the helper T cell.
+4. The activated helper T cell divides rapidly by **mitosis** to form a clone of T cells.
+
+#### Functions of cloned T cells
+1. Develop into **memory T cells**: Circulate in blood/tissue fluid, ready to respond rapidly to future infection by the same pathogen.
+2. Stimulate B cell division and activation (links cell-mediated and humoral immunity).
+3. Enhance phagocytosis (stimulate phagocytic activity).
+4. Activate **cytotoxic T cells (Tc cells)** to kill infected/abnormal cells.
+
+#### Cytotoxic T cell action
+Cytotoxic T cells kill abnormal/pathogen-infected cells by producing **perforin**—a protein that forms holes in the target cell’s membrane. This makes the membrane fully permeable, causing the cell to lyse and die.
+- **Key target**: Virally infected cells (destroying them stops viral replication and further spread of infection).
+
+### 14.4B lymphocytes, humoral immunity, and antibodies
+**Humoral immunity** is antibody-mediated immunity that acts in the **blood plasma and tissue fluid** (the "humors"), targeting free pathogens (not infected cells). B cells are the primary mediators, with each B cell producing antibodies specific to one antigen.
+
+#### B cell differentiation
+After activation, each B cell clone develops into two specialized cell types:
+1. **Plasma cells**: Secrete large quantities of **antibodies** into blood plasma; survive only a few days. Provide the **immediate immune defence** by binding to and destroying antigens.
+2. **Memory B cells**: Long-lived cells that mediate the **secondary immune response**.
+![Memory cells](../../assets/img/as-biology-C14-img4.png)
+
+#### Humoral immune response steps
+![Steps](../../assets/img/as-biology-C14-img5.png)
+1. B cells take up surface antigens of invading pathogens via their cell-surface receptors.
+2. B cells process the antigens and **present them on their own surface**.
+3. Activated helper T cells bind to the processed antigens on B cells, fully activating the B cells.
+4. Activated B cells divide by mitosis to form a clone of **plasma cells** (and a small number of memory B cells).
+5. Cloned plasma cells produce and secrete **antigen-specific antibodies** that match the pathogen’s surface antigens.
+6. Antibodies bind to pathogen antigens (**antigen-antibody complex**) and destroy the pathogen.
+7. Memory B cells persist in the body; on re-encountering the same antigen, they rapidly divide into plasma cells for the secondary immune response.
+
+#### Antibody structure
+![Antibody Structure](../../assets/img/as-biology-C14-img6.png)
+Antibodies are **globular proteins** synthesised by B cells, with a highly specific structure:
+- Composed of **four polypeptide chains**: 2 heavy (long) chains and 2 light (short) chains, held together by **disulfide bridges**.
+- **Variable region**: Unique to each antibody; forms the **antigen-binding site** (matches the shape of a specific antigen).
+- **Constant region**: Identical for all antibodies of the same type; includes a receptor-binding site for interaction with immune cells (e.g., phagocytes).
+
+#### Antibody action (pathogen destruction)
+Antibodies do not directly kill pathogens—they mark them for destruction by two key mechanisms:
+1. **Agglutination**: Antibodies bind to multiple bacterial cells, causing them to clump together. Clumped bacteria are easier for phagocytes to locate and engulf.
+2. **Opsonization**: Antibodies act as **markers** on pathogen surfaces, stimulating phagocytes to recognize and engulf the attached pathogens.
+
+### 14.5 Vaccination
+**Immunity** is the ability of an organism to resist infection by disease-causing microorganisms (pathogens). Vaccination is the basis of **artificial active immunity**, inducing a specific immune response without causing the full disease.
+
+#### Types of immunity
+Immunity is classified by **how it is acquired** and **whether the body produces its own antibodies**:
+
+| Feature                | Active Immunity                          | Passive Immunity                          |
+|------------------------|------------------------------------------|-------------------------------------------|
+| Antibody production    | Produced by the body itself              | Not produced by the body (external source)|
+| Time to develop        | 1-2 weeks (delayed)                      | Immediate                                 |
+| Memory cells           | Present (long-lasting immunity)          | Absent (temporary immunity)               |
+| **Induced by:**       |                |
+| Natural induction  | Exposure to a live pathogen (infection)  | Antibodies from another organism (e.g., placenta/breast milk for fetuses/infants) |
+| Artificial induction| Vaccination (inactivated/attenuated pathogen/antigen) | Injected manufactured antibodies (e.g., snake bite anti-venom, monoclonal antibodies) |
+
+##### Key details
+- **Passive immunity**: No contact with pathogen/antigen required; immunity fades as external antibodies are broken down (no replacement).
+- **Active immunity**: Pathogen/antigen contact required; immunity is long-lasting due to memory cells.
+  - **Natural active**: From natural infection (e.g., recovering from a cold).
+  - **Artificial active**: From vaccination (core of immunization programmes).
+
+#### Features of a successful vaccination programme
+To be effective, a vaccination programme must meet the following criteria:
+1. Affordable and sufficient vaccine for the **most vulnerable populations** (e.g., infants, the elderly).
+2. Few or no side effects (to encourage uptake).
+3. Reliable vaccine production, storage and transport (maintain vaccine efficacy).
+4. Proper and timely vaccine administration (correct dosage/schedule).
+5. Vaccinate a high enough proportion of the population to achieve **herd immunity**.
+
+#### Herd immunity
+**Herd immunity** occurs when a **large proportion of the population is vaccinated**, creating an indirect barrier to pathogen spread.
+- **Mechanism**: High vaccination rates mean susceptible (unvaccinated) individuals rarely come into contact with infected people, as the pathogen cannot spread easily through the immune population.
+- **Essential for**: Individuals who cannot be vaccinated safely (e.g., babies with immature immune systems, people with compromised immune systems, those with medical contraindications).
+- **Optimization**: Achieved best by **mass vaccination at the same time**, temporarily reducing disease cases and interrupting pathogen transmission (the required vaccination percentage varies by disease).
+
+#### Why vaccination may not eliminate a disease
+Despite effective vaccines, some diseases cannot be fully eliminated due to these key factors:
+1. Vaccination fails to induce immunity in some individuals (primary vaccine failure).
+2. Some people develop the disease **immediately after vaccination** (before immunity is fully established) and can transmit the pathogen to others.
+3. Pathogens **mutate frequently**, causing **antigenic variability** (changes to surface antigens).
+4. Antigenic variability (e.g., influenza virus, HIV) leads to short-lived immunity, resulting in repeated infections and the need for updated vaccines.
+5. Too many pathogen varieties/strains make a **universally effective vaccine** nearly impossible (e.g., the common cold, which has hundreds of viral strains).
+6. Pathogens can **hide from the immune system** (e.g., inside body cells or in immune-privileged sites).
+7. Individuals object to vaccination for **religious, ethical or medical reasons** (low uptake reduces herd immunity).
+
+#### Antigen Variability
+**Antigen variability** is the change in the structure/shape of pathogen surface antigens due to **random genetic mutations**.
+- Vaccines and immunity are far easier to develop for pathogens with **low/no antigen variability** (e.g., smallpox, polio) than those with high variability (e.g., flu, COVID-19).
+- Mutated antigens are unrecognizable by existing memory cells, meaning the immune system mounts a slow **primary response** instead of a rapid secondary response.
+
+#### Secondary Immune Response
+The secondary immune response is the **rapid, amplified immune reaction** that occurs when the body re-encounters an antigen it has previously been exposed to (via infection or vaccination).
+1. During the **primary immune response**, plasma cells secrete short-lived antibodies and produce long-lived **memory B/T cells** that circulate in the bloodstream.
+2. On re-exposure to the same antigen, memory cells rapidly divide into new **plasma cells** (and more memory cells) without the need for helper T cell activation (faster pathway).
+3. Plasma cells in the secondary response secrete antibodies **much faster and in larger quantities** than in the primary response, destroying the pathogen before symptoms develop.
+4. New memory cells are produced to maintain **long-term immunity** against future reinfections.
+
+#### The ethics of using vaccines
+Vaccine development, testing and implementation raise important ethical questions that balance individual risk, public health and moral values:
+1. Vaccine production/development often involves **animal testing**—is this ethically acceptable?
+2. Vaccines may have rare side effects that cause long-term harm—how to balance this small individual risk against the greater harm of widespread disease?
+3. Who should be **vaccine test subjects**? How to conduct trials ethically, and how much risk should individuals accept for public health benefit?
+4. Is it ethical to test new vaccines (with unknown risks) **only in countries where the disease is common** (on the grounds that the population has the most to gain)?
+5. Is **compulsory vaccination** justified for public health, especially during epidemics? On what ethical grounds can individuals opt out?
+6. Is it worth continuing **costly vaccination programmes** for near-eradicated diseases, even if this reduces funding for other medical treatments?
+7. How to balance **individual vaccine risks** (e.g., rare side effects) against the **population-wide benefits** of disease control and eradication?
+
 ## Chapter 15 Mammalian blood - the circulatory system
 
 ### 15.1 Circulatory system of a mammal
