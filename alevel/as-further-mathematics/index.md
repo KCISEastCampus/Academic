@@ -571,6 +571,7 @@ $$A^{-1} = \frac{1}{ad - bc} \begin{pmatrix} d & -b \\ -c & a \end{pmatrix}$$
 **Example**: Find the inverse of $A = \begin{pmatrix} 2 & 1 \\\\ 5 & 3 \end{pmatrix}$.
 
 $\det(A) = 2\times3 - 1\times5 = 6 - 5 = 1$
+
 $$A^{-1} = \frac{1}{1} \begin{pmatrix} 3 & -1 \\ -5 & 2 \end{pmatrix} = \begin{pmatrix} 3 & -1 \\ -5 & 2 \end{pmatrix}$$
 
 #### Transpose of a Matrix
