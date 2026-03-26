@@ -693,6 +693,7 @@ Plot $y^2$ against $x^3$: gradient $= a$, intercept $= b$.
 
 **Worked Example**:
 Experimental data gives:
+
 | $x$ | 1 | 2 | 3 | 4 | 5 |
 |-----|---|---|---|---|---|
 | $y$ | 2.5 | 10.0 | 22.5 | 40.0 | 62.5 |
@@ -701,6 +702,7 @@ Find a relationship of the form $y = kx^n$.
 
 **Solution**:
 Take logs:
+
 | $\ln x$ | 0 | 0.693 | 1.099 | 1.386 | 1.609 |
 |---------|---|---|---|---|---|
 | $\ln y$ | 0.916 | 2.303 | 3.114 | 3.689 | 4.135 |
@@ -830,12 +832,14 @@ A factory has three machines producing items:
 An item is found defective. What is the probability it came from Machine A?
 
 **Solution**:
+
 $P(A) = 0.4$, $P(B) = 0.35$, $P(C) = 0.25$
+
 $P(D \mid A) = 0.02$, $P(D \mid B) = 0.03$, $P(D \mid C) = 0.04$
 
 $P(D) = 0.4\times0.02 + 0.35\times0.03 + 0.25\times0.04 = 0.008 + 0.0105 + 0.01 = 0.0285$
 
-$$P(A \mid D) = \frac{0.4 \times 0.02}{0.0285} = \frac{0.008}{0.0285} = 0.2807$$
+$P(A \mid D) = \frac{0.4 \times 0.02}{0.0285} = \frac{0.008}{0.0285} = 0.2807$
 
 ### 1.4 Tree Diagrams
 
@@ -870,7 +874,9 @@ $$E(X) = \frac{a+b}{2}$$
 $$\text{Var}(X) = \frac{(b-a)^2}{12}$$
 
 **Derivation of variance**:
+
 $$E(X^2) = \int_a^b x^2 \cdot \frac{1}{b-a} \, dx = \frac{1}{b-a} \left[ \frac{x^3}{3} \right]_a^b = \frac{b^3 - a^3}{3(b-a)} = \frac{a^2 + ab + b^2}{3}$$
+
 $$\text{Var}(X) = E(X^2) - [E(X)]^2 = \frac{a^2 + ab + b^2}{3} - \left(\frac{a+b}{2}\right)^2 = \frac{(b-a)^2}{12}$$
 
 ### 2.5 Probability Calculations
