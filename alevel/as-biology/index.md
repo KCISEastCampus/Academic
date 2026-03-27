@@ -544,19 +544,11 @@ The human heart is two separate side-by-side pumps:
   6. Electrical wave is released from fibres → ventricles contract **simultaneously, from apex upwards**.
 
 #### Pressure and volume changes of the heart
-[INSERT IMAGE]
-[INSERT IMAGE]
-
-- Aortic pressure rises when muscle in the wall of the ventricles contracts and blood is forced into the aorta; it then gradually falls but never below around 12 kPa (due to aortic wall elasticity/recoil).
-- Ventricular pressure is low at first, gradually increases as ventricles fill with blood; rises dramatically when ventricular walls contract (AV valves close), falls as ventricles empty and relax.
-- Atrial pressure is always relatively low (thin atrial walls); highest when contracting, drops when relaxing/filling.
-- Ventricular volume rises as atria contract and ventricles fill; drops suddenly when semilunar valve opens (blood forced into aorta); increases again as AV valve opens.
-- Atrial volume rises as blood returns to the heart; drops when atria contract and blood moves to ventricles.
-
-#### Pressure reference
 
 ![Pressure Reference IMG 1](../../assets/img/as-biology-C15-img1.png)
 ![Pressure Reference IMG 2](../../assets/img/as-biology-C15-img2.png)
+
+#### Pressure reference
 
 - Systolic pressure = the maximum blood pressure in the arteries
 - Diastolic pressure = the minimum blood pressure in the arteries
