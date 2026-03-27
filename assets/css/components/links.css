@@ -1,0 +1,120 @@
+/**
+ * Wikipedia-Style Links Component
+ *
+ * Styles standard links (progressive blue), visited links (purple), hover states,
+ * and external link icon styling.
+ *
+ * Validates: Requirements 11.1, 11.2, 11.3, 11.6
+ */
+
+/* ============================================================================
+   Base Link Styles
+   ============================================================================ */
+
+a {
+  color: var(--color-progressive);
+  text-decoration: none;
+  transition: color var(--transition-fast) var(--transition-ease);
+}
+
+a:hover {
+  color: var(--color-progressive-hover);
+  text-decoration: underline;
+}
+
+a:visited {
+  color: var(--color-visited);
+}
+
+a:active {
+  color: var(--color-progressive-active);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-progressive);
+  outline-offset: 2px;
+  border-radius: var(--border-radius-small);
+}
+
+/* ============================================================================
+   External Link Icon
+   ============================================================================ */
+
+/* External links get an icon after them */
+a[href^="http"]:not([href*="{{ site.url }}"]):not(.no-external-icon)::after,
+a[href^="//"]:not(.no-external-icon)::after {
+  content: "\2197"; /* ↗ arrow */
+  display: inline-block;
+  font-size: 0.75em;
+  margin-left: 2px;
+  vertical-align: super;
+  line-height: 1;
+  color: var(--color-subtle);
+}
+
+/* ============================================================================
+   New / Red Links (Wikipedia-style for missing pages)
+   ============================================================================ */
+
+a.new {
+  color: var(--color-destructive);
+}
+
+a.new:hover {
+  color: var(--color-destructive);
+  text-decoration: underline;
+}
+
+a.new:visited {
+  color: var(--color-destructive);
+}
+
+/* ============================================================================
+   Navigation Links
+   ============================================================================ */
+
+.sidebar-nav a,
+nav a {
+  color: var(--color-base);
+  text-decoration: none;
+}
+
+.sidebar-nav a:hover,
+nav a:hover {
+  color: var(--color-progressive);
+  text-decoration: none;
+}
+
+.sidebar-nav a:visited,
+nav a:visited {
+  color: var(--color-base);
+}
+
+/* ============================================================================
+   Anchor Links (section headings)
+   ============================================================================ */
+
+.mw-editsection-bracket {
+  color: var(--color-subtle);
+  font-weight: var(--font-weight-normal);
+}
+
+/* ============================================================================
+   Print Styles
+   ============================================================================ */
+
+@media print {
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  /* Show full URL for external links in print */
+  a[href^="http"]::after,
+  a[href^="//"]::after {
+    content: " (" attr(href) ")";
+    font-size: var(--font-size-x-small);
+    font-weight: var(--font-weight-normal);
+    color: #555;
+  }
+}

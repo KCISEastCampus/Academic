@@ -1,110 +1,187 @@
-<meta charset="UTF-8">
-{% assign needs_mathjax = false %}
-{% if page.mathjax %}
-  {% assign needs_mathjax = true %}
-{% elsif page.layout == 'subjects' %}
-  {% assign needs_mathjax = true %}
-{% endif %}
+<meta charset="UTF-8" />
+{% assign needs_mathjax = false %} {% if page.mathjax %} {% assign needs_mathjax
+= true %} {% elsif page.layout == 'subjects' %} {% assign needs_mathjax = true
+%} {% endif %}
 <!-- Immediately apply saved theme to avoid flash: reads localStorage before paint -->
-<script>try{(function(){var t=localStorage.getItem('site-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);} )();}catch(e){/* ignore */}</script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script>
+    try {
+        (function () {
+            var t = localStorage.getItem("site-theme");
+            if (t) {
+                document.documentElement.setAttribute("data-bs-theme", t);
+            } else {
+                var s = window.matchMedia("(prefers-color-scheme: dark)")
+                    .matches
+                    ? "dark"
+                    : "light";
+                document.documentElement.setAttribute("data-bs-theme", s);
+            }
+        })();
+    } catch (e) {
+        /* ignore */
+    }
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <title>{{ page.title | default: site.title | escape }}</title>
-<meta name="description" content="{{ page.description | default: site.description | escape }}">
-<meta name="theme-color" content="#0b1220">
+<meta
+    name="description"
+    content="{{ page.description | default: site.description | escape }}"
+/>
+<meta name="theme-color" content="#1f1f23" />
 
 <!-- Resource hints for performance -->
-<link rel="preconnect" href="https://cdn.bootcdn.net" crossorigin>
-<link rel="preconnect" href="https://cdn.staticfile.net" crossorigin>
-<link rel="preconnect" href="https://unpkg.com" crossorigin>
-<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="preconnect" href="https://cdn.bootcdn.net" crossorigin />
+<link rel="preconnect" href="https://cdn.staticfile.net" crossorigin />
+<link rel="preconnect" href="https://unpkg.com" crossorigin />
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
 
 <!-- Preload critical resources -->
-<link rel="preload" href="/assets/vendor/bootstrap/5.3.3/css/bootstrap.min.css" as="style">
-<link rel="preload" href="/assets/css/style.css" as="style">
-<!-- Preload MathJax for pages that need it -->
+<link
+    rel="preload"
+    href="/assets/vendor/bootstrap/5.3.3/css/bootstrap.min.css"
+    as="style"
+/>
+<link rel="preload" href="/assets/css/style.css" as="style" />
+<!-- Preload MathJax bundle for pages that need it -->
 {% if needs_mathjax %}
-  <link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/tex-chtml-full.js" as="script">
-  <!-- Preload critical MathJax fonts to avoid late rendering -->
-  <link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
-  <link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff" as="font" type="font/woff" crossorigin="anonymous">
-  <link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/output/chtml/fonts/woff-v2/MathJax_AMS-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
-  <link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/output/chtml/fonts/woff-v2/MathJax_Size1-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
-  <link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/output/chtml/fonts/woff-v2/MathJax_Size2-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
-  <link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/output/chtml/fonts/woff-v2/MathJax_Size3-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
-  <link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/output/chtml/fonts/woff-v2/MathJax_Zero.woff" as="font" type="font/woff" crossorigin="anonymous">
+<link
+    rel="preload"
+    href="/assets/vendor/mathjax/3.2.2/es5/tex-svg-full.js"
+    as="script"
+/>
 {% endif %}
 
 <!-- Bootstrap (Local with CDN fallback) -->
-<link href="/assets/vendor/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet"
-  onerror="this.href='https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css'"
-  crossorigin="anonymous">
+<link
+    href="/assets/vendor/bootstrap/5.3.3/css/bootstrap.min.css"
+    rel="stylesheet"
+    onerror="
+        this.href =
+            'https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css'
+    "
+    crossorigin="anonymous"
+/>
 
 <!-- Icons - BootCDN -->
-<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link
+    rel="stylesheet"
+    href="https://cdn.bootcdn.net/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+/>
 
 <!-- Editor & highlighting themes -->
-<link href="/assets/css/gruvbox_dark_rouge.css" rel="stylesheet" media="(prefers-color-scheme: dark)">
+<link
+    href="/assets/css/gruvbox_dark_rouge.css"
+    rel="stylesheet"
+    media="(prefers-color-scheme: dark)"
+/>
 
 <!-- Fonts -->
-<link href="/assets/css/fonts/maplemono.css" rel="stylesheet">
+<link href="/assets/css/fonts/maplemono.css" rel="stylesheet" />
 
-
-<script defer src="https://unpkg.com/mermaid@11.1.1/dist/mermaid.min.js"></script>
+<script
+    defer
+    src="https://unpkg.com/mermaid@11.1.1/dist/mermaid.min.js"
+></script>
 
 <!-- Bootstrap JS: Load asynchronously after DOM ready - with CDN fallback -->
 <script>
-  window.loadBootstrapJS = function() {
-    if (window.bootstrap) return;
+    window.loadBootstrapJS = function () {
+        if (window.bootstrap) return;
 
-    const script = document.createElement('script');
-    script.crossOrigin = 'anonymous';
-    script.onerror = function() {
-      const fallbackScript = document.createElement('script');
-      fallbackScript.src = 'https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js';
-      fallbackScript.crossOrigin = 'anonymous';
-      fallbackScript.onerror = function() {
-        const secondScript = document.createElement('script');
-        secondScript.src = 'https://cdn.staticfile.net/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js';
-        secondScript.crossOrigin = 'anonymous';
-        secondScript.onerror = function() {
-          const thirdScript = document.createElement('script');
-          thirdScript.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js';
-          thirdScript.crossOrigin = 'anonymous';
-          document.head.appendChild(thirdScript);
+        const script = document.createElement("script");
+        script.crossOrigin = "anonymous";
+        script.onerror = function () {
+            const fallbackScript = document.createElement("script");
+            fallbackScript.src =
+                "https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js";
+            fallbackScript.crossOrigin = "anonymous";
+            fallbackScript.onerror = function () {
+                const secondScript = document.createElement("script");
+                secondScript.src =
+                    "https://cdn.staticfile.net/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js";
+                secondScript.crossOrigin = "anonymous";
+                secondScript.onerror = function () {
+                    const thirdScript = document.createElement("script");
+                    thirdScript.src =
+                        "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js";
+                    thirdScript.crossOrigin = "anonymous";
+                    document.head.appendChild(thirdScript);
+                };
+                document.head.appendChild(secondScript);
+            };
+            document.head.appendChild(fallbackScript);
         };
-        document.head.appendChild(secondScript);
-      };
-      document.head.appendChild(fallbackScript);
-    };
 
-    script.src = '/assets/vendor/bootstrap/5.3.3/js/bootstrap.bundle.min.js';
-    document.head.appendChild(script);
-  };
+        script.src =
+            "/assets/vendor/bootstrap/5.3.3/js/bootstrap.bundle.min.js";
+        document.head.appendChild(script);
+    };
 </script>
 
-<!-- Site styles & favicon -->
-<link rel="stylesheet" href="/assets/css/variables.css">
-<link rel="stylesheet" href="/assets/css/utilities.css">
-<link rel="stylesheet" href="/assets/css/style.css">
-<link rel="shortcut icon" href="/assets/favicon.ico">
+<!-- Wikipedia-Style Design System: Base -->
+<link rel="stylesheet" href="/assets/css/base/variables.css" />
+<link rel="stylesheet" href="/assets/css/base/reset.css" />
+<link rel="stylesheet" href="/assets/css/base/typography.css" />
+
+<!-- Wikipedia-Style Design System: Themes -->
+<link rel="stylesheet" href="/assets/css/themes/light.css" />
+<link rel="stylesheet" href="/assets/css/themes/dark.css" />
+
+<!-- Wikipedia-Style Design System: Layout -->
+<link rel="stylesheet" href="/assets/css/layout/header.css" />
+<link rel="stylesheet" href="/assets/css/layout/sidebar.css" />
+<link rel="stylesheet" href="/assets/css/layout/content.css" />
+<link rel="stylesheet" href="/assets/css/layout/toc.css" />
+<link rel="stylesheet" href="/assets/css/layout/footer.css" />
+
+<!-- Wikipedia-Style Design System: Components -->
+<link rel="stylesheet" href="/assets/css/components/infobox.css" />
+<link rel="stylesheet" href="/assets/css/components/navbox.css" />
+<link rel="stylesheet" href="/assets/css/components/tables.css" />
+<link rel="stylesheet" href="/assets/css/components/buttons.css" />
+<link rel="stylesheet" href="/assets/css/components/links.css" />
+<link rel="stylesheet" href="/assets/css/components/lists.css" />
+<link rel="stylesheet" href="/assets/css/components/references.css" />
+<link rel="stylesheet" href="/assets/css/components/messages.css" />
+<link rel="stylesheet" href="/assets/css/components/images.css" />
+<link rel="stylesheet" href="/assets/css/components/code.css" />
+<link rel="stylesheet" href="/assets/css/components/math.css" />
+
+<!-- Wikipedia-Style Design System: Utilities -->
+<link rel="stylesheet" href="/assets/css/utilities/accessibility.css" />
+<link rel="stylesheet" href="/assets/css/utilities/spacing.css" />
+<link rel="stylesheet" href="/assets/css/utilities/display.css" />
+<link rel="stylesheet" href="/assets/css/utilities/print.css" />
+
+<!-- Legacy Site styles (override layer) -->
+<link rel="stylesheet" href="/assets/css/variables.css" />
+<link rel="stylesheet" href="/assets/css/utilities.css" />
+<link rel="stylesheet" href="/assets/css/style.css" />
+<link rel="shortcut icon" href="/assets/favicon.ico" />
 
 <script defer src="/assets/js/image_lazy_load.js"></script>
 <script defer src="/assets/js/search.js"></script>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    setTimeout(window.loadBootstrapJS, 100);
+    document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(window.loadBootstrapJS, 100);
 
-    if (window.mermaid && window.mermaid.initialize) {
-      try {
-        window.mermaid.initialize({ startOnLoad: false, theme: 'dark' });
-        window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
-      } catch (e) {
-        // Silently fail if mermaid initialization fails
-      }
-    }
-  });
+        if (window.mermaid && window.mermaid.initialize) {
+            try {
+                window.mermaid.initialize({
+                    startOnLoad: false,
+                    theme: "dark",
+                });
+                window.mermaid.init(
+                    undefined,
+                    document.querySelectorAll(".language-mermaid"),
+                );
+            } catch (e) {
+                // Silently fail if mermaid initialization fails
+            }
+        }
+    });
 </script>
 
 <!-- Interactive Effects Script -->

@@ -1,0 +1,70 @@
+/**
+ * Light Theme
+ * 
+ * Light mode color palette for Wikipedia-style design.
+ * Provides high contrast and readability for bright environments.
+ * 
+ * Validates: Requirements 2.1
+ */
+
+html[data-bs-theme="light"] {
+  /* Primary Background Colors */
+  --background-primary: #ffffff;
+  --background-secondary: #f8f9fa;
+  --background-tertiary: #eaecf0;
+  --background-interactive: #f8f9fa;
+
+  /* Border Colors */
+  --border-base: #a2a9b1;
+  --border-subtle: #c8ccd1;
+  --border-muted: #eaecf0;
+
+  /* Text Colors */
+  --color-base: #202122;
+  --color-base-fixed: #202122;
+  --color-subtle: #54595d;
+  --color-placeholder: #72777d;
+  --color-disabled: #a2a9b1;
+
+  /* Link Colors */
+  --color-progressive: #0645ad;
+  --color-progressive-hover: #0b0080;
+  --color-progressive-active: #0645ad;
+  --color-visited: #0b0080;
+
+  /* Interactive Colors */
+  --color-destructive: #d73333;
+  --color-warning: #edab00;
+  --color-success: #14866d;
+  --color-notice: #202122;
+
+  /* Component-Specific Colors */
+  --background-color-interactive-subtle: #f8f9fa;
+  --background-color-progressive-subtle: #eaf3ff;
+  --background-color-destructive-subtle: #fee7e6;
+
+  /* Navigation & Header */
+  --background-header: #ffffff;
+  --background-nav: #f8f9fa;
+  --background-sidebar: #f8f9fa;
+
+  /* Tables & Infoboxes */
+  --background-infobox-header: #c3d6ef;
+  --background-infobox-subheader: #dcdcdc;
+  --background-table-header: #aacccc;
+  --background-table-odd: #f7f7f7;
+  --background-table-even: transparent;
+
+  /* Navbox Colors */
+  --background-navbox: #fdfdfd;
+  --background-navbox-title: #ccf;
+  --background-navbox-group: #ddf;
+  --background-navbox-subgroup: #e6e6ff;
+  --background-navbox-odd: #f7f7f7;
+  --background-navbox-even: transparent;
+
+  /* Shadows (Light Mode) */
+  --box-shadow-small: 0 1px 2px rgba(0, 0, 0, 0.1);
+  --box-shadow-medium: 0 2px 8px rgba(0, 0, 0, 0.15);
+  --box-shadow-large: 0 4px 16px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,315 @@
+/**
+ * Typography System
+ * 
+ * This file defines the typography system for the Wikipedia-style redesign.
+ * Includes font stacks, base styles, heading styles, and text utilities.
+ * All typography variables are defined in variables.css.
+ */
+
+/* ============================================================================
+   Base Typography
+   ============================================================================ */
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-base);
+  color: var(--color-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================================================
+   Headings
+   ============================================================================ */
+
+/* h1 and h2 use serif fonts as per Wikipedia style */
+h1,
+h2 {
+  font-family: var(--font-family-serif);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-tight);
+  color: var(--color-base);
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-4);
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: var(--space-2);
+}
+
+h1 {
+  font-size: var(--font-size-xxx-large);
+}
+
+h2 {
+  font-size: var(--font-size-xx-large);
+}
+
+/* h3-h6 use sans-serif fonts */
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  color: var(--color-base);
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-3);
+}
+
+h3 {
+  font-size: var(--font-size-x-large);
+}
+
+h4 {
+  font-size: var(--font-size-large);
+}
+
+h5 {
+  font-size: var(--font-size-medium);
+}
+
+h6 {
+  font-size: var(--font-size-small);
+}
+
+/* ============================================================================
+   Wikipedia-Specific Heading Styles
+   ============================================================================ */
+
+/* Page title (h1.firstHeading) - Wikipedia's distinctive styling */
+h1.firstHeading {
+  font-family: var(--font-family-serif);
+  font-size: var(--font-size-xxx-large);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-tight);
+  color: var(--color-base);
+  margin-top: 0;
+  margin-bottom: var(--space-4);
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: var(--space-2);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* Remove border from first heading if it's the only one */
+h1.firstHeading:only-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* ============================================================================
+   Paragraphs and Text
+   ============================================================================ */
+
+p {
+  margin-top: 0;
+  margin-bottom: var(--space-4);
+  line-height: var(--line-height-relaxed);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================================================
+   Text Emphasis
+   ============================================================================ */
+
+strong,
+b {
+  font-weight: var(--font-weight-bold);
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+small {
+  font-size: var(--font-size-small);
+}
+
+/* ============================================================================
+   Subscript and Superscript
+   ============================================================================ */
+
+sub,
+sup {
+  font-size: var(--font-size-x-small);
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* ============================================================================
+   Abbreviations
+   ============================================================================ */
+
+abbr[title] {
+  text-decoration: underline dotted;
+  cursor: help;
+  border-bottom: none;
+}
+
+/* ============================================================================
+   Blockquotes
+   ============================================================================ */
+
+blockquote {
+  margin: var(--space-4) var(--space-8);
+  padding-left: var(--space-4);
+  border-left: 4px solid var(--border-base);
+  color: var(--color-subtle);
+  font-style: italic;
+}
+
+blockquote p {
+  margin-bottom: var(--space-3);
+}
+
+blockquote cite {
+  display: block;
+  margin-top: var(--space-2);
+  font-size: var(--font-size-small);
+  font-style: normal;
+  color: var(--color-placeholder);
+}
+
+/* ============================================================================
+   Code and Preformatted Text
+   ============================================================================ */
+
+code,
+kbd,
+samp,
+pre {
+  font-family: var(--font-family-monospace);
+  font-size: var(--font-size-small);
+}
+
+code {
+  padding: 2px 4px;
+  background-color: var(--background-tertiary);
+  border-radius: var(--border-radius-small);
+  color: var(--color-base);
+}
+
+pre {
+  display: block;
+  margin: var(--space-4) 0;
+  padding: var(--space-4);
+  background-color: var(--background-tertiary);
+  border-left: 4px solid var(--border-base);
+  border-radius: var(--border-radius-small);
+  overflow-x: auto;
+  line-height: var(--line-height-base);
+}
+
+pre code {
+  padding: 0;
+  background-color: transparent;
+  border-radius: 0;
+  font-size: inherit;
+}
+
+kbd {
+  padding: 2px 6px;
+  background-color: var(--background-tertiary);
+  border: 1px solid var(--border-base);
+  border-radius: var(--border-radius-small);
+  box-shadow: 0 1px 0 var(--border-base);
+  font-size: var(--font-size-x-small);
+  color: var(--color-base);
+}
+
+/* ============================================================================
+   Horizontal Rules
+   ============================================================================ */
+
+hr {
+  margin: var(--space-6) 0;
+  border: 0;
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* ============================================================================
+   Text Utility Classes
+   ============================================================================ */
+
+/* Font sizes */
+.text-xx-small { font-size: var(--font-size-xx-small); }
+.text-x-small { font-size: var(--font-size-x-small); }
+.text-small { font-size: var(--font-size-small); }
+.text-medium { font-size: var(--font-size-medium); }
+.text-large { font-size: var(--font-size-large); }
+.text-x-large { font-size: var(--font-size-x-large); }
+.text-xx-large { font-size: var(--font-size-xx-large); }
+.text-xxx-large { font-size: var(--font-size-xxx-large); }
+
+/* Font weights */
+.text-normal { font-weight: var(--font-weight-normal); }
+.text-semibold { font-weight: var(--font-weight-semibold); }
+.text-bold { font-weight: var(--font-weight-bold); }
+
+/* Text colors */
+.text-base { color: var(--color-base); }
+.text-subtle { color: var(--color-subtle); }
+.text-placeholder { color: var(--color-placeholder); }
+.text-disabled { color: var(--color-disabled); }
+.text-progressive { color: var(--color-progressive); }
+.text-destructive { color: var(--color-destructive); }
+.text-warning { color: var(--color-warning); }
+.text-success { color: var(--color-success); }
+
+/* Text alignment */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }
+
+/* Text transform */
+.text-uppercase { text-transform: uppercase; }
+.text-lowercase { text-transform: lowercase; }
+.text-capitalize { text-transform: capitalize; }
+
+/* Text decoration */
+.text-underline { text-decoration: underline; }
+.text-line-through { text-decoration: line-through; }
+.text-no-decoration { text-decoration: none; }
+
+/* Text style */
+.text-italic { font-style: italic; }
+.text-normal-style { font-style: normal; }
+
+/* Line height */
+.line-height-tight { line-height: var(--line-height-tight); }
+.line-height-base { line-height: var(--line-height-base); }
+.line-height-relaxed { line-height: var(--line-height-relaxed); }
+.line-height-loose { line-height: var(--line-height-loose); }
+
+/* Word break */
+.text-break {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

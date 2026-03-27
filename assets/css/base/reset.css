@@ -1,0 +1,147 @@
+/**
+ * CSS Reset - Minimal Browser Normalization
+ * 
+ * This file provides minimal browser normalization while preserving useful defaults.
+ * Based on modern CSS reset principles and Wikipedia's approach.
+ */
+
+/* ============================================================================
+   Box Sizing
+   ============================================================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* MathJax CHTML calculates positions using content-box.
+   Forcing border-box onto mjx-* elements breaks all math rendering.
+   !important is required to override Bootstrap and any subsequent CSS. */
+mjx-container,
+mjx-container * {
+  box-sizing: content-box !important;
+}
+
+/* ============================================================================
+   Document & Body
+   ============================================================================ */
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* ============================================================================
+   Typography Reset
+   ============================================================================ */
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+p {
+  margin: 0;
+}
+
+/* ============================================================================
+   Lists
+   ============================================================================ */
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================================================================
+   Links
+   ============================================================================ */
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+/* ============================================================================
+   Media Elements
+   ============================================================================ */
+
+img,
+picture,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Do NOT force display:block on svg globally — it breaks MathJax inline SVG output */
+svg {
+  max-width: 100%;
+}
+
+/* MathJax SVG must remain inline */
+mjx-container svg,
+.MathJax svg {
+  display: inline !important;
+  max-width: none !important;
+  height: auto !important;
+}
+
+/* ============================================================================
+   Form Elements
+   ============================================================================ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  appearance: button;
+}
+
+/* ============================================================================
+   Tables
+   ============================================================================ */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ============================================================================
+   Accessibility
+   ============================================================================ */
+
+/* Remove default focus outline and let components define their own */
+:focus {
+  outline: none;
+}
+
+/* Ensure focus is visible for keyboard navigation */
+:focus-visible {
+  outline: 2px solid var(--color-progressive, #0645ad);
+  outline-offset: 2px;
+}

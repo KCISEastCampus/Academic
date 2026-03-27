@@ -13,12 +13,18 @@ council:
         - "Founder of kcisec.site"
         - "Currently the creator of all subject contents (unless otherwise stated)"
         - "Maintainer of site infrastructure and deployment"
-    
+
     - name: "Kathy Yue"
       title: "Member"
       period: "2026 - Present"
       contributions:
         - "Creator of AS Biology notes"
+
+    - name: "Fadouse"
+      title: "Member"
+      period: "2024 - Present"
+      contributions:
+        - "Implemented the contributors page refactor"
 
 external:
   title: "Contributors & Alumni"

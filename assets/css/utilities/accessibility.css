@@ -1,0 +1,135 @@
+/**
+ * Wikipedia-Style Accessibility Utilities
+ *
+ * Focus styles, sr-only class, skip links, prefers-reduced-motion.
+ *
+ * Validates: Requirements 17.1, 17.2, 17.3, 17.6, 24.5
+ */
+
+/* ============================================================================
+   Focus Styles (2px outline, 2px offset)
+   ============================================================================ */
+
+:focus-visible {
+  outline: 2px solid var(--color-progressive);
+  outline-offset: 2px;
+}
+
+/* Remove focus ring for mouse users */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ============================================================================
+   Screen-Reader Only (sr-only)
+   ============================================================================ */
+
+.sr-only,
+.visually-hidden,
+.screen-reader-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Allow focusable sr-only elements to become visible when focused */
+.sr-only-focusable:focus,
+.sr-only-focusable:focus-within {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: inherit;
+  margin: inherit;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* ============================================================================
+   Skip to Content Link
+   ============================================================================ */
+
+.skip-link,
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: var(--space-4);
+  z-index: var(--z-index-toast);
+
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--background-primary);
+  color: var(--color-progressive);
+  border: 2px solid var(--color-progressive);
+  border-radius: var(--border-radius-medium);
+
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+
+  transition: top var(--transition-fast) var(--transition-ease);
+}
+
+.skip-link:focus,
+.skip-to-content:focus {
+  top: var(--space-4);
+}
+
+/* ============================================================================
+   Reduced Motion
+   ============================================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================================================
+   High Contrast Mode Support
+   ============================================================================ */
+
+@media (forced-colors: active) {
+  a {
+    color: LinkText;
+  }
+
+  a:visited {
+    color: VisitedText;
+  }
+
+  .cdx-button {
+    border: 2px solid ButtonText;
+  }
+}
+
+/* ============================================================================
+   ARIA States
+   ============================================================================ */
+
+[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+[aria-hidden="true"] {
+  display: none !important;
+}
+
+[aria-expanded="false"] + .collapsible-content {
+  display: none;
+}
+
+[aria-expanded="true"] + .collapsible-content {
+  display: block;
+}

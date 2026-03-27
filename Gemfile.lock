@@ -11,6 +11,7 @@ GEM
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
+    erb (6.0.2)
     eventmachine (1.2.7)
     ffi (1.17.1-x64-mingw-ucrt)
     ffi (1.17.1-x86_64-linux-gnu)
@@ -95,6 +96,7 @@ PLATFORMS
 DEPENDENCIES
   base64
   csv
+  erb
   jekyll (~> 4.3.4)
   jekyll-redirect-from
   logger

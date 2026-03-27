@@ -1,0 +1,137 @@
+/**
+ * Wikipedia-Style Infobox Component
+ * 
+ * Provides styling for infobox tables that display structured information
+ * in a compact, visually distinct format. Infoboxes float to the right of
+ * content on desktop and expand to full width on mobile devices.
+ * 
+ * Validates: Requirements 8.1, 8.2, 8.3, 8.4, 8.5, 8.6
+ */
+
+/* ============================================================================
+   Base Infobox Structure
+   ============================================================================ */
+
+.infobox {
+  /* Layout and positioning */
+  float: right;
+  clear: right;
+  width: 25.5em;
+  margin: 0 0 var(--space-4) var(--space-4);
+  
+  /* Visual styling */
+  background-color: var(--background-secondary);
+  border: 1px solid var(--border-base);
+  border-spacing: 3px;
+  
+  /* Typography */
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-base);
+  
+  /* Ensure proper text wrapping */
+  word-wrap: break-word;
+}
+
+/* ============================================================================
+   Infobox Header Elements
+   ============================================================================ */
+
+/* Main title header (spans full width) */
+.infobox-above {
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--background-infobox-header);
+  color: var(--color-base);
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  line-height: var(--line-height-tight);
+}
+
+/* Subheader (secondary title) */
+.infobox-subheader {
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--background-infobox-subheader);
+  color: var(--color-base);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-semibold);
+  text-align: center;
+  line-height: var(--line-height-tight);
+}
+
+/* Section headers within the infobox */
+.infobox-header {
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--background-infobox-header);
+  color: var(--color-base);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+}
+
+/* ============================================================================
+   Infobox Data Rows
+   ============================================================================ */
+
+/* Label cells (left column) */
+.infobox-label {
+  padding: var(--space-2) var(--space-3);
+  vertical-align: top;
+  text-align: left;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-base);
+  width: 40%;
+}
+
+/* Data cells (right column) */
+.infobox-data {
+  padding: var(--space-2) var(--space-3);
+  vertical-align: top;
+  text-align: left;
+  color: var(--color-base);
+}
+
+/* ============================================================================
+   Infobox Image Section
+   ============================================================================ */
+
+.infobox-image {
+  padding: var(--space-2);
+  text-align: center;
+  background-color: var(--background-secondary);
+}
+
+.infobox-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.infobox-image div {
+  margin-top: var(--space-2);
+  font-size: var(--font-size-x-small);
+  color: var(--color-subtle);
+  line-height: var(--line-height-base);
+}
+
+/* ============================================================================
+   Responsive Behavior
+   ============================================================================ */
+
+/* Mobile: Full-width infobox, no float */
+@media (max-width: 639px) {
+  .infobox {
+    float: none;
+    width: 100%;
+    margin: 0 0 var(--space-4) 0;
+    clear: both;
+  }
+}
+
+/* Tablet: Slightly narrower infobox */
+@media (min-width: 640px) and (max-width: 999px) {
+  .infobox {
+    width: 22em;
+    margin: 0 0 var(--space-3) var(--space-3);
+  }
+}

@@ -1,0 +1,135 @@
+/**
+ * Wikipedia-Style Buttons Component (cdx-button)
+ *
+ * Implements Wikipedia's Codex button variants: normal, progressive, destructive,
+ * quiet, and icon-only.
+ *
+ * Validates: Requirements 11.4, 11.5
+ */
+
+/* ============================================================================
+   Base Button
+   ============================================================================ */
+
+.cdx-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--border-base);
+  border-radius: var(--border-radius-medium);
+
+  background-color: var(--background-interactive);
+  color: var(--color-base);
+
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  text-decoration: none;
+
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  vertical-align: middle;
+
+  transition: background-color var(--transition-fast) var(--transition-ease),
+              border-color var(--transition-fast) var(--transition-ease),
+              color var(--transition-fast) var(--transition-ease);
+}
+
+.cdx-button:hover {
+  background-color: var(--background-color-interactive-subtle);
+  border-color: var(--color-progressive);
+  color: var(--color-progressive);
+}
+
+.cdx-button:active {
+  background-color: var(--background-tertiary);
+}
+
+.cdx-button:focus-visible {
+  outline: 2px solid var(--color-progressive);
+  outline-offset: 2px;
+}
+
+.cdx-button:disabled,
+.cdx-button[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ============================================================================
+   Progressive Variant
+   ============================================================================ */
+
+.cdx-button--action-progressive {
+  background-color: var(--color-progressive);
+  border-color: var(--color-progressive);
+  color: #fff;
+}
+
+.cdx-button--action-progressive:hover {
+  background-color: var(--color-progressive-hover);
+  border-color: var(--color-progressive-hover);
+  color: #fff;
+}
+
+.cdx-button--action-progressive:active {
+  background-color: var(--color-progressive-active);
+}
+
+/* ============================================================================
+   Destructive Variant
+   ============================================================================ */
+
+.cdx-button--action-destructive {
+  background-color: var(--color-destructive);
+  border-color: var(--color-destructive);
+  color: #fff;
+}
+
+.cdx-button--action-destructive:hover {
+  background-color: var(--background-color-destructive-subtle);
+  border-color: var(--color-destructive);
+  color: var(--color-destructive);
+}
+
+/* ============================================================================
+   Quiet Variant
+   ============================================================================ */
+
+.cdx-button--weight-quiet {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--color-progressive);
+}
+
+.cdx-button--weight-quiet:hover {
+  background-color: var(--background-color-interactive-subtle);
+  border-color: transparent;
+  color: var(--color-progressive-hover);
+}
+
+/* ============================================================================
+   Icon-Only Variant
+   ============================================================================ */
+
+.cdx-button--icon-only {
+  padding: var(--space-2);
+  min-width: 32px;
+  min-height: 32px;
+}
+
+/* ============================================================================
+   Print Styles
+   ============================================================================ */
+
+@media print {
+  .cdx-button {
+    display: none;
+  }
+}

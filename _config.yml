@@ -22,6 +22,7 @@
 markdown: kramdown
 kramdown:
   input: GFM
+  math_engine: null
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     block:

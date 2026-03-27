@@ -1,131 +1,174 @@
 ---
 layout: none
 ---
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
+    <head>
+        {% include head.html %}
+        <meta
+            name="description"
+            content="KCISEC Academic Site - A comprehensive platform for KCISEC A level Programme students"
+        />
+        <meta
+            name="keywords"
+            content="KCISEC, A level, IGCSE, education, resources, academic, study materials"
+        />
+        <meta name="author" content="EricStoneChina" />
+        <script src="/assets/js/pop_ups.js"></script>
+        <link rel="stylesheet" href="/assets/css/home.css" />
+    </head>
 
-<head>
-  {% include head.html %}
-  <meta name="description" content="KCISEC Academic Site - A comprehensive platform for KCISEC A level Programme students">
-  <meta name="keywords" content="KCISEC, A level, IGCSE, education, resources, academic, study materials">
-  <meta name="author" content="EricStoneChina">
-  <script src="/assets/js/pop_ups.js"></script>
-  <link rel="stylesheet" href="/assets/css/home.css">
-</head>
+    <body class="layout-home">
+        {% include site_header.html title="A-level Homepage" subtitle="A
+        platform for A-level Students in KCISEC" %}
 
-<body>
-  {% include site_header.html 
-     title="A-level Homepage" 
-     subtitle="A platform for A-level Students in KCISEC" %}
+        <a class="skip-link sr-only-focusable" href="#main-content"
+            >Skip to main content</a
+        >
+        <main id="main-content" class="container" role="main">
+            <!-- Quick Navigation Links -->
+            <section class="quick-nav-section fade-in">
+                <div class="quick-nav-container">
+                    <a
+                        href="/student-council/"
+                        class="quick-nav-item"
+                        title="Student Council"
+                    >
+                        <div class="nav-icon">
+                            <i class="bi bi-people-fill"></i>
+                        </div>
+                        <div class="nav-content">
+                            <h3>Student Council</h3>
+                            <p>Student organization and activities</p>
+                        </div>
+                        <i class="bi bi-chevron-right nav-arrow"></i>
+                    </a>
 
-  <a class="skip-link sr-only-focusable" href="#main-content">Skip to main content</a>
-  <main id="main-content" class="container" role="main">
+                    <a
+                        href="/contributors/"
+                        class="quick-nav-item"
+                        title="Meet our contributors"
+                    >
+                        <div class="nav-icon">
+                            <i class="bi bi-stars"></i>
+                        </div>
+                        <div class="nav-content">
+                            <h3>Contributors</h3>
+                            <p>Meet the team behind these resources</p>
+                        </div>
+                        <i class="bi bi-chevron-right nav-arrow"></i>
+                    </a>
+                </div>
+            </section>
 
-    <!-- Quick Navigation Links -->
-    <section class="quick-nav-section fade-in">
-      <div class="quick-nav-container">
-        <a href="/student-council/" class="quick-nav-item" title="Student Council">
-          <div class="nav-icon">
-            <i class="bi bi-people-fill"></i>
-          </div>
-          <div class="nav-content">
-            <h3>Student Council</h3>
-            <p>Student organization and activities</p>
-          </div>
-          <i class="bi bi-chevron-right nav-arrow"></i>
-        </a>
-        
-        <a href="/contributors/" class="quick-nav-item" title="Meet our contributors">
-          <div class="nav-icon">
-            <i class="bi bi-stars"></i>
-          </div>
-          <div class="nav-content">
-            <h3>Contributors</h3>
-            <p>Meet the team behind these resources</p>
-          </div>
-          <i class="bi bi-chevron-right nav-arrow"></i>
-        </a>
-      </div>
-    </section>
+            <!-- A-Level Section -->
+            <section
+                class="subjects-section fade-in"
+                style="animation-delay: 0.1s"
+            >
+                <div class="section-header">
+                    <div class="header-content">
+                        <h2 class="section-title">
+                            <i class="bi bi-mortarboard-fill"></i>
+                            A-Level
+                        </h2>
+                        <p class="section-subtitle">
+                            OxfordAQA International A level
+                        </p>
+                    </div>
+                    <span
+                        class="section-badge"
+                        style="
+                            --accent-rgb: var(--accent-al-rgb);
+                            --accent-color: var(--accent-al);
+                        "
+                    >
+                        <i class="bi bi-book"></i>
+                        Advanced Level
+                    </span>
+                </div>
 
-    <!-- A-Level Section -->
-    <section class="subjects-section fade-in" style="animation-delay: 0.1s;">
-      <div class="section-header">
-        <div class="header-content">
-          <h2 class="section-title">
-            <i class="bi bi-mortarboard-fill"></i>
-            A-Level
-          </h2>
-          <p class="section-subtitle">OxfordAQA International A level</p>
-        </div>
-        <span class="section-badge" style="--accent-rgb: var(--accent-al-rgb); --accent-color: var(--accent-al);">
-          <i class="bi bi-book"></i>
-          Advanced Level
-        </span>
-      </div>
-      
-      <div class="subjects-grid-modern">
-        {% for subject in site.data.subjects.alevel %}
-          {% assign subject_name = subject.name | default: 'Subject' %}
-          <a href="{{ subject.path }}" class="modern-subject-card" style="--accent-rgb: var(--accent-al-rgb); --accent-color: var(--accent-al);" title="View {{ subject_name }} resources">
-            <div class="card-icon">
-              {{ subject.icon }}
-            </div>
-            <div class="card-content">
-              <div class="card-title">{{ subject_name }}</div>
-              <div class="card-meta">
-                <span class="meta-text">Study Materials</span>
-                <i class="bi bi-arrow-right hover-arrow"></i>
-              </div>
-            </div>
-          </a>
-        {% endfor %}
-      </div>
-    </section>
+                <div class="subjects-grid-modern">
+                    {% for subject in site.data.subjects.alevel %} {% assign
+                    subject_name = subject.name | default: 'Subject' %}
+                    <a
+                        href="{{ subject.path }}"
+                        class="modern-subject-card"
+                        style="
+                            --accent-rgb: var(--accent-al-rgb);
+                            --accent-color: var(--accent-al);
+                        "
+                        title="View {{ subject_name }} resources"
+                    >
+                        <div class="card-icon">{{ subject.icon }}</div>
+                        <div class="card-content">
+                            <div class="card-title">{{ subject_name }}</div>
+                            <div class="card-meta">
+                                <span class="meta-text">Study Materials</span>
+                                <i class="bi bi-arrow-right hover-arrow"></i>
+                            </div>
+                        </div>
+                    </a>
+                    {% endfor %}
+                </div>
+            </section>
 
-    <!-- IGCSE Section -->
-    <section class="subjects-section fade-in" style="animation-delay: 0.2s;">
-      <div class="section-header">
-        <div class="header-content">
-          <h2 class="section-title">
-            <i class="bi bi-book-half"></i>
-            IGCSE
-          </h2>
-          <p class="section-subtitle">OxfordAQA International GCSE</p>
-        </div>
-        <span class="section-badge" style="--accent-rgb: var(--accent-ig-rgb); --accent-color: var(--accent-ig);">
-          <i class="bi bi-mortarboard"></i>
-          GCSE Level
-        </span>
-      </div>
-      
-      <div class="subjects-grid-modern">
-        {% for subject in site.data.subjects.igcse %}
-          {% assign subject_name = subject.name | default: 'Subject' %}
-          <a href="{{ subject.path }}" class="modern-subject-card" style="--accent-rgb: var(--accent-ig-rgb); --accent-color: var(--accent-ig);" title="View {{ subject_name }} resources">
-            <div class="card-icon">
-              {{ subject.icon }}
-            </div>
-            <div class="card-content">
-              <div class="card-title">{{ subject_name }}</div>
-              <div class="card-meta">
-                <span class="meta-text">Study Materials</span>
-                <i class="bi bi-arrow-right hover-arrow"></i>
-              </div>
-            </div>
-          </a>
-        {% endfor %}
-      </div>
-    </section>
+            <!-- IGCSE Section -->
+            <section
+                class="subjects-section fade-in"
+                style="animation-delay: 0.2s"
+            >
+                <div class="section-header">
+                    <div class="header-content">
+                        <h2 class="section-title">
+                            <i class="bi bi-book-half"></i>
+                            IGCSE
+                        </h2>
+                        <p class="section-subtitle">
+                            OxfordAQA International GCSE
+                        </p>
+                    </div>
+                    <span
+                        class="section-badge"
+                        style="
+                            --accent-rgb: var(--accent-ig-rgb);
+                            --accent-color: var(--accent-ig);
+                        "
+                    >
+                        <i class="bi bi-mortarboard"></i>
+                        GCSE Level
+                    </span>
+                </div>
 
-    <!-- Exam Resources Section -->
-    {% include exams_section.html %}
+                <div class="subjects-grid-modern">
+                    {% for subject in site.data.subjects.igcse %} {% assign
+                    subject_name = subject.name | default: 'Subject' %}
+                    <a
+                        href="{{ subject.path }}"
+                        class="modern-subject-card"
+                        style="
+                            --accent-rgb: var(--accent-ig-rgb);
+                            --accent-color: var(--accent-ig);
+                        "
+                        title="View {{ subject_name }} resources"
+                    >
+                        <div class="card-icon">{{ subject.icon }}</div>
+                        <div class="card-content">
+                            <div class="card-title">{{ subject_name }}</div>
+                            <div class="card-meta">
+                                <span class="meta-text">Study Materials</span>
+                                <i class="bi bi-arrow-right hover-arrow"></i>
+                            </div>
+                        </div>
+                    </a>
+                    {% endfor %}
+                </div>
+            </section>
 
-  </main>
-
-  {% include theme_button.html %}
-  {% include footer.html %}
-
-</body>
-
+            <!-- Exam Resources Section -->
+            {% include exams_section.html %}
+        </main>
+        {% include footer.html %}
+    </body>
 </html>

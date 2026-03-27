@@ -1,0 +1,265 @@
+/**
+ * Wikipedia-Style Navbox Component
+ * 
+ * Provides styling for navigation boxes that appear at the bottom of pages
+ * to provide contextual navigation links. Navboxes display at full width,
+ * support collapsible sections, and use alternating row colors for readability.
+ * 
+ * Validates: Requirements 9.1, 9.2, 9.3, 9.4, 9.5, 9.6
+ */
+
+/* ============================================================================
+   Base Navbox Structure
+   ============================================================================ */
+
+.navbox {
+  /* Layout and positioning */
+  width: 100%;
+  margin: var(--space-4) 0;
+  clear: both;
+  
+  /* Visual styling */
+  background-color: var(--background-navbox);
+  border: 1px solid var(--border-base);
+  border-spacing: 0;
+  border-collapse: collapse;
+  
+  /* Typography */
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-base);
+  
+  /* Ensure proper text wrapping */
+  word-wrap: break-word;
+}
+
+/* ============================================================================
+   Navbox Title
+   ============================================================================ */
+
+.navbox-title {
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--background-navbox-title);
+  color: var(--color-base);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  line-height: var(--line-height-tight);
+}
+
+.navbox-title a {
+  color: var(--color-base);
+  text-decoration: none;
+}
+
+.navbox-title a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================================================
+   Navbox Groups
+   ============================================================================ */
+
+.navbox-group {
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--background-navbox-group);
+  color: var(--color-base);
+  font-weight: var(--font-weight-semibold);
+  text-align: right;
+  vertical-align: middle;
+  width: 12em;
+  white-space: nowrap;
+}
+
+.navbox-subgroup {
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--background-navbox-subgroup);
+  color: var(--color-base);
+  font-weight: var(--font-weight-semibold);
+  text-align: right;
+  vertical-align: middle;
+}
+
+/* ============================================================================
+   Navbox Lists
+   ============================================================================ */
+
+.navbox-list {
+  padding: var(--space-2) var(--space-3);
+  text-align: left;
+  vertical-align: middle;
+  color: var(--color-base);
+}
+
+/* Remove default list styling */
+.navbox-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbox-list li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+/* Add bullet separators between list items */
+.navbox-list li:not(:last-child)::after {
+  content: " · ";
+  color: var(--color-subtle);
+  padding: 0 var(--space-1);
+}
+
+/* Link styling within navbox lists */
+.navbox-list a {
+  color: var(--color-progressive);
+  text-decoration: none;
+}
+
+.navbox-list a:hover {
+  text-decoration: underline;
+  color: var(--color-progressive-hover);
+}
+
+.navbox-list a:visited {
+  color: var(--color-visited);
+}
+
+/* ============================================================================
+   Alternating Row Colors
+   ============================================================================ */
+
+.navbox-odd {
+  background-color: var(--background-navbox-odd);
+}
+
+.navbox-even {
+  background-color: var(--background-navbox-even);
+}
+
+/* Apply alternating colors to rows */
+.navbox tbody tr:nth-child(odd) .navbox-list {
+  background-color: var(--background-navbox-odd);
+}
+
+.navbox tbody tr:nth-child(even) .navbox-list {
+  background-color: var(--background-navbox-even);
+}
+
+/* ============================================================================
+   Collapsible Functionality
+   ============================================================================ */
+
+/* Toggle button styling */
+.navbox-toggle {
+  float: right;
+  padding: 0 var(--space-2);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-normal);
+  cursor: pointer;
+  user-select: none;
+  color: var(--color-progressive);
+}
+
+.navbox-toggle:hover {
+  color: var(--color-progressive-hover);
+}
+
+/* Collapsed state */
+.navbox.collapsed .navbox-content {
+  display: none;
+}
+
+/* Show/hide indicators */
+.navbox-toggle::before {
+  content: "[hide]";
+}
+
+.navbox.collapsed .navbox-toggle::before {
+  content: "[show]";
+}
+
+/* ============================================================================
+   Nested Navboxes
+   ============================================================================ */
+
+/* Nested navbox styling (navbox within navbox) */
+.navbox .navbox {
+  margin: 0;
+  border: none;
+  width: 100%;
+}
+
+/* ============================================================================
+   Responsive Behavior
+   ============================================================================ */
+
+/* Mobile: Adjust padding and font size */
+@media (max-width: 639px) {
+  .navbox {
+    font-size: var(--font-size-x-small);
+  }
+  
+  .navbox-title,
+  .navbox-group,
+  .navbox-list {
+    padding: var(--space-1) var(--space-2);
+  }
+  
+  .navbox-group {
+    width: 8em;
+    font-size: var(--font-size-x-small);
+  }
+  
+  /* Stack group and list on very small screens */
+  .navbox tbody tr {
+    display: block;
+  }
+  
+  .navbox-group,
+  .navbox-list {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .navbox-group {
+    border-bottom: 1px solid var(--border-subtle);
+    padding-bottom: var(--space-1);
+    margin-bottom: var(--space-1);
+  }
+}
+
+/* Tablet: Slightly adjusted spacing */
+@media (min-width: 640px) and (max-width: 999px) {
+  .navbox-group {
+    width: 10em;
+  }
+}
+
+/* ============================================================================
+   Print Styles
+   ============================================================================ */
+
+@media print {
+  .navbox {
+    border: 1px solid #000;
+    background-color: #fff;
+  }
+  
+  .navbox-title,
+  .navbox-group,
+  .navbox-list {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .navbox-toggle {
+    display: none;
+  }
+  
+  /* Expand all collapsed navboxes for printing */
+  .navbox.collapsed .navbox-content {
+    display: table-row-group;
+  }
+}

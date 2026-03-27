@@ -9,70 +9,92 @@ layout: none
   {% include mathjax.html %}
   <title>{{ page.title | default: site.title }}</title>
   <link rel="stylesheet" href="/assets/css/subject.css">
-  <script src="/assets/js/toc_generator.js"></script>
+  <script src="/assets/js/toc.js"></script>
   <script src="/assets/js/image_modal.js"></script>
   <script src="/assets/js/table_wrapper.js"></script>
 </head>
 
 {% if page.url contains '/igcse/' %}
-<body class="scheme-igcse">
+<body class="layout-subjects scheme-igcse">
 {% elsif page.url contains '/alevel/' %}
-<body class="scheme-alevel">
+<body class="layout-subjects scheme-alevel">
 {% else %}
-<body>
+<body class="layout-subjects">
 {% endif %}
-  <a href="{{ '/' | relative_url }}" class="btn btn-outline-info back-button" aria-label="Return to homepage">
-    <i class="bi bi-caret-left-fill"></i>Back to Home
-  </a>
 
-  <p class="fs-1 text-center mt-3">{{ page.title | default: site.title }}</p>
-  <hr class="mb-2" />
+  {% include site_header.html title=page.title %}
 
-  <!-- TOC Toggle Button for Mobile -->
-  <button class="toc-toggle" id="tocToggle" type="button" aria-label="Toggle Table of Contents" aria-controls="toc" aria-expanded="false">
-    <i class="bi bi-list"></i>
+  <div class="mw-page-container">
+    <div class="mw-page-container-inner">
+
+      <!-- LEFT: Table of Contents — sticky, does not scroll -->
+      <div class="vector-column-start">
+        <div id="toc" class="table-of-contents" aria-label="Table of Contents">
+          <div class="toc-header-fixed">
+            <div class="toc-title-row">
+              <h2 class="contents-list">Contents</h2>
+              <button id="tocExpandAll" class="toc-expand-all" type="button" aria-label="Collapse all sections">
+                Collapse all
+              </button>
+            </div>
+            <div class="toc-search-container">
+              <input type="text" id="tocSearch" class="toc-search-input"
+                     placeholder="Search contents…"
+                     aria-label="Search table of contents">
+              <button id="tocSearchClear" class="toc-search-clear"
+                      aria-label="Clear search" style="display: none;">
+                <i class="bi bi-x-circle" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="reading-progress-container" aria-hidden="true">
+              <div class="reading-progress-bar" id="readingProgress"></div>
+              <span class="reading-progress-text" id="progressText">0%</span>
+            </div>
+          </div>
+          <div class="toc-content" role="navigation" aria-label="Page sections"></div>
+        </div>
+      </div>
+
+      <!-- CENTER: Article content — this is the only part that scrolls -->
+      <div class="mw-content-container">
+        <main class="mw-body" id="content" role="main">
+          <h1 class="firstHeading" id="firstHeading">{{ page.title | default: site.title }}</h1>
+          <div class="mw-body-content">
+            <div id="content-container" class="mw-parser-output">
+              {{ content }}
+            </div>
+          </div>
+        </main>
+      </div>
+
+      <!-- RIGHT: Navigation — sticky, does not scroll -->
+      <nav class="vector-column-end" aria-label="Site navigation">
+        <div class="vector-menu" id="p-navigation">
+          <div class="vector-menu-heading">Navigation</div>
+          <ul class="vector-menu-content-list">
+            <li class="vector-menu-item"><a href="{{ '/' | relative_url }}">Main page</a></li>
+            <li class="vector-menu-item"><a href="{{ '/igcse/' | relative_url }}">IGCSE</a></li>
+            <li class="vector-menu-item"><a href="{{ '/alevel/' | relative_url }}">A-Level</a></li>
+            <li class="vector-menu-item"><a href="{{ '/student-council/' | relative_url }}">Student Council</a></li>
+            <li class="vector-menu-item"><a href="{{ '/contributors/' | relative_url }}">Contributors</a></li>
+          </ul>
+        </div>
+      </nav>
+
+    </div><!-- .mw-page-container-inner -->
+
+    <!-- FOOTER: outside the three-column flex row, spans full width -->
+    {% include footer.html %}
+
+  </div><!-- .mw-page-container -->
+  <!-- Mobile TOC toggle -->
+  <button class="toc-toggle" id="tocToggle" type="button"
+          aria-label="Toggle Table of Contents"
+          aria-controls="toc" aria-expanded="false">
+    <i class="bi bi-list" aria-hidden="true"></i>
   </button>
 
-  <div id="main-container">
-    <div id="content-container">
-      {{ content }}
-    </div>
-    <div id="toc" class="table-of-contents">
-      <div class="toc-header-fixed">
-        <h2 class="contents-list">Contents</h2>
-        
-        <!-- TOC Search Bar -->
-        <div class="toc-search-container">
-          <input type="text" 
-                 id="tocSearch" 
-                 class="toc-search-input" 
-                 placeholder="Search contents..."
-                 aria-label="Search table of contents">
-          <button id="tocSearchClear" class="toc-search-clear" aria-label="Clear search" style="display: none;">
-            <i class="bi bi-x-circle"></i>
-          </button>
-        </div>
-        
-        <!-- Reading Progress Bar -->
-        <div class="reading-progress-container">
-          <div class="reading-progress-bar" id="readingProgress"></div>
-          <span class="reading-progress-text" id="progressText">0%</span>
-        </div>
-      </div>
-      
-      <div class="toc-content">
-      </div>
-    </div>
-  </div>
-
-  {% include footer.html %}
-
-  {% include theme_button.html %}
-
-  <script>
-    generateTOC();
-  </script>
+  <script>generateTOC();</script>
 
 </body>
-
 </html>

@@ -1,0 +1,115 @@
+/**
+ * Wikipedia-Style Code Blocks Component
+ *
+ * Monospace font, subtle background, left border accent for blocks.
+ * Inline code with background and padding.
+ * Horizontal scrolling for overflow.
+ *
+ * Validates: Requirements 20.1, 20.2, 20.3, 20.4, 20.5, 20.6
+ */
+
+/* ============================================================================
+   Inline Code
+   ============================================================================ */
+
+code,
+kbd,
+samp {
+  font-family: var(--font-family-monospace);
+  font-size: 0.9em;
+  background-color: var(--background-tertiary);
+  color: var(--color-base);
+  padding: 0.1em 0.3em;
+  border-radius: var(--border-radius-small);
+  border: 1px solid var(--border-subtle);
+  word-break: break-word;
+}
+
+/* ============================================================================
+   Code Blocks (pre > code)
+   ============================================================================ */
+
+pre {
+  font-family: var(--font-family-monospace);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-relaxed);
+
+  background-color: var(--background-secondary);
+  color: var(--color-base);
+
+  margin: var(--space-4) 0;
+  padding: var(--space-4);
+  border: 1px solid var(--border-subtle);
+  border-left: 4px solid var(--color-progressive);
+  border-radius: var(--border-radius-small);
+
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  white-space: pre;
+  word-wrap: normal;
+  tab-size: 4;
+}
+
+pre code {
+  /* Reset inline code styles inside pre blocks */
+  font-family: inherit;
+  font-size: inherit;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+  word-break: normal;
+  color: inherit;
+}
+
+/* ============================================================================
+   Keyboard Input
+   ============================================================================ */
+
+kbd {
+  border: 1px solid var(--border-base);
+  border-bottom-width: 2px;
+  border-radius: var(--border-radius-small);
+  padding: 0.1em 0.4em;
+  font-size: 0.85em;
+  box-shadow: var(--box-shadow-small);
+}
+
+/* ============================================================================
+   Mermaid Diagrams
+   ============================================================================ */
+
+.language-mermaid {
+  text-align: center;
+  overflow-x: auto;
+}
+
+/* ============================================================================
+   Line Numbers (if applicable)
+   ============================================================================ */
+
+pre.line-numbers {
+  padding-left: 3.8em;
+  position: relative;
+}
+
+/* ============================================================================
+   Print Styles
+   ============================================================================ */
+
+@media print {
+  pre {
+    background-color: #f5f5f5;
+    color: #000;
+    border-color: #000;
+    border-left-color: #555;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  code {
+    background-color: #f5f5f5;
+    color: #000;
+    border-color: #ccc;
+  }
+}

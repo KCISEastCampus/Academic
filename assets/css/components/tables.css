@@ -1,0 +1,119 @@
+/**
+ * Wikipedia-Style Tables Component
+ *
+ * Provides wikitable styling with header backgrounds, alternating row colors,
+ * responsive horizontal scrolling on small screens.
+ *
+ * Validates: Requirements 10.1, 10.2, 10.3, 10.4, 10.5
+ */
+
+/* ============================================================================
+   Wikitable Base
+   ============================================================================ */
+
+.wikitable {
+  background-color: var(--background-secondary);
+  border: 1px solid var(--border-base);
+  border-collapse: collapse;
+  margin: var(--space-4) 0;
+  width: 100%;
+  font-size: var(--font-size-medium);
+  line-height: var(--line-height-base);
+  color: var(--color-base);
+}
+
+/* ============================================================================
+   Table Headers
+   ============================================================================ */
+
+.wikitable th {
+  background-color: var(--background-table-header);
+  border: 1px solid var(--border-base);
+  padding: var(--space-2) var(--space-3);
+  text-align: left;
+  font-weight: var(--font-weight-bold);
+  vertical-align: bottom;
+  color: var(--color-base);
+}
+
+/* ============================================================================
+   Table Cells
+   ============================================================================ */
+
+.wikitable td {
+  border: 1px solid var(--border-base);
+  padding: var(--space-2) var(--space-3);
+  vertical-align: top;
+  color: var(--color-base);
+}
+
+/* ============================================================================
+   Alternating Row Colors
+   ============================================================================ */
+
+.wikitable tbody tr:nth-child(odd) {
+  background-color: var(--background-table-odd);
+}
+
+.wikitable tbody tr:nth-child(even) {
+  background-color: var(--background-table-even);
+}
+
+/* Hover state */
+.wikitable tbody tr:hover {
+  background-color: var(--background-color-interactive-subtle);
+}
+
+/* ============================================================================
+   Sortable Tables
+   ============================================================================ */
+
+.wikitable.sortable th {
+  cursor: pointer;
+  user-select: none;
+}
+
+.wikitable.sortable th:hover {
+  background-color: var(--background-color-interactive-subtle);
+}
+
+/* ============================================================================
+   Responsive - Horizontal Scrolling on Small Screens
+   ============================================================================ */
+
+.table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: var(--space-4) 0;
+}
+
+.table-wrapper .wikitable {
+  margin: 0;
+  min-width: 480px;
+}
+
+@media (max-width: 639px) {
+  .wikitable {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* ============================================================================
+   Print Styles
+   ============================================================================ */
+
+@media print {
+  .wikitable {
+    border-color: #000;
+    background-color: #fff;
+  }
+
+  .wikitable th,
+  .wikitable td {
+    border-color: #000;
+    background-color: #fff;
+    color: #000;
+  }
+}

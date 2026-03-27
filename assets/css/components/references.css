@@ -1,0 +1,120 @@
+/**
+ * Wikipedia-Style References Component
+ *
+ * Styles reference numbers as superscript, implements reflist with
+ * multi-column layout options.
+ *
+ * Validates: Requirements 13.1, 13.2, 13.3, 13.4
+ */
+
+/* ============================================================================
+   Inline References (superscript)
+   ============================================================================ */
+
+sup.reference {
+  font-size: var(--font-size-x-small);
+  line-height: 1;
+  vertical-align: super;
+}
+
+sup.reference a {
+  color: var(--color-progressive);
+  text-decoration: none;
+  padding: 0 1px;
+}
+
+sup.reference a:hover {
+  text-decoration: underline;
+}
+
+/* Brackets around reference numbers */
+sup.reference::before {
+  content: "[";
+  color: var(--color-subtle);
+}
+
+sup.reference::after {
+  content: "]";
+  color: var(--color-subtle);
+}
+
+/* ============================================================================
+   Reference List (reflist)
+   ============================================================================ */
+
+.reflist {
+  font-size: var(--font-size-small);
+  margin: var(--space-4) 0;
+  padding: var(--space-3);
+  border-top: 1px solid var(--border-subtle);
+  color: var(--color-subtle);
+  line-height: var(--line-height-relaxed);
+}
+
+.reflist ol {
+  margin: 0;
+  padding-left: var(--space-6);
+}
+
+.reflist li {
+  margin: var(--space-1) 0;
+}
+
+/* Multi-column reflist */
+.reflist-columns-2 {
+  column-count: 2;
+  column-gap: var(--space-6);
+}
+
+.reflist-columns-3 {
+  column-count: 3;
+  column-gap: var(--space-6);
+}
+
+@media (max-width: 639px) {
+  .reflist-columns-2,
+  .reflist-columns-3 {
+    column-count: 1;
+  }
+}
+
+/* ============================================================================
+   Citation Formatting
+   ============================================================================ */
+
+cite {
+  font-style: normal;
+}
+
+.citation {
+  word-wrap: break-word;
+}
+
+.citation .cs1-kern-left {
+  padding-left: 0.2em;
+}
+
+/* Back-link arrow */
+.reflist .mw-cite-backlink a {
+  color: var(--color-subtle);
+  text-decoration: none;
+  font-size: var(--font-size-x-small);
+}
+
+.reflist .mw-cite-backlink a:hover {
+  color: var(--color-progressive);
+  text-decoration: underline;
+}
+
+/* ============================================================================
+   Print Styles
+   ============================================================================ */
+
+@media print {
+  .reflist {
+    font-size: 9pt;
+    color: #000;
+    border-top-color: #000;
+    column-count: 1;
+  }
+}

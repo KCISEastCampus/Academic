@@ -1,0 +1,373 @@
+/**
+ * Table of Contents Layout CSS
+ * Wikipedia-style TOC with sticky positioning, hierarchical indentation, and reading progress bar
+ * 
+ * Validates Requirements: 7.2, 7.3, 7.6, 7.7
+ */
+
+/* ============================================================================
+   TOC CONTAINER STRUCTURE
+   ============================================================================ */
+
+.vector-column-end {
+  width: 280px;
+  flex-shrink: 0;
+  background: var(--background-primary);
+}
+
+.vector-toc {
+  position: sticky;
+  top: 0;
+  max-height: 100vh;
+  overflow-y: auto;
+  padding: var(--space-4);
+  background: var(--background-primary);
+  border-left: 1px solid var(--border-subtle);
+}
+
+/* ============================================================================
+   TOC HEADER
+   ============================================================================ */
+
+.vector-toc-header {
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--border-subtle);
+  position: relative;
+}
+
+.vector-toc-header h2 {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-subtle);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================================================================
+   READING PROGRESS BAR
+   ============================================================================ */
+
+.reading-progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: var(--color-progressive);
+  width: 0%;
+  transition: width var(--transition-fast) var(--transition-ease);
+  border-radius: var(--border-radius-small);
+}
+
+/* Progress bar animation */
+.reading-progress-bar.animating {
+  transition: width var(--transition-medium) var(--transition-ease-out);
+}
+
+/* ============================================================================
+   TOC CONTENTS LIST
+   ============================================================================ */
+
+.vector-toc-contents {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.vector-toc-list-item {
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================================================================
+   TOC LINKS
+   ============================================================================ */
+
+.vector-toc-link {
+  display: block;
+  padding: var(--space-2) var(--space-3);
+  color: var(--color-progressive);
+  text-decoration: none;
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-base);
+  border-radius: var(--border-radius-small);
+  transition: background var(--transition-fast) var(--transition-ease),
+              color var(--transition-fast) var(--transition-ease),
+              padding-left var(--transition-fast) var(--transition-ease);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.vector-toc-link:hover {
+  background: var(--background-color-interactive-subtle);
+  text-decoration: none;
+  color: var(--color-progressive-hover);
+  padding-left: var(--space-4);
+}
+
+.vector-toc-link:active {
+  color: var(--color-progressive-active);
+}
+
+/* Active/Current section highlighting */
+.vector-toc-link.active,
+.vector-toc-link[aria-current="location"] {
+  background: var(--background-color-progressive-subtle);
+  color: var(--color-base);
+  font-weight: var(--font-weight-semibold);
+  border-left: 3px solid var(--color-progressive);
+  padding-left: calc(var(--space-3) - 3px);
+}
+
+.vector-toc-link.active:hover,
+.vector-toc-link[aria-current="location"]:hover {
+  padding-left: calc(var(--space-4) - 3px);
+}
+
+/* ============================================================================
+   HIERARCHICAL INDENTATION
+   ============================================================================ */
+
+/* Level 1 - h2 headings (top level) */
+.vector-toc-list-item.vector-toc-level-1 > .vector-toc-link {
+  padding-left: var(--space-3);
+  font-weight: var(--font-weight-normal);
+}
+
+.vector-toc-list-item.vector-toc-level-1 > .vector-toc-link:hover {
+  padding-left: var(--space-4);
+}
+
+.vector-toc-list-item.vector-toc-level-1 > .vector-toc-link.active {
+  padding-left: calc(var(--space-3) - 3px);
+}
+
+.vector-toc-list-item.vector-toc-level-1 > .vector-toc-link.active:hover {
+  padding-left: calc(var(--space-4) - 3px);
+}
+
+/* Level 2 - h3 headings (nested) */
+.vector-toc-list-item.vector-toc-level-2 > .vector-toc-link {
+  padding-left: var(--space-6);
+  font-size: var(--font-size-x-small);
+  color: var(--color-subtle);
+}
+
+.vector-toc-list-item.vector-toc-level-2 > .vector-toc-link:hover {
+  padding-left: calc(var(--space-6) + var(--space-1));
+  color: var(--color-progressive);
+}
+
+.vector-toc-list-item.vector-toc-level-2 > .vector-toc-link.active {
+  padding-left: calc(var(--space-6) - 3px);
+  color: var(--color-base);
+}
+
+.vector-toc-list-item.vector-toc-level-2 > .vector-toc-link.active:hover {
+  padding-left: calc(var(--space-6) + var(--space-1) - 3px);
+}
+
+/* Level 3 - h4 headings (deeply nested) */
+.vector-toc-list-item.vector-toc-level-3 > .vector-toc-link {
+  padding-left: var(--space-8);
+  font-size: var(--font-size-x-small);
+  color: var(--color-placeholder);
+}
+
+.vector-toc-list-item.vector-toc-level-3 > .vector-toc-link:hover {
+  padding-left: calc(var(--space-8) + var(--space-1));
+  color: var(--color-progressive);
+}
+
+.vector-toc-list-item.vector-toc-level-3 > .vector-toc-link.active {
+  padding-left: calc(var(--space-8) - 3px);
+  color: var(--color-base);
+}
+
+.vector-toc-list-item.vector-toc-level-3 > .vector-toc-link.active:hover {
+  padding-left: calc(var(--space-8) + var(--space-1) - 3px);
+}
+
+/* ============================================================================
+   TOC SCROLLBAR STYLING
+   ============================================================================ */
+
+.vector-toc::-webkit-scrollbar {
+  width: 8px;
+}
+
+.vector-toc::-webkit-scrollbar-track {
+  background: var(--background-primary);
+}
+
+.vector-toc::-webkit-scrollbar-thumb {
+  background: var(--border-base);
+  border-radius: var(--border-radius-medium);
+}
+
+.vector-toc::-webkit-scrollbar-thumb:hover {
+  background: var(--color-subtle);
+}
+
+/* Firefox scrollbar */
+.vector-toc {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-base) var(--background-primary);
+}
+
+/* ============================================================================
+   EMPTY STATE
+   ============================================================================ */
+
+.vector-toc-empty {
+  padding: var(--space-4);
+  color: var(--color-placeholder);
+  font-size: var(--font-size-small);
+  font-style: italic;
+  text-align: center;
+}
+
+/* ============================================================================
+   RESPONSIVE BEHAVIOR
+   ============================================================================ */
+
+/* Mobile: < 640px - Hide TOC */
+@media (max-width: 639px) {
+  .vector-column-end {
+    display: none;
+  }
+}
+
+/* Tablet: 640px - 999px - Adjust TOC width */
+@media (min-width: 640px) and (max-width: 999px) {
+  .vector-column-end {
+    width: 220px;
+  }
+
+  .vector-toc {
+    padding: var(--space-3);
+  }
+
+  .vector-toc-link {
+    font-size: var(--font-size-x-small);
+    padding: var(--space-1) var(--space-2);
+  }
+
+  .vector-toc-link:hover {
+    padding-left: var(--space-3);
+  }
+
+  .vector-toc-list-item.vector-toc-level-1 > .vector-toc-link {
+    padding-left: var(--space-2);
+  }
+
+  .vector-toc-list-item.vector-toc-level-1 > .vector-toc-link:hover {
+    padding-left: var(--space-3);
+  }
+
+  .vector-toc-list-item.vector-toc-level-2 > .vector-toc-link {
+    padding-left: var(--space-5);
+  }
+
+  .vector-toc-list-item.vector-toc-level-2 > .vector-toc-link:hover {
+    padding-left: var(--space-6);
+  }
+
+  .vector-toc-list-item.vector-toc-level-3 > .vector-toc-link {
+    padding-left: var(--space-6);
+  }
+
+  .vector-toc-list-item.vector-toc-level-3 > .vector-toc-link:hover {
+    padding-left: calc(var(--space-6) + var(--space-1));
+  }
+}
+
+/* Desktop: >= 1000px - Full TOC */
+@media (min-width: 1000px) {
+  .vector-column-end {
+    display: block;
+  }
+}
+
+/* ============================================================================
+   ACCESSIBILITY
+   ============================================================================ */
+
+/* Focus styles for keyboard navigation */
+.vector-toc-link:focus-visible {
+  outline: 2px solid var(--color-progressive);
+  outline-offset: 2px;
+}
+
+/* Screen reader only text - visible by default for additional context */
+
+/* Skip to TOC link */
+.skip-to-toc {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--background-primary);
+  color: var(--color-progressive);
+  padding: var(--space-2) var(--space-4);
+  text-decoration: none;
+  border: 1px solid var(--border-base);
+  border-radius: var(--border-radius-small);
+  z-index: var(--z-index-modal);
+}
+
+.skip-to-toc:focus {
+  top: var(--space-2);
+  left: var(--space-2);
+}
+
+/* ============================================================================
+   PRINT STYLES
+   ============================================================================ */
+
+@media print {
+  .vector-column-end {
+    display: none;
+  }
+
+  .vector-toc {
+    display: none;
+  }
+}
+
+/* ============================================================================
+   REDUCED MOTION
+   ============================================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .vector-toc-link,
+  .reading-progress-bar {
+    transition: none;
+  }
+
+  .vector-toc {
+    scroll-behavior: auto;
+  }
+}
+
+/* ============================================================================
+   SMOOTH SCROLLING
+   ============================================================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Scroll margin for headings (to account for sticky header) */
+h2[id],
+h3[id],
+h4[id] {
+  scroll-margin-top: var(--space-4);
+}

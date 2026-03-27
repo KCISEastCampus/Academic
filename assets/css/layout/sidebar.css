@@ -1,0 +1,290 @@
+/**
+ * Sidebar Layout CSS
+ * Wikipedia-style left sidebar navigation with sticky positioning and hierarchical structure
+ * 
+ * Validates Requirements: 6.1, 6.2, 6.3, 6.4, 6.5
+ */
+
+/* ============================================================================
+   SIDEBAR STRUCTURE
+   ============================================================================ */
+
+.vector-column-start {
+  width: 220px;
+  flex-shrink: 0;
+  background: var(--background-sidebar);
+  border-right: 1px solid var(--border-subtle);
+}
+
+.mw-sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  padding: var(--space-4);
+  background: var(--background-sidebar);
+}
+
+/* ============================================================================
+   NAVIGATION STRUCTURE
+   ============================================================================ */
+
+.vector-main-menu {
+  margin: 0;
+  padding: 0;
+}
+
+.vector-main-menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation sections */
+.vector-menu {
+  margin-bottom: var(--space-4);
+}
+
+.vector-menu-heading {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-subtle);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: var(--space-2) 0;
+  margin: 0;
+  border-bottom: 1px solid var(--border-muted);
+}
+
+/* ============================================================================
+   NAVIGATION LINKS
+   ============================================================================ */
+
+.vector-menu-content-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.vector-menu-content-list li {
+  margin: 0;
+}
+
+.vector-menu-content-list a {
+  display: block;
+  padding: var(--space-2) var(--space-3);
+  color: var(--color-progressive);
+  text-decoration: none;
+  font-size: var(--font-size-medium);
+  border-radius: var(--border-radius-small);
+  transition: background var(--transition-fast) var(--transition-ease),
+              color var(--transition-fast) var(--transition-ease);
+}
+
+.vector-menu-content-list a:hover {
+  background: var(--background-color-interactive-subtle);
+  text-decoration: none;
+  color: var(--color-progressive-hover);
+}
+
+.vector-menu-content-list a:active {
+  color: var(--color-progressive-active);
+}
+
+/* Active/Current page link */
+.vector-menu-content-list a.active,
+.vector-menu-content-list a[aria-current="page"] {
+  background: var(--background-color-progressive-subtle);
+  color: var(--color-base);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* ============================================================================
+   HIERARCHICAL STRUCTURE
+   ============================================================================ */
+
+/* Level 1 - Top level items */
+.vector-menu-content-list > li > a {
+  padding-left: var(--space-3);
+}
+
+/* Level 2 - Nested items */
+.vector-menu-content-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.vector-menu-content-list ul li a {
+  padding-left: var(--space-6);
+  font-size: var(--font-size-small);
+}
+
+/* Level 3 - Deeply nested items */
+.vector-menu-content-list ul ul li a {
+  padding-left: var(--space-8);
+  font-size: var(--font-size-small);
+  color: var(--color-subtle);
+}
+
+.vector-menu-content-list ul ul li a:hover {
+  color: var(--color-progressive);
+}
+
+/* ============================================================================
+   COLLAPSIBLE SECTIONS
+   ============================================================================ */
+
+.vector-menu-checkbox {
+  display: none;
+}
+
+.vector-menu-heading-label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.vector-menu-heading-label::after {
+  content: '▼';
+  font-size: var(--font-size-x-small);
+  transition: transform var(--transition-fast) var(--transition-ease);
+}
+
+.vector-menu-checkbox:checked ~ .vector-menu-heading-label::after {
+  transform: rotate(-180deg);
+}
+
+.vector-menu-checkbox:not(:checked) ~ .vector-menu-content {
+  display: none;
+}
+
+/* ============================================================================
+   SIDEBAR SCROLLBAR STYLING
+   ============================================================================ */
+
+.mw-sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.mw-sidebar::-webkit-scrollbar-track {
+  background: var(--background-sidebar);
+}
+
+.mw-sidebar::-webkit-scrollbar-thumb {
+  background: var(--border-base);
+  border-radius: var(--border-radius-medium);
+}
+
+.mw-sidebar::-webkit-scrollbar-thumb:hover {
+  background: var(--color-subtle);
+}
+
+/* Firefox scrollbar */
+.mw-sidebar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-base) var(--background-sidebar);
+}
+
+/* ============================================================================
+   RESPONSIVE BEHAVIOR
+   ============================================================================ */
+
+/* Mobile: < 640px - Hide sidebar */
+@media (max-width: 639px) {
+  .vector-column-start {
+    display: none;
+  }
+}
+
+/* Tablet: 640px - 999px - Adjust sidebar width */
+@media (min-width: 640px) and (max-width: 999px) {
+  .vector-column-start {
+    width: 180px;
+  }
+
+  .mw-sidebar {
+    padding: var(--space-3);
+  }
+
+  .vector-menu-content-list a {
+    font-size: var(--font-size-small);
+    padding: var(--space-2);
+  }
+
+  .vector-menu-content-list ul li a {
+    padding-left: var(--space-5);
+  }
+
+  .vector-menu-content-list ul ul li a {
+    padding-left: var(--space-6);
+  }
+}
+
+/* Desktop: >= 1000px - Full sidebar */
+@media (min-width: 1000px) {
+  .vector-column-start {
+    display: block;
+  }
+}
+
+/* ============================================================================
+   ACCESSIBILITY
+   ============================================================================ */
+
+/* Focus styles for keyboard navigation */
+.vector-menu-content-list a:focus-visible {
+  outline: 2px solid var(--color-progressive);
+  outline-offset: 2px;
+}
+
+.vector-menu-heading-label:focus-visible {
+  outline: 2px solid var(--color-progressive);
+  outline-offset: 2px;
+}
+
+/* Skip navigation link */
+.skip-navigation {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--background-primary);
+  color: var(--color-progressive);
+  padding: var(--space-2) var(--space-4);
+  text-decoration: none;
+  border: 1px solid var(--border-base);
+  border-radius: var(--border-radius-small);
+  z-index: var(--z-index-modal);
+}
+
+.skip-navigation:focus {
+  top: var(--space-2);
+  left: var(--space-2);
+}
+
+/* ============================================================================
+   PRINT STYLES
+   ============================================================================ */
+
+@media print {
+  .vector-column-start {
+    display: none;
+  }
+
+  .mw-sidebar {
+    display: none;
+  }
+}
+
+/* ============================================================================
+   REDUCED MOTION
+   ============================================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .vector-menu-content-list a,
+  .vector-menu-heading-label::after {
+    transition: none;
+  }
+}

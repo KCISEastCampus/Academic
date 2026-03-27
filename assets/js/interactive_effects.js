@@ -19,8 +19,8 @@
  * - prefers-reduced-motion 尊重用户偏好
  */
 
-(function() {
-  'use strict';
+(function () {
+  "use strict";
 
   // 配置参数
   const CONFIG = {
@@ -29,27 +29,27 @@
     SCROLL_OFFSET: 80,
     FADE_IN_DELAY: 100,
     // 性能优化：减少不必要的计算
-    ENABLE_DEBUG_LOGGING: false
+    ENABLE_DEBUG_LOGGING: false,
   };
 
   // 工具函数
   const utils = {
     // 节流函数
-    throttle: function(func, limit) {
+    throttle: function (func, limit) {
       let inThrottle;
-      return function() {
+      return function () {
         const args = arguments;
         const context = this;
         if (!inThrottle) {
           func.apply(context, args);
           inThrottle = true;
-          setTimeout(() => inThrottle = false, limit);
+          setTimeout(() => (inThrottle = false), limit);
         }
       };
     },
 
     // 防抖函数
-    debounce: function(func, wait) {
+    debounce: function (func, wait) {
       let timeout;
       return function executedFunction() {
         const later = () => {
@@ -62,94 +62,103 @@
     },
 
     // 检查用户是否偏好减少动画
-    prefersReducedMotion: function() {
-      return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    prefersReducedMotion: function () {
+      return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     },
 
     // 平滑滚动到元素
-    smoothScrollTo: function(element, offset = CONFIG.SCROLL_OFFSET) {
+    smoothScrollTo: function (element, offset = CONFIG.SCROLL_OFFSET) {
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     },
 
     // 检查是否是主页
-    isHomePage: function() {
+    isHomePage: function () {
       // 检查URL路径是否为根路径或index
       const path = window.location.pathname;
-      return path === '/' || path === '/index.html' || path.endsWith('/index');
-    }
+      return path === "/" || path === "/index.html" || path.endsWith("/index");
+    },
   };
 
   // 页面滚动进度条
   const scrollProgress = {
-    init: function() {
+    init: function () {
       if (utils.prefersReducedMotion()) return;
 
       // 检查是否已经存在
-      if (document.querySelector('.scroll-progress')) return;
+      if (document.querySelector(".scroll-progress")) return;
 
-      this.progressBar = document.createElement('div');
-      this.progressBar.className = 'scroll-progress';
+      this.progressBar = document.createElement("div");
+      this.progressBar.className = "scroll-progress";
       this.progressBar.innerHTML = '<div class="scroll-progress-bar"></div>';
       document.body.appendChild(this.progressBar);
 
       this.update = utils.throttle(this.update.bind(this), 16);
-      window.addEventListener('scroll', this.update, { passive: true });
+      window.addEventListener("scroll", this.update, { passive: true });
       this.update();
     },
 
-    update: function() {
+    update: function () {
       if (!this.progressBar) return;
 
-      const scrolled = (window.pageYOffset / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-      const progressBar = this.progressBar.querySelector('.scroll-progress-bar');
+      const scrolled =
+        (window.pageYOffset /
+          (document.documentElement.scrollHeight - window.innerHeight)) *
+        100;
+      const progressBar = this.progressBar.querySelector(
+        ".scroll-progress-bar",
+      );
 
       if (progressBar) {
         if (scrolled > 0) {
-          this.progressBar.style.opacity = '1';
-          progressBar.style.width = scrolled + '%';
+          this.progressBar.style.opacity = "1";
+          progressBar.style.width = scrolled + "%";
         } else {
-          this.progressBar.style.opacity = '0';
+          this.progressBar.style.opacity = "0";
         }
       }
-    }
+    },
   };
 
   // 返回顶部按钮
   const backToTop = {
-    init: function() {
+    init: function () {
       // 检查是否已经存在
-      if (document.querySelector('.back-to-top')) return;
+      if (document.querySelector(".back-to-top")) return;
 
-      this.button = document.createElement('button');
-      this.button.className = 'back-to-top';
+      this.button = document.createElement("button");
+      this.button.className = "back-to-top";
       this.button.innerHTML = '<i class="bi bi-chevron-up"></i>';
-      this.button.setAttribute('aria-label', '返回顶部');
+      this.button.setAttribute("aria-label", "返回顶部");
       document.body.appendChild(this.button);
 
-      this.button.addEventListener('click', this.scrollToTop.bind(this));
-      window.addEventListener('scroll', utils.throttle(this.toggleVisibility.bind(this), 100), { passive: true });
+      this.button.addEventListener("click", this.scrollToTop.bind(this));
+      window.addEventListener(
+        "scroll",
+        utils.throttle(this.toggleVisibility.bind(this), 100),
+        { passive: true },
+      );
     },
 
-    toggleVisibility: function() {
+    toggleVisibility: function () {
       if (!this.button) return;
 
       if (window.pageYOffset > CONFIG.BACK_TO_TOP_THRESHOLD) {
-        this.button.classList.add('visible');
+        this.button.classList.add("visible");
       } else {
-        this.button.classList.remove('visible');
+        this.button.classList.remove("visible");
       }
     },
 
-    scrollToTop: function() {
+    scrollToTop: function () {
       window.scrollTo({
         top: 0,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     },
 
@@ -160,11 +169,9 @@
     // }
   };
 
-
-
   // 元素淡入动画
   const fadeInAnimation = {
-    init: function() {
+    init: function () {
       if (utils.prefersReducedMotion()) return;
 
       setTimeout(() => {
@@ -172,13 +179,18 @@
       }, 100);
     },
 
-    applyFadeInToVisibleElements: function() {
+    applyFadeInToVisibleElements: function () {
       const selectors = [
-        'h2', 'h3', '.card', '.subject-card',
-        'table', '.math', '.exam-link'
+        "h2",
+        "h3",
+        ".card",
+        ".subject-card",
+        "table",
+        ".math",
+        ".exam-link",
       ];
 
-      selectors.forEach(selector => {
+      selectors.forEach((selector) => {
         try {
           document.querySelectorAll(selector).forEach((el, index) => {
             const rect = el.getBoundingClientRect();
@@ -186,7 +198,7 @@
 
             if (isVisible) {
               setTimeout(() => {
-                el.classList.add('fade-in-visible');
+                el.classList.add("fade-in-visible");
               }, index * 50);
             }
             // 不可见元素不添加类，保持初始状态
@@ -195,20 +207,20 @@
           // Silently handle errors
         }
       });
-    }
+    },
   };
 
   // 平滑滚动增强
   const smoothScroll = {
-    init: function() {
-      document.addEventListener('click', this.handleClick.bind(this));
+    init: function () {
+      document.addEventListener("click", this.handleClick.bind(this));
     },
 
-    handleClick: function(e) {
+    handleClick: function (e) {
       const link = e.target.closest('a[href^="#"]');
       if (!link) return;
 
-      const targetId = link.getAttribute('href').substring(1);
+      const targetId = link.getAttribute("href").substring(1);
       const targetElement = document.getElementById(targetId);
 
       if (targetElement) {
@@ -216,259 +228,268 @@
         utils.smoothScrollTo(targetElement);
         history.pushState(null, null, link.href);
       }
-    }
+    },
   };
 
   // 表格交互优化
   const tableInteraction = {
-    init: function() {
-      document.querySelectorAll('table').forEach(table => {
-        table.addEventListener('mouseover', this.handleMouseOver.bind(this));
-        table.addEventListener('mouseout', this.handleMouseOut.bind(this));
+    init: function () {
+      document.querySelectorAll("table").forEach((table) => {
+        table.addEventListener("mouseover", this.handleMouseOver.bind(this));
+        table.addEventListener("mouseout", this.handleMouseOut.bind(this));
       });
     },
 
-    handleMouseOver: function(e) {
-      const row = e.target.closest('tr');
-      if (row && row.parentElement.tagName === 'TBODY') {
-        row.classList.add('table-row-hover');
+    handleMouseOver: function (e) {
+      const row = e.target.closest("tr");
+      if (row && row.parentElement.tagName === "TBODY") {
+        row.classList.add("table-row-hover");
       }
     },
 
-    handleMouseOut: function(e) {
-      const row = e.target.closest('tr');
+    handleMouseOut: function (e) {
+      const row = e.target.closest("tr");
       if (row) {
-        row.classList.remove('table-row-hover');
+        row.classList.remove("table-row-hover");
       }
-    }
+    },
   };
 
   // 加载状态指示
   const loadingIndicator = {
-    init: function() {
-      document.addEventListener('click', this.handleClick.bind(this));
+    init: function () {
+      document.addEventListener("click", this.handleClick.bind(this));
     },
 
-    handleClick: function(e) {
-      const link = e.target.closest('a');
+    handleClick: function (e) {
+      const link = e.target.closest("a");
       if (!link) return;
 
-      const href = (link.getAttribute('href') || '').toLowerCase();
-      if (!href.endsWith('.pdf')) return;
+      const href = (link.getAttribute("href") || "").toLowerCase();
+      if (!href.endsWith(".pdf")) return;
 
-      if (link.classList.contains('loading-pdf')) {
+      if (link.classList.contains("loading-pdf")) {
         e.preventDefault();
         return;
       }
 
-      link.classList.add('loading-pdf');
-      link.setAttribute('aria-busy', 'true');
-      link.style.pointerEvents = 'none';
+      link.classList.add("loading-pdf");
+      link.setAttribute("aria-busy", "true");
+      link.style.pointerEvents = "none";
 
-      let loader = link.querySelector('.pdf-loader');
+      let loader = link.querySelector(".pdf-loader");
       if (!loader) {
-        loader = document.createElement('span');
-        loader.className = 'pdf-loader';
-        loader.innerHTML = '<i class="bi bi-hourglass-split" aria-hidden="true"></i><span class="visually-hidden">Loading PDF</span>';
+        loader = document.createElement("span");
+        loader.className = "pdf-loader";
+        loader.innerHTML =
+          '<i class="bi bi-hourglass-split" aria-hidden="true"></i><span class="visually-hidden">Loading PDF</span>';
         link.appendChild(loader);
       }
 
       setTimeout(() => {
-        link.classList.remove('loading-pdf');
-        link.removeAttribute('aria-busy');
-        link.style.pointerEvents = '';
+        link.classList.remove("loading-pdf");
+        link.removeAttribute("aria-busy");
+        link.style.pointerEvents = "";
         if (loader && loader.parentElement === link) {
           loader.remove();
         }
       }, 2000);
-    }
+    },
   };
 
   // 键盘导航增强
   const keyboardNavigation = {
-    init: function() {
-      document.addEventListener('keydown', this.handleKeydown.bind(this));
+    init: function () {
+      document.addEventListener("keydown", this.handleKeydown.bind(this));
     },
 
-    handleKeydown: function(e) {
+    handleKeydown: function (e) {
       // ESC 已在 backToTop 中处理
-      if (e.key === 'Tab') {
-        document.body.classList.add('keyboard-navigation');
+      if (e.key === "Tab") {
+        document.body.classList.add("keyboard-navigation");
       }
-    }
+    },
   };
 
   // 科目按钮特效
   const subjectButtonEffects = {
-    init: function() {
+    init: function () {
       if (utils.prefersReducedMotion()) return;
 
-      document.querySelectorAll('.subject-list .btn').forEach(btn => {
-        btn.addEventListener('mouseenter', this.handleMouseEnter.bind(this));
-        btn.addEventListener('mouseleave', this.handleMouseLeave.bind(this));
+      document.querySelectorAll(".subject-list .btn").forEach((btn) => {
+        btn.addEventListener("mouseenter", this.handleMouseEnter.bind(this));
+        btn.addEventListener("mouseleave", this.handleMouseLeave.bind(this));
       });
     },
 
-    handleMouseEnter: function(e) {
+    handleMouseEnter: function (e) {
       const btn = e.target;
-      btn.classList.add('subject-btn-hover');
+      btn.classList.add("subject-btn-hover");
     },
 
-    handleMouseLeave: function(e) {
+    handleMouseLeave: function (e) {
       const btn = e.target;
-      btn.classList.remove('subject-btn-hover');
-    }
+      btn.classList.remove("subject-btn-hover");
+    },
   };
-
-
 
   // 代码块复制功能
   const codeCopy = {
-    init: function() {
+    init: function () {
       // 查找所有代码块
-      const codeBlocks = document.querySelectorAll('pre.highlight, .highlight > pre');
-      
-      codeBlocks.forEach(block => {
+      const codeBlocks = document.querySelectorAll(
+        "pre.highlight, .highlight > pre",
+      );
+
+      codeBlocks.forEach((block) => {
         // 检查是否已经有复制按钮
-        if (block.querySelector('.copy-btn')) return;
-        
+        if (block.querySelector(".copy-btn")) return;
+
         // 创建包装器（如果还没有）
         let wrapper = block.parentElement;
-        if (!wrapper.classList.contains('code-wrapper')) {
-          wrapper = document.createElement('div');
-          wrapper.className = 'code-wrapper position-relative';
+        if (!wrapper.classList.contains("code-wrapper")) {
+          wrapper = document.createElement("div");
+          wrapper.className = "code-wrapper position-relative";
           block.parentNode.insertBefore(wrapper, block);
           wrapper.appendChild(block);
         }
-        
+
         // 创建复制按钮
-        const btn = document.createElement('button');
-        btn.className = 'btn btn-sm btn-outline-secondary copy-btn position-absolute top-0 end-0 m-2';
+        const btn = document.createElement("button");
+        btn.className =
+          "btn btn-sm btn-outline-secondary copy-btn position-absolute top-0 end-0 m-2";
         btn.innerHTML = '<i class="bi bi-clipboard"></i>';
-        btn.setAttribute('aria-label', 'Copy code');
-        btn.title = 'Copy to clipboard';
-        
+        btn.setAttribute("aria-label", "Copy code");
+        btn.title = "Copy to clipboard";
+
         // 添加点击事件
-        btn.addEventListener('click', () => {
+        btn.addEventListener("click", () => {
           const code = block.innerText;
-          navigator.clipboard.writeText(code).then(() => {
-            // 成功反馈
-            const originalHTML = btn.innerHTML;
-            btn.innerHTML = '<i class="bi bi-check2"></i>';
-            btn.classList.remove('btn-outline-secondary');
-            btn.classList.add('btn-success');
-            
-            setTimeout(() => {
-              btn.innerHTML = originalHTML;
-              btn.classList.remove('btn-success');
-              btn.classList.add('btn-outline-secondary');
-            }, 2000);
-          }).catch(err => {
-            console.error('Failed to copy:', err);
-            btn.innerHTML = '<i class="bi bi-x"></i>';
-            setTimeout(() => {
-              btn.innerHTML = '<i class="bi bi-clipboard"></i>';
-            }, 2000);
-          });
+          navigator.clipboard
+            .writeText(code)
+            .then(() => {
+              // 成功反馈
+              const originalHTML = btn.innerHTML;
+              btn.innerHTML = '<i class="bi bi-check2"></i>';
+              btn.classList.remove("btn-outline-secondary");
+              btn.classList.add("btn-success");
+
+              setTimeout(() => {
+                btn.innerHTML = originalHTML;
+                btn.classList.remove("btn-success");
+                btn.classList.add("btn-outline-secondary");
+              }, 2000);
+            })
+            .catch((err) => {
+              console.error("Failed to copy:", err);
+              btn.innerHTML = '<i class="bi bi-x"></i>';
+              setTimeout(() => {
+                btn.innerHTML = '<i class="bi bi-clipboard"></i>';
+              }, 2000);
+            });
         });
-        
+
         wrapper.appendChild(btn);
       });
-    }
+    },
   };
 
   // 搜索高亮功能
   const searchHighlight = {
-    init: function() {
+    init: function () {
       const urlParams = new URLSearchParams(window.location.search);
-      const query = urlParams.get('highlight');
-      
+      const query = urlParams.get("highlight");
+
       if (!query) return;
-      
+
       // 解码并清理查询词
       const decodedQuery = decodeURIComponent(query).trim();
       if (decodedQuery.length < 2) return;
-      
+
       // 延迟执行以确保内容已加载
       setTimeout(() => {
         this.highlightText(decodedQuery);
       }, 300);
     },
-    
-    highlightText: function(text) {
-      const contentArea = document.querySelector('main') || document.body;
+
+    highlightText: function (text) {
+      const contentArea = document.querySelector("main") || document.body;
       if (!contentArea) return;
-      
+
       // 简单的文本节点遍历
       const walker = document.createTreeWalker(
         contentArea,
         NodeFilter.SHOW_TEXT,
         {
-          acceptNode: function(node) {
+          acceptNode: function (node) {
             // 跳过脚本、样式和已高亮的元素
             const parent = node.parentNode;
-            if (parent.tagName === 'SCRIPT' || 
-                parent.tagName === 'STYLE' || 
-                parent.tagName === 'MARK' ||
-                parent.classList.contains('no-highlight')) {
+            if (
+              parent.tagName === "SCRIPT" ||
+              parent.tagName === "STYLE" ||
+              parent.tagName === "MARK" ||
+              parent.classList.contains("no-highlight")
+            ) {
               return NodeFilter.FILTER_REJECT;
             }
             return NodeFilter.FILTER_ACCEPT;
-          }
-        }
+          },
+        },
       );
-      
+
       const nodesToHighlight = [];
       let node;
-      
+
       // 查找包含文本的节点
-      while (node = walker.nextNode()) {
+      while ((node = walker.nextNode())) {
         if (node.nodeValue.toLowerCase().includes(text.toLowerCase())) {
           nodesToHighlight.push(node);
         }
       }
-      
+
       // 应用高亮
       let firstMatch = true;
-      nodesToHighlight.forEach(node => {
+      nodesToHighlight.forEach((node) => {
         const parent = node.parentNode;
         const content = node.nodeValue;
         const lowerContent = content.toLowerCase();
         const lowerText = text.toLowerCase();
-        
+
         // 创建高亮后的HTML
         const parts = [];
         let lastIndex = 0;
         let index = lowerContent.indexOf(lowerText);
-        
+
         while (index !== -1) {
           // 添加匹配前的文本
-          parts.push(document.createTextNode(content.substring(lastIndex, index)));
-          
+          parts.push(
+            document.createTextNode(content.substring(lastIndex, index)),
+          );
+
           // 添加高亮标记
-          const mark = document.createElement('mark');
-          mark.className = 'search-highlight fade-in-highlight';
+          const mark = document.createElement("mark");
+          mark.className = "search-highlight fade-in-highlight";
           mark.textContent = content.substring(index, index + text.length);
           parts.push(mark);
-          
+
           // 滚动到第一个匹配项
           if (firstMatch) {
             setTimeout(() => {
-              mark.scrollIntoView({ behavior: 'smooth', block: 'center' });
-              mark.classList.add('active-highlight');
+              mark.scrollIntoView({ behavior: "smooth", block: "center" });
+              mark.classList.add("active-highlight");
             }, 100);
             firstMatch = false;
           }
-          
+
           lastIndex = index + text.length;
           index = lowerContent.indexOf(lowerText, lastIndex);
         }
-        
+
         // 添加剩余文本
         parts.push(document.createTextNode(content.substring(lastIndex)));
-        
+
         // 替换原节点
-        parts.forEach(part => {
+        parts.forEach((part) => {
           parent.insertBefore(part, node);
         });
         parent.removeChild(node);
@@ -476,13 +497,13 @@
 
       // 5秒后自动淡出高亮
       setTimeout(() => {
-        document.querySelectorAll('.search-highlight').forEach(el => {
-          el.classList.add('fade-out');
+        document.querySelectorAll(".search-highlight").forEach((el) => {
+          el.classList.add("fade-out");
         });
-        
+
         // 动画结束后移除高亮标签但保留文本
         setTimeout(() => {
-          document.querySelectorAll('.search-highlight').forEach(el => {
+          document.querySelectorAll(".search-highlight").forEach((el) => {
             const parent = el.parentNode;
             if (parent) {
               parent.replaceChild(document.createTextNode(el.textContent), el);
@@ -491,14 +512,14 @@
           });
         }, 1000);
       }, 5000);
-    }
+    },
   };
 
   // 初始化所有特效
   function init() {
     // 检查是否支持必要的API
-    if (!('IntersectionObserver' in window)) {
-      console.warn('IntersectionObserver not supported, some effects disabled');
+    if (!("IntersectionObserver" in window)) {
+      console.warn("IntersectionObserver not supported, some effects disabled");
     }
 
     const isHomePage = utils.isHomePage();
@@ -519,15 +540,17 @@
     searchHighlight.init(); // 添加搜索高亮初始化
 
     if (CONFIG.ENABLE_DEBUG_LOGGING) {
-      console.log('Interactive effects initialized' + (isHomePage ? ' (Home page mode)' : ''));
+      console.log(
+        "Interactive effects initialized" +
+          (isHomePage ? " (Home page mode)" : ""),
+      );
     }
   }
 
   // 页面加载完成后初始化
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
   } else {
     init();
   }
-
 })();

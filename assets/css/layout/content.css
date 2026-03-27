@@ -1,0 +1,347 @@
+/**
+ * Content Layout CSS
+ * Wikipedia-style three-column layout with sidebar, main content, and table of contents
+ * Implements responsive breakpoints for mobile, tablet, and desktop viewports
+ * 
+ * Validates Requirements: 4.1, 4.2, 4.3, 4.4, 4.6, 4.7, 16.1, 16.2, 16.3, 16.4, 16.5, 16.6, 16.7
+ */
+
+/* ============================================================================
+   MAIN CONTENT CONTAINER
+   ============================================================================ */
+
+.mw-page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--background-primary);
+}
+
+.mw-content-container {
+  display: flex;
+  flex: 1;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ============================================================================
+   THREE-COLUMN LAYOUT STRUCTURE
+   ============================================================================ */
+
+/* Left Column - Sidebar (220px) */
+.vector-column-start {
+  width: 220px;
+  flex-shrink: 0;
+}
+
+/* Center Column - Main Content */
+.mw-content {
+  flex: 1;
+  min-width: 0; /* Prevent flex item overflow */
+  padding: var(--space-4);
+  background: var(--background-primary);
+}
+
+/* Right Column - Table of Contents (280px) */
+.vector-column-end {
+  width: 280px;
+  flex-shrink: 0;
+}
+
+/* ============================================================================
+   CONTENT WIDTH CONSTRAINTS
+   ============================================================================ */
+
+/* Limited-width mode for main content */
+.mw-body {
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Full-width mode (when limited-width is disabled) */
+.mw-body.full-width {
+  max-width: none;
+}
+
+/* ============================================================================
+   CONTENT AREA STYLING
+   ============================================================================ */
+
+.mw-body-content {
+  color: var(--color-base);
+  font-size: var(--font-size-medium);
+  line-height: var(--line-height-relaxed);
+  word-wrap: break-word;
+}
+
+/* Page title */
+.firstHeading {
+  font-family: var(--font-family-serif);
+  font-size: var(--font-size-xxx-large);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-tight);
+  color: var(--color-base);
+  margin: 0 0 var(--space-4) 0;
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+/* Content sections */
+.mw-parser-output {
+  margin-top: var(--space-4);
+}
+
+/* ============================================================================
+   STICKY POSITIONING FOR SIDEBAR AND TOC
+   ============================================================================ */
+
+.vector-column-start .mw-sidebar,
+.vector-column-end .vector-toc {
+  position: sticky;
+  top: 0;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+/* ============================================================================
+   RESPONSIVE BREAKPOINTS
+   ============================================================================ */
+
+/* Mobile: < 640px - Single column layout */
+@media (max-width: 639px) {
+  .mw-content-container {
+    flex-direction: column;
+  }
+
+  /* Hide sidebar and TOC on mobile */
+  .vector-column-start,
+  .vector-column-end {
+    display: none;
+  }
+
+  /* Full-width content on mobile */
+  .mw-content {
+    width: 100%;
+    padding: var(--space-2);
+  }
+
+  /* Reduce body padding */
+  .mw-body {
+    padding: 0;
+  }
+
+  /* Adjust page title size */
+  .firstHeading {
+    font-size: var(--font-size-xx-large);
+  }
+
+  /* Make infoboxes full-width on mobile */
+  .infobox {
+    width: 100% !important;
+    float: none !important;
+    margin: var(--space-4) 0 !important;
+  }
+}
+
+/* Tablet: 640px - 999px - Two column layout */
+@media (min-width: 640px) and (max-width: 999px) {
+  .mw-content-container {
+    flex-direction: row;
+  }
+
+  /* Adjust sidebar width */
+  .vector-column-start {
+    width: 180px;
+  }
+
+  /* Hide or collapse TOC on tablet */
+  .vector-column-end {
+    width: 220px;
+  }
+
+  /* Adjust content padding */
+  .mw-content {
+    padding: var(--space-3);
+  }
+
+  /* Adjust page title size */
+  .firstHeading {
+    font-size: var(--font-size-xx-large);
+  }
+}
+
+/* Desktop: 1000px - 1439px - Full three-column layout */
+@media (min-width: 1000px) and (max-width: 1439px) {
+  .mw-content-container {
+    flex-direction: row;
+  }
+
+  /* Full sidebar width */
+  .vector-column-start {
+    width: 220px;
+  }
+
+  /* Full TOC width */
+  .vector-column-end {
+    width: 280px;
+  }
+
+  /* Standard content padding */
+  .mw-content {
+    padding: var(--space-4);
+  }
+
+  /* Content max-width constraint */
+  .mw-body {
+    max-width: 960px;
+  }
+}
+
+/* Wide Desktop: >= 1440px - Maximum container width */
+@media (min-width: 1440px) {
+  .mw-content-container {
+    max-width: 1440px;
+  }
+
+  /* Full three-column layout */
+  .vector-column-start {
+    width: 220px;
+  }
+
+  .vector-column-end {
+    width: 280px;
+  }
+
+  .mw-content {
+    padding: var(--space-6);
+  }
+}
+
+/* ============================================================================
+   CONTENT SPACING AND FLOW
+   ============================================================================ */
+
+/* Spacing between content elements */
+.mw-parser-output > * + * {
+  margin-top: var(--space-4);
+}
+
+/* Headings spacing */
+.mw-parser-output h2,
+.mw-parser-output h3,
+.mw-parser-output h4,
+.mw-parser-output h5,
+.mw-parser-output h6 {
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-3);
+}
+
+/* First heading has no top margin */
+.mw-parser-output > h2:first-child,
+.mw-parser-output > h3:first-child {
+  margin-top: 0;
+}
+
+/* Paragraph spacing */
+.mw-parser-output p {
+  margin: var(--space-3) 0;
+}
+
+/* List spacing */
+.mw-parser-output ul,
+.mw-parser-output ol {
+  margin: var(--space-3) 0;
+  padding-left: var(--space-8);
+}
+
+/* ============================================================================
+   CONTENT SCROLLBAR STYLING
+   ============================================================================ */
+
+.mw-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.mw-content::-webkit-scrollbar-track {
+  background: var(--background-primary);
+}
+
+.mw-content::-webkit-scrollbar-thumb {
+  background: var(--border-base);
+  border-radius: var(--border-radius-medium);
+}
+
+.mw-content::-webkit-scrollbar-thumb:hover {
+  background: var(--color-subtle);
+}
+
+/* Firefox scrollbar */
+.mw-content {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-base) var(--background-primary);
+}
+
+/* ============================================================================
+   ACCESSIBILITY
+   ============================================================================ */
+
+/* Focus styles for content links */
+.mw-body-content a:focus-visible {
+  outline: 2px solid var(--color-progressive);
+  outline-offset: 2px;
+}
+
+/* Skip to content target */
+#content {
+  scroll-margin-top: var(--space-4);
+}
+
+/* ============================================================================
+   PRINT STYLES
+   ============================================================================ */
+
+@media print {
+  .mw-content-container {
+    display: block;
+    max-width: none;
+  }
+
+  .vector-column-start,
+  .vector-column-end {
+    display: none;
+  }
+
+  .mw-content {
+    width: 100%;
+    padding: 0;
+  }
+
+  .mw-body {
+    max-width: none;
+  }
+
+  /* Expand content for printing */
+  .mw-body-content {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  .firstHeading {
+    font-size: 18pt;
+    page-break-after: avoid;
+  }
+}
+
+/* ============================================================================
+   REDUCED MOTION
+   ============================================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .mw-content,
+  .vector-column-start,
+  .vector-column-end {
+    scroll-behavior: auto;
+  }
+}

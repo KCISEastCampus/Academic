@@ -1,0 +1,92 @@
+/**
+ * MathJax / math rendering styles
+ *
+ * Minimal overrides only. The site uses MathJax SVG output, so these
+ * rules focus on wrapper layout and overflow handling.
+ *
+ * Validates: Requirements 21.1, 21.2, 21.3, 21.4, 21.5
+ */
+
+.kdmath {
+    color: var(--color-base);
+}
+
+mjx-container {
+    display: inline-block !important;
+    color: var(--color-base);
+    vertical-align: -0.08em;
+    max-width: 100%;
+    text-indent: 0;
+}
+
+/* ============================================================================
+   Display math — centred block
+   ============================================================================ */
+
+mjx-container[display="true"] {
+    display: block !important;
+    text-align: center;
+    margin: 0.9em auto;
+    padding: 0.1em 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+mjx-container[display="true"] > svg {
+    display: block;
+    margin: 0 auto;
+    min-width: max-content;
+}
+
+/* ============================================================================
+   SVG output — must stay inline inside mjx-container
+   ============================================================================ */
+
+mjx-container svg {
+    display: inline !important;
+    max-width: none !important;
+    height: auto !important;
+    color: var(--color-base);
+}
+
+mjx-container mjx-assistive-mml {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+.mw-parser-output td mjx-container,
+.mw-parser-output th mjx-container,
+.mw-parser-output li mjx-container,
+.mw-parser-output p mjx-container {
+    max-width: 100%;
+}
+
+/* ============================================================================
+   Horizontal scroll on small screens (display math only)
+   ============================================================================ */
+
+@media (max-width: 639px) {
+    mjx-container[display="true"] {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* ============================================================================
+   Print
+   ============================================================================ */
+
+@media print {
+    mjx-container,
+    mjx-container svg {
+        color: #000 !important;
+    }
+}

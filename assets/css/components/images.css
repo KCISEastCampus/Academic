@@ -1,0 +1,247 @@
+/**
+ * Wikipedia-Style Images Component
+ *
+ * Responsive images, thumbnail styling, alignment classes, figcaption styling.
+ *
+ * Validates: Requirements 19.1, 19.2, 19.3, 19.4, 19.5
+ */
+
+/* ============================================================================
+   Base Image Styles
+   ============================================================================ */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Allow inline images */
+p img,
+span img {
+    display: inline;
+}
+
+/* ============================================================================
+   Thumbnail Styles (mw-default-size / thumb)
+   ============================================================================ */
+
+.thumb {
+    margin: var(--space-2) 0 var(--space-4) var(--space-4);
+    clear: right;
+    float: right;
+    max-width: 50%;
+}
+
+.thumb.tleft,
+.thumb.floatleft {
+    float: left;
+    margin: var(--space-2) var(--space-4) var(--space-4) 0;
+    clear: left;
+}
+
+.thumb.tright,
+.thumb.floatright {
+    float: right;
+    margin: var(--space-2) 0 var(--space-4) var(--space-4);
+    clear: right;
+}
+
+.thumb.tnone,
+.thumb.floatnone {
+    float: none;
+    margin: var(--space-4) auto;
+    clear: both;
+}
+
+/* Thumbnail inner wrapper */
+.thumbinner {
+    border: 1px solid var(--border-base);
+    background-color: var(--background-secondary);
+    padding: var(--space-1);
+    display: inline-block;
+    max-width: 100%;
+}
+
+.thumbimage {
+    display: block;
+    max-width: 100%;
+}
+
+/* ============================================================================
+   Figcaption / Thumbcaption
+   ============================================================================ */
+
+.thumbcaption,
+figcaption {
+    font-size: var(--font-size-small);
+    color: var(--color-subtle);
+    line-height: var(--line-height-base);
+    padding: var(--space-2) var(--space-1) var(--space-1);
+    text-align: left;
+}
+
+/* ============================================================================
+   Figure Wrapper
+   ============================================================================ */
+
+figure {
+    margin: var(--space-4) 0;
+}
+
+figure img {
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--border-radius-small);
+}
+
+figure.float-right {
+    float: right;
+    margin: var(--space-2) 0 var(--space-4) var(--space-4);
+    max-width: 320px;
+}
+
+figure.float-left {
+    float: left;
+    margin: var(--space-2) var(--space-4) var(--space-4) 0;
+    max-width: 320px;
+}
+
+/* ============================================================================
+   Image Modal
+   ============================================================================ */
+
+.image-modal-overlay[hidden] {
+    display: none !important;
+}
+
+.image-modal-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-4);
+    background: rgba(0, 0, 0, 0.88);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: var(--z-index-modal);
+    transition: opacity var(--transition-medium) var(--transition-ease);
+}
+
+.image-modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.image-modal-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: min(100%, 1200px);
+    max-height: 100%;
+    cursor: zoom-out;
+}
+
+.image-modal-content img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    max-height: calc(100vh - 2 * var(--space-4));
+    height: auto;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+}
+
+#imageModalImg:not([src]),
+#imageModalImg[src=""] {
+    display: none;
+}
+
+.image-modal-close {
+    position: absolute;
+    top: var(--space-4);
+    right: var(--space-4);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.32);
+    border-radius: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    cursor: pointer;
+}
+
+.image-modal-close:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.image-modal-close svg {
+    display: block;
+}
+
+/* ============================================================================
+   Gallery
+   ============================================================================ */
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin: var(--space-4) 0;
+    list-style: none;
+    padding: 0;
+}
+
+.gallerybox {
+    text-align: center;
+}
+
+.gallerybox img {
+    border: 1px solid var(--border-base);
+}
+
+/* ============================================================================
+   Responsive
+   ============================================================================ */
+
+@media (max-width: 639px) {
+    .thumb,
+    .thumb.tright,
+    .thumb.tleft,
+    figure.float-right,
+    figure.float-left {
+        float: none;
+        margin: var(--space-4) 0;
+        max-width: 100%;
+        clear: both;
+    }
+
+    .thumbinner {
+        max-width: 100%;
+        width: 100% !important;
+    }
+}
+
+/* ============================================================================
+   Print Styles
+   ============================================================================ */
+
+@media print {
+    .thumb,
+    figure {
+        border-color: #000;
+        background-color: #fff;
+    }
+
+    .thumbcaption,
+    figcaption {
+        color: #555;
+    }
+}

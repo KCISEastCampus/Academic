@@ -1,41 +1,66 @@
 /* variables.css */
-/* Centralized CSS variables for theme colors, spacing, and design tokens */
-/* This file makes it easy to maintain consistent styling across the site */
+/*
+ * Bridge file: maps old site variables to the Wikipedia design system.
+ * The Wikipedia design tokens are defined in assets/css/base/variables.css
+ * which is loaded BEFORE this file. Here we:
+ *  1. Point old vars (--bg, --text, --surface, --muted) at Wikipedia values
+ *     so any legacy CSS that still uses them continues to render correctly.
+ *  2. Keep accent / scheme colours that content pages still depend on.
+ *
+ * Do NOT redefine --background-primary, --color-base, etc. here —
+ * those are owned by base/variables.css.
+ */
 
+/* ============================================================================
+   DARK MODE (DEFAULT) — old vars → Wikipedia dark tokens
+   ============================================================================ */
 :root {
-  /* Theme colors - Dark mode defaults */
-  --bg: #0b1220; /* page background for dark theme */
-  --surface: #0f1a2b; /* card / surface */
-  --muted: #9aa4b2; /* secondary text */
-  --text: #e6eef6; /* primary text */
-  --accent-al: #5cc07f; /* A-Level accent */
-  --accent-ig: #5c6bc0; /* IGCSE accent */
-  --accent-al-rgb: 92, 192, 127;
-  --accent-ig-rgb: 92, 107, 192;
-  --accent-page: #a78bfa; /* Subpages accent (purple) */
-  --accent-page-rgb: 167, 139, 250;
-  --info: #17a2b8;
-  
-  /* Layout */
-  --radius: 0.6rem;
-  --container-max: 1100px;
-  
-  /* Spacing scale */
-  --space-xxs: 0.25rem;
-  --space-xs: 0.5rem;
-  --space-sm: 0.75rem;
-  --space-md: 1rem;
-  --space-lg: 1.5rem;
-  --space-xl: 2rem;
-  
-  /* Focus ring color */
-  --focus-ring: 100,150,255;
+    /* Old layout vars → Wikipedia equivalents */
+    --bg: var(--background-primary); /* was #0b1220 */
+    --surface: var(--background-secondary); /* was #0f1a2b */
+    --text: var(--color-base); /* was #e6eef6 */
+    --muted: var(--color-subtle); /* was #9aa4b2 */
+
+    /* Accent colours kept for subject-specific colouring */
+    --accent-al: #5cc07f; /* A-Level green */
+    --accent-ig: #6b9ff5; /* IGCSE blue — aligned with Wikipedia progressive blue */
+    --accent-al-rgb: 92, 192, 127;
+    --accent-ig-rgb: 107, 159, 245;
+    --accent-page: #a78bfa;
+    --accent-page-rgb: 167, 139, 250;
+    --info: #6b9ff5;
+
+    /* Legacy layout */
+    --radius: 2px; /* Wikipedia uses 2px radius */
+    --container-max: 1440px;
+    --content-page-max: 960px;
+
+    /* Legacy spacing scale (kept for any templates still using them) */
+    --space-xxs: 0.25rem;
+    --space-xs: 0.5rem;
+    --space-sm: 0.75rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+
+    /* Focus ring */
+    --focus-ring: 107, 159, 245;
 }
 
-/* Light theme overrides */
+/* ============================================================================
+   LIGHT MODE — old vars → Wikipedia light tokens
+   ============================================================================ */
 html[data-bs-theme="light"] {
-  --bg: #f6f8fa;
-  --surface: #ffffff;
-  --muted: #556076;
-  --text: #0b1220;
+    --bg: var(--background-primary); /* #ffffff */
+    --surface: var(--background-secondary); /* #f8f9fa */
+    --text: var(--color-base); /* #202122 */
+    --muted: var(--color-subtle); /* #54595d */
+
+    /* In light mode keep accent colours slightly adjusted */
+    --accent-al: #14866d;
+    --accent-ig: #0645ad;
+    --accent-al-rgb: 20, 134, 109;
+    --accent-ig-rgb: 6, 69, 173;
+    --info: #0645ad;
+    --focus-ring: 6, 69, 173;
 }

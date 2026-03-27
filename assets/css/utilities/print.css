@@ -1,0 +1,208 @@
+/**
+ * Wikipedia-Style Print Utilities
+ *
+ * Hides navigation elements, interactive elements, expands collapsed sections,
+ * uses white background / black text, displays URLs for external links,
+ * removes shadows and decorative elements.
+ *
+ * Validates: Requirements 18.1, 18.2, 18.3, 18.4, 18.5, 18.6
+ */
+
+@media print {
+  /* ============================================================================
+     Page Setup
+     ============================================================================ */
+
+  @page {
+    margin: 2cm;
+    size: A4;
+  }
+
+  /* ============================================================================
+     Global Reset for Print
+     ============================================================================ */
+
+  *,
+  *::before,
+  *::after {
+    background-color: #fff !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* ============================================================================
+     Hide Navigation and Interactive Elements
+     ============================================================================ */
+
+  /* Sidebar navigation */
+  .sidebar,
+  .mw-sidebar,
+  #sidebar,
+  [class*="sidebar"] {
+    display: none !important;
+  }
+
+  /* Header */
+  .site-header,
+  .mw-header,
+  header,
+  nav {
+    display: none !important;
+  }
+
+  /* Footer */
+  .site-footer,
+  footer {
+    display: none !important;
+  }
+
+  /* Table of Contents */
+  .toc,
+  .mw-toc,
+  #toc,
+  .reading-progress-bar {
+    display: none !important;
+  }
+
+  /* Theme toggle and interactive buttons */
+  .theme-toggle,
+  .cdx-button,
+  button,
+  .navbox-toggle,
+  .mw-collapsible-toggle {
+    display: none !important;
+  }
+
+  /* Search box */
+  .search-box,
+  .search-container,
+  [class*="search"] {
+    display: none !important;
+  }
+
+  /* ============================================================================
+     Content Layout
+     ============================================================================ */
+
+  .content-wrapper,
+  .mw-content-wrapper,
+  main,
+  .page-content {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    float: none !important;
+  }
+
+  /* ============================================================================
+     Typography for Print
+     ============================================================================ */
+
+  body {
+    font-size: 11pt;
+    line-height: 1.4;
+  }
+
+  h1 { font-size: 20pt; }
+  h2 { font-size: 16pt; }
+  h3 { font-size: 14pt; }
+  h4 { font-size: 12pt; }
+  h5, h6 { font-size: 11pt; }
+
+  /* Page breaks */
+  h2, h3, h4 {
+    page-break-after: avoid;
+  }
+
+  p, blockquote, ul, ol, dl, table {
+    page-break-inside: avoid;
+  }
+
+  /* ============================================================================
+     Expand Collapsed Sections
+     ============================================================================ */
+
+  .navbox.collapsed .navbox-content,
+  [aria-expanded="false"] + .collapsible-content,
+  .collapsed .collapse {
+    display: block !important;
+  }
+
+  /* ============================================================================
+     Show URLs for External Links
+     ============================================================================ */
+
+  a[href^="http"]::after,
+  a[href^="//"]::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #555 !important;
+    word-break: break-all;
+  }
+
+  /* Don't show URL for navigation-only links */
+  a[href^="#"]::after,
+  a[href^="/"]:not([href^="//"]):not([href^="https://"])::after {
+    content: none;
+  }
+
+  /* ============================================================================
+     Tables
+     ============================================================================ */
+
+  .wikitable,
+  table {
+    border-collapse: collapse !important;
+    border: 1px solid #000 !important;
+  }
+
+  .wikitable th,
+  .wikitable td,
+  table th,
+  table td {
+    border: 1px solid #000 !important;
+    padding: 4pt !important;
+  }
+
+  /* ============================================================================
+     Images
+     ============================================================================ */
+
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  figure,
+  .thumb {
+    page-break-inside: avoid;
+  }
+
+  /* ============================================================================
+     Remove Shadows and Decorative
+     ============================================================================ */
+
+  .infobox,
+  .navbox,
+  .ambox,
+  pre,
+  .thumbinner {
+    border: 1px solid #000 !important;
+    box-shadow: none !important;
+  }
+
+  /* ============================================================================
+     Print-Only Elements
+     ============================================================================ */
+
+  .print-only {
+    display: block !important;
+  }
+}
+
+/* Hide print-only elements on screen */
+.print-only {
+  display: none;
+}

@@ -27,12 +27,20 @@ redirect_from:
 
 ### Algebraic Division
 - Rewrite **improper fractions** as proper fractions using polynomial division
-- For $\frac{F(x)}{G(x)}$ where $F(x)$ and $G(x)$ are polynomials: $$\frac{F(x)}{G(x)} = Q(x) + \frac{r}{G(x)}$$ where $Q(x)$ is the quotient and $r$ is the remainder
-- **Example**: $$\frac{x^3 + x^2 - 7}{x - 3} = x^2 + 4x + 12 + \frac{29}{x - 3}$$
+
+For $\frac{F(x)}{G(x)}$ where $F(x)$ and $G(x)$ are polynomials:
+$$\frac{F(x)}{G(x)} = Q(x) + \frac{r}{G(x)}$$
+where $Q(x)$ is the quotient and $r$ is the remainder.
+
+**Example:**
+$$\frac{x^3 + x^2 - 7}{x - 3} = x^2 + 4x + 12 + \frac{29}{x - 3}$$
 
 ### Partial Fractions
 - Split fractions with multiple linear factors in the denominator
-- **Proper fraction example**: $$\frac{6x^2 + 5x - 2}{x(x-1)(2x+1)} \equiv \frac{A}{x} + \frac{B}{x-1} + \frac{C}{2x+1}$$
+
+**Proper fraction example:**
+$$\frac{6x^2 + 5x - 2}{x(x-1)(2x+1)} \equiv \frac{A}{x} + \frac{B}{x-1} + \frac{C}{2x+1}$$
+
 - **Method**:
   1. Set up identity with unknown constants
   2. Multiply through by denominator
@@ -40,10 +48,12 @@ redirect_from:
   4. Solve for remaining constants using additional values or by equating coefficients
 
 ### Repeated Linear Factors
-- For repeated factors, include extra fractions: $$\frac{2x^2 + 2x - 18}{x(x-3)^2} \equiv \frac{A}{x} + \frac{B}{(x-3)} + \frac{C}{(x-3)^2}$$
-- **Other examples**:
-  $$\frac{10x^2 - 10x + 17}{(2x+1)(x-3)^2} \equiv \frac{A}{2x+1} + \frac{B}{(x-3)} + \frac{C}{(x-3)^2}$$
-  $$\frac{2x}{(x+2)^2} \equiv \frac{A}{(x+2)} + \frac{B}{(x+2)^2}$$
+For repeated factors, include extra fractions:
+$$\frac{2x^2 + 2x - 18}{x(x-3)^2} \equiv \frac{A}{x} + \frac{B}{(x-3)} + \frac{C}{(x-3)^2}$$
+
+**Other examples:**
+$$\frac{10x^2 - 10x + 17}{(2x+1)(x-3)^2} \equiv \frac{A}{2x+1} + \frac{B}{(x-3)} + \frac{C}{(x-3)^2}$$
+$$\frac{2x}{(x+2)^2} \equiv \frac{A}{(x+2)} + \frac{B}{(x+2)^2}$$
 
 ### Proof by Contradiction 💡
 - **Method**:
@@ -123,7 +133,9 @@ Combinations of:
 
 ### Rational Functions
 - Use Factor Theorem and Remainder Theorem for divisors of the form $(ax + b)$
-- **Simplification example**: $$\frac{x^2 - 4x}{x^2 - 5x + 4} = \frac{x(x - 4)}{(x - 4)(x - 1)} = \frac{x}{x - 1}$$
+
+**Simplification example:**
+$$\frac{x^2 - 4x}{x^2 - 5x + 4} = \frac{x(x - 4)}{(x - 4)(x - 1)} = \frac{x}{x - 1}$$
 
 ### Algebraic Division
 **Examples**:
@@ -141,7 +153,10 @@ Combinations of:
 ### Binomial Series 🔢
 - $(1 + x)^n$ for any rational $n$ (including fractions and negative integers)
 - Valid for $\lvert x \rvert < 1$
-- **General Term** (Expansion of $(1+x)^n$): $$u_{r+1} = \frac{n(n-1)\cdots(n-r+1)}{r!}x^r$$
+
+**General Term** (Expansion of $(1+x)^n$):
+$$u_{r+1} = \frac{n(n-1)\cdots(n-r+1)}{r!}x^r$$
+
 - **Applications**: Use a few terms of the series to find approximate values of roots or powers (e.g., finding an approximation for $\sqrt{1.04}$).
 - **Example**: $(2 + 3x)^{-2} = \frac{1}{4}\left(1 + \frac{3x}{2}\right)^{-2}$, valid for $\lvert x \rvert < \frac{2}{3}$
 
@@ -375,7 +390,8 @@ $$V = \int_c^d \pi x^2 dy$$
 $$A = \int_a^b y dx$$
 
 #### Area between two curves:
-$$A = \int_a^b [f(x) - g(x)] dx$$ where $f(x) \geq g(x)$
+$$A = \int_a^b [f(x) - g(x)] dx$$
+where $f(x) \geq g(x)$.
 
 ---
 
@@ -434,7 +450,7 @@ where $h = \frac{b - a}{n}$ and **n must be even** (number of strips)
 - **Vector equation of line:** $\vec{r} = \vec{a} + \lambda\vec{b}$
   where $\vec{a}$ is a point on the line and $\vec{b}$ is the direction vector
 
-**Example:** Line through $$(1,0,2)$$ with direction $$\begin{bmatrix} -1 \\ 2 \\ 3 \end{bmatrix}$$
+**Example:** Line through $(1,0,2)$ with direction vector $(-1, 2, 3)$
 
 $$\begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} 1 \\ 0 \\ 2 \end{bmatrix} + \lambda \begin{bmatrix} -1 \\ 2 \\ 3 \end{bmatrix}$$
 

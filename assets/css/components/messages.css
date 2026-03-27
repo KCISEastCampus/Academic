@@ -1,0 +1,153 @@
+/**
+ * Wikipedia-Style Messages and Hatnotes Component
+ *
+ * Implements message box variants (warning, error, notice) and hatnote styling.
+ *
+ * Validates: Requirements 14.1, 14.2, 14.3, 14.4, 15.1, 15.2, 15.3
+ */
+
+/* ============================================================================
+   Base Message Box (ambox)
+   ============================================================================ */
+
+.ambox {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+
+  margin: var(--space-4) 0;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--border-base);
+  border-left-width: 4px;
+  border-radius: var(--border-radius-small);
+
+  background-color: var(--background-secondary);
+  color: var(--color-base);
+
+  font-size: var(--font-size-medium);
+  line-height: var(--line-height-base);
+}
+
+.ambox-icon {
+  flex-shrink: 0;
+  font-size: var(--font-size-x-large);
+  line-height: 1;
+}
+
+.ambox-text {
+  flex: 1;
+}
+
+.ambox-text p:first-child {
+  margin-top: 0;
+}
+
+.ambox-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================================================
+   Notice Variant (default)
+   ============================================================================ */
+
+.ambox-notice {
+  border-left-color: var(--color-progressive);
+  background-color: var(--background-color-progressive-subtle);
+}
+
+/* ============================================================================
+   Warning Variant
+   ============================================================================ */
+
+.ambox-warning {
+  border-left-color: var(--color-warning);
+  background-color: var(--background-secondary);
+}
+
+.ambox-warning .ambox-icon {
+  color: var(--color-warning);
+}
+
+/* ============================================================================
+   Error / Serious Variant
+   ============================================================================ */
+
+.ambox-serious,
+.ambox-error {
+  border-left-color: var(--color-destructive);
+  background-color: var(--background-color-destructive-subtle);
+}
+
+.ambox-serious .ambox-icon,
+.ambox-error .ambox-icon {
+  color: var(--color-destructive);
+}
+
+/* ============================================================================
+   Hatnotes
+   ============================================================================ */
+
+.hatnote {
+  padding: 0 0 var(--space-2) var(--space-8);
+  margin: 0 0 var(--space-3);
+  border-bottom: 1px solid var(--border-muted);
+
+  font-style: italic;
+  font-size: var(--font-size-medium);
+  color: var(--color-subtle);
+  line-height: var(--line-height-base);
+}
+
+.hatnote a {
+  color: var(--color-progressive);
+}
+
+.hatnote a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================================================
+   Sister Project Box
+   ============================================================================ */
+
+.sistersitebox {
+  float: right;
+  clear: right;
+  margin: 0 0 var(--space-3) var(--space-4);
+  padding: var(--space-3);
+  border: 1px solid var(--border-base);
+  border-radius: var(--border-radius-small);
+  background-color: var(--background-secondary);
+  font-size: var(--font-size-small);
+}
+
+/* ============================================================================
+   Navframe / Collapsible
+   ============================================================================ */
+
+.mw-collapsible-toggle {
+  cursor: pointer;
+  color: var(--color-progressive);
+  font-size: var(--font-size-small);
+}
+
+.mw-collapsible-toggle:hover {
+  text-decoration: underline;
+}
+
+/* ============================================================================
+   Print Styles
+   ============================================================================ */
+
+@media print {
+  .ambox {
+    border-color: #000;
+    background-color: #fff;
+    color: #000;
+  }
+
+  .hatnote {
+    color: #555;
+    border-bottom-color: #000;
+  }
+}

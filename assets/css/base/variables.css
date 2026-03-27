@@ -1,0 +1,201 @@
+/**
+ * Wikipedia-Style Design System Variables
+ * 
+ * This file defines all CSS custom properties (design tokens) for the Wikipedia-style redesign.
+ * Includes color palettes for light and dark modes, typography, spacing, shadows, transitions, and z-index.
+ */
+
+/* ============================================================================
+   DEFAULT THEME (DARK MODE)
+   ============================================================================ */
+
+:root {
+  /* Primary Background Colors */
+  --background-primary: #1f1f23;
+  --background-secondary: #27272b;
+  --background-tertiary: #2e2e32;
+  --background-interactive: #27272b;
+
+  /* Border Colors */
+  --border-base: #515455;
+  --border-subtle: #3f4041;
+  --border-muted: #2e2e32;
+
+  /* Text Colors */
+  --color-base: #f8f9fa;
+  --color-base-fixed: #d1cbc2;
+  --color-subtle: #c8c8c8;
+  --color-placeholder: #a2a9b1;
+  --color-disabled: #72777d;
+
+  /* Link Colors */
+  --color-progressive: #6b9ff5;
+  --color-progressive-hover: #8fb3ff;
+  --color-progressive-active: #6b9ff5;
+  --color-visited: #b19aff;
+
+  /* Interactive Colors */
+  --color-destructive: #ff6e6e;
+  --color-warning: #ffcc33;
+  --color-success: #3eaf7c;
+  --color-notice: #f8f9fa;
+
+  /* Component-Specific Colors */
+  --background-color-interactive-subtle: #2e2e32;
+  --background-color-progressive-subtle: #1a3a5a;
+  --background-color-destructive-subtle: #4a2020;
+
+  /* Navigation & Header */
+  --background-header: #1f1f23;
+  --background-nav: #27272b;
+  --background-sidebar: #27272b;
+
+  /* Tables & Infoboxes */
+  --background-infobox-header: #373a3a;
+  --background-infobox-subheader: #363838;
+  --background-table-header: #3f5856;
+  --background-table-odd: #2b2d2e;
+  --background-table-even: transparent;
+
+  /* Navbox Colors */
+  --background-navbox: #27272b;
+  --background-navbox-title: #373a3a;
+  --background-navbox-group: #363838;
+  --background-navbox-subgroup: #2b2d2e;
+  --background-navbox-odd: #2b2d2e;
+  --background-navbox-even: transparent;
+
+  /* Typography - Font Families */
+  --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 
+                       'Helvetica Neue', Arial, sans-serif;
+  --font-family-monospace: 'Courier New', Courier, monospace;
+  --font-family-serif: Georgia, 'Times New Roman', Times, serif;
+
+  /* Typography - Font Sizes */
+  --font-size-xx-small: 11px;
+  --font-size-x-small: 12px;
+  --font-size-small: 13px;
+  --font-size-medium: 14px;
+  --font-size-large: 16px;
+  --font-size-x-large: 18px;
+  --font-size-xx-large: 21px;
+  --font-size-xxx-large: 24px;
+
+  /* Typography - Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Typography - Line Heights */
+  --line-height-tight: 1.25;
+  --line-height-base: 1.5;
+  --line-height-relaxed: 1.6;
+  --line-height-loose: 1.8;
+
+  /* Spacing System */
+  --space-0: 0;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* Border Radius */
+  --border-radius-none: 0;
+  --border-radius-small: 2px;
+  --border-radius-medium: 4px;
+  --border-radius-large: 8px;
+  --border-radius-circle: 50%;
+
+  /* Shadows (Dark Mode) */
+  --box-shadow-small: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --box-shadow-medium: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --box-shadow-large: 0 4px 16px rgba(0, 0, 0, 0.5);
+
+  /* Transitions */
+  --transition-fast: 100ms;
+  --transition-medium: 200ms;
+  --transition-slow: 300ms;
+  --transition-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --transition-ease-out: cubic-bezier(0, 0, 0.2, 1);
+
+  /* Z-Index Scale */
+  --z-index-base: 0;
+  --z-index-dropdown: 100;
+  --z-index-sticky: 200;
+  --z-index-overlay: 300;
+  --z-index-modal: 400;
+  --z-index-toast: 500;
+}
+
+/* ============================================================================
+   LIGHT MODE THEME
+   ============================================================================ */
+
+html[data-bs-theme="light"] {
+  /* Primary Background Colors */
+  --background-primary: #ffffff;
+  --background-secondary: #f8f9fa;
+  --background-tertiary: #eaecf0;
+  --background-interactive: #f8f9fa;
+
+  /* Border Colors */
+  --border-base: #a2a9b1;
+  --border-subtle: #c8ccd1;
+  --border-muted: #eaecf0;
+
+  /* Text Colors */
+  --color-base: #202122;
+  --color-base-fixed: #202122;
+  --color-subtle: #54595d;
+  --color-placeholder: #72777d;
+  --color-disabled: #a2a9b1;
+
+  /* Link Colors */
+  --color-progressive: #0645ad;
+  --color-progressive-hover: #0b0080;
+  --color-progressive-active: #0645ad;
+  --color-visited: #0b0080;
+
+  /* Interactive Colors */
+  --color-destructive: #d73333;
+  --color-warning: #edab00;
+  --color-success: #14866d;
+  --color-notice: #202122;
+
+  /* Component-Specific Colors */
+  --background-color-interactive-subtle: #f8f9fa;
+  --background-color-progressive-subtle: #eaf3ff;
+  --background-color-destructive-subtle: #fee7e6;
+
+  /* Navigation & Header */
+  --background-header: #ffffff;
+  --background-nav: #f8f9fa;
+  --background-sidebar: #f8f9fa;
+
+  /* Tables & Infoboxes */
+  --background-infobox-header: #c3d6ef;
+  --background-infobox-subheader: #dcdcdc;
+  --background-table-header: #aacccc;
+  --background-table-odd: #f7f7f7;
+  --background-table-even: transparent;
+
+  /* Navbox Colors */
+  --background-navbox: #fdfdfd;
+  --background-navbox-title: #ccf;
+  --background-navbox-group: #ddf;
+  --background-navbox-subgroup: #e6e6ff;
+  --background-navbox-odd: #f7f7f7;
+  --background-navbox-even: transparent;
+
+  /* Shadows (Light Mode) */
+  --box-shadow-small: 0 1px 2px rgba(0, 0, 0, 0.1);
+  --box-shadow-medium: 0 2px 8px rgba(0, 0, 0, 0.15);
+  --box-shadow-large: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
