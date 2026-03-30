@@ -1268,6 +1268,7 @@ Both move in original direction.
 ## Key Formulae Summary
 
 ### Pure Mathematics
+
 | Topic | Formula |
 |-------|---------|
 | $2\times2$ inverse | $\begin{pmatrix} a & b \\\\ c & d \end{pmatrix}^{-1} = \frac{1}{ad-bc}\begin{pmatrix} d & -b \\\\ -c & a \end{pmatrix}$ |
@@ -1277,6 +1278,7 @@ Both move in original direction.
 | Euler's method | $y_{n+1} = y_n + h f(x_n, y_n)$ |
 
 ### Statistics
+
 | Topic | Formula |
 |-------|---------|
 | Bayes' theorem | $P(A \mid B) = \frac{P(B \mid A)P(A)}{P(B)}$ |
@@ -1292,6 +1294,7 @@ Both move in original direction.
 | Correlation | $\rho = \frac{\text{Cov}(X,Y)}{\sqrt{\text{Var}(X)\text{Var}(Y)}}$ |
 
 ### Mechanics
+
 | Topic | Formula |
 |-------|---------|
 | Relative velocity | $\mathbf{v}_{AB} = \mathbf{v}_A - \mathbf{v}_B$ |
