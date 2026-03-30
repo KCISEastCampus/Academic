@@ -4,391 +4,415 @@ function generateTOC() {
 
   if (!contentContainer || !tocContent) return;
 
-  const headers = contentContainer.querySelectorAll("h1, h2, h3, h4");
-  let tocHTML = "<ul>";
+  const headings = Array.from(contentContainer.querySelectorAll("h1, h2, h3, h4"));
+  if (headings.length === 0) {
+    tocContent.innerHTML = "";
+    return;
+  }
 
-  headers.forEach((header, index) => {
-    const id = header.id || `toc-heading-${index}`;
-    header.id = id; // assign an id if not present
+  const tree = buildTOCTree(headings);
+  tocContent.innerHTML = renderTOCTree(tree);
 
-    const levelClass = "toc-" + header.tagName.toLowerCase();
-    tocHTML += `<li class="${levelClass} toc-item"><a href="#${id}">${header.textContent}</a></li>`;
-  });
+  const tocLinks = Array.from(tocContent.querySelectorAll("a[data-toc-link]"));
+  let isProgrammaticScroll = false;
+  let currentActiveId = null;
+  let lastSyncAt = 0;
 
-  tocHTML += "</ul>";
-  tocContent.innerHTML = tocHTML;
-
-  // Scroll sync with active heading detection using IntersectionObserver
-  const tocLinks = document.querySelectorAll(".toc-content a");
-  let isScrolling = false;
-  let lastUpdateTime = 0;
-
-  // Intersection Observer for better active detection
-  const observer = new IntersectionObserver(
-    (entries) => {
-      const now = Date.now();
-      if (isScrolling || now - lastUpdateTime < 100) return; // Don't update during programmatic scrolling or too frequently
-      
-      let activeEntry = null;
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          activeEntry = entry;
-        }
-      });
-
-      if (activeEntry) {
-        lastUpdateTime = now;
-        tocLinks.forEach((link) => link.classList.remove("active"));
-        const activeLink = document.querySelector(`.toc-content a[href="#${activeEntry.target.id}"]`);
-        if (activeLink) {
-          activeLink.classList.add("active");
-          // Auto-scroll TOC to active item (only on desktop)
-          if (window.innerWidth > 1024) {
-            activeLink.scrollIntoView({
-              behavior: 'smooth',
-              block: 'center'
-            });
-          }
-        }
-      }
-    },
-    { 
-      rootMargin: "-10% 0px -80% 0px", 
-      threshold: [0, 0.5, 1.0]
+  tocContent.addEventListener("click", (event) => {
+    const collapseBtn = event.target.closest(".toc-collapse");
+    if (collapseBtn) {
+      event.preventDefault();
+      toggleBranch(collapseBtn.closest("li.toc-item"));
+      return;
     }
-  );
 
-  headers.forEach((header) => observer.observe(header));
+    const link = event.target.closest("a[data-toc-link]");
+    if (!link) return;
 
-  // Smooth scrolling for TOC links
-  tocLinks.forEach((link) => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const targetId = link.getAttribute('href').substring(1);
-      const targetElement = document.getElementById(targetId);
-      
-      if (targetElement) {
-        isScrolling = true;
-        
-        targetElement.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-        
-        // Reset scrolling flag after animation
-        setTimeout(() => {
-          isScrolling = false;
-        }, 1000);
-        
-        // Update active state immediately
-        tocLinks.forEach((l) => l.classList.remove("active"));
-        link.classList.add("active");
-        
-        // Close mobile TOC if open
-        if (window.innerWidth <= 1024) {
-          toggleTOC(false);
-        }
-      }
-    });
+    event.preventDefault();
+    const targetId = link.getAttribute("href").slice(1);
+    const targetElement = document.getElementById(targetId);
+    if (!targetElement) return;
+
+    isProgrammaticScroll = true;
+    targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    history.replaceState(null, "", `#${targetId}`);
+    setActiveLink(link, false);
+
+    setTimeout(() => {
+      isProgrammaticScroll = false;
+    }, 700);
+
+    if (window.innerWidth <= 1024) {
+      toggleTOC(false);
+    }
   });
 
-  // Initialize TOC toggle functionality
+  window.addEventListener("scroll", () => {
+    if (isProgrammaticScroll) return;
+
+    const now = Date.now();
+    if (now - lastSyncAt < 80) return;
+    lastSyncAt = now;
+
+    const activeHeading = findActiveHeading(headings);
+    if (!activeHeading) return;
+
+    const activeLink = tocContent.querySelector(`a[data-toc-link][href="#${activeHeading.id}"]`);
+    if (activeLink) {
+      setActiveLink(activeLink, true);
+    }
+  }, { passive: true });
+
+  setActiveFromHashOrTop(headings, tocContent);
+  const initialActiveLink = tocContent.querySelector("a[data-toc-link].active");
+  if (initialActiveLink) {
+    currentActiveId = initialActiveLink.getAttribute("href").slice(1);
+  }
+
   setTimeout(() => {
     initTOCToggle();
     initTOCSearch();
     initReadingProgress();
-  }, 100);
+  }, 80);
 
-  // Adjust TOC height only when footer is visible
-  setupTOCFooterObserver();
+  function setActiveLink(link, autoScrollInToc) {
+    const nextActiveId = link.getAttribute("href").slice(1);
+    if (nextActiveId === currentActiveId) {
+      return;
+    }
+
+    currentActiveId = nextActiveId;
+    tocLinks.forEach((item) => item.classList.remove("active"));
+    link.classList.add("active");
+    expandAncestors(link.closest("li.toc-item"));
+
+    if (autoScrollInToc && window.innerWidth > 1024) {
+      syncLinkVisibility(link);
+    }
+  }
+
+  function syncLinkVisibility(link) {
+    const containerRect = tocContent.getBoundingClientRect();
+    const linkRect = link.getBoundingClientRect();
+    const topPadding = 18;
+    const bottomPadding = 22;
+
+    const isAbove = linkRect.top < containerRect.top + topPadding;
+    const isBelow = linkRect.bottom > containerRect.bottom - bottomPadding;
+
+    if (!isAbove && !isBelow) {
+      return;
+    }
+
+    const delta = linkRect.top - containerRect.top - containerRect.height * 0.35;
+    tocContent.scrollTo({
+      top: tocContent.scrollTop + delta,
+      behavior: "auto"
+    });
+  }
+}
+
+function buildTOCTree(headings) {
+  const roots = [];
+  const stack = [];
+
+  headings.forEach((heading, index) => {
+    const id = heading.id || `toc-heading-${index}`;
+    heading.id = id;
+
+    const level = Number(heading.tagName.substring(1));
+    const node = {
+      id,
+      text: heading.textContent.trim(),
+      level,
+      children: []
+    };
+
+    while (stack.length && level <= stack[stack.length - 1].level) {
+      stack.pop();
+    }
+
+    if (stack.length === 0) {
+      roots.push(node);
+    } else {
+      stack[stack.length - 1].children.push(node);
+    }
+
+    stack.push(node);
+  });
+
+  return roots;
+}
+
+function renderTOCTree(nodes) {
+  const renderNodes = (list) => {
+    let html = '<ul class="toc-tree">';
+    list.forEach((node) => {
+      const levelClass = `toc-h${node.level}`;
+      const hasChildren = node.children.length > 0;
+      const itemClass = hasChildren ? "toc-item has-children expanded" : "toc-item";
+
+      html += `<li class="${itemClass} ${levelClass} toc-level-${node.level}">`;
+      html += '<div class="toc-row">';
+
+      if (hasChildren) {
+        html += `<button class="toc-collapse" type="button" aria-label="Collapse section" aria-expanded="true"></button>`;
+      } else {
+        html += '<span class="toc-spacer" aria-hidden="true"></span>';
+      }
+
+      html += `<a data-toc-link href="#${node.id}">${escapeHtml(node.text)}</a>`;
+      html += "</div>";
+
+      if (hasChildren) {
+        html += `<div class="toc-children">${renderNodes(node.children)}</div>`;
+      }
+
+      html += "</li>";
+    });
+    html += "</ul>";
+    return html;
+  };
+
+  return renderNodes(nodes);
+}
+
+function findActiveHeading(headings) {
+  const offset = 140;
+  const scrollTop = window.scrollY + offset;
+  let current = headings[0];
+
+  for (let i = 0; i < headings.length; i += 1) {
+    if (headings[i].offsetTop <= scrollTop) {
+      current = headings[i];
+    } else {
+      break;
+    }
+  }
+
+  return current;
+}
+
+function setActiveFromHashOrTop(headings, tocContent) {
+  const hash = window.location.hash ? window.location.hash.slice(1) : "";
+  const targetId = hash && document.getElementById(hash) ? hash : findActiveHeading(headings).id;
+  const activeLink = tocContent.querySelector(`a[data-toc-link][href="#${targetId}"]`);
+
+  if (!activeLink) return;
+  activeLink.classList.add("active");
+  expandAncestors(activeLink.closest("li.toc-item"));
+}
+
+function expandAncestors(item) {
+  let current = item;
+  while (current) {
+    if (current.classList.contains("collapsed")) {
+      current.classList.remove("collapsed");
+      current.classList.add("expanded");
+      const button = current.querySelector(":scope > .toc-row > .toc-collapse");
+      if (button) button.setAttribute("aria-expanded", "true");
+    }
+    current = current.parentElement ? current.parentElement.closest("li.toc-item") : null;
+  }
+}
+
+function toggleBranch(item) {
+  if (!item || !item.classList.contains("has-children")) return;
+  const isCollapsed = item.classList.toggle("collapsed");
+  item.classList.toggle("expanded", !isCollapsed);
+
+  const button = item.querySelector(":scope > .toc-row > .toc-collapse");
+  if (button) {
+    button.setAttribute("aria-expanded", String(!isCollapsed));
+  }
+}
+
+function escapeHtml(value) {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/\"/g, "&quot;")
+    .replace(/'/g, "&#39;");
 }
 
 function initTOCToggle() {
-  const tocToggle = document.getElementById('tocToggle');
-  const toc = document.getElementById('toc');
-  
-  if (tocToggle && toc) {
-    // Remove any existing event listeners
-    tocToggle.replaceWith(tocToggle.cloneNode(true));
-    const newTocToggle = document.getElementById('tocToggle');
-    newTocToggle.setAttribute('aria-expanded', 'false');
-    newTocToggle.setAttribute('aria-controls', 'toc');
-    
-    newTocToggle.addEventListener('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      const isVisible = toc.classList.contains('show');
-      toggleTOC(!isVisible);
-    });
-    
-    // Close TOC when clicking outside on mobile
-    document.addEventListener('click', (e) => {
-      if (window.innerWidth <= 1024 && 
-          !toc.contains(e.target) && 
-          !newTocToggle.contains(e.target) &&
-          toc.classList.contains('show')) {
-        toggleTOC(false);
-      }
-    });
-    
-    // ESC key to close TOC on mobile
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && toc.classList.contains('show')) {
-        toggleTOC(false);
-      }
-    });
-    
-  } else {
-    console.error('TOC elements not found:', {tocToggle, toc});
-  }
+  const tocToggle = document.getElementById("tocToggle");
+  const toc = document.getElementById("toc");
+
+  if (!tocToggle || !toc) return;
+
+  tocToggle.replaceWith(tocToggle.cloneNode(true));
+  const newTocToggle = document.getElementById("tocToggle");
+  newTocToggle.setAttribute("aria-expanded", "false");
+  newTocToggle.setAttribute("aria-controls", "toc");
+
+  newTocToggle.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    toggleTOC(!toc.classList.contains("show"));
+  });
+
+  document.addEventListener("click", (event) => {
+    if (
+      window.innerWidth <= 1024 &&
+      toc.classList.contains("show") &&
+      !toc.contains(event.target) &&
+      !newTocToggle.contains(event.target)
+    ) {
+      toggleTOC(false);
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && toc.classList.contains("show")) {
+      toggleTOC(false);
+    }
+  });
 }
 
 function toggleTOC(show) {
-  const toc = document.getElementById('toc');
-  const tocToggle = document.getElementById('tocToggle');
-  
-  if (!toc || !tocToggle) return;
-  
-  if (show) {
-    toc.classList.add('show');
-    tocToggle.classList.add('active');
-    tocToggle.innerHTML = '<i class="bi bi-x" aria-hidden="true"></i>';
-    tocToggle.setAttribute('aria-expanded', 'true');
-    // Prevent body scroll when TOC is open on mobile
-    if (window.innerWidth <= 768) {
-      document.body.style.overflow = 'hidden';
-    }
+  const toc = document.getElementById("toc");
+  const tocToggle = document.getElementById("tocToggle");
 
+  if (!toc || !tocToggle) return;
+
+  if (show) {
+    toc.classList.add("show");
+    tocToggle.classList.add("active");
+    tocToggle.innerHTML = '<i class="bi bi-x" aria-hidden="true"></i>';
+    tocToggle.setAttribute("aria-expanded", "true");
     if (window.innerWidth <= 1024) {
-      const firstLink = toc.querySelector('a');
-      if (firstLink) {
-        setTimeout(() => firstLink.focus(), 120);
-      }
+      document.body.style.overflow = "hidden";
     }
   } else {
-    toc.classList.remove('show');
-    tocToggle.classList.remove('active');
+    toc.classList.remove("show");
+    tocToggle.classList.remove("active");
     tocToggle.innerHTML = '<i class="bi bi-list" aria-hidden="true"></i>';
-    tocToggle.setAttribute('aria-expanded', 'false');
-    // Restore body scroll
-    document.body.style.overflow = '';
-
-    if (document.activeElement && toc.contains(document.activeElement)) {
-      tocToggle.focus();
-    }
+    tocToggle.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
   }
 }
 
-function setupTOCFooterObserver() {
-  const toc = document.getElementById('toc');
-  const footer = document.querySelector('footer');
-
-  if (!toc || !footer || !('IntersectionObserver' in window)) return;
-
-  let lastTocScroll = 0;
-  const userScrollCooldown = 800; // ms
-
-  const scrollTocToBottom = (sync = false) => {
-    // Respect recent user scroll interactions
-    if (Date.now() - lastTocScroll <= userScrollCooldown) return;
-
-    const doScroll = () => {
-      // Smoothly slide to the bottom; run twice to catch height transitions
-      toc.scrollTo({ top: toc.scrollHeight, behavior: 'smooth' });
-      setTimeout(() => {
-        toc.scrollTo({ top: toc.scrollHeight, behavior: 'smooth' });
-      }, 120);
-    };
-
-    // Align with the shrink transition so it feels like one motion
-    if (sync) {
-      requestAnimationFrame(() => {
-        doScroll();
-      });
-    } else {
-      doScroll();
-    }
-  };
-
-  // Track manual TOC scrolling to avoid fighting the user
-  toc.addEventListener('scroll', () => {
-    lastTocScroll = Date.now();
-  });
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        toc.classList.add('toc-footer-visible');
-        scrollTocToBottom(true);
-      } else {
-        toc.classList.remove('toc-footer-visible');
-      }
-    });
-  }, {
-    root: null,
-    threshold: 0,
-    rootMargin: '0px 0px 0px 0px'
-  });
-
-  observer.observe(footer);
-
-  // Keep TOC bottom-aligned on resize/zoom when footer is visible
-  const debouncedResize = (() => {
-    let timer = null;
-    return () => {
-      clearTimeout(timer);
-      timer = setTimeout(() => {
-        if (toc.classList.contains('toc-footer-visible')) {
-          scrollTocToBottom();
-        }
-      }, 120);
-    };
-  })();
-
-  window.addEventListener('resize', debouncedResize);
-}
-
-// TOC Search Functionality
 function initTOCSearch() {
-  const searchInput = document.getElementById('tocSearch');
-  const searchClear = document.getElementById('tocSearchClear');
-  const tocLinks = document.querySelectorAll('.toc-content a');
-  
-  if (!searchInput) return;
-  
-  searchInput.addEventListener('input', function() {
+  const searchInput = document.getElementById("tocSearch");
+  const searchClear = document.getElementById("tocSearchClear");
+  const tocLinks = Array.from(document.querySelectorAll(".toc-content a[data-toc-link]"));
+
+  if (!searchInput || !searchClear) return;
+
+  searchInput.addEventListener("input", function onInput() {
     const searchTerm = this.value.toLowerCase().trim();
-    
-    // Show/hide clear button
-    searchClear.style.display = searchTerm ? 'flex' : 'none';
-    
-    // Filter TOC items
+    searchClear.style.display = searchTerm ? "flex" : "none";
+
     let visibleCount = 0;
-    tocLinks.forEach(link => {
-      // Always restore plain text to avoid stale markup
-      const href = link.getAttribute('href');
-      const targetId = href ? href.substring(1) : '';
+    const matchedItems = [];
+
+    tocLinks.forEach((link) => {
+      const href = link.getAttribute("href");
+      const targetId = href ? href.slice(1) : "";
       const targetElement = targetId ? document.getElementById(targetId) : null;
-      const originalText = targetElement ? targetElement.textContent : link.textContent;
+      const originalText = targetElement ? targetElement.textContent.trim() : link.textContent.trim();
       link.textContent = originalText;
 
-      const text = originalText.toLowerCase();
-      const listItem = link.closest('li');
-      if (text.includes(searchTerm)) {
-        listItem.style.display = '';
-        visibleCount++;
-        // Lightweight highlight without layout shift
+      const item = link.closest(".toc-item");
+      const matches = originalText.toLowerCase().includes(searchTerm);
+
+      if (matches || !searchTerm) {
+        item.style.display = "";
+        visibleCount += 1;
+        if (matches && searchTerm) {
+          matchedItems.push(item);
+        }
         if (searchTerm) {
-          const regex = new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
-          link.innerHTML = originalText.replace(regex, '<span class="toc-match">$1</span>');
+          const pattern = new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})`, "gi");
+          link.innerHTML = originalText.replace(pattern, '<span class="toc-match">$1</span>');
         }
       } else {
-        listItem.style.display = 'none';
+        item.style.display = "none";
       }
     });
-    
-    // Show "no results" message if needed
-    const noResultsMsg = document.getElementById('tocNoResults');
+
+    if (searchTerm) {
+      matchedItems.forEach((item) => {
+        expandAncestors(item);
+      });
+    }
+
+    const noResultsMsg = document.getElementById("tocNoResults");
     if (visibleCount === 0 && searchTerm) {
       if (!noResultsMsg) {
-        const msg = document.createElement('div');
-        msg.id = 'tocNoResults';
-        msg.className = 'toc-no-results';
+        const msg = document.createElement("div");
+        msg.id = "tocNoResults";
+        msg.className = "toc-no-results";
         msg.innerHTML = '<i class="bi bi-search"></i> No matches found';
-        document.querySelector('.toc-content').appendChild(msg);
+        document.querySelector(".toc-content").appendChild(msg);
       }
     } else if (noResultsMsg) {
       noResultsMsg.remove();
     }
-    
-    // If no search term, restore original text
-    if (!searchTerm) {
-      tocLinks.forEach(link => {
-        const href = link.getAttribute('href');
-        const targetId = href.substring(1);
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-          link.textContent = targetElement.textContent;
-        }
-      });
-    }
   });
-  
-  // Clear button functionality
-  searchClear.addEventListener('click', function() {
-    searchInput.value = '';
-    searchInput.dispatchEvent(new Event('input'));
+
+  searchClear.addEventListener("click", () => {
+    searchInput.value = "";
+    searchInput.dispatchEvent(new Event("input"));
     searchInput.focus();
   });
-  
-  // ESC to clear search
-  searchInput.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-      this.value = '';
-      this.dispatchEvent(new Event('input'));
-      this.blur();
+
+  searchInput.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      searchInput.value = "";
+      searchInput.dispatchEvent(new Event("input"));
+      searchInput.blur();
     }
   });
 }
 
-// Reading Progress Indicator
 function initReadingProgress() {
-  const progressBar = document.getElementById('readingProgress');
-  const progressText = document.getElementById('progressText');
-  const contentContainer = document.getElementById('content-container');
-  
-  if (!progressBar || !contentContainer) return;
-  
+  const progressBar = document.getElementById("readingProgress");
+  const progressText = document.getElementById("progressText");
+  const contentContainer = document.getElementById("content-container");
+
+  if (!progressBar || !progressText || !contentContainer) return;
+
   function updateProgress() {
     const windowHeight = window.innerHeight;
-    const documentHeight = document.documentElement.scrollHeight;
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    
-    // Calculate content-specific progress
     const contentTop = contentContainer.offsetTop;
     const contentHeight = contentContainer.offsetHeight;
     const contentBottom = contentTop + contentHeight;
-    
+
     let progress = 0;
-    
     if (scrollTop < contentTop) {
       progress = 0;
     } else if (scrollTop + windowHeight > contentBottom) {
       progress = 100;
     } else {
-      const contentScrolled = scrollTop - contentTop;
-      const contentScrollable = contentHeight - windowHeight;
-      progress = (contentScrolled / contentScrollable) * 100;
+      const scrolled = scrollTop - contentTop;
+      const scrollable = Math.max(1, contentHeight - windowHeight);
+      progress = (scrolled / scrollable) * 100;
     }
-    
+
     progress = Math.max(0, Math.min(100, progress));
-    
-    progressBar.style.width = progress + '%';
-    progressText.textContent = Math.round(progress) + '%';
-    
-    // Change color based on progress
-    if (progress < 33) {
-      progressBar.style.background = 'linear-gradient(to right, #3b82f6, #06b6d4)';
-    } else if (progress < 66) {
-      progressBar.style.background = 'linear-gradient(to right, #06b6d4, #10b981)';
-    } else {
-      progressBar.style.background = 'linear-gradient(to right, #10b981, #22c55e)';
-    }
+    progressBar.style.width = `${progress}%`;
+    progressText.textContent = `${Math.round(progress)}%`;
   }
-  
-  // Update on scroll with throttling
+
   let ticking = false;
-  window.addEventListener('scroll', function() {
-    if (!ticking) {
-      window.requestAnimationFrame(function() {
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (ticking) return;
+      window.requestAnimationFrame(() => {
         updateProgress();
         ticking = false;
       });
       ticking = true;
-    }
-  });
-  
-  // Initial update
+    },
+    { passive: true }
+  );
+
   updateProgress();
 }
 

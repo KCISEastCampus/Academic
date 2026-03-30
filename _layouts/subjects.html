@@ -21,12 +21,20 @@ layout: none
 {% else %}
 <body>
 {% endif %}
-  <a href="{{ '/' | relative_url }}" class="btn btn-outline-info back-button" aria-label="Return to homepage">
-    <i class="bi bi-caret-left-fill"></i>Back to Home
-  </a>
-
-  <p class="fs-1 text-center mt-3">{{ page.title | default: site.title }}</p>
-  <hr class="mb-2" />
+  <header class="subject-header">
+    <div class="subject-header-row">
+      <div class="header-left">
+        <a href="{{ '/' | relative_url }}" class="btn btn-outline-info back-button" aria-label="Return to homepage">
+          <i class="bi bi-caret-left-fill"></i>Back to Home
+        </a>
+      </div>
+      <h1 class="subject-page-title">{{ page.title | default: site.title }}</h1>
+      <div class="header-right">
+        {% include theme_button.html %}
+      </div>
+    </div>
+    <hr class="subject-page-divider" />
+  </header>
 
   <!-- TOC Toggle Button for Mobile -->
   <button class="toc-toggle" id="tocToggle" type="button" aria-label="Toggle Table of Contents" aria-controls="toc" aria-expanded="false">
@@ -66,8 +74,6 @@ layout: none
   </div>
 
   {% include footer.html %}
-
-  {% include theme_button.html %}
 
   <script>
     generateTOC();
