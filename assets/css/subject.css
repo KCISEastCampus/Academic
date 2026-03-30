@@ -1590,3 +1590,628 @@ body.scheme-alevel #content-container tbody tr:hover {
   }
 }
 
+/* ========================================
+   TOC Left Sidebar Refactor
+   ======================================== */
+
+:root {
+  --toc-left-width: clamp(260px, 24vw, 360px);
+  --toc-layout-gap: clamp(16px, 1.8vw, 30px);
+  --toc-divider-color: rgba(15, 23, 42, 0.14);
+  --toc-panel-bg: rgba(255, 255, 255, 0.92);
+  --toc-panel-border: rgba(15, 23, 42, 0.12);
+}
+
+html[data-bs-theme="dark"] {
+  --toc-divider-color: rgba(226, 232, 240, 0.18);
+  --toc-panel-bg: rgba(18, 18, 22, 0.9);
+  --toc-panel-border: rgba(226, 232, 240, 0.14);
+}
+
+#main-container {
+  display: grid !important;
+  grid-template-columns: var(--toc-left-width) minmax(0, 1fr) !important;
+  gap: var(--toc-layout-gap) !important;
+  align-items: start;
+  position: relative;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 20px 44px;
+}
+
+#toc.table-of-contents {
+  grid-column: 1;
+  grid-row: 1;
+  position: sticky !important;
+  top: 88px !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  width: 100% !important;
+  max-height: calc(100vh - 108px) !important;
+  z-index: 90;
+  margin: 0;
+  border-radius: 16px;
+  padding: 14px;
+  background: var(--toc-panel-bg);
+  border: 1px solid var(--toc-panel-border);
+  box-shadow: 0 2px 10px rgba(2, 8, 23, 0.05);
+  overflow: hidden;
+}
+
+#content-container {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0 !important;
+  max-width: 100% !important;
+  padding: 0 8px 20px 0;
+}
+
+#content-container > *:first-child {
+  margin-top: 0 !important;
+}
+
+.table-of-contents .toc-header-fixed {
+  position: relative;
+  padding: 0 0 12px 0 !important;
+  margin: 0 0 16px 0 !important;
+  border-bottom: 2px solid var(--toc-divider-color) !important;
+  background: transparent !important;
+}
+
+.table-of-contents .contents-list {
+  font-size: 1.15rem !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  background: none !important;
+  text-align: left !important;
+  letter-spacing: 0.5px !important;
+}
+
+.table-of-contents .contents-list::before {
+  content: none !important;
+}
+
+.table-of-contents .toc-content {
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 2px;
+}
+
+.table-of-contents .toc-tree {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.table-of-contents .toc-item {
+  margin: 0;
+  list-style: none;
+}
+
+.table-of-contents .toc-row {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.table-of-contents .toc-spacer,
+.table-of-contents .toc-collapse {
+  width: 20px;
+  min-width: 20px;
+  height: 20px;
+  margin-right: 4px;
+}
+
+.table-of-contents .toc-collapse {
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+  color: var(--muted);
+  position: relative;
+}
+
+.table-of-contents .toc-collapse::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 5px;
+  border-left: 5px solid currentColor;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  transform: rotate(90deg);
+  transition: transform 0.2s ease;
+}
+
+.table-of-contents .toc-item.collapsed > .toc-row .toc-collapse::before {
+  transform: rotate(0deg);
+}
+
+.table-of-contents .toc-collapse:hover {
+  color: var(--text);
+  background: rgba(var(--accent-ig-rgb), 0.1);
+}
+
+.table-of-contents .toc-item.collapsed > .toc-children {
+  display: none;
+}
+
+.table-of-contents .toc-children {
+  margin-left: 10px;
+  border-left: 1px dashed rgba(var(--accent-ig-rgb), 0.2);
+  padding-left: 8px;
+}
+
+.table-of-contents .toc-level-1 > .toc-row a {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.table-of-contents .toc-level-2 > .toc-row a {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.table-of-contents .toc-level-3 > .toc-row a {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.table-of-contents .toc-level-4 > .toc-row a {
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+/* Hierarchy visual redesign: clear level differences without oversized pill blocks */
+.table-of-contents .toc-row > a {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  margin: 1px 0;
+  padding: 8px 10px;
+  border-radius: 8px;
+  line-height: 1.4;
+  text-decoration: none;
+  color: var(--muted);
+  background: transparent !important;
+  border-left: 2px solid transparent;
+  transform: none !important;
+  box-shadow: none !important;
+  word-break: break-word;
+}
+
+.table-of-contents .toc-row > a::before,
+.table-of-contents .toc-row > a::after {
+  content: none !important;
+}
+
+.table-of-contents .toc-row > a:hover {
+  color: var(--text) !important;
+  background: rgba(var(--accent-ig-rgb), 0.08) !important;
+  border-left-color: rgba(var(--accent-ig-rgb), 0.35);
+}
+
+.table-of-contents .toc-row > a.active {
+  color: var(--accent-ig) !important;
+  background: rgba(var(--accent-ig-rgb), 0.14) !important;
+  border-left-color: rgba(var(--accent-ig-rgb), 0.8);
+  font-weight: 600;
+}
+
+body.scheme-alevel .table-of-contents .toc-row > a.active {
+  color: var(--accent-al) !important;
+  background: rgba(var(--accent-al-rgb), 0.14) !important;
+  border-left-color: rgba(var(--accent-al-rgb), 0.78);
+}
+
+/* Level-specific rhythm */
+.table-of-contents .toc-level-1 > .toc-row > a {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  padding-left: 8px;
+}
+
+.table-of-contents .toc-level-2 > .toc-row > a {
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding-left: 12px;
+}
+
+.table-of-contents .toc-level-3 > .toc-row > a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding-left: 16px;
+  opacity: 0.95;
+}
+
+.table-of-contents .toc-level-4 > .toc-row > a {
+  font-size: 0.86rem;
+  font-weight: 450;
+  padding-left: 20px;
+  opacity: 0.88;
+}
+
+.table-of-contents .toc-level-4 > .toc-row > a.active {
+  opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  #main-container {
+    display: block !important;
+    padding: 0 0 24px;
+  }
+
+  #content-container {
+    padding: 20px !important;
+    margin: 0 !important;
+    max-width: 100vw !important;
+    border-left: none;
+  }
+
+  .toc-toggle {
+    display: flex !important;
+    left: 14px;
+    right: auto;
+  }
+
+  #toc.table-of-contents {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: min(86vw, 360px) !important;
+    height: 100vh;
+    max-height: 100vh !important;
+    border-radius: 0;
+    padding: 70px 16px 20px;
+    border-right: 1px solid var(--toc-panel-border) !important;
+    transform: translateX(-104%) !important;
+    transition: transform 0.28s ease;
+    z-index: 1002;
+  }
+
+  #toc.table-of-contents.show {
+    transform: translateX(0) !important;
+  }
+
+  #toc.table-of-contents.show::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: min(86vw, 360px);
+    width: calc(100vw - min(86vw, 360px));
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.42);
+    backdrop-filter: blur(3px);
+    z-index: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .back-button {
+    position: fixed !important;
+    top: 14px !important;
+    left: 66px !important;
+    right: 66px !important;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 10px 12px !important;
+    z-index: 9997 !important;
+    justify-content: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .toc-toggle {
+    top: 14px !important;
+    left: 14px !important;
+    width: 46px !important;
+    height: 46px !important;
+  }
+
+  .subject-page-title {
+    margin-top: 86px !important;
+    margin-bottom: 6px !important;
+    font-size: clamp(2rem, 8vw, 3rem) !important;
+    padding: 0 12px;
+  }
+
+  .subject-page-divider {
+    margin-bottom: 8px !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .back-button {
+    left: 58px !important;
+    right: 58px !important;
+    font-size: 0.95rem;
+    padding: 9px 10px !important;
+  }
+
+  .back-button i {
+    display: none;
+  }
+}
+
+/* ========================================
+   Subject Header Redesign (Final Override)
+   ======================================== */
+
+.subject-header {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 24px 20px 16px;
+}
+
+.subject-header-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 20px;
+  min-height: 44px;
+  margin-bottom: 32px;
+}
+
+.subject-header-row .header-left {
+  justify-self: start;
+}
+
+.subject-header-row .header-right {
+  justify-self: end;
+}
+
+.subject-header .back-button {
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  margin: 0 !important;
+  width: auto !important;
+  z-index: auto !important;
+}
+
+.subject-header-row #theme_button {
+  position: static !important;
+  top: auto !important;
+  right: auto !important;
+  left: auto !important;
+  margin: 0 !important;
+  z-index: auto !important;
+  width: auto;
+  height: auto;
+  min-height: 42px;
+  border-radius: 10px;
+}
+
+.subject-page-title {
+  margin: 0 !important;
+  padding: 0;
+  text-align: center;
+  font-size: clamp(2rem, 3.5vw, 3.2rem) !important;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+}
+
+.subject-page-divider {
+  margin: 0 0 16px 0 !important;
+  opacity: 0.5;
+}
+
+/* Seamless flush layout for TOC sidebar (Desktop only) */
+@media (min-width: 1025px) {
+  #toc.table-of-contents {
+    border-radius: 0;
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    padding: 0 16px 0 0 !important;
+  }
+
+  html[data-bs-theme="dark"] #toc.table-of-contents {
+    border: none !important;
+    background: transparent !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .subject-page-title {
+    margin: 0 !important;
+    font-size: clamp(1.9rem, 6.2vw, 2.7rem) !important;
+  }
+
+  .subject-header-row #theme_button {
+    min-height: 40px;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .subject-header {
+    padding-top: 70px;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .subject-header-row {
+    grid-template-columns: auto auto;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .subject-header-row .header-right {
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  .subject-header .back-button {
+    display: inline-flex;
+    max-width: calc(100vw - 180px);
+    padding: 8px 10px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-radius: 10px;
+  }
+
+  .subject-header-row #theme_button {
+    width: 44px;
+    height: 44px;
+    min-height: 44px;
+    border-radius: 50%;
+    padding: 0;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .subject-header-row #theme_button .theme-label {
+    display: none;
+  }
+
+  .subject-page-title {
+    grid-column: 1 / -1;
+    margin: 4px 0 0 !important;
+    padding: 0 4px;
+    font-size: clamp(1.8rem, 8vw, 2.5rem) !important;
+  }
+
+  .toc-toggle {
+    top: 14px !important;
+    left: 14px !important;
+    width: 46px !important;
+    height: 46px !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .subject-header {
+    padding-top: 68px;
+  }
+
+  .subject-header .back-button {
+    max-width: calc(100vw - 164px);
+    font-size: 0.92rem;
+    padding: 7px 9px !important;
+  }
+
+  .subject-header .back-button i {
+    display: none;
+  }
+}
+
+/* ========================================
+   TOC Desktop Shell Redesign (Final)
+   ======================================== */
+
+@media (min-width: 1025px) {
+  #main-container {
+    gap: clamp(20px, 2vw, 30px) !important;
+    padding: 0 20px 40px;
+  }
+
+  #toc.table-of-contents {
+    border-radius: 16px;
+    border: 1px solid rgba(51, 65, 85, 0.22) !important;
+    background: linear-gradient(180deg, rgba(248, 250, 252, 0.9), rgba(241, 245, 249, 0.96)) !important;
+    box-shadow: 0 20px 36px rgba(2, 8, 23, 0.16), 0 1px 0 rgba(255, 255, 255, 0.55) inset !important;
+    padding: 14px 12px 12px !important;
+  }
+
+  html[data-bs-theme="dark"] #toc.table-of-contents {
+    border-color: rgba(148, 163, 184, 0.34) !important;
+    background: linear-gradient(180deg, rgba(10, 24, 54, 0.94), rgba(6, 18, 44, 0.98)) !important;
+    box-shadow: 0 22px 40px rgba(2, 6, 23, 0.56), 0 1px 0 rgba(148, 163, 184, 0.1) inset !important;
+  }
+
+  .table-of-contents .toc-header-fixed {
+    padding: 2px 4px 10px !important;
+    margin: 0 0 10px 0 !important;
+    border-bottom: 1px solid rgba(100, 116, 139, 0.24) !important;
+    background: transparent !important;
+  }
+
+  .table-of-contents .contents-list {
+    font-size: clamp(1.25rem, 1.4vw, 1.6rem) !important;
+    line-height: 1.15 !important;
+    font-weight: 800 !important;
+    margin: 0 0 15px 0 !important;
+    letter-spacing: 0.01em !important;
+    text-align: center !important;
+  }
+
+  .table-of-contents .toc-search-container {
+    margin-bottom: 10px;
+  }
+
+  .table-of-contents .toc-search-input {
+    min-height: 42px;
+    border: 1px solid rgba(100, 116, 139, 0.4);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.64);
+    font-size: 0.92rem;
+    padding: 8px 34px 8px 11px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.55) inset;
+  }
+
+  html[data-bs-theme="dark"] .table-of-contents .toc-search-input {
+    border-color: rgba(148, 163, 184, 0.36);
+    background: rgba(15, 23, 42, 0.62);
+    box-shadow: 0 1px 0 rgba(148, 163, 184, 0.08) inset;
+  }
+
+  .table-of-contents .reading-progress-container {
+    height: 3px;
+    border-radius: 999px;
+    margin: 0;
+    background: rgba(148, 163, 184, 0.26);
+  }
+
+  .table-of-contents .reading-progress-bar {
+    box-shadow: 0 0 10px rgba(var(--accent-ig-rgb), 0.28);
+  }
+
+  .table-of-contents .reading-progress-text {
+    display: none;
+  }
+
+  .table-of-contents .toc-content {
+    padding: 8px 6px 8px 8px;
+    border: 1px solid rgba(100, 116, 139, 0.18);
+    border-radius: 12px;
+    background: rgba(15, 23, 42, 0.06);
+  }
+
+  html[data-bs-theme="dark"] .table-of-contents .toc-content {
+    border-color: rgba(148, 163, 184, 0.22);
+    background: rgba(2, 12, 32, 0.28);
+  }
+
+  .table-of-contents .toc-children {
+    border-left-color: rgba(var(--accent-ig-rgb), 0.28);
+  }
+
+  .table-of-contents .toc-content::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .table-of-contents .toc-content::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .table-of-contents .toc-content::-webkit-scrollbar-thumb {
+    background: rgba(100, 116, 139, 0.45);
+    border-radius: 999px;
+  }
+
+  html[data-bs-theme="dark"] .table-of-contents .toc-content::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.42);
+  }
+
+  #content-container {
+    padding-top: 0 !important;
+  }
+}
+

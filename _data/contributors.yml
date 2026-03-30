@@ -33,9 +33,13 @@ external:
         - "Turns the HTML based content to Jekyll markdown format with MathJax support"
     - name: "Lynn Liu"
       title: "Content Contributor"
-      period: "2024 - Present"
+      period: "2024"
       contributions:
         - "A-level Mathematics Teacher Team HOD"
         - "Contributed to IGCSE Mathematics notes and resources"
         - "Contributed to AS Mathematics notes and resources"
-        - "Supervised math content accuracy and clarity"
+    - name: "Fadouse"
+      title: "Developer"
+      period: "2026"
+      contributions:
+        - "Take part in the redesign of the TOC system of this website"
