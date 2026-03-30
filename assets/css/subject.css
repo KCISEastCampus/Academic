@@ -220,7 +220,7 @@ body.scheme-alevel #content-container h3::before {
   background: var(--accent-al);
 }
 
-html[data-bs-theme="dark"] #content-container h3::befor e {
+html[data-bs-theme="dark"] #content-container h3::before {
   background: var(--accent-ig);
   opacity: 0.8;
 }
