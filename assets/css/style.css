@@ -1,69 +1,6 @@
-/* Strong overrides to ensure backgrounds switch when theme changes (override third-party CSS) */
-html[data-bs-theme="light"] body,
-html[data-bs-theme="light"] .container,
-html[data-bs-theme="light"] header,
-html[data-bs-theme="light"] main,
-html[data-bs-theme="light"] footer {
-  background-color: var(--bg) !important;
-  color: var(--text) !important;
-}
-
-html[data-bs-theme="light"] .card,
-html[data-bs-theme="light"] .card .card-body,
-html[data-bs-theme="light"] .subject-card,
-html[data-bs-theme="light"] pre,
-html[data-bs-theme="light"] .highlight {
-  background: var(--surface) !important;
-  border-color: rgba(0,0,0,0.08) !important;
-  color: var(--text) !important;
-}
-
-html[data-bs-theme="light"] .card {
-  border-radius: 0.75rem !important;
-  overflow: hidden !important;
-}
-
 /* Default (rest) state keep transparent in light mode, but allow :hover/:focus to override */
-html[data-bs-theme="light"] .exam-link:not(:hover):not(:focus),
-html[data-bs-theme="light"] .subject-list .btn:not(:hover):not(:focus) {
-  background: transparent;
-  color: inherit;
-  transition: all 0.15s ease;
-}
-
 /* Ensure hover state also has transition for smooth fade-in */
-html[data-bs-theme="light"] .exam-link:hover,
-html[data-bs-theme="light"] .exam-link:focus,
-html[data-bs-theme="light"] .subject-list .btn:hover,
-html[data-bs-theme="light"] .subject-list .btn:focus {
-  transition: all 0.15s ease;
-}
-
 /* Dark explicit overrides too (in case third-party CSS forces light backgrounds) */
-html[data-bs-theme="dark"] body,
-html[data-bs-theme="dark"] .container,
-html[data-bs-theme="dark"] header,
-html[data-bs-theme="dark"] main,
-html[data-bs-theme="dark"] footer {
-  background-color: var(--bg) !important;
-  color: var(--text) !important;
-}
-
-html[data-bs-theme="dark"] .card,
-html[data-bs-theme="dark"] .card .card-body,
-html[data-bs-theme="dark"] .subject-card,
-html[data-bs-theme="dark"] pre,
-html[data-bs-theme="dark"] .highlight {
-  background: var(--surface) !important;
-  border-color: rgba(255,255,255,0.04) !important;
-  color: var(--text) !important;
-}
-
-html[data-bs-theme="dark"] .card {
-  border-radius: 0.75rem !important;
-  overflow: hidden !important;
-}
-
 html {
   font-size: 20px;
 }
@@ -98,8 +35,8 @@ body {
 /* Card / surface */
 .card {
   background: var(--surface);
-  border: 1px solid rgba(255,255,255,0.03);
-  border-radius: 0.75rem !important;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
   color: var(--text);
   overflow: hidden; /* Ensure children respect border-radius */
 }
@@ -126,8 +63,6 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
   border-radius: 0.6rem;
   transition: background-color 160ms ease, color 160ms ease;
 }
-html[data-bs-theme="light"] #theme_button { background: rgba(0,0,0,0.04); }
-html[data-bs-theme="dark"] #theme_button { background: rgba(255,255,255,0.02); }
 
 /* Tables: Clean and consistent styling */
 table, .table {
@@ -137,13 +72,13 @@ table, .table {
 }
 
 table thead th, .table thead th, .table th {
-  color: var(--text) !important;
+  color: var(--text);
   padding: 12px 16px;
   font-weight: 600;
-  letter-spacing: 0.3px;
   text-align: left;
-  border-bottom: 2px solid rgba(255,255,255,0.1);
-  border-right: 1px solid rgba(255,255,255,0.06);
+  background: var(--surface-hover);
+  border-bottom: 2px solid var(--border);
+  border-right: 1px solid var(--border);
 }
 
 table thead th:last-child,
@@ -152,57 +87,25 @@ table thead th:last-child,
   border-right: none;
 }
 
-/* Light theme: table headers */
-html[data-bs-theme="light"] table thead th,
-html[data-bs-theme="light"] .table thead th,
-html[data-bs-theme="light"] .table th {
-  background: rgba(0, 0, 0, 0.04);
-  border-bottom-color: rgba(0,0,0,0.12) !important;
-  border-right-color: rgba(0,0,0,0.06);
-}
-
-/* Dark theme: table headers */
-html[data-bs-theme="dark"] table thead th,
-html[data-bs-theme="dark"] .table thead th,
-html[data-bs-theme="dark"] .table th {
-  background: rgba(255,255,255,0.04);
-  border-bottom-color: rgba(255,255,255,0.1) !important;
-  border-right-color: rgba(255,255,255,0.06);
-}
-
-/* Table cells */
 table tbody td,
 .table tbody td {
   padding: 12px 16px;
-  border-right: 1px solid rgba(255,255,255,0.06);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
   transition: background-color 0.2s ease;
-}
-
-html[data-bs-theme="light"] table tbody td,
-html[data-bs-theme="light"] .table tbody td {
-  border-right-color: rgba(0,0,0,0.06);
-  border-bottom-color: rgba(0,0,0,0.08);
 }
 
 table tbody td:last-child,
 .table tbody td:last-child {
   border-right: none;
 }
-
-/* Table wrapper for subtle rounded corners */
 .table-wrapper,
 .table-responsive {
   border-radius: 8px !important;
   overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid var(--border);
   margin: 1.5rem 0;
   background: transparent;
-}
-
-html[data-bs-theme="light"] .table-wrapper,
-html[data-bs-theme="light"] .table-responsive {
-  border-color: rgba(0,0,0,0.08);
 }
 
 /* Table row hover - elegant */
@@ -212,7 +115,7 @@ table tbody tr, .table tbody tr {
 
 table tbody tr:hover,
 .table tbody tr:hover {
-  background-color: rgba(128, 128, 128, 0.08) !important;
+  background-color: var(--surface-hover);
 }
 
 body.scheme-igcse table tbody tr:hover,
@@ -325,13 +228,6 @@ body.scheme-alevel .table tbody tr:hover {
 }
 
 /* Light theme code blocks */
-html[data-bs-theme="light"] .highlight,
-html[data-bs-theme="light"] pre {
-  background: rgba(0,0,0,0.02);
-  border-left-color: rgba(var(--accent-ig-rgb), 0.5);
-  box-shadow: none;
-}
-
 /* Code block with language tag */
 .highlight pre {
   padding: 0;
@@ -350,12 +246,6 @@ code:not(.highlight code):not(pre code) {
   font-family: 'MapleMono', 'Fira Code', 'Courier New', Courier, monospace;
   font-size: 0.9em;
   border: 1px solid rgba(var(--accent-ig-rgb), 0.25);
-}
-
-html[data-bs-theme="light"] code:not(.highlight code):not(pre code) {
-  background: rgba(var(--accent-ig-rgb), 0.12);
-  color: #4a5bb3;
-  border-color: rgba(var(--accent-ig-rgb), 0.3);
 }
 
 /* Scrollbar styling for code blocks */
@@ -382,28 +272,12 @@ pre::-webkit-scrollbar-thumb:hover {
   background: rgba(var(--accent-ig-rgb), 0.6);
 }
 
-html[data-bs-theme="light"] .highlight::-webkit-scrollbar-track,
-html[data-bs-theme="light"] pre::-webkit-scrollbar-track {
-  background: rgba(0,0,0,0.05);
-}
-
-html[data-bs-theme="light"] .highlight::-webkit-scrollbar-thumb,
-html[data-bs-theme="light"] pre::-webkit-scrollbar-thumb {
-  background: rgba(var(--accent-ig-rgb), 0.5);
-}
-
 /* Code block hover effect */
 .highlight:hover,
 pre:hover {
   background: rgba(255,255,255,0.03);
   border-left-color: rgba(var(--accent-ig-rgb), 0.6);
   transition: all 0.2s ease;
-}
-
-html[data-bs-theme="light"] .highlight:hover,
-html[data-bs-theme="light"] pre:hover {
-  background: rgba(0,0,0,0.03);
-  border-left-color: rgba(var(--accent-ig-rgb), 0.7);
 }
 
 /* Focus states for keyboard navigation */
@@ -466,16 +340,6 @@ li p > mjx-container[display="true"] {
 }
 
 /* Theme-aware MathJax colors with better contrast */
-html[data-bs-theme="dark"] .MathJax,
-html[data-bs-theme="dark"] mjx-container {
-  color: #f0f0f0 !important;
-}
-
-html[data-bs-theme="light"] .MathJax,
-html[data-bs-theme="light"] mjx-container {
-  color: #1a1a1a !important;
-}
-
 /* Mathematical symbols should be crisp */
 mjx-mi, mjx-mn, mjx-mo, mjx-mtext {
   font-weight: 400 !important;
@@ -848,7 +712,7 @@ div.highlight {
 .card,
 .card.shadow-sm,
 article.card {
-  border-radius: 0.75rem !important;
+  border-radius: var(--radius);
   overflow: hidden !important;
 }
 
@@ -891,11 +755,6 @@ mark {
   border-radius: 0.2em;
 }
 
-html[data-bs-theme="dark"] mark {
-  background-color: rgba(255, 193, 7, 0.5);
-  color: #fff;
-}
-
 /* Active Search Highlight Animation */
 .search-highlight {
   background-color: rgba(142, 68, 173, 0.25); /* Subtle Purple */
@@ -910,15 +769,6 @@ html[data-bs-theme="dark"] mark {
 .search-highlight.fade-out {
   background-color: transparent !important;
   padding: 0;
-}
-
-html[data-bs-theme="dark"] .search-highlight {
-  background-color: rgba(155, 89, 182, 0.3);
-  color: inherit;
-}
-
-html[data-bs-theme="dark"] .search-highlight.active-highlight {
-  background-color: rgba(155, 89, 182, 0.5);
 }
 
 /* Code Copy Button Wrapper */
@@ -946,16 +796,6 @@ html[data-bs-theme="dark"] .search-highlight.active-highlight {
   border-color: var(--accent-ig);
   box-shadow: 0 0 0 0.25rem rgba(var(--accent-ig-rgb), 0.25);
   background-color: var(--surface);
-}
-
-html[data-bs-theme="light"] .search-wrapper {
-  border-color: rgba(0,0,0,0.1);
-  background-color: #fff;
-}
-
-html[data-bs-theme="light"] .search-wrapper:focus-within {
-  border-color: var(--accent-ig);
-  background-color: #fff;
 }
 
 #search-input {
@@ -1057,15 +897,6 @@ html[data-bs-theme="light"] .search-wrapper:focus-within {
   overflow: hidden;
 }
 
-html[data-bs-theme="light"] .modern-subject-card {
-  border-color: rgba(0,0,0,0.1);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-}
-
-html[data-bs-theme="dark"] .modern-subject-card {
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-}
-
 /* Subtle top accent line */
 .modern-subject-card::before {
   content: '';
@@ -1083,10 +914,6 @@ html[data-bs-theme="dark"] .modern-subject-card {
   transform: translateY(-2px);
   border-color: rgba(var(--accent-rgb), 0.25);
   box-shadow: 0 4px 12px rgba(var(--accent-rgb), 0.08);
-}
-
-html[data-bs-theme="light"] .modern-subject-card:hover {
-  box-shadow: 0 4px 12px rgba(var(--accent-rgb), 0.1);
 }
 
 .modern-subject-card:hover::before {
@@ -1174,10 +1001,6 @@ html[data-bs-theme="light"] .modern-subject-card:hover {
   gap: 1.5rem;
 }
 
-html[data-bs-theme="light"] .section-header {
-  border-bottom-color: rgba(0,0,0,0.06);
-}
-
 .section-header .header-content {
   flex: 1;
 }
@@ -1240,11 +1063,6 @@ html[data-bs-theme="light"] .section-header {
   border: 1px solid rgba(255,255,255,0.05);
 }
 
-html[data-bs-theme="light"] .exam-dashboard-card {
-  border-color: rgba(0,0,0,0.08);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
-}
-
 /* Department Exams - Week-based Layout */
 .exam-week-group {
   margin-bottom: 1.5rem;
@@ -1261,10 +1079,6 @@ html[data-bs-theme="light"] .exam-dashboard-card {
   margin-bottom: 0.75rem;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid rgba(255, 255, 255, 0.08);
-}
-
-html[data-bs-theme="light"] .exam-week-header {
-  border-bottom-color: rgba(0, 0, 0, 0.08);
 }
 
 .exam-week-label {
@@ -1300,21 +1114,11 @@ html[data-bs-theme="light"] .exam-week-header {
   gap: 1rem;
 }
 
-html[data-bs-theme="light"] .exam-item {
-  background: rgba(0, 0, 0, 0.02);
-  border-color: rgba(0, 0, 0, 0.06);
-}
-
 .exam-item:hover {
   background: rgba(255, 255, 255, 0.06);
   border-color: rgba(255, 255, 255, 0.12);
   transform: translateY(-1px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-}
-
-html[data-bs-theme="light"] .exam-item:hover {
-  background: rgba(0, 0, 0, 0.04);
-  border-color: rgba(0, 0, 0, 0.12);
 }
 
 /* Left side - Subject and Title */
@@ -1361,29 +1165,14 @@ html[data-bs-theme="light"] .exam-item:hover {
   color: #ef5350;
 }
 
-html[data-bs-theme="light"] .exam-type-mock .exam-type {
-  background: rgba(220, 53, 69, 0.1);
-  color: #d32f2f;
-}
-
 .exam-type-quiz .exam-type {
   background: rgba(255, 193, 7, 0.15);
   color: #ffca28;
 }
 
-html[data-bs-theme="light"] .exam-type-quiz .exam-type {
-  background: rgba(255, 193, 7, 0.1);
-  color: #f9a825;
-}
-
 .exam-type-test .exam-type {
   background: rgba(66, 165, 245, 0.15);
   color: #64b5f6;
-}
-
-html[data-bs-theme="light"] .exam-type-test .exam-type {
-  background: rgba(66, 165, 245, 0.1);
-  color: #1976d2;
 }
 
 .exam-duration {
@@ -1400,10 +1189,6 @@ html[data-bs-theme="light"] .exam-type-test .exam-type {
   border-radius: 0.25rem;
   background: rgba(var(--accent-rgb, 23, 162, 184), 0.15);
   color: var(--accent-color, #17a2b8);
-}
-
-html[data-bs-theme="light"] .exam-grade-badge {
-  background: rgba(var(--accent-rgb, 23, 162, 184), 0.1);
 }
 
 /* Responsive adjustments */

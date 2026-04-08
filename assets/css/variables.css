@@ -1,23 +1,35 @@
 /* variables.css */
 /* Centralized CSS variables for theme colors, spacing, and design tokens */
-/* This file makes it easy to maintain consistent styling across the site */
+/* Provides seamless integration with Bootstrap 5 native variables */
 
-:root {
-  /* Theme colors - Dark mode defaults */
-  --bg: #0b1220; /* page background for dark theme */
-  --surface: #0f1a2b; /* card / surface */
-  --muted: #9aa4b2; /* secondary text */
-  --text: #e6eef6; /* primary text */
-  --accent-al: #5cc07f; /* A-Level accent */
-  --accent-ig: #5c6bc0; /* IGCSE accent */
-  --accent-al-rgb: 92, 192, 127;
-  --accent-ig-rgb: 92, 107, 192;
-  --accent-page: #a78bfa; /* Subpages accent (purple) */
+:root, html[data-bs-theme="light"] {
+  /* Light theme defaults (base) */
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --surface-hover: #f1f5f9;
+  --border: rgba(15, 23, 42, 0.08);
+  --border-hover: rgba(15, 23, 42, 0.15);
+  --muted: #64748b;
+  --text: #0f172a;
+
+  /* Accents */
+  --accent-al: #34d399;
+  --accent-al-rgb: 52, 211, 153;
+  --accent-ig: #818cf8;
+  --accent-ig-rgb: 129, 140, 248;
+  --accent-page: #a78bfa;
   --accent-page-rgb: 167, 139, 250;
-  --info: #17a2b8;
-  
+  --info: #0ea5e9;
+
+  /* Hooking into Bootstrap variables for seamless integration */
+  --bs-body-bg: var(--bg);
+  --bs-body-color: var(--text);
+  --bs-emphasis-color: var(--text);
+  --bs-secondary-bg: var(--surface);
+  --bs-border-color: var(--border);
+
   /* Layout */
-  --radius: 0.6rem;
+  --radius: 0.75rem;
   --container-max: 1100px;
   
   /* Spacing scale */
@@ -29,13 +41,23 @@
   --space-xl: 2rem;
   
   /* Focus ring color */
-  --focus-ring: 100,150,255;
+  --focus-ring: 59, 130, 246;
 }
 
-/* Light theme overrides */
-html[data-bs-theme="light"] {
-  --bg: #f6f8fa;
-  --surface: #ffffff;
-  --muted: #556076;
-  --text: #0b1220;
+html[data-bs-theme="dark"] {
+  /* Dark theme overrides */
+  --bg: #0b1220; 
+  --surface: #111b2b;
+  --surface-hover: #1b2638;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 255, 255, 0.15);
+  --muted: #94a3b8;
+  --text: #f8fafc;
+
+  /* Bootstrap hook updates */
+  --bs-body-bg: var(--bg);
+  --bs-body-color: var(--text);
+  --bs-emphasis-color: var(--text);
+  --bs-secondary-bg: var(--surface);
+  --bs-border-color: var(--border);
 }

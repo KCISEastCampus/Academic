@@ -22,8 +22,8 @@
   min-width: 300px;
   max-width: 500px;
   padding: 1.25rem 1.5rem;
-  background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
-  border: 1px solid rgba(255,255,255,0.1);
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 1rem;
   text-decoration: none;
   color: var(--text);
@@ -32,10 +32,7 @@
   overflow: hidden;
 }
 
-html[data-bs-theme="light"] .quick-nav-item {
-  background: linear-gradient(135deg, rgba(0,0,0,0.02), rgba(0,0,0,0.01));
-  border-color: rgba(0,0,0,0.08);
-}
+
 
 .quick-nav-item::before {
   content: '';
@@ -139,15 +136,12 @@ html[data-bs-theme="light"] .quick-nav-item {
 
 .quick-nav-disabled:hover {
   transform: none;
-  border-color: rgba(255,255,255,0.1);
+  border-color: var(--border);
   box-shadow: none;
-  background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+  background: var(--surface);
 }
 
-html[data-bs-theme="light"] .quick-nav-disabled:hover {
-  background: linear-gradient(135deg, rgba(0,0,0,0.02), rgba(0,0,0,0.01));
-  border-color: rgba(0,0,0,0.08);
-}
+
 
 .quick-nav-disabled .nav-arrow {
   color: var(--muted);
