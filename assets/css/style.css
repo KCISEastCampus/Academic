@@ -115,7 +115,7 @@ table tbody tr, .table tbody tr {
 
 table tbody tr:hover,
 .table tbody tr:hover {
-  background-color: var(--surface-hover);
+  background-color: var(--surface-hover, rgba(127, 127, 127, 0.08));
 }
 
 body.scheme-igcse table tbody tr:hover,
