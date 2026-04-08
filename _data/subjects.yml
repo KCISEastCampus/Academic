@@ -38,7 +38,11 @@ alevel:
     icon: "📗"
     path: /alevel/as-physics/
     color: success
-    
+  - id: economics
+    name: AS Economics
+    icon: "📗"
+    path: /alevel/as-economics/
+    color: success
   - id: biology
     name: AS Biology
     icon: "📗"

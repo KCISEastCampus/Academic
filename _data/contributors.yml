@@ -20,6 +20,12 @@ council:
       contributions:
         - "Creator of AS Biology notes"
 
+    - name: "Dada Du"
+      title: "Member"
+      period: "2026 - Present"
+      contributions:
+        - "Provide high quality hand-made mindmaps for AS Economics"
+
 external:
   title: "Contributors & Alumni"
   description: "Friends and alumni who improved the site, content, or tooling."
