@@ -4,6 +4,7 @@ title: A2 Math - Statistics
 mathjax: true
 grade: a2
 subject: s2
+permalink: /alevel/a2-mathematics/statistics/
 ---
 
 # S2 (Statistics)

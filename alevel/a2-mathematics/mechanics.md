@@ -4,6 +4,7 @@ title: A2 Math - Mechanics
 mathjax: true
 grade: a2
 subject: m2
+permalink: /alevel/a2-mathematics/mechanics/
 ---
 
 # M2 (Mechanics)
