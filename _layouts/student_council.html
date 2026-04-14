@@ -168,7 +168,13 @@ layout: none
 
     <!-- Members Directory Entry -->
     <section class="member-directory-section fade-in" style="animation-delay: 0.45s;">
-      {% assign total_members = site.data.student_council.members | size %}
+      {% assign leaders_count = 0 %}
+      {% for group in site.data.student_council.groups %}
+        {% if group.leader_name_cn %}
+          {% assign leaders_count = leaders_count | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+      {% assign total_members = site.data.student_council.members | size | plus: leaders_count %}
       <div class="member-directory-card">
         <div class="member-directory-content">
           <h2>
