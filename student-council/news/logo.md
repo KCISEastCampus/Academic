@@ -47,8 +47,11 @@ A-level学生会今日正式发布全新视觉标识（Logo）。新Logo以A-lev
 A-level学生会
 
 > Logo设计：**马艺涵**
+>
 > Logo意见征集：**马艺涵**
+>
 > Logo修改：**石洪斌**
+>
 > 撰稿：**石洪斌**
 
 ---
@@ -87,6 +90,9 @@ The new logo will be comprehensively applied to the student council's official p
 A-level Student Council
 
 > Logo design: **Marcia Ma**
+>
 > Logo feedback collection: **Marcia Ma**
+>
 > Logo modification: **Eric Shi**
+>
 > Article editor: **Eric Shi**
