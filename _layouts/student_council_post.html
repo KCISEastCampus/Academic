@@ -45,12 +45,16 @@ layout: none
     }
 
     .post-title {
-      font-size: 2.2rem;
+      font-size: 2.6rem;
       font-weight: 800;
-      margin: 0 0 1.5rem 0;
-      letter-spacing: -0.02em;
-      color: var(--text);
-      line-height: 1.3;
+      margin: 0 0 1.2rem 0;
+      padding-bottom: 0.15em;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      background: linear-gradient(120deg, var(--text) 0%, rgba(var(--accent-page-rgb), 0.8) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
     }
 
     .post-meta {
@@ -110,29 +114,64 @@ layout: none
       line-height: 1.8;
     }
 
+    .post-content a {
+      color: var(--accent-page);
+      text-decoration: underline;
+      text-decoration-color: rgba(var(--accent-page-rgb), 0.3);
+      text-underline-offset: 4px;
+      text-decoration-thickness: 1.5px;
+      border-radius: 4px;
+      padding: 0 0.1em;
+      transition: all 0.2s ease;
+    }
+
+    .post-content a:hover {
+      text-decoration-color: var(--accent-page);
+      background-color: rgba(var(--accent-page-rgb), 0.1);
+    }
+
     .post-content p {
       margin-bottom: 1.2rem;
     }
 
-    .post-content h2 {
-      font-size: 1.6rem;
-      font-weight: 700;
-      margin: 1.8rem 0 0.8rem 0;
+    .post-content h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin: 3rem 0 1.2rem 0;
       color: var(--text);
+      letter-spacing: -0.02em;
+      padding-bottom: 0.6rem;
+      border-bottom: 3px solid var(--accent-page);
+    }
+
+    .post-content h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin: 2.5rem 0 1rem 0;
+      color: var(--text);
+      letter-spacing: -0.01em;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid rgba(var(--accent-page-rgb), 0.2);
     }
 
     .post-content h3 {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       font-weight: 700;
-      margin: 1.5rem 0 0.6rem 0;
+      margin: 2rem 0 0.8rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
       color: var(--text);
     }
 
-    .post-content img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 0.6rem;
-      margin: 1.5rem 0;
+    .post-content h3::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 1.3rem;
+      background: var(--accent-page);
+      border-radius: 2px;
+      box-shadow: 0 0 8px rgba(var(--accent-page-rgb), 0.4);
     }
 
     .post-content blockquote {

@@ -1,6 +1,6 @@
 ---
 layout: student_council_post
-title: Student Council Recruitment Event
+title: Recruitment Event
 author: Eric Shi
 date: 2026-03-12
 permalink: /student-council/news/recruitment/
@@ -10,14 +10,12 @@ redirect_from:
   - /student_council/news/recruitment/
   - /student_council/news/recruitment.html
 tags:
-  - Academic
-  - Events
-  - Publicity
+  - Administrative
 ---
 
-> Note: This news is in **both** languages.
+> Note: This news is in **both** languages. [Click Here](#recruitment-event-successfully-held) to skip to the English version.
 
-**A-level学生会面谈活动顺利举行**
+# A-level学生会面谈活动顺利举行
 
 近日，AL学生会新成员面谈活动在3420教室顺利举行。本次活动吸引了众多同学积极参与，现场交流氛围热烈。
 
@@ -34,7 +32,7 @@ A-level学生会
 
 ---
 
-**A-level Student Council Recruitment Event Successfully Held**
+# Recruitment Event Successfully Held
 
 Recently, the A-level Student Council recruitment event was successfully held in Room 3420. The event attracted many students who actively participated, creating a lively atmosphere for communication.
 
