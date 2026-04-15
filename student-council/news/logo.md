@@ -46,6 +46,11 @@ A-level学生会今日正式发布全新视觉标识（Logo）。新Logo以A-lev
 
 A-level学生会
 
+> Logo设计：**马艺涵**
+> Logo意见征集：**马艺涵**
+> Logo修改：**石洪斌**
+> 撰稿：**石洪斌**
+
 ---
 
 # New Logo Announcement
@@ -80,3 +85,8 @@ The capital "A" in the lower right quadrant of the shield represents three layer
 The new logo will be comprehensively applied to the student council's official promotions, event materials and online platforms as the organization's exclusive visual identity. In the future, A-level Student Council will continue to optimize our core work and accompany every student on their academic journey, helping everyone open the doors to world-renowned universities and shine with youthful brilliance!
 
 A-level Student Council
+
+> Logo design: **Marcia Ma**
+> Logo feedback collection: **Marcia Ma**
+> Logo modification: **Eric Shi**
+> Article editor: **Eric Shi**
