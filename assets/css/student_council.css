@@ -47,6 +47,24 @@
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.18);
 }
 
+.hero-logo {
+  width: 220px;
+  height: 88px;
+  max-width: 100%;
+  border-radius: 16px;
+  padding: 0.5rem 0.75rem;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(245, 249, 255, 0.92));
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.75);
+}
+
+.hero-logo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.16));
+}
+
 .hero-text {
   position: relative;
 }
@@ -61,11 +79,17 @@
 }
 
 .hero-title {
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   font-weight: 800;
   margin: 0 0 0.5rem 0;
-  letter-spacing: -0.02em;
-  color: var(--text);
+  padding-bottom: 0.15em;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  background: linear-gradient(135deg, var(--text) 0%, rgba(var(--accent-page-rgb), 0.85) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
 .hero-subtitle {
@@ -118,12 +142,27 @@
 }
 
 .section-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  display: flex;
+  font-size: 1.8rem;
+  font-weight: 700;
+  display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.8rem;
   color: var(--text);
+  letter-spacing: -0.01em;
+  padding-bottom: 0.6rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-page) 0%, transparent 95%);
+  border-radius: 2px;
+  opacity: 0.8;
 }
 
 .section-title i {
@@ -935,6 +974,18 @@ html[data-bs-theme="light"] .hero-title {
     font-size: 1.55rem;
   }
 
+  .hero-logo-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-logo {
+    width: 170px;
+    height: 68px;
+    border-radius: 12px;
+    padding: 0.4rem 0.55rem;
+  }
+
   .hero-title {
     font-size: 1.75rem;
     line-height: 1.2;
@@ -1087,12 +1138,13 @@ html[data-bs-theme="light"] .hero-title {
 }
 
 .news-title {
-  font-size: 1.05rem;
-  font-weight: 600;
-  margin: 0 0 0.25rem 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 0.35rem 0;
   color: var(--text);
-  line-height: 1.3;
+  line-height: 1.4;
   text-align: left;
+  letter-spacing: -0.01em;
 }
 
 .news-meta-row {
@@ -1309,9 +1361,13 @@ html[data-bs-theme="light"] .hero-title {
 }
 
 .tag-group-title {
-  margin: 0 0 0.75rem;
-  font-size: 1rem;
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+  font-weight: 700;
   color: var(--accent-page);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .tag-group-posts {

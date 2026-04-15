@@ -641,7 +641,8 @@ div.highlight {
 }
 
 /* Image Styling - Block display with white background */
-#content-container img {
+#content-container img,
+.post-content img {
   display: block;
   background-color: white;
   padding: 10px;
@@ -654,12 +655,15 @@ div.highlight {
   transition: opacity 0.3s ease;
 }
 
-#content-container img[data-lazy-pending="true"] {
+#content-container img[data-lazy-pending="true"],
+.post-content img[data-lazy-pending="true"] {
   opacity: 0;
 }
 
 #content-container img.is-lazy-loaded,
-#content-container img[data-lazy-ignore] {
+#content-container img[data-lazy-ignore],
+.post-content img.is-lazy-loaded,
+.post-content img[data-lazy-ignore] {
   opacity: 1;
 }
 
