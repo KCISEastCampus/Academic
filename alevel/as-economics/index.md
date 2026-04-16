@@ -29,3 +29,6 @@ permalink: /alevel/as-economics/
 
 ## Unit 8: Economic performance
 [Mindmap for Unit 8](../../assets/pdf/as-economics-unit-8.pdf)
+
+## Unit 9: Macroeconomic policy
+[Mindmap for Unit 9](../../assets/pdf/as-economics-unit-9.pdf)
