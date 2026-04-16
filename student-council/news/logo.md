@@ -27,9 +27,9 @@ A-level学生会今日正式发布全新视觉标识（Logo）。新Logo以A-lev
 
 ## 二、核心元素官方释义
 ### 1. 左上象限：书本与五星
-星星精准对应A-level成绩体系中的**A\***等级，与翻开的书本结合：
+星星对应A-level成绩体系中的**A\***等级，与翻开的书本结合：
 - 寓意全体学子以极致追求冲刺A\*顶尖成绩，践行学术卓越目标；
-- 彰显学生会助力学子斩获高分、在国际化升学赛道中突围的服务宗旨。
+- 彰显学生会助力学子斩获高分的服务宗旨。
 
 ### 2. 核心符号：字母“A”
 盾牌右下象限的大写“A”，既是A-level课程标识，更代表三重内涵：
@@ -39,7 +39,7 @@ A-level学生会今日正式发布全新视觉标识（Logo）。新Logo以A-lev
 
 ### 3. 其他元素
 - 斜向条纹：体现A-level课程国际化、多元化特质，寓意学子锐意进取的成长姿态；
-- 藏青主色调：象征学术严谨与组织公信力，契合A-level教育专业属性。
+- 藏青/黑色主色调：象征学术严谨与组织公信力，契合A-level教育专业属性。
 
 ## 三、全新征程与应用
 全新Logo将会应用于学生会官方宣传、活动物料和线上平台，作为组织专属视觉标识。未来，A-level学生会将持续优化各项核心工作，陪伴每一位学子在学术道路上砥砺前行，助力大家叩开世界名校大门，绽放青春光彩！
@@ -74,7 +74,7 @@ The capital "A" in the lower right quadrant of the shield represents three layer
 
 ### 3. Other Elements
 - Diagonal stripes: Reflecting the international and diverse characteristics of the A-level curriculum, symbolizing students' enterprising growth posture;
-- Navy blue primary color: Symbolizing academic rigor and organizational credibility, fitting the professional attributes of A-level education.
+- Navy blue/black primary color: Symbolizing academic rigor and organizational credibility, fitting the professional attributes of A-level education.
 
 ## 3. New Journey and Application
 The new logo will be comprehensively applied to the student council's official promotions, event materials and online platforms as the organization's exclusive visual identity. In the future, A-level Student Council will continue to optimize our core work and accompany every student on their academic journey, helping everyone open the doors to world-renowned universities and shine with youthful brilliance!
