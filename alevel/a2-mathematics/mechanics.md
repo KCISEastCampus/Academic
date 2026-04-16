@@ -106,7 +106,7 @@ Determine the value of $\mu$.
 
 #### Centre of Mass
 
-
+![Question IMG](/assets/img/MA05-centre-of-mass.png)
 A composite uniform lamina is modelled by the finite region bounded by two circular discs, shown shaded in the figure above. The details, of the sizes and relative positions of these discs, are as follows.
 
 The straight line $POQ$ is a diameter of the larger circular disc, of radius $12a$, whose centre is at the point $O$. The smaller circular disc, of radius $6a$, has its centre at O', so that $O'$ lies on $OQ$ with $\lVert O'Q \rVert = 9a$.
