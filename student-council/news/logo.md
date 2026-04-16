@@ -14,7 +14,7 @@ redirect_from:
 
 > Note: This news is in **both** languages. [Click Here](#new-logo-announcement) to skip to the English version.
 
-# 全新视觉标识（Logo）发布
+# 全新Logo发布
 
 ![Logo IMG](/assets/img/logo.png)
 
@@ -50,9 +50,7 @@ A-level学生会
 >
 > Logo意见征集：**马艺涵**
 >
-> Logo修改：**石洪斌**
->
-> 撰稿：**石洪斌**
+> Logo美化：**石洪斌**
 
 ---
 
@@ -93,6 +91,4 @@ A-level Student Council
 >
 > Logo feedback collection: **Marcia Ma**
 >
-> Logo modification: **Eric Shi**
->
-> Article editor: **Eric Shi**
+> Logo beautification: **Eric Shi**
