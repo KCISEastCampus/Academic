@@ -12,7 +12,7 @@ redirect_from:
 
 > This is **Pure Mathematics** (MA03).
 > 
-> If you want to view the **MECHANICS** (MA05) or **STATISTICS** (MA04) revision notes, click the links below:
+> If you want to view the **Mechanics** (MA05) or **Statistics** (MA04) revision notes, click the links below:
 > - [**(MA05)Mechanics**](/alevel/a2-mathematics/mechanics)
 > - [**(MA04)Statistics**](/alevel/a2-mathematics/statistics)
 
