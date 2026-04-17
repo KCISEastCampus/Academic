@@ -182,7 +182,7 @@ $$P = \frac{W}{t} = Fv$$
 ## M2.7: Uniform Circular Motion
 
 ### Key Relationships
-Fzxor a particle moving in a circle of radius $r$ with constant angular speed $\omega$:
+For a particle moving in a circle of radius $r$ with constant angular speed $\omega$:
 
 | Quantity | Formula |
 |----------|---------|
@@ -231,7 +231,7 @@ $$T = \frac{2\pi}{\omega} = \frac{2\pi}{8} = \frac{\pi}{4} \text{ s}$$
 | Circular motion | $a = \frac{v^2}{r} = r\omega^2$ |
 
 ## Exam-style Question
-x
+
 ### Equilibrium
 ![Statics Example](/assets/img/a2-math-mech/MA05_example_q1.png)
 A uniform rod $AB$, of length $2a$, is resting with its end $A$ on rough horizontal ground and a point $T$ on the rod in contact with a rough fixed prism of semicircular cross-section, of radius $a$. The rod lies in a vertical plane which is perpendicular to the axis of the prism, as shown in the figure above.
