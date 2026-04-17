@@ -195,7 +195,7 @@ Fzxor a particle moving in a circle of radius $r$ with constant angular speed $\
 - Centripetal force is provided by tension, friction, gravity, normal reaction, etc.
 
 ### Conical Pendulum
-![Conical Pendulum](/assets/img/MA05_Conical_Pendulum.jpg)
+![Conical Pendulum](/assets/img/a2-math-mech/MA05_Conical_Pendulum.jpg)
 A particle of mass $m$ on a string of length $L$, moving in horizontal circle with angle $\theta$ to vertical.
 
 **Vertical equilibrium:** $T\cos\theta = mg$  
@@ -233,7 +233,7 @@ $$T = \frac{2\pi}{\omega} = \frac{2\pi}{8} = \frac{\pi}{4} \text{ s}$$
 ## Exam-style Question
 x
 ### Equilibrium
-    ![Statics Example](/assets/img/MA05_example_q1.png)
+![Statics Example](/assets/img/a2-math-mech/MA05_example_q1.png)
 A uniform rod $AB$, of length $2a$, is resting with its end $A$ on rough horizontal ground and a point $T$ on the rod in contact with a rough fixed prism of semicircular cross-section, of radius $a$. The rod lies in a vertical plane which is perpendicular to the axis of the prism, as shown in the figure above.
 
 The coefficient of friction between the rod and the ground at $A$ and between the rod and the prism at $T$ is $\mu$, where $0 < \mu < 1$.
@@ -244,7 +244,7 @@ Determine the value of $\mu$.
 
 ### Centre of Mass
 
-![Question IMG](/assets/img/MA05-centre-of-mass.png)
+![Question IMG](/assets/img/a2-math-mech/MA05-centre-of-mass.png)
 A composite uniform lamina is modelled by the finite region bounded by two circular discs, shown shaded in the figure above. The details, of the sizes and relative positions of these discs, are as follows.
 
 The straight line $POQ$ is a diameter of the larger circular disc, of radius $12a$, whose centre is at the point $O$. The smaller circular disc, of radius $6a$, has its centre at O', so that $O'$ lies on $OQ$ with $\lVert O'Q \rVert = 9a$.
@@ -258,7 +258,7 @@ When the lamina is freely suspended from $X$ and hangs in equilibrium, with $P$ 
 Determine the ratio of the mass of the particle to the mass of the lamina.
 
 ### Circular Motion
-![Question](/assets/img/MA05-circular-motion.png)
+![Question](/assets/img/a2-math-mech/MA05-circular-motion.png)
 A car moving with constant speed $v$ in a horizontal circle of centre $O$ and radius $r$ on a road banked at angle $\theta$ to the horizontal.
 The car has width $|AB|=2d$, centre of mass $G$ is the midpoint of $AB$ and at height $h$ above the ground.
 The car is at the point of toppling about $G$ in an "up the bend" direction.

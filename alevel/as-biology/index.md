@@ -194,7 +194,7 @@ Digestion: is the process in which large molecules are hydrolysed by enzymes to 
 ## Chapter 14 Mammalian blood - defensive mechanisms
 ### 14.1 Cell recognition and the cells of the immune system
 
-![Defence Mechanisms](../../assets/img/as-biology-C14-img1.png)
+![Defence Mechanisms](../../assets/img/as-biology/as-biology-C14-img1.png)
 Mammalian immune defence mechanisms are divided into two main categories, with specific responses mediated by **lymphocytes** (a type of white blood cell) in two forms:
 - **Non-specific response**: Immediate, identical for all pathogens (e.g., physical barriers like skin, phagocytosis)
 - **Specific response**: Slower, tailored to individual pathogens
@@ -211,7 +211,7 @@ Protein molecules enable the immune system to identify:
 ### 14.2 Phagocytosis
 Phagocytosis is a core non-specific immune response that destroys pathogens via phagocytic white blood cells.
 
-![Phagocytosis](../../assets/img/as-biology-C14-img2.png)
+![Phagocytosis](../../assets/img/as-biology/as-biology-C14-img2.png)
 
 #### Phagocytosis process
 1. Chemicals released by pathogens/damaged/abnormal cells **attract phagocytes** (movement along a concentration gradient).
@@ -239,7 +239,7 @@ Cells that display foreign antigens on their surface include:
 - Cancer cells (abnormal surface antigens)
 
 #### Cell-mediated response steps
-![Cell-mediated Response](../../assets/img/as-biology-C14-img3.png)
+![Cell-mediated Response](../../assets/img/as-biology/as-biology-C14-img3.png)
 1. Pathogens invade body cells or are engulfed by phagocytes.
 2. Phagocytes present pathogen antigens on their cell-surface membrane.
 3. Receptors on a **specific helper T cell (TH cell)** bind to these foreign antigens, activating the helper T cell.
@@ -262,10 +262,10 @@ Cytotoxic T cells kill abnormal/pathogen-infected cells by producing **perforin*
 After activation, each B cell clone develops into two specialized cell types:
 1. **Plasma cells**: Secrete large quantities of **antibodies** into blood plasma; survive only a few days. Provide the **immediate immune defence** by binding to and destroying antigens.
 2. **Memory B cells**: Long-lived cells that mediate the **secondary immune response**.
-![Memory cells](../../assets/img/as-biology-C14-img4.png)
+![Memory cells](../../assets/img/as-biology/as-biology-C14-img4.png)
 
 #### Humoral immune response steps
-![Steps](../../assets/img/as-biology-C14-img5.png)
+![Steps](../../assets/img/as-biology/as-biology-C14-img5.png)
 1. B cells take up surface antigens of invading pathogens via their cell-surface receptors.
 2. B cells process the antigens and **present them on their own surface**.
 3. Activated helper T cells bind to the processed antigens on B cells, fully activating the B cells.
@@ -275,7 +275,7 @@ After activation, each B cell clone develops into two specialized cell types:
 7. Memory B cells persist in the body; on re-encountering the same antigen, they rapidly divide into plasma cells for the secondary immune response.
 
 #### Antibody structure
-![Antibody Structure](../../assets/img/as-biology-C14-img6.png)
+![Antibody Structure](../../assets/img/as-biology/as-biology-C14-img6.png)
 Antibodies are **globular proteins** synthesised by B cells, with a highly specific structure:
 - Composed of **four polypeptide chains**: 2 heavy (long) chains and 2 light (short) chains, held together by **disulfide bridges**.
 - **Variable region**: Unique to each antibody; forms the **antigen-binding site** (matches the shape of a specific antigen).
@@ -380,7 +380,7 @@ Two factors:
 - Fast delivery of substances
 - Suits mammals: high body temperature & **high metabolic rate**
 
-![Circulatory system](../../assets/img/as-biology-C15-img0.png)
+![Circulatory system](../../assets/img/as-biology/as-biology-C15-img0.png)
 
 #### Closed & Double characteristics
 - **Closed**: Blood is contained in blood vessels; Always in heart, arteries, veins or capillaries
@@ -545,8 +545,8 @@ The human heart is two separate side-by-side pumps:
 
 #### Pressure and volume changes of the heart
 
-![Pressure Reference IMG 1](../../assets/img/as-biology-C15-img1.png)
-![Pressure Reference IMG 2](../../assets/img/as-biology-C15-img2.png)
+![Pressure Reference IMG 1](../../assets/img/as-biology/as-biology-C15-img1.png)
+![Pressure Reference IMG 2](../../assets/img/as-biology/as-biology-C15-img2.png)
 
 #### Pressure reference
 
