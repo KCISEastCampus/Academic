@@ -16,7 +16,7 @@ redirect_from:
 
 # 全新Logo发布
 
-![Logo IMG](/assets/img/logo.png)
+<img src="/assets/img/logo.png" alt="Logo IMG" class="white-bg" />
 
 A-level学生会今日正式发布全新视觉标识（Logo）。新Logo以A-level课程核心特质为设计基底，精准融合组织使命与学子愿景，标志着学生会服务体系与品牌建设迈入全新阶段。
 
@@ -56,7 +56,7 @@ A-level学生会
 
 # New Logo Announcement
 
-![Logo IMG](/assets/img/logo.png)
+<img src="/assets/img/logo.png" alt="Logo IMG" class="white-bg" />
 
 A-level Student Council announced the launch of our new logo. The new logo is designed based on the core characteristics of the A-level curriculum, precisely integrating the mission of the organization and the aspirations of the students. This marks a new stage in our service system and brand development.
 
