@@ -104,7 +104,9 @@ html {
 #content-container h1,
 #content-container h2,
 #content-container h3,
-#content-container h4 {
+#content-container h4,
+#content-container h5,
+#content-container h6 {
   margin: 1.5rem 0 0.75rem 0 !important;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -115,7 +117,9 @@ html {
 #content-container h1::before,
 #content-container h2::before,
 #content-container h3::before,
-#content-container h4::before {
+#content-container h4::before,
+#content-container h5::before,
+#content-container h6::before {
   content: '';
   position: absolute;
   left: 0;
@@ -233,10 +237,10 @@ html[data-bs-theme="dark"] body.scheme-alevel #content-container h3::before {
 #content-container h4 {
   font-size: 1.15rem;
   color: var(--text);
-  margin-top: 1.25rem !important;
-  margin-bottom: 0.75rem !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.85rem !important;
   font-weight: 600;
-  opacity: 0.92;
+  opacity: 0.95;
   padding-left: 20px;
 }
 
@@ -265,6 +269,61 @@ html[data-bs-theme="dark"] body.scheme-alevel #content-container h4::before {
   background: var(--accent-al);
   opacity: 0.75;
 }
+
+#content-container h5 {
+  font-size: 1.1rem;
+  color: var(--text);
+  margin-top: 1.25rem !important;
+  margin-bottom: 0.75rem !important;
+  font-weight: 600;
+  opacity: 0.95;
+  padding-left: 20px;
+}
+
+#content-container h5::before {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid var(--accent-ig);
+  opacity: 0.85;
+}
+
+body.scheme-igcse #content-container h5::before {
+  border-color: var(--accent-ig);
+}
+
+body.scheme-alevel #content-container h5::before {
+  border-color: var(--accent-al);
+}
+
+html[data-bs-theme="dark"] #content-container h5::before {
+  border-color: var(--accent-ig);
+  opacity: 0.8;
+}
+
+html[data-bs-theme="dark"] body.scheme-alevel #content-container h5::before {
+  border-color: var(--accent-al);
+  opacity: 0.8;
+}
+
+#content-container h6 {
+  font-size: 1rem;
+  color: var(--text);
+  margin-top: 1rem !important;
+  margin-bottom: 0.6rem !important;
+  font-weight: 700;
+  opacity: 0.85;
+  padding-left: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+#content-container h6::before {
+  display: none;
+}
+
+
 
 /* Markdown blockquotes -> modern styled callout cards */
 #content-container blockquote {

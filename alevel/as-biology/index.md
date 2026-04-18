@@ -37,8 +37,6 @@ subject: biology
 
 How quickly causes damage = How rapidly pathogens divided
 
----
-
 ### 11.2 Data and disease
 #### Step of epidemiological study
 1. local observation
@@ -57,8 +55,6 @@ No, just correlated but no evidence to prove A causes B.
 - Data collectors have vested interest?
 - Study repeated with consistent results/conclusions?
 - Unanswered questions remaining?
-
----
 
 ### 11.3 Lifestyle and health
 - **Risk**: measure of the probability that damage to health will occur as a result of a given hazard
@@ -131,8 +127,6 @@ Digestion: is the process in which large molecules are hydrolysed by enzymes to 
 | Small intestine: duodenum | - acidic stomach contents are neutralised by bile<br>- complete chemical digestion |
 | Small intestine: ileum | - food further digested, and absorbed into the blood via villi |
 
----
-
 ### 12.2 Digestion
 #### Digestion process of carbohydrates
 1. Saliva from salivary glands mixes with food
@@ -154,8 +148,6 @@ Digestion: is the process in which large molecules are hydrolysed by enzymes to 
 2. Endopeptidases: hydrolyse internal peptide bonds
 3. Exopeptidases: hydrolyse terminal peptide bonds
 4. Dipeptidases: membrane‑bound, hydrolyse dipeptides
-
----
 
 ### 12.3 Absorption of the products of digestion
 #### Structure of ileum
@@ -190,6 +182,8 @@ Digestion: is the process in which large molecules are hydrolysed by enzymes to 
 8. Pass through lymph vessels into **blood system**
 9. Triglycerides hydrolysed by enzyme
 10. Products diffuse into **body cells**
+
+---
 
 ## Chapter 14 Mammalian blood - defensive mechanisms
 ### 14.1 Cell recognition and the cells of the immune system
@@ -353,6 +347,8 @@ Vaccine development, testing and implementation raise important ethical question
 6. Is it worth continuing **costly vaccination programmes** for near-eradicated diseases, even if this reduces funding for other medical treatments?
 7. How to balance **individual vaccine risks** (e.g., rare side effects) against the **population-wide benefits** of disease control and eradication?
 
+---
+
 ## Chapter 15 Mammalian blood - the circulatory system
 
 ### 15.1 Circulatory system of a mammal
@@ -388,8 +384,6 @@ Two factors:
   1 circuit = 2 circulations:
   1) **Pulmonary circulation**: Circulation through the lungs and heart
   2) **Systemic circulation**: Circulation through other parts of the body and heart except the lungs
-
----
 
 ### 15.2 Blood vessels and their functions
 #### Structure of blood vessels
@@ -457,8 +451,6 @@ Two factors:
 - hydrostatic pressure of tissue fluid
 - muscle contraction squeezing lymph vessels, valves ensuring one‑way flow
 
----
-
 ### 15.3 The structure of the heart
 The human heart is two separate side-by-side pumps:
 - Left pump: oxygenated blood (from lungs)
@@ -486,8 +478,6 @@ The human heart is two separate side-by-side pumps:
 - Oxygenated blood in left heart does not supply heart muscle.
 - Heart muscle supplied by coronary arteries (branch from aorta).
 - Coronary artery blockage → myocardial infarction: heart muscle area deprived of oxygen and dies.
-
----
 
 ### 15.4 The cardiac cycle
 #### Three types of valves
@@ -554,8 +544,6 @@ The human heart is two separate side-by-side pumps:
 - Diastolic pressure = the minimum blood pressure in the arteries
 - Human blood pressure is usually between 80-120mmHg
 
----
-
 ### 15.5 Heart disease
 #### Atheroma
 - **Definition**: A fatty deposit forming within the **artery wall**
@@ -620,3 +608,376 @@ The human heart is two separate side-by-side pumps:
 - High saturated fat levels → increase LDL levels → raise blood cholesterol concentration
 - Antioxidant-rich foods (e.g., vitamin C) → reduce heart disease risk
 - Non-starch polysaccharide (dietary fibre) → also reduce heart disease risk
+
+---
+
+## Chapter 16 Mass transport systems in plants
+### 16.1 Movement of water through roots
+![Root of a dicotyledonous plant](../../assets/img/as-biology/as-biology-C16-img1.png)
+#### Root Structure & Water Absorption Basis
+Most plants are terrestrial, evolving water-conserving adaptations (e.g., waterproof outer layer), so they cannot absorb water via the general body surface. Instead, they have a specialized exchange surface in soil: root hairs.
+
+Phloem is made up of living cells that have sieve plates between them and the companion cells beside them, which provide metabolic support.
+![Phloem](../../assets/img/as-biology/as-biology-C16-img2.png)
+
+#### Uptake of water by root hairs
+Root Hairs: Water & Mineral Ion Absorption
+- Root hairs are plants’ exchange surfaces for absorbing water and mineral ions.
+- Plants lose large amounts of water via transpiration (up to 700 dm³/day in large trees), which must be replaced by root hair absorption.
+- Adaptations for efficient absorption: long extensions + thousands per root branch (large surface area); thin cell-surface membrane and cellulose cell wall (rapid material movement).
+- Damp soil has a soil solution (mostly water, high water potential, slightly below zero) containing mineral ions.
+- Root hair/root cells have dissolved sugars, amino acids, and mineral ions (low water potential).
+- Water moves by osmosis from soil solution into root-hair cells down the water potential gradient.
+
+#### Apoplastic Pathway
+As water enters endodermal cells by osmosis, cohesive water molecules pull more water behind them, creating tension.
+This tension draws water along the cell walls of root cortex cells.
+The mesh-like cellulose cell walls have abundant water-filled spaces, resulting in little to no resistance to water movement.
+
+#### Symplastic Pathway
+![Symplastic Pathway](../../assets/img/as-biology/as-biology-C16-img3.png)
+Occurs via the cytoplasm of cortex cells (osmosis-driven), with water passing through cell walls via plasmodesmata (cytoplasm-filled tiny openings).
+A continuous cytoplasm column connects root-hair cells to root-centre xylem.
+
+Water movement process:
+1. Osmosis increases root-hair cell water potential.
+2. Root-hair cell has higher water potential than the first cortex cell.
+3. Water moves from root-hair to first cortex cell (osmosis, down water potential gradient).
+4. First cortex cell has higher water potential than inner neighbour.
+5. Water moves to inner neighbour (osmosis, down gradient).
+6. This repeats, with water moving inward cell-by-cell.
+7. Water loss from the first cortex cell lowers its potential, drawing more water from root-hair cell.
+8. A water potential gradient forms across cortex cells, transporting water along cytoplasm from root-hair to endodermis.
+
+#### Passage of water into the xylem
+In the apoplastic pathway, the waterproof Casparian strip in endodermal cells blocks water movement along cell walls.
+Water then enters the cell’s living protoplast and joins water from the symplastic pathway.
+
+Endodermal cells actively transport salts into the xylem (requires energy, carrier proteins, living tissue).
+This lowers xylem water potential, so water moves in by osmosis, creating root pressure that pushes water upward.
+Root pressure is important in small herbaceous plants but negligible in large trees compared to transpiration pull.
+
+**Evidence for root pressure**:
+1. Root pressure increases with higher temperature and decreases at lower temperatures.
+2. Metabolic inhibitors (e.g. cyanide) stop respiration and abolish root pressure.
+3. Less oxygen or respiratory substrates reduces root pressure.
+
+### 16.2 Movement of water up stems
+#### Movement of Water Out Through Stomata
+Atmospheric humidity (and water potential) is usually lower than that of the air spaces adjacent to stomata.
+When stomata are open, water vapour diffuses out of the air spaces into the atmosphere down the water potential gradient.
+Water lost from the air spaces is replenished by evaporation from the cell walls of surrounding mesophyll cells.
+Plants control transpiration rate by adjusting the size of stomatal pores.
+
+#### Movement of Water Across Leaf Cells
+Mesophyll cells lose water via evaporation from cell walls to leaf air spaces.
+Lost water is replaced by water from the xylem, moving through apoplastic or symplastic pathways.
+
+**Symplastic pathway mechanism**:
+1. Mesophyll cells lose water to air spaces, lowering their water potential.
+2. These cells take in water by osmosis from neighboring cells.
+3. Neighboring cells lose water, reducing their water potential.
+4. They absorb water from their own neighbors by osmosis.
+
+A water potential gradient is established, pulling water from the xylem across leaf mesophyll and out to the atmosphere.
+
+#### Structure and Function of Xylem
+- **Function**: Transports water (via transpiration stream) and dissolved minerals to plant tissues.
+- **Structure**: Composed of dead cells forming continuous tubes.
+
+**Water movement**:
+1. Water enters root hair cells by osmosis (down water potential gradient) and moves through root tissue to xylem.
+2. Leaf water evaporation creates tension, pulling water upward via cohesion (cohesion-tension theory), forming a continuous transpiration stream.
+
+#### Movement of Water Up the Stem in the Xylem
+Two key factors drive water upward from roots to leaves: cohesion-tension (main factor) and root pressure.
+
+**Cohesion-tension theory mechanism**:
+- Water evaporates from leaves via transpiration.
+- Water molecules form hydrogen bonds (cohesion), sticking together.
+- Water forms a continuous, unbroken column across mesophyll cells and down the xylem.
+- Transpiration-driven evaporation pulls more water molecules upward via cohesion, creating transpiration pull.
+- Transpiration pull puts xylem under tension (negative pressure), explaining the theory’s name.
+- Transpiration pull is powerful enough to lift water 100m+ in tallest trees.
+
+**Evidence for cohesion-tension theory**:
+- Tree trunk diameter changes with transpiration rate: shrinks during the day (high tension) and expands at night (low tension).
+- Broken xylem vessels allow air entry, breaking the water column—trees can no longer draw up water (cohesion fails).
+- Broken xylem does not leak water (contrary to positive pressure); instead, air is drawn in, confirming tension.
+
+#### Transpiration pull
+Transpiration pull is passive and requires no metabolic energy.
+Xylem vessels are dead, so their end walls break down, forming continuous, unbroken tubes from roots to leaves — essential for the cohesion-tension theory.
+Energy for transpiration comes from heat, ultimately supplied by the Sun.
+
+### 16.3 Transpiration and factors affecting it
+#### Role of Transpiration
+Transpiration is called a "necessary evil": unavoidable in flowering plants due to leaf adaptations for photosynthesis (large surface area for light absorption, stomata for CO₂ intake), causing huge water loss (up to 700 dm³ daily in large trees).
+It is not essential for water delivery to leaves (osmosis could do this), and <1% of transported water is used by the plant.
+
+**Benefit**: Transpiration pull carries water containing dissolved mineral ions, sugars and hormones throughout the plant, enabling rapid movement of materials.
+
+Transpiration in xylem can be measured by using potometer.
+
+#### Factors affecting transpiration
+
+| Factor | How factor affects transpiration | Increase in transpiration caused by | Decrease in transpiration caused by |
+|--------|----------------------------------|-------------------------------------|-------------------------------------|
+| Light | Stomata open in the light and close in the dark | Higher light intensity | Lower light intensity |
+| Temperature | Alters the **kinetic energy** of the water molecules and the relative humidity of the air | Higher temperatures | Lower temperatures |
+| Humidity | Affects the water potential gradient between the air spaces in the leaf and the atmosphere | Lower humidity | Higher humidity |
+| Air movement | Changes the water potential gradient by altering the rate at which moist air is removed from around the leaf | More air movement | Less air movement |
+
+All factors depend on solar energy, so the Sun ultimately drives transpiration.
+
+### 16.4 Transport of organic substances in the phloem
+#### Mechanism of translocation: mass flow theory
+1. Transfer of sucrose into sieve elements from photosynthesising tissue
+  - Sucrose is made from photosynthesis products in chloroplast-containing cells.
+  - Sucrose diffuses down a concentration gradient via facilitated diffusion into companion cells.
+  - Hydrogen ions are actively transported from companion cells into cell wall spaces using ATP.
+  - H⁺ diffuses back into sieve tube elements through carrier proteins.
+  - Sucrose is transported with H⁺ by co-transport, using co-transport proteins.
+
+2. Mass flow of sucrose through sieve tube elements
+  - Sucrose (from source cells) is actively transported into sieve tubes, lowering their water potential.
+  - Water moves from xylem into sieve tubes by osmosis, creating high hydrostatic pressure at the source.
+  - At sinks (respiring/storage cells), sucrose is removed or stored, so sieve tubes lose water by osmosis, reducing pressure.
+  - A hydrostatic pressure gradient exists between source and sink, causing mass flow of sucrose solution in sieve tubes.
+
+3. Transfer of sucrose into sink cells
+  - Sucrose is actively transported by companion cells out of sieve tubes into sink cells.
+![Transport of organic substances in the phloem](../../assets/img/as-biology/as-biology-C16-img5.png)
+
+#### Evidence that translocation of organic molecules occurs in phloem
+- When phloem is cut, a solution of organic molecules flows out.
+- Plants given radioactive CO₂ soon show labelled carbon in phloem.
+- Aphids use needle-like mouthparts to feed on phloem; sieve tube contents show sucrose changes matching leaf levels, with a short time lag.
+- Ringing (removing a full circle of phloem) causes sugar accumulation above the ring and loss below.
+![Table](../../assets/img/as-biology/as-biology-C16-img6.png)
+
+### 16.5 Investigating transport in plants
+#### Ringing experiments
+Woody stems have a layer of phloem cut from their circumference.
+The tissue below the cut dies and the tissue above swells.
+These observations suggest that removing the phloem around the stem has led to:
+- Phloem sugars accumulating above the ring, causing swelling as cells take up more water by osmosis (lowered water potential from sugar buildup).
+- Interrupted sugar flow below the ring, leading to tissue death in this region.
+
+#### Tracer Experiments
+Using the isotope ¹⁴C in carbon dioxide, the flow of sugars can be traced within the plant. These experiments show that sugars move around the plant only in phloem tissue.
+
+- Radioactive isotopes (e.g. ¹⁴C) trace substance movement in plants.
+- ¹⁴C is used to make ¹⁴CO₂, which is incorporated into sugars during photosynthesis.
+- Radioactive sugars are tracked by autoradiography: thin stem cross-sections are placed on X-ray film.
+- Film blackens where radiation from the ¹⁴C‑labelled sugars is present, corresponding exactly to phloem tissue.
+- Other tissues do not blacken the film, proving only phloem translocates sugars.
+
+### 16.6 Aphids and plant viruses
+#### Aphid life cycle
+- Aphids overwinter as cold-resistant eggs laid in autumn.
+- Eggs hatch into wingless females, which feed and mature quickly.
+- Females reproduce by parthenogenesis (asexual, no fertilisation), producing live female offspring — allowing rapid population growth.
+- Some offspring develop wings, migrate to new plants, and repeat parthenogenesis.
+- In autumn, winged males and sexual females are produced.
+- They mate, and females lay eggs that survive winter.
+
+#### Aphid Feeding Mechanism
+Aphids feed by inserting their needle-like stylets into the phloem to withdraw sap.
+Sieve tube sap is under hydrostatic pressure, causing sap to exude from the aphid’s rear.
+This exudate is sticky, sugar-rich, and supports mould growth.
+In heavy infestations, black moulds reduce leaf photosynthesis and lower crop yields.
+
+**Ways aphids reduce crop yields**:
+- Remove phloem sap, depriving plants of sugars and amino acids.
+- Promote mould growth on leaves, reducing photosynthesis and damaging appearance.
+- Transmit plant viruses.
+
+#### Plant virus diseases
+Like animal viruses, plant viruses consist of nucleic acid and a protein coat; some also have an outer membrane.
+Shapes vary: tobacco mosaic virus (TMV) is rigid rods; others are spherical.
+They only reproduce inside host cells but cannot penetrate cuticles or cell walls.
+Entry occurs via damaged tissue or vectors (aphids, fungi, nematodes).
+Viruses spread systemically throughout the plant and can be passed to the next generation via seeds and vegetative structures (e.g. tubers).
+
+**Symptoms of Plant Viral Diseases**:
+- Chlorosis (yellowing): Caused by viruses like TMV and BYDV, appearing as stripes or mosaic patterns on leaves/flowers.
+- Plant part distortion: Includes leaf roll, malformed flowers/fruits (reduces crop market value and yield).
+- Reduced photosynthetic efficiency (from leaf yellowing/distortion): In cereals, leads to fewer and smaller grains, lowering yield.
+
+#### Global Importance of Plant Viral Diseases
+- Plant viral infections reduce crop quality (lowering market value) and yield.
+- Rice tungro virus alone causes annual losses exceeding 1.5 billion USD in Southeast Asia.
+- Many viruses (e.g. BYDV) have a broad host range, infecting staple cereals.
+- Viral diseases are harder to control than fungal diseases.
+- A new cassava-infecting virus strain (emerged in Uganda in the late 1980s) spread to multiple African countries by 1999, causing severe yield losses—many farmers abandoned the crop, threatening regional food security.
+
+---
+
+## Chapter 17 Cell division
+### 17.1 The cell cycle and mitosis
+1. Interphase occupies most of the cell cycle (resting phase, no division). It has three stages:
+    - **G₁**: proteins synthesised, new organelles formed
+    - **S**: DNA replicated
+    - **G₂**: organelles grow and divide, energy stores increased
+2. Nuclear division: nucleus divides into two (mitosis) or four (meiosis)
+3. Cell division: whole cell divides into two (mitosis) or four (meiosis)
+
+![Variations in cell and DNA mass during the cell cycle](../../assets/img/as-biology/as-biology-C17-img1.png)
+
+The majority of the cell cycle is spent in interphase – this is when the cell is growing and DNA is replicated.
+The DNA is uncondensed and replicated so the amount of DNA doubles so each cell will have the same amount.
+Organelles are also replicated so there will be enough for both new cells. The amount of ATP being produced is increased as energy is required for cell division.
+
+![IMG 2](../../assets/img/as-biology/as-biology-C17-img2.png)
+
+Nuclear division can take place by either mitosis or meiosis:
+- **Mitosis**: produces two daughter nuclei with the same number of chromosomes as the parent cell.
+- **Meiosis**: produces four daughter nuclei, each with half the number of chromosomes of the parent cell.
+
+There are three stages to interphase:
+- G1 (gap 1) phase: the cell elongates and new organelles and proteins are made
+- S (synthesis) phase: the cell replicates its DNA – this is essential before the cell can divide.
+- G2 (gap 2) phase: the cell keeps elongating and proteins needed for cell division are made.
+
+#### Mitosis
+1. **Prophase**
+The chromosomes condense (they thicken and shorten as DNA is coiled tightly around proteins called histones) and become visible. The nucleolus disappears nuclear envelope begins to break down. The centrioles move to the poles of the cell. The centrioles (bundles of protein) begin to produce spindle fibres which start to extend towards the chromosomes
+![Prophase](../../assets/img/as-biology/as-biology-C17-img3.png)
+
+2. **Metaphase**
+The nuclear membrane has disappeared. Spindle fibres have attached to the centromere or the chromosomes. Each centromere has a spindle fibre from each pole of the cell. Chromosomes are pulled to the middle/equator of the cell where they line up.
+![Metaphase](../../assets/img/as-biology/as-biology-C17-img4.png)
+
+3. **Anaphase**
+The spindle fibres contract. The centromere of each chromosome splits in half so that one chromatid from each chromosome can be pulled to opposite poles of the cell. This stage makes sure that each half of the cell receives one chromatid from each chromosome. This stage can be recognised by the V-shape of the chromatids as they are dragged across.
+![Anaphase](../../assets/img/as-biology/as-biology-C17-img5.png)
+
+4. **Telophase**
+Nuclear envelopes begin to reform around each new group of chromosomes. The spindle fibres disappear. The chromosomes begin to uncoil/unravel and become less distinct.
+The cytoplasm begins to divide to form two new genetically identical daughter cells. Each new cell will have half the amount of DNA compared to the cell in interphase, until interphase begins again and DNA is replicated.
+![Telophase](../../assets/img/as-biology/as-biology-C17-img6.png)
+
+![The stages of mitosis in an animal cell](../../assets/img/as-biology/as-biology-C17-img7.png)
+
+#### The importance of mitosis
+1. **Growth**
+When two haploid cells (sperm and ovum) fuse to form a diploid cell with full genetic information. Mitosis produces genetically identical cells for the new organism to grow and resemble parents.
+
+2. **Differentiation**
+Cells differentiate into specialised cells (e.g. epithelium, xylem). These cells divide by mitosis to form efficient tissues with identical structure and function.
+
+3. **Repair**
+Damaged or dead cells are replaced by new identical cells produced by mitosis. This maintains effective tissue function.
+
+### 17.2 Binary fission
+![Binary fission](../../assets/img/as-biology/as-biology-C17-img8.png)
+#### Binary fission VS Mitosis
+Bacteria reproduce through binary fission which is a form of asexual reproduction. It is very similar to mitosis. The DNA of a prokaryotic cell is not linear and it does not condense into chromosomes because it does not associate with histone proteins, it is a single loop of circular DNA
+![Binary fission vs Mitosis](../../assets/img/as-biology/as-biology-C17-img9.png)
+1. At the start of binary fission the DNA is replicated along with any plasmids.
+2. The number of ribosomes also increases. The cell then elongates.
+3. The cytoplasm divides, similar to cytokinesis in plant cells as the cell wall has to be reformed along the centre
+4. The product is two new cells each with a single, identical copy of the circular DNA loop
+
+
+#### Conjugation
+DNA is transferred between bacterial cells.
+
+**Process**:
+- A conjugation tube forms between two cells.
+- The donor cell replicates a plasmid (small circular DNA).
+- The plasmid becomes linear and passes into the recipient cell.
+- Only part of the donor’s DNA is transferred.
+
+**Result**:
+The recipient cell gains new characteristics from the donor.
+
+![Diagram showing bacterial conjugation between a donor cell and a recipient cell in five stages: conjugation tube forms, donor plasmid replicates, the replicated plasmid moves through the tube, a linear strand enters the recipient cell, and the strand forms a circle as a new plasmid. Labels in the image read Donor cell, Recipient cell, Conjugation tube, Bacterial DNA, and Plasmid.](../../assets/img/as-biology/as-biology-C17-img10.png)
+
+In conjugation, DNA in the form of genes can pass between different species. This is horizontal gene transmission. When genes pass from parents to offspring of the same species, this is vertical gene transmission.
+
+### 17.3 Gene mutation
+#### Mutation
+A change to the quantity or structure of DNA is called a mutation.
+- Mutations in body cells are not inherited.
+- Mutations in gametes may be inherited, causing sudden differences — the basis of discontinuous variation.
+
+A change to one or more nucleotide bases or their rearrangement in DNA is a gene mutation.
+DNA triplets are transcribed into mRNA and translated into a polypeptide’s amino acid sequence.
+A change in DNA bases may alter the amino acid sequence.
+
+Two types of gene mutation are base substitution and base deletion.
+
+##### Substitution of bases
+The type of gene mutation in which a nucleotide in a DNA molecule replaced by another nucleotide that has a different base.
+
+- **A nonsense mutation**: Occurs when a base change forms a stop codon, ending the polypeptide prematurely. The protein is shortened, altered, and non-functional. Example: GTC → ATC; ATC is transcribed to UAG (a stop codon).
+- **A missense mutation**: Occurs when a base change codes for a different amino acid in the polypeptide. If the amino acid is important for the protein’s tertiary structure, the protein changes shape and may not function. For enzymes, the active site may no longer fit the substrate, so catalysis fails. Example: GTC → GTG; GTG codes for histidine instead of glutamine.
+- **A silent mutation**: Happens when a base substitution still codes for the same amino acid. This is due to the degenerate genetic code — most amino acids have more than one codon. There is no change to the polypeptide, so the mutation has no effect. Example: GTC → GTT; both code for glutamine.
+
+##### Deletion of bases
+A deletion mutation occurs when a nucleotide is lost from the DNA sequence.
+
+Even one lost nucleotide can drastically change the amino acid sequence.
+
+The genetic code is read in triplets (three bases).
+
+One deleted base causes a frame-shift — the reading frame shifts left by one base.
+
+All following triplets are read incorrectly, altering the whole polypeptide.
+
+A deletion near the start affects all triplets; a deletion near the end has a smaller effect but still alters the protein.
+
+![Diagram titled Proto-oncogenes showing a biology flowchart of how cell division is regulated. A normal pathway shows growth factor binding to a cell membrane receptor, activation of DNA replication genes, and controlled cell division. Mutated pathways show proto-oncogene changing to oncogene, receptor activation without growth factor, or excess growth factor production, leading to repeated uncontrolled division and tumour formation. Visible text includes Proto-oncogenes and labels for growth factor, receptor protein, cell division, and tumour. The setting is a clean educational diagram with a neutral scientific tone.](../../assets/img/as-biology/as-biology-C17-img11.png)
+
+#### Causes of mutations
+Gene mutations arise spontaneously during DNA replication, with no outside influence.
+They are random but have a predictable rate: about 1–2 mutations per 100 000 genes per generation.
+This rate is increased by mutagenic agents (mutagens), including:
+- high-energy radiation, which damages DNA
+- chemicals, which alter DNA structure or interfere with transcription
+
+#### Mutations have advantages and disadvantages
+- Benefits: produce genetic diversity needed for natural selection and speciation.
+- Costs: often produce organisms less adapted to their environment.
+
+Mutations in body cells can disrupt normal cell activities such as cell division.
+
+#### Genetic control of cell division
+Cell division is controlled by genes.
+Normal cell division is tightly regulated by two types of genes:
+
+##### 1) Proto-oncogenes: stimulate cell division
+
+![Scientific biology diagram of normal cell division control on a pale background. A growth factor binds to a receptor protein at the cell-surface membrane, activating relay proteins in the cytoplasm and then a nuclear protein in the nucleus, which switches on genes needed for DNA replication. Arrows show the signaling sequence from membrane to nucleus, and DNA is shown as a double helix where replication is activated. Visible text: Cell-surface membrane, Growth factor, Receptor protein, Cytoplasm, Relay proteins, Nuclear protein switches on genes needed for DNA replication, Nucleus, DNA, Genes switched on and DNA replicates, Figure 3 Control of cell division in a normal cell. Tone is neutral and instructional.](../../assets/img/as-biology/as-biology-C17-img12.png)
+
+**Role of proto-oncogenes**
+
+Growth factors bind to cell membrane receptors, activating genes for DNA replication.
+
+A mutation turns proto-oncogenes into oncogenes, which cause excessive cell division in two ways:
+
+- Receptor protein is permanently activated even without growth factors.
+- Oncogene causes excess growth factor production, over-stimulating division.
+
+**Result**: uncontrolled rapid cell division -> tumour / cancer
+
+- **Benign tumours**: Do not spread to other body parts. Can be easily removed and rarely reoccur.
+- **Malignant tumours**: Invade nearby tissues and spread to other parts of the body. Cells grow and form secondary tumours called metastases.
+
+##### 2) Tumour suppressor genes: slow cell division
+
+Research into inherited cancers led to the discovery of tumour suppressor genes.
+
+These genes inhibit cell division, the opposite of proto-oncogenes.
+
+Normal tumour suppressor genes keep cell division normal and prevent tumours.
+
+If mutated, they become inactivated and stop inhibiting division, so cell division increases.
+
+Mutated cells are structurally and functionally abnormal.
+
+Most die, but survivors can clone themselves and form tumours.
+
+Tumours may be malignant (harmful) or benign.
