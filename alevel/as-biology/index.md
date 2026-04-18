@@ -185,6 +185,91 @@ Digestion: is the process in which large molecules are hydrolysed by enzymes to 
 
 ---
 
+## Chapter 13 Human diseases
+### 13.1 Cholera
+#### How the cholera bacterium causes disease
+- Surviving bacteria use flagella in a corkscrew motion to move through intestinal mucus to the gut wall.
+- Bacteria secrete a two‑part toxic protein.
+- One part binds specific carbohydrate receptors only on small intestine epithelial cells.
+- The toxic fragment enters cells and opens cell‑surface chloride ion channels.
+- Chloride ions flood from epithelial cells into the intestinal lumen.
+- Cell water potential rises, lumen water potential falls; water moves into the lumen by osmosis.
+- Ions diffuse into epithelial cells from blood and tissues, further lowering lumen water potential.
+- More water leaves blood and tissues into the intestine.
+- Result: severe diarrhoea and dehydration — the main symptoms of cholera.
+
+### 13.2 Oral rehydration therapy
+#### What causes diarrhoea?
+- damage to the epithelial cells lining the intestine
+- loss of microvilli due to toxins
+- excessive secretion of water due to toxins, for example, cholera toxin.
+
+#### Treatment of Diarrhoeal Diseases – Oral Rehydration
+Plain water is ineffective:
+- Water is not absorbed in the intestine; water leaves cells into the gut lumen.
+- Drinking water cannot replace lost electrolytes.
+
+Rehydration solution components:
+1. Water: restore tissue hydration
+2. Sodium: replace lost ions; use sodium–glucose co‑transporters (alternative sodium glucose carrier protein)
+3. Glucose: stimulate sodium uptake + provide energy
+4. Potassium: replace losses + stimulate appetite
+5. Other electrolytes (chloride, citrate): correct ion balance
+
+### 13.3 The human immunodeficiency virus (HIV)
+![HIV virus](../../assets/img/as-biology/as-biology-C13-img1.png)
+The human immunodeficiency virus (HIV) is a retrovirus. A retrovirus contains reverse transcriptase, which is able to synthesise single-stranded DNA, called cDNA, from an RNA template.
+
+#### Replication of HIV
+- HIV enters the bloodstream after infection and circulates around the body.
+- Viral protein binds specifically to the CD4 protein, mainly on helper T cells.
+- The viral capsid fuses with the cell membrane, releasing HIV RNA and enzymes into the host cell.
+- Reverse transcriptase converts viral RNA into double‑stranded DNA.
+- New viral DNA enters the nucleus and inserts into the host cell’s own DNA.
+- Using host enzymes, viral DNA produces mRNA coding for new viral proteins and RNA.
+- mRNA exits the nucleus and uses host cell machinery to assemble HIV particles.
+- New viruses bud off from the cell surface, taking host membrane to form their lipid envelope.
+![Diagram of HIV infecting a T-helper cell through the CD4 receptor, showing the virus binding, entering the cell, reverse transcriptase and RNA entering the cell, HIV RNA being transcribed into the T-cell genome, reproduction beginning, and new HIV particles budding as T-cell function diminishes. The image uses a circular step-by-step layout on a plain background with labels including T-helper cell, CD4, HIV, infection with HIV, reverse transcriptase and RNA enter the cell, HIV RNA transcribed into T-cell genome, reproduction begins, and HIV budding. The tone is educational and clinical.](../../assets/img/as-biology/as-biology-C13-img2.png)
+
+#### HIV replication in T helper cells
+1. HIV attaches to CD4 surface receptors on a TH lymphocyte and injects reverse transcriptase and RNA into the cell.
+2. Reverse transcriptase uses the viral RNA as a template to make a DNA copy which gets inserted into the host chromosome.
+3. The viral DNA is transcribed to make viral mRNA and translated to make viral proteins.
+4. Viral proteins and RNA form new HIV particles which burst out of the host cell to infect more TH cells.
+5. This destroys the T helper cell, eventually leading to dramatic reduction in the immune capability of the host.
+
+(infected with HIV a person is said to be HIV positive)
+
+#### How HIV causes the symptoms of AIDS
+- HIV targets and destroys helper T cells, disrupting their normal function.
+- Healthy blood: 800–1200 helper T cells / mm³; AIDS patients may fall below 200 cells / mm³.
+- Helper T cells are vital in cell‑mediated immunity; low numbers stop activation of B cells (antibody production) and cytotoxic T cells.
+- Memory cells are also infected and destroyed.
+- The immune response fails, making the body vulnerable to secondary infections and cancers.
+- Symptoms include lung / intestinal / brain / eye infections, weight loss and diarrhoea.
+- HIV does not kill directly; failure of immunity allows opportunistic diseases to cause severe illness and death.
+
+#### Treating HIV
+- There is no cure for HIV.
+- Infection is controlled using antiretroviral therapy (ART).
+- Different drugs target separate stages of HIV replication and spread inside the human body.
+
+| Type of drug | Site of action |
+| --- | --- |
+| Attachment and entry inhibitors | Block the attachment points for the HIV viral protein onto the helper T cell; some bind to proteins on the virus whereas others bind to receptors on the cell. |
+| Reverse transcriptase inhibitors | There are two types. The non-nucleoside inhibitors act as non-competitive inhibitors, binding to reverse transcriptase at a region away from the active site. Nucleoside inhibitors act as alternative nucleotides in the synthesis of the viral DNA copy. When they are incorporated into the viral DNA copy, the polynucleotide chain is terminated. |
+| Integrase inhibitors | Once reverse transcriptase has synthesised a DNA copy of the viral RNA, this copy must become part of the genomic DNA. This is called integration. Integrase inhibitors act on the enzyme responsible for this process. |
+| Protease inhibitors | Inhibit the enzymes responsible for completing the modification of the proteins that are incorporated into new virus particles. |
+
+#### Why antibiotics are ineffective against viral diseases
+- Antibiotics (e.g. penicillin) kill bacteria by stopping synthesis of their murein cell walls.
+- Weakened bacterial walls cannot resist osmotic water intake; cells burst and die.
+- Viruses have no cell walls, no murein, and no independent metabolic pathways.
+- They rely entirely on host cell machinery, so antibiotics have no target structures or processes to disrupt.
+- Viruses live inside host cells, where antibiotics cannot reach them.
+
+---
+
 ## Chapter 14 Mammalian blood - defensive mechanisms
 ### 14.1 Cell recognition and the cells of the immune system
 
