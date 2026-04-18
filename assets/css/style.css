@@ -642,28 +642,49 @@ div.highlight {
 
 /* Image Styling - Block display with white background */
 #content-container img,
-.post-content img {
+.post-content img,
+.post-content img.white-bg {
   display: block;
-  background-color: white;
-  padding: 10px;
-  border-radius: 5px;
-  margin: 1rem 0;
-  max-width: 90%;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  clear: both;
   height: auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   transition: opacity 0.3s ease;
 }
 
+#content-container img,
+.post-content img.white-bg {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 90%;
+  clear: both;
+}
+
+#content-container img {
+  margin: 1rem 0;
+}
+
+.post-content img {
+  border-radius: 12px;
+  margin: 1rem auto;
+  max-width: 100%;
+}
+
+.post-content img.white-bg {
+  margin: 1rem auto;
+}
+
 #content-container img[data-lazy-pending="true"],
-.post-content img[data-lazy-pending="true"] {
+.post-content img[data-lazy-pending="true"],
+.post-content img.white-bg[data-lazy-pending="true"] {
   opacity: 0;
 }
 
 #content-container img.is-lazy-loaded,
 #content-container img[data-lazy-ignore],
 .post-content img.is-lazy-loaded,
-.post-content img[data-lazy-ignore] {
+.post-content img[data-lazy-ignore],
+.post-content img.white-bg.is-lazy-loaded,
+.post-content img.white-bg[data-lazy-ignore] {
   opacity: 1;
 }
 

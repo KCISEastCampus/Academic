@@ -26,8 +26,8 @@ tags:
 A-level学生会
 
 <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center;">
-  <img src="/assets/img/recruitment_1.jpg" alt="Event Photo 1" style="width:400px; max-width:100%; height:auto;" />
-  <img src="/assets/img/recruitment_2.jpg" alt="Event Photo 2" style="width:400px; max-width:100%; height:auto;" />
+  <img src="/assets/img/student-council-news/recruitment/recruitment_1.jpg" alt="Event Photo 1" style="width:400px; max-width:100%; height:auto;" />
+  <img src="/assets/img/student-council-news/recruitment/recruitment_2.jpg" alt="Event Photo 2" style="width:400px; max-width:100%; height:auto;" />
 </div>
 
 ---
@@ -43,6 +43,6 @@ Through this interview, the student council further understood the characteristi
 A-level Student Council
 
 <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center;">
-  <img src="/assets/img/recruitment_1.jpg" alt="Event Photo 1" style="width:400px; max-width:100%; height:auto;" />
-  <img src="/assets/img/recruitment_2.jpg" alt="Event Photo 2" style="width:400px; max-width:100%; height:auto;" />
+  <img src="/assets/img/student-council-news/recruitment/recruitment_1.jpg" alt="Event Photo 1" style="width:400px; max-width:100%; height:auto;" />
+  <img src="/assets/img/student-council-news/recruitment/recruitment_2.jpg" alt="Event Photo 2" style="width:400px; max-width:100%; height:auto;" />
 </div>
