@@ -40,8 +40,10 @@
   onerror="this.href='https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css'"
   crossorigin="anonymous">
 
-<!-- Icons - BootCDN -->
-<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<!-- Icons (Local with CDN fallback) -->
+<link rel="stylesheet" href="/assets/vendor/bootstrap-icons/font/bootstrap-icons.min.css"
+  onerror="this.href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css'"
+  crossorigin="anonymous">
 
 <!-- Editor & highlighting themes -->
 <link href="/assets/css/gruvbox_dark_rouge.css" rel="stylesheet" media="(prefers-color-scheme: dark)">
