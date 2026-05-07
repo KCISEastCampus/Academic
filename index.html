@@ -184,7 +184,7 @@
     </section>
   </main>
 
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4"></script>
   <script>
     // ===== Supabase 配置（请替换为你的项目值）=====
     const SUPABASE_URL = "YOUR_SUPABASE_URL";
@@ -193,7 +193,7 @@
     // ===== 可修改的邮箱白名单后缀 =====
     const ALLOWED_EMAIL_DOMAINS = ["@kcischool.com", "@kci.edu.cn"];
 
-    const STORAGE_KEY = "academic_auth_session";
+    const STORAGE_KEY = "academic_auth_state";
     const authPanel = document.getElementById("auth-panel");
     const resourcePanel = document.getElementById("resource-panel");
     const messageBox = document.getElementById("auth-message");
@@ -224,31 +224,24 @@
       resourcePanel.setAttribute("aria-hidden", "false");
       welcomeText.textContent = `欢迎，${user?.email || "同学"}`;
       clearMessage();
-      if (location.hash !== "#resources") {
-        location.hash = "resources";
-      }
     }
 
     function setGuestUI() {
       authPanel.classList.remove("hidden");
       resourcePanel.classList.add("hidden");
       resourcePanel.setAttribute("aria-hidden", "true");
-      // 未登录自动回登录页面（hash 路由）
-      if (location.hash !== "#login") {
-        location.hash = "login";
-      }
+      // 未登录自动回登录区域
+      authPanel.scrollIntoView({ behavior: "smooth", block: "start" });
     }
 
-    function persistSession(session) {
-      if (!session) {
+    function persistLoginState(user) {
+      if (!user) {
         localStorage.removeItem(STORAGE_KEY);
         return;
       }
       localStorage.setItem(STORAGE_KEY, JSON.stringify({
-        access_token: session.access_token,
-        refresh_token: session.refresh_token,
-        expires_at: session.expires_at,
-        user: { email: session.user?.email || "" }
+        isLoggedIn: true,
+        email: user?.email || ""
       }));
     }
 
@@ -265,7 +258,7 @@
 
     async function checkSessionOnLoad() {
       // 占位配置未填，防止误调用
-      if (!SUPABASE_URL.startsWith("http") || SUPABASE_ANON_KEY.includes("YOUR_")) {
+      if (!SUPABASE_URL.startsWith("http") || SUPABASE_ANON_KEY === "YOUR_SUPABASE_ANON_KEY") {
         setGuestUI();
         setMessage("请先在代码中填写 Supabase URL 与 anon key。", true);
         return;
@@ -280,14 +273,14 @@
 
       const session = data?.session || null;
       if (session?.user) {
-        persistSession(session);
+        persistLoginState(session.user);
         setAuthedUI(session.user);
       } else {
         if (!hasLocalSessionCache()) {
           setGuestUI();
         } else {
           // 本地有缓存但 Supabase 会话已失效，清理并回登录态
-          persistSession(null);
+          persistLoginState(null);
           setGuestUI();
         }
       }
@@ -337,34 +330,38 @@
         return;
       }
 
-      persistSession(data.session || null);
+      persistLoginState(data.user || null);
       setAuthedUI(data.user);
     }
 
     async function handleLogout() {
       await supabase.auth.signOut();
-      persistSession(null);
+      persistLoginState(null);
       emailInput.value = "";
       passwordInput.value = "";
       setGuestUI();
       setMessage("已退出登录。", false);
     }
 
-    supabase.auth.onAuthStateChange((_event, session) => {
-      if (session?.user) {
-        persistSession(session);
-        setAuthedUI(session.user);
-      } else {
-        persistSession(null);
-        setGuestUI();
-      }
-    });
+    function bindAuthStateListener() {
+      supabase.auth.onAuthStateChange((_event, session) => {
+        if (session?.user) {
+          persistLoginState(session.user);
+          setAuthedUI(session.user);
+        } else {
+          persistLoginState(null);
+          setGuestUI();
+        }
+      });
+    }
 
     document.getElementById("register-btn").addEventListener("click", handleRegister);
     document.getElementById("login-btn").addEventListener("click", handleLogin);
     document.getElementById("logout-btn").addEventListener("click", handleLogout);
 
-    checkSessionOnLoad();
+    checkSessionOnLoad().finally(() => {
+      bindAuthStateListener();
+    });
   </script>
 </body>
 </html>
