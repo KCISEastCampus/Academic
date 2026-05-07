@@ -259,6 +259,7 @@
       if (
         !SUPABASE_URL ||
         SUPABASE_URL === "YOUR_SUPABASE_URL" ||
+        !SUPABASE_ANON_KEY ||
         SUPABASE_ANON_KEY === "YOUR_SUPABASE_ANON_KEY"
       ) {
         return false;
@@ -306,13 +307,9 @@
         persistLoginState(session.user);
         setAuthedUI(session.user);
       } else {
-        if (!hasLocalSessionCache()) {
-          setGuestUI();
-        } else {
-          // 本地有缓存但 Supabase 会话已失效，清理并返回登录状态
-          persistLoginState(null);
-          setGuestUI();
-        }
+        // Supabase 会话无效时，清理本地登录状态并返回登录界面
+        persistLoginState(null);
+        setGuestUI();
       }
       return true;
     }
