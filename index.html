@@ -202,7 +202,7 @@
     const welcomeText = document.getElementById("welcome-text");
 
     function setMessage(text, isError = true) {
-      messageBox.textContent = text;
+      messageBox.textContent = `${isError ? "错误：" : "成功："}${text}`;
       messageBox.classList.remove("hidden", "error", "success");
       messageBox.classList.add(isError ? "error" : "success");
     }
@@ -214,7 +214,7 @@
     }
 
     function isAllowedEmail(email) {
-      const normalized = String(email || "").trim().toLowerCase();
+      const normalized = (email?.trim().toLowerCase() ?? "");
       return ALLOWED_EMAIL_DOMAINS.some(domain => normalized.endsWith(domain));
     }
 
@@ -241,7 +241,7 @@
       }
       localStorage.setItem(STORAGE_KEY, JSON.stringify({
         isLoggedIn: true,
-        email: user?.email || ""
+        email: user.email
       }));
     }
 
