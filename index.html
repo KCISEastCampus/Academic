@@ -213,9 +213,15 @@
       messageBox.classList.remove("error", "success");
     }
 
+    function extractEmailDomain(email) {
+      const normalized = email?.trim().toLowerCase() ?? "";
+      const match = normalized.match(/^[^\s@]+@([^\s@]+)$/);
+      return match ? `@${match[1]}` : "";
+    }
+
     function isAllowedEmail(email) {
-      const normalized = (email?.trim().toLowerCase() ?? "");
-      return ALLOWED_EMAIL_DOMAINS.some(domain => normalized.endsWith(domain));
+      const domain = extractEmailDomain(email);
+      return ALLOWED_EMAIL_DOMAINS.includes(domain);
     }
 
     function setAuthedUI(user) {
@@ -249,26 +255,46 @@
       return Boolean(localStorage.getItem(STORAGE_KEY));
     }
 
-    const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
-      auth: {
-        persistSession: true,
-        autoRefreshToken: true
+    function isValidSupabaseConfig() {
+      if (!SUPABASE_URL || SUPABASE_ANON_KEY === "YOUR_SUPABASE_ANON_KEY") {
+        return false;
       }
-    });
+      try {
+        const parsed = new URL(SUPABASE_URL);
+        const isHttps = parsed.protocol === "https:";
+        const isSupabaseHost = parsed.hostname.endsWith(".supabase.co");
+        return isHttps && isSupabaseHost;
+      } catch (_e) {
+        return false;
+      }
+    }
+
+    let supabaseClient = null;
+    function getSupabaseClient() {
+      if (supabaseClient) return supabaseClient;
+      supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+        auth: {
+          persistSession: true,
+          autoRefreshToken: true
+        }
+      });
+      return supabaseClient;
+    }
 
     async function checkSessionOnLoad() {
       // 占位配置未填，防止误调用
-      if (!SUPABASE_URL.startsWith("http") || SUPABASE_ANON_KEY === "YOUR_SUPABASE_ANON_KEY") {
+      if (!isValidSupabaseConfig()) {
         setGuestUI();
-        setMessage("请先在代码中填写 Supabase URL 与 anon key。", true);
-        return;
+        setMessage("请先填写正确的 Supabase URL（https://*.supabase.co）与 anon key。", true);
+        return false;
       }
 
+      const supabase = getSupabaseClient();
       const { data, error } = await supabase.auth.getSession();
       if (error) {
         setGuestUI();
         setMessage("会话检查失败，请重新登录。", true);
-        return;
+        return true;
       }
 
       const session = data?.session || null;
@@ -279,15 +305,20 @@
         if (!hasLocalSessionCache()) {
           setGuestUI();
         } else {
-          // 本地有缓存但 Supabase 会话已失效，清理并回登录态
+          // 本地有缓存但 Supabase 会话已失效，清理并返回登录状态
           persistLoginState(null);
           setGuestUI();
         }
       }
+      return true;
     }
 
     async function handleRegister() {
       clearMessage();
+      if (!isValidSupabaseConfig()) {
+        setMessage("请先完成 Supabase 配置后再注册。");
+        return;
+      }
       const email = emailInput.value.trim().toLowerCase();
       const password = passwordInput.value;
 
@@ -301,6 +332,7 @@
         return;
       }
 
+      const supabase = getSupabaseClient();
       const { error } = await supabase.auth.signUp({ email, password });
       if (error) {
         setMessage(error.message || "注册失败，请稍后重试。");
@@ -311,6 +343,10 @@
 
     async function handleLogin() {
       clearMessage();
+      if (!isValidSupabaseConfig()) {
+        setMessage("请先完成 Supabase 配置后再登录。");
+        return;
+      }
       const email = emailInput.value.trim().toLowerCase();
       const password = passwordInput.value;
 
@@ -324,6 +360,7 @@
         return;
       }
 
+      const supabase = getSupabaseClient();
       const { data, error } = await supabase.auth.signInWithPassword({ email, password });
       if (error) {
         setMessage(error.message || "登录失败，请检查账号信息。");
@@ -335,6 +372,12 @@
     }
 
     async function handleLogout() {
+      if (!isValidSupabaseConfig()) {
+        persistLoginState(null);
+        setGuestUI();
+        return;
+      }
+      const supabase = getSupabaseClient();
       await supabase.auth.signOut();
       persistLoginState(null);
       emailInput.value = "";
@@ -344,6 +387,7 @@
     }
 
     function bindAuthStateListener() {
+      const supabase = getSupabaseClient();
       supabase.auth.onAuthStateChange((_event, session) => {
         if (session?.user) {
           persistLoginState(session.user);
@@ -359,8 +403,10 @@
     document.getElementById("login-btn").addEventListener("click", handleLogin);
     document.getElementById("logout-btn").addEventListener("click", handleLogout);
 
-    checkSessionOnLoad().finally(() => {
-      bindAuthStateListener();
+    checkSessionOnLoad().then((isConfigured) => {
+      if (isConfigured) {
+        bindAuthStateListener();
+      }
     });
   </script>
 </body>
