@@ -214,7 +214,7 @@
     }
 
     function extractEmailDomain(email) {
-      const normalized = email?.trim().toLowerCase() ?? "";
+      const normalized = typeof email === "string" ? email.trim().toLowerCase() : "";
       const match = normalized.match(/^[^\s@]+@([^\s@]+)$/);
       return match ? `@${match[1]}` : "";
     }
@@ -256,7 +256,11 @@
     }
 
     function isValidSupabaseConfig() {
-      if (!SUPABASE_URL || SUPABASE_ANON_KEY === "YOUR_SUPABASE_ANON_KEY") {
+      if (
+        !SUPABASE_URL ||
+        SUPABASE_URL === "YOUR_SUPABASE_URL" ||
+        SUPABASE_ANON_KEY === "YOUR_SUPABASE_ANON_KEY"
+      ) {
         return false;
       }
       try {
@@ -403,8 +407,8 @@
     document.getElementById("login-btn").addEventListener("click", handleLogin);
     document.getElementById("logout-btn").addEventListener("click", handleLogout);
 
-    checkSessionOnLoad().then((isConfigured) => {
-      if (isConfigured) {
+    checkSessionOnLoad().then((shouldBindAuthListener) => {
+      if (shouldBindAuthListener) {
         bindAuthStateListener();
       }
     });
