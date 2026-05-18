@@ -11,14 +11,15 @@ council:
       contributions:
         - "Founder of this website"
         - "Founder of kcisec.site"
-        - "Currently the creator of all subject contents (unless otherwise stated)"
+        - "Currently the author of all subject contents (unless otherwise stated)"
         - "Maintainer of site infrastructure and deployment"
     
     - name: "Kathy Yue"
       title: "Member"
       period: "2026 - Present"
       contributions:
-        - "Creator of AS Biology notes"
+        - "Author of AS Biology notes"
+        - "Author of AS Chemistry notes"
 
     - name: "Dada Du"
       title: "Member"
