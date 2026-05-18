@@ -31,7 +31,7 @@ alevel:
   - id: chemistry
     name: AS Chemistry
     icon: "📗"
-    path: javascript:engUnderReview()
+    path: /alevel/as-chemistry/
     color: success
   - id: physics
     name: AS Physics
