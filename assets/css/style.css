@@ -181,7 +181,7 @@ body.scheme-alevel .table tbody tr:hover {
   --bs-btn-disabled-border-color: var(--info);
 }
 .btn-outline-secondary { color: var(--muted); border-color: rgba(150,150,150,0.12); }
-.btn:focus { outline: 2px solid rgba(45, 158, 106, 0.2); outline-offset: 1px; }
+.btn:focus:not(:focus-visible) { outline: 2px solid var(--accent-al); outline-offset: 1px; }
 
 /* Exam link */
 .exam-link {
