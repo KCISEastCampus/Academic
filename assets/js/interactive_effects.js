@@ -133,7 +133,36 @@
       document.body.appendChild(this.button);
 
       this.button.addEventListener('click', this.scrollToTop.bind(this));
-      window.addEventListener('scroll', utils.throttle(this.toggleVisibility.bind(this), 100), { passive: true });
+      this.updatePosition = utils.throttle(this.updatePosition.bind(this), 16);
+      this.toggleVisibility = utils.throttle(this.toggleVisibility.bind(this), 100);
+
+      window.addEventListener('scroll', this.updatePosition, { passive: true });
+      window.addEventListener('scroll', this.toggleVisibility, { passive: true });
+      window.addEventListener('resize', this.updatePosition, { passive: true });
+
+      this.updatePosition();
+      this.toggleVisibility();
+    },
+
+    updatePosition: function() {
+      if (!this.button) return;
+
+      const footer = document.querySelector('footer');
+      const baseBottom = window.innerWidth <= 768 ? 16 : 32;
+      const gap = 16;
+      let bottomOffset = baseBottom;
+
+      if (footer) {
+        const footerRect = footer.getBoundingClientRect();
+        const viewportBottom = window.innerHeight;
+        const overlap = viewportBottom - footerRect.top + gap;
+
+        if (footerRect.top < viewportBottom) {
+          bottomOffset = Math.max(baseBottom, overlap);
+        }
+      }
+
+      this.button.style.bottom = bottomOffset + 'px';
     },
 
     toggleVisibility: function() {
