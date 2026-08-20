@@ -297,6 +297,7 @@
   background: rgba(var(--accent-page-rgb), 0.12);
   border-radius: 12px;
   transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 
 .department-card:hover .dept-icon {
@@ -304,9 +305,11 @@
 }
 
 .dept-icon i {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: var(--dept-color);
   transition: color 0.3s ease;
+  line-height: 1;
+  margin-top: 1px;
 }
 
 .department-card:hover .dept-icon i {
