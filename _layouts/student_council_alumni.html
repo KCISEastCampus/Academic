@@ -61,14 +61,46 @@ layout: none
       </div>
     </section>
 
-    <!-- Executive Team -->
+    <!-- Leadership Team (President & Vice President) -->
     <section class="executives-section fade-in" style="animation-delay: 0.1s;">
       <h2 class="section-title">
         <i class="bi bi-star-fill"></i>
-        Executive Team
+        Leadership Team
+      </h2>
+      <div class="leadership-grid">
+        {% assign leaders = site.data.student_council_alumni.executives | where_exp: "exec", "exec.role == 'President' or exec.role == 'Vice President'" %}
+        {% for exec in leaders %}
+        <div class="executive-card leadership-card">
+          <div class="executive-avatar">
+            <i class="bi bi-person-circle"></i>
+          </div>
+          <div class="executive-info">
+            <h3 class="executive-name">{{ exec.name }}</h3>
+            <p class="executive-role">{{ exec.role }}</p>
+            <p class="executive-grade">{{ exec.grade }} · {{ exec.class }}</p>
+            {% if exec.bio and exec.bio != "TBD" %}
+            <p class="executive-bio">{{ exec.bio }}</p>
+            {% endif %}
+            <div class="executive-groups">
+              {% for group in exec.groups %}
+              <span class="group-pill">{{ group.name }}: {{ group.role }}</span>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <!-- Department Heads -->
+    <section class="executives-section fade-in" style="animation-delay: 0.12s;">
+      <h2 class="section-title">
+        <i class="bi bi-diagram-3-fill"></i>
+        Department Heads
       </h2>
       <div class="executives-grid">
-        {% for exec in site.data.student_council_alumni.executives %}
+        {% assign dept_heads = site.data.student_council_alumni.executives | where_exp: "exec", "exec.role != 'President' and exec.role != 'Vice President'" %}
+        {% for exec in dept_heads %}
         <div class="executive-card">
           <div class="executive-avatar">
             <i class="bi bi-person-circle"></i>
