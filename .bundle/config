@@ -1,2 +1,4 @@
 ---
-BUNDLE_PATH: "vendor/bundle"
+bundle config set --local path vendor/bundle
+bundle config set --local bin bin
+bundle install

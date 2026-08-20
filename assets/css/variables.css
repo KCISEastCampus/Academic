@@ -31,7 +31,16 @@
   /* Layout */
   --radius: 0.75rem;
   --container-max: 1100px;
-  
+  --content-max: 720px;
+
+  /* Typography tokens */
+  --font-body: 'Charter', 'Bitstream Charter', 'Sitka Text', Cambria, 'Times New Roman', serif;
+  --font-heading: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  --font-mono: 'MapleMono', 'Fira Code', 'Courier New', Courier, monospace;
+  --line-height-body: 1.75;
+  --line-height-heading: 1.25;
+  --line-height-tight: 1.15;
+
   /* Spacing scale */
   --space-xxs: 0.25rem;
   --space-xs: 0.5rem;
@@ -39,14 +48,20 @@
   --space-md: 1rem;
   --space-lg: 1.5rem;
   --space-xl: 2rem;
-  
+
+  /* Academic tokens */
+  --math-bg: rgba(var(--accent-ig-rgb), 0.04);
+  --callout-bg: rgba(var(--accent-ig-rgb), 0.06);
+  --code-bg-light: #fafaf8;
+  --code-bg-dark: #1a1d23;
+
   /* Focus ring color */
   --focus-ring: 59, 130, 246;
 }
 
 html[data-bs-theme="dark"] {
   /* Dark theme overrides */
-  --bg: #0b1220; 
+  --bg: #0b1220;
   --surface: #111b2b;
   --surface-hover: #1b2638;
   --border: rgba(255, 255, 255, 0.08);
@@ -60,4 +75,8 @@ html[data-bs-theme="dark"] {
   --bs-emphasis-color: var(--text);
   --bs-secondary-bg: var(--surface);
   --bs-border-color: var(--border);
+
+  /* Academic tokens - dark theme */
+  --math-bg: rgba(var(--accent-ig-rgb), 0.08);
+  --callout-bg: rgba(var(--accent-ig-rgb), 0.08);
 }

@@ -7,8 +7,10 @@ html {
 body {
   background-color: var(--bg);
   color: var(--text);
-  line-height: 1.6;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  line-height: var(--line-height-body);
+  font-family: var(--font-body);
+  font-feature-settings: 'kern' 1, 'liga' 1;
+  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -43,8 +45,18 @@ body {
 .card .card-title { color: var(--text); }
 
 /* Headings: tighter scale and nicer weight */
-h1, .display-4 { font-weight: 700; letter-spacing: -0.01em; }
-h2, h3 { font-weight: 600; }
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: var(--line-height-heading);
+  margin-top: 1.8rem;
+  margin-bottom: 0.6rem;
+}
+h1, .display-4 { font-weight: 700; letter-spacing: -0.02em; font-size: 2rem; }
+h2 { font-weight: 700; letter-spacing: -0.015em; font-size: 1.6rem; }
+h3 { font-weight: 600; letter-spacing: -0.01em; font-size: 1.3rem; }
+h4 { font-weight: 600; font-size: 1.1rem; }
+h5 { font-weight: 600; font-size: 1rem; }
+h6 { font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; }
 
 /* Make subject buttons a little more prominent and consistent */
 .subject-list .btn { padding: .65rem 1.15rem; font-size: 1.05rem; border-radius: 0.6rem; }
@@ -212,7 +224,7 @@ body.scheme-alevel .table tbody tr:hover {
 
 /* Code and highlighting - Clean inline code blocks */
 .highlight, pre {
-  background: rgba(255,255,255,0.02);
+  background: var(--code-bg-light);
   border: none;
   border-left: 3px solid rgba(var(--accent-ig-rgb), 0.4);
   border-radius: 0;
@@ -222,9 +234,14 @@ body.scheme-alevel .table tbody tr:hover {
   margin: 1.5rem 0;
   box-shadow: none;
   position: relative;
-  font-family: 'MapleMono', 'Fira Code', 'Courier New', Courier, monospace;
+  font-family: var(--font-mono);
   font-size: 0.9em;
   line-height: 1.6;
+}
+
+html[data-bs-theme="dark"] .highlight,
+html[data-bs-theme="dark"] pre {
+  background: var(--code-bg-dark);
 }
 
 /* Light theme code blocks */
@@ -239,13 +256,13 @@ body.scheme-alevel .table tbody tr:hover {
 
 /* Inline code styling */
 code:not(.highlight code):not(pre code) {
-  background: rgba(var(--accent-ig-rgb), 0.15);
-  color: var(--accent-ig);
-  padding: 0.2em 0.5em;
-  border-radius: 0.35rem;
-  font-family: 'MapleMono', 'Fira Code', 'Courier New', Courier, monospace;
-  font-size: 0.9em;
-  border: 1px solid rgba(var(--accent-ig-rgb), 0.25);
+  background: rgba(var(--accent-ig-rgb), 0.1);
+  color: var(--text);
+  padding: 0.15em 0.4em;
+  border-radius: 0.3rem;
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  border: 1px solid rgba(var(--accent-ig-rgb), 0.18);
 }
 
 /* Scrollbar styling for code blocks */
@@ -292,7 +309,23 @@ a:focus, button:focus { box-shadow: 0 0 0 3px rgba(100,150,255,0.08); }
 
 /* Skip link for accessibility */
 .skip-link { position: absolute; left: -999px; top: auto; width: 1px; height: 1px; overflow: hidden; }
-.skip-link:focus, .sr-only-focusable:focus { position: static; left: 0; width: auto; height: auto; padding: .5rem .75rem; background: rgba(255,255,255,0.06); color: var(--text); border-radius: .25rem; z-index: 9999; }
+.skip-link:focus {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  height: auto;
+  padding: 0.75rem 1.5rem;
+  background: var(--surface);
+  color: var(--text);
+  border: 2px solid var(--accent-ig);
+  border-radius: 0.5rem;
+  z-index: 9999;
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+.sr-only-focusable:focus { position: static; left: 0; width: auto; height: auto; padding: .5rem .75rem; background: rgba(255,255,255,0.06); color: var(--text); border-radius: .25rem; z-index: 9999; }
 
 /* MathJax Enhanced Styling - Modern Academic Typography */
 .MathJax, mjx-container {
@@ -319,7 +352,9 @@ mjx-container[jax="CHTML"][display="false"] {
   text-align: center !important;
   overflow-x: auto !important;
   overflow-y: hidden !important;
-  padding: 0.5em 0 !important;
+  padding: 0.75em 1rem !important;
+  background: var(--math-bg);
+  border-radius: 0.5rem;
 }
 
 /* Matrix environments (mjx-mtable / mjx-mtr / mjx-mtd) need to be visible
@@ -620,13 +655,14 @@ div.highlight {
 }
 
 .card {
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .card:hover,
 .card:focus-within {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 30px rgba(10, 15, 35, 0.18) !important;
+  transform: none;
+  box-shadow: 0 4px 16px rgba(10, 15, 35, 0.1) !important;
+  border-color: var(--border-hover);
 }
 
 /* Theme Toggle Enhancement */
@@ -746,7 +782,7 @@ article.card {
   header, footer, .back-to-top, .scroll-progress, #tocToggle, .theme-toggle, .back-button {
     display: none !important;
   }
-  
+
   body, .container {
     max-width: 100% !important;
     width: 100% !important;
@@ -755,20 +791,58 @@ article.card {
     background: white !important;
     color: black !important;
   }
-  
+
   a {
     text-decoration: none !important;
     color: black !important;
   }
-  
+
   .card {
     border: none !important;
     box-shadow: none !important;
   }
-  
+
   /* Ensure math is visible */
   .MathJax, mjx-container {
     color: black !important;
+  }
+
+  /* Academic print styles */
+  #content-container {
+    max-width: 100% !important;
+    margin: 0 !important;
+    font-size: 11pt;
+    line-height: 1.6;
+  }
+
+  #content-container h1 { font-size: 18pt; }
+  #content-container h2 {
+    font-size: 15pt;
+    page-break-after: avoid;
+  }
+  #content-container h3 {
+    font-size: 13pt;
+    page-break-after: avoid;
+  }
+
+  #content-container blockquote {
+    border-left: 3px solid #333;
+    background: none;
+    box-shadow: none;
+    page-break-inside: avoid;
+  }
+
+  #content-container table {
+    page-break-inside: avoid;
+  }
+
+  #content-container img {
+    max-width: 60%;
+    box-shadow: none;
+  }
+
+  .MathJax_Display, mjx-container[display="true"] {
+    background: none !important;
   }
 }
 

@@ -59,15 +59,55 @@ html {
 }
 
 #content-container {
-  line-height: 1.75;
-  font-size: 1.05rem;
-  letter-spacing: 0.01em;
+  line-height: var(--line-height-body);
+  font-size: 1rem;
+  letter-spacing: 0.005em;
+  word-spacing: 0.02em;
+  max-width: var(--content-max);
+  hyphens: auto;
+  -webkit-hyphens: auto;
   scroll-margin-top: 100px; /* Account for fixed elements */
   animation: fadeIn 0.6s ease-out;
 }
 
 #content-container p {
-  margin-bottom: 1.1rem;
+  margin-bottom: 1.25rem;
+  orphans: 3;
+  widows: 3;
+}
+
+/* List styling for academic content */
+#content-container ul,
+#content-container ol {
+  margin: 0.75rem 0 1.25rem 0;
+  padding-left: 1.5rem;
+}
+
+#content-container li {
+  margin-bottom: 0.35rem;
+  line-height: 1.7;
+}
+
+#content-container li > ul,
+#content-container li > ol {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+#content-container ul {
+  list-style-type: disc;
+}
+
+#content-container ul ul {
+  list-style-type: circle;
+}
+
+#content-container ol {
+  list-style-type: decimal;
+}
+
+#content-container ol ol {
+  list-style-type: lower-alpha;
 }
 
 #content-container a:not(.btn) {
@@ -170,6 +210,8 @@ html[data-bs-theme="dark"] body.scheme-alevel #content-container h1::before {
   margin-bottom: 1rem !important;
   font-weight: 700;
   opacity: 0.95;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border);
 }
 
 #content-container h2::before {
@@ -333,15 +375,13 @@ html[data-bs-theme="dark"] body.scheme-alevel #content-container h5::before {
   padding: 1.25rem 1.5rem 1.25rem 1.5rem;
   border-left: 5px solid var(--accent-ig);
   border-radius: 12px;
-  background: linear-gradient(135deg, rgba(var(--accent-ig-rgb), 0.12), rgba(var(--accent-ig-rgb), 0.06));
+  background: linear-gradient(135deg, rgba(var(--accent-ig-rgb), 0.08), rgba(var(--accent-ig-rgb), 0.03));
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04);
-  backdrop-filter: blur(8px);
-  transition: all 0.3s ease;
+  transition: box-shadow 0.2s ease;
 }
 
 #content-container blockquote:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1), 0 1px 4px rgba(0, 0, 0, 0.05);
 }
 
 html[data-bs-theme="dark"] #content-container blockquote {
@@ -1377,18 +1417,18 @@ body.scheme-alevel .toc-h4 a:hover::before {
 
 /* Content styling */
 img {
-  max-width: 35%;
+  max-width: 80%;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 1.5rem auto;
   cursor: pointer;
   transition: transform 0.2s ease;
+  border-radius: 8px;
 }
 
 /* 移动端图片优化 */
 @media (max-width: 768px) {
   img {
-    max-width: 90%;
+    max-width: 95%;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
@@ -1600,6 +1640,15 @@ html[data-bs-theme="light"] #content-container tbody td {
 
 #content-container tbody tr {
   transition: background-color 0.16s ease;
+}
+
+/* Table zebra stripes for better readability */
+#content-container tbody tr:nth-child(even) {
+  background: rgba(128, 128, 128, 0.03);
+}
+
+html[data-bs-theme="dark"] #content-container tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02);
 }
 
 #content-container tbody tr:hover {
