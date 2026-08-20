@@ -1423,3 +1423,175 @@ html[data-bs-theme="light"] .hero-title {
     margin-left: 0;
   }
 }
+
+/* ===== Alumni Section ===== */
+.alumni-card {
+  background: linear-gradient(135deg, rgba(var(--accent-al-rgb), 0.08), rgba(var(--accent-al-rgb), 0.04));
+  border-color: rgba(var(--accent-al-rgb), 0.18);
+}
+
+.alumni-card:hover {
+  border-color: rgba(var(--accent-al-rgb), 0.3);
+}
+
+/* ===== Alumni Page - Executive Cards ===== */
+.executives-section {
+  margin-bottom: 2rem;
+}
+
+.executives-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.executive-card {
+  display: flex;
+  gap: 1rem;
+  background: var(--surface);
+  border: 1px solid rgba(var(--accent-page-rgb), 0.12);
+  border-radius: 0.85rem;
+  padding: 1.25rem;
+  transition: all 0.2s ease;
+}
+
+.executive-card:hover {
+  border-color: rgba(var(--accent-page-rgb), 0.25);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.executive-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(var(--accent-page-rgb), 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.executive-avatar i {
+  font-size: 1.5rem;
+  color: var(--accent-page);
+}
+
+.executive-info {
+  flex: 1;
+}
+
+.executive-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 0.2rem;
+  color: var(--text);
+}
+
+.executive-role {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent-page);
+  margin: 0 0 0.15rem;
+}
+
+.executive-grade {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin: 0 0 0.5rem;
+}
+
+.executive-bio {
+  font-size: 0.85rem;
+  color: var(--text);
+  line-height: 1.5;
+  margin: 0 0 0.6rem;
+}
+
+.executive-groups {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+/* ===== Alumni Page - Grade Badge ===== */
+.grade-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(var(--accent-page-rgb), 0.15);
+  color: var(--accent-page);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.grade-badge.graduated {
+  background: rgba(var(--accent-al-rgb), 0.15);
+  color: var(--accent-al);
+}
+
+.grade-badge i {
+  font-size: 0.65rem;
+}
+
+/* ===== Alumni Page - Legacy Note ===== */
+.legacy-note {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.legacy-note-content {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  background: linear-gradient(135deg, rgba(var(--accent-al-rgb), 0.08), rgba(var(--accent-al-rgb), 0.04));
+  border: 1px solid rgba(var(--accent-al-rgb), 0.18);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.legacy-note-content i {
+  font-size: 2rem;
+  color: var(--accent-al);
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.legacy-note-content h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  color: var(--text);
+}
+
+.legacy-note-content p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ===== Alumni Page - Responsive ===== */
+@media (max-width: 768px) {
+  .executives-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .executive-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .executive-groups {
+    justify-content: center;
+  }
+
+  .legacy-note-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

@@ -1,0 +1,154 @@
+---
+layout: none
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% include head.html %}
+  <link href="/assets/css/student_council.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="council-hero" role="banner">
+    <div class="container hero-shell">
+      <a href="/student-council/" class="page-back" aria-label="Back to Student Council">
+        <i class="bi bi-arrow-left"></i>
+        <span>Back to Student Council</span>
+      </a>
+      <div class="hero-body">
+        <div class="hero-icon">
+          <i class="bi bi-people-fill"></i>
+        </div>
+        <div class="hero-text">
+          <p class="eyebrow">First Session Alumni</p>
+          <h1 class="hero-title">Inaugural A-level Student Council</h1>
+          <p class="hero-subtitle">The pioneering team that established the A-level Student Council in {{ site.data.student_council_alumni.council.session }}.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="container council-main" role="main">
+    <!-- Session Info -->
+    <section class="members-page-summary fade-in" style="animation-delay: 0.05s;">
+      {% assign leaders_count = 0 %}
+      {% for group in site.data.student_council_alumni.groups %}
+        {% if group.leader_name_cn %}
+          {% assign leaders_count = leaders_count | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+      {% assign total_members = site.data.student_council_alumni.members | size | plus: leaders_count %}
+      {% assign graduated_count = site.data.student_council_alumni.members | where: "status", "Graduated" | size %}
+      {% assign active_count = site.data.student_council_alumni.members | where: "status", "Active" | size %}
+      <div class="members-page-summary-card">
+        <div class="members-page-summary-item">
+          <span class="label">Session</span>
+          <span class="value">{{ site.data.student_council_alumni.council.session }}</span>
+        </div>
+        <div class="members-page-summary-item">
+          <span class="label">Total Members</span>
+          <span class="value">{{ total_members }}</span>
+        </div>
+        <div class="members-page-summary-item">
+          <span class="label">Graduated</span>
+          <span class="value">{{ graduated_count }}</span>
+        </div>
+        <div class="members-page-summary-item">
+          <span class="label">Still Active</span>
+          <span class="value">{{ active_count }}</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Executive Team -->
+    <section class="executives-section fade-in" style="animation-delay: 0.1s;">
+      <h2 class="section-title">
+        <i class="bi bi-star-fill"></i>
+        Executive Team
+      </h2>
+      <div class="executives-grid">
+        {% for exec in site.data.student_council_alumni.executives %}
+        <div class="executive-card">
+          <div class="executive-avatar">
+            <i class="bi bi-person-circle"></i>
+          </div>
+          <div class="executive-info">
+            <h3 class="executive-name">{{ exec.name }}</h3>
+            <p class="executive-role">{{ exec.role }}</p>
+            <p class="executive-grade">{{ exec.grade }} · {{ exec.class }}</p>
+            {% if exec.bio and exec.bio != "TBD" %}
+            <p class="executive-bio">{{ exec.bio }}</p>
+            {% endif %}
+            <div class="executive-groups">
+              {% for group in exec.groups %}
+              <span class="group-pill">{{ group.name }}: {{ group.role }}</span>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <!-- Members by Department -->
+    <section class="members-page-grid fade-in" style="animation-delay: 0.15s;">
+      {% for group in site.data.student_council_alumni.groups %}
+        {% assign group_members = site.data.student_council_alumni.members | where_exp: "member", "member.groups contains group.name" %}
+        {% assign group_leader_display = group.leader_name_cn %}
+        {% assign group_member_count = group_members.size %}
+        {% if group_leader_display %}
+          {% assign group_member_count = group_member_count | plus: 1 %}
+        {% endif %}
+        {% if group_members.size > 0 %}
+        <article class="members-page-card" style="--group-color: {{ group.color }};">
+          <div class="members-page-card-header">
+            <div class="members-page-card-icon">
+              <i class="bi {{ group.icon }}"></i>
+            </div>
+            <div class="members-page-card-title-wrap">
+              <h2 class="members-page-card-title">{{ group.name }}</h2>
+              <p class="members-page-card-subtitle">{{ group_member_count }} members</p>
+            </div>
+          </div>
+
+          {% if group_leader_display %}
+          <p class="members-page-leader"><span>Leader:</span> {{ group_leader_display }}</p>
+          {% endif %}
+
+          <ul class="members-page-list">
+            {% for member in group_members %}
+            <li class="members-page-list-item">
+              <span class="name">{{ member.name }}</span>
+              <span class="grade-badge {% if member.status == 'Graduated' %}graduated{% endif %}">
+                {{ member.grade }}
+                {% if member.status == 'Graduated' %}
+                <i class="bi bi-mortarboard-fill"></i>
+                {% endif %}
+              </span>
+              <span class="group-pill">{{ group.name }}</span>
+            </li>
+            {% endfor %}
+          </ul>
+        </article>
+        {% endif %}
+      {% endfor %}
+    </section>
+
+    <!-- Legacy Note -->
+    <section class="legacy-note fade-in" style="animation-delay: 0.2s;">
+      <div class="legacy-note-content">
+        <i class="bi bi-heart-fill"></i>
+        <div>
+          <h3>A Note of Gratitude</h3>
+          <p>This page honors the first session of the A-level Student Council ({{ site.data.student_council_alumni.council.session }}). Their dedication and hard work established the foundation for student governance and academic support at KCISEC A-level. We are grateful for their contributions.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  {% include theme_button.html %}
+  {% include footer.html %}
+</body>
+
+</html>

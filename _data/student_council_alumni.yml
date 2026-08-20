@@ -1,11 +1,12 @@
-# Student Council Data
-# A-level Student Council (ALSC) - Managing IGCSE and A-level students
+# First Session A-level Student Council Alumni Data
+# Session: 2024-2025 (First Session)
 
 # Council Information
 council:
   name: "A-level Student Council"
   short_name: "ALSC"
-  description: "The A-level Student Council (ALSC) aims to organize activities, provide resources, help students relieve stress, and help them learn effectively."
+  session: "2024-2025"
+  description: "The first session of the A-level Student Council (ALSC), established in 2024. This pioneering team laid the foundation for student governance and academic support at KCISEC A-level."
 
 # Core Members / Executive Team
 executives:
@@ -48,10 +49,6 @@ groups:
     icon: "bi-book"
     color: "#5cc07f"
     description: "Organizing special academic activities and maintaining this website."
-    responsibilities:
-      - "Organize special academic events (e.g., Science Day)"
-      - "Maintain and update the Academic Resources website"
-      - "Create and curate study materials"
 
   - id: "events"
     name: "Events"
@@ -59,11 +56,6 @@ groups:
     icon: "bi-calendar-event"
     color: "#5c6bc0"
     description: "Planning and executing events from concept to completion."
-    responsibilities:
-      - "Event planning and proposal development"
-      - "Mid-stage event execution and coordination"
-      - "Logistics and resource allocation"
-      - "Venue coordination and participant management"
 
   - id: "publicity"
     name: "Publicity"
@@ -71,30 +63,81 @@ groups:
     icon: "bi-megaphone"
     color: "#e67e22"
     description: "Creating content, designing materials, and documenting our work."
-    responsibilities:
-      - "Write official documents and announcements"
-      - "Design posters and promotional materials"
-      - "Post-event documentation and summaries"
-      - "Social media management and outreach"
 
-# Regular Members (Current - G10/G11 only)
+# Regular Members (All members from the first session)
 members:
-  - name: "王铎"
-    groups: ["Academic"]
-  - name: "张梓涵"
+  # G12 (Graduated)
+  - name: "谢秦一"
+    grade: "G12"
+    class: "12J"
+    groups: ["Publicity"]
+    status: "Graduated"
+  - name: "吴兆骐"
+    grade: "G12"
+    class: "12K"
     groups: ["Events"]
-  - name: "刘卿竹"
+    status: "Graduated"
+  - name: "黄品汉"
+    grade: "G12"
+    class: "12K"
     groups: ["Events"]
-  - name: "解徐洺淏"
+    status: "Graduated"
+  - name: "陈渤翰"
+    grade: "G12"
+    class: "12K"
+    groups: ["Publicity"]
+    status: "Graduated"
+  - name: "游博文"
+    grade: "G12"
+    class: "12K"
     groups: ["Academic"]
-  - name: "岳心怡"
-    groups: ["Academic"]
-  - name: "杜翼陈"
-    groups: ["Academic"]
-  - name: "唐浩宇"
-    groups: ["Events"]
+    status: "Graduated"
 
-# Contact Information
-contact:
-  email: "ALSC@kcisec.site"
-  location: "A-level Office"
+  # G11 (Current)
+  - name: "王铎"
+    grade: "G11"
+    class: "11I"
+    groups: ["Academic"]
+    status: "Active"
+  - name: "解徐洺淏"
+    grade: "G11"
+    class: "11I"
+    groups: ["Academic"]
+    status: "Active"
+  - name: "岳心怡"
+    grade: "G11"
+    class: "11I"
+    groups: ["Academic"]
+    status: "Active"
+  - name: "杜翼陈"
+    grade: "G11"
+    class: "11J"
+    groups: ["Academic"]
+    status: "Active"
+  - name: "刘卿竹"
+    grade: "G11"
+    class: "11J"
+    groups: ["Events"]
+    status: "Active"
+
+  # G10 (Current)
+  - name: "唐浩宇"
+    grade: "G10"
+    class: "10L"
+    groups: ["Events"]
+    status: "Active"
+  - name: "张梓涵"
+    grade: "G10"
+    class: "10L"
+    groups: ["Events"]
+    status: "Active"
+  - name: "钱俊希"
+    grade: "G10"
+    class: "10L"
+    groups: ["Events"]
+    status: "Active"
+  - name: "杨依蒙"
+    grade: "G10"
+    class: "10L"
+    groups: ["Publicity"]
+    status: "Active"
