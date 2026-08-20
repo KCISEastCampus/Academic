@@ -7,19 +7,19 @@
   --bg: #f8fafc;
   --surface: #ffffff;
   --surface-hover: #f1f5f9;
-  --border: rgba(15, 23, 42, 0.08);
-  --border-hover: rgba(15, 23, 42, 0.15);
+  --border: rgba(15, 23, 42, 0.06);
+  --border-hover: rgba(15, 23, 42, 0.12);
   --muted: #64748b;
   --text: #0f172a;
 
-  /* Accents */
-  --accent-al: #34d399;
-  --accent-al-rgb: 52, 211, 153;
-  --accent-ig: #818cf8;
-  --accent-ig-rgb: 129, 140, 248;
-  --accent-page: #a78bfa;
-  --accent-page-rgb: 167, 139, 250;
-  --info: #0ea5e9;
+  /* Accents - Refined, academic color palette */
+  --accent-al: #2d9e6a;
+  --accent-al-rgb: 45, 158, 106;
+  --accent-ig: #6b7adb;
+  --accent-ig-rgb: 107, 122, 219;
+  --accent-page: #7c84d6;
+  --accent-page-rgb: 124, 132, 214;
+  --info: #0284c7;
 
   /* Hooking into Bootstrap variables for seamless integration */
   --bs-body-bg: var(--bg);
@@ -41,7 +41,7 @@
   --line-height-heading: 1.25;
   --line-height-tight: 1.15;
 
-  /* Spacing scale */
+  /* Spacing scale - Modular 0.25rem base */
   --space-xxs: 0.25rem;
   --space-xs: 0.5rem;
   --space-sm: 0.75rem;

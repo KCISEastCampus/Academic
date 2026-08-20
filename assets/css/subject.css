@@ -67,7 +67,7 @@ html {
   hyphens: auto;
   -webkit-hyphens: auto;
   scroll-margin-top: 100px; /* Account for fixed elements */
-  animation: fadeIn 0.6s ease-out;
+  animation: none;
 }
 
 #content-container p {
@@ -147,11 +147,11 @@ html {
 #content-container h4,
 #content-container h5,
 #content-container h6 {
-  margin: 1.5rem 0 0.75rem 0 !important;
+  margin: 1.25rem 0 0.6rem 0 !important;
   font-weight: 700;
   letter-spacing: -0.02em;
   position: relative;
-  padding-left: 16px;
+  padding-left: 14px;
 }
 
 #content-container h1::before,
@@ -165,21 +165,21 @@ html {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  border-radius: 2px;
+  border-radius: 1px;
 }
 
 /* H1: Thick accent bar, largest size, darkest color */
 #content-container h1 {
-  font-size: 2.2rem;
+  font-size: 2rem;
   color: var(--text);
-  margin-top: 2.5rem !important;
-  margin-bottom: 1.2rem !important;
+  margin-top: 2rem !important;
+  margin-bottom: 1rem !important;
   font-weight: 800;
   letter-spacing: -0.03em;
 }
 
 #content-container h1::before {
-  width: 6px;
+  width: 4px;
   height: 85%;
   background: var(--accent-ig);
 }
@@ -204,10 +204,10 @@ html[data-bs-theme="dark"] body.scheme-alevel #content-container h1::before {
 
 /* H2: Medium accent bar, medium-large size */
 #content-container h2 {
-  font-size: 1.7rem;
+  font-size: 1.55rem;
   color: var(--text);
-  margin-top: 2rem !important;
-  margin-bottom: 1rem !important;
+  margin-top: 1.75rem !important;
+  margin-bottom: 0.85rem !important;
   font-weight: 700;
   opacity: 0.95;
   padding-bottom: 0.4rem;
@@ -215,7 +215,7 @@ html[data-bs-theme="dark"] body.scheme-alevel #content-container h1::before {
 }
 
 #content-container h2::before {
-  width: 5px;
+  width: 4px;
   height: 75%;
   background: var(--accent-ig);
   opacity: 0.85;
@@ -241,16 +241,16 @@ html[data-bs-theme="dark"] body.scheme-alevel #content-container h2::before {
 
 /* H3: Consistent with H1/H2 while preserving hierarchy */
 #content-container h3 {
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   color: var(--text);
-  margin-top: 1.75rem !important;
-  margin-bottom: 0.9rem !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.75rem !important;
   font-weight: 700;
   opacity: 0.95;
 }
 
 #content-container h3::before {
-  width: 4px;
+  width: 3px;
   height: 72%;
   background: var(--accent-ig);
   opacity: 0.8;
@@ -277,19 +277,19 @@ html[data-bs-theme="dark"] body.scheme-alevel #content-container h3::before {
 }
 
 #content-container h4 {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   color: var(--text);
-  margin-top: 1.5rem !important;
-  margin-bottom: 0.85rem !important;
+  margin-top: 1.25rem !important;
+  margin-bottom: 0.7rem !important;
   font-weight: 600;
   opacity: 0.95;
-  padding-left: 20px;
+  padding-left: 18px;
 }
 
 #content-container h4::before {
-  width: 12px;
-  height: 4px;
-  border-radius: 4px;
+  width: 10px;
+  height: 3px;
+  border-radius: 2px;
   background: var(--accent-ig);
   opacity: 0.8;
 }
@@ -427,14 +427,14 @@ html[data-bs-theme="dark"] #content-container blockquote strong {
 
 /* Info box / Callout box - Enhanced modern design */
 .info-box {
-  padding: 1.25rem 1.5rem;
-  margin: 2rem 0;
-  border-left: 5px solid var(--accent-ig);
-  border-radius: 12px;
-  background: linear-gradient(135deg, rgba(var(--accent-ig-rgb), 0.08), transparent);
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  border-left: 4px solid var(--accent-ig);
+  border-radius: 0.75rem;
+  background: linear-gradient(135deg, rgba(var(--accent-ig-rgb), 0.06), transparent);
   backdrop-filter: blur(8px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.2s ease;
   position: relative;
   overflow: hidden;
 }
@@ -455,8 +455,8 @@ html[data-bs-theme="dark"] .info-box {
 }
 
 .info-box:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15), 0 2px 8px rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 html[data-bs-theme="dark"] .info-box:hover {
@@ -493,12 +493,12 @@ html[data-bs-theme="dark"] .info-box strong {
 
 /* Clean horizontal rule styling */
 #content-container hr {
-  margin: 2rem 0 !important;
+  margin: 1.5rem 0 !important;
   border: none !important;
-  height: 2px !important;
+  height: 1px !important;
   background: currentColor !important;
-  opacity: 0.25 !important;
-  border-radius: 1px !important;
+  opacity: 0.2 !important;
+  border-radius: 0 !important;
   width: 100% !important;
 }
 
@@ -717,7 +717,8 @@ html[data-bs-theme="dark"] .toc-toggle {
     width: 96%;
     text-align: center;
     position: static;
-    margin: 2%;
+    margin: 1rem auto;
+    padding: 0.6rem 1rem;
   }
   
   .toc-toggle {
@@ -725,15 +726,15 @@ html[data-bs-theme="dark"] .toc-toggle {
     right: 15px;
     top: 15px;
     z-index: 10000;
-    width: 50px;
-    height: 50px;
-    font-size: 1.2rem;
+    width: 48px;
+    height: 48px;
+    font-size: 1.1rem;
   }
   
   .table-of-contents {
     position: fixed;
     width: 90vw;
-    max-width: 380px;
+    max-width: 360px;
     right: 0;
     top: 0;
     height: 100vh;
