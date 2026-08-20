@@ -1436,9 +1436,18 @@ html[data-bs-theme="light"] .hero-title {
 
 /* ===== Alumni Page - Executive Cards ===== */
 .executives-section {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
+/* Leadership Grid - President & Vice President */
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+/* Department Heads Grid */
 .executives-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -1461,9 +1470,20 @@ html[data-bs-theme="light"] .hero-title {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
+/* Leadership Card - More prominent styling */
+.leadership-card {
+  border-left: 4px solid var(--accent-al);
+  background: linear-gradient(135deg, rgba(var(--accent-al-rgb), 0.05), rgba(var(--accent-al-rgb), 0.02));
+}
+
+.leadership-card:hover {
+  border-left-color: var(--accent-al);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
 .executive-avatar {
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   background: rgba(var(--accent-page-rgb), 0.15);
   display: flex;
@@ -1473,8 +1493,20 @@ html[data-bs-theme="light"] .hero-title {
 }
 
 .executive-avatar i {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: var(--accent-page);
+}
+
+/* Leadership card avatar - larger and more prominent */
+.leadership-card .executive-avatar {
+  width: 60px;
+  height: 60px;
+  background: rgba(var(--accent-al-rgb), 0.15);
+}
+
+.leadership-card .executive-avatar i {
+  font-size: 1.8rem;
+  color: var(--accent-al);
 }
 
 .executive-info {
@@ -1501,6 +1533,17 @@ html[data-bs-theme="light"] .hero-title {
   margin: 0 0 0.5rem;
 }
 
+/* Leadership card text - more prominent */
+.leadership-card .executive-name {
+  font-size: 1.2rem;
+}
+
+.leadership-card .executive-role {
+  font-size: 1rem;
+  color: var(--accent-al);
+  font-weight: 700;
+}
+
 .executive-bio {
   font-size: 0.85rem;
   color: var(--text);
@@ -1518,58 +1561,59 @@ html[data-bs-theme="light"] .hero-title {
 .grade-badge {
   font-size: 0.72rem;
   font-weight: 700;
-  padding: 0.2rem 0.5rem;
+  padding: 0.25rem 0.55rem;
   border-radius: 999px;
   background: rgba(var(--accent-page-rgb), 0.15);
   color: var(--accent-page);
   display: inline-flex;
   align-items: center;
-  gap: 0.3rem;
+  gap: 0.35rem;
 }
 
 .grade-badge.graduated {
   background: rgba(var(--accent-al-rgb), 0.15);
   color: var(--accent-al);
+  border: 1px solid rgba(var(--accent-al-rgb), 0.25);
 }
 
 .grade-badge i {
-  font-size: 0.65rem;
+  font-size: 0.7rem;
 }
 
 /* ===== Alumni Page - Legacy Note ===== */
 .legacy-note {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .legacy-note-content {
   display: flex;
-  gap: 1.25rem;
+  gap: 1.5rem;
   align-items: flex-start;
-  background: linear-gradient(135deg, rgba(var(--accent-al-rgb), 0.08), rgba(var(--accent-al-rgb), 0.04));
-  border: 1px solid rgba(var(--accent-al-rgb), 0.18);
+  background: linear-gradient(135deg, rgba(var(--accent-al-rgb), 0.1), rgba(var(--accent-al-rgb), 0.04));
+  border: 1px solid rgba(var(--accent-al-rgb), 0.2);
   border-radius: 1rem;
-  padding: 1.5rem;
+  padding: 1.75rem;
 }
 
 .legacy-note-content i {
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: var(--accent-al);
   flex-shrink: 0;
-  margin-top: 0.2rem;
+  margin-top: 0.15rem;
 }
 
 .legacy-note-content h3 {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  margin: 0 0 0.5rem;
+  margin: 0 0 0.6rem;
   color: var(--text);
 }
 
 .legacy-note-content p {
   font-size: 0.95rem;
   color: var(--muted);
-  line-height: 1.6;
+  line-height: 1.65;
   margin: 0;
 }
 
