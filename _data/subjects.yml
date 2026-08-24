@@ -18,6 +18,11 @@ alevel:
     icon: "📕"
     path: /alevel/a2-mathematics/statistics
     color: success
+  - id: a2physics
+    name: A2 Physics
+    icon: "📕"
+    path: /alevel/a2-physics/
+    color: success
   - id: mathematics
     name: AS Math
     icon: "📗"
