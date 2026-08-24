@@ -6,7 +6,7 @@ grade: a2
 subject: physics
 ---
 
-# 📘 A-level Paper 1 (PH03): Fields and Their Consequences
+# 📕 A-level Paper 1 (PH03): Fields and Their Consequences
 `(Specification Sections: 3.6 – 3.10)`
 
 ---
