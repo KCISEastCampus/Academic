@@ -10,6 +10,7 @@ backend:
   branch: main
   base_url: https://kcisec-cms-auth.ericstone2009.workers.dev
   auth_endpoint: auth
+  site_domain: academic.kcisec.site
 
 # 媒体文件配置
 media_folder: "assets/uploads"
