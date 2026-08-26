@@ -1,0 +1,297 @@
+# Decap CMS Configuration
+# https://decapcms.org/docs/configure-decap-cms/
+
+# ============================================
+# 后端配置
+# ============================================
+backend:
+  name: github
+  repo: EricStoneChina/Academic
+  branch: main
+  base_url: https://kcisec-cms-auth.ericstone2009.workers.dev
+  auth_endpoint: auth
+
+# 媒体文件配置
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+# 集合定义 - 管理所有 _data/ 下的 YAML 文件
+collections:
+  # ============================================
+  # 学生会当前成员
+  # ============================================
+  - name: "student_council"
+    label: "学生会成员"
+    files:
+      - name: "student_council"
+        label: "学生会成员"
+        file: "_data/student_council.yml"
+        fields:
+          - label: "基本信息"
+            name: "council"
+            widget: "object"
+            fields:
+              - { label: "名称", name: "name", widget: "string" }
+              - { label: "简称", name: "short_name", widget: "string" }
+              - { label: "描述", name: "description", widget: "text" }
+
+          - label: "核心成员"
+            name: "executives"
+            widget: "list"
+            fields:
+              - { label: "姓名", name: "name", widget: "string" }
+              - { label: "职务", name: "role", widget: "string" }
+              - { label: "年级", name: "grade", widget: "string" }
+              - { label: "班级", name: "class", widget: "string" }
+              - { label: "简介", name: "bio", widget: "text", required: false }
+              - label: "负责小组"
+                name: "groups"
+                widget: "list"
+                fields:
+                  - label: "小组"
+                    name: "name"
+                    widget: "select"
+                    options:
+                      - { label: "学术组 Academic", value: "Academic" }
+                      - { label: "活动组 Events", value: "Events" }
+                      - { label: "宣传组 Publicity", value: "Publicity" }
+                  - label: "角色"
+                    name: "role"
+                    widget: "select"
+                    options:
+                      - { label: "组长 Leader", value: "Leader" }
+                      - { label: "副组长 Deputy Leader", value: "Deputy Leader" }
+
+          - label: "部门"
+            name: "groups"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string", hint: "英文小写，如 academic" }
+              - { label: "名称", name: "name", widget: "string" }
+              - { label: "负责人姓名（中文）", name: "leader_name_cn", widget: "string" }
+              - { label: "图标 (Bootstrap Icons)", name: "icon", widget: "string", hint: "如 bi-book, bi-calendar-event, bi-megaphone" }
+              - { label: "颜色", name: "color", widget: "color" }
+              - { label: "描述", name: "description", widget: "text" }
+              - { label: "职责", name: "responsibilities", widget: "list" }
+
+          - label: "普通成员"
+            name: "members"
+            widget: "list"
+            fields:
+              - { label: "姓名", name: "name", widget: "string" }
+              - label: "所属部门"
+                name: "groups"
+                widget: "select"
+                multiple: true
+                options:
+                  - { label: "学术组 Academic", value: "Academic" }
+                  - { label: "活动组 Events", value: "Events" }
+                  - { label: "宣传组 Publicity", value: "Publicity" }
+
+          - label: "联系方式"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "邮箱", name: "email", widget: "string" }
+              - { label: "地址", name: "location", widget: "string" }
+
+  # ============================================
+  # 学生会校友
+  # ============================================
+  - name: "student_council_alumni"
+    label: "学生会校友"
+    files:
+      - name: "student_council_alumni"
+        label: "学生会校友"
+        file: "_data/student_council_alumni.yml"
+        fields:
+          - label: "基本信息"
+            name: "council"
+            widget: "object"
+            fields:
+              - { label: "名称", name: "name", widget: "string" }
+              - { label: "简称", name: "short_name", widget: "string" }
+              - { label: "届次", name: "session", widget: "string", hint: "如 2025-2026" }
+              - { label: "描述", name: "description", widget: "text" }
+
+          - label: "核心成员"
+            name: "executives"
+            widget: "list"
+            fields:
+              - { label: "姓名", name: "name", widget: "string" }
+              - { label: "职务", name: "role", widget: "string" }
+              - { label: "年级", name: "grade", widget: "string" }
+              - { label: "班级", name: "class", widget: "string" }
+              - { label: "简介", name: "bio", widget: "text", required: false }
+              - label: "负责小组"
+                name: "groups"
+                widget: "list"
+                fields:
+                  - label: "小组"
+                    name: "name"
+                    widget: "select"
+                    options:
+                      - { label: "学术组 Academic", value: "Academic" }
+                      - { label: "活动组 Events", value: "Events" }
+                      - { label: "宣传组 Publicity", value: "Publicity" }
+                  - label: "角色"
+                    name: "role"
+                    widget: "select"
+                    options:
+                      - { label: "组长 Leader", value: "Leader" }
+                      - { label: "副组长 Deputy Leader", value: "Deputy Leader" }
+
+          - label: "部门"
+            name: "groups"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "名称", name: "name", widget: "string" }
+              - { label: "负责人姓名（中文）", name: "leader_name_cn", widget: "string" }
+              - { label: "图标", name: "icon", widget: "string" }
+              - { label: "颜色", name: "color", widget: "color" }
+              - { label: "描述", name: "description", widget: "text" }
+
+          - label: "成员"
+            name: "members"
+            widget: "list"
+            fields:
+              - { label: "姓名", name: "name", widget: "string" }
+              - { label: "年级", name: "grade", widget: "string" }
+              - { label: "班级", name: "class", widget: "string" }
+              - label: "所属部门"
+                name: "groups"
+                widget: "select"
+                multiple: true
+                options:
+                  - { label: "学术组 Academic", value: "Academic" }
+                  - { label: "活动组 Events", value: "Events" }
+                  - { label: "宣传组 Publicity", value: "Publicity" }
+              - label: "状态"
+                name: "status"
+                widget: "select"
+                options:
+                  - { label: "在校 Active", value: "Active" }
+                  - { label: "已毕业 Graduated", value: "Graduated" }
+
+  # ============================================
+  # 学科定义
+  # ============================================
+  - name: "subjects"
+    label: "学科定义"
+    files:
+      - name: "subjects"
+        label: "学科定义"
+        file: "_data/subjects.yml"
+        fields:
+          - label: "A-Level 学科"
+            name: "alevel"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "名称", name: "name", widget: "string" }
+              - { label: "图标 (Emoji)", name: "icon", widget: "string" }
+              - { label: "路径", name: "path", widget: "string" }
+              - { label: "颜色主题", name: "color", widget: "select", options: ["success", "primary", "secondary", "danger", "warning", "info"] }
+
+          - label: "IGCSE 学科"
+            name: "igcse"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "名称", name: "name", widget: "string" }
+              - { label: "图标 (Emoji)", name: "icon", widget: "string" }
+              - { label: "路径", name: "path", widget: "string" }
+              - { label: "颜色主题", name: "color", widget: "select", options: ["success", "primary", "secondary", "danger", "warning", "info"] }
+
+  # ============================================
+  # 网站贡献者
+  # ============================================
+  - name: "contributors"
+    label: "网站贡献者"
+    files:
+      - name: "contributors"
+        label: "网站贡献者"
+        file: "_data/contributors.yml"
+        fields:
+          - label: "学生会学术组"
+            name: "council"
+            widget: "object"
+            fields:
+              - { label: "标题", name: "title", widget: "string" }
+              - { label: "描述", name: "description", widget: "text" }
+              - label: "成员"
+                name: "members"
+                widget: "list"
+                fields:
+                  - { label: "姓名", name: "name", widget: "string" }
+                  - { label: "职位", name: "title", widget: "string" }
+                  - { label: "任期", name: "period", widget: "string" }
+                  - { label: "贡献", name: "contributions", widget: "list" }
+
+          - label: "外部贡献者"
+            name: "external"
+            widget: "object"
+            fields:
+              - { label: "标题", name: "title", widget: "string" }
+              - { label: "描述", name: "description", widget: "text" }
+              - label: "成员"
+                name: "members"
+                widget: "list"
+                fields:
+                  - { label: "姓名", name: "name", widget: "string" }
+                  - { label: "职位", name: "title", widget: "string" }
+                  - { label: "任期", name: "period", widget: "string" }
+                  - { label: "贡献", name: "contributions", widget: "list" }
+
+  # ============================================
+  # 考试安排
+  # ============================================
+  - name: "department_exams"
+    label: "考试安排"
+    files:
+      - name: "department_exams"
+        label: "考试安排"
+        file: "_data/department_exams.yml"
+        fields:
+          - label: "考试周"
+            name: "exams"
+            widget: "list"
+            fields:
+              - { label: "周次", name: "week", widget: "string", hint: "如 Week 15" }
+              - { label: "日期范围", name: "date_range", widget: "string", hint: "如 Dec 9-13", required: false }
+              - label: "考试列表"
+                name: "exams"
+                widget: "list"
+                fields:
+                  - { label: "科目", name: "subject", widget: "string" }
+                  - { label: "标题", name: "title", widget: "string" }
+                  - label: "类型"
+                    name: "type"
+                    widget: "select"
+                    options:
+                      - { label: "模拟考 Mock", value: "Mock" }
+                      - { label: "测验 Quiz", value: "Quiz" }
+                      - { label: "考试 Test", value: "Test" }
+                  - { label: "时长", name: "duration", widget: "string", hint: "如 1.5h" }
+                  - { label: "年级", name: "grade", widget: "string", hint: "如 AS, IG", required: false }
+
+  # ============================================
+  # 考试链接
+  # ============================================
+  - name: "exam_links"
+    label: "考试链接"
+    files:
+      - name: "exam_links"
+        label: "考试链接"
+        file: "_data/exam_links.yml"
+        fields:
+          - label: "考试链接列表"
+            name: "exam_links"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "标题", name: "title", widget: "string" }
+              - { label: "图标 (Emoji)", name: "icon", widget: "string" }
+              - { label: "路径", name: "path", widget: "string", hint: "如 /assets/pdf/xxx.pdf" }
+              - { label: "类型", name: "type", widget: "select", options: ["external", "internal"] }

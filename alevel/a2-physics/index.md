@@ -420,3 +420,90 @@ A transformer changes the magnitude of an alternating voltage. It consists of a 
 3.  **Investigating electromagnetic induction**: Move a magnet into and out of a coil connected to a galvanometer or datalogger to observe the effects described by Faraday's and Lenz's laws.
 4.  **Investigating the factors affecting magnetic flux linkage**: Use a search coil and datalogger to investigate how flux linkage depends on angle, number of turns, and area.
 
+---
+
+## 🔗 Summary: Comparing Gravitational Fields and Electric Fields
+
+> Gravitational and electric fields follow almost identical mathematical structures. Mastering the parallels between them is a powerful way to learn and revise both topics.
+
+| | Gravitational Field | Electric Field | Meaning |
+|---|---|---|---|
+| **Force** | $F = G\dfrac{Mm}{r^2}$ | $F = \dfrac{1}{4\pi\varepsilon_0}\dfrac{Qq}{r^2}$ | Force between masses / charges |
+| **Field strength** | $g = \dfrac{F}{m} = \dfrac{GM}{r^2}$ | $E = \dfrac{F}{Q} = \dfrac{Q}{4\pi\varepsilon_0 r^2}$ | Force per unit mass / charge |
+| **Potential energy** | $E_p = -G\dfrac{Mm}{r}$ | $E_p = \dfrac{1}{4\pi\varepsilon_0}\dfrac{Qq}{r}$ | Work done by the field force |
+| **Potential** | $\phi = \dfrac{E_p}{m} = -\dfrac{GM}{r}$ | $V = \dfrac{E_p}{Q} = \dfrac{Q}{4\pi\varepsilon_0 r}$ | Energy per unit mass / charge |
+| **Relation between field strength and potential** | $g = -\dfrac{d\phi}{dr}$ | $E = -\dfrac{dV}{dr}$ | Field strength is the negative gradient of potential |
+
+### Similarities
+
+* Both are **inverse-square** forces: $F \propto \dfrac{1}{r^2}$.
+* Both have field strength defined as **force per unit** (mass or charge): $g = \dfrac{F}{m}$, $E = \dfrac{F}{Q}$.
+* Both have potential defined as **energy per unit** (mass or charge): $\phi = \dfrac{E_p}{m}$, $V = \dfrac{E_p}{Q}$.
+* Both are **conservative fields**: work done is path-independent; potential energy depends only on position.
+* In both fields, field strength equals the **negative gradient of potential**: $g = -\dfrac{d\phi}{dr}$, $E = -\dfrac{dV}{dr}$.
+* Field strength and potential are both **scalar** quantities (though $g$ and $E$ have direction).
+* Both fields can be represented by **field lines** and **equipotential surfaces**.
+
+### Differences
+
+* Gravitational force is **always attractive**; electric force can be **attractive or repulsive** (depending on the signs of the charges).
+* Gravitational potential is always **negative** (by convention, $\phi = 0$ at infinity); electric potential can be **positive or negative**.
+* Gravitational field is produced by **mass** (always positive); electric field is produced by **charge** (can be positive or negative).
+* The gravitational constant $G$ is extremely small ($6.67 \times 10^{-11}$), so gravitational forces between everyday objects are negligible; the electric constant $\dfrac{1}{4\pi\varepsilon_0}$ is very large ($8.99 \times 10^9$), so electric forces can be very strong.
+
+---
+
+## 🔗 Summary: Electric Fields and Magnetic Fields
+
+> Electric and magnetic fields are different in many ways, but together they form the basis of **electromagnetic induction** and the operation of **transformers** and **generators**.
+
+| | Electric Field | Magnetic Field |
+|---|---|---|
+| **Source** | Stationary or moving charges | Moving charges (currents) only |
+| **Acts on** | Any charge (stationary or moving) | Moving charges only |
+| **Force law** | $F = QE$ | $F = BQv\sin\theta$ |
+| **Force direction** | Parallel to field (for $+$ charge) | Perpendicular to both $v$ and $B$ |
+| **Work done by field** | Can do work (changes KE) | **No work done** (force $\perp$ velocity) |
+| **Effect on speed** | Can change speed | Cannot change speed |
+| **Field lines** | Open (from $+$ to $-$) | Closed loops (no start or end) |
+
+### How Electric and Magnetic Fields Are Connected
+
+* A **moving charge** produces a magnetic field (the origin of all magnetism).
+* A **changing magnetic field** induces an electric field (Faraday's law: $\varepsilon = -N\dfrac{\Delta\Phi}{\Delta t}$).
+* A **changing electric field** produces a magnetic field (Maxwell's displacement current).
+* Together, these two facts explain **electromagnetic waves** (e.g. light), where oscillating $E$ and $B$ fields sustain each other through space.
+
+### Charged Particles in Electric and Magnetic Fields
+
+| | In an Electric Field | In a Magnetic Field |
+|---|---|---|
+| **Force** | $F = QE$ | $F = BQv$ (when $v \perp B$) |
+| **Direction of force** | Parallel to $E$ | Perpendicular to $v$ and $B$ |
+| **Trajectory** | **Parabolic** (like projectile motion) | **Circular** (centripetal force) |
+| **Speed changes?** | Yes — field does work | No — force $\perp$ velocity |
+| **KE changes?** | Yes | No |
+| **Key equation** | $a = \dfrac{QE}{m}$ | $r = \dfrac{mv}{BQ}$, $T = \dfrac{2\pi m}{BQ}$ |
+
+### Velocity Selector (Electric + Magnetic Fields Combined)
+
+When $E$ and $B$ are arranged **perpendicular to each other**, a charged particle moving through both experiences:
+* Electric force: $F_E = QE$
+* Magnetic force: $F_B = BQv$
+
+When the forces balance ($F_E = F_B$), the particle passes through **undeflected**:
+$$QE = BQv \implies v = \frac{E}{B}$$
+
+Only particles with speed $v = \dfrac{E}{B}$ are selected. This is the principle behind the **velocity selector** used in mass spectrometers.
+
+> **📝 Example Question**
+>
+> A velocity selector has $E = 3.0 \times 10^4$ V m$^{-1}$ and $B = 0.20$ T. A proton ($q = 1.6 \times 10^{-19}$ C, $m = 1.67 \times 10^{-27}$ kg) enters the selector.
+>
+> (a) What speed must the proton have to pass through undeflected?
+> (b) It then enters a region with only the magnetic field. Calculate the radius of its circular path.
+>
+> **Solution:**
+> 1. (a) $v = \dfrac{E}{B} = \dfrac{3.0 \times 10^4}{0.20} = 1.5 \times 10^5$ m s$^{-1}$
+> 2. (b) $r = \dfrac{mv}{BQ} = \dfrac{1.67 \times 10^{-27} \times 1.5 \times 10^5}{0.20 \times 1.6 \times 10^{-19}} = 7.8 \times 10^{-3}$ m $= 7.8$ mm
+
