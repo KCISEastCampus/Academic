@@ -6,7 +6,7 @@
 # ============================================
 backend:
   name: github
-  repo: EricStoneChina/Academic
+  repo: KCISEastCampus/Academic
   branch: main
   base_url: https://kcisec-cms-auth.ericstone2009.workers.dev
   auth_endpoint: auth/github
