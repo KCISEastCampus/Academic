@@ -9,7 +9,7 @@ backend:
   repo: EricStoneChina/Academic
   branch: main
   base_url: https://kcisec-cms-auth.ericstone2009.workers.dev
-  auth_endpoint: auth
+  auth_endpoint: auth/github
   site_domain: academic.kcisec.site
 
 # 媒体文件配置
