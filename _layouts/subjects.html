@@ -24,15 +24,13 @@ layout: none
   <header class="subject-header">
     <div class="subject-header-row">
       <div class="header-left">
-        <a href="{{ '/' | relative_url }}" class="btn btn-outline-info back-button" aria-label="Return to homepage">
-          <i class="bi bi-caret-left-fill"></i>Back to Home
-        </a>
+        {% include breadcrumb.html %}
       </div>
-      <h1 class="subject-page-title">{{ page.title | default: site.title }}</h1>
       <div class="header-right">
         {% include theme_button.html %}
       </div>
     </div>
+    <h1 class="subject-page-title">{{ page.title | default: site.title }}</h1>
     <hr class="subject-page-divider" />
   </header>
 

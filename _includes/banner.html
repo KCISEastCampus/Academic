@@ -1,6 +1,7 @@
-<a href="https://www.oxfordaqa.com/" id="oxfordaqa-badge">
+<a href="https://www.oxfordaqa.com/" id="oxfordaqa-badge" aria-label="OxfordAQA">
   <img style="max-height:100%; max-width:100%;"
-    src="https://www.oxfordaqa.com/wp-content/uploads/2023/01/OxfordAQA-Digital-Badge.png" />
+    src="https://www.oxfordaqa.com/wp-content/uploads/2023/01/OxfordAQA-Digital-Badge.png"
+    alt="OxfordAQA International Badge" />
 </a>
 <a href="https://github.com/KCISEastCampus/Academic" class="github-corner" aria-label="View source on GitHub"><svg
     width="80" height="80" viewBox="0 0 250 250"
@@ -48,13 +49,22 @@
     }
   }
 
-  @media (max-width:500px) {
-    .github-corner:hover .octo-arm {
-      animation: none
+  /* Mobile: hide non-essential decorative elements */
+  @media (max-width: 768px) {
+    #oxfordaqa-badge {
+      display: none;
     }
 
-    .github-corner .octo-arm {
-      animation: octocat-wave 560ms ease-in-out
+    .github-corner {
+      display: none;
+    }
+  }
+
+  /* Tablet: shrink GitHub corner */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .github-corner svg {
+      width: 60px;
+      height: 60px;
     }
   }
 </style>

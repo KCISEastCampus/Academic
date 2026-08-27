@@ -1,8 +1,10 @@
-<nav aria-label="breadcrumb">
+<!-- _includes/breadcrumb.html -->
+<!-- Breadcrumb navigation - auto-generated from URL path -->
+<nav aria-label="breadcrumb" class="site-breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item">
       {% if page.url != "/" %}
-      <a href="/">
+      <a href="/" aria-label="Home">
         <i class="bi bi-house-door"></i>
       </a>
       {% else %}
@@ -11,27 +13,85 @@
     </li>
 
     {% assign crumbs = page.url | split: '/' %}
-    {% assign parent_directory = crumbs.size | minus: 3 %}
     {% for crumb in crumbs offset: 1 %}
-    {% if forloop.last %}
-    {% if crumb == "" or crumb == "index" %}
-    {% else %}
-    <li class="breadcrumb-item active" aria-current="page">
-      {{ page.title }}
-    </li>
-    {% endif %}
-    {% else %}
-    <li class="breadcrumb-item">
-      {% if forloop.index0 == parent_directory and crumbs.last == "" or crumbs.last == "index" %}
-      {{ crumb }}
-      {% else %}
-      <a
-        href="{{ site.baseurl }}{% assign crumb_limit = forloop.index | plus: 1 %}{{ crumbs | slice: 0, crumb_limit | join: '/' }}/">
-        {{ crumb }}
-      </a>
+      {% if crumb != "" and crumb != "index" %}
+        {% if forloop.last %}
+          <li class="breadcrumb-item active" aria-current="page">
+            {{ page.title | default: crumb }}
+          </li>
+        {% else %}
+          <li class="breadcrumb-item">
+            {% comment %} Map directory names to readable labels {% endcomment %}
+            {% case crumb %}
+              {% when "alevel" %}
+                <a href="/alevel/">A-Level</a>
+              {% when "igcse" %}
+                <a href="/igcse/">IGCSE</a>
+              {% when "student-council" %}
+                <a href="/student-council/">Student Council</a>
+              {% else %}
+                {% assign crumb_limit = forloop.index | plus: 1 %}
+                <a href="{{ crumbs | slice: 0, crumb_limit | join: '/' }}/">
+                  {{ crumb | replace: '-', ' ' | capitalize }}
+                </a>
+            {% endcase %}
+          </li>
+        {% endif %}
       {% endif %}
-    </li>
-    {% endif %}
     {% endfor %}
   </ol>
 </nav>
+
+<style>
+  .site-breadcrumb {
+    width: 100%;
+  }
+
+  .site-breadcrumb .breadcrumb {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    font-size: 0.85rem;
+    border-radius: 0;
+  }
+
+  .site-breadcrumb .breadcrumb-item a {
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .site-breadcrumb .breadcrumb-item a:hover {
+    color: var(--accent-ig);
+  }
+
+  .site-breadcrumb .breadcrumb-item.active {
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  .site-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    color: var(--muted);
+    opacity: 0.5;
+  }
+
+  /* Mobile: simplify breadcrumb */
+  @media (max-width: 768px) {
+    .site-breadcrumb .breadcrumb {
+      font-size: 0.78rem;
+    }
+
+    .site-breadcrumb .breadcrumb-item:nth-child(n+3) {
+      display: none;
+    }
+
+    .site-breadcrumb .breadcrumb-item:last-child {
+      display: block;
+    }
+
+    .site-breadcrumb .breadcrumb-item:last-child::before {
+      content: '... ';
+      display: inline;
+    }
+  }
+</style>

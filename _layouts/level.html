@@ -1,0 +1,86 @@
+---
+layout: none
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% include head.html %}
+  <meta name="description" content="{{ page.description | default: site.description | escape }}">
+  <meta name="keywords" content="KCISEC, {{ page.level | default: 'A-Level' }}, IGCSE, education, resources, academic, study materials">
+  <meta name="author" content="EricStoneChina">
+  <link rel="stylesheet" href="/assets/css/home.css">
+</head>
+
+<body>
+  {% include site_header.html
+     title=page.title
+     subtitle=page.subtitle %}
+
+  <a class="skip-link sr-only-focusable" href="#main-content">Skip to main content</a>
+  <main id="main-content" class="container" role="main">
+
+    <!-- Back to Home -->
+    <section class="quick-nav-section fade-in">
+      <div class="quick-nav-container">
+        <a href="/" class="quick-nav-item" title="Back to Homepage">
+          <div class="nav-icon">
+            <i class="bi bi-house-door-fill"></i>
+          </div>
+          <div class="nav-content">
+            <h3>Homepage</h3>
+            <p>Back to main page</p>
+          </div>
+          <i class="bi bi-chevron-right nav-arrow"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Subjects Section -->
+    <section class="subjects-section fade-in" style="animation-delay: 0.1s;">
+      <div class="section-header">
+        <div class="header-content">
+          <h2 class="section-title">
+            {% if page.level == "igcse" %}
+            <i class="bi bi-book-half"></i>
+            {% else %}
+            <i class="bi bi-mortarboard-fill"></i>
+            {% endif %}
+            {{ page.title }}
+          </h2>
+          <p class="section-subtitle">{{ page.subtitle }}</p>
+        </div>
+        <span class="section-badge" style="--accent-rgb: var(--accent-{{ page.level | default: 'al' }}-rgb); --accent-color: var(--accent-{{ page.level | default: 'al' }});">
+          <i class="bi bi-book"></i>
+          {{ page.badge | default: "Study Materials" }}
+        </span>
+      </div>
+
+      <div class="subjects-grid-modern">
+        {% assign subjects = site.data.subjects[page.level] %}
+        {% for subject in subjects %}
+          {% assign subject_name = subject.name | default: 'Subject' %}
+          <a href="{{ subject.path }}" class="modern-subject-card" style="--accent-rgb: var(--accent-{{ page.level | default: 'al' }}-rgb); --accent-color: var(--accent-{{ page.level | default: 'al' }});" title="View {{ subject_name }} resources">
+            <div class="card-icon">
+              {{ subject.icon }}
+            </div>
+            <div class="card-content">
+              <div class="card-title">{{ subject_name }}</div>
+              <div class="card-meta">
+                <span class="meta-text">Study Materials</span>
+                <i class="bi bi-arrow-right hover-arrow"></i>
+              </div>
+            </div>
+          </a>
+        {% endfor %}
+      </div>
+    </section>
+
+  </main>
+
+  {% include theme_button.html %}
+  {% include footer.html %}
+
+</body>
+
+</html>

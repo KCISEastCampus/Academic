@@ -125,17 +125,22 @@
 
     // 检测是否为index页面（有GitHub按钮）
     const isIndexPage = document.querySelector('.github-corner') !== null;
-    
+
     // 根据页面类型调整按钮位置
     if (isIndexPage && theme_button) {
-      // 检查是否为移动端
       const isMobile = window.innerWidth <= 768;
+      const isTablet = window.innerWidth <= 1024;
       if (isMobile) {
-        theme_button.style.top = '85px';
+        // 移动端：GitHub角标已隐藏，按钮放在右上角
+        theme_button.style.top = '14px';
+        theme_button.style.right = '14px';
+      } else if (isTablet) {
+        theme_button.style.top = '20px';
+        theme_button.style.right = '20px';
       } else {
         theme_button.style.top = '90px';
+        theme_button.style.right = '20px';
       }
-      theme_button.style.right = '20px';
       theme_button.style.zIndex = '9998';
     }
 
