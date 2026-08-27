@@ -3,15 +3,17 @@ layout: subjects
 title: AS Mathematics
 mathjax: true
 grade: as
-subject: math
+subject: as-mathematics
 permalink: /alevel/as-mathematics/
 redirect_from:
   - /alevel/mathematics/
   - /alevel/mathematics/index.html
 ---
 
-# Introduction to AS Mathematics
-## OxfordAQA International AS Mathematics (9660)
+# AS Mathematics
+
+> **Qualification**: OxfordAQA International AS Mathematics (9660) · Modular
+> **Assessment**: Unit P1 + Unit PSM1 · 1h 30m each · 80 marks each · 50% of AS each
 
 AS Mathematics forms the first part of the A-Level Mathematics qualification. The AS level consists of two examined components:
 
@@ -28,8 +30,6 @@ AS Mathematics forms the first part of the A-Level Mathematics qualification. Th
 *Note: PSM1 consists of 40 marks Pure Maths, 20 marks Statistics, and 20 marks Mechanics*
 
 ---
-
-# Revision Guide
 
 ## 3.1 International AS Unit P1 (Pure Maths)
 

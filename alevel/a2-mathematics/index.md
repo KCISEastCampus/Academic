@@ -3,7 +3,7 @@ title: A2 Math - Pure
 layout: subjects
 mathjax: true
 grade: a2
-subject: a2mathematics
+subject: a2-mathematics
 permalink: /alevel/a2-mathematics/
 redirect_from:
   - /alevel/a2mathematics/

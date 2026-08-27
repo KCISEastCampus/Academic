@@ -3,10 +3,16 @@ title: AS Biology
 layout: subjects
 mathjax: true
 grade: as
-subject: biology
+subject: as-biology
+permalink: /alevel/as-biology/
 ---
 
 # 🧬 Unit 2: Biological systems and disease
+
+> **Qualification**: OxfordAQA International AS Biology (9610) · Modular
+> **Assessment**: Unit 1 (The diversity of living organisms) + Unit 2 (Biological systems and disease) · 1h 30m each · 75 marks each · 50% of AS each
+
+> 📌 This page covers **Unit 2** of the International AS Biology qualification. Unit 1 (The diversity of living organisms) is not yet included.
 
 ---
 

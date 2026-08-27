@@ -3,6 +3,8 @@ layout: subjects
 title: IG Physics
 mathjax: true
 grade: igcse
+subject: igcse-physics
+permalink: /igcse/physics/
 ---
 
 # IG Physics

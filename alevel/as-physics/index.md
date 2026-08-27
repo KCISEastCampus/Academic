@@ -3,15 +3,21 @@ layout: subjects
 title: AS Physics
 mathjax: true
 grade: as
-subject: physics
+subject: as-physics
+permalink: /alevel/as-physics/
 ---
 
-# 📘 Unit 1: Mechanics, Materials and Atoms
+# AS Physics
+
+> **Qualification**: OxfordAQA International AS Physics (9630) · Modular
+> **Assessment**: Unit 1 (Mechanics, materials and atoms) + Unit 2 (Electricity, waves and particles) · 2h each · 80 marks each · 50% of AS each
+
+## 📘 Unit 1: Mechanics, Materials and Atoms
 `(Specification Sections: 3.1, 3.2, 3.3)`
 
 ---
 
-## 1. 📏 Measurements & Errors (3.1)
+### 1. 📏 Measurements & Errors (3.1)
 
 ### 1.1 SI Units and Prefixes
 * **Base Units**: Mass (kg), Length (m), Time (s), Current (A), Temperature (K), Amount of substance (mol).
@@ -51,7 +57,7 @@ subject: physics
 
 ---
 
-## 2. 🚜 Mechanics (3.2.1 – 3.2.8)
+### 2. 🚜 Mechanics (3.2.1 – 3.2.8)
 
 ### 2.1 Vectors and Moments
 * **Scalars vs Vectors**: Scalars have magnitude only (mass, speed); Vectors have magnitude and direction (force, velocity).
@@ -104,7 +110,7 @@ Independent effect of motion in horizontal and vertical directions.
 
 ---
 
-## 3. 🏗️ Materials (3.2.9 – 3.2.10)
+### 3. 🏗️ Materials (3.2.9 – 3.2.10)
 
 ### 3.1 Bulk Properties
 * **Density ($\rho$)**: $\rho = \frac{m}{V}$.
@@ -126,7 +132,7 @@ A measure of the stiffness of a material, independent of its dimensions.
 
 ---
 
-## 4. ⚛️ Particles, Radiation & Radioactivity (3.3)
+### 4. ⚛️ Particles, Radiation & Radioactivity (3.3)
 
 ### 4.1 Constituents of the Atom
 * **Structure**: Protons and Neutrons in the nucleus; Electrons in shells.
@@ -167,3 +173,158 @@ A measure of the stiffness of a material, independent of its dimensions.
 ### 🧪 Key Required Practicals (Unit 1)
 1.  **Determination of $g$ by freefall**: Plot $s$ against $t^2$. Gradient $= g/2$.
 2.  **Young Modulus of a wire**: Measure diameter (micrometer), length, and extension. Plot Stress vs Strain. Gradient $= E$.
+
+---
+
+## ⚡ Unit 2: Electricity, Waves and Particles
+`(Specification Sections: 3.4, 3.5)`
+
+---
+
+### 5. 🔌 Electricity (3.4)
+
+### 5.1 Basics of Electricity
+* **Electric Current ($I$)**: Rate of flow of charge. $$I = \frac{Q}{t}$$
+* **Potential Difference ($V$)**: Work done per unit charge. $$V = \frac{W}{Q}$$
+* **Resistance ($R$)**: Defined as the ratio of potential difference to current. $$R = \frac{V}{I}$$
+
+### 5.2 Current–Voltage Characteristics
+* **Ohm's Law**: $I \propto V$ under constant physical conditions (a special case for ohmic conductors).
+* **Ohmic conductor**: Linear $I$–$V$ graph through origin.
+* **Semiconductor diode**: Current flows in one direction only; negligible current in reverse bias.
+* **Filament lamp**: Resistance increases with temperature; curved $I$–$V$ graph.
+* Unless stated, treat **ammeters as ideal** (zero resistance) and **voltmeters as ideal** (infinite resistance).
+
+> **📝 Note**: Questions can be set with either $I$ or $V$ on the horizontal axis of the characteristic graph.
+
+### 5.3 Resistivity
+* **Resistivity ($\rho$)**: A material property. $$\rho = \frac{RA}{L}$$
+* **Effect of temperature on resistance**:
+    * **Metal conductors**: Resistance **increases** with temperature (more lattice vibrations scatter electrons).
+    * **Thermistors**: **Negative temperature coefficient (ntc)** only — resistance **decreases** as temperature rises.
+
+### 5.4 Circuits
+* **Resistors in series**: $$R_T = R_1 + R_2 + R_3 + \dots$$
+* **Resistors in parallel**: $$\frac{1}{R_T} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + \dots$$
+* **Energy and power**: $$E = IVt, \qquad P = IV = I^2R = \frac{V^2}{R}$$
+* **Cells**: In series (voltages add); identical cells in parallel (same voltage, larger current capacity).
+* **Conservation** in dc circuits:
+    * **Charge**: Current divides at junctions (Kirchhoff's current law).
+    * **Energy**: Sum of potential differences around a loop equals the applied emf.
+
+### 5.5 Potential Divider
+* Used to supply a **constant or variable potential difference** from a power supply.
+* The potentiometer as a measuring instrument is **not required**.
+* Common applications: **variable resistors, thermistors, and light dependent resistors (LDR)** in the divider circuit.
+* For a divider: output voltage $V_{\text{out}} = V_{\text{in}} \times \frac{R_2}{R_1 + R_2}$.
+
+### 5.6 Electromotive Force and Internal Resistance
+* **emf ($\varepsilon$)**: Energy transferred per unit charge from the source. $$\varepsilon = \frac{E}{Q}$$
+* **Internal resistance ($r$)**: $$ \varepsilon = I(R + r)$$
+* **Terminal pd** $= \varepsilon - Ir$ — internal resistance causes the terminal pd to **drop** as current increases.
+* Calculations assume internal resistance is **not negligible** unless stated.
+
+> **📝 Example Question**
+> 
+> A battery of emf 6.0 V and internal resistance 0.5 Ω is connected to a 2.5 Ω resistor. Calculate the current and the terminal pd.
+>
+> **Solution:**
+> 1. Total resistance $R_{\text{total}} = 2.5 + 0.5 = 3.0 \, \Omega$.
+> 2. $I = \frac{\varepsilon}{R + r} = \frac{6.0}{3.0} = 2.0 \text{ A}$.
+> 3. Terminal pd $V = \varepsilon - Ir = 6.0 - (2.0 \times 0.5) = 5.0 \text{ V}$.
+
+**Required Practical 3 🧪**: Investigation of the emf and internal resistance of cells/batteries by measuring the variation of terminal pd with current.
+
+---
+
+### 6. 🌊 Oscillations and Waves (3.5)
+
+### 6.1 Oscillating Systems
+* **Mass–spring system**: $$T = 2\pi\sqrt{\frac{m}{k}}$$
+* **Simple pendulum**: $$T = 2\pi\sqrt{\frac{l}{g}}$$
+* **Energy variation**: $E_k$ and $E_p$ interchange; total energy remains constant (in SHM).
+* **Damping**: Reduces amplitude over time (energy lost to surroundings).
+
+**Required Practical 4 🧪**: Investigation into simple harmonic systems using a mass-spring system and a simple pendulum.
+
+### 6.2 Forced Vibrations and Resonance
+* **Free vibrations**: Oscillate at the natural frequency.
+* **Forced vibrations**: Driven at the driving frequency.
+* **Resonance**: Large-amplitude oscillation when driving frequency $\approx$ natural frequency.
+* **Damping** reduces the sharpness of the resonance peak.
+* Examples: mechanical systems and situations involving stationary waves.
+
+### 6.3 Progressive Waves
+* Oscillation of particles of the medium (energy transfer without net mass transfer).
+* Key quantities: **amplitude, frequency, wavelength, speed, phase, phase difference**.
+* **Wave equation**: $$c = f\lambda, \qquad f = \frac{1}{T}$$
+* **Phase difference**: measured in radians/degrees or as fractions of a cycle.
+
+### 6.4 Longitudinal and Transverse Waves
+* **Transverse**: particles oscillate perpendicular to energy propagation (e.g., waves on a string, EM waves).
+* **Longitudinal**: particles oscillate parallel to energy propagation (e.g., sound).
+* All electromagnetic waves travel at the same speed in a vacuum.
+* Use of **ultrasound** in medicine.
+
+### 6.5 Principle of Superposition and Stationary Waves
+* **Superposition**: when two waves meet, their displacements add.
+* **Stationary waves**: formed by two waves of the same frequency travelling in opposite directions.
+* **Nodes** (no displacement) and **antinodes** (maximum displacement) on strings.
+* **First harmonic** on a string: $$f = \frac{1}{2l}\sqrt{\frac{T}{\mu}}$$
+
+### 6.6 Interference
+* **Path difference** and **coherence**.
+* **Young's double-slit experiment**: two coherent sources (or single source + double slits) produce an interference pattern.
+* **Fringe spacing**: $$w = \frac{\lambda D}{s}$$
+* **White light** produces a pattern with coloured fringes (central white fringe).
+* ⚠️ Be aware of **safety issues** associated with lasers.
+
+### 6.7 Diffraction
+* **Single slit**: diffraction pattern with a central maximum and weaker side maxima.
+* Central maximum width varies with wavelength (longer $\lambda$ → wider) and slit width (narrower slit → wider).
+* **Diffraction grating** at normal incidence: $$d\sin\theta = n\lambda$$
+* Applications of diffraction gratings (e.g., spectroscopy). The spectrometer is **not tested**.
+
+### 6.8 Refraction at a Plane Surface
+* **Refractive index**: $$n = \frac{c}{c_s}$$ (refractive index of air $\approx 1$).
+* **Snell's law**: $$n_1\sin\theta_1 = n_2\sin\theta_2$$
+* **Total internal reflection**: $$\sin c = \frac{n_2}{n_1}$$
+* **Fibre optics**: function of the cladding (lower refractive index, protects, prevents signal loss).
+
+### 6.9 Collisions of Electrons with Atoms
+* **Ionisation** and **excitation** — e.g., in a fluorescent tube.
+* **The electron volt (eV)**: energy gained by an electron accelerated through 1 V. $1 \text{ eV} = 1.6 \times 10^{-19} \text{ J}$.
+* **Line spectra** (e.g., atomic hydrogen) as evidence for transitions between discrete energy levels.
+    $$hf = E_1 - E_2$$
+* **X-rays**: characteristic and line spectrum; basic structure and operation of an X-ray tube; medical applications.
+* Be able to convert between eV and J.
+
+### 6.10 Photoelectric Effect
+* **Photon model** of electromagnetic radiation; Planck constant.
+    $$E = hf = \frac{hc}{\lambda}$$
+* **Photoelectric effect**: emission of electrons when light (above threshold frequency) hits a metal surface.
+* **Threshold frequency**: minimum frequency to release electrons.
+* **Work function ($\phi$)**: minimum energy to remove an electron.
+* **Stopping potential**: voltage needed to stop the most energetic photoelectrons.
+    $$hf = \phi + E_{k,\text{max}}$$
+
+### 6.11 Wave–Particle Duality
+* **Electron diffraction** → particles possess wave properties.
+* **Photoelectric effect** → electromagnetic waves have a particulate nature.
+* **de Broglie equation**: $$\lambda = \frac{h}{mv}$$ where $mv$ is the momentum.
+* Diffraction amount changes with particle momentum (higher momentum → smaller wavelength → less diffraction).
+* Appreciation of how understanding of the nature of matter changes over time.
+
+> **📝 Example Question**
+> 
+> Calculate the de Broglie wavelength of an electron moving at $2.0 \times 10^6 \text{ m s}^{-1}$. (Electron mass $m_e = 9.11 \times 10^{-31} \text{ kg}$; $h = 6.63 \times 10^{-34} \text{ J s}$.)
+>
+> **Solution:**
+> 1. Momentum $p = mv = 9.11 \times 10^{-31} \times 2.0 \times 10^6 = 1.82 \times 10^{-24} \text{ kg m s}^{-1}$.
+> 2. $\lambda = \frac{h}{p} = \frac{6.63 \times 10^{-34}}{1.82 \times 10^{-24}} \approx 3.64 \times 10^{-10} \text{ m}$ (about 0.36 nm).
+
+---
+
+### 🧪 Key Required Practicals (Unit 2)
+1.  **emf and internal resistance**: Measure terminal pd at different currents; gradient of $V$–$I$ graph $= -r$.
+2.  **Simple harmonic systems**: Mass-spring and simple pendulum; measure $T$ and compare with theory.

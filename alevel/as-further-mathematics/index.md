@@ -3,13 +3,17 @@ title: AS Further Mathematics
 layout: subjects
 mathjax: true
 grade: as
-subject: asfm
+subject: as-further-mathematics
 permalink: /alevel/as-further-mathematics/
 redirect_from:
   - /alevel/asfm/
   - /alevel/asfm/index.html
 ---
-# Intro to AS Further Math
+# AS Further Mathematics
+
+> **Qualification**: OxfordAQA International AS Further Mathematics (9665) · Modular
+> **Assessment**: Unit FP1 + Unit FPSM1 · 1h 30m each · 80 marks each · 50% of AS each
+
 ## 🏗️ AS Level Course Structure
 
 ### Two Compulsory Units:
@@ -33,8 +37,7 @@ redirect_from:
 
 ---
 
-# Further Pure Math(FP1)
-## Revision Guide
+## 📘 Unit FP1: Pure Mathematics
 ### 1. Algebra and Graphs (FP1.1)
 
 #### 1.1 Rational Functions - Complete Foundation
@@ -520,11 +523,11 @@ Therefore, $y$ decreases by approximately $0.032$ when $x$ increases to $5.1$.
 
 ---
 
-# Further Pure Math, Statistics and Mechanics (FPSM1)
+## 📗 Unit FPSM1: Pure Mathematics, Statistics and Mechanics
 
-## FPP1.1: Matrices and Transformations
+### FPP1.1: Matrices and Transformations
 
-### 1.1 Matrix Algebra
+#### 1.1 Matrix Algebra
 
 #### Definitions
 A **matrix** is a rectangular array of numbers. An $m \times n$ matrix has $m$ rows and $n$ columns.
@@ -582,7 +585,7 @@ The transpose $A^T$ is obtained by swapping rows and columns.
 
 ---
 
-### 1.2 Transformations in the $x$-$y$ Plane
+#### 1.2 Transformations in the $x$-$y$ Plane
 
 A $2 \times 2$ matrix $M$ represents a linear transformation mapping a point $(x,y)$ to $(x',y')$:
 $$\begin{pmatrix} x' \\ y' \end{pmatrix} = M \begin{pmatrix} x \\ y \end{pmatrix}$$
@@ -632,7 +635,7 @@ For a $2 \times 2$ matrix $M$:
 
 ---
 
-### 1.3 Invariant Points and Lines
+#### 1.3 Invariant Points and Lines
 
 #### Invariant Points
 A point $\mathbf{x}$ is **invariant** if $M\mathbf{x} = \mathbf{x}$.
@@ -669,9 +672,9 @@ Thus invariant lines: $y = 0$ and $x = 0$.
 
 ---
 
-## FPP1.2: Linear Graphs – Reducing to Linear Form
+### FPP1.2: Linear Graphs – Reducing to Linear Form
 
-### 2.1 Transforming Non-Linear Relationships
+#### 2.1 Transforming Non-Linear Relationships
 
 When experimental data suggests a relationship of the form $y = kx^n$ or $y = k \cdot a^x$, we can take logarithms to obtain a linear equation.
 
@@ -713,13 +716,13 @@ Thus $y = 2.5x^2$.
 
 ---
 
-## FPP1.3: Numerical Methods
+### FPP1.3: Numerical Methods
 
-### 3.1 Location of Roots
+#### 3.1 Location of Roots
 
 If $f(x)$ is continuous on $[a,b]$ and $f(a)$ and $f(b)$ have opposite signs, then there is at least one root in $(a,b)$.
 
-### 3.2 Interval Bisection
+#### 3.2 Interval Bisection
 
 **Algorithm**:
 1. Find interval $[a,b]$ where $f(a)f(b) < 0$
@@ -741,7 +744,7 @@ If $f(x)$ is continuous on $[a,b]$ and $f(a)$ and $f(b)$ have opposite signs, th
 
 After 5 iterations, root ≈ 1.324 (accurate to 0.03).
 
-### 3.3 Linear Interpolation
+#### 3.3 Linear Interpolation
 
 Use similar triangles to estimate root:
 $$c = a - \frac{f(a)(b-a)}{f(b)-f(a)}$$
@@ -753,7 +756,7 @@ $$c = 1 - \frac{(-1)(2-1)}{5 - (-1)} = 1 - \frac{-1}{6} = 1 + \frac{1}{6} = 1.16
 
 This is often faster than bisection but less reliable.
 
-### 3.4 Newton-Raphson Method
+#### 3.4 Newton-Raphson Method
 
 **Formula**:
 $$x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$$
@@ -778,7 +781,7 @@ Converges rapidly to root ≈ 1.3247.
 
 ---
 
-### 3.5 Euler's Method for Differential Equations
+#### 3.5 Euler's Method for Differential Equations
 
 Given $\frac{dy}{dx} = f(x,y)$ with initial condition $(x_0, y_0)$ and step size $h$:
 
@@ -803,20 +806,20 @@ Thus $y(0.3) \approx 1.362$.
 
 ---
 
-## FS1.1: Bayes' Theorem
+### FS1.1: Bayes' Theorem
 
-### 1.1 Conditional Probability Review
+#### 1.1 Conditional Probability Review
 
 $$P(A \mid B) = \frac{P(A \cap B)}{P(B)}$$
 
 **Multiplication Rule**: $P(A \cap B) = P(A \mid B)P(B) = P(B \mid A)P(A)$
 
-### 1.2 Law of Total Probability
+#### 1.2 Law of Total Probability
 
 For a partition of the sample space into events $A_1, A_2, \dots, A_n$:
 $$P(B) = \sum_{i=1}^n P(B \mid A_i)P(A_i)$$
 
-### 1.3 Bayes' Theorem
+#### 1.3 Bayes' Theorem
 
 $$P(A_i \mid B) = \frac{P(B \mid A_i)P(A_i)}{\sum_{j=1}^n P(B \mid A_j)P(A_j)}$$
 
@@ -841,7 +844,7 @@ $P(D) = 0.4\times0.02 + 0.35\times0.03 + 0.25\times0.04 = 0.008 + 0.0105 + 0.01 
 
 $P(A \mid D) = \frac{0.4 \times 0.02}{0.0285} = \frac{0.008}{0.0285} = 0.2807$
 
-### 1.4 Tree Diagrams
+#### 1.4 Tree Diagrams
 
 Bayes' theorem problems are often solved using tree diagrams:
 - First branch: probabilities of $A_i$
@@ -851,23 +854,23 @@ Bayes' theorem problems are often solved using tree diagrams:
 
 ---
 
-## FS1.2: Uniform Distribution (Continuous)
+### FS1.2: Uniform Distribution (Continuous)
 
-### 2.1 Definition
+#### 2.1 Definition
 
 A continuous random variable $X$ has a **uniform distribution** on $[a,b]$ if all values in the interval are equally likely.
 
 **Notation**: $X \sim U(a,b)$
 
-### 2.2 Probability Density Function (PDF)
+#### 2.2 Probability Density Function (PDF)
 
 $$f(x) = \begin{cases} \frac{1}{b-a}, & a \leq x \leq b \\ 0, & \text{otherwise} \end{cases}$$
 
-### 2.3 Cumulative Distribution Function (CDF)
+#### 2.3 Cumulative Distribution Function (CDF)
 
 $$F(x) = \begin{cases} 0, & x < a \\ \frac{x-a}{b-a}, & a \leq x \leq b \\ 1, & x > b \end{cases}$$
 
-### 2.4 Mean and Variance
+#### 2.4 Mean and Variance
 
 $$E(X) = \frac{a+b}{2}$$
 
@@ -879,7 +882,7 @@ $$E(X^2) = \int_a^b x^2 \cdot \frac{1}{b-a} \, dx = \frac{1}{b-a} \left[ \frac{x
 
 $$\text{Var}(X) = E(X^2) - [E(X)]^2 = \frac{a^2 + ab + b^2}{3} - \left(\frac{a+b}{2}\right)^2 = \frac{(b-a)^2}{12}$$
 
-### 2.5 Probability Calculations
+#### 2.5 Probability Calculations
 
 $$P(c \leq X \leq d) = \frac{d-c}{b-a} \quad \text{for } a \leq c < d \leq b$$
 
@@ -889,27 +892,27 @@ $P(X > 5) = \frac{8-5}{8-2} = \frac{3}{6} = 0.5$
 
 ---
 
-## FS1.3: Geometric Distribution
+### FS1.3: Geometric Distribution
 
-### 3.1 Definition
+#### 3.1 Definition
 
 The geometric distribution models the number of trials needed to achieve the **first success** in a sequence of independent Bernoulli trials, each with probability of success $p$.
 
 **Notation**: $X \sim \text{Geom}(p)$
 
-### 3.2 Probability Mass Function
+#### 3.2 Probability Mass Function
 
 $$P(X = k) = (1-p)^{k-1}p, \quad k = 1, 2, 3, \dots$$
 
 **Interpretation**: First $k-1$ trials are failures (probability $1-p$ each), then the $k$th trial is a success (probability $p$).
 
-### 3.3 Cumulative Distribution Function
+#### 3.3 Cumulative Distribution Function
 
 $$P(X \leq k) = 1 - (1-p)^k$$
 
 $$P(X > k) = (1-p)^k$$
 
-### 3.4 Mean and Variance
+#### 3.4 Mean and Variance
 
 $$E(X) = \frac{1}{p}$$
 
@@ -920,7 +923,7 @@ $$E(X) = \sum_{k=1}^\infty k(1-p)^{k-1}p = p \sum_{k=1}^\infty k(1-p)^{k-1}$$
 Using $\sum_{k=1}^\infty k r^{k-1} = \frac{1}{(1-r)^2}$ for $\lvert r \rvert < 1$:
 $$E(X) = p \cdot \frac{1}{[1-(1-p)]^2} = p \cdot \frac{1}{p^2} = \frac{1}{p}$$
 
-### 3.5 Memoryless Property
+#### 3.5 Memoryless Property
 
 $$P(X > m+n \mid X > m) = P(X > n)$$
 
@@ -932,16 +935,16 @@ $P(X = 4) = (0.8)^3 \times 0.2 = 0.512 \times 0.2 = 0.1024$
 
 ---
 
-## FS1.4: Probability Generating Functions (PGF)
+### FS1.4: Probability Generating Functions (PGF)
 
-### 4.1 Definition
+#### 4.1 Definition
 
 For a discrete random variable $X$ taking non-negative integer values, the **probability generating function** is:
 $$G_X(t) = E(t^X) = \sum_{x=0}^\infty t^x P(X = x)$$
 
 $t$ is a dummy variable; the series converges for $\lvert t \rvert \leq 1$.
 
-### 4.2 Properties
+#### 4.2 Properties
 
 **Property 1**: $G_X(1) = \sum_{x=0}^\infty P(X = x) = 1$
 
@@ -958,7 +961,7 @@ $G_X'(t) = \sum_{x=0}^\infty x t^{x-1} P(X = x)$, so $G_X'(1) = \sum x P(X = x) 
 $G_X''(t) = \sum_{x=0}^\infty x(x-1) t^{x-2} P(X = x)$, so $G_X''(1) = E(X(X-1))$
 Then $\text{Var}(X) = E(X^2) - [E(X)]^2 = E(X(X-1)) + E(X) - [E(X)]^2$
 
-### 4.3 PGFs for Common Distributions
+#### 4.3 PGFs for Common Distributions
 
 | Distribution | PGF $G_X(t)$ |
 |--------------|--------------|
@@ -971,7 +974,7 @@ Then $\text{Var}(X) = E(X^2) - [E(X)]^2 = E(X(X-1)) + E(X) - [E(X)]^2$
 **Derivation for Poisson**:
 $$G_X(t) = \sum_{x=0}^\infty t^x \frac{e^{-\lambda}\lambda^x}{x!} = e^{-\lambda} \sum_{x=0}^\infty \frac{(\lambda t)^x}{x!} = e^{-\lambda} e^{\lambda t} = e^{\lambda(t-1)}$$
 
-### 4.4 Sum of Independent Random Variables
+#### 4.4 Sum of Independent Random Variables
 
 If $X$ and $Y$ are independent discrete random variables, then:
 $$G_{X+Y}(t) = G_X(t) \cdot G_Y(t)$$
@@ -984,9 +987,9 @@ Thus $X+Y \sim \text{Po}(\lambda_1+\lambda_2)$.
 
 ---
 
-## FS1.5: Linear Combinations of Discrete Random Variables
+### FS1.5: Linear Combinations of Discrete Random Variables
 
-### 5.1 Expectation of a Linear Combination
+#### 5.1 Expectation of a Linear Combination
 
 For constants $a$ and $b$:
 $$E(aX + bY) = aE(X) + bE(Y)$$
@@ -994,7 +997,7 @@ $$E(aX + bY) = aE(X) + bE(Y)$$
 More generally:
 $$E\left(\sum_{i=1}^n a_i X_i\right) = \sum_{i=1}^n a_i E(X_i)$$
 
-### 5.2 Variance of a Linear Combination
+#### 5.2 Variance of a Linear Combination
 
 For $Z = aX + bY$:
 $$\text{Var}(Z) = a^2\text{Var}(X) + b^2\text{Var}(Y) + 2ab\,\text{Cov}(X,Y)$$
@@ -1002,7 +1005,7 @@ $$\text{Var}(Z) = a^2\text{Var}(X) + b^2\text{Var}(Y) + 2ab\,\text{Cov}(X,Y)$$
 If $X$ and $Y$ are **independent**, $\text{Cov}(X,Y) = 0$:
 $$\text{Var}(aX + bY) = a^2\text{Var}(X) + b^2\text{Var}(Y)$$
 
-### 5.3 Covariance
+#### 5.3 Covariance
 
 $$\text{Cov}(X,Y) = E[(X - \mu_X)(Y - \mu_Y)] = E(XY) - E(X)E(Y)$$
 
@@ -1012,7 +1015,7 @@ Properties:
 - $\text{Cov}(aX, bY) = ab\,\text{Cov}(X,Y)$
 - If $X$ and $Y$ are independent, $\text{Cov}(X,Y) = 0$ (converse not necessarily true)
 
-### 5.4 Correlation Coefficient
+#### 5.4 Correlation Coefficient
 
 $$\rho(X,Y) = \frac{\text{Cov}(X,Y)}{\sqrt{\text{Var}(X)\text{Var}(Y)}}$$
 
@@ -1033,9 +1036,9 @@ $= 4\times4 + 9\times9 + 12\times3 = 16 + 81 + 36 = 133$
 
 ---
 
-## FM1.1: Constant Velocity in Two Dimensions
+### FM1.1: Constant Velocity in Two Dimensions
 
-### 1.1 Vector Representation
+#### 1.1 Vector Representation
 
 Position vector: $\mathbf{r} = x\mathbf{i} + y\mathbf{j} = \begin{pmatrix} x \\\\ y \end{pmatrix}$
 
@@ -1043,13 +1046,13 @@ Velocity vector: $\mathbf{v} = \frac{d\mathbf{r}}{dt} = v_x\mathbf{i} + v_y\math
 
 For constant velocity: $\mathbf{r}(t) = \mathbf{r}_0 + \mathbf{v}t$
 
-### 1.2 Speed and Distance
+#### 1.2 Speed and Distance
 
 Speed = $\lvert \mathbf{v} \rvert = \sqrt{v_x^2 + v_y^2}$
 
 Distance travelled = $\lvert \mathbf{v} \rvert \times t$
 
-### 1.3 Relative Velocity
+#### 1.3 Relative Velocity
 
 Velocity of $A$ relative to $B$:
 $$\mathbf{v}_{AB} = \mathbf{v}_A - \mathbf{v}_B$$
@@ -1066,7 +1069,7 @@ $\mathbf{v}_{AB} = (10-5)\mathbf{i} + (0-5)\mathbf{j} = 5\mathbf{i} - 5\mathbf{j
 
 Speed = $\sqrt{5^2 + (-5)^2} = \sqrt{50} = 5\sqrt{2}$ km/h
 
-### 1.4 Interception Problems
+#### 1.4 Interception Problems
 
 For $A$ to intercept $B$, there exists $t > 0$ such that:
 $$\mathbf{r}_A(0) + \mathbf{v}_A t = \mathbf{r}_B(0) + \mathbf{v}_B t$$
@@ -1081,7 +1084,7 @@ $B$: $(100, 10t)$
 
 For interception: $ut = 100$ and $0 = 10t$ ⇒ $t = 0$ (trivial). No interception possible because $A$ has no $y$-component. This shows interception requires velocity components to align.
 
-### 1.5 Closest Approach
+#### 1.5 Closest Approach
 
 For two moving particles, the distance between them is a quadratic function of time. To find the minimum distance:
 
@@ -1102,9 +1105,9 @@ Minimum occurs at $t = 0$ (since $t \geq 0$): $d = \sqrt{100} = 10$
 
 ---
 
-## FM1.2: Dimensional Analysis
+### FM1.2: Dimensional Analysis
 
-### 2.1 Base Dimensions
+#### 2.1 Base Dimensions
 
 In mechanics, all physical quantities can be expressed in terms of three base dimensions:
 
@@ -1114,7 +1117,7 @@ In mechanics, all physical quantities can be expressed in terms of three base di
 | Length | $L$ |
 | Time | $T$ |
 
-### 2.2 Derived Dimensions
+#### 2.2 Derived Dimensions
 
 | Quantity | Formula | Dimensions |
 |----------|---------|------------|
@@ -1130,14 +1133,14 @@ In mechanics, all physical quantities can be expressed in terms of three base di
 | Pressure | $\frac{F}{A}$ | $ML^{-1}T^{-2}$ |
 | Density | $\frac{m}{V}$ | $ML^{-3}$ |
 
-### 2.3 Dimensional Homogeneity
+#### 2.3 Dimensional Homogeneity
 
 In any valid physical equation, both sides must have the same dimensions. This principle can be used to:
 - Check the validity of equations
 - Derive relationships between quantities
 - Determine units
 
-### 2.4 Deriving Formulae by Dimensional Analysis
+#### 2.4 Deriving Formulae by Dimensional Analysis
 
 **Method**:
 1. Assume the quantity $Q$ is proportional to products of powers of relevant variables
@@ -1176,15 +1179,15 @@ Thus $v = k \sqrt{\frac{T}{\mu}}$. Experiment shows $k = 1$.
 
 ---
 
-## FM1.3: Collisions in One Dimension
+### FM1.3: Collisions in One Dimension
 
-### 3.1 Momentum
+#### 3.1 Momentum
 
 Linear momentum: $\mathbf{p} = m\mathbf{v}$ (vector quantity)
 
 Units: kg·m/s or N·s
 
-### 3.2 Impulse
+#### 3.2 Impulse
 
 **Impulse** = change in momentum:
 $$\mathbf{I} = \mathbf{p}_{\text{final}} - \mathbf{p}_{\text{initial}} = m\mathbf{v} - m\mathbf{u}$$
@@ -1197,13 +1200,13 @@ $$\mathbf{I} = \int_{t_1}^{t_2} \mathbf{F} \, dt$$
 
 Impulse is a vector; its direction is the same as the change in momentum.
 
-### 3.3 Conservation of Momentum
+#### 3.3 Conservation of Momentum
 
 For a system of particles with no external impulse (or when external forces are negligible), total momentum is conserved:
 
 $$m_1\mathbf{u}_1 + m_2\mathbf{u}_2 = m_1\mathbf{v}_1 + m_2\mathbf{v}_2$$
 
-### 3.4 Newton's Experimental Law (Coefficient of Restitution)
+#### 3.4 Newton's Experimental Law (Coefficient of Restitution)
 
 For two particles colliding along the line of centres:
 
@@ -1220,7 +1223,7 @@ where:
 | $0 < e < 1$ | Partially elastic (some KE lost) |
 | $e = 0$ | Perfectly inelastic (particles stick together, $v_1 = v_2$) |
 
-### 3.5 Impact with a Fixed Surface
+#### 3.5 Impact with a Fixed Surface
 
 For a particle hitting a fixed smooth surface perpendicularly:
 $$v = -e u$$
@@ -1233,7 +1236,7 @@ Velocity just before impact: $u = \sqrt{2gh}$ (downwards)
 Velocity just after impact: $v = e\sqrt{2gh}$ (upwards)
 Height after bounce: $h_1 = \frac{v^2}{2g} = e^2 h$
 
-### 3.6 Worked Example: Two-Particle Collision
+#### 3.6 Worked Example: Two-Particle Collision
 
 Particle $A$ of mass 2 kg moves at 3 m/s towards particle $B$ of mass 3 kg moving at 1 m/s in the same direction. They collide. Coefficient of restitution $e = 0.5$. Find velocities after collision.
 
@@ -1265,9 +1268,9 @@ Both move in original direction.
 
 ---
 
-## Key Formulae Summary
+### Key Formulae Summary
 
-### Pure Mathematics
+#### Pure Mathematics
 
 | Topic | Formula |
 |-------|---------|
@@ -1277,7 +1280,7 @@ Both move in original direction.
 | Newton-Raphson | $x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$ |
 | Euler's method | $y_{n+1} = y_n + h f(x_n, y_n)$ |
 
-### Statistics
+#### Statistics
 
 | Topic | Formula |
 |-------|---------|
@@ -1293,7 +1296,7 @@ Both move in original direction.
 | Covariance | $\text{Cov}(X,Y) = E(XY) - E(X)E(Y)$ |
 | Correlation | $\rho = \frac{\text{Cov}(X,Y)}{\sqrt{\text{Var}(X)\text{Var}(Y)}}$ |
 
-### Mechanics
+#### Mechanics
 
 | Topic | Formula |
 |-------|---------|

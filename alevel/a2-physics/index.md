@@ -3,17 +3,23 @@ layout: subjects
 title: A2 Physics
 mathjax: true
 grade: a2
-subject: physics
+subject: a2-physics
+permalink: /alevel/a2-physics/
 ---
 
-# 📕 A-level Paper 1 (PH03): Fields and Their Consequences
+# A2 Physics
+
+> **Qualification**: OxfordAQA International A-level Physics (9630) · Modular
+> **Assessment**: AS = Unit 1 + Unit 2 · A2 = Unit 3 + Unit 4 + Unit 5
+
+## 📕 Unit 3: Fields and Their Consequences
 `(Specification Sections: 3.6 – 3.10)`
 
 ---
 
-## 1. 🔄 Circular and Periodic Motion (3.6)
+### 1. 🔄 Circular and Periodic Motion (3.6)
 
-### 1.1 Angular Quantities
+#### 1.1 Angular Quantities
 * **Angular Displacement ($\theta$)**: Angle turned through, measured in **radians**.
     * $1 \text{ revolution} = 2\pi \text{ rad} = 360°$
 * **Angular Velocity ($\omega$)**: Rate of change of angular displacement.
@@ -22,11 +28,11 @@ subject: physics
 * **Relationship between linear and angular velocity**:
     $$v = r\omega$$
 
-### 1.2 Centripetal Acceleration
+#### 1.2 Centripetal Acceleration
 An object moving in a circle at constant speed has a **centripetal acceleration** directed towards the centre of the circle.
 $$a = \frac{v^2}{r} = r\omega^2$$
 
-### 1.3 Centripetal Force
+#### 1.3 Centripetal Force
 By Newton's second law, a centripetal force is required to produce centripetal acceleration:
 $$F = \frac{mv^2}{r} = mr\omega^2$$
 
@@ -37,7 +43,7 @@ $$F = \frac{mv^2}{r} = mr\omega^2$$
     * **Normal reaction** (car on a banked track)
     * **Electrostatic force** (electron orbiting a nucleus)
 
-### 1.4 Vertical Circular Motion
+#### 1.4 Vertical Circular Motion
 For an object moving in a **vertical** circle, the speed changes due to gravity.
 
 | Position | Speed | Tension / Normal Force |
@@ -48,7 +54,7 @@ For an object moving in a **vertical** circle, the speed changes due to gravity.
 * **Minimum speed at the top** (for a mass on a string): $v_{\text{min}} = \sqrt{gr}$ (when $T = 0$)
 * **Minimum speed at the top** (for a car over a bridge): $v_{\text{min}} = \sqrt{gr}$ (when $N = 0$)
 
-### 1.5 Simple Harmonic Motion (SHM)
+#### 1.5 Simple Harmonic Motion (SHM)
 * **Definition**: SHM is a type of periodic motion where the acceleration is **directly proportional to the displacement** from a fixed equilibrium position and is **always directed towards that position**.
     $$a = -\omega^2 x$$
     * $a$ = acceleration (m s$^{-2}$)
@@ -66,18 +72,18 @@ For an object moving in a **vertical** circle, the speed changes due to gravity.
     * Period: $T = \frac{2\pi}{\omega}$
     * Frequency: $f = \frac{1}{T} = \frac{\omega}{2\pi}$
 
-### 1.6 Examples of SHM
+#### 1.6 Examples of SHM
 
-#### Mass-spring system
+##### Mass-spring system
 A mass $m$ attached to a spring of spring constant $k$:
 $$\omega = \sqrt{\frac{k}{m}}, \quad T = 2\pi\sqrt{\frac{m}{k}}$$
 
-#### Simple pendulum
+##### Simple pendulum
 A mass $m$ on a string of length $L$ swinging through small angles:
 $$\omega = \sqrt{\frac{g}{L}}, \quad T = 2\pi\sqrt{\frac{L}{g}}$$
 * The period is **independent of mass** and **amplitude** (for small angles).
 
-### 1.7 Graphs of SHM
+#### 1.7 Graphs of SHM
 
 | Quantity | Graph Shape | Key Feature |
 |----------|-------------|-------------|
@@ -103,14 +109,14 @@ $$\omega = \sqrt{\frac{g}{L}}, \quad T = 2\pi\sqrt{\frac{L}{g}}$$
 
 ---
 
-## 2. 🌍 Gravitational Fields and Satellites (3.7)
+### 2. 🌍 Gravitational Fields and Satellites (3.7)
 
-### 2.1 Gravitational Field Strength
+#### 2.1 Gravitational Field Strength
 * **Definition**: The gravitational force per unit mass placed at a point in the field.
     $$g = \frac{F}{m}$$
     * $g$ has units of N kg$^{-1}$ (numerically equal to m s$^{-2}$).
 
-### 2.2 Newton's Law of Gravitation
+#### 2.2 Newton's Law of Gravitation
 Every particle attracts every other particle with a force proportional to the product of their masses and inversely proportional to the square of the distance between them:
 $$F = -\frac{GMm}{r^2}$$
 * $G$ = Universal gravitational constant $= 6.67 \times 10^{-11}$ N m$^2$ kg$^{-2}$
@@ -118,25 +124,25 @@ $$F = -\frac{GMm}{r^2}$$
 * $r$ = distance between their centres
 * The negative sign indicates an **attractive** force.
 
-### 2.3 Gravitational Field of a Point Mass
+#### 2.3 Gravitational Field of a Point Mass
 The gravitational field strength at distance $r$ from a point mass $M$:
 $$g = \frac{GM}{r^2}$$
 
-### 2.4 Gravitational Potential
+#### 2.4 Gravitational Potential
 * **Definition**: The work done per unit mass in bringing a small test mass from infinity to a point in the field.
     $$\phi = -\frac{GM}{r}$$
     * $\phi$ is always **negative** (by convention, $\phi = 0$ at infinity).
     * Units: J kg$^{-1}$
 
-### 2.5 Gravitational Potential Energy
+#### 2.5 Gravitational Potential Energy
 The gravitational potential energy of a mass $m$ at a point where the gravitational potential is $\phi$:
 $$E_p = m\phi = -\frac{GMm}{r}$$
 
-### 2.6 Gravitational Field Lines
+#### 2.6 Gravitational Field Lines
 * **Radial fields**: Lines point towards a point mass (converging towards the mass).
 * **Uniform fields**: Parallel, equally spaced lines (e.g., near Earth's surface).
 
-### 2.7 Orbital Motion
+#### 2.7 Orbital Motion
 For a satellite in circular orbit around a planet of mass $M$:
 * Gravitational force provides centripetal force:
     $$\frac{GMm}{r^2} = \frac{mv^2}{r}$$
@@ -166,38 +172,38 @@ For a satellite in circular orbit around a planet of mass $M$:
 
 ---
 
-## 3. ⚡ Electric Fields and Capacitance (3.8)
+### 3. ⚡ Electric Fields and Capacitance (3.8)
 
-### 3.1 Electric Field Strength
+#### 3.1 Electric Field Strength
 * **Definition**: The force per unit positive charge placed at a point in the field.
     $$E = \frac{F}{Q}$$
     * $E$ has units of N C$^{-1}$ or V m$^{-1}$.
 
-### 3.2 Coulomb's Law
+#### 3.2 Coulomb's Law
 The force between two point charges:
 $$F = \frac{Q_1 Q_2}{4\pi\varepsilon_0 r^2}$$
 * $\varepsilon_0$ = permittivity of free space $= 8.85 \times 10^{-12}$ C$^2$ N$^{-1}$ m$^{-2}$
 * $k = \frac{1}{4\pi\varepsilon_0} = 8.99 \times 10^9$ N m$^2$ C$^{-2}$
 
-### 3.3 Electric Field of a Point Charge
+#### 3.3 Electric Field of a Point Charge
 $$E = \frac{Q}{4\pi\varepsilon_0 r^2}$$
 
-### 3.4 Electric Potential
+#### 3.4 Electric Potential
 * **Definition**: The work done per unit positive charge in bringing a small test charge from infinity to a point in the field.
     $$V = \frac{Q}{4\pi\varepsilon_0 r}$$
     * $V$ is **positive** for a positive source charge and **negative** for a negative source charge.
     * Units: V (volts) or J C$^{-1}$
 
-### 3.5 Electric Potential Energy
+#### 3.5 Electric Potential Energy
 $$E_p = QV = \frac{Q_1 Q_2}{4\pi\varepsilon_0 r}$$
 
-### 3.6 Uniform Electric Field
+#### 3.6 Uniform Electric Field
 Between two parallel plates separated by distance $d$ with potential difference $V$:
 $$E = \frac{V}{d}$$
 * Field lines are **parallel and equally spaced** (uniform field).
 * Field lines go from **positive to negative** plate.
 
-### 3.7 Comparison of Gravitational and Electric Fields
+#### 3.7 Comparison of Gravitational and Electric Fields
 
 | Property | Gravitational Field | Electric Field |
 |----------|-------------------|----------------|
@@ -208,7 +214,7 @@ $$E = \frac{V}{d}$$
 | Potential energy | $E_p = -\frac{GMm}{r}$ | $E_p = \frac{Q_1Q_2}{4\pi\varepsilon_0 r}$ |
 | Nature | Always attractive | Attractive or repulsive |
 
-### 3.8 Capacitance
+#### 3.8 Capacitance
 * **Definition**: The ability of a component to store charge. The charge stored per unit potential difference.
     $$C = \frac{Q}{V}$$
     * $C$ = capacitance (F, farads)
@@ -216,12 +222,12 @@ $$E = \frac{V}{d}$$
     * $V$ = potential difference (V)
     * $1 \text{ F} = 1 \text{ C V}^{-1}$
 
-### 3.9 Parallel Plate Capacitor
+#### 3.9 Parallel Plate Capacitor
 For a parallel plate capacitor with plate area $A$, separation $d$, and dielectric of permittivity $\varepsilon$:
 $$C = \frac{\varepsilon_0 \varepsilon_r A}{d}$$
 * $\varepsilon_r$ = relative permittivity (dielectric constant) of the material between the plates
 
-### 3.10 Energy Stored in a Capacitor
+#### 3.10 Energy Stored in a Capacitor
 $$E = \frac{1}{2}QV = \frac{1}{2}CV^2 = \frac{Q^2}{2C}$$
 * On a $Q$–$V$ graph, the energy stored equals the **area under the graph** (a triangle).
 
@@ -236,9 +242,9 @@ $$E = \frac{1}{2}QV = \frac{1}{2}CV^2 = \frac{Q^2}{2C}$$
 
 ---
 
-## 4. 📉 Exponential Change (3.9)
+### 4. 📉 Exponential Change (3.9)
 
-### 4.1 Capacitor Charging and Discharging
+#### 4.1 Capacitor Charging and Discharging
 * **Charging**: When a capacitor is connected to a DC supply through a resistor:
     * Charge increases exponentially: $Q = Q_0(1 - e^{-t/RC})$
     * PD increases: $V = V_0(1 - e^{-t/RC})$
@@ -248,7 +254,7 @@ $$E = \frac{1}{2}QV = \frac{1}{2}CV^2 = \frac{Q^2}{2C}$$
     * PD decays: $V = V_0 e^{-t/RC}$
     * Current decays: $I = I_0 e^{-t/RC}$
 
-### 4.2 Time Constant (Capacitor)
+#### 4.2 Time Constant (Capacitor)
 $$\tau = RC$$
 * $\tau$ = time constant (s)
 * $R$ = resistance ($\Omega$)
@@ -256,7 +262,7 @@ $$\tau = RC$$
 * After time $\tau$, the charge (or PD) falls to $1/e \approx 37\%$ of its initial value.
 * After time $5\tau$, the capacitor is considered fully discharged (< 1%).
 
-### 4.3 Charging and Discharging Graphs
+#### 4.3 Charging and Discharging Graphs
 
 | Quantity | Charging | Discharging |
 |----------|----------|-------------|
@@ -264,7 +270,7 @@ $$\tau = RC$$
 | $V$ vs $t$ | Rises exponentially to $V_0$ | Decays exponentially to 0 |
 | $I$ vs $t$ | Decays exponentially from $I_0$ to 0 | Decays exponentially from $I_0$ to 0 (opposite direction) |
 
-### 4.4 Exponential Decay in Radioactivity
+#### 4.4 Exponential Decay in Radioactivity
 Radioactive decay follows the same exponential law:
 $$N = N_0 e^{-\lambda t}$$
 * $N$ = number of undecayed nuclei at time $t$
@@ -280,7 +286,7 @@ $$N = N_0 e^{-\lambda t}$$
 * **Mean lifetime ($\tau$)**: The average time a nucleus survives before decaying.
     $$\tau = \frac{1}{\lambda}$$
 
-### 4.5 Determining Decay Constants Graphically
+#### 4.5 Determining Decay Constants Graphically
 * Plot $\ln N$ (or $\ln A$) against $t$:
     * $\ln N = \ln N_0 - \lambda t$
     * Gradient $= -\lambda$
@@ -302,9 +308,9 @@ $$N = N_0 e^{-\lambda t}$$
 
 ---
 
-## 5. 🧲 Magnetic Fields (3.10)
+### 5. 🧲 Magnetic Fields (3.10)
 
-### 5.1 Magnetic Flux Density
+#### 5.1 Magnetic Flux Density
 * **Definition**: The force per unit current per unit length on a straight wire perpendicular to the field.
     $$B = \frac{F}{IL}$$
     * $B$ = magnetic flux density (T, tesla)
@@ -312,26 +318,26 @@ $$N = N_0 e^{-\lambda t}$$
     * $I$ = current (A)
     * $L$ = length of wire in the field (m)
 
-### 5.2 Force on a Current-Carrying Conductor
+#### 5.2 Force on a Current-Carrying Conductor
 For a straight wire of length $L$ carrying current $I$ in a uniform magnetic field $B$:
 $$F = BIL\sin\theta$$
 * $\theta$ = angle between the current direction and the magnetic field
 * The force is **maximum** when $\theta = 90°$ (wire perpendicular to field) and **zero** when $\theta = 0°$ (wire parallel to field).
 * **Direction**: Determined by **Fleming's Left-Hand Rule**.
 
-### 5.3 Fleming's Left-Hand Rule
+#### 5.3 Fleming's Left-Hand Rule
 * **Thumb**: Direction of motion (force)
 * **First finger**: Direction of magnetic field (N → S)
 * **Second finger**: Direction of conventional current
 
-### 5.4 Force on a Moving Charge
+#### 5.4 Force on a Moving Charge
 For a charge $Q$ moving with velocity $v$ perpendicular to a magnetic field $B$:
 $$F = BQv$$
 * This is the principle behind the **mass spectrometer** and **circular particle accelerators**.
 * The magnetic force provides centripetal force:
     $$BQv = \frac{mv^2}{r} \implies r = \frac{mv}{BQ}$$
 
-### 5.5 Magnetic Flux
+#### 5.5 Magnetic Flux
 * **Magnetic Flux ($\Phi$)**: The product of magnetic flux density and the area perpendicular to the field.
     $$\Phi = BA\cos\theta$$
     * $B$ = magnetic flux density (T)
@@ -339,25 +345,25 @@ $$F = BQv$$
     * $\theta$ = angle between $B$ and the **normal** to the area
     * Units: Wb (webers)
 
-### 5.6 Magnetic Flux Linkage
+#### 5.6 Magnetic Flux Linkage
 * **Flux Linkage** $= N\Phi = NBA\cos\theta$
     * $N$ = number of turns in a coil
 
-### 5.7 Faraday's Law of Electromagnetic Induction
+#### 5.7 Faraday's Law of Electromagnetic Induction
 The induced electromotive force (emf) is equal to the rate of change of magnetic flux linkage:
 $$\varepsilon = -N\frac{\Delta \Phi}{\Delta t} = -\frac{\Delta (N\Phi)}{\Delta t}$$
 
 * The negative sign indicates the direction of the induced emf (Lenz's Law).
 
-### 5.8 Lenz's Law
+#### 5.8 Lenz's Law
 The direction of the induced current is such that it **opposes the change** that produced it.
 * This is a consequence of the **conservation of energy**.
 
-### 5.9 Motional emf
+#### 5.9 Motional emf
 For a conductor of length $L$ moving at speed $v$ perpendicular to a magnetic field $B$:
 $$\varepsilon = BLv$$
 
-### 5.10 Alternating Currents
+#### 5.10 Alternating Currents
 * A coil rotating in a uniform magnetic field at constant angular velocity $\omega$ produces a sinusoidal emf:
     $$\varepsilon = NBA\omega \sin(\omega t)$$
 * **Peak emf**: $\varepsilon_0 = NBA\omega$
@@ -367,7 +373,7 @@ $$\varepsilon = BLv$$
 * **Peak factor**: $\frac{V_0}{V_{\text{rms}}} = \sqrt{2}$
 * **Mean (average) value** over a half-cycle: $V_{\text{mean}} = \frac{2V_0}{\pi} \approx 0.637 V_0$
 
-### 5.11 The Transformer
+#### 5.11 The Transformer
 A transformer changes the magnitude of an alternating voltage. It consists of a **soft iron core** with two coils wound around it: a **primary coil** and a **secondary coil**.
 
 * **Transformer equation** (for an ideal transformer):
@@ -422,7 +428,7 @@ A transformer changes the magnitude of an alternating voltage. It consists of a 
 
 ---
 
-## 🔗 Summary: Comparing Gravitational Fields and Electric Fields
+### 🔗 Summary: Comparing Gravitational Fields and Electric Fields
 
 > Gravitational and electric fields follow almost identical mathematical structures. Mastering the parallels between them is a powerful way to learn and revise both topics.
 
@@ -453,7 +459,7 @@ A transformer changes the magnitude of an alternating voltage. It consists of a 
 
 ---
 
-## 🔗 Summary: Electric Fields and Magnetic Fields
+### 🔗 Summary: Electric Fields and Magnetic Fields
 
 > Electric and magnetic fields are different in many ways, but together they form the basis of **electromagnetic induction** and the operation of **transformers** and **generators**.
 

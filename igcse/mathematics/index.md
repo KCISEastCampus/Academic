@@ -3,7 +3,7 @@ layout: subjects
 title: IG Mathematics
 mathjax: true
 grade: igcse
-subject: math
+subject: igcse-mathematics
 ---
 
 # IG Mathematics

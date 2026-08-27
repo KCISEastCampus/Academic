@@ -3,6 +3,8 @@ layout: subjects
 grade: igcse
 title: IG Chemistry
 mathjax: true
+subject: igcse-chemistry
+permalink: /igcse/chemistry/
 ---
 
 # IG Chemistry

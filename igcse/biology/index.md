@@ -3,6 +3,8 @@ layout: subjects
 grade: igcse
 title: IG Biology
 mathjax: true
+subject: igcse-biology
+permalink: /igcse/biology/
 ---
 
 # IG Biology
