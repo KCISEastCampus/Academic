@@ -210,34 +210,62 @@ html[data-bs-theme="dark"] body.scheme-alevel #content-container h1::before {
   background: var(--accent-al);
 }
 
-/* H2: Section header — Unit/Paper level. Minimal, clean */
+/* H2: Unit/Paper level — colored left bar + tinted background */
 #content-container h2 {
   font-size: 1.5rem;
   color: var(--text);
   margin-top: 2rem !important;
-  margin-bottom: 0.75rem !important;
+  margin-bottom: 0.9rem !important;
   font-weight: 700;
-  padding: 0;
-  border: none;
+  padding: 0.7rem 1rem 0.7rem 1.2rem;
+  background: linear-gradient(90deg, rgba(var(--accent-ig-rgb), 0.12), transparent 60%);
+  border-left: 4px solid var(--accent-ig);
+  border-radius: 6px;
 }
 
 #content-container h2::before {
   display: none;
 }
 
-/* H3: Chapter/topic level */
+body.scheme-igcse #content-container h2 {
+  border-left-color: var(--accent-ig);
+  background: linear-gradient(90deg, rgba(var(--accent-ig-rgb), 0.12), transparent 60%);
+}
+
+body.scheme-alevel #content-container h2 {
+  border-left-color: var(--accent-al);
+  background: linear-gradient(90deg, rgba(var(--accent-al-rgb), 0.12), transparent 60%);
+}
+
+html[data-bs-theme="dark"] #content-container h2 {
+  background: linear-gradient(90deg, rgba(var(--accent-ig-rgb), 0.15), transparent 60%);
+}
+
+html[data-bs-theme="dark"] body.scheme-alevel #content-container h2 {
+  background: linear-gradient(90deg, rgba(var(--accent-al-rgb), 0.15), transparent 60%);
+}
+
+/* H3: Chapter/topic level — subtle left bar only */
 #content-container h3 {
   font-size: 1.25rem;
   color: var(--text);
   margin-top: 1.6rem !important;
   margin-bottom: 0.6rem !important;
   font-weight: 700;
-  padding: 0;
-  border: none;
+  padding: 0.2rem 0 0.2rem 0.85rem;
+  border-left: 3px solid rgba(var(--accent-ig-rgb), 0.5);
 }
 
 #content-container h3::before {
   display: none;
+}
+
+body.scheme-igcse #content-container h3 {
+  border-left-color: rgba(var(--accent-ig-rgb), 0.5);
+}
+
+body.scheme-alevel #content-container h3 {
+  border-left-color: rgba(var(--accent-al-rgb), 0.5);
 }
 
 #content-container h4 {
