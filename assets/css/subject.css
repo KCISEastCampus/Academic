@@ -168,16 +168,17 @@ html {
   border-radius: 1px;
 }
 
-/* H1: Visible section header — Unit/Paper level, prominent */
+/* H1: Unit/Paper level — solid accent background + white text (highest contrast) */
 #content-container h1 {
-  font-size: 1.65rem;
-  color: var(--text);
+  font-size: 1.5rem;
+  color: #fff;
   margin-top: 2rem !important;
-  margin-bottom: 0.9rem !important;
-  font-weight: 700;
-  padding: 0.65rem 1rem;
-  background: rgba(var(--accent-ig-rgb), 0.1);
-  border: 1px solid rgba(var(--accent-ig-rgb), 0.25);
+  margin-bottom: 1rem !important;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  padding: 0.6rem 1.1rem;
+  background: var(--accent-ig);
+  border: none;
   border-radius: 8px;
 }
 
@@ -186,23 +187,19 @@ html {
 }
 
 body.scheme-igcse #content-container h1 {
-  background: rgba(var(--accent-ig-rgb), 0.1);
-  border-color: rgba(var(--accent-ig-rgb), 0.25);
+  background: var(--accent-ig);
 }
 
 body.scheme-alevel #content-container h1 {
-  background: rgba(var(--accent-al-rgb), 0.1);
-  border-color: rgba(var(--accent-al-rgb), 0.25);
+  background: var(--accent-al);
 }
 
 html[data-bs-theme="dark"] #content-container h1 {
-  background: rgba(var(--accent-ig-rgb), 0.12);
-  border-color: rgba(var(--accent-ig-rgb), 0.2);
+  background: var(--accent-ig);
 }
 
 html[data-bs-theme="dark"] body.scheme-alevel #content-container h1 {
-  background: rgba(var(--accent-al-rgb), 0.12);
-  border-color: rgba(var(--accent-al-rgb), 0.2);
+  background: var(--accent-al);
 }
 
 /* IGCSE scheme: use IG accent color */
@@ -223,17 +220,18 @@ html[data-bs-theme="dark"] body.scheme-alevel #content-container h1::before {
   background: var(--accent-al);
 }
 
-/* H2: Unit/Paper level — tinted background card */
+/* H2: Topic level — light tinted background, dark text, accent left bar */
 #content-container h2 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: var(--text);
-  margin-top: 2rem !important;
-  margin-bottom: 0.9rem !important;
-  font-weight: 700;
-  padding: 0.75rem 1rem;
-  background: rgba(var(--accent-ig-rgb), 0.1);
-  border: 1px solid rgba(var(--accent-ig-rgb), 0.25);
-  border-radius: 8px;
+  margin-top: 1.75rem !important;
+  margin-bottom: 0.85rem !important;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  padding: 0.55rem 1rem 0.55rem 1.1rem;
+  background: rgba(var(--accent-ig-rgb), 0.08);
+  border-left: 4px solid var(--accent-ig);
+  border-radius: 0 8px 8px 0;
 }
 
 #content-container h2::before {
@@ -241,23 +239,23 @@ html[data-bs-theme="dark"] body.scheme-alevel #content-container h1::before {
 }
 
 body.scheme-igcse #content-container h2 {
-  background: rgba(var(--accent-ig-rgb), 0.1);
-  border-color: rgba(var(--accent-ig-rgb), 0.25);
+  background: rgba(var(--accent-ig-rgb), 0.08);
+  border-left-color: var(--accent-ig);
 }
 
 body.scheme-alevel #content-container h2 {
-  background: rgba(var(--accent-al-rgb), 0.1);
-  border-color: rgba(var(--accent-al-rgb), 0.25);
+  background: rgba(var(--accent-al-rgb), 0.08);
+  border-left-color: var(--accent-al);
 }
 
 html[data-bs-theme="dark"] #content-container h2 {
-  background: rgba(var(--accent-ig-rgb), 0.12);
-  border-color: rgba(var(--accent-ig-rgb), 0.2);
+  background: rgba(var(--accent-ig-rgb), 0.1);
+  border-left-color: var(--accent-ig);
 }
 
 html[data-bs-theme="dark"] body.scheme-alevel #content-container h2 {
-  background: rgba(var(--accent-al-rgb), 0.12);
-  border-color: rgba(var(--accent-al-rgb), 0.2);
+  background: rgba(var(--accent-al-rgb), 0.1);
+  border-left-color: var(--accent-al);
 }
 
 /* H3: Chapter/topic level — subtle left bar only */

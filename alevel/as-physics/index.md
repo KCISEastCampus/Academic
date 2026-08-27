@@ -11,14 +11,17 @@ permalink: /alevel/as-physics/
 > **Qualification**: OxfordAQA International AS Physics (9630) · Modular<br>
 > **Assessment**: Unit 1 (Mechanics, materials and atoms) + Unit 2 (Electricity, waves and particles) · 2h each · 80 marks each · 50% of AS each
 
-### 📘 Unit 1: Mechanics, Materials and Atoms
+# 📘 Unit 1: Mechanics, Materials and Atoms
+
 `(Specification Sections: 3.1, 3.2, 3.3)`
 
 ---
 
-#### 1. 📏 Measurements & Errors (3.1)
+## 1. 📏 Measurements & Errors (3.1)
 
-#### 1.1 SI Units and Prefixes
+
+### 1.1 SI Units and Prefixes
+
 * **Base Units**: Mass (kg), Length (m), Time (s), Current (A), Temperature (K), Amount of substance (mol).
 * **Prefixes**: You must be able to convert between these:
 
@@ -34,7 +37,8 @@ permalink: /alevel/as-physics/
 | pico | p | $10^{-12}$ |
 | femto | f | $10^{-15}$ |
 
-#### 1.2 Errors and Uncertainties
+### 1.2 Errors and Uncertainties
+
 * **Random Error**: Unpredictable fluctuations in readings. **Remedy**: Take repeat readings and calculate a mean.
 * **Systematic Error**: Readings differ from the true value by a consistent amount (e.g., Zero Error). **Remedy**: Calibrate equipment; cannot be fixed by repeats.
 * **Precision**: The degree of spread of repeated measurements (consistency).
@@ -56,9 +60,11 @@ permalink: /alevel/as-physics/
 
 ---
 
-#### 2. 🚜 Mechanics (3.2.1 – 3.2.8)
+## 2. 🚜 Mechanics (3.2.1 – 3.2.8)
 
-#### 2.1 Vectors and Moments
+
+### 2.1 Vectors and Moments
+
 * **Scalars vs Vectors**: Scalars have magnitude only (mass, speed); Vectors have magnitude and direction (force, velocity).
 * **Resolving Vectors**:
     * Horizontal component: $F_x = F \cos \theta$
@@ -67,7 +73,8 @@ permalink: /alevel/as-physics/
 * **Principle of Moments**: For an object in equilibrium, $\Sigma \text{Clockwise Moments} = \Sigma \text{Anticlockwise Moments}$.
 * **Couple**: Two equal and opposite coplanar forces. Moment = $F \times d$ (perpendicular distance between forces).
 
-#### 2.2 Kinematics (SUVAT)
+### 2.2 Kinematics (SUVAT)
+
 Equations for **uniform acceleration** (motion in a straight line):
 1.  $v = u + at$
 2.  $s = ut + \frac{1}{2}at^2$
@@ -79,18 +86,21 @@ Equations for **uniform acceleration** (motion in a straight line):
     * Gradient of **velocity-time** = Acceleration.
     * Area under **velocity-time** = Displacement.
 
-#### 2.3 Projectile Motion
+### 2.3 Projectile Motion
+
 Independent effect of motion in horizontal and vertical directions.
 * **Horizontal**: Constant velocity ($a=0$). Use $s = vt$.
 * **Vertical**: Constant acceleration ($a = g = 9.81 \text{ m s}^{-2}$). Use SUVAT.
 
-#### 2.4 Newton's Laws & Momentum
+### 2.4 Newton's Laws & Momentum
+
 * **Newton’s 2nd Law**: Rate of change of momentum is proportional to net force. $F = \frac{\Delta (mv)}{\Delta t}$ (or $F=ma$ if mass is constant).
 * **Momentum ($p$)**: $p = mv$. (Vector quantity).
 * **Impulse**: Change in momentum ($\Delta p = F \Delta t$). Equals area under Force-Time graph.
 * **Conservation of Momentum**: Total momentum before collision = Total momentum after collision (in a closed system).
 
-#### 2.5 Work, Energy and Power
+### 2.5 Work, Energy and Power
+
 * **Work Done**: $W = F s \cos \theta$.
 * **Power**: Rate of energy transfer. $P = \frac{\Delta W}{\Delta t} = Fv$.
 * **Efficiency**: $\frac{\text{Useful Output Power}}{\text{Input Power}} \times 100\%$.
@@ -109,9 +119,11 @@ Independent effect of motion in horizontal and vertical directions.
 
 ---
 
-#### 3. 🏗️ Materials (3.2.9 – 3.2.10)
+## 3. 🏗️ Materials (3.2.9 – 3.2.10)
 
-#### 3.1 Bulk Properties
+
+### 3.1 Bulk Properties
+
 * **Density ($\rho$)**: $\rho = \frac{m}{V}$.
 * **Hooke's Law**: $F = k \Delta L$ (Force $\propto$ Extension).
     * $k$ = Spring constant (stiffness).
@@ -119,7 +131,8 @@ Independent effect of motion in horizontal and vertical directions.
     * $E = \frac{1}{2}F \Delta L$ or $E = \frac{1}{2}k(\Delta L)^2$.
     * Equal to the **area under the Force-Extension graph**.
 
-#### 3.2 The Young Modulus
+### 3.2 The Young Modulus
+
 A measure of the stiffness of a material, independent of its dimensions.
 * **Tensile Stress ($\sigma$)**: Force per unit cross-sectional area. $\sigma = \frac{F}{A}$ (Unit: Pa or N m$^{-2}$).
 * **Tensile Strain ($\epsilon$)**: Extension per unit original length. $\epsilon = \frac{\Delta L}{L}$ (No units).
@@ -131,15 +144,18 @@ A measure of the stiffness of a material, independent of its dimensions.
 
 ---
 
-#### 4. ⚛️ Particles, Radiation & Radioactivity (3.3)
+## 4. ⚛️ Particles, Radiation & Radioactivity (3.3)
 
-#### 4.1 Constituents of the Atom
+
+### 4.1 Constituents of the Atom
+
 * **Structure**: Protons and Neutrons in the nucleus; Electrons in shells.
 * **Specific Charge**: Charge-to-mass ratio of a particle or nucleus.
     $$\text{Specific Charge} = \frac{\text{Charge (C)}}{\text{Mass (kg)}}$$
 * **Notation**: $_Z^A\text{X}$ where $A$ = Nucleon number (Mass number), $Z$ = Proton number (Atomic number).
 
-#### 4.2 Particles and Antiparticles
+### 4.2 Particles and Antiparticles
+
 * Every particle has an **antiparticle** with the same mass and rest energy but opposite charge.
     * Electron ($e^-$) $\leftrightarrow$ Positron ($e^+$)
     * Proton ($p$) $\leftrightarrow$ Antiproton ($\bar{p}$)
@@ -147,7 +163,8 @@ A measure of the stiffness of a material, independent of its dimensions.
 * **Annihilation**: Particle and antiparticle collide $\rightarrow$ Mass converted to energy (2 photons).
 * **Pair Production**: A high-energy photon converts into a particle-antiparticle pair.
 
-#### 4.3 Radioactivity
+### 4.3 Radioactivity
+
 * **Decay Modes**:
     * **Alpha ($\alpha$)**: $_2^4\text{He}$. Highly ionising, low penetration (stopped by paper).
     * **Beta-minus ($\beta^-$)**: Electron. Neutron turns into proton. $_0^1n \rightarrow _1^1p + _{-1}^0e + \bar{\nu}_e$ (Antineutrino).
@@ -169,25 +186,30 @@ A measure of the stiffness of a material, independent of its dimensions.
 
 ---
 
-#### 🧪 Key Required Practicals (Unit 1)
+## 🧪 Key Required Practicals (Unit 1)
+
 1.  **Determination of $g$ by freefall**: Plot $s$ against $t^2$. Gradient $= g/2$.
 2.  **Young Modulus of a wire**: Measure diameter (micrometer), length, and extension. Plot Stress vs Strain. Gradient $= E$.
 
 ---
 
-### ⚡ Unit 2: Electricity, Waves and Particles
+# ⚡ Unit 2: Electricity, Waves and Particles
+
 `(Specification Sections: 3.4, 3.5)`
 
 ---
 
-#### 5. 🔌 Electricity (3.4)
+## 5. 🔌 Electricity (3.4)
 
-#### 5.1 Basics of Electricity
+
+### 5.1 Basics of Electricity
+
 * **Electric Current ($I$)**: Rate of flow of charge. $$I = \frac{Q}{t}$$
 * **Potential Difference ($V$)**: Work done per unit charge. $$V = \frac{W}{Q}$$
 * **Resistance ($R$)**: Defined as the ratio of potential difference to current. $$R = \frac{V}{I}$$
 
-#### 5.2 Current–Voltage Characteristics
+### 5.2 Current–Voltage Characteristics
+
 * **Ohm's Law**: $I \propto V$ under constant physical conditions (a special case for ohmic conductors).
 * **Ohmic conductor**: Linear $I$–$V$ graph through origin.
 * **Semiconductor diode**: Current flows in one direction only; negligible current in reverse bias.
@@ -196,13 +218,15 @@ A measure of the stiffness of a material, independent of its dimensions.
 
 > **📝 Note**: Questions can be set with either $I$ or $V$ on the horizontal axis of the characteristic graph.
 
-#### 5.3 Resistivity
+### 5.3 Resistivity
+
 * **Resistivity ($\rho$)**: A material property. $$\rho = \frac{RA}{L}$$
 * **Effect of temperature on resistance**:
     * **Metal conductors**: Resistance **increases** with temperature (more lattice vibrations scatter electrons).
     * **Thermistors**: **Negative temperature coefficient (ntc)** only — resistance **decreases** as temperature rises.
 
-#### 5.4 Circuits
+### 5.4 Circuits
+
 * **Resistors in series**: $$R_T = R_1 + R_2 + R_3 + \dots$$
 * **Resistors in parallel**: $$\frac{1}{R_T} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + \dots$$
 * **Energy and power**: $$E = IVt, \qquad P = IV = I^2R = \frac{V^2}{R}$$
@@ -211,13 +235,15 @@ A measure of the stiffness of a material, independent of its dimensions.
     * **Charge**: Current divides at junctions (Kirchhoff's current law).
     * **Energy**: Sum of potential differences around a loop equals the applied emf.
 
-#### 5.5 Potential Divider
+### 5.5 Potential Divider
+
 * Used to supply a **constant or variable potential difference** from a power supply.
 * The potentiometer as a measuring instrument is **not required**.
 * Common applications: **variable resistors, thermistors, and light dependent resistors (LDR)** in the divider circuit.
 * For a divider: output voltage $V_{\text{out}} = V_{\text{in}} \times \frac{R_2}{R_1 + R_2}$.
 
-#### 5.6 Electromotive Force and Internal Resistance
+### 5.6 Electromotive Force and Internal Resistance
+
 * **emf ($\varepsilon$)**: Energy transferred per unit charge from the source. $$\varepsilon = \frac{E}{Q}$$
 * **Internal resistance ($r$)**: $$ \varepsilon = I(R + r)$$
 * **Terminal pd** $= \varepsilon - Ir$ — internal resistance causes the terminal pd to **drop** as current increases.
@@ -236,9 +262,11 @@ A measure of the stiffness of a material, independent of its dimensions.
 
 ---
 
-#### 6. 🌊 Oscillations and Waves (3.5)
+## 6. 🌊 Oscillations and Waves (3.5)
 
-#### 6.1 Oscillating Systems
+
+### 6.1 Oscillating Systems
+
 * **Mass–spring system**: $$T = 2\pi\sqrt{\frac{m}{k}}$$
 * **Simple pendulum**: $$T = 2\pi\sqrt{\frac{l}{g}}$$
 * **Energy variation**: $E_k$ and $E_p$ interchange; total energy remains constant (in SHM).
@@ -246,51 +274,59 @@ A measure of the stiffness of a material, independent of its dimensions.
 
 **Required Practical 4 🧪**: Investigation into simple harmonic systems using a mass-spring system and a simple pendulum.
 
-#### 6.2 Forced Vibrations and Resonance
+### 6.2 Forced Vibrations and Resonance
+
 * **Free vibrations**: Oscillate at the natural frequency.
 * **Forced vibrations**: Driven at the driving frequency.
 * **Resonance**: Large-amplitude oscillation when driving frequency $\approx$ natural frequency.
 * **Damping** reduces the sharpness of the resonance peak.
 * Examples: mechanical systems and situations involving stationary waves.
 
-#### 6.3 Progressive Waves
+### 6.3 Progressive Waves
+
 * Oscillation of particles of the medium (energy transfer without net mass transfer).
 * Key quantities: **amplitude, frequency, wavelength, speed, phase, phase difference**.
 * **Wave equation**: $$c = f\lambda, \qquad f = \frac{1}{T}$$
 * **Phase difference**: measured in radians/degrees or as fractions of a cycle.
 
-#### 6.4 Longitudinal and Transverse Waves
+### 6.4 Longitudinal and Transverse Waves
+
 * **Transverse**: particles oscillate perpendicular to energy propagation (e.g., waves on a string, EM waves).
 * **Longitudinal**: particles oscillate parallel to energy propagation (e.g., sound).
 * All electromagnetic waves travel at the same speed in a vacuum.
 * Use of **ultrasound** in medicine.
 
-#### 6.5 Principle of Superposition and Stationary Waves
+### 6.5 Principle of Superposition and Stationary Waves
+
 * **Superposition**: when two waves meet, their displacements add.
 * **Stationary waves**: formed by two waves of the same frequency travelling in opposite directions.
 * **Nodes** (no displacement) and **antinodes** (maximum displacement) on strings.
 * **First harmonic** on a string: $$f = \frac{1}{2l}\sqrt{\frac{T}{\mu}}$$
 
-#### 6.6 Interference
+### 6.6 Interference
+
 * **Path difference** and **coherence**.
 * **Young's double-slit experiment**: two coherent sources (or single source + double slits) produce an interference pattern.
 * **Fringe spacing**: $$w = \frac{\lambda D}{s}$$
 * **White light** produces a pattern with coloured fringes (central white fringe).
 * ⚠️ Be aware of **safety issues** associated with lasers.
 
-#### 6.7 Diffraction
+### 6.7 Diffraction
+
 * **Single slit**: diffraction pattern with a central maximum and weaker side maxima.
 * Central maximum width varies with wavelength (longer $\lambda$ → wider) and slit width (narrower slit → wider).
 * **Diffraction grating** at normal incidence: $$d\sin\theta = n\lambda$$
 * Applications of diffraction gratings (e.g., spectroscopy). The spectrometer is **not tested**.
 
-#### 6.8 Refraction at a Plane Surface
+### 6.8 Refraction at a Plane Surface
+
 * **Refractive index**: $$n = \frac{c}{c_s}$$ (refractive index of air $\approx 1$).
 * **Snell's law**: $$n_1\sin\theta_1 = n_2\sin\theta_2$$
 * **Total internal reflection**: $$\sin c = \frac{n_2}{n_1}$$
 * **Fibre optics**: function of the cladding (lower refractive index, protects, prevents signal loss).
 
-#### 6.9 Collisions of Electrons with Atoms
+### 6.9 Collisions of Electrons with Atoms
+
 * **Ionisation** and **excitation** — e.g., in a fluorescent tube.
 * **The electron volt (eV)**: energy gained by an electron accelerated through 1 V. $1 \text{ eV} = 1.6 \times 10^{-19} \text{ J}$.
 * **Line spectra** (e.g., atomic hydrogen) as evidence for transitions between discrete energy levels.
@@ -298,7 +334,8 @@ A measure of the stiffness of a material, independent of its dimensions.
 * **X-rays**: characteristic and line spectrum; basic structure and operation of an X-ray tube; medical applications.
 * Be able to convert between eV and J.
 
-#### 6.10 Photoelectric Effect
+### 6.10 Photoelectric Effect
+
 * **Photon model** of electromagnetic radiation; Planck constant.
     $$E = hf = \frac{hc}{\lambda}$$
 * **Photoelectric effect**: emission of electrons when light (above threshold frequency) hits a metal surface.
@@ -307,7 +344,8 @@ A measure of the stiffness of a material, independent of its dimensions.
 * **Stopping potential**: voltage needed to stop the most energetic photoelectrons.
     $$hf = \phi + E_{k,\text{max}}$$
 
-#### 6.11 Wave–Particle Duality
+### 6.11 Wave–Particle Duality
+
 * **Electron diffraction** → particles possess wave properties.
 * **Photoelectric effect** → electromagnetic waves have a particulate nature.
 * **de Broglie equation**: $$\lambda = \frac{h}{mv}$$ where $mv$ is the momentum.
@@ -324,6 +362,7 @@ A measure of the stiffness of a material, independent of its dimensions.
 
 ---
 
-#### 🧪 Key Required Practicals (Unit 2)
+## 🧪 Key Required Practicals (Unit 2)
+
 1.  **emf and internal resistance**: Measure terminal pd at different currents; gradient of $V$–$I$ graph $= -r$.
 2.  **Simple harmonic systems**: Mass-spring and simple pendulum; measure $T$ and compare with theory.

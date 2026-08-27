@@ -13,18 +13,22 @@ redirect_from:
 > **Qualification**: OxfordAQA International AS Further Mathematics (9665) · Modular<br>
 > **Assessment**: Unit FP1 + Unit FPSM1 · 1h 30m each · 80 marks each · 50% of AS each
 
-### 🏗️ AS Level Course Structure
+# 🏗️ AS Level Course Structure
 
-#### Two Compulsory Units:
 
-##### Unit FP1: Pure Mathematics
+## Two Compulsory Units:
+
+
+### Unit FP1: Pure Mathematics
+
 - **Duration**: 1 hour 30 minutes
 - **Marks**: 80
 - **Weighting**: 50% of AS, 20% of A-level
 - **Calculator**: Allowed
 - **Focus**: Advanced algebra, complex numbers, series, calculus
 
-##### Unit FPSM1: Pure Mathematics, Statistics and Mechanics
+### Unit FPSM1: Pure Mathematics, Statistics and Mechanics
+
 - **Duration**: 1 hour 30 minutes
 - **Marks**: 80
 - **Weighting**: 50% of AS, 20% of A-level
@@ -36,10 +40,13 @@ redirect_from:
 
 ---
 
-### 📘 Unit FP1: Pure Mathematics
-#### 1. Algebra and Graphs (FP1.1)
+# 📘 Unit FP1: Pure Mathematics
 
-##### 1.1 Rational Functions - Complete Foundation
+## 1. Algebra and Graphs (FP1.1)
+
+
+### 1.1 Rational Functions - Complete Foundation
+
 
 **Basic Forms:**
 
@@ -104,7 +111,8 @@ Therefore: $k ≤ -1$ or $k ≥ \frac{1}{2}$
 
 Stationary points occur at boundaries: $(1, -1)$ and $(-2, \frac{1}{2})$
 
-##### 1.2 Conic Sections - Deep Understanding
+### 1.2 Conic Sections - Deep Understanding
+
 
 The four main conic sections have distinct geometric properties:
 
@@ -132,9 +140,11 @@ The four main conic sections have distinct geometric properties:
 
 ---
 
-#### 2. Coordinate Geometry (FP1.2)
+## 2. Coordinate Geometry (FP1.2)
 
-##### Locus Problems - Systematic Approach
+
+### Locus Problems - Systematic Approach
+
 
 **Distance Formulas:**
 
@@ -173,8 +183,10 @@ This is the equation of a parabola.
 
 ---
 
-#### 3. Complex Numbers (FP1.3)
-##### 3.1 What are Complex Numbers?
+## 3. Complex Numbers (FP1.3)
+
+### 3.1 What are Complex Numbers?
+
 
 (Tips: Real Part function and Imaginary Part function looks like $$\Re(z)$$ and $$\Im(z)$$ in computer respectively.)
 
@@ -184,7 +196,8 @@ This is the equation of a parabola.
 - Real part: $$\Re(z) = x$$
 - Imaginary part: $$\Im(z) = y$$
 
-##### 3.2 Basic Operations - Step by Step
+### 3.2 Basic Operations - Step by Step
+
 
 **Addition:**
 $$(a + bi) + (c + di) = (a + c) + (b + d)i$$
@@ -209,7 +222,8 @@ $$\frac{a + bi}{c + di} × \frac{c - di}{c - di} = \frac{(a + bi)(c - di)}{c^2 +
 
 $$\frac{3 + 2i}{1 - i} = \frac{(3 + 2i)(1 + i)}{(1 - i)(1 + i)} = \frac{3 + 3i + 2i + 2i^2}{1 + 1} = \frac{1 + 5i}{2}$$
 
-##### 3.3 Different Forms of Complex Numbers
+### 3.3 Different Forms of Complex Numbers
+
 
 **Cartesian Form:**
 $$z = x + iy$$
@@ -234,7 +248,8 @@ For $3 + 4i$:
 For $2(\cos 60° + i\sin 60°)$:
 $$2(0.5 + i\tfrac{\sqrt{3}}{2}) = 1 + i\sqrt{3}$$
 
-##### 3.4 Complex Conjugates
+### 3.4 Complex Conjugates
+
 
 **Definition:**
 
@@ -246,7 +261,8 @@ If $z = x + iy$, then the conjugate $z^* = x - iy$
 - $$z - z^* = 2i\Im(z)$$
 - $$zz^* = \lvert z\rvert^2 = x^2 + y^2$$
 
-##### 3.5 Argand Diagram and Loci
+### 3.5 Argand Diagram and Loci
+
 
 **Basic Loci Equations**
 
@@ -279,9 +295,11 @@ Fixed angle $θ$ emanating from point $a$
 
 ---
 
-#### 4. Roots and Coefficients (FP1.4)
+## 4. Roots and Coefficients (FP1.4)
 
-##### 4.1 Fundamental Relationships
+
+### 4.1 Fundamental Relationships
+
 
 For quadratic equation $$ax^2 + bx + c = 0$$ with roots $α$ and $β$:
 
@@ -291,7 +309,8 @@ $$α + β = -\frac{b}{a}$$
 **Product of roots:**
 $$αβ = \frac{c}{a}$$
 
-##### 4.2 Advanced Manipulations
+### 4.2 Advanced Manipulations
+
 
 **Common Expressions** (derived from sum and product):
 
@@ -303,7 +322,8 @@ $$α^4 + β^4 = (α^2 + β^2)^2 - 2(αβ)^2$$
 
 $$\frac{1}{α} + \frac{1}{β} = \frac{α + β}{αβ}$$
 
-##### 4.3 Forming New Equations
+### 4.3 Forming New Equations
+
 
 **Process** for equations with transformed roots:
 
@@ -324,9 +344,11 @@ $$x^2 - (S^3 - 3PS)x + P^3 = 0$$
 
 ---
 
-#### 5. Series (FP1.5)
+## 5. Series (FP1.5)
 
-##### 5.1 Essential Summation Formulas
+
+### 5.1 Essential Summation Formulas
+
 
 **Must Memorize** these three fundamental results:
 
@@ -336,7 +358,8 @@ $$\sum_{r=1}^n r^2 = \frac{n(n+1)(2n+1)}{6}$$
 
 $$\sum_{r=1}^n r^3 = \left[\frac{n(n+1)}{2}\right]^2$$
 
-##### 5.2 Method of Differences
+### 5.2 Method of Differences
+
 
 **Principle:** Express terms as differences of consecutive terms in a sequence
 
@@ -361,7 +384,8 @@ $$1 - \frac{1}{n+1} = \frac{n}{n+1}$$
 
 ---
 
-##### 5.3 Advanced Summation Examples
+### 5.3 Advanced Summation Examples
+
 
 **Example 1:**
 
@@ -383,9 +407,11 @@ After applying the telescoping technique, the sum simplifies to a manageable for
 
 ---
 
-#### 6. Trigonometry (FP1.6) - General Solutions
+## 6. Trigonometry (FP1.6) - General Solutions
 
-##### 6.1 Solving Trigonometric Equations
+
+### 6.1 Solving Trigonometric Equations
+
 
 **General Solutions Formulas:**
 
@@ -403,7 +429,8 @@ $$\text{where } α = \tan^{-1}k$$
 
 ---
 
-##### 6.2 Exact Values - Must Know
+### 6.2 Exact Values - Must Know
+
 
 **Standard Angles:**
 
@@ -417,7 +444,8 @@ $$\text{where } α = \tan^{-1}k$$
 
 ---
 
-##### 6.3 Worked Examples
+### 6.3 Worked Examples
+
 
 **Example 1:** Solve $\sin 2x = \frac{\sqrt{3}}{2}$
 
@@ -443,9 +471,11 @@ $$x = 2nπ + \frac{3π}{4} - \frac{π}{6} \quad \text{or} \quad x = 2nπ - \frac
 
 ---
 
-#### 7. Calculus (FP1.7)
+## 7. Calculus (FP1.7)
 
-##### 7.1 First Principles Differentiation
+
+### 7.1 First Principles Differentiation
+
 
 **Definition:**
 $$f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}$$
@@ -468,7 +498,8 @@ Therefore, $f'(x) = 2x$
 
 ---
 
-##### 7.2 Connected Rates of Change
+### 7.2 Connected Rates of Change
+
 
 Using the chain rule to relate rates of change of different variables:
 
@@ -484,7 +515,8 @@ This shows how the rate of change of pressure depends on both the current volume
 
 ---
 
-##### 7.3 Small Changes
+### 7.3 Small Changes
+
 
 For small changes in independent variable, we can estimate changes in dependent variable:
 
@@ -510,7 +542,8 @@ Therefore, $y$ decreases by approximately $0.032$ when $x$ increases to $5.1$.
 
 ---
 
-##### 7.4 Improper Integrals
+### 7.4 Improper Integrals
+
 
 **Type 1**: Infinite limits $$\int_a^∞ f(x)dx = \lim\limits_{b \to ∞} \int_a^b f(x)dx$$
 
@@ -522,28 +555,35 @@ Therefore, $y$ decreases by approximately $0.032$ when $x$ increases to $5.1$.
 
 ---
 
-### 📗 Unit FPSM1: Pure Mathematics, Statistics and Mechanics
+# 📗 Unit FPSM1: Pure Mathematics, Statistics and Mechanics
 
-#### FPP1.1: Matrices and Transformations
 
-##### 1.1 Matrix Algebra
+## FPP1.1: Matrices and Transformations
 
-##### Definitions
+
+### 1.1 Matrix Algebra
+
+
+### Definitions
+
 A **matrix** is a rectangular array of numbers. An $m \times n$ matrix has $m$ rows and $n$ columns.
 
-##### Addition and Subtraction
+### Addition and Subtraction
+
 Matrices can be added or subtracted only if they have the same dimensions. Add or subtract corresponding elements.
 
 **Example**:
 $$\begin{pmatrix} 2 & -1 \\ 3 & 0 \end{pmatrix} + \begin{pmatrix} 1 & 4 \\ -2 & 5 \end{pmatrix} = \begin{pmatrix} 3 & 3 \\ 1 & 5 \end{pmatrix}$$
 
-##### Scalar Multiplication
+### Scalar Multiplication
+
 Multiply every element by the scalar.
 
 **Example**:
 $$3\begin{pmatrix} 2 & -1 \\ 0 & 4 \end{pmatrix} = \begin{pmatrix} 6 & -3 \\ 0 & 12 \end{pmatrix}$$
 
-##### Matrix Multiplication
+### Matrix Multiplication
+
 For $A_{m \times n}$ and $B_{n \times p}$, the product $C = AB$ is $m \times p$ where:
 $$c_{ij} = \sum_{k=1}^{n} a_{ik} b_{kj}$$
 
@@ -552,13 +592,15 @@ $$c_{ij} = \sum_{k=1}^{n} a_{ik} b_{kj}$$
 **Example**:
 $$\begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix} \begin{pmatrix} 5 & 6 \\ 7 & 8 \end{pmatrix} = \begin{pmatrix} 1\times5 + 2\times7 & 1\times6 + 2\times8 \\ 3\times5 + 4\times7 & 3\times6 + 4\times8 \end{pmatrix} = \begin{pmatrix} 19 & 22 \\ 43 & 50 \end{pmatrix}$$
 
-##### Identity Matrix
+### Identity Matrix
+
 The $n \times n$ identity matrix $I_n$ has 1s on the main diagonal and 0s elsewhere.
 $$I_2 = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}, \quad I_3 = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix}$$
 
 For any matrix $A$, $AI = IA = A$ (provided dimensions are compatible).
 
-##### Inverse of a $2 \times 2$ Matrix
+### Inverse of a $2 \times 2$ Matrix
+
 For $A = \begin{pmatrix} a & b \\\\ c & d \end{pmatrix}$:
 - **Determinant**: $\det(A) = ad - bc$
 - If $\det(A) \neq 0$, $A$ is **non-singular** and has an inverse:
@@ -576,7 +618,8 @@ $\det(A) = 2\times3 - 1\times5 = 6 - 5 = 1$
 
 $$A^{-1} = \frac{1}{1} \begin{pmatrix} 3 & -1 \\ -5 & 2 \end{pmatrix} = \begin{pmatrix} 3 & -1 \\ -5 & 2 \end{pmatrix}$$
 
-##### Transpose of a Matrix
+### Transpose of a Matrix
+
 The transpose $A^T$ is obtained by swapping rows and columns.
 - $(A^T)\_{ij} = A\_{ji}$
 - $(AB)^T = B^T A^T$
@@ -584,12 +627,14 @@ The transpose $A^T$ is obtained by swapping rows and columns.
 
 ---
 
-##### 1.2 Transformations in the $x$-$y$ Plane
+### 1.2 Transformations in the $x$-$y$ Plane
+
 
 A $2 \times 2$ matrix $M$ represents a linear transformation mapping a point $(x,y)$ to $(x',y')$:
 $$\begin{pmatrix} x' \\ y' \end{pmatrix} = M \begin{pmatrix} x \\ y \end{pmatrix}$$
 
-##### Standard Transformation Matrices
+### Standard Transformation Matrices
+
 
 | Transformation | Matrix | Effect on Point |
 |----------------|--------|-----------------|
@@ -611,7 +656,8 @@ $$\begin{pmatrix} x' \\ y' \end{pmatrix} = M \begin{pmatrix} x \\ y \end{pmatrix
 | Parallel to $x$-axis (factor $k$) | $\begin{pmatrix} 1 & k \\\\ 0 & 1 \end{pmatrix}$ | $(x,y) \to (x+ky, y)$ |
 | Parallel to $y$-axis (factor $k$) | $\begin{pmatrix} 1 & 0 \\\\ k & 1 \end{pmatrix}$ | $(x,y) \to (x, kx+y)$ |
 
-##### Combinations of Transformations
+### Combinations of Transformations
+
 If transformation $T_1$ has matrix $M_1$ and $T_2$ has matrix $M_2$, then applying $T_1$ **followed by** $T_2$ gives:
 $$\begin{pmatrix} x' \\ y' \end{pmatrix} = M_2 M_1 \begin{pmatrix} x \\ y \end{pmatrix}$$
 **Order matters**: $M_2 M_1$ means apply $M_1$ first, then $M_2$.
@@ -624,7 +670,8 @@ Reflection in $x$-axis: $S = \begin{pmatrix} 1 & 0 \\\\ 0 & -1 \end{pmatrix}$
 
 Combined: $SR = \begin{pmatrix} 1 & 0 \\\\ 0 & -1 \end{pmatrix} \begin{pmatrix} 0 & -1 \\\\ 1 & 0 \end{pmatrix} = \begin{pmatrix} 0 & -1 \\\\ -1 & 0 \end{pmatrix}$
 
-##### Determinant and Area Scale Factor
+### Determinant and Area Scale Factor
+
 For a $2 \times 2$ matrix $M$:
 - $\lvert \det(M) \rvert$ = factor by which area is scaled
 - If $\det(M) = 0$, the transformation maps the plane onto a line (singular)
@@ -634,9 +681,11 @@ For a $2 \times 2$ matrix $M$:
 
 ---
 
-##### 1.3 Invariant Points and Lines
+### 1.3 Invariant Points and Lines
 
-##### Invariant Points
+
+### Invariant Points
+
 A point $\mathbf{x}$ is **invariant** if $M\mathbf{x} = \mathbf{x}$.
 
 **Method**: Solve $(M - I)\mathbf{x} = \mathbf{0}$.
@@ -649,10 +698,12 @@ Solve $\begin{pmatrix} -1 & 1 \\\\ 1 & -1 \end{pmatrix} \begin{pmatrix} x \\\\ y
 
 Thus all points on the line $y = x$ are invariant (the mirror line itself).
 
-##### Lines of Invariant Points
+### Lines of Invariant Points
+
 A **line of invariant points** means every point on that line is individually invariant (maps to itself).
 
-##### Invariant Lines
+### Invariant Lines
+
 A line (through the origin) is **invariant** if every point on the line maps to another point on the same line (not necessarily the same point).
 
 **Method**: Let the line be $y = mx$. Any point on it is $(t, mt)$. After transformation, we require the image to satisfy $y' = m x'$.
@@ -671,26 +722,32 @@ Thus invariant lines: $y = 0$ and $x = 0$.
 
 ---
 
-#### FPP1.2: Linear Graphs – Reducing to Linear Form
+## FPP1.2: Linear Graphs – Reducing to Linear Form
 
-##### 2.1 Transforming Non-Linear Relationships
+
+### 2.1 Transforming Non-Linear Relationships
+
 
 When experimental data suggests a relationship of the form $y = kx^n$ or $y = k \cdot a^x$, we can take logarithms to obtain a linear equation.
 
-##### Case 1: Power Law $y = kx^n$
+### Case 1: Power Law $y = kx^n$
+
 Take natural logs (or $\log_{10}$):
 $$\ln y = \ln k + n \ln x$$
 Plot $\ln y$ against $\ln x$: gradient $= n$, intercept $= \ln k$.
 
-##### Case 2: Exponential Law $y = k \cdot a^x$
+### Case 2: Exponential Law $y = k \cdot a^x$
+
 Take logs:
 $$\ln y = \ln k + x \ln a$$
 Plot $\ln y$ against $x$: gradient $= \ln a$, intercept $= \ln k$.
 
-##### Case 3: Reciprocal Relationship $\frac{1}{y} = a + \frac{b}{x}$
+### Case 3: Reciprocal Relationship $\frac{1}{y} = a + \frac{b}{x}$
+
 Plot $\frac{1}{y}$ against $\frac{1}{x}$: gradient $= b$, intercept $= a$.
 
-##### Case 4: Quadratic Form $y^2 = ax^3 + b$
+### Case 4: Quadratic Form $y^2 = ax^3 + b$
+
 Plot $y^2$ against $x^3$: gradient $= a$, intercept $= b$.
 
 **Worked Example**:
@@ -715,13 +772,16 @@ Thus $y = 2.5x^2$.
 
 ---
 
-#### FPP1.3: Numerical Methods
+## FPP1.3: Numerical Methods
 
-##### 3.1 Location of Roots
+
+### 3.1 Location of Roots
+
 
 If $f(x)$ is continuous on $[a,b]$ and $f(a)$ and $f(b)$ have opposite signs, then there is at least one root in $(a,b)$.
 
-##### 3.2 Interval Bisection
+### 3.2 Interval Bisection
+
 
 **Algorithm**:
 1. Find interval $[a,b]$ where $f(a)f(b) < 0$
@@ -743,7 +803,8 @@ If $f(x)$ is continuous on $[a,b]$ and $f(a)$ and $f(b)$ have opposite signs, th
 
 After 5 iterations, root ≈ 1.324 (accurate to 0.03).
 
-##### 3.3 Linear Interpolation
+### 3.3 Linear Interpolation
+
 
 Use similar triangles to estimate root:
 $$c = a - \frac{f(a)(b-a)}{f(b)-f(a)}$$
@@ -755,7 +816,8 @@ $$c = 1 - \frac{(-1)(2-1)}{5 - (-1)} = 1 - \frac{-1}{6} = 1 + \frac{1}{6} = 1.16
 
 This is often faster than bisection but less reliable.
 
-##### 3.4 Newton-Raphson Method
+### 3.4 Newton-Raphson Method
+
 
 **Formula**:
 $$x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$$
@@ -780,7 +842,8 @@ Converges rapidly to root ≈ 1.3247.
 
 ---
 
-##### 3.5 Euler's Method for Differential Equations
+### 3.5 Euler's Method for Differential Equations
+
 
 Given $\frac{dy}{dx} = f(x,y)$ with initial condition $(x_0, y_0)$ and step size $h$:
 
@@ -805,20 +868,24 @@ Thus $y(0.3) \approx 1.362$.
 
 ---
 
-#### FS1.1: Bayes' Theorem
+## FS1.1: Bayes' Theorem
 
-##### 1.1 Conditional Probability Review
+
+### 1.1 Conditional Probability Review
+
 
 $$P(A \mid B) = \frac{P(A \cap B)}{P(B)}$$
 
 **Multiplication Rule**: $P(A \cap B) = P(A \mid B)P(B) = P(B \mid A)P(A)$
 
-##### 1.2 Law of Total Probability
+### 1.2 Law of Total Probability
+
 
 For a partition of the sample space into events $A_1, A_2, \dots, A_n$:
 $$P(B) = \sum_{i=1}^n P(B \mid A_i)P(A_i)$$
 
-##### 1.3 Bayes' Theorem
+### 1.3 Bayes' Theorem
+
 
 $$P(A_i \mid B) = \frac{P(B \mid A_i)P(A_i)}{\sum_{j=1}^n P(B \mid A_j)P(A_j)}$$
 
@@ -843,7 +910,8 @@ $P(D) = 0.4\times0.02 + 0.35\times0.03 + 0.25\times0.04 = 0.008 + 0.0105 + 0.01 
 
 $P(A \mid D) = \frac{0.4 \times 0.02}{0.0285} = \frac{0.008}{0.0285} = 0.2807$
 
-##### 1.4 Tree Diagrams
+### 1.4 Tree Diagrams
+
 
 Bayes' theorem problems are often solved using tree diagrams:
 - First branch: probabilities of $A_i$
@@ -853,23 +921,28 @@ Bayes' theorem problems are often solved using tree diagrams:
 
 ---
 
-#### FS1.2: Uniform Distribution (Continuous)
+## FS1.2: Uniform Distribution (Continuous)
 
-##### 2.1 Definition
+
+### 2.1 Definition
+
 
 A continuous random variable $X$ has a **uniform distribution** on $[a,b]$ if all values in the interval are equally likely.
 
 **Notation**: $X \sim U(a,b)$
 
-##### 2.2 Probability Density Function (PDF)
+### 2.2 Probability Density Function (PDF)
+
 
 $$f(x) = \begin{cases} \frac{1}{b-a}, & a \leq x \leq b \\ 0, & \text{otherwise} \end{cases}$$
 
-##### 2.3 Cumulative Distribution Function (CDF)
+### 2.3 Cumulative Distribution Function (CDF)
+
 
 $$F(x) = \begin{cases} 0, & x < a \\ \frac{x-a}{b-a}, & a \leq x \leq b \\ 1, & x > b \end{cases}$$
 
-##### 2.4 Mean and Variance
+### 2.4 Mean and Variance
+
 
 $$E(X) = \frac{a+b}{2}$$
 
@@ -881,7 +954,8 @@ $$E(X^2) = \int_a^b x^2 \cdot \frac{1}{b-a} \, dx = \frac{1}{b-a} \left[ \frac{x
 
 $$\text{Var}(X) = E(X^2) - [E(X)]^2 = \frac{a^2 + ab + b^2}{3} - \left(\frac{a+b}{2}\right)^2 = \frac{(b-a)^2}{12}$$
 
-##### 2.5 Probability Calculations
+### 2.5 Probability Calculations
+
 
 $$P(c \leq X \leq d) = \frac{d-c}{b-a} \quad \text{for } a \leq c < d \leq b$$
 
@@ -891,27 +965,32 @@ $P(X > 5) = \frac{8-5}{8-2} = \frac{3}{6} = 0.5$
 
 ---
 
-#### FS1.3: Geometric Distribution
+## FS1.3: Geometric Distribution
 
-##### 3.1 Definition
+
+### 3.1 Definition
+
 
 The geometric distribution models the number of trials needed to achieve the **first success** in a sequence of independent Bernoulli trials, each with probability of success $p$.
 
 **Notation**: $X \sim \text{Geom}(p)$
 
-##### 3.2 Probability Mass Function
+### 3.2 Probability Mass Function
+
 
 $$P(X = k) = (1-p)^{k-1}p, \quad k = 1, 2, 3, \dots$$
 
 **Interpretation**: First $k-1$ trials are failures (probability $1-p$ each), then the $k$th trial is a success (probability $p$).
 
-##### 3.3 Cumulative Distribution Function
+### 3.3 Cumulative Distribution Function
+
 
 $$P(X \leq k) = 1 - (1-p)^k$$
 
 $$P(X > k) = (1-p)^k$$
 
-##### 3.4 Mean and Variance
+### 3.4 Mean and Variance
+
 
 $$E(X) = \frac{1}{p}$$
 
@@ -922,7 +1001,8 @@ $$E(X) = \sum_{k=1}^\infty k(1-p)^{k-1}p = p \sum_{k=1}^\infty k(1-p)^{k-1}$$
 Using $\sum_{k=1}^\infty k r^{k-1} = \frac{1}{(1-r)^2}$ for $\lvert r \rvert < 1$:
 $$E(X) = p \cdot \frac{1}{[1-(1-p)]^2} = p \cdot \frac{1}{p^2} = \frac{1}{p}$$
 
-##### 3.5 Memoryless Property
+### 3.5 Memoryless Property
+
 
 $$P(X > m+n \mid X > m) = P(X > n)$$
 
@@ -934,16 +1014,19 @@ $P(X = 4) = (0.8)^3 \times 0.2 = 0.512 \times 0.2 = 0.1024$
 
 ---
 
-#### FS1.4: Probability Generating Functions (PGF)
+## FS1.4: Probability Generating Functions (PGF)
 
-##### 4.1 Definition
+
+### 4.1 Definition
+
 
 For a discrete random variable $X$ taking non-negative integer values, the **probability generating function** is:
 $$G_X(t) = E(t^X) = \sum_{x=0}^\infty t^x P(X = x)$$
 
 $t$ is a dummy variable; the series converges for $\lvert t \rvert \leq 1$.
 
-##### 4.2 Properties
+### 4.2 Properties
+
 
 **Property 1**: $G_X(1) = \sum_{x=0}^\infty P(X = x) = 1$
 
@@ -960,7 +1043,8 @@ $G_X'(t) = \sum_{x=0}^\infty x t^{x-1} P(X = x)$, so $G_X'(1) = \sum x P(X = x) 
 $G_X''(t) = \sum_{x=0}^\infty x(x-1) t^{x-2} P(X = x)$, so $G_X''(1) = E(X(X-1))$
 Then $\text{Var}(X) = E(X^2) - [E(X)]^2 = E(X(X-1)) + E(X) - [E(X)]^2$
 
-##### 4.3 PGFs for Common Distributions
+### 4.3 PGFs for Common Distributions
+
 
 | Distribution | PGF $G_X(t)$ |
 |--------------|--------------|
@@ -973,7 +1057,8 @@ Then $\text{Var}(X) = E(X^2) - [E(X)]^2 = E(X(X-1)) + E(X) - [E(X)]^2$
 **Derivation for Poisson**:
 $$G_X(t) = \sum_{x=0}^\infty t^x \frac{e^{-\lambda}\lambda^x}{x!} = e^{-\lambda} \sum_{x=0}^\infty \frac{(\lambda t)^x}{x!} = e^{-\lambda} e^{\lambda t} = e^{\lambda(t-1)}$$
 
-##### 4.4 Sum of Independent Random Variables
+### 4.4 Sum of Independent Random Variables
+
 
 If $X$ and $Y$ are independent discrete random variables, then:
 $$G_{X+Y}(t) = G_X(t) \cdot G_Y(t)$$
@@ -986,9 +1071,11 @@ Thus $X+Y \sim \text{Po}(\lambda_1+\lambda_2)$.
 
 ---
 
-#### FS1.5: Linear Combinations of Discrete Random Variables
+## FS1.5: Linear Combinations of Discrete Random Variables
 
-##### 5.1 Expectation of a Linear Combination
+
+### 5.1 Expectation of a Linear Combination
+
 
 For constants $a$ and $b$:
 $$E(aX + bY) = aE(X) + bE(Y)$$
@@ -996,7 +1083,8 @@ $$E(aX + bY) = aE(X) + bE(Y)$$
 More generally:
 $$E\left(\sum_{i=1}^n a_i X_i\right) = \sum_{i=1}^n a_i E(X_i)$$
 
-##### 5.2 Variance of a Linear Combination
+### 5.2 Variance of a Linear Combination
+
 
 For $Z = aX + bY$:
 $$\text{Var}(Z) = a^2\text{Var}(X) + b^2\text{Var}(Y) + 2ab\,\text{Cov}(X,Y)$$
@@ -1004,7 +1092,8 @@ $$\text{Var}(Z) = a^2\text{Var}(X) + b^2\text{Var}(Y) + 2ab\,\text{Cov}(X,Y)$$
 If $X$ and $Y$ are **independent**, $\text{Cov}(X,Y) = 0$:
 $$\text{Var}(aX + bY) = a^2\text{Var}(X) + b^2\text{Var}(Y)$$
 
-##### 5.3 Covariance
+### 5.3 Covariance
+
 
 $$\text{Cov}(X,Y) = E[(X - \mu_X)(Y - \mu_Y)] = E(XY) - E(X)E(Y)$$
 
@@ -1014,7 +1103,8 @@ Properties:
 - $\text{Cov}(aX, bY) = ab\,\text{Cov}(X,Y)$
 - If $X$ and $Y$ are independent, $\text{Cov}(X,Y) = 0$ (converse not necessarily true)
 
-##### 5.4 Correlation Coefficient
+### 5.4 Correlation Coefficient
+
 
 $$\rho(X,Y) = \frac{\text{Cov}(X,Y)}{\sqrt{\text{Var}(X)\text{Var}(Y)}}$$
 
@@ -1035,9 +1125,11 @@ $= 4\times4 + 9\times9 + 12\times3 = 16 + 81 + 36 = 133$
 
 ---
 
-#### FM1.1: Constant Velocity in Two Dimensions
+## FM1.1: Constant Velocity in Two Dimensions
 
-##### 1.1 Vector Representation
+
+### 1.1 Vector Representation
+
 
 Position vector: $\mathbf{r} = x\mathbf{i} + y\mathbf{j} = \begin{pmatrix} x \\\\ y \end{pmatrix}$
 
@@ -1045,13 +1137,15 @@ Velocity vector: $\mathbf{v} = \frac{d\mathbf{r}}{dt} = v_x\mathbf{i} + v_y\math
 
 For constant velocity: $\mathbf{r}(t) = \mathbf{r}_0 + \mathbf{v}t$
 
-##### 1.2 Speed and Distance
+### 1.2 Speed and Distance
+
 
 Speed = $\lvert \mathbf{v} \rvert = \sqrt{v_x^2 + v_y^2}$
 
 Distance travelled = $\lvert \mathbf{v} \rvert \times t$
 
-##### 1.3 Relative Velocity
+### 1.3 Relative Velocity
+
 
 Velocity of $A$ relative to $B$:
 $$\mathbf{v}_{AB} = \mathbf{v}_A - \mathbf{v}_B$$
@@ -1068,7 +1162,8 @@ $\mathbf{v}_{AB} = (10-5)\mathbf{i} + (0-5)\mathbf{j} = 5\mathbf{i} - 5\mathbf{j
 
 Speed = $\sqrt{5^2 + (-5)^2} = \sqrt{50} = 5\sqrt{2}$ km/h
 
-##### 1.4 Interception Problems
+### 1.4 Interception Problems
+
 
 For $A$ to intercept $B$, there exists $t > 0$ such that:
 $$\mathbf{r}_A(0) + \mathbf{v}_A t = \mathbf{r}_B(0) + \mathbf{v}_B t$$
@@ -1083,7 +1178,8 @@ $B$: $(100, 10t)$
 
 For interception: $ut = 100$ and $0 = 10t$ ⇒ $t = 0$ (trivial). No interception possible because $A$ has no $y$-component. This shows interception requires velocity components to align.
 
-##### 1.5 Closest Approach
+### 1.5 Closest Approach
+
 
 For two moving particles, the distance between them is a quadratic function of time. To find the minimum distance:
 
@@ -1104,9 +1200,11 @@ Minimum occurs at $t = 0$ (since $t \geq 0$): $d = \sqrt{100} = 10$
 
 ---
 
-#### FM1.2: Dimensional Analysis
+## FM1.2: Dimensional Analysis
 
-##### 2.1 Base Dimensions
+
+### 2.1 Base Dimensions
+
 
 In mechanics, all physical quantities can be expressed in terms of three base dimensions:
 
@@ -1116,7 +1214,8 @@ In mechanics, all physical quantities can be expressed in terms of three base di
 | Length | $L$ |
 | Time | $T$ |
 
-##### 2.2 Derived Dimensions
+### 2.2 Derived Dimensions
+
 
 | Quantity | Formula | Dimensions |
 |----------|---------|------------|
@@ -1132,14 +1231,16 @@ In mechanics, all physical quantities can be expressed in terms of three base di
 | Pressure | $\frac{F}{A}$ | $ML^{-1}T^{-2}$ |
 | Density | $\frac{m}{V}$ | $ML^{-3}$ |
 
-##### 2.3 Dimensional Homogeneity
+### 2.3 Dimensional Homogeneity
+
 
 In any valid physical equation, both sides must have the same dimensions. This principle can be used to:
 - Check the validity of equations
 - Derive relationships between quantities
 - Determine units
 
-##### 2.4 Deriving Formulae by Dimensional Analysis
+### 2.4 Deriving Formulae by Dimensional Analysis
+
 
 **Method**:
 1. Assume the quantity $Q$ is proportional to products of powers of relevant variables
@@ -1178,15 +1279,18 @@ Thus $v = k \sqrt{\frac{T}{\mu}}$. Experiment shows $k = 1$.
 
 ---
 
-#### FM1.3: Collisions in One Dimension
+## FM1.3: Collisions in One Dimension
 
-##### 3.1 Momentum
+
+### 3.1 Momentum
+
 
 Linear momentum: $\mathbf{p} = m\mathbf{v}$ (vector quantity)
 
 Units: kg·m/s or N·s
 
-##### 3.2 Impulse
+### 3.2 Impulse
+
 
 **Impulse** = change in momentum:
 $$\mathbf{I} = \mathbf{p}_{\text{final}} - \mathbf{p}_{\text{initial}} = m\mathbf{v} - m\mathbf{u}$$
@@ -1199,13 +1303,15 @@ $$\mathbf{I} = \int_{t_1}^{t_2} \mathbf{F} \, dt$$
 
 Impulse is a vector; its direction is the same as the change in momentum.
 
-##### 3.3 Conservation of Momentum
+### 3.3 Conservation of Momentum
+
 
 For a system of particles with no external impulse (or when external forces are negligible), total momentum is conserved:
 
 $$m_1\mathbf{u}_1 + m_2\mathbf{u}_2 = m_1\mathbf{v}_1 + m_2\mathbf{v}_2$$
 
-##### 3.4 Newton's Experimental Law (Coefficient of Restitution)
+### 3.4 Newton's Experimental Law (Coefficient of Restitution)
+
 
 For two particles colliding along the line of centres:
 
@@ -1222,7 +1328,8 @@ where:
 | $0 < e < 1$ | Partially elastic (some KE lost) |
 | $e = 0$ | Perfectly inelastic (particles stick together, $v_1 = v_2$) |
 
-##### 3.5 Impact with a Fixed Surface
+### 3.5 Impact with a Fixed Surface
+
 
 For a particle hitting a fixed smooth surface perpendicularly:
 $$v = -e u$$
@@ -1235,7 +1342,8 @@ Velocity just before impact: $u = \sqrt{2gh}$ (downwards)
 Velocity just after impact: $v = e\sqrt{2gh}$ (upwards)
 Height after bounce: $h_1 = \frac{v^2}{2g} = e^2 h$
 
-##### 3.6 Worked Example: Two-Particle Collision
+### 3.6 Worked Example: Two-Particle Collision
+
 
 Particle $A$ of mass 2 kg moves at 3 m/s towards particle $B$ of mass 3 kg moving at 1 m/s in the same direction. They collide. Coefficient of restitution $e = 0.5$. Find velocities after collision.
 
@@ -1267,9 +1375,11 @@ Both move in original direction.
 
 ---
 
-#### Key Formulae Summary
+## Key Formulae Summary
 
-##### Pure Mathematics
+
+### Pure Mathematics
+
 
 | Topic | Formula |
 |-------|---------|
@@ -1279,7 +1389,8 @@ Both move in original direction.
 | Newton-Raphson | $x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$ |
 | Euler's method | $y_{n+1} = y_n + h f(x_n, y_n)$ |
 
-##### Statistics
+### Statistics
+
 
 | Topic | Formula |
 |-------|---------|
@@ -1295,7 +1406,8 @@ Both move in original direction.
 | Covariance | $\text{Cov}(X,Y) = E(XY) - E(X)E(Y)$ |
 | Correlation | $\rho = \frac{\text{Cov}(X,Y)}{\sqrt{\text{Var}(X)\text{Var}(Y)}}$ |
 
-##### Mechanics
+### Mechanics
+
 
 | Topic | Formula |
 |-------|---------|

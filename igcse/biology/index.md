@@ -14,9 +14,11 @@ permalink: /igcse/biology/
 
 ---
 
-### 🧫 Unit 1: Organisation
+# 🧫 Unit 1: Organisation
 
-#### 🔬 1.1 Cell structure
+
+## 🔬 1.1 Cell structure
+
 
 **Animal (eukaryotic) cells** have:
 - **Nucleus** — controls the activities of the cell
@@ -34,13 +36,15 @@ permalink: /igcse/biology/
 
 Cells may be **specialised** to carry out a particular function.
 
-#### 🧩 1.2 Principles of organisation
+## 🧩 1.2 Principles of organisation
+
 
 - **Tissue** = group of cells with similar structure and function.
 - **Organ** = made of tissues (one organ may contain several tissues).
 - **Organ system** = group of organs performing a particular function.
 
-#### 🐾 1.3 Animal tissues, organs and systems
+## 🐾 1.3 Animal tissues, organs and systems
+
 
 | Tissue | Function |
 |---|---|
@@ -50,7 +54,8 @@ Cells may be **specialised** to carry out a particular function.
 
 **Digestive system** includes: salivary glands, stomach, small intestine, liver (produces bile), large intestine (water absorbed → faeces).
 
-#### 🌱 1.4 Plant tissues, organs and systems
+## 🌱 1.4 Plant tissues, organs and systems
+
 
 - **Epidermal tissues** — cover the plant.
 - **Palisade mesophyll** — carries out photosynthesis.
@@ -58,7 +63,8 @@ Cells may be **specialised** to carry out a particular function.
 - **Xylem and phloem** — transport substances around the plant.
 - Plant organs: **stems, roots, leaves**.
 
-#### 🚰 1.5 Transport in cells
+## 🚰 1.5 Transport in cells
+
 
 - **Diffusion**: net movement of particles from higher to lower concentration. The greater the concentration difference, the faster the rate.
 - **Osmosis**: diffusion of water from a dilute to a more concentrated solution through a **partially permeable membrane**.
@@ -73,7 +79,8 @@ Cells may be **specialised** to carry out a particular function.
 - (Animals) efficient blood supply
 - (Animals, gas exchange) being ventilated
 
-#### ✅ Unit 1 Quick Check
+## ✅ Unit 1 Quick Check
+
 
 1. Where does protein synthesis occur? **(Ribosomes)**
 2. What is osmosis? **(Diffusion of water through a partially permeable membrane)**
@@ -82,9 +89,11 @@ Cells may be **specialised** to carry out a particular function.
 
 ---
 
-### ⚡ Unit 2: Bioenergetics
+# ⚡ Unit 2: Bioenergetics
 
-#### ☀️ 2.1 Photosynthesis
+
+## ☀️ 2.1 Photosynthesis
+
 
 $$\text{carbon dioxide} + \text{water} \xrightarrow{\text{light}} \text{glucose} + \text{oxygen}$$
 
@@ -97,7 +106,8 @@ $$6CO_2 + 6H_2O \xrightarrow{\text{light}} C_6H_{12}O_6 + 6O_2$$
 
 **Glucose can be used for**: respiration · converted to insoluble starch for storage · fat/oil for storage · cellulose (strengthens cell wall) · proteins (needs nitrate ions from soil).
 
-#### 🌿 2.2 Exchange and transport in plants
+## 🌿 2.2 Exchange and transport in plants
+
 
 - CO₂ enters leaves by diffusion through **stomata**; water and minerals absorbed by roots.
 - **Xylem**: transports water + mineral ions (roots → stem → leaves). The flow is called the **transpiration stream**.
@@ -105,7 +115,8 @@ $$6CO_2 + 6H_2O \xrightarrow{\text{light}} C_6H_{12}O_6 + 6O_2$$
 - **Stomata** size controlled by **guard cells**; they close to prevent wilting.
 - Evaporation is more rapid in **hot, dry, windy** conditions.
 
-#### ❤️ 2.3 Circulation in humans
+## ❤️ 2.3 Circulation in humans
+
 
 - The heart pumps blood in a **double circulatory system**. It has four chambers: right/left atria and right/left ventricles.
 - **Pacemaker** in the right atrium controls resting heart rate; artificial pacemakers correct irregularities.
@@ -128,7 +139,8 @@ $$6CO_2 + 6H_2O \xrightarrow{\text{light}} C_6H_{12}O_6 + 6O_2$$
 
 **Blood groups**: O, A, B, AB. **Group O is the universal donor.**
 
-#### 🍽️ 2.4 Digestion
+## 🍽️ 2.4 Digestion
+
 
 - Starch, proteins and fats are **insoluble** → broken down into soluble substances for absorption in the small intestine.
 - **Enzymes** are large proteins that act as **biological catalysts**. High temperature **denatures** enzymes (changes active site shape). Different enzymes work best at different pH.
@@ -143,7 +155,8 @@ $$6CO_2 + 6H_2O \xrightarrow{\text{light}} C_6H_{12}O_6 + 6O_2$$
 
 🔬 **Required practical**: Investigate how different temperatures and pH affect the rate of digestion.
 
-#### 🫁 2.5 Breathing
+## 🫁 2.5 Breathing
+
 
 **To inhale**: intercostal muscles contract (ribcage up) + diaphragm contracts (flattens) → volume of thorax increases → pressure decreases → air enters.
 
@@ -152,7 +165,8 @@ $$6CO_2 + 6H_2O \xrightarrow{\text{light}} C_6H_{12}O_6 + 6O_2$$
 - Gas exchange occurs in the **alveoli** (large surface area, rich blood supply).
 - Breathing is controlled automatically; **mechanical ventilators** (negative/positive pressure) can help if breathing stops.
 
-#### ⚡ 2.6 Respiration
+## ⚡ 2.6 Respiration
+
 
 **Aerobic respiration**:
 
@@ -174,7 +188,8 @@ $$\text{glucose} \rightarrow \text{lactic acid} \quad (C_6H_{12}O_6 \rightarrow 
 
 🔬 **Required practical**: Investigate the effects of exercise on the human body.
 
-#### ✅ Unit 2 Quick Check
+## ✅ Unit 2 Quick Check
+
 
 1. What is a limiting factor for photosynthesis? **(Low light, low CO₂, low temperature)**
 2. Where does aerobic respiration occur? **(In mitochondria)**
@@ -183,15 +198,18 @@ $$\text{glucose} \rightarrow \text{lactic acid} \quad (C_6H_{12}O_6 \rightarrow 
 
 ---
 
-### 🌍 Unit 3: Ecology
+# 🌍 Unit 3: Ecology
 
-#### ⚡ 3.1 Energy transfer in ecosystems
+
+## ⚡ 3.1 Energy transfer in ecosystems
+
 
 - Radiation from the Sun is the energy source for most communities. Plants/algae transfer about **1%** of incident energy for photosynthesis.
 - Only about **10%** of biomass is transferred from each trophic level to the next (energy lost in waste, and by respiration).
 - **Pyramids of biomass** show the biomass at each stage drawn to scale.
 
-#### 🏜️ 3.2 Adaptations, interdependence and competition
+## 🏜️ 3.2 Adaptations, interdependence and competition
+
 
 - Plants compete for **light, space, water, nutrients**.
 - Animals compete for **food, mates, territory**.
@@ -199,19 +217,22 @@ $$\text{glucose} \rightarrow \text{lactic acid} \quad (C_6H_{12}O_6 \rightarrow 
 - Adaptations: **structural** (shape/colour), **behavioural** (migration, huddling), **functional** (reproduction, metabolism).
 - Parasites (e.g. fleas, tapeworms, malaria parasites) are adapted to living on/inside hosts.
 
-#### 🔄 3.3 Decay and the carbon cycle
+## 🔄 3.3 Decay and the carbon cycle
+
 
 - Materials decay because they are broken down by **microorganisms**, which are more active in **warm, moist, aerobic** conditions.
 - **Carbon cycle**: CO₂ removed by photosynthesis → carbon in carbohydrates/fats/proteins → released by respiration of plants, animals and microorganisms → released by combustion of wood/fossil fuels.
 
-#### 🏭 3.4 Humans and their effects on the environment
+## 🏭 3.4 Humans and their effects on the environment
+
 
 - **Pollution** of: water (sewage, fertiliser, toxic chemicals), air (smoke, sulfur dioxide → acid rain), land (pesticides, herbicides).
 - **Eutrophication**: mineral ions → algae/plants grow → some die (no light) → microorganisms increase → respiration depletes oxygen → death of aerobic organisms.
 - **Deforestation** reduces biodiversity.
 - **Global warming** (rising CO₂ and methane): climate change, sea-level rise, changes in migration patterns, changes in species distribution.
 
-#### ✅ Unit 3 Quick Check
+## ✅ Unit 3 Quick Check
+
 
 1. What percentage of biomass is transferred between trophic levels? **(~10%)**
 2. What are extremophiles? **(Organisms adapted to extreme environments)**
@@ -219,9 +240,11 @@ $$\text{glucose} \rightarrow \text{lactic acid} \quad (C_6H_{12}O_6 \rightarrow 
 
 ---
 
-### 🧠 Unit 4: Organisms' interaction with the environment
+# 🧠 Unit 4: Organisms' interaction with the environment
 
-#### ⚡ 4.1 The human nervous system
+
+## ⚡ 4.1 The human nervous system
+
 
 - The nervous system enables reactions to surroundings. Information from **receptors** passes along **neurones** as impulses to the **CNS** (brain + spinal cord).
 - **Reflex actions** are automatic and rapid. They involve **sensory, relay and motor neurones**.
@@ -229,26 +252,30 @@ $$\text{glucose} \rightarrow \text{lactic acid} \quad (C_6H_{12}O_6 \rightarrow 
 - **Effectors** = muscles (contract) and glands (secrete).
 - Response pathway: **stimulus → receptor → coordinator → effector → response**.
 
-#### 🌡️ 4.2 Homeostasis
+## 🌡️ 4.2 Homeostasis
+
 
 - Control systems keep internal conditions constant: **receptors** (detect stimuli) → **coordination centres** → **effectors** (bring about responses).
 - Receptors are found in eyes (light), ears (sound, balance), tongue/nose (chemicals), skin (touch, pressure, pain, temperature), brain (blood temperature, water), pancreas (blood glucose).
 - Conditions controlled: **temperature, water content, ion content, blood glucose levels**.
 
-#### 💧 4.3 Control of water and ion content
+## 💧 4.3 Control of water and ion content
+
 
 - Water leaves via lungs (breathing out), skin (sweating), and kidneys (urine — excess).
 - The liver **deaminates** excess amino acids → ammonia → urea for excretion.
 - In a healthy kidney: blood filtered → all glucose reabsorbed → needed ions reabsorbed → water reabsorbed as needed → urea, excess ions and water released as urine.
 - **ADH** (from pituitary gland): if blood water too low → more ADH → more water reabsorbed → concentrated urine. **Negative feedback** controls ADH production.
 
-#### 🔥 4.4 Temperature control
+## 🔥 4.4 Temperature control
+
 
 - The **thermoregulatory centre** in the brain monitors blood temperature.
 - **Too hot**: skin blood vessels **dilate** (more energy transferred) + more **sweat** (cooling by evaporation).
 - **Too cold**: skin blood vessels **constrict** (reduce blood flow) + muscles **shiver** (respiration warms the body).
 
-#### 🍬 4.5 Control of blood glucose
+## 🍬 4.5 Control of blood glucose
+
 
 - Blood glucose monitored by the **pancreas**. Excess glucose stored as **glycogen** in liver and muscles.
 - **Too high**: pancreas produces **insulin** → glucose moves from blood into cells.
@@ -256,13 +283,15 @@ $$\text{glucose} \rightarrow \text{lactic acid} \quad (C_6H_{12}O_6 \rightarrow 
 - **Type 1 diabetes**: pancreas doesn't produce enough insulin → controlled by diet, exercise, insulin injections.
 - **Type 2 diabetes**: body doesn't respond to insulin; obesity is a significant factor → controlled by diet, exercise, drugs.
 
-#### 🐦 4.6 Behaviour
+## 🐦 4.6 Behaviour
+
 
 - Animals exhibit different behaviours: **innate behaviour, imprinting, habituation, classic conditioning, operant conditioning**.
 - Conditioning is used in training sniffer dogs and police horses.
 - Animals communicate using **sound, chemical and visual signals**.
 
-#### 🦠 4.7 Infection and response
+## 🦠 4.7 Infection and response
+
 
 - **Pathogens**: microorganisms that cause infectious disease. Bacteria produce **toxins**; viruses reproduce inside cells.
 - **White blood cells** defend by: **phagocytosis** (ingesting pathogens), producing **antibodies**, producing **antitoxins**.
@@ -272,7 +301,8 @@ $$\text{glucose} \rightarrow \text{lactic acid} \quad (C_6H_{12}O_6 \rightarrow 
 
 🔬 **Required practical**: Investigate the effect of disinfectants and antibiotics on uncontaminated cultures of microorganisms.
 
-#### ✅ Unit 4 Quick Check
+## ✅ Unit 4 Quick Check
+
 
 1. What is a reflex action? **(Automatic, rapid response — no conscious thought)**
 2. Which hormone lowers blood glucose? **(Insulin)**
@@ -281,9 +311,11 @@ $$\text{glucose} \rightarrow \text{lactic acid} \quad (C_6H_{12}O_6 \rightarrow 
 
 ---
 
-### 🧬 Unit 5: Inheritance
+# 🧬 Unit 5: Inheritance
 
-#### 🌱 5.1 Reproduction & 5.2 Cell division
+
+## 🌱 5.1 Reproduction & 5.2 Cell division
+
 
 - **Sexual reproduction**: fusion of male and female gametes → variety in offspring.
 - **Asexual reproduction**: no fusion of gametes → genetically identical offspring (**clones**).
@@ -293,7 +325,8 @@ $$\text{glucose} \rightarrow \text{lactic acid} \quad (C_6H_{12}O_6 \rightarrow 
 - **Therapeutic cloning**: embryo produced with the same genes as the patient → stem cells not rejected.
 - **Tumours**: abnormal, uncontrolled cell growth. **Benign** — don't invade other tissues. **Malignant** — invade healthy tissue, may spread (secondary tumours). Causes: chemical carcinogens (tobacco smoke, asbestos), ionising radiation (UV, X-rays).
 
-#### 🧬 5.3 Genetic variation
+## 🧬 5.3 Genetic variation
+
 
 - Differences in characteristics may be due to: **genetic causes, environmental causes, or a combination**.
 - Chromosomes carry genes; normally found in **pairs**. Humans have 23 pairs; sex chromosomes XX (female), XY (male).
@@ -302,14 +335,16 @@ $$\text{glucose} \rightarrow \text{lactic acid} \quad (C_6H_{12}O_6 \rightarrow 
 - **Genetic diagrams** (monohybrid crosses, family trees) are models used to predict outcomes.
 - **DNA**: long strands twisted into a **double helix**, containing four bases. A **gene** is a small section of DNA coding for a specific protein. A sequence of three bases codes for a particular amino acid.
 
-#### 🩺 5.4 Genetic disorders & 5.5 Genetic manipulation
+## 🩺 5.4 Genetic disorders & 5.5 Genetic manipulation
+
 
 - Inherited disorders: **polydactyly, cystic fibrosis, sickle cell anaemia**. Down's Syndrome is caused by an extra chromosome.
 - **Cloning techniques**: tissue culture, cuttings, embryo transplants, adult cell cloning.
 - **Genetic engineering**: genes "cut out" and transferred using enzymes and a vector (bacterial plasmid or virus).
 - **GM crops**: resistant to insect attack/herbicides, generally higher yields. Concerns: effects on wild populations, uncertainty about human health.
 
-#### ✅ Unit 5 Quick Check
+## ✅ Unit 5 Quick Check
+
 
 1. How many cells does meiosis produce? **(Four gametes)**
 2. What is a dominant allele? **(Controls development when present on one chromosome)**
@@ -317,14 +352,17 @@ $$\text{glucose} \rightarrow \text{lactic acid} \quad (C_6H_{12}O_6 \rightarrow 
 
 ---
 
-### 🌳 Unit 6: Variation and evolution
+# 🌳 Unit 6: Variation and evolution
 
-#### 🎲 6.1 Continuous and discontinuous variation
+
+## 🎲 6.1 Continuous and discontinuous variation
+
 
 - **Genetic variation**: different characteristics from mutation or reproduction.
 - **Environmental variation**: different characteristics caused by the environment.
 
-#### 🧬 6.2 Natural selection
+## 🧬 6.2 Natural selection
+
 
 - **Evolution via natural selection**:
   1. Individuals within a species show wide variation (differences in genes).
@@ -333,14 +371,16 @@ $$\text{glucose} \rightarrow \text{lactic acid} \quad (C_6H_{12}O_6 \rightarrow 
 
 - **Speciation** occurs through: **isolation** (populations separated) → **genetic variation** (wide range of alleles) → **natural selection** (favourable alleles selected) → **speciation** (populations become so different they can no longer interbreed successfully).
 
-#### ✅ Unit 6 Quick Check
+## ✅ Unit 6 Quick Check
+
 
 1. What is natural selection? **(Survival and breeding of organisms best suited to the environment)**
 2. What are the stages of speciation? **(Isolation → variation → natural selection → speciation)**
 
 ---
 
-### Practical Skills Checklist
+# Practical Skills Checklist
+
 
 1. **Designing experiments**: identify variables, controls, risks.
 2. **Data analysis**: spot anomalies, calculate means, plot and interpret graphs.
@@ -348,7 +388,8 @@ $$\text{glucose} \rightarrow \text{lactic acid} \quad (C_6H_{12}O_6 \rightarrow 
 
 ---
 
-### Study Tips
+# Study Tips
+
 
 - **Active recall**: flashcards for key terms (osmosis, homeostasis, alleles…).
 - **Past papers**: practise data and graph interpretation questions.
