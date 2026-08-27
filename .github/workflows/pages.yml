@@ -36,6 +36,14 @@ jobs:
       - name: Build site
         run: bundle exec jekyll build --trace
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build Pagefind search index
+        run: npx --yes pagefind --site _site
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
