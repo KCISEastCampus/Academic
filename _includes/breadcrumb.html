@@ -83,6 +83,15 @@
     transform: translateY(-1px);
   }
 
+  /* Ensure icon + text stay readable on the accent (purple) hover background */
+  .site-breadcrumb .breadcrumb-home:hover,
+  .site-breadcrumb .breadcrumb-home:hover i,
+  .site-breadcrumb .breadcrumb-home:hover span {
+    color: #fff !important;
+    border-color: var(--accent-ig) !important;
+    background: var(--accent-ig) !important;
+  }
+
   html[data-bs-theme="dark"] .site-breadcrumb .breadcrumb-home {
     background: var(--surface-hover);
     border-color: var(--border-hover);

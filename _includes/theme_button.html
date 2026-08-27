@@ -9,55 +9,36 @@
 <style>
   .theme-toggle-btn {
     position: fixed;
-    /* 默认位置 - 用于学科页面 */
     top: 20px;
     right: 20px;
     z-index: 9999;
-    background: var(--surface);
-    border: 2px solid var(--muted);
-    border-radius: 50px;
-    padding: 8px 16px;
-    cursor: pointer;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 8px;
+    padding: 8px 16px;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    cursor: pointer;
     font-size: 0.9rem;
     font-weight: 500;
-    color: var(--text);
-    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    line-height: 1;
+    transition: background-color 0.2s ease, border-color 0.2s ease,
+      color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
     backdrop-filter: blur(10px);
-  }
-
-  /* Light mode: solid, clearly visible button on light backgrounds */
-  html[data-bs-theme="light"] .theme-toggle-btn,
-  :root[data-bs-theme="light"] .theme-toggle-btn {
-    background: #ffffff;
-    border-color: rgba(15, 23, 42, 0.15);
-    color: var(--text);
-    box-shadow: 0 2px 12px rgba(15, 23, 42, 0.12);
   }
 
   .theme-toggle-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    border-color: var(--accent-ig);
-    background: var(--surface-hover);
-  }
-
-  html[data-bs-theme="light"] .theme-toggle-btn:hover,
-  :root[data-bs-theme="light"] .theme-toggle-btn:hover {
-    background: #ffffff;
-    border-color: var(--accent-ig);
-    box-shadow: 0 4px 20px rgba(107, 122, 219, 0.25);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.16);
   }
 
   .theme-toggle-btn:active {
     transform: translateY(0);
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
   }
 
-  /* Icon stack: two icons overlaid, cross-fade on theme change */
+  /* Icon stack: two icons overlaid */
   .theme-icon-stack {
     position: relative;
     width: 1.3em;
@@ -76,91 +57,108 @@
     transition: opacity 0.4s ease, transform 0.4s ease;
   }
 
-  /* Default light: show moon */
+  .theme-label {
+    font-size: 0.85rem;
+    opacity: 0.85;
+  }
+</style>
+
+<style>
+  /* ============================================
+     Theme-dependent states (colors set in pairs)
+     High specificity + !important to defeat any
+     external cascade interference.
+     ============================================ */
+
+  /* --- LIGHT MODE --- */
+  html[data-bs-theme="light"] .theme-toggle-btn,
+  :root[data-bs-theme="light"] .theme-toggle-btn {
+    background: #ffffff !important;
+    border-color: rgba(15, 23, 42, 0.14) !important;
+    color: #0f172a !important;
+  }
+
+  html[data-bs-theme="light"] .theme-toggle-btn:hover,
+  :root[data-bs-theme="light"] .theme-toggle-btn:hover {
+    background: #6b7adb !important;
+    border-color: #6b7adb !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 20px rgba(107, 122, 219, 0.35) !important;
+  }
+
+  html[data-bs-theme="light"] .theme-icon,
+  :root[data-bs-theme="light"] .theme-icon {
+    color: currentColor !important;
+  }
+
+  /* Light: show moon, hide sun */
   html[data-bs-theme="light"] .theme-icon-moon,
   :root[data-bs-theme="light"] .theme-icon-moon {
-    opacity: 1;
-    transform: rotate(0deg) scale(1);
+    opacity: 1 !important;
+    transform: rotate(0deg) scale(1) !important;
   }
   html[data-bs-theme="light"] .theme-icon-sun,
   :root[data-bs-theme="light"] .theme-icon-sun {
-    opacity: 0;
-    transform: rotate(90deg) scale(0.4);
+    opacity: 0 !important;
+    transform: rotate(90deg) scale(0.4) !important;
   }
 
-  /* Dark: show sun */
+  /* --- DARK MODE --- */
+  html[data-bs-theme="dark"] .theme-toggle-btn,
+  :root[data-bs-theme="dark"] .theme-toggle-btn {
+    background: #1b2638 !important;
+    border-color: rgba(255, 255, 255, 0.16) !important;
+    color: #e5e7eb !important;
+  }
+
+  html[data-bs-theme="dark"] .theme-toggle-btn:hover,
+  :root[data-bs-theme="dark"] .theme-toggle-btn:hover {
+    background: #6b7adb !important;
+    border-color: #6b7adb !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 20px rgba(107, 122, 219, 0.4) !important;
+  }
+
+  /* Dark: show sun, hide moon */
   html[data-bs-theme="dark"] .theme-icon-sun,
   :root[data-bs-theme="dark"] .theme-icon-sun {
-    opacity: 1;
-    transform: rotate(0deg) scale(1);
+    opacity: 1 !important;
+    transform: rotate(0deg) scale(1) !important;
   }
   html[data-bs-theme="dark"] .theme-icon-moon,
   :root[data-bs-theme="dark"] .theme-icon-moon {
-    opacity: 0;
-    transform: rotate(-90deg) scale(0.4);
+    opacity: 0 !important;
+    transform: rotate(-90deg) scale(0.4) !important;
   }
 
-  .theme-label {
-    font-size: 0.85rem;
-    opacity: 0.8;
-  }
-
-  /* Dark theme adjustments */
-  html[data-bs-theme="dark"] .theme-toggle-btn,
-  :root[data-bs-theme="dark"] .theme-toggle-btn {
-    background: var(--surface);
-    border-color: var(--muted);
-    color: var(--text);
-  }
-
-  /* Mobile responsive */
-  @media (max-width: 1024px) {
-    .theme-toggle-btn {
-      right: 90px;
-    }
-  }
-
+  /* Mobile: hide label, circular */
   @media (max-width: 768px) {
     .theme-toggle-btn {
-      top: 14px;
-      right: 14px;
-      padding: 0;
-      font-size: 0.8rem;
+      top: 14px !important;
+      right: 14px !important;
       width: 46px;
       height: 46px;
+      padding: 0;
       justify-content: center;
       gap: 0;
+      border-radius: 50%;
     }
-
     .theme-icon {
       font-size: 1rem;
     }
-
     .theme-label {
-      display: none; /* 移动端隐藏文字，只显示图标 */
-    }
-
-    .theme-toggle-btn {
-      border-radius: 50%;
+      display: none !important;
     }
   }
 
-  /* Respect prefers-reduced-motion */
+  /* Respect reduced-motion */
   @media (prefers-reduced-motion: reduce) {
+    .theme-toggle-btn,
     .theme-icon {
-      transition: none;
+      transition: none !important;
     }
-
-    .theme-toggle-btn {
-      transition: none;
-    }
-
     .theme-toggle-btn:hover {
-      transform: none;
-    }
-
-    .theme-toggle-btn:active {
-      transform: none;
+      transform: none !important;
     }
   }
 </style>
@@ -176,28 +174,29 @@
         const stored = localStorage.getItem('site-theme');
         if (stored) return stored;
         return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      } catch (error) {
+      } catch (e) {
         return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       }
     }
 
     function applyTheme(theme) {
       html.setAttribute('data-bs-theme', theme);
-      if (theme_label) {
-        theme_label.textContent = theme === 'dark' ? 'Dark' : 'Light';
-      }
-      if (theme_button) {
-        theme_button.setAttribute('aria-pressed', String(theme === 'dark'));
-      }
-      try { localStorage.setItem('site-theme', theme); } catch (e) { /* ignore */ }
+      if (theme_label) theme_label.textContent = theme === 'dark' ? 'Dark' : 'Light';
+      if (theme_button) theme_button.setAttribute('aria-pressed', String(theme === 'dark'));
+      try { localStorage.setItem('site-theme', theme); } catch (e) {}
     }
 
-    // initialize
     applyTheme(getPreferredTheme());
-
     theme_button && theme_button.addEventListener('click', () => {
       const isDark = html.getAttribute('data-bs-theme') === 'dark';
       applyTheme(isDark ? 'light' : 'dark');
     });
+
+    // Keep the button visible on subject pages (header placement)
+    if (theme_button && theme_button.closest('.subject-header-inner')) {
+      theme_button.style.position = 'static';
+      theme_button.style.top = 'auto';
+      theme_button.style.right = 'auto';
+    }
   })();
 </script>
