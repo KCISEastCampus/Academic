@@ -73,7 +73,7 @@ export default {
   <script>
     const receiveMessage = (message) => {
       window.opener.postMessage(
-        'authorization:github:success:${JSON.stringify({ token: "${token}" })}',
+        'authorization:github:success:${JSON.stringify({ token })}',
         '*'
       );
       window.removeEventListener("message", receiveMessage, false);
