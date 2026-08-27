@@ -210,59 +210,34 @@ html[data-bs-theme="dark"] body.scheme-alevel #content-container h1::before {
   background: var(--accent-al);
 }
 
-/* H2: Section header — Unit/Paper level. Clean, readable: accent bar + bottom rule */
+/* H2: Section header — Unit/Paper level. Minimal, clean */
 #content-container h2 {
   font-size: 1.5rem;
   color: var(--text);
-  margin-top: 2.25rem !important;
-  margin-bottom: 0.9rem !important;
+  margin-top: 2rem !important;
+  margin-bottom: 0.75rem !important;
   font-weight: 700;
-  opacity: 0.95;
-  padding-left: 14px;
-  padding-bottom: 0.45rem;
-  border-left: 4px solid var(--accent-ig);
-  border-bottom: 1px solid var(--border);
+  padding: 0;
+  border: none;
 }
 
 #content-container h2::before {
   display: none;
 }
 
-/* IGCSE scheme: use IG accent color */
-body.scheme-igcse #content-container h2 {
-  border-left-color: var(--accent-ig);
-}
-
-/* A-Level scheme: use A-Level accent color */
-body.scheme-alevel #content-container h2 {
-  border-left-color: var(--accent-al);
-}
-
-/* H3: Chapter/topic level — clear but subordinate to H2 */
+/* H3: Chapter/topic level */
 #content-container h3 {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   color: var(--text);
-  margin-top: 1.75rem !important;
-  margin-bottom: 0.7rem !important;
+  margin-top: 1.6rem !important;
+  margin-bottom: 0.6rem !important;
   font-weight: 700;
-  opacity: 0.95;
-  padding-left: 14px;
-  padding-bottom: 0.3rem;
-  border-left: 3px solid var(--accent-ig);
+  padding: 0;
+  border: none;
 }
 
 #content-container h3::before {
   display: none;
-}
-
-/* IGCSE scheme: use IG accent color */
-body.scheme-igcse #content-container h3 {
-  border-left-color: var(--accent-ig);
-}
-
-/* A-Level scheme: use A-Level accent color */
-body.scheme-alevel #content-container h3 {
-  border-left-color: var(--accent-al);
 }
 
 #content-container h4 {
