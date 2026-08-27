@@ -9,18 +9,17 @@ redirect_from:
   - /alevel/chemistry/
 ---
 
-# AS Chemistry
 
 > **Qualification**: OxfordAQA International AS Chemistry (9620) · Modular<br>
 > **Assessment**: Unit 1 (Inorganic 1 and Physical 1) + Unit 2 (Organic 1 and Physical 1) · 1h 30m each · 70 marks each · 50% of AS each
 
 > 📌 This page covers **Unit 2** (Organic 1 and Physical 1). Unit 1 is not yet included.
 
-## 📗 Unit 2: Organic Chemistry
+### 📗 Unit 2: Organic Chemistry
 
-### Chapter 11: Introduction to Organic Chemistry
+#### Chapter 11: Introduction to Organic Chemistry
 
-#### 11.1 Fundamental Concepts of Organic Chemistry
+##### 11.1 Fundamental Concepts of Organic Chemistry
 
 ##### 11.1.1 Hydrocarbons
 **Hydrocarbons** are compounds that are made up of carbon and hydrogen atoms ONLY.
@@ -53,7 +52,7 @@ A **homologous series** is a family of organic compounds with the following char
 
 ![Diagram of major homologous series in organic chemistry showing series such as alkanes, alkenes, alkynes, alcohols, and carboxylic acids with representative structural formulas and their general formulas (for example alkanes CnH2n+2, alkenes CnH2n, alkynes CnH2n-2, alcohols R-OH, carboxylic acids R-COOH). Subjects are presented as labeled structural diagrams on a white background with English and Chinese labels. Educational, neutral tone.](/assets/img/as-chem/C11-img%20(2).png)
 
-#### 11.2 IUPAC Nomenclature
+##### 11.2 IUPAC Nomenclature
 IUPAC organic nomenclature follows the standard format:  
 **IUPAC NAME = PREFIX + ROOT + PRIMARY SUFFIX + SECONDARY SUFFIX**
 
@@ -131,7 +130,7 @@ A type of bond fission where the bond pair of electrons is retained entirely by 
 
 ![IMG](<../../assets/img/as-chem/C11-img (17).png>)
 
-#### 11.3 Isomerism
+##### 11.3 Isomerism
 **Isomers** are compounds with the same molecular formula but different structural arrangements or spatial orientations.
 
 ##### 11.3.1 Structural Isomerism
@@ -163,9 +162,9 @@ Substituted groups joined by a single bond can rotate freely, so no isomerism oc
 
 ---
 
-### Chapter 12: Alkanes
+#### Chapter 12: Alkanes
 
-#### 12.1 Introduction to Alkanes
+##### 12.1 Introduction to Alkanes
 
 ##### 12.1.1 General Properties
 **Alkanes** are saturated hydrocarbons with the following characteristics:
@@ -198,7 +197,7 @@ Alkanes are generally unreactive due to the high strength of C–C and C–H sin
 - **Combustion**: Reaction with oxygen
 - **Halogenation**: Reaction with halogens under specific conditions
 
-#### 12.2 Fractional Distillation of Crude Oil
+##### 12.2 Fractional Distillation of Crude Oil
 Crude oil is a complex mixture of hydrocarbons that is separated into useful fractions by fractional distillation.
 
 **Process**:
@@ -210,7 +209,7 @@ Crude oil is a complex mixture of hydrocarbons that is separated into useful fra
 
 Each fraction is a mixture of hydrocarbons with similar chain lengths and properties.
 
-#### 12.3 Cracking of Hydrocarbons
+##### 12.3 Cracking of Hydrocarbons
 Cracking is the process of breaking long-chain hydrocarbon fractions into shorter, more useful chains to meet market demand.
 
 **Purposes**:
@@ -236,7 +235,7 @@ Insufficient hydrogen atoms to form two alkanes. One product forms a carbon‑ca
 
 ![IMG](<../../assets/img/as-chem/C12-img (2).png>)
 
-#### 12.4 Combustion and Environmental Impact
+##### 12.4 Combustion and Environmental Impact
 
 ##### 12.4.1 Types of Combustion
 - **Complete combustion**: Occurs in plentiful oxygen, producing carbon dioxide and water
@@ -275,7 +274,7 @@ Fitted to car exhaust systems to reduce emissions of carbon monoxide, nitrogen o
 ##### 12.4.5 Carbon Neutrality
 Activities that produce no net carbon dioxide emissions overall are referred to as **carbon neutral**.
 
-#### 12.5 Halogenation of Alkanes
+##### 12.5 Halogenation of Alkanes
 Alkanes react with halogens to form halogenoalkanes under specific conditions:
 - **Reactants**: Alkane + halogen (chlorine or bromine)
 - **Conditions**: Bright sunlight or ultraviolet (UV) light, room temperature
@@ -320,9 +319,9 @@ The chlorine radical acts as a catalyst, destroying thousands of ozone molecules
 
 ---
 
-### Chapter 13: Halogenoalkanes
+#### Chapter 13: Halogenoalkanes
 
-#### 13.1 Introduction to Halogenoalkanes
+##### 13.1 Introduction to Halogenoalkanes
 
 ##### 13.1.1 General Formula and Bond Polarity
 **Halogenoalkanes** are organic compounds containing one or more halogen atoms bonded to carbon atoms.
@@ -354,7 +353,7 @@ The chlorine radical acts as a catalyst, destroying thousands of ozone molecules
 
 **Conclusion**: Bond enthalpy is the dominant factor determining reactivity. Reactivity of halogenoalkanes **increases down the halogen group** as the C–X bond becomes weaker and easier to break.
 
-#### 13.2 Types of Reactions and Nucleophilic Substitution
+##### 13.2 Types of Reactions and Nucleophilic Substitution
 
 ##### 13.2.1 Common Organic Reaction Types
 - **Addition reaction**: Two or more molecules combine to form a single product
@@ -417,7 +416,7 @@ Nucleophilic substitution is a versatile reaction for converting halogenoalkanes
 ![IMG](<../../assets/img/as-chem/C13-img (7).png>)
 
 
-#### 13.3 Elimination Reactions and Environmental Impact
+##### 13.3 Elimination Reactions and Environmental Impact
 
 ##### 13.3.1 Elimination Reaction Mechanism
 Under different conditions, hydroxide ions act as a **base** rather than a nucleophile, removing a proton from the halogenoalkane to form an alkene.
@@ -478,9 +477,9 @@ CFCs are halogenoalkanes containing only chlorine, fluorine and carbon (no hydro
 
 ---
 
-### Chapter 14: Alkenes
+#### Chapter 14: Alkenes
 
-#### 14.1 Introduction to Alkenes
+##### 14.1 Introduction to Alkenes
 
 ##### 14.1.1 General Properties
 **Alkenes** are unsaturated hydrocarbons containing at least one carbon-carbon double bond.
@@ -516,7 +515,7 @@ Alkenes are **more reactive than alkanes** because:
 - It is attacked by **electrophiles** (electron-pair acceptors)
 - Alkenes undergo mainly **electrophilic addition reactions**
 
-#### 14.2 Reactions of Alkenes
+##### 14.2 Reactions of Alkenes
 
 ##### 14.2.1 Combustion
 Alkenes burn in air to produce carbon dioxide and water (complete combustion) or carbon monoxide/carbon (incomplete combustion).
@@ -582,7 +581,7 @@ Halogens ($\mathrm{Br_2}$, $\mathrm{Cl_2}$) add across the double bond to form d
 
 $$\mathrm{CH_2=CH_2 + H_2O \xrightarrow{H_3PO_4, heat, pressure} CH_3CH_2OH}$$
 
-#### 14.3 Addition Polymerisation
+##### 14.3 Addition Polymerisation
 
 ##### 14.3.1 Basic Concepts
 - **Polymers**: Very large molecules built up from small repeating units called **monomers**
@@ -624,7 +623,7 @@ $$\mathrm{n \ CH_2=CHR \rightarrow -[CH_2-CHR]_n-}$$
 | **LDPE (Low Density)** | High temperature, high pressure, free-radical mechanism | Extensive chain branching | Flexible, low density | Packaging, insulation |
 | **HDPE (High Density)** | Low temperature, low pressure, Ziegler-Natta catalyst | Little chain branching | Rigid, high density, higher melting point | Milk crates, buckets, bottles |
 
-#### 14.4 Epoxyethane
+##### 14.4 Epoxyethane
 
 ##### 14.4.1 Industrial Production
 Epoxyethane is made by the partial oxidation of ethene:
@@ -663,9 +662,9 @@ Produces ethanolamines, used in cosmetics, soaps and detergents.
 
 ---
 
-### Chapter 15: Alcohols
+#### Chapter 15: Alcohols
 
-#### 15.1 Introduction to Alcohols
+##### 15.1 Introduction to Alcohols
 
 ##### 15.1.1 General Formula and Structure
 **Alcohols** are organic compounds containing a hydroxyl (-OH) group bonded to a carbon atom.
@@ -682,7 +681,7 @@ Produces ethanolamines, used in cosmetics, soaps and detergents.
   - Short-chain alcohols ($\mathrm{C_1-C_3}$) are miscible with water (form hydrogen bonds with water molecules)
   - Long-chain alcohols are insoluble in water (non-polar hydrocarbon chain dominates over polar -OH group)
 
-#### 15.2 Reactions of Alcohols
+##### 15.2 Reactions of Alcohols
 
 ##### 15.2.1 Combustion
 Alcohols burn readily in air to produce carbon dioxide and water. Ethanol is commonly used as a fuel:

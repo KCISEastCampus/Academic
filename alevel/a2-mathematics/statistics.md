@@ -7,35 +7,34 @@ subject: s2
 permalink: /alevel/a2-mathematics/statistics/
 ---
 
-# S2 (Statistics)
 
-## S2.1: Poisson Distribution
+### S2.1: Poisson Distribution
 
-### Conditions for a Poisson Distribution
+#### Conditions for a Poisson Distribution
 A Poisson distribution models the number of events occurring in a fixed interval of time or space, given that:
 - Events occur **independently**.
 - Events occur at a **constant average rate** $\lambda$.
 - Two events cannot occur at exactly the same instant.
 
-### Notation
+#### Notation
 $$X \sim \text{Po}(\lambda)$$
 where $\lambda$ = mean number of events per interval.
 
-### Probability Mass Function
+#### Probability Mass Function
 $$P(X = x) = \frac{e^{-\lambda} \lambda^x}{x!}, \quad x = 0, 1, 2, \dots$$
 
-### Mean and Variance
+#### Mean and Variance
 $$E(X) = \lambda, \quad \text{Var}(X) = \lambda$$
 
-### Poisson as Limiting Form of Binomial
+#### Poisson as Limiting Form of Binomial
 When $n$ is large and $p$ is small, with $\lambda = np$:
 $$\text{Bin}(n, p) \approx \text{Po}(\lambda)$$
 
-### Sum of Independent Poisson Variables
+#### Sum of Independent Poisson Variables
 If $X \sim \text{Po}(\lambda_1)$ and $Y \sim \text{Po}(\lambda_2)$ are independent:
 $$X + Y \sim \text{Po}(\lambda_1 + \lambda_2)$$
 
-### Example
+#### Example
 The number of cars passing a point on a road follows a Poisson distribution with mean 3 per minute. Find the probability that exactly 5 cars pass in 2 minutes.
 
 **Solution:**
@@ -45,9 +44,9 @@ $$P(X = 5) = \frac{e^{-6} \times 6^5}{5!} = \frac{e^{-6} \times 7776}{120} \appr
 
 ---
 
-## S2.2: Continuous Random Variables
+### S2.2: Continuous Random Variables
 
-### Probability Density Function (PDF)
+#### Probability Density Function (PDF)
 For a continuous random variable $X$:
 - $f(x) \geq 0$ for all $x$
 - $\int_{-\infty}^{\infty} f(x) \, dx = 1$
@@ -55,13 +54,13 @@ For a continuous random variable $X$:
 **Probability in an interval:**
 $$P(a < X < b) = \int_a^b f(x) \, dx$$
 
-### Cumulative Distribution Function (CDF)
+#### Cumulative Distribution Function (CDF)
 $$F(x) = P(X \leq x) = \int_{-\infty}^x f(t) \, dt$$
 
 **Relationship:**
 $$f(x) = \frac{d}{dx}F(x)$$
 
-### Mean and Variance
+#### Mean and Variance
 
 | Quantity | Formula |
 |----------|---------|
@@ -69,16 +68,16 @@ $$f(x) = \frac{d}{dx}F(x)$$
 | Expected value of $g(X)$ | $E[g(X)] = \int_{-\infty}^{\infty} g(x) f(x) \, dx$ |
 | Variance | $\text{Var}(X) = E(X^2) - [E(X)]^2 = \int x^2 f(x) \, dx - \mu^2$ |
 
-### Linear Transformations
+#### Linear Transformations
 - $E(aX + b) = aE(X) + b$
 - $\text{Var}(aX + b) = a^2 \text{Var}(X)$
 
-### Sum of Independent Continuous Random Variables
+#### Sum of Independent Continuous Random Variables
 If $X$ and $Y$ are independent:
 - $E(aX \pm bY) = aE(X) \pm bE(Y)$
 - $\text{Var}(aX \pm bY) = a^2 \text{Var}(X) + b^2 \text{Var}(Y)$
 
-### Example
+#### Example
 A continuous random variable has PDF $f(x) = kx^2$ for $0 \leq x \leq 3$. Find $k$, $E(X)$, and $\text{Var}(X)$.
 
 **Solution:**
@@ -92,28 +91,28 @@ $$\text{Var}(X) = E(X^2) - [E(X)]^2 = 5.4 - (2.25)^2 = 5.4 - 5.0625 = 0.3375$$
 
 ---
 
-## S2.3: Exponential Distribution
+### S2.3: Exponential Distribution
 
-### Conditions for an Exponential Distribution
+#### Conditions for an Exponential Distribution
 The exponential distribution models the **time between events** in a Poisson process.
 
 If events occur at rate $\lambda$ per unit time, the waiting time $T$ between consecutive events follows:
 $$T \sim \text{Exp}(\lambda)$$
 
-### Probability Density Function
+#### Probability Density Function
 $$f(t) = \lambda e^{-\lambda t}, \quad t \geq 0$$
 
-### Cumulative Distribution Function
+#### Cumulative Distribution Function
 $$F(t) = P(T \leq t) = 1 - e^{-\lambda t}, \quad t \geq 0$$
 
-### Mean and Variance
+#### Mean and Variance
 $$E(T) = \frac{1}{\lambda}, \quad \text{Var}(T) = \frac{1}{\lambda^2}$$
 
-### Memoryless Property
+#### Memoryless Property
 $$P(T > t + s \mid T > s) = P(T > t)$$
 The exponential distribution is memoryless — the remaining waiting time does not depend on how long you've already waited.
 
-### Example
+#### Example
 The time between arrivals at a service centre follows an exponential distribution with mean 5 minutes. Find the probability that the next customer arrives in less than 3 minutes.
 
 **Solution:**
@@ -123,29 +122,29 @@ $$P(T < 3) = 1 - e^{-0.2 \times 3} = 1 - e^{-0.6} \approx 1 - 0.5488 = 0.4512$$
 
 ---
 
-## S2.4: Normal Distribution
+### S2.4: Normal Distribution
 
-### Properties
+#### Properties
 - Symmetric about the mean $\mu$
 - Bell-shaped curve
 - Approximately 68% of data within $\mu \pm \sigma$, 95% within $\mu \pm 2\sigma$, 99.7% within $\mu \pm 3\sigma$
 
-### Standardisation
+#### Standardisation
 $$Z = \frac{X - \mu}{\sigma} \sim N(0, 1)$$
 
-### Using Tables
+#### Using Tables
 - $P(Z \leq z)$ given in tables (cumulative probabilities)
 - For $P(Z > z) = 1 - P(Z \leq z)$
 - For $P(z_1 < Z < z_2) = P(Z \leq z_2) - P(Z \leq z_1)$
 
-### Finding Unknown $\mu$ and/or $\sigma$
+#### Finding Unknown $\mu$ and/or $\sigma$
 Use inverse normal (percentage points) tables.
 
-### Sum of Independent Normal Variables
+#### Sum of Independent Normal Variables
 If $X \sim N(\mu_X, \sigma_X^2)$ and $Y \sim N(\mu_Y, \sigma_Y^2)$ are independent:
 $$X + Y \sim N(\mu_X + \mu_Y, \sigma_X^2 + \sigma_Y^2)$$
 
-### Example
+#### Example
 The heights of students are normally distributed with mean 165 cm and standard deviation 8 cm. Find the probability that a randomly selected student is taller than 175 cm.
 
 **Solution:**
@@ -155,9 +154,9 @@ $$P(X > 175) = P(Z > 1.25) = 1 - P(Z \leq 1.25) = 1 - 0.8944 = 0.1056$$
 
 ---
 
-## S2.5: Estimation
+### S2.5: Estimation
 
-### Key Terms
+#### Key Terms
 
 | Term | Definition |
 |------|------------|
@@ -167,32 +166,32 @@ $$P(X > 175) = P(Z > 1.25) = 1 - P(Z \leq 1.25) = 1 - 0.8944 = 0.1056$$
 | **Statistic** | Numerical characteristic of a sample (e.g., $\bar{x}$, $s^2$) |
 | **Unbiased estimator** | $E(\text{estimator}) = \text{parameter}$ |
 
-### Unbiased Estimators
+#### Unbiased Estimators
 
 | Parameter | Unbiased Estimator |
 |-----------|-------------------|
 | Population mean $\mu$ | Sample mean $\bar{X} = \frac{1}{n}\sum X_i$ |
 | Population variance $\sigma^2$ | $S^2 = \frac{1}{n-1}\sum (X_i - \bar{X})^2$ |
 
-### Sampling Distribution of the Sample Mean
+#### Sampling Distribution of the Sample Mean
 If $X_1, X_2, \dots, X_n$ are i.i.d. with $E(X_i) = \mu$ and $\text{Var}(X_i) = \sigma^2$:
 - $E(\bar{X}) = \mu$
 - $\text{Var}(\bar{X}) = \frac{\sigma^2}{n}$
 - Standard error: $\text{SE} = \frac{\sigma}{\sqrt{n}}$ (estimated by $\frac{s}{\sqrt{n}}$)
 
-### Central Limit Theorem (CLT)
+#### Central Limit Theorem (CLT)
 For large $n$ (usually $n \geq 30$), the sampling distribution of $\bar{X}$ is approximately normal, regardless of the population distribution:
 $$\bar{X} \approx N\left(\mu, \frac{\sigma^2}{n}\right)$$
 
-### Sampling from a Normal Population
+#### Sampling from a Normal Population
 If the population is $N(\mu, \sigma^2)$, then:
 $$\bar{X} \sim N\left(\mu, \frac{\sigma^2}{n}\right)$$
 
 ---
 
-## S2.6: Hypothesis Testing
+### S2.6: Hypothesis Testing
 
-### Key Concepts
+#### Key Concepts
 
 | Term | Definition |
 |------|------------|
@@ -206,26 +205,26 @@ $$\bar{X} \sim N\left(\mu, \frac{\sigma^2}{n}\right)$$
 | **Type I error** | Reject $H_0$ when $H_0$ is true |
 | **Type II error** | Accept $H_0$ when $H_0$ is false |
 
-### Tests for a Population Proportion
+#### Tests for a Population Proportion
 - Use **exact binomial probabilities**.
 - $H_0: p = p_0$
 
-### Tests for the Mean of a Poisson Distribution
+#### Tests for the Mean of a Poisson Distribution
 - Use **exact Poisson probabilities**.
 - $H_0: \lambda = \lambda_0$
 
-### Tests for the Mean of a Normal Distribution (known variance)
+#### Tests for the Mean of a Normal Distribution (known variance)
 - $H_0: \mu = \mu_0$
 - Test statistic: $Z = \frac{\bar{X} - \mu_0}{\sigma / \sqrt{n}} \sim N(0, 1)$ under $H_0$
 
-### Tests for the Mean of a Normal Distribution (unknown variance)
+#### Tests for the Mean of a Normal Distribution (unknown variance)
 - $H_0: \mu = \mu_0$
 - Test statistic: $t = \frac{\bar{X} - \mu_0}{s / \sqrt{n}} \sim t_{n-1}$ under $H_0$
 
-### Tests Using Normal Approximation (large samples)
+#### Tests Using Normal Approximation (large samples)
 For proportions or Poisson means with large $n$, use $z$-test.
 
-### Example: One-Tailed $z$-Test
+#### Example: One-Tailed $z$-Test
 A manufacturer claims that light bulbs last 1000 hours on average. A sample of 50 bulbs has mean 980 hours with $\sigma = 80$ hours. Test at $\alpha = 0.05$ whether the true mean is less than 1000.
 
 **Solution:**
@@ -239,7 +238,7 @@ Since $-1.77 < -1.645$, reject $H_0$. There is evidence that the mean is less th
 
 ---
 
-## Key Formulae Summary
+### Key Formulae Summary
 
 | Topic | Formula |
 |-------|---------|

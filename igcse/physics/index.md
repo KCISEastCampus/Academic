@@ -7,7 +7,6 @@ subject: igcse-physics
 permalink: /igcse/physics/
 ---
 
-# IG Physics
 
 > **Exam info**: OxfordAQA 9203 · Linear qualification · 2 papers (1h 30m each, 90 marks each) · 9-point grading (1–9)
 >
@@ -15,9 +14,9 @@ permalink: /igcse/physics/
 
 ---
 
-## 📦 Unit 1: Forces and their effects
+### 📦 Unit 1: Forces and their effects
 
-### 🔧 1.1 Forces and their interactions
+#### 🔧 1.1 Forces and their interactions
 
 - **Non-contact (field) forces**: gravity, electrostatics, magnetism.
 - **Contact forces**: friction, air resistance, tension, normal contact force.
@@ -44,13 +43,13 @@ $$F = k \times e$$
 
 🔬 **Required practical**: Investigate the relationship between force and extension for a spring.
 
-### 🚗 1.2 Motion
+#### 🚗 1.2 Motion
 
 - A **distance–time graph**: gradient = speed.
 - **Velocity** is speed in a given direction: $$v = \frac{s}{t}$$
 - A **velocity–time graph**: gradient = acceleration; **area under graph** = distance travelled.
 
-### ➗ 1.3 Resultant forces
+#### ➗ 1.3 Resultant forces
 
 - **Newton's First Law**: if the resultant force is zero, a moving object keeps moving at the same velocity; a stationary object stays at rest.
 - **Newton's Second Law**: a non-zero resultant force causes acceleration in its direction: $$F = m \times a$$
@@ -59,27 +58,27 @@ $$F = k \times e$$
 
 $$a = \frac{\Delta v}{t}$$
 
-### 💥 1.4 Momentum
+#### 💥 1.4 Momentum
 
 - **Momentum** = mass × velocity: $$p = m \times v$$
 - **Conservation of momentum**: in a closed system, total momentum before an interaction equals total momentum after it.
 - Force = rate of change of momentum: $$F = \frac{\Delta p}{t}$$
 - **Safety features** (airbags, seat belts, crumple zones, cycle helmets) increase the *time* over which momentum changes, reducing the force.
 
-### 🚌 1.5 Safety in public transport
+#### 🚌 1.5 Safety in public transport
 
 - **Stopping distance = thinking distance + braking distance**.
 - Thinking distance is affected by tiredness, distractions, drugs, alcohol.
 - Braking distance is affected by speed, road/weather conditions, and condition of brakes/tyres.
 - When brakes are applied, work done by friction reduces kinetic energy → brakes heat up.
 
-### 🪂 1.6 Forces and terminal velocity
+#### 🪂 1.6 Forces and terminal velocity
 
 - An object falling through a fluid accelerates (due to gravity), but drag increases with speed.
 - When drag = weight, resultant force = 0 → **terminal velocity**.
 - Parachutes increase drag → lower terminal velocity. Streamlining reduces drag → higher maximum velocity.
 
-### ⚖️ 1.7 Centre of mass & 1.8 Moments
+#### ⚖️ 1.7 Centre of mass & 1.8 Moments
 
 - **Centre of mass**: point where the mass of an object may be thought to be concentrated.
 - A freely suspended object comes to rest with its centre of mass directly below the point of suspension.
@@ -87,7 +86,7 @@ $$a = \frac{\Delta v}{t}$$
 - If an object is not turning: total **clockwise moment = total anticlockwise moment**.
 - If the line of action of the weight lies **outside the base**, the object **topples**.
 
-### ✅ Unit 1 Quick Check
+#### ✅ Unit 1 Quick Check
 
 1. Is speed a scalar or a vector? **(Scalar — magnitude only)**
 2. A car accelerates from rest at 2 m/s² for 5 s. What is its velocity? **(v = 0 + 2×5 = 10 m/s)**
@@ -96,9 +95,9 @@ $$a = \frac{\Delta v}{t}$$
 
 ---
 
-## ⚡ Unit 2: Energy
+### ⚡ Unit 2: Energy
 
-### 🔄 2.1 Forces and energy
+#### 🔄 2.1 Forces and energy
 
 - **Work done**: $$W = F \times d \quad \text{(J)}$$
 - Energy is transferred when work is done.
@@ -109,20 +108,20 @@ $$a = \frac{\Delta v}{t}$$
 
 - **Power** is the rate of energy transfer or work done: $$P = \frac{W}{t} = \frac{E}{t}$$
 
-### ♻️ 2.2 Energy transfers, conservation and dissipation
+#### ♻️ 2.2 Energy transfers, conservation and dissipation
 
 - Energy can be **transferred usefully, stored or dissipated**, but **cannot be created or destroyed**.
 - Friction and air resistance dissipate energy by heating the surroundings.
 - **Efficiency**: $$\text{Efficiency} = \frac{\text{useful output}}{\text{total input}}$$ (as decimal or %)
 - **Sankey diagrams** show how energy is redistributed in a system.
 
-### 🌍 2.3 Energy resources
+#### 🌍 2.3 Energy resources
 
 - **Non-renewable**: fossil fuels (coal, oil, gas) — limited, polluting.
 - **Renewable**: solar, wind, wave, geothermal, hydroelectric, biomass, tidal.
 - Fuels are chosen based on ease of storage, energy content, and safety.
 
-### ✅ Unit 2 Quick Check
+#### ✅ Unit 2 Quick Check
 
 1. A 2 kg object is raised 3 m (g = 10 N/kg). GPE gained? **(Ep = 2×10×3 = 60 J)**
 2. A device transfers 100 J in, 25 J usefully. Efficiency? **(25%)**
@@ -130,9 +129,9 @@ $$a = \frac{\Delta v}{t}$$
 
 ---
 
-## 🌊 Unit 3: Waves
+### 🌊 Unit 3: Waves
 
-### 🌐 3.1 General properties of waves
+#### 🌐 3.1 General properties of waves
 
 - A **wave** transfers energy and information without transferring matter.
 - **Transverse**: oscillations perpendicular to direction of travel (EM waves, water waves).
@@ -140,7 +139,7 @@ $$a = \frac{\Delta v}{t}$$
 - Waves can be **reflected, transmitted, absorbed**, and undergo **refraction** (change in speed) and **diffraction** (spreading at a gap/edge).
 - Wave speed: $$v = f \times \lambda$$
 
-### 📡 3.2 The electromagnetic spectrum
+#### 📡 3.2 The electromagnetic spectrum
 
 Order (increasing frequency / decreasing wavelength):
 
@@ -159,7 +158,7 @@ Order (increasing frequency / decreasing wavelength):
 - **Infrared**: dark, matt surfaces are good absorbers/emitters; light, shiny surfaces are good reflectors.
 - **X-rays**: short wavelength, high energy, ionising; absorbed strongly by bone/metal, transmitted by healthy tissue.
 
-### 🔊 3.3 Sound and ultrasound
+#### 🔊 3.3 Sound and ultrasound
 
 - Range of human hearing: **20 Hz – 20 000 Hz**.
 - Pitch = frequency; loudness = amplitude.
@@ -167,7 +166,7 @@ Order (increasing frequency / decreasing wavelength):
 - Ultrasound is partially reflected at boundaries; reflection time gives distance: $$s = \frac{v \times t}{2}$$
 - Uses: **prenatal scanning**, **removing kidney stones**.
 
-### 🪞 3.4 Reflection & 3.5 Refraction
+#### 🪞 3.4 Reflection & 3.5 Refraction
 
 - **Angle of incidence = angle of reflection** (relative to the normal).
 - Plane mirror image: **virtual, upright, laterally inverted**.
@@ -175,7 +174,7 @@ Order (increasing frequency / decreasing wavelength):
 - **Refractive index**: $$n = \frac{\text{speed in vacuum}}{\text{speed in medium}}$$ and Snell's law: $$n = \frac{\sin i}{\sin r}$$
 - **Total internal reflection** occurs when the angle of incidence (in the denser medium) exceeds the **critical angle**. Used in **optical fibres** (medicine, communication).
 
-### 👁️ 3.6 Lenses and the eye
+#### 👁️ 3.6 Lenses and the eye
 
 - **Convex (converging) lens**: brings parallel rays to a focus at the principal focus.
 - **Concave (diverging) lens**: spreads parallel rays as if from the principal focus.
@@ -184,7 +183,7 @@ Order (increasing frequency / decreasing wavelength):
 - Near point ~25 cm; far point at infinity.
 - **Magnification**: $$\text{Magnification} = \frac{\text{image height}}{\text{object height}}$$
 
-### ✅ Unit 3 Quick Check
+#### ✅ Unit 3 Quick Check
 
 1. What type of wave is sound? **(Longitudinal)**
 2. Which EM wave has the highest frequency? **(Gamma rays)**
@@ -193,9 +192,9 @@ Order (increasing frequency / decreasing wavelength):
 
 ---
 
-## 🔬 Unit 4: Particle model of matter
+### 🔬 Unit 4: Particle model of matter
 
-### 🧊 4.1 Kinetic theory
+#### 🧊 4.1 Kinetic theory
 
 | State | Arrangement | Motion |
 |---|---|---|
@@ -208,7 +207,7 @@ Order (increasing frequency / decreasing wavelength):
 
 🔬 **Required practical**: Investigate cooling curves for stearic acid.
 
-### 🔥 4.2 Energy transfers and particle motion
+#### 🔥 4.2 Energy transfers and particle motion
 
 - **Conduction**: vibrating particles pass energy on; free electrons carry energy through metals.
 - **Convection**: fluids expand, become less dense, rise (e.g. hot air rises).
@@ -216,7 +215,7 @@ Order (increasing frequency / decreasing wavelength):
 - Rate of energy transfer depends on: surface area/volume, material, nature of surface, temperature difference.
 - Most substances **expand when heated** (hazard: roofs/bridges; useful: bimetallic strip thermostat).
 
-### ✅ Unit 4 Quick Check
+#### ✅ Unit 4 Quick Check
 
 1. What is specific heat capacity? **(Energy to raise 1 kg by 1°C)**
 2. Why does evaporation cool a liquid? **(Fastest particles escape, lowering average KE)**
@@ -224,9 +223,9 @@ Order (increasing frequency / decreasing wavelength):
 
 ---
 
-## 🔌 Unit 5: Electricity and magnetism
+### 🔌 Unit 5: Electricity and magnetism
 
-### ⚡ 5.1 Electrical circuits
+#### ⚡ 5.1 Electrical circuits
 
 - **Electric current** is the rate of flow of charge: $$Q = I \times t$$
 - **Potential difference** across a component measures energy transfer per charge: $$V = \frac{E}{Q}$$
@@ -248,7 +247,7 @@ Order (increasing frequency / decreasing wavelength):
 
 🔬 **Required practical**: Investigate the V–I characteristics of a filament lamp, a diode, and a resistor at constant temperature.
 
-### 🧲 5.2 Magnetism and electromagnetism
+#### 🧲 5.2 Magnetism and electromagnetism
 
 - Like poles **repel**, unlike poles **attract** (non-contact forces).
 - **Magnetic field**: space around a magnet where a force acts on magnetic materials (iron, steel, cobalt, nickel).
@@ -257,7 +256,7 @@ Order (increasing frequency / decreasing wavelength):
 
 🔬 **Required practical**: Investigate the factors that determine the strength of an electromagnet.
 
-### ✅ Unit 5 Quick Check
+#### ✅ Unit 5 Quick Check
 
 1. What happens to a thermistor's resistance when temperature rises? **(Decreases)**
 2. In a parallel circuit, is current the same everywhere? **(No — it splits)**
@@ -265,16 +264,16 @@ Order (increasing frequency / decreasing wavelength):
 
 ---
 
-## 🏠 Unit 6: Generating and distributing electricity & household use
+### 🏠 Unit 6: Generating and distributing electricity & household use
 
-### 🔄 6.1 Generating electricity
+#### 🔄 6.1 Generating electricity
 
 - **Generator effect**: a pd is induced across a conductor when it moves relative to a magnetic field, or is in a changing magnetic field.
 - Induced pd increases with: speed of movement, magnetic field strength, number of turns, coil area.
 - **Alternator** → AC; **dynamo** → DC.
 - Power stations use turbines to turn coils between magnets.
 
-### 🚚 6.2 Electricity transmission
+#### 🚚 6.2 Electricity transmission
 
 - High voltage → low current → less heating loss (more efficient).
 - **Transformer**: primary + secondary coil on a soft iron core. AC in primary → changing magnetic field → induced pd in secondary.
@@ -282,13 +281,13 @@ Order (increasing frequency / decreasing wavelength):
 - Transformer equation: $$\frac{V_p}{V_s} = \frac{n_p}{n_s}$$
 - **Switch-mode transformers**: high frequency (50–200 kHz), small and light (phone chargers).
 
-### 🔌 6.3 Using electricity in the home
+#### 🔌 6.3 Using electricity in the home
 
 - **dc**: current always in one direction (cells/batteries). **ac**: repeatedly changes direction (mains).
 - Safety features: **earthing** (metal case → live fault → current to earth), **fuse** or **circuit breaker** in live wire.
 - Circuit breakers operate faster than fuses and can be reset. Some appliances are double insulated (no earth).
 
-### 🔧 6.4 The motor effect & 6.5 Energy transfer
+#### 🔧 6.4 The motor effect & 6.5 Energy transfer
 
 - **Motor effect**: a current-carrying conductor in a magnetic field experiences a force. Force increases with field strength, current, conductor length. Direction from **Fleming's left-hand rule**.
 - A coil carrying current in a magnetic field rotates → basis of an **electric motor**.
@@ -296,7 +295,7 @@ Order (increasing frequency / decreasing wavelength):
 - Energy: $$E = P \times t \quad \text{(kWh)}$$
 - Cost of electricity = energy (kWh) × cost per kWh.
 
-### ✅ Unit 6 Quick Check
+#### ✅ Unit 6 Quick Check
 
 1. Why transmit electricity at high voltage? **(Reduces current → less heating loss)**
 2. What does a step-up transformer do? **(Increases voltage)**
@@ -304,9 +303,9 @@ Order (increasing frequency / decreasing wavelength):
 
 ---
 
-## ☢️ Unit 7: Nuclear physics
+### ☢️ Unit 7: Nuclear physics
 
-### ⚛️ 7.1 Atomic structure
+#### ⚛️ 7.1 Atomic structure
 
 | Particle | Relative mass | Relative charge |
 |---|---|---|
@@ -318,7 +317,7 @@ Order (increasing frequency / decreasing wavelength):
 - **Atomic number** = number of protons. **Mass number** = protons + neutrons.
 - Alpha-particle scattering by thin metal foil gives evidence of the distribution of mass in the atom.
 
-### ☢️ 7.2 Ionising radiation
+#### ☢️ 7.2 Ionising radiation
 
 - **Radioactive decay** is a **random** process — it is impossible to predict when a particular atom decays.
 - **Alpha (α)**: 2 protons + 2 neutrons (helium nucleus). Strongly ionising, low penetration (stopped by paper).
@@ -328,12 +327,12 @@ Order (increasing frequency / decreasing wavelength):
 - **Contamination** = unwanted radioactive atoms on other materials (hazard from decay). **Irradiation** = exposing an object to radiation (does not make it radioactive).
 - Background radiation comes from the environment, space, and devices (X-ray machines).
 
-### ⚛️ 7.3 Nuclear fission & 7.4 Nuclear fusion
+#### ⚛️ 7.3 Nuclear fission & 7.4 Nuclear fusion
 
 - **Fission**: splitting a large unstable nucleus (U-235, Pu-239) → two smaller nuclei + neutrons + energy. A **chain reaction** occurs when neutrons cause further fission. Control rods absorb neutrons.
 - **Fusion**: joining two light nuclei to form a heavier nucleus; some mass is converted into energy. Requires very high temperatures/pressures. This is how stars release energy.
 
-### ✅ Unit 7 Quick Check
+#### ✅ Unit 7 Quick Check
 
 1. What is an alpha particle? **(A helium nucleus — 2p + 2n)**
 2. What does "half-life" mean? **(Time for the number of nuclei/count rate to halve)**
@@ -341,9 +340,9 @@ Order (increasing frequency / decreasing wavelength):
 
 ---
 
-## 🌌 Unit 8: Space physics
+### 🌌 Unit 8: Space physics
 
-### ⭐ 8.1 Life cycle of a star
+#### ⭐ 8.1 Life cycle of a star
 
 **Star life cycles** (determined by mass):
 
@@ -352,20 +351,20 @@ Order (increasing frequency / decreasing wavelength):
 - Main sequence: energy released by fusion of hydrogen → helium.
 - Elements heavier than iron are formed in a **supernova**.
 
-### 🪐 8.2 Solar system and orbital motion
+#### 🪐 8.2 Solar system and orbital motion
 
 - Our solar system: 8 planets orbiting the Sun, plus moons, asteroids, dwarf planets, comets.
 - Our Sun is one of thousands of millions of stars in the **Milky Way** galaxy.
 - Gravity provides the **centripetal force** keeping planets and satellites in orbit.
 - Gravitational force decreases with separation → lower orbital speeds at larger distances.
 
-### 🌌 8.3 Red shift and the expanding universe
+#### 🌌 8.3 Red shift and the expanding universe
 
 - **Doppler effect**: a wave source moving away → wavelength increases, frequency decreases (red shift); moving towards → wavelength decreases (blue shift).
 - **Red shift** of light from distant galaxies → galaxies moving away → space is expanding → supports the **Big Bang** model.
 - **CMBR** (cosmic microwave background radiation) is evidence for the Big Bang.
 
-### ✅ Unit 8 Quick Check
+#### ✅ Unit 8 Quick Check
 
 1. What happens to a small star like the Sun after the main sequence? **(Red giant → white dwarf → black dwarf)**
 2. What keeps planets in orbit? **(Gravity as centripetal force)**
@@ -373,7 +372,7 @@ Order (increasing frequency / decreasing wavelength):
 
 ---
 
-## Key Equations Summary
+### Key Equations Summary
 
 | Equation | Formula |
 |---|---|
@@ -398,15 +397,15 @@ Order (increasing frequency / decreasing wavelength):
 
 ---
 
-## Revision Resources
+### Revision Resources
 
-### Unit 1: Force & Motion
+#### Unit 1: Force & Motion
 [Force & Motion](./assets/force_motion.pdf)
 
-### Unit 2: Energy
+#### Unit 2: Energy
 [Energy](./assets/energy.pdf)
 
-### Unit 3: Waves
+#### Unit 3: Waves
 [Waves](./assets/waves.pdf)
 
 ---
