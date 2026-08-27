@@ -1,100 +1,98 @@
-# Student Council Data
-# A-level Student Council (ALSC) - Managing IGCSE and A-level students
-
-# Council Information
 council:
-  name: "A-level Student Council"
-  short_name: "ALSC"
-  description: "The A-level Student Council (ALSC) aims to organize activities, provide resources, help students relieve stress, and help them learn effectively."
-
-# Core Members / Executive Team
+  name: A-level Student Council
+  short_name: ALSC
+  description: The A-level Student Council (ALSC) aims to organize activities,
+    provide resources, help students relieve stress, and help them learn
+    effectively.
 executives:
-  - name: "Eric Shi"
-    role: "President"
-    grade: "G11"
-    class: "11I"
-    bio: "From G11, with experience of leadership by being the class monitor for 3 years, since G8. Built and maintaining <a href=\"https://kcisec.site\">https://kcisec.site</a> since 2022."
+  - name: Eric Shi
+    role: President
+    grade: G12
+    class: 12H
+    bio: From G12, with experience of leadership by being the class monitor for 4
+      years, since G8. Built and maintaining <a
+      href="https://kcisec.site">https://kcisec.site</a> since 2022.
     groups:
-      - name: "Academic"
-        role: "Leader"
-      - name: "Publicity"
-        role: "Deputy Leader"
-
-  - name: "Marcia Ma"
-    role: "Vice President"
-    grade: "G11"
-    class: "11I"
-    bio: "From G11, experienced in organizational management, and have successfully managed the school's \"Heartfelt Voice(心辅之声)\" program for years."
+      - name: Academic
+        role: Leader
+      - name: Publicity
+        role: Deputy Leader
+  - name: Marcia Ma
+    role: Vice President
+    grade: G12
+    class: 12H
+    bio: From G12, experienced in organizational management, and have successfully
+      managed the school's "Heartfelt Voice(心辅之声)" program for years.
     groups:
-      - name: "Publicity"
-        role: "Leader"
-      - name: "Events"
-        role: "Deputy Leader"
-
-  - name: "Jason Jiang"
-    role: "Head of Events"
-    grade: "G10"
-    class: "10K"
-    bio: "TBD"
+      - name: Publicity
+        role: Leader
+      - name: Events
+        role: Deputy Leader
+  - name: Jason Jiang
+    role: Head of Events
+    grade: G11
+    class: 11H
+    bio: TBD
     groups:
-      - name: "Events"
-        role: "Leader"
-
-# Three Main Groups/Departments
+      - name: Events
+        role: Leader
 groups:
-  - id: "academic"
-    name: "Academic"
-    leader_name_cn: "石洪斌"
-    icon: "bi-book"
+  - id: academic
+    name: Academic
+    leader_name_cn: 石洪斌
+    icon: bi-book
     color: "#5cc07f"
-    description: "Organizing special academic activities and maintaining this website."
+    description: Maintaining this website and writing academic resources.
     responsibilities:
-      - "Organize special academic events (e.g., Science Day)"
-      - "Maintain and update the Academic Resources website"
-      - "Create and curate study materials"
-
-  - id: "events"
-    name: "Events"
-    leader_name_cn: "姜嘉鑫"
-    icon: "bi-calendar-event"
+      - Maintain and update the Academic Resources website
+      - Create and curate study materials
+  - id: events
+    name: Events
+    leader_name_cn: 姜嘉鑫
+    icon: bi-calendar-event
     color: "#5c6bc0"
-    description: "Planning and executing events from concept to completion."
+    description: Planning and executing events from concept to completion.
     responsibilities:
-      - "Event planning and proposal development"
-      - "Mid-stage event execution and coordination"
-      - "Logistics and resource allocation"
-      - "Venue coordination and participant management"
-
-  - id: "publicity"
-    name: "Publicity"
-    leader_name_cn: "马艺涵"
-    icon: "bi-megaphone"
+      - Event planning and proposal development
+      - Mid-stage event execution and coordination
+      - Logistics and resource allocation
+      - Venue coordination and participant management
+  - id: publicity
+    name: Publicity
+    leader_name_cn: 马艺涵
+    icon: bi-megaphone
     color: "#e67e22"
-    description: "Creating content, designing materials, and documenting our work."
+    description: Creating content, designing materials, and documenting our work.
     responsibilities:
-      - "Write official documents and announcements"
-      - "Design posters and promotional materials"
-      - "Post-event documentation and summaries"
-      - "Social media management and outreach"
-
-# Regular Members (Current - G10/G11 only)
+      - Write official documents and announcements
+      - Design posters and promotional materials
+      - Post-event documentation and summaries
+      - Social media management and outreach
 members:
-  - name: "王铎"
-    groups: ["Academic"]
-  - name: "张梓涵"
-    groups: ["Events"]
-  - name: "刘卿竹"
-    groups: ["Events"]
-  - name: "解徐洺淏"
-    groups: ["Academic"]
-  - name: "岳心怡"
-    groups: ["Academic"]
-  - name: "杜翼陈"
-    groups: ["Academic"]
-  - name: "唐浩宇"
-    groups: ["Events"]
-
-# Contact Information
+  - name: 王铎
+    groups:
+      - Academic
+  - name: 张梓涵
+    groups:
+      - Events
+  - name: 刘卿竹
+    groups:
+      - Events
+  - name: 解徐洺淏
+    groups:
+      - Academic
+  - name: 岳心怡
+    groups:
+      - Academic
+  - name: 杜翼陈
+    groups:
+      - Academic
+  - name: 唐浩宇
+    groups:
+      - Events
+  - groups:
+      - Publicity
+    name: 杨依蒙
 contact:
-  email: "ALSC@kcisec.site"
-  location: "A-level Office"
+  email: ALSC@kcisec.site
+  location: A-level Office
