@@ -4,11 +4,15 @@
   <ol class="breadcrumb">
     <li class="breadcrumb-item">
       {% if page.url != "/" %}
-      <a href="/" aria-label="Home">
-        <i class="bi bi-house-door"></i>
+      <a href="/" class="breadcrumb-home" aria-label="Back to homepage">
+        <i class="bi bi-house-door-fill"></i>
+        <span>Home</span>
       </a>
       {% else %}
-      <i class="bi bi-house-door"></i>
+      <span class="breadcrumb-home current">
+        <i class="bi bi-house-door-fill"></i>
+        <span>Home</span>
+      </span>
       {% endif %}
     </li>
 
@@ -53,6 +57,51 @@
     background: transparent;
     font-size: 0.85rem;
     border-radius: 0;
+    align-items: center;
+  }
+
+  /* Prominent "Back to homepage" pill button */
+  .site-breadcrumb .breadcrumb-home {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px 5px 10px;
+    border-radius: 50px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-weight: 600;
+    font-size: 0.82rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .site-breadcrumb .breadcrumb-home:hover {
+    background: var(--accent-ig);
+    border-color: var(--accent-ig);
+    color: #fff;
+    transform: translateY(-1px);
+  }
+
+  html[data-bs-theme="dark"] .site-breadcrumb .breadcrumb-home {
+    background: var(--surface-hover);
+    border-color: var(--border-hover);
+  }
+
+  html[data-bs-theme="dark"] .site-breadcrumb .breadcrumb-home:hover {
+    background: var(--accent-ig);
+    border-color: var(--accent-ig);
+    color: #fff;
+  }
+
+  .site-breadcrumb .breadcrumb-home.current {
+    cursor: default;
+    pointer-events: none;
+    opacity: 0.7;
+  }
+
+  .site-breadcrumb .breadcrumb-home i {
+    font-size: 0.95rem;
   }
 
   .site-breadcrumb .breadcrumb-item a {
@@ -75,23 +124,23 @@
     opacity: 0.5;
   }
 
-  /* Mobile: simplify breadcrumb */
+  /* Mobile: simplify breadcrumb but keep Home button */
   @media (max-width: 768px) {
     .site-breadcrumb .breadcrumb {
       font-size: 0.78rem;
     }
 
-    .site-breadcrumb .breadcrumb-item:nth-child(n+3) {
+    .site-breadcrumb .breadcrumb-home {
+      padding: 4px 10px 4px 8px;
+      font-size: 0.78rem;
+    }
+
+    .site-breadcrumb .breadcrumb-home span {
+      display: none; /* hide text on very small screens, keep icon button */
+    }
+
+    .site-breadcrumb .breadcrumb-item:nth-child(n+3):not(:last-child) {
       display: none;
-    }
-
-    .site-breadcrumb .breadcrumb-item:last-child {
-      display: block;
-    }
-
-    .site-breadcrumb .breadcrumb-item:last-child::before {
-      content: '... ';
-      display: inline;
     }
   }
 </style>

@@ -22,16 +22,15 @@ layout: none
 <body>
 {% endif %}
   <header class="subject-header">
-    <div class="subject-header-row">
-      <div class="header-left">
+    <div class="subject-header-inner">
+      <div class="subject-header-text">
         {% include breadcrumb.html %}
+        <h1 class="subject-page-title">{{ page.title | default: site.title }}</h1>
       </div>
       <div class="header-right">
         {% include theme_button.html %}
       </div>
     </div>
-    <h1 class="subject-page-title">{{ page.title | default: site.title }}</h1>
-    <hr class="subject-page-divider" />
   </header>
 
   <!-- TOC Toggle Button for Mobile -->

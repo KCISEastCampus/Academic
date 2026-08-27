@@ -12,7 +12,7 @@ redirect_from:
 
 # AS Mathematics
 
-> **Qualification**: OxfordAQA International AS Mathematics (9660) · Modular
+> **Qualification**: OxfordAQA International AS Mathematics (9660) · Modular<br>
 > **Assessment**: Unit P1 + Unit PSM1 · 1h 30m each · 80 marks each · 50% of AS each
 
 AS Mathematics forms the first part of the A-Level Mathematics qualification. The AS level consists of two examined components:

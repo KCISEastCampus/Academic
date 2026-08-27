@@ -11,7 +11,7 @@ redirect_from:
 ---
 # AS Further Mathematics
 
-> **Qualification**: OxfordAQA International AS Further Mathematics (9665) · Modular
+> **Qualification**: OxfordAQA International AS Further Mathematics (9665) · Modular<br>
 > **Assessment**: Unit FP1 + Unit FPSM1 · 1h 30m each · 80 marks each · 50% of AS each
 
 ## 🏗️ AS Level Course Structure

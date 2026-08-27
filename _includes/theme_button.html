@@ -1,5 +1,8 @@
-<button id="theme_button" class="theme-toggle-btn" aria-label="Toggle theme">
-  <i class="bi bi-sun theme-icon"></i>
+<button id="theme_button" class="theme-toggle-btn" aria-label="Toggle theme" aria-pressed="false">
+  <span class="theme-icon-stack" aria-hidden="true">
+    <i class="bi bi-moon theme-icon theme-icon-moon"></i>
+    <i class="bi bi-sun theme-icon theme-icon-sun"></i>
+  </span>
   <span class="theme-label">Light</span>
 </button>
 
@@ -21,7 +24,7 @@
     font-size: 0.9rem;
     font-weight: 500;
     color: var(--text);
-    transition: all 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
   }
@@ -37,13 +40,47 @@
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
   }
 
-  .theme-icon {
-    font-size: 1.2rem;
-    transition: transform 0.5s ease;
+  /* Icon stack: two icons overlaid, cross-fade on theme change */
+  .theme-icon-stack {
+    position: relative;
+    width: 1.3em;
+    height: 1.3em;
+    display: inline-block;
   }
 
-  .theme-toggle-btn:hover .theme-icon {
-    transform: rotate(180deg);
+  .theme-icon {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    line-height: 1;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+
+  /* Default light: show moon */
+  html[data-bs-theme="light"] .theme-icon-moon,
+  :root[data-bs-theme="light"] .theme-icon-moon {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+  html[data-bs-theme="light"] .theme-icon-sun,
+  :root[data-bs-theme="light"] .theme-icon-sun {
+    opacity: 0;
+    transform: rotate(90deg) scale(0.4);
+  }
+
+  /* Dark: show sun */
+  html[data-bs-theme="dark"] .theme-icon-sun,
+  :root[data-bs-theme="dark"] .theme-icon-sun {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+  html[data-bs-theme="dark"] .theme-icon-moon,
+  :root[data-bs-theme="dark"] .theme-icon-moon {
+    opacity: 0;
+    transform: rotate(-90deg) scale(0.4);
   }
 
   .theme-label {
@@ -52,7 +89,8 @@
   }
 
   /* Dark theme adjustments */
-  html[data-bs-theme="dark"] .theme-toggle-btn {
+  html[data-bs-theme="dark"] .theme-toggle-btn,
+  :root[data-bs-theme="dark"] .theme-toggle-btn {
     background: var(--surface);
     border-color: var(--muted);
     color: var(--text);
@@ -90,12 +128,6 @@
     }
   }
 
-  @media (max-width: 540px) {
-    .theme-toggle-btn {
-      right: 14px;
-    }
-  }
-
   /* Respect prefers-reduced-motion */
   @media (prefers-reduced-motion: reduce) {
     .theme-icon {
@@ -118,31 +150,9 @@
 
 <script>
   (function () {
-    const html_element = document.documentElement;
+    const html = document.documentElement;
     const theme_button = document.getElementById('theme_button');
-    const theme_icon = theme_button?.querySelector('.theme-icon');
     const theme_label = theme_button?.querySelector('.theme-label');
-
-    // 检测是否为index页面（有GitHub按钮）
-    const isIndexPage = document.querySelector('.github-corner') !== null;
-
-    // 根据页面类型调整按钮位置
-    if (isIndexPage && theme_button) {
-      const isMobile = window.innerWidth <= 768;
-      const isTablet = window.innerWidth <= 1024;
-      if (isMobile) {
-        // 移动端：GitHub角标已隐藏，按钮放在右上角
-        theme_button.style.top = '14px';
-        theme_button.style.right = '14px';
-      } else if (isTablet) {
-        theme_button.style.top = '20px';
-        theme_button.style.right = '20px';
-      } else {
-        theme_button.style.top = '90px';
-        theme_button.style.right = '20px';
-      }
-      theme_button.style.zIndex = '9998';
-    }
 
     function getPreferredTheme() {
       try {
@@ -150,43 +160,27 @@
         if (stored) return stored;
         return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       } catch (error) {
-        // localStorage 不可用时回退到系统偏好
         return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       }
     }
 
     function applyTheme(theme) {
-      try {
-        html_element.setAttribute('data-bs-theme', theme);
-        localStorage.setItem('site-theme', theme);
-        updateThemeButtonStatus();
-      } catch (error) {
-        // 静默失败，不影响用户体验
-        console.warn('Failed to apply theme:', error);
+      html.setAttribute('data-bs-theme', theme);
+      if (theme_label) {
+        theme_label.textContent = theme === 'dark' ? 'Dark' : 'Light';
       }
-    }
-
-    function isDarkTheme() { return html_element.getAttribute('data-bs-theme') === 'dark'; }
-
-    function updateThemeButtonStatus() {
-      if (!theme_button || !theme_icon || !theme_label) return;
-
-      if (isDarkTheme()) {
-        theme_icon.classList.remove('bi-moon');
-        theme_icon.classList.add('bi-sun');
-        theme_label.textContent = 'Dark';
-      } else {
-        theme_icon.classList.remove('bi-sun');
-        theme_icon.classList.add('bi-moon');
-        theme_label.textContent = 'Light';
+      if (theme_button) {
+        theme_button.setAttribute('aria-pressed', String(theme === 'dark'));
       }
+      try { localStorage.setItem('site-theme', theme); } catch (e) { /* ignore */ }
     }
 
     // initialize
     applyTheme(getPreferredTheme());
 
     theme_button && theme_button.addEventListener('click', () => {
-      applyTheme(isDarkTheme() ? 'light' : 'dark');
+      const isDark = html.getAttribute('data-bs-theme') === 'dark';
+      applyTheme(isDark ? 'light' : 'dark');
     });
   })();
 </script>

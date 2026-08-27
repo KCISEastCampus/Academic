@@ -9,7 +9,7 @@ permalink: /alevel/as-physics/
 
 # AS Physics
 
-> **Qualification**: OxfordAQA International AS Physics (9630) · Modular
+> **Qualification**: OxfordAQA International AS Physics (9630) · Modular<br>
 > **Assessment**: Unit 1 (Mechanics, materials and atoms) + Unit 2 (Electricity, waves and particles) · 2h each · 80 marks each · 50% of AS each
 
 ## 📘 Unit 1: Mechanics, Materials and Atoms

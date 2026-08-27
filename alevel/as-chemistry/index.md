@@ -11,7 +11,7 @@ redirect_from:
 
 # AS Chemistry
 
-> **Qualification**: OxfordAQA International AS Chemistry (9620) · Modular
+> **Qualification**: OxfordAQA International AS Chemistry (9620) · Modular<br>
 > **Assessment**: Unit 1 (Inorganic 1 and Physical 1) + Unit 2 (Organic 1 and Physical 1) · 1h 30m each · 70 marks each · 50% of AS each
 
 > 📌 This page covers **Unit 2** (Organic 1 and Physical 1). Unit 1 is not yet included.

@@ -9,7 +9,7 @@ permalink: /alevel/a2-physics/
 
 # A2 Physics
 
-> **Qualification**: OxfordAQA International A-level Physics (9630) · Modular
+> **Qualification**: OxfordAQA International A-level Physics (9630) · Modular<br>
 > **Assessment**: AS = Unit 1 + Unit 2 · A2 = Unit 3 + Unit 4 + Unit 5
 
 ## 📕 Unit 3: Fields and Their Consequences

@@ -168,20 +168,28 @@ html {
   border-radius: 1px;
 }
 
-/* H1: Thick accent bar, largest size, darkest color */
+/* H1: Hidden visually (page title shown in layout header), kept as TOC anchor */
 #content-container h1 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: var(--text);
-  margin-top: 2rem !important;
+  margin-top: 0.5rem !important;
   margin-bottom: 1rem !important;
   font-weight: 800;
   letter-spacing: -0.03em;
+  /* Visually hidden but accessible — avoids duplicate title with layout header */
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px !important;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 #content-container h1::before {
-  width: 4px;
-  height: 85%;
-  background: var(--accent-ig);
+  display: none;
 }
 
 /* IGCSE scheme: use IG accent color */
@@ -202,78 +210,59 @@ html[data-bs-theme="dark"] body.scheme-alevel #content-container h1::before {
   background: var(--accent-al);
 }
 
-/* H2: Medium accent bar, medium-large size */
+/* H2: Section header — Unit/Paper level. Clean, readable: accent bar + bottom rule */
 #content-container h2 {
-  font-size: 1.55rem;
+  font-size: 1.5rem;
   color: var(--text);
-  margin-top: 1.75rem !important;
-  margin-bottom: 0.85rem !important;
+  margin-top: 2.25rem !important;
+  margin-bottom: 0.9rem !important;
   font-weight: 700;
   opacity: 0.95;
-  padding-bottom: 0.4rem;
+  padding-left: 14px;
+  padding-bottom: 0.45rem;
+  border-left: 4px solid var(--accent-ig);
   border-bottom: 1px solid var(--border);
 }
 
 #content-container h2::before {
-  width: 4px;
-  height: 75%;
-  background: var(--accent-ig);
-  opacity: 0.85;
+  display: none;
 }
 
 /* IGCSE scheme: use IG accent color */
-body.scheme-igcse #content-container h2::before {
-  background: var(--accent-ig);
+body.scheme-igcse #content-container h2 {
+  border-left-color: var(--accent-ig);
 }
 
 /* A-Level scheme: use A-Level accent color */
-body.scheme-alevel #content-container h2::before {
-  background: var(--accent-al);
+body.scheme-alevel #content-container h2 {
+  border-left-color: var(--accent-al);
 }
 
-html[data-bs-theme="dark"] #content-container h2::before {
-  background: var(--accent-ig);
-}
-
-html[data-bs-theme="dark"] body.scheme-alevel #content-container h2::before {
-  background: var(--accent-al);
-}
-
-/* H3: Consistent with H1/H2 while preserving hierarchy */
+/* H3: Chapter/topic level — clear but subordinate to H2 */
 #content-container h3 {
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   color: var(--text);
-  margin-top: 1.5rem !important;
-  margin-bottom: 0.75rem !important;
+  margin-top: 1.75rem !important;
+  margin-bottom: 0.7rem !important;
   font-weight: 700;
   opacity: 0.95;
+  padding-left: 14px;
+  padding-bottom: 0.3rem;
+  border-left: 3px solid var(--accent-ig);
 }
 
 #content-container h3::before {
-  width: 3px;
-  height: 72%;
-  background: var(--accent-ig);
-  opacity: 0.8;
+  display: none;
 }
 
 /* IGCSE scheme: use IG accent color */
-body.scheme-igcse #content-container h3::before {
-  background: var(--accent-ig);
+body.scheme-igcse #content-container h3 {
+  border-left-color: var(--accent-ig);
 }
 
 /* A-Level scheme: use A-Level accent color */
-body.scheme-alevel #content-container h3::before {
-  background: var(--accent-al);
-}
-
-html[data-bs-theme="dark"] #content-container h3::before {
-  background: var(--accent-ig);
-  opacity: 0.8;
-}
-
-html[data-bs-theme="dark"] body.scheme-alevel #content-container h3::before {
-  background: var(--accent-al);
-  opacity: 0.8;
+body.scheme-alevel #content-container h3 {
+  border-left-color: var(--accent-al);
 }
 
 #content-container h4 {
@@ -415,6 +404,69 @@ html[data-bs-theme="dark"] #content-container blockquote:hover {
 #content-container blockquote p {
   margin: 0.35rem 0;
   color: var(--text);
+}
+
+/* ========================================
+   Qualification / Exam info card
+   (blockquotes whose first paragraph starts with **Qualification**)
+   ======================================== */
+#content-container blockquote:has(> p:first-child > strong:first-child) {
+  margin: 1.75rem 0 2.25rem;
+  padding: 1.5rem 1.75rem;
+  border-left: none !important;
+  border-radius: 16px;
+  background: linear-gradient(135deg,
+    rgba(var(--accent-ig-rgb), 0.10),
+    rgba(var(--accent-ig-rgb), 0.04) 45%,
+    rgba(var(--accent-ig-rgb), 0.07));
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07), 0 1px 4px rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(var(--accent-ig-rgb), 0.18);
+}
+
+/* Qualification / Assessment label styling — keep label bold, on its own line via <br> */
+#content-container blockquote:has(> p:first-child > strong:first-child) p strong {
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  opacity: 0.95;
+  text-transform: uppercase;
+}
+
+/* A-Level scheme uses green accent */
+body.scheme-alevel #content-container blockquote:has(> p:first-child > strong:first-child) {
+  background: linear-gradient(135deg,
+    rgba(var(--accent-al-rgb), 0.10),
+    rgba(var(--accent-al-rgb), 0.04) 45%,
+    rgba(var(--accent-al-rgb), 0.07));
+  border-color: rgba(var(--accent-al-rgb), 0.18);
+}
+
+/* Dark theme variant */
+html[data-bs-theme="dark"] #content-container blockquote:has(> p:first-child > strong:first-child) {
+  background: linear-gradient(135deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.03) 45%,
+    rgba(255, 255, 255, 0.05));
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+html[data-bs-theme="dark"] body.scheme-alevel #content-container blockquote:has(> p:first-child > strong:first-child) {
+  border-color: rgba(var(--accent-al-rgb), 0.35);
+}
+
+#content-container blockquote:has(> p:first-child > strong:first-child) p {
+  margin: 0.4rem 0;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+#content-container blockquote:has(> p:first-child > strong:first-child) p:first-child {
+  margin-top: 0;
+}
+
+#content-container blockquote:has(> p:first-child > strong:first-child) p:last-child {
+  margin-bottom: 0;
 }
 
 #content-container blockquote strong {
@@ -1729,7 +1781,7 @@ html[data-bs-theme="dark"] {
   position: relative;
   max-width: 1600px;
   margin: 0 auto;
-  padding: 0 20px 44px;
+  padding: 56px 20px 44px;
 }
 
 #toc.table-of-contents {
@@ -2054,31 +2106,37 @@ body.scheme-alevel .table-of-contents .toc-row > a.active {
    Subject Header Redesign (Final Override)
    ======================================== */
 
+/* ========================================
+   Subject Header — independent page-title band
+   ======================================== */
 .subject-header {
+  background: var(--header-bg, var(--surface));
+  border-bottom: 1px solid var(--border);
+}
+
+.subject-header-inner {
   max-width: 1600px;
   margin: 0 auto;
-  padding: 24px 20px 16px;
-}
-
-.subject-header-row {
+  padding: 1.5rem 20px 1.4rem;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
-  gap: 16px;
-  min-height: 44px;
-  margin-bottom: 12px;
+  gap: 24px;
 }
 
-.subject-header-row .header-left {
-  flex: 1;
+.subject-header-text {
   min-width: 0;
+}
+
+.subject-header-text .site-breadcrumb {
+  margin-bottom: 0.6rem;
 }
 
 .subject-header-row .header-right {
   flex-shrink: 0;
 }
 
-.subject-header-row #theme_button {
+.subject-header-inner .header-right #theme_button {
   position: static !important;
   top: auto !important;
   right: auto !important;
@@ -2094,19 +2152,11 @@ body.scheme-alevel .table-of-contents .toc-row > a.active {
 .subject-page-title {
   margin: 0 !important;
   padding: 0;
-  text-align: center;
-  font-size: clamp(2rem, 3.5vw, 3.2rem) !important;
-  line-height: 1.15;
-  letter-spacing: 0.01em;
-}
-
-.subject-page-divider {
-  margin: 0 auto 20px !important;
-  width: 60% !important;
-  height: 1px !important;
-  border: none !important;
-  background: linear-gradient(90deg, transparent, var(--muted), transparent) !important;
-  opacity: 0.3;
+  text-align: left;
+  font-size: clamp(1.9rem, 3vw, 2.8rem) !important;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  font-weight: 800;
 }
 
 /* Seamless flush layout for TOC sidebar (Desktop only) */
@@ -2138,18 +2188,17 @@ body.scheme-alevel .table-of-contents .toc-row > a.active {
 }
 
 @media (max-width: 768px) {
-  .subject-header {
-    padding-top: 70px;
-    padding-left: 14px;
-    padding-right: 14px;
+  .subject-header-inner {
+    /* Top padding clears the fixed TOC toggle button (44px + margin) */
+    padding: 66px 14px 1.1rem;
+    gap: 12px;
   }
 
-  .subject-header-row {
-    gap: 10px;
-    margin-bottom: 10px;
+  .subject-header-text .site-breadcrumb {
+    margin-bottom: 0.45rem;
   }
 
-  .subject-header-row #theme_button {
+  .subject-header-inner .header-right #theme_button {
     width: 44px;
     height: 44px;
     min-height: 44px;
@@ -2159,32 +2208,33 @@ body.scheme-alevel .table-of-contents .toc-row > a.active {
     gap: 0;
   }
 
-  .subject-header-row #theme_button .theme-label {
+  .subject-header-inner .header-right #theme_button .theme-label {
     display: none;
   }
 
   .subject-page-title {
-    margin: 4px 0 0 !important;
-    padding: 0 4px;
-    font-size: clamp(1.8rem, 8vw, 2.5rem) !important;
+    margin: 0 !important;
+    padding: 0;
+    font-size: clamp(1.7rem, 7vw, 2.3rem) !important;
   }
 
   .toc-toggle {
     top: 14px !important;
-    left: auto !important;
-    right: 60px !important;
+    left: 14px !important;
+    right: auto !important;
     width: 44px !important;
     height: 44px !important;
   }
 }
 
 @media (max-width: 420px) {
-  .subject-header {
-    padding-top: 68px;
+  .subject-header-inner {
+    padding-left: 12px;
+    padding-right: 12px;
   }
 
   .subject-page-title {
-    font-size: clamp(1.6rem, 7vw, 2.2rem) !important;
+    font-size: clamp(1.5rem, 6vw, 2rem) !important;
   }
 }
 
@@ -2195,7 +2245,7 @@ body.scheme-alevel .table-of-contents .toc-row > a.active {
 @media (min-width: 1025px) {
   #main-container {
     gap: clamp(20px, 2vw, 30px) !important;
-    padding: 0 20px 40px;
+    padding: 56px 20px 44px;
   }
 
   #toc.table-of-contents {
