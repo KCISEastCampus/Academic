@@ -1,0 +1,5 @@
+vendor/
+_site/
+node_modules/
+assets/
+admin/
