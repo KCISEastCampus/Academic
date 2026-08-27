@@ -29,10 +29,27 @@
     backdrop-filter: blur(10px);
   }
 
+  /* Light mode: solid, clearly visible button on light backgrounds */
+  html[data-bs-theme="light"] .theme-toggle-btn,
+  :root[data-bs-theme="light"] .theme-toggle-btn {
+    background: #ffffff;
+    border-color: rgba(15, 23, 42, 0.15);
+    color: var(--text);
+    box-shadow: 0 2px 12px rgba(15, 23, 42, 0.12);
+  }
+
   .theme-toggle-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     border-color: var(--accent-ig);
+    background: var(--surface-hover);
+  }
+
+  html[data-bs-theme="light"] .theme-toggle-btn:hover,
+  :root[data-bs-theme="light"] .theme-toggle-btn:hover {
+    background: #ffffff;
+    border-color: var(--accent-ig);
+    box-shadow: 0 4px 20px rgba(107, 122, 219, 0.25);
   }
 
   .theme-toggle-btn:active {

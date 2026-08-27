@@ -73,12 +73,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
 }
 
 /* Theme toggle button visibility */
-#theme_button {
-  background: rgba(255,255,255,0.03);
-  padding: .35rem .45rem;
-  border-radius: 0.6rem;
-  transition: background-color 160ms ease, color 160ms ease;
-}
+/* Theme button styling handled in theme_button.html — remove conflicting legacy #theme_button rule */
 
 /* Tables: Clean and consistent styling */
 table, .table {
