@@ -210,17 +210,17 @@ html[data-bs-theme="dark"] body.scheme-alevel #content-container h1::before {
   background: var(--accent-al);
 }
 
-/* H2: Unit/Paper level — colored left bar + tinted background */
+/* H2: Unit/Paper level — tinted background card */
 #content-container h2 {
   font-size: 1.5rem;
   color: var(--text);
   margin-top: 2rem !important;
   margin-bottom: 0.9rem !important;
   font-weight: 700;
-  padding: 0.7rem 1rem 0.7rem 1.2rem;
-  background: linear-gradient(90deg, rgba(var(--accent-ig-rgb), 0.12), transparent 60%);
-  border-left: 4px solid var(--accent-ig);
-  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  background: rgba(var(--accent-ig-rgb), 0.1);
+  border: 1px solid rgba(var(--accent-ig-rgb), 0.25);
+  border-radius: 8px;
 }
 
 #content-container h2::before {
@@ -228,21 +228,23 @@ html[data-bs-theme="dark"] body.scheme-alevel #content-container h1::before {
 }
 
 body.scheme-igcse #content-container h2 {
-  border-left-color: var(--accent-ig);
-  background: linear-gradient(90deg, rgba(var(--accent-ig-rgb), 0.12), transparent 60%);
+  background: rgba(var(--accent-ig-rgb), 0.1);
+  border-color: rgba(var(--accent-ig-rgb), 0.25);
 }
 
 body.scheme-alevel #content-container h2 {
-  border-left-color: var(--accent-al);
-  background: linear-gradient(90deg, rgba(var(--accent-al-rgb), 0.12), transparent 60%);
+  background: rgba(var(--accent-al-rgb), 0.1);
+  border-color: rgba(var(--accent-al-rgb), 0.25);
 }
 
 html[data-bs-theme="dark"] #content-container h2 {
-  background: linear-gradient(90deg, rgba(var(--accent-ig-rgb), 0.15), transparent 60%);
+  background: rgba(var(--accent-ig-rgb), 0.12);
+  border-color: rgba(var(--accent-ig-rgb), 0.2);
 }
 
 html[data-bs-theme="dark"] body.scheme-alevel #content-container h2 {
-  background: linear-gradient(90deg, rgba(var(--accent-al-rgb), 0.15), transparent 60%);
+  background: rgba(var(--accent-al-rgb), 0.12);
+  border-color: rgba(var(--accent-al-rgb), 0.2);
 }
 
 /* H3: Chapter/topic level — subtle left bar only */
