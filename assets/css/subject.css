@@ -2120,9 +2120,11 @@ body.scheme-alevel .table-of-contents .toc-row > a.active {
   padding: 1.5rem 20px 1.4rem;
   display: flex;
   align-items: flex-end;
-  justify-content: space-between;
-  gap: 24px;
+  justify-content: flex-start;
+  gap: 16px;
 }
+
+/* Header band aligns with the TOC + content grid below (same 1600px container) */
 
 .subject-header-text {
   min-width: 0;
