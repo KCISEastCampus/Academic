@@ -672,11 +672,7 @@ div.highlight {
   border-color: var(--border-hover);
 }
 
-/* Theme Toggle Enhancement */
-#theme_button:hover {
-  transform: scale(1.05);
-  transition: transform 0.2s ease;
-}
+/* Theme Toggle hover handled in theme_button.html — remove conflicting legacy rule */
 
 .btn:active {
   transform: scale(0.98);
