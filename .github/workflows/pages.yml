@@ -33,8 +33,56 @@ jobs:
           ruby-version: '3.3'
           bundler-cache: true
 
+      - name: Setup Python (for font subsetting)
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Subset MapleMono fonts to woff2 (before Jekyll build so _site ships woff2)
+        run: |
+          pip install --quiet fonttools brotli
+          # 1) 从内容提取实际用字（与 scripts/extract_chars.mjs 逻辑一致）
+          python - <<'PY'
+          import os
+          SKIP={'assets','_site','.git','vendor','node_modules','.jekyll-cache'}
+          files=[]
+          def walk(d):
+              for e in os.scandir(d):
+                  if e.is_dir():
+                      if e.name in SKIP: continue
+                      walk(e.path)
+                  elif e.name.endswith(('.md','.html')):
+                      files.append(e.path)
+          walk('.')
+          cps=set(c for c in range(0x20,0x7F))
+          for f in files:
+              try: s=open(f,encoding='utf-8').read()
+              except OSError: continue
+              for ch in s:
+                  c=ord(ch)
+                  if c>=0x20 and (c<=0x7E or c>=0x80): cps.add(c)
+          open('chars_site.txt','w',encoding='utf-8').write(''.join(chr(c) for c in sorted(cps)))
+          print('unique code points:', len(cps))
+          PY
+          # 2) 每个字重子集化 → woff2（纯文本子集，无 PUA 兜底）
+          for F in Regular Bold Italic BoldItalic; do
+            pyftsubset "assets/fonts/MapleMono-NF-CN-${F}.ttf" \
+              --text-file=chars_site.txt \
+              --flavor=woff2 \
+              --output-file="assets/fonts/MapleMono-NF-CN-${F}.woff2" \
+              --layout-features=liga,calt,ccmp,kern \
+              --no-hinting --name-IDs=0,1,2,3,4,5,6
+          done
+          rm -f chars_site.txt
+
       - name: Build site
         run: bundle exec jekyll build --trace
+
+      - name: Optimize images (post-build, in-place, before Pagefind)
+        run: |
+          # 原地覆盖原扩展名（HTML 直接引用 .png/.jpg，不能转成 .webp 否则引用失效）
+          npx --yes sharp-cli -i '_site/assets/img/**/*.jpg' -o '{dir}' -q 80 --effort 5
+          npx --yes sharp-cli -i '_site/assets/img/**/*.png' -o '{dir}' --effort 7
 
       - name: Setup Node
         uses: actions/setup-node@v4

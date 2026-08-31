@@ -1,0 +1,86 @@
+<!-- _includes/nav.html -->
+<!-- Global sticky navigation bar -->
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="site-nav-inner">
+    <a href="/" class="site-nav-brand" aria-label="KCISEC Academic Home">
+      <span class="site-nav-logo">📚</span>
+      <span class="site-nav-title">KCISEC Academic</span>
+    </a>
+    <div class="site-nav-links" id="siteNavLinks">
+      <a href="/" class="site-nav-link {% if page.url == '/' %}active{% endif %}">Home</a>
+      <a href="/alevel/" class="site-nav-link {% if page.url contains '/alevel' %}active{% endif %}">A-Level</a>
+      <a href="/igcse/" class="site-nav-link {% if page.url contains '/igcse' %}active{% endif %}">IGCSE</a>
+      <a href="/student-council/" class="site-nav-link {% if page.url contains '/student-council' %}active{% endif %}">Student Council</a>
+      <a href="/contributors/" class="site-nav-link {% if page.url == '/contributors/' %}active{% endif %}">Contributors</a>
+    </div>
+    <div class="site-nav-actions">
+      <button class="site-nav-theme-btn" id="navThemeBtn" aria-label="Toggle theme" aria-pressed="false">
+        <i class="bi bi-moon-fill theme-icon-nav-moon"></i>
+        <i class="bi bi-sun-fill theme-icon-nav-sun"></i>
+      </button>
+      <button class="site-nav-toggle" id="siteNavToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <i class="bi bi-list"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<script>
+  (function() {
+    var toggle = document.getElementById('siteNavToggle');
+    var links = document.getElementById('siteNavLinks');
+    var navThemeBtn = document.getElementById('navThemeBtn');
+
+    // Mobile menu toggle
+    if (toggle && links) {
+      toggle.addEventListener('click', function() {
+        var expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+        links.classList.toggle('show');
+      });
+
+      // Close on link click
+      links.querySelectorAll('.site-nav-link').forEach(function(link) {
+        link.addEventListener('click', function() {
+          links.classList.remove('show');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      // Close on outside click
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.site-nav')) {
+          links.classList.remove('show');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Close on Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && links.classList.contains('show')) {
+          links.classList.remove('show');
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.focus();
+        }
+      });
+    }
+
+    // Theme toggle
+    if (navThemeBtn) {
+      var html = document.documentElement;
+      function syncThemeBtn() {
+        var isDark = html.getAttribute('data-bs-theme') === 'dark';
+        navThemeBtn.setAttribute('aria-pressed', String(isDark));
+      }
+      syncThemeBtn();
+
+      navThemeBtn.addEventListener('click', function() {
+        var isDark = html.getAttribute('data-bs-theme') === 'dark';
+        var newTheme = isDark ? 'light' : 'dark';
+        html.setAttribute('data-bs-theme', newTheme);
+        try { localStorage.setItem('site-theme', newTheme); } catch(e) {}
+        syncThemeBtn();
+      });
+    }
+  })();
+</script>

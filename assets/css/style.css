@@ -1,6 +1,212 @@
-/* Default (rest) state keep transparent in light mode, but allow :hover/:focus to override */
-/* Ensure hover state also has transition for smooth fade-in */
-/* Dark explicit overrides too (in case third-party CSS forces light backgrounds) */
+/* ========================================
+   Global Navigation Bar
+   ======================================== */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1004;
+  background: rgba(var(--bs-body-bg-rgb, 248, 250, 252), 0.8);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border-bottom: 1px solid var(--border);
+  padding: 0;
+}
+
+html[data-bs-theme="dark"] .site-nav {
+  background: rgba(11, 18, 32, 0.85);
+}
+
+.site-nav-inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.45rem 1rem;
+  gap: 1rem;
+}
+
+.site-nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+  transition: opacity 0.15s ease;
+}
+
+.site-nav-brand:hover {
+  opacity: 0.8;
+  color: var(--text);
+}
+
+.site-nav-logo {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.site-nav-title {
+  letter-spacing: -0.01em;
+}
+
+.site-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  justify-content: center;
+  flex: 1;
+}
+
+.site-nav-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.7rem;
+  border-radius: 0.4rem;
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 500;
+  transition: color 0.15s ease, background-color 0.15s ease;
+  white-space: nowrap;
+}
+
+.site-nav-link:hover {
+  color: var(--text);
+  background: var(--surface-hover);
+}
+
+.site-nav-link.active {
+  color: var(--text);
+  font-weight: 600;
+  background: rgba(var(--accent-ig-rgb), 0.08);
+}
+
+.site-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+.site-nav-theme-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  line-height: 1;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  position: relative;
+  font-size: 0.9rem;
+}
+
+.site-nav-theme-btn:hover {
+  color: var(--text);
+  border-color: var(--border-hover);
+}
+
+.theme-icon-nav-moon,
+.theme-icon-nav-sun {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+html[data-bs-theme="light"] .theme-icon-nav-moon {
+  opacity: 1;
+  transform: rotate(0);
+}
+html[data-bs-theme="light"] .theme-icon-nav-sun {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.5);
+}
+html[data-bs-theme="dark"] .theme-icon-nav-sun {
+  opacity: 1;
+  transform: rotate(0);
+}
+html[data-bs-theme="dark"] .theme-icon-nav-moon {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.5);
+}
+
+.site-nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  line-height: 1;
+  width: 34px;
+  height: 34px;
+  border-radius: 0.4rem;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .site-nav-title {
+    display: none;
+  }
+
+  .site-nav-toggle {
+    display: inline-flex;
+  }
+
+  .site-nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    z-index: 999;
+  }
+
+  .site-nav-links.show {
+    display: flex;
+  }
+
+  .site-nav-link {
+    padding: 0.65rem 0.75rem;
+    border-radius: 0.4rem;
+    font-size: 0.9rem;
+  }
+
+  .site-nav-inner {
+    position: relative;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-nav-link,
+  .site-nav-theme-btn,
+  .theme-icon-nav-moon,
+  .theme-icon-nav-sun {
+    transition: none !important;
+  }
+}
+
 html {
   font-size: 18px;
 }
@@ -17,32 +223,22 @@ body {
 
 .container { max-width: var(--container-max); }
 
-/* Subjects grid: grid to keep two columns aligned even when item counts differ */
-.subjects-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  align-items: start;
-}
-.subjects-grid > .flex-fill {
-  display:flex;
-  flex-direction:column;
-  gap:.5rem;
-}
-
-@media (max-width: 767px) {
-  .subjects-grid { grid-template-columns: 1fr; }
-}
-
 /* Card / surface */
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   color: var(--text);
-  overflow: hidden; /* Ensure children respect border-radius */
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
 .card .card-title { color: var(--text); }
+.card:hover,
+.card:focus-within {
+  transform: none;
+  box-shadow: 0 4px 16px rgba(10, 15, 35, 0.1);
+  border-color: var(--border-hover);
+}
 
 /* Headings: tighter scale and nicer weight */
 h1, h2, h3, h4, h5, h6 {
@@ -72,10 +268,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
   border-radius: 0.6rem;
 }
 
-/* Theme toggle button visibility */
-/* Theme button styling handled in theme_button.html — remove conflicting legacy #theme_button rule */
-
-/* Tables: Clean and consistent styling */
+/* Tables */
 table, .table {
   width: 100%;
   margin: 1.5rem 0;
@@ -294,9 +487,18 @@ pre::-webkit-scrollbar-thumb:hover {
 /* Code block hover effect */
 .highlight:hover,
 pre:hover {
-  background: rgba(255,255,255,0.03);
   border-left-color: rgba(var(--accent-ig-rgb), 0.6);
   transition: all 0.2s ease;
+}
+
+html[data-bs-theme="light"] .highlight:hover,
+html[data-bs-theme="light"] pre:hover {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+html[data-bs-theme="dark"] .highlight:hover,
+html[data-bs-theme="dark"] pre:hover {
+  background: rgba(255, 255, 255, 0.03);
 }
 
 /* Focus states for keyboard navigation */
@@ -426,7 +628,7 @@ mjx-mfrac {
   }
 }
 
-code>* {
+pre code>* {
   font-family: 'MapleMono', 'Courier New', Courier, monospace !important;
   line-height: 0;
   white-space: break-spaces;
@@ -452,64 +654,6 @@ div.highlight {
   border-radius: 0.5rem;
 }
 
-/* .bg-al { */
-/*   background-color: var(--al-color); */
-/* } */
-/**/
-/* .bg-ig { */
-/*   background-color: var(--ig-color); */
-/* } */
-/**/
-/* .btn-outline-al { */
-/*   --bs-btn-color: var(--al-color); */
-/*   --bs-btn-border-color: var(--al-color); */
-/*   --bs-btn-hover-color: #fff; */
-/*   --bs-btn-hover-bg: var(--al-color); */
-/*   --bs-btn-hover-border-color: var(--al-color); */
-/*   --bs-btn-focus-shadow-rgb: 13, 110, 253; */
-/*   --bs-btn-active-color: #fff; */
-/*   --bs-btn-active-bg: var(--al-color); */
-/*   --bs-btn-active-border-color: var,--al-color); */
-/*   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); */
-/*   --bs-btn-disabled-color: var(--al-color); */
-/*   --bs-btn-disabled-bg: transparent; */
-/*   --bs-btn-disabled-border-color: var(--al-color); */
-/*   --bs-gradient: none; */
-/* } */
-/**/
-/* .btn-outline-ig { */
-/*   --bs-btn-color: var(--ig-color); */
-/*   --bs-btn-border-color: var(--ig-color); */
-/*   --bs-btn-hover-color: #fff; */
-/*   --bs-btn-hover-bg: var(--ig-color); */
-/*   --bs-btn-hover-border-color: var,--ig-color); */
-/*   --bs-btn-focus-shadow-rgb: 13, 110, 253; */
-/*   --bs-btn-active-color: #fff; */
-/*   --bs-btn-active-bg: var(--ig-color); */
-/*   --bs-btn-active-border-color: var,--ig-color); */
-/*   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); */
-/*   --bs-btn-disabled-color: var(--ig-color); */
-/*   --bs-btn-disabled-bg: transparent; */
-/*   --bs-btn-disabled-border-color: var(--ig-color); */
-/*   --bs-gradient: none; */
-/* } */
-/**/
-/* .text-al { */
-/*   color: var(--al-color); */
-/* } */
-/**/
-/* .text-ig { */
-/*   color: var(--ig-color); */
-/* } */
-
-/* Subject list: wrap into rows and maintain spacing */
-.subject-list { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
-.subject-list .btn { margin: 0; }
-.subject-card { background: var(--surface); padding: .6rem; border-radius: .45rem; }
-
-@media (min-width: 768px) {
-  .subject-list { gap: .75rem; }
-}
 
 /* ========================================
    Interactive Effects Styles
@@ -567,7 +711,7 @@ div.highlight {
 .back-to-top:hover {
   transform: translateY(-2px) scale(1.05);
   box-shadow: 0 6px 16px rgba(var(--accent-al-rgb), 0.3);
-  background: #209351;
+  background: var(--accent-al);
 }
 
 .back-to-top:active {
@@ -575,37 +719,17 @@ div.highlight {
   box-shadow: 0 2px 6px rgba(var(--accent-al-rgb), 0.2);
 }
 
-/* Ripple Effect - 已禁用以改善阅读体验 */
-/* 波纹效果相关样式已移除，不再创建视觉干扰 */
-
-/* Fade In Animation - 简化为基础过渡 */
+/* Fade In - simplified, no-op (animations handled by interactive_effects.js) */
 .fade-in {
   opacity: 1;
   transform: translateY(0);
   animation: none;
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .fade-in-visible {
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.2s ease-out, transform 0.2s ease-out;
-}
-
-/* Table Row Hover */
-.table-row-hover {
-  background-color: rgba(255, 255, 255, 0.05) !important;
-  transition: background-color 0.2s ease;
 }
 
 /* Subject Button Effects */
@@ -655,19 +779,6 @@ div.highlight {
   outline: 2px solid var(--accent-ig);
   outline-offset: 2px;
 }
-
-.card {
-  transition: box-shadow 0.2s ease, border-color 0.2s ease;
-}
-
-.card:hover,
-.card:focus-within {
-  transform: none;
-  box-shadow: 0 4px 16px rgba(10, 15, 35, 0.1) !important;
-  border-color: var(--border-hover);
-}
-
-/* Theme Toggle hover handled in theme_button.html — remove conflicting legacy rule */
 
 .btn:active {
   transform: scale(0.98);
@@ -767,13 +878,6 @@ div.highlight {
   }
 }
 
-/* Force card border-radius - Override Bootstrap */
-.card,
-.card.shadow-sm,
-article.card {
-  border-radius: var(--radius);
-  overflow: hidden !important;
-}
 
 /* Print Styles */
 @media print {
@@ -852,15 +956,14 @@ mark {
   border-radius: 0.2em;
 }
 
-/* Active Search Highlight Animation */
 .search-highlight {
-  background-color: rgba(142, 68, 173, 0.25); /* Subtle Purple */
+  background-color: rgba(var(--accent-ig-rgb), 0.2);
   border-radius: 0.2em;
   transition: background-color 1s ease;
 }
 
 .search-highlight.active-highlight {
-  background-color: rgba(142, 68, 173, 0.5); /* Slightly stronger for active match */
+  background-color: rgba(var(--accent-ig-rgb), 0.4);
 }
 
 .search-highlight.fade-out {
@@ -868,17 +971,21 @@ mark {
   padding: 0;
 }
 
-/* Code Copy Button Wrapper */
-.code-wrapper:hover .copy-btn {
-  opacity: 1;
-}
-
+/* Code Copy Button */
 .copy-btn {
-  opacity: 0;
+  opacity: 0.4;
   transition: opacity 0.2s ease;
   z-index: 10;
   background-color: var(--surface);
   border-color: rgba(128,128,128,0.3);
+  font-size: 0.75rem;
+  padding: 0.2rem 0.4rem;
+}
+
+.code-wrapper:hover .copy-btn,
+.copy-btn:hover,
+.copy-btn:focus {
+  opacity: 1;
 }
 
 /* Search Input Styling */
@@ -911,6 +1018,42 @@ mark {
 #search-input::placeholder {
   color: var(--muted);
   opacity: 0.7;
+}
+
+/* Footer nav links */
+.footer-nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.2rem 0.5rem;
+  font-size: 0.78rem;
+}
+
+.footer-nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  transition: color 0.15s ease;
+}
+
+.footer-nav-link:hover {
+  color: var(--text);
+}
+
+.search-kbd {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.7rem;
+  font-family: var(--font-mono);
+  color: var(--muted);
+  background: var(--surface-hover);
+  border: 1px solid var(--border);
+  border-radius: 0.25rem;
+  line-height: 1.2;
+  flex-shrink: 0;
+  margin-left: 0.5rem;
+  opacity: 0.6;
 }
 
 /* Search Results Improvements */
@@ -949,32 +1092,6 @@ mark {
   line-height: 1.4;
   margin-top: 0.25rem;
   opacity: 0.85;
-}
-
-/* Modern Index Page Styles */
-
-/* Hero Section */
-.hero-section {
-  padding: 2rem 0 1.5rem;
-  text-align: center;
-}
-
-.hero-title {
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  margin-bottom: 0.5rem;
-  background: linear-gradient(135deg, var(--accent-al), var(--accent-ig));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-size: 2.5rem;
-}
-
-.hero-subtitle {
-  font-size: 1.1rem;
-  color: var(--muted);
-  max-width: 600px;
-  margin: 0 auto;
 }
 
 /* Modern Subject Card - Professional & Clean Design */
@@ -1322,42 +1439,3 @@ mark {
   }
 }
 
-/* ============================================
-   Utilities (merged from utilities.css)
-   ============================================ */
-/* utilities.css */
-/* Utility classes for common patterns */
-/* Reduces duplication and provides consistent spacing/styling */
-
-/* Flexbox utilities */
-.flex-center { display: flex; justify-content: center; align-items: center; }
-.flex-between { display: flex; justify-content: space-between; align-items: center; }
-.flex-column-gap { display: flex; flex-direction: column; gap: var(--space-sm); }
-
-/* Spacing utilities using design tokens */
-.gap-xxs { gap: var(--space-xxs); }
-.gap-xs { gap: var(--space-xs); }
-.gap-sm { gap: var(--space-sm); }
-.gap-md { gap: var(--space-md); }
-.gap-lg { gap: var(--space-lg); }
-.gap-xl { gap: var(--space-xl); }
-
-/* Border radius utilities */
-.rounded { border-radius: var(--radius); }
-
-/* Text utilities */
-.text-muted { color: var(--muted); }
-
-/* Surface utilities */
-.surface-bg { background-color: var(--surface); }
-
-/* Image utilities */
-img {
-  max-height: 500px;
-  width: auto;
-}
-
-.img-sm { max-height: 300px; }
-.img-md { max-height: 400px; }
-.img-lg { max-height: 600px; }
-.img-full { max-height: none; }

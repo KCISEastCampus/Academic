@@ -1,7 +1,8 @@
 /* Regular */
 @font-face {
   font-family: 'MapleMono';
-  src: url('/assets/fonts/MapleMono-NF-CN-Regular.ttf') format('truetype');
+  src: url('/assets/fonts/MapleMono-NF-CN-Regular.woff2') format('woff2'),
+       url('/assets/fonts/MapleMono-NF-CN-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -10,7 +11,8 @@
 /* Bold */
 @font-face {
   font-family: 'MapleMono';
-  src: url('/assets/fonts/MapleMono-NF-CN-Bold.ttf') format('truetype');
+  src: url('/assets/fonts/MapleMono-NF-CN-Bold.woff2') format('woff2'),
+       url('/assets/fonts/MapleMono-NF-CN-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -19,7 +21,8 @@
 /* Italic */
 @font-face {
   font-family: 'MapleMono';
-  src: url('/assets/fonts/MapleMono-NF-CN-Italic.ttf') format('truetype');
+  src: url('/assets/fonts/MapleMono-NF-CN-Italic.woff2') format('woff2'),
+       url('/assets/fonts/MapleMono-NF-CN-Italic.ttf') format('truetype');
   font-weight: normal;
   font-style: italic;
   font-display: swap;
@@ -28,7 +31,8 @@
 /* Bold Italic */
 @font-face {
   font-family: 'MapleMono';
-  src: url('/assets/fonts/MapleMono-NF-CN-BoldItalic.ttf') format('truetype');
+  src: url('/assets/fonts/MapleMono-NF-CN-BoldItalic.woff2') format('woff2'),
+       url('/assets/fonts/MapleMono-NF-CN-BoldItalic.ttf') format('truetype');
   font-weight: bold;
   font-style: italic;
   font-display: swap;

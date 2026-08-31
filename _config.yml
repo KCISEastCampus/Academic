@@ -18,6 +18,13 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
+# Site metadata
+title: KCISEC Academic
+description: "IGCSE & A-Level study resources for Kang Chiao International School, East Campus - subject notes, revision materials and exam links aligned to OxfordAQA."
+url: "https://academic.kcisec.site"
+baseurl: ""
+tagline: KCISEC Academic Study Resources
+
 # Build settings
 markdown: kramdown
 kramdown:
@@ -29,6 +36,13 @@ kramdown:
 
 plugins:
   - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-feed
+
+# Exclude non-content files from the built site
+exclude:
+  - scripts
+  - chars_site.txt
 
 defaults:
   - scope:

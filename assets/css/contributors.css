@@ -59,7 +59,7 @@
   color: var(--text);
 }
 
-.hero-subtitle {
+.contributors-hero .hero-subtitle {
   font-size: 1.1rem;
   line-height: 1.6;
   color: var(--muted);
@@ -67,24 +67,22 @@
   font-weight: 500;
 }
 
-/* Section Headers */
+/* Section Headers — overrides base in style.css */
 .contrib-section {
   margin-bottom: 4rem;
 }
 
-.section-header {
+.contrib-section .section-header {
   margin-bottom: 2rem;
+  border-bottom: none;
+  padding: 0;
+  justify-content: flex-start;
 }
 
-.section-title {
+.contrib-section .section-title {
   font-size: 1.6rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  color: var(--text);
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  letter-spacing: -0.01em;
 }
 
 .section-icon {
@@ -374,11 +372,11 @@ html[data-bs-theme="dark"] .github-card {
     font-size: 2rem;
   }
 
-  .hero-subtitle {
+  .contributors-hero .hero-subtitle {
     font-size: 1rem;
   }
 
-  .section-title {
+  .contrib-section .section-title {
     font-size: 1.4rem;
   }
 

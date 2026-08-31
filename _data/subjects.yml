@@ -7,52 +7,42 @@ alevel:
     name: A2 Math - Pure
     icon: "📕"
     path: /alevel/a2-mathematics/
-    color: success
   - id: a2math_mechanics
     name: A2 Math - Mechanics
     icon: "📕"
     path: /alevel/a2-mathematics/mechanics
-    color: success
   - id: a2math_statistics
     name: A2 Math - Statistics
     icon: "📕"
     path: /alevel/a2-mathematics/statistics
-    color: success
   - id: a2physics
     name: A2 Physics
     icon: "📕"
     path: /alevel/a2-physics/
-    color: success
   - id: mathematics
     name: AS Math
     icon: "📗"
     path: /alevel/as-mathematics/
-    color: success
   - id: asfurthermathematics
     name: AS Further Math
     icon: "📗"
     path: /alevel/as-further-mathematics/
-    color: success
   - id: chemistry
     name: AS Chemistry
     icon: "📗"
     path: /alevel/as-chemistry/
-    color: success
   - id: physics
     name: AS Physics
     icon: "📗"
     path: /alevel/as-physics/
-    color: success
   - id: economics
     name: AS Economics
     icon: "📗"
     path: /alevel/as-economics/
-    color: success
   - id: biology
     name: AS Biology
     icon: "📗"
     path: /alevel/as-biology/
-    color: success
 
 
 igcse:
@@ -60,28 +50,18 @@ igcse:
     name: IG Math
     icon: "📘"
     path: /igcse/mathematics/
-    color: primary
-  
+
   - id: physics
     name: IG Physics
     icon: "📘"
     path: /igcse/physics/
-    color: primary
-  
+
   - id: chemistry
     name: IG Chemistry
     icon: "📘"
     path: /igcse/chemistry/
-    color: primary
-  
+
   - id: biology
     name: IG Biology
     icon: "📘"
     path: /igcse/biology/
-    color: primary
-  
-  # - id: esl
-  #   name: IG ESL
-  #   icon: "🚧"
-  #   path: "javascript:engUnderConstruction()"
-  #   color: secondary
