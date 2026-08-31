@@ -78,16 +78,16 @@ jobs:
       - name: Build site
         run: bundle exec jekyll build --trace
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
       - name: Optimize images (post-build, in-place, before Pagefind)
         run: |
           # 原地覆盖原扩展名（HTML 直接引用 .png/.jpg，不能转成 .webp 否则引用失效）
           npx --yes sharp-cli -i '_site/assets/img/**/*.jpg' -o '{dir}' -q 80 --effort 5
           npx --yes sharp-cli -i '_site/assets/img/**/*.png' -o '{dir}' --effort 7
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
 
       - name: Build Pagefind search index
         run: npx --yes pagefind --site _site
