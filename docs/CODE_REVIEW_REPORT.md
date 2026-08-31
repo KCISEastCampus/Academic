@@ -19,10 +19,8 @@
 
 **问题**: 文件包含明文 GitHub OAuth Client ID 和 Secret。虽然文件已删除，凭据永久存在于 Git 历史。
 
-```
-GITHUB_CLIENT_ID  = "Ov23li8iRwGmP6JGnDUl"
-GITHUB_CLIENT_SECRET = "60ddff0976cfb563b316fb1652358b115d8ead37"
-```
+    GITHUB_CLIENT_ID  = "<redacted>"
+    GITHUB_CLIENT_SECRET = "<redacted>"
 
 **修复步骤**:
 1. 前往 [GitHub Developer Settings](https://github.com/settings/developers) → 找到对应的 OAuth App
