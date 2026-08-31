@@ -9,7 +9,6 @@
   }
 
   let pagefind = null;
-  let searchReady = false;
 
   // Lazy-load Pagefind (built by CI after Jekyll build)
   function loadPagefind() {
@@ -24,12 +23,6 @@
         console.error('Pagefind failed to load:', err);
         return null;
       });
-  }
-
-  function escapeHtml(text) {
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
   }
 
   // Fallback: simple client-side filter (if Pagefind index unavailable)
