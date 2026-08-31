@@ -9,8 +9,7 @@
 <script>try{(function(){var t=localStorage.getItem('site-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);} )();}catch(e){/* ignore */}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>{{ page.title | default: site.title | escape }}</title>
-<meta name="description" content="{{ page.description | default: site.description | escape }}">
+{% seo %}
 <meta name="theme-color" content="#0b1220">
 
 <!-- Resource hints for performance -->
@@ -51,7 +50,6 @@
 
 <!-- Fonts -->
 <link href="/assets/css/fonts/maplemono.css" rel="stylesheet">
-
 
 <script defer src="https://unpkg.com/mermaid@11.1.1/dist/mermaid.min.js"></script>
 

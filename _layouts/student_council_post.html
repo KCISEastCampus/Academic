@@ -7,7 +7,6 @@ layout: none
 <head>
   {% include head.html %}
   {% include mathjax.html %}
-  <title>{{ page.title | default: site.title }}</title>
   <link rel="stylesheet" href="/assets/css/subject.css">
   <link href="/assets/css/student_council.css" rel="stylesheet">
   <style>
@@ -252,6 +251,7 @@ layout: none
 </head>
 
 <body>
+  {% include nav.html %}
   <div class="post-container">
     <a id="post-back-button" href="/student-council/" class="post-back-button" aria-label="Return to Student Council">
       <i class="bi bi-arrow-left"></i>Back to Student Council
@@ -303,7 +303,6 @@ layout: none
   </div>
 
   {% include footer.html %}
-  {% include theme_button.html %}
   <script>
     (function () {
       var backButton = document.getElementById('post-back-button');

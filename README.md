@@ -23,9 +23,12 @@ A responsive educational website for KangChiao International School East Campus 
 ### A-Level
 - A2 Mathematics
 - AS Mathematics
-- AS Physics
 - AS Further Mathematics
-- Chemistry
+- A2 Physics
+- AS Physics
+- AS Chemistry
+- AS Economics
+- AS Biology
 
 ## 🛠️ Tech Stack
 

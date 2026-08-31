@@ -5,3 +5,4 @@ _site
 /vendor
 !/assets/vendor
 .vscode
+scripts/chars_site.txt

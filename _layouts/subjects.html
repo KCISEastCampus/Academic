@@ -7,7 +7,6 @@ layout: none
 <head>
   {% include head.html %}
   {% include mathjax.html %}
-  <title>{{ page.title | default: site.title }}</title>
   <link rel="stylesheet" href="/assets/css/subject.css">
   <script src="/assets/js/toc_generator.js"></script>
   <script src="/assets/js/image_modal.js"></script>
@@ -21,14 +20,12 @@ layout: none
 {% else %}
 <body>
 {% endif %}
+  {% include nav.html %}
   <header class="subject-header">
     <div class="subject-header-inner">
       <div class="subject-header-text">
         {% include breadcrumb.html %}
         <h1 class="subject-page-title">{{ page.title | default: site.title }}</h1>
-      </div>
-      <div class="header-right">
-        {% include theme_button.html %}
       </div>
     </div>
   </header>

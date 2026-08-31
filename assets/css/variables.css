@@ -12,14 +12,14 @@
   --muted: #64748b;
   --text: #0f172a;
 
-  /* Accents - Refined, academic color palette */
-  --accent-al: #2d9e6a;
-  --accent-al-rgb: 45, 158, 106;
-  --accent-ig: #6b7adb;
-  --accent-ig-rgb: 107, 122, 219;
-  --accent-page: #7c84d6;
-  --accent-page-rgb: 124, 132, 214;
-  --info: #0284c7;
+  /* Accents - IGCSE = blue, A-Level = green */
+  --accent-al: #16a34a;
+  --accent-al-rgb: 22, 163, 74;
+  --accent-ig: #0ea5e9;
+  --accent-ig-rgb: 14, 165, 233;
+  --accent-page: #3b82f6;
+  --accent-page-rgb: 59, 130, 246;
+  --info: #38bdf8;
 
   /* Hooking into Bootstrap variables for seamless integration */
   --bs-body-bg: var(--bg);

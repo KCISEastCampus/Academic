@@ -6,9 +6,9 @@ layout: none
 <head>
   {% include head.html %}
   <link rel="stylesheet" href="/assets/css/contributors.css">
-  <title>{{ page.title | default: "Contributors" }}</title>
 </head>
 <body>
+  {% include nav.html %}
   <a class="skip-link sr-only-focusable" href="#main-content">Skip to main content</a>
   <main id="main-content" class="container contributors-container" role="main">
     <a href="/" class="btn btn-outline-info btn-back fade-in" aria-label="Return to homepage">
@@ -115,7 +115,6 @@ layout: none
     </section>
   </main>
 
-  {% include theme_button.html %}
   {% include footer.html %}
 </body>
 </html>

@@ -6,13 +6,13 @@ layout: none
 
 <head>
   {% include head.html %}
-  <meta name="description" content="{{ page.description | default: site.description | escape }}">
   <meta name="keywords" content="KCISEC, {{ page.level | default: 'A-Level' }}, IGCSE, education, resources, academic, study materials">
   <meta name="author" content="EricStoneChina">
   <link rel="stylesheet" href="/assets/css/home.css">
 </head>
 
 <body>
+  {% include nav.html %}
   {% include site_header.html
      title=page.title
      subtitle=page.subtitle %}
@@ -78,7 +78,6 @@ layout: none
 
   </main>
 
-  {% include theme_button.html %}
   {% include footer.html %}
 
 </body>

@@ -9,30 +9,20 @@
   }
 
   let pagefind = null;
-  let searchReady = false;
 
   // Lazy-load Pagefind (built by CI after Jekyll build)
   function loadPagefind() {
     if (pagefind) return Promise.resolve(pagefind);
-    if (searchReady) return Promise.resolve(pagefind);
 
     return import(/* webpackIgnore: true */ '/pagefind/pagefind.js')
       .then(mod => {
         pagefind = mod.default || mod;
-        searchReady = true;
         return pagefind;
       })
       .catch(err => {
-        console.error('Pagefind failed to load, falling back:', err);
-        searchReady = false;
+        console.error('Pagefind failed to load:', err);
         return null;
       });
-  }
-
-  function escapeHtml(text) {
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
   }
 
   // Fallback: simple client-side filter (if Pagefind index unavailable)
@@ -67,13 +57,13 @@
 
       const title = document.createElement('div');
       title.classList.add('fw-bold');
-      title.innerHTML = escapeHtml(result.title);
+      title.textContent = result.title;
       item.appendChild(title);
 
       if (result.excerpt) {
         const snippet = document.createElement('small');
         snippet.classList.add('text-muted', 'd-block');
-        snippet.innerHTML = result.excerpt;
+        snippet.textContent = result.excerpt.slice(0, 120);
         item.appendChild(snippet);
       }
 
@@ -139,6 +129,19 @@
   // Hide results when clicking outside
   document.addEventListener('click', function(e) {
     if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+      searchResults.style.display = 'none';
+    }
+  });
+
+  // Ctrl+K / Cmd+K to focus search
+  document.addEventListener('keydown', function(e) {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+      e.preventDefault();
+      searchInput.focus();
+      searchInput.select();
+    }
+    if (e.key === 'Escape' && document.activeElement === searchInput) {
+      searchInput.blur();
       searchResults.style.display = 'none';
     }
   });
