@@ -333,15 +333,15 @@ Jekyll 不处理静态资源（原样拷贝），所以图片压缩是**独立 s
 
 | 标记 | 来源 | 链接 | 维护/状态 |
 |---|---|---|---|
-| [C1] | fontTools 官方 `subset`（pyftsubset）文档 | https://fonttools.readthedocs.io/en/latest/subset/ | 活跃维护；`--flavor=woff2` 需 Brotli |
-| [C2] | Nerd Fonts Wiki · Glyph Sets and Code Points（PUA 等码点） | https://github.com/ryanoasis/nerd-fonts/wiki/Glyph-Sets-and-Code-Points | 活跃（v3.5.0） |
-| [C3] | GoogleChromeLabs/squoosh PR #1321 “Remove CLI / libsquoosh”（2023-01-03 merged，作者弃用 CLI，官方 web 版继续） | https://github.com/GoogleChromeLabs/squoosh/pull/1321 | 上游 CLI 已弃用；社区 fork `frostoven/Squoosh-with-CLI` |
-| [C4] | oxipng MANUAL.txt（10.1.0 全参数手册） | https://github.com/oxipng/oxipng/blob/628e241e23f368097883807fa6e985ccf7c00357/MANUAL.txt | 活跃 |
-| [C5] | Google WebP `cwebp` 官方文档 | https://developers.google.com/speed/webp/docs/cwebp | 官方活跃 |
-| [C6] | sharp-cli npm registry（latest 6.0.0，更新于 2026-08-22） | https://registry.npmjs.org/sharp-cli | **活跃** |
-| [C7] | sharp-cli README（命令语法、glob、输出宏、`-f/-q/--lossless/--effort/--exact`） | https://github.com/vseventer/sharp-cli | 活跃 |
-| [C8] | uv 官方《Using tools》（`uvx` 临时环境、`--from`/`--with`） | https://docs.astral.sh/uv/guides/tools/ | 官方活跃 |
-| [C9] | filamentgroup/glyphhanger 的 `pyftsubset` 帮助汇总（可读性高的 flag 清单） | https://github.com/filamentgroup/glyphhanger/blob/master/docs/pyftsubsethelp.txt | 参考 |
+| [C1] | fontTools 官方 `subset`（pyftsubset）文档 | [fonttools.readthedocs.io](https://fonttools.readthedocs.io/en/latest/subset/) | 活跃维护；`--flavor=woff2` 需 Brotli |
+| [C2] | Nerd Fonts Wiki · Glyph Sets and Code Points（PUA 等码点） | [ryanoasis/nerd-fonts wiki](https://github.com/ryanoasis/nerd-fonts/wiki/Glyph-Sets-and-Code-Points) | 活跃（v3.5.0） |
+| [C3] | GoogleChromeLabs/squoosh PR #1321 “Remove CLI / libsquoosh”（2023-01-03 merged，作者弃用 CLI，官方 web 版继续） | [squoosh#1321](https://github.com/GoogleChromeLabs/squoosh/pull/1321) | 上游 CLI 已弃用；社区 fork `frostoven/Squoosh-with-CLI` |
+| [C4] | oxipng MANUAL.txt（10.1.0 全参数手册） | [oxipng MANUAL](https://github.com/oxipng/oxipng/blob/628e241e23f368097883807fa6e985ccf7c00357/MANUAL.txt) | 活跃 |
+| [C5] | Google WebP `cwebp` 官方文档 | [developers.google.com](https://developers.google.com/speed/webp/docs/cwebp) | 官方活跃 |
+| [C6] | sharp-cli npm registry（latest 6.0.0，更新于 2026-08-22） | [sharp-cli on npm](https://registry.npmjs.org/sharp-cli) | **活跃** |
+| [C7] | sharp-cli README（命令语法、glob、输出宏、`-f/-q/--lossless/--effort/--exact`） | [vseventer/sharp-cli](https://github.com/vseventer/sharp-cli) | 活跃 |
+| [C8] | uv 官方《Using tools》（`uvx` 临时环境、`--from`/`--with`） | [docs.astral.sh](https://docs.astral.sh/uv/guides/tools/) | 官方活跃 |
+| [C9] | filamentgroup/glyphhanger 的 `pyftsubset` 帮助汇总（可读性高的 flag 清单） | [glyphhanger pyftsubset help](https://github.com/filamentgroup/glyphhanger/blob/master/docs/pyftsubsethelp.txt) | 参考 |
 | [C10] | 本仓库 `.github/workflows/pages.yml`、`assets/css/fonts/maplemono.css`、`_config.yml` | `.github/workflows/pages.yml` 等（本地源码） | 本仓库 |
 | [FILES] | 本仓库实测：`assets/fonts/*.ttf` 尺寸、`assets/img/*` 分布、`assets/vendor` 内容、`.bi` 图标规则 | 本地 `du`/`grep` | 本仓库 |
 | [MEAS] | 本报告实际运行：node 提取字符 + `uvx --from fonttools --with brotli pyftsubset` 实测 17MB→205KB（text subset）；全量 CJK 子集 5.4MB；本机 `uv/uvx 0.11.16` 可用、无 python | 本地执行 | 实测 |
