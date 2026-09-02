@@ -19,11 +19,11 @@
 # in the templates via {{ site.myvariable }}.
 
 # Site metadata
-title: KCISEC Academic
-description: "IGCSE & A-Level study resources for Kang Chiao International School, East Campus - subject notes, revision materials and exam links aligned to OxfordAQA."
+title: A-level Homepage
+description: "IGCSE & A-level study resources for Kang Chiao International School, East Campus - subject notes, revision materials and exam links aligned to OxfordAQA."
 url: "https://academic.kcisec.site"
 baseurl: ""
-tagline: KCISEC Academic Study Resources
+tagline: KCISEC A-level Study Resources
 
 # Build settings
 markdown: kramdown
