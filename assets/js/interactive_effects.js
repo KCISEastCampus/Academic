@@ -248,30 +248,6 @@
     }
   };
 
-  // 表格交互优化
-  const tableInteraction = {
-    init: function() {
-      document.querySelectorAll('table').forEach(table => {
-        table.addEventListener('mouseover', this.handleMouseOver.bind(this));
-        table.addEventListener('mouseout', this.handleMouseOut.bind(this));
-      });
-    },
-
-    handleMouseOver: function(e) {
-      const row = e.target.closest('tr');
-      if (row && row.parentElement.tagName === 'TBODY') {
-        row.classList.add('table-row-hover');
-      }
-    },
-
-    handleMouseOut: function(e) {
-      const row = e.target.closest('tr');
-      if (row) {
-        row.classList.remove('table-row-hover');
-      }
-    }
-  };
-
   // 加载状态指示
   const loadingIndicator = {
     init: function() {
@@ -326,30 +302,6 @@
       }
     }
   };
-
-  // 科目按钮特效
-  const subjectButtonEffects = {
-    init: function() {
-      if (utils.prefersReducedMotion()) return;
-
-      document.querySelectorAll('.subject-list .btn').forEach(btn => {
-        btn.addEventListener('mouseenter', this.handleMouseEnter.bind(this));
-        btn.addEventListener('mouseleave', this.handleMouseLeave.bind(this));
-      });
-    },
-
-    handleMouseEnter: function(e) {
-      const btn = e.target;
-      btn.classList.add('subject-btn-hover');
-    },
-
-    handleMouseLeave: function(e) {
-      const btn = e.target;
-      btn.classList.remove('subject-btn-hover');
-    }
-  };
-
-
 
   // 代码块复制功能
   const codeCopy = {
@@ -540,10 +492,8 @@
 
     fadeInAnimation.init();
     smoothScroll.init();
-    tableInteraction.init();
     loadingIndicator.init();
     keyboardNavigation.init();
-    subjectButtonEffects.init();
     codeCopy.init();
     searchHighlight.init(); // 添加搜索高亮初始化
 
