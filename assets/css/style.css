@@ -733,12 +733,12 @@ div.highlight {
 }
 
 /* Subject Button Effects */
-.subject-btn-hover {
+.subject-list .btn {
   position: relative;
   overflow: hidden;
 }
 
-.subject-btn-hover::before {
+.subject-list .btn::before {
   content: '';
   position: absolute;
   top: 50%;
@@ -751,7 +751,7 @@ div.highlight {
   transition: width 0.6s ease, height 0.6s ease;
 }
 
-.subject-btn-hover:hover::before {
+.subject-list .btn:hover::before {
   width: 300px;
   height: 300px;
 }
@@ -861,7 +861,7 @@ div.highlight {
   .fade-in,
   .scroll-progress-bar,
   #theme_button,
-  .subject-btn-hover::before,
+  .subject-list .btn::before,
   .back-to-top {
     animation: none !important;
     transition: none !important;
