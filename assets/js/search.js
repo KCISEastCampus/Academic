@@ -98,15 +98,15 @@
         const pf = await loadPagefind();
         if (pf) {
           const search = await pf.search(query);
-          const results = [];
-          for (let i = 0; i < Math.min(search.results.length, 10); i++) {
-            const data = await search.results[i].data();
-            results.push({
-              title: data.meta.title,
-              url: data.url,
-              excerpt: data.excerpt ? data.excerpt.replace(/<[^>]*>/g, ' ').trim().slice(0, 120) : ''
-            });
-          }
+          const resultPromises = search.results
+            .slice(0, 10)
+            .map(result => result.data());
+          const dataResults = await Promise.all(resultPromises);
+          const results = dataResults.map(data => ({
+            title: data.meta.title,
+            url: data.url,
+            excerpt: data.excerpt ? data.excerpt.replace(/<[^>]*>/g, ' ').trim().slice(0, 120) : ''
+          }));
           renderResults(results);
         } else if (searchData) {
           // Fallback to legacy filtering
