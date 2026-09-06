@@ -861,10 +861,13 @@ div.highlight {
   .fade-in,
   .scroll-progress-bar,
   #theme_button,
-  .subject-list .btn::before,
   .back-to-top {
     animation: none !important;
     transition: none !important;
+  }
+
+  .subject-list .btn::before {
+    display: none !important;
   }
 
   .fade-in-visible {
