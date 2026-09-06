@@ -125,10 +125,12 @@
           }));
           renderResults(results);
         } else {
+          if (searchId !== currentSearchId) return;
           renderResults([]);
         }
       } catch (e) {
         console.error('Search error:', e);
+        if (searchId !== currentSearchId) return;
         renderResults([]);
       }
     }, 200);
