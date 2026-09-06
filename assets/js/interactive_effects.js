@@ -98,24 +98,24 @@
       this.progressBar.innerHTML = '<div class="scroll-progress-bar"></div>';
       document.body.appendChild(this.progressBar);
 
+      // Cache the inner progress bar element to avoid querying it on every scroll
+      this.progressBarInner = this.progressBar.querySelector('.scroll-progress-bar');
+
       this.update = utils.throttle(this.update.bind(this), 16);
       window.addEventListener('scroll', this.update, { passive: true });
       this.update();
     },
 
     update: function() {
-      if (!this.progressBar) return;
+      if (!this.progressBar || !this.progressBarInner) return;
 
       const scrolled = (window.pageYOffset / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-      const progressBar = this.progressBar.querySelector('.scroll-progress-bar');
 
-      if (progressBar) {
-        if (scrolled > 0) {
-          this.progressBar.style.opacity = '1';
-          progressBar.style.width = scrolled + '%';
-        } else {
-          this.progressBar.style.opacity = '0';
-        }
+      if (scrolled > 0) {
+        this.progressBar.style.opacity = '1';
+        this.progressBarInner.style.width = scrolled + '%';
+      } else {
+        this.progressBar.style.opacity = '0';
       }
     }
   };
@@ -132,6 +132,9 @@
       this.button.setAttribute('aria-label', '返回顶部');
       document.body.appendChild(this.button);
 
+      // Cache the footer element to avoid querying it on every scroll
+      this.footer = document.querySelector('footer');
+
       this.button.addEventListener('click', this.scrollToTop.bind(this));
       this.updatePosition = utils.throttle(this.updatePosition.bind(this), 16);
       this.toggleVisibility = utils.throttle(this.toggleVisibility.bind(this), 100);
@@ -147,13 +150,12 @@
     updatePosition: function() {
       if (!this.button) return;
 
-      const footer = document.querySelector('footer');
       const baseBottom = window.innerWidth <= 768 ? 16 : 32;
       const gap = 16;
       let bottomOffset = baseBottom;
 
-      if (footer) {
-        const footerRect = footer.getBoundingClientRect();
+      if (this.footer) {
+        const footerRect = this.footer.getBoundingClientRect();
         const viewportBottom = window.innerHeight;
         const overlap = viewportBottom - footerRect.top + gap;
 
