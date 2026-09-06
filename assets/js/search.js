@@ -81,9 +81,11 @@
     .catch(() => { searchData = []; });
 
   let debounceTimer = null;
+  let currentSearchId = 0;
 
   searchInput.addEventListener('input', function() {
     const query = this.value.trim();
+    const searchId = ++currentSearchId;
 
     clearTimeout(debounceTimer);
 
@@ -102,6 +104,11 @@
             .slice(0, 10)
             .map(result => result.data());
           const dataResults = await Promise.all(resultPromises);
+
+          if (searchId !== currentSearchId) {
+            return;
+          }
+
           const results = dataResults.map(data => ({
             title: data.meta.title,
             url: data.url,
@@ -109,6 +116,7 @@
           }));
           renderResults(results);
         } else if (searchData) {
+          if (searchId !== currentSearchId) return;
           // Fallback to legacy filtering
           const results = fallbackSearch(query, searchData).map(item => ({
             title: item.title,
