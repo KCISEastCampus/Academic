@@ -72,7 +72,7 @@ function generateTOC() {
 
   setTimeout(() => {
     initTOCToggle();
-    initTOCSearch();
+    initTOCSearch(tocLinks);
     initReadingProgress();
   }, 80);
 
@@ -295,10 +295,9 @@ function toggleTOC(show) {
   }
 }
 
-function initTOCSearch() {
+function initTOCSearch(tocLinks) {
   const searchInput = document.getElementById("tocSearch");
   const searchClear = document.getElementById("tocSearchClear");
-  const tocLinks = Array.from(document.querySelectorAll(".toc-content a[data-toc-link]"));
 
   if (!searchInput || !searchClear) return;
 
