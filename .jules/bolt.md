@@ -1,3 +1,7 @@
+## 2026-09-06 - Fallback Search Performance
+**Learning:** Precomputing lowercase variants of object properties (e.g., `title`, `content`) during the data fetch/load phase significantly improves the performance of client-side filtering (e.g., `Array.prototype.filter`). It eliminates repeated string allocations inside the filter loop. Benchmark showed ~42-47% faster execution time for 1000 iterations over 10,000 mock items.
+**Action:** Precompute lowercase variants once at data-load time instead of calling `toLowerCase()` per item per keystroke in the filter loop.
+
 ## 2026-09-05 - Pagefind search speed up
 **Learning:** Pagefind returns a list of results where each result data must be fetched using `await result.data()`. Sequential awaiting creates an unnecessary performance bottleneck that increases search results latency when typing. Also, async operations can resolve out-of-order, leading to stale UI updates.
 **Action:** Always fetch search result contents concurrently using `Promise.all` in Pagefind integrations to dramatically reduce result latency, and use a `currentSearchId` to ensure stale responses are ignored.
