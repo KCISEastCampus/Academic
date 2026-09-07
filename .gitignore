@@ -6,3 +6,4 @@ _site
 !/assets/vendor
 .vscode
 scripts/chars_site.txt
+*.log

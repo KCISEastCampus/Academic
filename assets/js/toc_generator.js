@@ -58,7 +58,9 @@ function generateTOC() {
     const activeHeading = findActiveHeading(headings);
     if (!activeHeading) return;
 
-    const activeLink = tocContent.querySelector(`a[data-toc-link][href="#${activeHeading.id}"]`);
+    const targetHref = `#${activeHeading.id}`;
+    // Bolt Optimization: Replace O(N) DOM query with faster array lookup on cached elements to prevent scroll layout thrashing
+    const activeLink = tocLinks.find(link => link.getAttribute("href") === targetHref);
     if (activeLink) {
       setActiveLink(activeLink, true);
     }
