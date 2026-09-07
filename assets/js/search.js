@@ -74,8 +74,9 @@
   let searchData = null;
   const searchUrl = searchInput.getAttribute('data-search-source') || '/search.json';
 
-  // Preload fallback search data (small)
-  fetch(searchUrl)
+  // Preload fallback search data (small). Keep the promise so a search issued
+  // before the data finishes loading can await it instead of flashing "No results".
+  const searchDataReady = fetch(searchUrl)
     .then(r => r.ok ? r.json() : [])
     .then(data => {
       searchData = data.map(item => ({
@@ -121,18 +122,18 @@
             excerpt: data.excerpt ? data.excerpt.replace(/<[^>]*>/g, ' ').trim().slice(0, 120) : ''
           }));
           renderResults(results);
-        } else if (searchData) {
+        } else {
+          // Pagefind unavailable: fall back to client-side filtering.
+          // Wait for the data to finish loading so an early keystroke doesn't
+          // render an empty result set just because search.json hadn't arrived.
+          await searchDataReady;
           if (searchId !== currentSearchId) return;
-          // Fallback to legacy filtering
-          const results = fallbackSearch(query, searchData).map(item => ({
+          const results = fallbackSearch(query, searchData || []).map(item => ({
             title: item.title,
             url: item.url,
             excerpt: item.excerpt ? item.excerpt.slice(0, 120) : ''
           }));
           renderResults(results);
-        } else {
-          if (searchId !== currentSearchId) return;
-          renderResults([]);
         }
       } catch (e) {
         console.error('Search error:', e);
