@@ -30,8 +30,8 @@
     const q = query.toLowerCase().trim();
     return searchData
       .filter(item =>
-        (item._lowerTitle && item._lowerTitle.includes(q)) ||
-        (item._lowerContent && item._lowerContent.includes(q))
+        (item.title && item.title.toLowerCase().includes(q)) ||
+        (item.content && item.content.toLowerCase().includes(q))
       )
       .slice(0, 10)
       .map(item => ({ title: item.title, url: item.url, excerpt: item.content }));
@@ -77,13 +77,7 @@
   // Preload fallback search data (small)
   fetch(searchUrl)
     .then(r => r.ok ? r.json() : [])
-    .then(data => {
-      searchData = data.map(item => ({
-        ...item,
-        _lowerTitle: item.title ? item.title.toLowerCase() : '',
-        _lowerContent: item.content ? item.content.toLowerCase() : ''
-      }));
-    })
+    .then(data => { searchData = data; })
     .catch(() => { searchData = []; });
 
   let debounceTimer = null;

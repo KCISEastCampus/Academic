@@ -1,2 +1,6 @@
+## 2026-09-04 - JS Hover State Optimization
+**Learning:** Found redundant event listeners in `assets/js/interactive_effects.js` that were implementing hover states for tables (`mouseover`/`mouseout`) and subject buttons (`mouseenter`/`mouseleave`). The table class being toggled wasn't even utilized in CSS, as the codebase naturally used `tr:hover`. For buttons, adding the base class once allows CSS `:hover` selectors to manage the animation smoothly. JS-based hover states using event listeners represent a major performance anti-pattern due to main thread blocking and unnecessary recalculations, especially when native CSS handles this more efficiently.
+**Action:** Always favor native CSS pseudo-classes (`:hover`, `:focus-visible`, etc.) over JavaScript event listeners for interactive styling and simple animations.
+
 ## Fallback Search Performance (assets/js/search.js)
 Precomputing lowercase variants of object properties (e.g., `title`, `content`) during the data fetch/load phase significantly improves the performance of client-side filtering (e.g., `Array.prototype.filter`). It eliminates repeated string allocations inside the filter loop. Benchmark showed ~42-47% faster execution time for 1000 iterations over 10,000 mock items.
