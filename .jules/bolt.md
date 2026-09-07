@@ -2,6 +2,6 @@
 **Learning:** Found redundant event listeners in `assets/js/interactive_effects.js` that were implementing hover states for tables (`mouseover`/`mouseout`) and subject buttons (`mouseenter`/`mouseleave`). The table class being toggled wasn't even utilized in CSS, as the codebase naturally used `tr:hover`. For buttons, adding the base class once allows CSS `:hover` selectors to manage the animation smoothly. JS-based hover states using event listeners represent a major performance anti-pattern due to main thread blocking and unnecessary recalculations, especially when native CSS handles this more efficiently.
 **Action:** Always favor native CSS pseudo-classes (`:hover`, `:focus-visible`, etc.) over JavaScript event listeners for interactive styling and simple animations.
 
-## 2026-09-15 - DOM Querying in Scroll Events
+## 2026-09-06 - DOM Querying in Scroll Events
 **Learning:** Found an anti-pattern in `assets/js/interactive_effects.js` where `querySelector` was being called inside scroll event handlers (`scrollProgress.update` and `backToTop.updatePosition`). Even with a 16ms throttle, running DOM queries on every scroll tick causes layout thrashing and wastes CPU cycles, as querying the DOM is a synchronous O(N) operation.
 **Action:** Always cache DOM elements that don't change during initialization rather than querying them repeatedly inside high-frequency event handlers (like scroll, resize, or mousemove).
