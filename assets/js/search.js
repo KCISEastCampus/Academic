@@ -81,9 +81,11 @@
     .catch(() => { searchData = []; });
 
   let debounceTimer = null;
+  let currentSearchId = 0;
 
   searchInput.addEventListener('input', function() {
     const query = this.value.trim();
+    const searchId = ++currentSearchId;
 
     clearTimeout(debounceTimer);
 
@@ -98,17 +100,23 @@
         const pf = await loadPagefind();
         if (pf) {
           const search = await pf.search(query);
-          const results = [];
-          for (let i = 0; i < Math.min(search.results.length, 10); i++) {
-            const data = await search.results[i].data();
-            results.push({
-              title: data.meta.title,
-              url: data.url,
-              excerpt: data.excerpt ? data.excerpt.replace(/<[^>]*>/g, ' ').trim().slice(0, 120) : ''
-            });
+          const resultPromises = search.results
+            .slice(0, 10)
+            .map(result => result.data());
+          const dataResults = await Promise.all(resultPromises);
+
+          if (searchId !== currentSearchId) {
+            return;
           }
+
+          const results = dataResults.map(data => ({
+            title: data.meta.title,
+            url: data.url,
+            excerpt: data.excerpt ? data.excerpt.replace(/<[^>]*>/g, ' ').trim().slice(0, 120) : ''
+          }));
           renderResults(results);
         } else if (searchData) {
+          if (searchId !== currentSearchId) return;
           // Fallback to legacy filtering
           const results = fallbackSearch(query, searchData).map(item => ({
             title: item.title,
@@ -117,10 +125,12 @@
           }));
           renderResults(results);
         } else {
+          if (searchId !== currentSearchId) return;
           renderResults([]);
         }
       } catch (e) {
         console.error('Search error:', e);
+        if (searchId !== currentSearchId) return;
         renderResults([]);
       }
     }, 200);
