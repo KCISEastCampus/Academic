@@ -14,6 +14,17 @@ function generateTOC() {
   tocContent.innerHTML = renderTOCTree(tree);
 
   const tocLinks = Array.from(tocContent.querySelectorAll("a[data-toc-link]"));
+
+  // Create a map of heading IDs to their corresponding TOC link elements.
+  // This O(1) lookup replaces O(N) DOM querying inside the scroll event handler.
+  const tocLinkMap = new Map();
+  tocLinks.forEach(link => {
+    const href = link.getAttribute("href");
+    if (href && href.startsWith("#")) {
+      tocLinkMap.set(href.slice(1), link);
+    }
+  });
+
   let isProgrammaticScroll = false;
   let currentActiveId = null;
   let lastSyncAt = 0;
@@ -58,14 +69,22 @@ function generateTOC() {
     const activeHeading = findActiveHeading(headings);
     if (!activeHeading) return;
 
-    const activeLink = tocContent.querySelector(`a[data-toc-link][href="#${activeHeading.id}"]`);
+    const activeLink = tocLinkMap.get(activeHeading.id);
     if (activeLink) {
       setActiveLink(activeLink, true);
     }
   }, { passive: true });
 
-  setActiveFromHashOrTop(headings, tocContent);
-  const initialActiveLink = tocContent.querySelector("a[data-toc-link].active");
+  setActiveFromHashOrTop(headings, tocLinkMap);
+
+  // Find the initially active link, if any, to set the currentActiveId
+  let initialActiveLink = null;
+  for (const link of tocLinkMap.values()) {
+    if (link.classList.contains("active")) {
+      initialActiveLink = link;
+      break;
+    }
+  }
   if (initialActiveLink) {
     currentActiveId = initialActiveLink.getAttribute("href").slice(1);
   }
@@ -194,10 +213,10 @@ function findActiveHeading(headings) {
   return current;
 }
 
-function setActiveFromHashOrTop(headings, tocContent) {
+function setActiveFromHashOrTop(headings, tocLinkMap) {
   const hash = window.location.hash ? window.location.hash.slice(1) : "";
   const targetId = hash && document.getElementById(hash) ? hash : findActiveHeading(headings).id;
-  const activeLink = tocContent.querySelector(`a[data-toc-link][href="#${targetId}"]`);
+  const activeLink = tocLinkMap.get(targetId);
 
   if (!activeLink) return;
   activeLink.classList.add("active");
