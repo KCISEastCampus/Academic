@@ -14,6 +14,11 @@ function generateTOC() {
   tocContent.innerHTML = renderTOCTree(tree);
 
   const tocLinks = Array.from(tocContent.querySelectorAll("a[data-toc-link]"));
+  const linksById = new Map();
+  tocLinks.forEach(link => {
+    const href = link.getAttribute("href");
+    if (href) linksById.set(href.slice(1), link);
+  });
   let isProgrammaticScroll = false;
   let currentActiveId = null;
   let lastSyncAt = 0;
@@ -58,14 +63,14 @@ function generateTOC() {
     const activeHeading = findActiveHeading(headings);
     if (!activeHeading) return;
 
-    const activeLink = tocContent.querySelector(`a[data-toc-link][href="#${activeHeading.id}"]`);
+    const activeLink = linksById.get(activeHeading.id);
     if (activeLink) {
       setActiveLink(activeLink, true);
     }
   }, { passive: true });
 
-  setActiveFromHashOrTop(headings, tocContent);
-  const initialActiveLink = tocContent.querySelector("a[data-toc-link].active");
+  setActiveFromHashOrTop(headings, tocContent, linksById);
+  const initialActiveLink = tocLinks.find(link => link.classList.contains("active"));
   if (initialActiveLink) {
     currentActiveId = initialActiveLink.getAttribute("href").slice(1);
   }
@@ -194,10 +199,10 @@ function findActiveHeading(headings) {
   return current;
 }
 
-function setActiveFromHashOrTop(headings, tocContent) {
+function setActiveFromHashOrTop(headings, tocContent, linksById) {
   const hash = window.location.hash ? window.location.hash.slice(1) : "";
   const targetId = hash && document.getElementById(hash) ? hash : findActiveHeading(headings).id;
-  const activeLink = tocContent.querySelector(`a[data-toc-link][href="#${targetId}"]`);
+  const activeLink = linksById ? linksById.get(targetId) : tocContent.querySelector(`a[data-toc-link][href="#${targetId}"]`);
 
   if (!activeLink) return;
   activeLink.classList.add("active");
