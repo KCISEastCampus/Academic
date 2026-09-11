@@ -13,3 +13,7 @@
 ## 2026-09-04 - JS Hover State Optimization
 **Learning:** Found redundant event listeners in `assets/js/interactive_effects.js` that were implementing hover states for tables (`mouseover`/`mouseout`) and subject buttons (`mouseenter`/`mouseleave`). The table class being toggled wasn't even utilized in CSS, as the codebase naturally used `tr:hover`. For buttons, adding the base class once allows CSS `:hover` selectors to manage the animation smoothly. JS-based hover states using event listeners represent a major performance anti-pattern due to main thread blocking and unnecessary recalculations, especially when native CSS handles this more efficiently.
 **Action:** Always favor native CSS pseudo-classes (`:hover`, `:focus-visible`, etc.) over JavaScript event listeners for interactive styling and simple animations.
+
+## 2026-09-07 - TOC Scroll Optimization
+**Learning:** Found that tocContent.querySelector was being called on every scroll tick and findActiveHeading used an O(N) linear scan over offsetTop properties. DOM queries and layout reads inside scroll events cause layout thrashing.
+**Action:** Always pre-calculate maps for O(1) DOM node lookups and use O(log N) binary search for sorted DOM layout arrays to prevent main thread blocking.
