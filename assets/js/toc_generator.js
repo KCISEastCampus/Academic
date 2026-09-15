@@ -301,6 +301,22 @@ function initTOCSearch(tocLinks) {
 
   if (!searchInput || !searchClear) return;
 
+  // Pre-compute and cache search data to avoid O(N) DOM querying on every keystroke
+  const cachedLinks = tocLinks.map((link) => {
+    const href = link.getAttribute("href");
+    const targetId = href ? href.slice(1) : "";
+    const targetElement = targetId ? document.getElementById(targetId) : null;
+    const originalText = targetElement ? targetElement.textContent.trim() : link.textContent.trim();
+    return {
+      link: link,
+      item: link.closest(".toc-item"),
+      originalText: originalText,
+      lowerText: originalText.toLowerCase()
+    };
+  });
+
+  const tocContent = document.querySelector(".toc-content");
+
   searchInput.addEventListener("input", function onInput() {
     const searchTerm = this.value.toLowerCase().trim();
     searchClear.style.display = searchTerm ? "flex" : "none";
@@ -308,15 +324,13 @@ function initTOCSearch(tocLinks) {
     let visibleCount = 0;
     const matchedItems = [];
 
-    tocLinks.forEach((link) => {
-      const href = link.getAttribute("href");
-      const targetId = href ? href.slice(1) : "";
-      const targetElement = targetId ? document.getElementById(targetId) : null;
-      const originalText = targetElement ? targetElement.textContent.trim() : link.textContent.trim();
+    cachedLinks.forEach((cacheItem) => {
+      const { link, item, originalText, lowerText } = cacheItem;
+
+      // Reset link text first
       link.textContent = originalText;
 
-      const item = link.closest(".toc-item");
-      const matches = originalText.toLowerCase().includes(searchTerm);
+      const matches = lowerText.includes(searchTerm);
 
       if (matches || !searchTerm) {
         item.style.display = "";
@@ -341,12 +355,12 @@ function initTOCSearch(tocLinks) {
 
     const noResultsMsg = document.getElementById("tocNoResults");
     if (visibleCount === 0 && searchTerm) {
-      if (!noResultsMsg) {
+      if (!noResultsMsg && tocContent) {
         const msg = document.createElement("div");
         msg.id = "tocNoResults";
         msg.className = "toc-no-results";
         msg.innerHTML = '<i class="bi bi-search"></i> No matches found';
-        document.querySelector(".toc-content").appendChild(msg);
+        tocContent.appendChild(msg);
       }
     } else if (noResultsMsg) {
       noResultsMsg.remove();
