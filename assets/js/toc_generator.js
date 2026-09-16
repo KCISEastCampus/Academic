@@ -14,6 +14,16 @@ function generateTOC() {
   tocContent.innerHTML = renderTOCTree(tree);
 
   const tocLinks = Array.from(tocContent.querySelectorAll("a[data-toc-link]"));
+
+  // Cache links to avoid O(N) DOM querying on scroll events
+  const tocLinkMap = new Map();
+  tocLinks.forEach((link) => {
+    const href = link.getAttribute("href");
+    if (href) {
+      tocLinkMap.set(href.slice(1), link);
+    }
+  });
+
   let isProgrammaticScroll = false;
   let currentActiveId = null;
   let lastSyncAt = 0;
@@ -58,17 +68,13 @@ function generateTOC() {
     const activeHeading = findActiveHeading(headings);
     if (!activeHeading) return;
 
-    const activeLink = tocContent.querySelector(`a[data-toc-link][href="#${activeHeading.id}"]`);
+    const activeLink = tocLinkMap.get(activeHeading.id);
     if (activeLink) {
       setActiveLink(activeLink, true);
     }
   }, { passive: true });
 
-  setActiveFromHashOrTop(headings, tocContent);
-  const initialActiveLink = tocContent.querySelector("a[data-toc-link].active");
-  if (initialActiveLink) {
-    currentActiveId = initialActiveLink.getAttribute("href").slice(1);
-  }
+  currentActiveId = setActiveFromHashOrTop(headings, tocLinkMap);
 
   setTimeout(() => {
     initTOCToggle();
@@ -181,27 +187,36 @@ function renderTOCTree(nodes) {
 function findActiveHeading(headings) {
   const offset = 140;
   const scrollTop = window.scrollY + offset;
-  let current = headings[0];
+  if (headings.length === 0) return null;
+  if (headings[0].offsetTop > scrollTop) return headings[0];
 
-  for (let i = 0; i < headings.length; i += 1) {
-    if (headings[i].offsetTop <= scrollTop) {
-      current = headings[i];
+  let low = 0;
+  let high = headings.length - 1;
+  let activeIndex = 0;
+
+  while (low <= high) {
+    const mid = Math.floor((low + high) / 2);
+    if (headings[mid].offsetTop <= scrollTop) {
+      activeIndex = mid;
+      low = mid + 1;
     } else {
-      break;
+      high = mid - 1;
     }
   }
 
-  return current;
+  return headings[activeIndex];
 }
 
-function setActiveFromHashOrTop(headings, tocContent) {
+function setActiveFromHashOrTop(headings, tocLinkMap) {
   const hash = window.location.hash ? window.location.hash.slice(1) : "";
-  const targetId = hash && document.getElementById(hash) ? hash : findActiveHeading(headings).id;
-  const activeLink = tocContent.querySelector(`a[data-toc-link][href="#${targetId}"]`);
+  const activeHeading = findActiveHeading(headings);
+  const targetId = hash && document.getElementById(hash) ? hash : (activeHeading ? activeHeading.id : "");
+  const activeLink = tocLinkMap.get(targetId);
 
-  if (!activeLink) return;
+  if (!activeLink) return null;
   activeLink.classList.add("active");
   expandAncestors(activeLink.closest("li.toc-item"));
+  return targetId;
 }
 
 function expandAncestors(item) {
