@@ -28,10 +28,13 @@
   --bs-secondary-bg: var(--surface);
   --bs-border-color: var(--border);
 
-  /* Layout */
+  /* Layout & Shadows */
   --radius: 0.75rem;
   --container-max: 1100px;
   --content-max: 720px;
+  --card-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+  --card-shadow-hover: 0 6px 20px rgba(15, 23, 42, 0.08);
+  --card-subtle-bg: rgba(15, 23, 42, 0.02);
 
   /* Typography tokens */
   --font-body: 'Charter', 'Bitstream Charter', 'Sitka Text', Cambria, 'Times New Roman', serif;
@@ -75,6 +78,11 @@ html[data-bs-theme="dark"] {
   --bs-emphasis-color: var(--text);
   --bs-secondary-bg: var(--surface);
   --bs-border-color: var(--border);
+
+  /* Layout & Shadows - dark theme */
+  --card-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+  --card-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --card-subtle-bg: rgba(255, 255, 255, 0.03);
 
   /* Academic tokens - dark theme */
   --math-bg: rgba(var(--accent-ig-rgb), 0.08);

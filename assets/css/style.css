@@ -860,7 +860,7 @@ div.highlight {
 @media (prefers-reduced-motion: reduce) {
   .fade-in,
   .scroll-progress-bar,
-  #theme_button,
+  .site-nav-theme-btn,
   .back-to-top {
     animation: none !important;
     transition: none !important;
@@ -994,14 +994,15 @@ mark {
 /* Search Input Styling */
 .search-wrapper {
   background-color: var(--surface);
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid var(--border);
   border-radius: 2rem; /* Pill shape */
+  box-shadow: var(--card-shadow);
   transition: all 0.2s ease;
 }
 
 .search-wrapper:focus-within {
   border-color: var(--accent-ig);
-  box-shadow: 0 0 0 0.2rem rgba(var(--accent-ig-rgb), 0.15);
+  box-shadow: 0 0 0 0.2rem rgba(var(--accent-ig-rgb), 0.15), var(--card-shadow-hover);
   background-color: var(--surface);
 }
 
@@ -1105,8 +1106,9 @@ mark {
   height: 100%;
   padding: 1.25rem 1rem;
   background: var(--surface);
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid var(--border);
   border-radius: 0.75rem;
+  box-shadow: var(--card-shadow);
   transition: all 0.2s ease;
   text-decoration: none;
   color: var(--text);
@@ -1128,9 +1130,9 @@ mark {
 }
 
 .modern-subject-card:hover {
-  transform: translateY(-1px);
-  border-color: rgba(var(--accent-rgb), 0.2);
-  box-shadow: 0 3px 8px rgba(var(--accent-rgb), 0.06);
+  transform: translateY(-2px);
+  border-color: rgba(var(--accent-rgb), 0.35);
+  box-shadow: var(--card-shadow-hover);
 }
 
 .modern-subject-card:hover::before {
@@ -1214,7 +1216,7 @@ mark {
   justify-content: space-between;
   margin: 2rem 0 1.25rem 0;
   padding: 1rem 0;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid var(--border);
   gap: 1.5rem;
 }
 
@@ -1275,9 +1277,10 @@ mark {
 .exam-dashboard-card {
   background: var(--surface);
   border-radius: 0.75rem;
-  padding: 1rem;
+  padding: 1.25rem 1rem;
   height: 100%;
-  border: 1px solid rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  box-shadow: var(--card-shadow);
 }
 
 /* Department Exams - Week-based Layout */
@@ -1295,7 +1298,7 @@ mark {
   gap: 0.5rem;
   margin-bottom: 0.75rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 2px solid var(--border);
 }
 
 .exam-week-label {
@@ -1323,19 +1326,19 @@ mark {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--card-subtle-bg);
   border-radius: 0.5rem;
   padding: 0.875rem 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
   transition: all 0.2s ease;
   gap: 1rem;
 }
 
 .exam-item:hover {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.12);
+  background: var(--surface-hover);
+  border-color: var(--border-hover);
   transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--card-shadow);
 }
 
 /* Left side - Subject and Title */
@@ -1441,4 +1444,118 @@ mark {
     font-size: 0.7rem;
   }
 }
+
+/* ========================================
+   Breadcrumb Navigation
+   ======================================== */
+:root {
+  --breadcrumb-accent: var(--accent-ig);
+}
+
+body.scheme-alevel {
+  --breadcrumb-accent: var(--accent-al);
+}
+
+.site-breadcrumb {
+  width: 100%;
+}
+
+.site-breadcrumb .breadcrumb {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  font-size: 0.85rem;
+  border-radius: 0;
+  align-items: center;
+}
+
+.site-breadcrumb .breadcrumb-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px 5px 10px;
+  border-radius: 50px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.82rem;
+  text-decoration: none;
+  box-shadow: var(--card-shadow);
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.site-breadcrumb .breadcrumb-home:hover {
+  background: var(--breadcrumb-accent);
+  border-color: var(--breadcrumb-accent);
+  color: #fff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.site-breadcrumb .breadcrumb-home:hover i,
+.site-breadcrumb .breadcrumb-home:hover span {
+  color: #fff !important;
+}
+
+html[data-bs-theme="dark"] .site-breadcrumb .breadcrumb-home {
+  background: var(--surface);
+  border-color: var(--border);
+}
+
+html[data-bs-theme="dark"] .site-breadcrumb .breadcrumb-home:hover {
+  background: var(--breadcrumb-accent);
+  border-color: var(--breadcrumb-accent);
+  color: #fff !important;
+}
+
+.site-breadcrumb .breadcrumb-home.current {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.site-breadcrumb .breadcrumb-home i {
+  font-size: 0.95rem;
+}
+
+.site-breadcrumb .breadcrumb-item a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.site-breadcrumb .breadcrumb-item a:hover {
+  color: var(--breadcrumb-accent);
+}
+
+.site-breadcrumb .breadcrumb-item.active {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.site-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  color: var(--muted);
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  .site-breadcrumb .breadcrumb {
+    font-size: 0.78rem;
+  }
+
+  .site-breadcrumb .breadcrumb-home {
+    padding: 4px 10px 4px 8px;
+    font-size: 0.78rem;
+  }
+
+  .site-breadcrumb .breadcrumb-home span {
+    display: none;
+  }
+
+  .site-breadcrumb .breadcrumb-item:nth-child(n+3):not(:last-child) {
+    display: none;
+  }
+}
+
 
