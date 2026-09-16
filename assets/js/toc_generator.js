@@ -298,8 +298,23 @@ function toggleTOC(show) {
 function initTOCSearch(tocLinks) {
   const searchInput = document.getElementById("tocSearch");
   const searchClear = document.getElementById("tocSearchClear");
+  const tocContent = document.querySelector(".toc-content");
 
   if (!searchInput || !searchClear) return;
+
+  // Pre-compute and cache search data to avoid O(N) DOM queries on every keystroke
+  const cachedLinks = tocLinks.map((link) => {
+    const href = link.getAttribute("href");
+    const targetId = href ? href.slice(1) : "";
+    const targetElement = targetId ? document.getElementById(targetId) : null;
+    const originalText = targetElement ? targetElement.textContent.trim() : link.textContent.trim();
+    return {
+      link: link,
+      item: link.closest(".toc-item"),
+      originalText: originalText,
+      lowerText: originalText.toLowerCase()
+    };
+  });
 
   searchInput.addEventListener("input", function onInput() {
     const searchTerm = this.value.toLowerCase().trim();
@@ -308,20 +323,16 @@ function initTOCSearch(tocLinks) {
     let visibleCount = 0;
     const matchedItems = [];
 
-    tocLinks.forEach((link) => {
-      const href = link.getAttribute("href");
-      const targetId = href ? href.slice(1) : "";
-      const targetElement = targetId ? document.getElementById(targetId) : null;
-      const originalText = targetElement ? targetElement.textContent.trim() : link.textContent.trim();
+    cachedLinks.forEach((cacheItem) => {
+      const { link, item, originalText, lowerText } = cacheItem;
       link.textContent = originalText;
 
-      const item = link.closest(".toc-item");
-      const matches = originalText.toLowerCase().includes(searchTerm);
+      const matches = lowerText.includes(searchTerm);
 
       if (matches || !searchTerm) {
-        item.style.display = "";
+        if (item) item.style.display = "";
         visibleCount += 1;
-        if (matches && searchTerm) {
+        if (matches && searchTerm && item) {
           matchedItems.push(item);
         }
         if (searchTerm) {
@@ -329,7 +340,7 @@ function initTOCSearch(tocLinks) {
           link.innerHTML = originalText.replace(pattern, '<span class="toc-match">$1</span>');
         }
       } else {
-        item.style.display = "none";
+        if (item) item.style.display = "none";
       }
     });
 
@@ -341,12 +352,12 @@ function initTOCSearch(tocLinks) {
 
     const noResultsMsg = document.getElementById("tocNoResults");
     if (visibleCount === 0 && searchTerm) {
-      if (!noResultsMsg) {
+      if (!noResultsMsg && tocContent) {
         const msg = document.createElement("div");
         msg.id = "tocNoResults";
         msg.className = "toc-no-results";
         msg.innerHTML = '<i class="bi bi-search"></i> No matches found';
-        document.querySelector(".toc-content").appendChild(msg);
+        tocContent.appendChild(msg);
       }
     } else if (noResultsMsg) {
       noResultsMsg.remove();
@@ -364,6 +375,23 @@ function initTOCSearch(tocLinks) {
       searchInput.value = "";
       searchInput.dispatchEvent(new Event("input"));
       searchInput.blur();
+    }
+  });
+
+  // Ctrl+K / Cmd+K to quickly focus TOC search (and open drawer if on mobile)
+  document.addEventListener("keydown", (event) => {
+    if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "k") {
+      // Check if not inside an input/textarea already
+      const activeEl = document.activeElement;
+      if (activeEl && (activeEl.tagName === "INPUT" || activeEl.tagName === "TEXTAREA") && activeEl !== searchInput) {
+        return;
+      }
+      event.preventDefault();
+      if (window.innerWidth <= 1024) {
+        toggleTOC(true);
+      }
+      searchInput.focus();
+      searchInput.select();
     }
   });
 }
