@@ -14,6 +14,22 @@ function generateTOC() {
   tocContent.innerHTML = renderTOCTree(tree);
 
   const tocLinks = Array.from(tocContent.querySelectorAll("a[data-toc-link]"));
+
+  // Cache links to avoid O(N) DOM querying on scroll events
+  const linkMap = {};
+  let initialActiveLink = null;
+
+  tocLinks.forEach(link => {
+    const href = link.getAttribute("href");
+    if (href) {
+      const id = href.slice(1);
+      linkMap[id] = link;
+      if (link.classList.contains("active")) {
+        initialActiveLink = link;
+      }
+    }
+  });
+
   let isProgrammaticScroll = false;
   let currentActiveId = null;
   let lastSyncAt = 0;
@@ -58,17 +74,13 @@ function generateTOC() {
     const activeHeading = findActiveHeading(headings);
     if (!activeHeading) return;
 
-    const activeLink = tocContent.querySelector(`a[data-toc-link][href="#${activeHeading.id}"]`);
+    const activeLink = linkMap[activeHeading.id];
     if (activeLink) {
       setActiveLink(activeLink, true);
     }
   }, { passive: true });
 
-  setActiveFromHashOrTop(headings, tocContent);
-  const initialActiveLink = tocContent.querySelector("a[data-toc-link].active");
-  if (initialActiveLink) {
-    currentActiveId = initialActiveLink.getAttribute("href").slice(1);
-  }
+  currentActiveId = setActiveFromHashOrTop(headings, linkMap);
 
   setTimeout(() => {
     initTOCToggle();
@@ -194,14 +206,15 @@ function findActiveHeading(headings) {
   return current;
 }
 
-function setActiveFromHashOrTop(headings, tocContent) {
+function setActiveFromHashOrTop(headings, linkMap) {
   const hash = window.location.hash ? window.location.hash.slice(1) : "";
   const targetId = hash && document.getElementById(hash) ? hash : findActiveHeading(headings).id;
-  const activeLink = tocContent.querySelector(`a[data-toc-link][href="#${targetId}"]`);
+  const activeLink = linkMap[targetId];
 
-  if (!activeLink) return;
+  if (!activeLink) return null;
   activeLink.classList.add("active");
   expandAncestors(activeLink.closest("li.toc-item"));
+  return targetId;
 }
 
 function expandAncestors(item) {
