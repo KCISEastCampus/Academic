@@ -178,7 +178,7 @@
       updateSelectedResult();
     } else if (e.key === 'ArrowUp') {
       e.preventDefault();
-      selectedResultIndex = (selectedResultIndex - 1 + items.length) % items.length;
+      selectedResultIndex = selectedResultIndex < 0 ? items.length - 1 : (selectedResultIndex - 1 + items.length) % items.length;
       updateSelectedResult();
     } else if (e.key === 'Enter') {
       if (selectedResultIndex >= 0 && selectedResultIndex < items.length) {
