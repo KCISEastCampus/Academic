@@ -38,10 +38,10 @@
   }
 
   let selectedResultIndex = -1;
+  let currentSearchItems = [];
 
   function updateSelectedResult() {
-    const items = searchResults.querySelectorAll('a.list-group-item');
-    items.forEach((item, index) => {
+    currentSearchItems.forEach((item, index) => {
       if (index === selectedResultIndex) {
         item.classList.add('active');
         item.scrollIntoView({ block: 'nearest' });
@@ -54,6 +54,7 @@
   function renderResults(results) {
     searchResults.innerHTML = '';
     selectedResultIndex = -1;
+    currentSearchItems = [];
 
     if (!results || results.length === 0) {
       searchResults.style.display = 'block';
@@ -83,6 +84,7 @@
       }
 
       searchResults.appendChild(item);
+      currentSearchItems.push(item);
     });
   }
 
@@ -167,23 +169,22 @@
 
   // Keyboard navigation for search results
   searchInput.addEventListener('keydown', function(e) {
-    const items = searchResults.querySelectorAll('a.list-group-item');
-    if (!items.length || searchResults.style.display === 'none') {
+    if (!currentSearchItems.length || searchResults.style.display === 'none') {
       return;
     }
 
     if (e.key === 'ArrowDown') {
       e.preventDefault();
-      selectedResultIndex = (selectedResultIndex + 1) % items.length;
+      selectedResultIndex = (selectedResultIndex + 1) % currentSearchItems.length;
       updateSelectedResult();
     } else if (e.key === 'ArrowUp') {
       e.preventDefault();
-      selectedResultIndex = selectedResultIndex < 0 ? items.length - 1 : (selectedResultIndex - 1 + items.length) % items.length;
+      selectedResultIndex = selectedResultIndex < 0 ? currentSearchItems.length - 1 : (selectedResultIndex - 1 + currentSearchItems.length) % currentSearchItems.length;
       updateSelectedResult();
     } else if (e.key === 'Enter') {
-      if (selectedResultIndex >= 0 && selectedResultIndex < items.length) {
+      if (selectedResultIndex >= 0 && selectedResultIndex < currentSearchItems.length) {
         e.preventDefault();
-        items[selectedResultIndex].click();
+        currentSearchItems[selectedResultIndex].click();
       }
     }
   });
