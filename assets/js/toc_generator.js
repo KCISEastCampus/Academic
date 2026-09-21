@@ -24,6 +24,24 @@ function generateTOC() {
     }
   });
 
+  // Cache layout properties to avoid thrashing on scroll
+  let headingOffsets = headings.map(h => h.offsetTop);
+
+  // Update offsets on resize
+  window.addEventListener('resize', () => {
+    clearTimeout(window.tocResizeTimeout);
+    window.tocResizeTimeout = setTimeout(() => {
+      headingOffsets = headings.map(h => h.offsetTop);
+    }, 150);
+  }, { passive: true });
+
+  if ('ResizeObserver' in window) {
+    const observer = new ResizeObserver(() => {
+      headingOffsets = headings.map(h => h.offsetTop);
+    });
+    observer.observe(contentContainer);
+  }
+
   let isProgrammaticScroll = false;
   let currentActiveId = null;
   let lastSyncAt = 0;
@@ -65,7 +83,7 @@ function generateTOC() {
     if (now - lastSyncAt < 80) return;
     lastSyncAt = now;
 
-    const activeHeading = findActiveHeading(headings);
+    const activeHeading = findActiveHeading(headings, headingOffsets);
     if (!activeHeading) return;
 
     const activeLink = tocLinkMap.get(activeHeading.id);
@@ -74,7 +92,7 @@ function generateTOC() {
     }
   }, { passive: true });
 
-  currentActiveId = setActiveFromHashOrTop(headings, tocLinkMap);
+  currentActiveId = setActiveFromHashOrTop(headings, headingOffsets, tocLinkMap);
 
   setTimeout(() => {
     initTOCToggle();
@@ -184,11 +202,11 @@ function renderTOCTree(nodes) {
   return renderNodes(nodes);
 }
 
-function findActiveHeading(headings) {
+function findActiveHeading(headings, headingOffsets) {
   const offset = 140;
   const scrollTop = window.scrollY + offset;
   if (headings.length === 0) return null;
-  if (headings[0].offsetTop > scrollTop) return headings[0];
+  if (headingOffsets[0] > scrollTop) return headings[0];
 
   let low = 0;
   let high = headings.length - 1;
@@ -196,7 +214,7 @@ function findActiveHeading(headings) {
 
   while (low <= high) {
     const mid = Math.floor((low + high) / 2);
-    if (headings[mid].offsetTop <= scrollTop) {
+    if (headingOffsets[mid] <= scrollTop) {
       activeIndex = mid;
       low = mid + 1;
     } else {
@@ -207,9 +225,9 @@ function findActiveHeading(headings) {
   return headings[activeIndex];
 }
 
-function setActiveFromHashOrTop(headings, tocLinkMap) {
+function setActiveFromHashOrTop(headings, headingOffsets, tocLinkMap) {
   const hash = window.location.hash ? window.location.hash.slice(1) : "";
-  const activeHeading = findActiveHeading(headings);
+  const activeHeading = findActiveHeading(headings, headingOffsets);
   const targetId = hash && document.getElementById(hash) ? hash : (activeHeading ? activeHeading.id : "");
   const activeLink = tocLinkMap.get(targetId);
 
@@ -423,21 +441,45 @@ function initReadingProgress() {
 
   if (!progressBar || !progressText || !contentContainer) return;
 
+  // Cache layout properties to avoid thrashing on scroll
+  let cachedWindowHeight = window.innerHeight;
+  let cachedContentTop = contentContainer.offsetTop;
+  let cachedContentHeight = contentContainer.offsetHeight;
+  let cachedContentBottom = cachedContentTop + cachedContentHeight;
+
+  // Update layout properties on resize
+  window.addEventListener('resize', () => {
+    clearTimeout(window.readingProgressResizeTimeout);
+    window.readingProgressResizeTimeout = setTimeout(() => {
+      cachedWindowHeight = window.innerHeight;
+      cachedContentTop = contentContainer.offsetTop;
+      cachedContentHeight = contentContainer.offsetHeight;
+      cachedContentBottom = cachedContentTop + cachedContentHeight;
+      updateProgress();
+    }, 150);
+  }, { passive: true });
+
+  if ('ResizeObserver' in window) {
+    const observer = new ResizeObserver(() => {
+      cachedContentTop = contentContainer.offsetTop;
+      cachedContentHeight = contentContainer.offsetHeight;
+      cachedContentBottom = cachedContentTop + cachedContentHeight;
+      updateProgress();
+    });
+    observer.observe(contentContainer);
+  }
+
   function updateProgress() {
-    const windowHeight = window.innerHeight;
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const contentTop = contentContainer.offsetTop;
-    const contentHeight = contentContainer.offsetHeight;
-    const contentBottom = contentTop + contentHeight;
 
     let progress = 0;
-    if (scrollTop < contentTop) {
+    if (scrollTop < cachedContentTop) {
       progress = 0;
-    } else if (scrollTop + windowHeight > contentBottom) {
+    } else if (scrollTop + cachedWindowHeight > cachedContentBottom) {
       progress = 100;
     } else {
-      const scrolled = scrollTop - contentTop;
-      const scrollable = Math.max(1, contentHeight - windowHeight);
+      const scrolled = scrollTop - cachedContentTop;
+      const scrollable = Math.max(1, cachedContentHeight - cachedWindowHeight);
       progress = (scrolled / scrollable) * 100;
     }
 
