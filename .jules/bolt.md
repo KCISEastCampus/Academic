@@ -17,7 +17,3 @@
 ## 2026-09-17 - Scroll Event Layout Thrashing
 **Learning:** `scrollHeight`, `innerHeight`, and `getBoundingClientRect()` are synchronous DOM layout properties that force style recalculation when called inside high-frequency scroll event handlers, degrading scrolling performance and causing layout thrashing.
 **Action:** Always precalculate and cache layout dimensions (`scrollHeight`, `innerHeight`) in a debounced `resize` event listener rather than inside scroll events. Use `IntersectionObserver` to only trigger expensive element position reads (like `getBoundingClientRect()`) when the element is actually visible in the viewport.
-
-## 2026-09-17 - RegExp Compilation in Loops
-**Learning:** Found an $O(N)$ regex compilation inside the loop for the Table of Contents search (`assets/js/toc_generator.js`). On every keystroke, the exact same regex was compiled for every heading being filtered. Regex compilation is expensive and doing it repeatedly for the same pattern wastes CPU cycles, increasing latency when typing.
-**Action:** Always hoist invariant object creations, especially `new RegExp()`, out of iterations. Compile the search pattern once per keystroke instead of inside the filter loop.

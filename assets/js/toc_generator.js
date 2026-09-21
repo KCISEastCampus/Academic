@@ -338,12 +338,6 @@ function initTOCSearch(tocLinks) {
     let visibleCount = 0;
     const matchedItems = [];
 
-    // Pre-compile the regex once per keystroke, rather than inside the O(N) loop
-    let searchPattern = null;
-    if (searchTerm) {
-      searchPattern = new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})`, "gi");
-    }
-
     cachedLinks.forEach((cacheItem) => {
       const { link, item, originalText, lowerText } = cacheItem;
       link.textContent = originalText;
@@ -356,8 +350,9 @@ function initTOCSearch(tocLinks) {
         if (matches && searchTerm && item) {
           matchedItems.push(item);
         }
-        if (searchTerm && searchPattern) {
-          link.innerHTML = originalText.replace(searchPattern, '<span class="toc-match">$1</span>');
+        if (searchTerm) {
+          const pattern = new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})`, "gi");
+          link.innerHTML = originalText.replace(pattern, '<span class="toc-match">$1</span>');
         }
       } else {
         if (item) item.style.display = "none";
