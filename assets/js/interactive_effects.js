@@ -101,15 +101,25 @@
       // Cache the inner progress bar element to avoid querying it on every scroll
       this.progressBarInner = this.progressBar.querySelector('.scroll-progress-bar');
 
+      this.scrollableHeight = 1;
+      this.calculateDimensions();
+      this.onResize = utils.debounce(this.calculateDimensions.bind(this), 100);
+      window.addEventListener('resize', this.onResize, { passive: true });
+
       this.update = utils.throttle(this.update.bind(this), 16);
       window.addEventListener('scroll', this.update, { passive: true });
       this.update();
     },
 
+    calculateDimensions: function() {
+      this.scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (this.scrollableHeight <= 0) this.scrollableHeight = 1;
+    },
+
     update: function() {
       if (!this.progressBar || !this.progressBarInner) return;
 
-      const scrolled = (window.pageYOffset / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      const scrolled = (window.pageYOffset / this.scrollableHeight) * 100;
 
       if (scrolled > 0) {
         this.progressBar.style.opacity = '1';
@@ -134,37 +144,70 @@
 
       // Cache the footer element to avoid querying it on every scroll
       this.footer = document.querySelector('footer');
+      this.isFooterVisible = false;
+      this.baseBottom = window.innerWidth <= 768 ? 16 : 32;
+      this.viewportBottom = window.innerHeight;
+      this.lastBottomOffset = -1;
+
+      if (this.footer && 'IntersectionObserver' in window) {
+        this.footerObserver = new IntersectionObserver((entries) => {
+          this.isFooterVisible = entries[0].isIntersecting;
+          if (this.isFooterVisible) {
+            this.updatePosition();
+          } else {
+            // Reset to base when footer leaves viewport
+            this.applyBottomOffset(this.baseBottom);
+          }
+        });
+        this.footerObserver.observe(this.footer);
+      } else if (this.footer) {
+        // Fallback if IntersectionObserver is not available
+        this.isFooterVisible = true;
+      }
 
       this.button.addEventListener('click', this.scrollToTop.bind(this));
       this.updatePosition = utils.throttle(this.updatePosition.bind(this), 16);
       this.toggleVisibility = utils.throttle(this.toggleVisibility.bind(this), 100);
 
+      this.onResize = utils.debounce(this.calculateDimensions.bind(this), 100);
+
       window.addEventListener('scroll', this.updatePosition, { passive: true });
       window.addEventListener('scroll', this.toggleVisibility, { passive: true });
-      window.addEventListener('resize', this.updatePosition, { passive: true });
+      window.addEventListener('resize', this.onResize, { passive: true });
 
       this.updatePosition();
       this.toggleVisibility();
     },
 
+    calculateDimensions: function() {
+      this.baseBottom = window.innerWidth <= 768 ? 16 : 32;
+      this.viewportBottom = window.innerHeight;
+      this.updatePosition();
+    },
+
     updatePosition: function() {
       if (!this.button) return;
 
-      const baseBottom = window.innerWidth <= 768 ? 16 : 32;
       const gap = 16;
-      let bottomOffset = baseBottom;
+      let bottomOffset = this.baseBottom;
 
-      if (this.footer) {
+      if (this.footer && this.isFooterVisible) {
         const footerRect = this.footer.getBoundingClientRect();
-        const viewportBottom = window.innerHeight;
-        const overlap = viewportBottom - footerRect.top + gap;
+        const overlap = this.viewportBottom - footerRect.top + gap;
 
-        if (footerRect.top < viewportBottom) {
-          bottomOffset = Math.max(baseBottom, overlap);
+        if (footerRect.top < this.viewportBottom) {
+          bottomOffset = Math.max(this.baseBottom, overlap);
         }
       }
 
-      this.button.style.bottom = bottomOffset + 'px';
+      this.applyBottomOffset(bottomOffset);
+    },
+
+    applyBottomOffset: function(offset) {
+      if (this.lastBottomOffset !== offset) {
+        this.button.style.bottom = offset + 'px';
+        this.lastBottomOffset = offset;
+      }
     },
 
     toggleVisibility: function() {
