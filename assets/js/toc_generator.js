@@ -10,6 +10,17 @@ function generateTOC() {
     return;
   }
 
+  // Performance optimization: Cache heading offsetTop to prevent layout thrashing on scroll.
+  let headingsOffsets = headings.map(h => ({ id: h.id, offsetTop: h.offsetTop }));
+
+  if (window.ResizeObserver) {
+    // Only update the cached offsets when the layout actually changes
+    const observer = new ResizeObserver(() => {
+      headingsOffsets = headings.map(h => ({ id: h.id, offsetTop: h.offsetTop }));
+    });
+    observer.observe(contentContainer);
+  }
+
   const tree = buildTOCTree(headings);
   tocContent.innerHTML = renderTOCTree(tree);
 
@@ -65,7 +76,7 @@ function generateTOC() {
     if (now - lastSyncAt < 80) return;
     lastSyncAt = now;
 
-    const activeHeading = findActiveHeading(headings);
+    const activeHeading = findActiveHeading(headingsOffsets);
     if (!activeHeading) return;
 
     const activeLink = tocLinkMap.get(activeHeading.id);
@@ -74,7 +85,7 @@ function generateTOC() {
     }
   }, { passive: true });
 
-  currentActiveId = setActiveFromHashOrTop(headings, tocLinkMap);
+  currentActiveId = setActiveFromHashOrTop(headingsOffsets, tocLinkMap);
 
   setTimeout(() => {
     initTOCToggle();
@@ -184,19 +195,19 @@ function renderTOCTree(nodes) {
   return renderNodes(nodes);
 }
 
-function findActiveHeading(headings) {
+function findActiveHeading(headingsOffsets) {
   const offset = 140;
   const scrollTop = window.scrollY + offset;
-  if (headings.length === 0) return null;
-  if (headings[0].offsetTop > scrollTop) return headings[0];
+  if (headingsOffsets.length === 0) return null;
+  if (headingsOffsets[0].offsetTop > scrollTop) return headingsOffsets[0];
 
   let low = 0;
-  let high = headings.length - 1;
+  let high = headingsOffsets.length - 1;
   let activeIndex = 0;
 
   while (low <= high) {
     const mid = Math.floor((low + high) / 2);
-    if (headings[mid].offsetTop <= scrollTop) {
+    if (headingsOffsets[mid].offsetTop <= scrollTop) {
       activeIndex = mid;
       low = mid + 1;
     } else {
@@ -204,12 +215,12 @@ function findActiveHeading(headings) {
     }
   }
 
-  return headings[activeIndex];
+  return headingsOffsets[activeIndex];
 }
 
-function setActiveFromHashOrTop(headings, tocLinkMap) {
+function setActiveFromHashOrTop(headingsOffsets, tocLinkMap) {
   const hash = window.location.hash ? window.location.hash.slice(1) : "";
-  const activeHeading = findActiveHeading(headings);
+  const activeHeading = findActiveHeading(headingsOffsets);
   const targetId = hash && document.getElementById(hash) ? hash : (activeHeading ? activeHeading.id : "");
   const activeLink = tocLinkMap.get(targetId);
 
@@ -423,21 +434,32 @@ function initReadingProgress() {
 
   if (!progressBar || !progressText || !contentContainer) return;
 
+  // Performance optimization: Cache layout properties to prevent layout thrashing on scroll.
+  let cachedContentTop = contentContainer.offsetTop;
+  let cachedContentHeight = contentContainer.offsetHeight;
+
+  if (window.ResizeObserver) {
+    // Only update the cached layout properties when the container actually resizes
+    const observer = new ResizeObserver(() => {
+      cachedContentTop = contentContainer.offsetTop;
+      cachedContentHeight = contentContainer.offsetHeight;
+    });
+    observer.observe(contentContainer);
+  }
+
   function updateProgress() {
     const windowHeight = window.innerHeight;
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const contentTop = contentContainer.offsetTop;
-    const contentHeight = contentContainer.offsetHeight;
-    const contentBottom = contentTop + contentHeight;
+    const contentBottom = cachedContentTop + cachedContentHeight;
 
     let progress = 0;
-    if (scrollTop < contentTop) {
+    if (scrollTop < cachedContentTop) {
       progress = 0;
     } else if (scrollTop + windowHeight > contentBottom) {
       progress = 100;
     } else {
-      const scrolled = scrollTop - contentTop;
-      const scrollable = Math.max(1, contentHeight - windowHeight);
+      const scrolled = scrollTop - cachedContentTop;
+      const scrollable = Math.max(1, cachedContentHeight - windowHeight);
       progress = (scrolled / scrollable) * 100;
     }
 
@@ -445,7 +467,6 @@ function initReadingProgress() {
     progressBar.style.width = `${progress}%`;
     progressText.textContent = `${Math.round(progress)}%`;
   }
-
   let ticking = false;
   window.addEventListener(
     "scroll",
