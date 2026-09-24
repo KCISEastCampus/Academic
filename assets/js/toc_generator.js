@@ -27,6 +27,28 @@ function generateTOC() {
   let isProgrammaticScroll = false;
   let currentActiveId = null;
   let lastSyncAt = 0;
+  // Cache DOM layout properties to prevent Layout Thrashing during scroll events
+  let cachedHeadingOffsets = [];
+
+  function updateHeadingOffsets() {
+    cachedHeadingOffsets = Array.from(headings).map((heading) => ({
+      id: heading.id,
+      offsetTop: heading.offsetTop,
+    }));
+  }
+
+  updateHeadingOffsets();
+
+  window.addEventListener("resize", () => {
+    requestAnimationFrame(updateHeadingOffsets);
+  }, { passive: true });
+
+  if ('ResizeObserver' in window && contentContainer) {
+    const observer = new ResizeObserver(() => {
+      requestAnimationFrame(updateHeadingOffsets);
+    });
+    observer.observe(contentContainer);
+  }
 
   tocContent.addEventListener("click", (event) => {
     const collapseBtn = event.target.closest(".toc-collapse");
@@ -65,7 +87,7 @@ function generateTOC() {
     if (now - lastSyncAt < 80) return;
     lastSyncAt = now;
 
-    const activeHeading = findActiveHeading(headings);
+    const activeHeading = findActiveHeading(cachedHeadingOffsets);
     if (!activeHeading) return;
 
     const activeLink = tocLinkMap.get(activeHeading.id);
@@ -74,7 +96,7 @@ function generateTOC() {
     }
   }, { passive: true });
 
-  currentActiveId = setActiveFromHashOrTop(headings, tocLinkMap);
+  currentActiveId = setActiveFromHashOrTop(cachedHeadingOffsets, tocLinkMap);
 
   setTimeout(() => {
     initTOCToggle();
@@ -423,21 +445,42 @@ function initReadingProgress() {
 
   if (!progressBar || !progressText || !contentContainer) return;
 
+  // Cache layout reads to avoid forced synchronous layout recalculation on scroll
+  let cachedWindowHeight = 0;
+  let cachedContentTop = 0;
+  let cachedContentHeight = 0;
+
+  function updateProgressLayoutCache() {
+    cachedWindowHeight = window.innerHeight;
+    cachedContentTop = contentContainer.offsetTop;
+    cachedContentHeight = contentContainer.offsetHeight;
+  }
+
+  updateProgressLayoutCache();
+
+  window.addEventListener("resize", () => {
+    requestAnimationFrame(updateProgressLayoutCache);
+  }, { passive: true });
+
+  if ('ResizeObserver' in window) {
+    const observer = new ResizeObserver(() => {
+      requestAnimationFrame(updateProgressLayoutCache);
+    });
+    observer.observe(contentContainer);
+  }
+
   function updateProgress() {
-    const windowHeight = window.innerHeight;
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const contentTop = contentContainer.offsetTop;
-    const contentHeight = contentContainer.offsetHeight;
-    const contentBottom = contentTop + contentHeight;
+    const contentBottom = cachedContentTop + cachedContentHeight;
 
     let progress = 0;
-    if (scrollTop < contentTop) {
+    if (scrollTop < cachedContentTop) {
       progress = 0;
-    } else if (scrollTop + windowHeight > contentBottom) {
+    } else if (scrollTop + cachedWindowHeight > contentBottom) {
       progress = 100;
     } else {
-      const scrolled = scrollTop - contentTop;
-      const scrollable = Math.max(1, contentHeight - windowHeight);
+      const scrolled = scrollTop - cachedContentTop;
+      const scrollable = Math.max(1, cachedContentHeight - cachedWindowHeight);
       progress = (scrolled / scrollable) * 100;
     }
 
