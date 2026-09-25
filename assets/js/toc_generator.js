@@ -423,21 +423,38 @@ function initReadingProgress() {
 
   if (!progressBar || !progressText || !contentContainer) return;
 
+  let cachedWindowHeight = window.innerHeight;
+  let cachedContentTop = contentContainer.offsetTop;
+  let cachedContentHeight = contentContainer.offsetHeight;
+
+  function updateDimensions() {
+    cachedWindowHeight = window.innerHeight;
+    cachedContentTop = contentContainer.offsetTop;
+    cachedContentHeight = contentContainer.offsetHeight;
+    updateProgress(); // Ensure progress is correct after resize
+  }
+
+  // Update dimensions on resize
+  window.addEventListener("resize", updateDimensions, { passive: true });
+
+  // Update dimensions if content changes (e.g. lazy loaded images)
+  if (window.ResizeObserver) {
+    const resizeObserver = new ResizeObserver(updateDimensions);
+    resizeObserver.observe(contentContainer);
+  }
+
   function updateProgress() {
-    const windowHeight = window.innerHeight;
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const contentTop = contentContainer.offsetTop;
-    const contentHeight = contentContainer.offsetHeight;
-    const contentBottom = contentTop + contentHeight;
+    const contentBottom = cachedContentTop + cachedContentHeight;
 
     let progress = 0;
-    if (scrollTop < contentTop) {
+    if (scrollTop < cachedContentTop) {
       progress = 0;
-    } else if (scrollTop + windowHeight > contentBottom) {
+    } else if (scrollTop + cachedWindowHeight > contentBottom) {
       progress = 100;
     } else {
-      const scrolled = scrollTop - contentTop;
-      const scrollable = Math.max(1, contentHeight - windowHeight);
+      const scrolled = scrollTop - cachedContentTop;
+      const scrollable = Math.max(1, cachedContentHeight - cachedWindowHeight);
       progress = (scrolled / scrollable) * 100;
     }
 
