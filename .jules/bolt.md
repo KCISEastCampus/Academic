@@ -18,3 +18,7 @@
 ## 2026-09-17 - RegExp Compilation in Loops
 **Learning:** Found an $O(N)$ regex compilation inside the loop for the Table of Contents search (`assets/js/toc_generator.js`). On every keystroke, the exact same regex was compiled for every heading being filtered. Regex compilation is expensive and doing it repeatedly for the same pattern wastes CPU cycles, increasing latency when typing.
 **Action:** Always hoist invariant object creations, especially `new RegExp()`, out of iterations. Compile the search pattern once per keystroke instead of inside the filter loop.
+
+## 2026-09-21 - Layout Thrashing in Scroll Event
+**Learning:** Found layout thrashing in `assets/js/toc_generator.js` where `offsetHeight`, `offsetTop`, and `innerHeight` were being queried inside a scroll event handler (`updateProgress`) that also updated DOM styles (`style.width`). This forces synchronous layout recalculations on every scroll tick.
+**Action:** Always cache layout dimensions (`offsetHeight`, `offsetTop`, etc.) outside of scroll event handlers and update them using a `ResizeObserver` and `resize` event listeners to prevent layout thrashing.
