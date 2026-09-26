@@ -18,3 +18,7 @@
 ## 2026-09-17 - RegExp Compilation in Loops
 **Learning:** Found an $O(N)$ regex compilation inside the loop for the Table of Contents search (`assets/js/toc_generator.js`). On every keystroke, the exact same regex was compiled for every heading being filtered. Regex compilation is expensive and doing it repeatedly for the same pattern wastes CPU cycles, increasing latency when typing.
 **Action:** Always hoist invariant object creations, especially `new RegExp()`, out of iterations. Compile the search pattern once per keystroke instead of inside the filter loop.
+
+## 2026-09-26 - Forced Synchronous Layout in Initialization
+**Learning:** Found an anti-pattern in `assets/js/interactive_effects.js` where `getBoundingClientRect` was being called iteratively inside a `querySelectorAll` loop during `fadeInAnimation.init`. This forces synchronous layout calculations (layout thrashing) and blocks the main thread during page load.
+**Action:** Always use `IntersectionObserver` to detect element visibility as it enters the viewport instead of manually querying layout properties like `getBoundingClientRect()`, `offsetTop`, or `offsetHeight`, avoiding layout thrashing.

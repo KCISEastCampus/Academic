@@ -198,12 +198,43 @@
     init: function() {
       if (utils.prefersReducedMotion()) return;
 
-      setTimeout(() => {
-        this.applyFadeInToVisibleElements();
-      }, 100);
+      this.setupIntersectionObserver();
     },
 
-    applyFadeInToVisibleElements: function() {
+    setupIntersectionObserver: function() {
+      if (!('IntersectionObserver' in window)) {
+        // Fallback for browsers without IntersectionObserver
+        const selectors = [
+          'h2', 'h3', '.card', '.subject-card',
+          'table', '.math', '.exam-link'
+        ];
+        selectors.forEach(selector => {
+          try {
+            document.querySelectorAll(selector).forEach((el) => {
+              el.classList.add('fade-in-visible');
+            });
+          } catch (e) {}
+        });
+        return;
+      }
+
+      const observer = new IntersectionObserver((entries, obs) => {
+        let delayIndex = 0;
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            obs.unobserve(el);
+            setTimeout(() => {
+              el.classList.add('fade-in-visible');
+            }, delayIndex * 50);
+            delayIndex++;
+          }
+        });
+      }, {
+        rootMargin: '0px 0px -50px 0px',
+        threshold: 0.01
+      });
+
       const selectors = [
         'h2', 'h3', '.card', '.subject-card',
         'table', '.math', '.exam-link'
@@ -211,16 +242,8 @@
 
       selectors.forEach(selector => {
         try {
-          document.querySelectorAll(selector).forEach((el, index) => {
-            const rect = el.getBoundingClientRect();
-            const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
-
-            if (isVisible) {
-              setTimeout(() => {
-                el.classList.add('fade-in-visible');
-              }, index * 50);
-            }
-            // 不可见元素不添加类，保持初始状态
+          document.querySelectorAll(selector).forEach(el => {
+            observer.observe(el);
           });
         } catch (error) {
           // Silently handle errors
