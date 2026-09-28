@@ -2,8 +2,8 @@
 # Official exam timetables and documents
 # Update this file to add/modify exam links
 
-- id: alevel-may-2026
-  title: OxfordAQA Exam Timetable May/June 2026
+- id: alevel-jan-2027
+  title: OxfordAQA Exam Timetable January 2027 (1X27)
   icon: "📅"
-  path: /assets/pdf/exam-timetable-6Y26.pdf
+  path: /assets/pdf/exam-timetable-1X27.pdf
   type: external

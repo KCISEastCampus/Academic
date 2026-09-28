@@ -1,0 +1,768 @@
+/* ==========================================================================
+   Academic Examination Timetable Styles
+   Designed for KCIS East Campus · OxfordAQA International AS & A2
+   Emphasizes scholarly restraint, scannability, and high typographic clarity.
+   ========================================================================== */
+
+:root {
+  --tt-ink: var(--text, #0f172a);
+  --tt-muted: var(--muted, #64748b);
+  --tt-border: var(--border, rgba(15, 23, 42, 0.08));
+  --tt-border-strong: rgba(15, 23, 42, 0.16);
+  --tt-surface: var(--surface, #ffffff);
+  --tt-subtle: rgba(15, 23, 42, 0.025);
+  --tt-hover: var(--surface-hover, #f8fafc);
+  --tt-font-mono: var(--font-mono, 'MapleMono', 'SFMono-Regular', Consolas, monospace);
+  --tt-radius: 6px;
+
+  /* AS / Grade 11: Understated Academic Sage */
+  --tt-as-color: #047857;
+  --tt-as-bg: rgba(16, 185, 129, 0.08);
+  --tt-as-border: rgba(16, 185, 129, 0.25);
+
+  /* A2 / Grade 12: Understated Warm Bronze */
+  --tt-a2-color: #9a3412;
+  --tt-a2-bg: rgba(234, 88, 12, 0.08);
+  --tt-a2-border: rgba(234, 88, 12, 0.25);
+}
+
+html[data-bs-theme="dark"] {
+  --tt-ink: var(--text, #f8fafc);
+  --tt-muted: var(--muted, #94a3b8);
+  --tt-border: var(--border, rgba(255, 255, 255, 0.08));
+  --tt-border-strong: rgba(255, 255, 255, 0.16);
+  --tt-surface: var(--surface, #111b2b);
+  --tt-subtle: rgba(255, 255, 255, 0.03);
+  --tt-hover: var(--surface-hover, #1b2638);
+
+  --tt-as-color: #6ee7b7;
+  --tt-as-bg: rgba(16, 185, 129, 0.12);
+  --tt-as-border: rgba(16, 185, 129, 0.3);
+
+  --tt-a2-color: #fdba74;
+  --tt-a2-bg: rgba(234, 88, 12, 0.12);
+  --tt-a2-border: rgba(234, 88, 12, 0.3);
+}
+
+/* Page Layout */
+.exam-timetable-page {
+  max-width: 1060px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3.5rem;
+}
+
+/* Breadcrumb / Back Link */
+.timetable-breadcrumb {
+  display: flex;
+  align-items: center;
+}
+
+.btn-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: var(--tt-muted);
+  text-decoration: none;
+  padding: 0.25rem 0;
+  transition: color 0.15s ease;
+}
+
+.btn-back-link:hover {
+  color: var(--tt-ink);
+}
+
+/* Main Timetable Document Container */
+.timetable-document {
+  background: var(--tt-surface);
+  border: 1px solid var(--tt-border);
+  border-radius: var(--tt-radius);
+  box-shadow: var(--card-shadow, 0 1px 3px rgba(0, 0, 0, 0.04));
+  overflow: hidden;
+}
+
+/* Academic Document Header */
+.timetable-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  padding: 1.75rem 2rem 1.25rem;
+  border-bottom: 1px solid var(--tt-border);
+}
+
+.timetable-meta-eyebrow {
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--tt-muted);
+  margin-bottom: 0.35rem;
+}
+
+.timetable-title {
+  font-family: var(--font-heading, inherit);
+  font-size: clamp(1.45rem, 2.2vw, 1.85rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--tt-ink);
+  margin: 0 0 0.25rem;
+  line-height: 1.25;
+}
+
+.timetable-subtitle {
+  font-size: 0.92rem;
+  color: var(--tt-muted);
+  line-height: 1.45;
+}
+
+.btn-pdf-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--tt-ink);
+  background: var(--tt-subtle);
+  border: 1px solid var(--tt-border-strong);
+  border-radius: var(--tt-radius);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+}
+
+.btn-pdf-download:hover {
+  background: var(--tt-hover);
+  color: var(--tt-ink);
+}
+
+/* Notice Banner */
+.timetable-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin: 1.25rem 2rem 0;
+  padding: 0.85rem 1rem;
+  background: var(--callout-bg, rgba(14, 165, 233, 0.05));
+  border: 1px solid var(--tt-border);
+  border-left: 3px solid #0284c7;
+  border-radius: 4px;
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: var(--tt-ink);
+}
+
+.timetable-notice-icon {
+  color: #0284c7;
+  font-size: 1.05rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.timetable-notice-body strong {
+  font-weight: 600;
+  color: var(--tt-ink);
+}
+
+/* Controls & Filters Bar */
+.timetable-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1.25rem 2rem 1rem;
+  border-bottom: 1px solid var(--tt-border);
+}
+
+/* Segmented Control for Cohort */
+.timetable-cohort-control {
+  display: inline-flex;
+  background: var(--tt-subtle);
+  border: 1px solid var(--tt-border);
+  padding: 2px;
+  border-radius: var(--tt-radius);
+}
+
+.cohort-seg-btn {
+  border: none;
+  background: transparent;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--tt-muted);
+  border-radius: calc(var(--tt-radius) - 2px);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.cohort-seg-btn:hover {
+  color: var(--tt-ink);
+}
+
+.cohort-seg-btn.active {
+  background: var(--tt-surface);
+  color: var(--tt-ink);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.seg-count {
+  font-size: 0.76rem;
+  font-weight: 500;
+  opacity: 0.75;
+}
+
+/* Secondary Tools (Subject & Search) */
+.timetable-tools {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.timetable-select-wrap {
+  position: relative;
+}
+
+.timetable-select {
+  height: 34px;
+  padding: 0 1.85rem 0 0.75rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--tt-ink);
+  background-color: var(--tt-surface);
+  border: 1px solid var(--tt-border);
+  border-radius: var(--tt-radius);
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.15s ease;
+}
+
+.timetable-select:focus {
+  border-color: var(--tt-border-strong);
+}
+
+.timetable-search-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 0.65rem;
+  font-size: 0.78rem;
+  color: var(--tt-muted);
+  pointer-events: none;
+}
+
+.timetable-search {
+  height: 34px;
+  width: 220px;
+  padding: 0 0.65rem 0 1.95rem;
+  font-size: 0.82rem;
+  color: var(--tt-ink);
+  background-color: var(--tt-surface);
+  border: 1px solid var(--tt-border);
+  border-radius: var(--tt-radius);
+  outline: none;
+  transition: border-color 0.15s ease, width 0.15s ease;
+}
+
+.timetable-search:focus {
+  border-color: var(--tt-border-strong);
+  width: 260px;
+}
+
+/* Status Bar */
+.timetable-status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 2rem;
+  background: var(--tt-subtle);
+  border-bottom: 1px solid var(--tt-border);
+  font-size: 0.78rem;
+  color: var(--tt-muted);
+}
+
+.series-tag {
+  font-family: var(--tt-font-mono);
+  font-size: 0.74rem;
+}
+
+/* Schedule Ledger */
+.timetable-ledger {
+  padding: 1.5rem 2rem 2rem;
+}
+
+.ledger-day-section {
+  margin-bottom: 2rem;
+}
+
+.ledger-day-section:last-child {
+  margin-bottom: 0;
+}
+
+.ledger-day-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid var(--tt-border);
+}
+
+.ledger-date-title {
+  font-size: 1.08rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--tt-ink);
+  margin: 0;
+}
+
+.ledger-day-count {
+  font-size: 0.76rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--tt-muted);
+}
+
+/* Ledger Day Table */
+.ledger-day-table {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--tt-border);
+  border-radius: var(--tt-radius);
+  overflow: hidden;
+}
+
+.ledger-row {
+  display: grid;
+  grid-template-columns: 86px 72px 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.15rem;
+  background: var(--tt-surface);
+  border-bottom: 1px solid var(--tt-border);
+  transition: background-color 0.12s ease;
+}
+
+.ledger-row:last-child {
+  border-bottom: none;
+}
+
+.ledger-row:hover {
+  background-color: var(--tt-hover);
+}
+
+/* Ledger Columns */
+.ledger-col-cohort {
+  display: flex;
+  align-items: center;
+}
+
+.ledger-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.18rem 0.48rem;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.ledger-badge.cohort-as {
+  color: var(--tt-as-color);
+  background: var(--tt-as-bg);
+  border: 1px solid var(--tt-as-border);
+}
+
+.ledger-badge.cohort-a2 {
+  color: var(--tt-a2-color);
+  background: var(--tt-a2-bg);
+  border: 1px solid var(--tt-a2-border);
+}
+
+.ledger-col-code {
+  display: flex;
+  align-items: center;
+}
+
+.unit-code {
+  font-family: var(--tt-font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--tt-ink);
+  background: var(--tt-subtle);
+  border: 1px solid var(--tt-border);
+  padding: 0.12rem 0.4rem;
+  border-radius: 3px;
+}
+
+.ledger-col-details {
+  min-width: 0;
+}
+
+.exam-subject-line {
+  font-size: 0.92rem;
+  line-height: 1.35;
+  color: var(--tt-ink);
+}
+
+.exam-subject {
+  font-weight: 700;
+}
+
+.exam-paper-sep {
+  color: var(--tt-muted);
+  margin: 0 0.3rem;
+}
+
+.exam-paper {
+  font-weight: 500;
+  color: var(--tt-muted);
+}
+
+.exam-title-line {
+  font-size: 0.81rem;
+  color: var(--tt-muted);
+  margin-top: 0.15rem;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ledger-col-duration {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.duration-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--tt-font-mono);
+  font-size: 0.76rem;
+  font-weight: 500;
+  color: var(--tt-muted);
+  background: var(--tt-subtle);
+  border: 1px solid var(--tt-border);
+  padding: 0.2rem 0.55rem;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.duration-pill i {
+  font-size: 0.72rem;
+}
+
+/* Empty State */
+.timetable-empty {
+  text-align: center;
+  padding: 3.5rem 1.5rem;
+  color: var(--tt-muted);
+}
+
+.timetable-empty i {
+  font-size: 2.2rem;
+  opacity: 0.4;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.timetable-empty h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--tt-ink);
+  margin-bottom: 0.35rem;
+}
+
+.timetable-empty p {
+  font-size: 0.84rem;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.timetable-loading {
+  text-align: center;
+  padding: 3rem 1rem;
+  font-size: 0.86rem;
+  color: var(--tt-muted);
+}
+
+/* Document Footer */
+.timetable-doc-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: var(--tt-subtle);
+  border-top: 1px solid var(--tt-border);
+  font-size: 0.78rem;
+  color: var(--tt-muted);
+}
+
+.footer-links a {
+  color: var(--tt-muted);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+.footer-links a:hover {
+  color: var(--tt-ink);
+}
+
+/* ==========================================================================
+   Homepage "Upcoming Exam" Section Widget (_includes/exams_section.html)
+   Restrained, Academic Notice Style
+   ========================================================================== */
+.upcoming-exam-section {
+  margin-bottom: 2.25rem;
+}
+
+.upcoming-exam-card {
+  background: var(--tt-surface);
+  border: 1px solid var(--tt-border);
+  border-radius: var(--tt-radius);
+  box-shadow: var(--card-shadow, 0 1px 3px rgba(0, 0, 0, 0.04));
+  padding: 1.35rem 1.6rem;
+}
+
+.upcoming-exam-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.upcoming-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--tt-muted);
+  margin-bottom: 0.35rem;
+}
+
+.upcoming-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.3rem;
+}
+
+.upcoming-exam-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--tt-ink);
+  margin: 0;
+}
+
+.upcoming-teacher-hint {
+  font-size: 0.82rem;
+  color: var(--tt-muted);
+  margin: 0.3rem 0 0.75rem;
+  line-height: 1.45;
+}
+
+.upcoming-meta-pills {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.upcoming-meta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.76rem;
+  font-weight: 500;
+  color: var(--tt-muted);
+  background: var(--tt-subtle);
+  border: 1px solid var(--tt-border);
+  padding: 0.18rem 0.55rem;
+  border-radius: 3px;
+}
+
+.upcoming-right-action {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 0.65rem;
+  border-left: 1px solid var(--tt-border);
+  padding-left: 1.5rem;
+  min-width: 220px;
+}
+
+.upcoming-date-highlight {
+  text-align: right;
+}
+
+.upcoming-date-large {
+  display: block;
+  font-family: var(--font-heading, inherit);
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--tt-ink);
+  line-height: 1.15;
+}
+
+.upcoming-date-sub {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--tt-muted);
+  margin-top: 0.2rem;
+}
+
+.upcoming-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.42rem 0.95rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  border-radius: var(--tt-radius);
+  background: #0f172a;
+  color: #ffffff;
+  border: 1px solid #0f172a;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.upcoming-cta-btn:hover {
+  background: #1e293b;
+  border-color: #1e293b;
+  color: #ffffff;
+}
+
+.upcoming-cta-btn i {
+  font-size: 0.8rem;
+  transition: transform 0.15s ease;
+}
+
+.upcoming-cta-btn:hover i {
+  transform: translateX(2px);
+}
+
+/* Dark Mode: Avoid glaring pure-white background; use cohesive dark surface */
+html[data-bs-theme="dark"] .upcoming-cta-btn {
+  background: var(--surface-hover, #1b2638);
+  color: var(--tt-ink);
+  border: 1px solid var(--tt-border-strong);
+}
+
+html[data-bs-theme="dark"] .upcoming-cta-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .timetable-header,
+  .timetable-toolbar,
+  .timetable-ledger,
+  .timetable-doc-footer {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .timetable-notice {
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+  }
+
+  .ledger-row {
+    grid-template-columns: auto auto 1fr;
+    row-gap: 0.4rem;
+    padding: 0.75rem 0.85rem;
+  }
+
+  .ledger-col-cohort {
+    grid-column: 1;
+  }
+
+  .ledger-col-code {
+    grid-column: 2;
+  }
+
+  .ledger-col-duration {
+    grid-column: 3;
+    justify-content: flex-end;
+  }
+
+  .ledger-col-details {
+    grid-column: 1 / -1;
+  }
+
+  .exam-title-line {
+    white-space: normal;
+  }
+
+  .upcoming-exam-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .upcoming-right-action {
+    border-left: none;
+    border-top: 1px solid var(--tt-border);
+    padding-left: 0;
+    padding-top: 0.85rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .upcoming-date-highlight {
+    text-align: left;
+  }
+}
+
+@media (max-width: 580px) {
+  .timetable-tools {
+    width: 100%;
+  }
+
+  .timetable-select-wrap,
+  .timetable-select {
+    width: 100%;
+  }
+
+  .timetable-search-wrap,
+  .timetable-search {
+    width: 100% !important;
+  }
+
+  .timetable-cohort-control {
+    width: 100%;
+    display: flex;
+  }
+
+  .cohort-seg-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.35rem 0.4rem;
+    font-size: 0.78rem;
+  }
+}
