@@ -84,15 +84,36 @@ layout: none
         </div>
       </section>
 
-      <!-- Active Filter Summary -->
+      <!-- Active Filter Summary & View Switcher -->
       <div class="timetable-status-bar">
-        <span>Showing <strong data-filter-count>{{ site.data.exam_timetable.exams.size | default: 41 }}</strong> of {{ site.data.exam_timetable.exams.size | default: 41 }} scheduled papers</span>
-        <span class="series-tag">05 Jan 2027 – 19 Jan 2027</span>
+        <div class="timetable-status-meta">
+          <span>Showing <strong data-filter-count>{{ site.data.exam_timetable.exams.size | default: 41 }}</strong> of {{ site.data.exam_timetable.exams.size | default: 41 }} scheduled papers</span>
+          <span class="series-tag">05 Jan 2027 – 19 Jan 2027</span>
+        </div>
+
+        <!-- View Mode Switcher: Calendar vs List -->
+        <div class="timetable-view-control" role="tablist" aria-label="Select timetable view">
+          <button type="button" class="view-seg-btn active" data-view-mode="calendar" role="tab" aria-selected="true">
+            <i class="bi bi-calendar3"></i>
+            <span>Calendar</span>
+          </button>
+          <button type="button" class="view-seg-btn" data-view-mode="list" role="tab" aria-selected="false">
+            <i class="bi bi-list-ul"></i>
+            <span>List</span>
+          </button>
+        </div>
       </div>
 
-      <!-- Schedule Ledger Stream -->
-      <div class="timetable-ledger" data-timetable-days>
-        <!-- Populated dynamically via JS -->
+      <!-- Calendar View (Default) -->
+      <div class="timetable-calendar-container" data-timetable-calendar>
+        <div class="timetable-loading">
+          <div class="spinner-border spinner-border-sm text-secondary me-2" role="status"></div>
+          <span>Loading examination calendar...</span>
+        </div>
+      </div>
+
+      <!-- Schedule Ledger Stream (List View) -->
+      <div class="timetable-ledger" data-timetable-days style="display: none;">
         <div class="timetable-loading">
           <div class="spinner-border spinner-border-sm text-secondary me-2" role="status"></div>
           <span>Loading examination schedule...</span>
@@ -113,6 +134,62 @@ layout: none
 
     </div>
   </main>
+
+  <!-- Exam Detail Modal -->
+  <div id="examDetailModal" class="exam-modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Exam Details">
+    <div class="exam-modal-dialog">
+      <div class="exam-modal-box">
+        <div class="exam-modal-header">
+          <div class="d-flex align-items-center gap-2">
+            <span class="ledger-badge" id="modalExamCohort">AS</span>
+            <code class="unit-code fs-6" id="modalExamCode">CODE</code>
+          </div>
+          <button type="button" class="exam-modal-close" id="modalCloseBtn" aria-label="Close details">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
+        <div class="exam-modal-body">
+          <div class="exam-modal-subject" id="modalExamSubject">Subject</div>
+          <h3 class="exam-modal-paper" id="modalExamPaper">Paper Title</h3>
+          <p class="exam-modal-title" id="modalExamTitle">Full Paper Specification</p>
+
+          <div class="exam-modal-grid">
+            <div class="exam-modal-item">
+              <span class="modal-item-label"><i class="bi bi-calendar3"></i> Date</span>
+              <strong class="modal-item-val" id="modalExamDate">Date</strong>
+              <small class="text-muted" id="modalExamDay">Day</small>
+            </div>
+            <div class="exam-modal-item">
+              <span class="modal-item-label"><i class="bi bi-clock"></i> Duration</span>
+              <strong class="modal-item-val" id="modalExamDuration">Duration</strong>
+              <small class="text-muted">Standard timing</small>
+            </div>
+            <div class="exam-modal-item">
+              <span class="modal-item-label"><i class="bi bi-mortarboard"></i> Cohort</span>
+              <strong class="modal-item-val" id="modalExamGrade">Grade</strong>
+              <small class="text-muted">OxfordAQA</small>
+            </div>
+            <div class="exam-modal-item">
+              <span class="modal-item-label"><i class="bi bi-file-earmark-check"></i> Series</span>
+              <strong class="modal-item-val">1X27</strong>
+              <small class="text-muted">January 2027</small>
+            </div>
+          </div>
+
+          <div class="exam-modal-notice">
+            <i class="bi bi-info-circle text-info me-2"></i>
+            <span>Exact exam start times will be sent by your Homeroom Teacher.</span>
+          </div>
+        </div>
+        <div class="exam-modal-footer">
+          <a href="{{ site.data.exam_timetable.series_info.pdf_link | default: '/assets/pdf/exam-timetable-1X27.pdf' }}" class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-file-earmark-pdf me-1"></i> Official PDF
+          </a>
+          <button type="button" class="btn btn-sm btn-secondary" id="modalDismissBtn">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Embedded JSON Data for Instant Filtering -->
   <script id="exam-timetable-data" type="application/json">
