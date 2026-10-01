@@ -6,7 +6,7 @@
     startup: {
       ready: () => {
         MathJax.startup.defaultReady();
-        MathJax.startup.promise.then(() => {
+        MathJax.startup.promise.then(async () => {
           // Register a TeX preFilter that automatically promotes matrix environments
           // inside inline math ($...$) to display style, preventing them from being
           // compressed into the text baseline.
@@ -19,6 +19,18 @@
             }
           });
           document.dispatchEvent(new Event('mathjaxLoaded'));
+          // Typesetting changes page height after the browser's initial hash jump.
+          if (window.location.hash) {
+            if (document.readyState !== 'complete') {
+              await new Promise(resolve => window.addEventListener('load', resolve, {once: true}));
+            }
+            await document.fonts.ready;
+            await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+            let anchorId = window.location.hash.slice(1);
+            try { anchorId = decodeURIComponent(anchorId); } catch (_) {}
+            const anchor = document.getElementById(anchorId);
+            if (anchor) anchor.scrollIntoView({behavior: 'instant', block: 'start'});
+          }
         });
       }
     },

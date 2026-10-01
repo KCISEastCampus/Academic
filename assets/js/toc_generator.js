@@ -4,7 +4,7 @@ function generateTOC() {
 
   if (!contentContainer || !tocContent) return;
 
-  const headings = Array.from(contentContainer.querySelectorAll("h1, h2, h3, h4"));
+  const headings = Array.from(contentContainer.querySelectorAll(contentContainer.dataset.tocHeadings || "h1, h2, h3, h4"));
   if (headings.length === 0) {
     tocContent.innerHTML = "";
     return;
