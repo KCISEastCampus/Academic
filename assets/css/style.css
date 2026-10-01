@@ -125,11 +125,11 @@ html[data-bs-theme="dark"] .site-nav {
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-html[data-bs-theme="light"] .theme-icon-nav-moon {
+html:not([data-bs-theme="dark"]) .theme-icon-nav-moon {
   opacity: 1;
   transform: rotate(0);
 }
-html[data-bs-theme="light"] .theme-icon-nav-sun {
+html:not([data-bs-theme="dark"]) .theme-icon-nav-sun {
   opacity: 0;
   transform: rotate(90deg) scale(0.5);
 }
