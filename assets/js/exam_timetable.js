@@ -74,10 +74,15 @@
     });
   }
 
+  var modalTrigger = null;
+  var previousBodyOverflow = "";
+
   // Open Exam Detail Modal
   function openExamModal(exam) {
     if (!modalBackdrop || !exam) return;
 
+    modalTrigger = document.activeElement;
+    previousBodyOverflow = document.body.style.overflow;
     var isA2 = exam.cohort === 'A2';
     if (modalExamCohort) {
       modalExamCohort.textContent = exam.cohort;
@@ -95,6 +100,7 @@
     modalBackdrop.classList.add('is-open');
     modalBackdrop.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
+    if (modalCloseBtn) modalCloseBtn.focus();
   }
 
   // Close Exam Detail Modal
@@ -102,7 +108,8 @@
     if (!modalBackdrop) return;
     modalBackdrop.classList.remove('is-open');
     modalBackdrop.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
+    document.body.style.overflow = previousBodyOverflow;
+    if (modalTrigger && modalTrigger.isConnected) modalTrigger.focus();
   }
 
   if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeExamModal);
@@ -116,8 +123,20 @@
   }
 
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && modalBackdrop && modalBackdrop.classList.contains('is-open')) {
+    if (!modalBackdrop || !modalBackdrop.classList.contains('is-open')) return;
+    if (e.key === 'Escape') {
       closeExamModal();
+    } else if (e.key === 'Tab') {
+      var controls = modalBackdrop.querySelectorAll('button:not([disabled]), a[href]');
+      var first = controls[0];
+      var last = controls[controls.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
     }
   });
 
@@ -153,7 +172,7 @@
           '<span class="ledger-badge ' + cohortClass + '">' + escapeHtml(cohortLabel) + '</span>',
         '</div>',
         '<div class="ledger-col-code" role="cell">',
-          '<code class="unit-code">' + escapeHtml(exam.code) + '</code>',
+          '<button type="button" class="unit-code exam-details-trigger" aria-label="View details for ' + escapeHtml(exam.code) + '">' + escapeHtml(exam.code) + '</button>',
         '</div>',
         '<div class="ledger-col-details" role="cell">',
           '<div class="exam-subject-line">',
@@ -240,6 +259,11 @@
   function renderCalendarView(matched) {
     if (!calendarContainer) return;
 
+    if (!matched.length) {
+      calendarContainer.innerHTML = '<div class="timetable-empty"><h4>No examinations match your filter</h4><p>Try another cohort or subject, or clear the search.</p></div>';
+      return;
+    }
+
     var examDateMap = {};
     matched.forEach(function (exam) {
       if (!examDateMap[exam.date]) {
@@ -308,13 +332,13 @@
         var isA2 = ex.cohort === 'A2';
         var cohortClass = isA2 ? 'cohort-a2' : 'cohort-as';
         return [
-          '<div class="cal-exam-chip ' + cohortClass + '" data-exam-id="' + escapeHtml(ex.id) + '" title="' + escapeHtml(ex.code + ' ' + ex.subject + ': ' + ex.title + ' (' + ex.duration + ')') + '">',
+          '<button type="button" class="cal-exam-chip ' + cohortClass + '" data-exam-id="' + escapeHtml(ex.id) + '" title="' + escapeHtml(ex.code + ' ' + ex.subject + ': ' + ex.title + ' (' + ex.duration + ')') + '">',
             '<div class="cal-chip-top">',
               '<span class="cal-chip-code">' + escapeHtml(ex.code) + '</span>',
               '<span class="cal-chip-duration">' + escapeHtml(ex.duration) + '</span>',
             '</div>',
             '<div class="cal-chip-title">' + escapeHtml(ex.subject + ' · ' + ex.paper) + '</div>',
-          '</div>'
+          '</button>'
         ].join('');
       }).join('');
 
@@ -384,7 +408,7 @@
       mobileCardsHtml = selectedDateExams.map(function (ex) {
         var isA2 = ex.cohort === 'A2';
         return [
-          '<div class="cal-agenda-card ' + (isA2 ? 'cohort-a2' : 'cohort-as') + '" data-exam-id="' + escapeHtml(ex.id) + '">',
+          '<button type="button" class="cal-agenda-card ' + (isA2 ? 'cohort-a2' : 'cohort-as') + '" data-exam-id="' + escapeHtml(ex.id) + '">',
             '<div class="d-flex align-items-center gap-2">',
               '<span class="ledger-badge ' + (isA2 ? 'cohort-a2' : 'cohort-as') + '">' + ex.cohort + '</span>',
               '<div>',
@@ -393,7 +417,7 @@
               '</div>',
             '</div>',
             '<span class="duration-pill"><i class="bi bi-clock"></i> ' + escapeHtml(ex.duration) + '</span>',
-          '</div>'
+          '</button>'
         ].join('');
       }).join('');
     } else {
@@ -469,10 +493,10 @@
       currentViewMode = btn.getAttribute('data-view-mode');
       viewModeButtons.forEach(function (b) {
         b.classList.remove('active');
-        b.setAttribute('aria-selected', 'false');
+        b.setAttribute('aria-pressed', 'false');
       });
       btn.classList.add('active');
-      btn.setAttribute('aria-selected', 'true');
+      btn.setAttribute('aria-pressed', 'true');
       render();
     });
   });

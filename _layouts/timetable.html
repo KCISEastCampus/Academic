@@ -54,7 +54,7 @@ layout: none
       <!-- Control Toolbar: Cohort Tabs, Subject Filter, Search -->
       <section class="timetable-toolbar" aria-label="Timetable filters">
         <!-- Cohort Switcher (Segmented Control) -->
-        <div class="timetable-cohort-control" role="tablist" aria-label="Filter by cohort">
+        <div class="timetable-cohort-control" role="group" aria-label="Filter by cohort">
           <button type="button" class="cohort-seg-btn active" data-cohort-filter data-cohort="ALL" aria-pressed="true">
             All Papers <span class="seg-count">({{ site.data.exam_timetable.exams.size | default: 41 }})</span>
           </button>
@@ -92,12 +92,12 @@ layout: none
         </div>
 
         <!-- View Mode Switcher: Calendar vs List -->
-        <div class="timetable-view-control" role="tablist" aria-label="Select timetable view">
-          <button type="button" class="view-seg-btn active" data-view-mode="calendar" role="tab" aria-selected="true">
+        <div class="timetable-view-control" role="group" aria-label="Select timetable view">
+          <button type="button" class="view-seg-btn active" data-view-mode="calendar" aria-pressed="true">
             <i class="bi bi-calendar3"></i>
             <span>Calendar</span>
           </button>
-          <button type="button" class="view-seg-btn" data-view-mode="list" role="tab" aria-selected="false">
+          <button type="button" class="view-seg-btn" data-view-mode="list" aria-pressed="false">
             <i class="bi bi-list-ul"></i>
             <span>List</span>
           </button>

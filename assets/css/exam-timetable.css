@@ -1218,7 +1218,7 @@ html[data-bs-theme="dark"] .cal-day-count {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.2s ease, visibility 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 
 .exam-modal-backdrop.is-open {
@@ -1354,4 +1354,27 @@ html[data-bs-theme="dark"] .exam-modal-box {
   padding: 0.85rem 1.25rem;
   border-top: 1px solid var(--tt-border);
   background: var(--tt-subtle);
+}
+
+/* Native detail controls preserve the existing card appearance. */
+.cal-exam-chip,
+.cal-agenda-card {
+  width: 100%;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+}
+
+.exam-details-trigger {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+
+.cal-exam-chip:focus-visible,
+.cal-agenda-card:focus-visible,
+.exam-details-trigger:focus-visible {
+  outline: 2px solid var(--bs-primary);
+  outline-offset: 2px;
 }
