@@ -26,31 +26,31 @@ Pure Mathematics · MA03. Choose a lesson below. Each lesson has worked examples
 
 Start here if you are new to A2 Pure. Work through these lessons in order.
 
-1. **[Functions](/alevel/a2-mathematics/functions/)** — Domains, ranges, composite functions and inverse functions.
+1. <span id="p21-algebra-and-functions"></span>**[Functions](/alevel/a2-mathematics/functions/)** — Domains, ranges, composite functions and inverse functions.
 2. **[Modulus Functions and Transformations](/alevel/a2-mathematics/modulus-and-transformations/)** — Graphs, transformations, equations and inequalities.
 3. **[Algebraic Fractions and Algebraic Division](/alevel/a2-mathematics/algebraic-fractions-and-division/)** — Simplification, division and remainders.
 4. **[Partial Fractions](/alevel/a2-mathematics/partial-fractions/)** — Decomposition, repeated factors and use in integration.
-5. **[Binomial Series](/alevel/a2-mathematics/binomial-series/)** — Expansions, approximations and the range of validity.
+5. <span id="p22-sequences-and-series"></span>**[Binomial Series](/alevel/a2-mathematics/binomial-series/)** — Expansions, approximations and the range of validity.
 
 ## Trigonometry, Exponentials and Logarithms
 
-- **[Trigonometric Functions and Formulae](/alevel/a2-mathematics/trigonometric-functions-and-formulae/)** — Functions, identities, compound and double angle formulae.
-- **[Exponential and Logarithmic Functions](/alevel/a2-mathematics/exponential-and-logarithmic-functions/)** — Growth, decay, logarithm laws and equations.
+- <span id="p24-trigonometry"></span>**[Trigonometric Functions and Formulae](/alevel/a2-mathematics/trigonometric-functions-and-formulae/)** — Functions, identities, compound and double angle formulae.
+- <span id="p25-exponentials-and-logarithms"></span>**[Exponential and Logarithmic Functions](/alevel/a2-mathematics/exponential-and-logarithmic-functions/)** — Growth, decay, logarithm laws and equations.
 
 ## Calculus
 
 Study differentiation before parametric differentiation, and integration before differential equations.
 
-1. **[Differentiation](/alevel/a2-mathematics/differentiation/)** — Rules, tangents, normals and stationary points.
-2. **[Parametric Equations](/alevel/a2-mathematics/parametric-equations/)** — Cartesian equations, curves and differentiation.
-3. **[Integration — Choosing a Method](/alevel/a2-mathematics/integration/)** — Standard integrals, substitution, parts and partial fractions.
+1. <span id="p26-differentiation"></span>**[Differentiation](/alevel/a2-mathematics/differentiation/)** — Rules, tangents, normals and stationary points.
+2. <span id="p23-coordinate-geometry"></span>**[Parametric Equations](/alevel/a2-mathematics/parametric-equations/)** — Cartesian equations, curves and differentiation.
+3. <span id="p27-integration"></span>**[Integration — Choosing a Method](/alevel/a2-mathematics/integration/)** — Standard integrals, substitution, parts and partial fractions.
 4. **[Integration — Trigonometric Integrals and Applications](/alevel/a2-mathematics/integration-applications/)** — Trigonometric integrals, areas and volumes of revolution.
-5. **[Differential Equations](/alevel/a2-mathematics/differential-equations/)** — Separable variables, given conditions and models.
+5. <span id="p28-differential-equations"></span>**[Differential Equations](/alevel/a2-mathematics/differential-equations/)** — Separable variables, given conditions and models.
 
 ## Numerical Methods, Vectors and Proof
 
-- **[Numerical Methods](/alevel/a2-mathematics/numerical-methods/)** — Roots, iteration and numerical integration.
-- **[Vectors](/alevel/a2-mathematics/vectors/)** — Lines, scalar products, angles and distances.
+- <span id="p29-numerical-methods"></span>**[Numerical Methods](/alevel/a2-mathematics/numerical-methods/)** — Roots, iteration and numerical integration.
+- <span id="p210-vectors"></span>**[Vectors](/alevel/a2-mathematics/vectors/)** — Lines, scalar products, angles and distances.
 - **[Mathematical Proof](/alevel/a2-mathematics/mathematical-proof/)** — Direct proof, contradiction and counter-examples.
 
 ## Quick Reference

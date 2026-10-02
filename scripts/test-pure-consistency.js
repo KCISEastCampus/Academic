@@ -97,7 +97,28 @@ for (const lesson of ['index',...course,'quick-reference']) {
     questions+=(source.match(/^### (?:Question |Q)\d/gm)||[]).length;
   }
 }
-console.log('Pure consistency passed: early algebra, domains, modulus inequalities, 12 antiderivatives, proof cases, iteration values, general tangents, English, course navigation and TeX row separators.');
+// Published P2 bookmarks must still lead to their matching lesson on the index.
+const legacyTopics={
+  'p21-algebra-and-functions':'functions',
+  'p22-sequences-and-series':'binomial-series',
+  'p23-coordinate-geometry':'parametric-equations',
+  'p24-trigonometry':'trigonometric-functions-and-formulae',
+  'p25-exponentials-and-logarithms':'exponential-and-logarithmic-functions',
+  'p26-differentiation':'differentiation',
+  'p27-integration':'integration',
+  'p28-differential-equations':'differential-equations',
+  'p29-numerical-methods':'numerical-methods',
+  'p210-vectors':'vectors'
+};
+const indexHtml=fs.readFileSync(path.join(root,'_site/alevel/a2-mathematics/index.html'),'utf8');
+const indexIds=Array.from(indexHtml.matchAll(/\bid="([^"]+)"/g),m=>m[1]);
+const indexItems=indexHtml.match(/<li\b[^>]*>[\s\S]*?<\/li>/g)||[];
+for(const [anchor,lesson] of Object.entries(legacyTopics)) {
+  assert.equal(indexIds.filter(id=>id===anchor).length,1,`Missing or duplicate legacy bookmark: ${anchor}`);
+  const item=indexItems.find(item=>item.includes(`id="${anchor}"`));
+  assert(item?.includes(`href="/alevel/a2-mathematics/${lesson}/"`),`Legacy bookmark points to the wrong topic: ${anchor}`);
+}
+console.log('Pure consistency passed: early algebra, domains, modulus inequalities, 12 antiderivatives, proof cases, iteration values, general tangents, English, course navigation, TeX row separators and legacy topic bookmarks.');
 console.log('Content inventory: '+course.length+' lessons, '+examples+' worked examples, '+questions+' numbered practice questions; index and quick reference also checked.');
 
 // Re-align initial anchors only after MathJax and its fonts finish changing layout.
