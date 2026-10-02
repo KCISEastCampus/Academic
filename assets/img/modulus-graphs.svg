@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="580" height="690" viewBox="0 0 580 690" role="img" aria-labelledby="title desc">
+<title id="title">Modulus outside and inside a function</title><desc id="desc">For f(x)=x-1, the upper graph shows modulus of x-1, with minimum (1,0). The lower graph shows modulus of x minus 1, with minimum (0,-1). Dashed grey lines show the original graph.</desc>
+<rect width="580" height="690" rx="12" fill="#fff"/>
+<g font-family="Arial, sans-serif" font-size="16" fill="#172033"><text x="35" y="32" font-size="21" font-weight="bold">Modulus outside: y = |x − 1|</text>
+<path d="M70,312.5 L70,65" stroke="#e2e8f0"/>
+<text x="63" y="265">-4</text>
+<path d="M125,312.5 L125,65" stroke="#e2e8f0"/>
+<text x="118" y="265">-3</text>
+<path d="M180,312.5 L180,65" stroke="#e2e8f0"/>
+<text x="173" y="265">-2</text>
+<path d="M235,312.5 L235,65" stroke="#e2e8f0"/>
+<text x="228" y="265">-1</text>
+<path d="M290,312.5 L290,65" stroke="#e2e8f0"/>
+<path d="M345,312.5 L345,65" stroke="#e2e8f0"/>
+<text x="338" y="265">1</text>
+<path d="M400,312.5 L400,65" stroke="#e2e8f0"/>
+<text x="393" y="265">2</text>
+<path d="M455,312.5 L455,65" stroke="#e2e8f0"/>
+<text x="448" y="265">3</text>
+<path d="M510,312.5 L510,65" stroke="#e2e8f0"/>
+<text x="503" y="265">4</text>
+<path d="M70,290 L510,290" stroke="#e2e8f0"/>
+<text x="265" y="295">-1</text>
+<path d="M70,245 L510,245" stroke="#e2e8f0"/>
+<path d="M70,200 L510,200" stroke="#e2e8f0"/>
+<text x="265" y="205">1</text>
+<path d="M70,155 L510,155" stroke="#e2e8f0"/>
+<text x="265" y="160">2</text>
+<path d="M70,110 L510,110" stroke="#e2e8f0"/>
+<text x="265" y="115">3</text>
+<path d="M70,65 L510,65" stroke="#e2e8f0"/>
+<text x="265" y="70">4</text>
+<path d="M70,245 H522 M290,65 V312" stroke="#475569" stroke-width="1.5"/><text x="530" y="250">x</text><text x="300" y="65">y</text><text x="277" y="265">0</text>
+<path d="M262.5,312.5 L510,110" stroke="#64748b" stroke-width="2" stroke-dasharray="7 5"/>
+<polyline points="125,65 345,245 510,110" fill="none" stroke="#2563eb" stroke-width="3.5"/>
+<circle cx="345" cy="245" r="4" fill="#2563eb"/><text x="357" y="276" fill="#2563eb">(1, 0)</text></g>
+<g font-family="Arial, sans-serif" font-size="16" fill="#172033"><text x="35" y="377" font-size="21" font-weight="bold">Modulus inside: y = |x| − 1</text>
+<path d="M70,657.5 L70,410" stroke="#e2e8f0"/>
+<text x="63" y="610">-4</text>
+<path d="M125,657.5 L125,410" stroke="#e2e8f0"/>
+<text x="118" y="610">-3</text>
+<path d="M180,657.5 L180,410" stroke="#e2e8f0"/>
+<text x="173" y="610">-2</text>
+<path d="M235,657.5 L235,410" stroke="#e2e8f0"/>
+<text x="228" y="610">-1</text>
+<path d="M290,657.5 L290,410" stroke="#e2e8f0"/>
+<path d="M345,657.5 L345,410" stroke="#e2e8f0"/>
+<text x="338" y="610">1</text>
+<path d="M400,657.5 L400,410" stroke="#e2e8f0"/>
+<text x="393" y="610">2</text>
+<path d="M455,657.5 L455,410" stroke="#e2e8f0"/>
+<text x="448" y="610">3</text>
+<path d="M510,657.5 L510,410" stroke="#e2e8f0"/>
+<text x="503" y="610">4</text>
+<path d="M70,635 L510,635" stroke="#e2e8f0"/>
+<text x="265" y="640">-1</text>
+<path d="M70,590 L510,590" stroke="#e2e8f0"/>
+<path d="M70,545 L510,545" stroke="#e2e8f0"/>
+<text x="265" y="550">1</text>
+<path d="M70,500 L510,500" stroke="#e2e8f0"/>
+<text x="265" y="505">2</text>
+<path d="M70,455 L510,455" stroke="#e2e8f0"/>
+<text x="265" y="460">3</text>
+<path d="M70,410 L510,410" stroke="#e2e8f0"/>
+<text x="265" y="415">4</text>
+<path d="M70,590 H522 M290,410 V657" stroke="#475569" stroke-width="1.5"/><text x="530" y="595">x</text><text x="300" y="410">y</text><text x="277" y="610">0</text>
+<path d="M262.5,657.5 L510,455" stroke="#64748b" stroke-width="2" stroke-dasharray="7 5"/>
+<polyline points="70,455 290,635 510,455" fill="none" stroke="#b45309" stroke-width="3.5"/>
+<circle cx="290" cy="635" r="4" fill="#b45309"/><text x="302" y="666" fill="#b45309">(0, −1)</text></g>
+<text x="35" y="682" font-family="Arial, sans-serif" font-size="14" fill="#475569">Dashed grey line: original graph y = x − 1</text></svg>

@@ -3,13 +3,13 @@ function initImageModal() {
   // 创建模态框容器 - 使用 SVG 关闭图标确保完美居中
   const modalHTML = `
     <div id="imageModalOverlay" class="image-modal-overlay">
-      <button id="imageModalClose" class="image-modal-close" aria-label="关闭图片">
+      <button id="imageModalClose" class="image-modal-close" aria-label="Close image">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </button>
       <div class="image-modal-content">
-        <img id="imageModalImg" alt="放大图片">
+        <img id="imageModalImg" alt="Enlarged image">
       </div>
     </div>
   `;

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="540" viewBox="0 0 560 540" role="img" aria-labelledby="title desc">
+<title id="title">A parametric parabola</title>
+<desc id="desc">For x equals t squared and y equals t minus two, the curve opens to the right with vertex zero, minus two. As t increases, the point moves towards the vertex on the lower branch, then away along the upper branch. Arrows show this direction.</desc>
+<rect width="560" height="540" rx="12" fill="white"/>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0L6 3L0 6" fill="none" stroke="#006b9b" stroke-width="1.4"/></marker></defs>
+<g font-family="Arial, sans-serif" font-size="18" fill="#172338">
+<text x="30" y="34" font-weight="bold">x = t², y = t − 2</text>
+<text x="30" y="64">Arrows show increasing t</text>
+<g stroke="#e0e6ed"><path d="M80 140H480M80 260H480M80 320H480M80 380H480M80 440H480M140 120V480M200 120V480M260 120V480M320 120V480M380 120V480M440 120V480"/></g>
+<path d="M80 120V480M55 200H500" stroke="#172338" stroke-width="2" fill="none"/>
+<text x="505" y="206">x</text><text x="72" y="108">y</text><text x="60" y="193">0</text>
+<text x="49" y="266">−1</text><text x="49" y="326">−2</text><text x="49" y="386">−3</text><text x="49" y="446">−4</text>
+<text x="135" y="225">1</text><text x="255" y="225">3</text><text x="375" y="225">5</text>
+<path d="M455 470Q80 395 80 320Q80 245 455 170" fill="none" stroke="#006b9b" stroke-width="3"/>
+<path d="M166.4 392L140 380M140 260L166.4 248" fill="none" stroke="#006b9b" stroke-width="3" marker-end="url(#arrow)"/>
+<g fill="#006b9b"><circle cx="80" cy="320" r="4"/><circle cx="320" cy="200" r="4"/><circle cx="320" cy="440" r="4"/></g>
+<text x="95" y="338">(0, −2), t = 0</text><text x="323" y="186">(4, 0), t = 2</text><text x="270" y="469">(4, −4), t = −2</text>
+<text x="30" y="515">Both branches are included for all real t.</text>
+</g></svg>

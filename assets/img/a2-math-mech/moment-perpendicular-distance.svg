@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="370" viewBox="0 0 400 370" role="img" aria-labelledby="title desc">
+  <title id="title">Perpendicular distance for an angled force</title>
+  <desc id="desc">A horizontal rod runs 3 metres from A to B. Forces of 10 newtons down and 8 newtons up act 1 and 2 metres from A. At B, a 12 newton force acts 30 degrees downwards to the right. The perpendicular from A to its extended line of action is 1.5 metres.</desc>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#172033"/></marker></defs>
+  <rect width="400" height="370" rx="8" fill="white"/>
+  <g fill="none" stroke="#9aa7b5" stroke-width="2">
+    <path d="M80 57.2L375 227.5M40 190L107.5 73.1M310 190H380" stroke-dasharray="5 4"/>
+    <path d="M102 82.6L111.5 88.1L117 78.6M340 190A30 30 0 0 1 336 205"/>
+    <path d="M40 324H310M40 316V332M130 316V332M220 316V332M310 316V332"/>
+  </g>
+  <path d="M40 190H310" stroke="#527568" stroke-width="7"/>
+  <g stroke="#172033" stroke-width="2.5" fill="none" marker-end="url(#arrow)">
+    <path d="M130 190V285"/><path d="M220 190V95"/><path d="M310 190L375 227.5"/>
+  </g>
+  <circle cx="40" cy="190" r="5" fill="#172033"/>
+  <g fill="#172033" font-family="Arial, sans-serif" font-size="21">
+    <text x="19" y="40">d = 1.5 m</text><text x="145" y="65">Line of action</text>
+    <text x="23" y="216">A</text><text x="302" y="216">B</text>
+    <text x="67" y="266">10 N</text><text x="234" y="128">8 N</text><text x="322" y="263">12 N</text>
+    <text x="348" y="181">30°</text>
+    <text x="66" y="353">1 m</text><text x="156" y="353">1 m</text><text x="246" y="353">1 m</text>
+  </g>
+</svg>

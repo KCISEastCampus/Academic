@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 510" role="img" aria-labelledby="title desc">
+  <title id="title">Separate force diagrams for a car and trailer</title>
+  <desc id="desc">The trailer has tension to the right, weight down and normal reaction up. The car has driving force to the right, tension to the left, weight down and normal reaction up. Acceleration arrows are separate from the forces.</desc>
+  <rect width="380" height="510" fill="#fff" rx="12"/>
+  <defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7" fill="#172033"/></marker><marker id="motion" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7" fill="#087a4a"/></marker></defs>
+  <g font-family="Arial,sans-serif" font-size="22" fill="#172033" text-anchor="middle">
+    <text x="190" y="32">Trailer: 500 kg</text><text x="190" y="272">Car: 1000 kg</text>
+    <rect x="126" y="106" width="68" height="48" fill="#e6f5ec" stroke="#172033"/><rect x="126" y="346" width="68" height="48" fill="#e6f5ec" stroke="#172033"/>
+    <g fill="none" stroke="#172033" stroke-width="2.5" marker-end="url(#arrow)">
+      <path d="M160 130V57"/><path d="M160 130V216"/><path d="M160 130H330"/>
+      <path d="M160 370V297"/><path d="M160 370V456"/><path d="M160 370H25"/><path d="M160 370H345"/>
+    </g>
+    <text x="187" y="73">R₁</text><text x="207" y="211">500g</text><text x="299" y="115">T</text>
+    <text x="187" y="313">R₂</text><text x="215" y="451">1000g</text><text x="55" y="355">T</text><text x="294" y="352">3000 N</text>
+    <g stroke="#087a4a" stroke-width="2.5" marker-end="url(#motion)"><path d="M37 80H95"/><path d="M37 320H95"/></g>
+    <g fill="#087a4a"><text x="64" y="65">a</text><text x="64" y="305">a</text></g>
+    <text x="190" y="495" font-size="18">Green arrows: acceleration, not force.</text>
+  </g>
+</svg>

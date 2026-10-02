@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="340" viewBox="0 0 400 340" role="img" aria-labelledby="title desc">
+<title id="title">Conical pendulum geometry and actual forces</title><desc id="desc">In a vertical section, fixed point A lies above the circle centre O. A string of length l connects A to particle P. Its angle theta is measured from vertical, so OP equals l sin theta and AO equals l cos theta. Tension on P points up along the string; weight mg points down. No additional centripetal-force arrow is shown.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#172033"/></marker></defs>
+<rect width="400" height="340" rx="8" fill="white"/>
+<ellipse cx="152" cy="233" rx="120" ry="29" fill="none" stroke="#527568" stroke-width="2" stroke-dasharray="5 4"/>
+<path d="M152 73L272 233" stroke="#527568" stroke-width="3"/><path d="M152 73V233H272" fill="none" stroke="#8494a6" stroke-dasharray="5 4"/>
+<path d="M152 113A40 40 0 0 0 176 105M152 218H167V233" fill="none" stroke="#8494a6"/>
+<g fill="none" stroke="#172033" stroke-width="2" marker-end="url(#arrow)"><path d="M272 233L229 176"/><path d="M272 233V301"/></g>
+<circle cx="152" cy="73" r="3" fill="#172033"/><circle cx="272" cy="233" r="6" fill="#b54720"/>
+<g font-family="Arial,sans-serif" font-size="21" fill="#172033"><text x="62" y="32">Vertical section; θ from vertical</text><text x="137" y="64">A</text><text x="134" y="255">O</text><text x="284" y="239">P</text><text x="202" y="151">l</text><text x="169" y="135">θ</text><text x="25" y="157">h = l cos θ</text><text x="175" y="276">r = l sin θ</text><text x="245" y="184">T</text><text x="285" y="295">mg</text><text x="91" y="329">Only tension and weight</text></g>
+</svg>

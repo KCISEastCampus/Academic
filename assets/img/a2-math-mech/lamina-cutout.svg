@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="350" viewBox="0 0 400 350" role="img" aria-labelledby="title desc">
+<title id="title">A rectangle with a corner removed</title><desc id="desc">An eight by six rectangle has its top-right four by two corner removed. The original centre is (4,3), the removed part's centre is (6,5), and the remaining centre G is (3.6,2.6). Lengths are in centimetres.</desc>
+<rect width="400" height="350" rx="8" fill="white"/>
+<path d="M60 280H340V140H200V70H60Z" fill="#e4f1ed" stroke="#172033" stroke-width="2"/>
+<path d="M200 70H340V140" stroke="#8494a6" stroke-width="2" stroke-dasharray="6 5" fill="none"/>
+<circle cx="200" cy="175" r="4" fill="#172033"/><circle cx="270" cy="105" r="4" fill="#8494a6"/><circle cx="186" cy="189" r="5" fill="#b54720"/>
+<g font-family="Arial,sans-serif" font-size="20" fill="#172033"><text x="12" y="305">(0,0)</text><text x="300" y="305">(8,0)</text><text x="12" y="61">(0,6)</text><text x="213" y="164">(4,4)</text><text x="210" y="203">(4,3)</text><text x="270" y="95">(6,5)</text><text x="113" y="222">G</text><text x="121" y="334">Lengths in cm</text></g>
+<path d="M135 216L178 193" stroke="#b54720"/><text x="213" y="47" font-family="Arial,sans-serif" font-size="19" fill="#63758b">Removed corner</text>
+</svg>

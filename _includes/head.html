@@ -6,7 +6,16 @@
   {% assign needs_mathjax = true %}
 {% endif %}
 <!-- Immediately apply saved theme to avoid flash: reads localStorage before paint -->
-<script>try{(function(){var t=localStorage.getItem('site-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);} )();}catch(e){/* ignore */}</script>
+<script>
+  (function () {
+    var theme;
+    try { theme = localStorage.getItem('site-theme'); } catch (e) { /* Storage may be blocked. */ }
+    if (theme !== 'light' && theme !== 'dark') {
+      theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    document.documentElement.setAttribute('data-bs-theme', theme);
+  })();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 {% seo %}

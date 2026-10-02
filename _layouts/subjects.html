@@ -16,7 +16,7 @@ layout: none
 {% if page.url contains '/igcse/' %}
 <body class="scheme-igcse">
 {% elsif page.url contains '/alevel/' %}
-<body class="scheme-alevel">
+<body class="scheme-alevel{% if page.study_page %} study-page{% endif %}">
 {% else %}
 <body>
 {% endif %}
@@ -36,7 +36,7 @@ layout: none
   </button>
 
   <div id="main-container">
-    <div id="content-container" data-pagefind-body>
+    <div id="content-container" data-pagefind-body data-toc-headings="{{ page.toc_headings | default: 'h1, h2, h3, h4' }}">
       {{ content }}
     </div>
     <div id="toc" class="table-of-contents">

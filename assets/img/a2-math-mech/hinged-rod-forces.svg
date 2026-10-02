@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="360" viewBox="0 0 400 360" role="img" aria-labelledby="title desc">
+  <title id="title">Horizontal rod held by a hinge and a string</title>
+  <desc id="desc">A 4 metre horizontal rod is hinged at A. A string at midpoint C pulls towards the wall at 30 degrees above the leftward horizontal. The rod's weight of 60 newtons acts at C and a 40 newton load at B. Hinge components X right and Y up are assumed positive directions; the solution gives Y downwards.</desc>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#172033"/></marker></defs>
+  <rect width="400" height="360" rx="8" fill="white"/>
+  <g fill="none" stroke="#9aa7b5" stroke-width="2">
+    <path d="M50 25V235M50 103.4L200 190M165 190A35 35 0 0 1 169.7 172.5M50 329H350M50 321V337M200 321V337M350 321V337"/>
+  </g>
+  <path d="M50 190H350" stroke="#527568" stroke-width="8"/>
+  <g stroke="#172033" stroke-width="2.5" fill="none" marker-end="url(#arrow)">
+    <path d="M200 190L118 142.7"/><path d="M50 190H125"/><path d="M50 190V115"/><path d="M200 190V300"/><path d="M350 190V300"/>
+  </g>
+  <circle cx="50" cy="190" r="5" fill="white" stroke="#172033" stroke-width="2"/>
+  <g fill="#172033" font-family="Arial, sans-serif" font-size="21">
+    <text x="91" y="179">X</text><text x="19" y="147">Y</text><text x="133" y="136">T</text>
+    <text x="126" y="184">30°</text><text x="34" y="217">A</text><text x="210" y="217">C</text><text x="350" y="217">B</text>
+    <text x="214" y="280">60 N</text><text x="290" y="280">40 N</text>
+    <text x="104" y="354">2 m</text><text x="254" y="354">2 m</text>
+  </g>
+</svg>

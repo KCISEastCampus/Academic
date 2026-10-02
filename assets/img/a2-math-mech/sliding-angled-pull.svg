@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="360" viewBox="0 0 400 360" role="img" aria-labelledby="title desc">
+<title id="title">A sliding block pulled at an angle</title><desc id="desc">A twenty kilogram block slides right. Tension pulls thirty degrees above horizontal, normal reaction acts up, weight acts down and sliding friction acts left. Acceleration is marked separately from the force arrows.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#172033"/></marker><marker id="motion" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#a64025"/></marker></defs>
+<rect width="400" height="360" rx="8" fill="white"/><path d="M30 230H370" stroke="#8494a6" stroke-width="2"/>
+<rect x="175" y="185" width="50" height="45" fill="#e4f1ed" stroke="#172033"/>
+<path d="M200 208H345" stroke="#8494a6" stroke-dasharray="5 4"/>
+<g stroke="#172033" stroke-width="2.5" fill="none" marker-end="url(#arrow)"><path d="M200 208V65"/><path d="M200 208V323"/><path d="M200 208H45"/><path d="M200 208L330 133"/></g>
+<path d="M255 208A55 55 0 0 0 247.63 180.5" stroke="#8494a6" fill="none"/>
+<path d="M275 65H365" stroke="#a64025" stroke-width="2" marker-end="url(#motion)"/>
+<g font-family="Arial,sans-serif" font-size="21" fill="#172033"><text x="213" y="86">R</text><text x="216" y="310">20g</text><text x="46" y="191">0.2R</text><text x="320" y="118">T</text><text x="263" y="196">30°</text><text x="281" y="47" fill="#a64025">Motion, a</text></g>
+</svg>

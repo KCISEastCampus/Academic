@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="610" viewBox="0 0 400 610" role="img" aria-labelledby="title desc">
+  <title id="title">The two limiting cases on an inclined plane</title>
+  <desc id="desc">A horizontal push acts right and weight acts down. Reaction is normal to the plane. In the upper diagram friction acts up the plane, opposing slipping down. In the lower diagram friction acts down the plane, opposing slipping up.</desc>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#172033"/></marker></defs>
+  <rect width="400" height="610" rx="8" fill="white"/>
+  <g font-family="Arial, sans-serif" font-size="21" fill="#172033">
+    <g>
+      <text x="25" y="28" font-weight="bold">About to slip down</text>
+      <path d="M60 260L340 50M60 260H130M102 260A42 42 0 0 0 93.6 234.8" stroke="#8b98a6" stroke-width="2" fill="none"/>
+      <g stroke="#172033" stroke-width="2.5" fill="none" marker-end="url(#arrow)">
+        <path d="M200 155L134 67"/><path d="M200 155L280 95"/><path d="M200 155V255"/><path d="M200 155H330"/>
+      </g>
+      <circle cx="200" cy="155" r="7" fill="#d9eee5" stroke="#172033"/>
+      <text x="113" y="76">R</text><text x="272" y="81">F</text>
+      <text x="217" y="244">50 N</text><text x="303" y="143">P</text><text x="108" y="249">α</text>
+    </g>
+    <path d="M25 300H375" stroke="#d3dbe2"/>
+    <g transform="translate(0 310)">
+      <text x="25" y="28" font-weight="bold">About to slip up</text>
+      <path d="M60 260L340 50M60 260H130M102 260A42 42 0 0 0 93.6 234.8" stroke="#8b98a6" stroke-width="2" fill="none"/>
+      <g stroke="#172033" stroke-width="2.5" fill="none" marker-end="url(#arrow)">
+        <path d="M200 155L134 67"/><path d="M200 155L120 215"/><path d="M200 155V255"/><path d="M200 155H330"/>
+      </g>
+      <circle cx="200" cy="155" r="7" fill="#d9eee5" stroke="#172033"/>
+      <text x="113" y="76">R</text><text x="100" y="215">F</text>
+      <text x="217" y="244">50 N</text><text x="303" y="143">P</text><text x="108" y="249">α</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="340" viewBox="0 0 400 340" role="img" aria-labelledby="title desc">
+<title id="title">Normal reaction inside a smooth cone</title><desc id="desc">A vertical section shows the lower vertex V and vertical axis of a cone. The semi-vertical angle alpha is between the side and axis. Particle P circles horizontally at height z and radius r. Normal reaction R is perpendicular to the side, pointing up and towards the axis, while weight mg points down. The normal reaction makes angle ninety degrees minus alpha to vertical.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#172033"/></marker></defs>
+<rect width="400" height="340" rx="8" fill="white"/>
+<path d="M75 62L200 278L325 62" stroke="#527568" stroke-width="3" fill="none"/>
+<path d="M200 62V278M200 126H288" fill="none" stroke="#8494a6" stroke-dasharray="5 4"/><ellipse cx="200" cy="126" rx="88" ry="20" fill="none" stroke="#8494a6" stroke-dasharray="5 4"/>
+<path d="M200 232A46 46 0 0 1 223 238" stroke="#8494a6" fill="none"/>
+<g fill="none" stroke="#172033" stroke-width="2" marker-end="url(#arrow)"><path d="M288 126L227.38 91"/><path d="M288 126V214"/></g>
+<circle cx="288" cy="126" r="6" fill="#b54720"/>
+<g font-family="Arial,sans-serif" font-size="21" fill="#172033"><text x="101" y="32">Vertical section of a cone</text><text x="184" y="300">V</text><text x="302" y="125">P</text><text x="236" y="160">r</text><text x="178" y="207">z</text><text x="207" y="226">α</text><text x="228" y="83">R</text><text x="301" y="204">mg</text><text x="42" y="326">Reaction perpendicular to the side</text></g>
+</svg>

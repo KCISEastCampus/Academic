@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="320" viewBox="0 0 400 320" role="img" aria-labelledby="title desc">
+<title id="title">Velocity and acceleration in a circle</title><desc id="desc">In a top view of an anticlockwise circular path, particle P is right of centre O. Its velocity points upwards along the tangent. Its acceleration points left towards O, perpendicular to velocity. The radial line from O to P has length r.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#172033"/></marker></defs>
+<rect width="400" height="320" rx="8" fill="white"/><circle cx="174" cy="167" r="96" fill="none" stroke="#527568" stroke-width="3"/>
+<path d="M174 167H270" stroke="#8494a6" stroke-dasharray="5 4"/>
+<g fill="none" stroke="#172033" stroke-width="2" marker-end="url(#arrow)"><path d="M270 167V67"/><path d="M270 167H191"/><path d="M280 124A114 114 0 0 0 237 73"/></g>
+<path d="M254 167V151H270" fill="none" stroke="#8494a6"/>
+<circle cx="174" cy="167" r="3" fill="#172033"/><circle cx="270" cy="167" r="6" fill="#b54720"/>
+<g font-family="Arial,sans-serif" font-size="21" fill="#172033"><text x="200" y="33" text-anchor="middle">Constant speed; changing velocity</text><text x="151" y="182">O</text><text x="283" y="184">P</text><text x="281" y="68">v</text><text x="214" y="193">r</text><text x="211" y="147">a</text><text x="286" y="115">ω</text><text x="200" y="307" text-anchor="middle">Velocity tangent; acceleration inward</text></g>
+</svg>

@@ -1,0 +1,202 @@
+---
+layout: none
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+  <title>{{ page.title | default: "Exam Timetable" }} | A-level Platform</title>
+  <meta name="description" content="OxfordAQA International AS & A-Level Exam Timetable for KCIS East Campus. January 2027 dates, codes, and durations.">
+  <link rel="stylesheet" href="/assets/css/exam-timetable.css">
+</head>
+<body>
+  {% include nav.html %}
+
+  <a class="skip-link sr-only-focusable" href="#main-content">Skip to main content</a>
+  <main id="main-content" class="container exam-timetable-page mt-4" role="main" data-exam-timetable>
+
+    <!-- Top Navigation / Breadcrumb -->
+    <nav class="timetable-breadcrumb mb-3" aria-label="Breadcrumb">
+      <a href="/" class="btn-back-link">
+        <i class="bi bi-arrow-left"></i>
+        <span>Back to Home</span>
+      </a>
+    </nav>
+
+    <!-- Timetable Document Container -->
+    <div class="timetable-document">
+      
+      <!-- Academic Document Header -->
+      <header class="timetable-header">
+        <div class="timetable-header-main">
+          <div class="timetable-meta-eyebrow">Kang Chiao International School · East Campus</div>
+          <h1 class="timetable-title">Examination Timetable</h1>
+          <div class="timetable-subtitle">OxfordAQA International AS &amp; A-Level · January 2027 Series (1X27)</div>
+        </div>
+
+        <div class="timetable-header-action">
+          <a href="{{ site.data.exam_timetable.series_info.pdf_link | default: '/assets/pdf/exam-timetable-1X27.pdf' }}" class="btn-pdf-download" target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-file-earmark-pdf"></i>
+            <span>Official Timetable (PDF)</span>
+          </a>
+        </div>
+      </header>
+
+      <!-- Homeroom Teacher Notice Banner -->
+      <aside class="timetable-notice" role="note" aria-label="Exam notice">
+        <i class="bi bi-info-circle timetable-notice-icon"></i>
+        <div class="timetable-notice-body">
+          <strong>Notice on Exam Start Times:</strong>
+          Exact exam start times will be sent by your Homeroom Teacher. Use this schedule to check examination dates, syllabus unit codes, and paper durations.
+        </div>
+      </aside>
+
+      <!-- Control Toolbar: Cohort Tabs, Subject Filter, Search -->
+      <section class="timetable-toolbar" aria-label="Timetable filters">
+        <!-- Cohort Switcher (Segmented Control) -->
+        <div class="timetable-cohort-control" role="group" aria-label="Filter by cohort">
+          <button type="button" class="cohort-seg-btn active" data-cohort-filter data-cohort="ALL" aria-pressed="true">
+            All Papers <span class="seg-count">({{ site.data.exam_timetable.exams.size | default: 41 }})</span>
+          </button>
+          <button type="button" class="cohort-seg-btn" data-cohort-filter data-cohort="AS" aria-pressed="false">
+            AS · Grade 11 <span class="seg-count">(18)</span>
+          </button>
+          <button type="button" class="cohort-seg-btn" data-cohort-filter data-cohort="A2" aria-pressed="false">
+            A2 · Grade 12 <span class="seg-count">(23)</span>
+          </button>
+        </div>
+
+        <!-- Filter Tools: Subject & Search -->
+        <div class="timetable-tools">
+          <div class="timetable-select-wrap">
+            <select class="timetable-select" data-subject-filter aria-label="Filter by subject">
+              <option value="ALL">All Subjects</option>
+              {% for subject in site.data.exam_timetable.subjects %}
+                <option value="{{ subject.name }}">{{ subject.name }}</option>
+              {% endfor %}
+            </select>
+          </div>
+
+          <div class="timetable-search-wrap">
+            <i class="bi bi-search search-icon"></i>
+            <input type="search" class="timetable-search" data-timetable-search placeholder="Filter by code, subject, paper..." aria-label="Search examinations">
+          </div>
+        </div>
+      </section>
+
+      <!-- Active Filter Summary & View Switcher -->
+      <div class="timetable-status-bar">
+        <div class="timetable-status-meta">
+          <span>Showing <strong data-filter-count>{{ site.data.exam_timetable.exams.size | default: 41 }}</strong> of {{ site.data.exam_timetable.exams.size | default: 41 }} scheduled papers</span>
+          <span class="series-tag">05 Jan 2027 – 19 Jan 2027</span>
+        </div>
+
+        <!-- View Mode Switcher: Calendar vs List -->
+        <div class="timetable-view-control" role="group" aria-label="Select timetable view">
+          <button type="button" class="view-seg-btn active" data-view-mode="calendar" aria-pressed="true">
+            <i class="bi bi-calendar3"></i>
+            <span>Calendar</span>
+          </button>
+          <button type="button" class="view-seg-btn" data-view-mode="list" aria-pressed="false">
+            <i class="bi bi-list-ul"></i>
+            <span>List</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Calendar View (Default) -->
+      <div class="timetable-calendar-container" data-timetable-calendar>
+        <div class="timetable-loading">
+          <div class="spinner-border spinner-border-sm text-secondary me-2" role="status"></div>
+          <span>Loading examination calendar...</span>
+        </div>
+      </div>
+
+      <!-- Schedule Ledger Stream (List View) -->
+      <div class="timetable-ledger" data-timetable-days style="display: none;">
+        <div class="timetable-loading">
+          <div class="spinner-border spinner-border-sm text-secondary me-2" role="status"></div>
+          <span>Loading examination schedule...</span>
+        </div>
+      </div>
+
+      <!-- Document Footer -->
+      <footer class="timetable-doc-footer">
+        <div class="footer-meta">
+          <span>Oxford International AQA Examinations · Confirmed Timetable (1X27)</span>
+        </div>
+        <div class="footer-links">
+          <a href="{{ site.data.exam_timetable.series_info.pdf_link | default: '/assets/pdf/exam-timetable-1X27.pdf' }}" target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-download me-1"></i> Download Timetable PDF
+          </a>
+        </div>
+      </footer>
+
+    </div>
+  </main>
+
+  <!-- Exam Detail Modal -->
+  <div id="examDetailModal" class="exam-modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Exam Details">
+    <div class="exam-modal-dialog">
+      <div class="exam-modal-box">
+        <div class="exam-modal-header">
+          <div class="d-flex align-items-center gap-2">
+            <span class="ledger-badge" id="modalExamCohort">AS</span>
+            <code class="unit-code fs-6" id="modalExamCode">CODE</code>
+          </div>
+          <button type="button" class="exam-modal-close" id="modalCloseBtn" aria-label="Close details">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
+        <div class="exam-modal-body">
+          <div class="exam-modal-subject" id="modalExamSubject">Subject</div>
+          <h3 class="exam-modal-paper" id="modalExamPaper">Paper Title</h3>
+          <p class="exam-modal-title" id="modalExamTitle">Full Paper Specification</p>
+
+          <div class="exam-modal-grid">
+            <div class="exam-modal-item">
+              <span class="modal-item-label"><i class="bi bi-calendar3"></i> Date</span>
+              <strong class="modal-item-val" id="modalExamDate">Date</strong>
+              <small class="text-muted" id="modalExamDay">Day</small>
+            </div>
+            <div class="exam-modal-item">
+              <span class="modal-item-label"><i class="bi bi-clock"></i> Duration</span>
+              <strong class="modal-item-val" id="modalExamDuration">Duration</strong>
+              <small class="text-muted">Standard timing</small>
+            </div>
+            <div class="exam-modal-item">
+              <span class="modal-item-label"><i class="bi bi-mortarboard"></i> Cohort</span>
+              <strong class="modal-item-val" id="modalExamGrade">Grade</strong>
+              <small class="text-muted">OxfordAQA</small>
+            </div>
+            <div class="exam-modal-item">
+              <span class="modal-item-label"><i class="bi bi-file-earmark-check"></i> Series</span>
+              <strong class="modal-item-val">1X27</strong>
+              <small class="text-muted">January 2027</small>
+            </div>
+          </div>
+
+          <div class="exam-modal-notice">
+            <i class="bi bi-info-circle text-info me-2"></i>
+            <span>Exact exam start times will be sent by your Homeroom Teacher.</span>
+          </div>
+        </div>
+        <div class="exam-modal-footer">
+          <a href="{{ site.data.exam_timetable.series_info.pdf_link | default: '/assets/pdf/exam-timetable-1X27.pdf' }}" class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-file-earmark-pdf me-1"></i> Official PDF
+          </a>
+          <button type="button" class="btn btn-sm btn-secondary" id="modalDismissBtn">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Embedded JSON Data for Instant Filtering -->
+  <script id="exam-timetable-data" type="application/json">
+    {{ site.data.exam_timetable | jsonify }}
+  </script>
+
+  <script src="/assets/js/exam_timetable.js"></script>
+  {% include footer.html %}
+</body>
+</html>
