@@ -536,8 +536,9 @@ a:focus, button:focus { box-shadow: 0 0 0 3px rgba(100,150,255,0.08); }
   outline: 0 !important;
   color: var(--text) !important;
   font-size: 1.08em !important;
-  font-family: 'Latin Modern Math', 'STIX Two Math', 'Cambria Math', 'Times New Roman', serif !important;
-  line-height: 1.4 !important;
+  /* Do NOT force font-family or line-height here: MathJax CHTML relies on its
+     dedicated web fonts (MJXTEX) and line-height: 0 to calculate and stretch delimiters.
+     Overriding line-height stretches table rows beyond delimiter heights. */
 }
 
 /* Inline math should blend seamlessly with text.
@@ -562,10 +563,10 @@ mjx-container[jax="CHTML"][display="false"] {
 }
 
 /* Matrix environments (mjx-mtable / mjx-mtr / mjx-mtd) need to be visible
-   and not clipped by any ancestor's overflow settings. */
+   and keep line-height: 0 so table cells do not expand beyond delimiter heights. */
 mjx-mtable, mjx-mtr, mjx-mtd {
   overflow: visible !important;
-  line-height: normal !important;
+  line-height: 0 !important;
 }
 
 /* Ensure display math inside list items stays left-aligned with bullet text */
@@ -1542,6 +1543,14 @@ html[data-bs-theme="dark"] .site-breadcrumb .breadcrumb-home:hover {
 @media (max-width: 768px) {
   .site-breadcrumb .breadcrumb {
     font-size: 0.78rem;
+    flex-wrap: wrap;
+    row-gap: 0.35rem;
+  }
+
+  .site-breadcrumb .breadcrumb-item {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: break-word;
   }
 
   .site-breadcrumb .breadcrumb-home {
@@ -1553,9 +1562,6 @@ html[data-bs-theme="dark"] .site-breadcrumb .breadcrumb-home:hover {
     display: none;
   }
 
-  .site-breadcrumb .breadcrumb-item:nth-child(n+3):not(:last-child) {
-    display: none;
-  }
 }
 
 

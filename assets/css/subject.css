@@ -64,8 +64,10 @@ html {
   letter-spacing: 0.005em;
   word-spacing: 0.02em;
   max-width: var(--content-max);
-  hyphens: auto;
-  -webkit-hyphens: auto;
+  hyphens: none;
+  -webkit-hyphens: none;
+  word-break: normal;
+  overflow-wrap: break-word;
   scroll-margin-top: 100px; /* Account for fixed elements */
   animation: none;
 }
@@ -141,12 +143,17 @@ html {
 }
 
 /* Content heading spacing and style optimization */
+#content-container span[id] {
+  scroll-margin-top: 5rem;
+}
+
 #content-container h1,
 #content-container h2,
 #content-container h3,
 #content-container h4,
 #content-container h5,
 #content-container h6 {
+  scroll-margin-top: 5rem;
   margin: 1.25rem 0 0.6rem 0 !important;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -2150,3 +2157,39 @@ body.scheme-alevel .table-of-contents .toc-row > a.active {
   }
 }
 
+/* Guided study pages keep the existing theme with quieter lesson formatting. */
+body.study-page #content-container {
+  width: 100% !important;
+  max-width: min(76ch, 100%) !important;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+body.study-page #content-container h3 {
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--toc-divider-color);
+}
+
+body.study-page #content-container details {
+  margin: 0.75rem 0;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--toc-divider-color);
+  border-radius: 0.4rem;
+}
+
+body.study-page #content-container summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+body.study-page #content-container summary:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+body.study-page #content-container mjx-container[display="true"] {
+  background: transparent;
+  padding: 0.5em 0 !important;
+  max-width: 100%;
+}
