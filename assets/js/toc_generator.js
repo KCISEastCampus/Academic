@@ -423,13 +423,13 @@ function initReadingProgress() {
 
   if (!progressBar || !progressText || !contentContainer) return;
 
-  let cachedWindowHeight = window.innerHeight;
-  let cachedContentTop = contentContainer.offsetTop;
-  let cachedContentHeight = contentContainer.offsetHeight;
+  let cachedWindowHeight = 0;
+  let cachedContentTop = 0;
+  let cachedContentHeight = 0;
 
   function updateDimensions() {
     cachedWindowHeight = window.innerHeight;
-    cachedContentTop = contentContainer.offsetTop;
+    cachedContentTop = contentContainer.getBoundingClientRect().top + window.pageYOffset;
     cachedContentHeight = contentContainer.offsetHeight;
     updateProgress(); // Ensure progress is correct after resize
   }
@@ -441,6 +441,8 @@ function initReadingProgress() {
   if (window.ResizeObserver) {
     const resizeObserver = new ResizeObserver(updateDimensions);
     resizeObserver.observe(contentContainer);
+    // Content can move when the header changes without changing its own size.
+    resizeObserver.observe(document.body);
   }
 
   function updateProgress() {
@@ -469,7 +471,11 @@ function initReadingProgress() {
     () => {
       if (ticking) return;
       window.requestAnimationFrame(() => {
-        updateProgress();
+        if (window.ResizeObserver) {
+          updateProgress();
+        } else {
+          updateDimensions();
+        }
         ticking = false;
       });
       ticking = true;
@@ -477,6 +483,6 @@ function initReadingProgress() {
     { passive: true }
   );
 
-  updateProgress();
+  updateDimensions();
 }
 

@@ -20,5 +20,5 @@
 **Action:** Always hoist invariant object creations, especially `new RegExp()`, out of iterations. Compile the search pattern once per keystroke instead of inside the filter loop.
 
 ## 2026-09-21 - Layout Thrashing in Scroll Event
-**Learning:** Found layout thrashing in `assets/js/toc_generator.js` where `offsetHeight`, `offsetTop`, and `innerHeight` were being queried inside a scroll event handler (`updateProgress`) that also updated DOM styles (`style.width`). This forces synchronous layout recalculations on every scroll tick.
-**Action:** Always cache layout dimensions (`offsetHeight`, `offsetTop`, etc.) outside of scroll event handlers and update them using a `ResizeObserver` and `resize` event listeners to prevent layout thrashing.
+**Learning:** The reading-progress handler reads content geometry on each scroll. MathJax, lazy images and expanded solutions can change that geometry. `offsetTop` is relative to the offset parent, so it does not necessarily give the content's position in the document.
+**Action:** Cache document coordinates and dimensions when `ResizeObserver` is available. Refresh them on content, body and window size changes. Keep fresh geometry reads on scroll as a fallback when the observer is unavailable. Measure browser performance before claiming a frame-rate improvement.
