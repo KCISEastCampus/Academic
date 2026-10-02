@@ -15,6 +15,10 @@ alevel:
     name: A2 Math - Statistics
     icon: "📕"
     path: /alevel/a2-mathematics/statistics
+  - id: a2furthermathematics
+    name: A2 Further Math - Pure
+    icon: "📕"
+    path: /alevel/a2-further-mathematics/
   - id: a2physics
     name: A2 Physics
     icon: "📕"
