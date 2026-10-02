@@ -143,6 +143,10 @@ html {
 }
 
 /* Content heading spacing and style optimization */
+#content-container span[id] {
+  scroll-margin-top: 5rem;
+}
+
 #content-container h1,
 #content-container h2,
 #content-container h3,
