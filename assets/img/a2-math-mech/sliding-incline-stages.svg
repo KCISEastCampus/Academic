@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="600" viewBox="0 0 400 600" role="img" aria-labelledby="title desc">
+<title id="title">Friction reverses when sliding reverses</title><desc id="desc">On a thirty-degree slope, weight acts vertically down and reaction normal to the plane. During upward sliding friction acts down the slope. After stopping, the block slides down and friction acts up the slope. The motion arrows are separate from the forces.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#172033"/></marker><marker id="motion" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#a64025"/></marker></defs>
+<rect width="400" height="600" rx="8" fill="white"/>
+<g font-family="Arial,sans-serif" font-size="21" fill="#172033">
+<text x="35" y="30">Sliding up the plane</text>
+<path d="M50 240L350 66M50 240H115" stroke="#8494a6" stroke-width="2" fill="none"/>
+<circle cx="200" cy="153" r="7" fill="#e4f1ed" stroke="#172033"/>
+<g stroke="#172033" stroke-width="2.5" fill="none" marker-end="url(#arrow)"><path d="M200 153L148 63"/><path d="M200 153V263"/><path d="M200 153L105 208"/></g>
+<path d="M265 77L343 32" stroke="#a64025" stroke-width="2" marker-end="url(#motion)"/>
+<text x="125" y="65">R</text><text x="216" y="254">5g</text><text x="62" y="192">0.2R</text><text x="268" y="109" fill="#a64025">Motion</text><text x="96" y="233">30°</text>
+<path d="M25 295H375" stroke="#d3dbe2"/>
+<g transform="translate(0 300)">
+<text x="35" y="30">Sliding down the plane</text>
+<path d="M50 240L350 66M50 240H115" stroke="#8494a6" stroke-width="2" fill="none"/>
+<circle cx="200" cy="153" r="7" fill="#e4f1ed" stroke="#172033"/>
+<g stroke="#172033" stroke-width="2.5" fill="none" marker-end="url(#arrow)"><path d="M200 153L148 63"/><path d="M200 153V263"/><path d="M200 153L295 98"/></g>
+<path d="M143 140L65 185" stroke="#a64025" stroke-width="2" marker-end="url(#motion)"/>
+<text x="125" y="65">R</text><text x="216" y="254">5g</text><text x="294" y="83">0.2R</text><text x="43" y="132" fill="#a64025">Motion</text><text x="96" y="233">30°</text>
+</g></g></svg>

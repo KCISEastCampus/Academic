@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400" role="img" aria-labelledby="title desc">
+  <title id="title">Velocity and acceleration on a parabolic path</title>
+  <desc id="desc">For x at least zero, the path y equals x squared over four minus two x has its lowest point at (4, minus 4). At time two seconds the velocity points right and the acceleration points up. Arrows show directions, not a common magnitude scale.</desc>
+  <rect width="400" height="400" fill="#fff" rx="12"/>
+  <defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7" fill="#172033"/></marker><marker id="green" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7" fill="#087a4a"/></marker></defs>
+  <g fill="none" stroke="#172033" stroke-width="2" marker-end="url(#arrow)"><path d="M65 80H368"/><path d="M65 322V45"/></g>
+  <path d="M65 80Q190 480 315 80" fill="none" stroke="#087a4a" stroke-width="3"/>
+  <g fill="none" stroke="#94a3b8" stroke-dasharray="5 5"><path d="M190 80V280H65"/></g>
+  <circle cx="190" cy="280" r="5" fill="#172033"/>
+  <g fill="none" stroke-width="3"><path d="M190 280H280" stroke="#087a4a" marker-end="url(#green)"/><path d="M190 280V190" stroke="#172033" marker-end="url(#arrow)"/></g>
+  <g font-family="Arial,sans-serif" font-size="21" fill="#172033">
+    <text x="377" y="86">x</text><text x="75" y="48">y</text><text x="43" y="105">O</text><text x="183" y="70">4</text><text x="30" y="287">−4</text>
+    <text x="150" y="309">(4, −4), t = 2 s</text><text x="224" y="263" fill="#087a4a">v = 2i</text><text x="203" y="209">a = 2j</text>
+    <text x="228" y="137" font-size="19">y = x²/4 − 2x</text>
+    <text x="200" y="30" text-anchor="middle">Velocity and acceleration</text>
+    <text x="200" y="358" text-anchor="middle" font-size="19">Arrows show directions.</text>
+    <text x="200" y="387" text-anchor="middle" font-size="19">Velocity and acceleration have different units.</text>
+  </g>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="540" viewBox="0 0 400 540" role="img" aria-labelledby="title desc">
+<title id="title">A rectangular lamina before and after free suspension</title><desc id="desc">Before rotation P is the top-left vertex of a four by two rectangle. G is two units across and one down from P. After rotation G is vertically below P and edge PA makes angle theta with the vertical.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#172033"/></marker></defs>
+<rect width="400" height="540" rx="8" fill="white"/>
+<g font-family="Arial,sans-serif" font-size="21" fill="#172033"><text x="85" y="30">Original position</text><text x="89" y="274">After suspension</text></g>
+<path d="M80 70H320V190H80Z" fill="#e4f1ed" stroke="#172033" stroke-width="2"/><path d="M80 70L200 130" stroke="#b54720" stroke-width="2" stroke-dasharray="5 4"/>
+<circle cx="200" cy="130" r="4" fill="#b54720"/>
+<g font-family="Arial,sans-serif" font-size="20" fill="#172033"><text x="48" y="67">P</text><text x="328" y="68">C</text><text x="48" y="208">A</text><text x="328" y="208">B</text><text x="214" y="135">G</text><text x="186" y="63">4 cm</text><text x="11" y="137">2 cm</text></g>
+<path d="M180 315L108.45 350.78L180 493.89L251.55 458.11Z" fill="#e4f1ed" stroke="#172033" stroke-width="2"/>
+<!-- Body coordinates: P=(0,0), A=(0,2), B=(4,2), C=(4,0), rotated with G below P. -->
+<path d="M180 300V507" stroke="#8494a6" stroke-dasharray="5 5"/>
+<circle cx="180" cy="404.44" r="5" fill="#b54720"/>
+<path d="M180 404.44V475" stroke="#172033" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M180 315V283" stroke="#172033" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M180 351A36 36 0 0 1 147.8 331.1" stroke="#b54720" fill="none" stroke-width="2"/>
+<g font-family="Arial,sans-serif" font-size="20" fill="#172033"><text x="187" y="313">P</text><text x="84" y="356">A</text><text x="188" y="505">B</text><text x="262" y="464">C</text><text x="194" y="409">G</text><text x="193" y="455">Weight</text><text x="147" y="370">θ</text><text x="128" y="530">PG is vertical</text></g>
+</svg>

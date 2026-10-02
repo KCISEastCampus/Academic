@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="320" viewBox="0 0 400 320" role="img" aria-labelledby="title desc">
+  <title id="title">An overhanging beam approaching the tipping limit</title>
+  <desc id="desc">A uniform 4 metre beam is supported at A and at C, 3 metres from A. Its 80 newton weight acts at the midpoint. A load P acts down at B. As P increases, the reaction at A falls to zero and the beam is about to tip about C.</desc>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#172033"/></marker></defs>
+  <rect width="400" height="320" rx="8" fill="white"/>
+  <path d="M40 120H340" stroke="#527568" stroke-width="8"/>
+  <g fill="#e6edf2" stroke="#9aa7b5" stroke-width="2"><path d="M40 128L26 151H54ZM265 128L251 151H279Z"/></g>
+  <g stroke="#172033" stroke-width="2.5" fill="none" marker-end="url(#arrow)">
+    <path d="M40 120V25"/><path d="M265 120V25"/><path d="M190 120V230"/><path d="M340 120V230"/>
+  </g>
+  <g fill="none" stroke="#9aa7b5" stroke-width="2"><path d="M40 275H340M40 267V283M190 267V283M265 267V283M340 267V283"/></g>
+  <g fill="#172033" font-family="Arial, sans-serif" font-size="21">
+    <text x="52" y="60">R<tspan font-size="15" dy="5">A</tspan></text>
+    <text x="277" y="60">R<tspan font-size="15" dy="5">C</tspan></text>
+    <text x="25" y="178">A</text><text x="258" y="178">C</text><text x="335" y="147">B</text>
+    <text x="128" y="213">80 N</text><text x="354" y="213">P</text>
+    <text x="94" y="306">2 m</text><text x="207" y="306">1 m</text><text x="282" y="306">1 m</text>
+  </g>
+</svg>

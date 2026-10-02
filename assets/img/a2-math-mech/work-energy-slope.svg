@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="340" viewBox="0 0 400 340" role="img" aria-labelledby="title desc">
+<title id="title">Work and energy on a rough slope</title><desc id="desc">A block is pulled up a slope at angle alpha. Driving force D acts up the plane, friction f down the plane, normal reaction R perpendicular to the plane and weight mg vertically down. Distance s is measured along the slope and height h vertically. The driving work supplies the gains in kinetic and potential energy and the work done against friction.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#172033"/></marker></defs>
+<rect width="400" height="340" rx="8" fill="white"/>
+<path d="M40 280L340 130V280Z" fill="#f2f5f7" stroke="#8494a6" stroke-width="2"/>
+<rect x="160" y="175" width="60" height="40" rx="4" fill="#dcece4" stroke="#527568" stroke-width="2" transform="rotate(-26.565 190 195)"/>
+<g fill="none" stroke="#172033" stroke-width="2" marker-end="url(#arrow)"><path d="M190 195L278 151"/><path d="M190 195L111 235"/><path d="M190 195L150 115"/><path d="M190 195V273"/><path d="M70 233L300 118"/><path d="M362 280V130"/></g>
+<path d="M340 130H375M340 280H375" stroke="#8494a6" stroke-dasharray="5 4"/>
+<path d="M86 280A46 46 0 0 0 81 259" stroke="#8494a6" fill="none"/>
+<g font-family="Arial,sans-serif" font-size="21" fill="#172033"><text x="282" y="153">D</text><text x="91" y="250">f</text><text x="131" y="109">R</text><text x="198" y="269">mg</text><text x="164" y="170">s</text><text x="374" y="213">h</text><text x="93" y="272">α</text><text x="113" y="39">h = s sin α</text><text x="65" y="323">Driving work = ΔKE + ΔPE + fs</text></g>
+</svg>
