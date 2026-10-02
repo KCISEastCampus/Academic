@@ -19,6 +19,9 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Test reading progress
+        run: node scripts/test-reading-progress.js
+
       - name: Install markdownlint-cli
         run: npm install -g markdownlint-cli
 

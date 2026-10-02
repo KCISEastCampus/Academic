@@ -18,3 +18,7 @@
 ## 2026-09-17 - RegExp Compilation in Loops
 **Learning:** Found an $O(N)$ regex compilation inside the loop for the Table of Contents search (`assets/js/toc_generator.js`). On every keystroke, the exact same regex was compiled for every heading being filtered. Regex compilation is expensive and doing it repeatedly for the same pattern wastes CPU cycles, increasing latency when typing.
 **Action:** Always hoist invariant object creations, especially `new RegExp()`, out of iterations. Compile the search pattern once per keystroke instead of inside the filter loop.
+
+## 2026-09-21 - Layout Thrashing in Scroll Event
+**Learning:** The reading-progress handler reads content geometry on each scroll. MathJax, lazy images and expanded solutions can change that geometry. `offsetTop` is relative to the offset parent, so it does not necessarily give the content's position in the document.
+**Action:** Cache document coordinates and dimensions when `ResizeObserver` is available. Refresh them on content, body and window size changes. Keep fresh geometry reads on scroll as a fallback when the observer is unavailable. Measure browser performance before claiming a frame-rate improvement.
