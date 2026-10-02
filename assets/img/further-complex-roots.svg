@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 460" role="img" aria-labelledby="title desc">
+<title id="title">Three cube roots of 8i on an Argand diagram</title>
+<desc id="desc">The roots are square root of 3 plus i, minus square root of 3 plus i, and minus 2i. They form an equilateral triangle on the circle of radius 2, centred at the origin. Their arguments are pi over 6, 5 pi over 6 and minus pi over 2.</desc>
+<rect width="480" height="460" rx="12" fill="#fff"/>
+<g fill="none">
+<circle cx="240" cy="215" r="150" stroke="#94a3b8" stroke-width="2"/>
+<path d="M45 215H435 M240 395V30" stroke="#334155" stroke-width="2"/>
+<path d="M425 210L435 215L425 220 M235 40L240 30L245 40" stroke="#334155" stroke-width="2"/>
+<path d="M110.096 140H369.904L240 365Z" fill="#e0f2fe" fill-opacity=".65" stroke="#0284c7" stroke-width="2.5"/>
+<path d="M240 215L369.904 140 M240 215L110.096 140 M240 215V365" stroke="#0284c7" stroke-dasharray="5 4"/>
+<path d="M285 215A45 45 0 0 0 278.971 192.5" stroke="#b45309" stroke-width="2"/>
+</g>
+<g fill="#0284c7">
+<circle cx="110.096" cy="140" r="5"/>
+<circle cx="369.904" cy="140" r="5"/>
+<circle cx="240" cy="365" r="5"/>
+</g>
+<g font-family="Arial, sans-serif" font-size="19" fill="#172033">
+<text x="22" y="116">−√3 + i</text>
+<text x="364" y="116">√3 + i</text>
+<text x="250" y="388">−2i</text>
+<text x="224" y="237">0</text>
+<text x="429" y="242">Re</text>
+<text x="251" y="39">Im</text>
+<text x="292" y="207" fill="#b45309">π/6</text>
+<text x="240" y="437" text-anchor="middle">Radius 2 · Angular spacing 2π/3</text>
+</g>
+</svg>
