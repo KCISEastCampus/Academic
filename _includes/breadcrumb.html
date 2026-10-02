@@ -19,6 +19,7 @@
     {% assign crumbs = page.url | split: '/' %}
     {% for crumb in crumbs offset: 1 %}
       {% if crumb != "" and crumb != "index" %}
+        {% unless crumb == "a2-mathematics" and page.subject == "m2" %}
         {% if forloop.last %}
           <li class="breadcrumb-item active" aria-current="page">
             {{ page.title | default: crumb }}
@@ -33,6 +34,8 @@
                 <a href="/igcse/">IGCSE</a>
               {% when "a2-mathematics" %}
                 <a href="/alevel/a2-mathematics/">A2 Pure Mathematics</a>
+              {% when "mechanics" %}
+                <a href="/alevel/a2-mathematics/mechanics/">A2 Mechanics</a>
               {% when "student-council" %}
                 <a href="/student-council/">Student Council</a>
               {% else %}
@@ -43,6 +46,7 @@
             {% endcase %}
           </li>
         {% endif %}
+        {% endunless %}
       {% endif %}
     {% endfor %}
   </ol>

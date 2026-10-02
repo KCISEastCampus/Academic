@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="350" viewBox="0 0 400 350" role="img" aria-labelledby="title desc">
+<title id="title">Projectile components and gravity</title><desc id="desc">The origin is the launch point. Initial velocity has horizontal component u x and upward component u y. The curved path rises then returns to the launch level. After release the only force is weight vertically down.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#172033"/></marker></defs>
+<rect width="400" height="350" rx="8" fill="white"/>
+<g fill="none" stroke="#172033" stroke-width="2" marker-end="url(#arrow)"><path d="M50 280H360"/><path d="M50 280V60"/><path d="M50 280L130 220"/></g>
+<path d="M50 280Q172.45 188.16 294.9 280" fill="none" stroke="#527568" stroke-width="3"/>
+<path d="M50 280H130V220" fill="none" stroke="#8494a6" stroke-dasharray="5 4"/>
+<circle cx="172.45" cy="234.08" r="5" fill="#b54720"/><path d="M172.45 234.08V294" stroke="#172033" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M85 280A35 35 0 0 0 78 259" stroke="#8494a6" fill="none"/>
+<g font-family="Arial,sans-serif" font-size="21" fill="#172033"><text x="28" y="303">O</text><text x="365" y="285">x</text><text x="28" y="65">y</text><text x="97" y="300">uₓ</text><text x="137" y="254">uᵧ</text><text x="103" y="208">V</text><text x="91" y="274">θ</text><text x="185" y="276">mg</text><text x="87" y="37">Gravity acts downwards</text><text x="103" y="331">Launch level: y = 0</text></g>
+</svg>

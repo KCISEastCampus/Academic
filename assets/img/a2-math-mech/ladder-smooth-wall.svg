@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400" role="img" aria-labelledby="title desc">
+  <title id="title">Ladder against a smooth wall</title>
+  <desc id="desc">A uniform ladder of weight 200 newtons makes 60 degrees with the ground. Its top B touches a smooth wall on the left, with horizontal reaction S to the right. At its foot A, normal reaction R acts upwards and friction F towards the wall. Weight acts down at the midpoint.</desc>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#172033"/></marker></defs>
+  <rect width="400" height="400" rx="8" fill="white"/>
+  <g fill="none" stroke="#9aa7b5" stroke-width="2">
+    <path d="M50 35V340H355M50 55L35 70M50 110L35 125M50 165L35 180M50 220L35 235M50 275L35 290M60 340L45 355M280 340L265 355M335 340L320 355"/>
+    <path d="M160 340A40 40 0 0 1 180 305.4"/>
+  </g>
+  <path d="M50 80L200 340" stroke="#527568" stroke-width="8"/>
+  <g stroke="#172033" stroke-width="2.5" fill="none" marker-end="url(#arrow)">
+    <path d="M50 80H155"/><path d="M200 340V245"/><path d="M200 340H90"/><path d="M125 210V305"/>
+  </g>
+  <g fill="#172033" font-family="Arial, sans-serif" font-size="21">
+    <text x="64" y="38">Smooth wall</text><text x="18" y="84">B</text><text x="207" y="362">A</text>
+    <text x="104" y="66">S</text><text x="214" y="276">R</text><text x="127" y="370">F</text>
+    <text x="55" y="269">200 N</text><text x="140" y="319">60°</text>
+  </g>
+</svg>
