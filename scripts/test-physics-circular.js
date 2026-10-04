@@ -47,7 +47,7 @@ const speed = Math.sqrt(g * 150), mass = 2500 / speed;
 rounded(mass, '65'); close(mass * speed, 2500);
 close(mass * speed ** 2 / 150, mass * g);
 
-for (const slug of ['', 'circular-motion/', 'simple-harmonic-motion/', 'gravitational-fields-and-satellites/', 'electric-fields/', 'capacitance/', 'quick-reference/']) {
+for (const slug of ['', 'circular-motion/', 'simple-harmonic-motion/', 'gravitational-fields-and-satellites/', 'electric-fields/', 'capacitance/', 'capacitor-charge-and-discharge/', 'quick-reference/']) {
   const base = `/alevel/a2-physics/${slug}`;
   const html = fs.readFileSync(path.join('_site', base, 'index.html'), 'utf8');
   assert(!html.includes('<p>$$'), `Raw display math in ${base}`);

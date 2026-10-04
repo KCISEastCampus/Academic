@@ -316,32 +316,34 @@ $$E = \frac{1}{2}QV = \frac{1}{2}CV^2 = \frac{Q^2}{2C}$$
 
 ### 4.1 Capacitor Charging and Discharging
 
-* **Charging**: When a capacitor is connected to a DC supply through a resistor:
-    * Charge increases exponentially: $Q = Q_0(1 - e^{-t/RC})$
-    * PD increases: $V = V_0(1 - e^{-t/RC})$
-    * Current decreases exponentially: $I = I_0 e^{-t/RC}$
-* **Discharging**: When a charged capacitor is connected through a resistor:
-    * Charge decays exponentially: $Q = Q_0 e^{-t/RC}$
-    * PD decays: $V = V_0 e^{-t/RC}$
-    * Current decays: $I = I_0 e^{-t/RC}$
+[Open the full Capacitor Charge and Discharge lesson](/alevel/a2-physics/capacitor-charge-and-discharge/) for circuits, examples, practice and required practical 6.
+
+For constant $R$ and $C$, with negligible other resistance and leakage:
+
+| Quantity | Charging from zero | Discharging from $V_0$ |
+|---|---|---|
+| Capacitor voltage | $V_C=V_s(1-e^{-t/RC})$ | $V_C=V_0e^{-t/RC}$ |
+| Charge | $Q=CV_s(1-e^{-t/RC})$ | $Q=Q_0e^{-t/RC}$ |
+| Current magnitude | $I=(V_s/R)e^{-t/RC}$ | $I=(V_0/R)e^{-t/RC}$ |
+
+During charging, $V_s=IR+V_C$. As capacitor voltage rises, resistor voltage and current fall. During discharge, $I=V_C/R$; current falls as voltage falls. Conventional current reverses through the resistor. These equations give magnitudes; a common signed-current convention gives opposite signs.
 
 ### 4.2 Time Constant (Capacitor)
 
-$$\tau = RC$$
-* $\tau$ = time constant (s)
-* $R$ = resistance ($\Omega$)
-* $C$ = capacitance (F)
-* After time $\tau$, the charge (or PD) falls to $1/e \approx 37\%$ of its initial value.
-* After time $5\tau$, the capacitor is considered fully discharged (< 1%).
+$$\tau=RC,\qquad T_{1/2}=RC\ln2.$$
+
+* At $t=RC$, discharge charge, voltage and current fall to about 36.8% of their initial values.
+* Charging from zero reaches about 63.2% of the final charge and voltage, while current falls to about 36.8% of its initial value.
+* $5RC$ gives about 99.3% completion, not an exact end point.
+* Discharge energy follows $E_{\text{stored}}=E_0e^{-2t/RC}$, so its time to halve is $RC\ln2/2$.
 
 ### 4.3 Charging and Discharging Graphs
 
-
-| Quantity | Charging | Discharging |
-|----------|----------|-------------|
-| $Q$ vs $t$ | Rises exponentially to $Q_0$ | Decays exponentially to 0 |
-| $V$ vs $t$ | Rises exponentially to $V_0$ | Decays exponentially to 0 |
-| $I$ vs $t$ | Decays exponentially from $I_0$ to 0 | Decays exponentially from $I_0$ to 0 (opposite direction) |
+* Charging $Q$ and $V_C$ rise towards fixed limits. Discharge $Q$, $V_C$ and current magnitude approach zero with negative gradients that become less negative.
+* Current is the gradient of charging $Q$ against $t$. During discharge, outgoing current magnitude is the negative of the charge gradient.
+* Area under current magnitude against time gives charge **moved**, not automatically charge remaining. On discharge, subtract charge moved from initial charge.
+* Required practical 6: plot $\ln(V_C/1\,\mathrm V)$ against time for discharge, or $\ln[(V_s-V_C)/1\,\mathrm V]$ for charging. Gradient $m=-1/(RC)$, so $RC=-1/m$ and $C=-1/(Rm)$.
+* A voltmeter across the capacitor adds a parallel discharge path. Its input resistance should be much greater than $R$, or included when calculating the effective resistance.
 
 ### 4.4 Exponential Decay in Radioactivity
 

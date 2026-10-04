@@ -426,7 +426,7 @@ Use $V=Q/C$ and $E_{\text{field}}=V/d$. The plate separation stays fixed.
 
 Before moving on, check that you can identify the charge on one plate, interpret both graph gradients, derive stored energy from a graph, explain polar molecule rotation, and choose the correct fixed quantity before predicting a change.
 
-[Previous lesson: Electric Fields](/alevel/a2-physics/electric-fields/) · [PH03 course index](/alevel/a2-physics/) · [Charge and discharge reference notes](/alevel/a2-physics/quick-reference/#41-capacitor-charging-and-discharging)
+[Previous lesson: Electric Fields](/alevel/a2-physics/electric-fields/) · [PH03 course index](/alevel/a2-physics/) · [Next lesson: Capacitor Charge and Discharge](/alevel/a2-physics/capacitor-charge-and-discharge/)
 
 <details markdown="1">
 <summary>Sources and exam wording</summary>
