@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="620" viewBox="0 0 400 620" role="img" aria-labelledby="title desc">
+<title id="title">Contact forces at a hill crest and a dip</title>
+<desc id="desc">At the crest, weight points down and the smaller normal reaction up; the centre is below. At the dip, the larger normal reaction points up and weight down; the centre is above. Dashed lines mark radii, not forces.</desc>
+<defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7Z" fill="#172033"/></marker></defs>
+<rect width="400" height="620" rx="8" fill="white"/>
+<g fill="none" stroke="#527568" stroke-width="3"><path d="M45 182Q200 92 355 182"/><path d="M45 420Q200 530 355 420"/></g>
+<g fill="none" stroke="#8494a6" stroke-width="2" stroke-dasharray="5 5"><path d="M200 137V255"/><path d="M200 475V360"/></g>
+<g stroke="#172033" stroke-width="3" marker-end="url(#arrow)"><path d="M193 137V83"/><path d="M207 137V230"/><path d="M193 475V372"/><path d="M207 475V542"/></g>
+<g fill="#b54720"><circle cx="200" cy="137" r="6"/><circle cx="200" cy="475" r="6"/></g>
+<g fill="#172033"><circle cx="200" cy="255" r="4"/><circle cx="200" cy="360" r="4"/></g>
+<g font-family="Arial,sans-serif" font-size="20" fill="#172033"><text x="200" y="32" text-anchor="middle">Hill crest: centre below</text><text x="163" y="98">N</text><text x="222" y="223">mg</text><text x="170" y="206">r</text><text x="220" y="270">Centre</text><text x="200" y="309" text-anchor="middle">mg − N = mv²/r</text><text x="200" y="346" text-anchor="middle">Dip: centre above</text><text x="220" y="371">Centre</text><text x="164" y="408">N</text><text x="222" y="534">mg</text><text x="220" y="443">r</text><text x="200" y="593" text-anchor="middle">N − mg = mv²/r</text></g>
+</svg>
