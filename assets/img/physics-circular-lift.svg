@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="330" viewBox="0 0 400 330" role="img" aria-labelledby="title desc">
+<title id="title">Components of lift in a level turn</title>
+<desc id="desc">Lift points upwards and right at theta to the vertical. Its vertical component balances weight downwards. Its horizontal component points right towards the centre. Dashed arrows show components of lift, not additional forces.</desc>
+<defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7Z" fill="#172033"/></marker><marker id="component" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7Z" fill="#527568"/></marker></defs>
+<rect width="400" height="330" rx="8" fill="white"/>
+<g stroke="#172033" stroke-width="3" marker-end="url(#arrow)"><path d="M155 190L245 70"/><path d="M155 190V310"/></g>
+<g fill="none" stroke="#527568" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#component)"><path d="M155 190V70"/><path d="M155 190H245"/></g>
+<g fill="none" stroke="#8494a6" stroke-width="1.5"><path d="M245 70V190M155 70H245" stroke-dasharray="3 4"/><path d="M155 154A36 36 0 0 1 177 161"/></g>
+<circle cx="155" cy="190" r="6" fill="#b54720"/>
+<g font-family="Arial,sans-serif" font-size="19" fill="#172033"><text x="200" y="28" text-anchor="middle">Lift in a horizontal turn</text><text x="252" y="70">L</text><text x="64" y="115">L cos θ</text><text x="263" y="185">L sin θ</text><text x="163" y="147">θ</text><text x="170" y="302">mg</text><text x="226" y="226">Towards centre →</text></g>
+</svg>

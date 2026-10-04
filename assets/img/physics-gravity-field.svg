@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="640" viewBox="0 0 400 640" role="img" aria-labelledby="title desc">
+<title id="title">Radial field and orbit distance</title><desc id="desc">Inward field arrows cross circular equipotentials at right angles. Distance r from the centre equals planet radius R plus height h.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#0072b2"/></marker></defs>
+<g font-family="Arial, sans-serif" font-size="18" fill="#334155">
+<text x="20" y="30" font-size="21" font-weight="bold">Field lines and equipotentials</text>
+<circle cx="200" cy="185" r="115" fill="none" stroke="#d55e00" stroke-width="2" stroke-dasharray="6 5"/>
+<circle cx="200" cy="185" r="80" fill="none" stroke="#d55e00" stroke-width="2" stroke-dasharray="6 5"/>
+<g stroke="#0072b2" stroke-width="2" marker-end="url(#arrow)">
+<path d="M200 50V133"/><path d="M200 320V237"/>
+<path d="M65 185H148"/><path d="M335 185H252"/>
+<path d="M105 90L163 148"/><path d="M295 90L237 148"/>
+<path d="M105 280L163 222"/><path d="M295 280L237 222"/>
+</g><circle cx="200" cy="185" r="44" fill="#e0f2fe" stroke="#0072b2" stroke-width="2"/>
+<text x="200" y="191" text-anchor="middle">Planet</text>
+<text x="20" y="349" fill="#0072b2">Solid arrows: inward field</text>
+<text x="20" y="377" fill="#d55e00">Dashed circles: equipotentials</text>
+<text x="20" y="425" font-size="21" font-weight="bold">Measure from the centre</text>
+<circle cx="115" cy="506" r="58" fill="#e0f2fe" stroke="#0072b2" stroke-width="2"/>
+<circle cx="115" cy="506" r="3" fill="#334155"/><circle cx="345" cy="506" r="6" fill="#d55e00"/>
+<text x="326" y="475">Satellite</text>
+<g stroke="#0072b2" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"><path d="M119 506H169"/><path d="M177 506H337"/><path d="M119 586H337"/></g>
+<text x="139" y="495">R</text><text x="253" y="495">h</text>
+<text x="210" y="576">r = R + h</text>
+<path d="M115 515V595 M345 515V595" stroke="#94a3b8" stroke-dasharray="4 4"/>
+<text x="20" y="627">Orbit radius is not surface height.</text>
+</g></svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="680" viewBox="0 0 400 680" role="img" aria-labelledby="title desc">
+<title id="title">Vertical spring and pendulum models</title>
+<desc id="desc">The top diagram shows a mass below a vertical spring's equilibrium position, with spring force upwards and weight downwards. Downwards is positive displacement. The bottom diagram shows a pendulum displaced to the right. Tension points towards its pivot, weight downwards, and the tangential component of weight towards equilibrium.</desc>
+<defs><marker id="force" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7Z" fill="#172033"/></marker><marker id="component" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7Z" fill="#287044"/></marker></defs>
+<rect width="400" height="680" rx="8" fill="white"/>
+<g font-family="Arial,sans-serif" fill="#172033" font-size="19"><text x="200" y="30" text-anchor="middle">Vertical spring: x &gt; 0</text><text x="45" y="151">Spring force</text><text x="228" y="312">mg</text><text x="20" y="185">Equilibrium</text><text x="316" y="222">x</text><text x="200" y="339" text-anchor="middle">Displacement measured from equilibrium</text><text x="200" y="387" text-anchor="middle">Pendulum: θ &gt; 0</text><text x="156" y="484">Tension</text><text x="225" y="623">mg</text><text x="167" y="465">θ</text><text x="51" y="607">mg sin θ</text><text x="200" y="659" text-anchor="middle" font-size="17">Tension radial; restoring force tangent</text></g>
+<path d="M125 55H270M200 55V76L189 85L211 96L189 107L211 118L189 129L211 140L189 151L211 162L189 173L211 184L189 195L211 206L200 217V228" fill="none" stroke="#527568" stroke-width="3"/>
+<path d="M130 190H306M306 190V247" fill="none" stroke="#287044" stroke-width="1.5" stroke-dasharray="5 4"/>
+<path d="M306 195V242" stroke="#287044" stroke-width="2" marker-end="url(#component)"/>
+<rect x="174" y="228" width="52" height="38" rx="3" fill="#e6edf4" stroke="#172033" stroke-width="2"/>
+<g stroke="#172033" stroke-width="2.5" marker-end="url(#force)"><path d="M184 247V156"/><path d="M212 247V315"/></g>
+<path d="M130 420H175M150 420V555" fill="none" stroke="#8494a6" stroke-width="1.5" stroke-dasharray="5 4"/>
+<path d="M150 420L208 542" stroke="#527568" stroke-width="3"/>
+<path d="M150 555A135 135 0 0 0 208 542M150 459A39 39 0 0 0 167 455" fill="none" stroke="#8494a6" stroke-width="1.5"/>
+<circle cx="150" cy="420" r="4" fill="#172033"/><circle cx="208" cy="542" r="9" fill="#b54720"/>
+<g stroke="#172033" stroke-width="2.5" marker-end="url(#force)"><path d="M208 542L177 477"/><path d="M208 542V621"/></g>
+<path d="M208 542L158 566" fill="none" stroke="#287044" stroke-width="2.5" stroke-dasharray="5 4" marker-end="url(#component)"/>
+<text x="200" y="635" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#287044">Dashed arrow: component of weight</text>
+</svg>

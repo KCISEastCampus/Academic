@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="620" viewBox="0 0 400 620" role="img" aria-labelledby="title desc">
+<title id="title">Uniform field and electron deflection</title><desc id="desc">Field arrows point down between a positive upper plate and negative lower plate. A negative charge has an upward force. An electron entering horizontally curves upwards in the field and follows a straight tangent outside.</desc>
+<defs><marker id="fieldArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#0072b2"/></marker><marker id="forceArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#d55e00"/></marker></defs>
+<g font-family="Arial, sans-serif" font-size="18" fill="#334155">
+<text x="18" y="30" font-size="22" font-weight="bold">Field and force directions</text>
+<path d="M45 78H355 M45 253H355" stroke="#334155" stroke-width="5"/>
+<text x="65" y="66">+     +     +     +     +     +</text><text x="65" y="279">−     −     −     −     −     −</text>
+<g stroke="#0072b2" stroke-width="2" marker-end="url(#fieldArrow)"><path d="M75 94V230"/><path d="M125 94V230"/><path d="M200 94V230"/><path d="M275 94V230"/><path d="M325 94V230"/></g>
+<text x="19" y="169" fill="#0072b2">E</text>
+<circle cx="155" cy="163" r="17" fill="#fff7ed" stroke="#d55e00" stroke-width="2"/><text x="155" y="170" text-anchor="middle">+</text>
+<circle cx="240" cy="163" r="17" fill="#fff7ed" stroke="#d55e00" stroke-width="2"/><text x="240" y="170" text-anchor="middle">−</text>
+<g stroke="#d55e00" stroke-width="3" marker-end="url(#forceArrow)"><path d="M155 184V227"/><path d="M240 142V100"/></g>
+<text x="175" y="221" fill="#d55e00">F</text><text x="250" y="119" fill="#d55e00">F</text>
+<text x="18" y="321" font-size="22" font-weight="bold">Electron entering horizontally</text>
+<path d="M70 360H285 M70 540H285" stroke="#334155" stroke-width="5"/>
+<text x="105" y="349">Positive plate (+)</text><text x="105" y="565">Negative plate (−)</text>
+<g stroke="#0072b2" stroke-width="2" marker-end="url(#fieldArrow)"><path d="M100 380V516"/><path d="M155 380V516"/><path d="M210 380V516"/><path d="M265 380V516"/></g>
+<path d="M20 450H70" stroke="#d55e00" stroke-width="3" marker-end="url(#forceArrow)"/>
+<text x="22" y="433">u</text>
+<path d="M70 450Q177.5 450 285 390L367 344" fill="none" stroke="#d55e00" stroke-width="3" marker-end="url(#forceArrow)"/>
+<path d="M70 450H285 M285 360V540" stroke="#94a3b8" stroke-dasharray="5 5"/>
+<text x="19" y="595">Curved inside; straight tangent outside.</text>
+</g></svg>
