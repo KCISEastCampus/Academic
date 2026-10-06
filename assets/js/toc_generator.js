@@ -1,8 +1,15 @@
+const tocControllers = new WeakMap();
+
 function generateTOC() {
   const contentContainer = document.getElementById("content-container");
   const tocContent = document.querySelector(".toc-content");
 
   if (!contentContainer || !tocContent) return;
+
+  tocControllers.get(contentContainer)?.abort();
+  const controller = new AbortController();
+  tocControllers.set(contentContainer, controller);
+  const signal = controller.signal;
 
   const headings = Array.from(contentContainer.querySelectorAll(contentContainer.dataset.tocHeadings || "h1, h2, h3, h4"));
   if (headings.length === 0) {
@@ -56,7 +63,7 @@ function generateTOC() {
     if (window.innerWidth <= 1024) {
       toggleTOC(false);
     }
-  });
+  }, { signal });
 
   window.addEventListener("scroll", () => {
     if (isProgrammaticScroll) return;
@@ -72,15 +79,13 @@ function generateTOC() {
     if (activeLink) {
       setActiveLink(activeLink, true);
     }
-  }, { passive: true });
+  }, { passive: true, signal });
 
   currentActiveId = setActiveFromHashOrTop(headings, tocLinkMap);
 
-  setTimeout(() => {
-    initTOCToggle();
-    initTOCSearch(tocLinks);
-    initReadingProgress();
-  }, 80);
+  initTOCToggle(signal);
+  initTOCSearch(tocLinks, signal);
+  initReadingProgress(signal);
 
   function setActiveLink(link, autoScrollInToc) {
     const nextActiveId = link.getAttribute("href").slice(1);
@@ -252,7 +257,7 @@ function escapeHtml(value) {
     .replace(/'/g, "&#39;");
 }
 
-function initTOCToggle() {
+function initTOCToggle(signal) {
   const tocToggle = document.getElementById("tocToggle");
   const toc = document.getElementById("toc");
 
@@ -260,14 +265,14 @@ function initTOCToggle() {
 
   tocToggle.replaceWith(tocToggle.cloneNode(true));
   const newTocToggle = document.getElementById("tocToggle");
-  newTocToggle.setAttribute("aria-expanded", "false");
+  newTocToggle.setAttribute("aria-expanded", String(toc.classList.contains("show")));
   newTocToggle.setAttribute("aria-controls", "toc");
 
   newTocToggle.addEventListener("click", (event) => {
     event.preventDefault();
     event.stopPropagation();
     toggleTOC(!toc.classList.contains("show"));
-  });
+  }, { signal });
 
   document.addEventListener("click", (event) => {
     if (
@@ -278,13 +283,13 @@ function initTOCToggle() {
     ) {
       toggleTOC(false);
     }
-  });
+  }, { signal });
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && toc.classList.contains("show")) {
       toggleTOC(false);
     }
-  });
+  }, { signal });
 }
 
 function toggleTOC(show) {
@@ -310,7 +315,7 @@ function toggleTOC(show) {
   }
 }
 
-function initTOCSearch(tocLinks) {
+function initTOCSearch(tocLinks, signal) {
   const searchInput = document.getElementById("tocSearch");
   const searchClear = document.getElementById("tocSearchClear");
   const tocContent = document.querySelector(".toc-content");
@@ -367,6 +372,11 @@ function initTOCSearch(tocLinks) {
     if (searchTerm) {
       matchedItems.forEach((item) => {
         expandAncestors(item);
+        let ancestor = item.parentElement?.closest("li.toc-item");
+        while (ancestor) {
+          ancestor.style.display = "";
+          ancestor = ancestor.parentElement?.closest("li.toc-item");
+        }
       });
     }
 
@@ -382,13 +392,13 @@ function initTOCSearch(tocLinks) {
     } else if (noResultsMsg) {
       noResultsMsg.remove();
     }
-  });
+  }, { signal });
 
   searchClear.addEventListener("click", () => {
     searchInput.value = "";
     searchInput.dispatchEvent(new Event("input"));
     searchInput.focus();
-  });
+  }, { signal });
 
   searchInput.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
@@ -396,7 +406,7 @@ function initTOCSearch(tocLinks) {
       searchInput.dispatchEvent(new Event("input"));
       searchInput.blur();
     }
-  });
+  }, { signal });
 
   // Ctrl+K / Cmd+K to quickly focus TOC search (and open drawer if on mobile)
   document.addEventListener("keydown", (event) => {
@@ -413,10 +423,10 @@ function initTOCSearch(tocLinks) {
       searchInput.focus();
       searchInput.select();
     }
-  });
+  }, { signal });
 }
 
-function initReadingProgress() {
+function initReadingProgress(signal) {
   const progressBar = document.getElementById("readingProgress");
   const progressText = document.getElementById("progressText");
   const contentContainer = document.getElementById("content-container");
@@ -435,7 +445,7 @@ function initReadingProgress() {
   }
 
   // Update dimensions on resize
-  window.addEventListener("resize", updateDimensions, { passive: true });
+  window.addEventListener("resize", updateDimensions, { passive: true, signal });
 
   // Update dimensions if content changes (e.g. lazy loaded images)
   if (window.ResizeObserver) {
@@ -443,6 +453,7 @@ function initReadingProgress() {
     resizeObserver.observe(contentContainer);
     // Content can move when the header changes without changing its own size.
     resizeObserver.observe(document.body);
+    signal?.addEventListener("abort", () => resizeObserver.disconnect(), { once: true });
   }
 
   function updateProgress() {
@@ -480,7 +491,7 @@ function initReadingProgress() {
       });
       ticking = true;
     },
-    { passive: true }
+    { passive: true, signal }
   );
 
   updateDimensions();
