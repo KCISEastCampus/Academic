@@ -66,7 +66,7 @@ refreshNotesTOC();
 const output = `---
 layout: none
 title: ${JSON.stringify(title)}
-description: "TMUA & ESAT Mathematics 2"
+description: "ESAT Mathematics 1 & Physics, TMUA & ESAT Mathematics 2"
 permalink: /admissions/tmua-esat/
 ---
 <!DOCTYPE html>
@@ -115,8 +115,8 @@ assert.equal(extract(result, /const PROBLEMS = ([\s\S]*?);\r?\n/), problems, 'Pr
 assert.equal(extract(result, /<footer class="notes-credit">([\s\S]*?)<\/footer>/), footer, 'Credit changed');
 const data = JSON.parse(problems);
 const buttons = [...main.matchAll(/data-pid="([^"]+)"/g)].map(m => m[1]);
-assert.equal(Object.keys(data).length, 94);
-assert.equal(new Set(buttons).size, 94);
+assert.equal(Object.keys(data).length, 598);
+assert.equal(new Set(buttons).size, 598);
 for (const id of buttons) assert(data[id], `Missing problem ${id}`);
 assert.equal(script.match(/const PROBLEMS = ([\s\S]*?);\r?\n/)[1], problems);
 assert.equal(result, output, 'Imported page drifted; compare before re-importing');
@@ -124,4 +124,4 @@ if (!process.argv.includes('--check')) {
   fs.mkdirSync(path.dirname(targetPath), { recursive: true });
   fs.writeFileSync(targetPath, output);
 }
-console.log('Passed: unchanged notes, all 94 problems, original credit, and complete import.');
+console.log('Passed: unchanged notes, all 598 problems, original credit, and complete import.');
