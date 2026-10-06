@@ -78,6 +78,7 @@
 }
 
 /* Figures extracted from the UAT-UK guides */
+.tmua-notes figure.fig img, .tmua-notes img.qfig { height: auto; }
 .tmua-notes figure.fig { margin: 20px 0; text-align: center; }
 .tmua-notes figure.fig img { max-width: 100%; max-height: 420px; border: 1px solid var(--border-hover); border-radius: 8px; background: #fff; }
 .tmua-notes figcaption { font-size: 0.875rem; color: var(--muted); margin-top: 8px; }

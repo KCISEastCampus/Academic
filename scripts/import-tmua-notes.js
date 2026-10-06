@@ -22,6 +22,19 @@ const panel = extract(source, /<aside id="panel">([\s\S]*?)<\/aside>/)
   .replace('<button id="panel-close" title="关闭">✕</button>',
     '<button id="panel-close" type="button" aria-label="关闭" title="关闭"><i class="bi bi-x-lg" aria-hidden="true"></i></button>');
 let script = originalScript
+  .replace('function hydrateImgs(root) {', 'const FIGURE_SIZES = {{ site.data.tmua_figure_sizes | jsonify }};\nfunction hydrateImgs(root) {')
+  .replace("if (v) { im.src = v; im.removeAttribute('data-fig'); }", `if (v) {
+      const size = FIGURE_SIZES[im.dataset.fig];
+      if (size) {
+        const scale = Math.min(1, (im.classList.contains('qfig') ? 380 : 420) / size[1]);
+        im.width = Math.round(size[0] * scale);
+        im.height = Math.round(size[1] * scale);
+      }
+      im.loading = 'lazy';
+      im.decoding = 'async';
+      im.src = v;
+      im.removeAttribute('data-fig');
+    }`)
   .replace("const panel = document.getElementById('panel');", `function wrapInlineMath(root) {
   root.querySelectorAll('math[display="inline"]').forEach(math => {
     const wrapper = document.createElement('span');
@@ -56,7 +69,7 @@ document.querySelectorAll('main h2, main h3, main h4').forEach((heading, index) 
 function refreshNotesTOC() {
   const version = document.body.classList.contains('mode-concise') ? '.ver-concise' : '.ver-full';
   document.getElementById('content-container').dataset.tocHeadings =
-    ['h2', 'h3'].map(tag => version + ' ' + tag).join(', ');
+    ['h2', 'h3'].flatMap(tag => [version + ' ' + tag, '.ver-both ' + tag]).join(', ');
   generateTOC();
   document.getElementById('tocSearch').dispatchEvent(new Event('input'));
 }
