@@ -27,6 +27,11 @@ council:
       contributions:
         - "Provide high quality hand-made mindmaps for AS Economics"
 
+    - name: "Leo Xie"
+      title: "Member"
+      contributions:
+        - "Contributor of TMUA & ESAT Mathematics 2 notes"
+
 external:
   title: "Contributors & Alumni"
   description: "Friends and alumni who improved the site, content, or tooling."
