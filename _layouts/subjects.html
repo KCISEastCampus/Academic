@@ -2,18 +2,24 @@
 layout: none
 ---
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ page.lang | default: 'en' }}">
 
 <head>
   {% include head.html %}
-  {% include mathjax.html %}
+  {% include mathjax.html mathml=page.tmua_notes %}
+  {% if page.tmua_notes %}
+  <script src="/assets/js/tmua-math.js"></script>
+  <link rel="stylesheet" href="/assets/css/tmua-notes.css">
+  {% endif %}
   <link rel="stylesheet" href="/assets/css/subject.css">
   <script src="/assets/js/toc_generator.js"></script>
   <script src="/assets/js/image_modal.js"></script>
   <script src="/assets/js/table_wrapper.js"></script>
 </head>
 
-{% if page.url contains '/igcse/' %}
+{% if page.tmua_notes %}
+<body class="tmua-notes scheme-alevel">
+{% elsif page.url contains '/igcse/' %}
 <body class="scheme-igcse">
 {% elsif page.url contains '/alevel/' %}
 <body class="scheme-alevel{% if page.study_page %} study-page{% endif %}">
@@ -24,8 +30,14 @@ layout: none
   <header class="subject-header">
     <div class="subject-header-inner">
       <div class="subject-header-text">
-        {% include breadcrumb.html %}
+        {% include breadcrumb.html skip_parent=page.breadcrumb_skip_parent %}
         <h1 class="subject-page-title">{{ page.title | default: site.title }}</h1>
+        {% if page.tmua_notes %}
+        <div class="notes-controls">
+          <p class="sub">{{ page.subtitle | escape }}</p>
+          <button id="mode-toggle" type="button">切换到简洁版</button>
+        </div>
+        {% endif %}
       </div>
     </div>
   </header>
@@ -70,7 +82,7 @@ layout: none
   {% include footer.html %}
 
   <script>
-    generateTOC();
+    {% unless page.tmua_notes %}generateTOC();{% endunless %}
   </script>
 
 </body>

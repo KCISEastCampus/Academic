@@ -1,16 +1,18 @@
 <script>
   window.MathJax = {
     loader: {
-      load: ['[tex]/mhchem']
+      load: ['[tex]/mhchem'{% if include.mathml %}, 'input/mml'{% endif %}]{% if include.mathml %},
+      paths: {mathjax: '/assets/vendor/mathjax/3.2.2/es5'}{% endif %}
     },
     startup: {
+      {% if include.mathml %}typeset: false,{% endif %}
       ready: () => {
         MathJax.startup.defaultReady();
         MathJax.startup.promise.then(async () => {
           // Register a TeX preFilter that automatically promotes matrix environments
           // inside inline math ($...$) to display style, preventing them from being
           // compressed into the text baseline.
-          MathJax.startup.input[0].preFilters.add(({math}) => {
+          MathJax.startup.input.find(input => input.name === 'TeX').preFilters.add(({math}) => {
             if (!math.display) {
               math.math = math.math.replace(
                 /\\begin\{((?:p|b|B|v|V)?matrix|smallmatrix)\}/g,
