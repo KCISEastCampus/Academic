@@ -18,7 +18,7 @@
 
     {% assign crumbs = page.url | split: '/' %}
     {% for crumb in crumbs offset: 1 %}
-      {% if crumb != "" and crumb != "index" %}
+      {% if crumb != "" and crumb != "index" and crumb != include.skip_parent %}
         {% unless crumb == "a2-mathematics" and page.subject == "m2" %}
         {% if forloop.last %}
           <li class="breadcrumb-item active" aria-current="page">

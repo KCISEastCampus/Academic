@@ -4,14 +4,13 @@
   line-height: 1.8;
   letter-spacing: 0;
 }
-.notes-header, .notes-credit {
+.notes-credit {
   max-width: 1160px;
   margin-inline: auto;
   padding-inline: 28px;
 }
-.notes-header { padding-block: 32px 24px; }
-.notes-header > a { color: var(--muted); font-size: 0.875rem; }
-.notes-header h1 { font-size: 1.75rem; line-height: 1.4; margin: 8px 0 0; }
+.tmua-notes .subject-header-text { width: 100%; }
+.tmua-notes .subject-page-title { overflow-wrap: anywhere; }
 .notes-controls { display: flex; align-items: center; gap: 20px; justify-content: space-between; margin-top: 16px; }
 .notes-controls .sub { font-size: 0.875rem; color: var(--muted); margin: 0; }
 .tmua-notes #mode-toggle { flex: none; padding: 9px 12px; border: 1px solid var(--border-hover); background: var(--surface); color: var(--text); border-radius: 6px; font: inherit; font-size: 0.875rem; cursor: pointer; }
@@ -26,12 +25,11 @@
 .tmua-notes main p { margin: 0 0 16px; }
 .tmua-notes main ul, .tmua-notes main ol { padding-left: 1.5rem; }
 .tmua-notes main li { margin-bottom: 8px; }
-.tmua-notes table { display: block; width: 100%; overflow-x: auto; border-collapse: collapse; margin-block: 16px; }
-.tmua-notes th, .tmua-notes td { border: 1px solid var(--border-hover); padding: 8px 12px; text-align: center; }
-.tmua-notes th { background: var(--surface-hover); }
 .tmua-notes blockquote { margin: 20px 0; padding: 12px 18px; border-left: 3px solid var(--accent-al); background: var(--surface); color: var(--text); }
 .tmua-notes math { font-size: 1.05em; }
-.tmua-notes .notes-inline-math { display: inline-block; max-width: 100%; overflow-x: auto; overflow-y: hidden; vertical-align: middle; padding-block: 4px; }
+.tmua-notes mjx-container[display="true"] { max-width: 100%; overflow-x: auto; overflow-y: hidden; padding-block: 4px; }
+.tmua-notes .notes-inline-math { display: inline-block; max-width: 100%; overflow: visible; vertical-align: middle; padding: 4px 2px; }
+.tmua-notes .notes-inline-math.notes-math-overflow { overflow-x: auto; overflow-y: hidden; }
 .tmua-notes math[display="block"] { display: block; text-align: center; margin: 16px 0; max-width: 100%; overflow-x: auto; overflow-y: hidden; padding-block: 4px; }
 .tmua-notes .ver-concise { display: none; }
 .tmua-notes.mode-concise .ver-concise { display: block; }
@@ -59,16 +57,15 @@
 .notes-credit { padding-block: 0 32px; color: var(--muted); font-size: 0.875rem; }
 .tmua-notes button:focus-visible, .tmua-notes summary:focus-visible { outline: 2px solid var(--accent-al); outline-offset: 3px; }
 @media (min-width: 1500px) {
-  .tmua-notes:has(#panel.open) .notes-header,
+  .tmua-notes:has(#panel.open) .subject-header,
   .tmua-notes:has(#panel.open) #main-container,
   .tmua-notes:has(#panel.open) .notes-credit { margin-right: 500px; }
 }
 @media (max-width: 900px) {
   .notes-controls { align-items: flex-start; flex-direction: column; gap: 12px; }
-  .notes-header h1 { font-size: 1.5rem; }
 }
 @media (max-width: 540px) {
-  .notes-header, .notes-credit { padding-inline: 18px; }
+  .notes-credit { padding-inline: 18px; }
   .tmua-notes .prob-list { grid-template-columns: minmax(0, 1fr); }
   .tmua-notes #panel { padding-inline: 20px; }
 }

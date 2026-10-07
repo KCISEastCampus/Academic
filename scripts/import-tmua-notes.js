@@ -36,9 +36,10 @@ let script = originalScript
       im.removeAttribute('data-fig');
     }`)
   .replace("const panel = document.getElementById('panel');", `function wrapInlineMath(root) {
-  root.querySelectorAll('math[display="inline"]').forEach(math => {
-    const wrapper = document.createElement('span');
-    wrapper.className = 'notes-inline-math';
+  root.querySelectorAll('math').forEach(math => {
+    const block = math.getAttribute('display') === 'block';
+    const wrapper = document.createElement(block ? 'div' : 'span');
+    wrapper.className = block ? 'notes-block-math' : 'notes-inline-math';
     math.replaceWith(wrapper);
     wrapper.append(math);
   });
@@ -47,6 +48,8 @@ wrapInlineMath(document.querySelector('main'));
 const panel = document.getElementById('panel');`)
   .replace("panel.classList.add('open');", "wrapInlineMath(panelBody);\n  panel.classList.add('open');")
   .replace("panel.classList.add('open');", "panel.classList.add('open');\n  panel.inert = false;\n  closeBtn.focus();")
+  .replace('  panelBody.innerHTML =', '  renderNotesMath(() => {\n  window.MathJax?.typesetClear?.([panelBody]);\n  panelBody.innerHTML =')
+  .replace('  panel.scrollTop = 0;', '  panel.scrollTop = 0;\n  });')
   .replace("closeBtn.addEventListener('click', () => panel.classList.remove('open'));", `let lastProblemButton;
 document.addEventListener('click', e => {
   const button = e.target.closest('.prob-btn');
@@ -74,53 +77,23 @@ function refreshNotesTOC() {
   document.getElementById('tocSearch').dispatchEvent(new Event('input'));
 }
 modeBtn.addEventListener('click', refreshNotesTOC);
-refreshNotesTOC();
+document.addEventListener('DOMContentLoaded', refreshNotesTOC);
 `;
 const output = `---
-layout: none
+layout: subjects
+tmua_notes: true
+lang: zh-CN
+breadcrumb_skip_parent: admissions
+mathjax: true
 title: ${JSON.stringify(title)}
+subtitle: ${JSON.stringify(subtitle)}
 description: "ESAT Mathematics 1 & Physics, TMUA & ESAT Mathematics 2"
 permalink: /admissions/tmua-esat/
 ---
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  {% include head.html %}
-  <link rel="stylesheet" href="/assets/css/subject.css">
-  <link rel="stylesheet" href="/assets/css/tmua-notes.css">
-  <script src="/assets/js/toc_generator.js"></script>
-</head>
-<body class="tmua-notes scheme-alevel">
-  {% include nav.html %}
-  <header class="notes-header">
-    <a href="/">Academic</a>
-    <h1>${title}</h1>
-    <div class="notes-controls"><p class="sub">${subtitle}</p><button id="mode-toggle" type="button">切换到简洁版</button></div>
-  </header>
-  <button class="toc-toggle" id="tocToggle" type="button" aria-label="Toggle Table of Contents" aria-controls="toc" aria-expanded="false"><i class="bi bi-list" aria-hidden="true"></i></button>
-  <div id="main-container">
-    <main id="content-container" data-pagefind-body>${main}</main>
-    <div id="toc" class="table-of-contents">
-      <div class="toc-header-fixed">
-        <h2 class="contents-list">Contents</h2>
-        <div class="toc-search-container">
-          <input type="text" id="tocSearch" class="toc-search-input" placeholder="Search contents..." aria-label="Search table of contents">
-          <button id="tocSearchClear" class="toc-search-clear" aria-label="Clear search" style="display: none;"><i class="bi bi-x-circle"></i></button>
-        </div>
-        <div class="reading-progress-container">
-          <div class="reading-progress-bar" id="readingProgress"></div>
-          <span class="reading-progress-text" id="progressText">0%</span>
-        </div>
-      </div>
-      <div class="toc-content"></div>
-    </div>
-  </div>
+<main>${main}</main>
   <aside id="panel" aria-label="题目与解答" tabindex="-1" inert>${panel}</aside>
   <footer class="notes-credit">${footer}</footer>
-  {% include footer.html %}
   <script>${script}</script>
-</body>
-</html>
 `;
 const result = process.argv.includes('--check') ? fs.readFileSync(targetPath, 'utf8') : output;
 assert.equal(extract(result, /<main[^>]*>([\s\S]*?)<\/main>/), main, 'Notes changed');

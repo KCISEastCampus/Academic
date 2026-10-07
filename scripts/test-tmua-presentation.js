@@ -7,6 +7,12 @@ const { execFileSync } = require('node:child_process');
 const root = path.join(__dirname, '..');
 const html = fs.readFileSync(path.join(root, 'admissions/tmua-esat/index.html'), 'utf8').replace(/\r\n/g, '\n');
 const original = execFileSync('git', ['show', 'e4641cdb9528adab65c37b1a019792192b8236ce:admissions/tmua-esat/index.html'], { cwd: root, encoding: 'utf8', maxBuffer: 8 * 1024 * 1024 }).replace(/\r\n/g, '\n');
+const layout = fs.readFileSync(path.join(root, '_layouts/subjects.html'), 'utf8');
+assert(html.includes('layout: subjects'));
+assert(!html.includes('<html'));
+assert(layout.includes('<header class="subject-header">'));
+assert(layout.includes('{% include breadcrumb.html skip_parent=page.breadcrumb_skip_parent %}'));
+assert(!html.includes('<header class="notes-header">'));
 for (const pattern of [/<main[^>]*>([\s\S]*?)<\/main>/, /const PROBLEMS = (.*);/, /<footer class="notes-credit">([\s\S]*?)<\/footer>/]) {
   assert(html.match(pattern)[1] === original.match(pattern)[1], 'Protected content must not change');
 }
@@ -58,4 +64,5 @@ for (const mode of [false, true]) {
 }
 assert.equal(refreshes, 2);
 assert.match(fs.readFileSync(path.join(root, 'assets/css/tmua-notes.css'), 'utf8'), /figure\.fig img, \.tmua-notes img\.qfig \{ height: auto; \}/);
+assert(!/\.tmua-notes table\s*\{/.test(fs.readFileSync(path.join(root, 'assets/css/tmua-notes.css'), 'utf8')), 'Use shared subjects table layout, not a block-level table');
 console.log('Passed: protected content unchanged, 431 figure sizes, lazy loading and shared headings in both modes.');
