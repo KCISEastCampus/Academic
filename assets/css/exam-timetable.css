@@ -892,7 +892,7 @@ html[data-bs-theme="dark"] .upcoming-cta-btn:hover {
 
 .cal-weekdays {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(7, minmax(0, 1fr));
   background: var(--tt-subtle);
   border-bottom: 1px solid var(--tt-border);
 }
@@ -914,10 +914,11 @@ html[data-bs-theme="dark"] .upcoming-cta-btn:hover {
 
 .cal-days-grid {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(7, minmax(0, 1fr));
 }
 
 .cal-cell {
+  min-width: 0;
   min-height: 120px;
   padding: 6px;
   border-right: 1px solid var(--tt-border);

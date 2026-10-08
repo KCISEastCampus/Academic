@@ -272,13 +272,17 @@
       examDateMap[exam.date].push(exam);
     });
 
+    if (!examDateMap[selectedMobileDate]) {
+      selectedMobileDate = Object.keys(examDateMap).sort()[0];
+    }
+
     // Calendar Header
     var headerHtml = [
       '<div class="cal-header-bar">',
         '<div class="cal-month-title">',
           '<i class="bi bi-calendar3 text-primary"></i>',
           '<span>January 2027</span>',
-          '<span class="badge bg-light text-muted border ms-2 fw-normal" style="font-size: 0.72rem;">1X27 Series</span>',
+          '<span class="badge bg-body-secondary text-body-secondary border ms-2 fw-normal" style="font-size: 0.72rem;">1X27 Series</span>',
         '</div>',
         '<div class="cal-legend">',
           '<span class="cal-legend-item"><span class="cal-legend-dot as"></span> AS · Grade 11</span>',
@@ -433,7 +437,7 @@
         '<div class="cal-mobile-agenda">',
           '<div class="cal-agenda-header">',
             '<h3 class="cal-agenda-date">' + selectedDateTitle + '</h3>',
-            '<span class="badge bg-light text-muted border">' + selectedDateExams.length + ' scheduled</span>',
+            '<span class="badge bg-body-secondary text-body-secondary border">' + selectedDateExams.length + ' scheduled</span>',
           '</div>',
           '<div class="cal-agenda-cards">',
             mobileCardsHtml,
