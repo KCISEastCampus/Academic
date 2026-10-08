@@ -892,7 +892,7 @@ html[data-bs-theme="dark"] .upcoming-cta-btn:hover {
 
 .cal-weekdays {
   display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   background: var(--tt-subtle);
   border-bottom: 1px solid var(--tt-border);
 }
@@ -907,14 +907,9 @@ html[data-bs-theme="dark"] .upcoming-cta-btn:hover {
   letter-spacing: 0.05em;
 }
 
-.cal-weekday.is-weekend {
-  color: var(--tt-muted);
-  opacity: 0.65;
-}
-
 .cal-days-grid {
   display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
 .cal-cell {
@@ -930,13 +925,8 @@ html[data-bs-theme="dark"] .upcoming-cta-btn:hover {
   position: relative;
 }
 
-.cal-cell:nth-child(7n) {
+.cal-cell:nth-child(5n) {
   border-right: none;
-}
-
-.cal-cell.is-weekend {
-  background: var(--tt-subtle);
-  opacity: 0.75;
 }
 
 .cal-cell.is-other-month {
@@ -1080,7 +1070,7 @@ html[data-bs-theme="dark"] .cal-day-count {
 
   .cal-mobile-matrix {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     background: var(--tt-surface);
     border: 1px solid var(--tt-border);
     border-radius: var(--tt-radius);

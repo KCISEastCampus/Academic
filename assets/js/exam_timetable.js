@@ -291,32 +291,31 @@
       '</div>'
     ].join('');
 
-    // Desktop 7-Column Grid
+    // Monday–Friday calendar grid
     // Jan 1 2027 was Friday. In Mon-Sun format:
     // Mon Dec 28, Tue Dec 29, Wed Dec 30, Thu Dec 31
     // Jan 1 to Jan 31
     var gridDays = [];
     
     // Padding Dec 2026 days
-    gridDays.push({ date: '2026-12-28', num: 28, isOtherMonth: true, isWeekend: false });
-    gridDays.push({ date: '2026-12-29', num: 29, isOtherMonth: true, isWeekend: false });
-    gridDays.push({ date: '2026-12-30', num: 30, isOtherMonth: true, isWeekend: false });
-    gridDays.push({ date: '2026-12-31', num: 31, isOtherMonth: true, isWeekend: false });
+    gridDays.push({ date: '2026-12-28', num: 28, isOtherMonth: true });
+    gridDays.push({ date: '2026-12-29', num: 29, isOtherMonth: true });
+    gridDays.push({ date: '2026-12-30', num: 30, isOtherMonth: true });
+    gridDays.push({ date: '2026-12-31', num: 31, isOtherMonth: true });
 
     // Jan 2027 days (1 to 31)
     for (var d = 1; d <= 31; d++) {
       var dStr = '2027-01-' + (d < 10 ? '0' + d : d);
       var dayOfWeek = new Date(dStr + 'T12:00:00').getDay(); // 0 is Sun, 6 is Sat
-      var isWeekend = (dayOfWeek === 0 || dayOfWeek === 6);
-      gridDays.push({ date: dStr, num: d, isOtherMonth: false, isWeekend: isWeekend });
+      if (dayOfWeek === 0 || dayOfWeek === 6) continue;
+      gridDays.push({ date: dStr, num: d, isOtherMonth: false });
     }
 
-    var weekdays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+    var weekdays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
     var weekdaysHtml = [
       '<div class="cal-weekdays">',
-        weekdays.map(function (w, i) {
-          var isWk = (i >= 5);
-          return '<div class="cal-weekday ' + (isWk ? 'is-weekend' : '') + '">' + w + '</div>';
+        weekdays.map(function (w) {
+          return '<div class="cal-weekday">' + w + '</div>';
         }).join(''),
       '</div>'
     ].join('');
@@ -327,7 +326,6 @@
       var cellClasses = ['cal-cell'];
 
       if (day.isOtherMonth) cellClasses.push('is-other-month');
-      if (day.isWeekend) cellClasses.push('is-weekend');
       if (hasExams) cellClasses.push('has-exams');
 
       var countBadge = hasExams ? '<span class="cal-day-count">' + dayExams.length + 'p</span>' : '';
