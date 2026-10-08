@@ -71,5 +71,29 @@ vm.runInContext(fs.readFileSync(path.join(root, 'assets/js/tmua-math.js'), 'utf8
   context.fitNotesMath(wrapper);
   assert.equal(scrollable, true, 'Long formulas retain horizontal scrolling');
   assert(!listeners.click, 'Mode switch must not scan thousands of formulas');
-  console.log('Passed: viewport-only batches of 12, cached rendering, serial panel updates and startup fallback.');
+  for (const readyState of ['complete', 'loading']) {
+    let observers = 0;
+    const startupListeners = {};
+    const readyMathJax = {...context.MathJax, startup: {promise: Promise.resolve()}};
+    const early = vm.createContext({
+      ...context,
+      window: {MathJax: readyMathJax}, MathJax: readyMathJax,
+      document: {...context.document, readyState, addEventListener: (name, callback) => { startupListeners[name] = callback; }},
+      IntersectionObserver: class {
+        constructor() { observers++; }
+        observe() {}
+      }
+    });
+    vm.runInContext(fs.readFileSync(path.join(root, 'assets/js/tmua-math.js'), 'utf8'), early);
+    await Promise.resolve();
+    if (readyState === 'loading') {
+      assert.equal(observers, 0, 'Wait for formulas to exist in the DOM');
+      early.document.readyState = 'complete';
+      startupListeners.DOMContentLoaded();
+    }
+    assert.equal(observers, 1, 'Initialize even if mathjaxLoaded was missed');
+    startupListeners.mathjaxLoaded();
+    assert.equal(observers, 1, 'Late events must not initialize twice');
+  }
+  console.log('Passed: viewport batches, cached rendering, serial panels and early/late MathJax startup.');
 })().catch(error => { console.error(error); process.exitCode = 1; });

@@ -2,19 +2,20 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const vm = require('node:vm');
-const { execFileSync } = require('node:child_process');
+const { createHash } = require('node:crypto');
 
 const root = path.join(__dirname, '..');
 const html = fs.readFileSync(path.join(root, 'admissions/tmua-esat/index.html'), 'utf8').replace(/\r\n/g, '\n');
-const original = execFileSync('git', ['show', 'e4641cdb9528adab65c37b1a019792192b8236ce:admissions/tmua-esat/index.html'], { cwd: root, encoding: 'utf8', maxBuffer: 8 * 1024 * 1024 }).replace(/\r\n/g, '\n');
+// Hashes of the contributor's original notes, problems and credit; independent of Git history.
+const baseline = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/tmua-protected-content.json'), 'utf8'));
 const layout = fs.readFileSync(path.join(root, '_layouts/subjects.html'), 'utf8');
 assert(html.includes('layout: subjects'));
 assert(!html.includes('<html'));
 assert(layout.includes('<header class="subject-header">'));
 assert(layout.includes('{% include breadcrumb.html skip_parent=page.breadcrumb_skip_parent %}'));
 assert(!html.includes('<header class="notes-header">'));
-for (const pattern of [/<main[^>]*>([\s\S]*?)<\/main>/, /const PROBLEMS = (.*);/, /<footer class="notes-credit">([\s\S]*?)<\/footer>/]) {
-  assert(html.match(pattern)[1] === original.match(pattern)[1], 'Protected content must not change');
+for (const [name, pattern] of Object.entries({notes: /<main[^>]*>([\s\S]*?)<\/main>/, problems: /const PROBLEMS = (.*);/, credit: /<footer class="notes-credit">([\s\S]*?)<\/footer>/})) {
+  assert.equal(createHash('sha256').update(html.match(pattern)[1]).digest('hex'), baseline[name], `Protected ${name} must not change`);
 }
 const map = JSON.parse(html.match(/const IMGMAP = (.*);/)[1]);
 const sizes = JSON.parse(fs.readFileSync(path.join(root, '_data/tmua_figure_sizes.json'), 'utf8').replace(/^\uFEFF/, ''));

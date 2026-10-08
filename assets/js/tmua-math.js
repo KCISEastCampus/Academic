@@ -65,10 +65,15 @@ function renderNotesMath(update) {
   }
   return notesMathQueue;
 }
-document.addEventListener('mathjaxLoaded', () => {
+function startNotesMath() {
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => renderNotesMath(), {once: true});
+    document.addEventListener('DOMContentLoaded', startNotesMath, {once: true});
   } else {
     renderNotesMath();
   }
-});
+}
+document.addEventListener('mathjaxLoaded', startNotesMath, {once: true});
+if (window.MathJax?.startup?.promise) {
+  window.MathJax.startup.promise.then(startNotesMath)
+    .catch(error => console.error('Notes MathJax startup failed', error));
+}
