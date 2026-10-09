@@ -19,6 +19,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 {% seo %}
+{% if page.translation_of %}
+  {% assign translation = site.pages | where: 'url', page.translation_of | first %}
+{% else %}
+  {% assign translation = site.pages | where: 'translation_of', page.url | first %}
+{% endif %}
+{% if translation %}
+<link rel="alternate" hreflang="{{ page.lang | default: 'en' }}" href="{{ page.url | absolute_url }}">
+<link rel="alternate" hreflang="{{ translation.lang | default: 'en' }}" href="{{ translation.url | absolute_url }}">
+{% endif %}
 <meta name="theme-color" content="#0b1220">
 
 <!-- Resource hints for performance -->

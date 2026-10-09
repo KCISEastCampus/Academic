@@ -4,6 +4,10 @@ Agent-facing instructions for the Academic repository — a Jekyll static site (
 
 ## Agent skills
 
+### Cross-person task handoffs
+
+For collaboration through separate Codex accounts, task branches, and pull requests, follow `docs/agents/codex-collaboration.md`. Keep the active owner, latest commit, remaining work, and checks in the GitHub Issue or PR; do not have two people edit the same task branch concurrently.
+
 ### Issue tracker
 
 Issues live in GitHub Issues for `KCISEastCampus/Academic`; use the `gh` CLI. See `docs/agents/issue-tracker.md`.

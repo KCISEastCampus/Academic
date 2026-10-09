@@ -129,7 +129,7 @@
       this.button = document.createElement('button');
       this.button.className = 'back-to-top';
       this.button.innerHTML = '<i class="bi bi-chevron-up"></i>';
-      this.button.setAttribute('aria-label', 'Back to top');
+      this.button.setAttribute('aria-label', document.documentElement.lang === 'zh-CN' ? '返回顶部' : 'Back to top');
       document.body.appendChild(this.button);
 
       // Cache the footer element to avoid querying it on every scroll

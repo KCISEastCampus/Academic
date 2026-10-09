@@ -718,4 +718,4 @@ This is our worked solution, checked against the [AQA mark scheme, Question 4](h
 
 The lesson follows FP2.7 of the [OxfordAQA Further Mathematics 9665 specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf). Worked examples are teaching material. Questions 6–8 retain the AQA questions and marks from the supplied textbook; our solutions use $+C$ for indefinite integrals.
 
-**Learning path:** [Previous: Polar Coordinates](/alevel/a2-further-mathematics/polar-coordinates/) · [Back to the course](/alevel/a2-further-mathematics/). The next topic is **Arc Length and Area of Surface of Revolution**, textbook Chapter 23.
+**Learning path:** [Previous: Polar Coordinates](/alevel/a2-further-mathematics/polar-coordinates/) · [Next: Arc Length and Surface Area](/alevel/a2-further-mathematics/arc-length-and-surface-area/) · [Back to the course](/alevel/a2-further-mathematics/).

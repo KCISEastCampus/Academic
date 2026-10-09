@@ -1,6 +1,7 @@
 ---
 layout: none
 ---
+{% assign ui = site.data.ui[page.lang] | default: site.data.ui.en %}
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: 'en' }}">
 
@@ -43,7 +44,7 @@ layout: none
   </header>
 
   <!-- TOC Toggle Button for Mobile -->
-  <button class="toc-toggle" id="tocToggle" type="button" aria-label="Toggle Table of Contents" aria-controls="toc" aria-expanded="false">
+  <button class="toc-toggle" id="tocToggle" type="button" aria-label="{{ ui.toggle_contents }}" aria-controls="toc" aria-expanded="false">
     <i class="bi bi-list"></i>
   </button>
 
@@ -53,16 +54,16 @@ layout: none
     </div>
     <div id="toc" class="table-of-contents">
       <div class="toc-header-fixed">
-        <h2 class="contents-list">Contents</h2>
+        <h2 class="contents-list">{{ ui.contents }}</h2>
         
         <!-- TOC Search Bar -->
         <div class="toc-search-container">
           <input type="text" 
                  id="tocSearch" 
                  class="toc-search-input" 
-                 placeholder="Search contents..."
-                 aria-label="Search table of contents">
-          <button id="tocSearchClear" class="toc-search-clear" aria-label="Clear search" style="display: none;">
+                 placeholder="{{ ui.search_contents }}"
+                 aria-label="{{ ui.search_label }}">
+          <button id="tocSearchClear" class="toc-search-clear" aria-label="{{ ui.clear_search }}" style="display: none;">
             <i class="bi bi-x-circle"></i>
           </button>
         </div>

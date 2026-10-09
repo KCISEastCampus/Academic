@@ -168,7 +168,7 @@ function renderTOCTree(nodes) {
       html += '<div class="toc-row">';
 
       if (hasChildren) {
-        html += `<button class="toc-collapse" type="button" aria-label="Collapse section" aria-expanded="true"></button>`;
+        html += `<button class="toc-collapse" type="button" aria-label="${document.documentElement.lang === 'zh-CN' ? '展开或收起章节' : 'Collapse section'}" aria-expanded="true"></button>`;
       } else {
         html += '<span class="toc-spacer" aria-hidden="true"></span>';
       }
@@ -386,7 +386,7 @@ function initTOCSearch(tocLinks, signal) {
         const msg = document.createElement("div");
         msg.id = "tocNoResults";
         msg.className = "toc-no-results";
-        msg.innerHTML = '<i class="bi bi-search"></i> No matches found';
+        msg.innerHTML = '<i class="bi bi-search"></i> ' + (document.documentElement.lang === 'zh-CN' ? '没有匹配的目录项' : 'No matches found');
         tocContent.appendChild(msg);
       }
     } else if (noResultsMsg) {

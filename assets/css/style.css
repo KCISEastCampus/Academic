@@ -158,7 +158,7 @@ html[data-bs-theme="dark"] .theme-icon-nav-moon {
   font-size: 1.2rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .site-nav-title {
     display: none;
   }
