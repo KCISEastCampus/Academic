@@ -1,0 +1,27 @@
+/* Calculator screens keep their original aspect ratio and remain readable. */
+.cg50-guide .cg50-screens {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 1.25rem;
+  margin-block: 1.5rem;
+}
+.cg50-guide figure { margin: 0; }
+.cg50-guide .cg50-screens img {
+  width: 100%;
+  max-width: 384px;
+  height: auto;
+  margin: 0 auto .5rem;
+  border-radius: 0;
+}
+.cg50-guide figcaption { font-size: .9rem; line-height: 1.6; }
+.cg50-guide .cg50-keyboard { max-width: 650px; margin: 1.5rem auto; }
+.cg50-guide .cg50-keyboard img { width: 100%; max-width: 100%; height: auto; }
+.cg50-guide details { margin-block: 1rem; }
+.cg50-guide summary { cursor: pointer; font-weight: 600; }
+.cg50-guide h2, .cg50-guide h3 { scroll-margin-top: 100px; }
+@media print {
+  .site-nav, .site-footer, #toc, .toc-toggle { display: none !important; }
+  #main-container, #content-container { display: block; width: 100%; max-width: none; margin: 0; }
+  .cg50-guide { color: #000; background: #fff; }
+  .cg50-guide figure { break-inside: avoid; }
+}
