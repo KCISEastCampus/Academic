@@ -464,7 +464,7 @@ $$\boxed{y=x^2-x},\qquad x<0.$$
 
 **练习后：**重新独立完成曾需要提示的题目。写出标准形式、积分因子与乘积的导数，或明确写出 CF 与 PI。最后同时检验方程及其给定条件。
 
-**学习路径：**[上一课：双曲函数](/zh/alevel/a2-further-mathematics/hyperbolic-functions/) · FP2.11 二阶微分方程（准备中） · [高等纯数学](/zh/alevel/a2-further-mathematics/)。
+**学习路径：**[上一课：双曲函数](/zh/alevel/a2-further-mathematics/hyperbolic-functions/) · [下一课：二阶微分方程](/zh/alevel/a2-further-mathematics/second-order-differential-equations/) · [高等纯数学](/zh/alevel/a2-further-mathematics/)。
 
 ## 资料来源 {#sources}
 

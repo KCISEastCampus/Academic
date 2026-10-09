@@ -462,7 +462,7 @@ Check: $y'-y/x=(2x-1)-(x-1)=x$. Although the formula is a polynomial, the origin
 
 **After practice:** redo any question for which you needed a hint. Show the standard form, integrating factor and product derivative, or explicitly identify the CF and PI. Finish by checking both the equation and its condition.
 
-**Learning path:** [Previous lesson: hyperbolic functions](/alevel/a2-further-mathematics/hyperbolic-functions/) · FP2.11 Second-order differential equations (in preparation) · [Further Pure Mathematics](/alevel/a2-further-mathematics/).
+**Learning path:** [Previous lesson: hyperbolic functions](/alevel/a2-further-mathematics/hyperbolic-functions/) · [Next lesson: second-order differential equations](/alevel/a2-further-mathematics/second-order-differential-equations/) · [Further Pure Mathematics](/alevel/a2-further-mathematics/).
 
 ## Sources {#sources}
 
