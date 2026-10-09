@@ -638,7 +638,7 @@ The original integrand is real for $\lvert x\rvert>\frac32$. This exercise asks 
 
 **After practice:** repeat any solution you could not complete without its hint. For every equation in $e^x$, check positivity before taking a logarithm; for every inverse function, check its domain before differentiating or integrating.
 
-**Learning path:** [Previous lesson: arc length and surface area](/alevel/a2-further-mathematics/arc-length-and-surface-area/) · [Further Pure Mathematics](/alevel/a2-further-mathematics/).
+**Learning path:** [Previous lesson: arc length and surface area](/alevel/a2-further-mathematics/arc-length-and-surface-area/) · [Next lesson: first-order differential equations](/alevel/a2-further-mathematics/first-order-differential-equations/) · [Further Pure Mathematics](/alevel/a2-further-mathematics/).
 
 ## Sources {#sources}
 

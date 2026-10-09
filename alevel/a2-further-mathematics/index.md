@@ -22,10 +22,11 @@ Further Pure Mathematics · FP2 · FM03. Learn a method, work through examples, 
 7. **[Calculus of Inverse Trigonometric Functions](/alevel/a2-further-mathematics/inverse-trigonometric-functions/)** — Choose principal values, differentiate inverse functions and find exact integrals.
 8. **[Arc Length and Surface Area](/alevel/a2-further-mathematics/arc-length-and-surface-area/)** — Find curve lengths and curved surface areas from Cartesian or parametric equations.
 9. **[Hyperbolic Functions](/alevel/a2-further-mathematics/hyperbolic-functions/)** — Use exponential definitions, prove identities and apply inverse functions in calculus.
+10. **[First-order Differential Equations](/alevel/a2-further-mathematics/first-order-differential-equations/)** — Use an integrating factor or a complementary function and particular integral, then apply the given condition.
 
 Follow the lessons in order, or choose the topic you need. The remaining lessons are in preparation.
 
-**Chinese explanations:** [Arc length and surface area](/zh/alevel/a2-further-mathematics/arc-length-and-surface-area/) and [hyperbolic functions](/zh/alevel/a2-further-mathematics/hyperbolic-functions/) retain English questions and provide Chinese explanations with English terminology.
+**Chinese explanations:** [Arc length and surface area](/zh/alevel/a2-further-mathematics/arc-length-and-surface-area/), [hyperbolic functions](/zh/alevel/a2-further-mathematics/hyperbolic-functions/) and [first-order differential equations](/zh/alevel/a2-further-mathematics/first-order-differential-equations/) retain English questions and provide Chinese explanations with English terminology.
 
 **Before you start:** you should know AS Pure Mathematics and the pure content of [AS Further Mathematics](/alevel/as-further-mathematics/), including complex numbers, roots and coefficients, algebraic division and differentiation.
 
@@ -54,7 +55,7 @@ Page numbers are printed textbook pages, not PDF page numbers. The FP2 labels fo
 | FP2.7 Calculus of inverse trigonometrical functions | 22: The Calculus of Inverse Trigonometric Functions, pp. 270–279; practice on pp. 280–281 | [Open lesson](/alevel/a2-further-mathematics/inverse-trigonometric-functions/) |
 | FP2.8 Arc length and surface area | 23: Arc Length and Area of Surface of Revolution, pp. 282–287 | [Open lesson](/alevel/a2-further-mathematics/arc-length-and-surface-area/) |
 | FP2.9 Hyperbolic functions | 24: Hyperbolic Functions, pp. 288–305 | [Open lesson](/alevel/a2-further-mathematics/hyperbolic-functions/) |
-| FP2.10 First-order differential equations | 25.1 and 25.3, pp. 306–307 and 318–319 | In preparation |
+| FP2.10 First-order differential equations | 25.1 and 25.3, pp. 306–307 and 318–319 | [Open lesson](/alevel/a2-further-mathematics/first-order-differential-equations/) |
 | FP2.11 Second-order differential equations | 25.2, pp. 308–317; review questions on p. 319 | In preparation |
 | FP2.12 Vectors and three-dimensional coordinate geometry | 26: Vectors and Three-Dimensional Coordinate Geometry, pp. 320–344 | In preparation |
 | FP2.14 Solution of linear equations | 27: Solutions of Linear Equations, pp. 346–352 | In preparation |

@@ -24,10 +24,11 @@ study_page: true
 7. **[反三角函数的微积分](/alevel/a2-further-mathematics/inverse-trigonometric-functions/)** — 选择主值，对反函数求导，并求精确的积分值。
 8. **[弧长与旋转曲面面积](/zh/alevel/a2-further-mathematics/arc-length-and-surface-area/)** — 根据直角坐标方程或参数方程，计算曲线的长度与旋转曲面的面积。
 9. **[双曲函数](/zh/alevel/a2-further-mathematics/hyperbolic-functions/)** — 运用指数定义、证明恒等式，并在微积分中使用反双曲函数。
+10. **[一阶微分方程](/zh/alevel/a2-further-mathematics/first-order-differential-equations/)** — 使用积分因子法，或将齐次通解与一个特解相加，再代入题目给定的条件。
 
 可以按顺序学习，也可以直接选择当前需要的主题。尚未列出的课程正在准备中。
 
-**中文讲解：**FP2.8 弧长与旋转曲面面积、FP2.9 双曲函数已提供中文版本。题干保留英文，专业术语附英文原词，方便对应英文考试用语。前七节目前打开的是英文课程。
+**中文讲解：**FP2.8 弧长与旋转曲面面积、FP2.9 双曲函数、FP2.10 一阶微分方程已提供中文版本。题干保留英文，专业术语附英文原词，方便对应英文考试用语。前七节目前打开的是英文课程。
 
 **开始前：**你应当掌握 AS 纯数学，以及 [AS 高等数学](/alevel/as-further-mathematics/)中的纯数学内容，包括复数、根与系数的关系、多项式除法和求导。
 
@@ -56,7 +57,7 @@ study_page: true
 | FP2.7 反三角函数的微积分 | 第 22 章，第 270–279 页；练习在第 280–281 页 | [英文课程](/alevel/a2-further-mathematics/inverse-trigonometric-functions/) |
 | FP2.8 弧长与旋转曲面面积 | 第 23 章，第 282–287 页 | [中文课程](/zh/alevel/a2-further-mathematics/arc-length-and-surface-area/) |
 | FP2.9 双曲函数 | 第 24 章，第 288–305 页 | [中文课程](/zh/alevel/a2-further-mathematics/hyperbolic-functions/) |
-| FP2.10 一阶微分方程 | 第 25.1 与 25.3 节，第 306–307 与 318–319 页 | 准备中 |
+| FP2.10 一阶微分方程 | 第 25.1 与 25.3 节，第 306–307 与 318–319 页 | [中文课程](/zh/alevel/a2-further-mathematics/first-order-differential-equations/) |
 | FP2.11 二阶微分方程 | 第 25.2 节，第 308–317 页；复习题在第 319 页 | 准备中 |
 | FP2.12 向量与三维坐标几何 | 第 26 章，第 320–344 页 | 准备中 |
 | FP2.14 线性方程组的解 | 第 27 章，第 346–352 页 | 准备中 |
