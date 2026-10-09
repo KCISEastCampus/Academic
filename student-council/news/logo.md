@@ -14,6 +14,8 @@ redirect_from:
 
 > Note: This news is in **both** languages. [Click Here](#new-logo-announcement) to skip to the English version.
 
+<div lang="zh-CN" markdown="1">
+
 # 全新Logo发布
 
 <img src="/assets/img/logo.png" alt="Logo IMG" class="white-bg" />
@@ -51,6 +53,9 @@ A-level学生会
 > Logo意见征集：**马艺涵**
 >
 > Logo美化：**石洪斌**
+
+
+</div>
 
 ---
 

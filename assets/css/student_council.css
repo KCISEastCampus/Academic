@@ -1643,3 +1643,8 @@ html[data-bs-theme="light"] .hero-title {
     text-align: center;
   }
 }
+
+/* Chinese prose keeps the shared reading rhythm in bilingual news. */
+.post-content :is(p, li):lang(zh) {
+  line-height: var(--line-height-body);
+}
