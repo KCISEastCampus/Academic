@@ -59,8 +59,10 @@
       searchResults.style.display = 'block';
       const noResult = document.createElement('div');
       noResult.classList.add('list-group-item');
-      noResult.textContent = 'No results found';
+      noResult.setAttribute('data-ui', 'no_matches');
+      noResult.textContent = window.siteLanguage ? window.siteLanguage.text('no_matches') : (document.documentElement.lang === 'zh-CN' ? '没有找到匹配结果' : 'No results found');
       searchResults.appendChild(noResult);
+      if (window.siteLanguage) window.siteLanguage.apply();
       return;
     }
 
@@ -84,6 +86,7 @@
 
       searchResults.appendChild(item);
     });
+    if (window.siteLanguage) window.siteLanguage.apply();
   }
 
   let searchData = null;

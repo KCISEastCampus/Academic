@@ -5,50 +5,62 @@
 alevel:
   - id: fx-cg50
     name: Casio fx-CG50 Guide
+    name_zh: Casio fx-CG50 Guide
     icon: "🧮"
     path: /alevel/fx-cg50/
   - id: a2mathematics
     name: A2 Math - Pure
+    name_zh: A2 数学 · 纯数学
     icon: "📕"
     path: /alevel/a2-mathematics/
   - id: a2math_mechanics
     name: A2 Math - Mechanics
+    name_zh: A2 数学 · 力学
     icon: "📕"
     path: /alevel/a2-mathematics/mechanics
   - id: a2math_statistics
     name: A2 Math - Statistics
+    name_zh: A2 数学 · 统计学
     icon: "📕"
     path: /alevel/a2-mathematics/statistics
   - id: a2furthermathematics
     name: A2 Further Math - Pure
+    name_zh: A2 高等数学 · 纯数学
     icon: "📕"
     path: /alevel/a2-further-mathematics/
   - id: a2physics
     name: A2 Physics
+    name_zh: A2 物理
     icon: "📕"
     path: /alevel/a2-physics/
   - id: mathematics
     name: AS Math
+    name_zh: AS 数学
     icon: "📗"
     path: /alevel/as-mathematics/
   - id: asfurthermathematics
     name: AS Further Math
+    name_zh: AS 高等数学
     icon: "📗"
     path: /alevel/as-further-mathematics/
   - id: chemistry
     name: AS Chemistry
+    name_zh: AS 化学
     icon: "📗"
     path: /alevel/as-chemistry/
   - id: physics
     name: AS Physics
+    name_zh: AS 物理
     icon: "📗"
     path: /alevel/as-physics/
   - id: economics
     name: AS Economics
+    name_zh: AS 经济学
     icon: "📗"
     path: /alevel/as-economics/
   - id: biology
     name: AS Biology
+    name_zh: AS 生物
     icon: "📗"
     path: /alevel/as-biology/
 
@@ -56,20 +68,24 @@ alevel:
 igcse:
   - id: mathematics
     name: IG Math
+    name_zh: IGCSE 数学
     icon: "📘"
     path: /igcse/mathematics/
 
   - id: physics
     name: IG Physics
+    name_zh: IGCSE 物理
     icon: "📘"
     path: /igcse/physics/
 
   - id: chemistry
     name: IG Chemistry
+    name_zh: IGCSE 化学
     icon: "📘"
     path: /igcse/chemistry/
 
   - id: biology
     name: IG Biology
+    name_zh: IGCSE 生物
     icon: "📘"
     path: /igcse/biology/

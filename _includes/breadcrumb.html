@@ -1,18 +1,18 @@
 <!-- _includes/breadcrumb.html -->
 <!-- Breadcrumb navigation - auto-generated from URL path -->
 {% assign ui = site.data.ui[page.lang] | default: site.data.ui.en %}
-<nav aria-label="{% if page.lang == 'zh-CN' %}页面路径{% else %}breadcrumb{% endif %}" class="site-breadcrumb">
+<nav lang="{{ page.lang | default: 'en' }}" aria-label="{% if page.lang == 'zh-CN' %}页面路径{% else %}breadcrumb{% endif %}" class="site-breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item">
       {% if page.url != "/" %}
-      <a href="/" class="breadcrumb-home" aria-label="{{ ui.back_home }}">
+      <a href="{% if page.lang == 'zh-CN' %}/zh/{% else %}/{% endif %}" class="breadcrumb-home" data-ui-aria="back_home" aria-label="{{ ui.back_home }}">
         <i class="bi bi-house-door-fill"></i>
-        <span>{{ ui.home }}</span>
+        <span data-ui="home">{{ ui.home }}</span>
       </a>
       {% else %}
       <span class="breadcrumb-home current">
         <i class="bi bi-house-door-fill"></i>
-        <span>{{ ui.home }}</span>
+        <span data-ui="home">{{ ui.home }}</span>
       </span>
       {% endif %}
     </li>
@@ -25,7 +25,7 @@
     {% if page.cg50_stage == 'further' %}
     <li class="breadcrumb-item"><a href="{{ '/alevel/fx-cg50/' | relative_url }}#further-topics">高数进阶</a></li>
     {% endif %}
-    <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
+    <li class="breadcrumb-item active" aria-current="page" lang="{{ page.lang | default: 'en' }}">{{ page.title }}</li>
     {% else %}
     {% assign crumbs = page.translation_of | default: page.url | split: '/' %}
 
@@ -33,7 +33,7 @@
       {% if crumb != "" and crumb != "index" and crumb != include.skip_parent %}
         {% unless crumb == "a2-mathematics" and page.subject == "m2" %}
         {% if forloop.last %}
-          <li class="breadcrumb-item active" aria-current="page">
+          <li class="breadcrumb-item active" aria-current="page" lang="{{ page.lang | default: 'en' }}">
             {{ page.title | default: crumb }}
           </li>
         {% else %}
@@ -45,9 +45,9 @@
               {% when "igcse" %}
                 <a href="/igcse/">IGCSE</a>
               {% when "a2-mathematics" %}
-                <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/alevel/a2-mathematics/">{{ ui.pure_mathematics }}</a>
+                <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/alevel/a2-mathematics/" data-ui="pure_mathematics">{{ ui.pure_mathematics }}</a>
               {% when "a2-further-mathematics" %}
-                <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/alevel/a2-further-mathematics/">{{ ui.further_pure_mathematics }}</a>
+                <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/alevel/a2-further-mathematics/" data-ui="further_pure_mathematics">{{ ui.further_pure_mathematics }}</a>
               {% when "a2-physics" %}
                 <a href="/alevel/a2-physics/">A2 Physics</a>
               {% when "mechanics" %}
