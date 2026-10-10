@@ -371,7 +371,7 @@ $$\frac{2(3x - 2) - (2x + 1)3}{(3x - 2)^2} = \frac{6x - 4 - 6x - 3}{(3x - 2)^2} 
 
 ## P2.7：积分 {#p27-integration}
 
-[选择积分方法并完成练习](/zh/alevel/a2-mathematics/integration/)：例题涵盖先化简、标准积分、换元积分法、分部积分法及部分分式。
+[选择积分方法并完成练习](/zh/alevel/a2-mathematics/integration/)：例题与练习涵盖先化简、标准积分、换元积分法、分部积分法及部分分式。
 
 ### 标准积分（standard integrals） {#basic-integration}
 
@@ -498,7 +498,7 @@ $$A=\int_a^b[f(x)-g(x)]\,dx.$$
 - 解为 $y = Ae^{kx}$，其中 $A$ 是常数。若按比例衰减写成 $\frac{dy}{dt}=-ky$，且 $k>0$，则使用 $y=Ae^{-kt}$。半衰期为 $\frac{\ln2}{k}$。
 
 **例题 2：**$\frac{dy}{dx} = x(1 + y^2)$。
-- 解为 $y = \tan\left(\frac{1}{2}x^2 +C\right)$。
+- 解为 $y = \tan\left(\frac{1}{2}x^2 +C\right)$，适用于满足 $\cos\left(\frac{1}{2}x^2 +C\right)\ne0$ 的连续区间。
 
 ---
 

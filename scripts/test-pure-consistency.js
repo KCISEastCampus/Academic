@@ -124,7 +124,8 @@ console.log('Content inventory: '+course.length+' lessons, '+examples+' worked e
 // Re-align initial anchors only after MathJax and its fonts finish changing layout.
 (async () => {
   const vm=require('node:vm');
-  const config=fs.readFileSync(path.join(root,'_includes/mathjax.html'),'utf8').match(/<script>([\s\S]*?)<\/script>/)[1];
+  const config=indexHtml.match(/<script>\s*(window\.MathJax\s*=[\s\S]*?)<\/script>/)?.[1];
+  assert(config,'Built Pure index must contain the rendered MathJax configuration');
   for (const [hash,expectedId,state='complete'] of [['#p29-numerical-methods','p29-numerical-methods'],['#p21-algebra-and-functions','p21-algebra-and-functions','loading'],['#a%20b','a b'],['#bad%escape','bad%escape'],['#missing',null],['',null]]) {
     let releaseFonts, releaseLoad;
     const calls=[], frames=[];
@@ -143,7 +144,7 @@ console.log('Content inventory: '+course.length+' lessons, '+examples+' worked e
     Object.assign(context.MathJax.startup,{
       defaultReady(){},
       promise:Promise.resolve(),
-      input:[{preFilters:{add(){}}}]
+      input:[{name:'TeX',preFilters:{add(){}}}]
     });
     context.MathJax.startup.ready();
     await new Promise(setImmediate);

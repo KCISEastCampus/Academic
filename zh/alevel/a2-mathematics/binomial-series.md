@@ -19,7 +19,7 @@ study_page: true
 - **作业帮助：**先找出幂次 $n$，以及公式中替代 $x$ 的整个表达式。检查常数因子和符号。
 - **复习：**先在不看解答的情况下尝试[练习](#practice)，然后使用[快速参考](#quick-reference)。
 
-教材：第 2 章，第 2.1–2.2 节（印刷版第 24–30 页）。主要内容包括任意 $n$ 的二项式级数、有理函数（rational function）的级数展开和近似计算。
+教材：第 2 章，第 2.1–2.2 节（印刷版第 24–30 页）。主要内容包括指数 $n$ 为任意有理数（rational number）时的二项式级数、有理函数（rational function）的级数展开和近似计算。
 
 **开始前：**你应当掌握正整数幂的二项式展开（binomial expansion）、阶乘（factorial）、等比级数（geometric series）和[部分分式（partial fractions）](/zh/alevel/a2-mathematics/partial-fractions/)。
 

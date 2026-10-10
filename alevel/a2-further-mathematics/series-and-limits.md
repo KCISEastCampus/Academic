@@ -407,7 +407,7 @@ $$\boxed{\int_0^\infty xe^{-2x}\,\mathrm dx=\frac14.}$$
 
 State the range for expansions. For limits, show the first terms that do not cancel. For improper integrals, show the limiting process.
 
-Questions 1–6 are self-written exercises. Questions 7–8 are original AQA questions reproduced in the supplied textbook.
+Questions 1–6 are self-written exercises. Question 7 is an original AQA question reproduced in the supplied textbook. Question 8 is textbook-derived teaching practice; its original exam source and official marks have not been verified.
 
 ### Question 1 — A range of convergence
 
@@ -659,15 +659,15 @@ This is our worked solution, not an official mark scheme.
 
 </details>
 
-### Question 8 — Original AQA integral practice
+### Question 8 — Textbook-derived integral practice
 
-**Source:** AQA MFP3, January 2011, as reproduced in Chapter 19, practice examination question 5, printed p. 232. Original wording and marks are retained.
+**Source:** teaching practice adapted from the supplied textbook, Chapter 19, practice examination question 5, printed p. 232. Its original exam source and official marks have not been verified.
 
-**a** Find $\int x^2\ln x\,\mathrm dx$. **(3 marks)**
+**a** Find $\int x^2\ln x\,\mathrm dx$.
 
-**b** Explain why $\int_0^e x^2\ln x\,\mathrm dx$ is an improper integral. **(1 mark)**
+**b** Explain why $\int_0^e x^2\ln x\,\mathrm dx$ is an improper integral.
 
-**c** Evaluate $\int_0^e x^2\ln x\,\mathrm dx$, showing the limiting process used. **(3 marks)**
+**c** Evaluate $\int_0^e x^2\ln x\,\mathrm dx$, showing the limiting process used.
 
 <details markdown="1">
 <summary>Hint</summary>
@@ -704,7 +704,7 @@ $$\boxed{\int_0^e x^2\ln x\,\mathrm dx=\frac{2e^3}{9}.}$$
 
 **Check:** differentiating the answer in part a gives $x^2\ln x$; the extra $\frac13x^2$ terms cancel.
 
-This is our worked solution, not an official mark scheme.
+This is a teaching solution; no official mark scheme has been verified for this question.
 
 </details>
 
@@ -725,6 +725,6 @@ This is our worked solution, not an official mark scheme.
 
 **You should be able to:** use all five standard expansions, state the range for a related function, find a limit after cancellation and evaluate or reject an improper integral using a limiting process.
 
-The lesson follows FP2.6 of the [OxfordAQA Further Mathematics 9665 specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf). Worked examples are teaching material. Questions 7–8 retain the AQA questions and marks from the supplied textbook.
+The lesson follows FP2.6 of the [OxfordAQA Further Mathematics 9665 specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf). Worked examples are teaching material. Question 7 retains the AQA wording and marks from the supplied textbook. Question 8 is textbook-derived teaching practice with an unverified original exam source and no official marks assigned here.
 
 **Learning path:** [Previous: Finite Series](/alevel/a2-further-mathematics/finite-series/) · [Next: De Moivre's Theorem](/alevel/a2-further-mathematics/de-moivres-theorem/) · [Back to the course](/alevel/a2-further-mathematics/).

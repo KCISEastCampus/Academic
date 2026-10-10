@@ -16,7 +16,7 @@ study_page: true
 用向量描述三维空间中的点和直线。判断两条直线的位置关系，求角度并计算垂直距离。
 
 - **学习：**从[向量与位置向量](#vectors-and-position-vectors)开始，然后学习[直线](#straight-lines)、[两条直线的位置关系](#pairs-of-lines)和[数量积](#scalar-product)。
-- **作业帮助：**仔细选择所需向量。位置向量、方向向量以及连接两点的向量作用不同。
+- **作业帮助：**仔细选择所需向量。位置向量（position vector）、方向向量（direction vector）以及连接两点的向量作用不同。
 - **复习：**先完成[练习](#practice)，再打开提示与解答。
 
 教材：第 9 章，第 9.1–9.9 节（第 124–147 页，印刷页码）。本课介绍本章中关于点与直线的方法。本章不涉及平面方程。
@@ -27,7 +27,7 @@ study_page: true
 
 ## 向量与位置向量 {#vectors-and-position-vectors}
 
-**向量**（vector）既有大小也有方向。**标量**（scalar）只有大小。点 $A$ 的**位置向量**（position vector）是 $\overrightarrow{OA}$，其中 $O$ 为原点。
+**向量**（vector）既有大小也有方向。**标量**（scalar）只有大小。点 $A$ 的**位置向量**是 $\overrightarrow{OA}$，其中 $O$ 为原点。
 
 沿坐标轴正方向的单位向量（Cartesian unit vectors）$\mathbf i$、$\mathbf j$ 和 $\mathbf k$ 分别沿 $x$、$y$ 和 $z$ 轴的正方向。例如，
 
@@ -69,7 +69,7 @@ $$\boxed{M=\left(3,-1,\frac72\right)}.$$
 
 ## 直线 {#straight-lines}
 
-一条直线可以用其上一点的位置向量 $\mathbf a$ 和一个非零的**方向向量**（direction vector）$\mathbf b$ 表示：
+一条直线可以用其上一点的位置向量 $\mathbf a$ 和一个非零的**方向向量** $\mathbf b$ 表示：
 
 $$\boxed{\mathbf r=\mathbf a+\lambda\mathbf b,\quad\lambda\in\mathbb R}.$$
 

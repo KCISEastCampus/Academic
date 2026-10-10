@@ -13,7 +13,7 @@ study_page: true
 
 [纯数学](/zh/alevel/a2-mathematics/) · P2.6 求导与导数
 
-选择合适的求导法则，求曲线斜率（gradient），并用它求切线、法线和驻点。本页例题与练习的题干保留英文，讲解、提示与解答使用中文。
+选择合适的求导法则，求曲线斜率（gradient），并用它求切线（tangent）、法线（normal）和驻点（stationary point）。本页例题与练习的题干保留英文，讲解、提示与解答使用中文。
 
 - **学习：**从[基本导数](#standard-derivatives)开始，再学习[乘积与商](#products-and-quotients)、[复合函数](#composite-functions)和[隐函数](#implicit-functions)。
 - **作业帮助：**选择法则前先辨认最外层运算。保留原函数的定义域；求三角函数的导数时使用弧度制。
@@ -82,7 +82,7 @@ $$\begin{aligned}
 &=\frac{\cos^2 x+\sin^2 x}{\cos^2 x}=\boxed{\sec^2 x}.
 \end{aligned}$$
 
-此结果适用于 $\cos x\ne0$。表中的其他倒数三角函数导数也可以用商法则或链式法则推导。
+此结果适用于 $\cos x\ne0$。表中的其他倒数三角函数导数也可以用商法则或链式法则（chain rule）推导。
 
 ### 例题 3 — 对乘积求导 {#example-3--differentiate-a-product}
 
@@ -108,7 +108,7 @@ $$\frac{dy}{dx}=\frac{x(\frac1x)-\ln x(1)}{x^2}=\boxed{\frac{1-\ln x}{x^2}}.$$
 
 ## 复合函数 {#composite-functions}
 
-若 $y=f(u)$ 且 $u=g(x)$，则链式法则（chain rule）给出
+若 $y=f(u)$ 且 $u=g(x)$，则链式法则给出
 
 $$\frac{dy}{dx}=\frac{dy}{du}\frac{du}{dx}.$$
 
@@ -160,13 +160,13 @@ $$\frac{dy}{dx}=\frac1{3y^2+1},\qquad \boxed{\left.\frac{dy}{dx}\right|_{y=1}=\f
 
 ## 切线、法线与驻点 {#tangents-normals-and-stationary-points}
 
-在正则点 $(a,b)$ 处，若切线斜率 $m$ 有限，则切线（tangent）方程为
+在正则点 $(a,b)$ 处，若切线斜率 $m$ 有限，则切线方程为
 
 $$y-b=m(x-a).$$
 
-当 $m\ne0$ 时，法线（normal）的斜率为 $-\frac1m$。若切线水平（$m=0$），法线是竖直直线 $x=a$。在切线竖直的正则点处，法线水平。
+当 $m\ne0$ 时，法线的斜率为 $-\frac1m$。若切线水平（$m=0$），法线是竖直直线 $x=a$。在切线竖直的正则点处，法线水平。
 
-驻点（stationary point）满足 $\frac{dy}{dx}=0$。要给出驻点坐标，而不只是它的 $x$ 值。可以根据 $\frac{dy}{dx}$ 的符号变化或二阶导数（second derivative）来分类：
+驻点满足 $\frac{dy}{dx}=0$。要给出驻点坐标，而不只是它的 $x$ 值。可以根据 $\frac{dy}{dx}$ 的符号变化或二阶导数（second derivative）来分类：
 
 - 符号由正变负：局部极大值（local maximum）。
 - 符号由负变正：局部极小值（local minimum）。

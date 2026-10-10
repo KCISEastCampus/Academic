@@ -105,6 +105,8 @@ $$\int6x(x^2+1)^2\,dx=\boxed{(x^2+1)^3+C}.$$
 
 **Question:** Find $\displaystyle\int x(x+2)^6\,dx$.
 
+**来源：**[OxfordAQA Mathematics (9660) 课程大纲，P2.7，印刷第 23 页](https://www.oxfordaqa.com/wp-content/uploads/2023/10/oxfordaqa-a-level-mathematics-specification.pdf)的示例；解答由本站编写。
+
 **选择：**$x+2$ 的导数是 $1$，因此因子 $x$ 不符合标准形式。令 $u=x+2$，把积分改写成 $u$ 的多项式。
 
 **过程：**令 $u=x+2$，则 $x=u-2$ 且 $du=dx$。

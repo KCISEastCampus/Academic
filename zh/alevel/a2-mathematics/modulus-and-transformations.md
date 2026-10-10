@@ -15,7 +15,7 @@ study_page: true
 
 学习描绘绝对值图像、组合函数图像变换（transformations）以及解含绝对值的方程。每次变换都用原图像上的一个点来检查。
 
-教材：第 1 章，第 1.4–1.5 节（第 8–13 页）。下方例题和练习均为自拟教学题。
+教材：第 1 章，第 1.4–1.5 节（第 8–13 页）。例题 7 的题目为课程大纲示例；其余例题和所有练习均为自拟教学题。
 
 - **学习：**从[绝对值图像](#modulus-graphs)开始，再学习例题。
 - **作业帮助：**查看[组合变换](#combinations-of-transformations)或[方程与不等式](#equations-and-inequalities)。
@@ -166,6 +166,8 @@ $$\lvert u\rvert>a\iff u<-a\text{ or }u>a.$$
 ### 例题 7 — 等式两边都有绝对值 {#example-7--modulus-on-both-sides}
 
 **Question:** Solve $\lvert x+2\rvert<3\lvert x\rvert$.
+
+**来源：**[OxfordAQA Mathematics (9660) 课程大纲，P2.1，印刷第 21 页](https://www.oxfordaqa.com/wp-content/uploads/2023/10/oxfordaqa-a-level-mathematics-specification.pdf)的示例；解答由本站编写。
 
 先找出图像 $y=\lvert x+2\rvert$ 和 $y=3\lvert x\rvert$ 的交点。两边都非负，因此两边同时平方不会改变等式的解：
 
