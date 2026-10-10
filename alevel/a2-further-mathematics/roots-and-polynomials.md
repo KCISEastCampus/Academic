@@ -340,11 +340,11 @@ The root $1-i$ also occurs. Division gives
 
 $$z^4-8z^3+31z^2-46z+34=(z^2-2z+2)(z^2-6z+17).$$
 
-The second quadratic has roots $3\pm2i$. The other three roots are
+The second quadratic is $(z-3)^2+8=0$, so its roots are $3\pm2\sqrt{2}i$. The other three roots are
 
-$$\boxed{1-i,\quad 3+2i,\quad 3-2i.}$$
+$$\boxed{1-i,\quad 3+2\sqrt{2}i,\quad 3-2\sqrt{2}i.}$$
 
-Their sum together with the given root is $8$, and their product is $2\times17=34$. Expanding the factors also checks the coefficients $31$ and $-46$.
+Substituting $z=3\pm2\sqrt{2}i$ gives $(z-3)^2+8=-8+8=0$, so both values make the original polynomial zero. Their sum together with the given root is $8$, and their product is $2(9+8)=34$. Expanding the factors also checks the coefficients $31$ and $-46$.
 
 </details>
 

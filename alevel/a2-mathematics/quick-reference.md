@@ -369,7 +369,7 @@ For gradients, tangents, normals and stationary points, open the [Parametric Equ
 
 ## P2.7: Integration
 
-[Choose a method and practise](/alevel/a2-mathematics/integration/): worked examples on simplifying first, standard integrals, integration by substitution, integration by parts and partial fractions.
+[Choose a method and practise](/alevel/a2-mathematics/integration/): examples and practice on simplifying first, standard integrals, integration by substitution, integration by parts and partial fractions.
 
 ### Standard Integrals {#basic-integration}
 
@@ -496,7 +496,7 @@ Here $f(x)\geq g(x)$ throughout $[a,b]$.
 - Solution: $y = Ae^{kx}$ where $A$ is constant. For proportional decay written as $\frac{dy}{dt}=-ky$ with $k>0$, use $y=Ae^{-kt}$. The half-life is $\frac{\ln2}{k}$.
 
 **Example 2:** $\frac{dy}{dx} = x(1 + y^2)$
-- Solution: $y = \tan\left(\frac{1}{2}x^2 +C\right)$
+- Solution: $y = \tan\left(\frac{1}{2}x^2 +C\right)$, on a continuous interval where $\cos\left(\frac{1}{2}x^2 +C\right)\ne0$.
 
 ---
 

@@ -1,22 +1,23 @@
 <!-- _includes/breadcrumb.html -->
 <!-- Breadcrumb navigation - auto-generated from URL path -->
-<nav aria-label="breadcrumb" class="site-breadcrumb">
+{% assign ui = site.data.ui[page.lang] | default: site.data.ui.en %}
+<nav aria-label="{% if page.lang == 'zh-CN' %}页面路径{% else %}breadcrumb{% endif %}" class="site-breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item">
       {% if page.url != "/" %}
-      <a href="/" class="breadcrumb-home" aria-label="Back to homepage">
+      <a href="/" class="breadcrumb-home" aria-label="{{ ui.back_home }}">
         <i class="bi bi-house-door-fill"></i>
-        <span>Home</span>
+        <span>{{ ui.home }}</span>
       </a>
       {% else %}
       <span class="breadcrumb-home current">
         <i class="bi bi-house-door-fill"></i>
-        <span>Home</span>
+        <span>{{ ui.home }}</span>
       </span>
       {% endif %}
     </li>
 
-    {% assign crumbs = page.url | split: '/' %}
+    {% assign crumbs = page.translation_of | default: page.url | split: '/' %}
     {% for crumb in crumbs offset: 1 %}
       {% if crumb != "" and crumb != "index" and crumb != include.skip_parent %}
         {% unless crumb == "a2-mathematics" and page.subject == "m2" %}
@@ -33,9 +34,9 @@
               {% when "igcse" %}
                 <a href="/igcse/">IGCSE</a>
               {% when "a2-mathematics" %}
-                <a href="/alevel/a2-mathematics/">A2 Pure Mathematics</a>
+                <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/alevel/a2-mathematics/">{{ ui.pure_mathematics }}</a>
               {% when "a2-further-mathematics" %}
-                <a href="/alevel/a2-further-mathematics/">A2 Further Pure Mathematics</a>
+                <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/alevel/a2-further-mathematics/">{{ ui.further_pure_mathematics }}</a>
               {% when "a2-physics" %}
                 <a href="/alevel/a2-physics/">A2 Physics</a>
               {% when "mechanics" %}

@@ -599,83 +599,14 @@ html[data-bs-theme="dark"] body > hr.shadow {
   overflow-x: auto;
 }
 
-/* TOC Toggle Button - Modern Design */
+/* Contents control shares the navigation button style. */
 .toc-toggle {
-  position: fixed;
-  bottom: 96px;
-  right: 20px;
-  top: auto;
-  left: auto;
-  z-index: 10000;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
-  border: 2px solid rgba(var(--accent-ig-rgb), 0.3);
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  padding: 0;
-  line-height: 1;
-  font-size: 1.15rem;
-  cursor: pointer;
   display: none;
-  align-items: center;
-  justify-content: center;
-  color: var(--text);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
-  backdrop-filter: blur(12px) saturate(180%);
-}
-
-html[data-bs-theme="dark"] .toc-toggle {
-  background: linear-gradient(135deg, rgba(40, 40, 40, 0.9), rgba(30, 30, 30, 0.8));
-  border-color: rgba(255, 255, 255, 0.2);
-}
-
-.toc-toggle:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 6px 24px rgba(var(--accent-ig-rgb), 0.3), 0 3px 8px rgba(0, 0, 0, 0.1);
-  border-color: var(--accent-ig);
-  background: linear-gradient(135deg, var(--accent-ig), var(--accent-al));
-  color: white;
-}
-
-.toc-toggle:active {
-  transform: translateY(-1px) scale(1.02);
 }
 
 .toc-toggle.active {
-  background: linear-gradient(135deg, var(--accent-ig), var(--accent-al));
-  color: white;
+  color: var(--accent-ig);
   border-color: var(--accent-ig);
-  box-shadow: 0 6px 24px rgba(var(--accent-ig-rgb), 0.4);
-}
-
-.toc-toggle i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.3s ease;
-}
-
-.toc-toggle.active i {
-  transform: rotate(90deg);
-}
-
-/* Respect prefers-reduced-motion for TOC button */
-@media (prefers-reduced-motion: reduce) {
-  .toc-toggle {
-    transition: none;
-  }
-
-  .toc-toggle:hover {
-    transform: none;
-  }
-
-  .toc-toggle:active {
-    transform: none;
-  }
 }
 
 /* Responsive Design */
@@ -728,14 +659,6 @@ html[data-bs-theme="dark"] .toc-toggle {
 }
 
 @media (max-width: 768px) {
-  .toc-toggle {
-    display: flex !important;
-    z-index: 10000;
-    width: 48px;
-    height: 48px;
-    font-size: 1.1rem;
-  }
-  
   .table-of-contents {
     position: fixed;
     width: 90vw;
@@ -2025,12 +1948,6 @@ body.scheme-alevel .table-of-contents .toc-row > a.active {
     font-size: clamp(1.7rem, 7vw, 2.3rem) !important;
   }
 
-  .toc-toggle {
-    width: 44px !important;
-    height: 44px !important;
-    bottom: 84px !important;
-    right: 16px !important;
-  }
 }
 
 @media (max-width: 420px) {

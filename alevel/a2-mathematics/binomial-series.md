@@ -17,7 +17,7 @@ Expand in ascending powers of $x$, state the range of validity and use the serie
 - **Homework help:** identify the power $n$ and the whole expression that replaces $x$ in the formula. Check the constant factor and signs.
 - **Revision:** try [practice](#practice) with solutions closed, then use the [quick reference](#quick-reference).
 
-Textbook: Chapter 2, Sections 2.1–2.2 (printed pp. 24–30). The main topics are the binomial series for any value of $n$, series expansions of rational functions and approximations.
+Textbook: Chapter 2, Sections 2.1–2.2 (printed pp. 24–30). The main topics are the binomial series for any rational value of $n$, series expansions of rational functions and approximations.
 
 **Before you start:** you should know the binomial expansion for positive integer powers, factorials, geometric series and [partial fractions](/alevel/a2-mathematics/partial-fractions/).
 

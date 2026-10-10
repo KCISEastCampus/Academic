@@ -127,44 +127,17 @@
       if (document.querySelector('.back-to-top')) return;
 
       this.button = document.createElement('button');
-      this.button.className = 'back-to-top';
+      this.button.className = 'site-nav-theme-btn back-to-top';
       this.button.innerHTML = '<i class="bi bi-chevron-up"></i>';
-      this.button.setAttribute('aria-label', 'Back to top');
-      document.body.appendChild(this.button);
-
-      // Cache the footer element to avoid querying it on every scroll
-      this.footer = document.querySelector('footer');
+      this.button.setAttribute('aria-label', document.documentElement.lang === 'zh-CN' ? '返回顶部' : 'Back to top');
+      (document.querySelector('.site-nav-actions') || document.body).appendChild(this.button);
 
       this.button.addEventListener('click', this.scrollToTop.bind(this));
-      this.updatePosition = utils.throttle(this.updatePosition.bind(this), 16);
       this.toggleVisibility = utils.throttle(this.toggleVisibility.bind(this), 100);
 
-      window.addEventListener('scroll', this.updatePosition, { passive: true });
       window.addEventListener('scroll', this.toggleVisibility, { passive: true });
-      window.addEventListener('resize', this.updatePosition, { passive: true });
 
-      this.updatePosition();
       this.toggleVisibility();
-    },
-
-    updatePosition: function() {
-      if (!this.button) return;
-
-      const baseBottom = window.innerWidth <= 768 ? 16 : 32;
-      const gap = 16;
-      let bottomOffset = baseBottom;
-
-      if (this.footer) {
-        const footerRect = this.footer.getBoundingClientRect();
-        const viewportBottom = window.innerHeight;
-        const overlap = viewportBottom - footerRect.top + gap;
-
-        if (footerRect.top < viewportBottom) {
-          bottomOffset = Math.max(baseBottom, overlap);
-        }
-      }
-
-      this.button.style.bottom = bottomOffset + 'px';
     },
 
     toggleVisibility: function() {

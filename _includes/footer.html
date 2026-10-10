@@ -1,13 +1,14 @@
+{% assign ui = site.data.ui[page.lang] | default: site.data.ui.en %}
 <footer class="py-3 border-top">
   <div class="container">
     <div class="d-flex flex-column align-items-center gap-2">
       <!-- Nav Links -->
-      <nav class="footer-nav-links" aria-label="Footer navigation">
-        <a href="/" class="footer-nav-link">Home</a>
+      <nav class="footer-nav-links" aria-label="{{ ui.footer_navigation }}">
+        <a href="/" class="footer-nav-link">{{ ui.home }}</a>
         <a href="/alevel/" class="footer-nav-link">A-Level</a>
         <a href="/igcse/" class="footer-nav-link">IGCSE</a>
-        <a href="/student-council/" class="footer-nav-link">Student Council</a>
-        <a href="/contributors/" class="footer-nav-link">Contributors</a>
+        <a href="/student-council/" class="footer-nav-link">{{ ui.student_council }}</a>
+        <a href="/contributors/" class="footer-nav-link">{{ ui.contributors }}</a>
       </nav>
       <!-- Copyright + Counter -->
       <div class="d-flex align-items-center gap-2">
