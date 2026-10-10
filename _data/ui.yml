@@ -1,0 +1,40 @@
+en:
+  site_title: A-level Homepage
+  home: Home
+  timetable: Timetable
+  student_council: Student Council
+  contributors: Contributors
+  main_navigation: Main navigation
+  footer_navigation: Footer navigation
+  toggle_theme: Toggle theme
+  toggle_navigation: Toggle navigation menu
+  switch_language: 中文
+  switch_label: Read this page in Simplified Chinese
+  back_home: Back to homepage
+  pure_mathematics: A2 Pure Mathematics
+  further_pure_mathematics: A2 Further Pure Mathematics
+  contents: Contents
+  toggle_contents: Toggle Table of Contents
+  search_contents: Search contents...
+  search_label: Search table of contents
+  clear_search: Clear search
+zh-CN:
+  site_title: A-level 学习资源
+  home: 首页
+  timetable: 考试时间表
+  student_council: 学生会
+  contributors: 贡献者
+  main_navigation: 主导航
+  footer_navigation: 页脚导航
+  toggle_theme: 切换明暗主题
+  toggle_navigation: 展开或收起导航菜单
+  switch_language: English
+  switch_label: Read this page in English
+  back_home: 返回首页
+  pure_mathematics: A2 纯数学
+  further_pure_mathematics: A2 高等纯数学
+  contents: 目录
+  toggle_contents: 展开或收起目录
+  search_contents: 搜索目录…
+  search_label: 搜索目录
+  clear_search: 清除搜索

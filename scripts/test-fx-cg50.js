@@ -118,7 +118,7 @@ console.log('Reference PDFs passed: eight local files and no personal Drive link
 
 // The learning route must work across all pages, with an accurate current stage.
 for (const [url, html] of guidePages) {
-  const breadcrumb = html.match(/<nav aria-label="breadcrumb"[^>]*>([\s\S]*?)<\/nav>/)[1];
+  const breadcrumb = html.match(/<nav[^>]*class="site-breadcrumb"[^>]*>([\s\S]*?)<\/nav>/)[1];
   if (url !== '/alevel/fx-cg50/') assert(breadcrumb.includes('fx-CG50 指南'), url + ': guide breadcrumb missing');
   if (url.includes('/further-')) assert(breadcrumb.includes('href="/alevel/fx-cg50/#further-topics"'), url + ': stage breadcrumb missing');
   assert(html.includes('本页目录') && html.includes('搜索本页目录'), url + ': page-local contents label missing');

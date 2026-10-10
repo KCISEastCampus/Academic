@@ -41,6 +41,21 @@ const complexProduct = ([a, b], [c, d]) => [a * c - b * d, a * d + b * c];
 assert.deepEqual(complexProduct([1, 1], [2, 0]), [2, 2]);
 assert.deepEqual(complexProduct([1, 1], [3, -2]), [5, 1]);
 
+// Substitute the published Question 4 answers, so an incorrect root cannot pass a factor-only check.
+const question4 = source.split('### Question 4')[1].split('### Question 5')[0];
+const answer4 = question4.match(/\\boxed\{1-i,[\s\S]*?\}\$\$/)?.[0];
+assert(answer4, 'Question 4 answer lists the conjugate root');
+const otherRoots4 = [...answer4.matchAll(/3([+-])(\d+)(?:\\sqrt\{(\d+)\})?i/g)];
+assert.equal(otherRoots4.length, 2, 'Question 4 lists both remaining roots');
+for (const [, sign, coefficient, radicand] of otherRoots4) {
+  const z = [3, (sign === '+' ? 1 : -1) * Number(coefficient) * Math.sqrt(Number(radicand || 1))];
+  const residual = [1, -8, 31, -46, 34].reduce(([a, b], c) => {
+    const [real, imaginary] = complexProduct([a, b], z);
+    return [real + c, imaginary];
+  }, [0, 0]);
+  assert(Math.hypot(...residual) < 1e-10, 'Question 4 published root must satisfy the quartic');
+}
+
 // Uniqueness proofs use completed-square derivatives, not just sampled signs.
 assert.deepEqual(multiply([1, -1], [1, -1]).map((c, i) => 3 * c + (i === 2 ? 1 : 0)), [3, -6, 4]);
 assert.equal(value([1, -3, 4, -5], 2), -1);

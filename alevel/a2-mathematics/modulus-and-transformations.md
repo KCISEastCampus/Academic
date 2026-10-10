@@ -13,7 +13,7 @@ study_page: true
 
 Learn to sketch modulus graphs, combine transformations and solve modulus equations. Use a point on the original graph to check each transformation.
 
-Textbook: Chapter 1, Sections 1.4–1.5 (pp. 8–13). The examples and practice questions below are self-written teaching exercises.
+Textbook: Chapter 1, Sections 1.4–1.5 (pp. 8–13). Example 7 uses an illustrative example from the specification; the other examples and all practice questions below are self-written teaching exercises.
 
 - **Learning:** start with [modulus graphs](#modulus-graphs), then follow the worked examples.
 - **Homework help:** use [combinations of transformations](#combinations-of-transformations) or [equations and inequalities](#equations-and-inequalities).
@@ -164,6 +164,8 @@ Do not use these rules with a negative bound. A modulus is never negative, so $\
 ### Example 7 — Modulus on both sides
 
 **Question:** Solve $\lvert x+2\rvert<3\lvert x\rvert$.
+
+**Source:** Illustrative example in [OxfordAQA Mathematics (9660) specification, P2.1, printed p. 21](https://www.oxfordaqa.com/wp-content/uploads/2023/10/oxfordaqa-a-level-mathematics-specification.pdf). The solution is written for this site.
 
 First find where the graphs $y=\lvert x+2\rvert$ and $y=3\lvert x\rvert$ meet. Both sides are non-negative, so squaring preserves the equality:
 
