@@ -53,8 +53,8 @@ console.log('fx-CG50 guide passed: 31 tasks, anchors, 57 screens, 3 key diagrams
 const further = read('_site/alevel/fx-cg50/further-mathematics/index.html');
 const furtherIds = [...further.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
 assert.equal(new Set(furtherIds).size, furtherIds.length, 'Further Mathematics IDs must be unique');
-for (const task of ['03', '04', '05', '08', '10', '11', '15', '20']) {
-  assert(furtherIds.includes('fm-task-' + task), 'Missing priority task ' + task);
+for (const task of Array.from({length: 20}, (_, n) => String(n + 1).padStart(2, '0'))) {
+  assert(furtherIds.includes('fm-task-' + task), 'Missing core task ' + task);
 }
 for (const [, href] of further.matchAll(/href="#([^"]+)"/g)) {
   assert(furtherIds.includes(decodeURIComponent(href)), 'Broken Further Mathematics anchor ' + href);
@@ -64,5 +64,38 @@ for (const [tag, url] of further.matchAll(/<img[^>]+src="([^"]*\/fx-cg50\/fm\/[^
   assert(fs.existsSync(path.join(root, '_site', url)), 'Missing Further Mathematics image ' + url);
 }
 assert(further.includes('<html lang="zh-CN">') && further.includes('tex-chtml-full.js'));
+// Absolute-value bars in prose must not become Markdown table separators.
+assert.equal((further.match(/<table>/g) || []).length, 3, 'Unexpected Further Mathematics table');
+assert(/<p>距虚轴的距离是 \$\\lvert\\operatorname\{Re\}z\\rvert\$。比较上表/.test(further), 'Root distance formula must remain one paragraph');
 assert(page.includes('href="/alevel/fx-cg50/further-mathematics/"'));
-console.log('Further Mathematics passed: eight priority tasks, anchors, assets, Chinese layout and MathJax loading.');
+const numerical = read('_site/alevel/fx-cg50/further-mathematics/numerical-calculus/index.html');
+const mechanics = read('_site/alevel/fx-cg50/further-mechanics/index.html');
+const guidePages = new Map([
+  ['/alevel/fx-cg50/', page],
+  ['/alevel/fx-cg50/further-mathematics/', further],
+  ['/alevel/fx-cg50/further-mathematics/numerical-calculus/', numerical],
+  ['/alevel/fx-cg50/further-mechanics/', mechanics]
+]);
+for (const [url, html] of guidePages) {
+  const headingIds = [...html.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
+  assert.equal(new Set(headingIds).size, headingIds.length, url + ': duplicate ID');
+  assert(html.includes('<html lang="zh-CN">') && html.includes('tex-chtml-full.js'), url + ': language or MathJax missing');
+  assert(!html.includes('@@figure:') && !html.includes('将继续补充'), url + ': unfinished content');
+  for (const [, href] of html.matchAll(/href="([^"]+)"/g)) {
+    const destination = new URL(href, 'https://local.test' + url);
+    if (destination.origin !== 'https://local.test' || !guidePages.has(destination.pathname)) continue;
+    if (destination.hash) assert(guidePages.get(destination.pathname).includes('id="' + decodeURIComponent(destination.hash.slice(1)) + '"'), url + ': broken link ' + href);
+  }
+  for (const [tag, img] of html.matchAll(/<img[^>]+src="([^" ]*\/fx-cg50\/[^" ]+)"[^>]*>/g)) {
+    assert(/alt="[^"]+"/.test(tag), url + ': image needs alt text');
+    assert(fs.existsSync(path.join(root, '_site', img)), url + ': missing image ' + img);
+  }
+  for (const [, cell] of html.matchAll(/<t[dh]\b[^>]*>([\s\S]*?)<\/t[dh]>/g)) assert.equal((cell.match(/(?<!\\)\$/g) || []).length % 2, 0, url + ': math split across cells');
+}
+for (let n = 21; n <= 30; n++) assert(numerical.includes('id="fm-task-' + n + '"'), 'Missing numerical task ' + n);
+for (let n = 1; n <= 6; n++) assert(mechanics.includes('id="fm-mech-' + String(n).padStart(2, '0') + '"'), 'Missing mechanics extension ' + n);
+assert.equal((numerical.match(/<table>/g) || []).length, 1, 'Unexpected numerical-method table');
+assert.equal((mechanics.match(/<table>/g) || []).length, 0, 'Unexpected mechanics table');
+assert(mechanics.includes('fm-shm-phase.png') && mechanics.includes('最接近的整数度'));
+assert(numerical.includes('差分消项') && numerical.includes('1.789473684211'));
+console.log('Further Mathematics passed: 30 core tasks, six mechanics extensions, cross-page anchors, assets, tables and MathJax configuration.');

@@ -9,7 +9,7 @@ toc_headings: h2, h3
 permalink: /alevel/fx-cg50/
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/fx-cg50.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/fx-cg50.css' | relative_url }}?v=20261010">
 
 <div class="cg50-guide" markdown="1">
 
@@ -21,7 +21,11 @@ permalink: /alevel/fx-cg50/
 
 [下载第 1–3 章 PDF（10 页）]({{ '/assets/pdf/fx-CG50-guide-chapters-1-3-illustrated.pdf' | relative_url }})
 
-[Further Mathematics 操作专题]({{ '/alevel/fx-cg50/further-mathematics/' | relative_url }})：复数的全部根、矩阵特征值与特征向量、线面角及极坐标面积。
+[Further Mathematics 操作专题]({{ '/alevel/fx-cg50/further-mathematics/' | relative_url }})：核心任务 01–20，复数、多项式、矩阵、向量与极坐标。
+
+[数值方法与微积分]({{ '/alevel/fx-cg50/further-mathematics/numerical-calculus/' | relative_url }})：核心任务 21–30，求和、误差、迭代、双曲函数、积分与微分方程。
+
+[Further Mechanics 操作专题]({{ '/alevel/fx-cg50/further-mechanics/' | relative_url }})：六项扩展，弹性、变力、斜面抛射、碰撞、SHM 与圆周运动。
 
 网页版更新于 2026 年 10 月 10 日。PDF 是 10 月 6 日的前三章版本，尚不含新增考试模式与网页署名。
 
@@ -760,7 +764,7 @@ $$A=-\int_0^1(x^2-1)\,dx+\int_1^2(x^2-1)\,dx=\frac23+\frac43=2.$$
 
 第 1–3 章已有实机截图；第 4–9 章已逐项核对中文菜单、输入步骤和结果，并补齐配图。反求分位数也已代回检查。考试模式的进入、标识、退出，以及关机行为仍需实机核对。
 
-下一步请老师审阅内容，再安排实机复核与全文 PDF。Further Mathematics 的复数与矩阵留作扩展篇。当前 PDF 下载仍为原前三章版本。
+下一步请老师审阅内容，再安排实机复核与全文 PDF。Further Mathematics 的 30 项核心任务及六项力学扩展已另页完成。当前 PDF 下载仍为原前三章版本。
 
 ## 署名与资料来源 {#credits}
 
