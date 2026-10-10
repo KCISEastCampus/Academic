@@ -3,12 +3,12 @@
   <div class="container">
     <div class="d-flex flex-column align-items-center gap-2">
       <!-- Nav Links -->
-      <nav class="footer-nav-links" aria-label="{{ ui.footer_navigation }}">
-        <a href="/" class="footer-nav-link">{{ ui.home }}</a>
-        <a href="/alevel/" class="footer-nav-link">A-Level</a>
-        <a href="/igcse/" class="footer-nav-link">IGCSE</a>
-        <a href="/student-council/" class="footer-nav-link">{{ ui.student_council }}</a>
-        <a href="/contributors/" class="footer-nav-link">{{ ui.contributors }}</a>
+      <nav class="footer-nav-links" data-site-ui lang="{{ page.lang | default: 'en' }}" data-ui-aria="footer_navigation" aria-label="{{ ui.footer_navigation }}">
+        <a href="{% if page.lang == 'zh-CN' %}/zh/{% else %}/{% endif %}" class="footer-nav-link" data-ui="home">{{ ui.home }}</a>
+        <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/alevel/" class="footer-nav-link">A-Level</a>
+        <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/igcse/" class="footer-nav-link">IGCSE</a>
+        <a href="/student-council/" class="footer-nav-link" data-ui="student_council">{{ ui.student_council }}</a>
+        <a href="/contributors/" class="footer-nav-link" data-ui="contributors">{{ ui.contributors }}</a>
       </nav>
       <!-- Copyright + Counter -->
       <div class="d-flex align-items-center gap-2">
@@ -22,7 +22,7 @@
             var currentUrl = new URL(window.location.href);
             var pageLabel = "{{ page.title | default: site.title | default: 'Academic' | escape }}";
             currentUrl.hash = '';
-            var isHomePage = currentUrl.pathname === '/' || currentUrl.pathname === '/index.html';
+            var isHomePage = currentUrl.pathname === '/' || currentUrl.pathname === '/index.html' || currentUrl.pathname === '/zh/' || currentUrl.pathname === '/zh/index.html';
             var counterUrl = isHomePage ? 'academic.kcisec.site' : currentUrl.toString();
             var counterLabel = isHomePage ? 'Academic' : pageLabel;
             var api = new URL('https://hitscounter.dev/api/hit');

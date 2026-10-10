@@ -1523,3 +1523,17 @@ html[data-bs-theme="dark"] .site-breadcrumb .breadcrumb-home:hover {
 }
 
 
+
+.site-language-select {
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border-hover);
+  border-radius: .4rem;
+  padding: .35rem .4rem;
+  font: inherit;
+  max-width: 6.5rem;
+}
+
+#languageSwitch[hidden], .site-language-select[hidden] {
+  display: none;
+}

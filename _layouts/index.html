@@ -1,8 +1,9 @@
 ---
 layout: none
 ---
+{% assign ui = site.data.ui[page.lang] | default: site.data.ui.en %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ page.lang | default: 'en' }}">
 
 <head>
   {% include head.html %}
@@ -16,44 +17,44 @@ layout: none
 <body>
   {% include nav.html %}
   {% include site_header.html
-     title="A-level Homepage"
-     subtitle="A platform for A-level Students in KCISEC" %}
+     title=ui.homepage_title
+     subtitle=ui.homepage_subtitle %}
 
-  <a class="skip-link sr-only-focusable" href="#main-content">Skip to main content</a>
+  <a class="skip-link sr-only-focusable" href="#main-content" data-ui="skip_content">{{ ui.skip_content }}</a>
   <main id="main-content" class="container" role="main">
 
     <!-- Quick Navigation Links -->
     <section class="quick-nav-section fade-in">
       <div class="quick-nav-container">
-        <a href="/admissions/tmua-esat/" class="quick-nav-item" title="TMUA &amp; ESAT mathematics and physics notes">
+        <a href="/admissions/tmua-esat/" class="quick-nav-item" title="{{ ui.admissions_notes }}" data-ui-title="admissions_notes">
           <div class="nav-icon">
             <i class="bi bi-calculator" aria-hidden="true"></i>
           </div>
           <div class="nav-content">
             <h3>TMUA &amp; ESAT</h3>
-            <p>University admissions mathematics &amp; physics notes</p>
+            <p data-ui="admissions_description">{{ ui.admissions_description }}</p>
           </div>
           <i class="bi bi-chevron-right nav-arrow" aria-hidden="true"></i>
         </a>
 
-        <a href="/student-council/" class="quick-nav-item" title="Student Council">
+        <a href="/student-council/" class="quick-nav-item" title="{{ ui.student_council }}" data-ui-title="student_council">
           <div class="nav-icon">
             <i class="bi bi-people-fill"></i>
           </div>
           <div class="nav-content">
-            <h3>Student Council</h3>
-            <p>Student organization and activities</p>
+            <h3 data-ui="student_council">{{ ui.student_council }}</h3>
+            <p data-ui="student_council_description">{{ ui.student_council_description }}</p>
           </div>
           <i class="bi bi-chevron-right nav-arrow"></i>
         </a>
 
-        <a href="/contributors/" class="quick-nav-item" title="Meet our contributors">
+        <a href="/contributors/" class="quick-nav-item" title="{{ ui.contributors_title }}" data-ui-title="contributors_title">
           <div class="nav-icon">
             <i class="bi bi-stars"></i>
           </div>
           <div class="nav-content">
-            <h3>Contributors</h3>
-            <p>Meet the team behind these resources</p>
+            <h3 data-ui="contributors">{{ ui.contributors }}</h3>
+            <p data-ui="contributors_description">{{ ui.contributors_description }}</p>
           </div>
           <i class="bi bi-chevron-right nav-arrow"></i>
         </a>
@@ -68,25 +69,31 @@ layout: none
             <i class="bi bi-mortarboard-fill"></i>
             A-Level
           </h2>
-          <p class="section-subtitle">OxfordAQA International A level</p>
+          <p class="section-subtitle" data-ui="alevel_description">{{ ui.alevel_description }}</p>
         </div>
         <span class="section-badge" style="--accent-rgb: var(--accent-al-rgb); --accent-color: var(--accent-al);">
           <i class="bi bi-book"></i>
-          Advanced Level
+          <span data-ui="alevel_badge">{{ ui.alevel_badge }}</span>
         </span>
       </div>
       
       <div class="subjects-grid-modern">
         {% for subject in site.data.subjects.alevel %}
           {% assign subject_name = subject.name | default: 'Subject' %}
-          <a href="{{ subject.path }}" class="modern-subject-card" style="--accent-rgb: var(--accent-al-rgb); --accent-color: var(--accent-al);" title="View {{ subject_name }} resources">
+          {% assign subject_path = subject.path %}
+          {% if page.lang == 'zh-CN' %}
+            {% assign subject_name = subject.name_zh | default: subject_name %}
+            {% assign subject_translation = site.pages | where: 'translation_of', subject.path | first %}
+            {% if subject_translation %}{% assign subject_path = subject_translation.url %}{% endif %}
+          {% endif %}
+          <a href="{{ subject_path | relative_url }}" class="modern-subject-card" style="--accent-rgb: var(--accent-al-rgb); --accent-color: var(--accent-al);" title="{{ ui.view_resources | replace: '%subject%', subject_name }}">
             <div class="card-icon">
               {{ subject.icon }}
             </div>
             <div class="card-content">
               <div class="card-title">{{ subject_name }}</div>
               <div class="card-meta">
-                <span class="meta-text">Study Materials</span>
+                <span class="meta-text" data-ui="study_materials">{{ ui.study_materials }}</span>
                 <i class="bi bi-arrow-right hover-arrow"></i>
               </div>
             </div>
@@ -103,25 +110,31 @@ layout: none
             <i class="bi bi-book-half"></i>
             IGCSE
           </h2>
-          <p class="section-subtitle">OxfordAQA International GCSE</p>
+          <p class="section-subtitle" data-ui="igcse_description">{{ ui.igcse_description }}</p>
         </div>
         <span class="section-badge" style="--accent-rgb: var(--accent-ig-rgb); --accent-color: var(--accent-ig);">
           <i class="bi bi-mortarboard"></i>
-          GCSE Level
+          <span data-ui="igcse_badge">{{ ui.igcse_badge }}</span>
         </span>
       </div>
       
       <div class="subjects-grid-modern">
         {% for subject in site.data.subjects.igcse %}
           {% assign subject_name = subject.name | default: 'Subject' %}
-          <a href="{{ subject.path }}" class="modern-subject-card" style="--accent-rgb: var(--accent-ig-rgb); --accent-color: var(--accent-ig);" title="View {{ subject_name }} resources">
+          {% assign subject_path = subject.path %}
+          {% if page.lang == 'zh-CN' %}
+            {% assign subject_name = subject.name_zh | default: subject_name %}
+            {% assign subject_translation = site.pages | where: 'translation_of', subject.path | first %}
+            {% if subject_translation %}{% assign subject_path = subject_translation.url %}{% endif %}
+          {% endif %}
+          <a href="{{ subject_path | relative_url }}" class="modern-subject-card" style="--accent-rgb: var(--accent-ig-rgb); --accent-color: var(--accent-ig);" title="{{ ui.view_resources | replace: '%subject%', subject_name }}">
             <div class="card-icon">
               {{ subject.icon }}
             </div>
             <div class="card-content">
               <div class="card-title">{{ subject_name }}</div>
               <div class="card-meta">
-                <span class="meta-text">Study Materials</span>
+                <span class="meta-text" data-ui="study_materials">{{ ui.study_materials }}</span>
                 <i class="bi bi-arrow-right hover-arrow"></i>
               </div>
             </div>
@@ -140,8 +153,8 @@ layout: none
           <i class="bi bi-bar-chart-line"></i>
         </div>
         <div class="useful-link-content">
-          <h3>Grade Boundaries</h3>
-          <p>Check boundaries and compare across years</p>
+          <h3 data-ui="grade_boundaries">{{ ui.grade_boundaries }}</h3>
+          <p data-ui="grade_boundaries_description">{{ ui.grade_boundaries_description }}</p>
         </div>
         <i class="bi bi-box-arrow-up-right useful-link-arrow"></i>
       </a>

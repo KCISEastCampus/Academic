@@ -47,32 +47,34 @@ layout: none
     <div id="content-container" data-pagefind-body data-toc-headings="{{ page.toc_headings | default: 'h1, h2, h3, h4' }}">
       {{ content }}
     </div>
-    <div id="toc" class="table-of-contents">
+    <div id="toc" class="table-of-contents" data-site-ui lang="{{ page.lang | default: 'en' }}">
       <div class="toc-header-fixed">
-        <h2 class="contents-list">{% if page.cg50_stage %}本页目录{% else %}{{ ui.contents }}{% endif %}</h2>
+        <h2 class="contents-list" data-ui="{% if page.cg50_stage %}guide_contents{% else %}contents{% endif %}">{% if page.cg50_stage %}本页目录{% else %}{{ ui.contents }}{% endif %}</h2>
 
-        
+
         <!-- TOC Search Bar -->
         <div class="toc-search-container">
-          <input type="text" 
-                 id="tocSearch" 
-                 class="toc-search-input" 
+          <input type="text"
+                 id="tocSearch"
+                 data-ui-placeholder="{% if page.cg50_stage %}guide_search_contents{% else %}search_contents{% endif %}"
+                 data-ui-aria="{% if page.cg50_stage %}guide_search_label{% else %}search_label{% endif %}"
+                 class="toc-search-input"
                  placeholder="{% if page.cg50_stage %}搜索本页目录…{% else %}{{ ui.search_contents }}{% endif %}"
                  aria-label="{% if page.cg50_stage %}搜索本页目录{% else %}{{ ui.search_label }}{% endif %}">
-          <button id="tocSearchClear" class="toc-search-clear" aria-label="{{ ui.clear_search }}" style="display: none;">
+          <button id="tocSearchClear" data-ui-aria="clear_search" class="toc-search-clear" aria-label="{{ ui.clear_search }}" style="display: none;">
 
             <i class="bi bi-x-circle"></i>
           </button>
         </div>
-        
+
         <!-- Reading Progress Bar -->
         <div class="reading-progress-container">
           <div class="reading-progress-bar" id="readingProgress"></div>
           <span class="reading-progress-text" id="progressText">0%</span>
         </div>
       </div>
-      
-      <div class="toc-content">
+
+      <div class="toc-content" lang="{{ page.lang | default: 'en' }}">
       </div>
     </div>
   </div>

@@ -18,6 +18,48 @@ en:
   search_contents: Search contents...
   search_label: Search table of contents
   clear_search: Clear search
+  choose_language: Choose interface language
+  back_to_top: Back to top
+  collapse_section: Collapse or expand section
+  no_matches: No matches found
+  loading_pdf: Loading PDF
+  copy_code: Copy code
+  copy_clipboard: Copy to clipboard
+  guide_contents: Contents for this page
+  guide_search_contents: Search this page's contents...
+  guide_search_label: Search this page's table of contents
+  home_logo: Homepage
+  search_topics: Search topics...
+  search: Search
+  school_logo: KangChiao International School East Campus Logo
+  homepage_title: A-level Homepage
+  homepage_subtitle: A platform for A-level Students in KCISEC
+  skip_content: Skip to main content
+  admissions_notes: TMUA & ESAT mathematics and physics notes
+  admissions_description: University admissions mathematics & physics notes
+  student_council_description: Student organization and activities
+  contributors_title: Meet our contributors
+  contributors_description: Meet the team behind these resources
+  alevel_description: OxfordAQA International A level
+  igcse_description: OxfordAQA International GCSE
+  alevel_badge: Advanced Level
+  igcse_badge: GCSE Level
+  study_materials: Study Materials
+  view_resources: 'View %subject% resources'
+  homepage: Homepage
+  back_main_page: Back to main page
+  grade_boundaries: Grade Boundaries
+  grade_boundaries_description: Check boundaries and compare across years
+  upcoming_exam: Upcoming Exam
+  exam_session: January 2027
+  next_examination: Next Scheduled Examination
+  exam_start_notice: Exact exam start times will be sent by your Homeroom Teacher.
+  duration: 'Duration:'
+  scheduled_papers: Scheduled Papers
+  oxfordaqa_subjects: OxfordAQA Subjects
+  official_session: Official Session
+  full_timetable: View Full Timetable
+  official_pdf: Official PDF
 zh-CN:
   site_title: A-level 学习资源
   home: 首页
@@ -38,3 +80,45 @@ zh-CN:
   search_contents: 搜索目录…
   search_label: 搜索目录
   clear_search: 清除搜索
+  choose_language: 选择界面语言
+  back_to_top: 返回顶部
+  collapse_section: 展开或收起本节
+  no_matches: 没有找到匹配结果
+  loading_pdf: 正在加载 PDF
+  copy_code: 复制代码
+  copy_clipboard: 复制到剪贴板
+  guide_contents: 本页目录
+  guide_search_contents: 搜索本页目录…
+  guide_search_label: 搜索本页目录
+  home_logo: 首页
+  search_topics: 搜索主题…
+  search: 搜索
+  school_logo: 昆山康桥学校校徽
+  homepage_title: A-level 学习资源
+  homepage_subtitle: 昆山康桥学校 A-Level 与 IGCSE 学习资源
+  skip_content: 跳到主要内容
+  admissions_notes: TMUA 与 ESAT 数学及物理笔记
+  admissions_description: 大学入学考试数学与物理笔记
+  student_council_description: 学生组织与校园活动
+  contributors_title: 认识贡献者
+  contributors_description: 认识参与建设这些资源的同学
+  alevel_description: OxfordAQA 国际 A-Level 学习资源
+  igcse_description: OxfordAQA 国际 GCSE 学习资源
+  alevel_badge: A-Level 课程
+  igcse_badge: GCSE 课程
+  study_materials: 学习资料
+  view_resources: '查看 %subject% 学习资源'
+  homepage: 首页
+  back_main_page: 返回网站首页
+  grade_boundaries: 等级分数线
+  grade_boundaries_description: 查看各年份分数线并进行比较
+  upcoming_exam: 近期考试
+  exam_session: 2027 年 1 月
+  next_examination: 下一场考试
+  exam_start_notice: 具体考试开始时间将由班主任通知。
+  duration: 考试时长：
+  scheduled_papers: 场考试
+  oxfordaqa_subjects: 门 OxfordAQA 学科
+  official_session: 官方考试季
+  full_timetable: 查看完整考试时间表
+  official_pdf: 官方 PDF

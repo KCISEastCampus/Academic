@@ -1,8 +1,9 @@
 ---
 layout: none
 ---
+{% assign ui = site.data.ui[page.lang] | default: site.data.ui.en %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ page.lang | default: 'en' }}">
 
 <head>
   {% include head.html %}
@@ -17,19 +18,19 @@ layout: none
      title=page.title
      subtitle=page.subtitle %}
 
-  <a class="skip-link sr-only-focusable" href="#main-content">Skip to main content</a>
+  <a class="skip-link sr-only-focusable" href="#main-content" data-ui="skip_content">{{ ui.skip_content }}</a>
   <main id="main-content" class="container" role="main">
 
     <!-- Back to Home -->
     <section class="quick-nav-section fade-in">
       <div class="quick-nav-container">
-        <a href="/" class="quick-nav-item" title="Back to Homepage">
+        <a href="{% if page.lang == 'zh-CN' %}/zh/{% else %}/{% endif %}" class="quick-nav-item" title="{{ ui.back_home }}" data-ui-title="back_home">
           <div class="nav-icon">
             <i class="bi bi-house-door-fill"></i>
           </div>
           <div class="nav-content">
-            <h3>Homepage</h3>
-            <p>Back to main page</p>
+            <h3 data-ui="homepage">{{ ui.homepage }}</h3>
+            <p data-ui="back_main_page">{{ ui.back_main_page }}</p>
           </div>
           <i class="bi bi-chevron-right nav-arrow"></i>
         </a>
@@ -52,7 +53,7 @@ layout: none
         </div>
         <span class="section-badge" style="--accent-rgb: var(--accent-{{ page.level | default: 'al' }}-rgb); --accent-color: var(--accent-{{ page.level | default: 'al' }});">
           <i class="bi bi-book"></i>
-          {{ page.badge | default: "Study Materials" }}
+          {{ page.badge | default: ui.study_materials }}
         </span>
       </div>
 
@@ -60,14 +61,20 @@ layout: none
         {% assign subjects = site.data.subjects[page.level] %}
         {% for subject in subjects %}
           {% assign subject_name = subject.name | default: 'Subject' %}
-          <a href="{{ subject.path }}" class="modern-subject-card" style="--accent-rgb: var(--accent-{{ page.level | default: 'al' }}-rgb); --accent-color: var(--accent-{{ page.level | default: 'al' }});" title="View {{ subject_name }} resources">
+          {% assign subject_path = subject.path %}
+          {% if page.lang == 'zh-CN' %}
+            {% assign subject_name = subject.name_zh | default: subject_name %}
+            {% assign subject_translation = site.pages | where: 'translation_of', subject.path | first %}
+            {% if subject_translation %}{% assign subject_path = subject_translation.url %}{% endif %}
+          {% endif %}
+          <a href="{{ subject_path | relative_url }}" class="modern-subject-card" style="--accent-rgb: var(--accent-{{ page.level | default: 'al' }}-rgb); --accent-color: var(--accent-{{ page.level | default: 'al' }});" title="{{ ui.view_resources | replace: '%subject%', subject_name }}">
             <div class="card-icon">
               {{ subject.icon }}
             </div>
             <div class="card-content">
               <div class="card-title">{{ subject_name }}</div>
               <div class="card-meta">
-                <span class="meta-text">Study Materials</span>
+                <span class="meta-text" data-ui="study_materials">{{ ui.study_materials }}</span>
                 <i class="bi bi-arrow-right hover-arrow"></i>
               </div>
             </div>

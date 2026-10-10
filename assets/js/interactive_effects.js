@@ -81,7 +81,7 @@
     isHomePage: function() {
       // 检查URL路径是否为根路径或index
       const path = window.location.pathname;
-      return path === '/' || path === '/index.html' || path.endsWith('/index');
+      return path === '/' || path === '/index.html' || path === '/zh/' || path === '/zh/index.html' || path.endsWith('/index');
     }
   };
 
@@ -129,6 +129,7 @@
       this.button = document.createElement('button');
       this.button.className = 'site-nav-theme-btn back-to-top';
       this.button.innerHTML = '<i class="bi bi-chevron-up"></i>';
+      this.button.setAttribute('data-ui-aria', 'back_to_top');
       this.button.setAttribute('aria-label', document.documentElement.lang === 'zh-CN' ? '返回顶部' : 'Back to top');
       (document.querySelector('.site-nav-actions') || document.body).appendChild(this.button);
 
@@ -249,8 +250,9 @@
       if (!loader) {
         loader = document.createElement('span');
         loader.className = 'pdf-loader';
-        loader.innerHTML = '<i class="bi bi-hourglass-split" aria-hidden="true"></i><span class="visually-hidden">Loading PDF</span>';
+        loader.innerHTML = '<i class="bi bi-hourglass-split" aria-hidden="true"></i><span class="visually-hidden" data-ui="loading_pdf">Loading PDF</span>';
         link.appendChild(loader);
+        if (window.siteLanguage) window.siteLanguage.apply();
       }
 
       setTimeout(() => {
@@ -301,6 +303,8 @@
         const btn = document.createElement('button');
         btn.className = 'btn btn-sm btn-outline-secondary copy-btn position-absolute top-0 end-0 m-2';
         btn.innerHTML = '<i class="bi bi-clipboard"></i>';
+        btn.setAttribute('data-ui-aria', 'copy_code');
+        btn.setAttribute('data-ui-title', 'copy_clipboard');
         btn.setAttribute('aria-label', 'Copy code');
         btn.title = 'Copy to clipboard';
         
@@ -470,6 +474,7 @@
     loadingIndicator.init();
     keyboardNavigation.init();
     codeCopy.init();
+    if (window.siteLanguage) window.siteLanguage.apply();
     searchHighlight.init(); // 添加搜索高亮初始化
 
     if (CONFIG.ENABLE_DEBUG_LOGGING) {
