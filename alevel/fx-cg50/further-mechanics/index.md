@@ -9,7 +9,7 @@ toc_headings: h2, h3
 permalink: /alevel/fx-cg50/further-mechanics/
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/fx-cg50.css' | relative_url }}?v=20261010-reading">
+<link rel="stylesheet" href="{{ '/assets/css/fx-cg50.css' | relative_url }}?v=20261010-sections">
 
 <div class="cg50-guide" markdown="1">
 
@@ -193,6 +193,8 @@ $$\frac38=3\cos\theta_B-2\cos\alpha,
 ## 答卷与考前检查 {#fm-mech-checklist}
 
 每道题先写方向、单位和模型条件，再列受力或能量方程。碰撞检查法线，SHM 检查相位，圆周运动检查接触是否存在，数值求根检查物理解和题目范围。最后才按精度要求舍入；结束角度题后恢复 Rad，再做微积分。
+
+---
 
 [基础操作]({{ '/alevel/fx-cg50/' | relative_url }})提供矩阵、联立方程、定积分与表格的完整按键模板。本页真题版权归考试局，操作参考 [Casio 中文软件手册](https://www.casio.com/content/dam/casio/global/support/manuals/calculators/pdf/004-zh-cn/f/fx-CG50_Soft_v370_CN.pdf)。考试模式按学校与老师要求设置。
 

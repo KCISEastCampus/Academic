@@ -9,7 +9,7 @@ toc_headings: h2, h3
 permalink: /alevel/fx-cg50/
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/fx-cg50.css' | relative_url }}?v=20261010-reading">
+<link rel="stylesheet" href="{{ '/assets/css/fx-cg50.css' | relative_url }}?v=20261010-sections">
 
 <div class="cg50-guide" markdown="1">
 
@@ -715,6 +715,8 @@ $$A=-\int_0^1(x^2-1)\,dx+\int_1^2(x^2-1)\,dx=\frac23+\frac43=2.$$
 - **范围和单位对不对？** 不接受定义域外的根；长度、面积、时间等写相应单位；概率应在 $[0,1]$。
 - **漏掉结果了吗？** 检查所有根、所有交点以及题目对正值、整数或区间的限制。
 - **设置对不对？** 核对角度单位、数据与频数、考试模式要求和电量。
+
+---
 
 ## 核对进度与后续工作 {#next-chapters}
 

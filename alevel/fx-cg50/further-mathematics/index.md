@@ -9,7 +9,7 @@ toc_headings: h2, h3
 permalink: /alevel/fx-cg50/further-mathematics/
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/fx-cg50.css' | relative_url }}?v=20261010-reading">
+<link rel="stylesheet" href="{{ '/assets/css/fx-cg50.css' | relative_url }}?v=20261010-sections">
 
 <div class="cg50-guide" markdown="1">
 
@@ -462,6 +462,8 @@ $$A=\left[u+\frac{u^2}{2}+\frac{u^3}{3}+\frac{u^4}{4}\right]_0^{1/\sqrt3}
 </details>
 
 若积分模板中误用 $\theta$，计算器可能使用它保存的数值，把被积函数当成常数。本例画图后误用 $\theta$ 会得到约 $1.468264302$；检查屏幕里的积分变量是必要步骤。
+
+---
 
 ## 参考资料与后续学习 {#fm-sources}
 

@@ -9,7 +9,7 @@ toc_headings: h2, h3
 permalink: /alevel/fx-cg50/further-mathematics/numerical-calculus/
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/fx-cg50.css' | relative_url }}?v=20261010-reading">
+<link rel="stylesheet" href="{{ '/assets/css/fx-cg50.css' | relative_url }}?v=20261010-sections">
 
 <div class="cg50-guide" markdown="1">
 
@@ -250,6 +250,8 @@ $$y=4e^{-x}+3e^{2x}+3\cos x+\sin x-2xe^{-x}.$$
 ## 使用前的最后检查 {#fm-numerical-checklist}
 
 确认 Rad、变量 X、上下限、迭代起点及题目的精度要求。中间值保留完整精度；答案先区分精确式、近似值、区间和最小整数，再决定如何书写。涉及学校考试模式时回到[考试准备]({{ '/alevel/fx-cg50/' | relative_url }}#exam-mode)，按老师要求操作。
+
+---
 
 操作参考 [Casio 中文软件手册](https://www.casio.com/content/dam/casio/global/support/manuals/calculators/pdf/004-zh-cn/f/fx-CG50_Soft_v370_CN.pdf) 的计算、求和、表格与方程章节。本页菜单以核对的中文 03.81.0202 为准，真题版权归考试局。
 
