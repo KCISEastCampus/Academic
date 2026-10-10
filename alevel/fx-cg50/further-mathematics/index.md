@@ -9,7 +9,7 @@ toc_headings: h2, h3
 permalink: /alevel/fx-cg50/further-mathematics/
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/fx-cg50.css' | relative_url }}?v=20261010">
+<link rel="stylesheet" href="{{ '/assets/css/fx-cg50.css' | relative_url }}?v=20261010-reading">
 
 <div class="cg50-guide" markdown="1">
 
