@@ -23,7 +23,7 @@ permalink: /alevel/fx-cg50/
 
 网页版更新于 2026 年 10 月 10 日。PDF 是 10 月 6 日的前三章版本，尚不含新增考试模式与网页署名。
 
-前三章主要操作已于 10 月 6 日在中文版 **03.81.0202** 实机核对；12 张屏幕图来自 Screen Receiver，保留了部分计算历史，请关注图注指定的算式。练习答案另经数学复核。第 4 章已于 10 月 10 日在相同 **03.81.0202** 中文固件的虚拟机中逐项核对，新增 6 张截图来自虚拟机的实际屏幕。**考试模式与第 4–9 章尚未在这台中文版实机验收；第 5–9 章操作暂依据官方资料整理。**
+前三章主要操作已于 10 月 6 日在中文版 **03.81.0202** 实机核对；12 张屏幕图来自 Screen Receiver，保留了部分计算历史，请关注图注指定的算式。练习答案另经数学复核。第 4 章已于 10 月 10 日在相同 **03.81.0202** 中文固件的虚拟机中逐项核对。**考试模式与第 4–9 章尚未在这台中文版实机验收；第 5–9 章操作暂依据官方资料整理。**
 
 ## 考前先看：考试模式 {#exam-mode}
 
@@ -380,9 +380,9 @@ Ans 表示最近一次计算结果，每次执行新的计算后会更新。它�
 5. 应得到两个根 $-1$ 和 $4$；显示顺序不影响答案。
 
 <div class="cg50-screens">
-<figure><img src="{{ '/assets/img/fx-cg50/S13-quadratic-coefficients.png' | relative_url }}" width="384" height="216" loading="lazy" alt="二次方程系数为 1、−3、−4"><figcaption>03.81.0202 中文固件虚拟机截图：核对降幂排列的系数 1、−3、−4，再按 F1（求解）。</figcaption></figure>
+<figure><img src="{{ '/assets/img/fx-cg50/S13-quadratic-coefficients.png' | relative_url }}" width="384" height="216" loading="lazy" alt="二次方程系数为 1、−3、−4"><figcaption>核对降幂排列的系数 1、−3、−4，再按 F1（求解）。</figcaption></figure>
 
-<figure><img src="{{ '/assets/img/fx-cg50/S14-quadratic-roots.png' | relative_url }}" width="384" height="216" loading="lazy" alt="二次方程求解显示 x1 等于 4、x2 等于 −1"><figcaption>03.81.0202 中文固件虚拟机截图：两个根为 4 和 −1；结果页按 EXIT 返回系数表。</figcaption></figure>
+<figure><img src="{{ '/assets/img/fx-cg50/S14-quadratic-roots.png' | relative_url }}" width="384" height="216" loading="lazy" alt="二次方程求解显示 x1 等于 4、x2 等于 −1"><figcaption>两个根为 4 和 −1；结果页按 EXIT 返回系数表。</figcaption></figure>
 </div>
 
 多项式模式输入的是系数，不是整条方程。先把方程整理成右边为零的形式：例如 $x^2=3x+4$ 也应输入 $1,-3,-4$。缺项的系数输入零，例如 $x^3-8=0$ 的系数是 $1,0,0,-8$。
@@ -405,9 +405,9 @@ $$\begin{cases}2x+y=7,\\x-y=2.\end{cases}$$
 4. 验证 $2(3)+1=7$、$3-1=2$。
 
 <div class="cg50-screens">
-<figure><img src="{{ '/assets/img/fx-cg50/S15-simultaneous-coefficients.png' | relative_url }}" width="384" height="216" loading="lazy" alt="二元方程组系数两行为 2、1、7 和 1、−1、2"><figcaption>03.81.0202 中文固件虚拟机截图：每一行均按 ax＋by＝c 输入，最后一列是等号右边的常数。</figcaption></figure>
+<figure><img src="{{ '/assets/img/fx-cg50/S15-simultaneous-coefficients.png' | relative_url }}" width="384" height="216" loading="lazy" alt="二元方程组系数两行为 2、1、7 和 1、−1、2"><figcaption>每一行均按 ax＋by＝c 输入，最后一列是等号右边的常数。</figcaption></figure>
 
-<figure><img src="{{ '/assets/img/fx-cg50/S16-simultaneous-solution.png' | relative_url }}" width="384" height="216" loading="lazy" alt="二元方程组解为 x 等于 3、y 等于 1"><figcaption>03.81.0202 中文固件虚拟机截图：读取 X＝3、Y＝1，并代回两条原方程检查。</figcaption></figure>
+<figure><img src="{{ '/assets/img/fx-cg50/S16-simultaneous-solution.png' | relative_url }}" width="384" height="216" loading="lazy" alt="二元方程组解为 x 等于 3、y 等于 1"><figcaption>读取 X＝3、Y＝1，并代回两条原方程检查。</figcaption></figure>
 </div>
 
 **常见错误：** 第二个方程若写成 $x=y+2$，要先改写为 $x-y=2$。这里 $y$ 的系数是 $-1$。不要把常数也移到左边后，仍按照 $ax+by=c$ 输入。
@@ -423,9 +423,9 @@ $$\begin{cases}2x+y=7,\\x-y=2.\end{cases}$$
 5. 检查结果屏幕的左、右值是否接近，并把结果代回原方程检查。
 
 <div class="cg50-screens">
-<figure><img src="{{ '/assets/img/fx-cg50/S17-numerical-solver-settings.png' | relative_url }}" width="384" height="216" loading="lazy" alt="数值求解初始值 x 等于 0.5，下界 0，上界 1"><figcaption>03.81.0202 中文固件虚拟机截图：输入初始值与上下界后，移回 x 行，按 F6（求解）。</figcaption></figure>
+<figure><img src="{{ '/assets/img/fx-cg50/S17-numerical-solver-settings.png' | relative_url }}" width="384" height="216" loading="lazy" alt="数值求解初始值 x 等于 0.5，下界 0，上界 1"><figcaption>输入初始值与上下界后，移回 x 行，按 F6（求解）。</figcaption></figure>
 
-<figure><img src="{{ '/assets/img/fx-cg50/S18-numerical-solver-root.png' | relative_url }}" width="384" height="216" loading="lazy" alt="数值求解结果 x 等于 0.5671432904，左值右值均为 0"><figcaption>03.81.0202 中文固件虚拟机截图：本例输入的是 e^(−x)−x＝0，所以左、右值都应接近 0。</figcaption></figure>
+<figure><img src="{{ '/assets/img/fx-cg50/S18-numerical-solver-root.png' | relative_url }}" width="384" height="216" loading="lazy" alt="数值求解结果 x 等于 0.5671432904，左值右值均为 0"><figcaption>本例输入的是 e^(−x)−x＝0，所以左、右值都应接近 0。</figcaption></figure>
 </div>
 
 “解”使用数值方法，一次给出一个解。更换起始值可能找到另一个解，也可能不收敛；一次求解不能证明已经找齐所有根。本例中 $e^{-x}$ 递减而 $x$ 递增，结合端点的大小关系可判断区间内只有一个交点。
