@@ -17,7 +17,7 @@ permalink: /alevel/fx-cg50/further-mechanics/
 
 [返回基础指南]({{ '/alevel/fx-cg50/' | relative_url }}) · [Further Mathematics 核心任务]({{ '/alevel/fx-cg50/further-mathematics/' | relative_url }}) · [数值方法与微积分]({{ '/alevel/fx-cg50/further-mathematics/numerical-calculus/' | relative_url }})
 
-本页六项扩展均以 [FM05 June 2024 原题](https://drive.google.com/file/d/1RMANHK8IruahWtR4CL-cncGRlrRSqRq9/view) 和 [官方 MS](https://drive.google.com/file/d/1p6RTkhx7bo4jvlZvm9dPknj1dDBSS5-E/view) 为依据。英文题意为改写。先画受力图、选方向、列物理方程，再用计算器核对；屏幕不会替你选择模型。
+本页六项扩展均以 [FM05 June 2024 原题]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm05-2024-june-question-paper.pdf' | relative_url }}) 和 [官方 MS]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm05-2024-june-mark-scheme.pdf' | relative_url }}) 为依据。英文题意为改写。先画受力图、选方向、列物理方程，再用计算器核对；屏幕不会替你选择模型。
 
 更新于 2026 年 10 月 10 日。菜单按 **03.81.0202 中文固件**核对，尚待同版本实机抽查。初始采用 **Rad、Y=**；M03 为角度答案改用 Deg 后，要恢复 Rad。该套试卷取 $g=9.8\,\mathrm{m\,s^{-2}}$，非精确答案通常要求 2 位有效数字，另有明确要求时遵从题目。
 

@@ -76,13 +76,20 @@ const guidePages = new Map([
   ['/alevel/fx-cg50/further-mathematics/numerical-calculus/', numerical],
   ['/alevel/fx-cg50/further-mechanics/', mechanics]
 ]);
+const referencePdfs = new Set();
 for (const [url, html] of guidePages) {
+  assert(!/https?:\/\/(?:drive|docs)\.google\.com\//.test(html), url + ': personal Drive link');
   const headingIds = [...html.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
   assert.equal(new Set(headingIds).size, headingIds.length, url + ': duplicate ID');
   assert(html.includes('<html lang="zh-CN">') && html.includes('tex-chtml-full.js'), url + ': language or MathJax missing');
   assert(!html.includes('@@figure:') && !html.includes('将继续补充'), url + ': unfinished content');
   for (const [, href] of html.matchAll(/href="([^"]+)"/g)) {
     const destination = new URL(href, 'https://local.test' + url);
+    if (destination.origin === 'https://local.test' && destination.pathname.startsWith('/assets/pdf/fx-cg50/references/')) {
+      const file = fs.readFileSync(path.join(root, '_site', destination.pathname));
+      assert(file.subarray(0, 5).equals(Buffer.from('%PDF-')), url + ': invalid reference PDF ' + href);
+      referencePdfs.add(destination.pathname);
+    }
     if (destination.origin !== 'https://local.test' || !guidePages.has(destination.pathname)) continue;
     if (destination.hash) assert(guidePages.get(destination.pathname).includes('id="' + decodeURIComponent(destination.hash.slice(1)) + '"'), url + ': broken link ' + href);
   }
@@ -99,3 +106,6 @@ assert.equal((mechanics.match(/<table>/g) || []).length, 0, 'Unexpected mechanic
 assert(mechanics.includes('fm-shm-phase.png') && mechanics.includes('最接近的整数度'));
 assert(numerical.includes('差分消项') && numerical.includes('1.789473684211'));
 console.log('Further Mathematics passed: 30 core tasks, six mechanics extensions, cross-page anchors, assets, tables and MathJax configuration.');
+
+assert.equal(referencePdfs.size, 8, 'All eight exam reference PDFs must be linked locally');
+console.log('Reference PDFs passed: eight local files and no personal Drive links.');

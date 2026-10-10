@@ -27,7 +27,7 @@ permalink: /alevel/fx-cg50/further-mathematics/numerical-calculus/
 
 ### 有限求和：差分消项与归纳法的数值检查 {#fm-task-21}
 
-例题：[FM03 January 2025 Q5/Q6](https://drive.google.com/file/d/1aOiIyWqQHlGQuiJQ8sQpFw9_k4dNWKaz/view)、[官方 MS pp8–10](https://drive.google.com/file/d/1eN1K1jPKe-X80JGmxR_sgNNbC9wySygy/view)。题意改写：**Q6: derive the sum by differences. Q5: prove divisibility by induction.**
+例题：[FM03 January 2025 Q5/Q6]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-question-paper.pdf' | relative_url }})、[官方 MS pp8–10]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-mark-scheme.pdf' | relative_url }})。题意改写：**Q6: derive the sum by differences. Q5: prove divisibility by induction.**
 
 Q6 的公式为
 
@@ -76,7 +76,7 @@ E_{20}=9.5367431641\times10^{-7}<10^{-6}.$$
 
 ### 二分法（bisection）：记录每次保留的区间 {#fm-task-23}
 
-例题：[FM02 June 2024 Q3](https://drive.google.com/file/d/1Pzr0NgTYZurbygGila9h8gn7L9usfEP3/view)、[官方 MS Q3](https://drive.google.com/file/d/1bvMxskFnNDiNIZOszF106AdvclV3VmcK/view)。题意改写：**Use three iterations of bisection to improve the bracket.**
+例题：[FM02 June 2024 Q3]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm02-2024-june-question-paper.pdf' | relative_url }})、[官方 MS Q3]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm02-2024-june-mark-scheme.pdf' | relative_url }})。题意改写：**Use three iterations of bisection to improve the bracket.**
 
 $$f(x)=8x^3-28x^2+34x-17.$$
 
@@ -120,7 +120,7 @@ x_1=1.75-\frac{-0.375}{9.5}=1.789473684211\ldots.$$
 
 ### Euler：斜率使用更新前的点 {#fm-task-25}
 
-例题：[FM02 June 2024 Q1](https://drive.google.com/file/d/1Pzr0NgTYZurbygGila9h8gn7L9usfEP3/view)、[官方 MS Q1](https://drive.google.com/file/d/1bvMxskFnNDiNIZOszF106AdvclV3VmcK/view)。题意改写：**Use Euler's method with step $0.2$, starting at $(1,-3)$.**
+例题：[FM02 June 2024 Q1]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm02-2024-june-question-paper.pdf' | relative_url }})、[官方 MS Q1]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm02-2024-june-mark-scheme.pdf' | relative_url }})。题意改写：**Use Euler's method with step $0.2$, starting at $(1,-3)$.**
 
 $$y'=\sqrt{x^2+2y^2},\qquad
 y_{j+1}=y_j+0.2\sqrt{x_j^2+2y_j^2},\qquad x_{j+1}=x_j+0.2.$$
@@ -141,7 +141,7 @@ Ans 的按键是 <code>SHIFT → (−)</code>。输入第二式的两处 Ans 均
 
 ### 双曲方程：反函数以后仍要保留两个符号 {#fm-task-26}
 
-例题：[FM03 January 2025 Q2](https://drive.google.com/file/d/1aOiIyWqQHlGQuiJQ8sQpFw9_k4dNWKaz/view)、[官方 MS p5](https://drive.google.com/file/d/1eN1K1jPKe-X80JGmxR_sgNNbC9wySygy/view)。题意改写：**Solve $\sinh^2x-\cosh x-5=0$ exactly.**
+例题：[FM03 January 2025 Q2]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-question-paper.pdf' | relative_url }})、[官方 MS p5]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-mark-scheme.pdf' | relative_url }})。题意改写：**Solve $\sinh^2x-\cosh x-5=0$ exactly.**
 
 纸上用 $\sinh^2x=\cosh^2x-1$，得 $(\cosh x-3)(\cosh x+2)=0$。实数 $x$ 满足 $\cosh x\ge1$，所以只保留 $\cosh x=3$，但 $x$ 有正、负两个解：
 
@@ -174,7 +174,7 @@ $$g'(x)=\frac{1}{\sqrt{4-x^2}},\qquad g'(1)=\frac1{\sqrt3}.$$
 
 ### 反常积分：截断检查与极限证明 {#fm-task-28}
 
-例题：[FM03 January 2025 Q4](https://drive.google.com/file/d/1aOiIyWqQHlGQuiJQ8sQpFw9_k4dNWKaz/view)、[官方 MS p7](https://drive.google.com/file/d/1eN1K1jPKe-X80JGmxR_sgNNbC9wySygy/view)。题意改写：**Explain the improper endpoint and evaluate the integral.**
+例题：[FM03 January 2025 Q4]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-question-paper.pdf' | relative_url }})、[官方 MS p7]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-mark-scheme.pdf' | relative_url }})。题意改写：**Explain the improper endpoint and evaluate the integral.**
 
 $$I=\int_0^2\frac{1}{\sqrt{4-x^2}}\,dx.$$
 
@@ -193,7 +193,7 @@ $$I=\lim_{a\to2^-}\left[\sin^{-1}(x/2)\right]_0^a
 
 ### 参数弧长与旋转曲面面积 {#fm-task-29}
 
-例题：[FM03 January 2025 Q9](https://drive.google.com/file/d/1aOiIyWqQHlGQuiJQ8sQpFw9_k4dNWKaz/view)、[官方 MS p14](https://drive.google.com/file/d/1eN1K1jPKe-X80JGmxR_sgNNbC9wySygy/view)。题意改写：**Find the exact arc length and the surface area generated about the x-axis.**
+例题：[FM03 January 2025 Q9]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-question-paper.pdf' | relative_url }})、[官方 MS p14]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-mark-scheme.pdf' | relative_url }})。题意改写：**Find the exact arc length and the surface area generated about the x-axis.**
 
 $$x=\sin\theta\cos\theta,\qquad y=\sin^2\theta,
 \qquad0\le\theta\le\pi/6.$$
@@ -216,7 +216,7 @@ $$S=2\pi\int_0^{\pi/6}\sin^2\theta\,d\theta
 
 ### 辅助方程、共振与初始条件 {#fm-task-30}
 
-例题：[FM03 January 2025 Q12](https://drive.google.com/file/d/1aOiIyWqQHlGQuiJQ8sQpFw9_k4dNWKaz/view)、[官方 MS p19](https://drive.google.com/file/d/1eN1K1jPKe-X80JGmxR_sgNNbC9wySygy/view)。题意改写：**Solve the differential equation with $y(0)=10,y'(0)=1$.**
+例题：[FM03 January 2025 Q12]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-question-paper.pdf' | relative_url }})、[官方 MS p19]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-mark-scheme.pdf' | relative_url }})。题意改写：**Solve the differential equation with $y(0)=10,y'(0)=1$.**
 
 $$y''-y'-2y=6e^{-x}-10\cos x.$$
 
