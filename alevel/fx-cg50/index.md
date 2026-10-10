@@ -13,23 +13,11 @@ permalink: /alevel/fx-cg50/
 
 <div class="cg50-guide" markdown="1">
 
-**编写、组织与实机核对：Eric Shi · GPT 辅助整理与网页制作**
-
 面向使用**中文版 fx-CG50** 的 A-level 同学。英文题目配中文操作说明，按键保留机器上的标记。先学会输入，再用计算器检查你的数学过程。
-
-[考试模式](#exam-mode) · [认识按键](#chapter-1) · [必要设置](#chapter-2) · [基础输入](#chapter-3) · [解方程](#chapter-4) · [图像](#chapter-5) · [数值表](#chapter-6) · [微积分](#chapter-7) · [统计](#chapter-8) · [概率](#chapter-9) · [排错](#chapter-10)
 
 [下载第 1–3 章 PDF（10 页）]({{ '/assets/pdf/fx-CG50-guide-chapters-1-3-illustrated.pdf' | relative_url }})
 
-[Further Mathematics 操作专题]({{ '/alevel/fx-cg50/further-mathematics/' | relative_url }})：核心任务 01–20，复数、多项式、矩阵、向量与极坐标。
-
-[数值方法与微积分]({{ '/alevel/fx-cg50/further-mathematics/numerical-calculus/' | relative_url }})：核心任务 21–30，求和、误差、迭代、双曲函数、积分与微分方程。
-
-[Further Mechanics 操作专题]({{ '/alevel/fx-cg50/further-mechanics/' | relative_url }})：六项扩展，弹性、变力、斜面抛射、碰撞、SHM 与圆周运动。
-
-网页版更新于 2026 年 10 月 10 日。PDF 是 10 月 6 日的前三章版本，尚不含新增考试模式与网页署名。
-
-前三章主要操作已于 10 月 6 日在中文版 **03.81.0202** 实机核对；12 张屏幕图来自 Screen Receiver，保留了部分计算历史，请关注图注指定的算式。练习答案另经数学复核。第 4–9 章已于 10 月 10 日在相同 **03.81.0202** 中文固件的虚拟机中逐项核对并补图。**考试模式与第 4–9 章尚未在这台中文版实机验收。**
+考试前先阅读下面的考试模式说明，并向老师确认本场考试的要求。日常学习可从第 1 章开始，按“设置、输入、应用”的顺序练习。
 
 ## 考前先看：考试模式 {#exam-mode}
 
@@ -68,7 +56,6 @@ permalink: /alevel/fx-cg50/
 
 以下题目均为**自拟操作练习**，用于学会按键，并非 AQA 或 OxfordAQA 真题。可配合 [A2 三角函数](/alevel/a2-mathematics/trigonometric-functions-and-formulae/)、[指数与对数](/alevel/a2-mathematics/exponential-and-logarithmic-functions/) 和 [数值方法](/alevel/a2-mathematics/numerical-methods/) 的课程内容学习。
 
-
 ## 第 1 章 认识你的计算器 {#chapter-1}
 
 ### 先找到这些按键 {#section-1}
@@ -93,8 +80,6 @@ F1 至 F6 的用途随界面改变。按之前先看屏幕底部；不能把某�
 <figure><img src="{{ '/assets/img/fx-cg50/S57-graph-solve-menu.png' | relative_url }}" width="384" height="216" loading="lazy" data-lazy-ignore alt="图解菜单从左至右为零点、极大值、极小值、Y截距、交点和下一页"><div class="cg50-fkeys" aria-label="对应的实体功能键"><kbd>F1</kbd><kbd>F2</kbd><kbd>F3</kbd><kbd>F4</kbd><kbd>F5</kbd><kbd>F6</kbd></div><figcaption>屏幕菜单从左到右对应实体 F1–F6。本画面中，F1 找零点，F3 找极小值，F5 找交点。</figcaption></figure>
 </div>
 
-
-
 ### 任务 1 进入计算界面 {#task-1}
 
 **Calculate $2 + 3 \times 4$.**
@@ -109,7 +94,6 @@ F1 至 F6 的用途随界面改变。按之前先看屏幕底部；不能把某�
 <figure><img src="{{ '/assets/img/fx-cg50/S01-main-menu.png' | relative_url }}" width="384" height="216" loading="lazy" data-lazy-ignore alt="S01 主菜单选中计算·矩阵。"><figcaption>S01 主菜单选中计算·矩阵。</figcaption></figure>
 <figure><img src="{{ '/assets/img/fx-cg50/S02-basic-calculation.jpg' | relative_url }}" width="384" height="216" loading="lazy" data-lazy-ignore alt="S02 2 + 3 × 4 的结果为 14。"><figcaption>S02 $2+3\times4$ 的结果为 $14$。</figcaption></figure>
 </div>
-
 
 常见错误：把 EXIT 当成主菜单键；或算式中漏了乘号。本指南开始阶段均写出乘号。
 
@@ -126,7 +110,6 @@ F1 至 F6 的用途随界面改变。按之前先看屏幕底部；不能把某�
 <div class="cg50-screens">
 <figure><img src="{{ '/assets/img/fx-cg50/S03-square-root.jpg' | relative_url }}" width="384" height="216" loading="lazy" data-lazy-ignore alt="S03 √49 的结果为 7。"><figcaption>S03 $\sqrt{49}$ 的结果为 $7$。</figcaption></figure>
 </div>
-
 
 <figure class="cg50-keyboard"><img src="{{ '/assets/img/fx-cg50/keys-secondary.svg' | relative_url }}" width="720" height="420" loading="lazy" data-lazy-ignore alt="按键局部：SHIFT 调用 x² 上方的黄色平方根，ALPHA 调用 X,θ,T 上方的红色 A"><figcaption>黄色功能先按 SHIFT；红色字母先按 ALPHA。再按目标实体键。</figcaption></figure>
 
@@ -145,7 +128,6 @@ F1 至 F6 的用途随界面改变。按之前先看屏幕底部；不能把某�
 
 </details>
 
-
 ## 第 2 章 开始前的必要设置 {#chapter-2}
 
 ### 任务 3 使用自然书写格式 {#task-3}
@@ -161,7 +143,6 @@ F1 至 F6 的用途随界面改变。按之前先看屏幕底部；不能把某�
 <div class="cg50-screens">
 <figure><img src="{{ '/assets/img/fx-cg50/S04-math-setting.jpg' | relative_url }}" width="384" height="216" loading="lazy" data-lazy-ignore alt="S04 输入/输出为数学模式；模式为计算模式。"><figcaption>S04 输入/输出为数学模式；模式为计算模式。</figcaption></figure>
 </div>
-
 
 ### 任务 4 检查角度与弧度 {#task-4}
 
@@ -186,10 +167,7 @@ F1 至 F6 的用途随界面改变。按之前先看屏幕底部；不能把某�
 <figure><img src="{{ '/assets/img/fx-cg50/S07-angle-comparison.jpg' | relative_url }}" width="384" height="216" loading="lazy" data-lazy-ignore alt="S07 第一式在度数下计算，第二式在弧度下计算，两次结果均为 1/2。顶部 Rad 表示当前设置。"><figcaption>S07 第一式在度数下计算，第二式在弧度下计算，两次结果均为 $\frac{1}{2}$。顶部 Rad 表示当前设置。</figcaption></figure>
 </div>
 
-
 看题目给出的角度单位再选设置。A-level 的微积分和弧长等任务通常涉及弧度，但不要因此把所有三角函数题都设为 弧度。更换任务或应用后仍应检查当前设置。
-
-
 
 ### 任务 5 使用正常显示 {#task-5}
 
@@ -204,7 +182,6 @@ F1 至 F6 的用途随界面改变。按之前先看屏幕底部；不能把某�
 <div class="cg50-screens">
 <figure><img src="{{ '/assets/img/fx-cg50/S08-normal-display.jpg' | relative_url }}" width="384" height="216" loading="lazy" data-lazy-ignore alt="S08 显示行选中常规2。返回计算界面后，顶部显示 Norm2，见 S09。"><figcaption>S08 显示行选中常规2。返回计算界面后，顶部显示 Norm2，见 S09。</figcaption></figure>
 </div>
-
 
 ### 位数和科学分别表示什么 {#section-9}
 
@@ -234,7 +211,6 @@ F1 至 F6 的用途随界面改变。按之前先看屏幕底部；不能把某�
 答案：A 和 B 均为 $\frac{1}{2}$ 或 $0.5$；C 为 $0.286$。做完后检查当前 角度 设置，按下一道题的要求选择。
 
 </details>
-
 
 ## 第 3 章 基础计算与输入 {#chapter-3}
 
@@ -289,8 +265,6 @@ $$\frac{3}{4}-\frac{1}{8}$$
 
 </details>
 
-
-
 ### 任务 9 分清负号与减号 {#task-9}
 
 **Compare $(-3)^2$ and $-3^2$.**
@@ -304,7 +278,6 @@ $$\frac{3}{4}-\frac{1}{8}$$
 <figure><img src="{{ '/assets/img/fx-cg50/S11-negative-and-square.jpg' | relative_url }}" width="384" height="216" loading="lazy" data-lazy-ignore alt="S11 (−3)² = 9；−3² = −9。"><figcaption>S11 $(-3)^2=9$；$-3^2=-9$。</figcaption></figure>
 </div>
 
-
 <figure class="cg50-keyboard"><img src="{{ '/assets/img/fx-cg50/keys-signs.svg' | relative_url }}" width="720" height="330" loading="lazy" data-lazy-ignore alt="实体键局部：减法键在加法键右侧，负号键在最底行 EXE 左侧"><figcaption>减法用 −；输入一个负数用 (−)。两颗键的位置和用途不同。</figcaption></figure>
 
 ### 任务 10 输入任意次幂 {#task-10}
@@ -316,7 +289,6 @@ $$\frac{3}{4}-\frac{1}{8}$$
 3. 结果应为 32。
 
 继续在指数后输入加法或乘法时，务必先离开指数区域。例如 $2^5+1$ 的结果为 $33$；若把 $+1$ 留在指数内，得到的就是 $2^6$，即 $64$。
-
 
 <div class="cg50-screens">
 <figure><img src="{{ '/assets/img/fx-cg50/S21-power-inside.png' | relative_url }}" width="384" height="216" loading="lazy" data-lazy-ignore alt="当前输入式为 2 的 5 次方，5 位于指数区域"><figcaption>输入 <code>2 → ^ → 5</code> 后，$5$ 位于指数区域。</figcaption></figure>
@@ -344,8 +316,6 @@ $$\frac{3}{4}-\frac{1}{8}$$
 
 </details>
 
-
-
 ### 任务 12 使用 log 和 ln {#task-12}
 
 **Calculate $\log_{10}(1000)$ and $\ln(1)$.**
@@ -369,7 +339,6 @@ log 键表示以 10 为底的对数，ln 键表示自然对数。两者输入的
 <figure><img src="{{ '/assets/img/fx-cg50/S12-scientific-notation.jpg' | relative_url }}" width="384" height="216" loading="lazy" data-lazy-ignore alt="S12 (6.02 × 10²³) ÷ (3.01 × 10²²) = 20。右侧箭头表示算式末尾超出当前显示宽度。"><figcaption>S12 $\frac{6.02\times10^{23}}{3.01\times10^{22}}=20$。右侧箭头表示算式末尾超出当前显示宽度。</figcaption></figure>
 </div>
 
-
 ### 任务 14 使用上一结果 Ans {#task-14}
 
 **Calculate $10 \div 3$, then multiply the unrounded result by $3$.**
@@ -383,7 +352,6 @@ Ans 表示最近一次计算结果，每次执行新的计算后会更新。它�
 ### 本章完成检查 {#section-22}
 
 你应能独立输入分数、离开根号与指数模板、区分两种负号写法、切换分数与小数，并用 Ans 继续计算。
-
 
 ## 第 4 章 解方程与验证答案 {#chapter-4}
 
@@ -477,7 +445,6 @@ $$\begin{cases}2x+y=7,\\x-y=2.\end{cases}$$
 
 窗口只改变你看到的范围，不改变函数本身。图像出界或看起来像直线时，先检查窗口；不要马上改函数。输入负数参数时用 `(−)` 键。
 
-
 <div class="cg50-screens">
 <figure><img src="{{ '/assets/img/fx-cg50/S23-graph-function.png' | relative_url }}" width="384" height="216" loading="lazy" data-lazy-ignore alt="函数列表的 Y1 为 x²−3x−4"><figcaption>输入函数右边的表达式；本例存放在 Y1。</figcaption></figure>
 <figure><img src="{{ '/assets/img/fx-cg50/S24-graph-window-top.png' | relative_url }}" width="384" height="216" loading="lazy" data-lazy-ignore alt="X 最小值 −3、X 最大值 7、X 刻度 1"><figcaption>先设置横轴范围与刻度；“点距”行不需要改。</figcaption></figure>
@@ -493,7 +460,6 @@ $$\begin{cases}2x+y=7,\\x-y=2.\end{cases}$$
 4. 按 `EXIT` 返回函数列表，在另一行输入 $x+2$，选中这两条函数并重新绘图。
 5. 按 `SHIFT → F5（图解）→ F5（交点）`；若提示选择图像，依次选中这两条。
 6. 应找到两个交点，横坐标约为 $-1.16228$ 和 $5.16228$；用左右方向键切换结果。
-
 
 <div class="cg50-screens">
 <figure><img src="{{ '/assets/img/fx-cg50/S27-graph-root-left.png' | relative_url }}" width="384" height="216" loading="lazy" data-lazy-ignore alt="左侧零点 x 等于 −1，y 等于 0"><figcaption>第一个零点：$x=-1$。</figcaption></figure>
@@ -528,7 +494,6 @@ $$\begin{cases}2x+y=7,\\x-y=2.\end{cases}$$
 4. 找到 $f(1.3)=-0.103$ 与 $f(1.4)=0.344$。本例函数连续，所以这两个值异号说明区间 $(1.3,1.4)$ 内至少有一个根。
 5. 返回函数列表，再把范围改为 $1.3$ 至 $1.4$、步长改为 $0.01$。应看到根位于 $(1.32,1.33)$。
 
-
 <div class="cg50-screens">
 <figure><img src="{{ '/assets/img/fx-cg50/S33-table-function.png' | relative_url }}" width="384" height="216" loading="lazy" data-lazy-ignore alt="表格函数列表只选中 Y3 等于 x³−x−1"><figcaption>本例保留 Y1、Y2，只选中 Y3 来生成数值表。</figcaption></figure>
 <figure><img src="{{ '/assets/img/fx-cg50/S34-table-settings-coarse.png' | relative_url }}" width="384" height="216" loading="lazy" data-lazy-ignore alt="表格开始值 1、终止值 1.5、步长 0.1"><figcaption>F5（设定）：每个数输入后按 EXE。</figcaption></figure>
@@ -545,7 +510,6 @@ $$\begin{cases}2x+y=7,\\x-y=2.\end{cases}$$
 **Find $f(1.25)$ for $f(x)=x^3-x-1$.**
 
 在 **表格** 中把开始值设为 $1.25$、终止值设为 $1.35$、步长设为 $0.1$，生成表格后选中第一行对应的 $Y$ 结果单元，读取屏幕底部的完整数值 $-0.296875$；可用右方向键从 $x$ 列移到结果列。表格单元受列宽限制，可能只显示截短的小数。使用表格能避免把长函数反复重打；每次读值都要同时核对左侧 $x$ 列与正确的 $Y$ 列。
-
 
 <div class="cg50-screens">
 <figure><img src="{{ '/assets/img/fx-cg50/S37-table-point-value.png' | relative_url }}" width="384" height="216" loading="lazy" data-lazy-ignore alt="选中 x 等于 1.25 的 Y3 结果单元，屏幕底部显示 −0.296875"><figcaption>选中结果单元后，底部显示完整值 $-0.296875$。</figcaption></figure>
@@ -564,7 +528,6 @@ $$\begin{cases}2x+y=7,\\x-y=2.\end{cases}$$
 3. 在函数区域输入 $x^3-3x$，按右方向键移到求值点的格子，输入 $2$。输入 $x^3$ 后也要先按右方向键离开指数，再输入 $-3x$。
 4. 核对显示的是在 $x=2$ 处求导，按 `EXE`。结果应为 $9$。
 
-
 <div class="cg50-screens">
 <figure><img src="{{ '/assets/img/fx-cg50/S38-derivative-input.png' | relative_url }}" width="384" height="216" loading="lazy" data-lazy-ignore alt="导数模板中函数为 x³−3x，求值点 x 为 2"><figcaption>执行前确认求值点在 $x=2$ 的格子。</figcaption></figure>
 <figure><img src="{{ '/assets/img/fx-cg50/S39-derivative-result.png' | relative_url }}" width="384" height="216" loading="lazy" data-lazy-ignore alt="在 x 等于 2 处的导数值为 9"><figcaption>导数值为 $9$，下一行可直接输入新算式。</figcaption></figure>
@@ -579,7 +542,6 @@ $$\begin{cases}2x+y=7,\\x-y=2.\end{cases}$$
 1. 在 **计算·矩阵** 按 `OPTN → F4（计算）→ F4（∫dx）` 调出积分模板。
 2. 函数区域输入 $x^2-1$；按右方向键移到下限格子输入 $0$，再按右方向键移到上限格子输入 $2$。
 3. 检查上、下限的位置，再按 `EXE`。本例显示 $\frac{2}{3}$；按 `S↔D` 可查看小数 $0.6666666667$。
-
 
 <div class="cg50-screens">
 <figure><img src="{{ '/assets/img/fx-cg50/S40-integral-input.png' | relative_url }}" width="384" height="216" loading="lazy" data-lazy-ignore alt="定积分模板的下限为 0，上限为 2，被积函数为 x²−1"><figcaption>执行前检查上下限；上方的 $9$ 属于上一道导数练习。</figcaption></figure>
@@ -614,7 +576,6 @@ $$A=-\int_0^1(x^2-1)\,dx+\int_1^2(x^2-1)\,dx=\frac23+\frac43=2.$$
 4. 按 `EXIT` 回到“计算”菜单，直接按 `F1（单变量）`；若已返回最外层列表菜单，才先按 `F2（计算）`。
 5. 上下滚动结果，核对 $n=4$、$\bar{x}=4$。总体标准差约为 $1.41421356$，样本标准差约为 $1.63299316$。
 
-
 <div class="cg50-screens">
 <figure><img src="{{ '/assets/img/fx-cg50/S42-statistics-data.png' | relative_url }}" width="384" height="216" loading="lazy" data-lazy-ignore alt="List 1 逐行输入 2、4、4、6"><figcaption>每个数占一行；本例共有 $4$ 个数据。</figcaption></figure>
 <figure><img src="{{ '/assets/img/fx-cg50/S43-statistics-settings.png' | relative_url }}" width="384" height="216" loading="lazy" data-lazy-ignore alt="单变量 X 列表为列表 1，单变量频数为 1"><figcaption>逐个输入原始数据时，单变量频数设为 $1$。</figcaption></figure>
@@ -645,7 +606,6 @@ $$A=-\int_0^1(x^2-1)\,dx+\int_1^2(x^2-1)\,dx=\frac23+\frac43=2.$$
 3. 按 `EXIT → F1（单变量）`。应得到 $n=4$、$\bar{x}=4$，与任务 24 相同。
 4. 以后改用原始逐个数据时，记得把“单变量频数”改回 **1**，否则会沿用旧频数列表。
 
-
 <div class="cg50-screens">
 <figure><img src="{{ '/assets/img/fx-cg50/S45-statistics-frequency-data.png' | relative_url }}" width="384" height="216" loading="lazy" data-lazy-ignore alt="List 1 为 2、4、6，List 2 为 1、2、1"><figcaption>数据与频数按行对应，两个列表都只有 $3$ 行。</figcaption></figure>
 <figure><img src="{{ '/assets/img/fx-cg50/S46-statistics-frequency-settings.png' | relative_url }}" width="384" height="216" loading="lazy" data-lazy-ignore alt="单变量 X 列表为列表 1，单变量频数为列表 2"><figcaption>频数改为“列表2”；以后计算原始数据时，要改回 $1$。</figcaption></figure>
@@ -670,7 +630,6 @@ $$A=-\int_0^1(x^2-1)\,dx+\int_1^2(x^2-1)\,dx=\frac23+\frac43=2.$$
 4. 移到“执行”，按 `F1（执行）`。图上默认显示四位小数；用左右方向键选中结果概率，按 `OPTN → F1（查看）` 查看完整值 $P(X=3)\approx0.266827932$。单点概率只能查看，不能反向编辑。
 5. 按 `EXIT` 逐层返回，直到参数界面，将“尾部”改为 `F1` 的**左尾**，保持参数不变，再执行。应得到 $P(X\le3)\approx0.6496107184$。
 
-
 <div class="cg50-screens">
 <figure><img src="{{ '/assets/img/fx-cg50/S48-binomial-point-settings.png' | relative_url }}" width="384" height="216" loading="lazy" data-lazy-ignore alt="二项分布单点 X 等于 3，分布为 10，p 为 0.3"><figcaption>单点区域对应 $X=3$；“分布”字段填写试验次数 $10$。</figcaption></figure>
 <figure><img src="{{ '/assets/img/fx-cg50/S49-binomial-point-full.png' | relative_url }}" width="384" height="216" loading="lazy" data-lazy-ignore alt="选中单点概率后查看完整值 0.266827932"><figcaption>选中概率并按 OPTN → F1，查看完整值。</figcaption></figure>
@@ -691,7 +650,6 @@ $$A=-\int_0^1(x^2-1)\,dx+\int_1^2(x^2-1)\,dx=\frac23+\frac43=2.$$
 
 参数界面的“尾部”中，`F2` 是包含两端的区间，`F3` 是包含指定值的右尾。二项分布取整数值，所以把 $X>3$ 输入成右尾 $x=3$ 会多算 $P(X=3)$。
 
-
 <div class="cg50-screens">
 <figure><img src="{{ '/assets/img/fx-cg50/S51-binomial-interval-settings.png' | relative_url }}" width="384" height="216" loading="lazy" data-lazy-ignore alt="二项分布区间下限 2，上限 5，试验次数 10，p 为 0.3"><figcaption>区间包含两个端点：$2\le X\le5$。</figcaption></figure>
 <figure><img src="{{ '/assets/img/fx-cg50/S52-binomial-interval-result.png' | relative_url }}" width="384" height="216" loading="lazy" data-lazy-ignore alt="二项分布 2 小于等于 X 小于等于 5 的概率约为 0.8033"><figcaption>先核对图上事件，再查看完整值 $0.8033426667$。</figcaption></figure>
@@ -705,7 +663,6 @@ $$A=-\int_0^1(x^2-1)\,dx+\int_1^2(x^2-1)\,dx=\frac23+\frac43=2.$$
 2. 在“尾部”选择 `F2` 的区间区域。
 3. 依次输入下限 $60$、上限 $85$、标准差 $\sigma=10$、均值 $\mu=70$，每个数后按 `EXE`。移到“执行”，按 `F1（执行）`。
 4. 应得到约 $0.7745375448$。若要求三位有效数字，写 $0.775$。
-
 
 <div class="cg50-screens">
 <figure><img src="{{ '/assets/img/fx-cg50/S53-normal-interval-settings.png' | relative_url }}" width="384" height="216" loading="lazy" data-lazy-ignore alt="正态分布下限 60，上限 85，标准差 10，均值 70"><figcaption>本页先输入标准差 $10$，再输入均值 $70$。</figcaption></figure>
@@ -722,7 +679,6 @@ $$A=-\int_0^1(x^2-1)\,dx+\int_1^2(x^2-1)\,dx=\frac23+\frac43=2.$$
 2. 在结果图形屏幕按右方向键，把突出显示位置从 $x$ 移到**结果概率** $0.5$。这里改的是累积概率，不是分布的均值或标准差。
 3. 输入 $0.9$，按 `EXE`。计算器会反向计算 $x$。图上显示约 $82.815$；按左方向键选中 $x$，再按 `OPTN → F1（编辑）`，查看完整值 $82.81551566$。
 4. 在显示完整 $x$ 的“输入数值”框直接按 `EXE`，用这个 $x$ 再计算一次左尾概率，确认接近 $0.9$。
-
 
 <div class="cg50-screens">
 <figure><img src="{{ '/assets/img/fx-cg50/S55-normal-inverse-input.png' | relative_url }}" width="384" height="216" loading="lazy" data-lazy-ignore alt="选中左尾概率 0.5 后在输入数值框输入 0.9"><figcaption>先选中结果概率，再输入 $0.9$；这里没有修改均值或标准差。</figcaption></figure>
@@ -762,9 +718,19 @@ $$A=-\int_0^1(x^2-1)\,dx+\int_1^2(x^2-1)\,dx=\frac23+\frac43=2.$$
 
 ## 核对进度与后续工作 {#next-chapters}
 
+网页版更新于 2026 年 10 月 10 日。PDF 是 10 月 6 日的前三章版本，尚不含新增考试模式与网页署名。
+
+前三章主要操作已于 10 月 6 日在中文版 **03.81.0202** 实机核对；12 张屏幕图来自 Screen Receiver，保留了部分计算历史，请关注图注指定的算式。练习答案另经数学复核。第 4–9 章已于 10 月 10 日在相同 **03.81.0202** 中文固件的虚拟机中逐项核对并补图。**考试模式与第 4–9 章尚未在这台中文版实机验收。**
+
 第 1–3 章已有实机截图；第 4–9 章已逐项核对中文菜单、输入步骤和结果，并补齐配图。反求分位数也已代回检查。考试模式的进入、标识、退出，以及关机行为仍需实机核对。
 
-下一步请老师审阅内容，再安排实机复核与全文 PDF。Further Mathematics 的 30 项核心任务及六项力学扩展已另页完成。当前 PDF 下载仍为原前三章版本。
+继续学习时，可按主题进入以下章节：
+
+- [Further Mathematics：复数、多项式、矩阵、向量与极坐标]({{ '/alevel/fx-cg50/further-mathematics/' | relative_url }})，核心任务 01–20。
+- [数值方法与微积分]({{ '/alevel/fx-cg50/further-mathematics/numerical-calculus/' | relative_url }})，核心任务 21–30。
+- [Further Mechanics]({{ '/alevel/fx-cg50/further-mechanics/' | relative_url }})，六项力学扩展。
+
+下一步请老师审阅内容，再安排实机复核与全文 PDF。当前 PDF 下载仍为原前三章版本。
 
 ## 署名与资料来源 {#credits}
 

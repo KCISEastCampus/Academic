@@ -13,21 +13,17 @@ permalink: /alevel/fx-cg50/further-mathematics/
 
 <div class="cg50-guide" markdown="1">
 
-**编写与组织：Eric Shi · GPT 辅助整理、操作核对与网页制作**
+本页介绍中文版 fx-CG50 在 OxfordAQA International A-level Further Mathematics（9665）中的复数、多项式、矩阵、三维向量与极坐标操作，对应核心任务 01–20。
 
-面向 OxfordAQA International A-level Further Mathematics（9665），本页完成核心任务 01–20，数值方法与微积分另页完成 21–30，力学另列六项扩展。例题来自 FM03 真题，衔接练习明确标为自拟；英文题意为改写，公式与答卷要求已对照官方 Mark Scheme。计算器用于检查结果，推导和精确答案仍写在答题纸上。
+例题来自 FM03 真题，英文题意为改写，衔接练习明确标为自拟。公式与答卷要求已对照官方 Mark Scheme；计算器用于检查结果，推导和精确答案仍须写在答题纸上。
 
-[复数](#fm-complex) · [多项式](#fm-polynomials) · [矩阵](#fm-matrices) · [三维向量](#fm-vectors) · [极坐标](#fm-polar) · [参考资料](#fm-sources)
+开始前，先掌握基础指南中的[按键读法]({{ '/alevel/fx-cg50/' | relative_url }}#reading-keys)、[输入模板]({{ '/alevel/fx-cg50/' | relative_url }}#chapter-3)和[定积分]({{ '/alevel/fx-cg50/' | relative_url }}#task-23)。
 
-[返回基础使用指南]({{ '/alevel/fx-cg50/' | relative_url }})。本页沿用其中的[按键读法]({{ '/alevel/fx-cg50/' | relative_url }}#reading-keys)、[输入模板]({{ '/alevel/fx-cg50/' | relative_url }}#chapter-3)和[定积分]({{ '/alevel/fx-cg50/' | relative_url }}#task-23)，不重复完整入门教程。
-
-更新于 2026 年 10 月 10 日。本页操作已在 **03.81.0202 中文固件**逐项核对，尚待同版本实机抽查。考试模式须按老师要求设置，不由本页推定学校使用哪一种模式。
-
-[数值方法与微积分（21–30）]({{ '/alevel/fx-cg50/further-mathematics/numerical-calculus/' | relative_url }}) · [Further Mechanics（M01–M06）]({{ '/alevel/fx-cg50/further-mechanics/' | relative_url }})
+以下操作按 **03.81.0202 中文固件**核对，尚待同版本实机抽查。考试模式按学校与老师要求设置。
 
 <span id="fm-task-01"></span>
 
-## 开始前：角度与复数设置 {#fm-settings}
+## 任务 01 开始前：角度与复数设置 {#fm-settings}
 
 进入 **计算·矩阵**，按 <code>SHIFT → MENU</code> 打开设置，用方向键按行名选择：
 
@@ -46,7 +42,9 @@ permalink: /alevel/fx-cg50/further-mathematics/
 
 ## 复数：从一个主值到全部根 {#fm-complex}
 
-### 复数的和、积、商与实虚部 {#fm-task-02}
+先熟悉复数的输入和形式转换，再用辐角与数值表检查全部根。
+
+### 任务 02 复数的和、积、商与实虚部 {#fm-task-02}
 
 **自拟操作练习：Compute the sum, product and quotient of $2+3i$ and $1-i$.**
 
@@ -68,7 +66,7 @@ permalink: /alevel/fx-cg50/further-mathematics/
 
 例题：[FM03 June 2024 Q12，原题 pp22–23]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-question-paper.pdf' | relative_url }})，[官方 MS p18]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-mark-scheme.pdf' | relative_url }})。题意改写：**Find the fifth roots of $4-4i$ and compare their positions.**
 
-### 求模、辐角与形式转换 {#fm-task-03}
+### 任务 03 求模、辐角与形式转换 {#fm-task-03}
 
 先在纸上写 $w=4-4i$，明确辐角单位是弧度。
 
@@ -84,7 +82,7 @@ permalink: /alevel/fx-cg50/further-mathematics/
 
 若题目要求 $0\le\theta<2\pi$，本例的负辐角应加 $2\pi$，写成 $7\pi/4$。不要把不同范围中的等价角误当成不同的复数。
 
-### 用数值表核对全部五次根 {#fm-task-04}
+### 任务 04 用数值表核对全部五次根 {#fm-task-04}
 
 纸上先写出全部根，而不是只输入一个五次方根：
 
@@ -124,7 +122,7 @@ $$Y_2=\sqrt2\sin\left(-\frac{\pi}{20}+\frac{2X\pi}{5}\right).$$
 
 答卷仍保留 $\sqrt2e^{i\theta_k}$、$k$ 的五个取值及角度范围。表格中的小数只用于检查，不能替代精确指数形式。
 
-### 筛选根并检查乘积 {#fm-task-05}
+### 任务 05 筛选根并检查乘积 {#fm-task-05}
 
 距虚轴的距离是 $\lvert\operatorname{Re}z\rvert$。比较上表，$k=4$ 的绝对实部最小，因此最近虚轴的根为
 
@@ -147,7 +145,9 @@ $$z_1z_2=2e^{i(7\pi/20+3\pi/4)}
 
 ## 多项式：系数与变换后的根 {#fm-polynomials}
 
-### 求四次方程的数值根 {#fm-task-06}
+先用根与系数的关系完成推导，再输入多项式核对数值根。
+
+### 任务 06 求四次方程的数值根 {#fm-task-06}
 
 例题依据 [FM03 January 2025 Q10]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-question-paper.pdf' | relative_url }})、[官方 MS pp15–16]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-mark-scheme.pdf' | relative_url }})。题意改写：**Use the arithmetic-sequence condition to determine the roots and coefficients, then check numerically.**
 
@@ -163,7 +163,7 @@ $$z^4+2z^3-21z^2-22z+40=0.$$
 
 缺项要输入零；参数 $p,q$ 的推导先做在纸上，不能先凭小数猜整数。原题可按相反顺序写同一组根，但 $p=-22,q=40$ 不变。
 
-### 核对根的变换与 Vieta 关系 {#fm-task-07}
+### 任务 07 核对根的变换与 Vieta 关系 {#fm-task-07}
 
 **自拟衔接练习：If the roots above are shifted by $1$, find a polynomial with the new roots.**
 
@@ -187,7 +187,7 @@ $$u^4-2u^3-21u^2+22u+40=0.$$
 
 $$M=\begin{pmatrix}1&0&2\\1&5&-11\\2&-1&1\end{pmatrix}.$$
 
-### 输入矩阵、求行列式与逆 {#fm-task-08}
+### 任务 08 输入矩阵、求行列式与逆 {#fm-task-08}
 
 1. 进入 **计算·矩阵**，按 <code>F3（▸矩阵）</code> 打开编辑器，先确认标题为“矩阵”；若为“向量”，按 F6（M⇔V）切换，再选择未使用的 Mat A。本例用 A；已有数据时换空的存储区。
 2. 按 <code>F3（维数）</code>，输入行数 $3$、EXE，列数 $3$、EXE；**再按一次 EXE** 进入单元格。
@@ -203,7 +203,7 @@ $$M=\begin{pmatrix}1&0&2\\1&5&-11\\2&-1&1\end{pmatrix}.$$
 
 可在纸上或计算器中用 $MM^{-1}=I$ 检查逆矩阵。行列式为零时没有逆；但“没有逆”不等于所有相关线性方程组都无解，还可能有自由变量。
 
-### 先 S 后 R，输入 RS {#fm-task-09}
+### 任务 09 先 S 后 R，输入 RS {#fm-task-09}
 
 例题：[FM03 June 2024 Q1]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-question-paper.pdf' | relative_url }})、[官方 MS p4]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-mark-scheme.pdf' | relative_url }})。题意改写：**Find the matrix for S followed by R.**
 
@@ -220,7 +220,7 @@ $$RS=\begin{pmatrix}0&0&1\\0&1&0\\1&0&0\end{pmatrix}.$$
 
 对照输入 <code>Mat E × Mat D</code>，其 $(1,3)$、$(3,1)$ 元素均为 $-1$，不是同一变换。纸上写 $R(Sv)=(RS)v$ 说明顺序；用 $v=(1,0,0)^T$ 可进一步检查 RS 把它变为 $(0,0,1)^T$。
 
-### 通过特征方程求特征值 {#fm-task-10}
+### 任务 10 通过特征方程求特征值 {#fm-task-10}
 
 先在纸上建立 $\det(\lambda I-M)=0$。本例在代入 $c=5$ 后为
 
@@ -238,7 +238,7 @@ $$\lambda^3-7\lambda^2-4\lambda+28=0.$$
 
 多项式求根只检查数值方程，不能代替原题“证明 $c=5$”的参数过程。
 
-### 核对非零特征向量 {#fm-task-11}
+### 任务 11 核对非零特征向量 {#fm-task-11}
 
 取最小特征值 $\lambda=-2$。先写 $(M+2I)v=0$，得到
 
@@ -256,7 +256,7 @@ $$v=\begin{pmatrix}2\\-5\\-3\end{pmatrix}.$$
 
 答卷写成 $v=\beta(2,-5,-3)^T$，其中 $\beta\ne0$。零向量不是特征向量；计算器乘法是最后的核对，不是消元过程的替代。
 
-### 奇异方程组：从增广矩阵读矛盾 {#fm-task-12}
+### 任务 12 奇异方程组：从增广矩阵读矛盾 {#fm-task-12}
 
 例题：[FM03 January 2025 Q8]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-question-paper.pdf' | relative_url }})、[官方 MS p13]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-mark-scheme.pdf' | relative_url }})。题意改写：**Determine the exceptional parameters and justify the number of solutions.**
 
@@ -283,7 +283,9 @@ $$2x-y+3z=1,\qquad x+2y-z=3,\qquad -y+z=1.$$
 
 ## 三维向量：夹角、共面与距离 {#fm-vectors}
 
-### 点积、模与两个向量的夹角 {#fm-task-13}
+先确定点、方向和法向量的意义，再选择点积、叉积或投影。
+
+### 任务 13 点积、模与两个向量的夹角 {#fm-task-13}
 
 **自拟衔接练习：Find the angle between $d=(2,-1,4)^T$ and $n=(1,1,3)^T$.**
 
@@ -299,7 +301,7 @@ Angle 返回当前角度单位的结果。本页 Rad 下为约 $0.5445949547$ �
 <figure><img src="{{ '/assets/img/fx-cg50/fm/fm-vector-angle.png' | relative_url }}" width="384" height="216" loading="lazy" data-lazy-ignore alt="两个向量夹角的弧度结果"><figcaption>先看 Rad 或 Deg，再读 Angle 的数值。</figcaption></figure>
 </div>
 
-### 叉积与标量三重积 {#fm-task-14}
+### 任务 14 叉积与标量三重积 {#fm-task-14}
 
 **自拟操作练习：For $c=(1,0,t)^T$, find the condition for $d,n,c$ to be coplanar.**
 
@@ -319,11 +321,9 @@ $$d\times n=\begin{pmatrix}-7\\-2\\3\end{pmatrix}.$$
 
 输入新的 Vct 命令时需重新打开向量页，再按 F1；不要用 ALPHA 单独的 D 代替 Vct D。与原题带参数的共面题衔接可看 [FM03 June 2024 Q2及官方 MS p5]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-mark-scheme.pdf' | relative_url }})。
 
-
-
 例题：[FM03 June 2024 Q10(a)，原题 p16]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-question-paper.pdf' | relative_url }})，[官方 MS p14]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-mark-scheme.pdf' | relative_url }})。题意改写：**Find the acute line–plane angle, to the nearest $0.1^\circ$.**
 
-### 点积、向量模与线面角 {#fm-task-15}
+### 任务 15 点积、向量模与线面角 {#fm-task-15}
 
 从原题先识别直线的方向向量和面的法向量：
 
@@ -352,7 +352,7 @@ $$\sin^{-1}\left(\frac{13}{\sqrt{231}}\right)\times\frac{180}{\pi}.$$
 
 直接用 Angle(d,n) 得到的是方向向量与法向量的夹角，不是所求线面角。答卷说明这两个向量的身份，写出点积与模的关系，再取线面锐角。
 
-### 点到直线的距离与交线回代 {#fm-task-16}
+### 任务 16 点到直线的距离与交线回代 {#fm-task-16}
 
 例题：[FM03 June 2024 Q10(b)/(c)]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-question-paper.pdf' | relative_url }})、[官方 MS pp14–15]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-mark-scheme.pdf' | relative_url }})。题意改写：**Find an exact point–line distance and check the intersection of two planes.**
 
@@ -377,7 +377,7 @@ $$r=\sec^2\theta\sqrt{2(1+\tan\theta)},\qquad
 
 这里根号中的 **2 不能漏掉**。本题面积区域只用 $0\le\theta\le\pi/6$，不用整条曲线的定义域积分。
 
-### 输入极坐标函数并限定绘图区间 {#fm-task-17}
+### 任务 17 输入极坐标函数并限定绘图区间 {#fm-task-17}
 
 1. 进入 **图形**，在空的函数行按 <code>F3（类型）→ F2（r=）</code>。本例沿用表格中的 Y1、Y2，使用第三行 r3，并取消其他函数的绘图选择。
 2. 计算器没有独立 sec 键，用 $1/\cos\theta$ 改写，输入
@@ -406,7 +406,7 @@ X 刻度下面的“点距”行跳过。返回后按 <code>F6（绘图）</code
 
 <figure class="cg50-keyboard"><img src="{{ '/assets/img/fx-cg50/fm/polar-region.svg' | relative_url }}" width="480" height="340" loading="lazy" data-lazy-ignore alt="极点O、θ等于0的端点A、θ等于π除以6的端点B及两射线和弧段围成的阴影区域"><figcaption>阴影是所求区域，边界由 OA、OB 与弧 AB 构成。</figcaption></figure>
 
-### 极坐标交点与极点分支 {#fm-task-18}
+### 任务 18 极坐标交点与极点分支 {#fm-task-18}
 
 **自拟操作练习：Find the intersections of $r_1=1+\cos\theta$ and $r_2=1-\cos\theta$ for $0\le\theta\le\pi$, with $r\ge0$.**
 
@@ -420,7 +420,7 @@ X 刻度下面的“点距”行跳过。返回后按 <code>F6（绘图）</code
 
 复杂曲线还可能以负 r 或周期角度表示同一个点；先处理题目允许范围，必要时回代 $x=r\cos\theta,y=r\sin\theta$。
 
-### 最大半径与最大纵坐标 {#fm-task-19}
+### 任务 19 最大半径与最大纵坐标 {#fm-task-19}
 
 沿用自拟曲线 $r=1+\cos\theta$、$0\le\theta\le\pi$。半径最大值为 $2$，在 $\theta=0$；纵坐标 $y=(1+\cos\theta)\sin\theta$ 的最大值则为 $3\sqrt3/4$，在 $\theta=\pi/3$。
 
@@ -432,7 +432,7 @@ X 刻度下面的“点距”行跳过。返回后按 <code>F6（绘图）</code
 <figure><img src="{{ '/assets/img/fx-cg50/fm/fm-polar-maximum.png' | relative_url }}" width="384" height="216" loading="lazy" data-lazy-ignore alt="半径端点值2与最大纵坐标约1.299038106"><figcaption>先确定所求量是r还是y，再选择求导或绘图对象。</figcaption></figure>
 </div>
 
-### 数值积分检查精确面积 {#fm-task-20}
+### 任务 20 数值积分检查精确面积 {#fm-task-20}
 
 先在纸上写出
 
@@ -469,6 +469,14 @@ $$A=\left[u+\frac{u^2}{2}+\frac{u^3}{3}+\frac{u^4}{4}\right]_0^{1/\sqrt3}
 - [Casio fx-CG50 中文软件手册 v3.70](https://www.casio.com/content/dam/casio/global/support/manuals/calculators/pdf/004-zh-cn/f/fx-CG50_Soft_v370_CN.pdf)：复数 2-35 起、矩阵 2-42 起、向量 2-59 起、绘图第 5 章。最终步骤以本页核对的 03.81.0202 中文菜单为准。
 - 真题及官方 MS 链接已放在对应主题旁，均为本站 PDF，可直接打开，无需登录个人云盘。原题和评分标准版权归相应考试局；指南中的英文题意为简短改写。
 
-规划中的 30 项核心任务及六项 Further Mechanics 扩展已完成正文与关键操作配图。继续学习[数值方法与微积分]({{ '/alevel/fx-cg50/further-mathematics/numerical-calculus/' | relative_url }})或[Further Mechanics]({{ '/alevel/fx-cg50/further-mechanics/' | relative_url }})。尚待老师审阅、同版本实机抽查与全文 PDF。
+相关章节：
+
+- [基础使用指南]({{ '/alevel/fx-cg50/' | relative_url }})：按键、输入与常用计算。
+- [数值方法与微积分]({{ '/alevel/fx-cg50/further-mathematics/numerical-calculus/' | relative_url }})：核心任务 21–30。
+- [Further Mechanics]({{ '/alevel/fx-cg50/further-mechanics/' | relative_url }})：六项力学扩展。
+
+30 项核心任务及六项力学扩展已有正文与关键操作配图，尚待老师审阅、同版本实机抽查与全文 PDF。
+
+编写与组织：**Eric Shi**。GPT 辅助整理、操作核对与网页制作。更新于 2026 年 10 月 10 日。
 
 </div>

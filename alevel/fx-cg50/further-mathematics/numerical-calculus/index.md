@@ -13,19 +13,19 @@ permalink: /alevel/fx-cg50/further-mathematics/numerical-calculus/
 
 <div class="cg50-guide" markdown="1">
 
-**编写与组织：Eric Shi · GPT 辅助整理、操作核对与网页制作**
+本页介绍求和、误差、数值迭代、双曲函数、积分与微分方程中的计算器操作，对应 Further Mathematics 核心任务 21–30。
 
-[返回基础指南]({{ '/alevel/fx-cg50/' | relative_url }}) · [复数、矩阵、向量与极坐标]({{ '/alevel/fx-cg50/further-mathematics/' | relative_url }}) · [Further Mechanics]({{ '/alevel/fx-cg50/further-mechanics/' | relative_url }})
+真题题意为简短英文改写，计算与答卷要求已对照官方 MS；衔接练习明确标为自拟。练习时先写出题目要求的数学方法，再按步骤输入，最后用屏幕结果核对。
 
-本页完成 Further Mathematics 核心任务 21–30。真题题意为简短英文改写，计算与答卷要求已对照官方 MS；衔接练习明确标为自拟。数值检查与解析推导各有用途，题目要求的方法和精确形式仍须写在答卷上。
-
-更新于 2026 年 10 月 10 日。操作按 **03.81.0202 中文固件**核对，尚待同版本实机抽查。开始前进入 **计算·矩阵 → SHIFT → MENU**，选择数学输入、**角度：弧度**、**函数类型：Y=**。屏幕应显示 Rad；画极坐标后尤其要确认变量恢复为 X。
+开始前进入 **计算·矩阵 → SHIFT → MENU**，选择数学输入、**角度：弧度**、**函数类型：Y=**。屏幕应显示 Rad；画极坐标后尤其要确认变量恢复为 X。以下菜单按 **03.81.0202 中文固件**核对，尚待同版本实机抽查。
 
 按键中的 <code>→</code> 表示下一步；存储箭头键会另写“存储键”。<code>sin</code> 等函数名后手动输入括号，指数和根号输入后用右方向键离开模板。连续计算直接在下一行输入，不需每次清屏。
 
 ## 求和与误差 {#fm-sums}
 
-### 有限求和：差分消项与归纳法的数值检查 {#fm-task-21}
+本节用有限求和检查推导，并用临界值两侧的误差确定最小整数。
+
+### 任务 21 有限求和：差分消项与归纳法的数值检查 {#fm-task-21}
 
 例题：[FM03 January 2025 Q5/Q6]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-question-paper.pdf' | relative_url }})、[官方 MS pp8–10]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-mark-scheme.pdf' | relative_url }})。题意改写：**Q6: derive the sum by differences. Q5: prove divisibility by induction.**
 
@@ -53,7 +53,7 @@ $$f(k+1)=11f(k)-4\cdot7^{k+1}$$
 
 完成递推，最后写出归纳结论。求和模板也不会自动生成一般的 $n$ 的公式。
 
-### 相对误差与最小整数 {#fm-task-22}
+### 任务 22 相对误差与最小整数 {#fm-task-22}
 
 **自拟操作练习：Find the least integer $n$ for which the relative error of $S_n=\sum_{k=1}^n2^{-k}$ as an approximation to $1$ is less than $10^{-6}$.**
 
@@ -74,7 +74,9 @@ E_{20}=9.5367431641\times10^{-7}<10^{-6}.$$
 
 ## 数值求根与微分方程 {#fm-numerical}
 
-### 二分法（bisection）：记录每次保留的区间 {#fm-task-23}
+二分法、插值、Newton 与 Euler 的更新规则不同。每次计算都要记录更新前的值和得到的新值。
+
+### 任务 23 二分法（bisection）：记录每次保留的区间 {#fm-task-23}
 
 例题：[FM02 June 2024 Q3]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm02-2024-june-question-paper.pdf' | relative_url }})、[官方 MS Q3]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm02-2024-june-mark-scheme.pdf' | relative_url }})。题意改写：**Use three iterations of bisection to improve the bracket.**
 
@@ -96,7 +98,7 @@ $$f(x)=8x^3-28x^2+34x-17.$$
 
 答卷保留中点、函数值及新区间。原题指定二分法时，不能用“方程”里的数值求解结果替代这三轮记录。
 
-### 线性插值（linear interpolation）与 Newton：同一函数，不同更新式 {#fm-task-24}
+### 任务 24 线性插值（linear interpolation）与 Newton：同一函数，不同更新式 {#fm-task-24}
 
 **自拟衔接练习：Apply one linear-interpolation step and one Newton step to the polynomial above.**
 
@@ -118,7 +120,7 @@ x_1=1.75-\frac{-0.375}{9.5}=1.789473684211\ldots.$$
 
 两者都是一次迭代的近似值，不能称为准确根。后续若重复插值，要重新选择异号端点；若重复 Newton，要用新 $x$ 重算导数。导数接近零、跳出定义域或不收敛时，应检查起点和方法适用性。停止标准来自题目，不由屏幕的小数位数决定。
 
-### Euler：斜率使用更新前的点 {#fm-task-25}
+### 任务 25 Euler：斜率使用更新前的点 {#fm-task-25}
 
 例题：[FM02 June 2024 Q1]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm02-2024-june-question-paper.pdf' | relative_url }})、[官方 MS Q1]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm02-2024-june-mark-scheme.pdf' | relative_url }})。题意改写：**Use Euler's method with step $0.2$, starting at $(1,-3)$.**
 
@@ -139,7 +141,9 @@ Ans 的按键是 <code>SHIFT → (−)</code>。输入第二式的两处 Ans 均
 
 ## 双曲函数与积分 {#fm-calculus}
 
-### 双曲方程：反函数以后仍要保留两个符号 {#fm-task-26}
+调用函数或积分模板前，先检查定义域、角度设置和积分端点。
+
+### 任务 26 双曲方程：反函数以后仍要保留两个符号 {#fm-task-26}
 
 例题：[FM03 January 2025 Q2]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-question-paper.pdf' | relative_url }})、[官方 MS p5]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-mark-scheme.pdf' | relative_url }})。题意改写：**Solve $\sinh^2x-\cosh x-5=0$ exactly.**
 
@@ -156,7 +160,7 @@ $$x=\pm\operatorname{arcosh}3
 
 答卷写精确的两个解。不要把双曲函数当普通三角函数，也不要保留 $\cosh x=-2$ 的实数解。
 
-### 反三角函数：定义域与导数 {#fm-task-27}
+### 任务 27 反三角函数：定义域与导数 {#fm-task-27}
 
 **自拟衔接练习：For $g(x)=\sin^{-1}(x/2)$, find its domain and check $g'(1)$.**
 
@@ -172,7 +176,7 @@ $$g'(x)=\frac{1}{\sqrt{4-x^2}},\qquad g'(1)=\frac1{\sqrt3}.$$
 
 靠近 $x=\pm2$ 时导数无界，端点不能直接当成普通有限导数点。先判断定义域和可导范围，再调用模板。
 
-### 反常积分：截断检查与极限证明 {#fm-task-28}
+### 任务 28 反常积分：截断检查与极限证明 {#fm-task-28}
 
 例题：[FM03 January 2025 Q4]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-question-paper.pdf' | relative_url }})、[官方 MS p7]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-mark-scheme.pdf' | relative_url }})。题意改写：**Explain the improper endpoint and evaluate the integral.**
 
@@ -191,7 +195,7 @@ $$I=\lim_{a\to2^-}\left[\sin^{-1}(x/2)\right]_0^a
 
 可比较上限 $1.9,1.99,1.999$ 对应的 $\sin^{-1}(a/2)$，观察数值趋近 $\pi/2$。这里是有可积奇点的收敛积分；一次计算器报错或几次截断值，都不能单独证明收敛或发散。
 
-### 参数弧长与旋转曲面面积 {#fm-task-29}
+### 任务 29 参数弧长与旋转曲面面积 {#fm-task-29}
 
 例题：[FM03 January 2025 Q9]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-question-paper.pdf' | relative_url }})、[官方 MS p14]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-mark-scheme.pdf' | relative_url }})。题意改写：**Find the exact arc length and the surface area generated about the x-axis.**
 
@@ -214,7 +218,9 @@ $$S=2\pi\int_0^{\pi/6}\sin^2\theta\,d\theta
 
 ## 二阶线性微分方程 {#fm-ode}
 
-### 辅助方程、共振与初始条件 {#fm-task-30}
+辅助方程和初始条件可以用计算器核对；特解与共振处理仍需纸笔推导。
+
+### 任务 30 辅助方程、共振与初始条件 {#fm-task-30}
 
 例题：[FM03 January 2025 Q12]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-question-paper.pdf' | relative_url }})、[官方 MS p19]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-mark-scheme.pdf' | relative_url }})。题意改写：**Solve the differential equation with $y(0)=10,y'(0)=1$.**
 
@@ -246,5 +252,13 @@ $$y=4e^{-x}+3e^{2x}+3\cos x+\sin x-2xe^{-x}.$$
 确认 Rad、变量 X、上下限、迭代起点及题目的精度要求。中间值保留完整精度；答案先区分精确式、近似值、区间和最小整数，再决定如何书写。涉及学校考试模式时回到[考试准备]({{ '/alevel/fx-cg50/' | relative_url }}#exam-mode)，按老师要求操作。
 
 操作参考 [Casio 中文软件手册](https://www.casio.com/content/dam/casio/global/support/manuals/calculators/pdf/004-zh-cn/f/fx-CG50_Soft_v370_CN.pdf) 的计算、求和、表格与方程章节。本页菜单以核对的中文 03.81.0202 为准，真题版权归考试局。
+
+相关章节：
+
+- [基础使用指南]({{ '/alevel/fx-cg50/' | relative_url }})：输入模板与常用计算。
+- [复数、矩阵、向量与极坐标]({{ '/alevel/fx-cg50/further-mathematics/' | relative_url }})：核心任务 01–20。
+- [Further Mechanics]({{ '/alevel/fx-cg50/further-mechanics/' | relative_url }})：六项力学扩展。
+
+编写与组织：**Eric Shi**。GPT 辅助整理、操作核对与网页制作。更新于 2026 年 10 月 10 日。
 
 </div>

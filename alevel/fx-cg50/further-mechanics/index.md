@@ -13,15 +13,13 @@ permalink: /alevel/fx-cg50/further-mechanics/
 
 <div class="cg50-guide" markdown="1">
 
-**编写与组织：Eric Shi · GPT 辅助整理、操作核对与网页制作**
+本页介绍弹性、变力、斜面抛射、斜碰撞、简谐运动与圆周运动中的计算器操作。先画受力图、选方向、列物理方程，再用计算器核对。
 
-[返回基础指南]({{ '/alevel/fx-cg50/' | relative_url }}) · [Further Mathematics 核心任务]({{ '/alevel/fx-cg50/further-mathematics/' | relative_url }}) · [数值方法与微积分]({{ '/alevel/fx-cg50/further-mathematics/numerical-calculus/' | relative_url }})
+六项扩展均以 [FM05 June 2024 原题]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm05-2024-june-question-paper.pdf' | relative_url }}) 和 [官方 MS]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm05-2024-june-mark-scheme.pdf' | relative_url }}) 为依据，英文题意为改写。
 
-本页六项扩展均以 [FM05 June 2024 原题]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm05-2024-june-question-paper.pdf' | relative_url }}) 和 [官方 MS]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm05-2024-june-mark-scheme.pdf' | relative_url }}) 为依据。英文题意为改写。先画受力图、选方向、列物理方程，再用计算器核对；屏幕不会替你选择模型。
+菜单按 **03.81.0202 中文固件**核对，尚待同版本实机抽查。初始采用 **Rad、Y=**；M03 为角度答案改用 Deg 后，要恢复 Rad。该套试卷取 $g=9.8\,\mathrm{m\,s^{-2}}$，非精确答案通常要求 2 位有效数字，另有明确要求时遵从题目。
 
-更新于 2026 年 10 月 10 日。菜单按 **03.81.0202 中文固件**核对，尚待同版本实机抽查。初始采用 **Rad、Y=**；M03 为角度答案改用 Deg 后，要恢复 Rad。该套试卷取 $g=9.8\,\mathrm{m\,s^{-2}}$，非精确答案通常要求 2 位有效数字，另有明确要求时遵从题目。
-
-## 弹性绳（elastic string）：张力、平衡点与能量 {#fm-mech-01}
+## 扩展 M01 弹性绳（elastic string）：张力、平衡点与能量 {#fm-mech-01}
 
 Q2，题意改写：**A 6 kg particle is released from rest on a vertical elastic string of natural length 2 m and modulus 300 N, initially extended by 0.5 m. Find its initial acceleration and maximum speed.**
 
@@ -46,7 +44,7 @@ $$\frac12mv^2=\frac{\lambda}{2l}(0.5)^2
 
 伸长 $e$ 不等于绳的总长；弹性势能是 $\lambda e^2/(2l)$，不是张力乘伸长。绳松弛后 $T=0$，不能继续把负伸长代入同一绳模型。该题的最大速度发生在绳仍拉紧的平衡位置。
 
-## 变力做功（work done）、停止位置与阻力模型 {#fm-mech-02}
+## 扩展 M02 变力做功（work done）、停止位置与阻力模型 {#fm-mech-02}
 
 Q3，题意改写：**A horizontal driving force is $10e^{-0.1x}$ N. Use work and energy to find the speed at 5 m and the stopping distance, to the nearest metre.** 质量 $2\,\mathrm{kg}$，摩擦系数 $0.2$，初速零。
 
@@ -82,7 +80,7 @@ v=\sqrt{9+91e^{-x}},\qquad a=-45.5e^{-x}.$$
 
 答卷的 $v$–$x$ 图从 $(0,10)$ 下降并趋于 $v=3$；$a$–$x$ 图从 $(0,-45.5)$ 上升并趋于 $0$。本模型没有有限距离的 $v=0$ 停止点。计算器画图前先标出截距、渐近线和 $x\ge0$，不可照抄上一模型的停止方程。
 
-## 斜面抛射（projectile motion）：分量、二次方程与两个角 {#fm-mech-03}
+## 扩展 M03 斜面抛射（projectile motion）：分量、二次方程与两个角 {#fm-mech-03}
 
 Q5，题意改写：**A particle is projected at 10 m/s at angle $\alpha$ above a plane inclined at $30^\circ$. Its range along the plane is 4 m. Find both possible angles.** 题目给 $0<\alpha<60^\circ$。
 
@@ -109,7 +107,7 @@ $$2.588u^2-2\sqrt3\,u+0.588=0.$$
 
 答卷保留沿斜面、垂直斜面的分量方程及消去 $t$ 的过程；不要把水平射程公式直接套到斜面距离上。
 
-## 斜碰撞（oblique impact）：动量、冲量与法线恢复系数 {#fm-mech-04}
+## 扩展 M04 斜碰撞（oblique impact）：动量、冲量与法线恢复系数 {#fm-mech-04}
 
 Q6，题意改写：**Two smooth spheres collide. Determine the second velocity, the impulse magnitude and the coefficient of restitution.**
 
@@ -134,7 +132,7 @@ $$e=\frac{1.4-0.4}{4-(-1)}=0.2.$$
 
 恢复系数使用法线方向的分离速度与接近速度，不能把两球的总速率相除。若换题后法线不是坐标轴，先把速度投影到法线与切线，再计算。
 
-## 简谐运动（SHM）：相位与最短返回时间 {#fm-mech-05}
+## 扩展 M05 简谐运动（SHM）：相位与最短返回时间 {#fm-mech-05}
 
 Q7，题意改写：**A spring system has period $\pi$ seconds. The amplitude is $a/10$ and C is $a/20$ from equilibrium. Find its speed at C and the shortest time between visits to C.**
 
@@ -166,7 +164,7 @@ $$\Delta t_{\min}=2\frac{\cos^{-1}(1/2)}{2}=\frac\pi3\,\mathrm s.$$
 
 <figure class="cg50-keyboard"><img src="{{ '/assets/img/fx-cg50/fm/fm-shm-phase.png' | relative_url }}" width="1440" height="592" loading="lazy" data-lazy-ignore alt="简谐运动在同一位置的通过时刻与方向，相邻间隔交替为2π除以3和π除以3秒"><figcaption>在正侧转向点附近返回 C 的间隔较短；首次到达 C 的时刻不等于最短返回时间。</figcaption></figure>
 
-## 圆周运动（circular motion）：先离面，再用能量 {#fm-mech-06}
+## 扩展 M06 圆周运动（circular motion）：先离面，再用能量 {#fm-mech-06}
 
 Q8，题意改写：**A particle slides from rest on a smooth hemisphere. It leaves the surface where the radius is $30^\circ$ to the horizontal. Find $\cos\theta$ at B, where the normal reaction is half its maximum.**
 
@@ -197,5 +195,13 @@ $$\frac38=3\cos\theta_B-2\cos\alpha,
 每道题先写方向、单位和模型条件，再列受力或能量方程。碰撞检查法线，SHM 检查相位，圆周运动检查接触是否存在，数值求根检查物理解和题目范围。最后才按精度要求舍入；结束角度题后恢复 Rad，再做微积分。
 
 [基础操作]({{ '/alevel/fx-cg50/' | relative_url }})提供矩阵、联立方程、定积分与表格的完整按键模板。本页真题版权归考试局，操作参考 [Casio 中文软件手册](https://www.casio.com/content/dam/casio/global/support/manuals/calculators/pdf/004-zh-cn/f/fx-CG50_Soft_v370_CN.pdf)。考试模式按学校与老师要求设置。
+
+相关章节：
+
+- [基础使用指南]({{ '/alevel/fx-cg50/' | relative_url }})：方程、积分与表格的按键模板。
+- [Further Mathematics]({{ '/alevel/fx-cg50/further-mathematics/' | relative_url }})：复数、矩阵、向量与极坐标。
+- [数值方法与微积分]({{ '/alevel/fx-cg50/further-mathematics/numerical-calculus/' | relative_url }})：求根、迭代与微分方程。
+
+编写与组织：**Eric Shi**。GPT 辅助整理、操作核对与网页制作。更新于 2026 年 10 月 10 日。
 
 </div>
