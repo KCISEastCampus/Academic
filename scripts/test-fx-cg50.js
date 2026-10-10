@@ -14,7 +14,7 @@ for (const [, href] of page.matchAll(/href="#([^"]+)"/g)) {
   assert(ids.includes(decodeURIComponent(href)), `Broken anchor ${href}`);
 }
 const screenshots = [...page.matchAll(/<img[^>]+src="([^"]*\/fx-cg50\/S\d{2}[^" ]+)"[^>]*>/g)];
-assert.equal(screenshots.length, 18);
+assert.equal(screenshots.length, 57);
 for (const [tag, url] of screenshots) {
   assert(/alt="[^"]+"/.test(tag), 'Screenshot needs alt text');
   assert(fs.existsSync(path.join(root, '_site', url)), `Missing screenshot ${url}`);
@@ -35,8 +35,17 @@ for (const formula of ['\\frac{1}{2}', '\\sqrt{72}', '\\sin\\left(\\frac{\\pi}{6
 for (const [, keys] of source.matchAll(/`([^`]+)`/g)) assert(!keys.includes('$'), 'Key sequences must remain literal');
 
 for (let n = 1; n <= 10; n++) assert(ids.includes(`chapter-${n}`), `Missing chapter ${n}`);
-assert(source.includes('本章已在 03.81.0202 中文固件虚拟机逐项核对') && source.includes('第 5–9 章为文字初稿'));
+assert(source.includes('第 4–9 章已在 03.81.0202 中文固件逐项核对并配图'));
+assert(!source.includes('第 5–9 章为文字初稿'));
+for (const name of ['keys-overview', 'keys-secondary', 'keys-signs']) {
+  assert(page.includes(`${name}.svg`));
+  assert(fs.existsSync(path.join(root, '_site/assets/img/fx-cg50', `${name}.svg`)));
+}
+assert(source.includes('F5（设置）') && !source.includes('F5（设定）'));
+assert(source.includes('回到“计算”菜单，直接按 `F1（单变量）`'));
+assert(source.includes('读取屏幕底部的完整数值'));
+assert(source.includes('OPTN → F1（编辑）'));
 assert(source.includes('直到出现“选择类型”页'));
 for (const name of ['S13-quadratic-coefficients', 'S14-quadratic-roots', 'S15-simultaneous-coefficients', 'S16-simultaneous-solution', 'S17-numerical-solver-settings', 'S18-numerical-solver-root']) assert(source.includes(name));
 for (const result of ['0.5671432904', '0.266827932', '0.6496107184', '0.7745375448', '82.81551566']) assert(source.includes(result), `Missing checked example result ${result}`);
-console.log('fx-CG50 guide passed: 31 tasks, anchors, 18 images, PDF, attribution and A-Level entry.');
+console.log('fx-CG50 guide passed: 31 tasks, anchors, 57 screens, 3 key diagrams, PDF, attribution and A-Level entry.');
