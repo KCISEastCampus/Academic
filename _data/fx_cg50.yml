@@ -1,0 +1,25 @@
+stages:
+  - id: beginner
+    title: 初学
+    url: /alevel/fx-cg50/beginner/
+    description: 按键与输入
+  - id: advanced
+    title: 进阶
+    url: /alevel/fx-cg50/advanced/
+    description: 解题与应用
+  - id: further
+    title: 高数进阶
+    url: /alevel/fx-cg50/further-mathematics/
+    description: 数学与力学
+
+further_parts:
+  - title: 复数与代数
+    url: /alevel/fx-cg50/further-mathematics/
+  - title: 数值与微积分
+    url: /alevel/fx-cg50/further-mathematics/numerical-calculus/
+  - title: 力学扩展
+    url: /alevel/fx-cg50/further-mechanics/
+
+legacy_anchors:
+  beginner: [reading-keys, chapter-1, section-1, task-1, task-2, section-4, section-5, chapter-2, task-3, task-4, task-5, section-9, task-6, section-11, chapter-3, task-7, task-8, section-14, task-9, task-10, task-11, section-18, task-12, task-13, task-14, section-22]
+  advanced: [chapter-4, task-15, task-16, task-17, chapter-5, task-18, task-19, chapter-6, task-20, task-21, chapter-7, task-22, task-23, chapter-8, task-24, task-25, chapter-9, task-26, task-27, task-28, task-29, chapter-10, task-30, task-31]

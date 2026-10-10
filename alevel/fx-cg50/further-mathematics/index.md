@@ -1,23 +1,26 @@
 ---
 layout: subjects
-title: fx-CG50 Further Mathematics 操作专题
+title: fx-CG50 高数进阶：复数、矩阵与向量
 description: 中文版 fx-CG50 的复数、多项式、矩阵、三维向量与极坐标的二十项核心操作。
 lang: zh-CN
 author: Eric Shi
 study_page: true
+cg50_stage: further
 toc_headings: h2, h3
 permalink: /alevel/fx-cg50/further-mathematics/
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/fx-cg50.css' | relative_url }}?v=20261010-sections">
+<link rel="stylesheet" href="{{ '/assets/css/fx-cg50.css' | relative_url }}?v=20261010-routes">
 
 <div class="cg50-guide" markdown="1">
+
+{% include fx-cg50-navigation.html %}
 
 本页介绍中文版 fx-CG50 在 OxfordAQA International A-level Further Mathematics（9665）中的复数、多项式、矩阵、三维向量与极坐标操作，对应核心任务 01–20。
 
 例题来自 FM03 真题，英文题意为改写，衔接练习明确标为自拟。公式与答卷要求已对照官方 Mark Scheme；计算器用于检查结果，推导和精确答案仍须写在答题纸上。
 
-开始前，先掌握基础指南中的[按键读法]({{ '/alevel/fx-cg50/' | relative_url }}#reading-keys)、[输入模板]({{ '/alevel/fx-cg50/' | relative_url }}#chapter-3)和[定积分]({{ '/alevel/fx-cg50/' | relative_url }}#task-23)。
+开始前，先掌握初学中的[按键读法]({{ '/alevel/fx-cg50/beginner/' | relative_url }}#reading-keys)、[输入模板]({{ '/alevel/fx-cg50/beginner/' | relative_url }}#chapter-3)，再掌握进阶中的[定积分]({{ '/alevel/fx-cg50/advanced/' | relative_url }}#task-23)。
 
 以下操作按 **03.81.0202 中文固件**核对，尚待同版本实机抽查。考试模式按学校与老师要求设置。
 
@@ -471,13 +474,12 @@ $$A=\left[u+\frac{u^2}{2}+\frac{u^3}{3}+\frac{u^4}{4}\right]_0^{1/\sqrt3}
 - [Casio fx-CG50 中文软件手册 v3.70](https://www.casio.com/content/dam/casio/global/support/manuals/calculators/pdf/004-zh-cn/f/fx-CG50_Soft_v370_CN.pdf)：复数 2-35 起、矩阵 2-42 起、向量 2-59 起、绘图第 5 章。最终步骤以本页核对的 03.81.0202 中文菜单为准。
 - 真题及官方 MS 链接已放在对应主题旁，均为本站 PDF，可直接打开，无需登录个人云盘。原题和评分标准版权归相应考试局；指南中的英文题意为简短改写。
 
-相关章节：
+继续学习：
 
-- [基础使用指南]({{ '/alevel/fx-cg50/' | relative_url }})：按键、输入与常用计算。
-- [数值方法与微积分]({{ '/alevel/fx-cg50/further-mathematics/numerical-calculus/' | relative_url }})：核心任务 21–30。
-- [Further Mechanics]({{ '/alevel/fx-cg50/further-mechanics/' | relative_url }})：六项力学扩展。
-
-30 项核心任务及六项力学扩展已有正文与关键操作配图，尚待老师审阅、同版本实机抽查与全文 PDF。
+- 回顾：[进阶：方程、表格与微积分]({{ '/alevel/fx-cg50/advanced/' | relative_url }})。
+- 下一篇：[数值方法与微积分（任务 21–30）]({{ '/alevel/fx-cg50/further-mathematics/numerical-calculus/' | relative_url }})，继续同一套核心任务。
+- 选学：[力学扩展（M01–M06）]({{ '/alevel/fx-cg50/further-mechanics/' | relative_url }})。
+- [返回学习路线总览]({{ '/alevel/fx-cg50/' | relative_url }})。
 
 编写与组织：**Eric Shi**。GPT 辅助整理、操作核对与网页制作。更新于 2026 年 10 月 10 日。
 

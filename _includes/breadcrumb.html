@@ -16,6 +16,16 @@
       {% endif %}
     </li>
 
+    {% if page.cg50_stage %}
+    <li class="breadcrumb-item"><a href="/alevel/">A-Level</a></li>
+    {% unless page.cg50_stage == 'overview' %}
+    <li class="breadcrumb-item"><a href="{{ '/alevel/fx-cg50/' | relative_url }}">fx-CG50 指南</a></li>
+    {% endunless %}
+    {% if page.cg50_stage == 'further' %}
+    <li class="breadcrumb-item"><a href="{{ '/alevel/fx-cg50/' | relative_url }}#further-topics">高数进阶</a></li>
+    {% endif %}
+    <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
+    {% else %}
     {% assign crumbs = page.url | split: '/' %}
     {% for crumb in crumbs offset: 1 %}
       {% if crumb != "" and crumb != "index" and crumb != include.skip_parent %}
@@ -53,5 +63,6 @@
         {% endunless %}
       {% endif %}
     {% endfor %}
+    {% endif %}
   </ol>
 </nav>

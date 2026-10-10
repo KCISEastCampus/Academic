@@ -1,21 +1,26 @@
 ---
 layout: subjects
-title: fx-CG50 Further Mathematics：数值方法与微积分
+title: fx-CG50 高数进阶：数值方法与微积分
 description: 求和、误差、二分法、插值、Newton、Euler、双曲函数、反常积分、弧长与微分方程的中文操作。
 lang: zh-CN
 author: Eric Shi
 study_page: true
+cg50_stage: further
 toc_headings: h2, h3
 permalink: /alevel/fx-cg50/further-mathematics/numerical-calculus/
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/fx-cg50.css' | relative_url }}?v=20261010-sections">
+<link rel="stylesheet" href="{{ '/assets/css/fx-cg50.css' | relative_url }}?v=20261010-routes">
 
 <div class="cg50-guide" markdown="1">
+
+{% include fx-cg50-navigation.html %}
 
 本页介绍求和、误差、数值迭代、双曲函数、积分与微分方程中的计算器操作，对应 Further Mathematics 核心任务 21–30。
 
 真题题意为简短英文改写，计算与答卷要求已对照官方 MS；衔接练习明确标为自拟。练习时先写出题目要求的数学方法，再按步骤输入，最后用屏幕结果核对。
+
+本页属于高数进阶的第二篇。若还不熟悉计算器输入与基本应用，先回顾[初学输入模板]({{ '/alevel/fx-cg50/beginner/' | relative_url }}#chapter-3)及[进阶定积分]({{ '/alevel/fx-cg50/advanced/' | relative_url }}#task-23)；需要按核心任务顺序学习时，从[复数、矩阵与向量（01–20）]({{ '/alevel/fx-cg50/further-mathematics/' | relative_url }})开始。
 
 开始前进入 **计算·矩阵 → SHIFT → MENU**，选择数学输入、**角度：弧度**、**函数类型：Y=**。屏幕应显示 Rad；画极坐标后尤其要确认变量恢复为 X。以下菜单按 **03.81.0202 中文固件**核对，尚待同版本实机抽查。
 
@@ -255,11 +260,11 @@ $$y=4e^{-x}+3e^{2x}+3\cos x+\sin x-2xe^{-x}.$$
 
 操作参考 [Casio 中文软件手册](https://www.casio.com/content/dam/casio/global/support/manuals/calculators/pdf/004-zh-cn/f/fx-CG50_Soft_v370_CN.pdf) 的计算、求和、表格与方程章节。本页菜单以核对的中文 03.81.0202 为准，真题版权归考试局。
 
-相关章节：
+继续学习：
 
-- [基础使用指南]({{ '/alevel/fx-cg50/' | relative_url }})：输入模板与常用计算。
-- [复数、矩阵、向量与极坐标]({{ '/alevel/fx-cg50/further-mathematics/' | relative_url }})：核心任务 01–20。
-- [Further Mechanics]({{ '/alevel/fx-cg50/further-mechanics/' | relative_url }})：六项力学扩展。
+- 上一篇：[复数、矩阵与向量（任务 01–20）]({{ '/alevel/fx-cg50/further-mathematics/' | relative_url }})。
+- 选学下一篇：[力学扩展（M01–M06）]({{ '/alevel/fx-cg50/further-mechanics/' | relative_url }})，将方程与积分操作用于力学模型。
+- [回顾进阶操作]({{ '/alevel/fx-cg50/advanced/' | relative_url }}) · [返回学习路线总览]({{ '/alevel/fx-cg50/' | relative_url }})。
 
 编写与组织：**Eric Shi**。GPT 辅助整理、操作核对与网页制作。更新于 2026 年 10 月 10 日。
 

@@ -1,21 +1,26 @@
 ---
 layout: subjects
-title: fx-CG50 Further Mechanics 操作专题
+title: fx-CG50 高数进阶：力学扩展
 description: 弹性绳、变力做功、斜面抛射、斜碰撞、简谐运动和圆周运动的六项计算器扩展。
 lang: zh-CN
 author: Eric Shi
 study_page: true
+cg50_stage: further
 toc_headings: h2, h3
 permalink: /alevel/fx-cg50/further-mechanics/
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/fx-cg50.css' | relative_url }}?v=20261010-sections">
+<link rel="stylesheet" href="{{ '/assets/css/fx-cg50.css' | relative_url }}?v=20261010-routes">
 
 <div class="cg50-guide" markdown="1">
+
+{% include fx-cg50-navigation.html %}
 
 本页介绍弹性、变力、斜面抛射、斜碰撞、简谐运动与圆周运动中的计算器操作。先画受力图、选方向、列物理方程，再用计算器核对。
 
 六项扩展均以 [FM05 June 2024 原题]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm05-2024-june-question-paper.pdf' | relative_url }}) 和 [官方 MS]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm05-2024-june-mark-scheme.pdf' | relative_url }}) 为依据，英文题意为改写。
+
+本页是高数进阶中的力学分支，可独立选读。需要先会[进阶方程求解]({{ '/alevel/fx-cg50/advanced/' | relative_url }}#chapter-4)和[定积分]({{ '/alevel/fx-cg50/advanced/' | relative_url }}#task-23)；插值和 Newton 的方法说明见[数值方法专题]({{ '/alevel/fx-cg50/further-mathematics/numerical-calculus/' | relative_url }}#fm-numerical)。
 
 菜单按 **03.81.0202 中文固件**核对，尚待同版本实机抽查。初始采用 **Rad、Y=**；M03 为角度答案改用 Deg 后，要恢复 Rad。该套试卷取 $g=9.8\,\mathrm{m\,s^{-2}}$，非精确答案通常要求 2 位有效数字，另有明确要求时遵从题目。
 
@@ -56,7 +61,7 @@ $$W(d)=\int_0^d10e^{-0.1x}\,dx=100(1-e^{-0.1d}).$$
 
 $$v=\sqrt{W-19.6}\approx4.443752247\,\mathrm{m\,s^{-1}},$$
 
-按该题精度写 $39\,\mathrm J$、$4.4\,\mathrm{m\,s^{-1}}$。可在[定积分模板]({{ '/alevel/fx-cg50/' | relative_url }}#task-23)输入 $10e^{-0.1X}$、下限 $0$、上限 $5$，也可输入纸上积分后的精确式核对；后一种检查不会替代积分过程。
+按该题精度写 $39\,\mathrm J$、$4.4\,\mathrm{m\,s^{-1}}$。可在[定积分模板]({{ '/alevel/fx-cg50/advanced/' | relative_url }}#task-23)输入 $10e^{-0.1X}$、下限 $0$、上限 $5$，也可输入纸上积分后的精确式核对；后一种检查不会替代积分过程。
 
 <div class="cg50-screens">
 <figure><img src="{{ '/assets/img/fx-cg50/fm/fm-mech-work.png' | relative_url }}" width="384" height="216" loading="lazy" data-lazy-ignore alt="5米内的做功和速度"><figcaption>从驱动力做功中扣除摩擦做功，再求速度。</figcaption></figure>
@@ -196,13 +201,13 @@ $$\frac38=3\cos\theta_B-2\cos\alpha,
 
 ---
 
-[基础操作]({{ '/alevel/fx-cg50/' | relative_url }})提供矩阵、联立方程、定积分与表格的完整按键模板。本页真题版权归考试局，操作参考 [Casio 中文软件手册](https://www.casio.com/content/dam/casio/global/support/manuals/calculators/pdf/004-zh-cn/f/fx-CG50_Soft_v370_CN.pdf)。考试模式按学校与老师要求设置。
+[进阶操作]({{ '/alevel/fx-cg50/advanced/' | relative_url }})提供矩阵、联立方程、定积分与表格的完整按键模板。本页真题版权归考试局，操作参考 [Casio 中文软件手册](https://www.casio.com/content/dam/casio/global/support/manuals/calculators/pdf/004-zh-cn/f/fx-CG50_Soft_v370_CN.pdf)。考试模式按学校与老师要求设置。
 
-相关章节：
+继续学习：
 
-- [基础使用指南]({{ '/alevel/fx-cg50/' | relative_url }})：方程、积分与表格的按键模板。
-- [Further Mathematics]({{ '/alevel/fx-cg50/further-mathematics/' | relative_url }})：复数、矩阵、向量与极坐标。
-- [数值方法与微积分]({{ '/alevel/fx-cg50/further-mathematics/numerical-calculus/' | relative_url }})：求根、迭代与微分方程。
+- 回顾：[进阶：方程、积分与表格]({{ '/alevel/fx-cg50/advanced/' | relative_url }})。
+- 其他高数专题：[复数、矩阵与向量]({{ '/alevel/fx-cg50/further-mathematics/' | relative_url }}) · [数值方法与微积分]({{ '/alevel/fx-cg50/further-mathematics/numerical-calculus/' | relative_url }})。
+- [返回高数专题路线]({{ '/alevel/fx-cg50/' | relative_url }}#further-topics) · [考前准备]({{ '/alevel/fx-cg50/' | relative_url }}#exam-mode)。
 
 编写与组织：**Eric Shi**。GPT 辅助整理、操作核对与网页制作。更新于 2026 年 10 月 10 日。
 

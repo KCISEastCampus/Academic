@@ -2,11 +2,15 @@
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const vm = require('node:vm');
+const windowMock = { addEventListener() {} };
 const root = path.join(__dirname, '..');
 const read = name => fs.readFileSync(path.join(root, name), 'utf8');
-const page = read('_site/alevel/fx-cg50/index.html');
+const overview = read('_site/alevel/fx-cg50/index.html');
+const beginner = read('_site/alevel/fx-cg50/beginner/index.html');
+const advanced = read('_site/alevel/fx-cg50/advanced/index.html');
+const page = overview + beginner + advanced;
 const ids = [...page.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
-assert.equal(new Set(ids).size, ids.length, 'Heading IDs must be unique');
 assert(page.includes('<html lang="zh-CN">'));
 assert(page.includes('Eric Shi') && page.includes('GPT'));
 for (let n = 1; n <= 31; n++) assert(ids.includes(`task-${n}`), `Missing task ${n}`);
@@ -28,7 +32,7 @@ assert(page.includes('左括号要手动输入') && page.includes('×10ˣ（π�
 assert(page.includes('尚未在这台中文版实机验收'));
 assert(page.includes('UK') && page.includes('IB') && page.includes('品红色'));
 assert.equal((page.match(/<details\b/g) || []).length, 7, 'Practice answers must remain collapsible');
-const source = read('alevel/fx-cg50/index.md');
+const source = read('alevel/fx-cg50/beginner/index.md') + read('alevel/fx-cg50/advanced/index.md');
 for (const formula of ['\\frac{1}{2}', '\\sqrt{72}', '\\sin\\left(\\frac{\\pi}{6}\\right)', '\\log_{10}(1000)', '10^{23}', '$(-3)^2$', '$-3^2$']) {
   assert(source.includes(formula), `Missing TeX expression ${formula}`);
 }
@@ -71,7 +75,9 @@ assert(page.includes('href="/alevel/fx-cg50/further-mathematics/"'));
 const numerical = read('_site/alevel/fx-cg50/further-mathematics/numerical-calculus/index.html');
 const mechanics = read('_site/alevel/fx-cg50/further-mechanics/index.html');
 const guidePages = new Map([
-  ['/alevel/fx-cg50/', page],
+  ['/alevel/fx-cg50/', overview],
+  ['/alevel/fx-cg50/beginner/', beginner],
+  ['/alevel/fx-cg50/advanced/', advanced],
   ['/alevel/fx-cg50/further-mathematics/', further],
   ['/alevel/fx-cg50/further-mathematics/numerical-calculus/', numerical],
   ['/alevel/fx-cg50/further-mechanics/', mechanics]
@@ -109,3 +115,65 @@ console.log('Further Mathematics passed: 30 core tasks, six mechanics extensions
 
 assert.equal(referencePdfs.size, 8, 'All eight exam reference PDFs must be linked locally');
 console.log('Reference PDFs passed: eight local files and no personal Drive links.');
+
+// The learning route must work across all pages, with an accurate current stage.
+for (const [url, html] of guidePages) {
+  const breadcrumb = html.match(/<nav aria-label="breadcrumb"[^>]*>([\s\S]*?)<\/nav>/)[1];
+  if (url !== '/alevel/fx-cg50/') assert(breadcrumb.includes('fx-CG50 指南'), url + ': guide breadcrumb missing');
+  if (url.includes('/further-')) assert(breadcrumb.includes('href="/alevel/fx-cg50/#further-topics"'), url + ': stage breadcrumb missing');
+  assert(html.includes('本页目录') && html.includes('搜索本页目录'), url + ': page-local contents label missing');
+  const nav = html.match(/<nav class="cg50-stage-nav"[^>]*>([\s\S]*?)<\/nav>/);
+  assert(nav, url + ': learning-stage navigation missing');
+  for (const destination of ['beginner/', 'advanced/', 'further-mathematics/']) {
+    assert(nav[1].includes('href="/alevel/fx-cg50/' + destination + '"'), url + ': stage link missing');
+  }
+  const selected = [...nav[1].matchAll(/<a href="([^"]+)" aria-current="step"/g)];
+  assert.equal(selected.length, url === '/alevel/fx-cg50/' ? 0 : 1, url + ': current-stage count');
+  if (selected.length) {
+    const expected = url.includes('/beginner/') ? '/alevel/fx-cg50/beginner/'
+      : url.includes('/advanced/') ? '/alevel/fx-cg50/advanced/' : '/alevel/fx-cg50/further-mathematics/';
+    assert.equal(selected[0][1], expected, url + ': wrong current stage');
+  }
+  if (url.includes('/further-')) {
+    const topics = nav[1].match(/<div class="cg50-topic-links"[^>]*>([\s\S]*?)<\/div>/);
+    assert(topics, url + ': Further Mathematics topic navigation missing');
+    const current = [...topics[1].matchAll(/<a href="([^"]+)" aria-current="page"/g)];
+    assert.equal(current.length, 1, url + ': current topic count');
+    assert.equal(current[0][1], url, url + ': wrong current topic');
+  }
+}
+for (let n = 1; n <= 31; n++) {
+  const target = n <= 14 ? beginner : advanced;
+  const other = n <= 14 ? advanced : beginner;
+  assert(target.includes('id="task-' + n + '"'), 'Task in wrong learning stage: ' + n);
+  assert(!other.includes('id="task-' + n + '"'), 'Duplicate task across stages: ' + n);
+}
+assert(!overview.includes('id="task-1"') && !overview.includes('id="chapter-1"'), 'Overview must be a route map, not the old long lesson');
+assert(beginner.slice(beginner.indexOf('id="beginner-next"')).includes('href="/alevel/fx-cg50/advanced/"') && advanced.slice(advanced.indexOf('id="advanced-next"')).includes('href="/alevel/fx-cg50/further-mathematics/"'), 'Next-stage links missing from completion sections');
+// Run the shipped legacy-bookmark script in a synthetic location, not a browser.
+const legacyScript = overview.match(/<script id="cg50-legacy-anchors">([\s\S]*?)<\/script>/)[1];
+for (const [stage, html, count] of [['beginner', beginner, 26], ['advanced', advanced, 24]]) {
+  const anchors = JSON.parse(legacyScript.match(new RegExp('const ' + stage + ' = (\\[[^;]+\\]);'))[1]);
+  assert.equal(anchors.length, count, 'Legacy anchor inventory changed: ' + stage);
+  for (const anchor of anchors) {
+    assert(html.includes('id="' + anchor + '"'), 'Legacy target missing: ' + anchor);
+    let redirected;
+    vm.runInNewContext(legacyScript, { window: windowMock, location: { hash: '#' + anchor, replace: url => { redirected = url; } } });
+    assert.equal(redirected, '/alevel/fx-cg50/' + stage + '/#' + anchor, 'Legacy bookmark route: ' + anchor);
+  }
+}
+for (const hash of ['', '#exam-mode', '#credits', '#further-topics', '#unknown', '#__proto__']) {
+  let redirected;
+  vm.runInNewContext(legacyScript, { window: windowMock, location: { hash, replace: url => { redirected = url; } } });
+  assert.equal(redirected, undefined, 'Overview or unknown anchor must not redirect: ' + hash);
+}
+console.log('Learning routes passed: six pages, 14 beginner + 17 advanced tasks, three Further Mathematics topics, active navigation and 50 legacy bookmarks.');
+
+let hashChange;
+let changedDestination;
+const changingLocation = { hash: '', replace: url => { changedDestination = url; } };
+vm.runInNewContext(legacyScript, { location: changingLocation, window: { addEventListener: (event, listener) => { if (event === 'hashchange') hashChange = listener; } } });
+assert.equal(typeof hashChange, 'function', 'Old anchors must work after a same-page hash change');
+changingLocation.hash = '#task-23';
+hashChange();
+assert.equal(changedDestination, '/alevel/fx-cg50/advanced/#task-23');

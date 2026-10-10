@@ -1,0 +1,18 @@
+<nav class="cg50-stage-nav" aria-label="指南学习路线" data-pagefind-ignore>
+  <div class="cg50-stage-heading">
+    <a href="{{ '/alevel/fx-cg50/' | relative_url }}"{% if page.cg50_stage == 'overview' %} aria-current="page"{% endif %}>指南总览</a>
+    <span>初学 → 进阶 → 高数进阶</span>
+  </div>
+  <ol class="cg50-stage-links">
+    {% for stage in site.data.fx_cg50.stages %}
+    <li><a href="{{ stage.url | relative_url }}"{% if page.cg50_stage == stage.id %} aria-current="step"{% endif %}><strong>{{ stage.title }}</strong><span>{{ stage.description }}</span></a></li>
+    {% endfor %}
+  </ol>
+  {% if page.cg50_stage == 'further' %}
+  <div class="cg50-topic-links" aria-label="高数进阶专题">
+    {% for part in site.data.fx_cg50.further_parts %}
+    <a href="{{ part.url | relative_url }}"{% if page.url == part.url %} aria-current="page"{% endif %}>{{ part.title }}</a>
+    {% endfor %}
+  </div>
+  {% endif %}
+</nav>

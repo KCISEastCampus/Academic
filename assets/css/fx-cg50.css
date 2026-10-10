@@ -1,3 +1,14 @@
+.cg50-stage-nav { margin-bottom: 1.5rem; padding: 1rem; border: 1px solid var(--border); border-radius: .5rem; }
+.cg50-stage-heading { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 1rem; margin-bottom: .75rem; font-size: .9rem; }
+#content-container .cg50-stage-links { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .5rem; list-style: none; margin: 0 !important; padding: 0 !important; }
+#content-container .cg50-stage-links li { margin: 0; padding: 0; list-style: none; }
+.cg50-stage-links a { display: block; height: 100%; padding: .65rem .5rem; border: 1px solid var(--border); border-radius: .35rem; text-align: center; text-decoration: none !important; }
+.cg50-stage-links strong, .cg50-stage-links span { display: block; }
+.cg50-stage-links span { font-size: .8rem; margin-top: .25rem; }
+.cg50-topic-links { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .75rem; font-size: .9rem; }
+.cg50-topic-links a { padding: .25rem .5rem; border: 1px solid transparent; border-radius: .25rem; }
+.cg50-stage-links a[aria-current], .cg50-topic-links a[aria-current] { border-color: var(--accent-al); background: rgba(var(--accent-al-rgb), .12); color: var(--text); }
+
 /* Chapter rules belong to the title; subsections stay connected to the chapter. */
 #content-container .cg50-guide h2 {
   font-size: 1.7rem;

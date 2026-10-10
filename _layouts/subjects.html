@@ -53,15 +53,15 @@ layout: none
     </div>
     <div id="toc" class="table-of-contents">
       <div class="toc-header-fixed">
-        <h2 class="contents-list">Contents</h2>
+        <h2 class="contents-list">{% if page.cg50_stage %}本页目录{% else %}Contents{% endif %}</h2>
         
         <!-- TOC Search Bar -->
         <div class="toc-search-container">
           <input type="text" 
                  id="tocSearch" 
                  class="toc-search-input" 
-                 placeholder="Search contents..."
-                 aria-label="Search table of contents">
+                 placeholder="{% if page.cg50_stage %}搜索本页目录…{% else %}Search contents...{% endif %}"
+                 aria-label="{% if page.cg50_stage %}搜索本页目录{% else %}Search table of contents{% endif %}">
           <button id="tocSearchClear" class="toc-search-clear" aria-label="Clear search" style="display: none;">
             <i class="bi bi-x-circle"></i>
           </button>
