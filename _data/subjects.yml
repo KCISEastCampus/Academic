@@ -4,7 +4,7 @@
 
 alevel:
   - id: fx-cg50
-    name: Casio fx-CG50 Guide (中文)
+    name: Casio fx-CG50 Guide
     icon: "🧮"
     path: /alevel/fx-cg50/
   - id: a2mathematics
