@@ -24,6 +24,11 @@
       {% if translation %}
       <a class="site-nav-link" id="languageSwitch" href="{{ translation.url | relative_url }}" lang="{{ translation.lang | default: 'en' }}" hreflang="{{ translation.lang | default: 'en' }}" aria-label="{{ ui.switch_label }}">{{ ui.switch_language }}</a>
       {% endif %}
+      {% if include.show_toc %}
+      <button class="site-nav-theme-btn toc-toggle" id="tocToggle" type="button" aria-label="{{ ui.toggle_contents }}" title="{{ ui.contents }}" aria-controls="toc" aria-expanded="false">
+        <i class="bi bi-journal-text" aria-hidden="true"></i>
+      </button>
+      {% endif %}
       <button class="site-nav-theme-btn" id="navThemeBtn" aria-label="{{ ui.toggle_theme }}" aria-pressed="false">
         <i class="bi bi-moon-fill theme-icon-nav-moon"></i>
         <i class="bi bi-sun-fill theme-icon-nav-sun"></i>

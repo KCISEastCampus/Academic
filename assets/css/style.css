@@ -682,42 +682,11 @@ div.highlight {
 
 /* Back to Top Button */
 .back-to-top {
-  position: fixed;
-  bottom: 2rem;
-  left: 2rem;
-  width: 3rem;
-  height: 3rem;
-  background: var(--accent-al);
-  border: 3px solid var(--surface);
-  border-radius: 50%;
-  color: #ffffff;
-  cursor: pointer;
-  opacity: 0;
   visibility: hidden;
-  transition: all 0.3s ease;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 12px rgba(var(--accent-al-rgb), 0.25);
-  font-size: 1.2rem;
-  font-weight: bold;
 }
 
 .back-to-top.visible {
-  opacity: 1;
   visibility: visible;
-}
-
-.back-to-top:hover {
-  transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 6px 16px rgba(var(--accent-al-rgb), 0.3);
-  background: var(--accent-al);
-}
-
-.back-to-top:active {
-  transform: translateY(0) scale(0.98);
-  box-shadow: 0 2px 6px rgba(var(--accent-al-rgb), 0.2);
 }
 
 /* Fade In - simplified, no-op (animations handled by interactive_effects.js) */
@@ -836,14 +805,6 @@ div.highlight {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-  .back-to-top {
-    bottom: 1rem;
-    left: 1rem;
-    width: 2.5rem;
-    height: 2.5rem;
-    font-size: 1rem;
-  }
-
   .scroll-progress {
     height: 2px;
   }
@@ -877,9 +838,6 @@ div.highlight {
     transition: none !important;
   }
 
-  .back-to-top:hover {
-    transform: none !important;
-  }
 }
 
 

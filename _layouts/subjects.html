@@ -27,7 +27,7 @@ layout: none
 {% else %}
 <body>
 {% endif %}
-  {% include nav.html %}
+  {% include nav.html show_toc=true %}
   <header class="subject-header">
     <div class="subject-header-inner">
       <div class="subject-header-text">
@@ -42,11 +42,6 @@ layout: none
       </div>
     </div>
   </header>
-
-  <!-- TOC Toggle Button for Mobile -->
-  <button class="toc-toggle" id="tocToggle" type="button" aria-label="{{ ui.toggle_contents }}" aria-controls="toc" aria-expanded="false">
-    <i class="bi bi-list"></i>
-  </button>
 
   <div id="main-container">
     <div id="content-container" data-pagefind-body data-toc-headings="{{ page.toc_headings | default: 'h1, h2, h3, h4' }}">

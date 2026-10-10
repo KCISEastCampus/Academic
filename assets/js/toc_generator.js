@@ -309,7 +309,7 @@ function toggleTOC(show) {
   } else {
     toc.classList.remove("show");
     tocToggle.classList.remove("active");
-    tocToggle.innerHTML = '<i class="bi bi-list" aria-hidden="true"></i>';
+    tocToggle.innerHTML = '<i class="bi bi-journal-text" aria-hidden="true"></i>';
     tocToggle.setAttribute("aria-expanded", "false");
     document.body.style.overflow = "";
   }
