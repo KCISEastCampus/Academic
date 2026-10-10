@@ -146,13 +146,13 @@ layout: none
           </div>
 
           {% if group_leader_display %}
-          <p class="members-page-leader"><span>Leader:</span> {{ group_leader_display }}</p>
+          <p class="members-page-leader"><span>Leader:</span> <span lang="zh-CN">{{ group_leader_display }}</span></p>
           {% endif %}
 
           <ul class="members-page-list">
             {% for member in group_members %}
             <li class="members-page-list-item">
-              <span class="name">{{ member.name }}</span>
+              <span class="name" lang="zh-CN">{{ member.name }}</span>
               <span class="grade-badge {% if member.status == 'Graduated' %}graduated{% endif %}">
                 {{ member.grade }}
                 {% if member.status == 'Graduated' %}

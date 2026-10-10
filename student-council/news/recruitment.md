@@ -15,6 +15,8 @@ tags:
 
 > Note: This news is in **both** languages. [Click Here](#recruitment-event-successfully-held) to skip to the English version.
 
+<div lang="zh-CN" markdown="1">
+
 # A-level学生会面谈活动顺利举行
 
 近日，AL学生会新成员面谈活动在3420教室顺利举行。本次活动吸引了众多同学积极参与，现场交流氛围热烈。
@@ -28,6 +30,9 @@ A-level学生会
 <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center;">
   <img src="/assets/img/student-council-news/recruitment/recruitment_1.jpg" alt="Event Photo 1" style="width:400px; max-width:100%; height:auto;" />
   <img src="/assets/img/student-council-news/recruitment/recruitment_2.jpg" alt="Event Photo 2" style="width:400px; max-width:100%; height:auto;" />
+</div>
+
+
 </div>
 
 ---

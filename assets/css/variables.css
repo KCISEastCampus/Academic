@@ -62,7 +62,7 @@
   --focus-ring: 59, 130, 246;
 }
 
-html:lang(zh) {
+:lang(zh) {
   --line-height-body: 1.8;
 }
 
