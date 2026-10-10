@@ -21,6 +21,8 @@ permalink: /alevel/fx-cg50/
 
 [下载第 1–3 章 PDF（10 页）]({{ '/assets/pdf/fx-CG50-guide-chapters-1-3-illustrated.pdf' | relative_url }})
 
+[Further Mathematics 操作专题]({{ '/alevel/fx-cg50/further-mathematics/' | relative_url }})：复数的全部根、矩阵特征值与特征向量、线面角及极坐标面积。
+
 网页版更新于 2026 年 10 月 10 日。PDF 是 10 月 6 日的前三章版本，尚不含新增考试模式与网页署名。
 
 前三章主要操作已于 10 月 6 日在中文版 **03.81.0202** 实机核对；12 张屏幕图来自 Screen Receiver，保留了部分计算历史，请关注图注指定的算式。练习答案另经数学复核。第 4–9 章已于 10 月 10 日在相同 **03.81.0202** 中文固件的虚拟机中逐项核对并补图。**考试模式与第 4–9 章尚未在这台中文版实机验收。**
@@ -517,7 +519,7 @@ $$\begin{cases}2x+y=7,\\x-y=2.\end{cases}$$
 **Locate a root of $x^3-x-1=0$ between $1$ and $1.5$.**
 
 1. 按 `MENU`，进入 **表格**，在可用的 $Y$ 行输入 $x^3-x-1$，按 `EXE`。图形与表格共用函数列表；沿用上章时可放在 Y3，保留 Y1、Y2。
-2. 按 `F5（设置）`，把开始值设为 $1$，终止值设为 $1.5$，步长设为 $0.1$。每个数后按 `EXE`，再按 `EXIT`。
+2. 按 `F5（设定）`，把开始值设为 $1$，终止值设为 $1.5$，步长设为 $0.1$。每个数后按 `EXE`，再按 `EXIT`。
 3. 用 `F1（选择）` 确保本次函数已选中，取消其他暂时不用的函数，再按 `F6（表）`。
 4. 找到 $f(1.3)=-0.103$ 与 $f(1.4)=0.344$。本例函数连续，所以这两个值异号说明区间 $(1.3,1.4)$ 内至少有一个根。
 5. 返回函数列表，再把范围改为 $1.3$ 至 $1.4$、步长改为 $0.01$。应看到根位于 $(1.32,1.33)$。
@@ -525,7 +527,7 @@ $$\begin{cases}2x+y=7,\\x-y=2.\end{cases}$$
 
 <div class="cg50-screens">
 <figure><img src="{{ '/assets/img/fx-cg50/S33-table-function.png' | relative_url }}" width="384" height="216" loading="lazy" data-lazy-ignore alt="表格函数列表只选中 Y3 等于 x³−x−1"><figcaption>本例保留 Y1、Y2，只选中 Y3 来生成数值表。</figcaption></figure>
-<figure><img src="{{ '/assets/img/fx-cg50/S34-table-settings-coarse.png' | relative_url }}" width="384" height="216" loading="lazy" data-lazy-ignore alt="表格开始值 1、终止值 1.5、步长 0.1"><figcaption>F5（设置）：每个数输入后按 EXE。</figcaption></figure>
+<figure><img src="{{ '/assets/img/fx-cg50/S34-table-settings-coarse.png' | relative_url }}" width="384" height="216" loading="lazy" data-lazy-ignore alt="表格开始值 1、终止值 1.5、步长 0.1"><figcaption>F5（设定）：每个数输入后按 EXE。</figcaption></figure>
 <figure><img src="{{ '/assets/img/fx-cg50/S35-table-coarse.png' | relative_url }}" width="384" height="216" loading="lazy" data-lazy-ignore alt="数值表中 x 为 1.3 时值为 −0.103，x 为 1.4 时值为 0.344"><figcaption>粗步长显示 $f(1.3)<0$、$f(1.4)>0$。</figcaption></figure>
 <figure><img src="{{ '/assets/img/fx-cg50/S36-table-fine.png' | relative_url }}" width="384" height="216" loading="lazy" data-lazy-ignore alt="步长 0.01 的表格在 x 等于 1.32 和 1.33 之间变号"><figcaption>缩小步长后，根位于 $(1.32,1.33)$；列宽可能截短小数。</figcaption></figure>
 </div>

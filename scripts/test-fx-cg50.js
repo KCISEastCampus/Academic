@@ -41,7 +41,7 @@ for (const name of ['keys-overview', 'keys-secondary', 'keys-signs']) {
   assert(page.includes(`${name}.svg`));
   assert(fs.existsSync(path.join(root, '_site/assets/img/fx-cg50', `${name}.svg`)));
 }
-assert(source.includes('F5（设置）') && !source.includes('F5（设定）'));
+assert(source.includes('F5（设定）'));
 assert(source.includes('回到“计算”菜单，直接按 `F1（单变量）`'));
 assert(source.includes('读取屏幕底部的完整数值'));
 assert(source.includes('OPTN → F1（编辑）'));
@@ -49,3 +49,20 @@ assert(source.includes('直到出现“选择类型”页'));
 for (const name of ['S13-quadratic-coefficients', 'S14-quadratic-roots', 'S15-simultaneous-coefficients', 'S16-simultaneous-solution', 'S17-numerical-solver-settings', 'S18-numerical-solver-root']) assert(source.includes(name));
 for (const result of ['0.5671432904', '0.266827932', '0.6496107184', '0.7745375448', '82.81551566']) assert(source.includes(result), `Missing checked example result ${result}`);
 console.log('fx-CG50 guide passed: 31 tasks, anchors, 57 screens, 3 key diagrams, PDF, attribution and A-Level entry.');
+
+const further = read('_site/alevel/fx-cg50/further-mathematics/index.html');
+const furtherIds = [...further.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
+assert.equal(new Set(furtherIds).size, furtherIds.length, 'Further Mathematics IDs must be unique');
+for (const task of ['03', '04', '05', '08', '10', '11', '15', '20']) {
+  assert(furtherIds.includes('fm-task-' + task), 'Missing priority task ' + task);
+}
+for (const [, href] of further.matchAll(/href="#([^"]+)"/g)) {
+  assert(furtherIds.includes(decodeURIComponent(href)), 'Broken Further Mathematics anchor ' + href);
+}
+for (const [tag, url] of further.matchAll(/<img[^>]+src="([^"]*\/fx-cg50\/fm\/[^"]+)"[^>]*>/g)) {
+  assert(/alt="[^"]+"/.test(tag), 'Further Mathematics image needs alt text');
+  assert(fs.existsSync(path.join(root, '_site', url)), 'Missing Further Mathematics image ' + url);
+}
+assert(further.includes('<html lang="zh-CN">') && further.includes('tex-chtml-full.js'));
+assert(page.includes('href="/alevel/fx-cg50/further-mathematics/"'));
+console.log('Further Mathematics passed: eight priority tasks, anchors, assets, Chinese layout and MathJax loading.');
