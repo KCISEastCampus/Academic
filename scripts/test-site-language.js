@@ -150,7 +150,7 @@ for (const [url, language, alternate] of [
   assert(html.includes(`id="languageSwitch" href="${alternate}"`), `${url}: no-JavaScript language link`);
   assert(/<select\b[^>]*id="siteLanguage"[^>]*\bhidden/.test(html), `${url}: hide JavaScript-only controls until initialized`);
   assert(html.includes('href="/zh/alevel/"') && html.includes('href="/zh/igcse/"') || language === 'en', `${url}: static Chinese navigation`);
-  assert(html.includes('Casio fx-CG50 Guide') || url.includes('igcse'), `${url}: preserve calculator entry title`);
+  assert(html.includes(language === 'zh-CN' ? 'Casio fx-CG50 使用指南' : 'Casio fx-CG50 Guide') || url.includes('igcse'), `${url}: preserve calculator entry title`);
   const data = html.match(/<script id="site-language-data" type="application\/json">([\s\S]*?)<\/script>/);
   assert(data, `${url}: generated pairing configuration`);
   const parsed = JSON.parse(data[1]);
