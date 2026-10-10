@@ -49,16 +49,18 @@ layout: none
     </div>
     <div id="toc" class="table-of-contents">
       <div class="toc-header-fixed">
-        <h2 class="contents-list">{{ ui.contents }}</h2>
+        <h2 class="contents-list">{% if page.cg50_stage %}本页目录{% else %}{{ ui.contents }}{% endif %}</h2>
+
         
         <!-- TOC Search Bar -->
         <div class="toc-search-container">
           <input type="text" 
                  id="tocSearch" 
                  class="toc-search-input" 
-                 placeholder="{{ ui.search_contents }}"
-                 aria-label="{{ ui.search_label }}">
+                 placeholder="{% if page.cg50_stage %}搜索本页目录…{% else %}{{ ui.search_contents }}{% endif %}"
+                 aria-label="{% if page.cg50_stage %}搜索本页目录{% else %}{{ ui.search_label }}{% endif %}">
           <button id="tocSearchClear" class="toc-search-clear" aria-label="{{ ui.clear_search }}" style="display: none;">
+
             <i class="bi bi-x-circle"></i>
           </button>
         </div>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="440" viewBox="0 0 440 440" role="img" aria-labelledby="title">
+<title id="title">Five fifth roots of 4 minus 4i</title>
+<rect width="440" height="440" fill="white"/>
+<g stroke="#64748b" fill="none"><path d="M25 220H415 M220 25V415"/>
+<circle cx="220" cy="220" r="155.56349" stroke-dasharray="5 5"/></g>
+<g font-family="sans-serif" font-size="16" fill="#334155"><text x="390" y="207">Re</text><text x="229" y="35">Im</text><text x="203" y="240">O</text></g>
+<circle cx="373.64825" cy="244.33549" r="6" fill="#2563eb"/>
+<text x="381.64825" y="252.33549" font-family="sans-serif" font-size="16" fill="#2563eb">k=0</text>
+<circle cx="290.62435" cy="81.39191" r="6" fill="#2563eb"/>
+<text x="297.62435" y="73.39191" font-family="sans-serif" font-size="16" fill="#2563eb">k=1</text>
+<circle cx="110.00000" cy="110.00000" r="6" fill="#2563eb"/>
+<text x="74.00000" y="102.00000" font-family="sans-serif" font-size="16" fill="#2563eb">k=2</text>
+<circle cx="81.39191" cy="290.62435" r="6" fill="#2563eb"/>
+<text x="45.39191" y="312.62435" font-family="sans-serif" font-size="16" fill="#2563eb">k=3</text>
+<circle cx="244.33549" cy="373.64825" r="6" fill="#b45309"/>
+<text x="251.33549" y="397.64825" font-family="sans-serif" font-size="16" fill="#b45309">k=4</text>
+<path d="M220 373.64825H244.33549" stroke="#b45309" stroke-width="3" stroke-dasharray="3 3"/>
+</svg>

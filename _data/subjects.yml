@@ -3,6 +3,10 @@
 # This data-driven approach makes it easy to add/remove subjects
 
 alevel:
+  - id: fx-cg50
+    name: Casio fx-CG50 Guide
+    icon: "🧮"
+    path: /alevel/fx-cg50/
   - id: a2mathematics
     name: A2 Math - Pure
     icon: "📕"
