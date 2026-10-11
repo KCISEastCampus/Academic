@@ -267,6 +267,14 @@ function initTOCToggle(signal) {
   const newTocToggle = document.getElementById("tocToggle");
   newTocToggle.setAttribute("aria-expanded", String(toc.classList.contains("show")));
   newTocToggle.setAttribute("aria-controls", "toc");
+  toc.inert = window.innerWidth <= 1024 && !toc.classList.contains("show");
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 1024 && document.body.classList.contains("toc-open")) {
+      toggleTOC(false);
+    }
+    toc.inert = window.innerWidth <= 1024 && !toc.classList.contains("show");
+  }, { signal });
 
   newTocToggle.addEventListener("click", (event) => {
     event.preventDefault();
@@ -298,13 +306,22 @@ function toggleTOC(show) {
 
   if (!toc || !tocToggle) return;
 
+  const mobile = window.innerWidth <= 1024;
+  const wasOpen = toc.classList.contains("show");
+  toc.inert = mobile && !show;
+  document.querySelectorAll(".subject-header, #content-container, footer, .back-to-top").forEach(element => {
+    element.inert = mobile && show;
+  });
+
   if (show) {
     toc.classList.add("show");
     tocToggle.classList.add("active");
     tocToggle.innerHTML = '<i class="bi bi-x" aria-hidden="true"></i>';
     tocToggle.setAttribute("aria-expanded", "true");
-    if (window.innerWidth <= 1024) {
+    if (mobile) {
       document.body.style.overflow = "hidden";
+      document.body.classList.add("toc-open");
+      document.getElementById("tocSearch")?.focus();
     }
   } else {
     toc.classList.remove("show");
@@ -312,6 +329,8 @@ function toggleTOC(show) {
     tocToggle.innerHTML = '<i class="bi bi-journal-text" aria-hidden="true"></i>';
     tocToggle.setAttribute("aria-expanded", "false");
     document.body.style.overflow = "";
+    document.body.classList.remove("toc-open");
+    if (wasOpen && mobile) tocToggle.focus();
   }
 }
 

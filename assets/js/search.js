@@ -37,6 +37,21 @@
       .map(item => ({ title: item.title, url: item.url, excerpt: item.content }));
   }
 
+  function cleanExcerpt(value) {
+    const excerpt = String(value || '')
+      .replace(/<[^>]*>/g, ' ')
+      .replace(/\$\$[\s\S]*?\$\$|\$[^$\n]*\$|\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\)/g, ' ')
+      .replace(/\\(?:[A-Za-z]+|[,;!])/g, ' ')
+      .replace(/\s+([,.;!?])/g, '$1')
+      .replace(/([,.;!?])\s*[,.!?]+/g, '$1 ')
+      .replace(/\s+/g, ' ')
+      .trim();
+
+    // Pagefind may clip TeX mid-formula; hide fragments that still resemble source.
+    if (/\\[A-Za-z]+|[$\\{}^_]|\b[A-Za-z]\w*\s*=\s*[^.;!?]{1,50}/.test(excerpt)) return '';
+    return excerpt.slice(0, 120);
+  }
+
   let selectedResultIndex = -1;
 
   function updateSelectedResult() {
@@ -77,10 +92,11 @@
       title.textContent = result.title;
       item.appendChild(title);
 
-      if (result.excerpt) {
+      const excerpt = cleanExcerpt(result.excerpt);
+      if (excerpt) {
         const snippet = document.createElement('small');
         snippet.classList.add('text-muted', 'd-block');
-        snippet.textContent = result.excerpt.slice(0, 120);
+        snippet.textContent = excerpt;
         item.appendChild(snippet);
       }
 
@@ -137,7 +153,7 @@
           const results = dataResults.map(data => ({
             title: data.meta.title,
             url: data.url,
-            excerpt: data.excerpt ? data.excerpt.replace(/<[^>]*>/g, ' ').trim().slice(0, 120) : ''
+            excerpt: data.excerpt || ''
           }));
           renderResults(results);
         } else {
@@ -149,7 +165,7 @@
           const results = fallbackSearch(query, searchData || []).map(item => ({
             title: item.title,
             url: item.url,
-            excerpt: item.excerpt ? item.excerpt.slice(0, 120) : ''
+            excerpt: item.excerpt || ''
           }));
           renderResults(results);
         }

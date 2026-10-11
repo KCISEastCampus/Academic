@@ -701,26 +701,7 @@ html[data-bs-theme="dark"] body > hr.shadow {
     transform: translateX(0) !important;
   }
   
-  /* Mobile backdrop overlay */
-  .table-of-contents.show::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 90vw;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(4px);
-    z-index: -1;
-    animation: fadeIn 0.3s ease;
-  }
-  
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  
-  #content-container {
+#content-container {
     margin: 0 !important;
     padding: 20px !important;
     width: 100vw !important;
@@ -1842,6 +1823,15 @@ body.scheme-alevel .table-of-contents .toc-row > a.active {
 }
 
 @media (max-width: 1024px) {
+  body.toc-open::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 1002;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+  }
+
   #main-container {
     display: block !important;
     padding: 0 0 24px;
@@ -1870,24 +1860,13 @@ body.scheme-alevel .table-of-contents .toc-row > a.active {
     border-right: 1px solid var(--toc-panel-border) !important;
     transform: translateX(-104%) !important;
     transition: transform 0.28s ease;
-    z-index: 1002;
+    z-index: 1003;
   }
 
   #toc.table-of-contents.show {
     transform: translateX(0) !important;
   }
 
-  #toc.table-of-contents.show::before {
-    content: "";
-    position: fixed;
-    top: 44px;
-    left: min(86vw, 360px);
-    width: calc(100vw - min(86vw, 360px));
-    height: calc(100vh - 44px);
-    background: rgba(0, 0, 0, 0.42);
-    backdrop-filter: blur(3px);
-    z-index: -1;
-  }
 }
 
 /* ========================================

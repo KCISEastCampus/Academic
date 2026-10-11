@@ -160,8 +160,18 @@ html[data-bs-theme="dark"] .theme-icon-nav-moon {
 
 @media (max-width: 992px) {
   .site-nav-title {
-    display: none;
+    display: block;
+    max-width: 5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.8rem;
   }
+
+  .site-nav-brand { gap: 0.35rem; }
+  .site-nav-actions { gap: 0.25rem; }
+  .site-nav-inner { gap: 0.4rem; padding-inline: 0.65rem; }
+  .site-nav-actions .site-language-select { max-width: 5.25rem; }
 
   .site-nav-toggle {
     display: inline-flex;
@@ -1536,4 +1546,8 @@ html[data-bs-theme="dark"] .site-breadcrumb .breadcrumb-home:hover {
 
 #languageSwitch[hidden], .site-language-select[hidden] {
   display: none;
+}
+
+@media (max-width: 360px) {
+  .site-nav-title { display: none; }
 }
