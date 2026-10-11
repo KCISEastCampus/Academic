@@ -59,16 +59,21 @@ const toggle = {
   focus() { focused = 'toggle'; }
 };
 const drawerInput = { focus() { focused = 'search'; } };
+const navLinks = { classList: classes() };
+navLinks.classList.add('show');
+const navToggle = { setAttribute(key, value) { this[key] = value; } };
 const background = [{}, {}, {}, {}];
 document.body = { style: {}, classList: classes() };
 document.querySelectorAll = selector => {
   assert.equal(selector, '.subject-header, #content-container, footer, .back-to-top');
   return background;
 };
-document.getElementById = id => ({ toc: drawer, tocToggle: toggle, tocSearch: drawerInput })[id];
+document.getElementById = id => ({ toc: drawer, tocToggle: toggle, tocSearch: drawerInput, siteNavLinks: navLinks, siteNavToggle: navToggle })[id];
 context.window = { innerWidth: 390 };
 vm.runInContext('toggleTOC(true);', context);
 assert.equal(drawer.inert, false);
+assert.equal(navLinks.classList.contains('show'), false, 'Contents close the overlapping site navigation');
+assert.equal(navToggle['aria-expanded'], 'false');
 assert(background.every(element => element.inert), 'Opened drawer blocks focus on obscured content');
 assert.equal(document.body.classList.contains('toc-open'), true);
 assert.equal(document.body.style.overflow, 'hidden');

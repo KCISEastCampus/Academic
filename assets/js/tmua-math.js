@@ -4,7 +4,7 @@ const pendingNotesMath = new Set();
 let notesMathScheduled = false;
 function fitNotesMath(wrapper) {
   const formula = wrapper.querySelector('mjx-container, math');
-  wrapper.classList.toggle('notes-math-overflow', Boolean(formula && formula.getBoundingClientRect().width > wrapper.clientWidth));
+  wrapper.classList.toggle('notes-math-overflow', Boolean(formula && (formula.getBoundingClientRect().width > wrapper.clientWidth || wrapper.scrollWidth > wrapper.clientWidth + 2)));
 }
 function fitNotesMathRoot(root) {
   if (root.matches('.notes-inline-math')) fitNotesMath(root);
@@ -61,7 +61,10 @@ function renderNotesMath(update) {
       scheduleNotesMath();
     }, {rootMargin: '300px 0px'});
     document.querySelectorAll('main .notes-inline-math, main .notes-block-math')
-      .forEach(root => notesMathObserver.observe(root));
+      .forEach(root => {
+        watchNotesMath(root);
+        notesMathObserver.observe(root);
+      });
   }
   return notesMathQueue;
 }

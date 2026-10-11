@@ -63,6 +63,8 @@
     // Mobile menu toggle
     if (toggle && links) {
       toggle.addEventListener('click', function() {
+        if (typeof window.toggleTOC === 'function') window.toggleTOC(false);
+        toggle.focus();
         var expanded = toggle.getAttribute('aria-expanded') === 'true';
         toggle.setAttribute('aria-expanded', String(!expanded));
         links.classList.toggle('show');

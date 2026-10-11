@@ -108,18 +108,20 @@
   let searchData = null;
   const searchUrl = searchInput.getAttribute('data-search-source') || '/search.json';
 
-  // Preload fallback search data (small). Keep the promise so a search issued
-  // before the data finishes loading can await it instead of flashing "No results".
-  const searchDataReady = fetch(searchUrl)
-    .then(r => r.ok ? r.json() : [])
-    .then(data => {
-      searchData = data.map(item => ({
-        ...item,
-        _lowerTitle: item.title ? item.title.toLowerCase() : '',
-        _lowerContent: item.content ? item.content.toLowerCase() : ''
-      }));
-    })
-    .catch(() => { searchData = []; });
+  let searchDataReady;
+  function loadSearchData() {
+    // Share the fallback download across searches, only when Pagefind is unavailable.
+    return searchDataReady ||= fetch(searchUrl)
+      .then(r => r.ok ? r.json() : [])
+      .then(data => {
+        searchData = data.map(item => ({
+          ...item,
+          _lowerTitle: item.title ? item.title.toLowerCase() : '',
+          _lowerContent: item.content ? item.content.toLowerCase() : ''
+        }));
+      })
+      .catch(() => { searchData = []; });
+  }
 
   let debounceTimer = null;
   let currentSearchId = 0;
@@ -160,7 +162,7 @@
           // Pagefind unavailable: fall back to client-side filtering.
           // Wait for the data to finish loading so an early keystroke doesn't
           // render an empty result set just because search.json hadn't arrived.
-          await searchDataReady;
+          await loadSearchData();
           if (searchId !== currentSearchId) return;
           const results = fallbackSearch(query, searchData || []).map(item => ({
             title: item.title,

@@ -319,6 +319,8 @@ function toggleTOC(show) {
     tocToggle.innerHTML = '<i class="bi bi-x" aria-hidden="true"></i>';
     tocToggle.setAttribute("aria-expanded", "true");
     if (mobile) {
+      document.getElementById("siteNavLinks")?.classList.remove("show");
+      document.getElementById("siteNavToggle")?.setAttribute("aria-expanded", "false");
       document.body.style.overflow = "hidden";
       document.body.classList.add("toc-open");
       document.getElementById("tocSearch")?.focus();

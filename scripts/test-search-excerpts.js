@@ -33,6 +33,7 @@ async function search(mode, excerpt) {
   document.getElementById = id => ({ 'search-input': input, 'search-results': results })[id];
   document.createElement = element;
   let timer;
+  let requests = 0;
   const window = mode === 'pagefind' ? {
     pagefind: {
       async search() {
@@ -47,16 +48,24 @@ async function search(mode, excerpt) {
 
   vm.runInNewContext(source, {
     document, window,
-    fetch: async () => ({ ok: true, json: async () => [{
-      title: 'Capacitor lesson',
-      content: excerpt,
-      url: '/alevel/a2-physics/capacitor-charge-and-discharge/'
-    }] }),
+    fetch: async () => {
+      requests++;
+      return { ok: true, json: async () => [{
+        title: 'Capacitor lesson',
+        content: excerpt,
+        url: '/alevel/a2-physics/capacitor-charge-and-discharge/'
+      }] };
+    },
     setTimeout: callback => { timer = callback; }, clearTimeout() {}, console: { error() {} }
   });
+  assert.equal(requests, 0, 'Page startup does not download the fallback index');
   input.value = 'capacitor';
   input.dispatchEvent(new Event('input'));
   await timer();
+  assert.equal(requests, mode === 'pagefind' ? 0 : 1);
+  input.dispatchEvent(new Event('input'));
+  await timer();
+  assert.equal(requests, mode === 'pagefind' ? 0 : 1, 'Repeated searches share the fallback download');
   return results.children[0];
 }
 

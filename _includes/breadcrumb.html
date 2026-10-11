@@ -56,9 +56,13 @@
                 <a href="/student-council/">Student Council</a>
               {% else %}
                 {% assign crumb_limit = forloop.index | plus: 1 %}
-                <a href="{{ crumbs | slice: 0, crumb_limit | join: '/' }}/">
-                  {{ crumb | replace: '-', ' ' | capitalize }}
-                </a>
+                {% assign crumb_url = crumbs | slice: 0, crumb_limit | join: '/' | append: '/' %}
+                {% assign crumb_page = site.pages | where: 'url', crumb_url | first %}
+                {% if crumb_page %}
+                <a href="{{ crumb_url }}">{{ crumb | replace: '-', ' ' | capitalize }}</a>
+                {% else %}
+                <span>{{ crumb | replace: '-', ' ' | capitalize }}</span>
+                {% endif %}
             {% endcase %}
           </li>
         {% endif %}

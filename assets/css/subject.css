@@ -704,8 +704,8 @@ html[data-bs-theme="dark"] body > hr.shadow {
 #content-container {
     margin: 0 !important;
     padding: 20px !important;
-    width: 100vw !important;
-    max-width: 100vw !important;
+    width: 100% !important;
+    max-width: 100% !important;
     box-sizing: border-box !important;
     overflow-x: hidden !important;
     word-wrap: break-word !important;
@@ -1840,7 +1840,7 @@ body.scheme-alevel .table-of-contents .toc-row > a.active {
   #content-container {
     padding: 20px !important;
     margin: 0 !important;
-    max-width: 100vw !important;
+    max-width: 100% !important;
     border-left: none;
   }
 

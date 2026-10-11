@@ -39,7 +39,13 @@ vm.runInContext(fs.readFileSync(path.join(root, 'assets/js/tmua-math.js'), 'utf8
       active--;
     }
   };
+  let nativeOverflow;
+  formulas[0].matches = () => true;
+  formulas[0].clientWidth = 100;
+  formulas[0].querySelector = () => ({getBoundingClientRect: () => ({width: 500})});
+  formulas[0].classList = {toggle: (_, value) => { nativeOverflow = value; }};
   listeners.mathjaxLoaded();
+  assert.equal(nativeOverflow, true, 'Offscreen native formulas are fitted before lazy typesetting');
   assert.equal(calls.length, 0, 'Startup must not typeset entire versions');
   observer.callback(formulas.map(target => ({target, isIntersecting: true})));
   while (frames.length) {
@@ -70,6 +76,10 @@ vm.runInContext(fs.readFileSync(path.join(root, 'assets/js/tmua-math.js'), 'utf8
   wrapper.querySelector = () => ({getBoundingClientRect: () => ({width: 500})});
   context.fitNotesMath(wrapper);
   assert.equal(scrollable, true, 'Long formulas retain horizontal scrolling');
+  wrapper.querySelector = () => ({getBoundingClientRect: () => ({width: 23})});
+  wrapper.scrollWidth = 45;
+  context.fitNotesMath(wrapper);
+  assert.equal(scrollable, true, 'Native fractions can overflow their reported bounding width');
   assert(!listeners.click, 'Mode switch must not scan thousands of formulas');
   console.log('Passed: viewport-only batches of 12, cached rendering, serial panel updates and startup fallback.');
 })().catch(error => { console.error(error); process.exitCode = 1; });
