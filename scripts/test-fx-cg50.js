@@ -152,6 +152,11 @@ for (const [url, html] of guidePages) {
   }
 }
 // Keep bookmarked MA examples working after merging them into the advanced lessons.
+const trigonometryPrerequisite = advancedMechanics.match(/<a href="([^"]+)">三角函数<\/a>/);
+assert(trigonometryPrerequisite, 'Mechanics trigonometry prerequisite missing');
+const prerequisiteHeading = beginner.match(/<h3 id="task-4">([\s\S]*?)<\/h3>/);
+assert(prerequisiteHeading && prerequisiteHeading[1].includes('检查角度与弧度'), 'Trigonometry prerequisite must teach angle settings');
+assert.equal(trigonometryPrerequisite[1], '/alevel/fx-cg50/beginner/#task-4', 'Mechanics trigonometry prerequisite must open the angle lesson');
 let applicationCount;
 for (const unit of ['', 'ma01/', 'ma02/', 'ma03/', 'ma04/', 'ma05/']) {
   const url = applications + unit;

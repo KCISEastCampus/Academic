@@ -17,7 +17,7 @@ permalink: /alevel/fx-cg50/advanced/mechanics/
 
 {% include fx-cg50-navigation.html %}
 
-力学题先画受力图、选正方向、建立模型，再用计算器处理数值。下面把进阶中的[方程求解]({{ '/alevel/fx-cg50/advanced/' | relative_url }}#chapter-4)、[三角函数]({{ '/alevel/fx-cg50/beginner/' | relative_url }}#task-6)、[导数与积分]({{ '/alevel/fx-cg50/advanced/' | relative_url }}#chapter-7)用于 MA02 和 MA05；遇到不熟悉的操作，可按链接回顾。
+力学题先画受力图、选正方向、建立模型，再用计算器处理数值。下面把进阶中的[方程求解]({{ '/alevel/fx-cg50/advanced/' | relative_url }}#chapter-4)、[三角函数]({{ '/alevel/fx-cg50/beginner/' | relative_url }}#task-4)、[导数与积分]({{ '/alevel/fx-cg50/advanced/' | relative_url }}#chapter-7)用于 MA02 和 MA05；遇到不熟悉的操作，可按链接回顾。
 
 例题采用 **2025 年 1 月**原卷，英文题意为改写，补充练习标为“自拟”。出处：[MA02 QP]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-ma02-2025-january-question-paper.pdf' | relative_url }})、[MA02 MS]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-ma02-2025-january-mark-scheme.pdf' | relative_url }})；[MA05 QP]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-question-paper.pdf' | relative_url }})、[MA05 MS]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-mark-scheme.pdf' | relative_url }})。每题的 Q 编号和 MS 页码对应其 MA 单元。
 
