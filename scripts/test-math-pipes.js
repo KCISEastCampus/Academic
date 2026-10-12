@@ -6,16 +6,28 @@ const root = path.join(__dirname, '..');
 
 function mathPipes(source) {
   const mask = text => text.replace(/[^\r\n]/g, ' ');
-  const content = source
+  let fence = '';
+  const content = source.split('\n').map(line => {
+    const marker = line.match(/^ {0,3}(`{3,}|~{3,})([^\r\n]*)\r?$/);
+    if (fence) {
+      if (marker && marker[1][0] === fence[0] && marker[1].length >= fence.length &&
+          /^[ \t]*$/.test(marker[2])) fence = '';
+      return mask(line);
+    }
+    if (marker && (marker[1][0] === '~' || !marker[2].includes('`'))) {
+      fence = marker[1];
+      return mask(line);
+    }
+    return line;
+  }).join('\n')
     .replace(/^---\r?\n[\s\S]*?\r?\n---(?:\r?\n|$)/, mask)
-    .replace(/^ {0,3}(`{3,}|~{3,})[^\n]*\n[\s\S]*?^ {0,3}\1[ \t]*$/gm, mask)
     .replace(/<(script|style|pre|code)\b[^>]*>[\s\S]*?<\/\1>/gi, mask)
     .replace(/(`+)[^\r\n]*?\1/g, mask);
   const formulas = /(?<!\\)\$\$[\s\S]*?(?<!\\)\$\$|(?<![\\$])\$(?!\$)(?:\\.|[^$])*?(?<!\\)\$(?!\$)|\\\([\s\S]*?\\\)|\\\[[\s\S]*?\\\]/g;
   const failures = [];
   let match;
   while ((match = formulas.exec(content))) {
-    if (/^\$[+-]?\d+(?:[.,]\d+)*[ \t]*\|(?:[^$]*\|)?[ \t]*\$$/.test(match[0]) &&
+    if (/^\$[+-]?\d[^$]*\|[ \t]*\$$/.test(match[0]) &&
         /[^\s|$]/.test(content[formulas.lastIndex] || '')) {
       // A price can precede the next cell's opening dollar; scan that dollar again.
       formulas.lastIndex--;
@@ -54,6 +66,16 @@ assert.equal(mathPipes('| Item | Price |\n|---|---|\n| A | $5 |\n| B | $10 |').l
 assert.equal(mathPipes('| Price | $5 | note | $10 |').length, 0);
 assert.equal(mathPipes('| Refund | $-5 | $-10 |').length, 0);
 assert.equal(mathPipes('| A | $5 |\n| B | $10 | $|x|$ |').length, 1);
+assert.equal(mathPipes('| Plan | $5/month | $10/month |').length, 0);
+assert.equal(mathPipes('| Price | $5 USD | US$10 |').length, 0);
+assert.equal(mathPipes('| Range | $5-$10 | $15-$20 |').length, 0);
+assert.equal(mathPipes('| Plan | $5/month | $\\lvert x\\rvert$ |').length, 0);
+assert.equal(mathPipes('| Plan | $5/month | $|x|$ |').length, 1);
+assert.equal(mathPipes('```js\n$|x|$\n````').length, 0);
+assert.equal(mathPipes('~~~text\n$|x|$\n~~~~').length, 0);
+assert.equal(mathPipes('````\n```\n$|x|$\n````\n$|y|$').length, 1);
+assert.equal(mathPipes('```\n~~~~\n$|x|$\n```\n$|y|$').length, 1);
+assert.equal(mathPipes('```\n$|x|$').length, 0);
 
 const skipped = new Set(['_site', 'vendor', 'node_modules', 'scripts', 'npm-cache']);
 const failures = [];
@@ -74,4 +96,4 @@ function scan(directory) {
 scan(root);
 assert.equal(failures.length, 0,
   `Use \\lvert...\\rvert, \\lVert...\\rVert, \\mid or \\vert instead of literal pipes in math:\n${failures.join('\n')}`);
-console.log(`Math pipe checks passed: ${files} Markdown files and 23 scanner regressions.`);
+console.log(`Math pipe checks passed: ${files} Markdown files and 33 scanner regressions.`);
