@@ -69,7 +69,7 @@ y&=\boxed{\frac1\mu\left(\int\mu Q\,\mathrm dx+C\right)}.
 4. Integrate, include $C$, and divide by $\mu$.
 5. Apply the stated condition and check the answer in the original equation.
 
-For $P=1/x$, $\int P\,\mathrm dx=\ln|x|$, so the formula gives $\mu=|x|$. On either interval $x>0$ or $x<0$, we may use $\mu=x$, because the two choices differ by a nonzero constant factor on that interval. The point $x=0$ remains excluded.
+For $P=1/x$, $\int P\,\mathrm dx=\ln\lvert x\rvert $, so the formula gives $\mu=\lvert x\rvert $. On either interval $x>0$ or $x<0$, we may use $\mu=x$, because the two choices differ by a nonzero constant factor on that interval. The point $x=0$ remains excluded.
 
 ### Example 1: normalise and solve {#example-1-normalise-and-solve}
 
@@ -417,14 +417,14 @@ Differentiating gives $y'=(6+4x)e^x$, so $y'-y=4e^x$ and $y(0)=2$.
 <details markdown="1">
 <summary>Hint</summary>
 
-The integrating-factor formula gives $1/|x|$. On $x<0$, you may instead use the constant multiple $\mu=1/x$.
+The integrating-factor formula gives $1/\lvert x\rvert $. On $x<0$, you may instead use the constant multiple $\mu=1/x$.
 
 </details>
 
 <details markdown="1">
 <summary>Solution</summary>
 
-Since $\int-1/x\,\mathrm dx=-\ln|x|$, use $\mu=1/x$ on the stated interval. Multiplication gives
+Since $\int-1/x\,\mathrm dx=-\ln\lvert x\rvert $, use $\mu=1/x$ on the stated interval. Multiplication gives
 
 $$\frac{y'}x-\frac y{x^2}=1,\qquad \left(\frac yx\right)'=1.$$
 
@@ -458,7 +458,7 @@ Check: $y'-y/x=(2x-1)-(x-1)=x$. Although the formula is a polynomial, the origin
 - Forgetting $C$, or dividing only one term by $\mu$ at the end.
 - Treating a PI as the final solution satisfying the condition.
 - Trying an exponential PI that is already in the CF; multiply the trial by $x$ in the repeated case above.
-- Dropping the absolute value in $\ln|x|$ without specifying a sign interval, or allowing a solution interval to cross a singular point.
+- Dropping the absolute value in $\ln\lvert x\rvert $ without specifying a sign interval, or allowing a solution interval to cross a singular point.
 
 **After practice:** redo any question for which you needed a hint. Show the standard form, integrating factor and product derivative, or explicitly identify the CF and PI. Finish by checking both the equation and its condition.
 

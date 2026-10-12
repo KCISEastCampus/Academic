@@ -28,6 +28,18 @@ $$\int_0^\infty e^{-x^2} dx = \frac{\sqrt{\pi}}{2}$$
 
 $$\sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}$$
 
+### 绝对值、模长与竖线
+
+本站使用 Jekyll / kramdown 的 GFM 解析器，Markdown 会先于 MathJax 处理。公式中的原始竖线 `|` 可能把普通段落误解析成表格，或将已有表格中的公式拆成多列；增加 MathJax 转义配置无法修复已经拆开的 HTML。
+
+- 绝对值与向量模长：使用 `$\lvert x\rvert$`、`$\lvert\mathbf v\rvert$`。
+- 自动调整高度：使用 `$\left\lvert\frac{a+x}{a-x}\right\rvert$`。
+- 双竖线范数：使用 `$\lVert\mathbf v\rVert$`。
+- 条件概率或集合条件：使用 `\mid`；导数取值使用 `\vert`，例如 `$\left.\frac{dy}{dx}\right\vert_{x=1}$`。
+- 行内公式、显示公式及表格单元格均遵守此规则，保留真正的 Markdown 表格分隔符。
+
+提交前运行 `node scripts/test-math-pipes.js`，再构建页面确认公式完整、段落未变成表格。
+
 ---
 
 ## 🔬 化学公式标准语法

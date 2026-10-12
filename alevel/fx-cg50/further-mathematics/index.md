@@ -339,7 +339,7 @@ n=\begin{pmatrix}1\\1\\3\end{pmatrix}.$$
 4. Norm( 在向量命令页的 <code>F6 → F1（Norm(）</code>。插入命令后，**重新按 OPTN → F2 → F6 → F6 → F1（Vct）**，再输入 A、右括号，得到 $\sqrt{21}$；同样求 Vct B 的模，得到 $\sqrt{11}$。
 5. 所求线面锐角满足
 
-$$\sin\alpha=\frac{|d\cdot n|}{\|d\|\|n\|}
+$$\sin\alpha=\frac{\lvert d\cdot n\rvert }{\lVert d\rVert \lVert n\rVert }
 =\frac{13}{\sqrt{231}}.$$
 
 在 Rad 设置下，输入

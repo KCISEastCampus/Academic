@@ -247,7 +247,7 @@ $$\boxed{\begin{aligned}
 
 第一种被积函数对所有实数 $x$ 都有实数值。第二个公式适用于 $x>a$；当 $x=a$ 时被积函数无定义。虽然被积函数在 $x<-a$ 时也有实数值，但这里给出的 $\cosh^{-1}(x/a)$ 形式不适用于该区间。第三个反函数形式适用于 $(-a,a)$；在任意不包含 $x=\pm a$ 的区间上，也可写成
 
-$$\int\frac{\mathrm dx}{a^2-x^2}=\frac1{2a}\ln\left|\frac{a+x}{a-x}\right|+C.$$
+$$\int\frac{\mathrm dx}{a^2-x^2}=\frac1{2a}\ln\left\lvert \frac{a+x}{a-x}\right\rvert +C.$$
 
 换元积分法（integration by substitution）中，令 $u=g(x)$ 后，要把每个 $x$ 和 $\mathrm dx$ 都换成新变量，并计入 $\mathrm du=g'(x)\,\mathrm dx$ 带来的因子。不定积分（indefinite integral）要保留积分常数（constant of integration）$+C$。定积分应随换元改变积分限，或者先代回原变量再使用原积分限。
 

@@ -38,11 +38,11 @@ For any small test charge, the force is:
 
 $$\boxed{\mathbf F=q\mathbf E}.$$
 
-The force is in the field direction for $q>0$ and opposite to it for $q<0$. Its magnitude is $|q|E$, where $E$ is the field-strength magnitude. The test charge must be small enough not to change the source charge distribution significantly.
+The force is in the field direction for $q>0$ and opposite to it for $q<0$. Its magnitude is $\lvert q\rvert E$, where $E$ is the field-strength magnitude. The test charge must be small enough not to change the source charge distribution significantly.
 
 **Coulomb's law** gives the force between two point charges in a vacuum. Its magnitude is:
 
-$$\boxed{F=\frac{|Q_1Q_2|}{4\pi\varepsilon_0r^2}=\frac{k|Q_1Q_2|}{r^2}}.$$
+$$\boxed{F=\frac{\lvert Q_1Q_2\rvert }{4\pi\varepsilon_0r^2}=\frac{k\lvert Q_1Q_2\rvert }{r^2}}.$$
 
 Here $r$ is the separation of the charges. Like charges repel; unlike charges attract. Each charge experiences a force of the same magnitude in the opposite direction, regardless of the sizes of the charges. Air can usually be treated as a vacuum for these calculations.
 
@@ -80,7 +80,7 @@ The radial field-strength component, with outwards positive, is:
 
 $$E_r=\frac{kQ}{r^2}.$$
 
-The field-strength **magnitude** is $k|Q|/r^2$. For a negative source, $E_r<0$ means the field points inwards.
+The field-strength **magnitude** is $k\lvert Q\rvert /r^2$. For a negative source, $E_r<0$ means the field points inwards.
 
 These point-charge equations also describe the outside field of a spherically symmetric charged sphere, with $r$ measured from its centre. Do not apply them inside a conducting sphere. In electrostatic equilibrium, the field inside the conductor is zero and its potential is constant, but not necessarily zero. Nearby charges can change a conductor's surface charge distribution and the shape of its outside field.
 
@@ -305,7 +305,7 @@ Scale the charge product and the square of separation separately.
 
 $$\boxed{F_{\text{new}}=\frac49F}.$$
 
-The product of charge magnitudes increases by four and $r^2$ increases by nine. For fixed charges, $F=k|Q_1Q_2|(1/r^2)$, so the straight-line graph passes through the origin and its gradient is $k|Q_1Q_2|$.
+The product of charge magnitudes increases by four and $r^2$ increases by nine. For fixed charges, $F=k\lvert Q_1Q_2\rvert (1/r^2)$, so the straight-line graph passes through the origin and its gradient is $k\lvert Q_1Q_2\rvert $.
 
 </details>
 
@@ -519,7 +519,7 @@ The field need not be zero. It can be perpendicular to the equipotential surface
 
 | Quantity | Equation and condition |
 |---|---|
-| Coulomb force magnitude | $F=\dfrac{k|Q_1Q_2|}{r^2}$; point charges in a vacuum |
+| Coulomb force magnitude | $F=\dfrac{k\lvert Q_1Q_2\rvert }{r^2}$; point charges in a vacuum |
 | Force on a test charge | $\mathbf F=q\mathbf E$; opposite to the field for $q<0$ |
 | Radial field component | $E_r=\dfrac{kQ}{r^2}$; outwards positive |
 | Point-charge potential | $V=\dfrac{kQ}{r}$; zero at infinity |

@@ -143,7 +143,7 @@ At $x=0$, speed is greatest:
 
 $$\boxed{v_{\max}=\omega A}.$$
 
-At $x=\pm A$, speed is zero. A value of $|x|>A$ is outside the motion and cannot be substituted to give a real speed.
+At $x=\pm A$, speed is zero. A value of $\lvert x\rvert >A$ is outside the motion and cannot be substituted to give a real speed.
 
 ### Example 3: speed and energy
 
@@ -155,9 +155,9 @@ $$v_{\max}=\sqrt{250}(0.040)\approx\boxed{0.63\,\mathrm{m\,s^{-1}}}.$$
 
 At $x=+0.024\,\mathrm m$:
 
-$$|v|=\sqrt{250}\sqrt{0.040^2-0.024^2}.$$
+$$\lvert v\rvert =\sqrt{250}\sqrt{0.040^2-0.024^2}.$$
 
-$$\boxed{|v|\approx0.51\,\mathrm{m\,s^{-1}}}.$$
+$$\boxed{\lvert v\rvert \approx0.51\,\mathrm{m\,s^{-1}}}.$$
 
 The velocity is negative as the particle first returns towards equilibrium, and positive on its later outward motion. A displacement alone does not determine the sign of velocity.
 
@@ -189,9 +189,9 @@ $$E_p=\frac12(50)(0.024)^2=0.0144\,\mathrm J.$$
 
 $$E_k=0.040-0.0144=0.0256\,\mathrm J.$$
 
-$$|v|=\sqrt{\frac{2E_k}{m}}=\sqrt{\frac{2(0.0256)}{0.20}}.$$
+$$\lvert v\rvert =\sqrt{\frac{2E_k}{m}}=\sqrt{\frac{2(0.0256)}{0.20}}.$$
 
-This again gives $|v|\approx0.51\,\mathrm{m\,s^{-1}}$. The energy method checks the speed independently of the time equation.
+This again gives $\lvert v\rvert \approx0.51\,\mathrm{m\,s^{-1}}$. The energy method checks the speed independently of the time equation.
 
 ### Checkpoint: momentum and energy
 
@@ -200,7 +200,7 @@ This again gives $|v|\approx0.51\,\mathrm{m\,s^{-1}}$. The energy method checks 
 <details markdown="1">
 <summary>Check your answer</summary>
 
-Momentum magnitude is $m|v|$. It is greatest at equilibrium, where $x=0$ and kinetic energy is greatest. Zero acceleration at this point does not mean zero speed or zero momentum.
+Momentum magnitude is $m\lvert v\rvert $. It is greatest at equilibrium, where $x=0$ and kinetic energy is greatest. Zero acceleration at this point does not mean zero speed or zero momentum.
 
 </details>
 
@@ -379,9 +379,9 @@ $$\boxed{E_{\text{total}}\approx0.013\,\mathrm J}.$$
 
 $$E_k=\frac34E_{\text{total}}\approx\boxed{0.0095\,\mathrm J}.$$
 
-$$|v|=4\pi\sqrt{0.020^2-0.010^2}.$$
+$$\lvert v\rvert =4\pi\sqrt{0.020^2-0.010^2}.$$
 
-$$\boxed{|v|\approx0.22\,\mathrm{m\,s^{-1}}}.$$
+$$\boxed{\lvert v\rvert \approx0.22\,\mathrm{m\,s^{-1}}}.$$
 
 Neighbouring kinetic-energy maxima are separated by $T/2=0.25\,\mathrm s$. Velocity can have either sign at the given displacement; the direction was not specified.
 
@@ -511,7 +511,7 @@ The equilibrium extension changes to $Mg/k$. The mass starts at rest below this 
 | Period and frequency | $\omega=2\pi f=2\pi/T$ |
 | Released from rest at $+A$ | $x=A\cos(\omega t)$ |
 | Velocity for this release | $v=-A\omega\sin(\omega t)$ |
-| Speed at displacement $x$ | $|v|=\omega\sqrt{A^2-x^2}$; $|x|\leq A$ |
+| Speed at displacement $x$ | $\lvert v\rvert =\omega\sqrt{A^2-x^2}$; $\lvert x\rvert \leq A$ |
 | Maximum speed | $v_{\max}=\omega A$; at equilibrium |
 | Maximum acceleration magnitude | $a_{\max}=\omega^2A$; at either extreme |
 | Total oscillation energy | $E_{\text{total}}=m\omega^2A^2/2$; undamped SHM |
