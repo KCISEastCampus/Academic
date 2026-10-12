@@ -300,7 +300,7 @@ Use half the range of acceptable gradients as an uncertainty estimate:
 
 $$\Delta m=\frac{0.105-0.095}{2}=0.005\,\mathrm{s^{-1}}.$$
 
-The gradient uncertainty is 5%. Since $C=1/(R|m|)$, adding percentage uncertainties gives approximately $2\%+5\%=7\%$, or $C=(100\pm7)\,\mathrm{\mu F}$. This is an approximate uncertainty bound, not a claim that independent random errors must always be added this way.
+The gradient uncertainty is 5%. Since $C=1/(R\lvert m\rvert)$, adding percentage uncertainties gives approximately $2\%+5\%=7\%$, or $C=(100\pm7)\,\mathrm{\mu F}$. This is an approximate uncertainty bound, not a claim that independent random errors must always be added this way.
 
 **Check:** the gradient is negative, while time constant and capacitance are positive. Steepest and shallowest lines should be justified using error bars or an appropriate spread of data.
 

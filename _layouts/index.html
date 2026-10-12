@@ -23,44 +23,6 @@ layout: none
   <a class="skip-link sr-only-focusable" href="#main-content" data-ui="skip_content">{{ ui.skip_content }}</a>
   <main id="main-content" class="container" role="main">
 
-    <!-- Quick Navigation Links -->
-    <section class="quick-nav-section fade-in">
-      <div class="quick-nav-container">
-        <a href="/admissions/tmua-esat/" class="quick-nav-item" title="{{ ui.admissions_notes }}" data-ui-title="admissions_notes">
-          <div class="nav-icon">
-            <i class="bi bi-calculator" aria-hidden="true"></i>
-          </div>
-          <div class="nav-content">
-            <h3>TMUA &amp; ESAT</h3>
-            <p data-ui="admissions_description">{{ ui.admissions_description }}</p>
-          </div>
-          <i class="bi bi-chevron-right nav-arrow" aria-hidden="true"></i>
-        </a>
-
-        <a href="/student-council/" class="quick-nav-item" title="{{ ui.student_council }}" data-ui-title="student_council">
-          <div class="nav-icon">
-            <i class="bi bi-people-fill"></i>
-          </div>
-          <div class="nav-content">
-            <h3 data-ui="student_council">{{ ui.student_council }}</h3>
-            <p data-ui="student_council_description">{{ ui.student_council_description }}</p>
-          </div>
-          <i class="bi bi-chevron-right nav-arrow"></i>
-        </a>
-
-        <a href="/contributors/" class="quick-nav-item" title="{{ ui.contributors_title }}" data-ui-title="contributors_title">
-          <div class="nav-icon">
-            <i class="bi bi-stars"></i>
-          </div>
-          <div class="nav-content">
-            <h3 data-ui="contributors">{{ ui.contributors }}</h3>
-            <p data-ui="contributors_description">{{ ui.contributors_description }}</p>
-          </div>
-          <i class="bi bi-chevron-right nav-arrow"></i>
-        </a>
-      </div>
-    </section>
-
     <!-- A-Level Section -->
     <section class="subjects-section fade-in" style="animation-delay: 0.1s;">
       <div class="section-header">
@@ -140,6 +102,44 @@ layout: none
             </div>
           </a>
         {% endfor %}
+      </div>
+    </section>
+
+    <!-- Quick Navigation Links -->
+    <section class="quick-nav-section fade-in">
+      <div class="quick-nav-container">
+        <a href="/admissions/tmua-esat/" class="quick-nav-item" title="{{ ui.admissions_notes }}" data-ui-title="admissions_notes">
+          <div class="nav-icon">
+            <i class="bi bi-calculator" aria-hidden="true"></i>
+          </div>
+          <div class="nav-content">
+            <h3>TMUA &amp; ESAT</h3>
+            <p data-ui="admissions_description">{{ ui.admissions_description }}</p>
+          </div>
+          <i class="bi bi-chevron-right nav-arrow" aria-hidden="true"></i>
+        </a>
+
+        <a href="/student-council/" class="quick-nav-item" title="{{ ui.student_council }}" data-ui-title="student_council">
+          <div class="nav-icon">
+            <i class="bi bi-people-fill"></i>
+          </div>
+          <div class="nav-content">
+            <h3 data-ui="student_council">{{ ui.student_council }}</h3>
+            <p data-ui="student_council_description">{{ ui.student_council_description }}</p>
+          </div>
+          <i class="bi bi-chevron-right nav-arrow"></i>
+        </a>
+
+        <a href="/contributors/" class="quick-nav-item" title="{{ ui.contributors_title }}" data-ui-title="contributors_title">
+          <div class="nav-icon">
+            <i class="bi bi-stars"></i>
+          </div>
+          <div class="nav-content">
+            <h3 data-ui="contributors">{{ ui.contributors }}</h3>
+            <p data-ui="contributors_description">{{ ui.contributors_description }}</p>
+          </div>
+          <i class="bi bi-chevron-right nav-arrow"></i>
+        </a>
       </div>
     </section>
 

@@ -49,7 +49,7 @@
 <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 
 <!-- Preload critical resources -->
-<link rel="preload" href="/assets/vendor/bootstrap/5.3.3/css/bootstrap.min.css" as="style">
+<link rel="preload" href="/assets/vendor/bootstrap/5.3.3/css/bootstrap.min.css" as="style" crossorigin="anonymous">
 <link rel="preload" href="/assets/css/style.css" as="style">
 <!-- Preload MathJax for pages that need it -->
 {% if needs_mathjax %}
@@ -82,7 +82,9 @@
 <link href="/assets/css/fonts/maplemono.css" rel="stylesheet">
 <link href="/assets/css/fonts/chinese.css" rel="stylesheet">
 
+{% if page.content contains '```mermaid' or page.content contains 'language-mermaid' %}
 <script defer src="https://unpkg.com/mermaid@11.1.1/dist/mermaid.min.js"></script>
+{% endif %}
 
 <!-- Bootstrap JS: Load asynchronously after DOM ready - with CDN fallback -->
 <script>

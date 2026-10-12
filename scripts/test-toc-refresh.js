@@ -43,4 +43,50 @@ vm.runInContext('generateTOC();', context);
 const firstSignal = vm.runInContext('tocControllers.get(document.getElementById("content-container")).signal', context);
 vm.runInContext('generateTOC();', context);
 assert.equal(firstSignal.aborted, true, 'Refreshing cancels previous listeners and observers');
-console.log('TOC passed: nested search, clear and refresh cleanup.');
+function classes() {
+  const values = new Set();
+  return {
+    add: value => values.add(value),
+    remove: value => values.delete(value),
+    contains: value => values.has(value)
+  };
+}
+let focused;
+const drawer = { classList: classes() };
+const toggle = {
+  classList: classes(),
+  setAttribute(key, value) { this[key] = value; },
+  focus() { focused = 'toggle'; }
+};
+const drawerInput = { focus() { focused = 'search'; } };
+const navLinks = { classList: classes() };
+navLinks.classList.add('show');
+const navToggle = { setAttribute(key, value) { this[key] = value; } };
+const background = [{}, {}, {}, {}];
+document.body = { style: {}, classList: classes() };
+document.querySelectorAll = selector => {
+  assert.equal(selector, '.subject-header, #content-container, footer, .back-to-top');
+  return background;
+};
+document.getElementById = id => ({ toc: drawer, tocToggle: toggle, tocSearch: drawerInput, siteNavLinks: navLinks, siteNavToggle: navToggle })[id];
+context.window = { innerWidth: 390 };
+vm.runInContext('toggleTOC(true);', context);
+assert.equal(drawer.inert, false);
+assert.equal(navLinks.classList.contains('show'), false, 'Contents close the overlapping site navigation');
+assert.equal(navToggle['aria-expanded'], 'false');
+assert(background.every(element => element.inert), 'Opened drawer blocks focus on obscured content');
+assert.equal(document.body.classList.contains('toc-open'), true);
+assert.equal(document.body.style.overflow, 'hidden');
+assert.equal(toggle['aria-expanded'], 'true');
+assert.equal(focused, 'search');
+vm.runInContext('toggleTOC(false);', context);
+assert.equal(drawer.inert, true, 'Closed mobile drawer is outside the keyboard path');
+assert(background.every(element => !element.inert));
+assert.equal(document.body.classList.contains('toc-open'), false);
+assert.equal(document.body.style.overflow, '');
+assert.equal(toggle['aria-expanded'], 'false');
+assert.equal(focused, 'toggle');
+context.window.innerWidth = 1280;
+vm.runInContext('toggleTOC(false);', context);
+assert.equal(drawer.inert, false, 'Desktop contents remain keyboard-accessible');
+console.log('TOC passed: nested search, refresh cleanup, mobile backdrop, background focus exclusion and focus restoration.');
