@@ -42,7 +42,8 @@ collections:
             name: "executives"
             widget: "list"
             fields:
-              - { label: "姓名", name: "name", widget: "string" }
+              - { label: "姓名（英文）", name: "name", widget: "string" }
+              - { label: "姓名（中文）", name: "name_zh", widget: "string", required: false }
               - { label: "职务", name: "role", widget: "string" }
               - { label: "年级", name: "grade", widget: "string" }
               - { label: "班级", name: "class", widget: "string" }
@@ -84,7 +85,8 @@ collections:
             name: "members"
             widget: "list"
             fields:
-              - { label: "姓名", name: "name", widget: "string" }
+              - { label: "姓名（英文）", name: "name", widget: "string" }
+              - { label: "姓名（中文）", name: "name_zh", widget: "string", required: false }
               - label: "所属部门"
                 name: "groups"
                 widget: "select"

@@ -1,0 +1,10 @@
+{%- assign council_people = site.data.student_council.executives | concat: site.data.student_council.members -%}
+{%- assign council_person = council_people | where: 'name', include.name | first -%}
+{%- assign translated_person_name = council_person.name_zh | default: '' | strip -%}
+{%- assign person_name = include.name -%}
+{%- assign person_lang = 'en' -%}
+{%- if include.lang == 'zh-CN' and translated_person_name != '' -%}
+  {%- assign person_name = translated_person_name -%}
+  {%- assign person_lang = 'zh-CN' -%}
+{%- endif -%}
+<span{% if include.class %} class="{{ include.class }}"{% endif %} lang="{{ person_lang }}">{{ person_name | escape }}</span>

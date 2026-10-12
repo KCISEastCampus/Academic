@@ -270,7 +270,7 @@ layout: none
         {% if page.author %}
         <div class="post-meta-item">
           <i class="bi bi-person"></i>
-          <span>{{ ui.sc_by }} <span class="post-author" lang="en">{{ page.author }}</span></span>
+          <span>{{ ui.sc_by }} {% include student-council/person-name.html name=page.author lang=council_lang class="post-author" %}</span>
         </div>
         {% endif %}
         

@@ -81,7 +81,7 @@ layout: none
             <i class="bi bi-person-circle"></i>
           </div>
           <div class="executive-info">
-            <h3 class="executive-name" lang="en">{{ exec.name }}</h3>
+            <h3 class="executive-name">{% include student-council/person-name.html name=exec.name lang=council_lang %}</h3>
             <p class="executive-role">{{ ui.sc_roles[exec.role] | default: exec.role }}</p>
             <p class="executive-grade">{{ exec.grade }} · {{ exec.class }}</p>
             {% if exec.bio and exec.bio != "TBD" %}
@@ -112,7 +112,7 @@ layout: none
             <i class="bi bi-person-circle"></i>
           </div>
           <div class="executive-info">
-            <h3 class="executive-name" lang="en">{{ exec.name }}</h3>
+            <h3 class="executive-name">{% include student-council/person-name.html name=exec.name lang=council_lang %}</h3>
             <p class="executive-role">{{ ui.sc_roles[exec.role] | default: exec.role }}</p>
             <p class="executive-grade">{{ exec.grade }} · {{ exec.class }}</p>
             {% if exec.bio and exec.bio != "TBD" %}

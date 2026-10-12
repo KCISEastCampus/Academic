@@ -8,6 +8,7 @@ council:
   description_zh: A-level 学生会（ALSC）通过组织活动、提供学习资源，帮助同学缓解压力并提升学习效率。
 executives:
   - name: Eric Shi
+    name_zh: 石洪斌
     role: President
     grade: G12
     class: 12H
@@ -21,6 +22,7 @@ executives:
       - name: Publicity
         role: Deputy Leader
   - name: Marcia Ma
+    name_zh: 马艺涵
     role: Vice President
     grade: G12
     class: 12H
@@ -33,6 +35,7 @@ executives:
       - name: Events
         role: Deputy Leader
   - name: Jason Jiang
+    name_zh: 姜嘉鑫
     role: Head of Events
     grade: G11
     class: 11H
@@ -90,60 +93,79 @@ groups:
       - Social media management and outreach
 members:
   - name: James Wang
+    name_zh: 王铎
     groups:
       - Academic
   - name: Henry Zhang
+    name_zh: 张梓涵
     groups:
       - Events
   - name: Alisa Liu
+    name_zh: 刘卿竹
     groups:
       - Events
   - name: Leo Xie
+    name_zh: 解徐洺淏
     groups:
       - Academic
   - name: Kathy Yue
+    name_zh: 岳心怡
     groups:
       - Academic
   - name: Dada Du
+    name_zh: 杜翼陈
     groups:
       - Academic
   - name: Jimmy Tang
+    name_zh: 唐浩宇
     groups:
       - Events
   - name: Mable Yang
+    name_zh: 杨依蒙
     groups:
       - Publicity
   - name: Blanch Wang
+    name_zh: 王睿奇
     groups:
       - Academic
   - name: Katniss Zhang
+    name_zh: 章梓彤
     groups:
       - Academic
   - name: Rose Yang
+    name_zh: 杨月泽
     groups:
       - Academic
   - name: Kevin Du
+    name_zh: 杜艺歌
     groups:
       - Events
   - name: Mark Lin
+    name_zh: 林心悦
     groups:
       - Events
   - name: Yoky Guo
+    name_zh: 郭幼茜
     groups:
       - Events
   - name: Lucy Yang
+    name_zh: 杨璐欣
     groups:
       - Events
   - name: Liberty Gong
+    name_zh: 龚曦屔
     groups:
       - Events
   - name: Kevin Liu
+    name_zh: 刘光卿
     groups:
       - Events
   - name: Wendy Wang
+    name_zh: 汪雨彤
     groups:
       - Publicity
   - name: Yiyi Zeng
+    name_zh: 曾伊依
     groups:
       - Publicity
 contact:

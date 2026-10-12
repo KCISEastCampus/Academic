@@ -41,17 +41,18 @@ for (const route of ['', 'members/', 'alumni/', 'news/', 'news/recruitment/', 'n
     assert.ok(html.includes('/assets/css/student_council.css'), `Missing council styles: ${route}`);
   }
 }
-// English roster names keep their own language on both English and Chinese pages.
+// Current names follow the page language; historical Chinese records keep theirs.
 for (const prefix of ['', 'zh/']) {
+  const lang = prefix ? 'zh-CN' : 'en';
   const alumni = read(`_site/${prefix}student-council/alumni/index.html`);
   assert.equal((alumni.match(/<span class="name" lang="zh-CN">/g) || []).length, 14, 'Chinese alumni name labels');
   assert.ok(!alumni.includes('<span class="name">'), 'Unlabelled alumni names');
   const members = read(`_site/${prefix}student-council/members/index.html`);
   const names = [...members.matchAll(/<span class="name"([^>]*)>([^<]+)<\/span>/g)];
   assert.equal(names.length, 19, 'Current roster name spans');
-  assert.ok(names.every(([, attributes, name]) => attributes === ' lang="en"' && !/[\u4e00-\u9fff]/.test(name)), 'English roster language labels');
-  const leaders = [...members.matchAll(/class="members-page-leader"><span>[^<]+<\/span> <span lang="en">([^<]+)<\/span>/g)];
-  assert.equal(leaders.length, 3, 'English group leader labels');
+  assert.ok(names.every(([, attributes, name]) => attributes === ` lang="${lang}"` && /[\u4e00-\u9fff]/.test(name) === Boolean(prefix)), 'Localized roster language labels');
+  const leaders = [...members.matchAll(new RegExp(`class="members-page-leader"><span>[^<]+<\\/span> <span lang="${lang}">([^<]+)<\\/span>`, 'g'))];
+  assert.equal(leaders.length, 3, 'Localized group leader labels');
 }
 for (const [route, englishAnchor] of [
   ['recruitment', 'recruitment-event-successfully-held'],
@@ -67,4 +68,4 @@ for (const [route, englishAnchor] of [
 for (const route of ['zh/', 'zh/alevel/a2-mathematics/', 'alevel/fx-cg50/']) {
   assert.ok(read(`_site/${route}index.html`).includes('/assets/css/fonts/chinese.css'), `Missing Chinese font: ${route}`);
 }
-console.log('Chinese typography passed: CJK-only local and self-hosted faces, preserved English/math fonts, shared fonts on all 14 council pages, English current names and Chinese alumni names, rendered bilingual sections and preserved English anchors.');
+console.log('Chinese typography passed: CJK-only local and self-hosted faces, preserved English/math fonts, shared fonts on all 14 council pages, localized current names and Chinese alumni names, rendered bilingual sections and preserved English anchors.');
