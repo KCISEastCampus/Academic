@@ -12,6 +12,11 @@ const expectedNames = [
   'Jason Jiang', 'Henry Zhang', 'Alisa Liu', 'Jimmy Tang', 'Kevin Du', 'Mark Lin', 'Yoky Guo', 'Lucy Yang', 'Liberty Gong', 'Kevin Liu',
   'Marcia Ma', 'Mable Yang', 'Wendy Wang', 'Yiyi Zeng'
 ].sort();
+const expectedChineseNames = [
+  '石洪斌', '王铎', '解徐洺淏', '岳心怡', '杜翼陈', '王睿奇', '章梓彤', '杨月泽',
+  '姜嘉鑫', '张梓涵', '刘卿竹', '唐浩宇', '杜艺歌', '林心悦', '郭幼茜', '杨璐欣', '龚曦屔', '刘光卿',
+  '马艺涵', '杨依蒙', '汪雨彤', '曾伊依'
+].sort();
 for (const prefix of ['', '/zh']) {
   const lang = prefix ? 'zh-CN' : 'en';
   for (const route of routes) {
@@ -32,10 +37,10 @@ for (const prefix of ['', '/zh']) {
   }
   const members = readPage(`${prefix}/student-council/members/`);
   const names = [
-    ...matches(members, /class="name" lang="en">([^<]+)</g),
-    ...matches(members, /class="members-page-leader"><span>[^<]+<\/span> <span lang="en">([^<]+)</g)
+    ...matches(members, new RegExp(`class="name" lang="${lang}">([^<]+)<`, 'g')),
+    ...matches(members, new RegExp(`class="members-page-leader"><span>[^<]+<\\/span> <span lang="${lang}">([^<]+)<`, 'g'))
   ].sort();
-  assert.deepEqual(names, expectedNames, `${lang}: exact English-only roster`);
+  assert.deepEqual(names, prefix ? expectedChineseNames : expectedNames, `${lang}: exact localized roster`);
   const counts = matches(members, /class="members-page-card-subtitle">(\d+) [^<]+</g).map(Number);
   assert.deepEqual(counts, [8, 10, 4], `${lang}: counts include leaders`);
   assert.deepEqual(matches(members, /class="value">([^<]+)</g), ['22', '3']);
@@ -43,15 +48,20 @@ for (const prefix of ['', '/zh']) {
   assert.deepEqual(matches(alumni, /class="value">([^<]+)</g), ['2025-2026', '17', '5', '9'], `${lang}: historical statistics`);
   assert.equal((alumni.match(/class="grade-badge graduated"/g) || []).length, 5, `${lang}: graduation status remains intact`);
   assert(alumni.includes('谢秦一') && alumni.includes('钱俊希') && alumni.includes('11I'), `${lang}: historical records preserved`);
+  const expectedExecutives = prefix ? ['石洪斌', '马艺涵', '姜嘉鑫'] : ['Eric Shi', 'Marcia Ma', 'Jason Jiang'];
+  assert.deepEqual(matches(alumni, new RegExp(`class="executive-name"><span lang="${lang}">([^<]+)<`, 'g')), expectedExecutives, `${lang}: alumni executive names`);
+  assert.deepEqual(matches(readPage(`${prefix}/student-council/`), new RegExp(`class="member-name"><span lang="${lang}">([^<]+)<`, 'g')), expectedExecutives, `${lang}: current executive names`);
   for (const route of ['', 'news/']) {
     const html = readPage(`${prefix}/student-council/${route}`);
     const urls = matches(html, route ? /class="news-title"[^>]*>\s*<a href="([^"]+)"/g : /<a href="([^"]+)" class="news-item"/g);
     assert.equal(urls.length, 3, `${lang}: three news entries`);
     assert.equal(new Set(urls).size, 3, `${lang}: no bilingual duplicates`);
     assert(urls.every(url => url.startsWith(`${prefix}/student-council/news/`)), `${lang}: news list language`);
+    assert.deepEqual(matches(html, new RegExp(`class="news-author"><i[^>]*><\\/i> <span lang="${lang}">([^<]+)<`, 'g')), Array(3).fill(expectedExecutives[0]), `${lang}: news author names`);
   }
   for (const route of routes.filter(route => route.startsWith('news/') && route !== 'news/')) {
     const html = readPage(`${prefix}/student-council/${route}`);
+    assert(html.includes(`class="post-author" lang="${lang}">${expectedExecutives[0]}</span>`), `${lang}: article author name`);
     const content = html.match(/<article class="post-content">([\s\S]*?)<\/article>/)[1];
     const anchor = prefix ? matches(content, /<span id="([^"]+)"><\/span>/g) : [];
     if (prefix) {
@@ -78,4 +88,4 @@ for (const prefix of ['', '/zh']) {
     }
   }
 }
-console.log('Student Council passed: 7 page pairs, 22 English names, department counts, historical records, unique news lists, anchors and localized return buttons.');
+console.log('Student Council passed: 7 page pairs, 22 names in each language, localized executive and author names, department counts, historical records, unique news lists, anchors and localized return buttons.');

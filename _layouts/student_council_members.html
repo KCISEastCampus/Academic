@@ -77,13 +77,13 @@ layout: none
           </div>
 
           {% if group_leader_display %}
-          <p class="members-page-leader"><span>{{ ui.sc_leader }}</span> <span lang="en">{{ group_leader_display }}</span></p>
+          <p class="members-page-leader"><span>{{ ui.sc_leader }}</span> {% include student-council/person-name.html name=group_leader_display lang=council_lang %}</p>
           {% endif %}
 
           <ul class="members-page-list">
             {% for member in group_members %}
             <li class="members-page-list-item">
-              <span class="name" lang="en">{{ member.name }}</span>
+              {% include student-council/person-name.html name=member.name lang=council_lang class="name" %}
               <span class="group-pill">{{ ui.sc_groups[group.name] | default: group.name }}</span>
             </li>
             {% endfor %}

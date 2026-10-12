@@ -70,7 +70,7 @@ layout: none
             {% endif %}
             <div class="news-meta-row">
               {% if post.author %}
-              <span class="news-author"><i class="bi bi-person"></i> <span lang="en">{{ post.author }}</span></span>
+              <span class="news-author"><i class="bi bi-person"></i> {% include student-council/person-name.html name=post.author lang=council_lang %}</span>
               {% endif %}
               <span class="read-more-link">{{ ui.sc_read }} <i class="bi bi-arrow-right"></i></span>
             </div>
@@ -133,7 +133,7 @@ layout: none
             </div>
           </div>
           <div class="member-info">
-            <h3 class="member-name" lang="en">{{ member.name }}</h3>
+            <h3 class="member-name">{% include student-council/person-name.html name=member.name lang=council_lang %}</h3>
             <span class="member-role">{{ ui.sc_roles[member.role] | default: member.role }}</span>
             {% if member.grade and member.class %}
             <div class="member-class-info">

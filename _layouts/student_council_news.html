@@ -82,7 +82,7 @@ layout: none
             {% endif %}
             <div class="news-meta-row">
               {% if post.author %}
-              <span class="news-author"><i class="bi bi-person"></i> <span lang="en">{{ post.author }}</span></span>
+              <span class="news-author"><i class="bi bi-person"></i> {% include student-council/person-name.html name=post.author lang=council_lang %}</span>
               {% endif %}
               <span><i class="bi bi-calendar-event"></i> {% if council_lang == "zh-CN" %}{{ post.date | date: "%Y 年 %-m 月 %-d 日" }}{% else %}{{ post.date | date: "%B %d, %Y" }}{% endif %}</span>
               <a href="{{ post.url }}?from=news_archive" class="read-more-link read-more-link-inline">{{ ui.sc_read }} <i class="bi bi-arrow-right"></i></a>
