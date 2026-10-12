@@ -29,7 +29,6 @@ assert(fs.readFileSync(path.join(root, '_site', pdf)).subarray(0, 5).equals(Buff
 assert(read('_site/alevel/index.html').includes('href="/alevel/fx-cg50/"'), 'A-Level entry missing');
 assert(!page.includes('截图位置') && !page.includes('---PAGE---'));
 assert(page.includes('左括号要手动输入') && page.includes('×10ˣ（π）'));
-assert(page.includes('尚未在这台中文版实机验收'));
 assert(page.includes('UK') && page.includes('IB') && page.includes('品红色'));
 assert.equal((page.match(/<details\b/g) || []).length, 7, 'Practice answers must remain collapsible');
 const source = read('alevel/fx-cg50/beginner/index.md') + read('alevel/fx-cg50/advanced/index.md');
@@ -39,8 +38,6 @@ for (const formula of ['\\frac{1}{2}', '\\sqrt{72}', '\\sin\\left(\\frac{\\pi}{6
 for (const [, keys] of source.matchAll(/`([^`]+)`/g)) assert(!keys.includes('$'), 'Key sequences must remain literal');
 
 for (let n = 1; n <= 10; n++) assert(ids.includes(`chapter-${n}`), `Missing chapter ${n}`);
-assert(source.includes('第 4–9 章已在 03.81.0202 中文固件逐项核对并配图'));
-assert(!source.includes('第 5–9 章为文字初稿'));
 for (const name of ['keys-overview', 'keys-secondary', 'keys-signs']) {
   assert(page.includes(`${name}.svg`));
   assert(fs.existsSync(path.join(root, '_site/assets/img/fx-cg50', `${name}.svg`)));
@@ -93,7 +90,7 @@ for (const [url, html] of guidePages) {
   const headingIds = [...html.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
   assert.equal(new Set(headingIds).size, headingIds.length, url + ': duplicate ID');
   assert(html.includes('<html lang="zh-CN">') && html.includes('tex-chtml-full.js'), url + ': language or MathJax missing');
-  assert(!html.includes('@@figure:') && !html.includes('将继续补充'), url + ': unfinished content');
+  assert(!/@@figure:|将继续补充|文字初稿|核对进度|后续工作|截图待补充|尚待同版本实机抽查|尚未在这台中文版实机验收|本轮选用|下一步请老师审阅/.test(html), url + ': editorial status must stay out of student pages');
   for (const [, href] of html.matchAll(/href="([^"]+)"/g)) {
     const destination = new URL(href, 'https://local.test' + url);
     if (destination.origin === 'https://local.test' && destination.pathname.startsWith('/assets/pdf/fx-cg50/references/')) {

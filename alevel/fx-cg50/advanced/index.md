@@ -20,7 +20,7 @@ permalink: /alevel/fx-cg50/advanced/
 
 **开始前：** 完成[初学]({{ '/alevel/fx-cg50/beginner/' | relative_url }})；至少熟悉[按键读法]({{ '/alevel/fx-cg50/beginner/' | relative_url }}#reading-keys)、[角度与显示设置]({{ '/alevel/fx-cg50/beginner/' | relative_url }}#chapter-2)和[输入模板]({{ '/alevel/fx-cg50/beginner/' | relative_url }}#chapter-3)。
 
-第 4–9 章已在 03.81.0202 中文固件逐项核对并配图，尚未在这台中文版实机验收。考试模式与全书核对进度见[指南总览]({{ '/alevel/fx-cg50/' | relative_url }}#next-chapters)。
+考试前先阅读[考试模式与考前检查]({{ '/alevel/fx-cg50/' | relative_url }}#exam-mode)，按老师要求设置计算器。[适用版本与阅读说明]({{ '/alevel/fx-cg50/' | relative_url }}#next-chapters)。
 
 以下题目均为**自拟操作练习**，用于学会按键，并非 AQA 或 OxfordAQA 真题。可配合 [A2 三角函数](/alevel/a2-mathematics/trigonometric-functions-and-formulae/)、[指数与对数](/alevel/a2-mathematics/exponential-and-logarithmic-functions/) 和 [数值方法](/alevel/a2-mathematics/numerical-methods/) 的课程内容学习。
 

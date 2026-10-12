@@ -19,7 +19,7 @@ permalink: /alevel/fx-cg50/mathematics/
 
 本路线适用于 **OxfordAQA Mathematics 9660**，即普数 MA01–MA05。先学会[进阶通用操作]({{ '/alevel/fx-cg50/advanced/' | relative_url }})，再按正在学的考试单元选读。每个应用都先写模型，随后输入、核验结果，并说明答卷上须保留的过程。
 
-例题限定为 **2025 年 1 月**原卷及配套 Final Mark Scheme。英文题意均标注为改写；补齐大纲缺口的题目标为“自拟操作练习”。这是计算器应用指南，不是整套试卷的完整解答。
+例题选自 **2025 年 1 月**原卷及配套 Final Mark Scheme。英文题意标注为改写；补充练习标注为“自拟操作练习”。每节围绕一种计算器应用，原题全文和评分要求见所附试卷与评分细则。
 
 ## 选择考试单元 {#choose-unit}
 
@@ -36,7 +36,7 @@ AS 混合卷 MA02 同时包含纯数、统计和力学。MA05 是普数 M2；[Fu
 ## 解题时怎样使用 {#workflow}
 
 1. **先判断方法。** 写出方程、事件、积分式或受力图。遇到 show that、exact、justify 或指定方法，先确认答卷要求。
-2. **回顾通用教程。** 本路线链接到已维护的按键教程，不要求每道题重新学习菜单。
+2. **回顾通用教程。** 遇到不熟悉的菜单或输入方法，先打开例题旁的通用操作链接，再回到题目继续计算。
 3. **按未舍入数据计算。** 用 `Ans` 或存储变量继续计算；不要把显示的小数先抄回去。
 4. **核对结果。** 检查全解、范围、符号、单位、概率尾部和精度，再完成题目所需的文字结论。
 
@@ -52,11 +52,11 @@ AS 混合卷 MA02 同时包含纯数、统计和力学。MA05 是普数 M2；[Fu
 - 假设检验先写 $H_0,H_1$ 和显著性水平，再比较临界值或尾概率。结论放回题目情境。
 - 力学先确定正方向、受力、约束和初始条件；计算器不会自动判断这些模型。
 
-## 来源与核验状态 {#sources}
+## 资料来源与使用说明 {#sources}
 
-课程范围参考 [OxfordAQA Mathematics 9660 Specification，v5.2](https://www.oxfordaqa.com/wp-content/uploads/2023/10/oxfordaqa-a-level-mathematics-specification.pdf)。各单元页列出 2025 年 1 月 QP 与对应 MS，文件随网站保存，不依赖个人 Drive 权限。
+课程范围参考 [OxfordAQA Mathematics 9660 Specification，v5.2](https://www.oxfordaqa.com/wp-content/uploads/2023/10/oxfordaqa-a-level-mathematics-specification.pdf)。各单元页附有 2025 年 1 月 QP 与对应 MS，可直接打开或下载，无需登录。
 
-本轮选用的题意、公式和答卷要求已对照对应 MS，代表数值另行复算。复用的基础菜单已有中文固件核对记录；新增组合数、Ans 两次迭代与泊松有限求和已在 03.81.0202 中文固件执行并配图，本轮例题尚未逐项在中文版实机验收。t 检验用统计结果和纸上统计表完成。
+菜单使用中文版名称，[适用版本与阅读说明]({{ '/alevel/fx-cg50/' | relative_url }}#next-chapters)见指南总览。假设检验还需结合试卷所附统计表；[MA04 的 t 检验]({{ '/alevel/fx-cg50/mathematics/ma04/' | relative_url }}#ma04-t-test)说明怎样使用样本标准差和自由度查表。
 
 编写与组织：**Eric Shi**；GPT 辅助整理、核算与网页制作。[完整署名]({{ '/alevel/fx-cg50/' | relative_url }}#credits)。
 
