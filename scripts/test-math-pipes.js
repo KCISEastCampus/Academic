@@ -15,7 +15,7 @@ function mathPipes(source) {
   const failures = [];
   let match;
   while ((match = formulas.exec(content))) {
-    if (/^\$\d+(?:[.,]\d+)*[ \t]*\|[ \t]*\$$/.test(match[0]) &&
+    if (/^\$[+-]?\d+(?:[.,]\d+)*[ \t]*\|(?:[^$]*\|)?[ \t]*\$$/.test(match[0]) &&
         /[^\s|$]/.test(content[formulas.lastIndex] || '')) {
       // A price can precede the next cell's opening dollar; scan that dollar again.
       formulas.lastIndex--;
@@ -50,6 +50,10 @@ assert.equal(mathPipes('| Price | $5 | $x$ | $10 | $y$ |').length, 0);
 assert.equal(mathPipes('| Price | $5 | $10 | $|x|$ |').length, 1);
 assert.equal(mathPipes('| Formula | $5|x|$ |').length, 1);
 assert.equal(mathPipes('| Formula | $5|$ |').length, 1);
+assert.equal(mathPipes('| Item | Price |\n|---|---|\n| A | $5 |\n| B | $10 |').length, 0);
+assert.equal(mathPipes('| Price | $5 | note | $10 |').length, 0);
+assert.equal(mathPipes('| Refund | $-5 | $-10 |').length, 0);
+assert.equal(mathPipes('| A | $5 |\n| B | $10 | $|x|$ |').length, 1);
 
 const skipped = new Set(['_site', 'vendor', 'node_modules', 'scripts', 'npm-cache']);
 const failures = [];
@@ -70,4 +74,4 @@ function scan(directory) {
 scan(root);
 assert.equal(failures.length, 0,
   `Use \\lvert...\\rvert, \\lVert...\\rVert, \\mid or \\vert instead of literal pipes in math:\n${failures.join('\n')}`);
-console.log(`Math pipe checks passed: ${files} Markdown files and 19 scanner regressions.`);
+console.log(`Math pipe checks passed: ${files} Markdown files and 23 scanner regressions.`);
