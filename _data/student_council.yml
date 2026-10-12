@@ -1,9 +1,11 @@
 council:
   name: A-level Student Council
+  name_zh: A-level 学生会
   short_name: ALSC
   description: The A-level Student Council (ALSC) aims to organize activities,
     provide resources, help students relieve stress, and help them learn
     effectively.
+  description_zh: A-level 学生会（ALSC）通过组织活动、提供学习资源，帮助同学缓解压力并提升学习效率。
 executives:
   - name: Eric Shi
     role: President
@@ -12,6 +14,7 @@ executives:
     bio: From G12, with experience of leadership by being the class monitor for 4
       years, since G8. Built and maintaining <a
       href="https://kcisec.site">https://kcisec.site</a> since 2022.
+    bio_zh: 来自 G12，自 G8 起担任班长四年，具有团队领导经验。自 2022 年起建设并维护 <a href="https://kcisec.site">https://kcisec.site</a>。
     groups:
       - name: Academic
         role: Leader
@@ -23,6 +26,7 @@ executives:
     class: 12H
     bio: From G12, experienced in organizational management, and have successfully
       managed the school's "Heartfelt Voice(心辅之声)" program for years.
+    bio_zh: 来自 G12，具有组织管理经验，多年来负责管理学校“心辅之声”（Heartfelt Voice）项目。
     groups:
       - name: Publicity
         role: Leader
@@ -43,6 +47,10 @@ groups:
     icon: bi-book
     color: "#5cc07f"
     description: Maintaining this website and writing academic resources.
+    description_zh: 维护本网站，编写和整理学习资源。
+    responsibilities_zh:
+      - 维护并更新 Academic 学习资源网站
+      - 编写和整理学习资料
     responsibilities:
       - Maintain and update the Academic Resources website
       - Create and curate study materials
@@ -52,6 +60,12 @@ groups:
     icon: bi-calendar-event
     color: "#5c6bc0"
     description: Planning and executing events from concept to completion.
+    description_zh: 负责活动从构思、筹划到执行的全过程。
+    responsibilities_zh:
+      - 活动策划与方案制定
+      - 活动执行与现场协调
+      - 后勤安排与资源分配
+      - 场地协调与参与者管理
     responsibilities:
       - Event planning and proposal development
       - Mid-stage event execution and coordination
@@ -63,6 +77,12 @@ groups:
     icon: bi-megaphone
     color: "#e67e22"
     description: Creating content, designing materials, and documenting our work.
+    description_zh: 撰写内容、设计宣传材料，记录学生会工作。
+    responsibilities_zh:
+      - 撰写正式文件和公告
+      - 设计海报与宣传材料
+      - 活动记录与总结
+      - 社交媒体运营与对外宣传
     responsibilities:
       - Write official documents and announcements
       - Design posters and promotional materials
@@ -129,3 +149,4 @@ members:
 contact:
   email: ALSC@kcisec.site
   location: A-level Office
+  location_zh: A-level 办公室
