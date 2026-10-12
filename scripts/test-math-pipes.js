@@ -12,12 +12,23 @@ function mathPipes(source) {
     .replace(/<(script|style|pre|code)\b[^>]*>[\s\S]*?<\/\1>/gi, mask)
     .replace(/(`+)[^\r\n]*?\1/g, mask);
   const formulas = /(?<!\\)\$\$[\s\S]*?(?<!\\)\$\$|(?<![\\$])\$(?!\$)(?:\\.|[^$])*?(?<!\\)\$(?!\$)|\\\([\s\S]*?\\\)|\\\[[\s\S]*?\\\]/g;
-  return [...content.matchAll(formulas)]
-    .filter(match => match[0].includes('|'))
-    .map(match => ({
-      line: content.slice(0, match.index).split('\n').length,
-      formula: match[0],
-    }));
+  const failures = [];
+  let match;
+  while ((match = formulas.exec(content))) {
+    if (/^\$\d+(?:[.,]\d+)*[ \t]*\|[ \t]*\$$/.test(match[0]) &&
+        /[^\s|$]/.test(content[formulas.lastIndex] || '')) {
+      // A price can precede the next cell's opening dollar; scan that dollar again.
+      formulas.lastIndex--;
+      continue;
+    }
+    if (match[0].includes('|')) {
+      failures.push({
+        line: content.slice(0, match.index).split('\n').length,
+        formula: match[0],
+      });
+    }
+  }
+  return failures;
 }
 
 assert.equal(mathPipes('$|x|$').length, 1);
@@ -33,6 +44,12 @@ assert.equal(mathPipes('`$|x|$`\n```\n$|y|$\n```\n~~~\n$|z|$\n~~~').length, 0);
 assert.equal(mathPipes('<script>const value = "$x|y$";</script><code>$|x|$</code>').length, 0);
 assert.equal(mathPipes('---\ntitle: "$|x|$"\n---\n\n$|y|$')[0].line, 5);
 assert.equal(mathPipes('\\$5 and \\$10').length, 0);
+assert.equal(mathPipes('| Price | $5 | $10 |').length, 0);
+assert.equal(mathPipes('| Price | $5.50 | $10.25 | $20 |').length, 0);
+assert.equal(mathPipes('| Price | $5 | $x$ | $10 | $y$ |').length, 0);
+assert.equal(mathPipes('| Price | $5 | $10 | $|x|$ |').length, 1);
+assert.equal(mathPipes('| Formula | $5|x|$ |').length, 1);
+assert.equal(mathPipes('| Formula | $5|$ |').length, 1);
 
 const skipped = new Set(['_site', 'vendor', 'node_modules', 'scripts', 'npm-cache']);
 const failures = [];
@@ -53,4 +70,4 @@ function scan(directory) {
 scan(root);
 assert.equal(failures.length, 0,
   `Use \\lvert...\\rvert, \\lVert...\\rVert, \\mid or \\vert instead of literal pipes in math:\n${failures.join('\n')}`);
-console.log(`Math pipe checks passed: ${files} Markdown files and 13 scanner regressions.`);
+console.log(`Math pipe checks passed: ${files} Markdown files and 19 scanner regressions.`);
