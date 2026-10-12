@@ -20,6 +20,23 @@ further_parts:
   - title: 力学扩展
     url: /alevel/fx-cg50/further-mechanics/
 
+mathematics_units:
+  - id: ma01
+    title: MA01 · P1
+    url: /alevel/fx-cg50/mathematics/ma01/
+  - id: ma02
+    title: MA02 · PSM1
+    url: /alevel/fx-cg50/mathematics/ma02/
+  - id: ma03
+    title: MA03 · P2
+    url: /alevel/fx-cg50/mathematics/ma03/
+  - id: ma04
+    title: MA04 · S2
+    url: /alevel/fx-cg50/mathematics/ma04/
+  - id: ma05
+    title: MA05 · M2
+    url: /alevel/fx-cg50/mathematics/ma05/
+
 legacy_anchors:
   beginner: [reading-keys, chapter-1, section-1, task-1, task-2, section-4, section-5, chapter-2, task-3, task-4, task-5, section-9, task-6, section-11, chapter-3, task-7, task-8, section-14, task-9, task-10, task-11, section-18, task-12, task-13, task-14, section-22]
   advanced: [chapter-4, task-15, task-16, task-17, chapter-5, task-18, task-19, chapter-6, task-20, task-21, chapter-7, task-22, task-23, chapter-8, task-24, task-25, chapter-9, task-26, task-27, task-28, task-29, chapter-10, task-30, task-31]

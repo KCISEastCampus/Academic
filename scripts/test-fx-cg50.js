@@ -82,6 +82,11 @@ const guidePages = new Map([
   ['/alevel/fx-cg50/further-mathematics/numerical-calculus/', numerical],
   ['/alevel/fx-cg50/further-mechanics/', mechanics]
 ]);
+const applications = '/alevel/fx-cg50/mathematics/';
+for (const unit of ['', 'ma01/', 'ma02/', 'ma03/', 'ma04/', 'ma05/']) {
+  const url = applications + unit;
+  guidePages.set(url, read('_site' + url + 'index.html'));
+}
 const referencePdfs = new Set();
 for (const [url, html] of guidePages) {
   assert(!/https?:\/\/(?:drive|docs)\.google\.com\//.test(html), url + ': personal Drive link');
@@ -113,8 +118,8 @@ assert(mechanics.includes('fm-shm-phase.png') && mechanics.includes('最接近�
 assert(numerical.includes('差分消项') && numerical.includes('1.789473684211'));
 console.log('Further Mathematics passed: 30 core tasks, six mechanics extensions, cross-page anchors, assets, tables and MathJax configuration.');
 
-assert.equal(referencePdfs.size, 8, 'All eight exam reference PDFs must be linked locally');
-console.log('Reference PDFs passed: eight local files and no personal Drive links.');
+assert.equal(referencePdfs.size, 18, 'All 18 exam reference PDFs must be linked locally');
+console.log('Reference PDFs passed: 18 local files and no personal Drive links.');
 
 // The learning route must work across all pages, with an accurate current stage.
 for (const [url, html] of guidePages) {
@@ -131,15 +136,29 @@ for (const [url, html] of guidePages) {
   assert.equal(selected.length, url === '/alevel/fx-cg50/' ? 0 : 1, url + ': current-stage count');
   if (selected.length) {
     const expected = url.includes('/beginner/') ? '/alevel/fx-cg50/beginner/'
-      : url.includes('/advanced/') ? '/alevel/fx-cg50/advanced/' : '/alevel/fx-cg50/further-mathematics/';
+      : url.includes('/advanced/') || url.startsWith(applications) ? '/alevel/fx-cg50/advanced/' : '/alevel/fx-cg50/further-mathematics/';
     assert.equal(selected[0][1], expected, url + ': wrong current stage');
   }
   if (url.includes('/further-')) {
-    const topics = nav[1].match(/<div class="cg50-topic-links"[^>]*>([\s\S]*?)<\/div>/);
+    const topics = nav[1].match(/<div class="cg50-topic-links" aria-label="高数进阶专题">([\s\S]*?)<\/div>/);
     assert(topics, url + ': Further Mathematics topic navigation missing');
     const current = [...topics[1].matchAll(/<a href="([^"]+)" aria-current="page"/g)];
     assert.equal(current.length, 1, url + ': current topic count');
     assert.equal(current[0][1], url, url + ': wrong current topic');
+  }
+  if (url.startsWith(applications)) {
+    const units = nav[1].match(/<div class="cg50-topic-links" aria-label="普数考试应用">([\s\S]*?)<\/div>/)[1];
+    const current = [...units.matchAll(/<a href="([^"]+)" aria-current="page"/g)];
+    assert.equal(current.length, 1, url + ': current unit count');
+    assert.equal(current[0][1], url, url + ': wrong current unit');
+    if (url !== applications) {
+      assert(breadcrumb.includes('href="' + applications + '"'), url + ': applications breadcrumb missing');
+      const unit = url.split('/').filter(Boolean).at(-1);
+      for (const kind of ['question-paper', 'mark-scheme']) {
+        assert(html.includes(`href="/assets/pdf/fx-cg50/references/oxfordaqa-${unit}-2025-january-${kind}.pdf"`), url + ': paired January 2025 source missing');
+      }
+      assert(html.includes('英文题意改写') && html.includes('答卷保留'), url + ': source label or written method missing');
+    }
   }
 }
 for (let n = 1; n <= 31; n++) {
@@ -167,7 +186,7 @@ for (const hash of ['', '#exam-mode', '#credits', '#further-topics', '#unknown',
   vm.runInNewContext(legacyScript, { window: windowMock, location: { hash, replace: url => { redirected = url; } } });
   assert.equal(redirected, undefined, 'Overview or unknown anchor must not redirect: ' + hash);
 }
-console.log('Learning routes passed: six pages, 14 beginner + 17 advanced tasks, three Further Mathematics topics, active navigation and 50 legacy bookmarks.');
+console.log('Learning routes passed: 12 pages, five MA units, 14 beginner + 17 advanced tasks, three Further Mathematics topics, active navigation and 50 legacy bookmarks.');
 
 let hashChange;
 let changedDestination;

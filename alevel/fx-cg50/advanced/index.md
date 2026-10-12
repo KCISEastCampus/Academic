@@ -393,6 +393,8 @@ $$A=-\int_0^1(x^2-1)\,dx+\int_1^2(x^2-1)\,dx=\frac23+\frac43=2.$$
 
 先确认你能用不同方法检查方程的根，区分定积分与面积，检查统计数据与频数，并把概率题写成正确的事件。
 
+正在学普数的同学，下一步用[MA01–MA05 考试应用路线]({{ '/alevel/fx-cg50/mathematics/' | relative_url }})把这些操作连接到 2025 年 1 月真题：先建模，再输入，最后按题意写出方法、单位和精度。
+
 **下一步：** [高数进阶：复数、矩阵与向量]({{ '/alevel/fx-cg50/further-mathematics/' | relative_url }})。已经在学 Further Mathematics 的同学，可在[高数专题路线]({{ '/alevel/fx-cg50/' | relative_url }}#further-topics)中直接选择数值方法或力学扩展。
 
 [回顾初学：设置与输入]({{ '/alevel/fx-cg50/beginner/' | relative_url }}) · [返回学习路线总览]({{ '/alevel/fx-cg50/' | relative_url }}) · [考前准备]({{ '/alevel/fx-cg50/' | relative_url }}#exam-mode)

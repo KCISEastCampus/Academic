@@ -25,6 +25,9 @@
     {% if page.cg50_stage == 'further' %}
     <li class="breadcrumb-item"><a href="{{ '/alevel/fx-cg50/' | relative_url }}#further-topics">高数进阶</a></li>
     {% endif %}
+    {% if page.cg50_unit %}
+    <li class="breadcrumb-item"><a href="{{ '/alevel/fx-cg50/mathematics/' | relative_url }}">普数考试应用</a></li>
+    {% endif %}
     <li class="breadcrumb-item active" aria-current="page" lang="{{ page.lang | default: 'en' }}">{{ page.title }}</li>
     {% else %}
     {% assign crumbs = page.translation_of | default: page.url | split: '/' %}

@@ -28,6 +28,16 @@ permalink: /alevel/fx-cg50/
 
 首次使用时按 **初学 → 进阶 → 高数进阶** 阅读；复习时可直接使用下面的主题入口。[考试模式与考前检查]({{ '/alevel/fx-cg50/' | relative_url }}#exam-mode)是三个阶段共用的准备内容。
 
+## 按普数考试单元查找 {#mathematics-units}
+
+已会基本操作，想知道怎样用于 OxfordAQA Mathematics 9660 题目？进入[普数考试应用路线]({{ '/alevel/fx-cg50/mathematics/' | relative_url }})。它属于进阶阶段，按 MA01–MA05 组织，使用 **2025 年 1 月卷**及对应评分细则；通用按键教程仍在原章节维护。
+
+- [MA01 · P1：数列、联立方程、积分与梯形法]({{ '/alevel/fx-cg50/mathematics/ma01/' | relative_url }})
+- [MA02 · PSM1：三角全解、二项概率、离散期望与基础力学]({{ '/alevel/fx-cg50/mathematics/ma02/' | relative_url }})
+- [MA03 · P2：中矩形法、指定迭代、Simpson 法、向量与旋转体]({{ '/alevel/fx-cg50/mathematics/ma03/' | relative_url }})
+- [MA04 · S2：泊松、指数、连续随机变量与假设检验]({{ '/alevel/fx-cg50/mathematics/ma04/' | relative_url }})
+- [MA05 · M2：功率、摩擦、抛射、力矩、质心与圆周运动]({{ '/alevel/fx-cg50/mathematics/ma05/' | relative_url }})
+
 ## 初学：第 1–3 章 {#beginner-topics}
 
 先建立输入习惯，再开始做应用题。
@@ -110,7 +120,7 @@ permalink: /alevel/fx-cg50/
 
 ## 核对进度与后续工作 {#next-chapters}
 
-网页版更新于 2026 年 10 月 10 日。PDF 是 10 月 6 日的前三章版本，尚不含新增考试模式与网页署名。
+网页版新增普数考试应用于 2026 年 10 月 12 日。PDF 是 10 月 6 日的前三章版本，尚不含新增考试模式、网页署名和考试应用。
 
 前三章主要操作已于 10 月 6 日在中文版 **03.81.0202** 实机核对；12 张屏幕图来自 Screen Receiver，保留了部分计算历史，请关注图注指定的算式。练习答案另经数学复核。第 4–9 章已于 10 月 10 日在相同 **03.81.0202** 中文固件的虚拟机中逐项核对并补图。**考试模式与第 4–9 章尚未在这台中文版实机验收。**
 
