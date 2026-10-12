@@ -1,4 +1,5 @@
 ---
+lang: en
 layout: student_council_members
 title: Student Council Members
 permalink: /student-council/members/

@@ -1,8 +1,12 @@
 ---
 layout: none
 ---
+{% assign council_lang = page.lang | default: 'en' %}
+{% assign ui = site.data.ui[council_lang] | default: site.data.ui.en %}
+{% assign council_prefix = '' %}
+{% if council_lang == 'zh-CN' %}{% assign council_prefix = '/zh' %}{% endif %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ council_lang }}">
 
 <head>
   {% include head.html %}
@@ -252,9 +256,10 @@ layout: none
 
 <body>
   {% include nav.html %}
-  <div class="post-container">
-    <a id="post-back-button" href="/student-council/" class="post-back-button" aria-label="Return to Student Council">
-      <i class="bi bi-arrow-left"></i>Back to Student Council
+  <a class="skip-link sr-only-focusable" href="#main-content">{{ ui.skip_content }}</a>
+  <main id="main-content" class="post-container">
+    <a id="post-back-button" href="{{ council_prefix }}/student-council/" class="post-back-button" aria-label="{{ ui.sc_back }}">
+      <i class="bi bi-arrow-left"></i><span id="post-back-label">{{ ui.sc_back }}</span>
     </a>
 
     <header class="post-header">
@@ -265,7 +270,7 @@ layout: none
         {% if page.author %}
         <div class="post-meta-item">
           <i class="bi bi-person"></i>
-          <span>By <span class="post-author">{{ page.author }}</span></span>
+          <span>{{ ui.sc_by }} <span class="post-author" lang="en" lang="en" lang="en">{{ page.author }}</span></span>
         </div>
         {% endif %}
         
@@ -276,15 +281,15 @@ layout: none
         {% if page.date %}
         <div class="post-meta-item">
           <i class="bi bi-calendar3"></i>
-          <span>{{ page.date | date: "%B %d, %Y" }}</span>
+          <span>{% if council_lang == "zh-CN" %}{{ page.date | date: "%Y 年 %-m 月 %-d 日" }}{% else %}{{ page.date | date: "%B %d, %Y" }}{% endif %}</span>
         </div>
         {% endif %}
       </div>
 
       {% if page.tags and page.tags.size > 0 %}
-      <div class="post-tags" aria-label="News tags">
+      <div class="post-tags" aria-label="{{ ui.sc_news_tags }}">
         {% for tag in page.tags %}
-        <a href="/student-council/news/#tag-{{ tag | slugify }}" class="post-tag">{{ tag }}</a>
+        <a href="{{ council_prefix }}/student-council/news/#tag-{{ tag | slugify }}" class="post-tag">{{ ui.sc_tags[tag] | default: tag }}</a>
         {% endfor %}
       </div>
       {% endif %}
@@ -296,11 +301,11 @@ layout: none
     </article>
 
     <div class="post-footer">
-      <a href="/student-council/news/" class="post-footer-link" aria-label="View all news">
-        <i class="bi bi-newspaper"></i> View All News
+      <a href="{{ council_prefix }}/student-council/news/" class="post-footer-link" aria-label="{{ ui.sc_view_news }}">
+        <i class="bi bi-newspaper"></i> {{ ui.sc_view_news }}
       </a>
     </div>
-  </div>
+  </main>
 
   {% include footer.html %}
   <script>
@@ -313,9 +318,9 @@ layout: none
       var fromArchiveReferrer = document.referrer && document.referrer.indexOf('/student-council/news/') !== -1;
 
       if (fromArchiveParam || fromArchiveReferrer) {
-        backButton.setAttribute('href', '/student-council/news/');
-        backButton.setAttribute('aria-label', 'Back to All News');
-        backButton.innerHTML = '<i class="bi bi-arrow-left"></i>Back to All News';
+        backButton.setAttribute('href', '{{ council_prefix }}/student-council/news/');
+        backButton.setAttribute('aria-label', {{ ui.sc_back_news | jsonify }});
+        document.getElementById('post-back-label').textContent = {{ ui.sc_back_news | jsonify }};
       }
     })();
   </script>
