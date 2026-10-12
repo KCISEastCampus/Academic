@@ -27,7 +27,7 @@ function mathPipes(source) {
   const failures = [];
   let match;
   while ((match = formulas.exec(content))) {
-    if (/^\$[+-]?\d[^$]*\|[ \t]*\$$/.test(match[0]) &&
+    if (/^\$[+-]?\d[^$]*\|[ \t]*(?:[A-Z]{2,3})?\$$/.test(match[0]) &&
         /[^\s|$]/.test(content[formulas.lastIndex] || '')) {
       // A price can precede the next cell's opening dollar; scan that dollar again.
       formulas.lastIndex--;
