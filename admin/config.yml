@@ -69,7 +69,7 @@ collections:
             fields:
               - { label: "ID", name: "id", widget: "string", hint: "英文小写，如 academic" }
               - { label: "名称", name: "name", widget: "string" }
-              - { label: "负责人姓名（中文）", name: "leader_name_cn", widget: "string" }
+              - { label: "负责人姓名（英文）", name: "leader_name_cn", widget: "string" }
               - { label: "图标 (Bootstrap Icons)", name: "icon", widget: "string", hint: "如 bi-book, bi-calendar-event, bi-megaphone" }
               - { label: "颜色", name: "color", widget: "color" }
               - { label: "描述", name: "description", widget: "text" }

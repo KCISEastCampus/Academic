@@ -39,7 +39,7 @@ executives:
 groups:
   - id: academic
     name: Academic
-    leader_name_cn: 石洪斌
+    leader_name_cn: Eric Shi
     icon: bi-book
     color: "#5cc07f"
     description: Maintaining this website and writing academic resources.
@@ -48,7 +48,7 @@ groups:
       - Create and curate study materials
   - id: events
     name: Events
-    leader_name_cn: 姜嘉鑫
+    leader_name_cn: Jason Jiang
     icon: bi-calendar-event
     color: "#5c6bc0"
     description: Planning and executing events from concept to completion.
@@ -59,7 +59,7 @@ groups:
       - Venue coordination and participant management
   - id: publicity
     name: Publicity
-    leader_name_cn: 马艺涵
+    leader_name_cn: Marcia Ma
     icon: bi-megaphone
     color: "#e67e22"
     description: Creating content, designing materials, and documenting our work.
@@ -69,30 +69,63 @@ groups:
       - Post-event documentation and summaries
       - Social media management and outreach
 members:
-  - name: 王铎
+  - name: James Wang
     groups:
       - Academic
-  - name: 张梓涵
+  - name: Henry Zhang
     groups:
       - Events
-  - name: 刘卿竹
+  - name: Alisa Liu
     groups:
       - Events
-  - name: 解徐洺淏
+  - name: Leo Xie
     groups:
       - Academic
-  - name: 岳心怡
+  - name: Kathy Yue
     groups:
       - Academic
-  - name: 杜翼陈
+  - name: Dada Du
     groups:
       - Academic
-  - name: 唐浩宇
+  - name: Jimmy Tang
     groups:
       - Events
-  - groups:
+  - name: Mable Yang
+    groups:
       - Publicity
-    name: 杨依蒙
+  - name: Blanch Wang
+    groups:
+      - Academic
+  - name: Katniss Zhang
+    groups:
+      - Academic
+  - name: Rose Yang
+    groups:
+      - Academic
+  - name: Kevin Du
+    groups:
+      - Events
+  - name: Mark Lin
+    groups:
+      - Events
+  - name: Yoky Guo
+    groups:
+      - Events
+  - name: Lucy Yang
+    groups:
+      - Events
+  - name: Liberty Gong
+    groups:
+      - Events
+  - name: Kevin Liu
+    groups:
+      - Events
+  - name: Wendy Wang
+    groups:
+      - Publicity
+  - name: Yiyi Zeng
+    groups:
+      - Publicity
 contact:
   email: ALSC@kcisec.site
   location: A-level Office
