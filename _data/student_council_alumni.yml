@@ -1,5 +1,5 @@
 # First Session A-level Student Council Alumni Data
-# Session: 2024-2025 (First Session)
+# Session: 2025-2026 (First Session)
 
 # Council Information
 council:
@@ -15,6 +15,7 @@ executives:
     grade: "G11"
     class: "11I"
     bio: "From G11, with experience of leadership by being the class monitor for 3 years, since G8. Built and maintaining <a href=\"https://kcisec.site\">https://kcisec.site</a> since 2022."
+    bio_zh: 来自 G11，自 G8 起担任班长三年，具有团队领导经验。自 2022 年起建设并维护 <a href="https://kcisec.site">https://kcisec.site</a>。
     groups:
       - name: "Academic"
         role: "Leader"
@@ -26,6 +27,7 @@ executives:
     grade: "G11"
     class: "11I"
     bio: "From G11, experienced in organizational management, and have successfully managed the school's \"Heartfelt Voice(心辅之声)\" program for years."
+    bio_zh: 来自 G11，具有组织管理经验，多年来负责管理学校“心辅之声”（Heartfelt Voice）项目。
     groups:
       - name: "Publicity"
         role: "Leader"

@@ -33,18 +33,22 @@ collections:
             widget: "object"
             fields:
               - { label: "名称", name: "name", widget: "string" }
+              - { label: "中文名称", name: "name_zh", widget: "string", required: false }
               - { label: "简称", name: "short_name", widget: "string" }
               - { label: "描述", name: "description", widget: "text" }
+              - { label: "中文描述", name: "description_zh", widget: "text", required: false }
 
           - label: "核心成员"
             name: "executives"
             widget: "list"
             fields:
-              - { label: "姓名", name: "name", widget: "string" }
+              - { label: "姓名（英文）", name: "name", widget: "string" }
+              - { label: "姓名（中文）", name: "name_zh", widget: "string", required: false }
               - { label: "职务", name: "role", widget: "string" }
               - { label: "年级", name: "grade", widget: "string" }
               - { label: "班级", name: "class", widget: "string" }
               - { label: "简介", name: "bio", widget: "text", required: false }
+              - { label: "中文简介", name: "bio_zh", widget: "text", required: false }
               - label: "负责小组"
                 name: "groups"
                 widget: "list"
@@ -73,13 +77,16 @@ collections:
               - { label: "图标 (Bootstrap Icons)", name: "icon", widget: "string", hint: "如 bi-book, bi-calendar-event, bi-megaphone" }
               - { label: "颜色", name: "color", widget: "color" }
               - { label: "描述", name: "description", widget: "text" }
+              - { label: "中文描述", name: "description_zh", widget: "text", required: false }
               - { label: "职责", name: "responsibilities", widget: "list" }
+              - { label: "中文职责", name: "responsibilities_zh", widget: "list", required: false }
 
           - label: "普通成员"
             name: "members"
             widget: "list"
             fields:
-              - { label: "姓名", name: "name", widget: "string" }
+              - { label: "姓名（英文）", name: "name", widget: "string" }
+              - { label: "姓名（中文）", name: "name_zh", widget: "string", required: false }
               - label: "所属部门"
                 name: "groups"
                 widget: "select"
@@ -95,6 +102,7 @@ collections:
             fields:
               - { label: "邮箱", name: "email", widget: "string" }
               - { label: "地址", name: "location", widget: "string" }
+              - { label: "中文地址", name: "location_zh", widget: "string", required: false }
 
   # ============================================
   # 学生会校友
@@ -124,6 +132,7 @@ collections:
               - { label: "年级", name: "grade", widget: "string" }
               - { label: "班级", name: "class", widget: "string" }
               - { label: "简介", name: "bio", widget: "text", required: false }
+              - { label: "中文简介", name: "bio_zh", widget: "text", required: false }
               - label: "负责小组"
                 name: "groups"
                 widget: "list"

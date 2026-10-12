@@ -1,4 +1,5 @@
 ---
+lang: en
 layout: student_council_alumni
 title: First Session Alumni
 permalink: /student-council/alumni/

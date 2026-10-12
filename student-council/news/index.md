@@ -1,4 +1,5 @@
 ---
+lang: en
 layout: student_council_news
 title: All Student Council News
 permalink: /student-council/news/

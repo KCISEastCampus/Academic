@@ -1,8 +1,12 @@
 ---
 layout: none
 ---
+{% assign council_lang = page.lang | default: 'en' %}
+{% assign ui = site.data.ui[council_lang] | default: site.data.ui.en %}
+{% assign council_prefix = '' %}
+{% if council_lang == 'zh-CN' %}{% assign council_prefix = '/zh' %}{% endif %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ council_lang }}">
 
 <head>
   {% include head.html %}
@@ -11,20 +15,21 @@ layout: none
 
 <body>
   {% include nav.html %}
+  <a class="skip-link sr-only-focusable" href="#main-content">{{ ui.skip_content }}</a>
   <header class="council-hero" role="banner">
     <div class="container hero-shell">
-      <a href="/student-council/" class="page-back" aria-label="Back to Student Council">
+      <a href="{{ council_prefix }}/student-council/" class="page-back" aria-label="{{ ui.sc_back }}">
         <i class="bi bi-arrow-left"></i>
-        <span>Back to Student Council</span>
+        <span>{{ ui.sc_back }}</span>
       </a>
       <div class="hero-body">
         <div class="hero-icon">
           <i class="bi bi-people-fill"></i>
         </div>
         <div class="hero-text">
-          <p class="eyebrow">First Session Alumni</p>
-          <h1 class="hero-title">Inaugural A-level Student Council</h1>
-          <p class="hero-subtitle">The pioneering team that established the A-level Student Council in {{ site.data.student_council_alumni.council.session }}.</p>
+          <p class="eyebrow">{{ ui.sc_alumni }}</p>
+          <h1 class="hero-title">{{ ui.sc_inaugural }}</h1>
+          <p class="hero-subtitle">{{ ui.sc_inaugural_description }} {{ site.data.student_council_alumni.council.session }}{% if council_lang == "zh-CN" %}。{% else %}.{% endif %}</p>
         </div>
       </div>
     </div>
@@ -44,19 +49,19 @@ layout: none
       {% assign active_count = site.data.student_council_alumni.members | where: "status", "Active" | size %}
       <div class="members-page-summary-card">
         <div class="members-page-summary-item">
-          <span class="label">Session</span>
+          <span class="label">{{ ui.sc_session }}</span>
           <span class="value">{{ site.data.student_council_alumni.council.session }}</span>
         </div>
         <div class="members-page-summary-item">
-          <span class="label">Total Members</span>
+          <span class="label">{{ ui.sc_total }}</span>
           <span class="value">{{ total_members }}</span>
         </div>
         <div class="members-page-summary-item">
-          <span class="label">Graduated</span>
+          <span class="label">{{ ui.sc_graduated }}</span>
           <span class="value">{{ graduated_count }}</span>
         </div>
         <div class="members-page-summary-item">
-          <span class="label">Still Active</span>
+          <span class="label">{{ ui.sc_active }}</span>
           <span class="value">{{ active_count }}</span>
         </div>
       </div>
@@ -66,7 +71,7 @@ layout: none
     <section class="executives-section fade-in" style="animation-delay: 0.1s;">
       <h2 class="section-title">
         <i class="bi bi-star-fill"></i>
-        Leadership Team
+        {{ ui.sc_leadership }}
       </h2>
       <div class="leadership-grid">
         {% assign leaders = site.data.student_council_alumni.executives | where_exp: "exec", "exec.role == 'President' or exec.role == 'Vice President'" %}
@@ -76,15 +81,15 @@ layout: none
             <i class="bi bi-person-circle"></i>
           </div>
           <div class="executive-info">
-            <h3 class="executive-name">{{ exec.name }}</h3>
-            <p class="executive-role">{{ exec.role }}</p>
+            <h3 class="executive-name">{% include student-council/person-name.html name=exec.name lang=council_lang %}</h3>
+            <p class="executive-role">{{ ui.sc_roles[exec.role] | default: exec.role }}</p>
             <p class="executive-grade">{{ exec.grade }} · {{ exec.class }}</p>
             {% if exec.bio and exec.bio != "TBD" %}
-            <p class="executive-bio">{{ exec.bio }}</p>
+            <p class="executive-bio">{% if council_lang == "zh-CN" %}{{ exec.bio_zh | default: exec.bio }}{% else %}{{ exec.bio }}{% endif %}</p>
             {% endif %}
             <div class="executive-groups">
               {% for group in exec.groups %}
-              <span class="group-pill">{{ group.name }}: {{ group.role }}</span>
+              <span class="group-pill">{{ ui.sc_groups[group.name] | default: group.name }}: {{ ui.sc_roles[group.role] | default: group.role }}</span>
               {% endfor %}
             </div>
           </div>
@@ -97,7 +102,7 @@ layout: none
     <section class="executives-section fade-in" style="animation-delay: 0.12s;">
       <h2 class="section-title">
         <i class="bi bi-diagram-3-fill"></i>
-        Department Heads
+        {{ ui.sc_heads }}
       </h2>
       <div class="executives-grid">
         {% assign dept_heads = site.data.student_council_alumni.executives | where_exp: "exec", "exec.role != 'President' and exec.role != 'Vice President'" %}
@@ -107,15 +112,15 @@ layout: none
             <i class="bi bi-person-circle"></i>
           </div>
           <div class="executive-info">
-            <h3 class="executive-name">{{ exec.name }}</h3>
-            <p class="executive-role">{{ exec.role }}</p>
+            <h3 class="executive-name">{% include student-council/person-name.html name=exec.name lang=council_lang %}</h3>
+            <p class="executive-role">{{ ui.sc_roles[exec.role] | default: exec.role }}</p>
             <p class="executive-grade">{{ exec.grade }} · {{ exec.class }}</p>
             {% if exec.bio and exec.bio != "TBD" %}
-            <p class="executive-bio">{{ exec.bio }}</p>
+            <p class="executive-bio">{% if council_lang == "zh-CN" %}{{ exec.bio_zh | default: exec.bio }}{% else %}{{ exec.bio }}{% endif %}</p>
             {% endif %}
             <div class="executive-groups">
               {% for group in exec.groups %}
-              <span class="group-pill">{{ group.name }}: {{ group.role }}</span>
+              <span class="group-pill">{{ ui.sc_groups[group.name] | default: group.name }}: {{ ui.sc_roles[group.role] | default: group.role }}</span>
               {% endfor %}
             </div>
           </div>
@@ -140,13 +145,13 @@ layout: none
               <i class="bi {{ group.icon }}"></i>
             </div>
             <div class="members-page-card-title-wrap">
-              <h2 class="members-page-card-title">{{ group.name }}</h2>
-              <p class="members-page-card-subtitle">{{ group_member_count }} members</p>
+              <h2 class="members-page-card-title">{{ ui.sc_groups[group.name] | default: group.name }}</h2>
+              <p class="members-page-card-subtitle">{{ group_member_count }} {{ ui.sc_members_unit | downcase }}</p>
             </div>
           </div>
 
           {% if group_leader_display %}
-          <p class="members-page-leader"><span>Leader:</span> <span lang="zh-CN">{{ group_leader_display }}</span></p>
+          <p class="members-page-leader"><span>{{ ui.sc_leader }}</span> <span lang="zh-CN">{{ group_leader_display }}</span></p>
           {% endif %}
 
           <ul class="members-page-list">
@@ -159,7 +164,7 @@ layout: none
                 <i class="bi bi-mortarboard-fill"></i>
                 {% endif %}
               </span>
-              <span class="group-pill">{{ group.name }}</span>
+              <span class="group-pill">{{ ui.sc_groups[group.name] | default: group.name }}</span>
             </li>
             {% endfor %}
           </ul>
@@ -173,8 +178,8 @@ layout: none
       <div class="legacy-note-content">
         <i class="bi bi-heart-fill"></i>
         <div>
-          <h3>A Note of Gratitude</h3>
-          <p>This page honors the first session of the A-level Student Council ({{ site.data.student_council_alumni.council.session }}). Their dedication and hard work established the foundation for student governance and academic support at KCISEC A-level. We are grateful for their contributions.</p>
+          <h3>{{ ui.sc_gratitude }}</h3>
+          <p>{{ ui.sc_legacy_intro }} ({{ site.data.student_council_alumni.council.session }}){% if council_lang == "zh-CN" %}。{% else %}. {% endif %}{{ ui.sc_gratitude_description }}</p>
         </div>
       </div>
     </section>

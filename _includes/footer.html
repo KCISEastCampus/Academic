@@ -7,7 +7,7 @@
         <a href="{% if page.lang == 'zh-CN' %}/zh/{% else %}/{% endif %}" class="footer-nav-link" data-ui="home">{{ ui.home }}</a>
         <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/alevel/" class="footer-nav-link">A-Level</a>
         <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/igcse/" class="footer-nav-link">IGCSE</a>
-        <a href="/student-council/" class="footer-nav-link" data-ui="student_council">{{ ui.student_council }}</a>
+        <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/student-council/" class="footer-nav-link" data-ui="student_council">{{ ui.student_council }}</a>
         <a href="/contributors/" class="footer-nav-link" data-ui="contributors">{{ ui.contributors }}</a>
       </nav>
       <!-- Copyright + Counter -->

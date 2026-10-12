@@ -17,7 +17,7 @@
       <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/alevel/" class="site-nav-link {% if page.url contains '/alevel' %}active{% endif %}">A-Level</a>
       <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/igcse/" class="site-nav-link {% if page.url contains '/igcse' %}active{% endif %}">IGCSE</a>
       <a href="/timetable/" class="site-nav-link {% if page.url contains '/timetable' %}active{% endif %}" data-ui="timetable">{{ ui.timetable }}</a>
-      <a href="/student-council/" class="site-nav-link {% if page.url contains '/student-council' %}active{% endif %}" data-ui="student_council">{{ ui.student_council }}</a>
+      <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/student-council/" class="site-nav-link {% if page.url contains '/student-council' %}active{% endif %}" data-ui="student_council">{{ ui.student_council }}</a>
       <a href="/contributors/" class="site-nav-link {% if page.url == '/contributors/' %}active{% endif %}" data-ui="contributors">{{ ui.contributors }}</a>
     </div>
     <div class="site-nav-actions">
