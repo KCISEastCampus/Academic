@@ -18,11 +18,11 @@ permalink: /alevel/fx-cg50/further-mathematics/
 
 本页介绍中文版 fx-CG50 在 OxfordAQA International A-level Further Mathematics（9665）中的复数、多项式、矩阵、三维向量与极坐标操作，对应核心任务 01–20。
 
-例题来自 FM03 真题，英文题意为改写，衔接练习明确标为自拟。公式与答卷要求已对照官方 Mark Scheme；计算器用于检查结果，推导和精确答案仍须写在答题纸上。
+例题来自 FM03 真题，英文题意为改写，衔接练习标为自拟；原题和官方 Mark Scheme 链接见各主题。练习时将推导和精确答案写在答题纸上，再用计算器检查结果。
 
 开始前，先掌握初学中的[按键读法]({{ '/alevel/fx-cg50/beginner/' | relative_url }}#reading-keys)、[输入模板]({{ '/alevel/fx-cg50/beginner/' | relative_url }}#chapter-3)，再掌握进阶中的[定积分]({{ '/alevel/fx-cg50/advanced/' | relative_url }}#task-23)。
 
-以下操作按 **03.81.0202 中文固件**核对，尚待同版本实机抽查。考试模式按学校与老师要求设置。
+以下操作使用中文版菜单名称，[适用版本与阅读说明]({{ '/alevel/fx-cg50/' | relative_url }}#next-chapters)见指南总览。考试模式按学校与老师要求设置。
 
 <span id="fm-task-01"></span>
 
@@ -471,7 +471,7 @@ $$A=\left[u+\frac{u^2}{2}+\frac{u^3}{3}+\frac{u^4}{4}\right]_0^{1/\sqrt3}
 ## 参考资料与后续学习 {#fm-sources}
 
 - [OxfordAQA Further Mathematics 9665 Specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf)：复数 FP2.2、极坐标 FP2.3、向量 FP2.12、矩阵 FP2.13–14。
-- [Casio fx-CG50 中文软件手册 v3.70](https://www.casio.com/content/dam/casio/global/support/manuals/calculators/pdf/004-zh-cn/f/fx-CG50_Soft_v370_CN.pdf)：复数 2-35 起、矩阵 2-42 起、向量 2-59 起、绘图第 5 章。最终步骤以本页核对的 03.81.0202 中文菜单为准。
+- [Casio fx-CG50 中文软件手册 v3.70](https://www.casio.com/content/dam/casio/global/support/manuals/calculators/pdf/004-zh-cn/f/fx-CG50_Soft_v370_CN.pdf)：复数 2-35 起、矩阵 2-42 起、向量 2-59 起、绘图第 5 章；版本差异以计算器屏幕为准。
 - 真题及官方 MS 链接已放在对应主题旁，均为本站 PDF，可直接打开，无需登录个人云盘。原题和评分标准版权归相应考试局；指南中的英文题意为简短改写。
 
 继续学习：
@@ -481,6 +481,6 @@ $$A=\left[u+\frac{u^2}{2}+\frac{u^3}{3}+\frac{u^4}{4}\right]_0^{1/\sqrt3}
 - 选学：[力学扩展（M01–M06）]({{ '/alevel/fx-cg50/further-mechanics/' | relative_url }})。
 - [返回学习路线总览]({{ '/alevel/fx-cg50/' | relative_url }})。
 
-编写与组织：**Eric Shi**。GPT 辅助整理、操作核对与网页制作。更新于 2026 年 10 月 10 日。
+编写与组织：**Eric Shi**。GPT 辅助整理、数学核算与网页制作。[完整署名与资料来源]({{ '/alevel/fx-cg50/' | relative_url }}#credits)。
 
 </div>

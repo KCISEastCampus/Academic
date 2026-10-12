@@ -18,11 +18,11 @@ permalink: /alevel/fx-cg50/further-mathematics/numerical-calculus/
 
 本页介绍求和、误差、数值迭代、双曲函数、积分与微分方程中的计算器操作，对应 Further Mathematics 核心任务 21–30。
 
-真题题意为简短英文改写，计算与答卷要求已对照官方 MS；衔接练习明确标为自拟。练习时先写出题目要求的数学方法，再按步骤输入，最后用屏幕结果核对。
+真题题意为简短英文改写，原题与官方 MS 链接见对应主题；衔接练习标为自拟。练习时先写出题目要求的数学方法，再按步骤输入，最后用屏幕结果核对。
 
 本页属于高数进阶的第二篇。若还不熟悉计算器输入与基本应用，先回顾[初学输入模板]({{ '/alevel/fx-cg50/beginner/' | relative_url }}#chapter-3)及[进阶定积分]({{ '/alevel/fx-cg50/advanced/' | relative_url }}#task-23)；需要按核心任务顺序学习时，从[复数、矩阵与向量（01–20）]({{ '/alevel/fx-cg50/further-mathematics/' | relative_url }})开始。
 
-开始前进入 **计算·矩阵 → SHIFT → MENU**，选择数学输入、**角度：弧度**、**函数类型：Y=**。屏幕应显示 Rad；画极坐标后尤其要确认变量恢复为 X。以下菜单按 **03.81.0202 中文固件**核对，尚待同版本实机抽查。
+开始前进入 **计算·矩阵 → SHIFT → MENU**，选择数学输入、**角度：弧度**、**函数类型：Y=**。屏幕应显示 Rad；画极坐标后尤其要确认变量恢复为 X。[适用版本与阅读说明]({{ '/alevel/fx-cg50/' | relative_url }}#next-chapters)见指南总览。
 
 按键中的 <code>→</code> 表示下一步；存储箭头键会另写“存储键”。<code>sin</code> 等函数名后手动输入括号，指数和根号输入后用右方向键离开模板。连续计算直接在下一行输入，不需每次清屏。
 
@@ -266,6 +266,6 @@ $$y=4e^{-x}+3e^{2x}+3\cos x+\sin x-2xe^{-x}.$$
 - 选学下一篇：[力学扩展（M01–M06）]({{ '/alevel/fx-cg50/further-mechanics/' | relative_url }})，将方程与积分操作用于力学模型。
 - [回顾进阶操作]({{ '/alevel/fx-cg50/advanced/' | relative_url }}) · [返回学习路线总览]({{ '/alevel/fx-cg50/' | relative_url }})。
 
-编写与组织：**Eric Shi**。GPT 辅助整理、操作核对与网页制作。更新于 2026 年 10 月 10 日。
+编写与组织：**Eric Shi**。GPT 辅助整理、数学核算与网页制作。[完整署名与资料来源]({{ '/alevel/fx-cg50/' | relative_url }}#credits)。
 
 </div>
