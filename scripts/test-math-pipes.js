@@ -22,13 +22,13 @@ function mathPipes(source) {
   }).join('\n')
     .replace(/^---\r?\n[\s\S]*?\r?\n---(?:\r?\n|$)/, mask)
     .replace(/<(script|style|pre|code)\b[^>]*>[\s\S]*?<\/\1>/gi, mask)
-    .replace(/(`+)[^\r\n]*?\1/g, mask);
+    .replace(/(?<!`)(`+)(?!`)[\s\S]*?(?<!`)\1(?!`)/g, mask);
   const formulas = /(?<!\\)\$\$[\s\S]*?(?<!\\)\$\$|(?<![\\$])\$(?!\$)(?:\\.|[^$])*?(?<!\\)\$(?!\$)|\\\([\s\S]*?\\\)|\\\[[\s\S]*?\\\]/g;
   const failures = [];
   let match;
   while ((match = formulas.exec(content))) {
     if (/^\$[+-]?\d[^$]*\|[ \t]*(?:[A-Z]{2,3})?\$$/.test(match[0]) &&
-        /[^\s|$]/.test(content[formulas.lastIndex] || '')) {
+        /[A-Za-z0-9\\|({[+-]/.test(content[formulas.lastIndex] || '')) {
       // A price can precede the next cell's opening dollar; scan that dollar again.
       formulas.lastIndex--;
       continue;
@@ -76,6 +76,12 @@ assert.equal(mathPipes('~~~text\n$|x|$\n~~~~').length, 0);
 assert.equal(mathPipes('````\n```\n$|x|$\n````\n$|y|$').length, 1);
 assert.equal(mathPipes('```\n~~~~\n$|x|$\n```\n$|y|$').length, 1);
 assert.equal(mathPipes('```\n$|x|$').length, 0);
+assert.equal(mathPipes('$5|x|$. $5|x|$, $5|x|$! $5|x|$? $5|x|$)').length, 5);
+assert.equal(mathPipes('| Formula | $5|x|$. |').length, 1);
+assert.equal(mathPipes('Before `code $|x|$ `` after').length, 1);
+assert.equal(mathPipes('Before ``code $|x|$ ` after').length, 1);
+assert.equal(mathPipes('Before ``code `$|x|$` `` after').length, 0);
+assert.equal(mathPipes('Before `code\n$|x|$` after').length, 0);
 
 const skipped = new Set(['_site', 'vendor', 'node_modules', 'scripts', 'npm-cache']);
 const failures = [];
@@ -96,4 +102,4 @@ function scan(directory) {
 scan(root);
 assert.equal(failures.length, 0,
   `Use \\lvert...\\rvert, \\lVert...\\rVert, \\mid or \\vert instead of literal pipes in math:\n${failures.join('\n')}`);
-console.log(`Math pipe checks passed: ${files} Markdown files and 33 scanner regressions.`);
+console.log(`Math pipe checks passed: ${files} Markdown files and 39 scanner regressions.`);
