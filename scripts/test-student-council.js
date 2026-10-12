@@ -42,7 +42,7 @@ for (const prefix of ['', '/zh']) {
   ].sort();
   assert.deepEqual(names, prefix ? expectedChineseNames : expectedNames, `${lang}: exact localized roster`);
   const counts = matches(members, /class="members-page-card-subtitle">(\d+) [^<]+</g).map(Number);
-  assert.deepEqual(counts, [8, 10, 4], `${lang}: counts include leaders`);
+  assert.deepEqual(counts, [9, 10, 3], `${lang}: counts include leaders`);
   assert.deepEqual(matches(members, /class="value">([^<]+)</g), ['22', '3']);
   const alumni = readPage(`${prefix}/student-council/alumni/`);
   assert.deepEqual(matches(alumni, /class="value">([^<]+)</g), ['2025-2026', '17', '5', '9'], `${lang}: historical statistics`);
