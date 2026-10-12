@@ -71,26 +71,24 @@ assert(/<p>距虚轴的距离是 \$\\lvert\\operatorname\{Re\}z\\rvert\$。比�
 assert(page.includes('href="/alevel/fx-cg50/further-mathematics/"'));
 const numerical = read('_site/alevel/fx-cg50/further-mathematics/numerical-calculus/index.html');
 const mechanics = read('_site/alevel/fx-cg50/further-mechanics/index.html');
+const advancedMechanics = read('_site/alevel/fx-cg50/advanced/mechanics/index.html');
 const guidePages = new Map([
   ['/alevel/fx-cg50/', overview],
   ['/alevel/fx-cg50/beginner/', beginner],
   ['/alevel/fx-cg50/advanced/', advanced],
+  ['/alevel/fx-cg50/advanced/mechanics/', advancedMechanics],
   ['/alevel/fx-cg50/further-mathematics/', further],
   ['/alevel/fx-cg50/further-mathematics/numerical-calculus/', numerical],
   ['/alevel/fx-cg50/further-mechanics/', mechanics]
 ]);
 const applications = '/alevel/fx-cg50/mathematics/';
-for (const unit of ['', 'ma01/', 'ma02/', 'ma03/', 'ma04/', 'ma05/']) {
-  const url = applications + unit;
-  guidePages.set(url, read('_site' + url + 'index.html'));
-}
 const referencePdfs = new Set();
 for (const [url, html] of guidePages) {
   assert(!/https?:\/\/(?:drive|docs)\.google\.com\//.test(html), url + ': personal Drive link');
   const headingIds = [...html.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
   assert.equal(new Set(headingIds).size, headingIds.length, url + ': duplicate ID');
   assert(html.includes('<html lang="zh-CN">') && html.includes('tex-chtml-full.js'), url + ': language or MathJax missing');
-  assert(!/@@figure:|将继续补充|文字初稿|核对进度|后续工作|截图待补充|尚待同版本实机抽查|尚未在这台中文版实机验收|本轮选用|下一步请老师审阅/.test(html), url + ': editorial status must stay out of student pages');
+  assert(!/@@figure:|将继续补充|文字初稿|核对进度|后续工作|截图待补充|尚待同版本实机抽查|尚未在这台中文版实机验收|本轮选用|下一步请老师审阅|第 4–9 章已在/.test(html), url + ': editorial status must stay out of student pages');
   for (const [, href] of html.matchAll(/href="([^"]+)"/g)) {
     const destination = new URL(href, 'https://local.test' + url);
     if (destination.origin === 'https://local.test' && destination.pathname.startsWith('/assets/pdf/fx-cg50/references/')) {
@@ -133,7 +131,7 @@ for (const [url, html] of guidePages) {
   assert.equal(selected.length, url === '/alevel/fx-cg50/' ? 0 : 1, url + ': current-stage count');
   if (selected.length) {
     const expected = url.includes('/beginner/') ? '/alevel/fx-cg50/beginner/'
-      : url.includes('/advanced/') || url.startsWith(applications) ? '/alevel/fx-cg50/advanced/' : '/alevel/fx-cg50/further-mathematics/';
+      : url.includes('/advanced/') ? '/alevel/fx-cg50/advanced/' : '/alevel/fx-cg50/further-mathematics/';
     assert.equal(selected[0][1], expected, url + ': wrong current stage');
   }
   if (url.includes('/further-')) {
@@ -143,20 +141,52 @@ for (const [url, html] of guidePages) {
     assert.equal(current.length, 1, url + ': current topic count');
     assert.equal(current[0][1], url, url + ': wrong current topic');
   }
-  if (url.startsWith(applications)) {
-    const units = nav[1].match(/<div class="cg50-topic-links" aria-label="普数考试应用">([\s\S]*?)<\/div>/)[1];
-    const current = [...units.matchAll(/<a href="([^"]+)" aria-current="page"/g)];
-    assert.equal(current.length, 1, url + ': current unit count');
-    assert.equal(current[0][1], url, url + ': wrong current unit');
-    if (url !== applications) {
-      assert(breadcrumb.includes('href="' + applications + '"'), url + ': applications breadcrumb missing');
-      const unit = url.split('/').filter(Boolean).at(-1);
-      for (const kind of ['question-paper', 'mark-scheme']) {
-        assert(html.includes(`href="/assets/pdf/fx-cg50/references/oxfordaqa-${unit}-2025-january-${kind}.pdf"`), url + ': paired January 2025 source missing');
-      }
-      assert(html.includes('英文题意改写') && html.includes('答卷保留'), url + ': source label or written method missing');
-    }
+  assert(!nav[1].includes(applications), url + ': MA units must not be a separate learning route');
+  if (url.includes('/advanced/')) {
+    const topics = nav[1].match(/<div class="cg50-topic-links" aria-label="进阶专题">([\s\S]*?)<\/div>/)[1];
+    const current = [...topics.matchAll(/<a href="([^"]+)" aria-current="page"/g)];
+    assert.equal(current.length, 1, url + ': current advanced topic count');
+    assert.equal(current[0][1], url, url + ': wrong advanced topic');
+    assert(html.includes('英文题意改写') && html.includes('答卷保留'), url + ': source label or written method missing');
+    if (url.includes('/mechanics/')) assert(breadcrumb.includes('href="/alevel/fx-cg50/advanced/"'), url + ': advanced breadcrumb missing');
   }
+}
+// Keep bookmarked MA examples working after merging them into the advanced lessons.
+let applicationCount;
+for (const unit of ['', 'ma01/', 'ma02/', 'ma03/', 'ma04/', 'ma05/']) {
+  const url = applications + unit;
+  const html = read('_site' + url + 'index.html');
+  assert(html.includes('content="noindex"'), url + ': legacy route must not duplicate search results');
+  const script = html.match(/<script id="cg50-legacy-mathematics">([\s\S]*?)<\/script>/)[1];
+  let targets;
+  vm.runInNewContext(script + '\nresult = destinations;', {location: {hash: '', replace() {}}, set result(value) { targets = value; }});
+  const examples = Object.keys(targets).filter(anchor => /^ma0[1-5]-/.test(anchor) && !anchor.endsWith('-check'));
+  assert.equal(examples.length, 34, 'All MA applications must survive the merge');
+  applicationCount = examples.length;
+  for (const [anchor, expected] of Object.entries(targets)) {
+    const destination = new URL(expected, 'https://local.test');
+    assert(guidePages.has(destination.pathname), 'Missing merged destination: ' + expected);
+    if (destination.hash) assert(guidePages.get(destination.pathname).includes('id="' + destination.hash.slice(1) + '"'), 'Missing merged anchor: ' + expected);
+    let redirected;
+    vm.runInNewContext(script, {location: {hash: '#' + anchor, replace: value => { redirected = value; }}});
+    assert.equal(redirected, expected, url + ': broken MA bookmark ' + anchor);
+  }
+  for (const hash of ['', '#unknown', '#__proto__']) {
+    let redirected;
+    vm.runInNewContext(script, {location: {hash, replace: value => { redirected = value; }}});
+    const expected = unit === 'ma05/' ? '/alevel/fx-cg50/advanced/mechanics/'
+      : '/alevel/fx-cg50/advanced/#' + (unit ? unit.slice(0, -1) : 'mathematics-units');
+    assert.equal(redirected, expected, url + ': incorrect legacy fallback');
+  }
+  for (const anchor of examples) {
+    assert.equal(((advanced + advancedMechanics).match(new RegExp('<h3 id="' + anchor + '"', 'g')) || []).length, 1, 'Merged application must occur exactly once: ' + anchor);
+  }
+}
+for (let n = 1; n <= 5; n++) {
+  for (const kind of ['question-paper', 'mark-scheme']) assert(advanced.includes(`href="/assets/pdf/fx-cg50/references/oxfordaqa-ma0${n}-2025-january-${kind}.pdf"`), 'Paired January 2025 source missing');
+}
+for (const [before, example, after] of [['task-16', 'ma01-distance', 'task-17'], ['task-21', 'ma03-iteration', 'chapter-7'], ['task-22', 'ma03-parametric', 'task-23'], ['task-27', 'ma02-binomial', 'task-28']]) {
+  assert(advanced.indexOf('id="' + before + '"') < advanced.indexOf('id="' + example + '"') && advanced.indexOf('id="' + example + '"') < advanced.indexOf('id="' + after + '"'), 'Example must follow its relevant operation: ' + example);
 }
 for (let n = 1; n <= 31; n++) {
   const target = n <= 14 ? beginner : advanced;
@@ -183,7 +213,7 @@ for (const hash of ['', '#exam-mode', '#credits', '#further-topics', '#unknown',
   vm.runInNewContext(legacyScript, { window: windowMock, location: { hash, replace: url => { redirected = url; } } });
   assert.equal(redirected, undefined, 'Overview or unknown anchor must not redirect: ' + hash);
 }
-console.log('Learning routes passed: 12 pages, five MA units, 14 beginner + 17 advanced tasks, three Further Mathematics topics, active navigation and 50 legacy bookmarks.');
+console.log(`Learning routes passed: 7 pages, ${applicationCount} integrated MA applications, 14 beginner + 17 advanced tasks, active navigation, 50 old guide bookmarks and six MA redirect routes.`);
 
 let hashChange;
 let changedDestination;

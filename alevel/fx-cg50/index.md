@@ -22,21 +22,11 @@ permalink: /alevel/fx-cg50/
 
 **[初学]({{ '/alevel/fx-cg50/beginner/' | relative_url }})** — 刚买计算器、不会输入：从按键和设置开始，完成第 1–3 章、任务 1–14。
 
-**[进阶]({{ '/alevel/fx-cg50/advanced/' | relative_url }})** — 已经会输入，想用于 A-level 解题：学习第 4–10 章、任务 15–31。
+**[进阶]({{ '/alevel/fx-cg50/advanced/' | relative_url }})** — 已经会输入，想用于 A-level 解题：学习方程、图像、微积分、统计与力学，结合 MA01–MA05 例题练习。
 
 **[高数进阶]({{ '/alevel/fx-cg50/further-mathematics/' | relative_url }})** — 已经熟悉基本应用，正在学 Further Mathematics：选择纯数专题、数值方法与微积分，或力学扩展。
 
 首次使用时按 **初学 → 进阶 → 高数进阶** 阅读；复习时可直接使用下面的主题入口。[考试模式与考前检查]({{ '/alevel/fx-cg50/' | relative_url }}#exam-mode)是三个阶段共用的准备内容。
-
-## 按普数考试单元查找 {#mathematics-units}
-
-已会基本操作，想知道怎样用于 OxfordAQA Mathematics 9660 题目？进入[普数考试应用路线]({{ '/alevel/fx-cg50/mathematics/' | relative_url }})。按正在学习的 MA01–MA05 单元选读，结合 **2025 年 1 月卷**及对应评分细则练习；需要回顾按键时，可使用每节的通用操作链接。
-
-- [MA01 · P1：数列、二项展开、联立方程、积分与梯形法]({{ '/alevel/fx-cg50/mathematics/ma01/' | relative_url }})
-- [MA02 · PSM1：三角全解、二项概率、离散期望与基础力学]({{ '/alevel/fx-cg50/mathematics/ma02/' | relative_url }})
-- [MA03 · P2：中矩形法、指定迭代、Simpson 法、向量与旋转体]({{ '/alevel/fx-cg50/mathematics/ma03/' | relative_url }})
-- [MA04 · S2：泊松、指数、连续随机变量与假设检验]({{ '/alevel/fx-cg50/mathematics/ma04/' | relative_url }})
-- [MA05 · M2：功率、摩擦、能量、抛射、力矩、质心与圆周运动]({{ '/alevel/fx-cg50/mathematics/ma05/' | relative_url }})
 
 ## 初学：第 1–3 章 {#beginner-topics}
 
@@ -46,17 +36,33 @@ permalink: /alevel/fx-cg50/
 - [第 2 章 必要设置：自然书写、角度单位与显示精度]({{ '/alevel/fx-cg50/beginner/' | relative_url }}#chapter-2)
 - [第 3 章 基础输入：分数、括号、负号、指数、根式、对数与 Ans]({{ '/alevel/fx-cg50/beginner/' | relative_url }}#chapter-3)
 
-## 进阶：第 4–10 章 {#advanced-topics}
+## 进阶：数学、统计与力学 {#advanced-topics}
 
-用计算器核对结果，同时在答题纸上保留所需过程。
+先学一种操作，接着做相应的普数应用题。例题取自 OxfordAQA **2025 年 1 月 MA01–MA05** 原卷，英文题意为改写；补充练习标为自拟。用计算器核对结果，同时在答题纸上保留所需过程。
 
-- [第 4 章 方程：二次、联立与数值求解]({{ '/alevel/fx-cg50/advanced/' | relative_url }}#chapter-4)
-- [第 5 章 图像：窗口、零点、极值与交点]({{ '/alevel/fx-cg50/advanced/' | relative_url }}#chapter-5)
-- [第 6 章 表格：函数值与根所在区间]({{ '/alevel/fx-cg50/advanced/' | relative_url }}#chapter-6)
-- [第 7 章 微积分：数值导数、定积分与面积]({{ '/alevel/fx-cg50/advanced/' | relative_url }}#chapter-7)
-- [第 8 章 统计：数据、频数、均值与标准差]({{ '/alevel/fx-cg50/advanced/' | relative_url }}#chapter-8)
-- [第 9 章 概率：二项、正态与反求分位数]({{ '/alevel/fx-cg50/advanced/' | relative_url }}#chapter-9)
+<span id="mathematics-units"></span>
+
+复习某个单元时，可用进阶页末的[MA01–MA05 例题与原卷索引]({{ '/alevel/fx-cg50/advanced/' | relative_url }}#mathematics-units)直接跳到对应题目。
+
+### [数学与统计]({{ '/alevel/fx-cg50/advanced/' | relative_url }})
+
+- [方程：求解、验证与精确距离]({{ '/alevel/fx-cg50/advanced/' | relative_url }}#chapter-4)
+- [代数与数列：等差、等比与二项展开]({{ '/alevel/fx-cg50/advanced/' | relative_url }}#algebra-sequences)
+- [图像与三角方程：窗口、零点、极值与全解]({{ '/alevel/fx-cg50/advanced/' | relative_url }}#chapter-5)
+- [向量：分量、模长、夹角与直线交点]({{ '/alevel/fx-cg50/advanced/' | relative_url }}#vectors)
+- [表格与迭代：函数值、根所在区间与 Ans]({{ '/alevel/fx-cg50/advanced/' | relative_url }}#chapter-6)
+- [微积分：导数、参数曲线、面积与旋转体]({{ '/alevel/fx-cg50/advanced/' | relative_url }}#chapter-7)
+- [数值积分：梯形、中矩形与 Simpson 法]({{ '/alevel/fx-cg50/advanced/' | relative_url }}#numerical-integration)
+- [统计：数据、频数、期望与连续密度]({{ '/alevel/fx-cg50/advanced/' | relative_url }}#chapter-8)
+- [概率与检验：二项、泊松、正态、z/t 与样本量]({{ '/alevel/fx-cg50/advanced/' | relative_url }}#chapter-9)
 - [第 10 章 排错与交卷前检查]({{ '/alevel/fx-cg50/advanced/' | relative_url }}#chapter-10)
+
+### [力学]({{ '/alevel/fx-cg50/advanced/mechanics/' | relative_url }})
+
+- [受力、功率与能量：连接粒子、摩擦与阻力]({{ '/alevel/fx-cg50/advanced/mechanics/' | relative_url }}#mechanics-forces)
+- [运动：速度函数、抛体与向量积分]({{ '/alevel/fx-cg50/advanced/mechanics/' | relative_url }}#mechanics-motion)
+- [圆周运动：摩擦向心力与圆锥摆]({{ '/alevel/fx-cg50/advanced/mechanics/' | relative_url }}#mechanics-circular)
+- [力矩、质心与碰撞：力臂、质量加权与动量]({{ '/alevel/fx-cg50/advanced/mechanics/' | relative_url }}#mechanics-moments)
 
 ## 高数进阶：Further Mathematics {#further-topics}
 
@@ -126,7 +132,7 @@ permalink: /alevel/fx-cg50/
 
 需要离线查阅基础操作时，可[下载第 1–3 章 PDF（10 页）]({{ '/assets/pdf/fx-CG50-guide-chapters-1-3-illustrated.pdf' | relative_url }})，内容包括按键、必要设置和基础输入。
 
-考试模式、进阶操作、普数考试应用和高数专题请从本页导航进入相应网页。
+考试模式、进阶例题和高数专题请从本页导航进入相应网页。
 
 ## 署名与资料来源 {#credits}
 

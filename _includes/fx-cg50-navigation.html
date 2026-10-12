@@ -8,14 +8,13 @@
     <li><a href="{{ stage.url | relative_url }}"{% if page.cg50_stage == stage.id %} aria-current="step"{% endif %}><strong>{{ stage.title }}</strong><span>{{ stage.description }}</span></a></li>
     {% endfor %}
   </ol>
-  <div class="cg50-topic-links" aria-label="普数考试应用">
-    <a href="{{ '/alevel/fx-cg50/mathematics/' | relative_url }}"{% if page.cg50_applications %} aria-current="page"{% endif %}>按普数考试单元查找</a>
-    {% if page.cg50_unit or page.cg50_applications %}
-    {% for unit in site.data.fx_cg50.mathematics_units %}
-    <a href="{{ unit.url | relative_url }}"{% if page.cg50_unit == unit.id %} aria-current="page"{% endif %}>{{ unit.title }}</a>
+  {% if page.cg50_stage == 'advanced' %}
+  <div class="cg50-topic-links" aria-label="进阶专题">
+    {% for part in site.data.fx_cg50.advanced_parts %}
+    <a href="{{ part.url | relative_url }}"{% if page.url == part.url %} aria-current="page"{% endif %}>{{ part.title }}</a>
     {% endfor %}
-    {% endif %}
   </div>
+  {% endif %}
   {% if page.cg50_stage == 'further' %}
   <div class="cg50-topic-links" aria-label="高数进阶专题">
     {% for part in site.data.fx_cg50.further_parts %}
