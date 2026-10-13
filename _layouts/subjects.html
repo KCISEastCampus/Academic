@@ -45,7 +45,7 @@ layout: none
 
   <div id="main-container">
     <div id="content-container" data-pagefind-body data-toc-headings="{{ page.toc_headings | default: 'h1, h2, h3, h4' }}">
-      {{ content }}
+      {% include lazy_content.html content=content %}
     </div>
     <div id="toc" class="table-of-contents" data-site-ui lang="{{ page.lang | default: 'en' }}">
       <div class="toc-header-fixed">

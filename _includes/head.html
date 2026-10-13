@@ -54,6 +54,8 @@
 <!-- Preload MathJax for pages that need it -->
 {% if needs_mathjax %}
   <link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/tex-chtml-full.js" as="script">
+{% endif %}
+{% if page.mathjax %}
   <!-- Preload critical MathJax fonts to avoid late rendering -->
   <link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
   <link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff" as="font" type="font/woff" crossorigin="anonymous">
