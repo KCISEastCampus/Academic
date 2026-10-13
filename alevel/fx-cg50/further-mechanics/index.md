@@ -22,7 +22,7 @@ permalink: /alevel/fx-cg50/further-mechanics/
 
 本页是高数进阶中的力学分支，可独立选读。需要先会[进阶方程求解]({{ '/alevel/fx-cg50/advanced/' | relative_url }}#chapter-4)和[定积分]({{ '/alevel/fx-cg50/advanced/' | relative_url }}#task-23)；插值和 Newton 的方法说明见[数值方法专题]({{ '/alevel/fx-cg50/further-mathematics/numerical-calculus/' | relative_url }}#fm-numerical)。
 
-菜单按 **03.81.0202 中文固件**核对，尚待同版本实机抽查。初始采用 **Rad、Y=**；M03 为角度答案改用 Deg 后，要恢复 Rad。该套试卷取 $g=9.8\,\mathrm{m\,s^{-2}}$，非精确答案通常要求 2 位有效数字，另有明确要求时遵从题目。
+初始采用 **Rad、Y=**；M03 为角度答案改用 Deg 后，要恢复 Rad。该套试卷取 $g=9.8\,\mathrm{m\,s^{-2}}$，非精确答案通常要求 2 位有效数字，另有明确要求时遵从题目。[适用版本与阅读说明]({{ '/alevel/fx-cg50/' | relative_url }}#next-chapters)见指南总览。
 
 ## 扩展 M01 弹性绳（elastic string）：张力、平衡点与能量 {#fm-mech-01}
 
@@ -209,6 +209,6 @@ $$\frac38=3\cos\theta_B-2\cos\alpha,
 - 其他高数专题：[复数、矩阵与向量]({{ '/alevel/fx-cg50/further-mathematics/' | relative_url }}) · [数值方法与微积分]({{ '/alevel/fx-cg50/further-mathematics/numerical-calculus/' | relative_url }})。
 - [返回高数专题路线]({{ '/alevel/fx-cg50/' | relative_url }}#further-topics) · [考前准备]({{ '/alevel/fx-cg50/' | relative_url }}#exam-mode)。
 
-编写与组织：**Eric Shi**。GPT 辅助整理、操作核对与网页制作。更新于 2026 年 10 月 10 日。
+编写与组织：**Eric Shi**。GPT 辅助整理、数学核算与网页制作。[完整署名与资料来源]({{ '/alevel/fx-cg50/' | relative_url }}#credits)。
 
 </div>
