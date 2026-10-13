@@ -1,6 +1,9 @@
 <!-- _includes/nav.html -->
 <!-- Global sticky navigation bar -->
 {% assign ui = site.data.ui[page.lang] | default: site.data.ui.en %}
+{% assign home_url = '/' %}
+{% assign translated_home = site.pages | where: 'translation_of', '/' | where: 'lang', page.lang | first %}
+{% if translated_home %}{% assign home_url = translated_home.url %}{% endif %}
 {% if page.translation_of %}
   {% assign translation = site.pages | where: 'url', page.translation_of | first %}
 {% else %}
@@ -8,17 +11,28 @@
 {% endif %}
 <nav class="site-nav" data-site-ui lang="{{ page.lang | default: 'en' }}" data-ui-aria="main_navigation" aria-label="{{ ui.main_navigation }}">
   <div class="site-nav-inner">
-    <a href="{% if page.lang == 'zh-CN' %}/zh/{% else %}/{% endif %}" class="site-nav-brand" data-ui-aria="site_title" aria-label="{{ ui.site_title }}">
+    <a href="{{ home_url | relative_url }}" class="site-nav-brand" data-ui-aria="site_title" aria-label="{{ ui.site_title }}">
       <span class="site-nav-logo">📚</span>
       <span class="site-nav-title" data-ui="site_title">{{ ui.site_title }}</span>
     </a>
     <div class="site-nav-links" id="siteNavLinks">
-      <a href="{% if page.lang == 'zh-CN' %}/zh/{% else %}/{% endif %}" class="site-nav-link {% if page.url == '/' or page.url == '/zh/' %}active{% endif %}" data-ui="home">{{ ui.home }}</a>
-      <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/alevel/" class="site-nav-link {% if page.url contains '/alevel' %}active{% endif %}">A-Level</a>
-      <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/igcse/" class="site-nav-link {% if page.url contains '/igcse' %}active{% endif %}">IGCSE</a>
-      <a href="/timetable/" class="site-nav-link {% if page.url contains '/timetable' %}active{% endif %}" data-ui="timetable">{{ ui.timetable }}</a>
-      <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/student-council/" class="site-nav-link {% if page.url contains '/student-council' %}active{% endif %}" data-ui="student_council">{{ ui.student_council }}</a>
-      <a href="/contributors/" class="site-nav-link {% if page.url == '/contributors/' %}active{% endif %}" data-ui="contributors">{{ ui.contributors }}</a>
+      {% assign nav_urls = '/,/alevel/,/igcse/,/timetable/,/student-council/,/contributors/' | split: ',' %}
+      {% capture nav_labels %}{{ ui.home }}|A-Level|IGCSE|{{ ui.timetable }}|{{ ui.student_council }}|{{ ui.contributors }}{% endcapture %}
+      {% assign nav_labels = nav_labels | split: '|' %}
+      {% assign nav_keys = 'home,alevel,igcse,timetable,student_council,contributors' | split: ',' %}
+      {% assign current_url = page.translation_of | default: page.url %}
+      {% for nav_url in nav_urls %}
+        {% assign target_url = nav_url %}
+        {% assign translated_target = site.pages | where: 'translation_of', nav_url | where: 'lang', page.lang | first %}
+        {% if translated_target %}{% assign target_url = translated_target.url %}{% endif %}
+        {% assign active = false %}
+        {% if current_url == nav_url %}
+          {% assign active = true %}
+        {% elsif nav_url != '/' and current_url contains nav_url %}
+          {% assign active = true %}
+        {% endif %}
+        <a href="{{ target_url | relative_url }}" class="site-nav-link {% if active %}active{% endif %}" data-ui="{{ nav_keys[forloop.index0] }}">{{ nav_labels[forloop.index0] }}</a>
+      {% endfor %}
     </div>
     <div class="site-nav-actions">
       <select id="siteLanguage" class="site-language-select" data-ui-aria="choose_language" aria-label="{{ ui.choose_language }}" hidden>
