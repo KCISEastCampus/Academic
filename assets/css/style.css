@@ -831,6 +831,8 @@ div.highlight {
 /* Respect prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
   .fade-in,
+  .pdf-loader,
+  #content-container img,
   .scroll-progress-bar,
   .site-nav-theme-btn,
   .back-to-top {
@@ -853,7 +855,7 @@ div.highlight {
 
 /* Print Styles */
 @media print {
-  header, footer, .back-to-top, .scroll-progress, #tocToggle, .theme-toggle, .back-button {
+  header, footer, .back-to-top, .scroll-progress, #tocToggle, .theme-toggle, .back-button, .copy-btn, .pdf-loader {
     display: none !important;
   }
 
@@ -944,8 +946,16 @@ mark {
 }
 
 /* Code Copy Button */
+.code-wrapper {
+  padding-top: 2.25rem;
+}
+
+.code-wrapper > pre {
+  margin-top: 0;
+}
+
 .copy-btn {
-  opacity: 0.4;
+  opacity: 1;
   transition: opacity 0.2s ease;
   z-index: 10;
   background-color: var(--surface);

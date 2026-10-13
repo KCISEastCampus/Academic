@@ -1,0 +1,11 @@
+{%- comment -%}Defer offscreen requests during parsing, before the image observer starts.{%- endcomment -%}
+{%- assign image_parts = include.content | split: '<img ' -%}
+{{- image_parts | first -}}
+{%- for image_part in image_parts offset: 1 -%}
+  {%- assign image_attributes = image_part | split: '>' | first -%}
+  {%- if image_attributes contains 'loading=' or image_attributes contains 'data-lazy-ignore' -%}
+    {{- '<img ' -}}{{- image_part -}}
+  {%- else -%}
+    {{- '<img loading="lazy" ' -}}{{- image_part -}}
+  {%- endif -%}
+{%- endfor -%}
