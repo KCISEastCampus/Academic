@@ -4,6 +4,7 @@ title: IG Mathematics
 mathjax: true
 grade: igcse
 subject: igcse-mathematics
+permalink: /igcse/mathematics/
 ---
 
 
