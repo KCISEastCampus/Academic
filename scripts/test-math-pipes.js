@@ -7,13 +7,31 @@ const root = path.join(__dirname, '..');
 function mathPipes(source) {
   const mask = text => text.replace(/[^\r\n]/g, ' ');
   let fence = '';
+  let indented = false;
+  let previousBlank = true;
+  let listIndent = 0;
   const content = source.split('\n').map(line => {
+    const blank = /^[ \t\r]*$/.test(line);
+    const indentation = [...line.match(/^[ \t]*/)[0]]
+      .reduce((width, char) => char === '\t' ? width + 4 - width % 4 : width + 1, 0);
     const marker = line.match(/^ {0,3}(`{3,}|~{3,})([^\r\n]*)\r?$/);
     if (fence) {
       if (marker && marker[1][0] === fence[0] && marker[1].length >= fence.length &&
           /^[ \t]*$/.test(marker[2])) fence = '';
+      previousBlank = !fence;
       return mask(line);
     }
+    if (previousBlank && !blank && indentation < listIndent) listIndent = 0;
+    if ((indented && blank) ||
+        (indentation >= listIndent + 4 && (indented || previousBlank))) {
+      indented = !blank || indented;
+      previousBlank = blank;
+      return mask(line);
+    }
+    indented = false;
+    const list = line.match(/^[ \t]*(?:[-+*]|\d+[.)])[ \t]+/);
+    if (list) listIndent = indentation + list[0].trimStart().length;
+    previousBlank = blank;
     if (marker && (marker[1][0] === '~' || !marker[2].includes('`'))) {
       fence = marker[1];
       return mask(line);
@@ -82,6 +100,12 @@ assert.equal(mathPipes('Before `code $|x|$ `` after').length, 1);
 assert.equal(mathPipes('Before ``code $|x|$ ` after').length, 1);
 assert.equal(mathPipes('Before ``code `$|x|$` `` after').length, 0);
 assert.equal(mathPipes('Before `code\n$|x|$` after').length, 0);
+assert.equal(mathPipes('    $|x|$\n    $|y|$').length, 0);
+assert.equal(mathPipes('Example:\n\n    $|x|$\n\n    $|y|$\n\n$|z|$').length, 1);
+assert.equal(mathPipes('\t$|x|$').length, 0);
+assert.equal(mathPipes('Paragraph\n    $|x|$').length, 1);
+assert.equal(mathPipes('- Paragraph\n\n    $|x|$').length, 1);
+assert.equal(mathPipes('- Example:\n\n      $|x|$').length, 0);
 
 const skipped = new Set(['_site', 'vendor', 'node_modules', 'scripts', 'npm-cache']);
 const failures = [];
@@ -102,4 +126,4 @@ function scan(directory) {
 scan(root);
 assert.equal(failures.length, 0,
   `Use \\lvert...\\rvert, \\lVert...\\rVert, \\mid or \\vert instead of literal pipes in math:\n${failures.join('\n')}`);
-console.log(`Math pipe checks passed: ${files} Markdown files and 39 scanner regressions.`);
+console.log(`Math pipe checks passed: ${files} Markdown files and 45 scanner regressions.`);
