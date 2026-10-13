@@ -7,6 +7,7 @@ en:
   main_navigation: Main navigation
   footer_navigation: Footer navigation
   toggle_theme: Toggle theme
+  dark_theme: Dark theme
   toggle_navigation: Toggle navigation menu
   switch_language: 中文
   switch_label: Read this page in Simplified Chinese
@@ -115,6 +116,7 @@ zh-CN:
   main_navigation: 主导航
   footer_navigation: 页脚导航
   toggle_theme: 切换明暗主题
+  dark_theme: 深色主题
   toggle_navigation: 展开或收起导航菜单
   switch_language: English
   switch_label: 阅读此页英文版

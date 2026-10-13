@@ -67,15 +67,15 @@ layout: none
             {% assign subject_translation = site.pages | where: 'translation_of', subject.path | first %}
             {% if subject_translation %}{% assign subject_path = subject_translation.url %}{% endif %}
           {% endif %}
-          <a href="{{ subject_path | relative_url }}" class="modern-subject-card" style="--accent-rgb: var(--accent-{{ page.level | default: 'al' }}-rgb); --accent-color: var(--accent-{{ page.level | default: 'al' }});" title="{{ ui.view_resources | replace: '%subject%', subject_name }}">
-            <div class="card-icon">
+          <a href="{{ subject_path | relative_url }}" class="modern-subject-card" style="--accent-rgb: var(--accent-{{ page.level | default: 'al' }}-rgb); --accent-color: var(--accent-{{ page.level | default: 'al' }});" title="{{ ui.view_resources | replace: '%subject%', subject_name }}" aria-label="{{ ui.view_resources | replace: '%subject%', subject_name | strip | escape }}">
+            <div class="card-icon" aria-hidden="true">
               {{ subject.icon }}
             </div>
             <div class="card-content">
               <div class="card-title">{{ subject_name }}</div>
               <div class="card-meta">
                 <span class="meta-text" data-ui="study_materials">{{ ui.study_materials }}</span>
-                <i class="bi bi-arrow-right hover-arrow"></i>
+                <i class="bi bi-arrow-right hover-arrow" aria-hidden="true"></i>
               </div>
             </div>
           </a>
