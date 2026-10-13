@@ -43,12 +43,14 @@ plugins:
 exclude:
   - scripts
   - chars_site.txt
+  - node_modules
+  - package.json
+  - package-lock.json
 
 defaults:
   - scope:
       path: "student-council/news"
     values:
-      lang: en
       layout: student_council_post
       permalink: /student-council/news/:basename/
 # Exclude from processing.

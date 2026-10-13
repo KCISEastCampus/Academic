@@ -23,7 +23,9 @@ jobs:
         run: node scripts/test-reading-progress.js
 
       - name: Test math delimiters
-        run: node scripts/test-math-pipes.js
+        run: |
+          npm ci
+          node scripts/test-math-pipes.js
 
       - name: Install markdownlint-cli
         run: npm install -g markdownlint-cli

@@ -1,0 +1,6 @@
+{
+  "private": true,
+  "devDependencies": {
+    "markdown-it": "^14.1.0"
+  }
+}
