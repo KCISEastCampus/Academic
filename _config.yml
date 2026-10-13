@@ -43,9 +43,6 @@ plugins:
 exclude:
   - scripts
   - chars_site.txt
-  - node_modules
-  - package.json
-  - package-lock.json
 
 defaults:
   - scope:
