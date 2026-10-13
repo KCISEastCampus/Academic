@@ -71,7 +71,7 @@ y&=\boxed{\frac1\mu\left(\int\mu Q\,\mathrm dx+C\right)}.
 4. 积分时写上 $C$，再将每一项除以 $\mu$。
 5. 代入给定条件，并将答案代回原方程检验。
 
-当 $P=1/x$ 时，$\int P\,\mathrm dx=\ln|x|$，所以公式给出 $\mu=|x|$。无论选择 $x>0$ 还是 $x<0$ 这一侧的区间，都可以使用 $\mu=x$，因为在各自的区间上，两种积分因子只相差一个非零常数倍。仍然必须排除 $x=0$。
+当 $P=1/x$ 时，$\int P\,\mathrm dx=\ln\lvert x\rvert $，所以公式给出 $\mu=\lvert x\rvert $。无论选择 $x>0$ 还是 $x<0$ 这一侧的区间，都可以使用 $\mu=x$，因为在各自的区间上，两种积分因子只相差一个非零常数倍。仍然必须排除 $x=0$。
 
 ### 例 1：化为标准形式并求解 {#example-1-normalise-and-solve}
 
@@ -419,14 +419,14 @@ $$\boxed{y=(2+4x)e^x},\qquad x\in\mathbb R.$$
 <details markdown="1">
 <summary>提示</summary>
 
-积分因子公式给出 $1/|x|$。在 $x<0$ 上，也可以改用它的常数倍 $\mu=1/x$。
+积分因子公式给出 $1/\lvert x\rvert $。在 $x<0$ 上，也可以改用它的常数倍 $\mu=1/x$。
 
 </details>
 
 <details markdown="1">
 <summary>解答</summary>
 
-由于 $\int-1/x\,\mathrm dx=-\ln|x|$，在给定区间上使用 $\mu=1/x$。乘以积分因子，得
+由于 $\int-1/x\,\mathrm dx=-\ln\lvert x\rvert $，在给定区间上使用 $\mu=1/x$。乘以积分因子，得
 
 $$\frac{y'}x-\frac y{x^2}=1,\qquad \left(\frac yx\right)'=1.$$
 
@@ -460,7 +460,7 @@ $$\boxed{y=x^2-x},\qquad x<0.$$
 - 忘记 $C$，或最后只将某一项除以 $\mu$。
 - 将 PI 当作满足给定条件的最终解。
 - 试设的指数 PI 已包含在 CF 中；遇到上文这种重复情形，应将试设形式乘以 $x$。
-- 未说明区间上的正负号就去掉 $\ln|x|$ 中的绝对值，或让解的区间跨越奇点。
+- 未说明区间上的正负号就去掉 $\ln\lvert x\rvert $ 中的绝对值，或让解的区间跨越奇点。
 
 **练习后：**重新独立完成曾需要提示的题目。写出标准形式、积分因子与乘积的导数，或明确写出 CF 与 PI。最后同时检验方程及其给定条件。
 

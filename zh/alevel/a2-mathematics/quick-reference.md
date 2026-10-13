@@ -561,10 +561,10 @@ $$\begin{pmatrix} x \\ y \\ z \end{pmatrix} = \begin{pmatrix} 1 \\ 0 \\ 2 \end{p
 ### 数量积（scalar product） {#scalar-product}
 
 夹角公式要求两个向量都非零。
-$$\vec{a} \cdot \vec{b} = |\vec{a}||\vec{b}|\cos\theta = a_1b_1 + a_2b_2 + a_3b_3$$
+$$\vec{a} \cdot \vec{b} = \lvert \vec{a}\rvert \lvert \vec{b}\rvert \cos\theta = a_1b_1 + a_2b_2 + a_3b_3$$
 
 **向量的夹角：**
-$$\cos\theta = \frac{\vec{a} \cdot \vec{b}}{|\vec{a}||\vec{b}|}$$
+$$\cos\theta = \frac{\vec{a} \cdot \vec{b}}{\lvert \vec{a}\rvert \lvert \vec{b}\rvert }$$
 
 求两条直线的锐角时，分子中的数量积要取绝对值。
 

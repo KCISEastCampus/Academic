@@ -559,10 +559,10 @@ $$\begin{pmatrix} x \\ y \\ z \end{pmatrix} = \begin{pmatrix} 1 \\ 0 \\ 2 \end{p
 ### Scalar Product
 
 The angle formula requires two non-zero vectors.
-$$\vec{a} \cdot \vec{b} = |\vec{a}||\vec{b}|\cos\theta = a_1b_1 + a_2b_2 + a_3b_3$$
+$$\vec{a} \cdot \vec{b} = \lvert \vec{a}\rvert \lvert \vec{b}\rvert \cos\theta = a_1b_1 + a_2b_2 + a_3b_3$$
 
 **Angle between vectors:**
-$$\cos\theta = \frac{\vec{a} \cdot \vec{b}}{|\vec{a}||\vec{b}|}$$
+$$\cos\theta = \frac{\vec{a} \cdot \vec{b}}{\lvert \vec{a}\rvert \lvert \vec{b}\rvert }$$
 
 For the acute angle between two lines, use the modulus of the scalar product in the numerator.
 

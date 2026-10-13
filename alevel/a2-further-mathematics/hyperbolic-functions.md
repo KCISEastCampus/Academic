@@ -245,7 +245,7 @@ $$\boxed{\begin{aligned}
 
 The first integrand is real for every real $x$. The second formula is stated for $x>a$; its integrand is undefined at $x=a$. The integrand is also real for $x<-a$, but the displayed $\cosh^{-1}(x/a)$ form does not apply on that interval. The third inverse-function form applies on $(-a,a)$; on any interval avoiding $x=\pm a$, it may also be written
 
-$$\int\frac{\mathrm dx}{a^2-x^2}=\frac1{2a}\ln\left|\frac{a+x}{a-x}\right|+C.$$
+$$\int\frac{\mathrm dx}{a^2-x^2}=\frac1{2a}\ln\left\lvert \frac{a+x}{a-x}\right\rvert +C.$$
 
 When substituting $u=g(x)$, replace every $x$ and $\mathrm dx$, and include the factor from $\mathrm du=g'(x)\,\mathrm dx$. Keep $+C$ for an indefinite integral. For a definite integral, change the limits with the substitution or return to the original variable before using the original limits.
 

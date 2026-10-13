@@ -154,7 +154,7 @@ $$\frac{dx}{dy}=3y^2+1.$$
 
 由于这个导数不为零，
 
-$$\frac{dy}{dx}=\frac1{3y^2+1},\qquad \boxed{\left.\frac{dy}{dx}\right|_{y=1}=\frac14}.$$
+$$\frac{dy}{dx}=\frac1{3y^2+1},\qquad \boxed{\left.\frac{dy}{dx}\right\vert _{y=1}=\frac14}.$$
 
 **检查：**$y=1$ 时 $x=2$，所以斜率对应点 $(2,1)$，而不是 $(1,2)$。如果 $\frac{dx}{dy}=0$，这个倒数公式不能给出有限斜率；应先考察曲线，再判断切线方向。
 

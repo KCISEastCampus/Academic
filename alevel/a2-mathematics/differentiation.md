@@ -152,7 +152,7 @@ $$\frac{dx}{dy}=3y^2+1.$$
 
 Since this is non-zero,
 
-$$\frac{dy}{dx}=\frac1{3y^2+1},\qquad \boxed{\left.\frac{dy}{dx}\right|_{y=1}=\frac14}.$$
+$$\frac{dy}{dx}=\frac1{3y^2+1},\qquad \boxed{\left.\frac{dy}{dx}\right\vert _{y=1}=\frac14}.$$
 
 **Check:** $y=1$ gives $x=2$, so the gradient belongs to the point $(2,1)$, not $(1,2)$. If $\frac{dx}{dy}=0$, this reciprocal formula cannot give a finite gradient; examine the curve before deciding the tangent's direction.
 

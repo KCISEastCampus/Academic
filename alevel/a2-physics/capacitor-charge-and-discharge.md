@@ -369,7 +369,7 @@ At one instant on a discharge voltage graph, the tangent gradient is $-0.30\,\ma
 <details markdown="1">
 <summary>Hint</summary>
 
-Use $I=C|\mathrm dV_C/\mathrm dt|$. The area is charge transferred during the interval.
+Use $I=C\lvert \mathrm dV_C/\mathrm dt\rvert $. The area is charge transferred during the interval.
 
 </details>
 
