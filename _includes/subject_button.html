@@ -7,6 +7,6 @@
    href="{{ include.subject.path }}"
    data-subject-name="{{ subject_name | strip | escape }}"
    {% if include.subject.grade %}data-subject-grade="{{ include.subject.grade | escape }}"{% endif %}
-   aria-label="Open resources for {{ subject_name | strip | escape }}">
-  {{ include.subject.icon }} {{ subject_name }}
+   aria-label="{% if page.lang == 'zh-CN' %}查看 {{ subject_name | strip | escape }} 课程资料{% else %}Open resources for {{ subject_name | strip | escape }}{% endif %}">
+  <span aria-hidden="true">{{ include.subject.icon }}</span> {{ subject_name }}
 </a>

@@ -22,6 +22,12 @@ jobs:
       - name: Test reading progress
         run: node scripts/test-reading-progress.js
 
+      - name: Test navigation accessibility
+        run: node scripts/test-accessibility.js
+
+      - name: Test TOC refresh
+        run: node scripts/test-toc-refresh.js
+
       - name: Install markdownlint-cli
         run: npm install -g markdownlint-cli
 

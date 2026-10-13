@@ -183,6 +183,14 @@ const loadingIndicator = {
 
 ### 5. 无障碍访问改进
 
+**实施状态（2026年10月13日）**：已补齐 TOC、科目入口和主题按钮，保留原有视觉样式。
+
+科目入口保留链接语义，提供包含科目名的 `aria-label`；首页和课程列表卡片同步覆盖，装饰图标使用 `aria-hidden`。主题按钮使用固定的“Dark theme / 深色主题”名称，以 `aria-pressed` 表示是否启用深色模式。
+
+TOC 的 `aria-controls`、`aria-expanded` 和 `aria-hidden` 与实际可见状态同步；移动端收起时设置 `inert`，桌面端恢复可访问。打开后聚焦首个可见目录链接（无结果时聚焦搜索框），Escape 关闭并返回开关，选择目录项后聚焦正文标题。Tab 离开目录时关闭抽屉并保留新焦点；刷新和跨越 1024px 断点不会遗留隐藏焦点或滚动锁定。
+
+实现见 `_layouts/subjects.html`、`assets/js/toc_generator.js`、`_includes/subject_button.html`、`_layouts/index.html`、`_layouts/level.html`、`_includes/nav.html` 和 `_includes/theme_button.html`。回归验证见 `scripts/test-accessibility.js`。
+
 **问题**: 部分交互元素缺少完整的ARIA标签
 
 **解决方案**:
@@ -191,7 +199,6 @@ const loadingIndicator = {
 <!-- 在 _includes/subject_button.html 中 -->
 <a href="{{ subject.path }}" 
    class="btn btn-outline-{{ subject.color }}"
-   role="button"
    aria-label="查看 {{ subject.name }} 课程资料">
   {{ subject.icon }} {{ subject.name }}
 </a>

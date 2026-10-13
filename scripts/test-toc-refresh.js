@@ -21,7 +21,7 @@ const links = [parent, child, sibling].map((entry, index) => ({
   closest: () => entry
 }));
 const content = { dataset: {}, querySelectorAll: () => [] };
-const toc = {};
+const toc = { contains: () => false };
 const document = new EventTarget();
 document.getElementById = (id) => ({
   tocSearch: input, tocSearchClear: clear, 'content-container': content
@@ -52,13 +52,18 @@ function classes() {
   };
 }
 let focused;
-const drawer = { classList: classes() };
+const drawer = {
+  classList: classes(),
+  setAttribute(key, value) { this[key] = value; },
+  contains: element => element === drawerInput,
+  querySelectorAll: () => []
+};
 const toggle = {
   classList: classes(),
   setAttribute(key, value) { this[key] = value; },
-  focus() { focused = 'toggle'; }
+  focus() { focused = 'toggle'; document.activeElement = this; }
 };
-const drawerInput = { focus() { focused = 'search'; } };
+const drawerInput = { focus() { focused = 'search'; document.activeElement = this; } };
 const navLinks = { classList: classes() };
 navLinks.classList.add('show');
 const navToggle = { setAttribute(key, value) { this[key] = value; } };
