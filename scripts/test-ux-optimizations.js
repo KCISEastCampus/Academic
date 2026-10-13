@@ -3,6 +3,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const http = require('node:http');
 const path = require('node:path');
+const vm = require('node:vm');
 const { chromium } = require('playwright');
 
 const root = path.join(__dirname, '..');
@@ -41,6 +42,10 @@ const server = http.createServer((req, res) => {
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
     return res.end(fixture(url.searchParams.get('lang') || 'en', url.searchParams.has('runtime')));
   }
+  if (url.pathname === '/tmua-regression') {
+    res.setHeader('Content-Type', 'text/html; charset=utf-8');
+    return res.end(read('_site/admissions/tmua-esat/index.html'));
+  }
   if (url.pathname.startsWith('/image/')) {
     requests.push(url.pathname);
     res.setHeader('Content-Type', 'image/svg+xml');
@@ -70,6 +75,16 @@ const server = http.createServer((req, res) => {
   for (const [tag] of content.matchAll(/<img\b[^>]*>/g)) {
     assert.equal((tag.match(/\bloading=/g) || []).length, 1, 'Exactly one native loading attribute');
   }
+  const tmuaSource = read('admissions/tmua-esat/index.html');
+  const tmuaBuilt = read('_site/admissions/tmua-esat/index.html');
+  const problemData = html => html.match(/const PROBLEMS = (.*);/)[1];
+  assert.equal(problemData(tmuaBuilt), problemData(tmuaSource), 'Lazy image attributes must not alter inline question data');
+  const tmuaScript = [...tmuaBuilt.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/g)]
+    .find(([, body]) => body.includes('const PROBLEMS = '))[1];
+  new vm.Script(tmuaScript, { filename: 'built-tmua-notes.js' });
+  const illustratedProblem = Object.values(JSON.parse(problemData(tmuaSource)))
+    .find(problem => /<img /.test(problem.question + problem.solution + problem.answer));
+  assert(illustratedProblem, 'Exercise the real inline image markup');
   await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
   const origin = `http://127.0.0.1:${server.address().port}`;
   let browser;
@@ -178,7 +193,24 @@ const server = http.createServer((req, res) => {
     await staticPage.goto(origin);
     assert.equal(await staticPage.locator('#far').getAttribute('src'), '/image/far.svg');
     assert.equal(await staticPage.locator('#far').evaluate(img => getComputedStyle(img).opacity), '1');
-    console.log('UX browser checks passed: conditional font preloads, deferred image requests, picture/srcset, cache, errors, print, observer and JS fallbacks, PDF feedback, clipboard success/failure, keyboard and mobile controls.');
+    const tmuaPage = await context.newPage();
+    const tmuaErrors = [];
+    tmuaPage.on('pageerror', error => tmuaErrors.push(error.message));
+    await tmuaPage.route('**/assets/vendor/mathjax/**', route => route.abort());
+    await tmuaPage.goto(origin + '/tmua-regression', { waitUntil: 'domcontentloaded' });
+    assert.equal(await tmuaPage.locator('#content-container img[data-fig]').count(), 0, 'The notes script hydrates the chapter figures');
+    assert(await tmuaPage.locator('figure.fig img[src]').count() > 0);
+    await tmuaPage.locator('#mode-toggle').click();
+    assert.equal(await tmuaPage.locator('body').evaluate(body => body.classList.contains('mode-concise')), true);
+    await tmuaPage.locator('#mode-toggle').click();
+    await tmuaPage.locator('.prob-btn[data-pid="' + illustratedProblem.id + '"]:visible').first().click();
+    await tmuaPage.locator('#panel.open').waitFor();
+    assert(await tmuaPage.locator('#panel-body img[src]').count() > 0, 'Problem figures hydrate when the panel opens');
+    assert.equal(await tmuaPage.locator('#panel-body img[data-fig]').count(), 0);
+    await tmuaPage.locator('#panel-close').click();
+    assert.equal(await tmuaPage.locator('#panel.open').count(), 0);
+    assert.deepEqual(tmuaErrors, [], 'The built TMUA page has no script errors');
+    console.log('UX browser checks passed: built TMUA question data, figure hydration, mode and problem controls; conditional font preloads, deferred image requests, picture/srcset, cache, errors, print, observer and JS fallbacks, PDF feedback, clipboard success/failure, keyboard and mobile controls.');
   } finally {
     if (browser) await browser.close();
     await new Promise(resolve => server.close(resolve));

@@ -44,7 +44,7 @@
 
 **实施状态（2026年10月13日）**：已完成。
 
-`_layouts/subjects.html` 通过 `_includes/lazy_content.html` 为内容图补充原生 `loading="lazy"`，从 HTML 解析阶段开始延迟屏外请求；保留显式 `loading` 和 `data-lazy-ignore`。`assets/js/image_lazy_load.js` 使用 IntersectionObserver，在接近视口 120px 时恢复图片、`srcset` 和 `picture` 来源，加载后停止观察。缓存图片保持原图，加载失败时恢复可见状态；无 Observer 或关闭 JavaScript 时仍可显示原图，打印前触发剩余图片加载。
+`_layouts/subjects.html` 通过 `_includes/lazy_content.html` 为脚本正文之外的内容图补充原生 `loading="lazy"`，保留内联题库中的 HTML 字符串，从 HTML 解析阶段开始延迟屏外请求；保留显式 `loading` 和 `data-lazy-ignore`。`assets/js/image_lazy_load.js` 使用 IntersectionObserver，在接近视口 120px 时恢复图片、`srcset` 和 `picture` 来源，加载后停止观察。缓存图片保持原图，加载失败时恢复可见状态；无 Observer 或关闭 JavaScript 时仍可显示原图，打印前触发剩余图片加载。
 
 **问题**: 图片同时加载，影响页面渲染性能
 
