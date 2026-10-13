@@ -53,6 +53,21 @@ expanded(false);
 assert.equal(toc.inert, true, 'Closed mobile TOC is outside keyboard navigation');
 assert.equal(toc.getAttribute('aria-hidden'), 'true');
 assert.equal(toggle.getAttribute('aria-controls'), 'toc');
+
+for (const overflow of ['hidden', 'clip']) {
+  document.body.style.overflow = overflow;
+  for (const width of [1280, 390]) {
+    window.innerWidth = width;
+    window.dispatchEvent(new Event('resize'));
+    assert.equal(document.body.style.overflow, overflow, 'Closed TOC resize preserves another component’s scroll lock');
+    init();
+    assert.equal(document.body.style.overflow, overflow, 'Closed TOC initialization preserves another component’s scroll lock');
+    vm.runInContext('toggleTOC(false);', context);
+    assert.equal(document.body.style.overflow, overflow, 'Closing an already closed TOC preserves another component’s scroll lock');
+  }
+}
+document.body.style.overflow = '';
+
 toggle.dispatchEvent(new Event('click'));
 expanded(true);
 assert.equal(toc.inert, false);

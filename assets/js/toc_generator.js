@@ -357,7 +357,7 @@ function toggleTOC(show, focusOnOpen = true) {
     toc.classList.remove("show");
     tocToggle.classList.remove("active");
     tocToggle.innerHTML = '<i class="bi bi-journal-text" aria-hidden="true"></i>';
-    document.body.style.overflow = "";
+    if (wasOpen) document.body.style.overflow = "";
     document.body.classList.remove("toc-open");
     if (mobile && focusInTOC) tocToggle.focus({ preventScroll: true });
     if (!mobile && document.activeElement === tocToggle) {
