@@ -413,4 +413,4 @@ S&=2\pi\int_0^1(1-t^2)(2\sqrt2\,t)\,\mathrm dt\\
 
 本课依据 [OxfordAQA Further Mathematics 9665 课程大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf)中 FP2.8（印刷页码第 18 页）的要求：掌握直角坐标或参数形式下的弧长与旋转曲面面积。例题 3 改编自官方样题；练习题为自拟题，没有官方分值。
 
-**学习路径：**[上一节：反三角函数的微积分](/alevel/a2-further-mathematics/inverse-trigonometric-functions/) · [下一节：双曲函数](/zh/alevel/a2-further-mathematics/hyperbolic-functions/) · [返回高等纯数学课程](/zh/alevel/a2-further-mathematics/)
+**学习路径：**[上一节：反三角函数的微积分](/zh/alevel/a2-further-mathematics/inverse-trigonometric-functions/) · [下一节：双曲函数](/zh/alevel/a2-further-mathematics/hyperbolic-functions/) · [返回高等纯数学课程](/zh/alevel/a2-further-mathematics/)
