@@ -211,7 +211,7 @@ For a cubic with real coefficients, there is at least one real root. The remaini
 
 To decide how many real roots there are, differentiate:
 
-- If $f'(x)$ is always positive or always negative, the cubic is strictly increasing or decreasing and has exactly one real root.
+- If $f^{\prime}(x)$ is always positive or always negative, the cubic is strictly increasing or decreasing and has exactly one real root.
 - If there are two stationary points and their function values have opposite signs, there are three distinct real roots.
 - If both stationary values are positive, or both are negative, there is exactly one real root.
 - If there are two stationary points and one stationary value is zero, there is a double root. Count it twice when using roots and coefficients.
@@ -384,7 +384,7 @@ Differentiate to establish the number of real roots. Then use the sign change an
 <details markdown="1">
 <summary>Solution and check</summary>
 
-For $f(x)=x^3+3x+2$, $f'(x)=3x^2+3>0$ for every real $x$. The cubic is strictly increasing and therefore has exactly one real root.
+For $f(x)=x^3+3x+2$, $f^{\prime}(x)=3x^2+3>0$ for every real $x$. The cubic is strictly increasing and therefore has exactly one real root.
 
 Since $f(-1)=-2$ and $f(0)=2$, continuity gives $-1<\alpha<0$.
 

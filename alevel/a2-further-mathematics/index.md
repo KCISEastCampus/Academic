@@ -27,7 +27,7 @@ Further Pure Mathematics · FP2 · FM03. Learn a method, work through examples, 
 
 Follow the lessons in order, or choose the topic you need. The remaining lessons are in preparation.
 
-**Chinese explanations:** [Arc length and surface area](/zh/alevel/a2-further-mathematics/arc-length-and-surface-area/), [hyperbolic functions](/zh/alevel/a2-further-mathematics/hyperbolic-functions/), [first-order differential equations](/zh/alevel/a2-further-mathematics/first-order-differential-equations/) and [second-order differential equations](/zh/alevel/a2-further-mathematics/second-order-differential-equations/) retain English questions and provide Chinese explanations with English terminology.
+**Chinese explanations:** all eleven available lessons have [Chinese versions](/zh/alevel/a2-further-mathematics/), with English questions and formulas retained. Use the language switch to change languages at the same section.
 
 **Before you start:** you should know AS Pure Mathematics and the pure content of [AS Further Mathematics](/alevel/as-further-mathematics/), including complex numbers, roots and coefficients, algebraic division and differentiation.
 

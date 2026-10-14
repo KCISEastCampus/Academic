@@ -15,13 +15,13 @@ study_page: true
 
 ## 从这里开始 {#start-here}
 
-1. **[根与多项式](/alevel/a2-further-mathematics/roots-and-polynomials/)** — 运用根与系数的关系，求复数根，并判断实数根的个数。
-2. **[数学归纳法](/alevel/a2-further-mathematics/proof-by-induction/)** — 证明有关级数、数列、整除性、幂和导数的命题。
-3. **[有限级数](/alevel/a2-further-mathematics/finite-series/)** — 利用部分分式和差分求出精确的和。
-4. **[级数与极限](/alevel/a2-further-mathematics/series-and-limits/)** — 展开函数、求极限，并计算反常积分。
-5. **[棣莫弗定理](/alevel/a2-further-mathematics/de-moivres-theorem/)** — 求复数的幂与根，推导三角恒等式，并将其用于积分。
-6. **[极坐标](/alevel/a2-further-mathematics/polar-coordinates/)** — 转换坐标、描绘曲线，并选取正确的角度范围计算面积。
-7. **[反三角函数的微积分](/alevel/a2-further-mathematics/inverse-trigonometric-functions/)** — 选择主值，对反函数求导，并求精确的积分值。
+1. **[根与多项式](/zh/alevel/a2-further-mathematics/roots-and-polynomials/)** — 运用根与系数的关系，求复数根，并判断实数根的个数。
+2. **[数学归纳法](/zh/alevel/a2-further-mathematics/proof-by-induction/)** — 证明有关级数、数列、整除性、幂和导数的命题。
+3. **[有限级数](/zh/alevel/a2-further-mathematics/finite-series/)** — 利用部分分式和差分求出精确的和。
+4. **[级数与极限](/zh/alevel/a2-further-mathematics/series-and-limits/)** — 展开函数、求极限，并计算反常积分。
+5. **[棣莫弗定理](/zh/alevel/a2-further-mathematics/de-moivres-theorem/)** — 求复数的幂与根，推导三角恒等式，并将其用于积分。
+6. **[极坐标](/zh/alevel/a2-further-mathematics/polar-coordinates/)** — 转换坐标、描绘曲线，并选取正确的角度范围计算面积。
+7. **[反三角函数的微积分](/zh/alevel/a2-further-mathematics/inverse-trigonometric-functions/)** — 选择主值，对反函数求导，并求精确的积分值。
 8. **[弧长与旋转曲面面积](/zh/alevel/a2-further-mathematics/arc-length-and-surface-area/)** — 根据直角坐标方程或参数方程，计算曲线的长度与旋转曲面的面积。
 9. **[双曲函数](/zh/alevel/a2-further-mathematics/hyperbolic-functions/)** — 运用指数定义、证明恒等式，并在微积分中使用反双曲函数。
 10. **[一阶微分方程](/zh/alevel/a2-further-mathematics/first-order-differential-equations/)** — 使用积分因子法，或将齐次通解与一个特解相加，再代入题目给定的条件。
@@ -29,7 +29,7 @@ study_page: true
 
 可以按顺序学习，也可以直接选择当前需要的主题。尚未列出的课程正在准备中。
 
-**中文讲解：**FP2.8 弧长与旋转曲面面积、FP2.9 双曲函数、FP2.10 一阶微分方程、FP2.11 二阶微分方程已提供中文版本。题干保留英文，专业术语附英文原词，方便对应英文考试用语。前七节目前打开的是英文课程。
+**中文讲解：**已上线的十一节课程均提供中英文版本。题干与公式保留英文原文，专业术语附英文原词，方便对应英文考试用语。下方链接打开中文课程；可用页面顶部的语言切换继续阅读同一小节的英文版。
 
 **开始前：**你应当掌握 AS 纯数学，以及 [AS 高等数学](/alevel/as-further-mathematics/)中的纯数学内容，包括复数、根与系数的关系、多项式除法和求导。
 
@@ -49,13 +49,13 @@ study_page: true
 
 | 大纲主题 | 教材章节与页码 | 课程 |
 |---|---|---|
-| FP2.1 根与多项式 | 第 17 章，第 198–206 页 | <a href="/alevel/a2-further-mathematics/roots-and-polynomials/" hreflang="en" lang="zh-CN">英文课程</a> |
-| FP2.4 数学归纳法 | 第 18.1 节，第 208–215 页；练习在第 217–218 页 | <a href="/alevel/a2-further-mathematics/proof-by-induction/" hreflang="en" lang="zh-CN">英文课程</a> |
-| FP2.5 有限级数 | 第 18.2 节，第 215–216 页；练习在第 217–218 页 | <a href="/alevel/a2-further-mathematics/finite-series/" hreflang="en" lang="zh-CN">英文课程</a> |
-| FP2.6 级数与极限 | 第 19 章，第 220–230 页；练习在第 231–232 页 | <a href="/alevel/a2-further-mathematics/series-and-limits/" hreflang="en" lang="zh-CN">英文课程</a> |
-| FP2.2 棣莫弗定理 | 第 20 章，第 234–252 页；练习在第 253–254 页 | <a href="/alevel/a2-further-mathematics/de-moivres-theorem/" hreflang="en" lang="zh-CN">英文课程</a> |
-| FP2.3 极坐标 | 第 21 章，第 256–266 页；练习在第 267–269 页 | <a href="/alevel/a2-further-mathematics/polar-coordinates/" hreflang="en" lang="zh-CN">英文课程</a> |
-| FP2.7 反三角函数的微积分 | 第 22 章，第 270–279 页；练习在第 280–281 页 | <a href="/alevel/a2-further-mathematics/inverse-trigonometric-functions/" hreflang="en" lang="zh-CN">英文课程</a> |
+| FP2.1 根与多项式 | 第 17 章，第 198–206 页 | <a href="/zh/alevel/a2-further-mathematics/roots-and-polynomials/" hreflang="zh-CN" lang="zh-CN">中文课程</a> |
+| FP2.4 数学归纳法 | 第 18.1 节，第 208–215 页；练习在第 217–218 页 | <a href="/zh/alevel/a2-further-mathematics/proof-by-induction/" hreflang="zh-CN" lang="zh-CN">中文课程</a> |
+| FP2.5 有限级数 | 第 18.2 节，第 215–216 页；练习在第 217–218 页 | <a href="/zh/alevel/a2-further-mathematics/finite-series/" hreflang="zh-CN" lang="zh-CN">中文课程</a> |
+| FP2.6 级数与极限 | 第 19 章，第 220–230 页；练习在第 231–232 页 | <a href="/zh/alevel/a2-further-mathematics/series-and-limits/" hreflang="zh-CN" lang="zh-CN">中文课程</a> |
+| FP2.2 棣莫弗定理 | 第 20 章，第 234–252 页；练习在第 253–254 页 | <a href="/zh/alevel/a2-further-mathematics/de-moivres-theorem/" hreflang="zh-CN" lang="zh-CN">中文课程</a> |
+| FP2.3 极坐标 | 第 21 章，第 256–266 页；练习在第 267–269 页 | <a href="/zh/alevel/a2-further-mathematics/polar-coordinates/" hreflang="zh-CN" lang="zh-CN">中文课程</a> |
+| FP2.7 反三角函数的微积分 | 第 22 章，第 270–279 页；练习在第 280–281 页 | <a href="/zh/alevel/a2-further-mathematics/inverse-trigonometric-functions/" hreflang="zh-CN" lang="zh-CN">中文课程</a> |
 | FP2.8 弧长与旋转曲面面积 | 第 23 章，第 282–287 页 | <a href="/zh/alevel/a2-further-mathematics/arc-length-and-surface-area/" hreflang="zh-CN" lang="zh-CN">中文课程</a> |
 | FP2.9 双曲函数 | 第 24 章，第 288–305 页 | <a href="/zh/alevel/a2-further-mathematics/hyperbolic-functions/" hreflang="zh-CN" lang="zh-CN">中文课程</a> |
 | FP2.10 一阶微分方程 | 第 25.1 与 25.3 节，第 306–307 与 318–319 页 | <a href="/zh/alevel/a2-further-mathematics/first-order-differential-equations/" hreflang="zh-CN" lang="zh-CN">中文课程</a> |
