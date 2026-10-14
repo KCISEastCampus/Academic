@@ -33,6 +33,10 @@ alevel:
     name_zh: A2 物理
     icon: "📕"
     path: /alevel/a2-physics/
+  - id: a2chemistry
+    name: A2 Chemistry
+    icon: "📕"
+    path: /alevel/a2-chemistry/
   - id: mathematics
     name: AS Math
     name_zh: AS 数学
