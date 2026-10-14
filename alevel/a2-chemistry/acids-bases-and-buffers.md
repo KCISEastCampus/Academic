@@ -1,8 +1,8 @@
 ---
-title: 酸、碱与缓冲 · Acids, bases and buffers
+title: Acids, bases and buffers
 layout: subjects
 mathjax: true
-lang: zh-CN
+lang: en
 grade: a2
 subject: a2-chemistry
 permalink: /alevel/a2-chemistry/acids-bases-and-buffers/
@@ -10,17 +10,37 @@ toc_headings: h2
 study_page: true
 ---
 
-[CH03 课程](/alevel/a2-chemistry/) · 3.1.10 · 教材第 21 章，印刷 322–343 页
+[CH03 course](/alevel/a2-chemistry/) · 3.1.10 · Textbook Chapter 21, printed pp. 322–343
 
-本章先区分强弱与浓稀，再用 $K_w$、$K_a$ 处理平衡，最后把化学计量与平衡连接起来。计算时始终问：**我现在算的是原溶液、中和后剩余物，还是平衡浓度？**
+## Introduction and prerequisites {#introduction}
 
-**先想一想：**温度改变后，纯水的 pH 不等于 7，它是否一定变成酸性？写出你判断“中性”的条件。
+- **Learning:** start with the [method](#method), then work through the examples.
+- **Homework help:** identify the system in the [method table](#method), then find its exam question.
+- **Revision:** attempt [practice](#practice) first, then use the [quick reference](#quick-reference).
 
-<span id="ph-and-kw"></span>
+**Before you start:** convert cm³ to dm³, calculate moles from concentration and volume, balance neutralisation equations and reverse logarithms to find concentrations. If needed, try the [course prerequisite check](/alevel/a2-chemistry/#prerequisites).
 
-## A1：pH、强酸强碱与水的离子积
+Distinguish acid strength from concentration, use $K_w$ and $K_a$ for equilibrium, then connect stoichiometry with equilibrium. Ask throughout: **am I working with the original solution, amounts after neutralisation, or equilibrium concentrations?**
 
-Brønsted–Lowry 酸是质子给体，碱是质子受体。共轭酸碱对相差一个 H⁺。**强弱**描述电离程度；**浓稀**描述单位体积内的物质的量，两者不能混用。
+**Try first:** if pure water has a pH other than 7 after a temperature change, must it be acidic? Write the condition for neutrality.
+
+## Method {#method}
+
+List the species actually present in the solution. Whenever acid or alkali has been added, check reaction stoichiometry first.
+
+| Task | First step | What follows |
+| --- | --- | --- |
+| Strong acid/alkali or dilution | Find ion concentration from the formula and final volume | Use pH or the ionic product of water; see [Example 1](#example-1), [Q1](#q1) |
+| Weak acid alone | Write the equilibrium and initial concentration | Estimate dissociation and check the approximation; see [Example 2](#example-2), [Q5](#q5) |
+| Titration graph | Locate the equivalence volume first | Find acid moles; read pKa at half equivalence; see [Q3](#q3) |
+| Weak acid plus a limited amount of strong alkali | Construct a mole table after neutralisation | Use the buffer ratio only if both components remain; see [Example 3](#example-3), [Q4](#q4) |
+| Indicator or experimental procedure | Inspect the pH jump near equivalence | The transition range must lie in the steep region; see [Q7](#q7) |
+
+<span id="a1ph强酸强碱与水的离子积"></span>
+
+## A1: pH, strong acids and alkalis, and the ionic product of water {#ph-and-kw}
+
+A Brønsted–Lowry acid donates a proton; a base accepts one. A conjugate pair differs by one H⁺. **Strength** describes ionisation; **concentration** describes amount per unit volume. Do not confuse them.
 
 $$\mathrm{pH}=-\log_{10}[\mathrm H^+]$$
 
@@ -28,15 +48,27 @@ $$[\mathrm H^+]=10^{-\mathrm{pH}}$$
 
 $$K_w=[\mathrm H^+][\mathrm{OH}^-]$$
 
-浓度用 mol dm⁻³。对考试中通常浓度的强一元酸，$[\mathrm H^+]\approx c$；NaOH 提供一份 OH⁻，Ba(OH)₂ 提供两份 OH⁻。先由化学式得到离子浓度，再求 pH。极稀溶液须考虑水自身电离，不能无条件使用 $[\mathrm H^+]=c$。
+Use concentrations in mol dm⁻³. For a strong monoprotic acid at usual exam concentrations, $[\mathrm H^+]\approx c$. NaOH supplies one OH⁻ per formula unit; Ba(OH)₂ supplies two. Find ion concentration from the formula before calculating pH. Very dilute solutions require water's own ionisation; $[\mathrm H^+]=c$ is not unconditional.
 
 $$\mathrm{pH}+\mathrm{pOH}=\mathrm{p}K_w.$$
 
-只有使用 $K_w=1.00\times10^{-14}$ 时，右边才是 14.00。**中性条件永远是 $[\mathrm H^+]=[\mathrm{OH}^-]$**；中性 pH 为 $\tfrac12\mathrm{p}K_w$。水的电离吸热，升温使 $K_w$ 增大。
+The right-hand side is 14.00 only when $K_w=1.00\times10^{-14}$. **Neutrality always means $[\mathrm H^+]=[\mathrm{OH}^-]$**; neutral pH is $\tfrac12\mathrm{p}K_w$. Water ionisation is endothermic, so raising the temperature increases $K_w$.
 
-**示范（自拟）：**在 298 K，把 10.0 cm³ 的 0.100 mol dm⁻³ HCl 稀释到 50.0 cm³，H⁺ 的 mol 不变，$[\mathrm H^+]=(0.100\times0.0100)/0.0500=0.0200$，pH = 1.70。
+### Example 1: Diluting a strong acid (self-written) {#example-1}
 
-### 真题：中性水不一定是 pH 7
+**Question:** At 298 K, dilute 10.0 cm³ of 0.100 mol dm⁻³ HCl to 50.0 cm³. Find the pH.
+
+**Method:** There is no neutralisation. H⁺ moles stay constant; use the final volume.
+
+1. Convert to dm³: H⁺ moles = 0.100 × 0.0100 = 0.00100.
+2. $[\mathrm H^+]=(0.100\times0.0100)/0.0500=0.0200$.
+3. pH = −log₁₀(0.0200) = **1.70**.
+
+**Independent check:** Fivefold dilution raises pH from 1.00 by log₁₀5 ≈ 0.70. Acid moles remain 0.0200 × 0.0500 = 0.00100.
+
+<span id="真题中性水不一定是-ph-7"></span>
+
+### Q1 Exam question: Neutral water need not have pH 7 {#q1}
 
 **OxfordAQA CH03 · June 2026 · 11.2–11.4 · 1 + 2 + 3 marks**
 
@@ -47,42 +79,56 @@ $$\mathrm{pH}+\mathrm{pOH}=\mathrm{p}K_w.$$
 > **11.4** Calculate the pH of a 0.100 mol dm⁻³ solution of Ba(OH)₂ at 5 °C. Give your answer to 2 decimal places. At 5 °C, $K_w=1.86\times10^{-15}\,\mathrm{mol^2\,dm^{-6}}$.
 
 <details markdown="1">
-<summary>提示：对水与 Ba(OH)₂ 分别找 OH⁻ 的来源</summary>
+<summary>Hint</summary>
 
-纯水使用 $[\mathrm H^+]=\sqrt{K_w}$；Ba(OH)₂ 溶液先得 $[\mathrm{OH}^-]=2c$，再用 $K_w$ 求 H⁺。
+For pure water use $[\mathrm H^+]=\sqrt{K_w}$. For Ba(OH)₂ first find $[\mathrm{OH}^-]=2c$, then use $K_w$ to find H⁺.
 
 </details>
 
 <details markdown="1">
-<summary>评分解析：MS 第 31–32 页</summary>
+<summary>Solution and self-check</summary>
 
-- 11.2：$[\mathrm H^+]=[\mathrm{OH}^-]$，1 分。
-- 11.3：$[\mathrm H^+]=\sqrt{1.86\times10^{-15}}=4.31\times10^{-8}$，pH = **7.37**，求浓度与求 pH 各 1 分。
-- 11.4：$[\mathrm{OH}^-]=0.200$；$[\mathrm H^+]=1.86\times10^{-15}/0.200=9.30\times10^{-15}$；pH = **14.03**，三步各 1 分。
+MS pp. 31–32.
 
-不要把 14 当作 pH 的绝对上限，也不要把“酸性”简单定义为 pH 小于 7 而不看温度。
+- 11.2: $[\mathrm H^+]=[\mathrm{OH}^-]$, 1 mark.
+- 11.3: $[\mathrm H^+]=\sqrt{1.86\times10^{-15}}=4.31\times10^{-8}$, pH = **7.37**. Concentration and pH each earn 1 mark.
+- 11.4: $[\mathrm{OH}^-]=0.200$; $[\mathrm H^+]=1.86\times10^{-15}/0.200=9.30\times10^{-15}$; pH = **14.03**. Each step earns 1 mark.
+
+Do not treat 14 as an absolute upper limit for pH, or define acidity as pH below 7 without considering temperature.
 
 </details>
 
-<span id="weak-acids"></span>
+<span id="a2弱酸ka-与近似条件"></span>
 
-## A2：弱酸、Ka 与近似条件
+## A2: Weak acids, Ka and approximation conditions {#weak-acids}
 
-对一元弱酸 $\ce{HA <=> H+ + A^-}$：
+For a monoprotic weak acid $\ce{HA <=> H+ + A^-}$:
 
 $$K_a=\frac{[\mathrm H^+][\mathrm A^-]}{[\mathrm{HA}]},\qquad\mathrm pK_a=-\log_{10}K_a.$$
 
-在同一温度下，改变初始浓度不改变 $K_a$；它会改变平衡浓度和电离比例。$K_a$ 越大、p$K_a$ 越小，酸越强。
+At constant temperature, changing the initial concentration does not change $K_a$, but changes equilibrium concentrations and the dissociation fraction. A larger $K_a$ and smaller p$K_a$ indicate a stronger acid.
 
-设只含该酸的初始浓度为 $c$，电离量为 $x$，忽略水自身电离：
+For a solution containing only this acid, let its initial concentration be $c$ and the amount dissociated per unit volume be $x$, neglecting water ionisation:
 
 $$K_a=\frac{x^2}{c-x}.$$
 
-只有 **$x\ll c$** 时，才可以用 $c-x\approx c$，得到 $[\mathrm H^+]\approx\sqrt{K_ac}$。先算出近似 $x$，再检查 $x/c$ 是否足够小；不满足时解二次方程。含盐、加过碱或存在其他 H⁺ 来源时，不能直接套这条“纯弱酸”公式。
+Only if **$x\ll c$** can we use $c-x\approx c$, giving $[\mathrm H^+]\approx\sqrt{K_ac}$. Estimate $x$, then check that $x/c$ is sufficiently small; otherwise solve the quadratic. Do not directly apply the weak-acid-only formula when salts, added alkali or other H⁺ sources are present.
 
-**示范（自拟）：**$c=0.100$、$K_a=1.00\times10^{-5}$ 时，$x\approx1.00\times10^{-3}$，电离约 1%，pH ≈ 3.00；近似合理。
+### Example 2: A weak acid and its approximation (self-written) {#example-2}
 
-### 真题：从 pKa 得到 Ka
+**Question:** A monoprotic weak acid has $c=0.100$ and $K_a=1.00\times10^{-5}$ (concentration units: mol dm⁻³). Find its pH and check the approximation.
+
+**Method:** Only the weak acid is present. Estimate dissociation before deciding whether the decrease in acid concentration is negligible.
+
+1. Using the equilibrium above, $x\approx1.00\times10^{-3}$.
+2. About 1% of the initial acid dissociates, so the small-dissociation approximation is reasonable.
+3. pH ≈ **3.00**.
+
+**Independent check:** Retaining the decrease in the denominator and solving the quadratic gives H⁺ concentration about 9.95 × 10⁻⁴ mol dm⁻³ and pH about 3.002. This agrees with the approximation to two decimal places.
+
+<span id="真题从-pka-得到-ka"></span>
+
+### Q2 Exam question: Finding Ka from pKa {#q2}
 
 **OxfordAQA CH03 · June 2026 · 10.1–10.2 · 1 + 1 marks**
 
@@ -97,52 +143,56 @@ At 298 K, the pKa for butanoic acid = 4.82.
 > **10.2** Calculate the value of Ka, in mol dm⁻³, for butanoic acid at 298 K.
 
 <details markdown="1">
-<summary>提示：pKa 转 Ka 是否要取倒数？</summary>
+<summary>Hint</summary>
 
-指数是 $-\mathrm pK_a$；表达式分母为未电离的酸的平衡浓度。
+The exponent is $-\mathrm pK_a$. The denominator of the expression is the equilibrium concentration of undissociated acid.
 
 </details>
 
 <details markdown="1">
-<summary>评分解析：MS 第 28 页</summary>
+<summary>Solution and self-check</summary>
+
+MS pp. 28.
 
 $$K_a=\frac{[\ce{CH3CH2CH2COO^-}][\mathrm H^+]}{[\ce{CH3CH2CH2COOH}]}.$$
 
 $$K_a=10^{-4.82}=\boxed{1.51\times10^{-5}\,\mathrm{mol\,dm^{-3}}}.$$
 
-表达式、数值各 1 分；不要在式子中使用初始 mol 来代替平衡浓度。
+The expression and numerical value each earn 1 mark. Do not substitute initial moles for equilibrium concentrations.
 
 </details>
 
 <details markdown="1">
-<summary>进阶：January 2025 10.1 的近似为什么需要特别说明？</summary>
+<summary>Extension: Why does January 2025 10.1 need an approximation warning?</summary>
 
-这道水合 Fe³⁺ 题给出 $\mathrm pK_a=2.22$、1.35 g FeCl₃、750 cm³。原评分标准（MS 第 30 页）采用 $\sqrt{K_ac}$，得到 **pH = 2.09**。
+This hydrated Fe³⁺ question gives $\mathrm pK_a=2.22$, 1.35 g FeCl₃ and 750 cm³. The original mark scheme (MS p. 30) uses $\sqrt{K_ac}$ and obtains **pH = 2.09**.
 
-但 $K_a=6.03\times10^{-3}$，$c=(1.35/162.3)/0.750=0.0111$；按近似得到的电离量占初始量约 **74%**，不能视为小量。若使用**同一个单步电离模型**、保留 $c-x$ 解二次方程，则 pH ≈ **2.24**。
+However, $K_a=6.03\times10^{-3}$ and $c=(1.35/162.3)/0.750=0.0111$. The approximation predicts about **74%** dissociation, which is not small. Using **the same single-step dissociation model** but retaining $c-x$ and solving the quadratic gives pH ≈ **2.24**.
 
-所以这里要区分**原卷的给分方法**与**近似的成立条件**。2.24 是该单步模型的计算结果，不是对真实多步 Fe³⁺ 水解体系的完整预测；本题不作为无条件套用平方根公式的示范。
+Distinguish **the original marking method** from **the approximation's validity conditions**. The value 2.24 belongs to this single-step model, not a complete prediction of real multistep Fe³⁺ hydrolysis. This is not an example for unconditional use of the square-root formula.
 
 </details>
 
-<span id="titration"></span>
+<span id="a3滴定曲线指示剂与-rp7"></span>
 
-## A3：滴定曲线、指示剂与 RP7
+## A3: Titration curves, indicators and RP7 {#titration}
 
-把酸放在锥形瓶、逐步加入碱时，先画初始 pH，再找中和区和过量碱区。**Equivalence point** 指按化学计量完全中和的位置；**end point** 指指示剂的可见变化位置，两者应尽量接近，但不是同一定义。
+When acid is in the conical flask and alkali is added, begin with the initial pH, then identify neutralisation and excess-alkali regions. The **equivalence point** is stoichiometric neutralisation; the **end point** is the indicator's visible change. They should be close, but are not the same definition.
 
-| 酸／碱组合 | 等当点附近 | 指示剂选择 |
+| Acid/alkali combination | Near equivalence | Indicator choice |
 | --- | --- | --- |
-| 强酸／强碱 | 298 K 下等当点约 pH 7，跳变较宽 | methyl orange 或 phenolphthalein 通常均可 |
-| 弱酸／强碱 | 共轭碱使等当点 pH > 7；之前有缓冲区 | 通常 phenolphthalein |
-| 强酸／弱碱 | 共轭酸使等当点 pH < 7 | 通常 methyl orange |
-| 弱酸／弱碱 | 跳变较小，不一定有清楚的视觉终点 | 通常用 pH 测量方法 |
+| Strong acid/strong alkali | Equivalence about pH 7 at 298 K; wide pH jump | Usually either methyl orange or phenolphthalein |
+| Weak acid/strong alkali | Conjugate base gives pH > 7 at equivalence; buffer region beforehand | Usually phenolphthalein |
+| Strong acid/weak alkali | Conjugate acid gives pH < 7 at equivalence | Usually methyl orange |
+| Weak acid/weak alkali | Small jump; a clear visual end point may be absent | Usually a pH measurement method |
 
-选择指示剂的核心是其变色范围落在曲线的陡峭跳变区，不是死记“所有酸碱滴定用同一个指示剂”。对弱一元酸／强碱，半等当点时 $[\mathrm{HA}]=[\mathrm A^-]$，故 **pH = pKa**。
+Choose an indicator whose transition range lies in the steep pH jump, rather than using one indicator for every titration. For a monoprotic weak acid/strong alkali at half equivalence, $[\mathrm{HA}]=[\mathrm A^-]$, so **pH = pKa**.
 
-**RP7：**校准 pH 计，准确移取酸，搅拌后待读数稳定；在预计等当点附近减小加液体积，在其他区可用较大间隔。画 pH 对加入体积的图，不能只连几个稀疏点后凭空确定等当点。冲洗探头、避免交叉污染，并按给定温度解释数据。
+**RP7:** Calibrate the pH meter, pipette the acid accurately, stir and wait for stable readings. Make smaller additions near expected equivalence and larger ones elsewhere. Plot pH against added volume; a few widely spaced points cannot locate equivalence reliably. Rinse the probe, avoid contamination and interpret data at the stated temperature.
 
-### 真题：从原滴定图求浓度和 Ka
+<span id="真题从原滴定图求浓度和-ka"></span>
+
+### Q3 Exam question: Concentration and Ka from the original titration graph {#q3}
 
 **OxfordAQA CH03 · June 2024 · 05.5–05.6 · 3 + 3 marks**
 
@@ -155,34 +205,50 @@ A student adds 0.100 mol dm⁻³ aqueous sodium hydroxide from a burette to 25.0
 > **05.6** Use Figure 4 to determine the pH of the mixture at half equivalence (half neutralisation). Use this pH to determine the value of the acid dissociation constant, Ka, at 298 K for the weak acid HX. Give the units for Ka.
 
 <details markdown="1">
-<summary>提示：先读等当体积，再把它减半</summary>
+<summary>Hint</summary>
 
-HX 是一元酸，等当点时 $n(\mathrm{HX})=n(\mathrm{NaOH})$。半等当的体积是等当体积的一半，不是 pH 的一半。
+HX is monoprotic, so at equivalence $n(\mathrm{HX})=n(\mathrm{NaOH})$. Half equivalence means half the equivalence volume, not half the pH.
 
 </details>
 
 <details markdown="1">
-<summary>评分解析：MS 第 20 页</summary>
+<summary>Solution and self-check</summary>
 
-05.5：等当体积约 27.0 cm³；酸的 mol 为 $0.100\times0.0270=0.00270$；原浓度 $0.00270/0.0250=\boxed{0.108\,\mathrm{mol\,dm^{-3}}}$。三个步骤各 1 分。
+MS pp. 20.
 
-05.6：13.5 cm³ 处 pH 约 **5.3**；所以 $K_a=10^{-5.3}=\boxed{5.01\times10^{-6}\,\mathrm{mol\,dm^{-3}}}$。图读数、Ka 数值、单位各对应 1 分；原 MS 接受合理的读图范围，不要求读出图上没有的精度。
+05.5: Equivalence volume is about 27.0 cm³; acid moles are $0.100\times0.0270=0.00270$; original concentration is $0.00270/0.0250=\boxed{0.108\,\mathrm{mol\,dm^{-3}}}$. Each step earns 1 mark.
+
+05.6: At 13.5 cm³ the pH is about **5.3**, so $K_a=10^{-5.3}=\boxed{5.01\times10^{-6}\,\mathrm{mol\,dm^{-3}}}$. Reading the graph, Ka and units each earn 1 mark. The original MS accepts a reasonable reading range; do not invent extra precision.
 
 </details>
 
-<span id="buffers"></span>
+<span id="a4缓冲溶液先中和再平衡"></span>
 
-## A4：缓冲溶液——先中和，再平衡
+## A4: Buffers — neutralisation before equilibrium {#buffers}
 
-**酸性缓冲**含弱酸 HA 与大量共轭碱 A⁻；加入少量 H⁺ 时，$\ce{A^- + H+ -> HA}$；加入少量 OH⁻ 时，$\ce{HA + OH^- -> A^- + H2O}$。这样 H⁺ 浓度变化较小，pH 较稳定，**并非完全不变**。缓冲能力有限，耗尽任一组分后不再能按原方式缓冲。
+An **acidic buffer** contains a weak acid HA and a substantial amount of its conjugate base A⁻. A little added H⁺ reacts by $\ce{A^- + H+ -> HA}$; a little added OH⁻ reacts by $\ce{HA + OH^- -> A^- + H2O}$. H⁺ concentration and pH change only slightly, **not by zero**. Buffer capacity is limited; exhausting a component prevents the same buffering action.
 
-**碱性缓冲**可由 NH₃ 与 NH₄⁺ 盐组成：NH₃ 消耗加入的 H⁺，NH₄⁺ 消耗加入的 OH⁻。这里理解两类原理，定量重点放在酸性缓冲。
+An **alkaline buffer** can contain NH₃ and an NH₄⁺ salt: NH₃ consumes added H⁺ and NH₄⁺ consumes added OH⁻. Understand both principles; quantitative work here focuses on acidic buffers.
 
 $$[\mathrm H^+]\approx K_a\frac{[\mathrm{HA}]}{[\mathrm A^-]},\qquad\mathrm{pH}=\mathrm pK_a+\log_{10}\frac{[\mathrm A^-]}{[\mathrm{HA}]}.$$
 
-在同一最终体积内，浓度比等于 mol 比。若缓冲由弱酸与强碱部分中和形成，必须先用 mol 表计算：HA 减少多少、A⁻ 生成多少、OH⁻ 是否仍有剩余。完全中和时的盐溶液、过量强碱体系，不可以继续套双组分缓冲公式。
+Within one final volume, the concentration ratio equals the mole ratio. For a buffer formed by partial neutralisation, first calculate HA consumed, A⁻ formed and any OH⁻ remaining in a mole table. The two-component buffer formula does not apply to a fully neutralised salt solution or a solution containing excess strong alkali.
 
-### 真题：部分中和形成缓冲
+### Example 3: Neutralise before calculating buffer pH (self-written) {#example-3}
+
+**Question:** At 298 K, mix 20.0 cm³ of 0.100 mol dm⁻³ monoprotic weak acid (Ka = 1.00 × 10⁻⁵ mol dm⁻³) with 10.0 cm³ of 0.100 mol dm⁻³ NaOH. Find the pH.
+
+**Method:** Calculate HA and A⁻ after neutralisation and check that no strong alkali remains.
+
+1. Initially there are 0.00200 mol acid and 0.00100 mol OH⁻. They react in a 1:1 ratio.
+2. Finally HA and A⁻ are each 0.00100 mol, with no OH⁻ remaining. Both occupy 0.0300 dm³, so their concentration ratio equals their mole ratio.
+3. H⁺ concentration is approximately Ka × 1 = 1.00 × 10⁻⁵ mol dm⁻³; **pH = 5.00**.
+
+**Independent check:** Equal HA and A⁻ amounts give pH = pKa. The total acid species remain 0.00100 + 0.00100 = 0.00200 mol. The H⁺ concentration comes from equilibrium, not leftover strong acid.
+
+<span id="真题部分中和形成缓冲"></span>
+
+### Q4 Exam question: A buffer formed by partial neutralisation {#q4}
 
 **OxfordAQA CH03 · June 2026 · 10.3 · 6 marks**
 
@@ -195,16 +261,18 @@ $$[\mathrm H^+]\approx K_a\frac{[\mathrm{HA}]}{[\mathrm A^-]},\qquad\mathrm{pH}=
 > Calculate the pH of the final mixture. Give your answer to 2 decimal places.
 
 <details markdown="1">
-<summary>提示：先列三行 mol 表</summary>
+<summary>Hint</summary>
 
-写出反应前、反应量、反应后；最终弱酸和共轭碱都是否仍存在？不要先把两种溶液浓度直接代入。
+Write initial, reacting and final amounts. Do both weak acid and conjugate base remain? Do not insert the two original solution concentrations directly.
 
 </details>
 
 <details markdown="1">
-<summary>评分解析：MS 第 29 页</summary>
+<summary>Solution and self-check</summary>
 
-| 物种 | 初始 mol | 最终 mol |
+MS pp. 29.
+
+| Species | Initial mol | Final mol |
 | --- | --- | --- |
 | CH₃CH₂COOH | $0.0140\times0.200=0.00280$ | $0.00280-0.00250=0.000300$ |
 | OH⁻ | $0.0250\times0.100=0.00250$ | 0 |
@@ -212,14 +280,107 @@ $$[\mathrm H^+]\approx K_a\frac{[\mathrm{HA}]}{[\mathrm A^-]},\qquad\mathrm{pH}=
 
 $$[\mathrm H^+]=1.35\times10^{-5}\frac{0.000300}{0.00250}=1.62\times10^{-6},\qquad \boxed{\mathrm{pH}=5.79}.$$
 
-六个评分步骤：酸的 mol、碱的 mol、剩余酸、正确平衡关系、H⁺ 数值、pH。此题反应前是丙酸，解析也必须使用丙酸／丙酸根。
+The six marking steps are acid moles, alkali moles, acid remaining, the correct equilibrium relationship, H⁺ concentration and pH. The starting acid is propanoic acid, so use the propanoic acid/propanoate pair throughout.
 
-**复做：**把加入的 NaOH 改为 28.0 cm³。此时恰好完全中和，不能用本题的缓冲比继续计算。
+**Reattempt:** change the NaOH volume to 28.0 cm³. Neutralisation is now complete; the buffer ratio used in this question no longer applies.
 
 </details>
 
-## 闭卷检查与下一步
+## Practice {#practice}
 
-不用看公式，分别说明纯弱酸、强碱、半等当点、缓冲体系应从哪一步开始；解释两个近似条件：弱酸的小量电离、缓冲中组分的消耗可忽略。
+Keep hints and answers closed initially. Use this index to select a task and state your first step.
 
-下一主题：[第三周期元素及其化合物](/alevel/a2-chemistry/period-3/)。
+| Practice | Skill to check |
+| --- | --- |
+| [Q1: Cold pure water and strong alkali](#q1) | Neutrality, ion stoichiometry and temperature-dependent Kw |
+| [Q2: pKa and Ka](#q2) | Equilibrium expression and inverse logarithm |
+| [Q3: Titration graph](#q3) | Equivalence volume, original acid concentration and half equivalence |
+| [Q4: Buffer by partial neutralisation](#q4) | Post-reaction mole table and buffer ratio |
+| [Q5: Weak-acid approximation (self-written)](#q5) | Independent check of the dissociation fraction |
+| [Q6: Alkali added to a buffer (self-written)](#q6) | Updated moles and the direction of the pH change |
+| [Q7: Indicator and RP7 (self-written)](#q7) | Choosing from a curve and adjusting reading intervals |
+
+### Q5 Weak-acid approximation (self-written) {#q5}
+
+A monoprotic weak acid has initial concentration 0.0100 mol dm⁻³ and Ka = 1.00 × 10⁻⁵ mol dm⁻³. Calculate an approximate pH, check the dissociation fraction and verify using the quadratic equation.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Use the equilibrium in [Example 2](#example-2). Estimate first, then check.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and self-check</summary>
+
+Self-written task; no official marks. Approximate H⁺ concentration is 3.16 × 10⁻⁴ mol dm⁻³ and pH ≈ **3.50**; about 3.16% dissociates. The full quadratic gives 3.11 × 10⁻⁴ mol dm⁻³ and pH ≈ **3.51**. The small-dissociation approximation is reasonably good here, but differs by about 0.01 in pH to two decimal places. Do not claim exactness without checking.
+
+</details>
+
+### Q6 Adding a little strong alkali to a buffer (self-written) {#q6}
+
+Add 0.000200 mol NaOH to the final buffer in [Example 3](#example-3), at the same temperature. Ignore the volume change. Predict the direction of the pH change, then calculate it.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+OH⁻ consumes HA and produces the same amount of A⁻. Construct a new mole table before using the buffer ratio.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and self-check</summary>
+
+Self-written task; no official marks. HA is 0.000800 mol and A⁻ is 0.00120 mol; pH = 5.00 + log₁₀(1.50) = **5.18**. The pH rises slightly and both components remain. Their total amount is still 0.00200 mol.
+
+</details>
+
+### Q7 Indicator and titration readings (self-written) {#q7}
+
+The steep region near equivalence in a weak-acid/strong-alkali titration spans pH 8–10. Given transition ranges of 3.1–4.4 for methyl orange and 8.2–10.0 for phenolphthalein, select an indicator and explain why. Explain why adding 5 cm³ of alkali at every step near the expected equivalence point is unsuitable.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Locate the transition ranges within the pH jump. Consider what a large volume interval could miss.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and self-check</summary>
+
+Self-written task; no official marks. Choose phenolphthalein: its transition range lies in the steep region, so a small addition of alkali produces a clear colour change. A 5 cm³ interval could span the whole pH jump and make equivalence difficult to locate. Use smaller additions nearby, stir and wait for stable readings.
+
+</details>
+
+## Quick reference and error diagnosis {#quick-reference}
+
+| System or definition | Reference | Exam trap |
+| --- | --- | --- |
+| Neutrality | Equal H⁺ and OH⁻ concentrations | pH = 7 requires the appropriate temperature-dependent Kw |
+| Strong/weak versus concentrated/dilute | Extent of ionisation versus amount per unit volume | A strong acid can be dilute; a weak acid can be concentrated |
+| pH and Kw | Find ion concentration before applying A1 | Ba(OH)₂ supplies twice its preparation concentration of OH⁻ |
+| Weak acid alone | Use A2's Ka equilibrium; square-root approximation for small dissociation | Check the fraction of the initial acid that dissociates |
+| Half equivalence | pH = pKa | Halve the volume, not the pH |
+| Buffer | Neutralise first, then use A4's concentration or mole ratio | Both components must remain; pH is not perfectly constant |
+
+**Independent checks:** conserve amounts in every mole table and reject negative amounts. Use mol dm⁻³ for concentrations. Predict the direction of a pH change before calculating it. Check weak-acid approximations and avoid precision unsupported by a graph.
+
+| Wrong answer or difficulty | Return to | Close the answer and reattempt |
+| --- | --- | --- |
+| Writing pH 7 for neutral water at 5 °C | [A1](#ph-and-kw), [Q1](#q1) | State the neutrality condition, then recalculate 11.3 |
+| Ka greater than 1 from pKa = 4.82 | [A2](#weak-acids), [Q2](#q2) | Check the exponent's sign and retry 10.2 |
+| Using the pure weak-acid formula after adding alkali | [Example 3](#example-3), [Q4](#q4) | Reconstruct the final mole table and retry 10.3 |
+| Buffer pH falling after adding alkali | [Q6](#q6), [A4](#buffers) | Predict the HA/A⁻ change before recalculating |
+| Taking half equivalence to mean half the pH | [A3](#titration), [Q3](#q3) | Read the pH again at 13.5 cm³ |
+
+<span id="闭卷检查与下一步"></span>
+
+## Completion and next steps {#completion}
+
+Without looking at the formulas, state the first step for a weak acid alone, a strong alkali, half equivalence and a buffer. Explain the two approximations: small weak-acid dissociation and negligible depletion of buffer components.
+
+**Ready to move on:** without the solutions, choose a calculation method, construct a correct neutralisation mole table, check a weak-acid approximation and justify an indicator from a curve. For any missing skill, use the diagnosis table and reattempt its task.
+
+[Previous: Electrode potentials](/alevel/a2-chemistry/electrode-potentials/) · [Next: Period 3](/alevel/a2-chemistry/period-3/) · [Back to the CH03 course](/alevel/a2-chemistry/)

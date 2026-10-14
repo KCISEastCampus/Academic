@@ -31,6 +31,17 @@ close(ethanedioate, .0453, .00005);
 close(ethanedioate * .025 * 2 / 5 / .02235, .0203, .00005);
 close(5 * (.0200 * .0200) / .0250, .0800, 1e-12);
 
+// New self-written tasks exercise the skills missing from the original question selection.
+close(-Math.log10(.100 * .0100 / .0500), 1.70, .005);
+const weakAcidRoot = (k, c) => 2 * k * c / (k + Math.sqrt(k * k + 4 * k * c));
+close(-Math.log10(weakAcidRoot(1e-5, .100)), 3.002, .0005);
+close(-Math.log10(weakAcidRoot(1e-5, .0100)), 3.51, .005);
+close(5 + Math.log10((.00100 + .000200) / (.00100 - .000200)), 5.18, .005);
+for (const [enthalpy, entropy, values] of [[40, .100, [10, -10]], [-60, -.150, [-15, 15]]]) {
+  close(enthalpy / entropy, 400, 1e-12);
+  [300, 500].forEach((temperature, i) => close(enthalpy - temperature * entropy, values[i], 1e-12));
+}
+
 // Independent atom and charge counts for the two easily confused ammonia stages.
 // Vectors are [Cu, N, H, O, charge].
 const species = {
@@ -47,24 +58,70 @@ for (const reaction of [
   }
 }
 
+const course = 'alevel/a2-chemistry';
+const slugs = ['index', 'thermodynamics', 'electrode-potentials', 'acids-bases-and-buffers',
+  'period-3', 'transition-metals', 'ions-in-solution'];
+const read = file => fs.readFileSync(file, 'utf8').replace(/\r\n/g, '\n');
+const math = source => source.match(/\$\$[\s\S]*?\$\$|\$[^$\r\n]+\$/g) || [];
+const ids = html => [...html.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
+const headings = html => [...html.matchAll(/<h[2-4]\b[^>]*id="([^"]+)"/g)].map(match => match[1]);
+const body = html => html.split('id="content-container"')[1].split('<div id="toc"')[0];
+const built = url => read(path.join('_site', decodeURI(url), url.endsWith('/') ? 'index.html' : ''));
+const imageSources = source => [...source.matchAll(/!\[[^\]]*\]\(([^)]+)\)/g)].map(match => match[1]);
 let groups = 0;
-for (const name of fs.readdirSync('alevel/a2-chemistry').filter(name => name.endsWith('.md'))) {
-  const source = fs.readFileSync(`alevel/a2-chemistry/${name}`, 'utf8');
-  const permalink = source.match(/^permalink: (.+)$/m)[1];
-  const html = fs.readFileSync(path.join('_site', permalink, 'index.html'), 'utf8');
-  groups += (source.match(/^### 真题：/gm) || []).length;
-  assert(!html.includes('markdown="1"'), `Unprocessed Markdown: ${name}`);
-  assert(!/<details\b[^>]*\bopen(?:\s|=|>)/.test(html), `Exposed answer: ${name}`);
-  for (const link of source.matchAll(/\]\((\/[^)]+)\)/g)) {
-    const [url, anchor] = link[1].split('#');
-    const target = path.join('_site', url, path.extname(url) ? '' : 'index.html');
-    assert(fs.existsSync(target), `Broken local link: ${link[1]}`);
-    if (anchor) assert(fs.readFileSync(target, 'utf8').includes(`id="${anchor}"`), `Missing anchor: ${anchor}`);
+for (const slug of slugs) {
+  const url = `/${course}/${slug === 'index' ? '' : slug + '/'}`;
+  const en = read(`${course}/${slug}.md`), zh = read(`zh/${course}/${slug}.md`);
+  assert(en.includes('lang: en\n'), `${slug}: English metadata`);
+  assert(zh.includes(`translation_of: ${url}\n`), `${slug}: translation pair`);
+  assert(zh.includes(`permalink: /zh${url}\n`), `${slug}: Chinese route`);
+  assert.deepEqual(math(zh), math(en), `${slug}: formula parity`);
+  assert.deepEqual(imageSources(zh), imageSources(en), `${slug}: image parity`);
+  assert.deepEqual(zh.match(/https:\/\/[^)\s]+/g) || [], en.match(/https:\/\/[^)\s]+/g) || [], `${slug}: source parity`);
+  assert.deepEqual(zh.match(/^\*\*OxfordAQA CH03[^\n]+\*\*$/gm) || [],
+    en.match(/^\*\*OxfordAQA CH03[^\n]+\*\*$/gm) || [], `${slug}: original marks`);
+  if (slug !== 'index') {
+    const count = (en.match(/^\*\*OxfordAQA CH03[^\n]+\*\*$/gm) || []).length;
+    groups += count;
+    assert(count > 0, `${slug}: authentic exam groups`);
+    for (const section of ['introduction', 'method', 'practice', 'quick-reference']) {
+      assert(en.includes(`{#${section}}`) && zh.includes(`{#${section}}`), `${slug}: ${section}`);
+    }
+    // Authentic exam prompts must remain English in both versions; explanations may differ.
+    for (const question of en.split(/^### Q\d+[^\n]*\n/m).slice(1)) {
+      if (!question.split('<details')[0].includes('**OxfordAQA CH03')) continue;
+      for (const paragraph of question.split('<details')[0].trim().split(/\n\s*\n/)) {
+        if (/^\*\*(?:Source|Course note|来源|课程说明)/.test(paragraph) || /^<span/.test(paragraph) || paragraph.startsWith('![')) continue;
+        assert(zh.includes(paragraph), `${slug}: exam prompt parity ${paragraph.slice(0, 100)}`);
+      }
+    }
+    assert(!/<summary>[^<]*(?:Hint|Solution)/.test(zh), `${slug}: translated disclosure labels`);
   }
-  assert.equal((source.match(/<details\b/g) || []).length, (html.match(/<details\b/g) || []).length);
+  const enHtml = built(url), zhHtml = built(`/zh${url}`);
+  assert.deepEqual(headings(body(zhHtml)), headings(body(enHtml)), `${slug}: identical heading IDs`);
+  for (const [html, source, lang, target] of [[enHtml, en, 'en', `/zh${url}`], [zhHtml, zh, 'zh-CN', url]]) {
+    const content = body(html);
+    assert.equal(new Set(ids(content)).size, ids(content).length, `${slug}: duplicate IDs`);
+    assert(html.includes(`<html lang="${lang}">`), `${slug}: document language`);
+    assert(html.match(/<a[^>]*id="languageSwitch"[^>]*>/)?.[0].includes(`href="${target}"`), `${slug}: switch destination`);
+    assert(html.includes(`hreflang="${lang === 'en' ? 'zh-CN' : 'en'}" href="https://academic.kcisec.site${target}"`), `${slug}: alternate`);
+    assert(!html.includes('markdown="1"'), `${slug}: unprocessed Markdown`);
+    assert(!/<details\b[^>]*\bopen(?:\s|=|>)/.test(html), `${slug}: exposed answer`);
+    assert.equal((source.match(/<details\b/g) || []).length, (content.match(/<details\b/g) || []).length, `${slug}: rendered disclosures`);
+    for (const [, href] of content.matchAll(/(?:href|src)="([/#][^"]*)"/g)) {
+      const [local, fragment] = href.split('#');
+      const destination = local ? built(local) : html;
+      if (fragment) assert(ids(destination).includes(decodeURI(fragment)), `${slug}: missing anchor ${href}`);
+      if (lang === 'zh-CN' && local.startsWith(`/${course}/`)) assert.fail(`${slug}: Chinese learning link points to English ${href}`);
+    }
+  }
 }
 assert.equal(groups, 32);
-const subjects = fs.readFileSync('_data/subjects.yml', 'utf8');
-assert(/id: a2chemistry\s+name: A2 Chemistry\s+icon:/.test(subjects));
-assert(fs.readFileSync('_site/alevel/index.html', 'utf8').includes('A2 Chemistry'));
-console.log('CH03 passed: independently recomputed exam answers, ammonia atom/charge balance, seven rendered pages, 32 exam groups, closed answers and local links.');
+const subjects = read('_data/subjects.yml');
+assert(/id: a2chemistry\s+name: A2 Chemistry\s+name_zh: A2 Chemistry\s+icon:/.test(subjects));
+for (const prefix of ['', '/zh']) {
+  const level = built(`${prefix}/alevel/`);
+  assert(level.includes(`href="${prefix}/${course}/"`), 'Localized subject card');
+  assert(level.includes('A2 Chemistry'), 'Exact subject name');
+}
+console.log('CH03 passed: independent exam calculations, atom/charge balance, 7 bilingual page pairs, 32 authentic exam groups, formulas, marks, anchors, source/image parity, closed answers and localized links.');
