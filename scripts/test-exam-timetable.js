@@ -39,6 +39,10 @@ for (const [page, lang, target] of [[html, 'en', '/zh/timetable/'], [zhHtml, 'zh
   assert(active[0][0].includes(`href="${lang === 'en' ? '/timetable/' : '/zh/timetable/'}"`));
   const ui = JSON.parse(page.match(/<script id="exam-timetable-ui"[^>]*>([\s\S]*?)<\/script>/)[1]);
   assert.equal(ui.weekdays.length, 5);
+  const descriptions = [...page.matchAll(/<meta name="description" content="([^"]*)"/g)];
+  assert.equal(descriptions.length, 1, "Timetable must have one localized search description");
+  assert.equal(descriptions[0][1].replace(/&amp;/g, "&"), ui.description);
+  assert(page.includes(`property="og:description" content="${descriptions[0][1]}"`), "Share description must match the page language");
   assert(page.includes(`<span>${ui.calendar}</span>`));
   assert(page.includes(`aria-label="${ui.details}"`));
 }

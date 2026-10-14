@@ -51,6 +51,10 @@ defaults:
       lang: en
       layout: student_council_post
       permalink: /student-council/news/:basename/
+  - scope:
+      path: "zh"
+    values:
+      description: "昆山康桥学校 A-Level 与 IGCSE 学习资源，包含学科课程、复习材料、考试信息和计算器指南。"
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

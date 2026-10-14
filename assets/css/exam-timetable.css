@@ -44,6 +44,16 @@ html[data-bs-theme="dark"] {
   --tt-a2-border: rgba(234, 88, 12, 0.3);
 }
 
+/* Compact Chinese controls use the CJK font's own line metrics. */
+html[lang="zh-CN"] :is(.btn-back-link, .btn-pdf-download, .timetable-notice,
+  .cohort-seg-btn, .timetable-select, .timetable-search, .view-seg-btn, .series-tag,
+  .ledger-badge, .ledger-day-count, .cal-legend, .cal-weekday, .cal-day-count,
+  .cal-month-title .badge, .exam-modal-notice, .modal-item-label,
+  .exam-modal-footer .btn, .upcoming-meta-pill, .upcoming-cta-btn) {
+  font-family: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC',
+    'Noto Sans SC', 'Academic Chinese Web', sans-serif;
+}
+
 /* Page Layout */
 .exam-timetable-page {
   max-width: 1060px;
@@ -159,6 +169,7 @@ html[data-bs-theme="dark"] {
 .timetable-notice-icon {
   color: #0284c7;
   font-size: 1.05rem;
+  line-height: 1;
   flex-shrink: 0;
   margin-top: 0.1rem;
 }
