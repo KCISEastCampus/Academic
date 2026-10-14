@@ -27,6 +27,7 @@ A responsive educational website for KangChiao International School East Campus 
 - A2 Physics
 - AS Physics
 - AS Chemistry
+- A2 Chemistry (CH03)
 - AS Economics
 - AS Biology
 
@@ -83,6 +84,14 @@ A responsive educational website for KangChiao International School East Campus 
 	bundle exec jekyll serve
 	```
 4. Open `http://localhost:4000`.
+
+## Chemistry course content
+
+CH03 English pages live in `alevel/a2-chemistry/`; Chinese pages live in `zh/alevel/a2-chemistry/` and use `translation_of` to pair their original URLs. Keep heading IDs, original English exam prompts, marks and formulas aligned across each pair. Label self-written tasks separately.
+
+Store shared exam figures in `assets/img/a2-chemistry/` as `ch03-YYYY-session-qNN-description.png`, for example `ch03-2025-jan-q01-born-haber.png`. Use one asset for both languages and keep mark-scheme answer figures inside closed solutions.
+
+After `bundle exec jekyll build`, run `node scripts/test-chemistry-ch03.js` to check both language routes, learning links, exam calculations and equation balance.
 
 ## 🤝 Contributing
 

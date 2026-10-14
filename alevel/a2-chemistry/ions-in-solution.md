@@ -1,8 +1,8 @@
 ---
-title: 水溶液中的离子 · Reactions of ions in solution
+title: Reactions of ions in solution
 layout: subjects
 mathjax: true
-lang: zh-CN
+lang: en
 grade: a2
 subject: a2-chemistry
 permalink: /alevel/a2-chemistry/ions-in-solution/
@@ -10,47 +10,81 @@ toc_headings: h2
 study_page: true
 ---
 
-[CH03 课程](/alevel/a2-chemistry/) · 3.2.6 · 教材第 24 章，印刷 386–397 页
+[CH03 course](/alevel/a2-chemistry/) · 3.2.6 · Textbook Chapter 24, printed pp. 386–397
 
-本章把酸碱与配位知识连接起来。每次加入试剂后，分三步记录：**观察到什么 → 哪种反应发生 → 方程式怎样支持结论**。颜色不能代替反应类型，方程式也不能代替观察。
+Connect acid–base chemistry with coordination chemistry. After adding each reagent, record **observation → reaction type → supporting equation**. A colour alone does not identify the reaction; an equation does not replace an observation.
 
-**先想一想：**给蓝色 Cu²⁺ 溶液先滴加少量 NH₃，再加到过量。两个阶段都是同一种反应吗？先预测各阶段是固体还是溶液。
+**Try first:** add NH₃ dropwise to blue Cu²⁺ solution, then add an excess. Are the two stages the same reaction? Predict whether each stage gives a solid or a solution.
 
-<span id="aqua-acidity"></span>
+## Before you start {#introduction}
 
-## I1：水合离子的酸性与反应类型
+- **Learning:** start with the [method](#method), then use the example to write observations and equations.
+- **Homework help:** identify the reagent and amount; use the [method table](#method) to select a section.
+- **Revision:** attempt [practice](#practice), then use the [quick reference and diagnosis](#quick-reference).
 
-许多金属离子在水中形成六水合离子 $\ce{[M(H2O)6]^{n+}}$。中心金属吸引配体 O 的电子密度，使 O–H 键极化；高电荷密度离子更容易使配体释放 H⁺。
+**Prerequisite check:** recognise proton transfer and ligand substitution, and balance atoms and charge. Review [acids and bases](/alevel/a2-chemistry/acids-bases-and-buffers/#ph-and-kw) and [ligand substitution](/alevel/a2-chemistry/transition-metals/#ligand-substitution). If balancing remains difficult, return to the [course prerequisite check](/alevel/a2-chemistry/#prerequisites).
+
+## Method: identify the reagent and amount {#method}
+
+| Task | First step | Then check |
+| --- | --- | --- |
+| Explain acidity of an aqua ion | Compare charge density and identify ligand O–H bonds | State the source of H⁺ and product charge; see [I1](#aqua-acidity) |
+| Add a little NaOH/NH₃ | Predict the precipitate and colour | NH₃ acting as a base produces NH₄⁺; see [precipitation](#hydroxide-ammonia) |
+| Add excess reagent | Treat NaOH and NH₃ separately | Insolubility, amphoteric dissolution or ligand substitution? |
+| Add carbonate | Distinguish the divalent/trivalent ions in this lesson | For trivalent ions check both precipitate and CO₂; see [carbonate](#carbonate) |
+| Identify an unknown | List candidate ions and use a fresh sample for each reagent | Restrict the conclusion to the candidates; see [Example 5](#example-5) |
+
+**Learning goal:** give the visible change, reaction type and balanced equation for each stage, then check the conclusion using a fresh sample.
+
+<span id="i1水合离子的酸性与反应类型"></span>
+
+## I1: Acidity of aqua ions and reaction types {#aqua-acidity}
+
+Many metal ions form hexaaqua ions $\ce{[M(H2O)6]^{n+}}$ in water. The central ion attracts electron density from ligand oxygen, polarising O–H bonds. A higher charge density makes loss of H⁺ from a water ligand easier.
 
 $$\ce{[M(H2O)6]^{3+} <=> [M(H2O)5(OH)]^{2+} + H+}.$$
 
-**电荷密度 charge density** 要同时看电荷和半径。Fe³⁺ 比 Fe²⁺ 电荷更高，水合离子酸性更强；Al³⁺ 与 Fe³⁺ 电荷相同，但 Al³⁺ 半径更小、密度更高，酸性更强。
+**Charge density** depends on both charge and radius. Fe³⁺ has a higher charge than Fe²⁺, so its aqua ion is more acidic. Al³⁺ and Fe³⁺ have the same charge, but Al³⁺ has a smaller radius and higher charge density, making its aqua ion more acidic.
 
-### 真题：从电荷密度写出完整因果链
+### Example 1 (self-written): explain acidity of an Al³⁺ solution {#example-1}
+
+**Question:** why is an Al³⁺ solution acidic? **Method:** trace charge density through ligand polarisation to proton transfer. **Model answer:** Al³⁺ has high charge density and attracts electron density from water-ligand oxygen, polarising O–H bonds. Water ligands release H⁺:
+
+$$\ce{[Al(H2O)6]^{3+} <=> [Al(H2O)5(OH)]^{2+} + H+}.$$
+
+**Independent check:** each side has Al 1, O 6 and H 12, with total charge +3. Losing a proton changes complex charge from +3 to +2; the acidity comes from water ligands.
+
+<span id="真题从电荷密度写出完整因果链"></span>
+
+### Q1 — Authentic exam: build the causal explanation {#q1}
 
 **OxfordAQA CH03 · June 2024 · 08.5 · 3 marks**
 
 > Explain why [Al(H₂O)₆]³⁺(aq) forms an acidic solution in water. Include an equation in your answer.
 
 <details markdown="1">
-<summary>提示：H⁺ 从哪里来？</summary>
+<summary>Hint</summary>
 
-H⁺ 来自水配体的 O–H 键，不是 Al 原子本身。写电离后配合物的电荷。
+H⁺ comes from an O–H bond in a water ligand, not from the Al atom itself. Give the charge of the complex after ionisation.
 
 </details>
 
 <details markdown="1">
-<summary>评分解析：MS 第 26 页</summary>
+<summary>Mark scheme and self-check</summary>
 
-Al³⁺ 电荷密度高；吸引水配体的电子密度，极化／削弱 O–H 键，使 H⁺ 释放；正确方程式，各 1 分：
+MS pp. 26.
+
+Al³⁺ has a high charge density; it attracts electron density from water ligands, polarising/weakening O–H bonds so H⁺ is released; give the correct equation. One mark for each:
 
 $$\ce{[Al(H2O)6]^{3+} <=> [Al(H2O)5(OH)]^{2+} + H+}.$$
 
-也可用 H₂O 作质子受体，右边写 H₃O⁺，但整式必须守恒。
+Alternatively, use H₂O as the proton acceptor and show H₃O⁺ on the right, keeping the whole equation balanced.
 
 </details>
 
-### 真题：分别比较电荷与半径
+<span id="真题分别比较电荷与半径"></span>
+
+### Q2 — Authentic exam: compare charge and radius separately {#q2}
 
 **OxfordAQA CH03 · January 2025 · 10.2 · 2 marks**
 
@@ -61,43 +95,57 @@ $$\ce{[Al(H2O)6]^{3+} <=> [Al(H2O)5(OH)]^{2+} + H+}.$$
 > Suggest why solutions of Al³⁺(aq) are more acidic than Fe³⁺(aq).
 
 <details markdown="1">
-<summary>提示：第二组电荷相同，不能再说电荷更高</summary>
+<summary>Hint</summary>
 
-分别写两组比较，不要用一句“它更小／更大”而不说比较对象。
+Give both comparisons explicitly. Do not say only “smaller” or “larger” without identifying the ions compared.
 
 </details>
 
 <details markdown="1">
-<summary>评分解析：MS 第 31 页</summary>
+<summary>Mark scheme and self-check</summary>
 
-Fe²⁺ 的电荷／电荷密度比 Fe³⁺ 低，1 分；Al³⁺ 的半径比 Fe³⁺ 小，电荷密度更高，1 分。把小半径误写成 Al³⁺ 电荷更高，会失去第二点。
+MS pp. 31.
+
+Fe²⁺ has a lower charge/charge density than Fe³⁺ (1 mark). Al³⁺ has a smaller radius and higher charge density than Fe³⁺ (1 mark). Saying that Al³⁺ has a higher charge loses the second point.
 
 </details>
 
-<span id="hydroxide-ammonia"></span>
+<span id="ohnh-与两性氢氧化物"></span>
 
-## OH⁻、NH₃ 与两性氢氧化物
+## Hydroxide, ammonia and amphoteric hydroxides {#hydroxide-ammonia}
 
-少量 OH⁻ 从水合离子中移除质子，形成不溶性的中性羟基配合物。二价、三价离子分别需要 2、3 mol OH⁻：
+A small amount of OH⁻ removes protons from aqua ions, forming insoluble, neutral hydroxo complexes. Divalent and trivalent ions require 2 and 3 mol of OH⁻ respectively:
 
 $$\ce{[M(H2O)6]^{2+} + 2OH^- -> M(H2O)4(OH)2(s) + 2H2O}.$$
 
 $$\ce{[M(H2O)6]^{3+} + 3OH^- -> M(H2O)3(OH)3(s) + 3H2O}.$$
 
-NH₃ 少量时作为**碱**接受质子，形成 NH₄⁺；OH⁻ 的式子不能直接把 OH⁻ 换成 NH₃ 而不改产物：
+In a small amount, NH₃ acts as a **base**, accepting protons to form NH₄⁺. Do not simply replace OH⁻ with NH₃ without changing the products:
 
 $$\ce{[M(H2O)6]^{2+} + 2NH3 -> M(H2O)4(OH)2(s) + 2NH4+}.$$
 
-| 离子 | 少量 NaOH 或 NH₃ | 过量 NaOH | 过量 NH₃ |
+| Ion | A little NaOH or NH₃ | Excess NaOH | Excess NH₃ |
 | --- | --- | --- | --- |
-| Cu²⁺ | 蓝色沉淀 | 沉淀不溶 | 沉淀溶解，形成深蓝色溶液 |
-| Fe²⁺ | 绿色沉淀；暴露空气可逐渐变棕 | 不溶 | 不溶 |
-| Fe³⁺ | 棕色沉淀 | 不溶 | 不溶 |
-| Al³⁺ | 白色沉淀 | 溶解，形成无色溶液 | 不溶 |
+| Cu²⁺ | Blue precipitate | Insoluble | Precipitate dissolves to give a deep blue solution |
+| Fe²⁺ | Green precipitate; may turn brown in air | Insoluble | Insoluble |
+| Fe³⁺ | Brown precipitate | Insoluble | Insoluble |
+| Al³⁺ | White precipitate | Dissolves to give a colourless solution | Insoluble |
 
-**Amphoteric** 指能与酸、碱反应。Al 的沉淀在酸中重新形成水合离子，在过量 OH⁻ 中形成可溶羟基配合物。不能把“白色沉淀溶解”直接写成“消失，所以没有 Al”。
+**Amphoteric** means reacting with both acids and bases. The aluminium precipitate reforms an aqua ion in acid and forms a soluble hydroxo complex in excess OH⁻. “The white precipitate dissolves” does not mean that aluminium is absent.
 
-### 真题：两性及其两个方程式
+### Example 2 (self-written): where does an amphoteric precipitate go? {#example-2}
+
+**Question:** is aluminium removed when its white hydroxo precipitate reacts with acid or excess alkali? **Method:** recognise amphoterism and write the soluble products. **Model answer:** acid restores the aqua ion; excess alkali forms a hydroxo complex:
+
+$$\ce{Al(H2O)3(OH)3 + 3H+ -> [Al(H2O)6]^{3+}}.$$
+
+$$\ce{Al(H2O)3(OH)3 + OH^- -> [Al(OH)4]^- + 3H2O}.$$
+
+**Independent check:** the acid equation has Al 1, O 6, H 12 and charge +3 on both sides; the alkali equation has Al 1, O 7, H 10 and charge −1. Al remains in solution in both reactions: dissolution does not remove the element.
+
+<span id="真题两性及其两个方程式"></span>
+
+### Q3 — Authentic exam: amphoterism and two equations {#q3}
 
 **OxfordAQA CH03 · June 2024 · 08.3 · 3 marks**
 
@@ -110,28 +158,42 @@ $$\ce{[M(H2O)6]^{2+} + 2NH3 -> M(H2O)4(OH)2(s) + 2NH4+}.$$
 > Give an equation to show aluminium hydroxide reacting with an alkali.
 
 <details markdown="1">
-<summary>提示：酸恢复水配体；碱形成负离子</summary>
+<summary>Hint</summary>
 
-检查 $\ce{[Al(OH)4]^-}$ 的四个 OH 与 −1 电荷，配平剩余的水。
+Check the four OH groups and −1 charge in $\ce{[Al(OH)4]^-}$, then balance the remaining water.
 
 </details>
 
 <details markdown="1">
-<summary>评分解析：MS 第 25 页</summary>
+<summary>Mark scheme and self-check</summary>
 
-**Amphoteric**，1 分。
+MS pp. 25.
+
+**Amphoteric** (1 mark).
 
 $$\ce{Al(H2O)3(OH)3 + 3H+ -> [Al(H2O)6]^{3+}}.$$
 
 $$\ce{Al(H2O)3(OH)3 + OH^- -> [Al(OH)4]^- + 3H2O}.$$
 
-两个方程式各 1 分。先按本题给定的含水配体表示作答，避免只背一条简化 Al(OH)₃ 式子后忘记配平水。
+Each equation earns 1 mark. Use the water-ligand notation given in this question; memorising only a simplified Al(OH)₃ equation may leave the water unbalanced.
 
 </details>
 
-**NH₃ 过量时可能改作配体。**Cu 的蓝色沉淀溶解，是 NH₃ 配体取代形成深蓝色配合物。观察和机制要把少量与过量分开。
+**In excess, NH₃ may act as a ligand.** The blue copper precipitate dissolves through ligand substitution, forming a deep blue complex. Separate the observations and mechanisms for a small amount and an excess.
 
-### 真题：少量与过量氨水的两阶段
+### Example 3 (self-written): two roles of the same reagent {#example-3}
+
+**Question:** classify the two stages when Cu²⁺ reacts with ammonia and support them with equations. **Method:** separate small/excess amounts, then distinguish base/ligand roles. **Model answer:** a little NH₃ accepts protons from water ligands to form a blue precipitate. Excess NH₃ replaces ligands and dissolves it to give a deep blue solution:
+
+$$\ce{[Cu(H2O)6]^{2+} + 2NH3 -> Cu(H2O)4(OH)2(s) + 2NH4+}.$$
+
+$$\ce{Cu(H2O)4(OH)2(s) + 4NH3 -> [Cu(NH3)4(H2O)2]^{2+} + 2OH^- + 2H2O}.$$
+
+**Independent check:** the first equation has Cu 1, O 6, H 18, N 2 and charge +2 on each side; the second has Cu 1, O 6, H 22, N 4 and charge 0. Cu remains +2, so colour change does not establish redox.
+
+<span id="真题少量与过量氨水的两阶段"></span>
+
+### Q4 — Authentic exam: two stages with aqueous ammonia {#q4}
 
 **OxfordAQA CH03 · January 2025 · 09.3 · 4 marks**
 
@@ -140,36 +202,48 @@ $$\ce{Al(H2O)3(OH)3 + OH^- -> [Al(OH)4]^- + 3H2O}.$$
 > Describe what is observed. Write equations for any reactions that occur.
 
 <details markdown="1">
-<summary>提示：先是酸碱反应，然后才是配体取代</summary>
+<summary>Hint</summary>
 
-先写蓝色沉淀，再写深蓝色溶液；对应写两条方程式。
+First describe the blue precipitate, then the deep blue solution. Match these observations with two equations.
 
 </details>
 
 <details markdown="1">
-<summary>评分解析：MS 第 29 页</summary>
+<summary>Mark scheme and self-check</summary>
 
-观察：形成蓝色沉淀，1 分；过量氨水使其溶解形成深蓝色溶液，1 分。
+MS pp. 29.
+
+Observations: a blue precipitate forms (1 mark); it dissolves in excess ammonia to give a deep blue solution (1 mark).
 
 $$\ce{[Cu(H2O)6]^{2+} + 2NH3 -> Cu(H2O)4(OH)2(s) + 2NH4+}.$$
 
 $$\ce{Cu(H2O)4(OH)2(s) + 4NH3 -> [Cu(NH3)4(H2O)2]^{2+} + 2OH^- + 2H2O}.$$
 
-两个方程式各 1 分。原 MS 也接受从水合离子表示整体配体取代的第二式，但写沉淀直接溶解的式子能更明确地对应两阶段观察。
+Each equation earns 1 mark. The original MS also accepts an overall substitution equation starting from the aqua ion for the second stage; the equation for dissolution of the precipitate matches the two observed stages more directly.
 
 </details>
 
-<span id="carbonate"></span>
+<span id="碳酸根二价与三价离子不能混用"></span>
 
-## 碳酸根：二价与三价离子不能混用
+## Carbonate: distinguish divalent and trivalent ions {#carbonate}
 
-对这里的 Cu²⁺、Fe²⁺，碳酸根通常产生碳酸盐沉淀，例如：
+For the Cu²⁺ and Fe²⁺ ions considered here, carbonate usually gives a carbonate precipitate, for example:
 
 $$\ce{[Cu(H2O)6]^{2+} + CO3^{2-} -> CuCO3(s) + 6H2O}.$$
 
-Al³⁺、Fe³⁺ 的水合离子酸性更强，碳酸根接受质子，形成氢氧化物沉淀和 CO₂。不能按形式电荷直接写成“水溶液中生成 Al₂(CO₃)₃”。
+Al³⁺ and Fe³⁺ aqua ions are more acidic. Carbonate accepts protons, giving a hydroxide precipitate and CO₂. Do not use formal charges alone to predict Al₂(CO₃)₃ in aqueous solution.
 
-### 真题：沉淀与气泡必须都写
+### Example 4 (self-written): predict Fe³⁺ with carbonate {#example-4}
+
+**Question:** should only a precipitate be recorded when carbonate is added to aqueous Fe³⁺? **Method:** consider acidity of the trivalent aqua ion: carbonate accepts protons and gives CO₂. **Model answer:** both a brown hydroxo precipitate and bubbles appear:
+
+$$\ce{2[Fe(H2O)6]^{3+} + 3CO3^{2-} -> 2Fe(H2O)3(OH)3(s) + 3H2O + 3CO2}.$$
+
+**Independent check:** both sides have Fe 2, C 3, O 21 and H 24, with total charge 0. Al³⁺ gives a white precipitate instead; Fe²⁺ in this lesson follows the carbonate-precipitation route, so do not reuse this trivalent acid–base equation mechanically.
+
+<span id="真题沉淀与气泡必须都写"></span>
+
+### Q5 — Authentic exam: report the precipitate and the bubbles {#q5}
 
 **OxfordAQA CH03 · June 2024 · 08.6 · 3 marks**
 
@@ -178,69 +252,140 @@ Al³⁺、Fe³⁺ 的水合离子酸性更强，碳酸根接受质子，形成�
 > Describe what is observed in this reaction. Write an equation.
 
 <details markdown="1">
-<summary>提示：Al³⁺ 水合离子的酸性会让 CO₃²⁻ 变成什么？</summary>
+<summary>Hint</summary>
 
-沉淀来自羟基配合物，同时还会生成气体。总反应的电荷要守恒。
+The precipitate is a hydroxo complex, and a gas is also produced. Check conservation of charge in the overall equation.
 
 </details>
 
 <details markdown="1">
-<summary>评分解析：MS 第 27 页</summary>
+<summary>Mark scheme and self-check</summary>
 
-白色沉淀，1 分；气泡／effervescence，1 分；正确方程式，1 分：
+MS pp. 27.
+
+White precipitate (1 mark); bubbles/effervescence (1 mark); correct equation (1 mark):
 
 $$\ce{2[Al(H2O)6]^{3+} + 3CO3^{2-} -> 2Al(H2O)3(OH)3(s) + 3H2O + 3CO2}.$$
 
-**复做：**把 Al³⁺ 改为 Fe³⁺，预测沉淀颜色；再改为 Fe²⁺，说明为什么不能保留同一条 CO₂ 生成式。
+**Reattempt:** replace Al³⁺ with Fe³⁺ and predict the precipitate colour. Then replace it with Fe²⁺ and explain why the same CO₂-producing equation cannot be retained.
 
 </details>
 
-<span id="identification"></span>
+<span id="i2rp9-离子鉴别与未知样品"></span>
 
-## I2：RP9 离子鉴别与未知样品
+## I2: RP9 identification and unknown samples {#identification}
 
-建立四栏记录：**试剂与加入量 → 观察 → 方程式 → 支持的结论**。每种试剂使用一份新的小样，避免前一步反应污染后一步。先记录原溶液颜色，再逐滴加试剂，最后才加到过量；明确使用的是 NaOH 还是 NH₃。
+Use four columns: **reagent and amount → observation → equation → supported conclusion**. Use a fresh small sample for each reagent to avoid contamination by earlier reactions. Record the initial solution colour, add reagent dropwise, then add an excess. Identify whether the reagent is NaOH or NH₃.
 
-**示范（自拟）：**未知溶液与少量 NaOH 生成白色沉淀，过量 NaOH 沉淀溶解；另取新样，加入过量 NH₃ 时白色沉淀不溶。在本页给出的四种候选离子中，这支持 Al³⁺。结论限定在候选范围内；不能断言全世界只有一种离子有这些现象。
+### Example 5 (self-written): eliminate candidates with two reagents {#example-5}
 
-**写 Observe 时不要写理论代替现象：**“发生配体取代”不是观察；“蓝色沉淀溶解，形成深蓝色溶液”才是。写 Explain 时再用配体、酸碱、氧化数和电荷密度解释原因。
+**Question:** the candidate ions are Cu²⁺, Fe²⁺, Fe³⁺ and Al³⁺. A little NaOH gives a white precipitate that dissolves in excess. A fresh sample gives a white precipitate with a little NH₃ that remains insoluble in excess. Identify the ion and explain the excess-NaOH stage.
 
-### 真题：检验游离 Ca²⁺ 是否被 EDTA 结合
+**Method:** eliminate candidates using colour and behaviour in excess reagent, rather than relying on one colour.
+
+1. The white precipitate fits Al³⁺ in this lesson, unlike blue Cu²⁺, green Fe²⁺ or brown Fe³⁺ precipitates.
+2. Dissolving in excess NaOH supports an amphoteric hydroxo precipitate. Insolubility in excess NH₃ gives a second observation consistent with Al³⁺.
+3. Use the balanced [amphoteric reaction](#q3) to explain excess NaOH: the product is a soluble negatively charged complex, not aluminium metal.
+
+**Answer:** Al³⁺ among these four candidates. **Independent check:** the alkali equation has Al 1, O 7 and H 10 on both sides and total charge −1 on both sides. Both fresh-sample tests support the conclusion. A different candidate list requires a fresh assessment; this is not a unique identification test for every possible ion.
+
+**For Observe, report what you can see:** “ligand substitution occurs” is an explanation. “The blue precipitate dissolves to give a deep blue solution” is an observation. For Explain, use ligands, acid–base reactions, oxidation states and charge density.
+
+<span id="真题检验游离-ca-是否被-edta-结合"></span>
+
+### Q6 — Authentic exam: test whether EDTA binds free Ca²⁺ {#q6}
 
 **OxfordAQA CH03 · June 2024 · 06.5 · 2 marks**
 
-原卷情境：加入 EDTA⁴⁻，将 Ca²⁺ 水合离子转为 Ca–EDTA 配合物。
+**Course note:** Original paper context: EDTA⁴⁻ converts Ca²⁺ aqua ions into a Ca–EDTA complex.
 
 > Describe a test-tube reaction to show that EDTA⁴⁻ has removed calcium ions from an aqueous sample of calcium chloride with a concentration of 0.100 mol dm⁻³.
 >
 > State the result of the test.
 
 <details markdown="1">
-<summary>提示：原本游离 Ca²⁺ 能与哪种试剂形成沉淀？</summary>
+<summary>Hint</summary>
 
-选择试剂后，还要写“没有发生什么”；不要只写“加 EDTA”。
+Choose a reagent, then state what does not happen. “Add EDTA” alone does not describe the test.
 
 </details>
 
 <details markdown="1">
-<summary>评分解析：MS 第 22 页</summary>
+<summary>Mark scheme and self-check</summary>
 
-加入 NaOH（MS 也接受可溶性碳酸盐），1 分；没有沉淀形成，1 分，因为没有足以产生该沉淀的游离 Ca²⁺。
+MS pp. 22.
 
-设计实际比较时可保留未加 EDTA 的 CaCl₂ 样品作阳性对照，确认试剂有效。这里的“removed”指游离离子被配位结合，不是钙元素离开了试管。
+Add NaOH (the MS also accepts a soluble carbonate) (1 mark); no precipitate forms (1 mark), because insufficient free Ca²⁺ remains to give that precipitate.
+
+For a practical comparison, keep an untreated CaCl₂ sample as a positive control to show that the reagent works. Here “removed” means that free ions are bound in a complex; calcium atoms have not left the test tube.
 
 </details>
 
-## CH03 综合复做
+<span id="ch03-综合复做"></span>
 
-这是**自拟复习清单**，没有官方分值。每项都先完成再查对应课程：
+## CH03 mixed reattempt {#mixed-reattempt}
 
-1. 画一个 Born–Haber 循环，写出各步状态、电子和系数。
-2. 从 $\Delta H$、$\Delta S$ 判断高温还是低温可行，解释为何这不保证反应快。
-3. 为两个半电池写电池表示、电子流向、总反应和 EMF。
-4. 对酸碱混合物先判断强酸剩余、强碱剩余、完全中和还是缓冲，再选择公式。
-5. 用结构与成键解释一种第三周期氧化物和一种氯化物。
-6. 从配体数推算配位数，解释颜色与螯合稳定性。
-7. 根据实验观察选择离子方程式；配平一个催化循环和一个氧化还原滴定。
+This is a **self-written revision checklist**, with no official marks. Attempt each item before checking the corresponding lesson:
 
-返回 [CH03 课程首页](/alevel/a2-chemistry/)，按错因选择需要重做的主题。
+1. Draw a Born–Haber cycle, including states, electrons and coefficients.
+2. Use $\Delta H$ and $\Delta S$ to decide whether high or low temperature favours feasibility, and explain why feasibility does not guarantee a fast reaction.
+3. For two half-cells, give cell notation, electron flow, the overall reaction and EMF.
+4. For an acid–base mixture, first decide whether strong acid remains, strong base remains, neutralisation is complete or a buffer forms; then select the formula.
+5. Use structure and bonding to explain the properties of a Period 3 oxide and chloride.
+6. Deduce coordination number from ligands, then explain colour and chelate stability.
+7. Select ionic equations from observations; balance a catalytic cycle and a redox titration.
+
+Return to the [CH03 course home](/alevel/a2-chemistry/) and choose a reattempt topic from your error diagnosis.
+
+## Practice and reattempt {#practice}
+
+Keep solutions closed and write an independent answer. Open the hint, then the mark scheme, only when needed.
+
+| Local question | Action to complete |
+| --- | --- |
+| [Q1](#q1), [Q2](#q2) | Explain acidity; distinguish comparisons of charge and radius |
+| [Q3](#q3) | Define amphoterism and give acid and alkali equations |
+| [Q4](#q4) | Describe and explain both stages with ammonia |
+| [Q5](#q5) | Report precipitate and bubbles; balance the equation |
+| [Q6](#q6) | Choose a reagent, negative result and positive control |
+
+### Q7 (self-written): use observations to correct the reaction classification {#q7}
+
+An unknown can contain only Cu²⁺, Fe²⁺, Fe³⁺ or Al³⁺. A little NH₃ gives a blue precipitate; excess NH₃ gives a deep blue solution. Give the observation and reaction type at each stage, and explain why this is not redox. No official marks are assigned.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Separate the amounts using the [method](#method), then compare copper oxidation states. Review [Q4](#q4) if needed.
+
+</details>
+
+<details markdown="1">
+<summary>Answer and self-check</summary>
+
+The ion is Cu²⁺ among the candidates. A little NH₃ acts as a base, forming a blue hydroxo precipitate. In excess it acts as a ligand; the precipitate dissolves to give a deep blue solution. Cu remains +2 at both stages, so colour change does not prove redox. Rewrite the two Q4 equations without looking: total charge is +2 on both sides of the first and 0 on both sides of the second. Check Cu, O, H and N independently, including NH₄⁺ and OH⁻.
+
+</details>
+
+## Quick reference and diagnosis {#quick-reference}
+
+| Key point | Check / exam trap |
+| --- | --- |
+| Acidity comes from water ligands | Charge density → O–H polarisation → H⁺ release; the metal ion itself contains no H |
+| A little NH₃ | Acts as a base and produces NH₄⁺; do not copy OH⁻ products |
+| Excess NaOH/NH₃ | The same precipitate may behave differently; see the [observation table](#hydroxide-ammonia) |
+| Amphoteric aluminium precipitate | Reacts with acid and alkali; Al remains after dissolution; see [Q3](#q3) |
+| Trivalent aqua ions with carbonate | Hydroxo precipitate and CO₂; balance atoms and charge |
+| RP9 conclusion | Fresh samples, initial colour, reagent amount, candidate range; use a control for negative results |
+
+| Error | Review | Reattempt |
+| --- | --- | --- |
+| Al³⁺ said to have a higher charge than Fe³⁺ | [Acidity](#aqua-acidity): compare radius at equal charge | [Q2](#q2) |
+| “Substitution occurs” given as an observation | [Identification](#identification): write the visible change first | [Q4](#q4), [Q7](#q7) |
+| Dissolution said to remove aluminium | [Example 5](#example-5): soluble complex formation | [Q3](#q3) |
+| A trivalent carbonate predicted; bubbles omitted | [Carbonate](#carbonate): consider acidity | [Q5](#q5) |
+| No precipitate said to prove removal of the element | [Q6](#q6): distinguish free ions from the total element | Add a fresh-sample positive control, then answer Q6 |
+
+**Completion check:** without the table, predict small/excess reagent observations for the four candidate ions, balance both Cu–NH₃ stages and give a bounded identification conclusion from two fresh samples.
+
+[Previous: Transition metals](/alevel/a2-chemistry/transition-metals/) · [Back to the CH03 course](/alevel/a2-chemistry/). After all six lessons, use the mixed checklist above to begin your next revision round.
