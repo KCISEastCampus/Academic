@@ -118,10 +118,10 @@ for (const slug of slugs) {
 }
 assert.equal(groups, 32);
 const subjects = read('_data/subjects.yml');
-assert(/id: a2chemistry\s+name: A2 Chemistry\s+name_zh: A2化学\s+icon:/.test(subjects));
+assert(/id: a2chemistry\s+name: A2 Chemistry\s+name_zh: A2 化学\s+icon:/.test(subjects));
 for (const prefix of ['', '/zh']) {
   const level = built(`${prefix}/alevel/`);
   assert(level.includes(`href="${prefix}/${course}/"`), 'Localized subject card');
-  assert(level.includes(prefix ? 'A2化学' : 'A2 Chemistry'), 'Localized subject name');
+  assert(level.includes(prefix ? 'A2 化学' : 'A2 Chemistry'), 'Localized subject name');
 }
 console.log('CH03 passed: independent exam calculations, atom/charge balance, 7 bilingual page pairs, 32 authentic exam groups, formulas, marks, anchors, source/image parity, closed answers and localized links.');
