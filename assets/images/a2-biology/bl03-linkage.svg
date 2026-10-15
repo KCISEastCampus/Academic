@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 475" role="img" aria-labelledby="title desc">
+<title id="title">Linked loci in coupling phase</title>
+<desc id="desc">One homologue carries A and B; the other carries a and b. In this AB/ab phase, AB and ab are parental gametes and Ab and aB are recombinants produced by crossing over. This is a teaching diagram, not a chromosome-scale map.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#334155"/></marker></defs>
+<rect width="600" height="475" rx="12" fill="#ffffff"/>
+<g font-family="Arial, sans-serif" font-size="20" fill="#172554" stroke-linecap="round" stroke-linejoin="round">
+
+<text x="24" y="36" font-size="25" font-weight="bold">Linked loci: AB / ab phase</text>
+<text x="24" y="84">Homologous chromosome pair</text>
+<path d="M80 150H520 M80 232H520" stroke="#334155" stroke-width="9"/>
+<circle cx="200" cy="150" r="10" fill="#ffffff" stroke="#334155" stroke-width="3"/>
+<circle cx="420" cy="150" r="10" fill="#ffffff" stroke="#334155" stroke-width="3"/>
+<circle cx="200" cy="232" r="10" fill="#ffffff" stroke="#334155" stroke-width="3"/>
+<circle cx="420" cy="232" r="10" fill="#ffffff" stroke="#334155" stroke-width="3"/>
+<text x="191" y="132" font-size="27">A</text><text x="411" y="132" font-size="27">B</text>
+<text x="192" y="269" font-size="27">a</text><text x="412" y="269" font-size="27">b</text>
+<text x="24" y="317">After meiosis, possible gamete combinations:</text>
+<rect x="24" y="339" width="263" height="80" rx="12" fill="#eff6ff" stroke="#1e40af" stroke-width="2"/>
+<text x="87" y="370">Parental</text><text x="103" y="402" font-size="25">AB, ab</text>
+<rect x="313" y="339" width="263" height="80" rx="12" fill="#fff7ed" stroke="#9a3412" stroke-width="2"/>
+<text x="371" y="370">Recombinant</text><text x="393" y="402" font-size="25">Ab, aB</text>
+<text x="24" y="455" font-size="16">Recombinants require exchange between the loci. Not to scale.</text>
+</g></svg>
