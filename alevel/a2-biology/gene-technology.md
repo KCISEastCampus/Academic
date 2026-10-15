@@ -122,11 +122,13 @@ Incomplete primer annealing, inhibitors, damaged template, declining enzyme acti
 </details>
 
 <!-- task:BL04-gene-technology-data -->
+
 | Reaction | Product at expected target size | Additional products |
 | --- | --- | --- |
 | Positive-control DNA | Present | Absent |
 | No-template control | Present | Absent |
 | Sample DNA | Present | Absent |
+
 <!-- /task:BL04-gene-technology-data -->
 
 <!-- task:BL04-G3 -->

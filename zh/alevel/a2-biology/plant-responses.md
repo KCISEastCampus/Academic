@@ -75,6 +75,7 @@ A root is placed horizontally in darkness. More IAA reaches its lower side. At t
 原实验使用初始长 20 mm 的茎尖，每皿十段，每个浓度只有一皿，48 小时后测伸长量。零处理表示**未外加 IAA**，不表示活茎尖内完全没有自身产生的 IAA。
 
 <!-- task:BL04-plant-responses-data -->
+
 | IAA concentration / mg dm−3 | Mean increase in shoot-tip length / mm |
 | --- | --- |
 | 0.00 | 1.4 |
@@ -82,6 +83,7 @@ A root is placed horizontally in darkness. More IAA reaches its lower side. At t
 | 0.10 | 2.3 |
 | 1.00 | 5.4 |
 | 10.00 | 6.9 |
+
 <!-- /task:BL04-plant-responses-data -->
 
 ![按表中数据绘制：零IAA对照单列为1.4毫米；对数浓度图只含0.01、0.10、1.00、10.00毫克每立方分米，对应平均伸长1.6、2.3、5.4、6.9毫米。](/assets/images/a2-biology/bl04-iaa-data.svg)

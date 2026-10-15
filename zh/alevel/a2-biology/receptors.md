@@ -5,7 +5,7 @@ mathjax: true
 grade: a2
 subject: a2-biology
 study_page: true
-toc_headings: h2
+toc_headings: 'h2, h3'
 lang: zh-CN
 permalink: /zh/alevel/a2-biology/receptors/
 translation_of: /alevel/a2-biology/receptors/
@@ -30,11 +30,11 @@ Name the structure that detects a stimulus and the structure that produces a res
 
 </details>
 
-## 三个神经元连接快速保护反射 {#responses}
+## 响应类型 {#responses}
+
+### 缩回反射 {#withdrawal-reflex}
 
 **反射（reflex）**是快速、自动的响应。在三神经元缩回反射中，皮肤感受器刺激**感觉神经元（sensory neurone）**，冲动进入脊髓，经突触传给**中间神经元（relay neurone）**，再经突触传给**运动神经元（motor neurone）**。运动冲动到达骨骼肌，引起收缩。信息也可上传大脑，但启动缩回不需要先作有意识的决定。缩短接触时间能减少组织损伤，却不保证完全无损伤。
-
-**趋性（taxis）**是整个生物相对于刺激方向的移动：正趋性朝向，负趋性远离。**非定向运动（kinesis）**则是速度或转向频率随刺激强度变化，移动方向并不固定指向刺激。两者都可能增加在适宜环境停留的时间，不需要动物先“知道哪里最好”。[植物向性](/zh/alevel/a2-biology/plant-responses/)依靠生长，区别于这些位置移动。
 
 <!-- task:BL04-R1 -->
 **R1 · Self-written / 自拟题**
@@ -55,6 +55,10 @@ Complete a three-neurone withdrawal reflex in the correct order, including both 
 感觉神经元 → 突触 → 中间神经元 → 突触 → 运动神经元，最终由肌肉执行。快速、不随意的缩回可以在有意识判断和主动行动之前缩短有害刺激的接触时间。
 
 </details>
+
+### 趋性与非定向运动 {#taxis-kinesis}
+
+**趋性（taxis）**是整个生物相对于刺激方向的移动：正趋性朝向，负趋性远离。**非定向运动（kinesis）**则是速度或转向频率随刺激强度变化，移动方向并不固定指向刺激。两者都可能增加在适宜环境停留的时间，不需要动物先“知道哪里最好”。[植物向性](/zh/alevel/a2-biology/plant-responses/)依靠生长，区别于这些位置移动。
 
 ## Pacinian 小体把形变转成电位变化 {#pacinian}
 

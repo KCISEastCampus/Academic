@@ -5,7 +5,7 @@ mathjax: true
 grade: a2
 subject: a2-biology
 study_page: true
-toc_headings: h2
+toc_headings: 'h2, h3'
 lang: en
 permalink: /alevel/a2-biology/receptors/
 ---
@@ -29,11 +29,11 @@ A receptor detects the stimulus; an effector produces the response. The contract
 
 </details>
 
-## Three neurones, a fast protective response {#responses}
+## Types of response {#responses}
+
+### Withdrawal reflex {#withdrawal-reflex}
 
 A reflex is a rapid, automatic response. In a three-neurone withdrawal reflex, a receptor in the skin stimulates a **sensory neurone**, which carries impulses into the spinal cord. It synapses with a **relay neurone**, which synapses with a **motor neurone**. Motor impulses reach a skeletal muscle and cause contraction. Information can also travel to the brain, but conscious decision is not needed to initiate withdrawal. Shortening the time of contact can reduce tissue damage; a reflex does not guarantee that no damage occurs.
-
-A **taxis** is movement of a whole organism in a direction related to a stimulus: positive towards, negative away. A **kinesis** changes speed or turning rate with stimulus intensity, without a movement direction fixed relative to the stimulus. Either can increase time spent in favourable conditions. Neither requires an animal to understand which habitat is “best”. Tropisms in [plants](/alevel/a2-biology/plant-responses/) involve growth rather than locomotion.
 
 <!-- task:BL04-R1 -->
 **R1 · Self-written / 自拟题**
@@ -54,6 +54,10 @@ Start with the neurone carrying information into the CNS; end with the neurone c
 Sensory neurone → synapse → relay neurone → synapse → motor neurone. The muscle is the final effector. A rapid involuntary withdrawal reduces exposure to a damaging stimulus before the slower process of conscious assessment and voluntary action.
 
 </details>
+
+### Taxis and kinesis {#taxis-kinesis}
+
+A **taxis** is movement of a whole organism in a direction related to a stimulus: positive towards, negative away. A **kinesis** changes speed or turning rate with stimulus intensity, without a movement direction fixed relative to the stimulus. Either can increase time spent in favourable conditions. Neither requires an animal to understand which habitat is “best”. Tropisms in [plants](/alevel/a2-biology/plant-responses/) involve growth rather than locomotion.
 
 ## A Pacinian corpuscle converts deformation into voltage {#pacinian}
 

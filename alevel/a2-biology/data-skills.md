@@ -178,6 +178,8 @@ SE = 5.0/5 = 1.0 cm; the interval is 12.0 ± 2.064 cm, approximately 9.94–14.0
 
 Use Spearman's rank correlation for paired observations when asking about a **monotonic association**: as one variable increases, the other tends to increase or tends to decrease, not necessarily along a straight line. Each row needs an appropriate independent observational unit. Inspect a scatterplot first: a U-shaped relationship may be strong while its Spearman coefficient is near zero. Correlation alone does not establish a causal mechanism.
 
+### No tied values {#spearman-no-ties}
+
 Rank each variable separately in the same direction, for example smallest = 1. With **no ties**, the shortcut below applies; $d_i$ is the difference between the two ranks in row $i$ and $n$ is the number of pairs.
 
 $$r_s=1-\frac{6\sum d_i^2}{n(n^2-1)}\quad\text{(no ties)}.$$
@@ -197,6 +199,8 @@ $$r_s=1-\frac{6(2)}{6(36-1)}=0.942857.$$
 
 This is a strong positive rank association. To make a significance decision, state the null hypothesis of no association, the alternative (either direction here) and a preselected significance level such as 0.05. Use a suitable critical value/table for this sample size and test direction, or a valid exact/permutation method. In this no-tie example, under independent, exchangeable pairings there are 720 rank permutations; 12 have an absolute coefficient at least this large. The exact two-sided p is 12/720 ≈ 0.0167, so reject that null at 5%. Soil moisture or another variable could still explain the association; nitrate causation is not proved.
 
+### Tied values {#spearman-ties}
+
 **Ties change the calculation.** Equal observations receive the mean of the ranks they occupy. For values 1, 2, 2, 4, the ranks are 1, 2.5, 2.5, 4. Do not break ties arbitrarily and do not insert these ranks into the no-ties shortcut as though it remained exact. The general Spearman coefficient is the Pearson correlation **of the ranks**, with average ranks for ties. This is a way to compute Spearman, not an extra requirement to study a separate Pearson testing course.
 
 $$r_s=\frac{\sum(R_i-\bar R)(S_i-\bar S)}{\sqrt{\sum(R_i-\bar R)^2\sum(S_i-\bar S)^2}}.$$
@@ -206,6 +210,8 @@ $$r_s=\frac{\sum(R_i-\bar R)(S_i-\bar S)}{\sqrt{\sum(R_i-\bar R)^2\sum(S_i-\bar 
 $$r_s=\frac{4.5}{\sqrt{4.5\times5}}=0.948683.$$
 
 For significance with ties, use an explicitly suitable method, such as permutation of the observed pairs under the null, preserving the tied values. A no-ties critical table is not automatically valid. If either variable is constant, all its ranks are equal and the coefficient is undefined. A reported software p-value also needs its method checked, especially for small samples.
+
+### Independent association task {#spearman-task}
 
 <!-- task:spearman-transfer -->
 **Self-written / 自拟题 · Independent association task**

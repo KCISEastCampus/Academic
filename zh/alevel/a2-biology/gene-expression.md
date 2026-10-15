@@ -81,11 +81,13 @@ Complete a typical RNA-interference chain: a small RNA associates with a protein
 下表是构造教学数据，相对单位以未处理对照为 100；并非临床实测或从官方试卷改编的数据。
 
 <!-- task:BL04-gene-expression-data -->
+
 | Treatment | Target mRNA / relative units | Target protein / relative units |
 | --- | --- | --- |
 | Untreated control | 100 | 100 |
 | A | 30 | 35 |
 | B | 95 | 25 |
+
 <!-- /task:BL04-gene-expression-data -->
 
 <!-- task:BL04-E2 -->

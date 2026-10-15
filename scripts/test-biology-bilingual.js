@@ -31,6 +31,10 @@ for (const slug of slugs) {
   assert.deepEqual(headings(zhBody), headings(enBody), slug + ': language-switch anchors');
   for (const [source, content] of [[en, enBody], [zh, zhBody]]) {
     const tree = headings(content);
+    const sourceHeadings = [...source.matchAll(/^(#{2,4}) .+?\{#([^}]+)\}\s*$/gm)].map(m => [m[1].length, m[2]]);
+    assert.deepEqual(tree, sourceHeadings, slug + ': rendered heading tree');
+    const sourceTables = (source.match(/^\|\s*:?-{3,}.*\|\s*$/gm) || []).length;
+    assert.equal((content.match(/<table\b/g) || []).length, sourceTables, slug + ': Markdown tables must render as tables');
     let previous = 1;
     for (const [level] of tree) {
       assert(level <= previous + 1, slug + ': skipped heading level');
@@ -43,15 +47,24 @@ for (const slug of slugs) {
       assert(/<h3\b[^>]*id="chi-model-task"[\s\S]*?<!-- task:chi-transfer -->/.test(content), 'chi transfer needs its own sibling section');
     }
     const parents = {
-      'data-skills': { 'chi-model-task': 'chi-squared' },
+      'data-skills': { 'spearman-no-ties': 'spearman', 'spearman-ties': 'spearman', 'spearman-task': 'spearman', 'chi-model-task': 'chi-squared' },
+      receptors: { 'withdrawal-reflex': 'responses', 'taxis-kinesis': 'responses' },
       'plant-responses': { direction: 'iaa', ethene: 'other-signals', aba: 'other-signals' },
       evolution: { 'selection-patterns': 'natural-selection' },
       'nutrient-cycles': { climate: 'carbon' }
     };
+    for (const id of Object.keys(parents[slug] || {})) {
+      assert(tree.some(([, headingId]) => headingId === id), slug + ': missing subtopic ' + id);
+    }
     let section;
     for (const [level, id] of tree) {
       if (level === 2) section = id;
       if (parents[slug]?.[id]) assert.equal(section, parents[slug][id], slug + ': wrong parent for ' + id);
+    }
+    if (slug === 'receptors') {
+      const reflex = content.split('id="withdrawal-reflex"')[1].split('<h3')[0];
+      assert(reflex.includes('<!-- task:BL04-R1 -->') && reflex.includes('<details'), 'reflex task and help must stay in the reflex section');
+      assert(!reflex.includes('<strong>taxis'), 'taxis definition must have its own section');
     }
   }
   assert.equal((zhBody.match(/<details/g) || []).length, (enBody.match(/<details/g) || []).length, slug + ': help parity');
@@ -83,4 +96,4 @@ near(2 * .004 * .996 * 340000000, 2709120);
 near(Math.PI * .5 ** 2 * 14 / 20 * 60, 32.98672286269283);
 assert(read(built('/alevel/')).includes('href="/alevel/a2-biology/"'), 'English subject card');
 assert(read(built('/zh/alevel/')).includes('href="/zh/alevel/a2-biology/"'), 'Chinese subject card');
-console.log(`PASS: ${slugs.length} Biology page pairs; formulas, tasks, anchors, help, links, image descriptions, navigation and numerical checks.`);
+console.log(`PASS: ${slugs.length} Biology page pairs; formulas, tasks, rendered tables, heading scope, anchors, help, links, image descriptions, navigation and numerical checks.`);

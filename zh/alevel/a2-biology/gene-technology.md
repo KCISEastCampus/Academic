@@ -123,11 +123,13 @@ $$t=8(20+25+40)+5\times60=980\ \text{s}=16\ \text{min}\ 20\ \text{s}.$$
 </details>
 
 <!-- task:BL04-gene-technology-data -->
+
 | Reaction | Product at expected target size | Additional products |
 | --- | --- | --- |
 | Positive-control DNA | Present | Absent |
 | No-template control | Present | Absent |
 | Sample DNA | Present | Absent |
+
 <!-- /task:BL04-gene-technology-data -->
 
 <!-- task:BL04-G3 -->

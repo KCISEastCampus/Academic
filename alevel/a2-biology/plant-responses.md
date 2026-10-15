@@ -74,6 +74,7 @@ More IAA on the lower side → less elongation there → upper side elongates mo
 The source investigation used 20 mm shoot tips, ten per dish, one dish at each concentration, and measured elongation after 48 hours. The zero treatment means **no added IAA**, not that the living tips contain no endogenous IAA.
 
 <!-- task:BL04-plant-responses-data -->
+
 | IAA concentration / mg dm−3 | Mean increase in shoot-tip length / mm |
 | --- | --- |
 | 0.00 | 1.4 |
@@ -81,6 +82,7 @@ The source investigation used 20 mm shoot tips, ten per dish, one dish at each c
 | 0.10 | 2.3 |
 | 1.00 | 5.4 |
 | 10.00 | 6.9 |
+
 <!-- /task:BL04-plant-responses-data -->
 
 ![Teaching plot of the table: a separate zero-IAA control is 1.4 mm; the log concentration plot contains only 0.01, 0.10, 1.00 and 10.00 mg per cubic decimetre, with mean elongations 1.6, 2.3, 5.4 and 6.9 mm.](/assets/images/a2-biology/bl04-iaa-data.svg)

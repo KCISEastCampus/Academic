@@ -80,11 +80,13 @@ Target mRNA → translation. The small RNA guides a protein complex to the RNA, 
 Constructed teaching data; relative units use the untreated control as 100. These are not measured clinical results or data adapted from an official paper.
 
 <!-- task:BL04-gene-expression-data -->
+
 | Treatment | Target mRNA / relative units | Target protein / relative units |
 | --- | --- | --- |
 | Untreated control | 100 | 100 |
 | A | 30 | 35 |
 | B | 95 | 25 |
+
 <!-- /task:BL04-gene-expression-data -->
 
 <!-- task:BL04-E2 -->

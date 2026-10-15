@@ -226,12 +226,12 @@ html[data-bs-theme="dark"] body.scheme-alevel #content-container h1::before {
   background: var(--accent-al);
 }
 
-/* H2: Topic level — medium bold, no block */
+/* Heading levels use type and spacing to show their scope. */
 #content-container h2 {
-  font-size: 1.35rem;
+  font-size: 1.65rem;
   color: var(--text);
-  margin-top: 1.75rem !important;
-  margin-bottom: 0.7rem !important;
+  margin-top: 2.75rem !important;
+  margin-bottom: 0.9rem !important;
   font-weight: 700;
   letter-spacing: -0.01em;
   padding: 0;
@@ -243,13 +243,12 @@ html[data-bs-theme="dark"] body.scheme-alevel #content-container h1::before {
   display: none;
 }
 
-/* H3: Chapter/topic level — plain text */
 #content-container h3 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: var(--text);
-  margin-top: 1.5rem !important;
+  margin-top: 1.8rem !important;
   margin-bottom: 0.6rem !important;
-  font-weight: 600;
+  font-weight: 700;
   padding: 0;
   border: none;
 }
@@ -261,37 +260,14 @@ html[data-bs-theme="dark"] body.scheme-alevel #content-container h1::before {
 #content-container h4 {
   font-size: 1.1rem;
   color: var(--text);
-  margin-top: 1.25rem !important;
-  margin-bottom: 0.7rem !important;
+  margin-top: 1.1rem !important;
+  margin-bottom: 0.5rem !important;
   font-weight: 600;
-  opacity: 0.95;
-  padding-left: 18px;
+  padding: 0;
 }
 
 #content-container h4::before {
-  width: 10px;
-  height: 3px;
-  border-radius: 2px;
-  background: var(--accent-ig);
-  opacity: 0.8;
-}
-
-body.scheme-igcse #content-container h4::before {
-  background: var(--accent-ig);
-}
-
-body.scheme-alevel #content-container h4::before {
-  background: var(--accent-al);
-}
-
-html[data-bs-theme="dark"] #content-container h4::before {
-  background: var(--accent-ig);
-  opacity: 0.75;
-}
-
-html[data-bs-theme="dark"] body.scheme-alevel #content-container h4::before {
-  background: var(--accent-al);
-  opacity: 0.75;
+  display: none;
 }
 
 #content-container h5 {
@@ -713,11 +689,23 @@ html[data-bs-theme="dark"] body > hr.shadow {
   }
   
   /* 移动端内容样式优化 */
-  #content-container h1,
-  #content-container h2,
-  #content-container h3,
+  #content-container h1 {
+    margin: 2rem 0 1rem !important;
+  }
+
+  #content-container h2 {
+    font-size: 1.5rem;
+    margin: 2.25rem 0 0.8rem !important;
+  }
+
+  #content-container h3 {
+    font-size: 1.25rem;
+    margin: 1.6rem 0 0.6rem !important;
+  }
+
   #content-container h4 {
-    margin: 0.8rem 0 0.5rem 0 !important;
+    font-size: 1.0625rem;
+    margin: 1.1rem 0 0.5rem !important;
   }
   
   #content-container p {
@@ -1462,11 +1450,13 @@ html[data-bs-theme="dark"] .image-modal-close:hover {
 
 #content-container table {
   width: 100%;
-  min-width: 620px;
+  min-width: 0;
   border-collapse: collapse;
   margin: 0;
   background: transparent;
 }
+
+#content-container table.wide-table { min-width: 42rem; }
 
 #content-container th,
 #content-container td {
@@ -1547,7 +1537,7 @@ body.scheme-alevel #content-container tbody tr:hover {
   }
 
   #content-container table {
-    min-width: 520px;
+    min-width: 0;
   }
 
   #content-container th,
@@ -2059,12 +2049,6 @@ body.study-page #content-container {
   max-width: min(76ch, 100%) !important;
   min-width: 0;
   box-sizing: border-box;
-}
-
-body.study-page #content-container h3 {
-  margin-top: 2.5rem;
-  padding-top: 1.25rem;
-  border-top: 1px solid var(--toc-divider-color);
 }
 
 body.study-page #content-container details {
