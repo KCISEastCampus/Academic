@@ -1,5 +1,5 @@
 ---
-title: A2 Chemistry
+title: A2化学
 layout: subjects
 mathjax: true
 lang: zh-CN

@@ -52,7 +52,7 @@
               {% when "a2-further-mathematics" %}
                 <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/alevel/a2-further-mathematics/" data-ui="further_pure_mathematics">{{ ui.further_pure_mathematics }}</a>
               {% when "a2-chemistry" %}
-                <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/alevel/a2-chemistry/">A2 Chemistry</a>
+                <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/alevel/a2-chemistry/">{% if page.lang == 'zh-CN' %}A2化学{% else %}A2 Chemistry{% endif %}</a>
               {% when "a2-physics" %}
                 <a href="/alevel/a2-physics/">A2 Physics</a>
               {% when "mechanics" %}

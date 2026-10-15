@@ -35,7 +35,7 @@ alevel:
     path: /alevel/a2-physics/
   - id: a2chemistry
     name: A2 Chemistry
-    name_zh: A2 Chemistry
+    name_zh: A2化学
     icon: "📕"
     path: /alevel/a2-chemistry/
   - id: mathematics
