@@ -134,7 +134,7 @@
       document.body.appendChild(this.button);
 
       // Cache the footer element to avoid querying it on every scroll
-      this.footer = document.querySelector('footer');
+      this.footer = document.querySelector('.site-footer');
 
       this.button.addEventListener('click', this.scrollToTop.bind(this));
       this.updatePosition = utils.throttle(this.updatePosition.bind(this), 16);
@@ -160,7 +160,7 @@
         const viewportBottom = window.innerHeight;
         const overlap = viewportBottom - footerRect.top + gap;
 
-        if (footerRect.top < viewportBottom) {
+        if (footerRect.top < viewportBottom && footerRect.bottom > 0) {
           bottomOffset = Math.max(baseBottom, overlap);
         }
       }
