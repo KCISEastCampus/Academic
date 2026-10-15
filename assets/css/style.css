@@ -692,11 +692,38 @@ div.highlight {
 
 /* Back to Top Button */
 .back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  background: var(--accent-al);
+  border: 3px solid var(--surface);
   visibility: hidden;
+  border-radius: 50%;
+  color: #ffffff;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(var(--accent-al-rgb), 0.25);
+  font-size: 1.35rem;
 }
 
 .back-to-top.visible {
+  opacity: 1;
   visibility: visible;
+}
+
+.back-to-top:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 16px rgba(var(--accent-al-rgb), 0.3);
+}
+
+.back-to-top:active {
+  transform: translateY(0) scale(0.98);
 }
 
 /* Fade In - simplified, no-op (animations handled by interactive_effects.js) */
@@ -815,6 +842,14 @@ div.highlight {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
+  .back-to-top {
+    bottom: 1.25rem;
+    left: 1.25rem;
+    width: 3.25rem;
+    height: 3.25rem;
+    font-size: 1.25rem;
+  }
+
   .scroll-progress {
     height: 2px;
   }

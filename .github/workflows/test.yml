@@ -28,6 +28,9 @@ jobs:
       - name: Test TOC refresh
         run: node scripts/test-toc-refresh.js
 
+      - name: Test back-to-top positioning
+        run: node scripts/test-back-to-top.js
+
       - name: Install markdownlint-cli
         run: npm install -g markdownlint-cli
 
