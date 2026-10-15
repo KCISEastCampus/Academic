@@ -16,6 +16,7 @@ for (const width of [390, 844, 1440]) {
     const nestedFooter = { getBoundingClientRect: () => ({ top: -500, bottom: -400 }) };
     const classes = new Set();
     const button = {
+      getBoundingClientRect: () => ({ height: 64 }),
       style: {},
       classList: { add: name => classes.add(name), remove: name => classes.delete(name) },
       setAttribute() {},
@@ -55,6 +56,17 @@ for (const width of [390, 844, 1440]) {
     backToTop.footer = null;
     backToTop.updatePosition();
     assert.equal(button.style.bottom, `${base}px`, 'Pages without a site footer still work');
+
+    backToTop.footer = siteFooter;
+    footer.top = -height;
+    footer.bottom = height;
+    backToTop.updatePosition();
+    assert.equal(
+      button.style.bottom,
+      `${height - 64}px`,
+      'Cap the offset so a tall footer cannot push the button offscreen'
+    );
+
     window.pageYOffset = 0;
     backToTop.toggleVisibility();
     assert.equal(classes.has('visible'), false);

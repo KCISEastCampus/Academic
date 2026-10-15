@@ -161,7 +161,8 @@
         const overlap = viewportBottom - footerRect.top + gap;
 
         if (footerRect.top < viewportBottom && footerRect.bottom > 0) {
-          bottomOffset = Math.max(baseBottom, overlap);
+          const maxOffset = Math.max(baseBottom, viewportBottom - this.button.getBoundingClientRect().height);
+          bottomOffset = Math.min(Math.max(baseBottom, overlap), maxOffset);
         }
       }
 
