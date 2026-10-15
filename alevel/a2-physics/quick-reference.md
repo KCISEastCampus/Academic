@@ -225,7 +225,7 @@ For a satellite in circular orbit around a planet of mass $M$:
 ### 3.2 Coulomb's Law
 
 The force magnitude between two point charges in a vacuum:
-$$F = \frac{|Q_1 Q_2|}{4\pi\varepsilon_0 r^2}$$
+$$F = \frac{\lvert Q_1 Q_2\rvert }{4\pi\varepsilon_0 r^2}$$
 * $\varepsilon_0$ = permittivity of free space $= 8.85 \times 10^{-12}$ C$^2$ N$^{-1}$ m$^{-2}$
 * $k = \frac{1}{4\pi\varepsilon_0} = 8.99 \times 10^9$ N m$^2$ C$^{-2}$
 * Like charges repel; unlike charges attract. Each experiences an equal and opposite force. Air can usually be treated as a vacuum.
@@ -234,7 +234,7 @@ $$F = \frac{|Q_1 Q_2|}{4\pi\varepsilon_0 r^2}$$
 
 $$E_r = \frac{Q}{4\pi\varepsilon_0 r^2}$$
 
-This is the signed radial component with outwards positive. The magnitude is $|Q|/(4\pi\varepsilon_0r^2)$; the field is outwards for a positive source and inwards for a negative source. Measure $r$ from the source charge, or from the centre of a spherically symmetric charged sphere for its outside field.
+This is the signed radial component with outwards positive. The magnitude is $\lvert Q\rvert /(4\pi\varepsilon_0r^2)$; the field is outwards for a positive source and inwards for a negative source. Measure $r$ from the source charge, or from the centre of a spherically symmetric charged sphere for its outside field.
 
 ### 3.4 Electric Potential
 
@@ -268,7 +268,7 @@ $$E = \frac{V}{d}$$
 | Property | Gravitational Field | Electric Field |
 |----------|-------------------|----------------|
 | Source | Mass | Charge |
-| Force law | $F = \frac{GMm}{r^2}$ (magnitude) | $F = \frac{|Q_1Q_2|}{4\pi\varepsilon_0 r^2}$ (magnitude) |
+| Force law | $F = \frac{GMm}{r^2}$ (magnitude) | $F = \frac{\lvert Q_1Q_2\rvert }{4\pi\varepsilon_0 r^2}$ (magnitude) |
 | Field strength | $g = \frac{GM}{r^2}$ (magnitude, inwards) | $E_r = \frac{Q}{4\pi\varepsilon_0 r^2}$ (outwards positive) |
 | Potential | $V = -\frac{GM}{r}$ | $V = \frac{Q}{4\pi\varepsilon_0 r}$ |
 | Potential energy | $E_p = -\frac{GMm}{r}$ | $E_p = \frac{Q_1Q_2}{4\pi\varepsilon_0 r}$ |
@@ -305,7 +305,7 @@ $$E = \frac{1}{2}QV = \frac{1}{2}CV^2 = \frac{Q^2}{2C}$$
 > Two point charges, $+4.0 \times 10^{-6}$ C and $-3.0 \times 10^{-6}$ C, are separated by 0.20 m. Calculate the force between them and state its nature.
 >
 > **Solution:**
-> 1. $F = \frac{1}{4\pi\varepsilon_0} \times \frac{|Q_1 Q_2|}{r^2} = 8.99 \times 10^9 \times \frac{4.0 \times 10^{-6} \times 3.0 \times 10^{-6}}{(0.20)^2}$
+> 1. $F = \frac{1}{4\pi\varepsilon_0} \times \frac{\lvert Q_1 Q_2\rvert }{r^2} = 8.99 \times 10^9 \times \frac{4.0 \times 10^{-6} \times 3.0 \times 10^{-6}}{(0.20)^2}$
 > 2. $F = 8.99 \times 10^9 \times \frac{1.2 \times 10^{-11}}{0.040} = 8.99 \times 10^9 \times 3.0 \times 10^{-10} = 2.7$ N
 > 3. The force is **attractive** (opposite charges).
 
@@ -525,8 +525,8 @@ The simple harmonic systems investigation is **AS required practical 4**. Moving
 
 | | Gravitational Field | Electric Field | Meaning |
 |---|---|---|---|
-| **Force magnitude** | $F = G\dfrac{Mm}{r^2}$ | $F = \dfrac{1}{4\pi\varepsilon_0}\dfrac{|Qq|}{r^2}$ | Non-negative force magnitude |
-| **Field-strength magnitude** | $g = \dfrac{GM}{r^2}$ | $E = \dfrac{|Q|}{4\pi\varepsilon_0 r^2}$ | State the direction separately |
+| **Force magnitude** | $F = G\dfrac{Mm}{r^2}$ | $F = \dfrac{1}{4\pi\varepsilon_0}\dfrac{\lvert Qq\rvert }{r^2}$ | Non-negative force magnitude |
+| **Field-strength magnitude** | $g = \dfrac{GM}{r^2}$ | $E = \dfrac{\lvert Q\rvert }{4\pi\varepsilon_0 r^2}$ | State the direction separately |
 | **Potential energy** | $E_p = -G\dfrac{Mm}{r}$ | $E_p = \dfrac{1}{4\pi\varepsilon_0}\dfrac{Qq}{r}$ | Energy due to position in the field |
 | **Potential** | $V = \dfrac{E_p}{m} = -\dfrac{GM}{r}$ | $V = \dfrac{E_p}{q} = \dfrac{Q}{4\pi\varepsilon_0 r}$ | Energy per unit mass / charge |
 | **Relation between field strength and potential** | $g_r = -\dfrac{dV}{dr}$ | $E_r = -\dfrac{dV}{dr}$ | Signed radial components; outwards positive |
@@ -548,7 +548,7 @@ The simple harmonic systems investigation is **AS required practical 4**. Moving
 * Gravitational force is **always attractive**; electric force can be **attractive or repulsive** (depending on the signs of the charges).
 * Gravitational potential is always **negative** (by convention, $V = 0$ at infinity); electric potential can be **positive or negative**.
 * Gravitational field is produced by **mass** (always positive); electric field is produced by **charge** (can be positive or negative).
-* For an electron and proton, the electric force is about $2.3\times10^{39}$ times the gravitational force. Compare $k|Qq|$ with $GMm$ for the actual particles; the numerical values of $k$ and $G$ alone cannot establish the force ratio because their units differ.
+* For an electron and proton, the electric force is about $2.3\times10^{39}$ times the gravitational force. Compare $k\lvert Qq\rvert $ with $GMm$ for the actual particles; the numerical values of $k$ and $G$ alone cannot establish the force ratio because their units differ.
 
 ---
 

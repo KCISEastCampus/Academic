@@ -103,6 +103,8 @@ $$\int6x(x^2+1)^2\,dx=\boxed{(x^2+1)^3+C}.$$
 
 **Question:** Find $\displaystyle\int x(x+2)^6\,dx$.
 
+**Source:** Illustrative example in [OxfordAQA Mathematics (9660) specification, P2.7, printed p. 23](https://www.oxfordaqa.com/wp-content/uploads/2023/10/oxfordaqa-a-level-mathematics-specification.pdf). The solution is written for this site.
+
 **Choice:** The derivative of $x+2$ is $1$, so the factor $x$ does not fit the standard form. Use the substitution $u=x+2$ to obtain a polynomial in $u$.
 
 **Working:** $u=x+2$, so $x=u-2$ and $du=dx$.

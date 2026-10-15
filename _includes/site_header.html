@@ -2,11 +2,12 @@
 <!-- Site header with logo and title -->
 <!-- Usage: include site_header.html with title="Page Title" subtitle="Page subtitle" parameters -->
 
+{% assign ui = site.data.ui[page.lang] | default: site.data.ui.en %}
 <header class="container text-center py-3" role="banner">
-  <a href="/" aria-label="Homepage">
-    <img src="https://www.kcisec.site/assets/images/school-logo.svg" 
-         alt="KangChiao International School East Campus Logo" 
-         class="img-fluid mb-2" 
+  <a href="{% if page.lang == 'zh-CN' %}/zh/{% else %}/{% endif %}" data-ui-aria="home_logo" aria-label="{{ ui.home_logo }}">
+    <img src="https://www.kcisec.site/assets/images/school-logo.svg"
+         data-ui-alt="school_logo" alt="{{ ui.school_logo }}"
+         class="img-fluid mb-2"
          style="max-width:120px;">
   </a>
   <h1 class="fs-2 display-5 mb-1">{{ include.title | default: "A-Level Homepage" }}</h1>
@@ -18,7 +19,7 @@
     <div class="search-wrapper d-flex align-items-center px-3 py-1">
       <i class="bi bi-search text-muted me-2"></i>
       <input type="text" id="search-input" class="form-control border-0 p-0 bg-transparent shadow-none"
-             placeholder="Search topics..." aria-label="Search"
+             data-ui-placeholder="search_topics" placeholder="{{ ui.search_topics }}" data-ui-aria="search" aria-label="{{ ui.search }}"
              data-search-source="{{ '/assets/search.json' | relative_url }}">
       <kbd class="search-kbd d-none d-sm-inline-flex">Ctrl+K</kbd>
     </div>

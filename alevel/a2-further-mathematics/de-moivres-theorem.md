@@ -696,7 +696,7 @@ $$\begin{aligned}
 
 $$t^4-10t^2+5=0$$
 
-and write down the other roots of this equation in trigonometrical form. **(3 marks)**
+and write down the three other roots of this equation in trigonometrical form. **(3 marks)**
 
 **c** Deduce that
 

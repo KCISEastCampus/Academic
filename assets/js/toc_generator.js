@@ -1,8 +1,19 @@
+const tocControllers = new WeakMap();
+
 function generateTOC() {
   const contentContainer = document.getElementById("content-container");
   const tocContent = document.querySelector(".toc-content");
 
   if (!contentContainer || !tocContent) return;
+
+  tocControllers.get(contentContainer)?.abort();
+  const controller = new AbortController();
+  tocControllers.set(contentContainer, controller);
+  const signal = controller.signal;
+  const focusedControl = tocContent.contains(document.activeElement) ? document.activeElement : null;
+  const focusedHref = focusedControl?.closest("li.toc-item")?.querySelector("a[data-toc-link]")?.getAttribute("href");
+
+  initTOCToggle(signal);
 
   const headings = Array.from(contentContainer.querySelectorAll(contentContainer.dataset.tocHeadings || "h1, h2, h3, h4"));
   if (headings.length === 0) {
@@ -14,6 +25,12 @@ function generateTOC() {
   tocContent.innerHTML = renderTOCTree(tree);
 
   const tocLinks = Array.from(tocContent.querySelectorAll("a[data-toc-link]"));
+  if (focusedHref) {
+    const link = tocLinks.find((link) => link.getAttribute("href") === focusedHref);
+    const control = focusedControl.classList.contains("toc-collapse")
+      ? link?.parentElement.querySelector(".toc-collapse") : link;
+    control?.focus({ preventScroll: true });
+  }
 
   // Cache links to avoid O(N) DOM querying on scroll events
   const tocLinkMap = new Map();
@@ -44,19 +61,21 @@ function generateTOC() {
     const targetElement = document.getElementById(targetId);
     if (!targetElement) return;
 
+    if (window.innerWidth <= 1024) toggleTOC(false);
+
     isProgrammaticScroll = true;
     targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
     history.replaceState(null, "", `#${targetId}`);
     setActiveLink(link, false);
 
+    if (!targetElement.hasAttribute("tabindex")) targetElement.setAttribute("tabindex", "-1");
+    targetElement.focus({ preventScroll: true });
+
     setTimeout(() => {
       isProgrammaticScroll = false;
     }, 700);
 
-    if (window.innerWidth <= 1024) {
-      toggleTOC(false);
-    }
-  });
+  }, { signal });
 
   window.addEventListener("scroll", () => {
     if (isProgrammaticScroll) return;
@@ -72,15 +91,12 @@ function generateTOC() {
     if (activeLink) {
       setActiveLink(activeLink, true);
     }
-  }, { passive: true });
+  }, { passive: true, signal });
 
   currentActiveId = setActiveFromHashOrTop(headings, tocLinkMap);
 
-  setTimeout(() => {
-    initTOCToggle();
-    initTOCSearch(tocLinks);
-    initReadingProgress();
-  }, 80);
+  initTOCSearch(tocLinks, signal);
+  initReadingProgress(signal);
 
   function setActiveLink(link, autoScrollInToc) {
     const nextActiveId = link.getAttribute("href").slice(1);
@@ -89,8 +105,12 @@ function generateTOC() {
     }
 
     currentActiveId = nextActiveId;
-    tocLinks.forEach((item) => item.classList.remove("active"));
+    tocLinks.forEach((item) => {
+      item.classList.remove("active");
+      item.removeAttribute("aria-current");
+    });
     link.classList.add("active");
+    link.setAttribute("aria-current", "location");
     expandAncestors(link.closest("li.toc-item"));
 
     if (autoScrollInToc && window.innerWidth > 1024) {
@@ -152,18 +172,20 @@ function buildTOCTree(headings) {
 }
 
 function renderTOCTree(nodes) {
+  let branchIndex = 0;
   const renderNodes = (list) => {
     let html = '<ul class="toc-tree">';
     list.forEach((node) => {
       const levelClass = `toc-h${node.level}`;
       const hasChildren = node.children.length > 0;
+      const branchId = hasChildren ? `toc-branch-${branchIndex++}` : "";
       const itemClass = hasChildren ? "toc-item has-children expanded" : "toc-item";
 
       html += `<li class="${itemClass} ${levelClass} toc-level-${node.level}">`;
       html += '<div class="toc-row">';
 
       if (hasChildren) {
-        html += `<button class="toc-collapse" type="button" aria-label="Collapse section" aria-expanded="true"></button>`;
+        html += `<button class="toc-collapse" type="button" data-ui-aria="collapse_section" aria-label="${document.documentElement.lang === 'zh-CN' ? '展开或收起章节' : 'Collapse section'}" aria-expanded="true" aria-controls="${branchId}"></button>`;
       } else {
         html += '<span class="toc-spacer" aria-hidden="true"></span>';
       }
@@ -172,7 +194,7 @@ function renderTOCTree(nodes) {
       html += "</div>";
 
       if (hasChildren) {
-        html += `<div class="toc-children">${renderNodes(node.children)}</div>`;
+        html += `<div id="${branchId}" class="toc-children">${renderNodes(node.children)}</div>`;
       }
 
       html += "</li>";
@@ -215,6 +237,7 @@ function setActiveFromHashOrTop(headings, tocLinkMap) {
 
   if (!activeLink) return null;
   activeLink.classList.add("active");
+  activeLink.setAttribute("aria-current", "location");
   expandAncestors(activeLink.closest("li.toc-item"));
   return targetId;
 }
@@ -252,65 +275,98 @@ function escapeHtml(value) {
     .replace(/'/g, "&#39;");
 }
 
-function initTOCToggle() {
+function initTOCToggle(signal) {
   const tocToggle = document.getElementById("tocToggle");
   const toc = document.getElementById("toc");
 
   if (!tocToggle || !toc) return;
 
-  tocToggle.replaceWith(tocToggle.cloneNode(true));
-  const newTocToggle = document.getElementById("tocToggle");
-  newTocToggle.setAttribute("aria-expanded", "false");
-  newTocToggle.setAttribute("aria-controls", "toc");
+  tocToggle.setAttribute("aria-controls", "toc");
+  const syncVisibility = () => toggleTOC(window.innerWidth <= 1024 && toc.classList.contains("show"), false);
+  syncVisibility();
+  window.addEventListener("resize", syncVisibility, { passive: true, signal });
 
-  newTocToggle.addEventListener("click", (event) => {
+  tocToggle.addEventListener("click", (event) => {
     event.preventDefault();
     event.stopPropagation();
     toggleTOC(!toc.classList.contains("show"));
-  });
+  }, { signal });
 
   document.addEventListener("click", (event) => {
     if (
       window.innerWidth <= 1024 &&
       toc.classList.contains("show") &&
       !toc.contains(event.target) &&
-      !newTocToggle.contains(event.target)
+      !tocToggle.contains(event.target)
     ) {
       toggleTOC(false);
     }
-  });
+  }, { signal });
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && toc.classList.contains("show")) {
+      event.preventDefault();
       toggleTOC(false);
+      tocToggle.focus({ preventScroll: true });
     }
-  });
+  }, { signal });
+
+  // Let Tab leave the non-modal drawer without leaving the page scroll-locked.
+  document.addEventListener("focusin", (event) => {
+    if (window.innerWidth <= 1024 && toc.classList.contains("show") &&
+        !toc.contains(event.target) && !tocToggle.contains(event.target)) {
+      toggleTOC(false, false);
+    }
+  }, { signal });
 }
 
-function toggleTOC(show) {
+function toggleTOC(show, focusOnOpen = true) {
   const toc = document.getElementById("toc");
   const tocToggle = document.getElementById("tocToggle");
 
   if (!toc || !tocToggle) return;
 
+  const mobile = window.innerWidth <= 1024;
+  show = mobile && show;
+  const wasOpen = toc.classList.contains("show");
+  const focusInTOC = toc.contains(document.activeElement);
+  const visible = !mobile || show;
+  toc.inert = !visible;
+  toc.setAttribute("aria-hidden", String(!visible));
+  tocToggle.setAttribute("aria-expanded", String(visible));
+  document.querySelectorAll(".subject-header, #content-container, footer, .back-to-top").forEach(element => {
+    element.inert = mobile && show;
+  });
+
   if (show) {
     toc.classList.add("show");
     tocToggle.classList.add("active");
     tocToggle.innerHTML = '<i class="bi bi-x" aria-hidden="true"></i>';
-    tocToggle.setAttribute("aria-expanded", "true");
-    if (window.innerWidth <= 1024) {
+    if (mobile) {
+      document.getElementById("siteNavLinks")?.classList.remove("show");
+      document.getElementById("siteNavToggle")?.setAttribute("aria-expanded", "false");
       document.body.style.overflow = "hidden";
+      document.body.classList.add("toc-open");
+      if (focusOnOpen && !wasOpen) {
+        const firstLink = Array.from(toc.querySelectorAll("a[data-toc-link]"))
+          .find(link => link.getClientRects().length > 0);
+        (firstLink || document.getElementById("tocSearch") || tocToggle).focus({ preventScroll: true });
+      }
     }
   } else {
     toc.classList.remove("show");
     tocToggle.classList.remove("active");
-    tocToggle.innerHTML = '<i class="bi bi-list" aria-hidden="true"></i>';
-    tocToggle.setAttribute("aria-expanded", "false");
-    document.body.style.overflow = "";
+    tocToggle.innerHTML = '<i class="bi bi-journal-text" aria-hidden="true"></i>';
+    if (wasOpen) document.body.style.overflow = "";
+    document.body.classList.remove("toc-open");
+    if (mobile && focusInTOC) tocToggle.focus({ preventScroll: true });
+    if (!mobile && document.activeElement === tocToggle) {
+      document.getElementById("tocSearch")?.focus({ preventScroll: true });
+    }
   }
 }
 
-function initTOCSearch(tocLinks) {
+function initTOCSearch(tocLinks, signal) {
   const searchInput = document.getElementById("tocSearch");
   const searchClear = document.getElementById("tocSearchClear");
   const tocContent = document.querySelector(".toc-content");
@@ -367,6 +423,11 @@ function initTOCSearch(tocLinks) {
     if (searchTerm) {
       matchedItems.forEach((item) => {
         expandAncestors(item);
+        let ancestor = item.parentElement?.closest("li.toc-item");
+        while (ancestor) {
+          ancestor.style.display = "";
+          ancestor = ancestor.parentElement?.closest("li.toc-item");
+        }
       });
     }
 
@@ -376,27 +437,26 @@ function initTOCSearch(tocLinks) {
         const msg = document.createElement("div");
         msg.id = "tocNoResults";
         msg.className = "toc-no-results";
-        msg.innerHTML = '<i class="bi bi-search"></i> No matches found';
+        msg.innerHTML = '<i class="bi bi-search"></i> <span data-ui="no_matches">' + (window.siteLanguage ? window.siteLanguage.text('no_matches') : (document.documentElement.lang === 'zh-CN' ? '没有匹配的目录项' : 'No matches found')) + '</span>';
         tocContent.appendChild(msg);
       }
     } else if (noResultsMsg) {
       noResultsMsg.remove();
     }
-  });
+  }, { signal });
 
   searchClear.addEventListener("click", () => {
     searchInput.value = "";
     searchInput.dispatchEvent(new Event("input"));
     searchInput.focus();
-  });
+  }, { signal });
 
   searchInput.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
       searchInput.value = "";
       searchInput.dispatchEvent(new Event("input"));
-      searchInput.blur();
     }
-  });
+  }, { signal });
 
   // Ctrl+K / Cmd+K to quickly focus TOC search (and open drawer if on mobile)
   document.addEventListener("keydown", (event) => {
@@ -413,10 +473,10 @@ function initTOCSearch(tocLinks) {
       searchInput.focus();
       searchInput.select();
     }
-  });
+  }, { signal });
 }
 
-function initReadingProgress() {
+function initReadingProgress(signal) {
   const progressBar = document.getElementById("readingProgress");
   const progressText = document.getElementById("progressText");
   const contentContainer = document.getElementById("content-container");
@@ -435,7 +495,7 @@ function initReadingProgress() {
   }
 
   // Update dimensions on resize
-  window.addEventListener("resize", updateDimensions, { passive: true });
+  window.addEventListener("resize", updateDimensions, { passive: true, signal });
 
   // Update dimensions if content changes (e.g. lazy loaded images)
   if (window.ResizeObserver) {
@@ -443,6 +503,7 @@ function initReadingProgress() {
     resizeObserver.observe(contentContainer);
     // Content can move when the header changes without changing its own size.
     resizeObserver.observe(document.body);
+    signal?.addEventListener("abort", () => resizeObserver.disconnect(), { once: true });
   }
 
   function updateProgress() {
@@ -480,7 +541,7 @@ function initReadingProgress() {
       });
       ticking = true;
     },
-    { passive: true }
+    { passive: true, signal }
   );
 
   updateDimensions();

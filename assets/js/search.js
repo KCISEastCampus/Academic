@@ -37,6 +37,21 @@
       .map(item => ({ title: item.title, url: item.url, excerpt: item.content }));
   }
 
+  function cleanExcerpt(value) {
+    const excerpt = String(value || '')
+      .replace(/<[^>]*>/g, ' ')
+      .replace(/\$\$[\s\S]*?\$\$|\$[^$\n]*\$|\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\)/g, ' ')
+      .replace(/\\(?:[A-Za-z]+|[,;!])/g, ' ')
+      .replace(/\s+([,.;!?])/g, '$1')
+      .replace(/([,.;!?])\s*[,.!?]+/g, '$1 ')
+      .replace(/\s+/g, ' ')
+      .trim();
+
+    // Pagefind may clip TeX mid-formula; hide fragments that still resemble source.
+    if (/\\[A-Za-z]+|[$\\{}^_]|\b[A-Za-z]\w*\s*=\s*[^.;!?]{1,50}/.test(excerpt)) return '';
+    return excerpt.slice(0, 120);
+  }
+
   let selectedResultIndex = -1;
 
   function updateSelectedResult() {
@@ -59,8 +74,10 @@
       searchResults.style.display = 'block';
       const noResult = document.createElement('div');
       noResult.classList.add('list-group-item');
-      noResult.textContent = 'No results found';
+      noResult.setAttribute('data-ui', 'no_matches');
+      noResult.textContent = window.siteLanguage ? window.siteLanguage.text('no_matches') : (document.documentElement.lang === 'zh-CN' ? '没有找到匹配结果' : 'No results found');
       searchResults.appendChild(noResult);
+      if (window.siteLanguage) window.siteLanguage.apply();
       return;
     }
 
@@ -75,32 +92,36 @@
       title.textContent = result.title;
       item.appendChild(title);
 
-      if (result.excerpt) {
+      const excerpt = cleanExcerpt(result.excerpt);
+      if (excerpt) {
         const snippet = document.createElement('small');
         snippet.classList.add('text-muted', 'd-block');
-        snippet.textContent = result.excerpt.slice(0, 120);
+        snippet.textContent = excerpt;
         item.appendChild(snippet);
       }
 
       searchResults.appendChild(item);
     });
+    if (window.siteLanguage) window.siteLanguage.apply();
   }
 
   let searchData = null;
   const searchUrl = searchInput.getAttribute('data-search-source') || '/search.json';
 
-  // Preload fallback search data (small). Keep the promise so a search issued
-  // before the data finishes loading can await it instead of flashing "No results".
-  const searchDataReady = fetch(searchUrl)
-    .then(r => r.ok ? r.json() : [])
-    .then(data => {
-      searchData = data.map(item => ({
-        ...item,
-        _lowerTitle: item.title ? item.title.toLowerCase() : '',
-        _lowerContent: item.content ? item.content.toLowerCase() : ''
-      }));
-    })
-    .catch(() => { searchData = []; });
+  let searchDataReady;
+  function loadSearchData() {
+    // Share the fallback download across searches, only when Pagefind is unavailable.
+    return searchDataReady ||= fetch(searchUrl)
+      .then(r => r.ok ? r.json() : [])
+      .then(data => {
+        searchData = data.map(item => ({
+          ...item,
+          _lowerTitle: item.title ? item.title.toLowerCase() : '',
+          _lowerContent: item.content ? item.content.toLowerCase() : ''
+        }));
+      })
+      .catch(() => { searchData = []; });
+  }
 
   let debounceTimer = null;
   let currentSearchId = 0;
@@ -134,19 +155,19 @@
           const results = dataResults.map(data => ({
             title: data.meta.title,
             url: data.url,
-            excerpt: data.excerpt ? data.excerpt.replace(/<[^>]*>/g, ' ').trim().slice(0, 120) : ''
+            excerpt: data.excerpt || ''
           }));
           renderResults(results);
         } else {
           // Pagefind unavailable: fall back to client-side filtering.
           // Wait for the data to finish loading so an early keystroke doesn't
           // render an empty result set just because search.json hadn't arrived.
-          await searchDataReady;
+          await loadSearchData();
           if (searchId !== currentSearchId) return;
           const results = fallbackSearch(query, searchData || []).map(item => ({
             title: item.title,
             url: item.url,
-            excerpt: item.excerpt ? item.excerpt.slice(0, 120) : ''
+            excerpt: item.excerpt || ''
           }));
           renderResults(results);
         }

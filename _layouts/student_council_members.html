@@ -1,8 +1,12 @@
 ---
 layout: none
 ---
+{% assign council_lang = page.lang | default: 'en' %}
+{% assign ui = site.data.ui[council_lang] | default: site.data.ui.en %}
+{% assign council_prefix = '' %}
+{% if council_lang == 'zh-CN' %}{% assign council_prefix = '/zh' %}{% endif %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ council_lang }}">
 
 <head>
   {% include head.html %}
@@ -11,20 +15,21 @@ layout: none
 
 <body>
   {% include nav.html %}
+  <a class="skip-link sr-only-focusable" href="#main-content">{{ ui.skip_content }}</a>
   <header class="council-hero" role="banner">
     <div class="container hero-shell">
-      <a href="/student-council/" class="page-back" aria-label="Back to Student Council">
+      <a href="{{ council_prefix }}/student-council/" class="page-back" aria-label="{{ ui.sc_back }}">
         <i class="bi bi-arrow-left"></i>
-        <span>Back to Student Council</span>
+        <span>{{ ui.sc_back }}</span>
       </a>
       <div class="hero-body">
         <div class="hero-icon">
           <i class="bi bi-people-fill"></i>
         </div>
         <div class="hero-text">
-          <p class="eyebrow">Members Directory</p>
-          <h1 class="hero-title">Current Student Council Members</h1>
-          <p class="hero-subtitle">Browse current members grouped by department.</p>
+          <p class="eyebrow">{{ ui.sc_directory }}</p>
+          <h1 class="hero-title">{{ ui.sc_current }}</h1>
+          <p class="hero-subtitle">{{ ui.sc_current_description }}</p>
         </div>
       </div>
     </div>
@@ -41,11 +46,11 @@ layout: none
       {% assign total_members = site.data.student_council.members | size | plus: leaders_count %}
       <div class="members-page-summary-card">
         <div class="members-page-summary-item">
-          <span class="label">Total Members</span>
+          <span class="label">{{ ui.sc_total }}</span>
           <span class="value">{{ total_members }}</span>
         </div>
         <div class="members-page-summary-item">
-          <span class="label">Departments</span>
+          <span class="label">{{ ui.sc_department_count }}</span>
           <span class="value">{{ site.data.student_council.groups | size }}</span>
         </div>
       </div>
@@ -66,20 +71,20 @@ layout: none
               <i class="bi {{ group.icon }}"></i>
             </div>
             <div class="members-page-card-title-wrap">
-              <h2 class="members-page-card-title">{{ group.name }}</h2>
-              <p class="members-page-card-subtitle">{{ group_member_count }} members</p>
+              <h2 class="members-page-card-title">{{ ui.sc_groups[group.name] | default: group.name }}</h2>
+              <p class="members-page-card-subtitle">{{ group_member_count }} {{ ui.sc_members_unit | downcase }}</p>
             </div>
           </div>
 
           {% if group_leader_display %}
-          <p class="members-page-leader"><span>Leader:</span> {{ group_leader_display }}</p>
+          <p class="members-page-leader"><span>{{ ui.sc_leader }}</span> {% include student-council/person-name.html name=group_leader_display lang=council_lang %}</p>
           {% endif %}
 
           <ul class="members-page-list">
             {% for member in group_members %}
             <li class="members-page-list-item">
-              <span class="name">{{ member.name }}</span>
-              <span class="group-pill">{{ group.name }}</span>
+              {% include student-council/person-name.html name=member.name lang=council_lang class="name" %}
+              <span class="group-pill">{{ ui.sc_groups[group.name] | default: group.name }}</span>
             </li>
             {% endfor %}
           </ul>

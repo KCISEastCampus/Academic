@@ -1,0 +1,218 @@
+en:
+  site_title: A-level Homepage
+  home: Home
+  timetable: Timetable
+  student_council: Student Council
+  contributors: Contributors
+  main_navigation: Main navigation
+  footer_navigation: Footer navigation
+  toggle_theme: Toggle theme
+  dark_theme: Dark theme
+  toggle_navigation: Toggle navigation menu
+  switch_language: 中文
+  switch_label: Read this page in Simplified Chinese
+  back_home: Back to homepage
+  pure_mathematics: A2 Pure Mathematics
+  further_pure_mathematics: A2 Further Pure Mathematics
+  contents: Contents
+  toggle_contents: Toggle Table of Contents
+  search_contents: Search contents...
+  search_label: Search table of contents
+  clear_search: Clear search
+  subject_index_intro: This page provides a Chinese topic index. The links below open the corresponding sections of the existing English notes. English exam terminology is retained alongside the Chinese topic names.
+  read_full_notes: Read the full notes
+  open_english_notes: Open English notes
+  view_english_notes: View English notes
+  choose_language: Choose interface language
+  back_to_top: Back to top
+  collapse_section: Collapse or expand section
+  no_matches: No matches found
+  loading_pdf: Loading PDF
+  copy_code: Copy code
+  copy_clipboard: Copy to clipboard
+  guide_contents: Contents for this page
+  guide_search_contents: Search this page's contents...
+  guide_search_label: Search this page's table of contents
+  home_logo: Homepage
+  search_topics: Search topics...
+  search: Search
+  school_logo: KangChiao International School East Campus Logo
+  homepage_title: A-level Homepage
+  homepage_subtitle: A platform for A-level Students in KCISEC
+  skip_content: Skip to main content
+  admissions_notes: TMUA & ESAT mathematics and physics notes
+  admissions_description: University admissions mathematics & physics notes
+  student_council_description: Student organization and activities
+  contributors_title: Meet our contributors
+  contributors_description: Meet the team behind these resources
+  alevel_description: OxfordAQA International A level
+  igcse_description: OxfordAQA International GCSE
+  alevel_badge: Advanced Level
+  igcse_badge: GCSE Level
+  study_materials: Study Materials
+  view_resources: 'View %subject% resources'
+  homepage: Homepage
+  back_main_page: Back to main page
+  grade_boundaries: Grade Boundaries
+  grade_boundaries_description: Check boundaries and compare across years
+  upcoming_exam: Upcoming Exam
+  exam_session: January 2027
+  next_examination: Next Scheduled Examination
+  exam_start_notice: Exact exam start times will be sent by your Homeroom Teacher.
+  duration: 'Duration:'
+  scheduled_papers: Scheduled Papers
+  oxfordaqa_subjects: OxfordAQA Subjects
+  official_session: Official Session
+  full_timetable: View Full Timetable
+  official_pdf: Official PDF
+  sc_back: "Back to Student Council"
+  sc_logo: "A-level Student Council logo"
+  sc_latest: "Latest News"
+  sc_all_news: "All News"
+  sc_view_news: "View All News"
+  sc_news_tags: "News tags"
+  sc_read: "Read Article"
+  sc_empty: "No news updates at the moment."
+  sc_departments: "Our Departments"
+  sc_executives: "Executive Team"
+  sc_directory: "Members Directory"
+  sc_directory_description: "See all current members."
+  sc_members_unit: "Members"
+  sc_view_members: "View Members"
+  sc_alumni: "First Session Alumni"
+  sc_alumni_intro: "Honor the inaugural A-level Student Council"
+  sc_view_alumni: "View Alumni"
+  sc_contact: "Get in Touch"
+  sc_contact_description: "Have ideas or want to join us? We'd love to hear from you!"
+  sc_current: "Current Student Council Members"
+  sc_current_description: "Browse current members grouped by department."
+  sc_total: "Total Members"
+  sc_department_count: "Departments"
+  sc_leader: "Leader:"
+  sc_inaugural: "Inaugural A-level Student Council"
+  sc_inaugural_description: "The pioneering team that established the A-level Student Council in"
+  sc_session: "Session"
+  sc_graduated: "Graduated"
+  sc_active: "Still Active"
+  sc_leadership: "Leadership Team"
+  sc_heads: "Department Heads"
+  sc_gratitude: "A Note of Gratitude"
+  sc_gratitude_description: "Their dedication and hard work established the foundation for student governance and academic support at KCISEC A-level. We are grateful for their contributions."
+  sc_archive: "News Archive"
+  sc_archive_description: "Browse all Student Council news by date and tag."
+  sc_by_tag: "News by Tag"
+  sc_by: "By"
+  sc_back_news: "Back to All News"
+  sc_groups: {"Academic": "Academic", "Events": "Events", "Publicity": "Publicity"}
+  sc_roles: {"President": "President", "Vice President": "Vice President", "Head of Events": "Head of Events", "Leader": "Leader", "Deputy Leader": "Deputy Leader", "Member": "Member"}
+  sc_tags: {"Administrative": "Administrative", "Academic": "Academic", "Events": "Events", "Publicity": "Publicity"}
+  sc_legacy_intro: "This page honors the first session of the A-level Student Council"
+zh-CN:
+  site_title: A-level 学习资源
+  home: 首页
+  timetable: 考试时间表
+  student_council: 学生会
+  contributors: 贡献者
+  main_navigation: 主导航
+  footer_navigation: 页脚导航
+  toggle_theme: 切换明暗主题
+  dark_theme: 深色主题
+  toggle_navigation: 展开或收起导航菜单
+  switch_language: English
+  switch_label: 阅读此页英文版
+  back_home: 返回首页
+  pure_mathematics: A2 纯数学
+  further_pure_mathematics: A2 高等纯数学
+  contents: 目录
+  toggle_contents: 展开或收起目录
+  search_contents: 搜索目录…
+  search_label: 搜索目录
+  clear_search: 清除搜索
+  subject_index_intro: 本页提供中文主题目录；下方链接打开现有英文笔记的对应章节。英文考试术语保留在主题名称旁，方便对照复习。
+  read_full_notes: 阅读完整笔记
+  open_english_notes: 打开英文版
+  view_english_notes: 查看英文笔记
+  choose_language: 选择界面语言
+  back_to_top: 返回顶部
+  collapse_section: 展开或收起本节
+  no_matches: 没有找到匹配结果
+  loading_pdf: 正在加载 PDF
+  copy_code: 复制代码
+  copy_clipboard: 复制到剪贴板
+  guide_contents: 本页目录
+  guide_search_contents: 搜索本页目录…
+  guide_search_label: 搜索本页目录
+  home_logo: 首页
+  search_topics: 搜索主题…
+  search: 搜索
+  school_logo: 昆山康桥学校校徽
+  homepage_title: A-level 学习资源
+  homepage_subtitle: 昆山康桥学校 A-Level 与 IGCSE 学习资源
+  skip_content: 跳到主要内容
+  admissions_notes: TMUA 与 ESAT 数学及物理笔记
+  admissions_description: 大学入学考试数学与物理笔记
+  student_council_description: 学生组织与校园活动
+  contributors_title: 认识贡献者
+  contributors_description: 认识参与建设这些资源的同学
+  alevel_description: OxfordAQA 国际 A-Level 学习资源
+  igcse_description: OxfordAQA 国际 GCSE 学习资源
+  alevel_badge: A-Level 课程
+  igcse_badge: GCSE 课程
+  study_materials: 学习资料
+  view_resources: '查看 %subject% 学习资源'
+  homepage: 首页
+  back_main_page: 返回网站首页
+  grade_boundaries: 等级分数线
+  grade_boundaries_description: 查看各年份分数线并进行比较
+  upcoming_exam: 近期考试
+  exam_session: 2027 年 1 月
+  next_examination: 下一场考试
+  exam_start_notice: 具体考试开始时间将由班主任通知。
+  duration: 考试时长：
+  scheduled_papers: 场考试
+  oxfordaqa_subjects: 门 OxfordAQA 学科
+  official_session: 官方考试季
+  full_timetable: 查看完整考试时间表
+  official_pdf: 官方 PDF
+  sc_back: "返回学生会"
+  sc_logo: "A-level 学生会标识"
+  sc_latest: "最新动态"
+  sc_all_news: "全部动态"
+  sc_view_news: "查看全部动态"
+  sc_news_tags: "新闻标签"
+  sc_read: "阅读全文"
+  sc_empty: "暂无新闻动态。"
+  sc_departments: "部门介绍"
+  sc_executives: "核心团队"
+  sc_directory: "成员名录"
+  sc_directory_description: "查看学生会现任成员。"
+  sc_members_unit: "人"
+  sc_view_members: "查看成员"
+  sc_alumni: "首届成员"
+  sc_alumni_intro: "致敬首届 A-level 学生会"
+  sc_view_alumni: "查看首届成员"
+  sc_contact: "联系我们"
+  sc_contact_description: "有想法或想加入我们？欢迎与我们联系！"
+  sc_current: "学生会现任成员"
+  sc_current_description: "按部门查看学生会现任成员。"
+  sc_total: "成员总数"
+  sc_department_count: "部门数量"
+  sc_leader: "组长："
+  sc_inaugural: "首届 A-level 学生会"
+  sc_inaugural_description: "创立 A-level 学生会的首届团队，任期为"
+  sc_session: "任期"
+  sc_graduated: "已毕业"
+  sc_active: "在校成员"
+  sc_leadership: "会长与副会长"
+  sc_heads: "部门负责人"
+  sc_gratitude: "致谢"
+  sc_gratitude_description: "首届成员的投入与努力，为康桥 A-level 的学生自治和学术支持奠定了基础。感谢他们为学生会作出的贡献。"
+  sc_archive: "新闻动态"
+  sc_archive_description: "按日期和标签浏览学生会的全部动态。"
+  sc_by_tag: "按标签浏览"
+  sc_by: "作者："
+  sc_back_news: "返回全部动态"
+  sc_groups: {"Academic": "学术组", "Events": "活动组", "Publicity": "宣传组"}
+  sc_roles: {"President": "会长", "Vice President": "副会长", "Head of Events": "活动组负责人", "Leader": "组长", "Deputy Leader": "副组长", "Member": "成员"}
+  sc_tags: {"Administrative": "会务", "Academic": "学术", "Events": "活动", "Publicity": "宣传"}
+  sc_legacy_intro: "此页纪念首届 A-level 学生会"

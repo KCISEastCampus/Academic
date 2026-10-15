@@ -1,25 +1,57 @@
 <!-- _includes/nav.html -->
 <!-- Global sticky navigation bar -->
-<nav class="site-nav" aria-label="Main navigation">
+{% assign ui = site.data.ui[page.lang] | default: site.data.ui.en %}
+{% assign home_url = '/' %}
+{% assign translated_home = site.pages | where: 'translation_of', '/' | where: 'lang', page.lang | first %}
+{% if translated_home %}{% assign home_url = translated_home.url %}{% endif %}
+{% if page.translation_of %}
+  {% assign translation = site.pages | where: 'url', page.translation_of | first %}
+{% else %}
+  {% assign translation = site.pages | where: 'translation_of', page.url | first %}
+{% endif %}
+<nav class="site-nav" data-site-ui lang="{{ page.lang | default: 'en' }}" data-ui-aria="main_navigation" aria-label="{{ ui.main_navigation }}">
   <div class="site-nav-inner">
-    <a href="/" class="site-nav-brand" aria-label="A-level Homepage">
+    <a href="{{ home_url | relative_url }}" class="site-nav-brand" data-ui-aria="site_title" aria-label="{{ ui.site_title }}">
       <span class="site-nav-logo">📚</span>
-      <span class="site-nav-title">A-level Homepage</span>
+      <span class="site-nav-title" data-ui="site_title">{{ ui.site_title }}</span>
     </a>
     <div class="site-nav-links" id="siteNavLinks">
-      <a href="/" class="site-nav-link {% if page.url == '/' %}active{% endif %}">Home</a>
-      <a href="/alevel/" class="site-nav-link {% if page.url contains '/alevel' %}active{% endif %}">A-Level</a>
-      <a href="/igcse/" class="site-nav-link {% if page.url contains '/igcse' %}active{% endif %}">IGCSE</a>
-      <a href="/timetable/" class="site-nav-link {% if page.url contains '/timetable' %}active{% endif %}">Timetable</a>
-      <a href="/student-council/" class="site-nav-link {% if page.url contains '/student-council' %}active{% endif %}">Student Council</a>
-      <a href="/contributors/" class="site-nav-link {% if page.url == '/contributors/' %}active{% endif %}">Contributors</a>
+      {% assign nav_urls = '/,/alevel/,/igcse/,/timetable/,/student-council/,/contributors/' | split: ',' %}
+      {% capture nav_labels %}{{ ui.home }}|A-Level|IGCSE|{{ ui.timetable }}|{{ ui.student_council }}|{{ ui.contributors }}{% endcapture %}
+      {% assign nav_labels = nav_labels | split: '|' %}
+      {% assign nav_keys = 'home,alevel,igcse,timetable,student_council,contributors' | split: ',' %}
+      {% assign current_url = page.translation_of | default: page.url %}
+      {% for nav_url in nav_urls %}
+        {% assign target_url = nav_url %}
+        {% assign translated_target = site.pages | where: 'translation_of', nav_url | where: 'lang', page.lang | first %}
+        {% if translated_target %}{% assign target_url = translated_target.url %}{% endif %}
+        {% assign active = false %}
+        {% if current_url == nav_url %}
+          {% assign active = true %}
+        {% elsif nav_url != '/' and current_url contains nav_url %}
+          {% assign active = true %}
+        {% endif %}
+        <a href="{{ target_url | relative_url }}" class="site-nav-link {% if active %}active{% endif %}" data-ui="{{ nav_keys[forloop.index0] }}">{{ nav_labels[forloop.index0] }}</a>
+      {% endfor %}
     </div>
     <div class="site-nav-actions">
-      <button class="site-nav-theme-btn" id="navThemeBtn" aria-label="Toggle theme" aria-pressed="false">
-        <i class="bi bi-moon-fill theme-icon-nav-moon"></i>
-        <i class="bi bi-sun-fill theme-icon-nav-sun"></i>
+      <select id="siteLanguage" class="site-language-select" data-ui-aria="choose_language" aria-label="{{ ui.choose_language }}" hidden>
+        <option value="en" lang="en"{% unless page.lang == 'zh-CN' %} selected{% endunless %}>English</option>
+        <option value="zh-CN" lang="zh-CN"{% if page.lang == 'zh-CN' %} selected{% endif %}>中文</option>
+      </select>
+      {% if translation %}
+      <a class="site-nav-link" id="languageSwitch" href="{{ translation.url | relative_url }}" lang="{{ translation.lang | default: 'en' }}" hreflang="{{ translation.lang | default: 'en' }}" aria-label="{{ ui.switch_label }}">{{ ui.switch_language }}</a>
+      {% endif %}
+      {% if include.show_toc %}
+      <button class="site-nav-theme-btn toc-toggle" id="tocToggle" type="button" data-ui-aria="toggle_contents" data-ui-title="contents" aria-label="{{ ui.toggle_contents }}" title="{{ ui.contents }}" aria-controls="toc" aria-expanded="false">
+        <i class="bi bi-journal-text" aria-hidden="true"></i>
       </button>
-      <button class="site-nav-toggle" id="siteNavToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      {% endif %}
+      <button class="site-nav-theme-btn" id="navThemeBtn" type="button" data-ui-aria="dark_theme" aria-label="{{ ui.dark_theme }}" aria-pressed="false">
+        <i class="bi bi-moon-fill theme-icon-nav-moon" aria-hidden="true"></i>
+        <i class="bi bi-sun-fill theme-icon-nav-sun" aria-hidden="true"></i>
+      </button>
+      <button class="site-nav-toggle" id="siteNavToggle" data-ui-aria="toggle_navigation" aria-label="{{ ui.toggle_navigation }}" aria-expanded="false">
         <i class="bi bi-list"></i>
       </button>
     </div>
@@ -31,10 +63,22 @@
     var toggle = document.getElementById('siteNavToggle');
     var links = document.getElementById('siteNavLinks');
     var navThemeBtn = document.getElementById('navThemeBtn');
+    var languageSwitch = document.getElementById('languageSwitch');
+    if (languageSwitch) {
+      languageSwitch.addEventListener('click', function() {
+        try { localStorage.setItem('site-language', languageSwitch.hreflang); } catch(e) {}
+        var target = new URL(languageSwitch.href);
+        target.search = window.location.search;
+        target.hash = window.location.hash;
+        languageSwitch.href = target.href;
+      });
+    }
 
     // Mobile menu toggle
     if (toggle && links) {
       toggle.addEventListener('click', function() {
+        if (typeof window.toggleTOC === 'function') window.toggleTOC(false);
+        toggle.focus();
         var expanded = toggle.getAttribute('aria-expanded') === 'true';
         toggle.setAttribute('aria-expanded', String(!expanded));
         links.classList.toggle('show');

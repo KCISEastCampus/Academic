@@ -1,68 +1,80 @@
 ---
 layout: none
 ---
+{% assign ui = site.data.ui[page.lang] | default: site.data.ui.en %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ page.lang | default: 'en' }}">
 
 <head>
   {% include head.html %}
-  {% include mathjax.html %}
+  {% include mathjax.html mathml=page.tmua_notes %}
+  {% if page.tmua_notes %}
+  <script src="/assets/js/tmua-math.js"></script>
+  <link rel="stylesheet" href="/assets/css/tmua-notes.css">
+  {% endif %}
   <link rel="stylesheet" href="/assets/css/subject.css">
   <script src="/assets/js/toc_generator.js"></script>
   <script src="/assets/js/image_modal.js"></script>
   <script src="/assets/js/table_wrapper.js"></script>
 </head>
 
-{% if page.url contains '/igcse/' %}
+{% if page.tmua_notes %}
+<body class="tmua-notes scheme-alevel">
+{% elsif page.url contains '/igcse/' %}
 <body class="scheme-igcse">
 {% elsif page.url contains '/alevel/' %}
 <body class="scheme-alevel{% if page.study_page %} study-page{% endif %}">
 {% else %}
 <body>
 {% endif %}
-  {% include nav.html %}
+  {% include nav.html show_toc=true %}
   <header class="subject-header">
     <div class="subject-header-inner">
       <div class="subject-header-text">
-        {% include breadcrumb.html %}
+        {% include breadcrumb.html skip_parent=page.breadcrumb_skip_parent %}
         <h1 class="subject-page-title">{{ page.title | default: site.title }}</h1>
+        {% if page.tmua_notes %}
+        <div class="notes-controls">
+          <p class="sub">{{ page.subtitle | escape }}</p>
+          <button id="mode-toggle" type="button">切换到简洁版</button>
+        </div>
+        {% endif %}
       </div>
     </div>
   </header>
 
-  <!-- TOC Toggle Button for Mobile -->
-  <button class="toc-toggle" id="tocToggle" type="button" aria-label="Toggle Table of Contents" aria-controls="toc" aria-expanded="false">
-    <i class="bi bi-list"></i>
-  </button>
-
   <div id="main-container">
     <div id="content-container" data-pagefind-body data-toc-headings="{{ page.toc_headings | default: 'h1, h2, h3, h4' }}">
-      {{ content }}
+      {% include lazy_content.html content=content %}
     </div>
-    <div id="toc" class="table-of-contents">
+    <div id="toc" class="table-of-contents" role="navigation" aria-labelledby="tocTitle" data-site-ui lang="{{ page.lang | default: 'en' }}">
       <div class="toc-header-fixed">
-        <h2 class="contents-list">Contents</h2>
-        
+        <h2 id="tocTitle" class="contents-list" data-ui="{% if page.cg50_stage %}guide_contents{% else %}contents{% endif %}">{% if page.cg50_stage %}本页目录{% else %}{{ ui.contents }}{% endif %}</h2>
+
+
         <!-- TOC Search Bar -->
         <div class="toc-search-container">
-          <input type="text" 
-                 id="tocSearch" 
-                 class="toc-search-input" 
-                 placeholder="Search contents..."
-                 aria-label="Search table of contents">
-          <button id="tocSearchClear" class="toc-search-clear" aria-label="Clear search" style="display: none;">
-            <i class="bi bi-x-circle"></i>
+          <input type="text"
+                 id="tocSearch"
+                 data-ui-placeholder="{% if page.cg50_stage %}guide_search_contents{% else %}search_contents{% endif %}"
+                 data-ui-aria="{% if page.cg50_stage %}guide_search_label{% else %}search_label{% endif %}"
+                 class="toc-search-input"
+                 placeholder="{% if page.cg50_stage %}搜索本页目录…{% else %}{{ ui.search_contents }}{% endif %}"
+                 aria-label="{% if page.cg50_stage %}搜索本页目录{% else %}{{ ui.search_label }}{% endif %}">
+          <button id="tocSearchClear" type="button" data-ui-aria="clear_search" class="toc-search-clear" aria-label="{{ ui.clear_search }}" style="display: none;">
+
+            <i class="bi bi-x-circle" aria-hidden="true"></i>
           </button>
         </div>
-        
+
         <!-- Reading Progress Bar -->
         <div class="reading-progress-container">
           <div class="reading-progress-bar" id="readingProgress"></div>
           <span class="reading-progress-text" id="progressText">0%</span>
         </div>
       </div>
-      
-      <div class="toc-content">
+
+      <div class="toc-content" lang="{{ page.lang | default: 'en' }}">
       </div>
     </div>
   </div>
@@ -70,7 +82,7 @@ layout: none
   {% include footer.html %}
 
   <script>
-    generateTOC();
+    {% unless page.tmua_notes %}generateTOC();{% endunless %}
   </script>
 
 </body>

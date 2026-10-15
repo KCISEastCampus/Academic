@@ -16,9 +16,30 @@
     document.documentElement.setAttribute('data-bs-theme', theme);
   })();
 </script>
+<script id="site-language-data" type="application/json">
+{
+  "ui": {{ site.data.ui | jsonify }},
+  "pairs": [
+    {% assign paired_pages = site.pages | where_exp: 'item', 'item.translation_of' %}
+    {% for item in paired_pages %}
+    {"en": {{ item.translation_of | relative_url | jsonify }}, "zh-CN": {{ item.url | relative_url | jsonify }}}{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+<script defer src="{{ '/assets/js/site-language.js' | relative_url }}"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 {% seo %}
+{% if page.translation_of %}
+  {% assign translation = site.pages | where: 'url', page.translation_of | first %}
+{% else %}
+  {% assign translation = site.pages | where: 'translation_of', page.url | first %}
+{% endif %}
+{% if translation %}
+<link rel="alternate" hreflang="{{ page.lang | default: 'en' }}" href="{{ page.url | absolute_url }}">
+<link rel="alternate" hreflang="{{ translation.lang | default: 'en' }}" href="{{ translation.url | absolute_url }}">
+{% endif %}
 <meta name="theme-color" content="#0b1220">
 
 <!-- Resource hints for performance -->
@@ -28,11 +49,13 @@
 <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 
 <!-- Preload critical resources -->
-<link rel="preload" href="/assets/vendor/bootstrap/5.3.3/css/bootstrap.min.css" as="style">
+<link rel="preload" href="/assets/vendor/bootstrap/5.3.3/css/bootstrap.min.css" as="style" crossorigin="anonymous">
 <link rel="preload" href="/assets/css/style.css" as="style">
 <!-- Preload MathJax for pages that need it -->
 {% if needs_mathjax %}
   <link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/tex-chtml-full.js" as="script">
+{% endif %}
+{% if page.mathjax %}
   <!-- Preload critical MathJax fonts to avoid late rendering -->
   <link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
   <link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff" as="font" type="font/woff" crossorigin="anonymous">
@@ -59,8 +82,11 @@
 
 <!-- Fonts -->
 <link href="/assets/css/fonts/maplemono.css" rel="stylesheet">
+<link href="/assets/css/fonts/chinese.css" rel="stylesheet">
 
+{% if page.content contains '```mermaid' or page.content contains 'language-mermaid' %}
 <script defer src="https://unpkg.com/mermaid@11.1.1/dist/mermaid.min.js"></script>
+{% endif %}
 
 <!-- Bootstrap JS: Load asynchronously after DOM ready - with CDN fallback -->
 <script>

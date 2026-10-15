@@ -81,7 +81,7 @@
     isHomePage: function() {
       // 检查URL路径是否为根路径或index
       const path = window.location.pathname;
-      return path === '/' || path === '/index.html' || path.endsWith('/index');
+      return path === '/' || path === '/index.html' || path === '/zh/' || path === '/zh/index.html' || path.endsWith('/index');
     }
   };
 
@@ -127,44 +127,18 @@
       if (document.querySelector('.back-to-top')) return;
 
       this.button = document.createElement('button');
-      this.button.className = 'back-to-top';
+      this.button.className = 'site-nav-theme-btn back-to-top';
       this.button.innerHTML = '<i class="bi bi-chevron-up"></i>';
-      this.button.setAttribute('aria-label', 'Back to top');
-      document.body.appendChild(this.button);
-
-      // Cache the footer element to avoid querying it on every scroll
-      this.footer = document.querySelector('footer');
+      this.button.setAttribute('data-ui-aria', 'back_to_top');
+      this.button.setAttribute('aria-label', document.documentElement.lang === 'zh-CN' ? '返回顶部' : 'Back to top');
+      (document.querySelector('.site-nav-actions') || document.body).appendChild(this.button);
 
       this.button.addEventListener('click', this.scrollToTop.bind(this));
-      this.updatePosition = utils.throttle(this.updatePosition.bind(this), 16);
       this.toggleVisibility = utils.throttle(this.toggleVisibility.bind(this), 100);
 
-      window.addEventListener('scroll', this.updatePosition, { passive: true });
       window.addEventListener('scroll', this.toggleVisibility, { passive: true });
-      window.addEventListener('resize', this.updatePosition, { passive: true });
 
-      this.updatePosition();
       this.toggleVisibility();
-    },
-
-    updatePosition: function() {
-      if (!this.button) return;
-
-      const baseBottom = window.innerWidth <= 768 ? 16 : 32;
-      const gap = 16;
-      let bottomOffset = baseBottom;
-
-      if (this.footer) {
-        const footerRect = this.footer.getBoundingClientRect();
-        const viewportBottom = window.innerHeight;
-        const overlap = viewportBottom - footerRect.top + gap;
-
-        if (footerRect.top < viewportBottom) {
-          bottomOffset = Math.max(baseBottom, overlap);
-        }
-      }
-
-      this.button.style.bottom = bottomOffset + 'px';
     },
 
     toggleVisibility: function() {
@@ -257,11 +231,9 @@
     },
 
     handleClick: function(e) {
+      if (e.defaultPrevented || e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
       const link = e.target.closest('a');
-      if (!link) return;
-
-      const href = (link.getAttribute('href') || '').toLowerCase();
-      if (!href.endsWith('.pdf')) return;
+      if (!link || !/\.pdf$/i.test(link.pathname)) return;
 
       if (link.classList.contains('loading-pdf')) {
         e.preventDefault();
@@ -269,24 +241,26 @@
       }
 
       link.classList.add('loading-pdf');
+      const originalBusy = link.getAttribute('aria-busy');
       link.setAttribute('aria-busy', 'true');
-      link.style.pointerEvents = 'none';
 
-      let loader = link.querySelector('.pdf-loader');
-      if (!loader) {
-        loader = document.createElement('span');
-        loader.className = 'pdf-loader';
-        loader.innerHTML = '<i class="bi bi-hourglass-split" aria-hidden="true"></i><span class="visually-hidden">Loading PDF</span>';
-        link.appendChild(loader);
-      }
+      const loader = document.createElement('span');
+      loader.className = 'pdf-loader';
+      loader.setAttribute('role', 'status');
+      loader.innerHTML = '<i class="bi bi-hourglass-split" aria-hidden="true"></i>';
+      const text = document.createElement('span');
+      text.setAttribute('data-ui', 'loading_pdf');
+      text.textContent = window.siteLanguage ? window.siteLanguage.text('loading_pdf') :
+        (document.documentElement.lang === 'zh-CN' ? '加载中...' : 'Loading...');
+      loader.appendChild(text);
+      link.appendChild(loader);
 
+      // shortcut: PDF navigation has no completion event; replace the timer if an inline viewer exposes load status.
       setTimeout(() => {
         link.classList.remove('loading-pdf');
-        link.removeAttribute('aria-busy');
-        link.style.pointerEvents = '';
-        if (loader && loader.parentElement === link) {
-          loader.remove();
-        }
+        if (originalBusy === null) link.removeAttribute('aria-busy');
+        else link.setAttribute('aria-busy', originalBusy);
+        loader.remove();
       }, 2000);
     }
   };
@@ -309,53 +283,73 @@
   const codeCopy = {
     init: function() {
       // 查找所有代码块
-      const codeBlocks = document.querySelectorAll('pre.highlight, .highlight > pre');
+      const codeBlocks = document.querySelectorAll('pre code');
       
       codeBlocks.forEach(block => {
+        const pre = block.closest('pre');
+        if (block.closest('.language-mermaid, .mermaid')) return;
         // 检查是否已经有复制按钮
-        if (block.querySelector('.copy-btn')) return;
+        if (pre.parentElement.classList.contains('code-wrapper') &&
+            pre.parentElement.querySelector('.copy-btn')) return;
         
         // 创建包装器（如果还没有）
-        let wrapper = block.parentElement;
+        let wrapper = pre.parentElement;
         if (!wrapper.classList.contains('code-wrapper')) {
           wrapper = document.createElement('div');
           wrapper.className = 'code-wrapper position-relative';
-          block.parentNode.insertBefore(wrapper, block);
-          wrapper.appendChild(block);
+          pre.parentNode.insertBefore(wrapper, pre);
+          wrapper.appendChild(pre);
         }
         
         // 创建复制按钮
         const btn = document.createElement('button');
+        btn.type = 'button';
         btn.className = 'btn btn-sm btn-outline-secondary copy-btn position-absolute top-0 end-0 m-2';
-        btn.innerHTML = '<i class="bi bi-clipboard"></i>';
-        btn.setAttribute('aria-label', 'Copy code');
-        btn.title = 'Copy to clipboard';
+        const chinese = (document.documentElement.dataset.uiLanguage || document.documentElement.lang) === 'zh-CN';
+        const label = chinese ? '复制代码' : 'Copy code';
+        btn.innerHTML = '<i class="bi bi-clipboard" aria-hidden="true"></i>';
+        btn.setAttribute('aria-label', label);
+        btn.title = label;
+        btn.setAttribute('data-ui-aria', 'copy_code');
+        btn.setAttribute('data-ui-title', 'copy_clipboard');
+        const status = document.createElement('span');
+        status.className = 'visually-hidden';
+        status.setAttribute('role', 'status');
         
         // 添加点击事件
-        btn.addEventListener('click', () => {
-          const code = block.innerText;
-          navigator.clipboard.writeText(code).then(() => {
-            // 成功反馈
-            const originalHTML = btn.innerHTML;
-            btn.innerHTML = '<i class="bi bi-check2"></i>';
+        btn.addEventListener('click', async () => {
+          btn.disabled = true;
+          const chinese = (document.documentElement.dataset.uiLanguage || document.documentElement.lang) === 'zh-CN';
+          btn.removeAttribute('data-ui-aria');
+          btn.removeAttribute('data-ui-title');
+          try {
+            await navigator.clipboard.writeText(block.textContent);
+            btn.innerHTML = '<i class="bi bi-check2" aria-hidden="true"></i>';
             btn.classList.remove('btn-outline-secondary');
             btn.classList.add('btn-success');
-            
-            setTimeout(() => {
-              btn.innerHTML = originalHTML;
-              btn.classList.remove('btn-success');
-              btn.classList.add('btn-outline-secondary');
-            }, 2000);
-          }).catch(err => {
-            console.error('Failed to copy:', err);
-            btn.innerHTML = '<i class="bi bi-x"></i>';
-            setTimeout(() => {
-              btn.innerHTML = '<i class="bi bi-clipboard"></i>';
-            }, 2000);
-          });
+            status.textContent = chinese ? '已复制' : 'Copied';
+          } catch (err) {
+            btn.innerHTML = '<i class="bi bi-x" aria-hidden="true"></i>';
+            status.textContent = chinese ? '复制失败，请选中代码手动复制' : 'Copy failed. Select the code and copy it manually.';
+          }
+          btn.title = status.textContent;
+          btn.setAttribute('aria-label', status.textContent);
+          setTimeout(() => {
+            btn.innerHTML = '<i class="bi bi-clipboard" aria-hidden="true"></i>';
+            btn.classList.remove('btn-success');
+            btn.classList.add('btn-outline-secondary');
+            btn.title = label;
+            btn.setAttribute('aria-label', label);
+            btn.setAttribute('data-ui-aria', 'copy_code');
+            btn.setAttribute('data-ui-title', 'copy_clipboard');
+            if (window.siteLanguage) window.siteLanguage.apply();
+            status.textContent = '';
+            btn.disabled = false;
+          }, 2000);
         });
         
         wrapper.appendChild(btn);
+        wrapper.appendChild(status);
       });
     }
   };
@@ -497,6 +491,7 @@
     loadingIndicator.init();
     keyboardNavigation.init();
     codeCopy.init();
+    if (window.siteLanguage) window.siteLanguage.apply();
     searchHighlight.init(); // 添加搜索高亮初始化
 
     if (CONFIG.ENABLE_DEBUG_LOGGING) {

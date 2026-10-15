@@ -1,0 +1,110 @@
+en:
+  description: OxfordAQA International AS & A-Level Exam Timetable for KCIS East Campus. January 2027 dates, codes, and durations.
+  skip_content: Skip to main content
+  breadcrumb: Breadcrumb
+  back_home: Back to Home
+  school: Kang Chiao International School · East Campus
+  title: Examination Timetable
+  subtitle: OxfordAQA International AS & A-Level · January 2027 Series (1X27)
+  official_pdf: Official Timetable (PDF)
+  notice_label: Exam notice
+  notice_title: "Notice on Exam Start Times:"
+  notice: Exact exam start times will be sent by your Homeroom Teacher.
+  notice_detail: Use this schedule to check examination dates, syllabus unit codes, and paper durations.
+  filters: Timetable filters
+  cohort_filter: Filter by cohort
+  all_papers: All Papers
+  as_grade: AS · Grade 11
+  a2_grade: A2 · Grade 12
+  subject_filter: Filter by subject
+  all_subjects: All Subjects
+  search_placeholder: Filter by code, subject, paper...
+  search_label: Search examinations
+  showing: Showing
+  of: of
+  scheduled_papers: scheduled papers
+  date_range: 05 Jan 2027 – 19 Jan 2027
+  view_label: Select timetable view
+  calendar: Calendar
+  list: List
+  loading_calendar: Loading examination calendar...
+  loading_schedule: Loading examination schedule...
+  confirmed: Oxford International AQA Examinations · Confirmed Timetable (1X27)
+  download_pdf: Download Timetable PDF
+  details: Exam Details
+  close_details: Close details
+  date: Date
+  duration: Duration
+  standard_timing: Standard timing
+  cohort: Cohort
+  series: Series
+  month: January 2027
+  pdf: Official PDF
+  close: Close
+  row_title: Click to view full paper details
+  view_details: View details for
+  empty_title: No examinations match your filter
+  empty_hint: Try selecting another cohort, subject, or clearing the search keyword.
+  paper: paper
+  papers: papers
+  examinations: examinations
+  series_label: 1X27 Series
+  weekdays: [Mon, Tue, Wed, Thu, Fri]
+  count_suffix: p
+  no_exams: No examinations scheduled on this date.
+  scheduled: scheduled
+zh-CN:
+  description: 康桥学校华东校区 OxfordAQA 国际 AS 与 A-Level 考试时间表，包含 2027 年 1 月考试日期、科目单元代码及考试时长。
+  skip_content: 跳转到主要内容
+  breadcrumb: 面包屑导航
+  back_home: 返回首页
+  school: 康桥学校 · 华东校区
+  title: 考试时间表
+  subtitle: OxfordAQA 国际 AS 与 A-Level · 2027 年 1 月考季（1X27）
+  official_pdf: 官方考试时间表（PDF）
+  notice_label: 考试提醒
+  notice_title: 关于考试开始时间：
+  notice: 具体考试开始时间将由班主任通知。
+  notice_detail: 请使用本表核对考试日期、科目单元代码及考试时长。
+  filters: 考试时间表筛选
+  cohort_filter: 按年级筛选
+  all_papers: 全部试卷
+  as_grade: AS · 11 年级
+  a2_grade: A2 · 12 年级
+  subject_filter: 按科目筛选
+  all_subjects: 全部科目
+  search_placeholder: 按代码、科目或试卷筛选…
+  search_label: 搜索考试
+  showing: 显示
+  of: / 共
+  scheduled_papers: 场考试
+  date_range: 2027 年 1 月 5 日 – 1 月 19 日
+  view_label: 选择时间表视图
+  calendar: 日历
+  list: 列表
+  loading_calendar: 正在加载考试日历…
+  loading_schedule: 正在加载考试安排…
+  confirmed: Oxford International AQA Examinations · 已确认考试时间表（1X27）
+  download_pdf: 下载考试时间表 PDF
+  details: 考试详情
+  close_details: 关闭详情
+  date: 日期
+  duration: 考试时长
+  standard_timing: 标准考试时长
+  cohort: 年级
+  series: 考季
+  month: 2027 年 1 月
+  pdf: 官方 PDF
+  close: 关闭
+  row_title: 点击查看完整试卷详情
+  view_details: 查看考试详情：
+  empty_title: 没有符合筛选条件的考试
+  empty_hint: 请尝试选择其他年级或科目，或清除搜索关键词。
+  paper: 场考试
+  papers: 场考试
+  examinations: 考试安排
+  series_label: 1X27 考季
+  weekdays: [周一, 周二, 周三, 周四, 周五]
+  count_suffix: 场
+  no_exams: 当天没有考试安排。
+  scheduled: 场考试

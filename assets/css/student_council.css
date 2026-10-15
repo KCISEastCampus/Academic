@@ -1,5 +1,13 @@
 /* Student Council Page - unified subpage styling (accent-page) */
 
+/* Use the CJK font's own line metrics in compact Chinese UI text. */
+html[lang="zh-CN"] :is(.news-tag, .archive-tag, .post-tag, .section-action,
+  .page-back, .post-back-button, .read-more-link, .member-role, .eyebrow,
+  .role-badge, .grade-badge) {
+  font-family: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC',
+    'Noto Sans SC', 'Academic Chinese Web', sans-serif;
+}
+
 /* ===== Hero Section ===== */
 .council-hero {
   position: relative;
@@ -1642,4 +1650,9 @@ html[data-bs-theme="light"] .hero-title {
     align-items: center;
     text-align: center;
   }
+}
+
+/* Chinese prose keeps the shared reading rhythm in bilingual news. */
+.post-content :is(p, li):lang(zh) {
+  line-height: var(--line-height-body);
 }

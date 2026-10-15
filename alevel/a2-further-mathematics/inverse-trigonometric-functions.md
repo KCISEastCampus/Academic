@@ -196,7 +196,7 @@ $$\begin{aligned}
 
 This derivative is defined for every real $x$, since its denominator is positive.
 
-**Check:** $z'(0)=1$, and $z'$ is zero at $x=\pm1$. For $y$, omitting the derivative of $2x$ would halve the answer.
+**Check:** $z^{\prime}(0)=1$, and $z^{\prime}$ is zero at $x=\pm1$. For $y$, omitting the derivative of $2x$ would halve the answer.
 
 ## Standard Integrals
 
@@ -703,9 +703,9 @@ This is our worked solution, checked against the [AQA mark scheme, Question 4](h
 | Inverse sine | $-\frac\pi2\le\sin^{-1}x\le\frac\pi2$ | $-1\le x\le1$ |
 | Inverse cosine | $0\le\cos^{-1}x\le\pi$ | $-1\le x\le1$ |
 | Inverse tangent | $-\frac\pi2<\tan^{-1}x<\frac\pi2$ | All real inputs; neither endpoint is reached |
-| Differentiate $\sin^{-1}u$ | $\frac{u'}{\sqrt{1-u^2}}$ | Include the inner derivative; $-1<u<1$ |
-| Differentiate $\cos^{-1}u$ | $-\frac{u'}{\sqrt{1-u^2}}$ | Keep the minus sign; $-1<u<1$ |
-| Differentiate $\tan^{-1}u$ | $\frac{u'}{1+u^2}$ | Check where $u$ is defined and differentiable |
+| Differentiate $\sin^{-1}u$ | $\frac{u^{\prime}}{\sqrt{1-u^2}}$ | Include the inner derivative; $-1<u<1$ |
+| Differentiate $\cos^{-1}u$ | $-\frac{u^{\prime}}{\sqrt{1-u^2}}$ | Keep the minus sign; $-1<u<1$ |
+| Differentiate $\tan^{-1}u$ | $\frac{u^{\prime}}{1+u^2}$ | Check where $u$ is defined and differentiable |
 | $\displaystyle\int\frac{\mathrm dx}{\sqrt{a^2-x^2}}$ | $\sin^{-1}(\frac xa)+C$ | $a>0$ and $-a<x<a$ |
 | $\displaystyle\int\frac{\mathrm dx}{a^2+x^2}$ | $\frac1a\tan^{-1}(\frac xa)+C$ | $a>0$; do not lose the factor $\frac1a$ |
 | Shifted or scaled quadratic | Complete the square, then substitute | Include the factor from $\mathrm dx$ |
@@ -718,4 +718,4 @@ This is our worked solution, checked against the [AQA mark scheme, Question 4](h
 
 The lesson follows FP2.7 of the [OxfordAQA Further Mathematics 9665 specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf). Worked examples are teaching material. Questions 6–8 retain the AQA questions and marks from the supplied textbook; our solutions use $+C$ for indefinite integrals.
 
-**Learning path:** [Previous: Polar Coordinates](/alevel/a2-further-mathematics/polar-coordinates/) · [Back to the course](/alevel/a2-further-mathematics/). The next topic is **Arc Length and Area of Surface of Revolution**, textbook Chapter 23.
+**Learning path:** [Previous: Polar Coordinates](/alevel/a2-further-mathematics/polar-coordinates/) · [Next: Arc Length and Surface Area](/alevel/a2-further-mathematics/arc-length-and-surface-area/) · [Back to the course](/alevel/a2-further-mathematics/).

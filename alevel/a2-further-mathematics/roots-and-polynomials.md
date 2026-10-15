@@ -211,7 +211,7 @@ For a cubic with real coefficients, there is at least one real root. The remaini
 
 To decide how many real roots there are, differentiate:
 
-- If $f'(x)$ is always positive or always negative, the cubic is strictly increasing or decreasing and has exactly one real root.
+- If $f^{\prime}(x)$ is always positive or always negative, the cubic is strictly increasing or decreasing and has exactly one real root.
 - If there are two stationary points and their function values have opposite signs, there are three distinct real roots.
 - If both stationary values are positive, or both are negative, there is exactly one real root.
 - If there are two stationary points and one stationary value is zero, there is a double root. Count it twice when using roots and coefficients.
@@ -340,11 +340,11 @@ The root $1-i$ also occurs. Division gives
 
 $$z^4-8z^3+31z^2-46z+34=(z^2-2z+2)(z^2-6z+17).$$
 
-The second quadratic has roots $3\pm2i$. The other three roots are
+The second quadratic is $(z-3)^2+8=0$, so its roots are $3\pm2\sqrt{2}i$. The other three roots are
 
-$$\boxed{1-i,\quad 3+2i,\quad 3-2i.}$$
+$$\boxed{1-i,\quad 3+2\sqrt{2}i,\quad 3-2\sqrt{2}i.}$$
 
-Their sum together with the given root is $8$, and their product is $2\times17=34$. Expanding the factors also checks the coefficients $31$ and $-46$.
+Substituting $z=3\pm2\sqrt{2}i$ gives $(z-3)^2+8=-8+8=0$, so both values make the original polynomial zero. Their sum together with the given root is $8$, and their product is $2(9+8)=34$. Expanding the factors also checks the coefficients $31$ and $-46$.
 
 </details>
 
@@ -384,7 +384,7 @@ Differentiate to establish the number of real roots. Then use the sign change an
 <details markdown="1">
 <summary>Solution and check</summary>
 
-For $f(x)=x^3+3x+2$, $f'(x)=3x^2+3>0$ for every real $x$. The cubic is strictly increasing and therefore has exactly one real root.
+For $f(x)=x^3+3x+2$, $f^{\prime}(x)=3x^2+3>0$ for every real $x$. The cubic is strictly increasing and therefore has exactly one real root.
 
 Since $f(-1)=-2$ and $f(0)=2$, continuity gives $-1<\alpha<0$.
 

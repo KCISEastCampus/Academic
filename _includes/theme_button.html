@@ -1,4 +1,4 @@
-<button id="theme_button" class="theme-toggle-btn" aria-label="Toggle theme" aria-pressed="false">
+<button id="theme_button" class="theme-toggle-btn" type="button" aria-label="{% if page.lang == 'zh-CN' %}深色主题（Light / Dark）{% else %}Dark theme (Light / Dark){% endif %}" aria-pressed="false">
   <span class="theme-icon-stack" aria-hidden="true">
     <i class="bi bi-moon theme-icon theme-icon-moon"></i>
     <i class="bi bi-sun theme-icon theme-icon-sun"></i>
@@ -172,7 +172,7 @@
     function getPreferredTheme() {
       try {
         const stored = localStorage.getItem('site-theme');
-        if (stored) return stored;
+        if (stored === 'light' || stored === 'dark') return stored;
         return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       } catch (e) {
         return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';

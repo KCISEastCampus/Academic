@@ -5,13 +5,13 @@
     <div class="header-content">
       <h2 id="upcoming-exams-heading" class="section-title">
         <i class="bi bi-calendar-check text-info"></i>
-        Upcoming Exam
+        <span data-ui="upcoming_exam">{{ ui.upcoming_exam }}</span>
       </h2>
-      <p class="section-subtitle">OxfordAQA International AS &amp; A-Level</p>
+      <p class="section-subtitle" lang="en">OxfordAQA International AS &amp; A-Level</p>
     </div>
     <span class="section-badge" style="--accent-rgb: 23, 162, 184; --accent-color: var(--info);">
       <i class="bi bi-clock-history"></i>
-      January 2027
+      <span data-ui="exam_session">{{ ui.exam_session }}</span>
     </span>
   </div>
 
@@ -22,33 +22,31 @@
     <div class="upcoming-exam-grid">
       <!-- Left Content -->
       <div class="upcoming-left-content">
-        <div class="upcoming-eyebrow">Next Scheduled Examination</div>
+        <div class="upcoming-eyebrow" data-ui="next_examination">{{ ui.next_examination }}</div>
         <div class="upcoming-title-wrap">
-          <h3 class="upcoming-exam-name">
+          <h3 class="upcoming-exam-name" lang="en">
             {{ next_exam.subject }} · {{ next_exam.paper }}
           </h3>
-          <span class="ledger-badge {% if next_exam.cohort == 'AS' %}cohort-as{% else %}cohort-a2{% endif %}">
+          <span lang="en" class="ledger-badge {% if next_exam.cohort == 'AS' %}cohort-as{% else %}cohort-a2{% endif %}">
             {{ next_exam.grade }}
           </span>
           <code class="unit-code">{{ next_exam.code }}</code>
         </div>
 
-        <p class="upcoming-teacher-hint">
-          Exact exam start times will be sent by your Homeroom Teacher.
-        </p>
+        <p class="upcoming-teacher-hint" data-ui="exam_start_notice">{{ ui.exam_start_notice }}</p>
 
         <div class="upcoming-meta-pills">
           <span class="upcoming-meta-pill">
             <i class="bi bi-clock"></i>
-            Duration: {{ next_exam.duration }}
+            <span data-ui="duration">{{ ui.duration }}</span> <span lang="en">{{ next_exam.duration }}</span>
           </span>
           <span class="upcoming-meta-pill">
             <i class="bi bi-calendar3"></i>
-            {{ exam_data.exams.size | default: 41 }} Scheduled Papers
+            {{ exam_data.exams.size | default: 41 }} <span data-ui="scheduled_papers">{{ ui.scheduled_papers }}</span>
           </span>
           <span class="upcoming-meta-pill">
             <i class="bi bi-book"></i>
-            9 OxfordAQA Subjects
+            {{ exam_data.subjects.size }} <span data-ui="oxfordaqa_subjects">{{ ui.oxfordaqa_subjects }}</span>
           </span>
         </div>
       </div>
@@ -56,17 +54,17 @@
       <!-- Right Actions & Date -->
       <div class="upcoming-right-action">
         <div class="upcoming-date-highlight">
-          <span class="upcoming-date-large">{{ next_exam.date_formatted }}</span>
-          <span class="upcoming-date-sub">{{ next_exam.day }} · Official Session</span>
+          <span class="upcoming-date-large"{% unless page.lang == 'zh-CN' %} lang="en"{% endunless %}>{% if page.lang == 'zh-CN' %}{{ next_exam.date | date: '%Y 年 %-m 月 %-d 日' }}{% else %}{{ next_exam.date_formatted }}{% endif %}</span>
+          <span class="upcoming-date-sub"><span{% unless page.lang == 'zh-CN' %} lang="en"{% endunless %}>{% if page.lang == 'zh-CN' %}{% assign weekday = next_exam.date | date: '%w' | plus: 0 %}{% assign weekdays = '星期日,星期一,星期二,星期三,星期四,星期五,星期六' | split: ',' %}{{ weekdays[weekday] }}{% else %}{{ next_exam.day }}{% endif %}</span> · <span data-ui="official_session">{{ ui.official_session }}</span></span>
         </div>
 
         <div class="d-flex flex-column gap-2 align-items-end">
           <a href="/timetable/" class="upcoming-cta-btn">
-            <span>View Full Timetable</span>
+            <span data-ui="full_timetable">{{ ui.full_timetable }}</span>
             <i class="bi bi-arrow-right"></i>
           </a>
           <a href="{{ exam_data.series_info.pdf_link | default: '/assets/pdf/exam-timetable-1X27.pdf' }}" class="btn btn-sm btn-link text-muted p-0" style="font-size: 0.76rem; text-decoration: none;" target="_blank" rel="noopener noreferrer">
-            <i class="bi bi-file-earmark-pdf me-1"></i> Official PDF
+            <i class="bi bi-file-earmark-pdf me-1"></i> <span data-ui="official_pdf">{{ ui.official_pdf }}</span>
           </a>
         </div>
       </div>

@@ -1,0 +1,150 @@
+stages:
+  - id: beginner
+    title: 初学
+    url: /alevel/fx-cg50/beginner/
+    description: 按键与输入
+  - id: advanced
+    title: 进阶
+    url: /alevel/fx-cg50/advanced/
+    description: 解题与应用
+  - id: further
+    title: 高数进阶
+    url: /alevel/fx-cg50/further-mathematics/
+    description: 数学与力学
+
+further_parts:
+  - title: 复数与代数
+    url: /alevel/fx-cg50/further-mathematics/
+  - title: 数值与微积分
+    url: /alevel/fx-cg50/further-mathematics/numerical-calculus/
+  - title: 力学扩展
+    url: /alevel/fx-cg50/further-mechanics/
+
+advanced_parts:
+  - title: 数学与统计
+    url: /alevel/fx-cg50/advanced/
+  - title: 力学
+    url: /alevel/fx-cg50/advanced/mechanics/
+
+mathematics_units:
+  - id: ma01
+    title: MA01 · P1
+    topics:
+      - anchor: ma01-distance
+        title: "联立方程后保留精确距离"
+        url: /alevel/fx-cg50/advanced/
+      - anchor: ma01-arithmetic
+        title: "等差数列：第几个月与累计多少"
+        url: /alevel/fx-cg50/advanced/
+      - anchor: ma01-binomial-expansion
+        title: "二项展开：组合数核对系数"
+        url: /alevel/fx-cg50/advanced/
+      - anchor: ma01-geometric
+        title: "等比级数：有穷和与收敛条件"
+        url: /alevel/fx-cg50/advanced/
+      - anchor: ma01-area
+        title: "交点、负积分与几何面积"
+        url: /alevel/fx-cg50/advanced/
+      - anchor: ma01-trapezium
+        title: "梯形法：先数小区间，再加权"
+        url: /alevel/fx-cg50/advanced/
+  - id: ma02
+    title: MA02 · PSM1
+    topics:
+      - anchor: ma02-trig
+        title: "三角方程：主值之后找全解"
+        url: /alevel/fx-cg50/advanced/
+      - anchor: ma02-binomial
+        title: "二项概率：单点与严格右尾"
+        url: /alevel/fx-cg50/advanced/
+      - anchor: ma02-expectation
+        title: "离散期望：把概率权重输入成频数"
+        url: /alevel/fx-cg50/advanced/
+      - anchor: ma02-pulley
+        title: "连接粒子：先选两边的正方向"
+        url: /alevel/fx-cg50/advanced/mechanics/
+      - anchor: ma02-motion
+        title: "速度函数：最大值、平均速率与分段距离"
+        url: /alevel/fx-cg50/advanced/mechanics/
+  - id: ma03
+    title: MA03 · P2
+    topics:
+      - anchor: ma03-midordinate
+        title: "中矩形法：五个小区间对应五个中点"
+        url: /alevel/fx-cg50/advanced/
+      - anchor: ma03-iteration
+        title: "指定迭代：每一步保留内部精度"
+        url: /alevel/fx-cg50/advanced/
+      - anchor: ma03-simpson
+        title: "Simpson 法：偶数小区间与交替权重"
+        url: /alevel/fx-cg50/advanced/
+      - anchor: ma03-vectors
+        title: "向量：分清方向、模长与锐角"
+        url: /alevel/fx-cg50/advanced/
+      - anchor: ma03-volume
+        title: "旋转体：平方整个函数，答案保留 exact"
+        url: /alevel/fx-cg50/advanced/
+      - anchor: ma03-parametric
+        title: "参数曲线：分别求导，再相除"
+        url: /alevel/fx-cg50/advanced/
+  - id: ma04
+    title: MA04 · S2
+    topics:
+      - anchor: ma04-binomial-test
+        title: "二项临界区：检查边界及相邻值"
+        url: /alevel/fx-cg50/advanced/
+      - anchor: ma04-poisson
+        title: "泊松概率：换算时间，处理严格区间"
+        url: /alevel/fx-cg50/advanced/
+      - anchor: ma04-exponential
+        title: "指数等待时间与泊松近似"
+        url: /alevel/fx-cg50/advanced/
+      - anchor: ma04-density
+        title: "分段密度：积分给出概率和矩"
+        url: /alevel/fx-cg50/advanced/
+      - anchor: ma04-z-test
+        title: "z 检验：标准误不是单个数据的标准差"
+        url: /alevel/fx-cg50/advanced/
+      - anchor: ma04-t-test
+        title: "t 检验：使用样本标准差和自由度"
+        url: /alevel/fx-cg50/advanced/
+      - anchor: ma04-sample-size
+        title: "反求分位数，再决定整数样本量"
+        url: /alevel/fx-cg50/advanced/
+  - id: ma05
+    title: MA05 · M2
+    topics:
+      - anchor: ma05-power
+        title: "功率与变阻力：先统一 W 和 kW"
+        url: /alevel/fx-cg50/advanced/mechanics/
+      - anchor: ma05-friction
+        title: "摩擦：保留角度精度，再算摩擦系数"
+        url: /alevel/fx-cg50/advanced/mechanics/
+      - anchor: ma05-circular
+        title: "圆周运动：摩擦提供向心力"
+        url: /alevel/fx-cg50/advanced/mechanics/
+      - anchor: ma05-conical-pendulum
+        title: "圆锥摆：半径与绳长分别使用"
+        url: /alevel/fx-cg50/advanced/mechanics/
+      - anchor: ma05-energy
+        title: "能量接抛体：离开斜面时的速度作初始条件"
+        url: /alevel/fx-cg50/advanced/mechanics/
+      - anchor: ma05-projectile
+        title: "抛体：二次方程的两个根对应两次经过"
+        url: /alevel/fx-cg50/advanced/mechanics/
+      - anchor: ma05-moments
+        title: "力矩：每个力乘自己的垂直距离"
+        url: /alevel/fx-cg50/advanced/mechanics/
+      - anchor: ma05-centre-of-mass
+        title: "组合质心：先算质量加权坐标"
+        url: /alevel/fx-cg50/advanced/mechanics/
+      - anchor: ma05-collision
+        title: "碰撞：动量带方向，动能取平方"
+        url: /alevel/fx-cg50/advanced/mechanics/
+      - anchor: ma05-vector-motion
+        title: "向量运动：积分常数由初始条件决定"
+        url: /alevel/fx-cg50/advanced/mechanics/
+
+legacy_anchors:
+  beginner: [reading-keys, chapter-1, section-1, task-1, task-2, section-4, section-5, chapter-2, task-3, task-4, task-5, section-9, task-6, section-11, chapter-3, task-7, task-8, section-14, task-9, task-10, task-11, section-18, task-12, task-13, task-14, section-22]
+  advanced: [chapter-4, task-15, task-16, task-17, chapter-5, task-18, task-19, chapter-6, task-20, task-21, chapter-7, task-22, task-23, chapter-8, task-24, task-25, chapter-9, task-26, task-27, task-28, task-29, chapter-10, task-30, task-31]

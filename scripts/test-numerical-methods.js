@@ -45,9 +45,17 @@ close(simpson([0,.5,1,1.5,2].map(Math.exp),.5),6.391210186666918);
 close(simpson([1,1.4,2.1,3.5,5.2],.5),5);
 close(simpson([0,.5,1,1.5,2].map(x=>x**3),.5),4);
 assert.throws(()=>simpson([0,1,4,9],1));
+for (const [estimate,exact,expected] of [
+  [n=>midpoint(x=>x*x,0,2,n),8/3,2.65625],
+  [n=>midpoint(Math.log,1,3,n),3*Math.log(3)-2,1.2975640130337196],
+  [n=>simpson(Array.from({length:n+1},(_,i)=>Math.exp(2*i/n)),2/n),Math.exp(2)-1,6.389193725416423]
+]) {
+  close(estimate(8),expected);
+  assert(Math.abs(estimate(8)-exact)<Math.abs(estimate(4)-exact),'Finer strips should reduce the error in this example');
+}
 assert(!/[\u3400-\u9fff]/u.test(source));
 assert.equal((source.match(/^### Example /gm)||[]).length,6);
 assert.equal((source.match(/^### Q\d/gm)||[]).length,6);
 const html=fs.readFileSync(path.join(root,'_site/alevel/a2-mathematics/numerical-methods/index.html'),'utf8');
 assert.equal((html.match(/<details\b/g)||[]).length,12);
-console.log('Numerical methods passed: root brackets, displayed iterations, divergence, convergence, midpoint/Simpson estimates and 12 practice disclosures.');
+console.log('Numerical methods passed: root brackets, displayed iterations, divergence, convergence, midpoint/Simpson estimates, 3 refinement comparisons and 12 practice disclosures.');

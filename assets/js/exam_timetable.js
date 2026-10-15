@@ -19,6 +19,8 @@
 
   if (!root || !dataNode) return;
 
+  var ui = JSON.parse(document.getElementById('exam-timetable-ui').textContent);
+  var locale = document.documentElement.lang === 'zh-CN' ? 'zh-CN' : 'en-GB';
   var timetableData;
   try {
     timetableData = JSON.parse(dataNode.textContent);
@@ -92,10 +94,11 @@
     if (modalExamSubject) modalExamSubject.textContent = exam.subject;
     if (modalExamPaper) modalExamPaper.textContent = exam.paper;
     if (modalExamTitle) modalExamTitle.textContent = exam.title;
-    if (modalExamDate) modalExamDate.textContent = exam.date_formatted;
-    if (modalExamDay) modalExamDay.textContent = exam.day;
+    var examDate = new Date(exam.date + 'T12:00:00');
+    if (modalExamDate) modalExamDate.textContent = new Intl.DateTimeFormat(locale, { day: '2-digit', month: 'long', year: 'numeric' }).format(examDate);
+    if (modalExamDay) modalExamDay.textContent = new Intl.DateTimeFormat(locale, { weekday: 'long' }).format(examDate);
     if (modalExamDuration) modalExamDuration.textContent = exam.duration;
-    if (modalExamGrade) modalExamGrade.textContent = exam.grade + ' · ' + (isA2 ? 'A2 Level' : 'AS Level');
+    if (modalExamGrade) modalExamGrade.textContent = isA2 ? ui.a2_grade : ui.as_grade;
 
     modalBackdrop.classList.add('is-open');
     modalBackdrop.setAttribute('aria-hidden', 'false');
@@ -164,15 +167,15 @@
   function renderRow(exam) {
     var isA2 = exam.cohort === 'A2';
     var cohortClass = isA2 ? 'cohort-a2' : 'cohort-as';
-    var cohortLabel = isA2 ? 'A2 · G12' : 'AS · G11';
+    var cohortLabel = isA2 ? ui.a2_grade : ui.as_grade;
 
     return [
-      '<div class="ledger-row" data-cohort="' + escapeHtml(exam.cohort) + '" data-exam-id="' + escapeHtml(exam.id) + '" role="row" style="cursor: pointer;" title="Click to view full paper details">',
+      '<div class="ledger-row" data-cohort="' + escapeHtml(exam.cohort) + '" data-exam-id="' + escapeHtml(exam.id) + '" role="row" style="cursor: pointer;" title="' + escapeHtml(ui.row_title) + '">',
         '<div class="ledger-col-cohort" role="cell">',
           '<span class="ledger-badge ' + cohortClass + '">' + escapeHtml(cohortLabel) + '</span>',
         '</div>',
         '<div class="ledger-col-code" role="cell">',
-          '<button type="button" class="unit-code exam-details-trigger" aria-label="View details for ' + escapeHtml(exam.code) + '">' + escapeHtml(exam.code) + '</button>',
+          '<button type="button" class="unit-code exam-details-trigger" aria-label="' + escapeHtml(ui.view_details + ' ' + exam.code) + '">' + escapeHtml(exam.code) + '</button>',
         '</div>',
         '<div class="ledger-col-details" role="cell">',
           '<div class="exam-subject-line">',
@@ -197,8 +200,8 @@
       daysContainer.innerHTML = [
         '<div class="timetable-empty">',
           '<i class="bi bi-calendar-x"></i>',
-          '<h4>No examinations match your filter</h4>',
-          '<p>Try selecting another cohort, subject, or clearing the search keyword.</p>',
+          '<h4>' + escapeHtml(ui.empty_title) + '</h4>',
+          '<p>' + escapeHtml(ui.empty_hint) + '</p>',
         '</div>'
       ].join('');
       return;
@@ -222,7 +225,7 @@
     daysContainer.innerHTML = sortedDates.map(function (dKey) {
       var grp = groups[dKey];
       var dateObj = new Date(dKey + 'T12:00:00');
-      var dateFormatted = new Intl.DateTimeFormat('en-GB', {
+      var dateFormatted = new Intl.DateTimeFormat(locale, {
         weekday: 'long',
         day: '2-digit',
         month: 'long',
@@ -230,7 +233,7 @@
       }).format(dateObj);
 
       var rowsHtml = grp.items.map(renderRow).join('');
-      var paperWord = grp.items.length === 1 ? 'paper' : 'papers';
+      var paperWord = grp.items.length === 1 ? ui.paper : ui.papers;
 
       return [
         '<section class="ledger-day-section" aria-labelledby="date-' + escapeHtml(dKey) + '">',
@@ -238,7 +241,7 @@
             '<h2 id="date-' + escapeHtml(dKey) + '" class="ledger-date-title">' + escapeHtml(dateFormatted) + '</h2>',
             '<span class="ledger-day-count">' + grp.items.length + ' ' + paperWord + '</span>',
           '</div>',
-          '<div class="ledger-day-table" role="table" aria-label="' + escapeHtml(dateFormatted) + ' examinations">',
+          '<div class="ledger-day-table" role="table" aria-label="' + escapeHtml(dateFormatted + ' ' + ui.examinations) + '">',
             rowsHtml,
           '</div>',
         '</section>'
@@ -260,7 +263,7 @@
     if (!calendarContainer) return;
 
     if (!matched.length) {
-      calendarContainer.innerHTML = '<div class="timetable-empty"><h4>No examinations match your filter</h4><p>Try another cohort or subject, or clear the search.</p></div>';
+      calendarContainer.innerHTML = '<div class="timetable-empty"><h4>' + escapeHtml(ui.empty_title) + '</h4><p>' + escapeHtml(ui.empty_hint) + '</p></div>';
       return;
     }
 
@@ -272,47 +275,50 @@
       examDateMap[exam.date].push(exam);
     });
 
+    if (!examDateMap[selectedMobileDate]) {
+      selectedMobileDate = Object.keys(examDateMap).sort()[0];
+    }
+
     // Calendar Header
     var headerHtml = [
       '<div class="cal-header-bar">',
         '<div class="cal-month-title">',
           '<i class="bi bi-calendar3 text-primary"></i>',
-          '<span>January 2027</span>',
-          '<span class="badge bg-light text-muted border ms-2 fw-normal" style="font-size: 0.72rem;">1X27 Series</span>',
+          '<span>' + escapeHtml(ui.month) + '</span>',
+          '<span class="badge bg-body-secondary text-body-secondary border ms-2 fw-normal" style="font-size: 0.72rem;">' + escapeHtml(ui.series_label) + '</span>',
         '</div>',
         '<div class="cal-legend">',
-          '<span class="cal-legend-item"><span class="cal-legend-dot as"></span> AS · Grade 11</span>',
-          '<span class="cal-legend-item"><span class="cal-legend-dot a2"></span> A2 · Grade 12</span>',
+          '<span class="cal-legend-item"><span class="cal-legend-dot as"></span> ' + escapeHtml(ui.as_grade) + '</span>',
+          '<span class="cal-legend-item"><span class="cal-legend-dot a2"></span> ' + escapeHtml(ui.a2_grade) + '</span>',
         '</div>',
       '</div>'
     ].join('');
 
-    // Desktop 7-Column Grid
+    // Monday–Friday calendar grid
     // Jan 1 2027 was Friday. In Mon-Sun format:
     // Mon Dec 28, Tue Dec 29, Wed Dec 30, Thu Dec 31
     // Jan 1 to Jan 31
     var gridDays = [];
     
     // Padding Dec 2026 days
-    gridDays.push({ date: '2026-12-28', num: 28, isOtherMonth: true, isWeekend: false });
-    gridDays.push({ date: '2026-12-29', num: 29, isOtherMonth: true, isWeekend: false });
-    gridDays.push({ date: '2026-12-30', num: 30, isOtherMonth: true, isWeekend: false });
-    gridDays.push({ date: '2026-12-31', num: 31, isOtherMonth: true, isWeekend: false });
+    gridDays.push({ date: '2026-12-28', num: 28, isOtherMonth: true });
+    gridDays.push({ date: '2026-12-29', num: 29, isOtherMonth: true });
+    gridDays.push({ date: '2026-12-30', num: 30, isOtherMonth: true });
+    gridDays.push({ date: '2026-12-31', num: 31, isOtherMonth: true });
 
     // Jan 2027 days (1 to 31)
     for (var d = 1; d <= 31; d++) {
       var dStr = '2027-01-' + (d < 10 ? '0' + d : d);
       var dayOfWeek = new Date(dStr + 'T12:00:00').getDay(); // 0 is Sun, 6 is Sat
-      var isWeekend = (dayOfWeek === 0 || dayOfWeek === 6);
-      gridDays.push({ date: dStr, num: d, isOtherMonth: false, isWeekend: isWeekend });
+      if (dayOfWeek === 0 || dayOfWeek === 6) continue;
+      gridDays.push({ date: dStr, num: d, isOtherMonth: false });
     }
 
-    var weekdays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+    var weekdays = ui.weekdays;
     var weekdaysHtml = [
       '<div class="cal-weekdays">',
-        weekdays.map(function (w, i) {
-          var isWk = (i >= 5);
-          return '<div class="cal-weekday ' + (isWk ? 'is-weekend' : '') + '">' + w + '</div>';
+        weekdays.map(function (w) {
+          return '<div class="cal-weekday">' + escapeHtml(w) + '</div>';
         }).join(''),
       '</div>'
     ].join('');
@@ -323,10 +329,9 @@
       var cellClasses = ['cal-cell'];
 
       if (day.isOtherMonth) cellClasses.push('is-other-month');
-      if (day.isWeekend) cellClasses.push('is-weekend');
       if (hasExams) cellClasses.push('has-exams');
 
-      var countBadge = hasExams ? '<span class="cal-day-count">' + dayExams.length + 'p</span>' : '';
+      var countBadge = hasExams ? '<span class="cal-day-count">' + dayExams.length + escapeHtml(ui.count_suffix) + '</span>' : '';
 
       var chipsHtml = dayExams.map(function (ex) {
         var isA2 = ex.cohort === 'A2';
@@ -396,7 +401,7 @@
     // Selected Day Agenda for Mobile
     var selectedDateExams = examDateMap[selectedMobileDate] || [];
     var selectedDateObj = new Date(selectedMobileDate + 'T12:00:00');
-    var selectedDateTitle = new Intl.DateTimeFormat('en-GB', {
+    var selectedDateTitle = new Intl.DateTimeFormat(locale, {
       weekday: 'short',
       day: '2-digit',
       month: 'short',
@@ -421,19 +426,19 @@
         ].join('');
       }).join('');
     } else {
-      mobileCardsHtml = '<p class="text-muted small text-center my-3">No examinations scheduled on this date.</p>';
+      mobileCardsHtml = '<p class="text-muted small text-center my-3">' + escapeHtml(ui.no_exams) + '</p>';
     }
 
     var mobileViewHtml = [
       '<div class="cal-mobile-view">',
         '<div class="cal-mobile-matrix">',
-          weekdays.map(function (w) { return '<div class="cal-mobile-weekday">' + w + '</div>'; }).join(''),
+          weekdays.map(function (w) { return '<div class="cal-mobile-weekday">' + escapeHtml(w) + '</div>'; }).join(''),
           mobileDaysHtml,
         '</div>',
         '<div class="cal-mobile-agenda">',
           '<div class="cal-agenda-header">',
             '<h3 class="cal-agenda-date">' + selectedDateTitle + '</h3>',
-            '<span class="badge bg-light text-muted border">' + selectedDateExams.length + ' scheduled</span>',
+            '<span class="badge bg-body-secondary text-body-secondary border">' + selectedDateExams.length + ' ' + escapeHtml(ui.scheduled) + '</span>',
           '</div>',
           '<div class="cal-agenda-cards">',
             mobileCardsHtml,

@@ -102,7 +102,7 @@ for (const name of pages) {
   assert.equal((html.match(/<h1\b/g)||[]).length,1,`${name}: duplicate title`);
   const ids=Array.from(html.matchAll(/\bid="([^"]+)"/g),m=>m[1]);
   assert.equal(new Set(ids).size,ids.length,`${name}: duplicate anchor IDs`);
-  const breadcrumb=html.match(/<nav aria-label="breadcrumb"[\s\S]*?<\/nav>/)[0];
+  const breadcrumb=html.match(/<nav\b[^>]*\baria-label="breadcrumb"[^>]*>[\s\S]*?<\/nav>/)[0];
   assert(!breadcrumb.includes('A2 Pure Mathematics'),`${name}: Mechanics is not a Pure subtopic`);
   if(name) assert(breadcrumb.includes('>A2 Mechanics</a>'),`${name}: missing course breadcrumb`);
   if(['mathematical-modelling','vectors-and-kinematics','forces-equilibrium-and-friction','moments-and-rigid-objects','centres-of-mass','newtons-laws-of-motion','projectiles','work-and-energy','uniform-circular-motion'].includes(name)) {

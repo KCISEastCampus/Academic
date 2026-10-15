@@ -176,6 +176,10 @@ $$\boxed{I\approx2.625}.$$
 
 **Common mistake:** using $0$, $0.5$, $1$ and $1.5$. Those are left endpoints, not midpoint positions.
 
+**Improve the estimate:** increase the number of strips from $4$ to $8$, so $h=0.25$. Recalculate the heights at $0.125$, $0.375$, $\ldots$, $1.875$. This gives $I\approx2.65625$, improving on $2.625$ as an estimate of $\frac83$: the absolute error falls from about $0.04167$ to $0.01042$.
+
+For sufficiently smooth functions, smaller strip widths usually improve the estimate. Compare results using finer strips and, when available, the exact integral; improvement is not guaranteed for every function or every subdivision. [OxfordAQA P2.9, printed p. 24](https://www.oxfordaqa.com/wp-content/uploads/2023/10/oxfordaqa-a-level-mathematics-specification.pdf) includes improving an estimate by increasing the number of steps.
+
 ### Simpson's rule
 
 Use ordinates at the strip boundaries, including both endpoints. There are $n+1$ ordinates for $n$ strips. Simpson's rule uses pairs of strips, so **$n$ must be even** and **the number of ordinates must be odd**.
@@ -209,6 +213,8 @@ $$I\approx\frac{0.5}{3}\big[(1+e^2)+4(e^{0.5}+e^{1.5})+2e\big].$$
 $$\boxed{I\approx6.3912}.$$
 
 **Check:** The exact integral is $e^2-1\approx6.38906$. Simpson's rule gives an approximation here, not the exact answer.
+
+**Improve the estimate:** use $8$ strips with $h=0.25$ and $9$ boundary ordinates, retaining the alternating weights. This gives $I\approx6.389193725$. Compared with $e^2-1$, the absolute error falls from about $0.00215409$ to $0.00013763$. Keep the number of strips even when refining Simpson's rule.
 
 ### Example 6 — Work from a table
 
@@ -318,10 +324,14 @@ For the diagram, $x_1\approx0.6711$, $x_2\approx0.6895$ and $x_3\approx0.6778$. 
 
 Use the mid-ordinate rule with $4$ strips to estimate $\displaystyle\int_1^3\ln x\,dx$, giving your estimate to $4$ decimal places.
 
+Repeat with $8$ strips. Compare both estimates with the exact integral and explain whether increasing the number of strips improved the estimate.
+
 <details markdown="1">
 <summary>Hint</summary>
 
 The width is $0.5$. Start with the midpoint $1.25$, not the boundary $1$.
+
+For $8$ strips, $h=0.25$; start at $1.125$ and use $8$ midpoint heights. Compare absolute errors using unrounded estimates.
 
 </details>
 
@@ -335,6 +345,8 @@ $$I\approx0.5[\ln1.25+\ln1.75+\ln2.25+\ln2.75].$$
 $$\boxed{I\approx1.3026}.$$
 
 The exact result is $[x\ln x-x]_1^3=3\ln3-2\approx1.29584$. Here the mid-ordinate estimate is greater than the exact integral.
+
+With $8$ strips, the midpoints are $1.125$, $1.375$, $\ldots$, $2.875$, giving $I\approx1.297564013$. To $4$ decimal places, this is $\boxed{1.2976}$. The absolute error falls from about $0.00680837$ to $0.00172715$, so the finer subdivision improves this estimate.
 
 </details>
 
@@ -402,6 +414,6 @@ Check both the number of strips and their widths. Boundary heights are not midpo
 
 **If your answer looks wrong:** check the original equation, starting index, calculator angle mode, strip count, positions and weights. Keep extra digits in intermediate values and round the final answer as requested.
 
-**You should be able to:** justify a root interval, use and assess an iteration, verify an approximation's accuracy, and apply the two integration rules with the correct data.
+**You should be able to:** justify a root interval, use and assess an iteration, verify an approximation's accuracy, apply the two integration rules with the correct data, and compare estimates after increasing the number of strips.
 
 **Learning path:** [Previous: Differential Equations](/alevel/a2-mathematics/differential-equations/) · [Next: Vectors](/alevel/a2-mathematics/vectors/).

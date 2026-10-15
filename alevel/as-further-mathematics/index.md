@@ -530,7 +530,7 @@ For $y = 20x^{-2}$, estimate change in $y$ when $x$ increases from $5$ to $5.1$.
 $$\frac{dy}{dx} = -40x^{-3} = -\frac{40}{x^3}$$
 
 **Step 2:** Evaluate at $x = 5$
-$$\frac{dy}{dx}\bigg|_{x=5} = -\frac{40}{125} = -0.32$$
+$$\frac{dy}{dx}\bigg\vert _{x=5} = -\frac{40}{125} = -0.32$$
 
 **Step 3:** Calculate small change
 $$δx = 5.1 - 5 = 0.1$$

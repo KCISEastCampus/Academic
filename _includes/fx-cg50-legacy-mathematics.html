@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="{{ page.redirect_target | absolute_url }}">
+  <title>fx-CG50 进阶指南</title>
+</head>
+<body data-pagefind-ignore>
+  <p>例题已按解题方法编排。<a href="{{ page.redirect_target | relative_url }}">打开进阶指南</a>。</p>
+  <script id="cg50-legacy-mathematics">
+    const destinations = {
+      {% for unit in site.data.fx_cg50.mathematics_units %}
+      {% for topic in unit.topics %}
+      {{ topic.anchor | jsonify }}: {{ topic.url | append: '#' | append: topic.anchor | relative_url | jsonify }},
+      {% endfor %}
+      {{ unit.id | append: '-check' | jsonify }}: {{ '/alevel/fx-cg50/advanced/#' | append: unit.id | relative_url | jsonify }},
+      {% endfor %}
+      "choose-unit": {{ '/alevel/fx-cg50/advanced/#mathematics-units' | relative_url | jsonify }},
+      "workflow": {{ '/alevel/fx-cg50/advanced/' | relative_url | jsonify }},
+      "answer-boundaries": {{ '/alevel/fx-cg50/advanced/#task-31' | relative_url | jsonify }},
+      "sources": {{ '/alevel/fx-cg50/advanced/#mathematics-units' | relative_url | jsonify }}
+    };
+    const anchor = location.hash.slice(1);
+    location.replace(Object.hasOwn(destinations, anchor) ? destinations[anchor] : {{ page.redirect_target | relative_url | jsonify }});
+  </script>
+</body>
+</html>

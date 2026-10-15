@@ -1,8 +1,12 @@
 ---
 layout: none
 ---
+{% assign council_lang = page.lang | default: 'en' %}
+{% assign ui = site.data.ui[council_lang] | default: site.data.ui.en %}
+{% assign council_prefix = '' %}
+{% if council_lang == 'zh-CN' %}{% assign council_prefix = '/zh' %}{% endif %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ council_lang }}">
 
 <head>
   {% include head.html %}
@@ -14,24 +18,24 @@ layout: none
   <!-- Standalone Hero -->
   <header class="council-hero" role="banner">
     <div class="container hero-shell">
-      <a href="/" class="page-back" aria-label="Back to Homepage">
+      <a href="{{ council_prefix }}/" class="page-back" aria-label="{{ ui.back_home }}">
         <i class="bi bi-arrow-left"></i>
-        <span>Back to Homepage</span>
+        <span>{{ ui.back_home }}</span>
       </a>
       <div class="hero-body">
         <div class="hero-icon hero-logo">
-          <img src="/assets/img/logo.png" alt="A-level Student Council logo" class="hero-logo-image">
+          <img src="/assets/img/logo.png" alt="{{ ui.sc_logo }}" class="hero-logo-image">
         </div>
         <div class="hero-text">
-          <p class="eyebrow">Student Council</p>
-          <h1 class="hero-title">{{ site.data.student_council.council.name }}</h1>
-          <p class="hero-subtitle">{{ site.data.student_council.council.description }}</p>
+          <p class="eyebrow">{{ ui.student_council }}</p>
+          <h1 class="hero-title">{% if council_lang == "zh-CN" %}{{ site.data.student_council.council.name_zh | default: site.data.student_council.council.name }}{% else %}{{ site.data.student_council.council.name }}{% endif %}</h1>
+          <p class="hero-subtitle">{% if council_lang == "zh-CN" %}{{ site.data.student_council.council.description_zh | default: site.data.student_council.council.description }}{% else %}{{ site.data.student_council.council.description }}{% endif %}</p>
         </div>
       </div>
     </div>
   </header>
 
-  <a class="skip-link sr-only-focusable" href="#main-content">Skip to main content</a>
+  <a class="skip-link sr-only-focusable" href="#main-content">{{ ui.skip_content }}</a>
   
   <main id="main-content" class="container council-main" role="main">
     
@@ -40,40 +44,40 @@ layout: none
       <div class="section-header section-header-with-action">
         <h2 class="section-title">
           <i class="bi bi-newspaper"></i>
-          Latest News
+          {{ ui.sc_latest }}
         </h2>
-        <a href="/student-council/news/" class="section-action" aria-label="View all Student Council news">
-          View All News <i class="bi bi-arrow-right"></i>
+        <a href="{{ council_prefix }}/student-council/news/" class="section-action" aria-label="{{ ui.sc_view_news }}">
+          {{ ui.sc_view_news }} <i class="bi bi-arrow-right"></i>
         </a>
       </div>
       
       <div class="news-list">
-        {% assign news_pages = site.pages | where_exp: "item", "item.path contains 'student-council/news/'" | where_exp: "item", "item.name != 'index.md'" | sort: 'date' | reverse %}
+        {% assign news_pages = site.pages | where: 'layout', 'student_council_post' | where: 'lang', council_lang | sort: 'date' | reverse %}
         {% for post in news_pages limit:3 %}
         <a href="{{ post.url }}" class="news-item">
           <div class="news-date-badge">
             <span class="day">{{ post.date | date: "%d" }}</span>
-            <span class="month">{{ post.date | date: "%b" }}</span>
+            <span class="month">{% if council_lang == "zh-CN" %}{{ post.date | date: "%-m" }} 月{% else %}{{ post.date | date: "%b" }}{% endif %}</span>
           </div>
           <div class="news-info">
             <h3 class="news-title">{{ post.title }}</h3>
             {% if post.tags and post.tags.size > 0 %}
-            <div class="news-tags" aria-label="News tags">
+            <div class="news-tags" aria-label="{{ ui.sc_news_tags }}">
               {% for tag in post.tags limit:3 %}
-              <span class="news-tag">{{ tag }}</span>
+              <span class="news-tag">{{ ui.sc_tags[tag] | default: tag }}</span>
               {% endfor %}
             </div>
             {% endif %}
             <div class="news-meta-row">
               {% if post.author %}
-              <span class="news-author"><i class="bi bi-person"></i> {{ post.author }}</span>
+              <span class="news-author"><i class="bi bi-person"></i> {% include student-council/person-name.html name=post.author lang=council_lang %}</span>
               {% endif %}
-              <span class="read-more-link">Read Article <i class="bi bi-arrow-right"></i></span>
+              <span class="read-more-link">{{ ui.sc_read }} <i class="bi bi-arrow-right"></i></span>
             </div>
           </div>
         </a>
         {% else %}
-        <p class="text-center text-muted">No news updates at the moment.</p>
+        <p class="text-center text-muted">{{ ui.sc_empty }}</p>
         {% endfor %}
       </div>
     </section>
@@ -83,7 +87,7 @@ layout: none
       <div class="section-header">
         <h2 class="section-title">
           <i class="bi bi-grid-3x3-gap-fill"></i>
-          Our Departments
+          {{ ui.sc_departments }}
         </h2>
       </div>
       
@@ -94,12 +98,14 @@ layout: none
             <div class="dept-icon">
               <i class="bi {{ group.icon }}"></i>
             </div>
-            <h3 class="dept-name">{{ group.name }}</h3>
+            <h3 class="dept-name">{{ ui.sc_groups[group.name] | default: group.name }}</h3>
           </div>
-          <p class="dept-description">{{ group.description }}</p>
-          {% if group.responsibilities %}
+          <p class="dept-description">{% if council_lang == "zh-CN" %}{{ group.description_zh | default: group.description }}{% else %}{{ group.description }}{% endif %}</p>
+          {% assign responsibilities = group.responsibilities %}
+          {% if council_lang == "zh-CN" %}{% assign responsibilities = group.responsibilities_zh | default: responsibilities %}{% endif %}
+          {% if responsibilities %}
           <ul class="dept-responsibilities">
-            {% for item in group.responsibilities %}
+            {% for item in responsibilities %}
             <li>{{ item }}</li>
             {% endfor %}
           </ul>
@@ -114,7 +120,7 @@ layout: none
       <div class="section-header">
         <h2 class="section-title">
           <i class="bi bi-star-fill"></i>
-          Executive Team
+          {{ ui.sc_executives }}
         </h2>
       </div>
       
@@ -127,16 +133,16 @@ layout: none
             </div>
           </div>
           <div class="member-info">
-            <h3 class="member-name">{{ member.name }}</h3>
-            <span class="member-role">{{ member.role }}</span>
+            <h3 class="member-name">{% include student-council/person-name.html name=member.name lang=council_lang %}</h3>
+            <span class="member-role">{{ ui.sc_roles[member.role] | default: member.role }}</span>
             {% if member.grade and member.class %}
             <div class="member-class-info">
               <i class="bi bi-mortarboard-fill"></i>
               <span>{{ member.grade }} {{ member.class }}</span>
             </div>
             {% endif %}
-            {% if member.bio %}
-            <p class="member-bio">{{ member.bio }}</p>
+            {% if member.bio and member.bio != "TBD" %}
+            <p class="member-bio">{% if council_lang == "zh-CN" %}{{ member.bio_zh | default: member.bio }}{% else %}{{ member.bio }}{% endif %}</p>
             {% endif %}
             <div class="member-detailed-roles">
               {% for group_item in member.groups %}
@@ -152,7 +158,9 @@ layout: none
                 <div class="role-badge" style="--role-color: {{ group_data.color | default: '#5c6bc0' }};">
                   <i class="bi {{ group_data.icon | default: 'bi-circle-fill' }}"></i>
                   <span class="role-text">
-                    {% if group_role and group_role != "Member" %}
+                    {% if council_lang == "zh-CN" %}
+                      {{ ui.sc_groups[group_name] | default: group_name }}{% if group_role %} <strong>{{ ui.sc_roles[group_role] | default: group_role }}</strong>{% endif %}
+                    {% elsif group_role and group_role != "Member" %}
                       <strong>{{ group_role }}</strong> of {{ group_name }}
                     {% else %}
                       {{ group_name }} Team
@@ -180,33 +188,37 @@ layout: none
         <div class="member-directory-content">
           <h2>
             <i class="bi bi-people-fill"></i>
-            Members Directory
+            {{ ui.sc_directory }}
           </h2>
-          <p>See all current members.</p>
+          <p>{{ ui.sc_directory_description }}</p>
         </div>
         <div class="member-directory-actions">
-          <span class="member-directory-count">{{ total_members }} Members</span>
-          <a href="/student-council/members/" class="section-action" aria-label="View all Student Council members">
-            View Members <i class="bi bi-arrow-right"></i>
+          <span class="member-directory-count">{{ total_members }} {{ ui.sc_members_unit }}</span>
+          <a href="{{ council_prefix }}/student-council/members/" class="section-action" aria-label="{{ ui.sc_view_members }}">
+            {{ ui.sc_view_members }} <i class="bi bi-arrow-right"></i>
           </a>
         </div>
       </div>
     </section>
 
+    {% assign alumni_total = site.data.student_council_alumni.members | size %}
+    {% for group in site.data.student_council_alumni.groups %}
+      {% if group.leader_name_cn %}{% assign alumni_total = alumni_total | plus: 1 %}{% endif %}
+    {% endfor %}
     <!-- First Session Alumni Entry -->
     <section class="alumni-section fade-in" style="animation-delay: 0.48s; margin-bottom: 2rem;">
       <div class="member-directory-card alumni-card">
         <div class="member-directory-content">
           <h2>
             <i class="bi bi-mortarboard-fill"></i>
-            First Session Alumni
+            {{ ui.sc_alumni }}
           </h2>
-          <p>Honor the inaugural A-level Student Council ({{ site.data.student_council_alumni.council.session }}).</p>
+          <p>{{ ui.sc_alumni_intro }} ({{ site.data.student_council_alumni.council.session }}){% if council_lang == "zh-CN" %}。{% else %}.{% endif %}</p>
         </div>
         <div class="member-directory-actions">
-          <span class="member-directory-count">{{ site.data.student_council_alumni.members | size }} Members</span>
-          <a href="/student-council/alumni/" class="section-action" aria-label="View First Session Alumni">
-            View Alumni <i class="bi bi-arrow-right"></i>
+          <span class="member-directory-count">{{ alumni_total }} {{ ui.sc_members_unit }}</span>
+          <a href="{{ council_prefix }}/student-council/alumni/" class="section-action" aria-label="{{ ui.sc_view_alumni }}">
+            {{ ui.sc_view_alumni }} <i class="bi bi-arrow-right"></i>
           </a>
         </div>
       </div>
@@ -219,8 +231,8 @@ layout: none
           <i class="bi bi-envelope-heart"></i>
         </div>
         <div class="contact-content">
-          <h2>Get in Touch</h2>
-          <p>Have ideas or want to join us? We'd love to hear from you!</p>
+          <h2>{{ ui.sc_contact }}</h2>
+          <p>{{ ui.sc_contact_description }}</p>
           <div class="contact-details">
             {% if site.data.student_council.contact.email %}
             <a href="mailto:{{ site.data.student_council.contact.email }}" class="contact-link">
@@ -231,7 +243,7 @@ layout: none
             {% if site.data.student_council.contact.location %}
             <div class="contact-info">
               <i class="bi bi-geo-alt"></i>
-              <span>{{ site.data.student_council.contact.location }}</span>
+              <span>{% if council_lang == "zh-CN" %}{{ site.data.student_council.contact.location_zh | default: site.data.student_council.contact.location }}{% else %}{{ site.data.student_council.contact.location }}{% endif %}</span>
             </div>
             {% endif %}
           </div>

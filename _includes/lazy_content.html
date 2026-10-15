@@ -1,0 +1,18 @@
+{%- comment -%}Defer HTML images without rewriting image markup inside script data.{%- endcomment -%}
+{%- assign script_parts = include.content | split: '</script>' -%}
+{%- for script_part in script_parts -%}
+  {%- assign html_part = script_part | split: '<script' | first -%}
+  {%- assign image_parts = html_part | split: '<img ' -%}
+  {{- image_parts | first -}}
+  {%- for image_part in image_parts offset: 1 -%}
+    {%- assign image_attributes = image_part | split: '>' | first -%}
+    {%- if image_attributes contains 'loading=' or image_attributes contains 'data-lazy-ignore' -%}
+      {{- '<img ' -}}{{- image_part -}}
+    {%- else -%}
+      {{- '<img loading="lazy" ' -}}{{- image_part -}}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- if script_part contains '<script' -%}
+    {{- script_part | remove_first: html_part -}}{{- '</script>' -}}
+  {%- endif -%}
+{%- endfor -%}
