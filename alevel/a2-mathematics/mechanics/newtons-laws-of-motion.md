@@ -226,7 +226,7 @@ $$\boxed{\mathbf v=5\mathbf i-\mathbf j\,\mathrm{m\,s^{-1}}}.$$
 
 $$\boxed{\mathbf r=\frac{22}{3}\mathbf i+2\mathbf j\,\mathrm m}.$$
 
-**Check:** substituting $t=1$ recovers both given vectors. The speed at $t=2$ is $\sqrt{26}\,\mathrm{m\,s^{-1}}$; the negative $y$-component means downward motion in the chosen coordinate plane, not a negative speed.
+**Check:** substituting $t=1$ recovers both given vectors. The speed at $t=2$ is $\sqrt{26}\,\mathrm{m\,s^{-1}}$; the negative $y$-component means motion in the negative $y$-direction in the chosen horizontal plane, not a negative speed.
 
 ## Finding Force from Position
 
