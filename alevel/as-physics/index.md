@@ -40,13 +40,13 @@ permalink: /alevel/as-physics/
 ### 1.2 Errors and Uncertainties
 
 * **Random Error**: Unpredictable fluctuations in readings. **Remedy**: Take repeat readings and calculate a mean.
-* **Systematic Error**: Readings differ from the true value by a consistent amount (e.g., Zero Error). **Remedy**: Calibrate equipment; cannot be fixed by repeats.
+* **Systematic Error**: A consistent bias in measurements, such as a zero offset or a calibration scale error. **Remedy**: Check and calibrate equipment; repeats alone do not remove the bias.
 * **Precision**: The degree of spread of repeated measurements (consistency).
 * **Accuracy**: Closeness of the measured value to the true value.
-* **Calculating Uncertainty**:
-    * **Adding/Subtracting ($y = a \pm b$)**: Add **absolute** uncertainties ($\Delta y = \Delta a + \Delta b$).
-    * **Multiplying/Dividing ($y = ab$ or $y=a/b$)**: Add **percentage** uncertainties ($\frac{\Delta y}{y} = \frac{\Delta a}{a} + \frac{\Delta b}{b}$).
-    * **Powers ($y = x^n$)**: Multiply percentage uncertainty by $n$ ($\frac{\Delta y}{y} = n \times \frac{\Delta x}{x}$).
+* **Calculating Maximum Uncertainty** (first-order estimates for small uncertainties; $\Delta$ denotes a non-negative uncertainty):
+    * **Adding/Subtracting ($y = a \pm b$)**: Add **absolute** uncertainties, $\Delta y=\Delta a+\Delta b$.
+    * **Multiplying/Dividing ($y = ab$ or $y=a/b$)**: Add **percentage** uncertainties, $\frac{\Delta y}{\lvert y\rvert }\approx\frac{\Delta a}{\lvert a\rvert }+\frac{\Delta b}{\lvert b\rvert }$, for non-zero quantities.
+    * **Powers ($y = x^n$)**: Multiply percentage uncertainty by $\lvert n\rvert $, $\frac{\Delta y}{\lvert y\rvert }\approx \lvert n\rvert \frac{\Delta x}{\lvert x\rvert }$, where the power is defined and $x,y\ne0$.
 
 > **📝 Example Question**
 > 
@@ -71,7 +71,7 @@ permalink: /alevel/as-physics/
     * Vertical component: $F_y = F \sin \theta$ (where $\theta$ is angle to horizontal).
 * **Moment**: $Force \times \text{perpendicular distance from pivot}$.
 * **Principle of Moments**: For an object in equilibrium, $\Sigma \text{Clockwise Moments} = \Sigma \text{Anticlockwise Moments}$.
-* **Couple**: Two equal and opposite coplanar forces. Moment = $F \times d$ (perpendicular distance between forces).
+* **Couple**: Two equal, opposite, parallel forces with different lines of action. Moment magnitude = $Fd$, where $d>0$ is their perpendicular separation.
 
 ### 2.2 Kinematics (SUVAT)
 
@@ -88,21 +88,21 @@ Equations for **uniform acceleration** (motion in a straight line):
 
 ### 2.3 Projectile Motion
 
-Independent effect of motion in horizontal and vertical directions.
+Neglect air resistance and assume uniform gravitational acceleration. Resolve motion into independent horizontal and vertical components.
 * **Horizontal**: Constant velocity ($a=0$). Use $s = vt$.
-* **Vertical**: Constant acceleration ($a = g = 9.81 \text{ m s}^{-2}$). Use SUVAT.
+* **Vertical**: With downwards positive, $a=+g$; with upwards positive, $a=-g$. Use SUVAT with $g=9.81\,\mathrm{m\,s^{-2}}$ unless the question specifies another value.
 
 ### 2.4 Newton's Laws & Momentum
 
-* **Newton’s 2nd Law**: Rate of change of momentum is proportional to net force. $F = \frac{\Delta (mv)}{\Delta t}$ (or $F=ma$ if mass is constant).
+* **Newton’s 2nd Law**: Resultant force $\mathbf F=\frac{d\mathbf p}{dt}$; average resultant force $\mathbf F_{\rm avg}=\frac{\Delta\mathbf p}{\Delta t}$. For constant mass, $\mathbf F=m\mathbf a$.
 * **Momentum ($p$)**: $p = mv$. (Vector quantity).
-* **Impulse**: Change in momentum ($\Delta p = F \Delta t$). Equals area under Force-Time graph.
+* **Impulse**: Change in momentum. $\Delta\mathbf p=\mathbf F\Delta t$ for constant force, or $\mathbf F_{\rm avg}\Delta t$ for average force. For a variable force, each component equals the signed area under its force-time graph.
 * **Conservation of Momentum**: Total momentum before collision = Total momentum after collision (in a closed system).
 
 ### 2.5 Work, Energy and Power
 
-* **Work Done**: $W = F s \cos \theta$.
-* **Power**: Rate of energy transfer. $P = \frac{\Delta W}{\Delta t} = Fv$.
+* **Work Done by a Constant Force**: $W=Fs\cos\theta$, where $\theta$ is the angle between force and displacement.
+* **Power**: Average power $P_{\rm avg}=\Delta W/\Delta t$; instantaneous power $P=\mathbf F\cdot\mathbf v$, or $Fv$ when force and velocity have the same direction.
 * **Efficiency**: $\frac{\text{Useful Output Power}}{\text{Input Power}} \times 100\%$.
 * **Conservation of Energy**:
     * **GPE**: $\Delta E_p = mg\Delta h$
@@ -125,11 +125,11 @@ Independent effect of motion in horizontal and vertical directions.
 ### 3.1 Bulk Properties
 
 * **Density ($\rho$)**: $\rho = \frac{m}{V}$.
-* **Hooke's Law**: $F = k \Delta L$ (Force $\propto$ Extension).
+* **Hooke's Law**: $F=k\Delta L$ (force proportional to extension), within the limit of proportionality.
     * $k$ = Spring constant (stiffness).
 * **Elastic Strain Energy**: Energy stored in a stretched material.
-    * $E = \frac{1}{2}F \Delta L$ or $E = \frac{1}{2}k(\Delta L)^2$.
-    * Equal to the **area under the Force-Extension graph**.
+    * In the linear elastic region, $E=\frac12F\Delta L=\frac12k(\Delta L)^2$.
+    * The loading force-extension graph area gives work input. Recoverable elastic energy is the unloading area; these agree for an ideal elastic material without hysteresis.
 
 ### 3.2 The Young Modulus
 
@@ -159,8 +159,8 @@ A measure of the stiffness of a material, independent of its dimensions.
 * Every particle has an **antiparticle** with the same mass and rest energy but opposite charge.
     * Electron ($e^-$) $\leftrightarrow$ Positron ($e^+$)
     * Proton ($p$) $\leftrightarrow$ Antiproton ($\bar{p}$)
-    * Neutron ($n$) $\leftrightarrow$ Antineutrino ($\bar{n}$) *(Note: Neutron/Antineutron have 0 charge but different internal structures)*.
-* **Annihilation**: Particle and antiparticle collide $\rightarrow$ Mass converted to energy (2 photons).
+    * Neutron ($n$) $\leftrightarrow$ Antineutron ($\bar{n}$) *(Both have zero electric charge, but opposite baryon number)*.
+* **Annihilation**: A particle and its antiparticle annihilate, transferring their energy to other particles. In electron-positron annihilation at rest, two photons are produced.
 * **Pair Production**: A high-energy photon converts into a particle-antiparticle pair.
 
 ### 4.3 Radioactivity
@@ -267,9 +267,9 @@ A measure of the stiffness of a material, independent of its dimensions.
 
 ### 6.1 Oscillating Systems
 
-* **Mass–spring system**: $$T = 2\pi\sqrt{\frac{m}{k}}$$
-* **Simple pendulum**: $$T = 2\pi\sqrt{\frac{l}{g}}$$
-* **Energy variation**: $E_k$ and $E_p$ interchange; total energy remains constant (in SHM).
+* **Mass–spring system** (ideal light spring obeying Hooke's law): $$T = 2\pi\sqrt{\frac{m}{k}}$$
+* **Simple pendulum** (small angles, point mass, light inextensible string): $$T \approx 2\pi\sqrt{\frac{l}{g}}$$
+* **Energy variation**: $E_k$ and $E_p$ interchange; total mechanical energy remains constant in the undamped model.
 * **Damping**: Reduces amplitude over time (energy lost to surroundings).
 
 **Required Practical 4 🧪**: Investigation into simple harmonic systems using a mass-spring system and a simple pendulum.
@@ -284,14 +284,14 @@ A measure of the stiffness of a material, independent of its dimensions.
 
 ### 6.3 Progressive Waves
 
-* Oscillation of particles of the medium (energy transfer without net mass transfer).
+* Mechanical waves transfer energy through oscillations of particles of a medium, without net mass transfer. Electromagnetic waves involve oscillating electric and magnetic fields and can travel through a vacuum.
 * Key quantities: **amplitude, frequency, wavelength, speed, phase, phase difference**.
 * **Wave equation**: $$c = f\lambda, \qquad f = \frac{1}{T}$$
 * **Phase difference**: measured in radians/degrees or as fractions of a cycle.
 
 ### 6.4 Longitudinal and Transverse Waves
 
-* **Transverse**: particles oscillate perpendicular to energy propagation (e.g., waves on a string, EM waves).
+* **Transverse**: oscillations are perpendicular to propagation: particle displacements for a wave on a string, and electric and magnetic fields for an EM wave.
 * **Longitudinal**: particles oscillate parallel to energy propagation (e.g., sound).
 * All electromagnetic waves travel at the same speed in a vacuum.
 * Use of **ultrasound** in medicine.
@@ -299,15 +299,15 @@ A measure of the stiffness of a material, independent of its dimensions.
 ### 6.5 Principle of Superposition and Stationary Waves
 
 * **Superposition**: when two waves meet, their displacements add.
-* **Stationary waves**: formed by two waves of the same frequency travelling in opposite directions.
+* **Ideal stationary waves**: formed by two waves of equal frequency, wavelength and amplitude travelling in opposite directions in the same medium.
 * **Nodes** (no displacement) and **antinodes** (maximum displacement) on strings.
-* **First harmonic** on a string: $$f = \frac{1}{2l}\sqrt{\frac{T}{\mu}}$$
+* **First harmonic** of a uniform string of length $l$, fixed at both ends under constant tension $T$, with mass per unit length $\mu$: $$f = \frac{1}{2l}\sqrt{\frac{T}{\mu}}$$
 
 ### 6.6 Interference
 
 * **Path difference** and **coherence**.
 * **Young's double-slit experiment**: two coherent sources (or single source + double slits) produce an interference pattern.
-* **Fringe spacing**: $$w = \frac{\lambda D}{s}$$
+* **Fringe spacing**: $$w \approx \frac{\lambda D}{s}$$ for source separation $s$, screen distance $D\gg s$ and small angles to the central axis.
 * **White light** produces a pattern with coloured fringes (central white fringe).
 * ⚠️ Be aware of **safety issues** associated with lasers.
 
@@ -322,7 +322,8 @@ A measure of the stiffness of a material, independent of its dimensions.
 
 * **Refractive index**: $$n = \frac{c}{c_s}$$ (refractive index of air $\approx 1$).
 * **Snell's law**: $$n_1\sin\theta_1 = n_2\sin\theta_2$$
-* **Total internal reflection**: $$\sin c = \frac{n_2}{n_1}$$
+    * Measure both angles from the normal.
+* **Critical angle** for $n_1>n_2$: $$\sin c = \frac{n_2}{n_1}$$ Total internal reflection occurs when light travels from medium 1 to medium 2 with incidence angle $\theta_1>c$.
 * **Fibre optics**: function of the cladding (lower refractive index, protects, prevents signal loss).
 
 ### 6.9 Collisions of Electrons with Atoms

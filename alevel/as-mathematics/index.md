@@ -43,7 +43,7 @@ AS Mathematics forms the first part of the A-Level Mathematics qualification. Th
   - Simplification: $\sqrt{12} = 2\sqrt{3}$
   - Rationalisation: $\frac{1}{\sqrt{2}-1} = \sqrt{2}+1$
   - Complex rationalisation: $\frac{2\sqrt{3}+\sqrt{2}}{3\sqrt{2}+\sqrt{3}} = \frac{\sqrt{6}}{3}$
-- **Laws of Indices**: For all rational exponents
+- **Laws of Indices**: For $a > 0$ and rational exponents $m,n$
   - $a^m \times a^n = a^{m+n}$
   - $(a^m)^n = a^{mn}$
   - $a^0 = 1$, $a^{-n} = \frac{1}{a^n}$
@@ -78,10 +78,11 @@ AS Mathematics forms the first part of the A-Level Mathematics qualification. Th
 - **Function Types**: Linear, quadratic, cubic
 - **Graph Sketching**: Interpret intersection points as equation solutions
 - **Transformations**:
-  - $y = af(x)$: Vertical stretch scale factor $a$
-  - $y = f(x) + a$: Vertical translation
-  - $y = f(x + a)$: Horizontal translation  
-  - $y = f(ax)$: Horizontal stretch scale factor $\frac{1}{a}$
+  - $y = af(x)$: Vertical stretch scale factor $\lvert a\rvert $ for $a \ne 0$; also reflect in the x-axis if $a < 0$
+  - $y = f(x) + a$: Translation by vector $(0,a)$
+  - $y = f(x + a)$: Translation by vector $(-a,0)$
+  - $y = f(ax)$: Horizontal stretch scale factor $1/\lvert a\rvert $ for $a \ne 0$; also reflect in the y-axis if $a < 0$
+  - If $a=0$, these become $y=0$ and $y=f(0)$ respectively (where defined), rather than stretches.
 
 ## P1.2: Coordinate Geometry
 
@@ -93,14 +94,14 @@ AS Mathematics forms the first part of the A-Level Mathematics qualification. Th
   - $y - y_1 = m(x - x_1)$ (point-gradient)
   - $ax + by + c = 0$ (general form)
 - **Geometrical Calculations**:
-  - Gradient: $m = \frac{y_2 - y_1}{x_2 - x_1}$
+  - Gradient: $m = \frac{y_2 - y_1}{x_2 - x_1}$ for $x_2 \ne x_1$; a vertical line has undefined gradient
   - Distance: $d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$
   - Midpoint: $\left(\frac{x_1 + x_2}{2}, \frac{y_1 + y_2}{2}\right)$
 
 ### Line Relationships
 
-- **Parallel Lines**: $m_1 = m_2$
-- **Perpendicular Lines**: $m_1 \times m_2 = -1$
+- **Parallel Lines**: $m_1 = m_2$ for lines with finite gradients; vertical lines are parallel to one another
+- **Perpendicular Lines**: $m_1m_2 = -1$ for finite gradients; a horizontal line is perpendicular to a vertical line
 - **Intersections**: Line with curve - interpret roots geometrically
 
 ## P1.3: Differentiation
@@ -119,7 +120,7 @@ AS Mathematics forms the first part of the A-Level Mathematics qualification. Th
 
 - **Tangents and Normals**:
   - Tangent: $y - y_1 = f'(x_1)(x - x_1)$
-  - Normal: $y - y_1 = -\frac{1}{f'(x_1)}(x - x_1)$
+  - Normal: $y - y_1 = -\frac{1}{f'(x_1)}(x - x_1)$ if $f'(x_1) \ne 0$; if $f'(x_1)=0$, the normal is $x=x_1$
 - **Stationary Points**: Where $f'(x) = 0$
 - **Second Derivatives**: Determine nature of stationary points
 - **Optimisation**: Practical problems involving maxima/minima
@@ -137,7 +138,7 @@ AS Mathematics forms the first part of the A-Level Mathematics qualification. Th
 ### Definite Integrals and Applications
 
 - **Area Under Curve**: $A = \int_a^b y dx$ ($y \geq 0$)
-- **Negative Areas**: Regions below x-axis give negative values
+- **Signed Integral and Area**: If $y \leq 0$ on $[a,b]$, the integral is non-positive and the geometric area is $-\int_a^b y\,dx$. Split the interval at sign changes to find total area.
 - **Area Between Curves**: Between line and curve, or two curves
 - **Trapezium Rule**: Approximation of area
   - Graphical interpretation of over/under-estimation
@@ -148,7 +149,7 @@ AS Mathematics forms the first part of the A-Level Mathematics qualification. Th
 ### Sequences
 
 - **nth Term**: Given by formula $u_n = f(n)$
-- **Iterative Sequences**: $x_{n+1} = f(x_n)$, find limit as $n \to \infty$
+- **Iterative Sequences**: $x_{n+1} = f(x_n)$. If the sequence converges to $L$ and $f$ is continuous at $L$, then $L=f(L)$; convergence must be checked.
 
 ### Series
 
@@ -159,7 +160,7 @@ AS Mathematics forms the first part of the A-Level Mathematics qualification. Th
   - $u_n = ar^{n-1}$
   - $S_n = \frac{a(1 - r^n)}{1 - r}$ ($r \neq 1$)
   - $S_\infty = \frac{a}{1 - r} \quad (\lvert r \rvert < 1)$
-- **Binomial Expansion**:
+- **Binomial Expansion** (positive integer $n$):
   - $(1 + x)^n = 1 + nx + \frac{n(n-1)}{2!}x^2 + \cdots + x^n$
   - Notation: $n!$, $\binom{n}{r}$
 
@@ -191,7 +192,7 @@ AS Mathematics forms the first part of the A-Level Mathematics qualification. Th
   - $a^2 = b^2 + c^2 - 2bc\cos A$
 - **Area of Triangle**: $\frac{1}{2}ab\sin C$
 - **Radian Measure**: $180^\circ = \pi$ radians
-- **Arc and Sector**:
+- **Arc and Sector** ($\theta$ in radians):
   - Arc length: $l = r\theta$
   - Sector area: $A = \frac{1}{2}r^2\theta$
 
@@ -208,16 +209,16 @@ AS Mathematics forms the first part of the A-Level Mathematics qualification. Th
 
 ### Exponential Functions
 
-- **Graph**: $y = a^x$, always positive, increasing if $a > 1$
+- **Graph**: For $a>0$, $y=a^x$ is positive; it increases if $a>1$, decreases if $0<a<1$, and is constant if $a=1$
 - **Laws of Indices**: Applied where appropriate
 
 ### Logarithmic Functions
 
-- **Laws of Logarithms**:
+- **Laws of Logarithms** ($a>0$, $a\ne1$, $x,y>0$):
   - $\log_a x + \log_a y = \log_a(xy)$
   - $\log_a x - \log_a y = \log_a\left(\frac{x}{y}\right)$
   - $k\log_a x = \log_a(x^k)$
-- **Inverse Relationship**: $y = a^x \Leftrightarrow x = \log_a y$
+- **Inverse Relationship**: $y = a^x \Leftrightarrow x = \log_a y$ for $a>0$, $a\ne1$ and $y>0$
 - **Solving Equations**: $a^x = b$ using logarithms
 
 ---
@@ -246,7 +247,7 @@ AS Mathematics forms the first part of the A-Level Mathematics qualification. Th
 
 ### Probability Distributions
 
-- **Discrete Random Variables**: Finite outcomes, tabular or functional form
+- **Discrete Random Variables**: A finite or countably infinite set of possible values; this S1 section uses finite distributions in tabular or functional form
 - **Measures**:
   - Central tendency: Mean
   - Spread: Variance, standard deviation
@@ -269,14 +270,14 @@ AS Mathematics forms the first part of the A-Level Mathematics qualification. Th
 
 ### Bernoulli Distribution
 
-- **Conditions**: Single trial, two outcomes
+- **Conditions**: A single trial with success probability $p$; $X=1$ for success and $X=0$ for failure
 - **Mean and Variance**:
   - $E(X) = p$
   - $Var(X) = p(1-p)$
 
 ### Binomial Distribution
 
-- **Definition**: Sum of independent Bernoulli trials
+- **Definition**: Number of successes in a fixed number $n$ of independent Bernoulli trials, each with the same success probability $p$
 - **Probability**: $P(X = r) = \binom{n}{r}p^r(1-p)^{n-r}$
 - **Mean and Variance**:
   - $E(X) = np$
@@ -303,7 +304,7 @@ AS Mathematics forms the first part of the A-Level Mathematics qualification. Th
   - $s = ut + \frac{1}{2}at^2$
   - $v^2 = u^2 + 2as$
   - $s = \frac{1}{2}(u + v)t$
-- **Vertical Motion**: Under gravity ($a = -9.8 ms^{-2}$)
+- **Vertical Motion**: With upwards positive and air resistance neglected, $a=-g=-9.8\,\mathrm{m\,s^{-2}}$; with downwards positive, $a=+g$
 - **Average Speed**: Total distance $\div$ total time
 
 ## M1.2: Motion in a Straight Line with Variable Acceleration
@@ -314,8 +315,9 @@ AS Mathematics forms the first part of the A-Level Mathematics qualification. Th
 - **Relationships**:
   - $v = \frac{ds}{dt}$
   - $a = \frac{dv}{dt} = \frac{d^2s}{dt^2}$
-  - $s = \int v dt$
-  - $v = \int a dt$
+  - $s = \int v\,dt + C_1$
+  - $v = \int a\,dt + C_2$
+  - Determine the constants from the initial position and velocity.
 - **Application**: Using P1 calculus techniques
 
 ## M1.3: Forces and Newton's Laws
@@ -336,6 +338,6 @@ AS Mathematics forms the first part of the A-Level Mathematics qualification. Th
 ### Momentum Principles
 
 - **Momentum**: $p = mv$
-- **Conservation**: Applied to two particles in straight line
-- **Impulse**: Change in momentum = impulse
+- **Conservation**: Total momentum is conserved when the resultant external impulse is zero; use signed velocities along one chosen axis
+- **Impulse**: Change in momentum, $I=m(v-u)$ for constant mass, using the same positive direction
 - **Direct Impact**: With fixed smooth surface

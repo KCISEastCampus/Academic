@@ -9,17 +9,19 @@ permalink: /alevel/a2-mathematics/statistics/
 
 # S2 (Statistics)
 
+> **Qualification**: OxfordAQA International A-level Mathematics (9660), Unit S2 (MA04). See the [official specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf) for the assessed scope.
+
 ## S2.1: Poisson Distribution
 
 ### Conditions for a Poisson Distribution
 A Poisson distribution models the number of events occurring in a fixed interval of time or space, given that:
 - Events occur **independently**.
-- Events occur at a **constant average rate** $\lambda$.
+- Events occur at a **constant average rate** $r$ per unit time or space.
 - Two events cannot occur at exactly the same instant.
 
 ### Notation
 $$X \sim \text{Po}(\lambda)$$
-where $\lambda$ = mean number of events per interval.
+where $\lambda$ is the mean number of events in the chosen interval. For an interval of length $t$ and rate $r$, $\lambda=rt$.
 
 ### Probability Mass Function
 $$P(X = x) = \frac{e^{-\lambda} \lambda^x}{x!}, \quad x = 0, 1, 2, \dots$$
@@ -60,6 +62,7 @@ $$F(x) = P(X \leq x) = \int_{-\infty}^x f(t) \, dt$$
 
 **Relationship:**
 $$f(x) = \frac{d}{dx}F(x)$$
+at points where $F$ is differentiable.
 
 ### Mean and Variance
 
@@ -67,7 +70,7 @@ $$f(x) = \frac{d}{dx}F(x)$$
 |----------|---------|
 | Expected value | $E(X) = \mu = \int_{-\infty}^{\infty} x f(x) \, dx$ |
 | Expected value of $g(X)$ | $E[g(X)] = \int_{-\infty}^{\infty} g(x) f(x) \, dx$ |
-| Variance | $\text{Var}(X) = E(X^2) - [E(X)]^2 = \int x^2 f(x) \, dx - \mu^2$ |
+| Variance | $\text{Var}(X) = E(X^2) - [E(X)]^2 = \int_{-\infty}^{\infty} x^2 f(x) \, dx - \mu^2$ |
 
 ### Linear Transformations
 - $E(aX + b) = aE(X) + b$
@@ -79,7 +82,7 @@ If $X$ and $Y$ are independent:
 - $\text{Var}(aX \pm bY) = a^2 \text{Var}(X) + b^2 \text{Var}(Y)$
 
 ### Example
-A continuous random variable has PDF $f(x) = kx^2$ for $0 \leq x \leq 3$. Find $k$, $E(X)$, and $\text{Var}(X)$.
+A continuous random variable has PDF $f(x) = kx^2$ for $0 \leq x \leq 3$ and $f(x)=0$ otherwise. Find $k$, $E(X)$, and $\text{Var}(X)$.
 
 **Solution:**
 $$\int_0^3 kx^2 \, dx = k \left[\frac{x^3}{3}\right]_0^3 = k \times \frac{27}{3} = 9k = 1 \Rightarrow k = \frac{1}{9}$$
@@ -97,7 +100,7 @@ $$\text{Var}(X) = E(X^2) - [E(X)]^2 = 5.4 - (2.25)^2 = 5.4 - 5.0625 = 0.3375$$
 ### Conditions for an Exponential Distribution
 The exponential distribution models the **time between events** in a Poisson process.
 
-If events occur at rate $\lambda$ per unit time, the waiting time $T$ between consecutive events follows:
+If events occur at a constant rate $\lambda>0$ per unit time, the waiting time $T$ between consecutive events follows:
 $$T \sim \text{Exp}(\lambda)$$
 
 ### Probability Density Function
@@ -111,7 +114,7 @@ $$E(T) = \frac{1}{\lambda}, \quad \text{Var}(T) = \frac{1}{\lambda^2}$$
 
 ### Memoryless Property
 $$P(T > t + s \mid T > s) = P(T > t)$$
-The exponential distribution is memoryless — the remaining waiting time does not depend on how long you've already waited.
+For $s,t\geq0$, the exponential distribution is memoryless: the remaining waiting time does not depend on how long you've already waited.
 
 ### Example
 The time between arrivals at a service centre follows an exponential distribution with mean 5 minutes. Find the probability that the next customer arrives in less than 3 minutes.
@@ -126,6 +129,7 @@ $$P(T < 3) = 1 - e^{-0.2 \times 3} = 1 - e^{-0.6} \approx 1 - 0.5488 = 0.4512$$
 ## S2.4: Normal Distribution
 
 ### Properties
+- $X\sim N(\mu,\sigma^2)$ with $\sigma>0$.
 - Symmetric about the mean $\mu$
 - Bell-shaped curve
 - Approximately 68% of data within $\mu \pm \sigma$, 95% within $\mu \pm 2\sigma$, 99.7% within $\mu \pm 3\sigma$
@@ -181,11 +185,12 @@ If $X_1, X_2, \dots, X_n$ are i.i.d. with $E(X_i) = \mu$ and $\text{Var}(X_i) = 
 - Standard error: $\text{SE} = \frac{\sigma}{\sqrt{n}}$ (estimated by $\frac{s}{\sqrt{n}}$)
 
 ### Central Limit Theorem (CLT)
-For large $n$ (usually $n \geq 30$), the sampling distribution of $\bar{X}$ is approximately normal, regardless of the population distribution:
+For independent, identically distributed observations with finite mean $\mu$ and finite variance $\sigma^2>0$, the sampling distribution of $\bar X$ is approximately normal for sufficiently large $n$:
 $$\bar{X} \approx N\left(\mu, \frac{\sigma^2}{n}\right)$$
+The required sample size depends on the population distribution. The rule $n\geq30$ is a guide, not a guarantee, especially for strongly skewed distributions.
 
 ### Sampling from a Normal Population
-If the population is $N(\mu, \sigma^2)$, then:
+For an independent random sample from a population $N(\mu, \sigma^2)$, for any sample size $n$:
 $$\bar{X} \sim N\left(\mu, \frac{\sigma^2}{n}\right)$$
 
 ---
@@ -198,13 +203,15 @@ $$\bar{X} \sim N\left(\mu, \frac{\sigma^2}{n}\right)$$
 |------|------------|
 | **Null hypothesis** $H_0$ | Statement assumed true (e.g., $\mu = \mu_0$) |
 | **Alternative hypothesis** $H_1$ | Statement we test against (e.g., $\mu \neq \mu_0$, $\mu > \mu_0$, $\mu < \mu_0$) |
-| **Significance level** $\alpha$ | Probability of Type I error (typically 0.05, 0.01) |
+| **Significance level** $\alpha$ | Chosen upper bound on the probability of a Type I error (typically 0.05 or 0.01); a discrete test may have an actual probability below this bound |
 | **Test statistic** | Value calculated from sample data |
 | **Critical region** | Set of values leading to rejection of $H_0$ |
 | **Critical value** | Boundary of the critical region |
-| **p-value** | Probability of observing test statistic as extreme as observed, assuming $H_0$ true |
+| **p-value** | Under $H_0$, the probability of a test statistic at least as extreme as the observed value, in the direction(s) specified by $H_1$ |
 | **Type I error** | Reject $H_0$ when $H_0$ is true |
 | **Type II error** | Accept $H_0$ when $H_0$ is false |
+
+Accepting (or not rejecting) $H_0$ means that the test provides insufficient evidence against it; it does not prove $H_0$ true. The mean tests below assume an independent random sample.
 
 ### Tests for a Population Proportion
 - Use **exact binomial probabilities**.
@@ -220,13 +227,14 @@ $$\bar{X} \sim N\left(\mu, \frac{\sigma^2}{n}\right)$$
 
 ### Tests for the Mean of a Normal Distribution (unknown variance)
 - $H_0: \mu = \mu_0$
+- Use the unbiased sample variance $s^2=\frac{1}{n-1}\sum(x_i-\bar x)^2$; the exact $t$ distribution requires a normal population.
 - Test statistic: $t = \frac{\bar{X} - \mu_0}{s / \sqrt{n}} \sim t_{n-1}$ under $H_0$
 
-### Tests Using Normal Approximation (large samples)
-For proportions or Poisson means with large $n$, use $z$-test.
+### Large-Sample Tests for a Population Mean
+For a sufficiently large independent random sample, use $z=(\bar x-\mu_0)/(\sigma/\sqrt n)$ when the population variance is known. If it is unknown, use $s/\sqrt n$ as the estimated standard error. Justify the normal approximation using the central limit theorem. For the proportion and Poisson-mean tests required by this course, use exact binomial and exact Poisson probabilities.
 
 ### Example: One-Tailed $z$-Test
-A manufacturer claims that light bulbs last 1000 hours on average. A sample of 50 bulbs has mean 980 hours with $\sigma = 80$ hours. Test at $\alpha = 0.05$ whether the true mean is less than 1000.
+A manufacturer claims that light bulbs last 1000 hours on average. An independent random sample of 50 bulbs has mean 980 hours. Assume a normal population with known standard deviation $\sigma = 80$ hours. Test at $\alpha = 0.05$ whether the true mean is less than 1000.
 
 **Solution:**
 $H_0: \mu = 1000$, $H_1: \mu < 1000$ (one-tailed)

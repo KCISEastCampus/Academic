@@ -57,6 +57,8 @@ A **homologous series** is a family of organic compounds with the following char
 - Each successive member differs by $\mathrm{-CH_2-}$
 - Members have gradually changing physical properties (boiling point, melting point, density)
 
+The general formulae in the table below refer to the indicated **acyclic series** with the stated number of functional groups and multiple bonds. For example, $\mathrm{C_nH_{2n}}$ applies to acyclic monoalkenes, and $\mathrm{C_nH_{2n+1}OH}$ to saturated acyclic monohydric alcohols; these formulae do not cover every molecule containing the same functional group.
+
 ![Diagram of major homologous series in organic chemistry showing series such as alkanes, alkenes, alkynes, alcohols, and carboxylic acids with representative structural formulas and their general formulas (for example alkanes CnH2n+2, alkenes CnH2n, alkynes CnH2n-2, alcohols R-OH, carboxylic acids R-COOH). Subjects are presented as labeled structural diagrams on a white background with English and Chinese labels. Educational, neutral tone.](/assets/img/as-chem/C11-img%20(2).png)
 
 ### 11.2 IUPAC Nomenclature
@@ -125,13 +127,27 @@ The **secondary suffix** indicates the main functional group present in the mole
 
 #### 11.2.6 IUPAC Naming Rules
 
+For these simple acyclic examples, choose a parent chain containing the principal characteristic group, then apply its numbering priority. After those priorities, compare competing sets of substituent locants in increasing order and choose the lower locant at the **first point of difference**, rather than the lowest sum. See [IUPAC Blue Book P-14.3.5](https://iupac.qmul.ac.uk/BlueBook/P1.html#P-14.3.5).
+
 ![IMG](<../../assets/img/as-chem/C11-img (9).png>)
 ![IMG](<../../assets/img/as-chem/C11-img (10).png>)
-![IMG](<../../assets/img/as-chem/C11-img (11).png>)
+**Locant comparison — 2,3-dimethylpentane:**
+
+$$\mathrm{CH_3-CH(CH_3)-CH(CH_3)-CH_2-CH_3}$$
+
+From one end the methyl locants are $2,3$; from the other they are $3,4$. Choose $2,3$ because $2<3$ at the first difference.
 ![IMG](<../../assets/img/as-chem/C11-img (12).png>)
-![IMG](<../../assets/img/as-chem/C11-img (13).png>)
+**2,4,4-trimethylpentanal:**
+
+$$\mathrm{OHC-CH(CH_3)-CH_2-C(CH_3)_2-CH_3}$$
+
+Number the five-carbon parent chain from the aldehyde carbon (C1). There is one methyl group at C2 and two at C4, giving locants **2,4,4**.
 ![IMG](<../../assets/img/as-chem/C11-img (14).png>)
-![IMG](<../../assets/img/as-chem/C11-img (15).png>)
+**4-chloro-3-oxobutanoic acid:**
+
+$$\mathrm{HOOC-CH_2-CO-CH_2Cl}$$
+
+The parent chain has **four carbons**, numbered from the carboxyl carbon (C1): the additional carbonyl is at C3 and chloro at C4. Oxygen and chlorine atoms do not add carbons to the parent chain.
 
 #### 11.2.7 Bond Fission
 
@@ -170,16 +186,17 @@ A type of bond fission where the bond pair of electrons is retained entirely by 
 
 #### 11.3.3 Geometrical (E/Z) Isomerism
 
-Occurs in unsaturated (double bond-containing) or ring compounds due to **restricted rotation** around the double bond.
+E/Z isomerism about a C=C double bond requires **restricted rotation** and **two different groups attached to each carbon** of the double bond.
 
-- **Z isomers**: Functional groups on the **same side** of the double bond/ring
-- **E isomers**: Functional groups on the **opposite sides** of the double bond/ring
+1. On each double-bonded carbon, rank its two groups using **Cahn–Ingold–Prelog (CIP) priority**: higher atomic number has higher priority; if the first atoms tie, compare the next atoms until the first difference.
+2. **Z**: the higher-priority groups on the two carbons lie on the **same side** of the double bond.
+3. **E**: those higher-priority groups lie on **opposite sides**.
 
-> Note: Cis/trans isomerism is a special case of E/Z isomerism, where *cis* ≈ Z and *trans* ≈ E.
+Ring compounds may show **cis/trans** isomerism because rotation is restricted by the ring. Do not apply C=C E/Z rules directly to a ring. In the 1,2-dichloroethene example below, Cl has higher priority than H, so cis is Z and trans is E; this correspondence is not a general rule for every alkene.
 
 ![IMG](<../../assets/img/as-chem/C11-img (21).png>)
 
-Substituted groups joined by a single bond can rotate freely, so no isomerism occurs. However, there is no rotation around a double bond, so E- and Z-isomers are distinct compounds that cannot be easily interconverted.
+Rotation about an ordinary C-C single bond generally interconverts conformations. Rotation about C=C would disrupt the π overlap, so E and Z isomers cannot readily interconvert under ordinary conditions.
 
 ---
 
@@ -555,7 +572,7 @@ CFCs are halogenoalkanes containing only chlorine, fluorine and carbon (no hydro
 #### 14.1.1 General Properties
 
 **Alkenes** are unsaturated hydrocarbons containing at least one carbon-carbon double bond.
-- **General formula**: $\mathrm{C_{n}H_{2n}}$
+- **General formula for acyclic monoalkenes**: $\mathrm{C_{n}H_{2n}}$
 - **Simplest alkene**: Ethene ($\mathrm{C_2H_4}$)
 
 #### 14.1.2 Structure of Alkenes
@@ -566,7 +583,9 @@ CFCs are halogenoalkanes containing only chlorine, fluorine and carbon (no hydro
 - There is **no rotation around the C=C double bond** (unlike C-C single bonds in alkanes)
 - All alkenes have a planar geometry around the carbon-carbon double bond
 
-![IMG](<../../assets/img/as-chem/C14-img (1).png>)
+![Ethene: planar sigma-bond framework with approximately 120-degree angles, and a pi bond formed by sideways overlap of parallel p orbitals](/assets/img/as-chem/ethene-bonding.svg)
+
+*Self-drawn teaching schematic; orbitals and distances are not to scale.*
 
 #### 2. Bonding in Alkenes
 
@@ -576,7 +595,7 @@ A C=C double bond consists of:
 
 The π bond is responsible for the restricted rotation around the double bond.
 
-![IMG](<../../assets/img/as-chem/C14-img (2).png>)
+Parallel p orbitals are required for sideways overlap. Rotation about C=C would disrupt that overlap; the diagram does not describe the carbon orbitals forming σ bonds as pure s orbitals.
 
 #### 14.1.3 Physical Properties
 
@@ -769,11 +788,11 @@ Produces ethanolamines, used in cosmetics, soaps and detergents.
 #### 15.1.1 General Formula and Structure
 
 **Alcohols** are organic compounds containing a hydroxyl (-OH) group bonded to a carbon atom.
-- **General formula**: $\mathrm{C_{n}H_{2n+1}OH}$ (or $\mathrm{C_{n}H_{2n+2}O}$)
+- **General formula for saturated acyclic monohydric alcohols**: $\mathrm{C_{n}H_{2n+1}OH}$ (or $\mathrm{C_{n}H_{2n+2}O}$)
 - **Molecular geometry**: The oxygen atom in the -OH group has two bonding pairs and two lone pairs of electrons
-- **C-O-H bond angle**: Approximately 105° (compressed from the ideal tetrahedral angle of 109.5° due to greater repulsion between lone pairs)
+- **C-O-H geometry**: The two bonding pairs and two lone pairs give a bent arrangement of the bonds at oxygen. The exact angle depends on the molecule; water's 104.5° angle is not a universal alcohol bond angle.
 
-![IMG](<../../assets/img/as-chem/C15-img (1).png>)
+For ethanol, $\mathrm{CH_3CH_2-O-H}$, oxygen forms two single bonds (to C and H) and has two lone pairs. This condensed formula shows connectivity, not a measured bond angle.
 
 #### 15.1.2 Physical Properties
 

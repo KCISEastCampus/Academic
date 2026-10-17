@@ -240,22 +240,24 @@ Protein digestion yields **amino acids**; carbohydrate digestion yields **glucos
 
 #### Replication of HIV
 1. HIV enters the bloodstream after infection and circulates around the body.
-2. Viral protein binds specifically to the **CD4 protein**, mainly on helper T cells.
-3. The viral capsid fuses with the cell membrane, releasing HIV RNA and enzymes into the host cell.
+2. Viral proteins bind to the **CD4 protein** and a co-receptor, mainly on helper T cells.
+3. The viral **lipid envelope** fuses with the cell membrane. The capsid enters, then uncoating releases viral RNA and enzymes.
 4. **Reverse transcriptase** converts viral RNA into double-stranded DNA.
 5. New viral DNA enters the nucleus and inserts into the host cell’s own DNA.
-6. Using host enzymes, viral DNA produces mRNA coding for new viral proteins and RNA.
-7. mRNA exits the nucleus and uses host cell machinery to assemble HIV particles.
-8. New viruses **bud off** from the cell surface, taking host membrane to form their lipid envelope.
+6. Host enzymes transcribe the integrated viral DNA into viral RNA; some transcripts act as mRNA and others become new viral genomes.
+7. Host ribosomes translate viral mRNA into proteins. Viral proteins and genome RNA assemble into new HIV particles at the cell membrane.
+8. New particles **bud off** from the cell surface, taking host membrane to form their lipid envelope. Viral protease processes viral proteins, allowing maturation into infectious particles.
 
-![Diagram of HIV infecting a T-helper cell through the CD4 receptor, showing the virus binding, entering the cell, reverse transcriptase and RNA entering the cell, HIV RNA being transcribed into the T-cell genome, reproduction beginning, and new HIV particles budding as T-cell function diminishes. The image uses a circular step-by-step layout on a plain background with labels including T-helper cell, CD4, HIV, infection with HIV, reverse transcriptase and RNA enter the cell, HIV RNA transcribed into T-cell genome, reproduction begins, and HIV budding. The tone is educational and clinical.](../../assets/img/as-biology/as-biology-C13-img2.png)
+![HIV replication: attachment, envelope fusion and uncoating, reverse transcription from RNA to DNA, integration of viral DNA, production of viral RNA and proteins, then assembly and budding](/assets/img/as-biology/hiv-replication.svg)
+
+*Teaching diagram adapted from the process described by [NIH HIVinfo](https://hivinfo.nih.gov/understanding-hiv/fact-sheets/hiv-life-cycle); not an examination question.*
 
 #### HIV replication in T helper cells — summary
-1. HIV attaches to CD4 surface receptors on a TH lymphocyte and injects reverse transcriptase and RNA into the cell.
+1. HIV attaches to CD4 surface receptors on a TH lymphocyte. Envelope fusion and uncoating release viral RNA and enzymes into the cell.
 2. Reverse transcriptase uses the viral RNA as a template to make a DNA copy which gets inserted into the host chromosome.
 3. The viral DNA is transcribed to make viral mRNA and translated to make viral proteins.
-4. Viral proteins and RNA form new HIV particles which burst out of the host cell to infect more TH cells.
-5. This destroys the T helper cell, eventually leading to a dramatic reduction in the immune capability of the host.
+4. Viral proteins and RNA assemble into new HIV particles, which **bud from the host cell membrane** and, after protease-dependent maturation, can infect more TH cells.
+5. Over time, infection damages and depletes helper T cells, reducing the host's immune capability.
 
 > A person infected with HIV is said to be **HIV positive**.
 
@@ -284,7 +286,7 @@ Protein digestion yields **amino acids**; carbohydrate digestion yields **glucos
 - Weakened bacterial walls cannot resist osmotic water intake; cells burst and die.
 - Viruses have **no cell walls, no murein, and no independent metabolic pathways**.
 - They rely entirely on host cell machinery, so antibiotics have no target structures or processes to disrupt.
-- Viruses live **inside host cells**, where antibiotics cannot reach them.
+- The reason is the absence of the corresponding **bacterial targets**, not a general inability of antibiotics to enter host cells.
 
 ---
 
@@ -367,7 +369,7 @@ Cells that display foreign antigens on their surface include:
 #### B cell differentiation
 
 After activation, each B cell clone develops into two specialised cell types:
-1. **Plasma cells** — secrete large quantities of **antibodies** into blood plasma; survive only a few days. Provide the **immediate immune defence** by binding to and destroying antigens.
+1. **Plasma cells** — secrete large quantities of antigen-specific **antibodies**. Many early plasma cells are short-lived, but some are long-lived. Antibodies help remove pathogens through mechanisms such as neutralisation, agglutination and opsonisation.
 2. **Memory B cells** — long-lived cells that mediate the **secondary immune response**.
 
 ![Memory cells diagram](../../assets/img/as-biology/as-biology-C14-img4.png)
@@ -381,7 +383,7 @@ After activation, each B cell clone develops into two specialised cell types:
 3. Activated helper T cells bind to the processed antigens on B cells, fully activating the B cells.
 4. Activated B cells divide by mitosis to form a clone of **plasma cells** (and a small number of memory B cells).
 5. Cloned plasma cells produce and secrete **antigen-specific antibodies** that match the pathogen’s surface antigens.
-6. Antibodies bind to pathogen antigens (**antigen-antibody complex**) and destroy the pathogen.
+6. Antibodies bind to pathogen antigens (**antigen-antibody complexes**), helping neutralise pathogens or toxins and assisting their clearance by other immune mechanisms.
 7. Memory B cells persist in the body; on re-encountering the same antigen, they rapidly divide into plasma cells for the **secondary immune response**.
 
 #### Antibody structure
@@ -462,9 +464,9 @@ Despite effective vaccines, some diseases cannot be fully eliminated due to thes
 
 > The **secondary immune response** is the rapid, amplified immune reaction that occurs when the body re-encounters an antigen it has previously been exposed to (via infection or vaccination).
 
-1. During the **primary immune response**, plasma cells secrete short-lived antibodies and produce long-lived **memory B / T cells** that circulate in the bloodstream.
-2. On re-exposure to the same antigen, memory cells rapidly divide into new **plasma cells** (and more memory cells) without the need for helper T cell activation (faster pathway).
-3. Plasma cells in the secondary response secrete antibodies **much faster and in larger quantities** than in the primary response, destroying the pathogen before symptoms develop.
+1. During the **primary immune response**, activated B cells divide and differentiate into **plasma cells** and **memory B cells**. Memory T cells develop separately from activated T cells.
+2. On re-exposure to the same antigen, memory B cells rapidly proliferate and differentiate into antibody-secreting plasma cells and further memory B cells. Helper T cells can still contribute to this response.
+3. The secondary response produces antibodies **faster and in larger quantities** than the primary response, often controlling the pathogen before symptoms develop.
 4. New memory cells are produced to maintain **long-term immunity** against future reinfections.
 
 #### The ethics of using vaccines
@@ -686,7 +688,14 @@ The ventricles and atria both relax. The higher pressure in the pulmonary artery
 
 ![Pressure and volume changes during the cardiac cycle — reference diagram 1](../../assets/img/as-biology/as-biology-C15-img1.png)
 
-![Pressure and volume changes during the cardiac cycle — reference diagram 2](../../assets/img/as-biology/as-biology-C15-img2.png)
+| Phase | Valve state and pressure change | Ventricular volume / blood flow |
+|---|---|---|
+| Ventricular filling (including atrial systole) | AV valves open; semilunar valves closed; atrial pressure exceeds ventricular pressure | Blood flows from atria into ventricles; ventricular volume increases |
+| Isovolumetric contraction | Ventricular pressure exceeds atrial pressure, closing AV valves; semilunar valves have not opened | All valves closed; ventricular volume remains at end-diastolic volume |
+| Ventricular ejection | Ventricular pressure exceeds arterial pressure, opening semilunar valves; AV valves stay closed | Blood enters the arteries; ventricular volume decreases |
+| Isovolumetric relaxation | Ventricular pressure falls below arterial pressure, closing semilunar valves; AV valves have not yet opened | All valves closed; volume remains at the non-zero end-systolic volume. Filling resumes when ventricular pressure falls below atrial pressure |
+
+The ventricles do **not** empty completely. When AV valves open, blood flows into the **ventricles** from the atria.
 
 #### Pressure reference
 - **Systolic pressure** = the maximum blood pressure in the arteries
@@ -772,9 +781,9 @@ The ventricles and atria both relax. The higher pressure in the pulmonary artery
 
 Most plants are terrestrial, evolving water-conserving adaptations (e.g., waterproof outer layer), so they cannot absorb water via the general body surface. Instead, they have a specialised exchange surface in the soil: **root hairs**.
 
-![Structure of phloem showing sieve plates and companion cells](../../assets/img/as-biology/as-biology-C16-img2.png)
+![Water uptake by a root hair from the soil and movement towards the xylem](../../assets/img/as-biology/as-biology-C16-img2.png)
 
-> Phloem is made up of living cells that have **sieve plates** between them and **companion cells** beside them, which provide metabolic support.
+> Water enters root-hair cells by osmosis down a water potential gradient, then moves across the cortex towards the xylem.
 
 #### Uptake of water by root hairs
 
@@ -795,7 +804,7 @@ As water enters endodermal cells by osmosis, cohesive water molecules pull more 
 
 #### Symplastic pathway
 
-![Symplastic pathway diagram showing water movement through cytoplasm via plasmodesmata](../../assets/img/as-biology/as-biology-C16-img3.png)
+![Apoplastic movement through cell walls and symplastic movement through cytoplasm and plasmodesmata](../../assets/img/as-biology/as-biology-C16-img3.png)
 
 Occurs via the **cytoplasm** of cortex cells (osmosis-driven), with water passing through cell walls via **plasmodesmata** (cytoplasm-filled tiny openings). A continuous cytoplasm column connects root-hair cells to root-centre xylem.
 
@@ -916,7 +925,14 @@ All factors depend on solar energy, so the **Sun ultimately drives transpiration
 - Aphids use needle-like mouthparts to feed on phloem; sieve tube contents show sucrose changes matching leaf levels, with a short time lag.
 - Ringing (removing a full circle of phloem) causes sugar accumulation above the ring and loss below.
 
-![Evidence table for phloem translocation](../../assets/img/as-biology/as-biology-C16-img6.png)
+| Observation | Interpretation and limit |
+|---|---|
+| Sap escapes when a sieve tube is cut | The sap is under positive hydrostatic pressure, consistent with pressure-driven mass flow |
+| Labelled carbon from supplied CO₂ appears in the phloem | Products of photosynthesis are transported in the phloem; this alone does not establish every step of the mechanism |
+| Changes in leaf sucrose are followed by changes in phloem sap | Supports transport from source leaves; the delay depends on transport and exchange processes |
+| Metabolic poisons or low oxygen can inhibit translocation; companion cells contain many mitochondria | ATP-dependent loading and unloading contribute to translocation; the pressure-driven flow itself is not an ATP-powered pump along each sieve tube |
+
+Translocation can continue **at night**, using carbohydrates released from stores. Shading or darkness can reduce photosynthesis and export, but does not imply that phloem flow always stops. The direction depends on the positions of sources and sinks.
 
 ### 16.5 Investigating transport in plants
 
@@ -1079,6 +1095,8 @@ A change to one or more nucleotide bases or their rearrangement in DNA is a **ge
 
 Two types of gene mutation are **base substitution** and **base deletion**.
 
+The DNA triplets in the substitution examples below are on the **template strand**, read 3′→5′; the complementary mRNA codons are read 5′→3′. For example, template GTC produces mRNA CAG (glutamine).
+
 ##### Substitution of bases
 
 The type of gene mutation in which a nucleotide in a DNA molecule is replaced by another nucleotide that has a different base.
@@ -1095,7 +1113,7 @@ The genetic code is read in **triplets** (three bases). One deleted base causes 
 
 A deletion near the start affects all triplets; a deletion near the end has a smaller effect but still alters the protein.
 
-![Diagram showing how proto-oncogenes regulate cell division: normal pathway shows growth factor binding to a receptor protein, activating DNA replication genes, and controlled cell division; mutated pathways show oncogene formation leading to uncontrolled division and tumour formation](../../assets/img/as-biology/as-biology-C17-img11.png)
+![Deletion of one G nucleotide shifts the reading frame, changing subsequent triplets and the amino acids they encode](../../assets/img/as-biology/as-biology-C17-img11.png)
 
 #### Causes of mutations
 

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 480" width="660" height="480" role="img" aria-labelledby="title desc">
+  <title id="title">Sigma and pi bonding in ethene</title>
+  <desc id="desc">The sigma-bond framework is planar, with angles approximately 120 degrees at each carbon. Parallel p orbitals overlap sideways above and below this plane to form the pi bond. Rotation disrupts this overlap.</desc>
+  <rect width="660" height="480" rx="12" fill="white"/>
+  <g font-family="Arial, sans-serif" fill="#153c59" text-anchor="middle">
+    <text x="330" y="34" font-size="25" font-weight="bold">Ethene: σ framework and π overlap</text>
+    <text x="330" y="65" font-size="19">Top view of the planar σ-bond framework</text>
+    <g stroke="#153c59" stroke-width="3"><path d="M251 148H404M220 137L160 101M220 159L160 195M435 137L490 101M435 159L490 195"/></g>
+    <g font-size="25"><text x="235" y="156">C</text><text x="420" y="156">C</text><text x="143" y="99">H</text><text x="143" y="214">H</text><text x="507" y="99">H</text><text x="507" y="214">H</text></g>
+    <text x="330" y="135" font-size="19">σ</text><text x="92" y="156" font-size="19">≈120°</text><text x="566" y="156" font-size="19">≈120°</text>
+    <text x="330" y="258" font-size="19">Side view of parallel p orbitals (H atoms omitted)</text>
+    <g fill="#6fa9db" fill-opacity="0.45" stroke="#315f85" stroke-width="2">
+      <ellipse cx="266" cy="315" rx="78" ry="38"/><ellipse cx="394" cy="315" rx="78" ry="38"/>
+      <ellipse cx="266" cy="401" rx="78" ry="38"/><ellipse cx="394" cy="401" rx="78" ry="38"/>
+    </g>
+    <path d="M90 358H570" stroke="#8999a7" stroke-dasharray="6 5"/>
+    <path d="M266 284V432M394 284V432" stroke="#315f85" stroke-dasharray="3 4"/>
+    <path d="M279 358H381" stroke="#153c59" stroke-width="3"/>
+    <g font-size="23"><text x="266" y="366">C</text><text x="394" y="366">C</text><text x="330" y="316">π</text><text x="330" y="409">π</text><text x="330" y="351">σ</text></g>
+    <text x="330" y="465" font-size="19">π electron density lies above and below the plane.</text>
+  </g>
+</svg>

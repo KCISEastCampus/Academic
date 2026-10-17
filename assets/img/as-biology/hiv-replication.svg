@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 670" width="640" height="670" role="img" aria-labelledby="title desc">
+  <title id="title">HIV replication in a helper T cell</title>
+  <desc id="desc">Viral envelope fusion releases the capsid. Reverse transcription makes DNA from RNA. Viral DNA integrates into host DNA, which then produces viral RNA and proteins. New particles assemble and bud from the membrane.</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#315f85"/></marker></defs>
+  <rect width="640" height="670" rx="12" fill="white"/>
+  <g font-family="Arial, sans-serif" fill="#153c59">
+    <text x="320" y="36" text-anchor="middle" font-size="26" font-weight="bold">HIV replication in a helper T cell</text>
+    <g fill="#eff6fc" stroke="#315f85" stroke-width="2">
+      <rect x="25" y="58" width="590" height="80" rx="8"/>
+      <rect x="25" y="158" width="590" height="80" rx="8"/>
+      <rect x="25" y="258" width="590" height="80" rx="8"/>
+      <rect x="25" y="358" width="590" height="80" rx="8"/>
+      <rect x="25" y="458" width="590" height="80" rx="8"/>
+      <rect x="25" y="558" width="590" height="80" rx="8"/>
+    </g>
+    <g font-size="24" font-weight="bold">
+      <text x="45" y="90">1. Attachment</text><text x="45" y="190">2. Fusion and uncoating</text>
+      <text x="45" y="290">3. Reverse transcription: RNA → DNA</text>
+      <text x="45" y="390">4. Integration: viral DNA → host DNA</text>
+      <text x="45" y="490">5. Production of viral components</text>
+      <text x="45" y="590">6. Assembly and budding</text>
+    </g>
+    <g font-size="20">
+      <text x="45" y="120">Viral proteins bind CD4 and a co-receptor.</text>
+      <text x="45" y="220">Envelope fuses; uncoating releases RNA and enzymes.</text>
+      <text x="45" y="320">Reverse transcriptase produces viral DNA.</text>
+      <text x="45" y="420">Viral DNA is inserted into a host chromosome.</text>
+      <text x="45" y="520">Transcription makes RNA; translation makes proteins.</text>
+      <text x="45" y="620">Particles bud, then mature through protease activity.</text>
+    </g>
+  </g>
+  <g stroke="#315f85" stroke-width="2.5" marker-end="url(#arrow)"><path d="M320 139V156"/><path d="M320 239V256"/><path d="M320 339V356"/><path d="M320 439V456"/><path d="M320 539V556"/></g>
+</svg>

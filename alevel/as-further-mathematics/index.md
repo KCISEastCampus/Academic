@@ -62,7 +62,7 @@ $$y = \frac{x^2 + ax + b}{x^2 + cx + d} \quad \text{(Quadratic/Quadratic)}$$
 
 **Step 1: Finding Asymptotes**
 
-*Vertical asymptotes* occur where the denominator equals zero:
+*Vertical asymptotes*: cancel common factors first, while retaining exclusions from the original domain. A zero of the remaining denominator gives a vertical asymptote. An excluded point where the simplified denominator is non-zero is a removable hole.
 - For $$y = \frac{x+2}{x-3}$$, set $x - 3 = 0$, so vertical asymptote at $x = 3$
 
 *Horizontal asymptotes* depend on comparing degrees:
@@ -71,8 +71,8 @@ $$y = \frac{x^2 + ax + b}{x^2 + cx + d} \quad \text{(Quadratic/Quadratic)}$$
 
 **Step 2: Finding Intercepts**
 
-- **x-intercepts**: Set numerator = 0
-- **y-intercepts**: Set x = 0
+- **x-intercepts**: Set numerator = 0, excluding points outside the original domain
+- **y-intercepts**: Set x = 0, if the function is defined there
 
 **Step 3: Stationary Points (Without Calculus)**
 
@@ -123,6 +123,8 @@ The four main conic sections have distinct geometric properties:
 - **Key property:** All points equidistant from focus and directrix
 
 **Ellipse:** $$\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$$
+
+For the horizontal major axis described below, assume $a>b>0$.
 
 - **Major axis length:** $2a$
 - **Minor axis length:** $2b$
@@ -233,7 +235,7 @@ $$z = r(\cos θ + i\sin θ)$$
 
 where:
 - **Modulus:** $r = \lvert z\rvert = \sqrt{x^2 + y^2}$
-- **Argument:** $θ = \arg(z) = \tan^{-1}(y/x)$ (adjusted for quadrant)
+- **Argument:** For $z\ne0$ and $x\ne0$, use $\tan^{-1}(y/x)$ and adjust for the quadrant. On the imaginary axis, the principal argument is $\pi/2$ if $y>0$ and $-\pi/2$ if $y<0$. The argument of zero is undefined; principal arguments here lie in $(-\pi,\pi]$.
 
 **Conversion Examples**
 
@@ -674,7 +676,7 @@ Combined: $SR = \begin{pmatrix} 1 & 0 \\\\ 0 & -1 \end{pmatrix} \begin{pmatrix} 
 
 For a $2 \times 2$ matrix $M$:
 - $\lvert \det(M) \rvert$ = factor by which area is scaled
-- If $\det(M) = 0$, the transformation maps the plane onto a line (singular)
+- If $\det(M) = 0$, the transformation maps the plane onto a line, or onto the origin if $M$ is the zero matrix (singular)
 - If $\det(M) < 0$, orientation is reversed (e.g., includes a reflection)
 
 **Example**: The matrix $\begin{pmatrix} 2 & 0 \\\\ 0 & 3 \end{pmatrix}$ has determinant $6$, so area is multiplied by $6$.
@@ -704,11 +706,11 @@ A **line of invariant points** means every point on that line is individually in
 
 ### Invariant Lines
 
-A line (through the origin) is **invariant** if every point on the line maps to another point on the same line (not necessarily the same point).
+A line is **invariant** if every point on it maps to a point on the same line (not necessarily itself). The method below finds invariant lines through the origin.
 
 **Method**: Let the line be $y = mx$. Any point on it is $(t, mt)$. After transformation, we require the image to satisfy $y' = m x'$.
 
-**Example**: For $M = \begin{pmatrix} 2 & 0 \\\\ 0 & 1 \end{pmatrix}$ (stretch in $x$), find invariant lines.
+**Example**: For $M = \begin{pmatrix} 2 & 0 \\\\ 0 & 1 \end{pmatrix}$ (stretch in $x$), find invariant lines through the origin.
 
 Let $(x,y) = (t, mt)$. Then $(x',y') = (2t, mt)$.
 
@@ -718,7 +720,7 @@ So either $m = 0$ or $t = 0$ (trivial). Thus $m = 0$ is a solution.
 
 Also check vertical lines $x = 0$: $(0,t) \to (0,t)$ maps to itself, so $x = 0$ is also invariant.
 
-Thus invariant lines: $y = 0$ and $x = 0$.
+Thus the invariant lines through the origin are $y=0$ and $x=0$. More generally, every horizontal line $y=c$ is invariant for this transformation.
 
 ---
 
@@ -827,11 +829,17 @@ $$x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$$
 **Example**: $f(x) = x^3 - x - 1$, $f'(x) = 3x^2 - 1$
 
 Start with $x_0 = 1.5$:
-$x_1 = 1.5 - \frac{1.5^3 - 1.5 - 1}{3(1.5)^2 - 1} = 1.5 - \frac{3.375 - 2.5}{6.75 - 1} = 1.5 - \frac{0.875}{5.75} = 1.5 - 0.1522 = 1.3478$
 
-$x_2 = 1.3478 - \frac{1.3478^3 - 2.3478}{3(1.3478)^2 - 1} = 1.3478 - \frac{2.447 - 2.3478}{5.456 - 1} = 1.3478 - \frac{0.0992}{4.456} = 1.3478 - 0.0223 = 1.3255$
+$$x_1=1.5-\frac{0.875}{5.75}=1.347826086\ldots$$
 
-$x_3 = 1.3255 - \frac{1.3255^3 - 2.3255}{3(1.3255)^2 - 1} = 1.3255 - \frac{2.329 - 2.3255}{5.271 - 1} = 1.3255 - \frac{0.0035}{4.271} = 1.3255 - 0.00082 = 1.3247$
+| $n$ | $x_n$ (6 decimal places) |
+|---|---|
+| 0 | 1.500000 |
+| 1 | 1.347826 |
+| 2 | 1.325200 |
+| 3 | 1.324718 |
+
+Retain unrounded values during the iteration, and round only the reported answer.
 
 Converges rapidly to root ≈ 1.3247.
 
@@ -921,47 +929,49 @@ Bayes' theorem problems are often solved using tree diagrams:
 
 ---
 
-## FS1.2: Uniform Distribution (Continuous)
+## FS1.2: Discrete Uniform Distribution
 
 
 ### 2.1 Definition
 
 
-A continuous random variable $X$ has a **uniform distribution** on $[a,b]$ if all values in the interval are equally likely.
+A discrete random variable $X$ is **uniform** on the consecutive integers $a,a+1,\ldots,b$ if each has the same probability. Let $N=b-a+1$, with integers $a\leq b$.
 
-**Notation**: $X \sim U(a,b)$
-
-### 2.2 Probability Density Function (PDF)
+### 2.2 Probability Mass Function (PMF)
 
 
-$$f(x) = \begin{cases} \frac{1}{b-a}, & a \leq x \leq b \\ 0, & \text{otherwise} \end{cases}$$
+$$P(X=x)=\begin{cases}1/N, & x\in\{a,a+1,\ldots,b\} \\ 0, & \text{otherwise}\end{cases}$$
 
 ### 2.3 Cumulative Distribution Function (CDF)
 
 
-$$F(x) = \begin{cases} 0, & x < a \\ \frac{x-a}{b-a}, & a \leq x \leq b \\ 1, & x > b \end{cases}$$
+$$F(x)=\begin{cases}0, & x<a \\ (\lfloor x\rfloor-a+1)/N, & a\leq x<b \\ 1, & x\geq b\end{cases}$$
+
+The CDF is a step function; $\lfloor x\rfloor$ is the greatest integer not exceeding $x$.
 
 ### 2.4 Mean and Variance
 
 
 $$E(X) = \frac{a+b}{2}$$
 
-$$\text{Var}(X) = \frac{(b-a)^2}{12}$$
+$$\text{Var}(X)=\frac{N^2-1}{12}$$
 
 **Derivation of variance**:
 
-$$E(X^2) = \int_a^b x^2 \cdot \frac{1}{b-a} \, dx = \frac{1}{b-a} \left[ \frac{x^3}{3} \right]_a^b = \frac{b^3 - a^3}{3(b-a)} = \frac{a^2 + ab + b^2}{3}$$
+Let $Y=X-a$, so $Y$ is uniform on $0,1,\ldots,N-1$.
 
-$$\text{Var}(X) = E(X^2) - [E(X)]^2 = \frac{a^2 + ab + b^2}{3} - \left(\frac{a+b}{2}\right)^2 = \frac{(b-a)^2}{12}$$
+$$E(Y)=\frac{N-1}{2},\qquad E(Y^2)=\frac{(N-1)(2N-1)}{6}$$
+
+$$\text{Var}(X)=\text{Var}(Y)=\frac{(N-1)(2N-1)}{6}-\left(\frac{N-1}{2}\right)^2=\frac{N^2-1}{12}$$
 
 ### 2.5 Probability Calculations
 
 
-$$P(c \leq X \leq d) = \frac{d-c}{b-a} \quad \text{for } a \leq c < d \leq b$$
+$$P(c\leq X\leq d)=\frac{d-c+1}{N}\quad\text{for integers }a\leq c\leq d\leq b$$
 
-**Example**: $X \sim U(2,8)$. Find $P(X > 5)$.
+**Example (self-written / 自拟题)**: $X$ is uniform on $\{2,3,4,5,6,7,8\}$. Find $P(X>5)$.
 
-$P(X > 5) = \frac{8-5}{8-2} = \frac{3}{6} = 0.5$
+The favourable values are $6,7,8$, so $P(X>5)=3/7$. Also, $E(X)=5$ and $\text{Var}(X)=(7^2-1)/12=4$.
 
 ---
 
@@ -1052,7 +1062,7 @@ Then $\text{Var}(X) = E(X^2) - [E(X)]^2 = E(X(X-1)) + E(X) - [E(X)]^2$
 | Binomial$(n,p)$ | $(1-p + pt)^n$ |
 | Geometric$(p)$ | $\frac{pt}{1-(1-p)t}$ |
 | Poisson$(\lambda)$ | $e^{\lambda(t-1)}$ |
-| Uniform on $\{1,2,\dots,n\}$ | $\frac{t(1-t^n)}{n(1-t)}$ |
+| Uniform on $\{1,2,\dots,n\}$ | $\frac{t+t^2+\cdots+t^n}{n}$ (including $t=1$) |
 
 **Derivation for Poisson**:
 $$G_X(t) = \sum_{x=0}^\infty t^x \frac{e^{-\lambda}\lambda^x}{x!} = e^{-\lambda} \sum_{x=0}^\infty \frac{(\lambda t)^x}{x!} = e^{-\lambda} e^{\lambda t} = e^{\lambda(t-1)}$$
@@ -1181,7 +1191,7 @@ For interception: $ut = 100$ and $0 = 10t$ ⇒ $t = 0$ (trivial). No interceptio
 ### 1.5 Closest Approach
 
 
-For two moving particles, the distance between them is a quadratic function of time. To find the minimum distance:
+For two particles moving with constant velocities, the **squared distance** between them is a quadratic function of time (possibly with a zero quadratic coefficient). Minimise it over the allowed time interval, checking its endpoints as well as any stationary point.
 
 **Method 1**: Complete the square
 **Method 2**: Differentiate $d^2$ with respect to $t$ and set to zero
@@ -1259,7 +1269,7 @@ $M$: $c = 0$ (period independent of mass)
 $T$: $1 = -2b$ ⇒ $b = -\frac{1}{2}$
 $L$: $0 = a + b$ ⇒ $a = -b = \frac{1}{2}$
 
-Thus $T = k \sqrt{\frac{l}{g}}$. Experiment shows $k = 2\pi$.
+Thus $T=k\sqrt{l/g}$. For an ideal simple pendulum at small angular amplitudes, $k\approx2\pi$. Dimensional analysis alone cannot determine this numerical constant or rule out dependence on a dimensionless quantity such as angular amplitude.
 
 **Example 2**: Speed of waves on a string
 Assume $v = k \cdot T^a \cdot \mu^b$, where $T$ = tension ($MLT^{-2}$), $\mu$ = mass per unit length ($ML^{-1}$)
@@ -1318,7 +1328,7 @@ For two particles colliding along the line of centres:
 $$v_2 - v_1 = -e(u_2 - u_1)$$
 
 where:
-- $u_1, u_2$ = velocities before impact (positive in same direction)
+- $u_1,u_2$ = signed velocities before impact, measured along one chosen positive axis
 - $v_1, v_2$ = velocities after impact
 - $e$ = coefficient of restitution ($0 \leq e \leq 1$)
 
@@ -1326,7 +1336,7 @@ where:
 |-----|-------------------|
 | $e = 1$ | Perfectly elastic (kinetic energy conserved) |
 | $0 < e < 1$ | Partially elastic (some KE lost) |
-| $e = 0$ | Perfectly inelastic (particles stick together, $v_1 = v_2$) |
+| $e = 0$ | Perfectly inelastic: $v_1=v_2$ immediately after impact; permanent adhesion is not implied |
 
 ### 3.5 Impact with a Fixed Surface
 
@@ -1334,11 +1344,11 @@ where:
 For a particle hitting a fixed smooth surface perpendicularly:
 $$v = -e u$$
 
-where $u$ = speed towards surface, $v$ = speed away from surface.
+where $u$ and $v$ are signed velocities along the same axis. If away from the surface is positive, $u<0$ and $v\geq0$.
 
 **Example**: A ball is dropped from height $h$ onto a horizontal floor with coefficient of restitution $e$. Find the height after the first bounce.
 
-Velocity just before impact: $u = \sqrt{2gh}$ (downwards)
+With upwards positive, velocity just before impact: $u=-\sqrt{2gh}$ (downwards)
 Velocity just after impact: $v = e\sqrt{2gh}$ (upwards)
 Height after bounce: $h_1 = \frac{v^2}{2g} = e^2 h$
 
@@ -1395,8 +1405,9 @@ Both move in original direction.
 | Topic | Formula |
 |-------|---------|
 | Bayes' theorem | $P(A \mid B) = \frac{P(B \mid A)P(A)}{P(B)}$ |
-| Uniform mean | $E(X) = \frac{a+b}{2}$ |
-| Uniform variance | $\text{Var}(X) = \frac{(b-a)^2}{12}$ |
+| Discrete uniform PMF | $P(X=x)=1/N$ for integers $a\leq x\leq b$, $N=b-a+1$ |
+| Discrete uniform mean | $E(X) = \frac{a+b}{2}$ |
+| Discrete uniform variance | $\text{Var}(X)=(N^2-1)/12$ |
 | Geometric PMF | $P(X=k) = (1-p)^{k-1}p$ |
 | Geometric mean | $E(X) = \frac{1}{p}$ |
 | Geometric variance | $\text{Var}(X) = \frac{1-p}{p^2}$ |
@@ -1416,4 +1427,4 @@ Both move in original direction.
 | Impulse | $\mathbf{I} = m\mathbf{v} - m\mathbf{u}$ |
 | Momentum conservation | $m_1u_1 + m_2u_2 = m_1v_1 + m_2v_2$ |
 | Newton's law | $v_2 - v_1 = -e(u_2 - u_1)$ |
-| Impact with wall | $v = -eu$ |
+| Impact with wall | $v=-eu$, with signed velocities along the same axis |
