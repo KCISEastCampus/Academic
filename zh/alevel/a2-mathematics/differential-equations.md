@@ -7,7 +7,7 @@ subject: a2-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-mathematics/differential-equations/
 permalink: /zh/alevel/a2-mathematics/differential-equations/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -399,6 +399,7 @@ $$\boxed{60-33.75=26.25\text{ g}}.$$
 | 求常数 | 区分模型常数 $k$ 和任意常数 | 使用所有已知信息，并统一单位 |
 | 增长或衰减 | $Q_0e^{kt}$ 或 $Q_0e^{-kt}$，其中 $k>0$ | 最后计算时再把精确对数值换成近似值 |
 | 半衰期 | $\displaystyle T=\frac{\ln2}{k}$，适用于写成 $Q_0e^{-kt}$ 的衰减模型 | 区分剩余量和减少量 |
+{: .wide-table}
 
 **如果答案看起来不对：**对答案求导并代回原方程。然后检查给定条件、排除值和变化方向是否符合预期。
 

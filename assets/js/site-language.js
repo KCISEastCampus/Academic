@@ -55,9 +55,10 @@
       link.href = localizedHref(link.dataset.languageHref, language);
     });
     const select = document.getElementById('siteLanguage');
-    if (select) select.value = language;
+    // On translated pages the selector names the content actually being read.
+    if (select) select.value = pairs.has(normalize(location.pathname)) ? root.lang : language;
     const fallback = document.getElementById('languageSwitch');
-    if (fallback) fallback.hidden = root.lang === language;
+    if (fallback) fallback.hidden = !!select;
   }
 
   window.siteLanguage = { text, apply };

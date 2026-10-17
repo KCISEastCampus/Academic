@@ -7,7 +7,7 @@ subject: a2-further-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-further-mathematics/series-and-limits/
 permalink: /zh/alevel/a2-further-mathematics/series-and-limits/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -175,9 +175,13 @@ $$\begin{aligned}
 
 **有效范围与定义域（domain）不同。**例如，$\ln(1+x)$ 对所有 $x>-1$ 都有定义，但这一麦克劳林级数仅在 $-1<x\le1$ 内有效。
 
-## 相关函数的展开 {#related-functions}
+## 代入、乘积与复合展开 {#related-functions}
 
-### 例 3：两个对数与共同有效范围 {#example-3--two-logarithms-and-a-shared-range}
+### 组合对数展开式与有效范围 {#combine-logarithmic-series}
+
+先检查对数拆分是否合法，再分别展开；最终有效范围必须同时满足每个展开式的条件。
+
+#### 例 3：两个对数与共同有效范围 {#example-3--two-logarithms-and-a-shared-range}
 
 **Question:** expand
 
@@ -203,7 +207,11 @@ $$\boxed{-\frac12<x<\frac12.}$$
 
 **检验：**偶数次幂的项相消。当 $x=\frac12$ 时，分母为零；当 $x=-\frac12$ 时，对数的真数（argument of a logarithm）为零。两个端点都不能包含。
 
-### 例 4：两个级数相乘 {#example-4--multiply-two-series}
+### 按总次数截断乘积 {#multiply-series}
+
+先确定目标最高次幂。两项相乘时次数相加，保留所有可能贡献目标次数的交叉项，再合并同类项。
+
+#### 例 4：两个级数相乘 {#example-4--multiply-two-series}
 
 **Question:** expand $e^{2x}\sin x$ up to and including the term in $x^4$.
 
@@ -227,7 +235,11 @@ e^{2x}\sin x={}&x+2x^2\\
 
 **检验：**$x^4$ 的系数包含乘积 $(2x)(-\frac16x^3)$。不能因为其中一个因式没有 $x^4$ 项，就漏掉交叉相乘产生的项（cross terms）。
 
-### 例 5：指数中的复合函数 {#example-5--a-function-inside-an-exponential}
+### 复合展开的内层与外层阶数 {#compose-series}
+
+用一个临时变量表示内层函数，再代入外层的标准展开式。检查内层各项会怎样影响所需的最高次幂后，才截去高阶项。
+
+#### 例 5：指数中的复合函数 {#example-5--a-function-inside-an-exponential}
 
 **Question:** expand $e^{\sin x}$ up to and including the term in $x^4$.
 
@@ -621,7 +633,7 @@ $$\int_0^R xe^{-3x}\,\mathrm dx
 
 ### 第 7 题：AQA 级数原题练习 {#question-7--original-aqa-series-practice}
 
-**来源：**AQA MFP3，2013 年 1 月；所提供教材第 19 章模拟考试练习第 2 题，印刷页码 231。保留原题措辞与分值。
+**来源：**AQA Mathematics 6360，MFP3，January 2013，原卷第 2 题。原题分值：**1 + 4 marks**。教材索引：Chapter 19, practice examination question 2, printed p. 231。[原卷](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/January%202013%20QP%20-%20FP3%20AQA.pdf)、[AQA 评分材料](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/January%202013%20MS%20-%20FP3%20AQA.PDF)。
 
 **a** Write down the expansion of $e^{3x}$ in ascending powers of $x$ up to and including the term in $x^2$. **(1 mark)**
 
@@ -657,7 +669,7 @@ $$\frac92+(3)(-3)+\frac{15}{2}=3.$$
 
 **检验：**一次项相消，因此乘积从 $1+3x^2+\cdots$ 开始。二项式级数的标准有效范围为 $-\frac12<x<\frac12$，这也是此乘积使用的标准范围。
 
-这是本课编写的解答，并非官方评分细则。
+**评分材料核对：**先将两个因式分别展开至二次项，再相乘；一次项相消，二次项系数为 3。本课解答已对照上述 AQA 评分材料检查；这些解释由本课编写，并非官方评分细则。
 
 </details>
 
@@ -722,6 +734,7 @@ $$\boxed{\int_0^e x^2\ln x\,\mathrm dx=\frac{2e^3}{9}.}$$
 | 零处的极限 | 展开、相消，再除以最低公共幂次 | 先在 $x\ne0$ 时化简，再取极限 |
 | 无穷积分限 | 使用有限积分限 $R$，再令 $R\to\infty$ | 说明剩余边界项均趋于零 |
 | 零处的对数 | 使用 $\varepsilon>0$，再令 $\varepsilon\to0^+$ | 当 $k>0$ 时，$\varepsilon^k\ln\varepsilon\to0$ |
+{: .wide-table}
 
 **练习后：**若根据单项变小就判断收敛，重做第 1 题；若端点判断错误，重做第 2 题；若丢失常数因子，重做第 3 题；若复合函数展开漏项，重做第 4 题；若求极限时所有项都相消，复习例 6–7；若将零或无穷直接代入原函数，重做第 6、8 题。
 

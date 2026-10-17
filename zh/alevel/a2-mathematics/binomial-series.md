@@ -7,7 +7,7 @@ subject: a2-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-mathematics/binomial-series/
 permalink: /zh/alevel/a2-mathematics/binomial-series/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -329,6 +329,7 @@ $$\begin{aligned}
 | 展开有理函数 | 先做部分分式分解 | 合并后核对各项系数 |
 | 展开乘积 | 合并同次幂的项 | 计算所求次幂时，不要漏掉任何乘积 |
 | 求近似值 | 选择较小的 $\lvert u\rvert$，并忽略更高次幂 | 使用 $\approx$，检查是否达到所需精度 |
+{: .wide-table}
 
 **如果答案看起来不对：**检查外部因子、符号、阶乘、漏掉的乘积和适用范围。函数本身可能在某处有定义，但这里的展开不一定在该处有效。
 

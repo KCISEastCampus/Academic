@@ -93,7 +93,7 @@ for (const lesson of ['index',...course,'quick-reference']) {
     const learningPath=source.split('**Learning path:**')[1]||'';
     if(next) assert(learningPath.includes('/'+next+'/'),lesson+': next lesson missing');
     if(prev) assert(learningPath.includes('/'+prev+'/'),lesson+': previous lesson missing');
-    examples+=(source.match(/^### (?:Worked example|Example) \d/gmi)||[]).length;
+    examples+=(source.match(/^#{3,4} (?:Worked example|Example) \d/gmi)||[]).length;
     questions+=(source.match(/^### (?:Question |Q)\d/gm)||[]).length;
   }
 }

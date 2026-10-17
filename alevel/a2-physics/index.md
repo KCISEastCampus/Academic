@@ -5,7 +5,7 @@ mathjax: true
 grade: a2
 subject: a2-physics
 permalink: /alevel/a2-physics/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -39,8 +39,12 @@ The remaining topics currently have reference notes. Guided lessons will follow 
 
 <span id="-key-required-practicals-unit-3"></span><span id="-summary-comparing-gravitational-fields-and-electric-fields"></span><span id="similarities"></span><span id="differences"></span><span id="-summary-electric-fields-and-magnetic-fields"></span><span id="how-electric-and-magnetic-fields-are-connected"></span><span id="charged-particles-in-electric-and-magnetic-fields"></span><span id="velocity-selector-electric--magnetic-fields-combined"></span>
 
+## PH04 — Thermal Physics {#ph04-thermal-physics}
+
+[Start Chapter 1: Thermal Physics](/alevel/a2-physics/thermal-physics/) — Internal energy and the first law, specific heat and latent heat, conduction and U-values, gas laws, molecular kinetic theory, and required practicals 8 and 9. Covers specification Sections 3.11.1–3.11.4, with English questions, worked examples and practice.
+
 ## Course Reference
 
-PH03 covers Sections 3.6–3.10 of the [OxfordAQA Physics specification](https://www.oxfordaqa.com/wp-content/uploads/2022/08/oxfordaqa-a-level-physics-specification.pdf). These pages focus on PH03.
+PH03 covers Sections 3.6–3.10 and PH04 thermal physics covers Section 3.11 of the [OxfordAQA Physics specification](https://www.oxfordaqa.com/wp-content/uploads/2022/08/oxfordaqa-a-level-physics-specification.pdf). The other PH04 chapters are not yet included.
 
 [Open the reference notes](/alevel/a2-physics/quick-reference/) for the full topic outline and formula reminders. The notes will be revised further as each guided lesson is added.

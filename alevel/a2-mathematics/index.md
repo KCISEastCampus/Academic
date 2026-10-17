@@ -5,7 +5,7 @@ mathjax: true
 grade: a2
 subject: a2-mathematics
 permalink: /alevel/a2-mathematics/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 redirect_from:
   - /alevel/a2mathematics/

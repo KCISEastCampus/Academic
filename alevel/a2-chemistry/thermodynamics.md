@@ -6,7 +6,7 @@ lang: en
 grade: a2
 subject: a2-chemistry
 permalink: /alevel/a2-chemistry/thermodynamics/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -32,6 +32,8 @@ Turn enthalpy definitions into calculable paths, then use entropy and Gibbs free
 | Find an unknown cycle value | Fix the endpoints and label arrow directions | [Example 2](#example-2) → [Q2](#q2) |
 | Calculate solution enthalpy | Dissociate the lattice, then hydrate every ion | [Solution](#solution) → [Q3](#q3) |
 | Explain a lattice trend | Compare charge and ionic radius before attraction | [Ionic model](#solution) → [Q4](#q4) |
+| Compare a cycle value with an ionic model | Match substance, phase and enthalpy direction; inspect the uncertainty | [Model comparison](#ionic-model-comparison) → [Q9](#q9) |
+| Calculate reaction entropy | Apply stoichiometric coefficients to absolute entropies | [Entropy table](#absolute-entropy) → [Q8](#q8) |
 | Use temperature data | Calculate heat, moles, then reaction sign and units | [Q5](#q5) |
 | Decide feasibility or sketch a graph | Convert entropy to the same energy unit as enthalpy | [Example 4](#example-4) → [Q7](#q7) |
 
@@ -52,6 +54,7 @@ A **standard enthalpy change** is measured under standard conditions with substa
 | Bond dissociation enthalpy | Break 1 mol of specified gaseous covalent bonds: $\ce{Cl2(g) -> 2Cl(g)}$ | Breaking bonds is endothermic; mean bond enthalpy averages different molecular environments |
 | Lattice dissociation | Separate 1 mol of a solid ionic lattice into gaseous ions: $\ce{CaO(s) -> Ca^{2+}(g) + O^{2-}(g)}$ | Endothermic; do not confuse its direction with lattice formation |
 | Hydration, $\Delta_{hyd}H^\circ$ | Form hydrated ions from 1 mol of gaseous ions: $\ce{Ca^{2+}(g) -> Ca^{2+}(aq)}$ | Ion–water attractions form; exothermic |
+{: .wide-table}
 
 **Writing a definition:** state “one mole of what”, then the initial and final states. Check with an equation. “Energy needed to separate ions” alone omits the amount and states and will usually lose credit.
 
@@ -102,7 +105,7 @@ The two marking points are 1 mol of a solid ionic compound and separation into g
 
 By Hess’s law, two paths with the same start and end have the same total enthalpy change. For CaO, the direct path forms CaO from its elements. The indirect path makes gaseous atoms, then gaseous ions, and finally the lattice.
 
-$$\Delta_fH^\circ=\Delta_{at}H^\circ(\mathrm{Ca})+\Delta_{at}H^\circ(\mathrm O)+IE_1+IE_2+EA_1+EA_2-\Delta_{latt,diss}H^\circ.$$
+$$\begin{aligned}\Delta_fH^\circ&=\Delta_{at}H^\circ(\mathrm{Ca})+\Delta_{at}H^\circ(\mathrm O)\\&\quad+IE_1+IE_2+EA_1+EA_2\\&\quad-\Delta_{latt,diss}H^\circ.\end{aligned}$$
 
 If the table gives **lattice formation**, add its negative value directly for the final step. If it gives **lattice dissociation**, reverse that step and subtract its value. Do not take every absolute value and then guess the signs.
 
@@ -116,7 +119,7 @@ If the table gives **lattice formation**, add its negative value directly for th
 2. Remove two electrons from magnesium in two successive steps. Each chlorine atom accepts one electron.
 3. Reverse lattice dissociation to form the solid:
 
-$$\Delta_fH^\circ=\Delta_{at}H^\circ(\mathrm{Mg})+2\Delta_{at}H^\circ(\mathrm{Cl})+IE_1+IE_2+2EA_1-\Delta_{latt,diss}H^\circ.$$
+$$\begin{aligned}\Delta_fH^\circ&=\Delta_{at}H^\circ(\mathrm{Mg})+2\Delta_{at}H^\circ(\mathrm{Cl})\\&\quad+IE_1+IE_2+2EA_1\\&\quad-\Delta_{latt,diss}H^\circ.\end{aligned}$$
 
 **Answer and independent check:** the chlorine atomisation and electron-affinity terms each occur twice. Count one Mg and two Cl on every level; the two electrons removed from Mg equal the two accepted by chlorine. The last step is exothermic lattice formation, hence the minus sign. Now attempt [Q2](#q2) without this model.
 
@@ -129,6 +132,22 @@ $$\Delta_fH^\circ=\Delta_{at}H^\circ(\mathrm{Mg})+2\Delta_{at}H^\circ(\mathrm{Cl
 Figure 1 shows the Born–Haber cycle for calcium oxide.
 
 ![Original Figure 1: calcium oxide Born–Haber cycle with species X and Y, steps A and B, and enthalpy values.](/assets/img/a2-chemistry/ch03-2025-jan-q01-born-haber.png)
+
+<details markdown="1">
+<summary>Figure 1: equivalent text description</summary>
+
+This transcribes the labels, arrows and given values; **X, Y, A, B and the formation enthalpy remain unknown**. All enthalpy values below are in kJ mol⁻¹.
+
+1. The starting level is $\ce{Ca(s) + 1/2O2(g)}$. An arrow points upwards, +193, to $\ce{Ca(g) + 1/2O2(g)}$.
+2. From that level an arrow points upwards, +248, to $\ce{Ca(g) + O(g)}$.
+3. An upward arrow, +590, reaches $\ce{Ca+(g) + e^- + O(g)}$.
+4. Another upward arrow, +1150, reaches **X + 2e⁻ + O(g)**.
+5. **Step A** points downwards from that level, −142, to **Ca²⁺(g) + O⁻(g) + Y**.
+6. From this level an upward arrow, +844, reaches $\ce{Ca^{2+}(g) + O^{2-}(g)}$.
+7. $\ce{CaO(s)}$ is below the starting level. The unknown standard formation arrow points downwards from the starting level to CaO(s).
+8. **Step B** points upwards from CaO(s) to $\ce{Ca^{2+}(g) + O^{2-}(g)}$ and is labelled +3513.
+
+</details>
 
 > **01.1** Identify species X and species Y. Include state symbols where appropriate.
 >
@@ -166,9 +185,19 @@ $$\Delta_{sol}H^\circ=\Delta_{latt,diss}H^\circ+\sum\Delta_{hyd}H^\circ.$$
 
 For $\ce{MgCl2}$, both Cl⁻ ions are hydrated, so multiply chloride hydration enthalpy by 2.
 
-**Textbook correction:** printed p. 273 (PDF p. 275) labels $\ce{NaCl(s) -> Na+(aq) + Cl^-(aq)}$ as hydration. The overall change is **solution**. Hydration itself starts with **gaseous ions**.
+**Definition check:** $\ce{NaCl(s) -> Na+(aq) + Cl^-(aq)}$ is **solution**, whereas hydration starts with **gaseous ions**. Classify the process from its endpoints, rather than from the diagram title alone.
 
 The **perfect ionic model** treats ions as spherical charges with entirely ionic bonding. Higher charges and smaller ions give stronger attraction and usually larger lattice dissociation enthalpies. A small cation with high charge density may also polarise an anion, introducing covalent character. The experimental Born–Haber value can then differ from the ideal-model value.
+
+### Comparing a cycle value with an ionic model {#ionic-model-comparison}
+
+The cycle value inferred from experimental thermochemical data and the perfect-ionic-model prediction answer different questions. Compare the **same salt, physical states and direction** before interpreting their difference.
+
+**Worked comparison:** the MgCl₂ lattice dissociation value in January 2025 02.3 is +2493 kJ mol⁻¹; the perfect-model value in June 2026 Table 2 is +2326 kJ mol⁻¹. These are examination reference values, not a new matched experimental study.
+
+$$2493-2326=167\,\mathrm{kJ\,mol^{-1}}.$$
+
+The cycle value is larger: the real solid is more strongly stabilised than the purely ionic calculation predicts. Polarisation and covalent character are a chemical explanation for the model's limitation. Do not claim that 167 kJ mol⁻¹ is a directly measured “covalent bond energy”, or that any tiny difference proves covalency. Check uncertainty and the assumptions behind both values. Now try [Q9](#q9), where the evidence differs between two salts.
 
 ### Example 3 — hydrate every ion (self-written) {#example-3}
 
@@ -179,7 +208,7 @@ The **perfect ionic model** treats ions as spherical charges with entirely ionic
 1. Balance the dissolution equation: $\ce{MgCl2(s) -> Mg^{2+}(aq) + 2Cl^-(aq)}$.
 2. Add lattice dissociation once, magnesium hydration once and chloride hydration twice:
 
-$$\Delta_{sol}H=2500-1900+2(-350)=\boxed{-100\,\mathrm{kJ\,mol^{-1}}}.$$
+$$\begin{aligned}\Delta_{sol}H&=2500-1900+2(-350)\\&=\boxed{-100\,\mathrm{kJ\,mol^{-1}}}.\end{aligned}$$
 
 **Answer:** −100 kJ mol⁻¹, so dissolution is exothermic in this model.
 
@@ -211,7 +240,7 @@ $\ce{MgCl2(s) -> Mg^{2+}(aq) + 2Cl^-(aq)}$. Which term must be multiplied by 2?
 
 MS p. 13.
 
-$$\Delta_{sol}H=2493-1920-2(364)=\boxed{-155\,\mathrm{kJ\,mol^{-1}}}.$$
+$$\begin{aligned}\Delta_{sol}H&=2493-1920-2(364)\\&=\boxed{-155\,\mathrm{kJ\,mol^{-1}}}.\end{aligned}$$
 
 The correct cycle earns 1 mark and the correct result 1 mark. An endothermic lattice-dissociation step does not make the entire solution process endothermic.
 
@@ -287,11 +316,39 @@ The three steps in 01.4 are $q=25.0\times4.18\times5.3=553.85\,\mathrm J$; $n=1.
 
 ## T4: Entropy, Gibbs free energy and temperature {#entropy}
 
+### Entropy and entropy-change calculations {#entropy-calculations}
+
 **Entropy, $S$,** reflects how energy and particles can be distributed. Although examinations often use “disorder”, connect the explanation to the actual change: gases have more accessible arrangements and motion than liquids or solids; increasing gas moles in comparable systems usually increases $\Delta S$.
 
-$$\Delta S^\circ=\sum S^\circ(\text{products})-\sum S^\circ(\text{reactants}),\qquad \Delta G^\circ=\Delta H^\circ-T\Delta S^\circ.$$
+$$\begin{aligned}\Delta S^\circ&=\sum S^\circ(\text{products})\\&\quad-\sum S^\circ(\text{reactants}).\end{aligned}$$
 
-Apply stoichiometric coefficients first. $\Delta S$ is often given in J K⁻¹ mol⁻¹ and $\Delta H$ in kJ mol⁻¹. Use consistent energy units and temperature in K.
+Apply stoichiometric coefficients first.
+
+#### Worked example: coefficients in an absolute-entropy table {#absolute-entropy}
+
+**Self-written task using reference data.** Calculate the entropy change at 298.15 K for:
+
+$$\ce{N2(g) + 3H2(g) -> 2NH3(g)}.$$
+
+| Substance | Standard molar entropy / J K⁻¹ mol⁻¹ |
+| --- | --- |
+| N₂(g) | 191.61 |
+| H₂(g) | 130.68 |
+| NH₃(g) | 192.77 |
+
+Rounded 1-bar reference values from NIST Chemistry WebBook: [N₂](https://webbook.nist.gov/cgi/cbook.cgi?ID=C7727379&Mask=1), [H₂](https://webbook.nist.gov/cgi/cbook.cgi?ID=C1333740&Mask=1), [NH₃](https://webbook.nist.gov/cgi/cbook.cgi?ID=C7664417&Mask=1); consulted 15 October 2026. These are not classroom measurements.
+
+**Method:** multiply each molar entropy by its reaction coefficient, then subtract the reactant total from the product total.
+
+$$\begin{aligned}\Delta S^\circ&=2(192.77)-[191.61+3(130.68)]\\&=-198.11\,\mathrm{J\,K^{-1}\,mol^{-1}}.\end{aligned}$$
+
+**Check:** the reaction as written consumes 4 mol of gas and produces 2 mol, consistent with a negative entropy change. Standard-state elements have **non-zero absolute entropies**: the zero convention for standard formation enthalpy does not apply to S°. Reversing the equation reverses ΔS; halving all coefficients halves ΔS. Attempt [Q8](#q8) without this calculation, where the gas-mole count stays unchanged.
+
+### Gibbs free energy, temperature and phase changes {#gibbs-temperature}
+
+$$\Delta G^\circ=\Delta H^\circ-T\Delta S^\circ.$$
+
+$\Delta S$ is often given in J K⁻¹ mol⁻¹ and $\Delta H$ in kJ mol⁻¹. Use consistent energy units and temperature in K.
 
 | $\Delta H$ | $\Delta S$ | Condition for $\Delta G<0$, assuming both are temperature-independent |
 | --- | --- | --- |
@@ -304,7 +361,7 @@ At the threshold $\Delta G=0$, so $T=\Delta H/\Delta S$. A straight-line $\Delta
 
 **Feasible does not mean fast:** $\Delta G<0$ is a thermodynamic condition. A reaction may remain slow because of a high activation energy. A catalyst changes the pathway and rate, not $\Delta G$ or the equilibrium constant.
 
-### Example 4 — feasibility and a Gibbs graph (self-written) {#example-4}
+#### Example 4 — feasibility and a Gibbs graph (self-written) {#example-4}
 
 **Question:** A reaction has $\Delta H^\circ=+40.0\,\mathrm{kJ\,mol^{-1}}$ and $\Delta S^\circ=+100\,\mathrm{J\,K^{-1}\,mol^{-1}}$. Assuming both are constant, find the threshold temperature, calculate Gibbs free energy at 300 K and 500 K, and describe its graph against temperature.
 
@@ -313,11 +370,11 @@ At the threshold $\Delta G=0$, so $T=\Delta H/\Delta S$. A straight-line $\Delta
 1. Convert the entropy: $\Delta S^\circ=+0.100\,\mathrm{kJ\,K^{-1}\,mol^{-1}}$.
 2. Write the straight-line relationship:
 
-$$\Delta G^\circ=40.0-0.100T\quad(\mathrm{kJ\,mol^{-1}}).$$
+   $$\Delta G^\circ=40.0-0.100T\quad(\mathrm{kJ\,mol^{-1}}).$$
 
 3. Find the intercept and threshold:
 
-$$T_{\mathrm{threshold}}=\frac{40.0}{0.100}=400\,\mathrm K.$$
+   $$T_{\mathrm{threshold}}=\frac{40.0}{0.100}=400\,\mathrm K.$$
 
 **Answer:** at 300 K, Gibbs free energy is +10.0 kJ mol⁻¹; at 500 K it is −10.0 kJ mol⁻¹. The line intercepts the vertical axis at +40.0 kJ mol⁻¹, has gradient −0.100 kJ K⁻¹ mol⁻¹ and crosses zero at 400 K. The forward reaction is thermodynamically feasible above 400 K; at 400 K it is at the threshold, not a claim of fast reaction.
 
@@ -325,7 +382,7 @@ $$T_{\mathrm{threshold}}=\frac{40.0}{0.100}=400\,\mathrm K.$$
 
 <span id="真题熔点处的熵变"></span>
 
-### Q6 — Past paper: entropy at the melting point {#q6}
+#### Q6 — Past paper: entropy at the melting point {#q6}
 
 **OxfordAQA CH03 · June 2026 · 04.2 · 2 marks**
 
@@ -369,6 +426,8 @@ Attempt the inline questions with all hints and solutions closed. Record the loc
 | [Q5](#q5) | Calorimetry, sign, units and experimental evaluation |
 | [Q6](#q6) | Entropy at a melting threshold |
 | [Q7](#q7) | Low-temperature feasibility and a Gibbs graph; self-written |
+| [Q8](#q8) | Absolute entropies, coefficients and limits of the gas-mole rule; self-written |
+| [Q9](#q9) | Model comparison, uncertainty intervals and enthalpy direction; self-written |
 
 ### Q7 — temperature range and graph (self-written) {#q7}
 
@@ -394,6 +453,53 @@ At 300 K: −15.0 kJ mol⁻¹; at 500 K: +15.0 kJ mol⁻¹. The graph has vertic
 
 </details>
 
+### Q8 — an unfamiliar entropy comparison (self-written) {#q8}
+
+At 298.15 K consider $\ce{H2(g) + Cl2(g) -> 2HCl(g)}$. Use standard molar entropies H₂(g) = 130.68, Cl₂(g) = 223.08 and HCl(g) = 186.90, all in J K⁻¹ mol⁻¹. The rounded reference data come from NIST: H₂ above, [Cl₂](https://webbook.nist.gov/cgi/cbook.cgi?ID=C7782505&Mask=1) and [HCl](https://webbook.nist.gov/cgi/cbook.cgi?ID=C7647010&Mask=1), consulted 15 October 2026.
+
+Calculate ΔS for the reaction as written and for forming **one mole** of HCl(g). Assess the statement “equal gas moles on both sides means zero entropy change”.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Count each species using its coefficient; decide whether the second requested equation is the original equation or half of it.
+
+</details>
+
+<details markdown="1">
+<summary>Answer and self-check</summary>
+
+$$\begin{aligned}\Delta S^\circ&=2(186.90)-[130.68+223.08]\\&=+20.04\,\mathrm{J\,K^{-1}\,mol^{-1}}.\end{aligned}$$
+
+For one mole of HCl, halve the equation and the value: +10.02 J K⁻¹ mol⁻¹. Equal gas amounts do not force ΔS to zero because the molar entropies of different gases differ. The gas-mole rule is a useful trend, not a substitute for the table. Reattempt for the reverse equation and explain its sign.
+
+</details>
+
+### Q9 — what does a model difference establish? (self-written) {#q9}
+
+The table contains **constructed data for two hypothetical salts**, not measured literature values. All entries are lattice **dissociation** enthalpies in kJ mol⁻¹. For this task take the model values as fixed and the quoted experimental uncertainty as an interval.
+
+| Salt | Perfect ionic model | Cycle value inferred from experimental data |
+| --- | --- | --- |
+| P | +1800 | +1803 ± 10 |
+| Q | +1600 | +1740 ± 10 |
+
+Which result gives clearer evidence of departure from the ideal ionic model? Explain a possible chemical cause and one conclusion these numbers cannot establish. A student reverses the direction of the cycle value for Q to −1740 but still compares it with +1600; correct the comparison.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Compare each difference with the stated interval and make both enthalpy directions match.
+
+</details>
+
+<details markdown="1">
+<summary>Answer and self-check</summary>
+
+P differs by 3 kJ mol⁻¹ and its interval includes 1800; this evidence does not resolve a departure. Q differs by 140 kJ mol⁻¹, with its interval well above 1600, so it provides clearer evidence within the stated assumptions. Polarisation/covalent character may account for additional stabilisation; these data alone do not measure the fraction of covalent bonding or prove that other model assumptions are exact. For formation, compare −1740 with **−1600**; for dissociation compare +1740 with +1600. Both conventions imply extra stabilisation of the real solid, not opposite chemistry.
+
+</details>
+
 ## Quick reference and error repair {#quick-reference}
 
 | Check | Use it to prevent |
@@ -402,7 +508,7 @@ At 300 K: −15.0 kJ mol⁻¹; at 500 K: +15.0 kJ mol⁻¹. The graph has vertic
 | Cycle: same endpoints; reverse arrow → reverse sign | Treating lattice formation and dissociation as the same direction |
 | Count every ion before substituting | Missing the second halide hydration/electron-affinity term |
 | Heat absorbed by solution has the opposite sign to reaction heat | A positive reaction enthalpy for a temperature rise |
-| $\Delta S^\circ=\sum S^\circ(\text{products})-\sum S^\circ(\text{reactants})$; apply coefficients | Subtracting the two sides in the wrong order |
+| Entropy: product total − reactant total; apply coefficients | Subtracting the two sides in the wrong order |
 | Gibbs graph: intercept is enthalpy; gradient is negative entropy | Confusing a positive entropy change with a positive gradient |
 | $\Delta G^\circ=\Delta H^\circ-T\Delta S^\circ$; use consistent J or kJ and K | A threshold wrong by a factor of 1000 |
 
@@ -422,6 +528,6 @@ After a repair, write one sentence naming the cause of the error and reattempt w
 
 Close the solutions. Draw a solution cycle for CaBr₂, explain why Br⁻ hydration appears twice, state the gradient of a $\Delta G$–$T$ graph, and distinguish thermodynamic feasibility from a fast reaction.
 
-**Completion standard:** independently draw cycles, explain coefficients and signs, calculate entropy and Gibbs free energy, decide temperature ranges and check units. Reattempt corrected questions with solutions closed.
+**Completion standard:** independently draw cycles, compare experimental and ideal-model values, calculate reaction entropy from a molar-entropy table with coefficients, explain signs, calculate Gibbs free energy, decide temperature ranges and check units. Reattempt corrected questions with solutions closed.
 
 [Back to course](/alevel/a2-chemistry/) · Next: [electrode potentials and cells](/alevel/a2-chemistry/electrode-potentials/).

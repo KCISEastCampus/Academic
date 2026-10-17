@@ -5,7 +5,7 @@ mathjax: true
 grade: a2
 subject: a2-mathematics
 permalink: /alevel/a2-mathematics/integration-applications/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -33,6 +33,7 @@ All worked examples and practice questions on this page are self-written, not of
 | An odd power of $\cos x$ | Keep one factor $\cos x$; use $\cos^2x=1-\sin^2x$ for the rest | Try $u=\sin x$, with $du=\cos x\,dx$ |
 | Only even powers of $\sin x$ and $\cos x$ | Use double angle identities | Replace squares by constants and cosines |
 | A power of $\tan x$ | Use $\tan^2x=\sec^2x-1$ to reduce the power | Terms containing $\sec^2x$ may allow $u=\tan x$ |
+{: .wide-table}
 
 For an argument such as $2x$ or $3x$, use the same identities with that argument. Include the coefficient from the chain rule when integrating.
 
@@ -375,6 +376,7 @@ At $y=4$, the radius is $\sqrt3$. The solid fits inside a cylinder of height $3$
 | Area between curves | Integrate upper curve minus lower curve | Find intersections; split if their order changes |
 | Volume about the $x$-axis | $\displaystyle V=\pi\int_a^b y^2\,dx$ | Square the whole radius; use $x$-limits |
 | Volume about the $y$-axis | $\displaystyle V=\pi\int_c^d x^2\,dy$ | Express $x^2$ in terms of $y$; use $y$-limits |
+{: .wide-table}
 
 **If your answer looks wrong:** differentiate an indefinite result; check signs for area; check the radius, limits and units for volume. Keep exact values such as $\pi$ until the end.
 

@@ -5,7 +5,7 @@ mathjax: true
 grade: a2
 subject: a2-further-mathematics
 permalink: /alevel/a2-further-mathematics/roots-and-polynomials/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -398,7 +398,7 @@ The interval is positive because $\alpha$ is negative. The imaginary parts cance
 
 ### Question 7 — Original AQA practice
 
-**Source:** AQA MFP2, January 2006, as reproduced in the textbook's Chapter 17, practice examination question 4, printed p. 206. Original marks are shown below.
+**Source:** AQA Mathematics 6360, MFP2, January 2006, Question 2. **5 + 5 marks**. Textbook cross-reference: Chapter 17, practice examination question 4, printed p. 206. [Question paper](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/January%202006%20QP%20-%20FP2%20AQA.PDF), [AQA mark scheme](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/January%202006%20MS%20-%20FP2%20AQA.PDF).
 
 The cubic equation
 
@@ -438,9 +438,9 @@ For a cubic, $\alpha\beta\gamma=-r$, hence
 
 $$\boxed{p=-4,\quad q=-2,\quad r=20.}$$
 
-**Check:** $(x+2)(x^2-6x+10)=x^3-4x^2-2x+20$. The sum of the squares is $(3+i)^2+(3-i)^2+(-2)^2=20$.
+**Check:** $(x+2)(x^2-6x+10)=x^3-4x^2-2x+20$. The sum of the squares is $(3+i)^2+(3-i)^2+(-2)^2=20$. Show the coefficient relations, the square identity, the reason for the conjugate root and the product calculation.
 
-This is our worked solution, not an official mark scheme. Show the coefficient relations, the square identity, the reason for the conjugate root and the product calculation.
+**Mark-scheme comparison:** Use the sum of roots, the sum-of-squares identity and the conjugate root to obtain p = −4, q = −2 and r = 20. Our working has been checked against the linked AQA mark scheme; these explanations are our own, not an official mark scheme.
 
 </details>
 
@@ -454,6 +454,7 @@ This is our worked solution, not an official mark scheme. Show the coefficient r
 | Given a root $p+qi$ | For real coefficients, use the root $p-qi$ | Form $(z-p)^2+q^2$, then divide |
 | Complex coefficients | Use substitution and roots-and-coefficients relations | Do not assume conjugate roots |
 | Number of real roots | Differentiate and examine stationary values | A sign change locates at least one root, not necessarily the only one |
+{: .wide-table}
 
 **After practice:** if signs caused a problem, repeat Question 1. If you missed a root, repeat Question 4. If you used conjugates with complex coefficients, compare Example 5 and Question 5. If you found a root interval but did not prove uniqueness, review Example 6.
 

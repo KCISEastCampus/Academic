@@ -14,6 +14,7 @@ en:
   back_home: Back to homepage
   pure_mathematics: A2 Pure Mathematics
   further_pure_mathematics: A2 Further Pure Mathematics
+  physics: A2 Physics
   contents: Contents
   toggle_contents: Toggle Table of Contents
   search_contents: Search contents...
@@ -23,7 +24,7 @@ en:
   read_full_notes: Read the full notes
   open_english_notes: Open English notes
   view_english_notes: View English notes
-  choose_language: Choose interface language
+  choose_language: Choose language
   back_to_top: Back to top
   collapse_section: Collapse or expand section
   no_matches: No matches found
@@ -123,6 +124,7 @@ zh-CN:
   back_home: 返回首页
   pure_mathematics: A2 纯数学
   further_pure_mathematics: A2 高等纯数学
+  physics: A2 物理
   contents: 目录
   toggle_contents: 展开或收起目录
   search_contents: 搜索目录…
@@ -132,7 +134,7 @@ zh-CN:
   read_full_notes: 阅读完整笔记
   open_english_notes: 打开英文版
   view_english_notes: 查看英文笔记
-  choose_language: 选择界面语言
+  choose_language: 选择语言
   back_to_top: 返回顶部
   collapse_section: 展开或收起本节
   no_matches: 没有找到匹配结果

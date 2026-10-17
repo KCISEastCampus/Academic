@@ -5,7 +5,7 @@ mathjax: true
 grade: a2
 subject: a2-further-mathematics
 permalink: /alevel/a2-further-mathematics/polar-coordinates/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -271,7 +271,11 @@ A
 
 **Check:** the region is in the second quadrant. The integral does not start at zero because the specified first radius is $\theta=\frac\pi2$.
 
-### Example 9 — The bounding curve changes
+### Common regions and changing boundaries {#common-regions}
+
+For a common region, use the smaller radius on each ray. Split the integral at angles where the bounding curve changes.
+
+#### Example 9 — The bounding curve changes
 
 **Question:** find the area inside both $r=1+\cos\theta$ and $r=\sqrt3\sin\theta$.
 
@@ -325,6 +329,8 @@ Therefore
 $$\boxed{A=A_1+A_2=\frac{3\pi}{4}-\frac{3\sqrt3}{4}.}$$
 
 **Check:** the common region has area less than the whole circle, whose area is $\frac{3\pi}{4}$. It uses the **smaller radius** on each ray.
+
+### Regions between two curves {#area-between-curves}
 
 For a region between an outer and an inner curve on the same angular interval, use
 
@@ -505,7 +511,7 @@ A
 
 ### Question 6 — AQA: a Cartesian equation
 
-**Original AQA question.** AQA MFP3, June 2014; textbook Chapter 21, practice examination Question 2, printed p. 267. **4 marks.**
+**Source:** AQA Mathematics 6360, MFP3, June 2014, Question 3. **4 marks**. Textbook cross-reference: Chapter 21, practice examination question 2, printed p. 267. [Question paper](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202014%20QP%20-%20FP3%20AQA.PDF), [AQA mark scheme](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202014%20MS%20-%20FP3%20AQA.PDF).
 
 A curve has polar equation $r(4-3\cos\theta)=4$. Find its Cartesian equation in the form $y^2=f(x)$.
 
@@ -537,13 +543,13 @@ $$\boxed{y^2=1+\frac32x-\frac7{16}x^2.}$$
 
 **Check:** at $\theta=0$, $r=4$ and the point $(4,0)$ satisfies the equation. The Cartesian curve has $-\frac47\le x\le4$, so $1+\frac34x$ is positive throughout; squaring has not added a negative-radius branch.
 
-This is our worked solution, not an official mark scheme.
+**Mark-scheme comparison:** First obtain 4r = 4 + 3x, then use r² = x² + y² and rearrange to the requested Cartesian equation. Our working has been checked against the linked AQA mark scheme; these explanations are our own, not an official mark scheme.
 
 </details>
 
 ### Question 7 — AQA: a circle using the origin as pole
 
-**Original AQA question.** AQA MFP3, June 2013; textbook Chapter 21, practice examination Question 3, printed p. 267. **4 marks.**
+**Source:** AQA Mathematics 6360, MFP3, June 2013, Question 2. **4 marks**. Textbook cross-reference: Chapter 21, practice examination question 3, printed p. 267. [Question paper](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202013%20QP%20-%20FP3%20AQA.pdf), [AQA mark scheme](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202013%20MS%20-%20FP3%20AQA.PDF).
 
 The Cartesian equation of a circle is $(x+8)^2+(y-6)^2=100$.
 
@@ -577,13 +583,13 @@ Thus $p=12$ and $q=-16$.
 
 **Check:** the Cartesian centre is $(-8,6)$ and the radius is $10$. Its distance from the origin is also $10$, so the circle passes through the pole. The zeros of the polar equation retain that boundary point.
 
-This is our worked solution, not an official mark scheme.
+**Mark-scheme comparison:** Expand the circle equation, use x = r cosθ and y = r sinθ, and obtain r = 12 sinθ − 16 cosθ. Our working has been checked against the linked AQA mark scheme; these explanations are our own, not an official mark scheme.
 
 </details>
 
 ### Question 8 — AQA: area of a loop
 
-**Original AQA question.** AQA MFP3, January 2009; textbook Chapter 21, practice examination Question 1, printed p. 267. **6 marks.** The diagram is redrawn for this lesson.
+**Source:** Adapted question (diagram redrawn). AQA Mathematics 6360, MFP3, January 2009, Question 3. **6 marks**. Textbook cross-reference: Chapter 21, practice examination question 1, printed p. 267. [Question paper](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/January%202009%20QP%20-%20FP3%20AQA.PDF), [AQA mark scheme](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/January%202009%20MS%20-%20FP3%20AQA.PDF). The redrawn diagram retains the original curve, pole, initial line and conditions.
 
 The diagram shows a sketch of a loop, the pole $O$ and the initial line.
 
@@ -622,7 +628,7 @@ A
 
 **Check:** reversing the limits removes the minus sign. The area is positive, and there is no symmetry about the $y$-axis to justify doubling half of this loop.
 
-This is our worked solution, not an official mark scheme.
+**Mark-scheme comparison:** Use one half of the integral of r² from 0 to π, integrate a valid expanded form or substitution, and obtain area 13/3. Our working has been checked against the linked AQA mark scheme; these explanations are our own, not an official mark scheme.
 
 </details>
 
@@ -638,6 +644,7 @@ This is our worked solution, not an official mark scheme.
 | One loop | $\displaystyle A=\frac12\int_\alpha^\beta r^2\,\mathrm d\theta$ between its ends | Sweep the required loop once |
 | Common region | Use the smaller radius on each ray | Split where the bounding curve changes |
 | Outer minus inner | Integrate $\frac12(r_{\text{outer}}^2-r_{\text{inner}}^2)$ | Subtract the squares, not the radii before squaring |
+{: .wide-table}
 
 **After practice:** if the quadrant was wrong, repeat Question 1. If a converted equation had an invalid domain, repeat Question 2. If the sketch included negative radii, repeat Question 3. If an area used the whole curve instead of the given sector, repeat Question 4. If the pole or a change of boundary was missed, repeat Question 5. If conversion was difficult, repeat Questions 6–7. If the substitution gave a negative area, repeat Question 8.
 

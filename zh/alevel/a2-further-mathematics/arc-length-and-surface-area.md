@@ -7,7 +7,7 @@ subject: a2-further-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-further-mathematics/arc-length-and-surface-area/
 permalink: /zh/alevel/a2-further-mathematics/arc-length-and-surface-area/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -29,21 +29,7 @@ study_page: true
 
 曲线的一小段弧长记作 $\mathrm ds$。把这些小弧长相加，就得到整段弧长。弧长公式中的平方根因子始终非负。
 
-| 曲线的表示方式 | 弧长微元 | 弧长 |
-|---|---|---|
-| $y=f(x)$，其中 $a\le x\le b$ | $\displaystyle\mathrm ds=\sqrt{1+\left(\frac{\mathrm dy}{\mathrm dx}\right)^2}\,\mathrm dx$ | $\displaystyle L=\int_a^b\sqrt{1+\left(\frac{\mathrm dy}{\mathrm dx}\right)^2}\,\mathrm dx$ |
-| $x=x(t),\ y=y(t)$，其中 $\alpha\le t\le\beta$ | $\displaystyle\mathrm ds=\sqrt{\left(\frac{\mathrm dx}{\mathrm dt}\right)^2+\left(\frac{\mathrm dy}{\mathrm dt}\right)^2}\,\mathrm dt$ | $\displaystyle L=\int_\alpha^\beta\sqrt{\left(\frac{\mathrm dx}{\mathrm dt}\right)^2+\left(\frac{\mathrm dy}{\mathrm dt}\right)^2}\,\mathrm dt$ |
-
-曲线绕 x 轴旋转时，短弧段会扫出一条窄带。对应圆周的周长为 $2\pi r$，其中旋转半径（radius）是曲线上对应点到 x 轴的距离：
-
-$$r=\lvert y\rvert.$$
-
-所以窄带面积约为 $2\pi\lvert y\rvert\,\mathrm ds$。把所有窄带相加，得到
-
-| 曲线的表示方式 | 绕 x 轴的旋转曲面面积 |
-|---|---|
-| $y=f(x)$ | $\displaystyle S=2\pi\int_a^b\lvert y\rvert\sqrt{1+\left(\frac{\mathrm dy}{\mathrm dx}\right)^2}\,\mathrm dx$ |
-| $x=x(t),\ y=y(t)$ | $\displaystyle S=2\pi\int_\alpha^\beta\lvert y\rvert\sqrt{\left(\frac{\mathrm dx}{\mathrm dt}\right)^2+\left(\frac{\mathrm dy}{\mathrm dt}\right)^2}\,\mathrm dt$ |
+以下分别建立直角坐标和参数形式的弧长，再由圆周长与弧长微元求旋转曲面面积。
 
 **检查积分限（limits of integration）与绝对值（absolute value）。**
 
@@ -57,35 +43,13 @@ $$r=\lvert y\rvert.$$
 
 ## 直角坐标形式下的弧长 {#cartesian-arc-length}
 
-对于 $y=f(x)$，先对 x 求导，得到斜率（gradient）；将斜率平方、加 1，再在给定的 x 坐标之间对正平方根积分。
+对于 $y=f(x)$、$a\le x\le b$，先对 x 求导，得到斜率（gradient）；将斜率平方、加 1，再在给定的 x 坐标之间对正平方根积分。
+
+$$\mathrm ds=\sqrt{1+\left(\frac{\mathrm dy}{\mathrm dx}\right)^2}\,\mathrm dx.$$
 
 $$L=\int_a^b\sqrt{1+\left(\frac{\mathrm dy}{\mathrm dx}\right)^2}\,\mathrm dx.$$
 
 整个计算都使用变量 x，因此积分限也应是 x 值。如果端点处导数或被积函数无定义，就从区间内部取极限。
-
-## 参数形式下的弧长 {#parametric-arc-length}
-
-如果两个坐标都依赖于 t，就分别对它们关于 t 求导。速率（speed）是速度向量（velocity vector）的长度：
-
-$$\frac{\mathrm ds}{\mathrm dt}=\sqrt{\left(\frac{\mathrm dx}{\mathrm dt}\right)^2+\left(\frac{\mathrm dy}{\mathrm dt}\right)^2}.$$
-
-然后对 t 积分：
-
-$$L=\int_\alpha^\beta\frac{\mathrm ds}{\mathrm dt}\,\mathrm dt.$$
-
-不能只使用 $\frac{\mathrm dx}{\mathrm dt}$ 或 $\frac{\mathrm dy}{\mathrm dt}$。曲线运动的两个方向都会影响沿曲线移动的距离。
-
-## 绕 x 轴的旋转曲面面积 {#surface-area-about-the-x-axis}
-
-曲线上每一点到 x 轴的距离都是旋转半径 $\lvert y\rvert$。用周长 $2\pi\lvert y\rvert$ 乘以弧长微元 $\mathrm ds$。
-
-$$S=\int 2\pi\lvert y\rvert\,\mathrm ds.$$
-
-直角坐标形式下代入相应的弧长微元，参数形式下代入参数弧长微元。确认积分限只涵盖题目要求的母线弧段。
-
-**注意两种不同的重复。**如果参数多次描过同一弧段，弧长积分会把每次描绘都计算一次。另有一种情况是，母线弧段的不同部分绕轴后扫过同一片曲面；这时面积积分也会重复计算该曲面。两种情况下都要选择只覆盖目标几何对象一次的积分限。
-
-## 例题 {#worked-examples}
 
 ### 例题 1 — 用换元法计算直角坐标弧长 {#example-1--cartesian-arc-length-by-substitution}
 
@@ -102,6 +66,38 @@ L&=\int_0^3\sqrt{1+x}\,\mathrm dx\\
 \end{aligned}$$
 
 **检查：**整个区间上的被积函数为正，答案也大于水平距离 $3$，符合预期。
+
+## 参数形式下的弧长 {#parametric-arc-length}
+
+对于 $x=x(t),\ y=y(t)$、$\alpha\le t\le\beta$，分别对两个坐标关于 t 求导。速率（speed）是速度向量（velocity vector）的长度：
+
+$$\frac{\mathrm ds}{\mathrm dt}=\sqrt{\left(\frac{\mathrm dx}{\mathrm dt}\right)^2+\left(\frac{\mathrm dy}{\mathrm dt}\right)^2}.$$
+
+然后对 t 积分：
+
+$$L=\int_\alpha^\beta\frac{\mathrm ds}{\mathrm dt}\,\mathrm dt.$$
+
+不能只使用 $\frac{\mathrm dx}{\mathrm dt}$ 或 $\frac{\mathrm dy}{\mathrm dt}$。曲线运动的两个方向都会影响沿曲线移动的距离。
+
+## 绕 x 轴的旋转曲面面积 {#surface-area-about-the-x-axis}
+
+曲线上每一点到 x 轴的距离都是旋转半径 $\lvert y\rvert$。用周长 $2\pi\lvert y\rvert$ 乘以弧长微元 $\mathrm ds$。
+
+$$r=\lvert y\rvert,\qquad S=\int 2\pi r\,\mathrm ds.$$
+
+**直角坐标形式：**
+
+$$S=2\pi\int_a^b\lvert y\rvert\sqrt{1+\left(\frac{\mathrm dy}{\mathrm dx}\right)^2}\,\mathrm dx.$$
+
+**参数形式：**
+
+$$S=2\pi\int_\alpha^\beta\lvert y(t)\rvert\frac{\mathrm ds}{\mathrm dt}\,\mathrm dt.$$
+
+直角坐标形式下代入相应的弧长微元，参数形式下代入参数弧长微元。确认积分限只涵盖题目要求的母线弧段。
+
+**注意两种不同的重复。**如果参数多次描过同一弧段，弧长积分会把每次描绘都计算一次。另有一种情况是，母线弧段的不同部分绕轴后扫过同一片曲面；这时面积积分也会重复计算该曲面。两种情况下都要选择只覆盖目标几何对象一次的积分限。
+
+## 例题 {#worked-examples}
 
 ### 例题 2 — 保留平方根中的绝对值 {#example-2--keep-the-absolute-value}
 
@@ -406,6 +402,7 @@ S&=2\pi\int_0^1(1-t^2)(2\sqrt2\,t)\,\mathrm dt\\
 | 平方根中的完全平方 | $\sqrt{g^2}=\lvert g\rvert$ | 去掉绝对值前先判断 $g$ 的符号 |
 | 曲线穿过 x 轴 | 在 $y=0$ 处拆分，或保留 $\lvert y\rvert$ 积分 | 不要使用负半径 |
 | 参数或曲面部分重复 | 选择只覆盖目标对象一次的积分区间 | 区分重复描曲线与旋转后曲面重叠 |
+{: .wide-table}
 
 **练习后：**如果弧长公式用错，重做第 1–3 题。如果半径符号出错，重做第 4–5 题。如果重复计算了重叠曲面，复习第 6 题。如果需要组合使用两个公式，再做一次第 7 题。
 

@@ -5,7 +5,7 @@ mathjax: true
 grade: a2
 subject: a2-mathematics
 permalink: /alevel/a2-mathematics/integration/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -14,7 +14,7 @@ study_page: true
 Choose a method, integrate, then check your answer by differentiation. The **integrand** is the function inside the integral sign.
 
 - **Learning:** start with [choosing a method](#choose-a-method), then explain the choice in each [worked example](#worked-examples).
-- **Homework help:** review [substitution](#example-3--rewrite-everything-in-the-new-variable), [integration by parts](#example-4--a-product-that-becomes-simpler) or [partial fractions](/alevel/a2-mathematics/partial-fractions/#integration).
+- **Homework help:** review [substitution](#substitution), [integration by parts](#integration-by-parts) or [partial fractions](/alevel/a2-mathematics/partial-fractions/#integration).
 - **Revision:** attempt [practice](#practice) with solutions closed, then use the [quick reference](#quick-reference).
 
 Textbook: Chapter 6, Sections 6.1–6.4 (pp. 82–95). We write the constant of integration as $C$.
@@ -33,6 +33,7 @@ Textbook: Chapter 6, Sections 6.1–6.4 (pp. 82–95). We write the constant of 
 | A substitution makes every part simpler | Use integration by substitution | $x(x+2)^6$, using $u=x+2$ |
 | A product where differentiating one factor simplifies it | Try integration by parts | $xe^{2x}$ |
 | A rational function with a factorisable denominator | Check the logarithm form first. If needed, use algebraic division and partial fractions. | $\displaystyle \frac{5}{(x+1)(x+2)}$ |
+{: .wide-table}
 
 More than one method may work. Choose a method that makes the integral simpler. If the question gives a substitution, use it.
 
@@ -53,17 +54,33 @@ A product does not always need integration by parts.
 
 ## Standard Integrals
 
-The table includes the standard forms from textbook Section 6.1. Use radians for trigonometric functions. Here $a\ne0$; each result applies on an interval where the integrand and answer are defined. Constants can differ on separate intervals.
+These are the standard forms from textbook Section 6.1. Use radians for trigonometric functions. Here $a\ne0$; each result applies on an interval where the integrand and answer are defined. Constants can differ on separate intervals.
 
-| Integrand | Integral | Condition |
-|---|---|---|
-| $x^n$ | $\displaystyle\frac{x^{n+1}}{n+1}+C$ | $n\ne-1$ |
-| $(ax+b)^n$ | $\displaystyle\frac{(ax+b)^{n+1}}{a(n+1)}+C$ | $n\ne-1$ |
-| $e^{ax+b}$ | $\displaystyle\frac1a e^{ax+b}+C$ | All real $x$ |
-| $\displaystyle\frac1{ax+b}$ | $\displaystyle\frac1a\ln\lvert ax+b\rvert+C$ | $ax+b\ne0$ |
-| $\sin(ax+b)$ | $\displaystyle-\frac1a\cos(ax+b)+C$ | All real $x$ |
-| $\cos(ax+b)$ | $\displaystyle\frac1a\sin(ax+b)+C$ | All real $x$ |
-| $\sec^2(ax+b)$ | $\displaystyle\frac1a\tan(ax+b)+C$ | $\cos(ax+b)\ne0$ |
+### Powers and linear arguments {#power-integrals}
+
+Both formulae require $n\ne-1$. With real powers, also check the original domain.
+
+$$\int x^n\,dx=\frac{x^{n+1}}{n+1}+C.$$
+
+$$\int (ax+b)^n\,dx=\frac{(ax+b)^{n+1}}{a(n+1)}+C.$$
+
+### Exponential and logarithmic forms {#exponential-logarithmic-integrals}
+
+The exponential form applies for all real $x$; the logarithmic form requires $ax+b\ne0$.
+
+$$\int e^{ax+b}\,dx=\frac1a e^{ax+b}+C.$$
+
+$$\int\frac1{ax+b}\,dx=\frac1a\ln\lvert ax+b\rvert+C.$$
+
+### Trigonometric functions {#trigonometric-integrals}
+
+The sine and cosine forms apply for all real $x$; the secant-squared form requires $\cos(ax+b)\ne0$.
+
+$$\int\sin(ax+b)\,dx=-\frac1a\cos(ax+b)+C.$$
+
+$$\int\cos(ax+b)\,dx=\frac1a\sin(ax+b)+C.$$
+
+$$\int\sec^2(ax+b)\,dx=\frac1a\tan(ax+b)+C.$$
 
 **Check the coefficient by differentiation.** For example,
 
@@ -71,9 +88,13 @@ $$\int\sec^2(2x-1)\,dx=\frac12\tan(2x-1)+C.$$
 
 Differentiation multiplies by $2$, cancelling the factor $\frac12$. The same division by the inner coefficient is needed for the other linear arguments.
 
-## Worked Examples
+## Integration Methods and Examples {#worked-examples}
 
-### Example 1 — Simplify before choosing
+### Simplify and integrate term by term {#simplify-and-integrate}
+
+Expand or cancel first, then use standard integrals. Retain the domain restrictions of the original expression.
+
+#### Example 1 — Simplify before choosing
 
 **Question:** Find $\displaystyle\int\frac{x^2+3x}{x}\,dx$ for $x\ne0$.
 
@@ -85,7 +106,11 @@ $$\int(x+3)\,dx=\boxed{\frac{x^2}{2}+3x+C}.$$
 
 **Check:** Differentiation gives $x+3$, which equals the original integrand for $x\ne0$. The original expression is still undefined at $x=0$.
 
-### Example 2 — Reverse the chain rule
+### Reverse the chain rule {#reverse-chain-rule}
+
+Identify the inner function and its derivative. Try an antiderivative, then differentiate to determine the required coefficient.
+
+#### Example 2 — Reverse the chain rule
 
 **Question:** Find $\displaystyle\int6x(x^2+1)^2\,dx$.
 
@@ -99,7 +124,11 @@ $$\int6x(x^2+1)^2\,dx=\boxed{(x^2+1)^3+C}.$$
 
 **Check:** The derivative equals the integrand. The chain rule includes the derivative of $x^2+1$, which is $2x$.
 
-### Example 3 — Rewrite everything in the new variable
+### Integration by substitution {#substitution}
+
+Choose a new variable that simplifies the integrand, find the differential relation and rewrite every factor and the differential in that variable. For an indefinite integral, substitute back afterwards.
+
+#### Example 3 — Rewrite everything in the new variable
 
 **Question:** Find $\displaystyle\int x(x+2)^6\,dx$.
 
@@ -121,7 +150,13 @@ $$\begin{aligned}&(x+2)^7-2(x+2)^6\\&\qquad=(x+2)^6[(x+2)-2]\\&\qquad=x(x+2)^6.\
 
 **Common mistake:** changing $(x+2)$ to $u$ but leaving the factor $x$ behind. After substitution, write every part in terms of $u$, including $dx$.
 
-### Example 4 — A product that becomes simpler
+### Integration by parts {#integration-by-parts}
+
+Rearranging the product rule gives the formula below. Choose one factor that becomes simpler on differentiation and another that is easy to integrate; the remaining integral should be easier to handle.
+
+$$\int v\frac{du}{dx}\,dx=uv-\int u\frac{dv}{dx}\,dx.$$
+
+#### Example 4 — A product that becomes simpler
 
 **Question:** Find $\displaystyle\int xe^{2x}\,dx$.
 
@@ -129,7 +164,7 @@ $$\begin{aligned}&(x+2)^7-2(x+2)^6\\&\qquad=(x+2)^6[(x+2)-2]\\&\qquad=x(x+2)^6.\
 
 $$v=x,\qquad \frac{du}{dx}=e^{2x},\qquad \frac{dv}{dx}=1,\qquad u=\frac{e^{2x}}{2}.$$
 
-Using $\displaystyle\int v\frac{du}{dx}\,dx=uv-\int u\frac{dv}{dx}\,dx$,
+Substitute these expressions into the formula:
 
 $$\int xe^{2x}\,dx=\frac{xe^{2x}}{2}-\frac12\int e^{2x}\,dx=\boxed{\frac{xe^{2x}}{2}-\frac{e^{2x}}{4}+C}.$$
 
@@ -139,13 +174,19 @@ $$\left(\frac{e^{2x}}2+xe^{2x}\right)-\frac{e^{2x}}2=xe^{2x}.$$
 
 **Common mistake:** using $u=e^{2x}$ instead of $\frac{e^{2x}}2$. Check $u$ by differentiation before using integration by parts.
 
-**A logarithm can be treated as a product too.** To find $\int\ln x\,dx$ for $x>0$, write the integrand as $1\times\ln x$. Choose $v=\ln x$ and $du/dx=1$, so $dv/dx=1/x$ and $u=x$:
+#### Application: integrating a logarithm {#integrating-a-logarithm}
+
+A logarithm can be treated as a product too. To find $\int\ln x\,dx$ for $x>0$, write the integrand as $1\times\ln x$. Choose $v=\ln x$ and $du/dx=1$, so $dv/dx=1/x$ and $u=x$:
 
 $$\int\ln x\,dx=x\ln x-\int1\,dx=\boxed{x\ln x-x+C}.$$
 
 Differentiation gives $\ln x+1-1=\ln x$.
 
-### Example 5 — A fraction does not always need partial fractions
+### Recognise the logarithmic form {#logarithmic-form}
+
+Compare the numerator with the derivative of the denominator. A constant-multiple relationship allows the logarithmic form. Check that the denominator is non-zero and use the result on a valid interval.
+
+#### Example 5 — A fraction does not always need partial fractions
 
 **Question:** Find $\displaystyle\int\frac{2x+2}{x^2+2x-15}\,dx$.
 
@@ -247,7 +288,11 @@ For the logarithmic product, choose $v=\ln x$ and $du/dx=x$.
 
 Choose $v=x$ and $\frac{du}{dx}=\cos(2x)$, so $\frac{dv}{dx}=1$ and $u=\frac12\sin(2x)$.
 
-$$\int x\cos(2x)\,dx=\frac{x\sin(2x)}2-\frac12\int\sin(2x)\,dx=\boxed{\frac{x\sin(2x)}2+\frac{\cos(2x)}4+C}.$$
+$$\begin{aligned}
+\int x\cos(2x)\,dx
+&=\frac{x\sin(2x)}2-\frac12\int\sin(2x)\,dx\\
+&=\boxed{\frac{x\sin(2x)}2+\frac{\cos(2x)}4+C}.
+\end{aligned}$$
 
 Differentiation gives
 
@@ -255,7 +300,11 @@ $$\begin{aligned}&\frac12\sin(2x)+x\cos(2x)-\frac12\sin(2x)\\&\qquad=x\cos(2x).\
 
 For the second integral, $u=x^2/2$ and $dv/dx=1/x$, so
 
-$$\int x\ln x\,dx=\frac{x^2\ln x}{2}-\frac12\int x\,dx=\boxed{\frac{x^2\ln x}{2}-\frac{x^2}{4}+C}.$$
+$$\begin{aligned}
+\int x\ln x\,dx
+&=\frac{x^2\ln x}{2}-\frac12\int x\,dx\\
+&=\boxed{\frac{x^2\ln x}{2}-\frac{x^2}{4}+C}.
+\end{aligned}$$
 
 Differentiation gives $x\ln x+\frac x2-\frac x2=x\ln x$.
 
@@ -315,6 +364,7 @@ Alternatively, $[\ln(x^2+1)]_0^1=\ln2$. The answer is positive, as expected beca
 | Integration by substitution | Write the whole integral in terms of the new variable. Change the limits for a definite integral. | Do not mix the old and new variables |
 | Integration by parts | $\displaystyle\int v\frac{du}{dx}\,dx=uv-\int u\frac{dv}{dx}\,dx$ | The remaining integral should be simpler |
 | Partial fractions | Divide if needed, decompose, then integrate each term | Include every power of a repeated factor and keep the quotient |
+{: .wide-table}
 
 **If the derivative is wrong:** check the coefficient from the chain rule, the signs and any terms lost during substitution or algebraic division.
 

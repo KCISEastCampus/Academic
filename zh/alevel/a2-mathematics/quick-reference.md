@@ -7,7 +7,7 @@ subject: a2-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-mathematics/quick-reference/
 permalink: /zh/alevel/a2-mathematics/quick-reference/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -30,6 +30,15 @@ P2 编号依据 OxfordAQA 课程大纲的主题分类，部分标题作了简化
 
 三个例子都要求 $x\ne-4,1$。在这个定义域内，第三个例子的除数始终不为零。
 
+#### 有理函数的化简（rational functions） {#rational-functions}
+
+[练习因式分解与保留定义域限制](/zh/alevel/a2-mathematics/algebraic-fractions-and-division/#simplification)。
+
+- 分解分子和分母，再约去公因式。保留原分母带来的限制。
+- **化简例子：**
+
+  $$\begin{aligned}\frac{x^2-4x}{x^2-5x+4}&=\frac{x(x-4)}{(x-4)(x-1)}\\&=\frac{x}{x-1},\qquad x\ne1,4.\end{aligned}$$
+
 ### 多项式除法（algebraic division） {#algebraic-division}
 
 [学习商、余数和余数定理](/zh/alevel/a2-mathematics/algebraic-fractions-and-division/#algebraic-division)。
@@ -49,9 +58,22 @@ P2 编号依据 OxfordAQA 课程大纲的主题分类，部分标题作了简化
 - **余数定理（remainder theorem）：**除式为 $ax+b$、$a\ne0$ 时，余数为 $F(-\frac ba)$。
 - **因式定理（factor theorem）：**$ax+b$ 是 $F(x)$ 的因式，当且仅当 $F(-\frac ba)=0$。
 
+#### 更多多项式除法例子 {#algebraic-division-1}
+**例子：**
+- $\frac{3x + 4}{x - 1} = 3 + \frac{7}{x - 1}$，其中 $x\ne1$。
+- $\frac{2x^3 - 3x^2 - 2x + 2}{x - 2} = 2x^2 + x + \frac{2}{x - 2}$，其中 $x\ne2$。
+
 ### 部分分式（partial fractions） {#partial-fractions}
 
 [学习分解方法、重复因式及完整例题](/zh/alevel/a2-mathematics/partial-fractions/#method)。
+
+<span id="partial-fractions-extended"></span>
+
+遇到一次因式与重复因式的复杂组合，仍然使用相同的方法。例如，
+
+$$\frac{3+2x^2}{(2x+1)(x-3)^2}=\frac{A}{2x+1}+\frac{B}{x-3}+\frac{C}{(x-3)^2}.$$
+
+先比较分子与分母的次数，再去分母。代入使因式为零的值后，若仍有常数未求出，就比较系数或再代入一个方便的值。
 
 ### 函数（functions） {#functions}
 
@@ -65,12 +87,12 @@ P2 编号依据 OxfordAQA 课程大纲的主题分类，部分标题作了简化
   - $f(x)=\sqrt{x},\ \lbrace x\in\mathbb{R},x\geq0\rbrace$
   - $f:x\mapsto\sqrt{x},\ \lbrace x\in\mathbb{R},x\geq0\rbrace$
 
-### 映射类型 {#function-types}
+#### 映射类型 {#function-types}
 - **一一函数（one-to-one）：**不同输入对应不同输出。任意水平线与图像至多相交一次。
 - **多对一函数（many-to-one）：**两个或更多不同输入可以对应同一输出。
 - **一对多（one-to-many）：**一个输入对应多个输出，因此这不是函数。
 
-### 复合函数（composite functions） {#function-composition}
+#### 复合函数（composite functions） {#function-composition}
 - $fg(x) = f(g(x))$（先作用 $g$，再作用 $f$）。
 - $gf(x) = g(f(x))$（先作用 $f$，再作用 $g$）。
 - 对于 $fg$，$x$ 必须属于 $g$ 的定义域，且 $g(x)$ 必须属于 $f$ 的定义域。
@@ -80,7 +102,7 @@ P2 编号依据 OxfordAQA 课程大纲的主题分类，部分标题作了简化
 
   $$\begin{aligned}fg(x)&=3(x^2+4x-2)-2\\&=3x^2+12x-8,\\gf(x)&=(3x-2)^2+4(3x-2)-2\\&=9x^2-8.\end{aligned}$$
 
-### 反函数（inverse functions） {#inverse-functions}
+#### 反函数（inverse functions） {#inverse-functions}
 - 记作 $f^{-1}$。
 - 函数只有在给定定义域上是**一一函数**，才有反函数。因此有时需要限制原函数的定义域。
 - 图像关系：关于直线 $y = x$ 翻折。
@@ -109,19 +131,19 @@ $$\lvert x\rvert=\begin{cases}x & \text{if }x\geq0\\-x & \text{if }x<0.\end{case
   - $y = \lvert f(x) \rvert$：保留满足 $f(x)\geq0$ 的部分；把 $x$ 轴下方的部分关于 $x$ 轴翻折。
   - $y = f(\lvert x \rvert)$：保留 $x\geq0$ 对应的允许部分，再关于 $y$ 轴翻折。输入值只有在 $\lvert x\rvert$ 属于原定义域时才允许。
 
-### 图像变换（transformations） {#transformations}
+#### 图像变换（transformations） {#transformations}
 
 [学习多个图像变换的组合](/zh/alevel/a2-mathematics/modulus-and-transformations/#combinations-of-transformations)。
 
 用以下变换描绘新图像。下面两种伸缩都要求 $a>0$；若乘数为负，还需要翻折。
 - $y = af(x)$ → 沿平行于 $y$ 轴的方向单向伸缩（one-way stretch），伸缩因子（scale factor）为 $a$。
 - $y = f(x) + a$ → 竖直平移（translation）$a$ 个单位，正值向上、负值向下。
-- $y = f(x + a)$ → 水平平移 $-a$ 个单位，正值向右、负值向左。
+- $y = f(x + a)$ → 当 $a>0$ 时向左平移 $a$ 个单位；当 $a<0$ 时向右平移 $-a$ 个单位。
 - $y = f(ax)$ → 沿平行于 $x$ 轴的方向单向伸缩，伸缩因子为 $\frac{1}{a}$。
 - $y = -f(x)$ → 关于 x 轴翻折（reflection）。
 - $y = f(-x)$ → 关于 y 轴翻折。
 
-### 解绝对值方程 {#solving-modulus-equations}
+#### 解绝对值方程 {#solving-modulus-equations}
 1. 画草图，判断可能的解的个数。
 2. 找出图像交点。
 3. 按绝对值定义分类求解，并检查每个解是否满足对应情况的条件。
@@ -130,28 +152,6 @@ $$\lvert x\rvert=\begin{cases}x & \text{if }x\geq0\\-x & \text{if }x<0.\end{case
   - 情况 2，$2x+a<0$：$-(2x + a) - b = \frac{1}{3}x$。
 
 若不等式两边都有绝对值，先求相等时的边界，再检验区间或比较图像。只有两边都非负时，才能直接平方。参见[完整例题](/zh/alevel/a2-mathematics/modulus-and-transformations/#example-7--modulus-on-both-sides)。
-
-### 有理函数的化简（rational functions） {#rational-functions}
-
-[练习因式分解与保留定义域限制](/zh/alevel/a2-mathematics/algebraic-fractions-and-division/#simplification)。
-
-- 分解分子和分母，再约去公因式。保留原分母带来的限制。
-- **化简例子：**
-
-  $$\begin{aligned}\frac{x^2-4x}{x^2-5x+4}&=\frac{x(x-4)}{(x-4)(x-1)}\\&=\frac{x}{x-1},\qquad x\ne1,4.\end{aligned}$$
-
-### 更多多项式除法例子 {#algebraic-division-1}
-**例子：**
-- $\frac{3x + 4}{x - 1} = 3 + \frac{7}{x - 1}$，其中 $x\ne1$。
-- $\frac{2x^3 - 3x^2 - 2x + 2}{x - 2} = 2x^2 + x + \frac{2}{x - 2}$，其中 $x\ne2$。
-
-### 部分分式：进阶形式 {#partial-fractions-extended}
-
-遇到一次因式与重复因式的复杂组合，仍然使用相同的方法。例如，
-
-$$\frac{3+2x^2}{(2x+1)(x-3)^2}=\frac{A}{2x+1}+\frac{B}{x-3}+\frac{C}{(x-3)^2}.$$
-
-先比较分子与分母的次数，再去分母。代入使因式为零的值后，若仍有常数未求出，就比较系数或再代入一个方便的值。
 
 ### 反证法（proof by contradiction） {#proof-by-contradiction}
 
@@ -173,7 +173,10 @@ $$\frac{3+2x^2}{(2x+1)(x-3)^2}=\frac{A}{2x+1}+\frac{B}{x-3}+\frac{C}{(x-3)^2}.$$
 - 当 $n$ 为负数或非整数时，本课使用的无穷级数要求 $\lvert x\rvert<1$。这里的适用范围不包含端点；端点处的情况取决于 $n$。若 $n$ 为正整数，展开是有限的，且对所有实数 $x$ 都成立。当 $n=0$ 时，只要原式有定义，结果就是 $1$。
 - **展开式（expansion）：**
 
-  $$(1+x)^n=1+nx+\frac{n(n-1)}{2!}x^2+\frac{n(n-1)(n-2)}{3!}x^3+\cdots.$$
+  $$\begin{aligned}
+  (1+x)^n={}&1+nx+\frac{n(n-1)}{2!}x^2\\
+  &+\frac{n(n-1)(n-2)}{3!}x^3+\cdots.
+  \end{aligned}$$
 
 - **通项（general term）：**当 $r\geq1$ 时，
 
@@ -317,7 +320,11 @@ $$\frac{d}{dx}\tan^{-1}x=\frac1{1+x^2},\qquad x\in\mathbb R.$$
 - $g(x) = 3x - 2$, $g'(x) = 3$
 - 导数为
 
-$$\frac{2(3x - 2) - (2x + 1)3}{(3x - 2)^2} = \frac{6x - 4 - 6x - 3}{(3x - 2)^2} = \frac{-7}{(3x - 2)^2}$$
+$$\begin{aligned}
+&\frac{2(3x - 2) - (2x + 1)3}{(3x - 2)^2}\\
+&\quad=\frac{6x - 4 - 6x - 3}{(3x - 2)^2}\\
+&\quad=\frac{-7}{(3x - 2)^2}
+\end{aligned}$$
 
 ### 链式法则（chain rule） {#chain-rule}
 - $\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx}$
@@ -366,6 +373,7 @@ $$\frac{2(3x - 2) - (2x + 1)3}{(3x - 2)^2} = \frac{6x - 4 - 6x - 3}{(3x - 2)^2} 
 | 商 | $\left(\frac{u}{v}\right)' = \frac{u'v - uv'}{v^2}$ | 一个函数除以另一个 |
 | 链式 | $\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx}$ | 复合函数 |
 | 隐式 | 对两边求导，并保留 $\frac{dy}{dx}$ | 方程不是 $y = f(x)$ 的形式 |
+{: .wide-table}
 
 ---
 

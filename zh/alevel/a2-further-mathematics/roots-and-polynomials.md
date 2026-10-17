@@ -7,7 +7,7 @@ subject: a2-further-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-further-mathematics/roots-and-polynomials/
 permalink: /zh/alevel/a2-further-mathematics/roots-and-polynomials/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -400,7 +400,7 @@ $\alpha$ 为负，所以实部范围为正。在共轭根相加时，虚部抵�
 
 ### 第 7 题：AQA 原题练习 {#question-7--original-aqa-practice}
 
-**来源：**AQA MFP2，2006 年 1 月；所提供教材第 17 章的考试练习第 4 题，印刷页码 206。下方保留原题分值。
+**来源：**AQA Mathematics 6360，MFP2，January 2006，原卷第 2 题。原题分值：**5 + 5 marks**。教材索引：Chapter 17, practice examination question 4, printed p. 206。[原卷](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/January%202006%20QP%20-%20FP2%20AQA.PDF)、[AQA 评分材料](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/January%202006%20MS%20-%20FP2%20AQA.PDF)。
 
 The cubic equation
 
@@ -444,6 +444,8 @@ $$\boxed{p=-4,\quad q=-2,\quad r=20.}$$
 
 这里给出的是本课编写的解答，并非官方评分细则。解答中应展示系数关系、平方恒等式、使用共轭根的理由及根的乘积计算。
 
+**评分材料核对：**利用根的和、平方和恒等式及共轭根，得到 p = −4、q = −2、r = 20。本课解答已对照上述 AQA 评分材料检查；这些解释由本课编写，并非官方评分细则。
+
 </details>
 
 ## 快速参考 {#quick-reference}
@@ -456,6 +458,7 @@ $$\boxed{p=-4,\quad q=-2,\quad r=20.}$$
 | 已知根 $p+qi$ | 实系数多项式还有根 $p-qi$ | 建立 $(z-p)^2+q^2$，再进行除法 |
 | 复数系数 | 代入检验，并使用根与系数的关系 | 不能直接假设根成共轭对 |
 | 实数根的个数 | 求导并检查驻点处的函数值 | 变号只能说明区间内至少有一个根 |
+{: .wide-table}
 
 **练习后：**若符号出错，重做第 1 题；若遗漏根，重做第 4 题；若对复数系数误用了共轭根定理，对比例 5 和第 5 题；若找到了根的区间却没有证明唯一性，复习例 6。
 

@@ -5,12 +5,14 @@ mathjax: true
 grade: a2
 subject: a2-physics
 permalink: /alevel/a2-physics/quick-reference/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
 
 [Back to the PH03 course index](/alevel/a2-physics/). For a full lesson, open [Circular Motion](/alevel/a2-physics/circular-motion/). These reference notes cover PH03; the other topics will be developed into guided lessons.
+
+The original sources of these seven worked reference examples have not yet been recovered. They are not authenticated official questions and are not assumed to be self-written. Their numerical results have been independently checked; source identity remains unverified.
 
 > **Qualification**: OxfordAQA International A-level Physics (9630) · Modular<br>
 > **Assessment**: AS = Unit 1 + Unit 2 · A2 = Unit 3 + Unit 4 + Unit 5
@@ -61,6 +63,7 @@ At the top and bottom of a vertical circle, resolve the actual forces towards th
 | Particle on a string, bottom of a vertical circle | $F_T-mg=\dfrac{mv^2}{r}$ | Tension exceeds weight |
 | Car at a hill crest, centre below | $mg-N=\dfrac{mv^2}{r}$ | $N\geq0$: $v\leq\sqrt{gr}$ (maximum speed for contact) |
 | Car at the bottom of a dip, centre above | $N-mg=\dfrac{mv^2}{r}$ | Reaction exceeds weight |
+{: .wide-table}
 
 For a particle on a string moving in a vertical circle under gravity, speed changes with height. Do not assume uniform speed. For a road, $r$ is the local radius of curvature. See the [force diagrams and contact conditions](/alevel/a2-physics/circular-motion/#at-the-top-and-bottom-of-a-curve).
 
@@ -112,7 +115,7 @@ $$\omega = \sqrt{\frac{g}{L}}, \quad T = 2\pi\sqrt{\frac{L}{g}}$$
     * KE: $E_k = \frac{1}{2}mv^2$ — maximum at equilibrium ($x = 0$)
     * PE: $E_p = \frac{1}{2}kx^2$ — maximum at extreme positions ($x = \pm A$)
 
-> **📝 Example Question**
+> **📝 Worked reference example — original source not yet traced**
 >
 > A mass of 0.20 kg is attached to a spring of spring constant 50 N m$^{-1}$. It is displaced 4.0 cm from equilibrium and released. Calculate:
 > (a) The angular frequency
@@ -200,13 +203,13 @@ For a satellite in circular orbit around a planet of mass $M$:
     * Altitude is about $3.6 \times 10^7$ m.
     * Used for telecommunications and weather monitoring.
 
-> **📝 Example Question**
+> **📝 Worked reference example — original source not yet traced**
 >
 > A satellite orbits Earth at a height of 400 km above the surface. Given $R_E = 6.37 \times 10^6$ m and $M_E = 5.97 \times 10^{24}$ kg, calculate the orbital speed and period.
 >
 > **Solution:**
-> 1. $r = R_E + h = 6.37 \times 10^6 + 4.00 \times 10^5 = 6.77 \times 10^6$ m
-> 2. $v = \sqrt{\frac{GM}{r}} = \sqrt{\frac{6.67 \times 10^{-11} \times 5.97 \times 10^{24}}{6.77 \times 10^6}} = \sqrt{5.89 \times 10^7} = 7.67 \times 10^3$ m s$^{-1}$
+> 1. $r = R_E + h$<br>$= 6.37 \times 10^6 + 4.00 \times 10^5$<br>$= 6.77 \times 10^6$ m
+> 2. $v = \sqrt{\frac{GM}{r}}$<br>$= \sqrt{\frac{6.67 \times 10^{-11} \times 5.97 \times 10^{24}}{6.77 \times 10^6}}$<br>$= \sqrt{5.89 \times 10^7}$<br>$= 7.67 \times 10^3$ m s$^{-1}$
 > 3. $T = \frac{2\pi r}{v} = \frac{2\pi \times 6.77 \times 10^6}{7.67 \times 10^3} = 5550$ s $\approx 92.4$ min
 
 ---
@@ -229,6 +232,17 @@ $$F = \frac{\lvert Q_1 Q_2\rvert }{4\pi\varepsilon_0 r^2}$$
 * $\varepsilon_0$ = permittivity of free space $= 8.85 \times 10^{-12}$ C$^2$ N$^{-1}$ m$^{-2}$
 * $k = \frac{1}{4\pi\varepsilon_0} = 8.99 \times 10^9$ N m$^2$ C$^{-2}$
 * Like charges repel; unlike charges attract. Each experiences an equal and opposite force. Air can usually be treated as a vacuum.
+
+#### Example: force between two point charges {#example-coulomb-force}
+
+> **📝 Worked reference example — original source not yet traced**
+>
+> Two point charges, $+4.0 \times 10^{-6}$ C and $-3.0 \times 10^{-6}$ C, are separated by 0.20 m. Calculate the force between them and state its nature.
+>
+> **Solution:**
+> 1. $F = \frac{1}{4\pi\varepsilon_0} \times \frac{\lvert Q_1 Q_2\rvert }{r^2}$<br>$= 8.99 \times 10^9 \times \frac{4.0 \times 10^{-6} \times 3.0 \times 10^{-6}}{(0.20)^2}$
+> 2. $F = 8.99 \times 10^9 \times \frac{1.2 \times 10^{-11}}{0.040}$<br>$= 8.99 \times 10^9 \times 3.0 \times 10^{-10}$<br>$= 2.7$ N
+> 3. The force is **attractive** (opposite charges).
 
 ### 3.3 Electric Field of a Point Charge
 
@@ -273,6 +287,7 @@ $$E = \frac{V}{d}$$
 | Potential | $V = -\frac{GM}{r}$ | $V = \frac{Q}{4\pi\varepsilon_0 r}$ |
 | Potential energy | $E_p = -\frac{GMm}{r}$ | $E_p = \frac{Q_1Q_2}{4\pi\varepsilon_0 r}$ |
 | Nature | Always attractive | Attractive or repulsive |
+{: .wide-table}
 
 ### 3.8 Capacitance
 
@@ -300,15 +315,6 @@ $$E = \frac{1}{2}QV = \frac{1}{2}CV^2 = \frac{Q^2}{2C}$$
 
 * At fixed capacitance, energy released between voltages is $C(V_1^2-V_2^2)/2$, not $C(V_1-V_2)^2/2$.
 
-> **📝 Example Question**
->
-> Two point charges, $+4.0 \times 10^{-6}$ C and $-3.0 \times 10^{-6}$ C, are separated by 0.20 m. Calculate the force between them and state its nature.
->
-> **Solution:**
-> 1. $F = \frac{1}{4\pi\varepsilon_0} \times \frac{\lvert Q_1 Q_2\rvert }{r^2} = 8.99 \times 10^9 \times \frac{4.0 \times 10^{-6} \times 3.0 \times 10^{-6}}{(0.20)^2}$
-> 2. $F = 8.99 \times 10^9 \times \frac{1.2 \times 10^{-11}}{0.040} = 8.99 \times 10^9 \times 3.0 \times 10^{-10} = 2.7$ N
-> 3. The force is **attractive** (opposite charges).
-
 ---
 
 ## 4. 📉 Exponential Change (3.9)
@@ -325,8 +331,25 @@ For constant $R$ and $C$, with negligible other resistance and leakage:
 | Capacitor voltage | $V_C=V_s(1-e^{-t/RC})$ | $V_C=V_0e^{-t/RC}$ |
 | Charge | $Q=CV_s(1-e^{-t/RC})$ | $Q=Q_0e^{-t/RC}$ |
 | Current magnitude | $I=(V_s/R)e^{-t/RC}$ | $I=(V_0/R)e^{-t/RC}$ |
+{: .wide-table}
 
 During charging, $V_s=IR+V_C$. As capacitor voltage rises, resistor voltage and current fall. During discharge, $I=V_C/R$; current falls as voltage falls. Conventional current reverses through the resistor. These equations give magnitudes; a common signed-current convention gives opposite signs.
+
+#### Example: RC discharge {#example-rc-discharge}
+
+> **📝 Worked reference example — original source not yet traced**
+>
+> A 4700 μF capacitor is charged to 12 V and then discharged through a 10 kΩ resistor. Calculate:
+> (a) The initial charge stored
+> (b) The time constant
+> (c) The time for the PD to fall to 4.0 V
+>
+> **Solution:**
+> 1. (a) $Q_0 = CV_0 = 4700 \times 10^{-6} \times 12 = 0.0564$ C $= 56.4$ mC
+> 2. (b) $\tau = RC = 10 \times 10^3 \times 4700 \times 10^{-6} = 47$ s
+> 3. (c) $V = V_0 e^{-t/RC} \implies 4.0 = 12 \times e^{-t/47}$
+> 4. $\frac{4.0}{12} = e^{-t/47} \implies \ln\left(\frac{1}{3}\right) = -\frac{t}{47}$
+> 5. $t = 47 \times \ln 3 = 47 \times 1.099 = 51.6$ s $\approx 52$ s
 
 ### 4.2 Time Constant (Capacitor)
 
@@ -369,20 +392,6 @@ $$N = N_0 e^{-\lambda t}$$
     * Gradient $= -\lambda$
     * $y$-intercept $= \ln N_0$
 
-> **📝 Example Question**
->
-> A 4700 μF capacitor is charged to 12 V and then discharged through a 10 kΩ resistor. Calculate:
-> (a) The initial charge stored
-> (b) The time constant
-> (c) The time for the PD to fall to 4.0 V
->
-> **Solution:**
-> 1. (a) $Q_0 = CV_0 = 4700 \times 10^{-6} \times 12 = 0.0564$ C $= 56.4$ mC
-> 2. (b) $\tau = RC = 10 \times 10^3 \times 4700 \times 10^{-6} = 47$ s
-> 3. (c) $V = V_0 e^{-t/RC} \implies 4.0 = 12 \times e^{-t/47}$
-> 4. $\frac{4.0}{12} = e^{-t/47} \implies \ln\left(\frac{1}{3}\right) = -\frac{t}{47}$
-> 5. $t = 47 \times \ln 3 = 47 \times 1.099 = 51.6$ s $\approx 52$ s
-
 ---
 
 ## 5. 🧲 Magnetic Fields (3.10)
@@ -413,11 +422,12 @@ $$F = BIL\sin\theta$$
 
 ### 5.4 Force on a Moving Charge
 
-For a charge $Q$ moving with velocity $v$ perpendicular to a magnetic field $B$:
+For a particle of charge magnitude $Q=\lvert q\rvert $ moving at speed $v$ perpendicular to a uniform magnetic field of magnitude $B$, the force magnitude is:
 $$F = BQv$$
 * This is the principle behind the **mass spectrometer** and **circular particle accelerators**.
 * The magnetic force provides centripetal force:
     $$BQv = \frac{mv^2}{r} \implies r = \frac{mv}{BQ}$$
+* Use the sign of $q$ separately to determine the force direction.
 
 ### 5.5 Magnetic Flux
 
@@ -440,6 +450,18 @@ $$\varepsilon = -N\frac{\Delta \Phi}{\Delta t} = -\frac{\Delta (N\Phi)}{\Delta t
 
 * The negative sign indicates the direction of the induced emf (Lenz's Law).
 
+#### Example: flux-linkage change and average emf {#example-induced-emf}
+
+> **📝 Worked reference example — original source not yet traced**
+>
+> A rectangular coil of 200 turns and area $5.0 \times 10^{-3}$ m$^2$ is placed perpendicular to a uniform magnetic field of strength 0.15 T. The field is removed in 0.10 s. Calculate the average induced emf.
+>
+> **Solution:**
+> 1. Initial flux linkage: $N\Phi = NBA$<br>$= 200 \times 0.15 \times 5.0 \times 10^{-3}$<br>$= 0.15$ Wb
+> 2. Final flux linkage $= 0$ (field removed)
+> 3. $\varepsilon = -N\frac{\Delta \Phi}{\Delta t} = -\frac{0 - 0.15}{0.10} = +1.5$ V
+> 4. The induced emf is **1.5 V**.
+
 ### 5.8 Lenz's Law
 
 The direction of the induced current is such that it **opposes the change** that produced it.
@@ -447,8 +469,8 @@ The direction of the induced current is such that it **opposes the change** that
 
 ### 5.9 Motional emf
 
-For a conductor of length $L$ moving at speed $v$ perpendicular to a magnetic field $B$:
-$$\varepsilon = BLv$$
+For a straight conductor of length $L$ moving in a uniform magnetic field, with the conductor, velocity and field directions mutually perpendicular, the induced emf magnitude is:
+$$\lvert \varepsilon\rvert =BLv$$
 
 ### 5.10 Alternating Currents
 
@@ -487,25 +509,15 @@ A transformer changes the magnitude of an alternating voltage. It consists of a 
     * Long-distance transmission uses **high voltage, low current** to minimise energy losses ($P_{\text{loss}} = I^2 R$).
     * Step-up transformers increase voltage at power stations; step-down transformers reduce voltage for domestic use.
 
-> **📝 Example Question**
->
-> A rectangular coil of 200 turns and area $5.0 \times 10^{-3}$ m$^2$ is placed perpendicular to a uniform magnetic field of strength 0.15 T. The field is removed in 0.10 s. Calculate the average induced emf.
->
-> **Solution:**
-> 1. Initial flux linkage: $N\Phi = NBA = 200 \times 0.15 \times 5.0 \times 10^{-3} = 0.15$ Wb
-> 2. Final flux linkage $= 0$ (field removed)
-> 3. $\varepsilon = -N\frac{\Delta \Phi}{\Delta t} = -\frac{0 - 0.15}{0.10} = +1.5$ V
-> 4. The induced emf is **1.5 V**.
-
-> **📝 Example Question**
+> **📝 Worked reference example — original source not yet traced**
 >
 > A step-up transformer has 400 turns on the primary coil and 8000 turns on the secondary coil. The primary voltage is 230 V. Calculate:
 > (a) The secondary voltage
 > (b) The secondary current if the primary current is 2.0 A (assume 100% efficiency)
 >
 > **Solution:**
-> 1. (a) $\frac{V_s}{V_p} = \frac{N_s}{N_p} \implies V_s = V_p \times \frac{N_s}{N_p} = 230 \times \frac{8000}{400} = 4600$ V
-> 2. (b) $V_p I_p = V_s I_s \implies I_s = \frac{V_p I_p}{V_s} = \frac{230 \times 2.0}{4600} = 0.10$ A
+> 1. (a) $\frac{V_s}{V_p} = \frac{N_s}{N_p}$<br>$\implies V_s$<br>$= V_p \times \frac{N_s}{N_p}$<br>$= 230 \times \frac{8000}{400}$<br>$= 4600$ V
+> 2. (b) $V_p I_p = V_s I_s$<br>$\implies I_s$<br>$= \frac{V_p I_p}{V_s}$<br>$= \frac{230 \times 2.0}{4600}$<br>$= 0.10$ A
 
 ---
 
@@ -523,6 +535,8 @@ The simple harmonic systems investigation is **AS required practical 4**. Moving
 
 > Gravitational and electric fields follow almost identical mathematical structures. Mastering the parallels between them is a powerful way to learn and revise both topics.
 
+In this comparison: [similarities](#similarities) · [differences](#differences).
+
 | | Gravitational Field | Electric Field | Meaning |
 |---|---|---|---|
 | **Force magnitude** | $F = G\dfrac{Mm}{r^2}$ | $F = \dfrac{1}{4\pi\varepsilon_0}\dfrac{\lvert Qq\rvert }{r^2}$ | Non-negative force magnitude |
@@ -530,8 +544,9 @@ The simple harmonic systems investigation is **AS required practical 4**. Moving
 | **Potential energy** | $E_p = -G\dfrac{Mm}{r}$ | $E_p = \dfrac{1}{4\pi\varepsilon_0}\dfrac{Qq}{r}$ | Energy due to position in the field |
 | **Potential** | $V = \dfrac{E_p}{m} = -\dfrac{GM}{r}$ | $V = \dfrac{E_p}{q} = \dfrac{Q}{4\pi\varepsilon_0 r}$ | Energy per unit mass / charge |
 | **Relation between field strength and potential** | $g_r = -\dfrac{dV}{dr}$ | $E_r = -\dfrac{dV}{dr}$ | Signed radial components; outwards positive |
+{: .wide-table}
 
-## Similarities
+### Similarities
 
 
 * For point sources, both force magnitudes follow an **inverse-square** law: $F \propto \dfrac{1}{r^2}$.
@@ -542,7 +557,7 @@ The simple harmonic systems investigation is **AS required practical 4**. Moving
 * Field strength is a **vector**; potential is a **scalar**. In radial-field formulae, distinguish a magnitude from a signed radial component.
 * Both fields can be represented by **field lines** and **equipotential surfaces**.
 
-## Differences
+### Differences
 
 
 * Gravitational force is **always attractive**; electric force can be **attractive or repulsive** (depending on the signs of the charges).
@@ -557,36 +572,39 @@ The simple harmonic systems investigation is **AS required practical 4**. Moving
 
 > Electric and magnetic fields are different in many ways, but together they form the basis of **electromagnetic induction** and the operation of **transformers** and **generators**.
 
+In this comparison: [connections](#how-electric-and-magnetic-fields-are-connected) · [particle motion](#charged-particles-in-electric-and-magnetic-fields) · [velocity selector](#velocity-selector-electric--magnetic-fields-combined).
+
 | | Electric Field | Magnetic Field |
 |---|---|---|
 | **Source** | Stationary or moving charges | Electric currents and permanent magnets |
 | **Acts on** | Any charge (stationary or moving) | Moving charges only |
-| **Force law** | $F = QE$ | $F = BQv\sin\theta$ |
+| **Force law** | $\mathbf F=q\mathbf E$ | $F=B\lvert q\rvert v\sin\theta$ (magnitude) |
 | **Force direction** | Parallel to field (for $+$ charge) | Perpendicular to both $v$ and $B$ |
 | **Work done by field** | Can do work (changes KE) | **No work done** (force $\perp$ velocity) |
 | **Effect on speed** | Can change speed | Cannot change speed |
 | **Field lines** | Open (from $+$ to $-$) | Closed loops (no start or end) |
 
-## How Electric and Magnetic Fields Are Connected
+### How Electric and Magnetic Fields Are Connected
 
 Electric currents produce magnetic fields. A change in magnetic flux linkage induces an emf (Faraday's law); the induced current opposes the change that causes it (Lenz's law). These ideas explain generators and transformers.
 
-## Charged Particles in Electric and Magnetic Fields
+### Charged Particles in Electric and Magnetic Fields
 
 
 | | In an Electric Field | In a Magnetic Field |
 |---|---|---|
-| **Force** | $F = QE$ | $F = BQv$ (when $v \perp B$) |
+| **Force** | $\mathbf F=q\mathbf E$ | $F=B\lvert q\rvert v$ (magnitude, when $v \perp B$) |
 | **Direction of force** | Along $E$ for positive charge; opposite $E$ for negative charge | Perpendicular to $v$ and $B$; direction depends on charge sign |
 | **Trajectory** | Parabolic for entry perpendicular to a uniform field, with no other forces | Circular in a uniform field when $v\perp B$, with no other forces |
 | **Speed changes?** | Can change as the field does work | No — magnetic force is perpendicular to velocity |
 | **KE changes?** | Can change | No, for the magnetic force alone |
-| **Key equation** | $a = \dfrac{QE}{m}$ | $r = \dfrac{mv}{BQ}$, $T = \dfrac{2\pi m}{BQ}$ |
+| **Key equation** | $\mathbf a=\dfrac{q\mathbf E}{m}$ | $r=\dfrac{mv}{B\lvert q\rvert}$, $T=\dfrac{2\pi m}{B\lvert q\rvert}$ |
+{: .wide-table}
 
-## Velocity Selector (Electric + Magnetic Fields Combined)
+### Velocity Selector (Electric + Magnetic Fields Combined)
 
 
-For perpendicular electric and magnetic fields, choose the particle velocity perpendicular to both fields so the electric and magnetic forces oppose each other:
+For perpendicular electric and magnetic fields, choose the particle velocity perpendicular to both fields so the electric and magnetic forces oppose each other. In the magnitude equations below, $Q=\lvert q\rvert $:
 * Electric force: $F_E = QE$
 * Magnetic force: $F_B = BQv$
 
@@ -595,7 +613,7 @@ $$QE = BQv \implies v = \frac{E}{B}$$
 
 Only particles with speed $v = \dfrac{E}{B}$ are selected. This is the principle behind the **velocity selector** used in mass spectrometers.
 
-> **📝 Example Question**
+> **📝 Worked reference example — original source not yet traced**
 >
 > A velocity selector has $E = 3.0 \times 10^4$ V m$^{-1}$ and $B = 0.20$ T. A proton ($q = 1.6 \times 10^{-19}$ C, $m = 1.67 \times 10^{-27}$ kg) enters the selector.
 >
@@ -604,4 +622,4 @@ Only particles with speed $v = \dfrac{E}{B}$ are selected. This is the principle
 >
 > **Solution:**
 > 1. (a) $v = \dfrac{E}{B} = \dfrac{3.0 \times 10^4}{0.20} = 1.5 \times 10^5$ m s$^{-1}$
-> 2. (b) $r = \dfrac{mv}{BQ} = \dfrac{1.67 \times 10^{-27} \times 1.5 \times 10^5}{0.20 \times 1.6 \times 10^{-19}} = 7.8 \times 10^{-3}$ m $= 7.8$ mm
+> 2. (b) $r = \dfrac{mv}{BQ}$<br>$= \dfrac{1.67 \times 10^{-27} \times 1.5 \times 10^5}{0.20 \times 1.6 \times 10^{-19}}$<br>$= 7.8 \times 10^{-3}$ m $= 7.8$ mm

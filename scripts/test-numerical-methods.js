@@ -54,7 +54,7 @@ for (const [estimate,exact,expected] of [
   assert(Math.abs(estimate(8)-exact)<Math.abs(estimate(4)-exact),'Finer strips should reduce the error in this example');
 }
 assert(!/[\u3400-\u9fff]/u.test(source));
-assert.equal((source.match(/^### Example /gm)||[]).length,6);
+assert.equal((source.match(/^#{3,4} Example /gm)||[]).length,6);
 assert.equal((source.match(/^### Q\d/gm)||[]).length,6);
 const html=fs.readFileSync(path.join(root,'_site/alevel/a2-mathematics/numerical-methods/index.html'),'utf8');
 assert.equal((html.match(/<details\b/g)||[]).length,12);

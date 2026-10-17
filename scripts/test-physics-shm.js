@@ -71,7 +71,7 @@ close(4 * pi * pi / (4 * pi * pi / g), g);
 const source = fs.readFileSync('alevel/a2-physics/simple-harmonic-motion.md', 'utf8');
 const html = fs.readFileSync('_site/alevel/a2-physics/simple-harmonic-motion/index.html', 'utf8');
 assert(!/[\u3400-\u9fff]/u.test(source), 'English content');
-assert.equal((source.match(/### Example /g) || []).length, 5);
+assert.equal((source.match(/^#{3,4} Example /gm) || []).length, 5);
 assert.equal((source.match(/### Question /g) || []).length, 7);
 assert.equal((html.match(/<details\b/g) || []).length, 17);
 assert.equal((html.match(/<img[^>]*data-lazy-ignore="true"/g) || []).length, 3);

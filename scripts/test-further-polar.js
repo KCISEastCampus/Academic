@@ -81,7 +81,7 @@ const source = fs.readFileSync('alevel/a2-further-mathematics/polar-coordinates.
 const html = fs.readFileSync('_site/alevel/a2-further-mathematics/polar-coordinates/index.html', 'utf8');
 assert(!/[\u3400-\u9fff]/u.test(source), 'English content');
 assert(!source.includes('with Mechanics'), 'Shared textbook name');
-assert.equal((source.match(/### Example /g) || []).length, 9);
+assert.equal((source.match(/^#{3,4} Example /gm) || []).length, 9);
 assert.equal((source.match(/### Question /g) || []).length, 8);
 assert.equal((html.match(/<details\b/g) || []).length, 16);
 assert.equal((html.match(/<table\b/g) || []).length, 3, 'Absolute-value pipes must not create tables');

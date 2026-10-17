@@ -5,7 +5,7 @@ mathjax: true
 grade: a2
 subject: a2-physics
 permalink: /alevel/a2-physics/gravitational-fields-and-satellites/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 

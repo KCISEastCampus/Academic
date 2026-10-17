@@ -5,7 +5,7 @@ mathjax: true
 grade: a2
 subject: a2-further-mathematics
 permalink: /alevel/a2-further-mathematics/de-moivres-theorem/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -292,7 +292,7 @@ Expand $(\cos\theta+i\sin\theta)^n$ by the binomial theorem.
 
 The imaginary part is the real coefficient of $i$; it does not include $i$. Use $i^2=-1$, $i^3=-i$ and $i^4=1$.
 
-### Example 7 — Triple-angle formulae
+#### Example 7 — Triple-angle formulae
 
 **Question:** use De Moivre's theorem to express $\sin3\theta$ in powers of $\sin\theta$, $\cos3\theta$ in powers of $\cos\theta$ and $\tan3\theta$ in powers of $\tan\theta$.
 
@@ -347,7 +347,7 @@ z^m-\frac1{z^m}&=2i\sin m\theta.
 
 These reciprocal identities use **unit modulus**. If the original complex number has modulus $r\ne1$, first use $\frac zr=e^{i\theta}$.
 
-### Example 8 — Express a fifth power using multiple angles
+#### Example 8 — Express a fifth power using multiple angles
 
 **Question:** express $\sin^5\theta$ in terms of sines of multiples of $\theta$.
 
@@ -379,7 +379,11 @@ $$\boxed{\begin{aligned}
 
 ## Integration
 
-### Example 9 — Integrate a trigonometric power
+### Rewrite as multiple-angle terms {#integrate-multiple-angle-terms}
+
+Use the preceding identities to rewrite a trigonometric power as multiple-angle terms, then integrate term by term and check each inner coefficient.
+
+#### Example 9 — Integrate a trigonometric power
 
 **Question:** use the result in Example 8 to find $\int\sin^5x\,\mathrm dx$.
 
@@ -400,7 +404,11 @@ $$\boxed{\begin{aligned}
 
 **Common mistake:** forgetting the factor $\frac1k$ when integrating $\sin kx$ or $\cos kx$.
 
-### Example 10 — Use exponential form in an integral
+### Integrate using complex exponentials {#integrate-complex-exponentials}
+
+Express the integrand as the real or imaginary part of a complex exponential, integrate that exponential, then take the required part and add a real constant of integration.
+
+#### Example 10 — Use exponential form in an integral
 
 **Question:** find $\int e^{2x}\cos3x\,\mathrm dx$ using exponential form.
 
@@ -629,7 +637,7 @@ $$\boxed{\begin{aligned}
 
 ### Question 7 — AQA: the smallest positive angle
 
-**Original AQA question.** AQA MFP2, June 2007; textbook Chapter 20, practice examination Question 2, printed p. 253. **5 marks.**
+**Source:** AQA Mathematics 6360, MFP2, June 2007, Question 3. **5 marks**. Textbook cross-reference: Chapter 20, practice examination question 2, printed p. 253. [Question paper](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202007%20QP%20-%20FP2%20AQA.PDF), [AQA mark scheme](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202007%20MS%20-%20FP2%20AQA.PDF).
 
 Use De Moivre's theorem to find the smallest positive angle $\theta$ for which
 
@@ -664,13 +672,13 @@ $$\boxed{\theta=\frac\pi{10}.}$$
 
 **Check:** $15\theta=\frac{3\pi}{2}$, whose cosine is zero and sine is $-1$. Consecutive solutions are separated by $\frac{2\pi}{15}$, so the preceding one is negative.
 
-This is our worked solution, not an official mark scheme.
+**Mark-scheme comparison:** Apply De Moivre’s theorem, match the real and imaginary parts, and select 15θ = 3π/2 to obtain the smallest positive θ = π/10. Our working has been checked against the linked AQA mark scheme; these explanations are our own, not an official mark scheme.
 
 </details>
 
 ### Question 8 — AQA: a fifth-angle identity and a product
 
-**Original AQA question.** AQA MFP2, June 2011; textbook Chapter 20, practice examination Question 3, printed p. 253. **16 marks.**
+**Source:** AQA Mathematics 6360, MFP2, June 2011, Question 7. **5 + 3 + 3 + 5 marks**. Textbook cross-reference: Chapter 20, practice examination question 3, printed p. 253. [Question paper](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202011%20QP%20-%20FP2%20AQA.pdf), [AQA mark scheme](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202011%20MS%20-%20FP2%20AQA.PDF).
 
 **a i** Use De Moivre's theorem to show that
 
@@ -758,7 +766,7 @@ $$\boxed{\tan\frac\pi5\tan\frac{2\pi}{5}=\sqrt5.}$$
 
 **Check:** the quadratic in $t^2$ has roots $5\pm2\sqrt5$, both positive, with product $5$. The sign of $ab$ still needs the first-quadrant check.
 
-This is our worked solution, not an official mark scheme.
+**Mark-scheme comparison:** Expand the fifth power and compare parts; divide by cos⁵θ where it is nonzero. Identify all four tangent roots, then justify the positive product √5. Our working has been checked against the linked AQA mark scheme; these explanations are our own, not an official mark scheme.
 
 </details>
 
@@ -775,6 +783,7 @@ This is our worked solution, not an official mark scheme.
 | Power in terms of multiple angles | Raise $z+z^{-1}=2\cos\theta$ or $z-z^{-1}=2i\sin\theta$ to a power | These identities require $\lvert z\rvert=1$ |
 | Tangent identity | Divide imaginary part by real part | State where the tangent expressions are defined |
 | Integration | Integrate the multiple-angle expression, or take a part of a complex exponential | Include the angle factors and $+C$ |
+{: .wide-table}
 
 **After practice:** if the quadrant was wrong, repeat Question 1. If sine and cosine were interchanged, repeat Question 2. If roots were missing, repeat Questions 3–4. If the direction of a trigonometric expansion was wrong, compare Question 5 with Question 6. If the smallest angle was wrong, repeat Question 7. If a sign was lost in a product, repeat Question 8.
 

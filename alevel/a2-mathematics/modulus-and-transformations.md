@@ -5,7 +5,7 @@ mathjax: true
 grade: a2
 subject: a2-mathematics
 permalink: /alevel/a2-mathematics/modulus-and-transformations/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -33,6 +33,7 @@ $$\lvert x\rvert=\begin{cases}x,&x\geq0,\\-x,&x<0.\end{cases}$$
 |---|---|---|
 | $y=\lvert f(x)\rvert$ | Parts on or above the $x$-axis | Reflect parts below the $x$-axis in the $x$-axis |
 | $y=f(\lvert x\rvert)$ | The part with $x\geq0$ | Reflect that part in the $y$-axis to form the part with $x<0$ |
+{: .wide-table}
 
 For $y=\lvert f(x)\rvert$, the domain stays the same. For $y=f(\lvert x\rvert)$, an input $x$ is allowed only when $\lvert x\rvert$ belongs to the domain of $f$. The graph rule in the table applies to the allowed non-negative inputs.
 
@@ -81,6 +82,7 @@ Start from $y=f(x)$. Describe each transformation using the axis, direction and 
 | $y=f(ax)$, $a>0$ | One-way stretch parallel to the $x$-axis, scale factor $\displaystyle\frac1a$ | $(\displaystyle\frac pa,q)$ |
 | $y=-f(x)$ | Reflection in the $x$-axis | $(p,-q)$ |
 | $y=f(-x)$ | Reflection in the $y$-axis | $(-p,q)$ |
+{: .wide-table}
 
 **Inside the function:** change the input coordinates. **Outside the function:** change the output coordinates. A scale factor between $0$ and $1$ makes the graph narrower or shorter in the stated direction.
 
@@ -96,6 +98,7 @@ Write $2x-4=2(x-2)$. One correct sequence is:
 | 2 | Translation by $\begin{pmatrix}2\\\\0\end{pmatrix}$ | $y=f(2(x-2))$ |
 | 3 | One-way stretch parallel to the $y$-axis, scale factor $2$ | $y=2f(2(x-2))$ |
 | 4 | Translation by $\begin{pmatrix}0\\\\-1\end{pmatrix}$ | $y=2f(2x-4)-1$ |
+{: .wide-table}
 
 **Check with a point:** If $(p,q)$ lies on the original graph, the new input must satisfy $2x-4=p$. Thus,
 

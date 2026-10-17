@@ -61,7 +61,7 @@ function run({ lang = 'en', saved = null, blocked = false, href = 'https://acade
   const window = {};
   vm.runInNewContext(source, {
     URL, document, window,
-    location: { href, origin: new URL(href).origin, assign: destination => assigned.push(destination) },
+    location: { href, pathname: new URL(href).pathname, origin: new URL(href).origin, assign: destination => assigned.push(destination) },
     localStorage: {
       getItem(key) { assert.equal(key, 'site-language'); if (blocked) throw Error('Blocked storage'); return saved; },
       setItem(key, value) { if (blocked) throw Error('Blocked storage'); writes.push([key, value]); }
@@ -81,9 +81,9 @@ for (const lang of ['en', 'zh-CN']) {
       assert.equal(result.ui.lang, expected);
       assert.equal(result.label.textContent, config.ui[expected].home);
       for (const attribute of ['aria-label', 'title', 'placeholder', 'alt']) assert.equal(result.search.getAttribute(attribute), config.ui[expected].search);
-      assert.equal(result.select.value, expected);
+      assert.equal(result.select.value, lang, 'Paired pages select their current content language even when UI preference differs');
       assert.equal(result.select.hidden, false);
-      assert.equal(result.fallback.hidden, lang === expected, 'A differing content language keeps its translation link available');
+      assert.equal(result.fallback.hidden, true, 'The active selector replaces the no-JavaScript link without duplicate mobile controls');
       assert.equal(result.label.lang, expected);
       assert.equal(result.search.lang, expected);
       assert.deepEqual(result.writes, [], 'Loading a page must not reset the saved preference');
@@ -98,9 +98,9 @@ const paired = run({ loading: true });
 assert.equal(paired.select.hidden, true);
 paired.document.dispatchEvent(new Event('DOMContentLoaded'));
 paired.choose('zh-CN');
-assert.equal(paired.fallback.hidden, false);
+assert.equal(paired.fallback.hidden, true);
 paired.window.siteLanguage.apply();
-assert.equal(paired.fallback.hidden, false, 'Refreshing UI keeps access to the selected translation');
+assert.equal(paired.fallback.hidden, true, 'Refreshing UI does not restore a duplicate language link');
 assert.deepEqual(paired.writes, [['site-language', 'zh-CN']]);
 assert.deepEqual(paired.assigned, ['https://academic.example/zh/alevel/math/?paper=FP#task-2']);
 assert.equal(paired.links[0].href, paired.assigned[0]);
@@ -120,7 +120,7 @@ assert.equal(paired.writes.length, 2, 'Only supported preferences are stored');
 
 const chinese = run({ lang: 'zh-CN', saved: 'zh-CN', href: 'https://academic.example/zh/alevel/math/?paper=FP#task-2' });
 chinese.choose('en');
-assert.equal(chinese.fallback.hidden, false);
+assert.equal(chinese.fallback.hidden, true);
 assert.deepEqual(chinese.assigned, ['https://academic.example/alevel/math/?paper=FP#task-2']);
 const unpaired = run({ lang: 'zh-CN', saved: 'en', href: 'https://academic.example/alevel/fx-cg50/', fallbackLink: false });
 assert.equal(unpaired.document.getElementById('languageSwitch'), null);
@@ -132,7 +132,7 @@ assert.deepEqual(unpaired.assigned, []);
 assert.equal(unpaired.document.documentElement.lang, 'zh-CN');
 const blocked = run({ blocked: true });
 blocked.choose('zh-CN');
-assert.equal(blocked.select.value, 'zh-CN');
+assert.equal(blocked.select.value, 'en', 'Until navigation completes the selector still describes the displayed content');
 assert.equal(blocked.assigned.length, 1, 'Session selection works even when persistence is blocked');
 assert.deepEqual(blocked.writes, []);
 vm.runInNewContext(source, { document: { getElementById: () => null } });

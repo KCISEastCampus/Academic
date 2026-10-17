@@ -7,7 +7,7 @@ subject: a2-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-mathematics/trigonometric-functions-and-formulae/
 permalink: /zh/alevel/a2-mathematics/trigonometric-functions-and-formulae/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -35,6 +35,7 @@ study_page: true
 | 和差角公式（compound angle formulae） | 展开或识别展开后的形式 | 余弦公式中的符号与括号内相反 |
 | $a\cos\theta+b\sin\theta$ | 按题目要求的形式比较系数（compare coefficients） | 检查 $\alpha$ 所在象限 |
 | 多倍角 | 使用二倍角公式或换一个角度变量 | 同时转换角度的取值区间 |
+{: .wide-table}
 
 题目使用角度制（degrees）时，就按角度制计算；本课其余地方使用弧度制。中间步骤保留精确值；求小数答案时，保留计算器完整精度，最后再取近似值。
 
@@ -452,6 +453,7 @@ $$\boxed{6\sin^2 x-2=1-3\cos2x}.$$
 | 化为正弦或余弦形式 | 先求 $r=\sqrt{a^2+b^2}$，再比较系数 | 确定象限，并保留 $\alpha$ 的完整精度 |
 | 二倍角公式 | 化为只含一种三角函数的方程 | 因式分解，不要除以可能为零的因子 |
 | 方程的解 | 列出给定区间内的所有角 | 转换取值区间，按题意保留端点 |
+{: .wide-table}
 
 **如果答案看起来不对：**检查角度单位、反函数值域、符号、系数顺序、分母和是否漏掉象限。每个候选解都要代回原方程检查。
 

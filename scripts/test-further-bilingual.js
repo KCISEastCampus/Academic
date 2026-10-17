@@ -37,7 +37,7 @@ for (const slug of slugs) {
       .filter(paragraph => !/^\*\*(?:Source:|Original AQA question\.)/.test(paragraph) && !paragraph.startsWith('!['));
     for (const paragraph of prompt) assert(zh.includes(paragraph), `${slug}: English exercise prompt ${paragraph.slice(0, 70)}`);
   }
-  for (const match of en.matchAll(/^### Example[^\n]*\n\n([^\n]+)/gm)) {
+  for (const match of en.matchAll(/^#{3,4} Example[^\n]*\n\n([^\n]+)/gm)) {
     if (slug === 'roots-and-polynomials')
       assert(zh.includes(match[1]), `${slug}: English example prompt`);
   }

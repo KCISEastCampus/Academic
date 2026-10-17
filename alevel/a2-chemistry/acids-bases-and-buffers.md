@@ -6,7 +6,7 @@ lang: en
 grade: a2
 subject: a2-chemistry
 permalink: /alevel/a2-chemistry/acids-bases-and-buffers/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -185,10 +185,38 @@ When acid is in the conical flask and alkali is added, begin with the initial pH
 | Weak acid/strong alkali | Conjugate base gives pH > 7 at equivalence; buffer region beforehand | Usually phenolphthalein |
 | Strong acid/weak alkali | Conjugate acid gives pH < 7 at equivalence | Usually methyl orange |
 | Weak acid/weak alkali | Small jump; a clear visual end point may be absent | Usually a pH measurement method |
+{: .wide-table}
 
 Choose an indicator whose transition range lies in the steep pH jump, rather than using one indicator for every titration. For a monoprotic weak acid/strong alkali at half equivalence, $[\mathrm{HA}]=[\mathrm A^-]$, so **pH = pKa**.
 
 **RP7:** Calibrate the pH meter, pipette the acid accurately, stir and wait for stable readings. Make smaller additions near expected equivalence and larger ones elsewhere. Plot pH against added volume; a few widely spaced points cannot locate equivalence reliably. Rinse the probe, avoid contamination and interpret data at the stated temperature.
+
+### Build a curve from the reacting species {#curve-construction}
+
+**Worked example (self-written, calculated data):** 25.0 cm³ of 0.100 mol dm⁻³ HCl is titrated with 0.100 mol dm⁻³ NaOH at 298 K. Assume additive volumes and complete dissociation. The initial acid amount is 0.00250 mol, so equivalence requires 25.0 cm³ of alkali. This is a calculation model, not an experimental record.
+
+Before equivalence, subtract the added hydroxide amount from the initial hydrogen-ion amount, then divide by the **total** volume. At equivalence this strong acid/strong alkali leaves no excess acid or alkali: water determines pH. After equivalence calculate excess hydroxide, then use Kw. The same subtraction formula cannot be used at every point.
+
+| Added NaOH / cm³ | Species controlling pH | Calculated pH |
+| --- | --- | --- |
+| 0.0 | Initial strong acid | 1.00 |
+| 12.5 | Excess acid, now diluted | 1.48 |
+| 24.9 | Small excess of acid | 3.70 |
+| 25.0 | Neutral solution at 298 K | 7.00 |
+| 25.1 | Small excess of alkali | 10.30 |
+| 40.0 | Excess alkali, now diluted | 12.36 |
+
+For example, at 12.5 cm³:
+
+$$\begin{aligned}
+\left[\mathrm H^+\right]&=\frac{0.00250-0.00125}{0.0375}\\
+&=0.0333\ \mathrm{mol\,dm^{-3}}\\
+\mathrm{pH}&=1.48.
+\end{aligned}$$
+
+Plot volume horizontally and pH vertically. Join with a smooth curve, including the sharp rise around 25.0 cm³; do not connect the three central points as a broad straight segment. The tiny before/after excesses explain why a small volume addition changes pH greatly near equivalence. At much larger volumes pH approaches that of the titrant. The table gives calculated anchor points, not the precision an actual pH meter necessarily achieves.
+
+**Complete the reasoning:** explain why pH at half equivalence is 1.48 here, rather than treating “pH = pKa” as a rule for every acid. The rule requires a weak acid/conjugate-base buffer; this strong-acid example has no such buffer. Now use [Q8](#q8) to construct the other curve shapes.
 
 <span id="真题从原滴定图求浓度和-ka"></span>
 
@@ -199,6 +227,30 @@ Choose an indicator whose transition range lies in the steep pH jump, rather tha
 A student adds 0.100 mol dm⁻³ aqueous sodium hydroxide from a burette to 25.0 cm³ of an aqueous solution of the weak acid HX. Figure 4 shows how the pH changes during part of this titration at 298 K.
 
 ![Original Figure 4: weak acid HX titrated with sodium hydroxide; pH against volume of NaOH in cubic centimetres.](/assets/img/a2-chemistry/ch03-2024-jun-q05-titration.png)
+
+<details markdown="1">
+<summary>Approximate coordinate readings from Figure 4</summary>
+
+**Accessible adaptation of the figure-reading task:** the approximate points below are transcribed from Figure 4 for use when the original graph is unavailable to the reader. They are not new measurements and do not add precision to the original graph; the original figure-reading task remains above. Join the readings smoothly and locate the change and half-equivalence position yourself.
+
+| Volume of NaOH / cm³ | pH (approximately) |
+| --- | --- |
+| 2.5 | 4.7 |
+| 5.0 | 4.95 |
+| 10.0 | 5.2 |
+| 13.5 | 5.3 |
+| 20.0 | 5.6 |
+| 25.0 | 5.95 |
+| 26.5 | 6.3 |
+| 26.9 | 6.8 |
+| 27.1 | 10.5 |
+| 28.0 | 11.0 |
+| 30.0 | 11.3 |
+| 35.0 | 11.5 |
+
+Original axes: volume 0–40 cm³, pH 0–13. A very steep rise lies between 26.9 and 27.1 cm³; these sparse readings do not locate a volume to 0.01 cm³.
+
+</details>
 
 > **05.5** Use Figure 4 to determine the concentration, in mol dm⁻³, of the weak acid, HX.
 >
@@ -277,8 +329,14 @@ MS pp. 29.
 | CH₃CH₂COOH | $0.0140\times0.200=0.00280$ | $0.00280-0.00250=0.000300$ |
 | OH⁻ | $0.0250\times0.100=0.00250$ | 0 |
 | CH₃CH₂COO⁻ | 0 | 0.00250 |
+{: .wide-table}
 
-$$[\mathrm H^+]=1.35\times10^{-5}\frac{0.000300}{0.00250}=1.62\times10^{-6},\qquad \boxed{\mathrm{pH}=5.79}.$$
+$$\begin{aligned}
+\left[\mathrm H^+\right]&=1.35\times10^{-5}\frac{0.000300}{0.00250}\\
+&=1.62\times10^{-6}.
+\end{aligned}$$
+
+$$\boxed{\mathrm{pH}=5.79}.$$
 
 The six marking steps are acid moles, alkali moles, acid remaining, the correct equilibrium relationship, H⁺ concentration and pH. The starting acid is propanoic acid, so use the propanoic acid/propanoate pair throughout.
 
@@ -299,6 +357,7 @@ Keep hints and answers closed initially. Use this index to select a task and sta
 | [Q5: Weak-acid approximation (self-written)](#q5) | Independent check of the dissociation fraction |
 | [Q6: Alkali added to a buffer (self-written)](#q6) | Updated moles and the direction of the pH change |
 | [Q7: Indicator and RP7 (self-written)](#q7) | Choosing from a curve and adjusting reading intervals |
+| [Q8: construct three curves](#q8) | Sketch, explain and compare weak/strong combinations; self-written |
 
 ### Q5 Weak-acid approximation (self-written) {#q5}
 
@@ -351,6 +410,32 @@ Locate the transition ranges within the pH jump. Consider what a large volume in
 <summary>Solution and self-check</summary>
 
 Self-written task; no official marks. Choose phenolphthalein: its transition range lies in the steep region, so a small addition of alkali produces a clear colour change. A 5 cm³ interval could span the whole pH jump and make equivalence difficult to locate. Use smaller additions nearby, stir and wait for stable readings.
+
+</details>
+
+### Q8 — construct and explain three curves (self-written) {#q8}
+
+On three separate axes, sketch the titration of 25.0 cm³ of each acid below with a base of the **same** concentration, 0.100 mol dm⁻³, at 298 K. In each case the acid is 0.100 mol dm⁻³ and the neutralisation ratio is 1:1: (a) weak acid HA with NaOH; (b) HCl with aqueous NH₃; (c) weak acid HA with aqueous NH₃. For HA use pKa = 5.00. Numerical weak-base or equivalence-point pH calculations are not required.
+
+Label axes, the equivalence volume, initial pH relative to the worked HCl example, the pH region at equivalence where it can be determined, and the large-volume trend. Mark any buffer region and justify an indicator choice. Explain whether “both reactants are weak” alone fixes the equivalence pH at 7. Finally compare all three sketches with the strong acid/strong alkali curve above.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Begin with amounts, then identify the species remaining before, at and after equivalence. A weak acid left with its conjugate base forms a buffer. In a strong acid/weak base titration, a buffer forms after equivalence when excess weak base coexists with its conjugate acid. Match an indicator to the steep region, not merely to the word “acid”.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and repair</summary>
+
+Self-written practice; no official marks. Each curve has equivalence at **25.0 cm³**, because the initial amount and 1:1 ratio are unchanged.
+
+- **HA/NaOH:** initial pH is higher than 1.00; there is a buffer before equivalence. At 12.5 cm³ the pH is 5.00. At equivalence A⁻ reacts with water, so pH > 7. The jump is narrower than for HCl/NaOH; phenolphthalein is usually suitable at these concentrations. Beyond equivalence excess strong alkali controls pH, approaching the NaOH titrant's pH.
+- **HCl/NH₃:** initial pH is 1.00. The salt's conjugate acid makes equivalence pH < 7; the jump is narrower and lies lower than for HCl/NaOH. Methyl orange is usually suitable at these concentrations. After equivalence NH₃ and its conjugate acid form a buffer, and at large added volumes the curve approaches the weak-base titrant's pH, below the NaOH limit. There is no weak-acid buffer before equivalence.
+- **HA/NH₃:** initial pH is higher than 1.00 and the equivalence volume is still 25.0 cm³. A broad acid/base equilibrium region replaces the clear sharp jump, so a conventional visual indicator is unreliable; use a suitable pH measurement method. Equivalence pH depends on the relative acid/base equilibria and cannot be fixed at 7 from “weak/weak” alone. At large volumes the pH approaches that of the excess weak base.
+
+**Repair and reattempt:** if you put equivalence at a different volume merely because an acid is weak, redo the mole calculation: weak means partial dissociation, not fewer moles in the prepared sample. If all three sketches have the same vertical jump, label the species at equivalence before redrawing. Explain why doubling both initial acid and titrant concentrations preserves equivalence volume but need not preserve every pH value.
 
 </details>
 

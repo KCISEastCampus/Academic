@@ -5,7 +5,7 @@ mathjax: true
 grade: a2
 subject: a2-physics
 permalink: /alevel/a2-physics/capacitance/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -205,6 +205,7 @@ Charge conservation does not require the stored energy to stay constant. The cap
 | Potential difference | $V_0$ | $V_0/\varepsilon_r$ |
 | Field-strength magnitude | $E_0$ | $E_0/\varepsilon_r$ |
 | Stored energy | $\varepsilon_r E_{\text{stored},0}$ | $E_{\text{stored},0}/\varepsilon_r$ |
+{: .wide-table}
 
 Here the subscript 0 labels the original empty-gap values for each case. The table is for unchanged geometry; if $d$ changes, re-evaluate $E_{\text{field}}=V/d$ rather than copying the field row.
 

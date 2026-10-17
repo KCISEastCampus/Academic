@@ -54,7 +54,7 @@
               {% when "a2-chemistry" %}
                 <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/alevel/a2-chemistry/">{% if page.lang == 'zh-CN' %}A2 化学{% else %}A2 Chemistry{% endif %}</a>
               {% when "a2-physics" %}
-                <a href="/alevel/a2-physics/">A2 Physics</a>
+                <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/alevel/a2-physics/" data-ui="physics">{{ ui.physics }}</a>
               {% when "a2-biology" %}
                 <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/alevel/a2-biology/">{% if page.lang == 'zh-CN' %}A2 生物{% else %}A2 Biology{% endif %}</a>
               {% when "mechanics" %}

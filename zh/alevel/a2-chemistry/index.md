@@ -7,7 +7,7 @@ translation_of: /alevel/a2-chemistry/
 grade: a2
 subject: a2-chemistry
 permalink: /zh/alevel/a2-chemistry/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -24,6 +24,7 @@ study_page: true
 | 4 | [第三周期 Period 3](/zh/alevel/a2-chemistry/period-3/) | 用结构与成键解释氧化物、氯化物的性质和反应 | 352–365 |
 | 5 | [过渡金属 Transition metals](/zh/alevel/a2-chemistry/transition-metals/) | 解释配位、形状、颜色、配体取代、变价和催化 | 366–385；391–393 |
 | 6 | [水溶液中的离子 Reactions of ions in solution](/zh/alevel/a2-chemistry/ions-in-solution/) | 区分酸碱反应与配体取代，用试剂、现象和方程式鉴别离子 | 386–397 |
+{: .wide-table}
 
 <details markdown="1">
 <summary>选择学习路径</summary>
@@ -31,7 +32,7 @@ study_page: true
 <span id="怎样使用这些内容"></span>
 ### 新学、作业求助与复习 {#learning-routes}
 
-- **新学知识：**按顺序学习，先检查先修知识、选择方法，再独立尝试示范题后打开解答。
+- **新学知识：**按顺序学习，先检查先修知识。阅读直接展示的示范，解释每一步为何成立，再合上示范尝试对应练习；练习的提示与答案分别展开。
 - **作业求助：**用方法表判断任务类型，只打开当前卡住步骤的提示。
 - **考前复习：**跳到练习，在纸上闭卷完成。按评分点自查，用错因表回到对应知识点，隔天不看笔记再做一次。
 
@@ -48,7 +49,7 @@ study_page: true
 2. A reaction has $\Delta H=-120\,\mathrm{kJ\,mol^{-1}}$. What is the enthalpy change of the reverse reaction?
 3. Write the full electron configuration of Fe²⁺.
 4. Balance the reduction half-equation $\ce{MnO4^- -> Mn^{2+}}$ in acidic solution.
-5. Calculate $K_a$ when $\mathrm{p}K_a=4.80$.
+5. For $\ce{H2(g) + I2(g) <=> 2HI(g)}$, the equilibrium concentrations of H₂, I₂ and HI are 0.200, 0.200 and 0.400 mol dm⁻³ respectively. Write the expression for $K_c$ and calculate its value.
 
 <details markdown="1">
 <summary>答案与补习链接</summary>
@@ -57,9 +58,18 @@ study_page: true
 2. $+120\,\mathrm{kJ\,mol^{-1}}$；反向改变符号，倍乘反应还要倍乘焓变。回到[焓变方程式](/zh/alevel/a2-chemistry/thermodynamics/#definitions)。
 3. $1s^22s^22p^63s^23p^63d^6$；先移除 4s 电子。回到[过渡金属配合物](/zh/alevel/a2-chemistry/transition-metals/#complexes)。
 4. $\ce{MnO4^- + 8H+ + 5e^- -> Mn^{2+} + 4H2O}$；检查原子和电荷。回到[氧化还原滴定](/zh/alevel/a2-chemistry/transition-metals/#redox-titration)。
-5. $K_a=10^{-4.80}=1.58\times10^{-5}\,\mathrm{mol\,dm^{-3}}$。回到[弱酸](/zh/alevel/a2-chemistry/acids-bases-and-buffers/#weak-acids)。
+5. 先写平衡表达式，再代入：
+
+   $$\begin{aligned}
+   K_c&=\frac{[\mathrm{HI}]^2}{[\mathrm{H_2}][\mathrm{I_2}]}\\
+   &=\frac{0.400^2}{0.200\times0.200}=4.00.
+   \end{aligned}$$
+
+   指数来自配平系数；这里浓度单位相消。先复习 [AS 化学（英文资料）](/alevel/as-chemistry/)的平衡，再到[弱酸](/zh/alevel/a2-chemistry/acids-bases-and-buffers/#weak-acids)学习新的 Ka／pKa 定义。
 
 </details>
+
+## 教材、实验与课程范围 {#resources}
 
 <details markdown="1">
 <summary>教材、实验、真题来源与大纲</summary>
@@ -74,6 +84,8 @@ study_page: true
 **RP6（测量 EMF）**在电极电势页；**RP7（酸碱滴定中的 pH 变化）**在酸碱页；**RP9（鉴别过渡金属离子）**在离子反应页。这里训练实验设计与笔试分析，实际操作应在老师指导下完成。
 
 课程选用你提供的 **June 2024、January 2025、June 2026 CH03 试卷及评分标准**。真题置于对应知识点后，保留原年份、题号、题干与分值；表格和公式按网页排版重排，提示与评分解析为课程讲解。自拟示范和练习另行标注。
+
+**June 2026 来源文件：**[CH03 原卷](https://www.alevelcopilot.com/whfile/80/4c/f1/fc/0f/05/e8/d8/79/ad/3d/37/15/fc/51/e9.pdf) · [CH03 评分标准，version 1.0 Final](https://www.alevelcopilot.com/whfile/7c/9b/be/0f/20/3c/b0/25/c1/90/49/e0/53/f9/29/22.pdf)。文件为 OxfordAQA 原文，由第三方资料库托管。
 
 <span id="大纲与边界"></span>
 ### 大纲与边界 {#specification}

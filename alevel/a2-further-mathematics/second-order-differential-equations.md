@@ -5,7 +5,7 @@ mathjax: true
 grade: a2
 subject: a2-further-mathematics
 permalink: /alevel/a2-further-mathematics/second-order-differential-equations/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -127,7 +127,7 @@ $$y=e^{-x}(A\cos2x+B\sin2x).$$
 
 Differentiating,
 
-$$y^{\prime}=e^{-x}[(-A+2B)\cos2x+(-B-2A)\sin2x].$$
+$$\begin{aligned}y^{\prime}&=e^{-x}\bigl[(-A+2B)\cos2x\\&\qquad+(-B-2A)\sin2x\bigr].\end{aligned}$$
 
 The conditions give $A=2$ and $-A+2B=0$, so $B=1$:
 
@@ -220,15 +220,15 @@ $$y_c=e^{-x/2}\left(A\cos\frac{\sqrt7x}{2}+B\sin\frac{\sqrt7x}{2}\right).$$
 
 For $y_p=C\cos x+D\sin x$,
 
-$$y_p^{\prime}=-C\sin x+D\cos x,\qquad y_p^{\prime\prime}=-C\cos x-D\sin x.$$
+$$\begin{aligned}y_p^{\prime}&=-C\sin x+D\cos x,\\y_p^{\prime\prime}&=-C\cos x-D\sin x.\end{aligned}$$
 
 Substitution gives
 
-$$y_p^{\prime\prime}+y_p^{\prime}+2y_p=(C+D)\cos x+(D-C)\sin x.$$
+$$\begin{aligned}y_p^{\prime\prime}+y_p^{\prime}+2y_p&=(C+D)\cos x\\&\quad+(D-C)\sin x.\end{aligned}$$
 
 Thus $C+D=3$ and $D-C=0$, so $C=D=3/2$. The general solution is
 
-$$\boxed{y=e^{-x/2}\left(A\cos\frac{\sqrt7x}{2}+B\sin\frac{\sqrt7x}{2}\right)+\frac32(\cos x+\sin x)}.$$
+$$\boxed{\begin{aligned}y={}&e^{-x/2}\left(A\cos\frac{\sqrt7x}{2}+B\sin\frac{\sqrt7x}{2}\right)\\&+\frac32(\cos x+\sin x).\end{aligned}}$$
 
 The matched coefficients confirm that the PI contributes exactly $3\cos x$.
 
@@ -288,7 +288,7 @@ $$y_p=Cx+D+Exe^{-2x}.$$
 
 Its derivatives are
 
-$$y_p^{\prime}=C+E(1-2x)e^{-2x},\qquad y_p^{\prime\prime}=E(4x-4)e^{-2x}.$$
+$$\begin{aligned}y_p^{\prime}&=C+E(1-2x)e^{-2x},\\y_p^{\prime\prime}&=E(4x-4)e^{-2x}.\end{aligned}$$
 
 Substitution gives
 
@@ -318,9 +318,9 @@ Check: its exponential part contributes $-6e^{-2x}$ to the equation and its poly
 
 ## Practice Questions {#practice}
 
-All seven questions below are original practice questions. Identify the CF and PI where appropriate. State the general solution before applying conditions, and check the equation and every condition.
+All seven questions below are original practice questions. Identify the CF and PI where appropriate. State the general solution before applying conditions, and check the equation and every condition. Work in the order Q5, Q2, Q6, Q1, Q7, Q3, Q4 so the tasks are mixed. Before opening a hint, explain how the auxiliary roots determine the CF and why your PI trial is independent of it.
 
-### Question 1: distinct real roots {#practice-1}
+### Question 1 {#practice-1}
 
 > Solve $y^{\prime\prime}-5y^{\prime}+6y=0$, given $y(0)=1$ and $y^{\prime}(0)=0$.
 
@@ -342,7 +342,7 @@ Both terms solve the equation because their exponents are auxiliary roots. Also 
 
 </details>
 
-### Question 2: repeated real root {#practice-2}
+### Question 2 {#practice-2}
 
 > Solve $y^{\prime\prime}-2y^{\prime}+y=0$, given $y(0)=0$ and $y^{\prime}(0)=2$.
 
@@ -364,7 +364,7 @@ Here $y^{\prime}=2(1+x)e^x$ and $y^{\prime\prime}=2(2+x)e^x$, giving $y^{\prime\
 
 </details>
 
-### Question 3: pure oscillation {#practice-3}
+### Question 3 {#practice-3}
 
 > Solve $y^{\prime\prime}+9y=0$, given $y(0)=1$ and $y^{\prime}(0)=6$.
 
@@ -386,7 +386,7 @@ Differentiating twice gives $y^{\prime\prime}=-9y$; at zero, $y=1$ and $y^{\prim
 
 </details>
 
-### Question 4: a fourth-degree polynomial {#practice-4}
+### Question 4 {#practice-4}
 
 > Find the general solution of $y^{\prime\prime}+y=x^4$.
 
@@ -402,7 +402,7 @@ Try $Cx^4+Dx^3+Ex^2+Fx+G$. Include the missing lower powers before matching coef
 
 The CF is $A\cos x+B\sin x$. For the proposed polynomial,
 
-$$y_p^{\prime\prime}+y_p=Cx^4+Dx^3+(E+12C)x^2+(F+6D)x+(G+2E).$$
+$$\begin{aligned}y_p^{\prime\prime}+y_p&=Cx^4+Dx^3+(E+12C)x^2\\&\quad+(F+6D)x+(G+2E).\end{aligned}$$
 
 Matching coefficients gives $C=1$, $D=0$, $E=-12$, $F=0$, $G=24$. Hence
 
@@ -412,7 +412,7 @@ Check: the polynomial has $y_p^{\prime\prime}=12x^2-24$, so $y_p^{\prime\prime}+
 
 </details>
 
-### Question 5: simple exponential resonance {#practice-5}
+### Question 5 {#practice-5}
 
 > Find the general solution of $y^{\prime\prime}-3y^{\prime}+2y=5e^x$.
 
@@ -438,7 +438,7 @@ The substitution above checks the PI; the auxiliary equation checks the CF.
 
 </details>
 
-### Question 6: trigonometric resonance {#practice-6}
+### Question 6 {#practice-6}
 
 > Solve $y^{\prime\prime}+4y=8\sin2x$, given $y(0)=0$ and $y^{\prime}(0)=0$.
 
@@ -460,7 +460,7 @@ Thus $C=-2$, $D=0$, and the general solution is $y=A\cos2x+B\sin2x-2x\cos2x$.
 
 At zero, $A=0$. Its derivative is
 
-$$y^{\prime}=-2A\sin2x+2B\cos2x-2\cos2x+4x\sin2x,$$
+$$\begin{aligned}y^{\prime}&=-2A\sin2x+2B\cos2x\\&\quad-2\cos2x+4x\sin2x,\end{aligned}$$
 
 so $2B-2=0$, giving $B=1$:
 
@@ -470,7 +470,7 @@ The PI contributes $8\sin2x$ and the CF contributes zero; both initial condition
 
 </details>
 
-### Question 7: a repeated zero root and boundary values {#practice-7}
+### Question 7 {#practice-7}
 
 > On $0\le x\le1$, solve $y^{\prime\prime}=6x+4$, given $y(0)=1$ and $y(1)=4$. Identify a CF and a PI.
 
@@ -509,6 +509,7 @@ Check: $y^{\prime\prime}=6x+4$, $y(0)=1$ and $y(1)=4$. The forcing is degree 1, 
 | General solution | $y=y_c+y_p$ | Exactly two arbitrary constants |
 | Conditions | Use the total $y$ and total $y^{\prime}$ | Check limits term by term |
 | Final check | Calculate $ay^{\prime\prime}+by^{\prime}+cy$ | Recover $f(x)$ and check every condition |
+{: .wide-table}
 
 ## Common Pitfalls {#common-pitfalls}
 

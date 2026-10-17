@@ -7,7 +7,7 @@ subject: a2-further-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-further-mathematics/finite-series/
 permalink: /zh/alevel/a2-further-mathematics/finite-series/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -339,7 +339,7 @@ $$\begin{aligned}
 
 ### 第 5 题：AQA 原题练习 {#question-5--original-aqa-practice}
 
-**来源：**AQA MFP2，2010 年 6 月；教材将其转载为第 18 章考试练习第 6 题，印刷页码 218。保留原题措辞与分值。
+**来源：**AQA Mathematics 6360，MFP2，June 2010，原卷第 2 题。原题分值：**3 + 5 marks**。教材索引：Chapter 18, practice examination question 6, printed p. 218。[原卷](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202010%20QP%20-%20FP2%20AQA.PDF)、[AQA 评分材料](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202010%20MS%20-%20FP2%20AQA.PDF)。
 
 **a** Express
 
@@ -384,6 +384,8 @@ $$\begin{aligned}
 
 这是本站编写的详细解答，并非官方评分细则。
 
+**评分材料核对：**部分分式的系数为 1/2 和 −1/2。须展示相消过程、保留首尾各两项，并化简为 894/1225。本课解答已对照上述 AQA 评分材料检查；这些解释由本课编写，并非官方评分细则。
+
 </details>
 
 ## 快速参考 {#quick-reference}
@@ -395,6 +397,7 @@ $$\begin{aligned}
 | 下限 $a>1$ | 先求出求和至 $a-1$ 的和，再将它从求和至 $b$ 的和中减去 | 只减去 $a$ 之前的各项 |
 | 幂的和 | $\displaystyle \sum r=\frac{n(n+1)}2$；$\displaystyle \sum r^2=\frac{n(n+1)(2n+1)}6$；$\displaystyle \sum r^3=\frac{n^2(n+1)^2}4$ | 这些公式从 $r=1$ 开始，到 $r=n$ 结束 |
 | 数学归纳法证明 | 将 $u_{k+1}$ 加到假设中的 $S_k$ 上 | 包含初始情形与完整结论 |
+{: .wide-table}
 
 **练习后：**若漏掉因子 $\frac12$，重做第 1 题。若保留的项太少，重做第 2 题。若最后的分母错误，重做第 3 题。若题目要求归纳法证明，而你只使用了相消法，重做第 4 题。
 

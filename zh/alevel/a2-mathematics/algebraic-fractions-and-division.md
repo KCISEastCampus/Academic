@@ -7,7 +7,7 @@ subject: a2-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-mathematics/algebraic-fractions-and-division/
 permalink: /zh/alevel/a2-mathematics/algebraic-fractions-and-division/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -78,6 +78,7 @@ $$\frac{\frac12x+1}{\frac14x-2}=\frac{2x+4}{x-8},\qquad x\ne8.$$
 | 减法 | $\displaystyle\frac ab-\frac cd=\frac{ad-bc}{bd}$ | 整个第二个分子都要减去 |
 | 乘法 | $\displaystyle\frac ab\times\frac cd=\frac{ac}{bd}$ | 展开之前先约去公因式 |
 | 除法 | $\displaystyle\frac ab\div\frac cd=\frac ab\times\frac dc$ | 除数也必须非零，因此 $c\ne0$ |
+{: .wide-table}
 
 乘积 $bd$ 是一个公分母。如果 $b$ 和 $d$ 有公因式，也可以使用较小的公分母。
 
@@ -187,7 +188,7 @@ $$\boxed{\frac{2x^3+3x^2-5x+4}{x+2}=2x^2-x-3+\frac{10}{x+2},\qquad x\ne-2}.$$
 
 可以把 $-2$ 代入**多项式**，但不能代入原分式，因为原分式在该处无定义。
 
-### 用长除法（long division）再做一次 {#the-same-example-by-long-division}
+#### 用长除法（long division）再做一次 {#the-same-example-by-long-division}
 
 长除法会得到相同的商和余数。按降幂顺序写出各项；若缺少某次幂，也要写出系数为零的那一项。
 
@@ -198,6 +199,7 @@ $$\boxed{\frac{2x^3+3x^2-5x+4}{x+2}=2x^2-x-3+\frac{10}{x+2},\qquad x\ne-2}.$$
 | $2x^3+3x^2-5x+4$ | $2x^2$ | $2x^2(x+2)$ | $-x^2-5x+4$ |
 | $-x^2-5x+4$ | $-x$ | $-x(x+2)$ | $-3x+4$ |
 | $-3x+4$ | $-3$ | $-3(x+2)$ | $10$ |
+{: .wide-table}
 
 当常数余数的次数低于一次除式的次数时，停止计算。商为 $2x^2-x-3$。
 

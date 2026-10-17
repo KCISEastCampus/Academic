@@ -7,7 +7,7 @@ subject: a2-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-mathematics/differentiation/
 permalink: /zh/alevel/a2-mathematics/differentiation/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 

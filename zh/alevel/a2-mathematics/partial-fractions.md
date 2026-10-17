@@ -7,7 +7,7 @@ subject: a2-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-mathematics/partial-fractions/
 permalink: /zh/alevel/a2-mathematics/partial-fractions/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -40,6 +40,7 @@ $$\frac{5x+1}{(x-1)(x+2)},\qquad \frac{x^2+1}{(x-1)(x+2)}.$$
 | 分子次数 ≥ 分母次数 | 先做多项式除法 | 再把真分式（proper fraction）分解为部分分式。保留商。 |
 | 不同的一次因式（distinct linear factors） | 每个因式对应一个常数分子 | 例如，$\displaystyle \frac{A}{x-1}+\frac{B}{x+2}$ |
 | 重复因式（repeated factor） $(x-a)^2$ | 同时包含 $\displaystyle \frac{A}{x-a}+\frac{B}{(x-a)^2}$ | 一直写到最高次幂对应的每一项 |
+{: .wide-table}
 
 第一个式子是真分式。分解第二个式子之前，先把它改写为 $1+\frac{-x+3}{(x-1)(x+2)}$。
 
@@ -125,6 +126,7 @@ $$\begin{aligned}&-2(x-3)^2+4x(x-3)+2x\\&\qquad=2x^2+2x-18.\end{aligned}$$
 | $\displaystyle \frac{A}{ax+b}$ | $\displaystyle \frac{A}{a}\ln\lvert ax+b\rvert$ | 除以 $a$，因为它是 $ax+b$ 的导数。使用绝对值符号（modulus signs）。 |
 | $\displaystyle \frac{B}{(ax+b)^2}$ | $\displaystyle -\frac{B}{a(ax+b)}$ | 使用幂函数积分法（power rule），不要用对数 |
 | 多项式商 | 逐项积分 | 包含除法得到的商 |
+{: .wide-table}
 
 这里 $a\ne0$。不定积分要加上 $C$。每个结果都应用于分母不为零的区间。
 

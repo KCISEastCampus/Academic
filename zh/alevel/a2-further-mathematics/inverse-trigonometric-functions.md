@@ -7,7 +7,7 @@ subject: a2-further-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-further-mathematics/inverse-trigonometric-functions/
 permalink: /zh/alevel/a2-further-mathematics/inverse-trigonometric-functions/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -654,7 +654,7 @@ I
 
 ### 第 8 题：AQA——利用导数求积分 {#question-8--aqa-use-a-derivative-to-find-an-integral}
 
-**AQA 原题。**AQA MFP2，2007 年 6 月，第 4 题；教材第 22 章，模拟考试练习第 4 题，印刷页码 281。**7 marks: 2 + 5.**
+**AQA 原题。**AQA MFP2，2007 年 6 月，第 4 题；教材第 22 章，模拟考试练习第 4 题，印刷页码 281。**7 marks: 2 + 5.** [原卷第 4 题](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202007%20QP%20-%20FP2%20AQA.PDF)。
 
 **(a)** Differentiate $x\tan^{-1}x$ with respect to $x$. **(2 marks)**
 
@@ -694,7 +694,7 @@ $$\begin{aligned}
 
 **检验：**结果为正且小于 $\frac\pi4$，因为在这个区间内有 $0\le\tan^{-1}x\le\frac\pi4$。
 
-这是本课编写的解答，已对照 [AQA 评分细则第 4 题](https://colmanweb.co.uk/pastpapers/Papers/A%20Level/AQA%206360/AQA-6360-MFP2/AQA-MFP2-W-MS-JUN07.PDF)核验。
+这是本课编写的解答，已对照 [AQA 评分细则第 4 题](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202007%20MS%20-%20FP2%20AQA.PDF)核验。
 
 </details>
 
@@ -713,6 +713,7 @@ $$\begin{aligned}
 | 平移或缩放后的二次式 | 先配方，再换元 | 保留来自 $\mathrm dx$ 的系数 |
 | 被积函数为反函数 | 使用分部积分，取 $\mathrm dv=\mathrm dx$ | 对答案求导，检查符号 |
 | 定积分 | 改变上下限，或换回 $x$ | 若被积函数在端点处无定义，应写出极限 |
+{: .wide-table}
 
 **练习后：**若角度超出了值域，重做第 1 题；若漏掉链式法则的系数或弄错定义域，重做第 2 题；若积分系数错误，重做第 3 题；若配方困难，重做第 4、6 题；若反正切恒等式给出了错误角度，重做第 5 题；若分部积分出现符号错误，重做第 7–8 题。
 

@@ -7,7 +7,7 @@ subject: a2-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-mathematics/mathematical-proof/
 permalink: /zh/alevel/a2-mathematics/mathematical-proof/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -34,6 +34,7 @@ study_page: true
 | $P\Rightarrow Q$，推出 | 只要 $P$ 成立，$Q$ 就成立 | $x=2\Rightarrow x^2=4$ |
 | $P\Leftarrow Q$，由……推出 | 只要 $Q$ 成立，$P$ 就成立 | $x^2=4\Leftarrow x=2$ |
 | $P\Leftrightarrow Q$，当且仅当 | 两个方向都成立 | $x^2=4\Leftrightarrow x=2\text{ or }x=-2$ |
+{: .wide-table}
 
 在 $P\Rightarrow Q$ 中，$P$ 是 $Q$ 的**充分条件**（sufficient condition），而 $Q$ 是 $P$ 的**必要条件**（necessary condition）。例如，$x=2$ 是 $x^2=4$ 的充分条件；它不是必要条件，因为 $x=-2$ 也成立。条件 $x^2=4$ 是 $x=2$ 的必要条件，但不是充分条件。
 

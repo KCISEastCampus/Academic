@@ -7,7 +7,7 @@ grade: a2
 subject: a2-chemistry
 translation_of: /alevel/a2-chemistry/thermodynamics/
 permalink: /zh/alevel/a2-chemistry/thermodynamics/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -33,6 +33,8 @@ study_page: true
 | 求循环中的未知量 | 固定起终点，标箭头方向 | [例题 2](#example-2) → [Q2](#q2) |
 | 求溶解焓 | 拆晶格，再水合每一个离子 | [溶解](#solution) → [Q3](#q3) |
 | 解释晶格焓趋势 | 先比较电荷和离子半径，再说吸引 | [离子模型](#solution) → [Q4](#q4) |
+| 比较循环值与离子模型 | 统一物质、相态和焓变方向，再看不确定度 | [模型比较](#ionic-model-comparison) → [Q9](#q9) |
+| 求反应熵 | 给绝对熵乘上反应计量系数 | [熵表](#absolute-entropy) → [Q8](#q8) |
 | 使用温度实验数据 | 算热量、mol，再确定反应符号和单位 | [Q5](#q5) |
 | 判断可行温度或画图 | 将熵与焓的能量单位统一 | [例题 4](#example-4) → [Q7](#q7) |
 
@@ -53,6 +55,7 @@ study_page: true
 | Bond dissociation enthalpy | 断开 1 mol 指定的气态共价键：$\ce{Cl2(g) -> 2Cl(g)}$ | 断键吸热；平均键焓是多种分子环境的平均值 |
 | Lattice dissociation | 1 mol 固体离子晶体拆成气态离子：$\ce{CaO(s) -> Ca^{2+}(g) + O^{2-}(g)}$ | 拆晶格吸热；不要与 lattice formation 的方向混用 |
 | Hydration，$\Delta_{hyd}H^\circ$ | 1 mol 气态离子形成水合离子：$\ce{Ca^{2+}(g) -> Ca^{2+}(aq)}$ | 离子—水吸引形成，放热 |
+{: .wide-table}
 
 **写定义的方法：**先写“1 mol 的什么”，再写初始状态、最终状态；用方程式核对。只写“分开离子需要的能量”，缺少 mol 和状态，通常不能拿全分。
 
@@ -103,7 +106,7 @@ MS 第 12 页。
 
 Hess 定律说明，起点与终点相同的两条路径具有相同总焓变。对 CaO，直接路径是元素形成 CaO；间接路径先得到气态原子，再得到气态离子，最后形成晶格。
 
-$$\Delta_fH^\circ=\Delta_{at}H^\circ(\mathrm{Ca})+\Delta_{at}H^\circ(\mathrm O)+IE_1+IE_2+EA_1+EA_2-\Delta_{latt,diss}H^\circ.$$
+$$\begin{aligned}\Delta_fH^\circ&=\Delta_{at}H^\circ(\mathrm{Ca})+\Delta_{at}H^\circ(\mathrm O)\\&\quad+IE_1+IE_2+EA_1+EA_2\\&\quad-\Delta_{latt,diss}H^\circ.\end{aligned}$$
 
 如果表中给的是 **lattice formation**，最后一步直接加它的负值；如果给的是 **lattice dissociation**，需要反向，所以减去它。不要把所有数值先取绝对值再凭感觉决定符号。
 
@@ -117,7 +120,7 @@ $$\Delta_fH^\circ=\Delta_{at}H^\circ(\mathrm{Ca})+\Delta_{at}H^\circ(\mathrm O)+
 2. Mg 分两步移走两个电子；每个 Cl 原子接受一个电子。
 3. 将晶格解离反向，形成固体：
 
-$$\Delta_fH^\circ=\Delta_{at}H^\circ(\mathrm{Mg})+2\Delta_{at}H^\circ(\mathrm{Cl})+IE_1+IE_2+2EA_1-\Delta_{latt,diss}H^\circ.$$
+$$\begin{aligned}\Delta_fH^\circ&=\Delta_{at}H^\circ(\mathrm{Mg})+2\Delta_{at}H^\circ(\mathrm{Cl})\\&\quad+IE_1+IE_2+2EA_1\\&\quad-\Delta_{latt,diss}H^\circ.\end{aligned}$$
 
 **答案与独立检查：**氯的原子化焓与第一电子亲和能各取两次。逐层数出一个 Mg 和两个 Cl；Mg 移走的两个电子等于氯接受的两个电子。最后一步是放热的晶格形成，因此带负号。现在不看示范尝试 [Q2](#q2)。
 
@@ -130,6 +133,22 @@ $$\Delta_fH^\circ=\Delta_{at}H^\circ(\mathrm{Mg})+2\Delta_{at}H^\circ(\mathrm{Cl
 Figure 1 shows the Born–Haber cycle for calcium oxide.
 
 ![Original Figure 1: calcium oxide Born–Haber cycle with species X and Y, steps A and B, and enthalpy values.](/assets/img/a2-chemistry/ch03-2025-jan-q01-born-haber.png)
+
+<details markdown="1">
+<summary>图 1：等价文字描述</summary>
+
+下面转录图上给定的标签、箭头与数值；**X、Y、A、B 和生成焓仍是未知量**。以下焓变单位均为 kJ mol⁻¹。
+
+1. 起始能级为 $\ce{Ca(s) + 1/2O2(g)}$；向上箭头 +193 到 $\ce{Ca(g) + 1/2O2(g)}$。
+2. 从该能级向上 +248 到 $\ce{Ca(g) + O(g)}$。
+3. 向上箭头 +590 到 $\ce{Ca+(g) + e^- + O(g)}$。
+4. 再向上 +1150 到 **X + 2e⁻ + O(g)**。
+5. **Step A** 从该能级向下，−142，到 **Ca²⁺(g) + O⁻(g) + Y**。
+6. 从这里向上 +844 到 $\ce{Ca^{2+}(g) + O^{2-}(g)}$。
+7. $\ce{CaO(s)}$ 在起始能级以下。未知的标准生成焓箭头从起始能级向下到 CaO(s)。
+8. **Step B** 从 CaO(s) 向上到 $\ce{Ca^{2+}(g) + O^{2-}(g)}$，标示 +3513。
+
+</details>
 
 > **01.1** Identify species X and species Y. Include state symbols where appropriate.
 >
@@ -167,9 +186,19 @@ $$\Delta_{sol}H^\circ=\Delta_{latt,diss}H^\circ+\sum\Delta_{hyd}H^\circ.$$
 
 对 $\ce{MgCl2}$，两个 Cl⁻ 各发生一次水合，因此氯离子水合焓乘 2。
 
-**教材勘误：**印刷 273 页（PDF 第 275 页）把 $\ce{NaCl(s) -> Na+(aq) + Cl^-(aq)}$ 的变化误标为 hydration；这个整体过程应为 **solution**。真正的水合从**气态离子**开始。
+**定义检查：**$\ce{NaCl(s) -> Na+(aq) + Cl^-(aq)}$ 是**溶解**过程；水合从**气态离子**开始。按过程的起终态判断定义，不只看图的标题。
 
 **Perfect ionic model** 将离子视作球形电荷，成键完全为离子性。电荷越大、离子越小，离子之间吸引越强，通常晶格解离焓越大。小而高电荷密度的阳离子还会极化阴离子，使成键有共价性；此时由 Born–Haber 得到的实验值可能偏离理想模型值。
+
+### 比较循环值与理想离子模型 {#ionic-model-comparison}
+
+由实验热化学数据推得的循环值，与纯离子模型的计算值，回答的问题不同。先统一**盐、物态和方向**，再解释差值。
+
+**示范比较：**January 2025 02.3 给出的 MgCl₂ 晶格解离焓为 +2493 kJ mol⁻¹；June 2026 Table 2 的理想模型值为 +2326 kJ mol⁻¹。这是考试参考值的比较，不是新做的配对实验研究。
+
+$$2493-2326=167\,\mathrm{kJ\,mol^{-1}}.$$
+
+循环值较大，表明真实固体的稳定程度超过纯离子计算预测；阴离子极化与共价性可以解释这一模型限制。不能把 167 kJ mol⁻¹ 直接称为实测“共价键能”，也不能说任何微小差异都证明共价性；还要检查数据不确定度及两种值的假设。接着做 [Q9](#q9)，比较两种盐的不同证据。
 
 ### 例题 3 — 水合每一个离子（自拟） {#example-3}
 
@@ -180,7 +209,7 @@ $$\Delta_{sol}H^\circ=\Delta_{latt,diss}H^\circ+\sum\Delta_{hyd}H^\circ.$$
 1. 配平溶解方程式：$\ce{MgCl2(s) -> Mg^{2+}(aq) + 2Cl^-(aq)}$。
 2. 晶格解离取一次，Mg 水合取一次，Cl 水合取两次：
 
-$$\Delta_{sol}H=2500-1900+2(-350)=\boxed{-100\,\mathrm{kJ\,mol^{-1}}}.$$
+$$\begin{aligned}\Delta_{sol}H&=2500-1900+2(-350)\\&=\boxed{-100\,\mathrm{kJ\,mol^{-1}}}.\end{aligned}$$
 
 **答案：**−100 kJ mol⁻¹，因此这个模型中的溶解为放热。
 
@@ -212,7 +241,7 @@ $\ce{MgCl2(s) -> Mg^{2+}(aq) + 2Cl^-(aq)}$。哪一项必须乘 2？
 
 MS 第 13 页。
 
-$$\Delta_{sol}H=2493-1920-2(364)=\boxed{-155\,\mathrm{kJ\,mol^{-1}}}.$$
+$$\begin{aligned}\Delta_{sol}H&=2493-1920-2(364)\\&=\boxed{-155\,\mathrm{kJ\,mol^{-1}}}.\end{aligned}$$
 
 正确循环关系 1 分，正确结果 1 分。不能因为“拆晶格吸热”就判断整个溶解必定吸热。
 
@@ -288,11 +317,39 @@ MS 第 13 页。
 
 ## T4：熵、Gibbs 自由能与温度 {#entropy}
 
+### 熵与熵变计算 {#entropy-calculations}
+
 **Entropy，$S$** 表示能量和粒子可分布的方式。考试常用 disorder 表述，但解释时要落到具体变化：气体比液体或固体有更多可用的运动与分布方式；相近体系中气体 mol 数增加，通常使 $\Delta S$ 增加。
 
-$$\Delta S^\circ=\sum S^\circ(\text{products})-\sum S^\circ(\text{reactants}),\qquad \Delta G^\circ=\Delta H^\circ-T\Delta S^\circ.$$
+$$\begin{aligned}\Delta S^\circ&=\sum S^\circ(\text{products})\\&\quad-\sum S^\circ(\text{reactants}).\end{aligned}$$
 
-先乘化学计量系数。$\Delta S$ 常以 J K⁻¹ mol⁻¹ 给出，$\Delta H$ 常以 kJ mol⁻¹ 给出；代入前统一单位，温度用 K。
+先乘化学计量系数。
+
+#### 示范：绝对熵表中的化学计量系数 {#absolute-entropy}
+
+**自拟任务，使用文献参考值。**求 298.15 K 时以下反应的熵变：
+
+$$\ce{N2(g) + 3H2(g) -> 2NH3(g)}.$$
+
+| 物质 | 标准摩尔熵 / J K⁻¹ mol⁻¹ |
+| --- | --- |
+| N₂(g) | 191.61 |
+| H₂(g) | 130.68 |
+| NH₃(g) | 192.77 |
+
+数据为 NIST Chemistry WebBook 的 1 bar 参考值，经适当取舍：[N₂](https://webbook.nist.gov/cgi/cbook.cgi?ID=C7727379&Mask=1)、[H₂](https://webbook.nist.gov/cgi/cbook.cgi?ID=C1333740&Mask=1)、[NH₃](https://webbook.nist.gov/cgi/cbook.cgi?ID=C7664417&Mask=1)；2026-10-15 查阅。不是课堂实测。
+
+**方法：**先将每个摩尔熵乘相应反应系数，再用产物总和减反应物总和。
+
+$$\begin{aligned}\Delta S^\circ&=2(192.77)-[191.61+3(130.68)]\\&=-198.11\,\mathrm{J\,K^{-1}\,mol^{-1}}.\end{aligned}$$
+
+**检查：**按所写反应，4 mol 气体变为 2 mol，负熵变与此趋势一致。标准态单质的**绝对熵不为零**；标准生成焓的零点约定不能套给 S°。反向改变 ΔS 的符号；全式系数减半，ΔS 也减半。合上本例完成 [Q8](#q8)：气体物质的量不变时，能否直接断言熵变为零？
+
+### Gibbs 自由能、温度与物态变化 {#gibbs-temperature}
+
+$$\Delta G^\circ=\Delta H^\circ-T\Delta S^\circ.$$
+
+$\Delta S$ 常以 J K⁻¹ mol⁻¹ 给出，$\Delta H$ 常以 kJ mol⁻¹ 给出；代入前统一单位，温度用 K。
 
 | $\Delta H$ | $\Delta S$ | $\Delta G<0$ 的条件（视两者不随温度改变） |
 | --- | --- | --- |
@@ -305,7 +362,7 @@ $$\Delta S^\circ=\sum S^\circ(\text{products})-\sum S^\circ(\text{reactants}),\q
 
 **可行不代表快：**$\Delta G<0$ 是热力学条件，反应仍可能因活化能很大而缓慢。催化剂改变路径与速率，不改变 $\Delta G$ 或平衡常数。
 
-### 例题 4 — 可行温度与 Gibbs 图像（自拟） {#example-4}
+#### 例题 4 — 可行温度与 Gibbs 图像（自拟） {#example-4}
 
 **Question:** A reaction has $\Delta H^\circ=+40.0\,\mathrm{kJ\,mol^{-1}}$ and $\Delta S^\circ=+100\,\mathrm{J\,K^{-1}\,mol^{-1}}$. Assuming both are constant, find the threshold temperature, calculate Gibbs free energy at 300 K and 500 K, and describe its graph against temperature.
 
@@ -314,11 +371,11 @@ $$\Delta S^\circ=\sum S^\circ(\text{products})-\sum S^\circ(\text{reactants}),\q
 1. 换算熵：$\Delta S^\circ=+0.100\,\mathrm{kJ\,K^{-1}\,mol^{-1}}$。
 2. 写出直线关系：
 
-$$\Delta G^\circ=40.0-0.100T\quad(\mathrm{kJ\,mol^{-1}}).$$
+   $$\Delta G^\circ=40.0-0.100T\quad(\mathrm{kJ\,mol^{-1}}).$$
 
 3. 求截距与临界温度：
 
-$$T_{\mathrm{threshold}}=\frac{40.0}{0.100}=400\,\mathrm K.$$
+   $$T_{\mathrm{threshold}}=\frac{40.0}{0.100}=400\,\mathrm K.$$
 
 **答案：**300 K 时 Gibbs 自由能为 +10.0 kJ mol⁻¹；500 K 时为 −10.0 kJ mol⁻¹。直线纵截距为 +40.0 kJ mol⁻¹，斜率为 −0.100 kJ K⁻¹ mol⁻¹，在 400 K 穿过零。正向反应在 400 K 以上热力学可行；400 K 是临界点，不能据此声称反应很快。
 
@@ -326,7 +383,7 @@ $$T_{\mathrm{threshold}}=\frac{40.0}{0.100}=400\,\mathrm K.$$
 
 <span id="真题熔点处的熵变"></span>
 
-### Q6 — 真题：熔点处的熵变 {#q6}
+#### Q6 — 真题：熔点处的熵变 {#q6}
 
 **OxfordAQA CH03 · June 2026 · 04.2 · 2 marks**
 
@@ -370,6 +427,8 @@ $$\Delta S=\frac{\Delta H}{T}=\frac{15.4\times1000}{1810}=\boxed{8.51\,\mathrm{J
 | [Q5](#q5) | 量热计算、符号、单位和实验评价 |
 | [Q6](#q6) | 熔化临界点的熵变 |
 | [Q7](#q7) | 低温可行范围与 Gibbs 图像；自拟 |
+| [Q8](#q8) | 绝对熵表、计量系数及气体 mol 数判断的边界；自拟 |
+| [Q9](#q9) | 模型比较、区间证据与焓变方向；自拟 |
 
 ### Q7 — 可行温度与图像（自拟） {#q7}
 
@@ -395,6 +454,53 @@ $$\Delta G^\circ=-60.0+0.150T\quad(\mathrm{kJ\,mol^{-1}}).$$
 
 </details>
 
+### Q8（自拟）：新的熵变比较 {#q8}
+
+At 298.15 K consider $\ce{H2(g) + Cl2(g) -> 2HCl(g)}$. Use standard molar entropies H₂(g) = 130.68, Cl₂(g) = 223.08 and HCl(g) = 186.90, all in J K⁻¹ mol⁻¹. The rounded reference data come from NIST: H₂ above, [Cl₂](https://webbook.nist.gov/cgi/cbook.cgi?ID=C7782505&Mask=1) and [HCl](https://webbook.nist.gov/cgi/cbook.cgi?ID=C7647010&Mask=1), consulted 15 October 2026.
+
+Calculate ΔS for the reaction as written and for forming **one mole** of HCl(g). Assess the statement “equal gas moles on both sides means zero entropy change”.
+
+<details markdown="1">
+<summary>提示</summary>
+
+各物质的摩尔熵要乘系数；第二个要求对应原方程式还是半个方程式？
+
+</details>
+
+<details markdown="1">
+<summary>答案与自查</summary>
+
+$$\begin{aligned}\Delta S^\circ&=2(186.90)-[130.68+223.08]\\&=+20.04\,\mathrm{J\,K^{-1}\,mol^{-1}}.\end{aligned}$$
+
+生成一摩尔 HCl，要将方程式与熵变都减半，得 +10.02 J K⁻¹ mol⁻¹。气体物质的量相同不强制 ΔS 为零，因为不同气体的摩尔熵不同。气体 mol 数只提供趋势，不能代替数据表。再尝试反向反应并解释符号。
+
+</details>
+
+### Q9（自拟）：模型差值能证明什么？ {#q9}
+
+The table contains **constructed data for two hypothetical salts**, not measured literature values. All entries are lattice **dissociation** enthalpies in kJ mol⁻¹. For this task take the model values as fixed and the quoted experimental uncertainty as an interval.
+
+| Salt | Perfect ionic model | Cycle value inferred from experimental data |
+| --- | --- | --- |
+| P | +1800 | +1803 ± 10 |
+| Q | +1600 | +1740 ± 10 |
+
+Which result gives clearer evidence of departure from the ideal ionic model? Explain a possible chemical cause and one conclusion these numbers cannot establish. A student reverses the direction of the cycle value for Q to −1740 but still compares it with +1600; correct the comparison.
+
+<details markdown="1">
+<summary>提示</summary>
+
+将每个差值与给出的区间比较；先统一两个焓变的方向。
+
+</details>
+
+<details markdown="1">
+<summary>答案与自查</summary>
+
+P 差 3 kJ mol⁻¹，区间包括 1800；这些证据不能分辨是否偏离。Q 差 140 kJ mol⁻¹，区间明显高于 1600，因此在题设假定下是更清楚的偏离证据。极化／共价性可解释额外稳定；不能据此测出“共价成分百分比”，也不能证明其他模型假设完全准确。用生成方向就比较 −1740 与 **−1600**；用解离方向就比较 +1740 与 +1600。两种约定都支持真实固体额外稳定，不是相反的化学结论。
+
+</details>
+
 ## 快速参考与改错 {#quick-reference}
 
 | 检查项 | 避免的问题 |
@@ -403,7 +509,7 @@ $$\Delta G^\circ=-60.0+0.150T\quad(\mathrm{kJ\,mol^{-1}}).$$
 | 循环：起终点相同；箭头反向 → 符号反向 | 混用晶格形成与晶格解离方向 |
 | 代入前数出所有离子 | 漏掉第二个卤离子的水合／电子亲和能 |
 | 溶液吸收热量与反应热量符号相反 | 温度升高却写正的反应焓变 |
-| $\Delta S^\circ=\sum S^\circ(\text{products})-\sum S^\circ(\text{reactants})$；先乘系数 | 两侧相减次序反转 |
+| 熵变：产物总和 − 反应物总和；先乘系数 | 两侧相减次序反转 |
 | Gibbs 图：截距是焓，斜率是负的熵变 | 熵变为正却画成正斜率 |
 | $\Delta G^\circ=\Delta H^\circ-T\Delta S^\circ$；J 或 kJ 统一，温度用 K | 临界温度相差 1000 倍 |
 
@@ -423,6 +529,6 @@ $$\Delta G^\circ=-60.0+0.150T\quad(\mathrm{kJ\,mol^{-1}}).$$
 
 合上解析，画一个 CaBr₂ 的溶解循环；解释为何 Br⁻ 的水合焓出现两次；写出 $\Delta G$—$T$ 图的斜率；各说一句“反应可行”和“反应很快”的判据。
 
-**完成标准：**能独立画循环、解释系数与符号、算熵和 Gibbs 自由能、判断温度范围并检查单位；错题已合上解析复做。
+**完成标准：**能独立画循环、解释系数与符号、从绝对熵表计算反应熵、评价离子模型差值、计算 Gibbs 自由能并判断温度范围，检查单位与推断边界；错题已合上解析复做。
 
 [返回课程](/zh/alevel/a2-chemistry/) · 下一课：[电极电势与电池](/zh/alevel/a2-chemistry/electrode-potentials/)。

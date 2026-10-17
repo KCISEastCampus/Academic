@@ -7,7 +7,7 @@ subject: a2-further-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-further-mathematics/polar-coordinates/
 permalink: /zh/alevel/a2-further-mathematics/polar-coordinates/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -273,7 +273,11 @@ A
 
 **检验：**该区域位于第二象限。题目指定的第一条半径方向为 $\theta=\frac\pi2$，因此积分不能从零开始。
 
-### 例 9：边界曲线发生变化 {#example-9--the-bounding-curve-changes}
+### 公共区域与分段边界 {#common-regions}
+
+公共区域在每条射线上取较小半径；若边界曲线发生变化，应在交点对应的角度处分段积分。
+
+#### 例 9：边界曲线发生变化 {#example-9--the-bounding-curve-changes}
 
 **Question:** find the area inside both $r=1+\cos\theta$ and $r=\sqrt3\sin\theta$.
 
@@ -327,6 +331,8 @@ A_2
 $$\boxed{A=A_1+A_2=\frac{3\pi}{4}-\frac{3\sqrt3}{4}.}$$
 
 **检验：**公共区域的面积小于整个圆的面积，后者为 $\frac{3\pi}{4}$。在每条射线上，公共区域均取**较小的半径**。
+
+### 两曲线之间的区域 {#area-between-curves}
 
 对于同一角度区间上位于外侧曲线与内侧曲线之间的区域，使用
 
@@ -507,7 +513,7 @@ A
 
 ### 第 6 题：AQA——直角坐标方程 {#question-6--aqa-a-cartesian-equation}
 
-**AQA 原题。**AQA MFP3，2014 年 6 月；教材第 21 章，模拟考试练习第 2 题，印刷页码 267。**4 marks.**
+**来源：**AQA Mathematics 6360，MFP3，June 2014，原卷第 3 题。原题分值：**4 marks**。教材索引：Chapter 21, practice examination question 2, printed p. 267。[原卷](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202014%20QP%20-%20FP3%20AQA.PDF)、[AQA 评分材料](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202014%20MS%20-%20FP3%20AQA.PDF)。
 
 A curve has polar equation $r(4-3\cos\theta)=4$. Find its Cartesian equation in the form $y^2=f(x)$.
 
@@ -539,13 +545,13 @@ $$\boxed{y^2=1+\frac32x-\frac7{16}x^2.}$$
 
 **检验：**当 $\theta=0$ 时，$r=4$，且点 $(4,0)$ 满足方程。直角坐标曲线满足 $-\frac47\le x\le4$，因此 $1+\frac34x$ 在整个区间内均为正；平方没有引入负半径分支（branch）。
 
-这是本课编写的解答，并非官方评分细则。
+**评分材料核对：**先得到 4r = 4 + 3x，再代入 r² = x² + y²，整理为题目要求的直角坐标方程。本课解答已对照上述 AQA 评分材料检查；这些解释由本课编写，并非官方评分细则。
 
 </details>
 
 ### 第 7 题：AQA——以原点为极点的圆 {#question-7--aqa-a-circle-using-the-origin-as-pole}
 
-**AQA 原题。**AQA MFP3，2013 年 6 月；教材第 21 章，模拟考试练习第 3 题，印刷页码 267。**4 marks.**
+**来源：**AQA Mathematics 6360，MFP3，June 2013，原卷第 2 题。原题分值：**4 marks**。教材索引：Chapter 21, practice examination question 3, printed p. 267。[原卷](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202013%20QP%20-%20FP3%20AQA.pdf)、[AQA 评分材料](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202013%20MS%20-%20FP3%20AQA.PDF)。
 
 The Cartesian equation of a circle is $(x+8)^2+(y-6)^2=100$.
 
@@ -579,13 +585,13 @@ $$\boxed{r=12\sin\theta-16\cos\theta.}$$
 
 **检验：**直角坐标中的圆心为 $(-8,6)$，半径为 $10$。圆心到原点的距离也是 $10$，因此圆经过极点。极坐标方程的零点保留了这个边界点。
 
-这是本课编写的解答，并非官方评分细则。
+**评分材料核对：**展开圆方程，使用 x = r cosθ、y = r sinθ，得到 r = 12 sinθ − 16 cosθ。本课解答已对照上述 AQA 评分材料检查；这些解释由本课编写，并非官方评分细则。
 
 </details>
 
 ### 第 8 题：AQA——环瓣的面积 {#question-8--aqa-area-of-a-loop}
 
-**AQA 原题。**AQA MFP3，2009 年 1 月；教材第 21 章，模拟考试练习第 1 题，印刷页码 267。**6 marks.** 本课重新绘制了题图。
+**来源（改编题：题图重绘）：**AQA Mathematics 6360，MFP3，January 2009，原卷第 3 题。原题分值：**6 marks**。教材索引：Chapter 21, practice examination question 1, printed p. 267。[原卷](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/January%202009%20QP%20-%20FP3%20AQA.PDF)、[AQA 评分材料](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/January%202009%20MS%20-%20FP3%20AQA.PDF)。 题图按原卷重绘，保留曲线、极点、始线和题目条件。
 
 The diagram shows a sketch of a loop, the pole $O$ and the initial line.
 
@@ -624,7 +630,7 @@ A
 
 **检验：**交换积分上下限可消去负号。面积为正；该环瓣并不关于 $y$ 轴对称，因此不能把半个环瓣的面积乘以二。
 
-这是本课编写的解答，并非官方评分细则。
+**评分材料核对：**使用从 0 到 π 的 r² 积分的一半；可展开或换元积分，得到面积 13/3。本课解答已对照上述 AQA 评分材料检查；这些解释由本课编写，并非官方评分细则。
 
 </details>
 
@@ -640,6 +646,7 @@ A
 | 一个环瓣 | 在两个端点之间计算 $\displaystyle A=\frac12\int_\alpha^\beta r^2\,\mathrm d\theta$ | 所求环瓣应恰好被扫过一次 |
 | 公共区域 | 每条射线上取较小半径 | 在边界曲线发生变化处将积分分段 |
 | 外侧面积减内侧面积 | 对 $\frac12(r_{\text{outer}}^2-r_{\text{inner}}^2)$ 积分 | 两个半径先各自平方再相减，不是先相减再平方 |
+{: .wide-table}
 
 **练习后：**若选错象限，重做第 1 题；若转换后的方程具有不正确的定义域，重做第 2 题；若草图包含负半径，重做第 3 题；若求面积时用了整条曲线的范围，而非给定扇形的范围，重做第 4 题；若漏掉极点或边界变化，重做第 5 题；若坐标方程转换困难，重做第 6–7 题；若换元后得到负面积，重做第 8 题。
 

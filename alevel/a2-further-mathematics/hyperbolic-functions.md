@@ -5,7 +5,7 @@ mathjax: true
 grade: a2
 subject: a2-further-mathematics
 permalink: /alevel/a2-further-mathematics/hyperbolic-functions/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -37,6 +37,21 @@ $$e^x=\cosh x+\sinh x,\qquad e^{-x}=\cosh x-\sinh x.$$
 
 The notation $\sinh^{-1}x$ means the inverse function of $\sinh x$; it does not mean $1/\sinh x$. The reciprocal is $\operatorname{cosech}x$. The same distinction applies to $\cosh^{-1}x$ and $\tanh^{-1}x$.
 
+### Example 1 — Exact values from exponentials {#example-1-exact-values}
+
+**Question:** Find $\sinh(\ln3)$, $\cosh(\ln3)$, $\tanh(\ln3)$ and $\operatorname{sech}(\ln3)$.
+
+Since $e^{\ln3}=3$ and $e^{-\ln3}=\frac13$,
+
+$$\begin{aligned}
+\sinh(\ln3)&=\frac{3-\frac13}{2}=\frac43,\\
+\cosh(\ln3)&=\frac{3+\frac13}{2}=\frac53,\\
+\tanh(\ln3)&=\frac{\frac43}{\frac53}=\frac45,\\
+\operatorname{sech}(\ln3)&=\frac1{\cosh(\ln3)}=\frac35.
+\end{aligned}$$
+
+**Check:** $\cosh^2(\ln3)-\sinh^2(\ln3)=\frac{25}{9}-\frac{16}{9}=1$, and $1-\tanh^2(\ln3)=\frac9{25}=\operatorname{sech}^2(\ln3)$.
+
 ## Graphs and Identities {#graphs-and-identities}
 
 ### The six graphs in FP2.9 {#six-core-graphs}
@@ -51,6 +66,7 @@ The inverse $\cosh^{-1}x$ is defined by restricting the original function $y=\co
 | $y=\sinh^{-1}x$ | $\mathbb R$ | $\mathbb R$ | Odd; increasing through $(0,0)$ | None |
 | $y=\cosh^{-1}x$ | $[1,\infty)$ | $[0,\infty)$ | Increasing from $(1,0)$ | None |
 | $y=\tanh^{-1}x$ | $(-1,1)$ | $\mathbb R$ | Odd; increasing through $(0,0)$ | Vertical: $x=\pm1$ |
+{: .wide-table}
 
 ![Six graphs for FP2.9: sinh x, cosh x and tanh x in the top row; sinh inverse x, cosh inverse x and tanh inverse x in the bottom row. The curves show the origin or turning point, the nonnegative cosh inverse branch, horizontal asymptotes y equals plus or minus one for tanh, and vertical asymptotes x equals plus or minus one for inverse tanh.](/assets/img/further-hyperbolic-graphs.svg)
 
@@ -60,9 +76,10 @@ For $\tanh x$, the horizontal lines $y=1$ and $y=-1$ are approached but never re
 
 | Function | Domain | Range | Symmetry and asymptotes |
 |---|---|---|---|
-| $y=\operatorname{coth}x$ | $\mathbb R\setminus\{0\}$ | $(-\infty,-1)\cup(1,\infty)$ | Odd; vertical $x=0$, horizontal $y=\pm1$ |
+| $y=\operatorname{coth}x$ | $\mathbb R\setminus\lbrace0\rbrace$ | $(-\infty,-1)\cup(1,\infty)$ | Odd; vertical $x=0$, horizontal $y=\pm1$ |
 | $y=\operatorname{sech}x$ | $\mathbb R$ | $(0,1]$ | Even; maximum at $(0,1)$, horizontal $y=0$ |
-| $y=\operatorname{cosech}x$ | $\mathbb R\setminus\{0\}$ | $\mathbb R\setminus\{0\}$ | Odd; vertical $x=0$, horizontal $y=0$ |
+| $y=\operatorname{cosech}x$ | $\mathbb R\setminus\lbrace0\rbrace$ | $\mathbb R\setminus\lbrace0\rbrace$ | Odd; vertical $x=0$, horizontal $y=0$ |
+{: .wide-table}
 
 The reciprocal functions are not among the six graphs specified for familiarity in FP2.9, but their domains matter when differentiating or integrating them.
 
@@ -251,21 +268,6 @@ When substituting $u=g(x)$, replace every $x$ and $\mathrm dx$, and include the 
 
 ## Worked Examples {#worked-examples}
 
-### Example 1 — Exact values from exponentials {#example-1-exact-values}
-
-**Question:** Find $\sinh(\ln3)$, $\cosh(\ln3)$, $\tanh(\ln3)$ and $\operatorname{sech}(\ln3)$.
-
-Since $e^{\ln3}=3$ and $e^{-\ln3}=\frac13$,
-
-$$\begin{aligned}
-\sinh(\ln3)&=\frac{3-\frac13}{2}=\frac43,\\
-\cosh(\ln3)&=\frac{3+\frac13}{2}=\frac53,\\
-\tanh(\ln3)&=\frac{\frac43}{\frac53}=\frac45,\\
-\operatorname{sech}(\ln3)&=\frac1{\cosh(\ln3)}=\frac35.
-\end{aligned}$$
-
-**Check:** $\cosh^2(\ln3)-\sinh^2(\ln3)=\frac{25}{9}-\frac{16}{9}=1$, and $1-\tanh^2(\ln3)=\frac9{25}=\operatorname{sech}^2(\ln3)$.
-
 ### Example 2 — Solve a linear combination and reject a root {#example-2-solve-a-linear-combination}
 
 **Question:** Solve $2\sinh x+\cosh x=2$.
@@ -447,7 +449,7 @@ For $\tanh x$, the domain is $\mathbb R$, the range is $(-1,1)$, the function is
 
 For $\tanh^{-1}x$, the domain is $(-1,1)$, the range is $\mathbb R$, the function is odd, and its vertical asymptotes are $x=\pm1$.
 
-For $\operatorname{coth}x$, the domain is $\mathbb R\setminus\{0\}$, the range is $(-\infty,-1)\cup(1,\infty)$, the function is odd, and its asymptotes are $x=0$ and $y=\pm1$.
+For $\operatorname{coth}x$, the domain is $\mathbb R\setminus\lbrace0\rbrace$, the range is $(-\infty,-1)\cup(1,\infty)$, the function is odd, and its asymptotes are $x=0$ and $y=\pm1$.
 
 **Check:** the range bounds $(-1,1)$ of $\tanh x$ become the excluded endpoints of the domain of $\tanh^{-1}x$.
 
@@ -635,6 +637,7 @@ The original integrand is real for $\lvert x\rvert>\frac32$. This exercise asks 
 | Derivatives | $\sinh' x=\cosh x$, $\cosh' x=\sinh x$, $\tanh' x=\operatorname{sech}^2x$ | Chain rule multiplies by $u'$ |
 | Inverse derivatives | $(\sinh^{-1}x)'=\frac1{\sqrt{1+x^2}}$, $(\cosh^{-1}x)'=\frac1{\sqrt{x^2-1}}$, $(\tanh^{-1}x)'=\frac1{1-x^2}$ | Respect the inverse domains; $\cosh^{-1}$ derivative requires $x>1$ |
 | Integration | Reverse the six derivative formulae or use the three standard inverse-hyperbolic forms | Scale by the inner derivative, state domain, and include $+C$ |
+{: .wide-table}
 
 **After practice:** repeat any solution you could not complete without its hint. For every equation in $e^x$, check positivity before taking a logarithm; for every inverse function, check its domain before differentiating or integrating.
 

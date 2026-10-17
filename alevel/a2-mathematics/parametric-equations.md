@@ -5,7 +5,7 @@ mathjax: true
 grade: a2
 subject: a2-mathematics
 permalink: /alevel/a2-mathematics/parametric-equations/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -316,6 +316,7 @@ Check: $-36-4=-\frac12(81-1)=-40$.
 | Tangent or normal | Calculate the point and gradient | Treat vertical and horizontal lines separately |
 | Stationary point | Solve $dy/dt=0$ with $dx/dt\ne0$ | Give both coordinates and classify |
 | Further intersection | Substitute parametric coordinates into the line equation | Exclude the original point and check the parameter range |
+{: .wide-table}
 
 **You should be able to:** eliminate a parameter, sketch the allowed curve, find gradients, tangents and normals, and find and classify stationary points.
 

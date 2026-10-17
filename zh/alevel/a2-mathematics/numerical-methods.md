@@ -7,7 +7,7 @@ subject: a2-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-mathematics/numerical-methods/
 permalink: /zh/alevel/a2-mathematics/numerical-methods/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -157,7 +157,7 @@ $n$ 个条带对应 $n$ 个中点高度。将这些高度相加，再乘以 $h$�
 
 ![四个宽度为 0.5 的矩形近似表示 y=x^2 在 0 到 2 之间的面积，每个矩形的高度取该条带中点处的函数值。](/assets/img/numerical-mid-ordinate.svg)
 
-### 例题 4 — 取中点，不取端点 {#example-4--choose-the-midpoints-not-the-endpoints}
+#### 例题 4 — 取中点，不取端点 {#example-4--choose-the-midpoints-not-the-endpoints}
 
 **Question:** Estimate $\displaystyle\int_0^2x^2\,dx$ using the mid-ordinate rule with $4$ strips.
 
@@ -196,7 +196,7 @@ I\approx\frac h3\big[&(y_0+y_n)\\
 
 两个端点的权重（weight）为 $1$。内部权重按 $4,2,4,2,\ldots,4$ 交替。
 
-### 例题 5 — 使用权重 {#example-5--apply-the-weights}
+#### 例题 5 — 使用权重 {#example-5--apply-the-weights}
 
 **Question:** Estimate $\displaystyle\int_0^2e^x\,dx$ using Simpson's rule with $4$ strips. Give the estimate to $4$ decimal places.
 
@@ -218,7 +218,7 @@ $$\boxed{I\approx6.3912}.$$
 
 **改进估计：**使用 $8$ 个条带，此时 $h=0.25$，共有 $9$ 个边界纵坐标，仍按原来的交替权重计算，得到 $I\approx6.389193725$。与 $e^2-1$ 比较，绝对误差从约 $0.00215409$ 减少到 $0.00013763$。细分时，辛普森法则的条带数仍须是偶数。
 
-### 例题 6 — 根据表格计算 {#example-6--work-from-a-table}
+#### 例题 6 — 根据表格计算 {#example-6--work-from-a-table}
 
 **Question:** Use Simpson's rule to estimate the integral from $0$ to $2$ for a function with the following ordinates.
 
@@ -413,6 +413,7 @@ $$\boxed{I\approx4}.$$
 | 验证小数位数 | 在舍入边界处计算原函数值 | 在要求的舍入范围内找出变号区间 |
 | 中点纵坐标法 | 求 $h$ 和 $n$ 个中点高度 | 取条带中心，不取边界 |
 | 辛普森法则 | 求 $h$ 和 $n+1$ 个边界纵坐标 | 等间距、偶数个条带；权重为 $1,4,2,\ldots,4,1$ |
+{: .wide-table}
 
 **如果答案看起来不对：**检查原方程、起始下标、计算器角度模式、条带数量、取值位置和权重。中间步骤保留更多有效数字，最后按要求取近似值。
 

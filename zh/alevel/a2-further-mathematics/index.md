@@ -7,7 +7,7 @@ subject: a2-further-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-further-mathematics/
 permalink: /zh/alevel/a2-further-mathematics/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -63,6 +63,7 @@ study_page: true
 | FP2.12 向量与三维坐标几何 | 第 26 章，第 320–344 页 | 准备中 |
 | FP2.14 线性方程组的解 | 第 27 章，第 346–352 页 | 准备中 |
 | FP2.13 矩阵代数 | 第 28 章，第 354–368 页 | 准备中 |
+{: .wide-table}
 
 </details>
 

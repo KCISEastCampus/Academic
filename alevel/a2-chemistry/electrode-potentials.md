@@ -6,7 +6,7 @@ lang: en
 grade: a2
 subject: a2-chemistry
 permalink: /alevel/a2-chemistry/electrode-potentials/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -60,7 +60,9 @@ A single line denotes a phase boundary and a double line the salt bridge. Specie
 2. Reduction at the right electrode: $\ce{Cu^{2+} + 2e^- -> Cu}$.
 3. Cancel electrons and subtract the tabulated reduction potentials:
 
-$$\ce{Zn + Cu^{2+} -> Zn^{2+} + Cu},\qquad E_{cell}^\circ=0.34-(-0.76)=+1.10\,\mathrm V.$$
+$$\ce{Zn + Cu^{2+} -> Zn^{2+} + Cu}$$
+
+$$E_{cell}^\circ=0.34-(-0.76)=+1.10\,\mathrm V.$$
 
 **Answer and independent check:** one Zn and one Cu appear on each side; both sides have charge +2, and two electrons cancel. The positive EMF agrees with the chosen spontaneous direction. Electrons flow from Zn to Cu in the external wire; ions carry charge in the salt bridge. Swapping the leads changes the measured sign, not the spontaneous chemical direction. Reattempt [Q5](#q5).
 
@@ -116,6 +118,8 @@ MS p. 22.
 
 Use **2.00 mol dm⁻³ K₂Cr₂O₇**, still mixed with an equal volume of **1.00 mol dm⁻³ Cr₂(SO₄)₃** (1 mark). After mixing, both redox species have concentrations of **1.00 mol dm⁻³** (1 mark). The acidified conditions must also be satisfied; checking the salt labels alone is insufficient.
 
+**Marking model and preparation limit:** the concentration above preserves the January 2025 MS p.22 dilution calculation; it is not a validated room-temperature preparation. [Thermo Fisher reagent information](https://www.fishersci.fi/shop/products/potassium-dichromate-99-5-analysis-thermo-scientific/p-43068) lists molar mass 294.19 g mol⁻¹ and water solubility 125 g L⁻¹ at 20 °C. A 2.00 mol dm⁻³ solution would require 588 g per litre of final solution, so its preparation at room temperature must not be assumed feasible from the dilution algebra. An actual plan needs separate checks of temperature, medium, solubility basis and safety; heating a stock or handling Cr(VI) is not a student instruction here.
+
 **Reattempt:** derive the result from $n=cV$ and the final total volume instead of memorising it.
 
 </details>
@@ -142,7 +146,9 @@ The subtracted value is still the couple’s tabulated **reduction potential**. 
 2. Multiply the silver half-equation by 2, then cancel two electrons.
 3. Subtract the zinc **reduction potential** once:
 
-$$\ce{Zn + 2Ag+ -> Zn^{2+} + 2Ag},\qquad E_{cell}^\circ=0.80-(-0.76)=+1.56\,\mathrm V.$$
+$$\ce{Zn + 2Ag+ -> Zn^{2+} + 2Ag}$$
+
+$$E_{cell}^\circ=0.80-(-0.76)=+1.56\,\mathrm V.$$
 
 **Answer and independent check:** reduction is thermodynamically feasible under standard conditions. Both sides contain one Zn and two Ag and have charge +2. The silver coefficient of 2 does not double +0.80 V: potential is energy per unit charge, not total transferred energy. Apply the same method to each possible step in [Q3](#q3).
 
@@ -182,19 +188,23 @@ The overall first-step reaction is $\ce{Cu + 2Fe^{3+} -> Cu^{2+} + 2Fe^{2+}}$. T
 
 <span id="e3电池充电与-rp6"></span>
 
-## E3: Cells, recharging and RP6 {#cells-and-practical}
+## E3: Cells and recharging {#cells-and-practical}
 
 A **primary cell** usually has reactions that are difficult to reverse. A **secondary cell** uses an external power supply to drive the reverse of its discharge reaction. To find a charging equation, first combine the discharge half-equations, then reverse the overall equation.
 
 A **hydrogen fuel cell** receives a continuous supply of fuel and oxidant. In an acidic system:
 
-$$\ce{2H2 -> 4H+ + 4e^-},\qquad\ce{O2 + 4H+ + 4e^- -> 2H2O}.$$
+$$\ce{2H2 -> 4H+ + 4e^-}$$
+
+$$\ce{O2 + 4H+ + 4e^- -> 2H2O}.$$
 
 The overall reaction is $\ce{2H2 + O2 -> 2H2O}$. No CO₂ is produced by this reaction during use, but evaluation must consider hydrogen production, storage, transport, equipment costs and safety. Do not claim “no environmental impact”. Alkaline half-equations use OH⁻ instead, with the same overall reaction.
 
 The specification requires the **alkaline hydrogen–oxygen fuel-cell half-equations**:
 
-$$\ce{2H2 + 4OH^- -> 4H2O + 4e^-},\qquad\ce{O2 + 2H2O + 4e^- -> 4OH^-}.$$
+$$\ce{2H2 + 4OH^- -> 4H2O + 4e^-}$$
+
+$$\ce{O2 + 2H2O + 4e^- -> 4OH^-}.$$
 
 Add the equations, cancel electrons and OH⁻, then cancel water appearing on both sides to obtain the same overall reaction. Oxidation occurs at the H₂ electrode and reduction at the O₂ electrode. Electrons flow externally from the fuel side to the oxygen side.
 
@@ -224,6 +234,7 @@ The half-equations at each of the electrodes in one type of lithium cell are:
 | --- | --- | --- |
 | Positive | $\ce{Li+ + MnO2 + e^- -> LiMnO2}$ | −0.15 |
 | Negative | $\ce{Li+ + e^- -> Li}$ | −3.05 |
+{: .wide-table}
 
 > **04.5** Deduce the overall equation for the reaction when this cell is being recharged.
 >
@@ -245,9 +256,64 @@ MS p. 18.
 
 </details>
 
+## RP6: measuring and evaluating EMF {#rp6-measurement}
+
 **RP6 measurement:** prepare two half-cells and connect them with a suitable salt bridge. Measure the open-circuit EMF with a high-resistance voltmeter. Record temperature, concentrations and gas pressures. High resistance minimises current and changes in composition. Check connection polarity against the expected sign, repeat readings and avoid electrode contamination or mixing the solutions.
 
+### Salt-bridge compatibility {#salt-bridge}
+
 **The salt bridge must be compatible with both half-cells.** It must not cause precipitation, acid–base or redox reactions with the electrode species. For example, Cl⁻ may be oxidised by a strong oxidising agent; OH⁻ consumes H⁺ and may precipitate metal aqua ions. Do not choose NaCl without considering the system.
+
+### Independent RP6 task: analyse the original readings {#rp6-data}
+
+**Self-written task; all readings below are constructed for analysis, not measurements made by students.** Use the Zn/Cu half-cell potentials in Example 1. The positive voltmeter lead is connected to Cu. Before using the records, predict the standard EMF and electron-flow direction, choose between KNO₃ and NaOH for a salt bridge, and justify your choice for these two metal-ion solutions.
+
+All sets use clean electrodes, fresh solutions, a high-resistance voltmeter and 298 K. Concentrations below are in mol dm⁻³. Sets A and B use meter M, checked against a voltage reference. Set C uses meter N; apart from the meter, its stated conditions match A. The 0.001 V display step is a resolution, not an established total uncertainty.
+
+Concentrations and meter selection:
+
+- **A:** Zn²⁺ = 1.00; Cu²⁺ = 1.00; meter M.
+- **B:** Zn²⁺ = 1.00; Cu²⁺ = 0.0100; meter M.
+- **C:** Zn²⁺ = 1.00; Cu²⁺ = 1.00; meter N.
+
+| Set | Reading 1 / V | Reading 2 / V | Reading 3 / V |
+| --- | --- | --- | --- |
+| A | 1.096 | 1.098 | 1.097 |
+| B | 1.038 | 1.040 | 1.039 |
+| C | 1.076 | 1.078 | 1.077 |
+
+An independent check applies a 1.100 V reference to meter N using the same range and polarity. N displays 1.080 V. Assume an additive offset over the narrow voltage range used here; this assumption would need checking for other ranges.
+
+1. Calculate the mean and full range of each set. Compare repeatability before judging agreement with the standard prediction.
+2. Use A versus B to judge the effect of concentration. Explain why the B readings must not be labelled standard EMF, or dismissed as a faulty meter merely because they differ from the standard value. No Nernst-equation calculation is required.
+3. Use the independent reference check to estimate and correct the offset in C. Does taking many more readings remove this offset? State one further comparison needed before attributing every remaining difference from the standard prediction to measurement error.
+4. Propose one change addressing each identified cause, with a reason. For a real experiment, include suitable eye protection, teacher-approved metal-salt handling and waste collection; this data task does not establish completion of practical work.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Predict from the two reduction potentials, then keep three comparisons separate: repeated readings within a set, concentration changed with the meter held constant, and meter changed with concentration held constant. A reference voltage checks the meter independently of the electrochemical model.
+
+</details>
+
+<details markdown="1">
+<summary>Feedback and reattempt</summary>
+
+The standard prediction is +1.10 V, with electrons passing from Zn to Cu in the external circuit. For these solutions KNO₃ avoids the hydroxide precipitation expected if NaOH contacts the metal ions; compatibility is a chemical choice, not simply whether the bridge conducts.
+
+| Set | Mean / V | Full range / V |
+| --- | --- | --- |
+| A | 1.097 | 0.002 |
+| B | 1.039 | 0.002 |
+| C | 1.077 | 0.002 |
+
+All three sets have the same small observed range; this supports similar repeatability for these readings, not equal accuracy. Lowering Cu²⁺ concentration lowers the Cu reduction potential and hence the cell EMF: B is a deliberate non-standard condition. Keep the concentration change, since the purpose is to test its effect; restore both concentrations only when making a standard-condition comparison.
+
+Meter N has an estimated **−0.020 V offset** near this range. Adding 0.020 V to C gives a corrected mean of **1.097 V**, consistent with A. Repetition alone does not remove the offset; use a calibrated meter or a justified correction with its uncertainty. A still differs from the tabulated prediction by 0.003 V: inspect temperature, actual ion activities/concentrations, junction effects and the uncertainty/rounding of the prediction before assigning a single cause. A small full range alone supplies no total uncertainty budget.
+
+**Reattempt:** if the reference had read 1.120 V instead, state the direction of the correction before calculating it. If a proposed improvement is simply “take more readings”, say which random variation it estimates and which systematic cause it leaves unchanged.
+
+</details>
 
 ## Practice {#practice}
 
@@ -261,6 +327,7 @@ Work with hints and solutions closed. Local Q numbers locate the task; the origi
 | [Q4](#q4) | Charging direction and water compatibility |
 | [Q5](#q5) | Reversed leads and a non-standard concentration; self-written |
 | [Q6](#q6) | Alkaline fuel-cell paths and practical limitations; self-written |
+| [RP6 data](#rp6-data) | Means, repeatability, concentration control and meter offset; self-written |
 
 ### Q5 — sign and concentration checks (self-written) {#q5}
 
@@ -335,6 +402,6 @@ Name the cause of your error in one sentence, then reattempt with the solution c
 
 Draw the SHE and label its three conditions. Explain ion transport through the salt bridge, combine two half-equations into an overall reaction and EMF, and explain why multiplying an equation does not multiply its potential.
 
-**Completion standard:** label standard conditions, balance reactions, predict direction and EMF, explain why potentials are not multiplied, distinguish electron and ion paths, and derive charging from discharge. Reattempt corrected questions with solutions closed.
+**Completion standard:** label standard conditions, balance reactions, predict direction and EMF, explain why potentials are not multiplied, distinguish electron and ion paths, and derive charging from discharge. Analyse RP6 raw readings, separate a controlled chemical change from an instrument offset, and justify a matching improvement. Reattempt corrected questions with solutions closed.
 
 Previous: [thermodynamics](/alevel/a2-chemistry/thermodynamics/) · [Back to course](/alevel/a2-chemistry/) · Next: [acids, bases and buffers](/alevel/a2-chemistry/acids-bases-and-buffers/).
