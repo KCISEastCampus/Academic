@@ -5,7 +5,7 @@ mathjax: true
 grade: a2
 subject: a2-further-mathematics
 permalink: /alevel/a2-further-mathematics/first-order-differential-equations/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -282,7 +282,7 @@ The CF is $Ce^{-2x}$. The trial $Ae^{-2x}$ gives $y_p'+2y_p=0$ for every $A$, so
 
 Try $y_p=Axe^{-2x}$. By the product rule,
 
-$$y_p'=Ae^{-2x}-2Axe^{-2x},\qquad y_p'+2y_p=Ae^{-2x}.$$
+$$y_p'=Ae^{-2x}-2Axe^{-2x},\quad y_p'+2y_p=Ae^{-2x}.$$
 
 Hence $A=3$ and
 
@@ -449,6 +449,7 @@ Check: $y'-y/x=(2x-1)-(x-1)=x$. Although the formula is a polynomial, the origin
 | CF + PI | $y=y_c+y_p$ | Apply the condition after adding the two parts |
 | Exponential trial | For $y'+ay=be^{kx}$, $y_p=\frac b{k+a}e^{kx}$ if $k+a\ne0$ | If $k=-a$, use $y_p=bxe^{-ax}$ |
 | Conditions and interval | Substitute the given $(x,y)$ to find $C$ | Keep singular points excluded |
+{: .wide-table}
 
 ## Common Pitfalls {#common-pitfalls}
 

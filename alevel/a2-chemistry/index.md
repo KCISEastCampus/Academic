@@ -6,7 +6,7 @@ lang: en
 grade: a2
 subject: a2-chemistry
 permalink: /alevel/a2-chemistry/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -23,6 +23,7 @@ study_page: true
 | 4 | [Period 3](/alevel/a2-chemistry/period-3/) | Explain properties and reactions of oxides and chlorides using structure and bonding | 352–365 |
 | 5 | [Transition metals](/alevel/a2-chemistry/transition-metals/) | Explain coordination, shape, colour, ligand substitution, variable oxidation states and catalysis | 366–385; 391–393 |
 | 6 | [Reactions of ions in solution](/alevel/a2-chemistry/ions-in-solution/) | Distinguish acid–base reactions from ligand substitution and identify ions using observations and equations | 386–397 |
+{: .wide-table}
 
 <details markdown="1">
 <summary>Choose a learning route</summary>
@@ -30,7 +31,7 @@ study_page: true
 <span id="怎样使用这些内容"></span>
 ### Learning, homework help and revision {#learning-routes}
 
-- **Learning:** follow the lessons in order. Check prerequisites, choose a method and attempt each worked example before opening its solution.
+- **Learning:** follow the lessons in order and check prerequisites. Read the displayed worked examples and explain why each step follows, then attempt the matching practice with the example covered; practice hints and answers open separately.
 - **Homework help:** use the Method section to identify your task, then open only the hint for the step that blocks you.
 - **Revision:** go to Practice and answer on paper with the hints closed. Mark each point, use the error table to return to the relevant section, then reattempt without notes the next day.
 
@@ -47,7 +48,7 @@ These are **self-written diagnostic tasks**, with no official marks. Attempt the
 2. A reaction has $\Delta H=-120\,\mathrm{kJ\,mol^{-1}}$. What is the enthalpy change of the reverse reaction?
 3. Write the full electron configuration of Fe²⁺.
 4. Balance the reduction half-equation $\ce{MnO4^- -> Mn^{2+}}$ in acidic solution.
-5. Calculate $K_a$ when $\mathrm{p}K_a=4.80$.
+5. For $\ce{H2(g) + I2(g) <=> 2HI(g)}$, the equilibrium concentrations of H₂, I₂ and HI are 0.200, 0.200 and 0.400 mol dm⁻³ respectively. Write the expression for $K_c$ and calculate its value.
 
 <details markdown="1">
 <summary>Answers and recovery links</summary>
@@ -56,9 +57,18 @@ These are **self-written diagnostic tasks**, with no official marks. Attempt the
 2. $+120\,\mathrm{kJ\,mol^{-1}}$. Reverse the sign; multiplying an equation also multiplies its enthalpy. Return to [enthalpy equations](/alevel/a2-chemistry/thermodynamics/#definitions).
 3. $1s^22s^22p^63s^23p^63d^6$. Remove 4s electrons first. Return to [transition-metal complexes](/alevel/a2-chemistry/transition-metals/#complexes).
 4. $\ce{MnO4^- + 8H+ + 5e^- -> Mn^{2+} + 4H2O}$. Check atoms and charge. Revisit [redox titration](/alevel/a2-chemistry/transition-metals/#redox-titration).
-5. $K_a=10^{-4.80}=1.58\times10^{-5}\,\mathrm{mol\,dm^{-3}}$. Revisit [weak acids](/alevel/a2-chemistry/acids-bases-and-buffers/#weak-acids).
+5. Write the equilibrium expression, then substitute:
+
+   $$\begin{aligned}
+   K_c&=\frac{[\mathrm{HI}]^2}{[\mathrm{H_2}][\mathrm{I_2}]}\\
+   &=\frac{0.400^2}{0.200\times0.200}=4.00.
+   \end{aligned}$$
+
+   Powers come from the balanced coefficients; concentration units cancel here. Review equilibria in [AS Chemistry](/alevel/as-chemistry/), then learn the new Ka/pKa definitions in [weak acids](/alevel/a2-chemistry/acids-bases-and-buffers/#weak-acids).
 
 </details>
+
+## Resources and course scope {#resources}
 
 <details markdown="1">
 <summary>Textbook, practicals, exam sources and specification</summary>
@@ -73,6 +83,8 @@ The textbook is Lister and Renshaw, *International A Level Chemistry: AS and A L
 **RP6 (measuring EMF)** is in Electrode potentials; **RP7 (pH changes during titration)** is in Acids and bases; **RP9 (identifying transition-metal ions)** is in Reactions of ions in solution. These pages prepare practical design and written analysis; carry out experiments under teacher supervision.
 
 Questions come from the supplied **June 2024, January 2025 and June 2026 CH03 papers and mark schemes**. Questions follow the relevant concept and retain their original year, number, wording and marks; tables and formulae are reformatted for the web. Hints and marking explanations are course commentary. Self-written examples and tasks are labelled separately.
+
+**June 2026 source files:** [CH03 question paper](https://www.alevelcopilot.com/whfile/80/4c/f1/fc/0f/05/e8/d8/79/ad/3d/37/15/fc/51/e9.pdf) · [CH03 mark scheme, version 1.0 Final](https://www.alevelcopilot.com/whfile/7c/9b/be/0f/20/3c/b0/25/c1/90/49/e0/53/f9/29/22.pdf). These are OxfordAQA documents hosted by a third-party archive.
 
 <span id="大纲与边界"></span>
 ### Specification and scope {#specification}

@@ -7,7 +7,7 @@ subject: a2-further-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-further-mathematics/proof-by-induction/
 permalink: /zh/alevel/a2-further-mathematics/proof-by-induction/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -466,7 +466,7 @@ g^{(2)}(x)&=-2e^x\sin x\\
 
 ### 第 6 题：AQA 原题练习 {#question-6--original-aqa-practice}
 
-**来源：**AQA MFP2，2006 年 6 月，第 6 题；教材将其转载为第 18 章考试练习第 5 题，印刷页码 218。保留原题措辞与分值。
+**来源：**AQA Mathematics 6360，MFP2，June 2006，原卷第 6 题。原题分值：**4 + 4 marks**。教材索引：Chapter 18, practice examination question 5, printed p. 218。[原卷](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202006%20QP%20-%20FP2%20AQA.PDF)、[AQA 评分材料](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202006%20MS%20-%20FP2%20AQA.PDF)。
 
 **a** The function $f$ is given by
 
@@ -519,6 +519,8 @@ $$f(m+1)=8f(m)+7\cdot15^m.$$
 **检验：**$f(3)=3375-8=3367=7(481)$。不能从 $n=1$ 开始这个证明，因为此时 $8^{n-2}$ 不是整数。
 
 这是本站编写的详细解答，并非官方评分细则。
+
+**评分材料核对：**第 (a) 小题得到 7 × 15ⁿ。第 (b) 小题须验证 n = 2、陈述归纳假设、在归纳步中调用 (a)，并得出对所有整数 n ≥ 2 成立的结论。本课解答已对照上述 AQA 评分材料检查；这些解释由本课编写，并非官方评分细则。
 
 </details>
 

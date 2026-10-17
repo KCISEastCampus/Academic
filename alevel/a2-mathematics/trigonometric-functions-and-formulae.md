@@ -5,7 +5,7 @@ mathjax: true
 grade: a2
 subject: a2-mathematics
 permalink: /alevel/a2-mathematics/trigonometric-functions-and-formulae/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -33,6 +33,7 @@ All worked examples and practice questions are self-written, not official past-p
 | Compound angle | Expand, or recognise the expanded form | Cosine uses the opposite sign |
 | $a\cos\theta+b\sin\theta$ | Compare coefficients in the requested form | Check the quadrant of $\alpha$ |
 | Multiple angles | Use a double angle formula or change the angle variable | Transform the interval too |
+{: .wide-table}
 
 Use degrees when a question gives degrees. Otherwise this lesson uses radians. Keep exact values until the final answer; use full calculator values when finding decimal solutions.
 
@@ -450,6 +451,7 @@ The tangent denominator is $\frac34\ne0$. For the second result, $x=0$ gives $-2
 | Sine or cosine form | $r=\sqrt{a^2+b^2}$, then compare coefficients | Choose the quadrant and retain full $\alpha$ |
 | Double angle | Reduce to one trigonometric function | Factor instead of dividing by a possible zero |
 | Equation solutions | List all angles in the stated interval | Transform the interval and include endpoints if allowed |
+{: .wide-table}
 
 **If your answer looks wrong:** check radians or degrees, inverse ranges, signs, coefficient order, denominators and missing quadrants. Check every candidate in the original equation.
 

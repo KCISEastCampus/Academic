@@ -7,7 +7,7 @@ subject: a2-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-mathematics/parametric-equations/
 permalink: /zh/alevel/a2-mathematics/parametric-equations/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -318,6 +318,7 @@ For $x=t^2$, $y=4t$, find the normal at $t=1$ and its other intersection with th
 | 切线或法线 | 先求点和斜率 | 水平线和竖直线要分别处理 |
 | 驻点 | 解 $dy/dt=0$，并要求 $dx/dt\ne0$ | 给出两个坐标并分类 |
 | 进一步求交点 | 把参数坐标代入直线方程 | 排除原来的点，并检查参数范围 |
+{: .wide-table}
 
 **你应当能够：**消去参数、画出允许的曲线、求斜率、切线和法线，并求出驻点及其类型。
 

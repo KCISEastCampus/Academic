@@ -5,7 +5,7 @@ mathjax: true
 grade: a2
 subject: a2-mathematics
 permalink: /alevel/a2-mathematics/algebraic-fractions-and-division/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -76,6 +76,7 @@ Use the same rules as for numerical fractions. The letters below represent expre
 | Subtraction | $\displaystyle\frac ab-\frac cd=\frac{ad-bc}{bd}$ | Subtract the whole second numerator |
 | Multiplication | $\displaystyle\frac ab\times\frac cd=\frac{ac}{bd}$ | Cancel common factors before expanding |
 | Division | $\displaystyle\frac ab\div\frac cd=\frac ab\times\frac dc$ | The divisor must also be non-zero, so $c\ne0$ |
+{: .wide-table}
 
 The product $bd$ is a common denominator. If $b$ and $d$ share a factor, you can use a smaller common denominator.
 
@@ -185,7 +186,7 @@ $$\boxed{\frac{2x^3+3x^2-5x+4}{x+2}=2x^2-x-3+\frac{10}{x+2},\qquad x\ne-2}.$$
 
 Substituting $-2$ into the **polynomial** is allowed. The original fraction is undefined there.
 
-### The same example by long division
+#### The same example by long division
 
 Long division gives the same quotient and remainder. Write the powers in descending order and include a zero coefficient for any missing power.
 
@@ -196,6 +197,7 @@ At each step, divide the leading term of the current remainder by the leading te
 | $2x^3+3x^2-5x+4$ | $2x^2$ | $2x^2(x+2)$ | $-x^2-5x+4$ |
 | $-x^2-5x+4$ | $-x$ | $-x(x+2)$ | $-3x+4$ |
 | $-3x+4$ | $-3$ | $-3(x+2)$ | $10$ |
+{: .wide-table}
 
 Stop because the constant remainder has lower degree than the linear divisor. The quotient is $2x^2-x-3$.
 

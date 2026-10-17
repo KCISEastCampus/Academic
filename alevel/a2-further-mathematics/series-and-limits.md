@@ -5,7 +5,7 @@ mathjax: true
 grade: a2
 subject: a2-further-mathematics
 permalink: /alevel/a2-further-mathematics/series-and-limits/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -173,9 +173,13 @@ For negative or non-integer rational $p$, use $\lvert x\rvert<1$ as the standard
 
 **Range of validity is not the same as domain.** For example, $\ln(1+x)$ is defined for every $x>-1$, but this Maclaurin series is valid only for $-1<x\le1$.
 
-## Related Functions
+## Substitution, Products and Composite Expansions {#related-functions}
 
-### Example 3 — Two logarithms and a shared range
+### Combine logarithmic series and their ranges {#combine-logarithmic-series}
+
+Check that logarithm laws apply before splitting the expression. Expand each part, then intersect the ranges in which all the series are valid.
+
+#### Example 3 — Two logarithms and a shared range
 
 **Question:** expand
 
@@ -201,7 +205,11 @@ $$\boxed{-\frac12<x<\frac12.}$$
 
 **Check:** the even powers cancel. At $x=\frac12$ the denominator is zero; at $x=-\frac12$ the logarithm's argument is zero. Neither endpoint is allowed.
 
-### Example 4 — Multiply two series
+### Truncate products by total degree {#multiply-series}
+
+Choose the highest required power first. Degrees add when terms multiply: retain every cross term that can contribute through that power, then collect like terms.
+
+#### Example 4 — Multiply two series
 
 **Question:** expand $e^{2x}\sin x$ up to and including the term in $x^4$.
 
@@ -225,7 +233,11 @@ The full series is valid for every real $x$.
 
 **Check:** the coefficient of $x^4$ includes the product $(2x)(-\frac16x^3)$. Do not miss cross terms just because one factor has no $x^4$ term.
 
-### Example 5 — A function inside an exponential
+### Track orders in a composite expansion {#compose-series}
+
+Use a temporary variable for the inner function and substitute into the outer standard expansion. Check how each inner term contributes to the required powers before truncating.
+
+#### Example 5 — A function inside an exponential
 
 **Question:** expand $e^{\sin x}$ up to and including the term in $x^4$.
 
@@ -619,7 +631,7 @@ Since $Re^{-3R}\to0$ and $e^{-3R}\to0$, the improper integral converges to $\box
 
 ### Question 7 — Original AQA series practice
 
-**Source:** AQA MFP3, January 2013, as reproduced in Chapter 19, practice examination question 2, printed p. 231. Original wording and marks are retained.
+**Source:** AQA Mathematics 6360, MFP3, January 2013, Question 2. **1 + 4 marks**. Textbook cross-reference: Chapter 19, practice examination question 2, printed p. 231. [Question paper](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/January%202013%20QP%20-%20FP3%20AQA.pdf), [AQA mark scheme](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/January%202013%20MS%20-%20FP3%20AQA.PDF).
 
 **a** Write down the expansion of $e^{3x}$ in ascending powers of $x$ up to and including the term in $x^2$. **(1 mark)**
 
@@ -655,7 +667,7 @@ The required **term** is $\boxed{3x^2}$.
 
 **Check:** the linear terms cancel, so the product begins $1+3x^2+\cdots$. The binomial series has the standard range $-\frac12<x<\frac12$, which is also the standard range used for the product.
 
-This is our worked solution, not an official mark scheme.
+**Mark-scheme comparison:** Expand each factor through the quadratic term before multiplying; the linear terms cancel and the quadratic coefficient is 3. Our working has been checked against the linked AQA mark scheme; these explanations are our own, not an official mark scheme.
 
 </details>
 
@@ -720,6 +732,7 @@ This is a teaching solution; no official mark scheme has been verified for this 
 | Limit at zero | Expand, cancel, divide by the lowest common power | Work with $x\ne0$ before taking the limit |
 | Infinite bound | Use a finite bound $R$, then let $R\to\infty$ | Show that the remaining boundary terms tend to zero |
 | Logarithm at zero | Use $\varepsilon>0$, then let $\varepsilon\to0^+$ | For $k>0$, $\varepsilon^k\ln\varepsilon\to0$ |
+{: .wide-table}
 
 **After practice:** if you inferred convergence from small terms, repeat Question 1. If an endpoint was wrong, repeat Question 2. If you lost a constant factor, repeat Question 3. If you missed a term in a composition, repeat Question 4. If everything cancelled in a limit, review Examples 6–7. If you substituted zero or infinity directly into an antiderivative, repeat Questions 6 and 8.
 

@@ -5,7 +5,7 @@ mathjax: true
 grade: a2
 subject: a2-mathematics
 permalink: /alevel/a2-mathematics/binomial-series/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -327,6 +327,7 @@ So the estimate is $\boxed{2.98496}$ to five decimal places. The calculator give
 | Expand a rational function | Use partial fractions first | Recombine the coefficients |
 | Expand a product | Collect terms of the same power | Include every product needed for the requested power |
 | Find an approximation | Choose small $\lvert u\rvert$ and neglect higher powers | Use $\approx$ and check the requested accuracy |
+{: .wide-table}
 
 **If your answer looks wrong:** check the outside factor, signs, factorials, missing products and range. A function may be defined at a value where this expansion is not valid.
 

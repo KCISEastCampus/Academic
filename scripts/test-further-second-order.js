@@ -69,6 +69,9 @@ assert(zh.includes(`permalink: /zh/${topic}/`));
 assert(zh.includes('lang: zh-CN'));
 assert.equal((en.match(/^### Example /gm) || []).length, 7);
 assert.equal((en.match(/^### Question /gm) || []).length, 7);
+// Independent tasks must require the student to classify the roots and choose a PI.
+assert.deepEqual(en.match(/^### Question .*$/gm),
+  Array.from({ length: 7 }, (_, i) => `### Question ${i + 1} {#practice-${i + 1}}`));
 assert.equal((en.match(/<details\b/g) || []).length, 28);
 assert.equal((zh.match(/<details\b/g) || []).length, 28);
 

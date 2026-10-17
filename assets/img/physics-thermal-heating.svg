@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="330" viewBox="0 0 560 330" role="img" aria-labelledby="title desc">
+  <title id="title">Heating ice, melting it, then heating water</title>
+  <desc id="desc">Temperature rises while ice is heated, remains at zero degrees Celsius during melting, then rises as water is heated. Energy continues to enter during the melting plateau. This is a schematic, with no numerical energy scale.</desc>
+  <rect width="560" height="330" rx="12" fill="#f8fafc"/>
+  <g font-family="Arial,sans-serif" fill="#172033" font-size="16">
+    <text x="24" y="30" font-size="20" font-weight="bold">Heating curve: energy keeps entering</text>
+    <text x="24" y="60">Temperature / °C</text>
+    <path d="M65 75 V265 H530" stroke="#475569" stroke-width="2" fill="none"/>
+    <path d="M65 190 H530" stroke="#94a3b8" stroke-dasharray="5 4" fill="none"/>
+    <text x="44" y="196">0</text>
+    <path d="M90 245 L190 190 H350 L470 95" stroke="#007e91" stroke-width="4" fill="none"/>
+    <text x="87" y="172">Ice warms</text>
+    <text x="219" y="172">Ice melts</text>
+    <text x="359" y="79">Water warms</text>
+    <text x="204" y="221" fill="#007e91">Constant temperature</text>
+    <text x="204" y="245" fill="#007e91">Potential energy increases</text>
+    <text x="306" y="290">Energy supplied / J</text>
+    <text x="24" y="317" font-size="14">Pure substance, fixed pressure; schematic, not to scale.</text>
+  </g>
+</svg>

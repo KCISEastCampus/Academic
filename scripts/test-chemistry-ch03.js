@@ -1,7 +1,8 @@
-// Run after bundle exec jekyll build. Recompute exam answers and check rendered course links.
+// Run after bundle exec jekyll build; --source-only checks calculations and bilingual sources without using stale output.
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const sourceOnly = process.argv.includes('--source-only');
 const close = (a, b, tolerance) => assert(Math.abs(a - b) < tolerance, `${a} != ${b}`);
 
 assert.equal(193 + 248 + 590 + 1150 - 142 + 844 - 3513, -630);
@@ -58,6 +59,17 @@ for (const reaction of [
   }
 }
 
+// Recompute the newly supplied quantities independently of the prose answers.
+close(10 ** -2.20 / 10 ** -4.95, 562.34, .005);
+close(.4 ** 2 / (.2 * .2), 4, 1e-12);
+close(2 * 192.77 - 191.61 - 3 * 130.68, -198.11, 1e-10);
+close(2 * 186.90 - 130.68 - 223.08, 20.04, 1e-10);
+close((2 * 186.90 - 130.68 - 223.08) / 2, 10.02, 1e-10);
+assert.equal(2493 - 2326, 167);
+assert(1803 - 10 < 1800 && 1800 < 1803 + 10);
+assert(1740 - 10 > 1600);
+close(2 * 294.19, 588.38, 1e-10);
+
 const course = 'alevel/a2-chemistry';
 const slugs = ['index', 'thermodynamics', 'electrode-potentials', 'acids-bases-and-buffers',
   'period-3', 'transition-metals', 'ions-in-solution'];
@@ -67,7 +79,43 @@ const ids = html => [...html.matchAll(/\bid="([^"]+)"/g)].map(match => match[1])
 const headings = html => [...html.matchAll(/<h[2-4]\b[^>]*id="([^"]+)"/g)].map(match => match[1]);
 const body = html => html.split('id="content-container"')[1].split('<div id="toc"')[0];
 const built = url => read(path.join('_site', decodeURI(url), url.endsWith('/') ? 'index.html' : ''));
+const numericalRows = source => (source.match(/^\| (?:[ABC]|\d+\.\d+) \|[^\n]*$/gm) || [])
+  .map(row => row.split('|').map(cell => cell.trim()).filter(cell => /^(?:[ABC]|[-+]?\d+(?:\.\d+)?)$/.test(cell)));
+const numericLastCells = source => [...source.matchAll(/^\|[^\n]*\| ([-+]?\d+\.\d+) \|$/gm)].map(match => match[1]);
 const imageSources = source => [...source.matchAll(/!\[[^\]]*\]\(([^)]+)\)/g)].map(match => match[1]);
+const parents = source => {
+  const stack = [], result = {};
+  for (const [, marks, id] of source.matchAll(/^(#{2,4}) [^\n]*\{#([^}]+)\}/gm)) {
+    while (stack.length && stack.at(-1).level >= marks.length) stack.pop();
+    result[id] = stack.at(-1)?.id;
+    stack.push({level: marks.length, id});
+  }
+  return result;
+};
+const electrodeSource = read(`${course}/electrode-potentials.md`);
+const records = [...electrodeSource.matchAll(/^\| ([ABC]) \| (1\.\d{3}) \| (1\.\d{3}) \| (1\.\d{3}) \|$/gm)]
+  .map(([, set, ...values]) => ({set, values: values.map(Number)}));
+assert.deepEqual(records.map(record => record.set), ['A', 'B', 'C']);
+const means = records.map(({values}) => values.reduce((sum, value) => sum + value, 0) / values.length);
+records.forEach(({values}) => close(Math.max(...values) - Math.min(...values), .002, 1e-12));
+[1.097, 1.039, 1.077].forEach((value, i) => close(means[i], value, 1e-12));
+close(means[2] + (1.100 - 1.080), means[0], 1e-12);
+assert(means[1] < means[0]);
+// The deliberately non-standard record is also physically plausible: Nernst is an author check, not a student requirement.
+const nonStandardIdeal = 1.10 - 8.314462618 * 298 / (2 * 96485.33212) * Math.log(1 / .0100);
+assert(Math.abs(means[1] - nonStandardIdeal) < .003);
+const acidSource = read(`${course}/acids-bases-and-buffers.md`);
+const curve = acidSource.split('{#curve-construction}')[1].split('For example,')[0];
+const curvePoints = [...curve.matchAll(/^\| (\d+\.\d) \| [^\n]*? \| (\d+\.\d{2}) \|$/gm)]
+  .map(([, volume, ph]) => [Number(volume), Number(ph)]);
+assert.equal(curvePoints.length, 6);
+for (const [volume, ph] of curvePoints) {
+  const excess = .100 * (.0250 - volume / 1000), total = .0250 + volume / 1000;
+  const predicted = Math.abs(excess) < 1e-12 ? 7 : excess > 0
+    ? -Math.log10(excess / total) : 14 + Math.log10(-excess / total);
+  close(ph, predicted, .005);
+}
+
 let groups = 0;
 for (const slug of slugs) {
   const url = `/${course}/${slug === 'index' ? '' : slug + '/'}`;
@@ -76,7 +124,11 @@ for (const slug of slugs) {
   assert(zh.includes(`translation_of: ${url}\n`), `${slug}: translation pair`);
   assert(zh.includes(`permalink: /zh${url}\n`), `${slug}: Chinese route`);
   assert.deepEqual(math(zh), math(en), `${slug}: formula parity`);
+  assert.deepEqual(numericalRows(zh), numericalRows(en), `${slug}: raw numeric records`);
+  assert.deepEqual(numericLastCells(zh), numericLastCells(en), `${slug}: numeric table values`);
   assert.deepEqual(imageSources(zh), imageSources(en), `${slug}: image parity`);
+  assert.deepEqual(zh.match(/^>[^\n]*$/gm) || [], en.match(/^>[^\n]*$/gm) || [], `${slug}: all quoted exam prompts`);
+  assert.deepEqual(parents(zh), parents(en), `${slug}: source heading ownership`);
   assert.deepEqual(zh.match(/https:\/\/[^)\s]+/g) || [], en.match(/https:\/\/[^)\s]+/g) || [], `${slug}: source parity`);
   assert.deepEqual(zh.match(/^\*\*OxfordAQA CH03[^\n]+\*\*$/gm) || [],
     en.match(/^\*\*OxfordAQA CH03[^\n]+\*\*$/gm) || [], `${slug}: original marks`);
@@ -88,7 +140,7 @@ for (const slug of slugs) {
       assert(en.includes(`{#${section}}`) && zh.includes(`{#${section}}`), `${slug}: ${section}`);
     }
     // Authentic exam prompts must remain English in both versions; explanations may differ.
-    for (const question of en.split(/^### Q\d+[^\n]*\n/m).slice(1)) {
+    for (const question of en.split(/^#{3,4} Q\d+[^\n]*\n/m).slice(1)) {
       if (!question.split('<details')[0].includes('**OxfordAQA CH03')) continue;
       for (const paragraph of question.split('<details')[0].trim().split(/\n\s*\n/)) {
         if (/^\*\*(?:Source|Course note|来源|课程说明)/.test(paragraph) || /^<span/.test(paragraph) || paragraph.startsWith('![')) continue;
@@ -97,6 +149,24 @@ for (const slug of slugs) {
     }
     assert(!/<summary>[^<]*(?:Hint|Solution)/.test(zh), `${slug}: translated disclosure labels`);
   }
+  for (const [source, language] of [[en, 'en'], [zh, 'zh']]) {
+    const tree = parents(source);
+    if (slug === 'transition-metals') {
+      assert.equal(tree.q5, 'haemoglobin', `${language}: CO question belongs to haemoglobin`);
+      assert.equal(tree.q8, 'autocatalysis', `${language}: autocatalysis question ownership`);
+    }
+    if (slug === 'electrode-potentials') {
+      assert.equal(tree['rp6-measurement'], undefined, `${language}: RP6 is an independent main section`);
+      assert.equal(tree['salt-bridge'], 'rp6-measurement');
+      assert.equal(tree['rp6-data'], 'rp6-measurement');
+    }
+    if (slug === 'ions-in-solution') assert.equal(tree['excess-ammonia'], undefined);
+    if (slug === 'index') {
+      assert.equal(tree.resources, undefined);
+      assert.equal(tree.textbook, 'resources');
+    }
+  }
+  if (sourceOnly) continue;
   const enHtml = built(url), zhHtml = built(`/zh${url}`);
   assert.deepEqual(headings(body(zhHtml)), headings(body(enHtml)), `${slug}: identical heading IDs`);
   for (const [html, source, lang, target] of [[enHtml, en, 'en', `/zh${url}`], [zhHtml, zh, 'zh-CN', url]]) {
@@ -119,9 +189,11 @@ for (const slug of slugs) {
 assert.equal(groups, 32);
 const subjects = read('_data/subjects.yml');
 assert(/id: a2chemistry\s+name: A2 Chemistry\s+name_zh: A2化学\s+icon:/.test(subjects));
-for (const prefix of ['', '/zh']) {
+for (const prefix of sourceOnly ? [] : ['', '/zh']) {
   const level = built(`${prefix}/alevel/`);
   assert(level.includes(`href="${prefix}/${course}/"`), 'Localized subject card');
   assert(level.includes(prefix ? 'A2化学' : 'A2 Chemistry'), 'Localized subject name');
 }
-console.log('CH03 passed: independent exam calculations, atom/charge balance, 7 bilingual page pairs, 32 authentic exam groups, formulas, marks, anchors, source/image parity, closed answers and localized links.');
+console.log(sourceOnly
+  ? 'CH03 sources passed: calculations, entropy/curve/EMF data, atom/charge balance, 7 bilingual pairs, 32 authentic exam groups, formula/source/image/prompt parity and heading ownership. Build and browser checks pending.'
+  : 'CH03 passed: calculations, entropy/curve/EMF data, atom/charge balance, 7 bilingual pairs, 32 authentic exam groups, formulas, marks, heading ownership, anchors, source/image parity, closed answers and localized links.');

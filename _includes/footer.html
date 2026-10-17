@@ -20,7 +20,7 @@
             var badge = document.getElementById('hitscounter-badge');
             if (!badge) return;
             var currentUrl = new URL(window.location.href);
-            var pageLabel = "{{ page.title | default: site.title | default: 'Academic' | escape }}";
+            var pageLabel = {{ page.title | default: site.title | default: 'Academic' | jsonify | replace: '<', '\u003c' }};
             currentUrl.hash = '';
             var isHomePage = currentUrl.pathname === '/' || currentUrl.pathname === '/index.html' || currentUrl.pathname === '/zh/' || currentUrl.pathname === '/zh/index.html';
             var counterUrl = isHomePage ? 'academic.kcisec.site' : currentUrl.toString();

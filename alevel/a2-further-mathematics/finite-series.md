@@ -5,7 +5,7 @@ mathjax: true
 grade: a2
 subject: a2-further-mathematics
 permalink: /alevel/a2-further-mathematics/finite-series/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -337,7 +337,7 @@ This is the formula for $n=k+1$. The formula is true for $n=1$. If it is true fo
 
 ### Question 5 — Original AQA practice
 
-**Source:** AQA MFP2, June 2010, as reproduced in Chapter 18, practice examination question 6, printed p. 218. Original wording and marks are retained.
+**Source:** AQA Mathematics 6360, MFP2, June 2010, Question 2. **3 + 5 marks**. Textbook cross-reference: Chapter 18, practice examination question 6, printed p. 218. [Question paper](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202010%20QP%20-%20FP2%20AQA.PDF), [AQA mark scheme](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202010%20MS%20-%20FP2%20AQA.PDF).
 
 **a** Express
 
@@ -380,7 +380,7 @@ The middle terms cancel because the positive denominators run from $1$ to $48$ a
 
 **Check:** the exact answer is a little less than $\frac34$, as the two remaining negative fractions are small and positive.
 
-This is our worked solution, not an official mark scheme.
+**Mark-scheme comparison:** The partial fractions have coefficients 1/2 and −1/2. Show the cancellation, retain both end pairs, and simplify to 894/1225. Our working has been checked against the linked AQA mark scheme; these explanations are our own, not an official mark scheme.
 
 </details>
 
@@ -393,6 +393,7 @@ This is our worked solution, not an official mark scheme.
 | Lower limit $a>1$ | Subtract the sum up to $a-1$ from the sum up to $b$ | Remove exactly the terms before $a$ |
 | Sum of powers | $\displaystyle \sum r=\frac{n(n+1)}2$; $\displaystyle \sum r^2=\frac{n(n+1)(2n+1)}6$; $\displaystyle \sum r^3=\frac{n^2(n+1)^2}4$ | These formulae start at $r=1$ and end at $r=n$ |
 | Proof by induction | Add $u_{k+1}$ to the assumed $S_k$ | Include the initial case and the full conclusion |
+{: .wide-table}
 
 **After practice:** if you lost a factor of $\frac12$, repeat Question 1. If you kept too few terms, repeat Question 2. If the final denominator was wrong, repeat Question 3. If you used cancellation when an induction proof was requested, repeat Question 4.
 

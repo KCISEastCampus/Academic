@@ -7,7 +7,7 @@ subject: a2-further-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-further-mathematics/de-moivres-theorem/
 permalink: /zh/alevel/a2-further-mathematics/de-moivres-theorem/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -294,7 +294,7 @@ z&=\frac{1+2i}{5},\quad\frac{1-2i}{5}.
 
 虚部是 $i$ 的实数系数，本身不含 $i$。计算时使用 $i^2=-1$、$i^3=-i$ 和 $i^4=1$。
 
-### 例 7：三倍角公式 {#example-7--triple-angle-formulae}
+#### 例 7：三倍角公式 {#example-7--triple-angle-formulae}
 
 **Question:** use De Moivre's theorem to express $\sin3\theta$ in powers of $\sin\theta$, $\cos3\theta$ in powers of $\cos\theta$ and $\tan3\theta$ in powers of $\tan\theta$.
 
@@ -349,7 +349,7 @@ z^m-\frac1{z^m}&=2i\sin m\theta.
 
 这些倒数恒等式要求**模为 1（unit modulus）**。若原复数的模为 $r\ne1$，应先使用 $\frac zr=e^{i\theta}$。
 
-### 例 8：用倍角表示五次幂 {#example-8--express-a-fifth-power-using-multiple-angles}
+#### 例 8：用倍角表示五次幂 {#example-8--express-a-fifth-power-using-multiple-angles}
 
 **Question:** express $\sin^5\theta$ in terms of sines of multiples of $\theta$.
 
@@ -381,7 +381,11 @@ $$\boxed{\begin{aligned}
 
 ## 积分 {#integration}
 
-### 例 9：三角函数幂的积分 {#example-9--integrate-a-trigonometric-power}
+### 先改写为倍角项 {#integrate-multiple-angle-terms}
+
+用前面的恒等式把三角函数的幂改写为倍角项，再逐项积分，并检查各项的内层系数。
+
+#### 例 9：三角函数幂的积分 {#example-9--integrate-a-trigonometric-power}
 
 **Question:** use the result in Example 8 to find $\int\sin^5x\,\mathrm dx$.
 
@@ -402,7 +406,11 @@ $$\boxed{\begin{aligned}
 
 **常见错误：**忘记因子 $\frac1k$；对 $\sin kx$ 或 $\cos kx$ 积分时，必须保留这一因子。
 
-### 例 10：在积分中使用指数形式 {#example-10--use-exponential-form-in-an-integral}
+### 用复指数积分 {#integrate-complex-exponentials}
+
+先把被积函数表示为复指数的实部或虚部，积分该复指数，再取所需的实部或虚部，并加上实积分常数。
+
+#### 例 10：在积分中使用指数形式 {#example-10--use-exponential-form-in-an-integral}
 
 **Question:** find $\int e^{2x}\cos3x\,\mathrm dx$ using exponential form.
 
@@ -631,7 +639,7 @@ $$\boxed{\begin{aligned}
 
 ### 第 7 题：AQA——最小正角 {#question-7--aqa-the-smallest-positive-angle}
 
-**来源：AQA 原题。**AQA MFP2，2007 年 6 月；教材第 20 章模拟考试练习第 2 题，印刷页码 253。**5 marks.**
+**来源：**AQA Mathematics 6360，MFP2，June 2007，原卷第 3 题。原题分值：**5 marks**。教材索引：Chapter 20, practice examination question 2, printed p. 253。[原卷](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202007%20QP%20-%20FP2%20AQA.PDF)、[AQA 评分材料](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202007%20MS%20-%20FP2%20AQA.PDF)。
 
 Use De Moivre's theorem to find the smallest positive angle $\theta$ for which
 
@@ -666,13 +674,13 @@ $$\boxed{\theta=\frac\pi{10}.}$$
 
 **检验：**$15\theta=\frac{3\pi}{2}$，其余弦为零、正弦为 $-1$。相邻解相差 $\frac{2\pi}{15}$，因此前一个解为负。
 
-这是本课编写的解答，并非官方评分细则。
+**评分材料核对：**应用棣莫弗定理，对应实部与虚部，选取 15θ = 3π/2，得到最小正角 θ = π/10。本课解答已对照上述 AQA 评分材料检查；这些解释由本课编写，并非官方评分细则。
 
 </details>
 
 ### 第 8 题：AQA——五倍角恒等式与乘积 {#question-8--aqa-a-fifth-angle-identity-and-a-product}
 
-**来源：AQA 原题。**AQA MFP2，2011 年 6 月；教材第 20 章模拟考试练习第 3 题，印刷页码 253。**16 marks.**
+**来源：**AQA Mathematics 6360，MFP2，June 2011，原卷第 7 题。原题分值：**5 + 3 + 3 + 5 marks**。教材索引：Chapter 20, practice examination question 3, printed p. 253。[原卷](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202011%20QP%20-%20FP2%20AQA.pdf)、[AQA 评分材料](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202011%20MS%20-%20FP2%20AQA.PDF)。
 
 **a i** Use De Moivre's theorem to show that
 
@@ -760,7 +768,7 @@ $$\boxed{\tan\frac\pi5\tan\frac{2\pi}{5}=\sqrt5.}$$
 
 **检验：**以 $t^2$ 为未知量的二次方程的根为 $5\pm2\sqrt5$，两者都为正，乘积为 $5$。$ab$ 的符号仍须根据第一象限来判断。
 
-这是本课编写的解答，并非官方评分细则。
+**评分材料核对：**展开五次幂并比较实部与虚部；在 cosθ 非零时除以 cos⁵θ。找齐四个正切根后，还须说明为什么所求乘积取正值 √5。本课解答已对照上述 AQA 评分材料检查；这些解释由本课编写，并非官方评分细则。
 
 </details>
 
@@ -777,6 +785,7 @@ $$\boxed{\tan\frac\pi5\tan\frac{2\pi}{5}=\sqrt5.}$$
 | 用倍角表示幂次 | 将 $z+z^{-1}=2\cos\theta$ 或 $z-z^{-1}=2i\sin\theta$ 取相应次幂 | 这些恒等式要求 $\lvert z\rvert=1$ |
 | 正切恒等式 | 虚部除以实部 | 说明正切表达式的定义条件 |
 | 积分 | 对倍角表达式积分，或取复指数函数的实部或虚部 | 保留角度系数产生的因子及 $+C$ |
+{: .wide-table}
 
 **练习后：**若象限判断错误，重做第 1 题；若正弦、余弦顺序颠倒，重做第 2 题；若漏根，重做第 3–4 题；若三角展开的方向错误，对比第 5、6 题；若最小正角错误，重做第 7 题；若乘积中丢失符号，重做第 8 题。
 

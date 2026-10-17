@@ -7,7 +7,7 @@ grade: a2
 subject: a2-chemistry
 translation_of: /alevel/a2-chemistry/electrode-potentials/
 permalink: /zh/alevel/a2-chemistry/electrode-potentials/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -61,7 +61,9 @@ $$\mathrm{Zn(s)\vert Zn^{2+}(aq)\Vert Cu^{2+}(aq)\vert Cu(s)}.$$
 2. 右电极还原：$\ce{Cu^{2+} + 2e^- -> Cu}$。
 3. 消去电子，减去表中的还原电势：
 
-$$\ce{Zn + Cu^{2+} -> Zn^{2+} + Cu},\qquad E_{cell}^\circ=0.34-(-0.76)=+1.10\,\mathrm V.$$
+$$\ce{Zn + Cu^{2+} -> Zn^{2+} + Cu}$$
+
+$$E_{cell}^\circ=0.34-(-0.76)=+1.10\,\mathrm V.$$
 
 **答案与独立检查：**两侧各有一个 Zn 和一个 Cu，电荷都为 +2，两个电子消去。正 EMF 与选定的自发方向一致。电子在外电路由 Zn 流向 Cu，盐桥中的离子传递电荷。交换表笔只改变读数符号，不改变自发反应的化学方向。用 [Q5](#q5)复做。
 
@@ -117,6 +119,8 @@ MS 第 22 页。
 
 使用 **2.00 mol dm⁻³ K₂Cr₂O₇**，仍与等体积的 **1.00 mol dm⁻³ Cr₂(SO₄)₃** 混合（1 分）。混合后两个氧化还原物种的浓度均为 **1.00 mol dm⁻³**（1 分）。酸化条件也必须满足，不能只检查盐的标签浓度。
 
+**评分模型与配液边界：**上面保留 January 2025 MS p.22 的浓度要求，是理论稀释计算，不是已验证的室温配液方案。[Thermo Fisher 的试剂资料](https://www.fishersci.fi/shop/products/potassium-dichromate-99-5-analysis-thermo-scientific/p-43068)给出 K₂Cr₂O₇ 摩尔质量 294.19 g mol⁻¹、水中 20 °C 溶解度 125 g L⁻¹；2.00 mol dm⁻³ 对应每升最终溶液 588 g，不能据此称所需室温水溶液已可实际配制。真实方案需另外核对温度、介质、溶解度口径和安全条件；不把加热配制或 Cr(VI) 操作作为学生在此执行的要求。
+
 **复做：**不用记结论，从 $n=cV$ 与最终总体积重新推导。
 
 </details>
@@ -143,7 +147,9 @@ $$E_{cell}^\circ=E_{reduction}^\circ-E_{oxidation\,couple}^\circ.$$
 2. 将银的半反应乘 2，再消去两个电子。
 3. 锌的**还原电势**只减一次：
 
-$$\ce{Zn + 2Ag+ -> Zn^{2+} + 2Ag},\qquad E_{cell}^\circ=0.80-(-0.76)=+1.56\,\mathrm V.$$
+$$\ce{Zn + 2Ag+ -> Zn^{2+} + 2Ag}$$
+
+$$E_{cell}^\circ=0.80-(-0.76)=+1.56\,\mathrm V.$$
 
 **答案与独立检查：**标准条件下还原热力学可行。两侧各有一个 Zn、两个 Ag，电荷均为 +2。银的系数为 2，但 +0.80 V 不倍乘：电势是每单位电荷的能量，不是转移的总能量。用同样方法分别测试 [Q3](#q3) 的两步还原。
 
@@ -183,19 +189,23 @@ MS 第 19 页。
 
 <span id="e3电池充电与-rp6"></span>
 
-## E3：电池、充电与 RP6 {#cells-and-practical}
+## E3：电池与充电 {#cells-and-practical}
 
 **一次电池 primary cell** 的反应通常不便逆转；**可充电电池 secondary cell** 用外部电源驱动放电反应的逆反应。判断充电方程式时，先得到放电总反应，再反向。
 
 **氢燃料电池 fuel cell** 持续输入燃料与氧化剂。酸性体系中：
 
-$$\ce{2H2 -> 4H+ + 4e^-},\qquad\ce{O2 + 4H+ + 4e^- -> 2H2O}.$$
+$$\ce{2H2 -> 4H+ + 4e^-}$$
+
+$$\ce{O2 + 4H+ + 4e^- -> 2H2O}.$$
 
 总反应为 $\ce{2H2 + O2 -> 2H2O}$。优点是使用时没有 CO₂ 作为该反应产物；评价还要考虑制氢来源、储运、设备成本和安全，不能直接写“完全没有环境影响”。碱性体系中半反应会改用 OH⁻，但总反应相同。
 
 **大纲要求的碱性氢氧燃料电池**分别为：
 
-$$\ce{2H2 + 4OH^- -> 4H2O + 4e^-},\qquad\ce{O2 + 2H2O + 4e^- -> 4OH^-}.$$
+$$\ce{2H2 + 4OH^- -> 4H2O + 4e^-}$$
+
+$$\ce{O2 + 2H2O + 4e^- -> 4OH^-}.$$
 
 两式相加，电子和 OH⁻ 消去，再约去两侧的水，得到同一个总反应。H₂ 电极发生氧化，O₂ 电极发生还原；电子经外电路从燃料侧流向氧侧。
 
@@ -225,6 +235,7 @@ The half-equations at each of the electrodes in one type of lithium cell are:
 | --- | --- | --- |
 | Positive | $\ce{Li+ + MnO2 + e^- -> LiMnO2}$ | −0.15 |
 | Negative | $\ce{Li+ + e^- -> Li}$ | −3.05 |
+{: .wide-table}
 
 > **04.5** Deduce the overall equation for the reaction when this cell is being recharged.
 >
@@ -246,9 +257,64 @@ MS 第 18 页。
 
 </details>
 
+## RP6：EMF 的测量与评价 {#rp6-measurement}
+
 **RP6 测量流程：**准备两个半电池，用合适的盐桥连接，以高电阻电压表测开路 EMF；标明温度、浓度和气体压力。高电阻减小电流与体系组成变化。对照预期符号检查接线方向，重复测量，避免污染电极和交叉混合溶液。
 
+### 盐桥的相容性 {#salt-bridge}
+
 **盐桥需要与两边体系相容。**不能与电极物种发生沉淀、酸碱或氧化还原反应。例如含 Cl⁻ 的盐桥可能被强氧化剂氧化；含 OH⁻ 的盐桥会消耗 H⁺，也会使某些金属水合离子沉淀。不要不看体系就统一选择 NaCl。
+
+### RP6 独立任务：分析原始读数 {#rp6-data}
+
+**Self-written task; all readings below are constructed for analysis, not measurements made by students.** Use the Zn/Cu half-cell potentials in Example 1. The positive voltmeter lead is connected to Cu. Before using the records, predict the standard EMF and electron-flow direction, choose between KNO₃ and NaOH for a salt bridge, and justify your choice for these two metal-ion solutions.
+
+All sets use clean electrodes, fresh solutions, a high-resistance voltmeter and 298 K. Concentrations below are in mol dm⁻³. Sets A and B use meter M, checked against a voltage reference. Set C uses meter N; apart from the meter, its stated conditions match A. The 0.001 V display step is a resolution, not an established total uncertainty.
+
+Concentrations and meter selection:
+
+- **A:** Zn²⁺ = 1.00; Cu²⁺ = 1.00; meter M.
+- **B:** Zn²⁺ = 1.00; Cu²⁺ = 0.0100; meter M.
+- **C:** Zn²⁺ = 1.00; Cu²⁺ = 1.00; meter N.
+
+| Set | Reading 1 / V | Reading 2 / V | Reading 3 / V |
+| --- | --- | --- | --- |
+| A | 1.096 | 1.098 | 1.097 |
+| B | 1.038 | 1.040 | 1.039 |
+| C | 1.076 | 1.078 | 1.077 |
+
+An independent check applies a 1.100 V reference to meter N using the same range and polarity. N displays 1.080 V. Assume an additive offset over the narrow voltage range used here; this assumption would need checking for other ranges.
+
+1. Calculate the mean and full range of each set. Compare repeatability before judging agreement with the standard prediction.
+2. Use A versus B to judge the effect of concentration. Explain why the B readings must not be labelled standard EMF, or dismissed as a faulty meter merely because they differ from the standard value. No Nernst-equation calculation is required.
+3. Use the independent reference check to estimate and correct the offset in C. Does taking many more readings remove this offset? State one further comparison needed before attributing every remaining difference from the standard prediction to measurement error.
+4. Propose one change addressing each identified cause, with a reason. For a real experiment, include suitable eye protection, teacher-approved metal-salt handling and waste collection; this data task does not establish completion of practical work.
+
+<details markdown="1">
+<summary>提示</summary>
+
+先从两个还原电势预测，再分开三种比较：同一组内的重复读数、保持仪表不变而改变浓度、保持浓度不变而改变仪表。电压基准能独立于电化学模型检查仪表。
+
+</details>
+
+<details markdown="1">
+<summary>反馈与再尝试</summary>
+
+标准预测为 +1.10 V，外电路电子从 Zn 流向 Cu。对本题溶液，KNO₃ 避免了 NaOH 接触金属离子时预期出现的氢氧化物沉淀；相容性是化学选择，不只是“能导电”。
+
+| 组别 | 均值 / V | 全极差 / V |
+| --- | --- | --- |
+| A | 1.097 | 0.002 |
+| B | 1.039 | 0.002 |
+| C | 1.077 | 0.002 |
+
+三组观察到的极差同样小，支持这批读数有相近的重复性，不代表准确度相同。Cu²⁺ 浓度降低使 Cu 还原电势降低，故电池 EMF 降低；B 是刻意设置的非标准条件。研究浓度影响时保留这一改变，只有比较标准条件时才恢复两边浓度。
+
+仪表 N 在这一范围附近估计有 **−0.020 V 偏移**。给 C 加上 0.020 V，修正均值为 **1.097 V**，与 A 一致。重复测量不能消除偏移，应校准仪表，或作有依据并带不确定度的修正。A 与表列预测仍差 0.003 V；在指定单一原因前，应检查温度、实际离子活度／浓度、液接效应及预测值本身的不确定度和舍入。小极差本身不构成总不确定度预算。
+
+**再尝试：**若基准电压的读数反而为 1.120 V，先说修正方向，再计算。若改进只写“多做几次”，说明它能估计哪一种随机变化，又留下了哪一种系统原因。
+
+</details>
 
 ## 练习 {#practice}
 
@@ -262,6 +328,7 @@ MS 第 18 页。
 | [Q4](#q4) | 充电方向与水的相容性 |
 | [Q5](#q5) | 表笔反接与非标准浓度；自拟 |
 | [Q6](#q6) | 碱性燃料电池的路径与实验局限；自拟 |
+| [RP6 数据](#rp6-data) | 均值、重复性、浓度控制与仪表偏移；自拟 |
 
 ### Q5 — 符号与浓度检查（自拟） {#q5}
 
@@ -335,6 +402,6 @@ MS 第 18 页。
 
 画出 SHE 并标三个条件；解释为什么盐桥传递离子；从两个半反应写出总反应和 EMF；说明电势为何不随系数倍乘。
 
-**完成标准：**能标出标准条件、正确配平并预测方向与 EMF，解释电势不倍乘，区分电子和离子路径，并从放电得到充电反应；已合上解析复做错题。
+**完成标准：**能标出标准条件、正确配平并预测方向与 EMF，解释电势不倍乘，区分电子和离子路径，并从放电得到充电反应。能分析 RP6 原始读数，分开受控的化学改变与仪表偏移，并提出对应改进；已合上解析复做错题。
 
 上一课：[热力学](/zh/alevel/a2-chemistry/thermodynamics/) · [返回课程](/zh/alevel/a2-chemistry/) · 下一课：[酸、碱与缓冲溶液](/zh/alevel/a2-chemistry/acids-bases-and-buffers/)。

@@ -7,7 +7,7 @@ subject: a2-further-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-further-mathematics/first-order-differential-equations/
 permalink: /zh/alevel/a2-further-mathematics/first-order-differential-equations/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -284,7 +284,7 @@ CF 为 $Ce^{-2x}$。试设 $Ae^{-2x}$ 时，代入后总有 $y_p'+2y_p=0$；这�
 
 改为试设 $y_p=Axe^{-2x}$。由乘积法则，
 
-$$y_p'=Ae^{-2x}-2Axe^{-2x},\qquad y_p'+2y_p=Ae^{-2x}.$$
+$$y_p'=Ae^{-2x}-2Axe^{-2x},\quad y_p'+2y_p=Ae^{-2x}.$$
 
 于是 $A=3$，且
 
@@ -451,6 +451,7 @@ $$\boxed{y=x^2-x},\qquad x<0.$$
 | CF + PI | $y=y_c+y_p$ | 两部分相加后，再代入条件 |
 | 指数形式的试设 | 对于 $y'+ay=be^{kx}$，可取 $y_p=\frac b{k+a}e^{kx}$，条件是 $k+a\ne0$ | 若 $k=-a$，使用 $y_p=bxe^{-ax}$ |
 | 条件与区间 | 代入给定的 $(x,y)$，求出 $C$ | 区间仍须排除奇点 |
+{: .wide-table}
 
 ## 常见错误 {#common-pitfalls}
 

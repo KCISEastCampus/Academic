@@ -84,7 +84,7 @@ const html = fs.readFileSync('_site/alevel/a2-further-mathematics/de-moivres-the
 assert(!/[\u3400-\u9fff]/u.test(source), 'English course content');
 assert(!source.includes('with Mechanics'), 'Use the shared textbook name');
 assert(source.includes('+C'), 'Integration constants use +C');
-assert.equal((source.match(/### Example /g) || []).length, 10);
+assert.equal((source.match(/^#{3,4} Example /gm) || []).length, 10);
 assert.equal((source.match(/### Question /g) || []).length, 8);
 assert.equal((html.match(/<details\b/g) || []).length, 16);
 assert.equal((html.match(/<table\b/g) || []).length, 1, 'Absolute-value pipes must not create tables');

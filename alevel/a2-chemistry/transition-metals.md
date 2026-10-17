@@ -6,7 +6,7 @@ lang: en
 grade: a2
 subject: a2-chemistry
 permalink: /alevel/a2-chemistry/transition-metals/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -59,6 +59,7 @@ A **ligand** donates a lone pair to the central metal ion to form a coordinate b
 | 4 | Tetrahedral, approximately 109.5° | $\ce{[FeCl4]^-}$ |
 | 4 | Square planar, 90° | $\ce{Pt(NH3)2Cl2}$ |
 | 6 | Octahedral, 90°/180° | $\ce{[Cu(H2O)6]^{2+}}$ (may be distorted) |
+{: .wide-table}
 
 **Geometric isomerism:** in square-planar $\ce{Pt(NH3)2Cl2}$, adjacent Cl ligands give cis and opposite Cl ligands give trans. Draw the metal and four positions first. Rotating the entire drawing does not create an isomer.
 
@@ -70,7 +71,9 @@ cis-$\ce{Pt(NH3)2Cl2}$ is **cisplatin**. Octahedral $\ce{[Co(NH3)4Cl2]+}$ also h
 
 **Question:** Co²⁺ forms a complex with three neutral en ligands. Find its charge, coordination number and shape, and describe a pair of optical-isomer drawings.
 
-**Method and steps:** each en donates one lone pair from each of two N atoms, giving six donors in total. Neutral en does not alter the overall charge. **Answer:** $\ce{[Co(en)3]^{2+}}$ is six-coordinate, octahedral and has a pair of non-superimposable mirror images.
+**Method and steps:** each en donates one lone pair from each of two N atoms, giving six donors in total. Neutral en does not alter the overall charge.
+
+**Answer:** $\ce{[Co(en)3]^{2+}}$ is six-coordinate, octahedral and has a pair of non-superimposable mirror images.
 
 **Drawing model:** treat the six donor positions as the octahedral +x, −x, +y, −y, +z and −z directions. In the first drawing, the three en ligands join (+x,+y), (−x,+z) and (−y,−z). Reflection in the yz plane gives pairs (−x,+y), (+x,+z) and (−y,−z). Connect each pair with one complete N–CH₂–CH₂–N ligand; use solid and dashed wedges to show directions towards and away from the viewer.
 
@@ -126,9 +129,15 @@ Use wavelength in m; multiply by $10^9$ at the end to express it in nm. J per ph
 
 **Method and steps:** use the energy gap to calculate absorbed wavelength, first in m and then in nm.
 
-$$\lambda=\frac{hc}{\Delta E}=\frac{6.63\times10^{-34}\times3.00\times10^8}{4.00\times10^{-19}}=4.97\times10^{-7}\,\mathrm{m}=497\,\mathrm{nm}.$$
+$$\begin{aligned}
+\lambda&=\frac{hc}{\Delta E}\\
+&=\frac{6.63\times10^{-34}\times3.00\times10^8}{4.00\times10^{-19}}\\
+&=4.97\times10^{-7}\,\mathrm{m}=497\,\mathrm{nm}.
+\end{aligned}$$
 
-**Answer:** absorption excites d electrons to higher levels; the remaining unabsorbed transmitted/reflected light gives the observed colour. The explanation is not “emission of 497 nm light”. **Independent check:** J s multiplied by m s⁻¹ and divided by J gives m; 497 nm is visible. Convert back to m and substitute into the energy equation to recover approximately the original photon energy.
+**Answer:** absorption excites d electrons to higher levels; the remaining unabsorbed transmitted/reflected light gives the observed colour. The explanation is not “emission of 497 nm light”.
+
+**Independent check:** J s multiplied by m s⁻¹ and divided by J gives m; 497 nm is visible. Convert back to m and substitute into the energy equation to recover approximately the original photon energy.
 
 <span id="真题解释颜色再计算波长"></span>
 
@@ -158,7 +167,14 @@ MS pp. 27.
 
 09.4: certain visible wavelengths are absorbed; d electrons are excited to a higher energy level; remaining transmitted/reflected light gives the observed colour (1 mark each). The MS explicitly rejects **emitted** as the explanation for the observed colour.
 
-09.5: $\lambda=(6.63\times10^{-34}\times3.00\times10^8)/(3.67\times10^{-19})=5.42\times10^{-7}$ m = **542 nm**. Substitution/rearrangement (1 mark), result in nm (1 mark).
+09.5:
+
+$$\begin{aligned}
+\lambda&=\frac{6.63\times10^{-34}\times3.00\times10^8}{3.67\times10^{-19}}\\
+&=5.42\times10^{-7}\,\mathrm m=\boxed{542\,\mathrm{nm}}.
+\end{aligned}$$
+
+Substitution/rearrangement (1 mark), result in nm (1 mark).
 
 </details>
 
@@ -204,7 +220,9 @@ The aqua complex is predominantly six-coordinate octahedral; the chloride comple
 
 ### Example 3 (self-written): explain chelation using particle count {#example-3}
 
-**Question:** three en ligands replace six water ligands. Explain greater stability when the enthalpy change from exchanging bonds is small. **Method:** write the substitution, then use entropy and Gibbs energy.
+**Question:** three en ligands replace six water ligands. Explain greater stability when the enthalpy change from exchanging bonds is small.
+
+**Method:** write the substitution, then use entropy and Gibbs energy.
 
 $$\ce{[Co(H2O)6]^{2+} + 3en <=> [Co(en)3]^{2+} + 6H2O}.$$
 
@@ -212,7 +230,9 @@ $$\ce{[Co(H2O)6]^{2+} + 3en <=> [Co(en)3]^{2+} + 6H2O}.$$
 2. If the six broken and six formed metal–ligand bonds have similar energies, $\Delta H$ is small.
 3. The $-T\Delta S$ term is negative, so $\Delta G$ can be negative, favouring the new complex.
 
-**Answer and independent check:** the explanation uses the stated enthalpy approximation and increased entropy, not an unconditional claim that multidentate ligands form stronger bonds. Co and en counts match, six waters are released, total charge is +2 on both sides and coordination number remains six.
+**Answer:** the explanation uses the stated enthalpy approximation and increased entropy, not an unconditional claim that multidentate ligands form stronger bonds.
+
+**Independent check:** Co and en counts match, six waters are released, total charge is +2 on both sides and coordination number remains six.
 
 Other substitutions include $\ce{[Co(H2O)6]^{2+} + 4Cl^- <=> [CoCl4]^{2-} + 6H2O}$ (pink to blue) and $\ce{[Fe(H2O)6]^{3+} + 4Cl^- <=> [FeCl4]^- + 6H2O}$. Larger Cl⁻ ligands may change coordination number from 6 to 4. NH₃ and H₂O are similar in size, so substitution usually retains coordination number and may be partial: the tetraammine-diaqua copper complex remains six-coordinate.
 
@@ -244,11 +264,13 @@ Correct equation (1 mark); particle count rises from 2 to 7 (1 mark); entropy in
 
 </details>
 
+### Haemoglobin and competition from CO {#haemoglobin}
+
 Fe²⁺ in haemoglobin coordinates with multidentate haem and other ligands. O₂ can bind and be released for transport. CO binds more strongly at the iron centre, competing for the O₂ position.
 
 <span id="真题co-的毒性与配位"></span>
 
-### Q5 — Authentic exam: coordination and CO toxicity {#q5}
+#### Q5 — Authentic exam: coordination and CO toxicity {#q5}
 
 **OxfordAQA CH03 · June 2026 · 09.3 · 1 mark**
 
@@ -280,7 +302,9 @@ Balance half-equations first and obtain the mole ratio from the overall equation
 
 ### Example 4 (self-written): the Fe²⁺ titration mole chain {#example-4}
 
-**Question:** 20.0 cm³ of 0.0200 mol dm⁻³ MnO₄⁻ completely oxidises 25.0 cm³ of Fe²⁺ in sufficient acid. Find the Fe²⁺ concentration. **Method:** use the overall reaction ratio, not the ethanedioate ratio.
+**Question:** 20.0 cm³ of 0.0200 mol dm⁻³ MnO₄⁻ completely oxidises 25.0 cm³ of Fe²⁺ in sufficient acid. Find the Fe²⁺ concentration.
+
+**Method:** use the overall reaction ratio, not the ethanedioate ratio.
 
 $$\ce{MnO4^- + 8H+ + 5Fe^{2+} -> Mn^{2+} + 4H2O + 5Fe^{3+}}.$$
 
@@ -288,11 +312,22 @@ $$\ce{MnO4^- + 8H+ + 5Fe^{2+} -> Mn^{2+} + 4H2O + 5Fe^{3+}}.$$
 2. Convert both volumes from cm³ to dm³, calculate moles of MnO₄⁻ and multiply by 5.
 3. Divide by the Fe²⁺ sample volume:
 
-$$c(\mathrm{Fe^{2+}})=\frac{5(0.0200\times0.0200)}{0.0250}=0.0800\,\mathrm{mol\,dm^{-3}}.$$
+   $$\begin{aligned}
+   c(\mathrm{Fe^{2+}})&=\frac{5(0.0200\times0.0200)}{0.0250}\\
+   &=0.0800\,\mathrm{mol\,dm^{-3}}.
+   \end{aligned}$$
 
-**Answer and independent check:** 0.0800 mol dm⁻³. Work backwards: the 25.0 cm³ sample contains 0.00200 mol Fe²⁺; dividing by 5 gives 0.000400 mol MnO₄⁻, equal to titrant concentration times volume. Total charge is +17 on each side and Mn, Fe, O and H are balanced.
+**Answer:** 0.0800 mol dm⁻³.
 
-Reduction potentials depend on pH and ligands. For example, changing acidity changes the reduction tendency of the MnO₄⁻ half-equation containing H⁺. **Tollens’ reagent** contains linear $\ce{[Ag(NH3)2]+}$; aldehydes reduce it to silver, giving a silver mirror, whereas ketones normally do not. An alkaline overall equation is $\ce{RCHO + 2[Ag(NH3)2]+ + 3OH^- -> RCOO^- + 2Ag + 4NH3 + 2H2O}$.
+**Independent check:** Work backwards: the 25.0 cm³ sample contains 0.00200 mol Fe²⁺; dividing by 5 gives 0.000400 mol MnO₄⁻, equal to titrant concentration times volume. Total charge is +17 on each side and Mn, Fe, O and H are balanced.
+
+Reduction potentials depend on pH and ligands. For example, changing acidity changes the reduction tendency of the MnO₄⁻ half-equation containing H⁺. **Tollens’ reagent** contains linear $\ce{[Ag(NH3)2]+}$; aldehydes reduce it to silver, giving a silver mirror, whereas ketones normally do not. An alkaline overall equation is
+
+$$\begin{aligned}
+&\ce{RCHO + 2[Ag(NH3)2]+ + 3OH^-}\\
+&\quad\ce{-> RCOO^- + 2Ag}\\
+&\quad\ce{+ 4NH3 + 2H2O}
+\end{aligned}$$
 
 <span id="真题从整瓶到取样再算-kmno"></span>
 
@@ -328,11 +363,22 @@ Find concentration in the whole flask, then moles in the aliquot. Moles of MnO�
 
 MS pp. 16.
 
-$$n(\mathrm{Na_2C_2O_4})=0.910/134.0=0.006791,\qquad c=0.006791/0.150=\boxed{0.0453\,\mathrm{mol\,dm^{-3}}}.$$
+$$\begin{aligned}
+n(\mathrm{Na_2C_2O_4})&=0.910/134.0\\
+&=0.006791\,\mathrm{mol}.
+\end{aligned}$$
+
+$$\begin{aligned}
+c&=0.006791/0.150\\
+&=\boxed{0.0453\,\mathrm{mol\,dm^{-3}}}.
+\end{aligned}$$
 
 The aliquot contains $0.0452736\times0.0250=0.00113184$ mol C₂O₄²⁻, so MnO₄⁻ is $0.00113184\times2/5=0.000452736$ mol.
 
-$$c(\mathrm{KMnO_4})=0.000452736/0.02235=\boxed{0.0203\,\mathrm{mol\,dm^{-3}}}.$$
+$$\begin{aligned}
+c(\mathrm{KMnO_4})&=0.000452736/0.02235\\
+&=\boxed{0.0203\,\mathrm{mol\,dm^{-3}}}.
+\end{aligned}$$
 
 The five steps in 04.1 are whole-flask moles, concentration, aliquot moles, reaction ratio and titrant concentration. For 04.2: **colourless → pale pink** (1 mark), not dark purple at the endpoint.
 
@@ -352,13 +398,17 @@ The Haber process uses solid Fe to catalyse $\ce{N2 + 3H2 <=> 2NH3}$. Dispersing
 
 ### Example 5 (self-written): two steps in Fe²⁺ homogeneous catalysis {#example-5}
 
-**Question:** $\ce{S2O8^{2-}}$ and I⁻ are both negative ions, so they repel. Show how Fe²⁺/Fe³⁺ provides an alternative route and check that the catalyst is regenerated. **Method:** add the two stages and cancel species present on both sides:
+**Question:** $\ce{S2O8^{2-}}$ and I⁻ are both negative ions, so they repel. Show how Fe²⁺/Fe³⁺ provides an alternative route and check that the catalyst is regenerated.
+
+**Method:** add the two stages and cancel species present on both sides:
 
 $$\ce{S2O8^{2-} + 2Fe^{2+} -> 2SO4^{2-} + 2Fe^{3+}}.$$
 
 $$\ce{2Fe^{3+} + 2I^- -> 2Fe^{2+} + I2}.$$
 
-**Steps and answer:** Fe²⁺ is oxidised in the first step; Fe³⁺ is reduced in the second, regenerating Fe²⁺. All species are aqueous, so catalysis is homogeneous. Add and cancel to obtain $\ce{S2O8^{2-} + 2I^- -> 2SO4^{2-} + I2}$. **Independent check:** both sides have S 2, O 8, I 2 and total charge −4; neither Fe²⁺ nor Fe³⁺ remains in the net equation. Unlike a reactant, the catalyst is recovered.
+**Steps and answer:** Fe²⁺ is oxidised in the first step; Fe³⁺ is reduced in the second, regenerating Fe²⁺. All species are aqueous, so catalysis is homogeneous. Add and cancel to obtain $\ce{S2O8^{2-} + 2I^- -> 2SO4^{2-} + I2}$.
+
+**Independent check:** both sides have S 2, O 8, I 2 and total charge −4; neither Fe²⁺ nor Fe³⁺ remains in the net equation. Unlike a reactant, the catalyst is recovered.
 
 <span id="真题contact-process-的催化循环"></span>
 
@@ -390,11 +440,13 @@ Adding cancels V₂O₅ and V₂O₄, leaving $\ce{SO2 + 1/2O2 -> SO3}$.
 
 </details>
 
+### Autocatalysis and concentration–time curves {#autocatalysis}
+
 In **autocatalysis**, a product acts as the catalyst. Little product is initially present, so the reaction is slow. Accumulating product speeds the reaction; later reactant depletion slows it. Reactant concentration therefore falls slowly, then steeply, then levels off; it does not first increase.
 
 <span id="真题自催化步骤与浓度时间图"></span>
 
-### Q8 — Authentic exam: autocatalytic steps and concentration–time graph {#q8}
+#### Q8 — Authentic exam: autocatalytic steps and concentration–time graph {#q8}
 
 **OxfordAQA CH03 · June 2026 · 08.2–08.4 · 1 + 2 + 1 marks**
 

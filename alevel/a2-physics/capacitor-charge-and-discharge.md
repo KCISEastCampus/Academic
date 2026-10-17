@@ -5,7 +5,7 @@ mathjax: true
 grade: a2
 subject: a2-physics
 permalink: /alevel/a2-physics/capacitor-charge-and-discharge/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -200,7 +200,7 @@ $$Q(T)=Q_0-\Delta Q_{\text{moved}}.$$
 
 The area from $T$ to infinity is the charge still available to leave, $Q(T)$. During charging, the area from zero to $T$ is the charge gained; it equals stored charge only if the capacitor started uncharged. Area under a voltage–time graph is not charge.
 
-### Example 4: charge lost and charge remaining
+#### Example 4: charge lost and charge remaining
 
 A $100\,\mathrm{\mu F}$ capacitor discharges from $8.0\,\mathrm V$ through $100\,\mathrm{k\Omega}$. Find the charge represented by the area under its current graph from zero to $10\,\mathrm s$, and the charge remaining then.
 
@@ -288,7 +288,7 @@ For charging, uncertainty in $V_s$ also affects the shortfall, especially near t
 
 If you use $\log_{10}$ instead of $\ln$, the gradient is $-1/(RC\ln10)$. The natural-log formula cannot be used unchanged.
 
-### Example 6: a fitted line and uncertainty
+#### Example 6: a fitted line and uncertainty
 
 A discharge experiment uses $R=100\,\mathrm{k\Omega}$. The best-fit natural-log line has gradient $-0.100\,\mathrm{s^{-1}}$. Acceptable steepest and shallowest lines give $-0.105$ and $-0.095\,\mathrm{s^{-1}}$. The resistance uncertainty is 2%.
 
@@ -303,6 +303,58 @@ $$\Delta m=\frac{0.105-0.095}{2}=0.005\,\mathrm{s^{-1}}.$$
 The gradient uncertainty is 5%. Since $C=1/(R\lvert m\rvert)$, adding percentage uncertainties gives approximately $2\%+5\%=7\%$, or $C=(100\pm7)\,\mathrm{\mu F}$. This is an approximate uncertainty bound, not a claim that independent random errors must always be added this way.
 
 **Check:** the gradient is negative, while time constant and capacitance are positive. Steepest and shallowest lines should be justified using error bars or an appropriate spread of data.
+
+### Data investigation: choose and test a fit {#data-rc-records}
+
+*Self-written; constructed teaching data, not measurements from a completed practical.*
+
+A capacitor discharges through a $100\,\mathrm{k\Omega}$ resistor (uncertainty 2%). A high-input-resistance sensor has voltage uncertainty ±0.02 V; take timing uncertainty as negligible here. The switch closes at $t=0$.
+
+| Time / s | Capacitor voltage / V |
+| --- | --- |
+| 0 | 8.00 |
+| 5 | 4.86 |
+| 10 | 2.93 |
+| 15 | 1.79 |
+| 20 | 1.08 |
+| 25 | 0.66 |
+| 30 | 0.40 |
+| 35 | 0.24 |
+| 40 | 0.15 |
+| 45 | 0.09 |
+| 50 | 0.05 |
+| 55 | 0.03 |
+| 60 | 0.02 |
+
+1. Plot a suitable transformed graph. Choose and justify a fitting interval using the sensor uncertainty; do not remove a reading merely because it misses your line. Show the line and two separated points used to determine its gradient.
+2. Estimate the time constant and capacitance. Inspect residuals (observed value minus fitted value) over your chosen interval. Use voltage error bars, or their transformed equivalents, to explain why late readings give weak evidence about curvature.
+3. A student says a straight log plot proves the voltmeter has no effect. Assess this claim. Then explain how a resistance that increases during the run would change the gradient.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Use the log-linear analysis above. At 0.40 V the fractional voltage uncertainty is 5%; at 0.02 V it is 100%, and the lower uncertainty limit reaches zero, whose logarithm is undefined. Constant parallel loading and changing resistance have different effects.
+
+</details>
+
+<details markdown="1">
+<summary>Analysis and retry</summary>
+
+A defensible example uses 0–30 s. Other justified intervals and graph readings are acceptable. A least-squares fit of the seven natural-log readings gives:
+
+$$y\approx2.0781-(0.09985\,\mathrm{s^{-1}})t.$$
+
+$$RC\approx10.0\,\mathrm s,\qquad C\approx100\,\mathrm{\mu F}.$$
+
+The residuals in this interval are small and alternate in sign, consistent with rounding within the stated voltage uncertainty. They do not show a systematic bend. Draw uncertainty bars before claiming a precise gradient range; add the resistance contribution when estimating uncertainty in $C$. The fitted 100 μF is an estimate, not an exact component value.
+
+Late voltages carry large fractional uncertainty: taking logs makes their scatter more prominent, rather than showing that the circuit must have stopped obeying an exponential model. A zero lower limit cannot be put on a log graph.
+
+A constant meter input resistance in parallel gives a smaller constant effective resistance. The plot can remain straight while $RC$ and the inferred capacitance are biased low if the meter is ignored. If resistance grows during discharge, the magnitude of the negative log gradient decreases: the curve becomes less steep. This is a possible explanation to test, not proof of a unique cause.
+
+**Retry:** if the recording starts 3 s after the switch closes, while the resistance remains constant, which fitted quantity changes? The intercept changes; the gradient, time constant and capacitance estimate do not.
+
+</details>
 
 ## Practice
 
@@ -546,6 +598,6 @@ Before moving on, check that you can explain why current falls, sketch all three
 
 This lesson follows Section 3.9.1 and Required Practical 6 of the [OxfordAQA Physics specification](https://www.oxfordaqa.com/wp-content/uploads/2022/08/oxfordaqa-a-level-physics-specification.pdf). Textbook support: Jim Breithaupt, *Oxford International AQA Examinations: International A Level Physics*, Section 19.4, printed pp. 346–349. The teacher's AS handouts inform short explanations, circuit reasoning and staged practical analysis.
 
-Questions 6–8 are adapted from OxfordAQA PH03 January 2020 Question 2 and June 2024 Question 5. Official mark schemes were consulted before drafting. Numerical readings are supplied explicitly; adapted answers were independently checked rather than copied from textbook answers. Later PH03 radioactivity and magnetic-field lessons are not part of this page.
+Questions 6–8 are adapted from OxfordAQA PH03 January 2020 Question 2 and June 2024 Question 5. Official mark schemes were consulted before drafting. Numerical readings are supplied explicitly; adapted answers were independently checked rather than copied from textbook answers. The additional raw-record investigation is self-written with constructed data and has no official mark allocation. It practises data analysis, not completion of the physical practical. Later PH03 radioactivity and magnetic-field lessons are not part of this page.
 
 </details>

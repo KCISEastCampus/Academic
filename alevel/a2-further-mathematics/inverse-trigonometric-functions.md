@@ -5,7 +5,7 @@ mathjax: true
 grade: a2
 subject: a2-further-mathematics
 permalink: /alevel/a2-further-mathematics/inverse-trigonometric-functions/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -652,7 +652,7 @@ This is our worked solution, checked against the [AQA mark scheme, Question 5](h
 
 ### Question 8 — AQA: use a derivative to find an integral
 
-**Original AQA question.** AQA MFP2, June 2007, Question 4; textbook Chapter 22, practice examination Question 4, printed p. 281. **7 marks: 2 + 5.**
+**Original AQA question.** AQA MFP2, June 2007, Question 4; textbook Chapter 22, practice examination Question 4, printed p. 281. **7 marks: 2 + 5.** [Question paper, Question 4](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202007%20QP%20-%20FP2%20AQA.PDF).
 
 **(a)** Differentiate $x\tan^{-1}x$ with respect to $x$. **(2 marks)**
 
@@ -692,7 +692,7 @@ $$\begin{aligned}
 
 **Check:** the value is positive and less than $\frac\pi4$, since $0\le\tan^{-1}x\le\frac\pi4$ on this interval.
 
-This is our worked solution, checked against the [AQA mark scheme, Question 4](https://colmanweb.co.uk/pastpapers/Papers/A%20Level/AQA%206360/AQA-6360-MFP2/AQA-MFP2-W-MS-JUN07.PDF).
+This is our worked solution, checked against the [AQA mark scheme, Question 4](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202007%20MS%20-%20FP2%20AQA.PDF).
 
 </details>
 
@@ -711,6 +711,7 @@ This is our worked solution, checked against the [AQA mark scheme, Question 4](h
 | Shifted or scaled quadratic | Complete the square, then substitute | Include the factor from $\mathrm dx$ |
 | An inverse function as the integrand | Integration by parts, with $\mathrm dv=\mathrm dx$ | Differentiate the answer to check the signs |
 | Definite integral | Change limits or return to $x$ | If an endpoint is undefined, show the limit |
+{: .wide-table}
 
 **After practice:** if an angle was outside the range, repeat Question 1. If a chain-rule factor or domain was wrong, repeat Question 2. If an integral's coefficient was wrong, repeat Question 3. If completing the square was difficult, repeat Questions 4 and 6. If an inverse tangent identity gave the wrong angle, repeat Question 5. If integration by parts had a sign error, repeat Questions 7–8.
 

@@ -81,6 +81,11 @@ for (const [prefix, source, language, target] of [
   const previous = read(`_site/${prefix}alevel/a2-further-mathematics/hyperbolic-functions/index.html`);
   assert(index.includes(`href="/${prefix}${topic}/"`));
   assert(previous.includes(`href="/${prefix}${topic}/"`));
+  // Kramdown used to consume the braces of all four excluded-zero sets.
+  const hyperbolic = read(`${prefix}alevel/a2-further-mathematics/hyperbolic-functions.md`);
+  assert.equal((hyperbolic.match(/\\lbrace0\\rbrace/g) || []).length, 4);
+  assert.equal((previous.match(/\\lbrace0\\rbrace/g) || []).length, 4,
+    'Excluded-zero set braces must survive Markdown rendering');
 }
 
 // Compile the actual lesson's TeX with the site's existing MathJax, without a new dependency.

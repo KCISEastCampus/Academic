@@ -5,7 +5,7 @@ mathjax: true
 grade: a2
 subject: a2-mathematics
 permalink: /alevel/a2-mathematics/quick-reference/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -28,6 +28,15 @@ The P2 labels follow the OxfordAQA syllabus topic groups, with some shortened ti
 
 All three examples require $x\ne-4,1$. The divisor in the third example is never zero on this domain.
 
+#### Simplification of Rational Functions {#rational-functions}
+
+[Practise factorisation and domain restrictions](/alevel/a2-mathematics/algebraic-fractions-and-division/#simplification).
+
+- Factorise the numerator and denominator, then cancel common factors. Keep the restrictions from the original denominator.
+- **Simplification example**:
+
+  $$\begin{aligned}\frac{x^2-4x}{x^2-5x+4}&=\frac{x(x-4)}{(x-4)(x-1)}\\&=\frac{x}{x-1},\qquad x\ne1,4.\end{aligned}$$
+
 ### Algebraic Division
 
 [Study quotients, remainders and the remainder theorem](/alevel/a2-mathematics/algebraic-fractions-and-division/#algebraic-division).
@@ -47,9 +56,22 @@ All three examples require $x\ne-4,1$. The divisor in the third example is never
 - **Remainder theorem:** for divisor $ax+b$ with $a\ne0$, the remainder is $F(-\frac ba)$.
 - **Factor theorem:** $ax+b$ is a factor of $F(x)$ if and only if $F(-\frac ba)=0$.
 
+#### More Algebraic Division Examples {#algebraic-division-1}
+**Examples**:
+- $\frac{3x + 4}{x - 1} = 3 + \frac{7}{x - 1}$, with $x\ne1$
+- $\frac{2x^3 - 3x^2 - 2x + 2}{x - 2} = 2x^2 + x + \frac{2}{x - 2}$, with $x\ne2$
+
 ### Partial Fractions
 
 [Study the method, repeated factors and worked examples](/alevel/a2-mathematics/partial-fractions/#method).
+
+<span id="partial-fractions-extended"></span>
+
+Use the same process for more complex combinations of linear and repeated factors. For example,
+
+$$\frac{3+2x^2}{(2x+1)(x-3)^2}=\frac{A}{2x+1}+\frac{B}{x-3}+\frac{C}{(x-3)^2}.$$
+
+Compare degrees first, then clear the denominator. If constants remain unknown after substituting the roots, compare coefficients or substitute another convenient value.
 
 ### Functions
 
@@ -63,12 +85,12 @@ All three examples require $x\ne-4,1$. The divisor in the third example is never
   - $f(x)=\sqrt{x},\ \lbrace x\in\mathbb{R},x\geq0\rbrace$
   - $f:x\mapsto\sqrt{x},\ \lbrace x\in\mathbb{R},x\geq0\rbrace$
 
-### Function Types
+#### Function Types
 - **One-to-one**: Different inputs give different outputs. A horizontal line meets the graph at most once.
 - **Many-to-one**: Two or more different inputs can give the same output.
 - **One-to-many**: One input gives more than one output, so this is not a function.
 
-### Composite Functions {#function-composition}
+#### Composite Functions {#function-composition}
 - $fg(x) = f(g(x))$ (apply $g$ first, then $f$)
 - $gf(x) = g(f(x))$ (apply $f$ first, then $g$)
 - For $fg$, $x$ must be in the domain of $g$, and $g(x)$ must be in the domain of $f$.
@@ -78,7 +100,7 @@ All three examples require $x\ne-4,1$. The divisor in the third example is never
 
   $$\begin{aligned}fg(x)&=3(x^2+4x-2)-2\\&=3x^2+12x-8,\\gf(x)&=(3x-2)^2+4(3x-2)-2\\&=9x^2-8.\end{aligned}$$
 
-### Inverse Functions
+#### Inverse Functions
 - Denoted as $f^{-1}$
 - A function has an inverse only if it is **one-to-one** on its stated domain. You may need to restrict the domain.
 - Graphically: Reflection in the line $y = x$
@@ -107,19 +129,19 @@ $$\lvert x\rvert=\begin{cases}x & \text{if }x\geq0\\-x & \text{if }x<0.\end{case
   - $y = \lvert f(x) \rvert$: Keep the parts with $f(x)\geq0$. Reflect the parts below the $x$-axis in the $x$-axis.
   - $y = f(\lvert x \rvert)$: Keep the allowed part for $x\geq0$, then reflect it in the $y$-axis. An input is allowed only if $\lvert x\rvert$ belongs to the original domain.
 
-### Transformations
+#### Transformations
 
 [Work through combinations of transformations](/alevel/a2-mathematics/modulus-and-transformations/#combinations-of-transformations).
 
 Use these transformations to sketch a new graph. For the two stretches below, $a>0$. A negative multiplier also introduces a reflection.
 - $y = af(x)$ → One-way stretch parallel to the $y$-axis, with scale factor $a$
 - $y = f(x) + a$ → Vertical translation by $a$ (up/down)
-- $y = f(x + a)$ → Horizontal translation by $-a$ (left/right)
+- $y = f(x + a)$ → When $a>0$, translate left by $a$ units; when $a<0$, translate right by $-a$ units.
 - $y = f(ax)$ → One-way stretch parallel to the $x$-axis, with scale factor $\frac{1}{a}$
 - $y = -f(x)$ → Reflection in x-axis
 - $y = f(-x)$ → Reflection in y-axis
 
-### Solving Modulus Equations
+#### Solving Modulus Equations
 1. Sketch the graphs to see how many solutions there are
 2. Identify intersection points
 3. Solve each case using the definition of modulus. Check that each answer satisfies its case condition.
@@ -128,28 +150,6 @@ Use these transformations to sketch a new graph. For the two stretches below, $a
   - Case 2, $2x+a<0$: $-(2x + a) - b = \frac{1}{3}x$
 
 For an inequality with modulus on both sides, find the equality boundaries and test the intervals or compare the graphs. Square both sides only when both are non-negative. See [the worked example](/alevel/a2-mathematics/modulus-and-transformations/#example-7--modulus-on-both-sides).
-
-### Simplification of Rational Functions {#rational-functions}
-
-[Practise factorisation and domain restrictions](/alevel/a2-mathematics/algebraic-fractions-and-division/#simplification).
-
-- Factorise the numerator and denominator, then cancel common factors. Keep the restrictions from the original denominator.
-- **Simplification example**:
-
-  $$\begin{aligned}\frac{x^2-4x}{x^2-5x+4}&=\frac{x(x-4)}{(x-4)(x-1)}\\&=\frac{x}{x-1},\qquad x\ne1,4.\end{aligned}$$
-
-### More Algebraic Division Examples {#algebraic-division-1}
-**Examples**:
-- $\frac{3x + 4}{x - 1} = 3 + \frac{7}{x - 1}$, with $x\ne1$
-- $\frac{2x^3 - 3x^2 - 2x + 2}{x - 2} = 2x^2 + x + \frac{2}{x - 2}$, with $x\ne2$
-
-### Partial Fractions (Extended)
-
-Use the same process for more complex combinations of linear and repeated factors. For example,
-
-$$\frac{3+2x^2}{(2x+1)(x-3)^2}=\frac{A}{2x+1}+\frac{B}{x-3}+\frac{C}{(x-3)^2}.$$
-
-Compare degrees first, then clear the denominator. If constants remain unknown after substituting the roots, compare coefficients or substitute another convenient value.
 
 ### Proof by Contradiction
 
@@ -171,7 +171,10 @@ For worked examples and independent practice, open the [Binomial Series lesson](
 - When $n$ is negative or non-integer, use $\lvert x\rvert<1$ for the infinite series in this course. We do not include endpoints in the stated range; behaviour there depends on $n$. For positive integer $n$, the expansion is finite and valid for all real $x$. For $n=0$, the result is $1$ where the original expression is defined.
 - **Expansion:**
 
-  $$(1+x)^n=1+nx+\frac{n(n-1)}{2!}x^2+\frac{n(n-1)(n-2)}{3!}x^3+\cdots.$$
+  $$\begin{aligned}
+  (1+x)^n={}&1+nx+\frac{n(n-1)}{2!}x^2\\
+  &+\frac{n(n-1)(n-2)}{3!}x^3+\cdots.
+  \end{aligned}$$
 
 - **General term**, for $r\geq1$:
 
@@ -315,7 +318,11 @@ For a composite function, multiply by the inner derivative. The sine and cosine 
 - $g(x) = 3x - 2$, $g'(x) = 3$
 - Derivative: 
 
-$$\frac{2(3x - 2) - (2x + 1)3}{(3x - 2)^2} = \frac{6x - 4 - 6x - 3}{(3x - 2)^2} = \frac{-7}{(3x - 2)^2}$$
+$$\begin{aligned}
+&\frac{2(3x - 2) - (2x + 1)3}{(3x - 2)^2}\\
+&\quad=\frac{6x - 4 - 6x - 3}{(3x - 2)^2}\\
+&\quad=\frac{-7}{(3x - 2)^2}
+\end{aligned}$$
 
 ### Chain Rule
 - $\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx}$
@@ -364,6 +371,7 @@ For gradients, tangents, normals and stationary points, open the [Parametric Equ
 | Quotient | $\left(\frac{u}{v}\right)' = \frac{u'v - uv'}{v^2}$ | One function divided by another |
 | Chain | $\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx}$ | Composite functions |
 | Implicit | Differentiate both sides, include $\frac{dy}{dx}$ | Equations not in $y = f(x)$ form |
+{: .wide-table}
 
 ---
 

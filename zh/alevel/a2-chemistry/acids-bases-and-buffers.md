@@ -7,7 +7,7 @@ grade: a2
 subject: a2-chemistry
 translation_of: /alevel/a2-chemistry/acids-bases-and-buffers/
 permalink: /zh/alevel/a2-chemistry/acids-bases-and-buffers/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -186,10 +186,38 @@ $$K_a=10^{-4.82}=\boxed{1.51\times10^{-5}\,\mathrm{mol\,dm^{-3}}}.$$
 | 弱酸／强碱 | 共轭碱使等当点 pH > 7；之前有缓冲区 | 通常 phenolphthalein |
 | 强酸／弱碱 | 共轭酸使等当点 pH < 7 | 通常 methyl orange |
 | 弱酸／弱碱 | 跳变较小，不一定有清楚的视觉终点 | 通常用 pH 测量方法 |
+{: .wide-table}
 
 选择指示剂的核心是其变色范围落在曲线的陡峭跳变区，不是死记“所有酸碱滴定用同一个指示剂”。对弱一元酸／强碱，半等当点时 $[\mathrm{HA}]=[\mathrm A^-]$，故 **pH = pKa**。
 
 **RP7：**校准 pH 计，准确移取酸，搅拌后待读数稳定；在预计等当点附近减小加液体积，在其他区可用较大间隔。画 pH 对加入体积的图，不能只连几个稀疏点后凭空确定等当点。冲洗探头、避免交叉污染，并按给定温度解释数据。
+
+### 从反应中的物种构建曲线 {#curve-construction}
+
+**示范（自拟、计算数据）：**298 K 下，用 0.100 mol dm⁻³ NaOH 滴定 25.0 cm³、0.100 mol dm⁻³ HCl。假设体积可加、完全电离。初始酸为 0.00250 mol，故等当点需要 25.0 cm³ 碱。这是计算模型，不是实验记录。
+
+等当点前，先用初始氢离子的 mol 数减去加入氢氧根的 mol 数，再除以**混合后的总体积**。等当点时，这组强酸／强碱没有酸或碱过量，由水决定 pH。等当点后算过量氢氧根，再用 Kw。不能在每个位置都套同一个相减公式。
+
+| 加入 NaOH / cm³ | 决定 pH 的物种 | 计算 pH |
+| --- | --- | --- |
+| 0.0 | 初始强酸 | 1.00 |
+| 12.5 | 已稀释的过量酸 | 1.48 |
+| 24.9 | 微量过量酸 | 3.70 |
+| 25.0 | 298 K 下的中性溶液 | 7.00 |
+| 25.1 | 微量过量碱 | 10.30 |
+| 40.0 | 已稀释的过量碱 | 12.36 |
+
+例如加入 12.5 cm³ 时：
+
+$$\begin{aligned}
+\left[\mathrm H^+\right]&=\frac{0.00250-0.00125}{0.0375}\\
+&=0.0333\ \mathrm{mol\,dm^{-3}}\\
+\mathrm{pH}&=1.48.
+\end{aligned}$$
+
+横轴画体积、纵轴画 pH，用平滑曲线连接，在 25.0 cm³ 附近画出陡峭上升；不要把中央三个点连成宽阔的直线段。等当点两侧极少量的酸／碱过量解释了为何很小的加液量能大幅改变 pH。加入远大体积后，pH 逐渐接近滴定剂的 pH。表中是计算锚点，不代表实际 pH 计一定达到这样的准确程度。
+
+**补完推理：**说明为何本例半等当点 pH 为 1.48，而不是把“pH = pKa”当所有酸都适用的规则。该规则要求弱酸／共轭碱缓冲体系；本例强酸没有这样的缓冲。再做 [Q8](#q8)，独立构建其余曲线。
 
 <span id="真题从原滴定图求浓度和-ka"></span>
 
@@ -200,6 +228,30 @@ $$K_a=10^{-4.82}=\boxed{1.51\times10^{-5}\,\mathrm{mol\,dm^{-3}}}.$$
 A student adds 0.100 mol dm⁻³ aqueous sodium hydroxide from a burette to 25.0 cm³ of an aqueous solution of the weak acid HX. Figure 4 shows how the pH changes during part of this titration at 298 K.
 
 ![Original Figure 4: weak acid HX titrated with sodium hydroxide; pH against volume of NaOH in cubic centimetres.](/assets/img/a2-chemistry/ch03-2024-jun-q05-titration.png)
+
+<details markdown="1">
+<summary>图 4 的近似坐标读数</summary>
+
+**图像的可访问改编表征：**以下近似点从 Figure 4 转录，供不能使用原图时完成同一浓度与 Ka 分析。它们不是新实测，也不增加原图读数精度；原图读取任务保留在上方。用平滑曲线连接读数，自己判断转折和半等当位置。
+
+| NaOH 体积 / cm³ | pH（约） |
+| --- | --- |
+| 2.5 | 4.7 |
+| 5.0 | 4.95 |
+| 10.0 | 5.2 |
+| 13.5 | 5.3 |
+| 20.0 | 5.6 |
+| 25.0 | 5.95 |
+| 26.5 | 6.3 |
+| 26.9 | 6.8 |
+| 27.1 | 10.5 |
+| 28.0 | 11.0 |
+| 30.0 | 11.3 |
+| 35.0 | 11.5 |
+
+原图坐标范围：横轴 0–40 cm³，纵轴 pH 0–13。26.9–27.1 cm³ 之间为非常陡的上升段；不要用稀疏点声称能定位到 0.01 cm³。
+
+</details>
 
 > **05.5** Use Figure 4 to determine the concentration, in mol dm⁻³, of the weak acid, HX.
 >
@@ -278,8 +330,14 @@ MS 第 29 页。
 | CH₃CH₂COOH | $0.0140\times0.200=0.00280$ | $0.00280-0.00250=0.000300$ |
 | OH⁻ | $0.0250\times0.100=0.00250$ | 0 |
 | CH₃CH₂COO⁻ | 0 | 0.00250 |
+{: .wide-table}
 
-$$[\mathrm H^+]=1.35\times10^{-5}\frac{0.000300}{0.00250}=1.62\times10^{-6},\qquad \boxed{\mathrm{pH}=5.79}.$$
+$$\begin{aligned}
+\left[\mathrm H^+\right]&=1.35\times10^{-5}\frac{0.000300}{0.00250}\\
+&=1.62\times10^{-6}.
+\end{aligned}$$
+
+$$\boxed{\mathrm{pH}=5.79}.$$
 
 六个评分步骤：酸的 mol、碱的 mol、剩余酸、正确平衡关系、H⁺ 数值、pH。此题反应前是丙酸，解析也必须使用丙酸／丙酸根。
 
@@ -300,6 +358,7 @@ $$[\mathrm H^+]=1.35\times10^{-5}\frac{0.000300}{0.00250}=1.62\times10^{-6},\qqu
 | [Q5：弱酸近似（自拟）](#q5) | 独立检查电离量占比 |
 | [Q6：缓冲再加碱（自拟）](#q6) | 更新 mol 后预测 pH 的方向 |
 | [Q7：指示剂与 RP7（自拟）](#q7) | 从曲线选择指示剂、控制读数间隔 |
+| [Q8：独立构建曲线（自拟）](#q8) | 绘制、解释并比较强弱酸碱的不同组合 |
 
 ### Q5 弱酸近似（自拟） {#q5}
 
@@ -355,6 +414,32 @@ OH⁻ 消耗 HA 并生成等量 A⁻。写出新 mol 表，再代入缓冲比。
 
 </details>
 
+### Q8 构建并解释三条曲线（自拟） {#q8}
+
+On three separate axes, sketch the titration of 25.0 cm³ of each acid below with a base of the **same** concentration, 0.100 mol dm⁻³, at 298 K. In each case the acid is 0.100 mol dm⁻³ and the neutralisation ratio is 1:1: (a) weak acid HA with NaOH; (b) HCl with aqueous NH₃; (c) weak acid HA with aqueous NH₃. For HA use pKa = 5.00. Numerical weak-base or equivalence-point pH calculations are not required.
+
+Label axes, the equivalence volume, initial pH relative to the worked HCl example, the pH region at equivalence where it can be determined, and the large-volume trend. Mark any buffer region and justify an indicator choice. Explain whether “both reactants are weak” alone fixes the equivalence pH at 7. Finally compare all three sketches with the strong acid/strong alkali curve above.
+
+<details markdown="1">
+<summary>提示</summary>
+
+先算物质的量，再辨认等当点前、等当点、等当点后的剩余物种。弱酸和其共轭碱共存形成缓冲。强酸／弱碱滴定中，等当点后，过量弱碱与其共轭酸共存形成缓冲。指示剂需配合陡峭区，不能只看“酸”这个字。
+
+</details>
+
+<details markdown="1">
+<summary>解析与修复</summary>
+
+自拟练习，无官方分值。三条曲线等当体积均为 **25.0 cm³**，因为初始 mol 数和 1:1 比例不变。
+
+- **HA/NaOH：**初始 pH 高于 1.00，等当点前有缓冲区。12.5 cm³ 时 pH 为 5.00。等当点 A⁻ 与水反应，使 pH > 7。跳变比 HCl/NaOH 窄；在本题浓度下，phenolphthalein 通常合适。等当点后由过量强碱决定 pH，逐渐接近 NaOH 滴定剂的 pH。
+- **HCl/NH₃：**初始 pH 为 1.00。盐的共轭酸使等当点 pH < 7；跳变比 HCl/NaOH 窄且位置较低。在本题浓度下，methyl orange 通常合适。等当点后 NH₃ 与其共轭酸构成缓冲；加入很大体积后，曲线接近弱碱滴定剂的 pH，低于 NaOH 的极限。等当点前不存在弱酸缓冲区。
+- **HA/NH₃：**初始 pH 高于 1.00，等当体积仍为 25.0 cm³。较宽的酸碱平衡变化区取代明显陡峭跳变，因此常规视觉指示剂不可靠，应使用合适的 pH 测量方法。等当点 pH 取决于酸碱平衡的相对强弱，不能仅凭“弱／弱”确定为 7。加入很大体积后，pH 接近过量弱碱的 pH。
+
+**修复后再尝试：**若因酸弱就把等当体积画小，重做 mol 计算：“弱”指部分电离，不是配制样品的 mol 数较少。若三条曲线跳变完全相同，先标出等当点的物种再重画。解释为何同时把初始酸和滴定剂浓度加倍会保持等当体积，却不一定保持每个位置的 pH。
+
+</details>
+
 ## 速查与纠错 {#quick-reference}
 
 | 体系或定义 | 速查 | 易错点 |
@@ -382,6 +467,6 @@ OH⁻ 消耗 HA 并生成等量 A⁻。写出新 mol 表，再代入缓冲比。
 
 不用看公式，分别说明纯弱酸、强碱、半等当点、缓冲体系应从哪一步开始；解释两个近似条件：弱酸的小量电离、缓冲中组分的消耗可忽略。
 
-**完成标准：**能在不看解析时选择计算方法、正确列中和 mol 表、检查弱酸近似，并用曲线解释指示剂选择。若有一项未完成，按上表定位后复做对应题。
+**完成标准：**能在不看解析时选择计算方法、正确列中和 mol 表、检查弱酸近似，能绘制并解释四种强弱酸碱组合的曲线，并据图解释指示剂选择。若有一项未完成，按上表定位后复做对应题。
 
 [上一课：电极电势](/zh/alevel/a2-chemistry/electrode-potentials/) · [下一课：第三周期](/zh/alevel/a2-chemistry/period-3/) · [返回 CH03 课程](/zh/alevel/a2-chemistry/)

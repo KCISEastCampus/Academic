@@ -5,7 +5,7 @@ mathjax: true
 grade: a2
 subject: a2-mathematics
 permalink: /alevel/a2-mathematics/mathematical-proof/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -32,6 +32,7 @@ A statement must say which values it covers. For example, “$n^2$ is even” is
 | $P\Rightarrow Q$, implies | Whenever $P$ is true, $Q$ is true | $x=2\Rightarrow x^2=4$ |
 | $P\Leftarrow Q$, is implied by | Whenever $Q$ is true, $P$ is true | $x^2=4\Leftarrow x=2$ |
 | $P\Leftrightarrow Q$, if and only if | Both directions hold | $x^2=4\Leftrightarrow x=2\text{ or }x=-2$ |
+{: .wide-table}
 
 In $P\Rightarrow Q$, $P$ is **sufficient** for $Q$, and $Q$ is **necessary** for $P$. For example, $x=2$ is sufficient for $x^2=4$. It is not necessary, since $x=-2$ also works. The condition $x^2=4$ is necessary for $x=2$, but is not sufficient.
 

@@ -5,7 +5,7 @@ mathjax: true
 grade: a2
 subject: a2-mathematics
 permalink: /alevel/a2-mathematics/differential-equations/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -397,6 +397,7 @@ The model gives $m(0)=60$ and $m(5)=45$. Since more than half remains after $5$ 
 | Find constants | Distinguish the model constant $k$ from an arbitrary constant | Use all the given information and consistent units |
 | Growth or decay | $Q_0e^{kt}$ or $Q_0e^{-kt}$, with $k>0$ | Keep exact logarithms until the final calculation |
 | Half-life | $\displaystyle T=\frac{\ln2}{k}$ for decay written as $Q_0e^{-kt}$ | Distinguish the amount remaining from the amount lost |
+{: .wide-table}
 
 **If your answer looks wrong:** differentiate it and substitute into the original equation. Then check the given condition, any excluded values, and the expected direction of change.
 

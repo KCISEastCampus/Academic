@@ -7,7 +7,7 @@ subject: a2-further-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-further-mathematics/hyperbolic-functions/
 permalink: /zh/alevel/a2-further-mathematics/hyperbolic-functions/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -39,6 +39,21 @@ $$e^x=\cosh x+\sinh x,\qquad e^{-x}=\cosh x-\sinh x.$$
 
 记号 $\sinh^{-1}x$ 表示函数 $\sinh x$ 的反函数（inverse function）；它并不表示 $1/\sinh x$。倒数函数记作 $\operatorname{cosech}x$。$\cosh^{-1}x$ 和 $\tanh^{-1}x$ 也遵循同样的记号区别。
 
+### 例题 1 — 由指数定义求精确值 {#example-1-exact-values}
+
+**Question:** Find $\sinh(\ln3)$, $\cosh(\ln3)$, $\tanh(\ln3)$ and $\operatorname{sech}(\ln3)$.
+
+因为 $e^{\ln3}=3$ 且 $e^{-\ln3}=\frac13$，
+
+$$\begin{aligned}
+\sinh(\ln3)&=\frac{3-\frac13}{2}=\frac43,\\
+\cosh(\ln3)&=\frac{3+\frac13}{2}=\frac53,\\
+\tanh(\ln3)&=\frac{\frac43}{\frac53}=\frac45,\\
+\operatorname{sech}(\ln3)&=\frac1{\cosh(\ln3)}=\frac35.
+\end{aligned}$$
+
+**检查：**$\cosh^2(\ln3)-\sinh^2(\ln3)=\frac{25}{9}-\frac{16}{9}=1$，且 $1-\tanh^2(\ln3)=\frac9{25}=\operatorname{sech}^2(\ln3)$。
+
 ## 图像与恒等式 {#graphs-and-identities}
 
 ### FP2.9 要求熟悉的六个图像 {#six-core-graphs}
@@ -53,6 +68,7 @@ $$e^x=\cosh x+\sinh x,\qquad e^{-x}=\cosh x-\sinh x.$$
 | $y=\sinh^{-1}x$ | $\mathbb R$ | $\mathbb R$ | 奇函数；递增并经过 $(0,0)$ | 无 |
 | $y=\cosh^{-1}x$ | $[1,\infty)$ | $[0,\infty)$ | 从 $(1,0)$ 开始递增 | 无 |
 | $y=\tanh^{-1}x$ | $(-1,1)$ | $\mathbb R$ | 奇函数；递增并经过 $(0,0)$ | 垂直渐近线：$x=\pm1$ |
+{: .wide-table}
 
 ![FP2.9 的六个图像：上排依次为双曲正弦、双曲余弦和双曲正切，下排依次为它们的反函数。图中标出了原点或转折点、反双曲余弦的非负主值分支、双曲正切的水平渐近线，以及反双曲正切的垂直渐近线。](/assets/img/further-hyperbolic-graphs.svg)
 
@@ -62,9 +78,10 @@ $$e^x=\cosh x+\sinh x,\qquad e^{-x}=\cosh x-\sinh x.$$
 
 | 函数 | 定义域 | 值域 | 对称性与渐近线 |
 |---|---|---|---|
-| $y=\operatorname{coth}x$ | $\mathbb R\setminus\{0\}$ | $(-\infty,-1)\cup(1,\infty)$ | 奇函数；垂直渐近线 $x=0$, 水平渐近线 $y=\pm1$ |
+| $y=\operatorname{coth}x$ | $\mathbb R\setminus\lbrace0\rbrace$ | $(-\infty,-1)\cup(1,\infty)$ | 奇函数；垂直渐近线 $x=0$, 水平渐近线 $y=\pm1$ |
 | $y=\operatorname{sech}x$ | $\mathbb R$ | $(0,1]$ | 偶函数；在 $(0,1)$ 处取得最大值，水平渐近线 $y=0$ |
-| $y=\operatorname{cosech}x$ | $\mathbb R\setminus\{0\}$ | $\mathbb R\setminus\{0\}$ | 奇函数；垂直渐近线 $x=0$, 水平渐近线 $y=0$ |
+| $y=\operatorname{cosech}x$ | $\mathbb R\setminus\lbrace0\rbrace$ | $\mathbb R\setminus\lbrace0\rbrace$ | 奇函数；垂直渐近线 $x=0$, 水平渐近线 $y=0$ |
+{: .wide-table}
 
 倒数型函数不属于 FP2.9 指定熟悉的六个图像，但求导或积分时必须注意它们的定义域。
 
@@ -253,21 +270,6 @@ $$\int\frac{\mathrm dx}{a^2-x^2}=\frac1{2a}\ln\left\lvert \frac{a+x}{a-x}\right\
 
 ## 例题 {#worked-examples}
 
-### 例题 1 — 由指数定义求精确值 {#example-1-exact-values}
-
-**Question:** Find $\sinh(\ln3)$, $\cosh(\ln3)$, $\tanh(\ln3)$ and $\operatorname{sech}(\ln3)$.
-
-因为 $e^{\ln3}=3$ 且 $e^{-\ln3}=\frac13$，
-
-$$\begin{aligned}
-\sinh(\ln3)&=\frac{3-\frac13}{2}=\frac43,\\
-\cosh(\ln3)&=\frac{3+\frac13}{2}=\frac53,\\
-\tanh(\ln3)&=\frac{\frac43}{\frac53}=\frac45,\\
-\operatorname{sech}(\ln3)&=\frac1{\cosh(\ln3)}=\frac35.
-\end{aligned}$$
-
-**检查：**$\cosh^2(\ln3)-\sinh^2(\ln3)=\frac{25}{9}-\frac{16}{9}=1$，且 $1-\tanh^2(\ln3)=\frac9{25}=\operatorname{sech}^2(\ln3)$。
-
 ### 例题 2 — 求解线性组合并舍去不合条件的根 {#example-2-solve-a-linear-combination}
 
 **Question:** Solve $2\sinh x+\cosh x=2$.
@@ -449,7 +451,7 @@ $\tanh x$ 的定义域为 $\mathbb R$，值域为 $(-1,1)$；它是奇函数，�
 
 $\tanh^{-1}x$ 的定义域为 $(-1,1)$，值域为 $\mathbb R$；它是奇函数，垂直渐近线为 $x=\pm1$。
 
-$\operatorname{coth}x$ 的定义域为 $\mathbb R\setminus\{0\}$，值域为 $(-\infty,-1)\cup(1,\infty)$；它是奇函数，渐近线为 $x=0$ 和 $y=\pm1$。
+$\operatorname{coth}x$ 的定义域为 $\mathbb R\setminus\lbrace0\rbrace$，值域为 $(-\infty,-1)\cup(1,\infty)$；它是奇函数，渐近线为 $x=0$ 和 $y=\pm1$。
 
 **检验：**值域边界 $(-1,1)$（对应 $\tanh x$）是 $\tanh^{-1}x$ 定义域中不包含的端点。
 
@@ -637,6 +639,7 @@ $$\begin{aligned}
 | 导数 | $\sinh' x=\cosh x$, $\cosh' x=\sinh x$, $\tanh' x=\operatorname{sech}^2x$ | 链式法则需乘以内层导数 $u'$ |
 | 反函数的导数 | $(\sinh^{-1}x)'=\frac1{\sqrt{1+x^2}}$, $(\cosh^{-1}x)'=\frac1{\sqrt{x^2-1}}$, $(\tanh^{-1}x)'=\frac1{1-x^2}$ | 注意反函数的定义域；$\cosh^{-1}$ 的导数要求 $x>1$ |
 | 积分 | 可逆用六个求导公式，或使用三种标准反双曲积分形式 | 按内层导数缩放，注明定义域，并加上 $+C$ |
+{: .wide-table}
 
 **练习之后：**把无法在不看提示的情况下完成的解答重新做一遍。对于每个含 $e^x$ 的方程，取对数前先检查正性；对于每个反函数，求导或积分前先检查定义域。
 

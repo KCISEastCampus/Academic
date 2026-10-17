@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="330" viewBox="0 0 560 330" role="img" aria-labelledby="title desc">
+  <title id="title">Work done by gas during expansion at constant pressure</title>
+  <desc id="desc">A horizontal pressure-volume line at 100 kilopascals runs from 0.002 to 0.005 cubic metres. Its shaded rectangular area is 300 joules, positive work by the expanding gas and negative work on it.</desc>
+  <rect width="560" height="330" rx="12" fill="#f8fafc"/>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#007e91" stroke-width="1.5"/></marker></defs>
+  <g font-family="Arial,sans-serif" fill="#172033" font-size="16">
+    <text x="24" y="30" font-size="20" font-weight="bold">Area gives work done by the gas</text>
+    <text x="24" y="64">p / kPa</text>
+    <path d="M70 75 V250 H525" stroke="#475569" stroke-width="2" fill="none"/>
+    <path d="M170 110 H450 V250 H170 Z" fill="#b9e5db"/>
+    <path d="M70 110 H170 M170 110 V250 M450 110 V250" stroke="#94a3b8" stroke-dasharray="5 4" fill="none"/>
+    <path d="M170 110 H450" stroke="#007e91" stroke-width="3" fill="none"/>
+    <path d="M270 110 H350" stroke="#007e91" stroke-width="3" marker-end="url(#arrow)"/>
+    <text x="26" y="116">100</text>
+    <text x="48" y="269">0</text>
+    <text x="145" y="274">0.002</text>
+    <text x="425" y="274">0.005</text>
+    <text x="464" y="296">V / m³</text>
+    <text x="220" y="156">Expansion →</text>
+    <text x="220" y="188">Area = 300 J</text>
+    <text x="220" y="218" fill="#007e91">Work on gas = −300 J</text>
+    <text x="24" y="317" font-size="14">Slow expansion: gas pressure ≈ external pressure.</text>
+  </g>
+</svg>

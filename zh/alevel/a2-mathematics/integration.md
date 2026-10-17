@@ -7,7 +7,7 @@ subject: a2-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-mathematics/integration/
 permalink: /zh/alevel/a2-mathematics/integration/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -16,7 +16,7 @@ study_page: true
 选择方法，完成积分，再通过求导检查答案。**被积函数**（integrand）是积分号内的函数。本页题干保留英文，方法、提示与解答使用中文。
 
 - **学习：**从[选择方法](#choose-a-method)开始，并在每个[例题](#worked-examples)中说明选择理由。
-- **作业帮助：**复习[换元积分法](#example-3--rewrite-everything-in-the-new-variable)、[分部积分法](#example-4--a-product-that-becomes-simpler)或[部分分式](/zh/alevel/a2-mathematics/partial-fractions/#integration)。
+- **作业帮助：**复习[换元积分法](#substitution)、[分部积分法](#integration-by-parts)或[部分分式](/zh/alevel/a2-mathematics/partial-fractions/#integration)。
 - **复习：**先在不看解答的情况下完成[练习](#practice)，然后查看[快速参考](#quick-reference)。
 
 教材：第 6 章，第 6.1–6.4 节（第 82–95 页）。不定积分（indefinite integral）的积分常数（constant of integration）记作 $C$。
@@ -35,6 +35,7 @@ study_page: true
 | 换元后每一部分都更简单 | 使用换元积分法（integration by substitution） | $x(x+2)^6$，令 $u=x+2$ |
 | 对其中一个因子求导会使乘积更简单 | 尝试分部积分法（integration by parts） | $xe^{2x}$ |
 | 分母可因式分解的有理函数（rational function） | 先检查对数形式；必要时做多项式除法并使用部分分式 | $\displaystyle \frac{5}{(x+1)(x+2)}$ |
+{: .wide-table}
 
 同一个积分可能有不止一种解法。选择能使积分更简单的方法。如果题目指定了换元，就按要求使用。
 
@@ -55,17 +56,33 @@ $$\int xe^{x^2}\,dx,\qquad \int xe^{2x}\,dx,\qquad \int \frac{2x}{x^2+1}\,dx.$$
 
 ## 标准积分（standard integrals） {#standard-integrals}
 
-下表包含教材第 6.1 节中的标准形式。三角函数使用弧度制（radians）。这里 $a\ne0$；每个结果都适用于被积函数和答案均有定义的区间。不同区间上的积分常数可以不同。
+以下是教材第 6.1 节中的标准形式。三角函数使用弧度制（radians）。这里 $a\ne0$；每个结果都适用于被积函数和答案均有定义的区间。不同区间上的积分常数可以不同。
 
-| 被积函数 | 积分 | 条件 |
-|---|---|---|
-| $x^n$ | $\displaystyle\frac{x^{n+1}}{n+1}+C$ | $n\ne-1$ |
-| $(ax+b)^n$ | $\displaystyle\frac{(ax+b)^{n+1}}{a(n+1)}+C$ | $n\ne-1$ |
-| $e^{ax+b}$ | $\displaystyle\frac1a e^{ax+b}+C$ | 所有实数 $x$ |
-| $\displaystyle\frac1{ax+b}$ | $\displaystyle\frac1a\ln\lvert ax+b\rvert+C$ | $ax+b\ne0$ |
-| $\sin(ax+b)$ | $\displaystyle-\frac1a\cos(ax+b)+C$ | 所有实数 $x$ |
-| $\cos(ax+b)$ | $\displaystyle\frac1a\sin(ax+b)+C$ | 所有实数 $x$ |
-| $\sec^2(ax+b)$ | $\displaystyle\frac1a\tan(ax+b)+C$ | $\cos(ax+b)\ne0$ |
+### 幂函数与线性内层 {#power-integrals}
+
+两式都要求 $n\ne-1$。含实数幂时，还须检查原式的定义域。
+
+$$\int x^n\,dx=\frac{x^{n+1}}{n+1}+C.$$
+
+$$\int (ax+b)^n\,dx=\frac{(ax+b)^{n+1}}{a(n+1)}+C.$$
+
+### 指数与对数形式 {#exponential-logarithmic-integrals}
+
+指数式适用于所有实数 $x$；对数式要求 $ax+b\ne0$。
+
+$$\int e^{ax+b}\,dx=\frac1a e^{ax+b}+C.$$
+
+$$\int\frac1{ax+b}\,dx=\frac1a\ln\lvert ax+b\rvert+C.$$
+
+### 三角函数 {#trigonometric-integrals}
+
+正弦、余弦式适用于所有实数 $x$；正割平方的积分要求 $\cos(ax+b)\ne0$。
+
+$$\int\sin(ax+b)\,dx=-\frac1a\cos(ax+b)+C.$$
+
+$$\int\cos(ax+b)\,dx=\frac1a\sin(ax+b)+C.$$
+
+$$\int\sec^2(ax+b)\,dx=\frac1a\tan(ax+b)+C.$$
 
 **求导检查系数。**例如，
 
@@ -73,9 +90,13 @@ $$\int\sec^2(2x-1)\,dx=\frac12\tan(2x-1)+C.$$
 
 求导时会乘以 $2$，正好抵消系数 $\frac12$。其他线性内层函数也需要除以其系数。
 
-## 例题 {#worked-examples}
+## 积分方法与示范 {#worked-examples}
 
-### 例题 1 — 先化简再选择方法 {#example-1--simplify-before-choosing}
+### 化简后逐项积分 {#simplify-and-integrate}
+
+先展开或约分，再使用标准积分；化简后仍保留原式的定义域限制。
+
+#### 例题 1 — 先化简再选择方法 {#example-1--simplify-before-choosing}
 
 **Question:** Find $\displaystyle\int\frac{x^2+3x}{x}\,dx$ for $x\ne0$.
 
@@ -87,7 +108,11 @@ $$\int(x+3)\,dx=\boxed{\frac{x^2}{2}+3x+C}.$$
 
 **检查：**求导后得到 $x+3$，当 $x\ne0$ 时它与原被积函数相同。原式在 $x=0$ 时仍无定义。
 
-### 例题 2 — 逆用链式法则 {#example-2--reverse-the-chain-rule}
+### 逆用链式法则 {#reverse-chain-rule}
+
+寻找内层函数及其导数，尝试一个原函数，再通过求导确定所需系数。
+
+#### 例题 2 — 逆用链式法则 {#example-2--reverse-the-chain-rule}
 
 **Question:** Find $\displaystyle\int6x(x^2+1)^2\,dx$.
 
@@ -101,7 +126,11 @@ $$\int6x(x^2+1)^2\,dx=\boxed{(x^2+1)^3+C}.$$
 
 **检查：**求导后等于被积函数。链式法则还要乘上 $x^2+1$ 的导数 $2x$。
 
-### 例题 3 — 换元后把所有部分都改写 {#example-3--rewrite-everything-in-the-new-variable}
+### 换元积分法 {#substitution}
+
+选择能简化被积函数的新变量，求出微分关系，并把所有因子和微分都改写成新变量。不定积分完成后代回原变量。
+
+#### 例题 3 — 换元后把所有部分都改写 {#example-3--rewrite-everything-in-the-new-variable}
 
 **Question:** Find $\displaystyle\int x(x+2)^6\,dx$.
 
@@ -123,7 +152,13 @@ $$\begin{aligned}&(x+2)^7-2(x+2)^6\\&\qquad=(x+2)^6[(x+2)-2]\\&\qquad=x(x+2)^6.\
 
 **常见错误：**把 $(x+2)$ 改写成 $u$，却仍保留因子 $x$。换元后，要把所有部分都用 $u$ 表示，包括 $dx$。
 
-### 例题 4 — 适合分部积分的乘积 {#example-4--a-product-that-becomes-simpler}
+### 分部积分法 {#integration-by-parts}
+
+从乘积求导法则整理出下式。选择一个求导后更简单的因子，并确认另一个因子容易积分；使用后，余下的积分应更容易处理。
+
+$$\int v\frac{du}{dx}\,dx=uv-\int u\frac{dv}{dx}\,dx.$$
+
+#### 例题 4 — 适合分部积分的乘积 {#example-4--a-product-that-becomes-simpler}
 
 **Question:** Find $\displaystyle\int xe^{2x}\,dx$.
 
@@ -131,7 +166,7 @@ $$\begin{aligned}&(x+2)^7-2(x+2)^6\\&\qquad=(x+2)^6[(x+2)-2]\\&\qquad=x(x+2)^6.\
 
 $$v=x,\qquad \frac{du}{dx}=e^{2x},\qquad \frac{dv}{dx}=1,\qquad u=\frac{e^{2x}}{2}.$$
 
-使用 $\displaystyle\int v\frac{du}{dx}\,dx=uv-\int u\frac{dv}{dx}\,dx$，
+将这些表达式代入公式：
 
 $$\int xe^{2x}\,dx=\frac{xe^{2x}}{2}-\frac12\int e^{2x}\,dx=\boxed{\frac{xe^{2x}}{2}-\frac{e^{2x}}{4}+C}.$$
 
@@ -141,13 +176,19 @@ $$\left(\frac{e^{2x}}2+xe^{2x}\right)-\frac{e^{2x}}2=xe^{2x}.$$
 
 **常见错误：**使用 $u=e^{2x}$，而不是 $\frac{e^{2x}}2$。应用分部积分法前，先求导检查 $u$。
 
-**对数函数也可以视为乘积。**若要计算 $\int\ln x\,dx$（$x>0$），把被积函数写成 $1\times\ln x$。选择 $v=\ln x$ 和 $du/dx=1$，则 $dv/dx=1/x$ 且 $u=x$：
+#### 应用：对数函数的积分 {#integrating-a-logarithm}
+
+对数函数也可以视为乘积。若要计算 $\int\ln x\,dx$（$x>0$），把被积函数写成 $1\times\ln x$。选择 $v=\ln x$ 和 $du/dx=1$，则 $dv/dx=1/x$ 且 $u=x$：
 
 $$\int\ln x\,dx=x\ln x-\int1\,dx=\boxed{x\ln x-x+C}.$$
 
 求导得到 $\ln x+1-1=\ln x$。
 
-### 例题 5 — 分式不一定要做部分分式分解 {#example-5--a-fraction-does-not-always-need-partial-fractions}
+### 识别对数形式 {#logarithmic-form}
+
+先比较分子与分母的导数；若两者成常数倍关系，可以直接使用对数形式。检查分母不为零，并在同一有效区间内使用结果。
+
+#### 例题 5 — 分式不一定要做部分分式分解 {#example-5--a-fraction-does-not-always-need-partial-fractions}
 
 **Question:** Find $\displaystyle\int\frac{2x+2}{x^2+2x-15}\,dx$.
 
@@ -249,7 +290,11 @@ Also find $\displaystyle\int x\ln x\,dx$ for $x>0$.
 
 选择 $v=x$ 和 $\frac{du}{dx}=\cos(2x)$，则 $\frac{dv}{dx}=1$ 且 $u=\frac12\sin(2x)$。
 
-$$\int x\cos(2x)\,dx=\frac{x\sin(2x)}2-\frac12\int\sin(2x)\,dx=\boxed{\frac{x\sin(2x)}2+\frac{\cos(2x)}4+C}.$$
+$$\begin{aligned}
+\int x\cos(2x)\,dx
+&=\frac{x\sin(2x)}2-\frac12\int\sin(2x)\,dx\\
+&=\boxed{\frac{x\sin(2x)}2+\frac{\cos(2x)}4+C}.
+\end{aligned}$$
 
 求导得到
 
@@ -257,7 +302,11 @@ $$\begin{aligned}&\frac12\sin(2x)+x\cos(2x)-\frac12\sin(2x)\\&\qquad=x\cos(2x).\
 
 对于第二个积分，$u=x^2/2$ 且 $dv/dx=1/x$，所以
 
-$$\int x\ln x\,dx=\frac{x^2\ln x}{2}-\frac12\int x\,dx=\boxed{\frac{x^2\ln x}{2}-\frac{x^2}{4}+C}.$$
+$$\begin{aligned}
+\int x\ln x\,dx
+&=\frac{x^2\ln x}{2}-\frac12\int x\,dx\\
+&=\boxed{\frac{x^2\ln x}{2}-\frac{x^2}{4}+C}.
+\end{aligned}$$
 
 求导得到 $x\ln x+\frac x2-\frac x2=x\ln x$。
 
@@ -317,6 +366,7 @@ $$\int_1^2\frac1u\,du=[\ln u]_1^2=\boxed{\ln2}.$$
 | 换元积分法 | 把整个积分都改写为新变量。定积分要改变积分限。 | 不要混用新旧变量 |
 | 分部积分法 | $\displaystyle\int v\frac{du}{dx}\,dx=uv-\int u\frac{dv}{dx}\,dx$ | 剩余积分应当更简单 |
 | 部分分式 | 必要时先除法，再分解并逐项积分 | 包含重复因式的每一个幂次，并保留商 |
+{: .wide-table}
 
 **如果求导结果不对：**检查链式法则带来的系数、符号，以及换元或多项式除法中是否漏项。
 

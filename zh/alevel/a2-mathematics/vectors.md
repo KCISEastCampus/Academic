@@ -7,7 +7,7 @@ subject: a2-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-mathematics/vectors/
 permalink: /zh/alevel/a2-mathematics/vectors/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -105,6 +105,7 @@ $$\boxed{\left(\frac32,\frac74,0\right)}.$$
 |---|---|---|
 | 互为标量倍数 | 一条直线上的点是否也在另一条直线上？ | 若是，则为同一直线；若否，则为不同的平行直线 |
 | 不互为标量倍数 | 是否存在一对 $(\lambda,\mu)$，能同时满足三个分量方程？ | 若是，则相交；若否，则为异面直线 |
+{: .wide-table}
 
 **异面直线**（skew lines）是三维空间中既不平行也不相交的直线。两条直线要分别使用参数；它们相交时参数值不必相同。
 
@@ -396,6 +397,7 @@ $$\overrightarrow{PH}=(-1,1,1),\qquad \boxed{PH=\sqrt3}.$$
 | 求向量夹角 | $\frac{\mathbf a\cdot\mathbf b}{\lvert\mathbf a\rvert\lvert\mathbf b\rvert}$ 给出夹角的余弦 | 保留符号；两个向量均不能为零 |
 | 求两直线的锐角 | 对数量积取绝对值 | 使用方向向量，不要用位置向量 |
 | 求垂直距离 | 在直线上求 $H$，使 $\overrightarrow{PH}\cdot\mathbf b=0$ | 检查直线方程，再求 $\lvert\overrightarrow{PH}\rvert$ |
+{: .wide-table}
 
 **如果答案看起来不对：**检查向量方向、分量符号、参数值和角度模式。最终计算前保留精确的模。
 

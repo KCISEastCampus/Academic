@@ -5,7 +5,7 @@ mathjax: true
 grade: a2
 subject: a2-further-mathematics
 permalink: /alevel/a2-further-mathematics/arc-length-and-surface-area/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -27,21 +27,7 @@ Textbook: Chapter 23, pp. 282–287, in *International A Level Further Mathemati
 
 The small length of a curve is written as $\mathrm ds$. Add these small lengths to find the whole arc length. The square-root factor in the arc-length formula is always non-negative.
 
-| Curve is given as | Length element | Arc length |
-|---|---|---|
-| $y=f(x)$, with $a\le x\le b$ | $\displaystyle\mathrm ds=\sqrt{1+\left(\frac{\mathrm dy}{\mathrm dx}\right)^2}\,\mathrm dx$ | $\displaystyle L=\int_a^b\sqrt{1+\left(\frac{\mathrm dy}{\mathrm dx}\right)^2}\,\mathrm dx$ |
-| $x=x(t),\ y=y(t)$, with $\alpha\le t\le\beta$ | $\displaystyle\mathrm ds=\sqrt{\left(\frac{\mathrm dx}{\mathrm dt}\right)^2+\left(\frac{\mathrm dy}{\mathrm dt}\right)^2}\,\mathrm dt$ | $\displaystyle L=\int_\alpha^\beta\sqrt{\left(\frac{\mathrm dx}{\mathrm dt}\right)^2+\left(\frac{\mathrm dy}{\mathrm dt}\right)^2}\,\mathrm dt$ |
-
-For a surface of revolution about the x-axis, a short strip of the curve sweeps out a narrow band. The corresponding circle has circumference $2\pi r$, where the radius is the distance from the curve to the x-axis:
-
-$$r=\lvert y\rvert.$$
-
-So the band area is approximately $2\pi\lvert y\rvert\,\mathrm ds$. Adding the bands gives
-
-| Curve is given as | Surface area about the x-axis |
-|---|---|
-| $y=f(x)$ | $\displaystyle S=2\pi\int_a^b\lvert y\rvert\sqrt{1+\left(\frac{\mathrm dy}{\mathrm dx}\right)^2}\,\mathrm dx$ |
-| $x=x(t),\ y=y(t)$ | $\displaystyle S=2\pi\int_\alpha^\beta\lvert y\rvert\sqrt{\left(\frac{\mathrm dx}{\mathrm dt}\right)^2+\left(\frac{\mathrm dy}{\mathrm dt}\right)^2}\,\mathrm dt$ |
+Build the Cartesian and parametric length elements below, then use circumference times the length element for a surface of revolution.
 
 **Check the limits and absolute values.**
 
@@ -55,35 +41,13 @@ The formula gives the curved surface only. It does not add circular end caps; in
 
 ## Cartesian Arc Length {#cartesian-arc-length}
 
-For $y=f(x)$, differentiate with respect to x, square the gradient, add 1, and integrate the positive square root between the stated x-coordinates.
+For $y=f(x)$, with $a\le x\le b$, differentiate with respect to x, square the gradient, add 1, and integrate the positive square root between the stated x-coordinates.
+
+$$\mathrm ds=\sqrt{1+\left(\frac{\mathrm dy}{\mathrm dx}\right)^2}\,\mathrm dx.$$
 
 $$L=\int_a^b\sqrt{1+\left(\frac{\mathrm dy}{\mathrm dx}\right)^2}\,\mathrm dx.$$
 
 The variable is x throughout, so keep the limits as x-values. If an endpoint makes the derivative or integrand undefined, treat the integral as a limit from inside the interval.
-
-## Parametric Arc Length {#parametric-arc-length}
-
-When both coordinates depend on t, differentiate both coordinates with respect to t. The speed is the length of the velocity vector:
-
-$$\frac{\mathrm ds}{\mathrm dt}=\sqrt{\left(\frac{\mathrm dx}{\mathrm dt}\right)^2+\left(\frac{\mathrm dy}{\mathrm dt}\right)^2}.$$
-
-Then integrate with respect to t:
-
-$$L=\int_\alpha^\beta\frac{\mathrm ds}{\mathrm dt}\,\mathrm dt.$$
-
-Do not use only $\frac{\mathrm dx}{\mathrm dt}$ or only $\frac{\mathrm dy}{\mathrm dt}$. Both directions contribute to the distance travelled along the curve.
-
-## Surface Area About the x-axis {#surface-area-about-the-x-axis}
-
-At each point of the curve, the rotation radius is its distance from the x-axis, $\lvert y\rvert$. Multiply the circumference $2\pi\lvert y\rvert$ by the curve length element $\mathrm ds$.
-
-$$S=\int 2\pi\lvert y\rvert\,\mathrm ds.$$
-
-In Cartesian coordinates, substitute the Cartesian length element. In parametric coordinates, substitute the parametric length element. Make sure the limits describe just the generating arc required.
-
-**Do not confuse two kinds of repetition.** If a parameter traces the same arc more than once, the arc-length integral counts each traversal. Separately, a single arc can generate the same surface patch more than once under rotation; then the surface-area integral also counts that patch more than once. In either case, choose limits that cover the required geometric object once.
-
-## Worked Examples {#worked-examples}
 
 ### Example 1 — Cartesian arc length by substitution {#example-1--cartesian-arc-length-by-substitution}
 
@@ -100,6 +64,38 @@ L&=\int_0^3\sqrt{1+x}\,\mathrm dx\\
 \end{aligned}$$
 
 **Check:** the integrand is positive throughout the interval, and the answer is greater than the horizontal distance $3$.
+
+## Parametric Arc Length {#parametric-arc-length}
+
+For $x=x(t),\ y=y(t)$, with $\alpha\le t\le\beta$, differentiate both coordinates with respect to t. The speed is the length of the velocity vector:
+
+$$\frac{\mathrm ds}{\mathrm dt}=\sqrt{\left(\frac{\mathrm dx}{\mathrm dt}\right)^2+\left(\frac{\mathrm dy}{\mathrm dt}\right)^2}.$$
+
+Then integrate with respect to t:
+
+$$L=\int_\alpha^\beta\frac{\mathrm ds}{\mathrm dt}\,\mathrm dt.$$
+
+Do not use only $\frac{\mathrm dx}{\mathrm dt}$ or only $\frac{\mathrm dy}{\mathrm dt}$. Both directions contribute to the distance travelled along the curve.
+
+## Surface Area About the x-axis {#surface-area-about-the-x-axis}
+
+At each point of the curve, the rotation radius is its distance from the x-axis, $\lvert y\rvert$. Multiply the circumference $2\pi\lvert y\rvert$ by the curve length element $\mathrm ds$.
+
+$$r=\lvert y\rvert,\qquad S=\int 2\pi r\,\mathrm ds.$$
+
+**Cartesian form:**
+
+$$S=2\pi\int_a^b\lvert y\rvert\sqrt{1+\left(\frac{\mathrm dy}{\mathrm dx}\right)^2}\,\mathrm dx.$$
+
+**Parametric form:**
+
+$$S=2\pi\int_\alpha^\beta\lvert y(t)\rvert\frac{\mathrm ds}{\mathrm dt}\,\mathrm dt.$$
+
+In Cartesian coordinates, substitute the Cartesian length element. In parametric coordinates, substitute the parametric length element. Make sure the limits describe just the generating arc required.
+
+**Do not confuse two kinds of repetition.** If a parameter traces the same arc more than once, the arc-length integral counts each traversal. Separately, a single arc can generate the same surface patch more than once under rotation; then the surface-area integral also counts that patch more than once. In either case, choose limits that cover the required geometric object once.
+
+## Worked Examples {#worked-examples}
 
 ### Example 2 — Keep the absolute value from a square root {#example-2--keep-the-absolute-value}
 
@@ -404,6 +400,7 @@ S&=2\pi\int_0^1(1-t^2)(2\sqrt2\,t)\,\mathrm dt\\
 | A square root of a square | $\sqrt{g^2}=\lvert g\rvert$ | Check the sign of $g$ before removing the absolute value |
 | Curve crosses the x-axis | Split where $y=0$, or integrate with $\lvert y\rvert$ | Do not use a negative radius |
 | A repeated parameter or surface patch | Choose an interval that covers the requested object once | Distinguish retracing the curve from overlapping after rotation |
+{: .wide-table}
 
 **After practice:** if the length formula was wrong, repeat Questions 1–3. If the radius sign was wrong, repeat Questions 4–5. If you counted an overlapping surface twice, revisit Question 6. If you need to combine both formulas, retry Question 7.
 

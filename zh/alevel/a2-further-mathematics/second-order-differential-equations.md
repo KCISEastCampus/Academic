@@ -7,7 +7,7 @@ subject: a2-further-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-further-mathematics/second-order-differential-equations/
 permalink: /zh/alevel/a2-further-mathematics/second-order-differential-equations/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -135,7 +135,7 @@ $$y=e^{-x}(A\cos2x+B\sin2x).$$
 
 求导得
 
-$$y^{\prime}=e^{-x}[(-A+2B)\cos2x+(-B-2A)\sin2x].$$
+$$\begin{aligned}y^{\prime}&=e^{-x}\bigl[(-A+2B)\cos2x\\&\qquad+(-B-2A)\sin2x\bigr].\end{aligned}$$
 
 给定条件得到 $A=2$ 和 $-A+2B=0$，所以 $B=1$：
 
@@ -232,15 +232,15 @@ $$y_c=e^{-x/2}\left(A\cos\frac{\sqrt7x}{2}+B\sin\frac{\sqrt7x}{2}\right).$$
 
 设 $y_p=C\cos x+D\sin x$，求导得
 
-$$y_p^{\prime}=-C\sin x+D\cos x,\qquad y_p^{\prime\prime}=-C\cos x-D\sin x.$$
+$$\begin{aligned}y_p^{\prime}&=-C\sin x+D\cos x,\\y_p^{\prime\prime}&=-C\cos x-D\sin x.\end{aligned}$$
 
 代入得
 
-$$y_p^{\prime\prime}+y_p^{\prime}+2y_p=(C+D)\cos x+(D-C)\sin x.$$
+$$\begin{aligned}y_p^{\prime\prime}+y_p^{\prime}+2y_p&=(C+D)\cos x\\&\quad+(D-C)\sin x.\end{aligned}$$
 
 因此 $C+D=3$，$D-C=0$，解得 $C=D=3/2$。通解为
 
-$$\boxed{y=e^{-x/2}\left(A\cos\frac{\sqrt7x}{2}+B\sin\frac{\sqrt7x}{2}\right)+\frac32(\cos x+\sin x)}.$$
+$$\boxed{\begin{aligned}y={}&e^{-x/2}\left(A\cos\frac{\sqrt7x}{2}+B\sin\frac{\sqrt7x}{2}\right)\\&+\frac32(\cos x+\sin x).\end{aligned}}$$
 
 比较系数的结果确认，将 PI 代入方程左边，恰好得到 $3\cos x$。
 
@@ -302,7 +302,7 @@ $$y_p=Cx+D+Exe^{-2x}.$$
 
 求导得
 
-$$y_p^{\prime}=C+E(1-2x)e^{-2x},\qquad y_p^{\prime\prime}=E(4x-4)e^{-2x}.$$
+$$\begin{aligned}y_p^{\prime}&=C+E(1-2x)e^{-2x},\\y_p^{\prime\prime}&=E(4x-4)e^{-2x}.\end{aligned}$$
 
 代入得
 
@@ -332,9 +332,11 @@ $$\boxed{y=(3+2x)e^{-2x}-2x-1},\qquad x\ge0.$$
 
 ## 练习 {#practice}
 
+按 Q5、Q2、Q6、Q1、Q7、Q3、Q4 的顺序混合练习。打开提示前，说明辅助方程的根如何决定 CF，以及所选 PI 试探式为何不与 CF 重复。
+
 以下七题均为自拟题。适用时，指出 CF 与 PI。先写通解，再使用给定条件；最后检验方程和每一个条件。
 
-### 第 1 题：两个不同实根 {#practice-1}
+### 练习 1 {#practice-1}
 
 > Solve $y^{\prime\prime}-5y^{\prime}+6y=0$, given $y(0)=1$ and $y^{\prime}(0)=0$.
 
@@ -356,7 +358,7 @@ $$\boxed{y=3e^{2x}-2e^{3x}}.$$
 
 </details>
 
-### 第 2 题：实重根 {#practice-2}
+### 练习 2 {#practice-2}
 
 > Solve $y^{\prime\prime}-2y^{\prime}+y=0$, given $y(0)=0$ and $y^{\prime}(0)=2$.
 
@@ -378,7 +380,7 @@ $$\boxed{y=2xe^x}.$$
 
 </details>
 
-### 第 3 题：纯振荡 {#practice-3}
+### 练习 3 {#practice-3}
 
 > Solve $y^{\prime\prime}+9y=0$, given $y(0)=1$ and $y^{\prime}(0)=6$.
 
@@ -400,7 +402,7 @@ $$\boxed{y=\cos3x+2\sin3x}.$$
 
 </details>
 
-### 第 4 题：四次多项式 {#practice-4}
+### 练习 4 {#practice-4}
 
 > Find the general solution of $y^{\prime\prime}+y=x^4$.
 
@@ -416,7 +418,7 @@ $$\boxed{y=\cos3x+2\sin3x}.$$
 
 齐次通解为 $A\cos x+B\sin x$。对于所设的多项式，
 
-$$y_p^{\prime\prime}+y_p=Cx^4+Dx^3+(E+12C)x^2+(F+6D)x+(G+2E).$$
+$$\begin{aligned}y_p^{\prime\prime}+y_p&=Cx^4+Dx^3+(E+12C)x^2\\&\quad+(F+6D)x+(G+2E).\end{aligned}$$
 
 比较系数得 $C=1$，$D=0$，$E=-12$，$F=0$，$G=24$。因此
 
@@ -426,7 +428,7 @@ $$\boxed{y=A\cos x+B\sin x+x^4-12x^2+24}.$$
 
 </details>
 
-### 第 5 题：单根对应的指数函数共振 {#practice-5}
+### 练习 5 {#practice-5}
 
 > Find the general solution of $y^{\prime\prime}-3y^{\prime}+2y=5e^x$.
 
@@ -452,7 +454,7 @@ $$\boxed{y=Ae^x+Be^{2x}-5xe^x}.$$
 
 </details>
 
-### 第 6 题：三角函数共振 {#practice-6}
+### 练习 6 {#practice-6}
 
 > Solve $y^{\prime\prime}+4y=8\sin2x$, given $y(0)=0$ and $y^{\prime}(0)=0$.
 
@@ -474,7 +476,7 @@ $$y_p^{\prime\prime}+4y_p=-4C\sin2x+4D\cos2x.$$
 
 由初始函数值得 $A=0$。完整解的导数为
 
-$$y^{\prime}=-2A\sin2x+2B\cos2x-2\cos2x+4x\sin2x,$$
+$$\begin{aligned}y^{\prime}&=-2A\sin2x+2B\cos2x\\&\quad-2\cos2x+4x\sin2x,\end{aligned}$$
 
 因此 $2B-2=0$，得 $B=1$：
 
@@ -484,7 +486,7 @@ $$\boxed{y=\sin2x-2x\cos2x}.$$
 
 </details>
 
-### 第 7 题：零为重根与边界条件 {#practice-7}
+### 练习 7 {#practice-7}
 
 > On $0\le x\le1$, solve $y^{\prime\prime}=6x+4$, given $y(0)=1$ and $y(1)=4$. Identify a CF and a PI.
 
@@ -523,6 +525,7 @@ $$\boxed{y=x^3+2x^2+1},\qquad 0\le x\le1.$$
 | 通解 | $y=y_c+y_p$ | 恰好含两个任意常数 |
 | 给定条件 | 使用完整的 $y$ 和完整的 $y^{\prime}$ | 逐项判断极限 |
 | 最后检验 | 计算 $ay^{\prime\prime}+by^{\prime}+cy$ | 结果应为 $f(x)$，并满足每一个条件 |
+{: .wide-table}
 
 ## 常见错误 {#common-pitfalls}
 

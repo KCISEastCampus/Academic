@@ -5,7 +5,7 @@ mathjax: true
 grade: a2
 subject: a2-further-mathematics
 permalink: /alevel/a2-further-mathematics/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -61,6 +61,7 @@ Page numbers are printed textbook pages, not PDF page numbers. The FP2 labels fo
 | FP2.12 Vectors and three-dimensional coordinate geometry | 26: Vectors and Three-Dimensional Coordinate Geometry, pp. 320–344 | In preparation |
 | FP2.14 Solution of linear equations | 27: Solutions of Linear Equations, pp. 346–352 | In preparation |
 | FP2.13 Matrix algebra | 28: Matrix Algebra, pp. 354–368 | In preparation |
+{: .wide-table}
 
 </details>
 

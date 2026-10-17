@@ -6,7 +6,7 @@ lang: en
 grade: a2
 subject: a2-chemistry
 permalink: /alevel/a2-chemistry/period-3/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -38,11 +38,13 @@ Period 3 requires more than memorising trends. Complete each explanation: **stru
 
 ## P1: Elements, oxides and acid–base character {#elements-and-oxides}
 
+### Structure, interactions and phase changes {#structure-and-phase-changes}
+
 Na, Mg and Al have metallic bonding. From Na to Al, ionic charge and the number of delocalised electrons increase while ionic radius decreases, generally strengthening metallic bonding. Si has a giant covalent structure; melting requires many covalent bonds to be broken. P₄, S₈ and Cl₂ are molecular: melting mainly overcomes intermolecular forces. Larger S₈ molecules have stronger intermolecular forces than P₄. Ar is monatomic, with only weak London forces between atoms.
 
 **Do not explain melting a molecular substance by breaking intramolecular covalent bonds.** First distinguish a giant structure from discrete molecules.
 
-### Example 1: A complete structure–property explanation (self-written) {#example-1}
+#### Example 1: A complete structure–property explanation (self-written) {#example-1}
 
 **Question:** Explain why SiO₂ has a high melting point whereas SO₂ has a low boiling point.
 
@@ -56,81 +58,38 @@ Na, Mg and Al have metallic bonding. From Na to Al, ionic charge and the number 
 
 <span id="与氧氯反应的方程式"></span>
 
-### Equations for reactions with oxygen and chlorine {#reaction-equations}
+### Formation reactions and reactions with water {#reaction-equations}
 
-Oxide formation: $\ce{4Na + O2 -> 2Na2O}$; $\ce{2Mg + O2 -> 2MgO}$; $\ce{4Al + 3O2 -> 2Al2O3}$; $\ce{Si + O2 -> SiO2}$; $\ce{P4 + 5O2 -> P4O10}$; $\ce{S + O2 -> SO2}$. SO₃ is commonly made by $\ce{2SO2 + O2 <=> 2SO3}$ under suitable catalytic conditions. Do not give SO₃ as the main product of burning sulfur.
+**Oxide formation:**
 
-Chloride formation: $\ce{2Na + Cl2 -> 2NaCl}$; $\ce{Mg + Cl2 -> MgCl2}$; $\ce{2Al + 3Cl2 -> Al2Cl6}$; $\ce{Si + 2Cl2 -> SiCl4}$; $\ce{P4 + 10Cl2 -> 4PCl5}$ (excess chlorine). Limited chlorine can give PCl₃ first. Always read the reaction conditions.
+- $\ce{4Na + O2 -> 2Na2O}$
+- $\ce{2Mg + O2 -> 2MgO}$
+- $\ce{4Al + 3O2 -> 2Al2O3}$
+- $\ce{Si + O2 -> SiO2}$
+- $\ce{P4 + 5O2 -> P4O10}$
+- $\ce{S + O2 -> SO2}$
 
-Sodium with water: $\ce{2Na + 2H2O -> 2NaOH + H2}$. When comparing with Mg, discuss products, rate and metallic character separately. Include state symbols when required; in particular, PCl₅ is solid at room temperature.
+SO₃ is commonly made by $\ce{2SO2 + O2 <=> 2SO3}$ under suitable catalytic conditions; it is not the main product of burning sulfur.
 
-| Oxide | Structure/bonding | Acid–base character and main reactions |
-| --- | --- | --- |
-| Na₂O | Giant ionic | Basic; forms NaOH with water, giving a strongly alkaline solution |
-| MgO | Giant ionic; strong ionic attractions and high melting point | Basic; limited reaction/dissolution in water gives sparingly soluble Mg(OH)₂; reacts with acids |
-| Al₂O₃ | Giant lattice with ionic and covalent bonding character | Amphoteric; reacts with acids and strong alkalis, with no obvious reaction with water |
-| SiO₂ | Giant covalent | Acidic; does not react with water, but reacts with hot concentrated alkali |
-| P₄O₁₀ | Molecular covalent oxide (common molecular form) | Acidic; forms H₃PO₄ with water |
-| SO₂, SO₃ | Molecular covalent oxides | Acidic; water gives an acidic equilibrium system and H₂SO₄, respectively |
+**Chloride formation:**
 
-Across the period, metallic character gives way to non-metallic character, and oxides generally change from basic through amphoteric to acidic. **Solubility does not determine acid–base classification**; reaction with alkali demonstrates SiO₂'s acidic character.
+- $\ce{2Na + Cl2 -> 2NaCl}$
+- $\ce{Mg + Cl2 -> MgCl2}$
+- $\ce{2Al + 3Cl2 -> 2AlCl3}$
+- $\ce{Si + 2Cl2 -> SiCl4}$
+- $\ce{P4 + 10Cl2 -> 4PCl5}$
 
-Reactions you should be able to write:
+The final equation assumes excess chlorine; limited chlorine can give PCl₃ first. AlCl₃ above is the composition formula; Al₂Cl₆ represents a phase-dependent structure, as explained in the [phase limit](#chlorides).
 
-$$\ce{Na2O + H2O -> 2NaOH},\qquad\ce{MgO + 2H+ -> Mg^{2+} + H2O}.$$
+**Sodium with water:**
 
-$$\ce{Al2O3 + 6H+ -> 2Al^{3+} + 3H2O}.$$
+$$\ce{2Na + 2H2O -> 2NaOH + H2}.$$
 
-$$\ce{Al2O3 + 2OH^- + 3H2O -> 2[Al(OH)4]^-},\qquad\ce{SiO2 + 2OH^- -> SiO3^{2-} + H2O}.$$
-
-The last two equations require suitable strong-alkali conditions. They do not imply that all oxides react immediately with dilute alkali.
-
-$$\ce{P4O10 + 6H2O -> 4H3PO4},\qquad\ce{SO3 + H2O -> H2SO4}.$$
-
-SO₂ in water forms an acidic equilibrium, represented by $\ce{SO2 + H2O <=> H2SO3}$; it does not produce strong alkali as Na₂O does. H₃PO₄ and the SO₂-containing system are weak-acid systems, whereas the first ionisation of H₂SO₄ is strong. Do not compare pH at equal concentrations merely by counting H atoms in the acid formula.
-
-### Example 2: Solubility does not determine acid–base character (self-written) {#example-2}
-
-**Question:** Why is Al₂O₃ amphoteric despite showing no obvious reaction with water? How can SiO₂ be shown to be an acidic oxide?
-
-**Method:** Use reactions with acid and alkali as evidence, rather than deciding from solubility in water.
-
-1. Al₂O₃ reacts with acid to form Al³⁺ and water, and under suitable strong-alkali conditions forms tetrahydroxoaluminate ions. The two equations above show basic and acidic behaviour, respectively, so the oxide is amphoteric.
-2. SiO₂ reacts with hot concentrated alkali to form silicate and water. The ionic equation above supports its acidic classification even though it does not react with water.
-3. **Answer:** Amphoterism requires evidence of reaction with both acid and alkali. Reaction with alkali supports an acidic-oxide classification; insolubility does not mean neutrality.
-
-**Independent check:** The Al₂O₃/alkali equation has 2 Al, 8 O and 8 H atoms on each side, with total charge −2. The SiO₂/alkali equation has 1 Si, 4 O and 2 H atoms on each side, also with total charge −2.
-
-<span id="酸及阴离子的结构"></span>
-
-### Structures of acids and their anions {#oxoacid-structures}
-
-Attach acidic H atoms to O when drawing structures. Then remove H⁺ stepwise, marking the negative charge on the relevant O:
-
-| Acid connectivity | Anions | Drawing checks |
-| --- | --- | --- |
-| H₃PO₄: $\ce{O=P(OH)3}$ | H₂PO₄⁻, HPO₄²⁻, PO₄³⁻ | Four O atoms around P in a tetrahedral arrangement; three O–H groups can ionise stepwise |
-| Textbook representation of H₂SO₃: $\ce{O=S(OH)2}$ | HSO₃⁻, SO₃²⁻ | Three O atoms around S and a lone pair; SO₃²⁻ is trigonal pyramidal |
-| H₂SO₄: $\ce{O=S(=O)(OH)2}$ | HSO₄⁻, SO₄²⁻ | Four O atoms around S, tetrahedral; both H atoms attach to O |
-| Si–OH-containing intermediate in SiCl₄ hydrolysis: $\ce{Si(OH)4}$ | Silicate is often represented as SiO₃²⁻ in alkali reactions | Four O atoms around Si; condensation can form hydrated SiO₂ containing Si–O–Si links |
-
-These are connectivity and examination drawing models. Anions have delocalised electrons; a double bond in one drawing is not the uniquely localised real structure.
-
-### Example 3: Drawing a conjugate base from an oxoacid (self-written) {#example-3}
-
-**Question:** Give one valid connectivity representation of H₃PO₄ and H₂PO₄⁻.
-
-**Method:** Connect P to four O atoms and attach acidic H atoms to O. Remove only one H⁺.
-
-1. Represent H₃PO₄ as O=P(OH)₃: one P=O and three P–O–H groups.
-2. Remove H⁺ from one O–H group to obtain O=P(OH)₂(O⁻). Its O atom stays in the structure.
-3. **Answer:** H₂PO₄⁻ still has four O atoms and two O–H groups, with overall charge −1. The four bonding directions around P are tetrahedral.
-
-**Independent check:** Both structures contain one P and four O atoms. The H count falls from 3 to 2 and the acid becomes a −1 anion. The dissociation products have total charge −1 + 1 = 0, matching the neutral acid. No OH⁻ group is removed.
+When comparing with Mg, separate products, rate and metallic character. Include state symbols when requested; PCl₅ is solid at room temperature.
 
 <span id="真题镁与冷水蒸汽"></span>
 
-### Q1 Exam question: Magnesium with cold water and steam {#q1}
+#### Q1 Exam question: Magnesium with cold water and steam {#q1}
 
 **OxfordAQA CH03 · June 2026 · 01.1 · 2 marks**
 
@@ -152,15 +111,63 @@ MS p. 12.
 
 Similarity: both form H₂, 1 mark. Difference: cold water forms Mg(OH)₂, whereas steam forms MgO, 1 mark.
 
-$$\ce{Mg + 2H2O(l) -> Mg(OH)2 + H2},\qquad\ce{Mg + H2O(g) -> MgO + H2}.$$
+$$\ce{Mg + 2H2O(l) -> Mg(OH)2 + H2}.$$
+
+$$\ce{Mg + H2O(g) -> MgO + H2}.$$
 
 The question already gives the rates. Repeating “steam reacts faster” does not compare the products.
 
 </details>
 
+### Oxide structures, acid–base character and water reactions {#oxide-acid-base-character}
+
+| Oxide | Structure/bonding | Acid–base character and main reactions |
+| --- | --- | --- |
+| Na₂O | Giant ionic | Basic; forms NaOH with water, giving a strongly alkaline solution |
+| MgO | Giant ionic; strong ionic attractions and high melting point | Basic; limited reaction/dissolution in water gives sparingly soluble Mg(OH)₂; reacts with acids |
+| Al₂O₃ | Giant lattice with ionic and covalent bonding character | Amphoteric; reacts with acids and strong alkalis, with no obvious reaction with water |
+| SiO₂ | Giant covalent | Acidic; does not react with water, but reacts with hot concentrated alkali |
+| P₄O₁₀ | Molecular covalent oxide (common molecular form) | Acidic; forms H₃PO₄ with water |
+| SO₂, SO₃ | Molecular covalent oxides | Acidic; water gives an acidic equilibrium system and H₂SO₄, respectively |
+{: .wide-table}
+
+Across the period, metallic character gives way to non-metallic character, and oxides generally change from basic through amphoteric to acidic. **Solubility does not determine acid–base classification**; reaction with alkali demonstrates SiO₂'s acidic character.
+
+Reactions you should be able to write:
+
+$$\ce{Na2O + H2O -> 2NaOH}.$$
+
+$$\ce{MgO + 2H+ -> Mg^{2+} + H2O}.$$
+
+$$\ce{Al2O3 + 6H+ -> 2Al^{3+} + 3H2O}.$$
+
+$$\ce{Al2O3 + 2OH^- + 3H2O -> 2[Al(OH)4]^-}.$$
+
+$$\ce{SiO2 + 2OH^- -> SiO3^{2-} + H2O}.$$
+
+The last two equations require suitable strong-alkali conditions. They do not imply that all oxides react immediately with dilute alkali.
+
+$$\ce{P4O10 + 6H2O -> 4H3PO4}.$$
+
+$$\ce{SO3 + H2O -> H2SO4}.$$
+
+SO₂ in water forms an acidic equilibrium, represented by $\ce{SO2 + H2O <=> H2SO3}$; it does not produce strong alkali as Na₂O does. H₃PO₄ and the SO₂-containing system are weak-acid systems, whereas the first ionisation of H₂SO₄ is strong. Do not compare pH at equal concentrations merely by counting H atoms in the acid formula.
+
+#### Example 2: Solubility does not determine acid–base character (self-written) {#example-2}
+
+**Question:** Why is Al₂O₃ amphoteric despite showing no obvious reaction with water? How can SiO₂ be shown to be an acidic oxide?
+
+**Method:** Use reactions with acid and alkali as evidence, rather than deciding from solubility in water.
+
+1. Al₂O₃ reacts with acid to form Al³⁺ and water, and under suitable strong-alkali conditions forms tetrahydroxoaluminate ions. The two equations above show basic and acidic behaviour, respectively, so the oxide is amphoteric.
+2. SiO₂ reacts with hot concentrated alkali to form silicate and water. The ionic equation above supports its acidic classification even though it does not react with water.
+3. **Answer:** Amphoterism requires evidence of reaction with both acid and alkali. Reaction with alkali supports an acidic-oxide classification; insolubility does not mean neutrality.
+
+**Independent check:** The Al₂O₃/alkali equation has 2 Al, 8 O and 8 H atoms on each side, with total charge −2. The SiO₂/alkali equation has 1 Si, 4 O and 2 H atoms on each side, also with total charge −2.
+
 <span id="真题磷燃烧后加入水"></span>
 
-### Q2 Exam question: Burning phosphorus, then adding water {#q2}
+#### Q2 Exam question: Burning phosphorus, then adding water {#q2}
 
 **OxfordAQA CH03 · June 2026 · 01.2 · 2 marks**
 
@@ -188,7 +195,7 @@ $\ce{P4 + 5O2 -> P4O10}$; $\ce{P4O10 + 6H2O -> 4H3PO4}$, 1 mark each. Use molecu
 
 <span id="真题alo-的酸性反应与水中现象"></span>
 
-### Q3 Exam question: Al₂O₃ with acid and in water {#q3}
+#### Q3 Exam question: Al₂O₃ with acid and in water {#q3}
 
 **OxfordAQA CH03 · January 2025 · 08.2–08.3 · 1 + 1 marks**
 
@@ -212,6 +219,34 @@ MS p. 26.
 
 </details>
 
+<span id="酸及阴离子的结构"></span>
+
+### Structures of acids and their anions {#oxoacid-structures}
+
+Attach acidic H atoms to O when drawing structures. Then remove H⁺ stepwise, marking the negative charge on the relevant O:
+
+| Acid connectivity | Anions | Drawing checks |
+| --- | --- | --- |
+| H₃PO₄: $\ce{O=P(OH)3}$ | H₂PO₄⁻, HPO₄²⁻, PO₄³⁻ | Four O atoms around P in a tetrahedral arrangement; three O–H groups can ionise stepwise |
+| Textbook representation of H₂SO₃: $\ce{O=S(OH)2}$ | HSO₃⁻, SO₃²⁻ | Three O atoms around S and a lone pair; SO₃²⁻ is trigonal pyramidal |
+| H₂SO₄: $\ce{O=S(=O)(OH)2}$ | HSO₄⁻, SO₄²⁻ | Four O atoms around S, tetrahedral; both H atoms attach to O |
+| Si–OH-containing intermediate in SiCl₄ hydrolysis: $\ce{Si(OH)4}$ | Silicate is often represented as SiO₃²⁻ in alkali reactions | Four O atoms around Si; condensation can form hydrated SiO₂ containing Si–O–Si links |
+{: .wide-table}
+
+These are connectivity and examination drawing models. Anions have delocalised electrons; a double bond in one drawing is not the uniquely localised real structure.
+
+#### Example 3: Drawing a conjugate base from an oxoacid (self-written) {#example-3}
+
+**Question:** Give one valid connectivity representation of H₃PO₄ and H₂PO₄⁻.
+
+**Method:** Connect P to four O atoms and attach acidic H atoms to O. Remove only one H⁺.
+
+1. Represent H₃PO₄ as O=P(OH)₃: one P=O and three P–O–H groups.
+2. Remove H⁺ from one O–H group to obtain O=P(OH)₂(O⁻). Its O atom stays in the structure.
+3. **Answer:** H₂PO₄⁻ still has four O atoms and two O–H groups, with overall charge −1. The four bonding directions around P are tetrahedral.
+
+**Independent check:** Both structures contain one P and four O atoms. The H count falls from 3 to 2 and the acid becomes a −1 anion. The dissociation products have total charge −1 + 1 = 0, matching the neutral acid. No OH⁻ group is removed.
+
 <span id="p2氯化物溶解与水解"></span>
 
 ## P2: Chlorides, dissolution and hydrolysis {#chlorides}
@@ -222,15 +257,20 @@ Distinguish **dissolution**, which brings existing species into solution, from *
 | --- | --- | --- |
 | NaCl | Ionic crystal | Dissolves into Na⁺ and Cl⁻; approximately neutral solution |
 | MgCl₂ | Mainly ionic crystal | Dissolves; hydrated Mg²⁺ makes the solution slightly acidic |
-| AlCl₃ | Anhydrous material has substantial covalent character and can form Al₂Cl₆ | Hydrated Al³⁺ forms in water and undergoes acidic hydrolysis |
+| AlCl₃ | Phase-dependent structure; liquid can be represented by Al₂Cl₆ dimers | Hydrated Al³⁺ forms in water and undergoes acidic hydrolysis |
 | SiCl₄ | Simple molecular, covalent | Reacts with water, forming silicon-containing products and HCl; acidic system |
 | PCl₅ | Solid represented by $\ce{[PCl4]+[PCl6]^-}$; gas is molecular | Excess water ultimately forms H₃PO₄ and HCl |
+{: .wide-table}
 
 Al₂Cl₆ has bridging chlorine atoms and coordinate bonds; do not draw two disconnected AlCl₃ units. The acidity of hydrated Al³⁺ is developed in [ions in solution](/alevel/a2-chemistry/ions-in-solution/#aqua-acidity).
 
-Explain chloride melting points from structure first. NaCl and MgCl₂ have giant ionic lattices with strong attractions between ions to overcome. Phase changes of molecular substances such as anhydrous Al₂Cl₆ and SiCl₄ mainly overcome intermolecular forces. Solid PCl₅ differs from its gas-phase structure; not all chlorides on the right of the period are liquids at room temperature.
+Specify the phase and structure before explaining a chloride phase change. NaCl and MgCl₂ have giant ionic lattices with strong ionic attractions; SiCl₄ is simple molecular and its phase changes mainly overcome intermolecular forces. Solid PCl₅ differs from its gas-phase structure; do not treat all chlorides on the right as room-temperature liquids.
 
-$$\ce{SiCl4 + 2H2O -> SiO2 + 4HCl},\qquad\ce{PCl5 + 4H2O -> H3PO4 + 5HCl}.$$
+**AlCl₃ model limit:** the Al₂Cl₆ dimer describes the liquid and vapour in an appropriate temperature range, not a room-temperature crystal made of separate dimers. Melting crystalline AlCl₃ changes its structure and the coordination environment of Al; the whole change cannot be explained as overcoming only intermolecular forces between dimers. The [research abstract of Bernasconi et al. (2002)](https://pubs.rsc.org/en/content/articlelanding/2002/qu/b107715e) distinguishes the crystal from the dimeric liquid and reports coordination changing from six to four. This limits the teaching model; detailed crystal theory is not an additional examination requirement here.
+
+$$\ce{SiCl4 + 2H2O -> SiO2 + 4HCl}.$$
+
+$$\ce{PCl5 + 4H2O -> H3PO4 + 5HCl}.$$
 
 SiCl₄ hydrolysis can proceed through Si–OH-containing species and form hydrated silica. The equation above is a common overall representation. Distinguish white fumes, a white precipitate and a white solid in observation questions, according to the actual context.
 

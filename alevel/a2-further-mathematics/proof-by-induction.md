@@ -5,7 +5,7 @@ mathjax: true
 grade: a2
 subject: a2-further-mathematics
 permalink: /alevel/a2-further-mathematics/proof-by-induction/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -464,7 +464,7 @@ The minus sign matters.
 
 ### Question 6 — Original AQA practice
 
-**Source:** AQA MFP2, June 2006, Question 6, reproduced as Chapter 18, practice examination Question 5, printed p. 218. Original wording and marks are retained.
+**Source:** AQA Mathematics 6360, MFP2, June 2006, Question 6. **4 + 4 marks**. Textbook cross-reference: Chapter 18, practice examination question 5, printed p. 218. [Question paper](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202006%20QP%20-%20FP2%20AQA.PDF), [AQA mark scheme](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202006%20MS%20-%20FP2%20AQA.PDF).
 
 **a** The function $f$ is given by
 
@@ -516,7 +516,7 @@ By the assumption, $f(m)$ is a multiple of $7$. Also, $15^m$ is an integer. Both
 
 **Check:** $f(3)=3375-8=3367=7(481)$. Do not start this proof at $n=1$: $8^{n-2}$ would not be an integer.
 
-This is our worked solution, not an official mark scheme.
+**Mark-scheme comparison:** Part (a) gives 7 × 15ⁿ. In part (b), establish n = 2, state the induction hypothesis, use part (a) in the induction step, and give the conclusion for all integers n ≥ 2. Our working has been checked against the linked AQA mark scheme; these explanations are our own, not an official mark scheme.
 
 </details>
 

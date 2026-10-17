@@ -5,7 +5,7 @@ mathjax: true
 grade: a2
 subject: a2-mathematics
 permalink: /alevel/a2-mathematics/vectors/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -103,6 +103,7 @@ For $\mathbf r=\mathbf a+\lambda\mathbf b$ and $\mathbf r=\mathbf c+\mu\mathbf d
 |---|---|---|
 | Scalar multiples | Is a point from one line also on the other? | Same line if yes; distinct parallel lines if no |
 | Not scalar multiples | Can one pair $(\lambda,\mu)$ satisfy all three component equations? | Intersecting if yes; skew if no |
+{: .wide-table}
 
 **Skew lines** are lines in three dimensions which are neither parallel nor intersecting. Use separate parameters for the two lines: they need not have the same value at an intersection.
 
@@ -394,6 +395,7 @@ The point $H$ lies on the line, and $(-1)(1)+(1)(0)+(1)(1)=0$. The distance to t
 | Vector angle | $\frac{\mathbf a\cdot\mathbf b}{\lvert\mathbf a\rvert\lvert\mathbf b\rvert}$ gives its cosine | Keep the sign; neither vector can be zero |
 | Acute line angle | Use the modulus of the scalar product | Use direction vectors, not position vectors |
 | Perpendicular distance | Find $H$ on the line with $\overrightarrow{PH}\cdot\mathbf b=0$ | Check the line equation and take $\lvert\overrightarrow{PH}\rvert$ |
+{: .wide-table}
 
 **If your answer looks wrong:** check vector direction, component signs, parameter values and angle mode. Keep exact magnitudes until the final calculation.
 

@@ -5,7 +5,7 @@ mathjax: true
 grade: a2
 subject: a2-mathematics
 permalink: /alevel/a2-mathematics/partial-fractions/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -38,6 +38,7 @@ If you used the same form for both expressions, check the degrees of the numerat
 | Degree of numerator ≥ degree of denominator | Use algebraic division first | Express the proper fraction in partial fractions. Keep the quotient. |
 | Distinct linear factors | Use a constant numerator for each factor | For example, $\displaystyle \frac{A}{x-1}+\frac{B}{x+2}$ |
 | A repeated factor $(x-a)^2$ | Include both $\displaystyle \frac{A}{x-a}+\frac{B}{(x-a)^2}$ | Include every power up to the highest one |
+{: .wide-table}
 
 The first expression is a proper fraction. Rewrite the second as $1+\frac{-x+3}{(x-1)(x+2)}$ before decomposing the remainder.
 
@@ -126,6 +127,7 @@ Unsure which method fits your integral? Start with [Integration — Choosing a M
 | $\displaystyle \frac{A}{ax+b}$ | $\displaystyle \frac{A}{a}\ln\lvert ax+b\rvert$ | Divide by $a$, the derivative of $ax+b$. Use modulus signs. |
 | $\displaystyle \frac{B}{(ax+b)^2}$ | $\displaystyle -\frac{B}{a(ax+b)}$ | Use the power rule, not a logarithm |
 | Polynomial quotient | Integrate term by term | Include the quotient from division |
+{: .wide-table}
 
 Here $a\ne0$. Add $C$ for an indefinite integral. Use each result on an interval where the denominator is never zero.
 

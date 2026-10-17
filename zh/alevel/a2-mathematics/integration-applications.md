@@ -7,7 +7,7 @@ subject: a2-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-mathematics/integration-applications/
 permalink: /zh/alevel/a2-mathematics/integration-applications/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -35,6 +35,7 @@ study_page: true
 | $\cos x$ 的奇次幂 | 保留一个因子 $\cos x$；其余部分使用 $\cos^2x=1-\sin^2x$ | 尝试令 $u=\sin x$，此时 $du=\cos x\,dx$ |
 | 只有 $\sin x$ 和 $\cos x$ 的偶次幂 | 使用二倍角恒等式（double angle identity） | 把平方项改写为常数项和余弦项 |
 | $\tan x$ 的幂 | 使用 $\tan^2x=\sec^2x-1$ 降低幂次 | 含 $\sec^2x$ 的项可能适合令 $u=\tan x$ |
+{: .wide-table}
 
 若角的表达式是 $2x$ 或 $3x$ 等形式，对整个角使用相同恒等式。积分时要补上内层函数导数所对应的倒数系数。
 
@@ -377,6 +378,7 @@ $$\boxed{\frac{9\pi}{2}\text{ cubic units}}.$$
 | 两条曲线之间的面积 | 积分上方曲线减下方曲线 | 求交点；若上下顺序变化则分段 |
 | 绕 $x$ 轴旋转的体积 | $\displaystyle V=\pi\int_a^b y^2\,dx$ | 整个半径要平方；使用 $x$ 的积分限 |
 | 绕 $y$ 轴旋转的体积 | $\displaystyle V=\pi\int_c^d x^2\,dy$ | 把 $x^2$ 写成关于 $y$ 的表达式；使用 $y$ 的积分限 |
+{: .wide-table}
 
 **如果答案看起来不对：**对不定积分结果求导；检查面积计算中的符号，以及体积计算中的半径、积分限和单位。像 $\pi$ 这样的精确值应尽量保留到最后。
 

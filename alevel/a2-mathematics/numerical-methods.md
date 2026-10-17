@@ -5,7 +5,7 @@ mathjax: true
 grade: a2
 subject: a2-mathematics
 permalink: /alevel/a2-mathematics/numerical-methods/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -155,7 +155,7 @@ There are $n$ midpoint heights for $n$ strips. Add those heights, then multiply 
 
 ![Four rectangles approximate the area under y equals x squared from zero to two. Each rectangle has width 0.5 and its height is taken at the midpoint of the strip.](/assets/img/numerical-mid-ordinate.svg)
 
-### Example 4 — Choose the midpoints, not the endpoints
+#### Example 4 — Choose the midpoints, not the endpoints
 
 **Question:** Estimate $\displaystyle\int_0^2x^2\,dx$ using the mid-ordinate rule with $4$ strips.
 
@@ -194,7 +194,7 @@ I\approx\frac h3\big[&(y_0+y_n)\\
 
 The endpoint weights are $1$. The inside weights alternate $4,2,4,2,\ldots,4$.
 
-### Example 5 — Apply the weights
+#### Example 5 — Apply the weights
 
 **Question:** Estimate $\displaystyle\int_0^2e^x\,dx$ using Simpson's rule with $4$ strips. Give the estimate to $4$ decimal places.
 
@@ -216,7 +216,7 @@ $$\boxed{I\approx6.3912}.$$
 
 **Improve the estimate:** use $8$ strips with $h=0.25$ and $9$ boundary ordinates, retaining the alternating weights. This gives $I\approx6.389193725$. Compared with $e^2-1$, the absolute error falls from about $0.00215409$ to $0.00013763$. Keep the number of strips even when refining Simpson's rule.
 
-### Example 6 — Work from a table
+#### Example 6 — Work from a table
 
 **Question:** Use Simpson's rule to estimate the integral from $0$ to $2$ for a function with the following ordinates.
 
@@ -411,6 +411,7 @@ Check both the number of strips and their widths. Boundary heights are not midpo
 | Verify decimal places | Test the original function at rounding boundaries | Use a sign-change interval inside the required rounding range |
 | Mid-ordinate rule | Find $h$ and the $n$ midpoint heights | Use strip centres, not boundaries |
 | Simpson's rule | Find $h$ and the $n+1$ boundary ordinates | Equal spacing, even strips, weights $1,4,2,\ldots,4,1$ |
+{: .wide-table}
 
 **If your answer looks wrong:** check the original equation, starting index, calculator angle mode, strip count, positions and weights. Keep extra digits in intermediate values and round the final answer as requested.
 

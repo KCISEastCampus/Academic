@@ -7,7 +7,7 @@ subject: a2-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-mathematics/modulus-and-transformations/
 permalink: /zh/alevel/a2-mathematics/modulus-and-transformations/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -35,6 +35,7 @@ $$\lvert x\rvert=\begin{cases}x,&x\geq0,\\-x,&x<0.\end{cases}$$
 |---|---|---|
 | $y=\lvert f(x)\rvert$ | $x$ 轴上方及轴上的部分 | 将 $x$ 轴下方的部分关于 $x$ 轴翻折 |
 | $y=f(\lvert x\rvert)$ | $x\geq0$ 的部分 | 将这部分关于 $y$ 轴翻折，得到 $x<0$ 的部分 |
+{: .wide-table}
 
 对于 $y=\lvert f(x)\rvert$，定义域不变。对于 $y=f(\lvert x\rvert)$，输入 $x$ 只有在 $\lvert x\rvert$ 属于 $f$ 的定义域时才允许。表中的图像规则只适用于允许的非负输入值。
 
@@ -83,6 +84,7 @@ $$y=\begin{cases}x^2-4,&x\leq-2\text{ or }x\geq2,\\4-x^2,&-2<x<2.\end{cases}$$
 | $y=f(ax)$，$a>0$ | 沿平行于 $x$ 轴的方向单向伸缩，伸缩因子为 $\displaystyle\frac1a$ | $(\displaystyle\frac pa,q)$ |
 | $y=-f(x)$ | 关于 $x$ 轴翻折（reflection） | $(p,-q)$ |
 | $y=f(-x)$ | 关于 $y$ 轴翻折 | $(-p,q)$ |
+{: .wide-table}
 
 **函数内部的变化：**改变输入坐标。**函数外部的变化：**改变输出坐标。伸缩因子介于 $0$ 与 $1$ 之间时，图像沿所述方向变窄或变矮。
 
@@ -98,6 +100,7 @@ $$y=\begin{cases}x^2-4,&x\leq-2\text{ or }x\geq2,\\4-x^2,&-2<x<2.\end{cases}$$
 | 2 | 沿 $\begin{pmatrix}2\\\\0\end{pmatrix}$ 平移 | $y=f(2(x-2))$ |
 | 3 | 沿平行于 $y$ 轴的方向单向伸缩，伸缩因子为 $2$ | $y=2f(2(x-2))$ |
 | 4 | 沿 $\begin{pmatrix}0\\\\-1\end{pmatrix}$ 平移 | $y=2f(2x-4)-1$ |
+{: .wide-table}
 
 **用一个点检查：**如果原图像上有点 $(p,q)$，新的输入必须满足 $2x-4=p$。因此，
 

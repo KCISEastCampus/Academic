@@ -5,7 +5,7 @@ mathjax: true
 grade: a2
 subject: a2-physics
 permalink: /alevel/a2-physics/simple-harmonic-motion/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
@@ -240,7 +240,7 @@ The constant weight cancels the spring force at equilibrium. The same period for
 
 For this vertical system, $kx^2/2$ is the **combined spring and gravitational potential energy relative to equilibrium**, not the spring's elastic energy alone. The spring's elastic energy is $k(e_0+x)^2/2$.
 
-### Example 4: a vertical spring
+#### Example 4: a vertical spring
 
 A $0.25\,\mathrm{kg}$ mass hangs from a spring of constant $40\,\mathrm{N\,m^{-1}}$. It oscillates with amplitude $0.020\,\mathrm m$. Find the equilibrium extension, period and acceleration when it is $0.020\,\mathrm m$ below equilibrium.
 
@@ -256,7 +256,7 @@ The acceleration is upwards. The mass is at its lower turning point, so its velo
 
 **Check using actual forces:** the spring force is $mg+kx=2.4525+0.80=3.2525\,\mathrm N$ upwards. The resultant is $0.80\,\mathrm N$ upwards, giving $a=0.80/0.25=3.2\,\mathrm{m\,s^{-2}}$ upwards.
 
-### Derive the period of a simple pendulum
+### Simple pendulum: model and period {#derive-the-period-of-a-simple-pendulum}
 
 Let $L$ be the distance from the pivot to the centre of the bob. Measure the signed displacement $x=L\theta$ **along the arc** from the lowest point, with $\theta$ in radians.
 
@@ -276,7 +276,7 @@ The approximation is good for small swings, typically around $10^\circ$ or less.
 
 Here $a$ means **tangential acceleration**. At the lowest point this is zero, but the bob still has radial acceleration $v^2/L$ towards the pivot. Tension is therefore greater than weight at that instant. This connects SHM to [circular motion force equations](/alevel/a2-physics/circular-motion/#force-equations).
 
-### Example 5: period and speed of a pendulum
+#### Example 5: period and speed of a pendulum
 
 A $0.10\,\mathrm{kg}$ bob hangs from a light string of length $0.80\,\mathrm m$. It is released from rest $0.0030\,\mathrm m$ above its lowest point. Find the approximate period and its speed at the lowest point.
 
@@ -302,6 +302,7 @@ Keep pendulum swings small and measure $L$ from the pivot to the bob's centre. F
 |---|---|---|
 | $T^2$ against oscillating mass $m$ | Effective spring constant $k$ | $S=4\pi^2/k$; find $k=4\pi^2/S$ |
 | $T^2$ against pendulum length $L$ | $g$, with small swings | $S=4\pi^2/g$; find $g=4\pi^2/S$ |
+{: .wide-table}
 
 Both ideal graphs are straight lines through the origin. A real intercept may reveal an unaccounted hanger mass, spring mass or length offset. Do not force a best-fit line through the origin without considering the model and data. Use a large gradient triangle on the best-fit line, rather than two neighbouring data points.
 

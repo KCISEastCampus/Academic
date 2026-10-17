@@ -7,7 +7,7 @@ subject: a2-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-mathematics/functions/
 permalink: /zh/alevel/a2-mathematics/functions/
-toc_headings: h2
+toc_headings: h2, h3, h4
 study_page: true
 ---
 
