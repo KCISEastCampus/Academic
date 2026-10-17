@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 530" role="img" aria-labelledby="title desc">
+<title id="title">Consumer energy account</title>
+<desc id="desc">Ingested chemical energy branches into faeces, urine, respiratory use and new biomass. Organic waste can feed decomposers. This qualitative diagram does not use arrow widths as numbers.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#334155"/></marker></defs>
+<rect width="600" height="530" rx="12" fill="#ffffff"/>
+<g font-family="Arial, sans-serif" font-size="20" fill="#172554" stroke-linecap="round" stroke-linejoin="round">
+
+<text x="24" y="36" font-size="25" font-weight="bold">Consumer: where ingested energy goes</text>
+<rect x="135" y="67" width="330" height="65" rx="12" fill="#eff6ff" stroke="#1e40af" stroke-width="2"/>
+<text x="179" y="107">I: energy in ingested food</text>
+<path d="M300 132V170" fill="none" stroke="#334155" stroke-width="3"/>
+<path d="M300 170H160V203" fill="none" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M300 170H440V203" fill="none" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="35" y="215" width="250" height="70" rx="10" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<text x="106" y="246">F: faeces</text><text x="73" y="271" font-size="18">unassimilated material</text>
+<rect x="315" y="215" width="250" height="70" rx="10" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<text x="395" y="246">U: urine</text><text x="355" y="271" font-size="18">metabolic waste</text>
+<path d="M300 170V324" fill="none" stroke="#334155" stroke-width="3"/>
+<path d="M300 324H160V355" fill="none" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M300 324H440V355" fill="none" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="35" y="367" width="250" height="70" rx="10" fill="#fff7ed" stroke="#9a3412" stroke-width="2"/>
+<text x="91" y="398">R: respiration</text><text x="77" y="423" font-size="18">ultimately dissipates heat</text>
+<rect x="315" y="367" width="250" height="70" rx="10" fill="#ecfdf5" stroke="#047857" stroke-width="2"/>
+<text x="356" y="398">N: net production</text><text x="370" y="423" font-size="18">new biomass</text>
+<text x="135" y="477" font-size="24">N = I − (F + U + R)</text>
+<text x="24" y="514" font-size="16">Same interval and energy units throughout. Arrow widths are not data.</text>
+</g></svg>

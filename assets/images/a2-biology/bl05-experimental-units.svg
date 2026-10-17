@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 500" role="img" aria-labelledby="title desc">
+  <title id="title">Experimental units in a seedling-density investigation</title>
+  <desc id="desc">Six separate pots form independent treatment units. Pots L1, L2 and L3 each contain two schematic seedlings. Pots H1, H2 and H3 each contain six. Seedlings within one pot share soil and treatment. These are design groups, not results.</desc>
+  <defs>
+    <g id="seedling" fill="none" stroke="#256443" stroke-width="3" stroke-linecap="round">
+      <path d="M0 0v-30M0-16q-14 0-14-12 14 0 14 12M0-23q14 0 14-12-14 0-14 12"/>
+    </g>
+    <g id="pot">
+      <path d="M-83 0h166l-12 66H-71Z" fill="#e8d6be" stroke="#584535" stroke-width="2"/>
+      <path d="M-83 0h166" stroke="#584535" stroke-width="4"/>
+    </g>
+  </defs>
+  <rect width="720" height="500" rx="12" fill="#fffdf7"/>
+  <g font-family="Arial, sans-serif" fill="#172c35" text-anchor="middle">
+    <text x="360" y="35" font-size="23" font-weight="bold">Independent units are separate pots</text>
+    <text x="360" y="64" font-size="16">Original teaching schematic · not to scale · not observed results</text>
+    <text x="360" y="104" font-size="20" font-weight="bold">Low density: 2 seedlings per pot</text>
+    <g transform="translate(125 172)">
+      <use href="#seedling" x="-28"/><use href="#seedling" x="28"/><use href="#pot"/>
+      <text x="0" y="42" font-size="22" font-weight="bold">L1</text>
+    </g>
+    <g transform="translate(360 172)">
+      <use href="#seedling" x="-28"/><use href="#seedling" x="28"/><use href="#pot"/>
+      <text x="0" y="42" font-size="22" font-weight="bold">L2</text>
+    </g>
+    <g transform="translate(595 172)">
+      <use href="#seedling" x="-28"/><use href="#seedling" x="28"/><use href="#pot"/>
+      <text x="0" y="42" font-size="22" font-weight="bold">L3</text>
+    </g>
+    <text x="360" y="284" font-size="20" font-weight="bold">High density: 6 seedlings per pot</text>
+    <g transform="translate(125 352)">
+      <use href="#seedling" x="-65"/><use href="#seedling" x="-39"/><use href="#seedling" x="-13"/>
+      <use href="#seedling" x="13"/><use href="#seedling" x="39"/><use href="#seedling" x="65"/><use href="#pot"/>
+      <text x="0" y="42" font-size="22" font-weight="bold">H1</text>
+    </g>
+    <g transform="translate(360 352)">
+      <use href="#seedling" x="-65"/><use href="#seedling" x="-39"/><use href="#seedling" x="-13"/>
+      <use href="#seedling" x="13"/><use href="#seedling" x="39"/><use href="#seedling" x="65"/><use href="#pot"/>
+      <text x="0" y="42" font-size="22" font-weight="bold">H2</text>
+    </g>
+    <g transform="translate(595 352)">
+      <use href="#seedling" x="-65"/><use href="#seedling" x="-39"/><use href="#seedling" x="-13"/>
+      <use href="#seedling" x="13"/><use href="#seedling" x="39"/><use href="#seedling" x="65"/><use href="#pot"/>
+      <text x="0" y="42" font-size="22" font-weight="bold">H3</text>
+    </g>
+    <text x="360" y="458" font-size="18">Within one pot: shared soil and treatment environment</text>
+    <text x="360" y="484" font-size="17">Keep pot IDs when recording and analysing the measurements.</text>
+  </g>
+</svg>

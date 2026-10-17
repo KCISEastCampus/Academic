@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" role="img" aria-labelledby="title desc">
+<title id="title">Nitrogen-cycle process map</title>
+<desc id="desc">Nitrogen fixation moves nitrogen from atmospheric N2 to ammonium or organic compounds. Ammonification releases ammonium; aerobic nitrification converts ammonium through nitrite to nitrate. Assimilation makes organic nitrogen. Oxygen-limited denitrification returns nitrate nitrogen to the atmosphere.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#334155"/></marker></defs>
+<rect width="600" height="750" rx="12" fill="#ffffff"/>
+<g font-family="Arial, sans-serif" font-size="20" fill="#172554" stroke-linecap="round" stroke-linejoin="round">
+
+<text x="24" y="36" font-size="25" font-weight="bold">Nitrogen: forms, processes, conditions</text>
+<rect x="40" y="66" width="520" height="62" rx="12" fill="#eff6ff" stroke="#1e40af" stroke-width="2"/>
+<text x="198" y="105">Atmospheric N₂</text>
+<rect x="40" y="280" width="220" height="60" rx="10" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<text x="77" y="318">Ammonium NH₄⁺</text>
+<rect x="340" y="280" width="220" height="60" rx="10" fill="#ecfdf5" stroke="#047857" stroke-width="2"/>
+<text x="387" y="318">Organic N</text>
+<path d="M70 128V270" fill="none" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="95" y="171" font-size="18">Fixation by microbes</text>
+<text x="95" y="199" font-size="18">→ reduced N</text>
+<text x="95" y="227" font-size="16">(then NH₄⁺ / organic N)</text>
+<path d="M340 298H270" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="295" y="260" text-anchor="middle" font-size="18">Ammonification</text>
+<path d="M260 330H330" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="300" y="372" text-anchor="middle" font-size="18">Assimilation</text>
+<rect x="40" y="451" width="220" height="60" rx="10" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<text x="93" y="489">Nitrite NO₂⁻</text>
+<rect x="40" y="615" width="220" height="60" rx="10" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<text x="89" y="653">Nitrate NO₃⁻</text>
+<path d="M150 340V441" stroke="#334155" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+<path d="M150 511V605" stroke="#334155" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+<text x="172" y="418" font-size="18">Nitrification</text>
+<text x="172" y="565" font-size="18">Nitrification</text>
+<text x="172" y="590" font-size="16">(both aerobic)</text>
+<path d="M260 630H420V350" stroke="#334155" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+<text x="434" y="530" font-size="18">Assimilation</text>
+<path d="M260 661H575V97H568" stroke="#334155" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+<text x="350" y="184" font-size="18">Denitrification</text>
+<text x="350" y="211" font-size="16">(oxygen-limited)</text>
+<text x="24" y="717" font-size="16">Organic N includes living biomass, dead material and waste.</text>
+<text x="24" y="740" font-size="16">Qualitative teaching map. Arrow widths do not represent flux.</text>
+</g></svg>

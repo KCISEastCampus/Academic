@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 810" role="img" aria-labelledby="title desc">
+<title id="title">Three selection patterns shown as relative fitness</title>
+<desc id="desc">Each graph uses trait value on the horizontal axis and relative fitness on the vertical axis. Directional selection favours one end; stabilising favours intermediates; disruptive favours both extremes. These qualitative fitness curves are not observed population-frequency distributions.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#334155"/></marker></defs>
+<rect width="600" height="810" rx="12" fill="#ffffff"/>
+<g font-family="Arial, sans-serif" font-size="20" fill="#172554" stroke-linecap="round" stroke-linejoin="round">
+
+<text x="24" y="36" font-size="25" font-weight="bold">Which phenotypes leave more offspring?</text>
+<text x="24" y="65" font-size="17">Vertical axis in every panel: relative fitness</text>
+<text x="155" y="109" font-weight="bold">Directional selection</text>
+<path d="M75 242V132 M75 242H551" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="19" y="145" font-size="16">High</text><text x="22" y="237" font-size="16">Low</text>
+<path d="M100 223C230 218 360 177 525 140" fill="none" stroke="#0369a1" stroke-width="5"/>
+<text x="233" y="272" font-size="18">Trait value →</text>
+<text x="155" y="333" font-weight="bold">Stabilising selection</text>
+<path d="M75 466V356 M75 466H551" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="19" y="369" font-size="16">High</text><text x="22" y="461" font-size="16">Low</text>
+<path d="M100 448C205 442 220 365 310 365C400 365 415 442 525 448" fill="none" stroke="#047857" stroke-width="5"/>
+<text x="233" y="496" font-size="18">Trait value →</text>
+<text x="155" y="557" font-weight="bold">Disruptive selection</text>
+<path d="M75 690V580 M75 690H551" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="19" y="593" font-size="16">High</text><text x="22" y="685" font-size="16">Low</text>
+<path d="M100 594C190 596 225 674 310 674C395 674 430 596 525 594" fill="none" stroke="#9a3412" stroke-width="5"/>
+<text x="233" y="720" font-size="18">Trait value →</text>
+<text x="24" y="766" font-size="18">Constructed qualitative models; no measured values.</text>
+<text x="24" y="795" font-size="16">Trait-frequency changes also require inheritance across generations.</text>
+</g></svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 540" role="img" aria-labelledby="title desc">
+<title id="title">Gas exchange versus net volume</title>
+<desc id="desc">A gas-space boundary contains two opposing transfers: oxygen consumption and carbon dioxide production. An optional absorber removes carbon dioxide from the gas space. Arrow lengths and widths do not represent rates.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#334155"/></marker></defs>
+<rect width="600" height="540" rx="12" fill="#ffffff"/>
+<g font-family="Arial, sans-serif" font-size="20" fill="#172554" stroke-linecap="round" stroke-linejoin="round">
+
+<text x="24" y="36" font-size="25" font-weight="bold">Gas exchange ≠ net gas change</text>
+<rect x="35" y="75" width="530" height="140" rx="14" fill="#eff6ff" stroke="#1e40af" stroke-width="2"/>
+<text x="230" y="110" font-size="24">GAS SPACE</text>
+<text x="67" y="149">Read final volume − initial volume.</text>
+<text x="67" y="181">Keep temperature and pressure comparable.</text>
+<rect x="35" y="350" width="310" height="96" rx="14" fill="#ecfdf5" stroke="#047857" stroke-width="2"/>
+<text x="105" y="389">RESPIRING</text><text x="103" y="420">ORGANISM</text>
+<path d="M125 215V342" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="45" y="260">O₂</text><text x="31" y="290" font-size="18">consumed</text>
+<path d="M275 350V224" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="183" y="260">CO₂</text><text x="167" y="290" font-size="18">produced</text>
+<rect x="387" y="350" width="178" height="96" rx="14" fill="#fff7ed" stroke="#9a3412" stroke-width="2"/>
+<text x="412" y="388">OPTIONAL</text><text x="410" y="420">ABSORBER</text>
+<path d="M550 215V342" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="399" y="260">CO₂ removed</text><text x="401" y="290" font-size="18">if absorbed</text>
+<text x="24" y="489">A zero net change can hide nonzero exchange.</text>
+<text x="24" y="521" font-size="16">Teaching model. Arrows represent transfers, not measured rates.</text>
+</g></svg>

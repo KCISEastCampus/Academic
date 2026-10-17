@@ -188,11 +188,11 @@ for (const slug of slugs) {
 }
 assert.equal(groups, 32);
 const subjects = read('_data/subjects.yml');
-assert(/id: a2chemistry\s+name: A2 Chemistry\s+name_zh: A2化学\s+icon:/.test(subjects));
+assert(/id: a2chemistry\s+name: A2 Chemistry\s+name_zh: A2 化学\s+icon:/.test(subjects));
 for (const prefix of sourceOnly ? [] : ['', '/zh']) {
   const level = built(`${prefix}/alevel/`);
   assert(level.includes(`href="${prefix}/${course}/"`), 'Localized subject card');
-  assert(level.includes(prefix ? 'A2化学' : 'A2 Chemistry'), 'Localized subject name');
+  assert(level.includes(prefix ? 'A2 化学' : 'A2 Chemistry'), 'Localized subject name');
 }
 console.log(sourceOnly
   ? 'CH03 sources passed: calculations, entropy/curve/EMF data, atom/charge balance, 7 bilingual pairs, 32 authentic exam groups, formula/source/image/prompt parity and heading ownership. Build and browser checks pending.'

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 580" role="img" aria-labelledby="title desc">
+<title id="title">Mitochondrial proton gradient</title>
+<desc id="desc">Teaching model, not to scale. Electron carriers pump protons from the matrix to the intermembrane space. Protons return through ATP synthase to the matrix; oxygen accepts electrons and forms water.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#334155"/></marker></defs>
+<rect width="600" height="580" rx="12" fill="#ffffff"/>
+<g font-family="Arial, sans-serif" font-size="20" fill="#172554" stroke-linecap="round" stroke-linejoin="round">
+
+<text x="24" y="36" font-size="25" font-weight="bold">Respiration: membrane and direction</text>
+<text x="24" y="85" font-weight="bold">INTERMEMBRANE SPACE</text>
+<text x="24" y="116">Higher proton concentration</text>
+<rect x="24" y="216" width="552" height="66" fill="#e0f2fe" stroke="#0369a1" stroke-width="2"/>
+<text x="24" y="380" font-size="18">Inner mitochondrial membrane</text>
+<rect x="110" y="204" width="134" height="90" rx="10" fill="#f1f5f9" stroke="#334155" stroke-width="2"/>
+<text x="130" y="242">Electron</text><text x="136" y="268">carriers</text>
+<rect x="375" y="204" width="134" height="90" rx="10" fill="#fef3c7" stroke="#334155" stroke-width="2"/>
+<text x="421" y="242">ATP</text><text x="395" y="268">synthase</text>
+<path d="M175 350V294 M175 204V147" fill="none" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="192" y="174">H⁺ pumped out</text>
+<path d="M440 147V204 M440 294V360" fill="none" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="459" y="172">H⁺</text>
+<text x="329" y="390">ADP + Pᵢ → ATP</text>
+<text x="24" y="433" font-weight="bold">MATRIX</text>
+<text x="24" y="469">Reduced NAD / FAD donate electrons.</text>
+<text x="24" y="502">Electron transfer supplies pumping energy.</text>
+<text x="24" y="535">At the chain end: O₂ + electrons + H⁺ → water</text>
+<text x="24" y="565" font-size="16">Arrows across the membrane show proton movement.</text>
+</g></svg>

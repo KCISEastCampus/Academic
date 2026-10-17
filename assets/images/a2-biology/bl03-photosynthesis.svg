@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 680" role="img" aria-labelledby="title desc">
+<title id="title">Light reactions and the Calvin cycle</title>
+<desc id="desc">Non-cyclic electron flow starts at water and ends at NADP. Proton pumping and photolysis increase protons in the thylakoid lumen; ATP synthase lets protons return to the stroma. ATP and reduced NADP support the Calvin cycle, which fixes carbon dioxide.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#334155"/></marker></defs>
+<rect width="600" height="680" rx="12" fill="#ffffff"/>
+<g font-family="Arial, sans-serif" font-size="20" fill="#172554" stroke-linecap="round" stroke-linejoin="round">
+
+<text x="24" y="36" font-size="25" font-weight="bold">Light reactions supply the Calvin cycle</text>
+<text x="24" y="85" font-weight="bold">THYLAKOID LUMEN</text>
+<text x="24" y="120">Photolysis: water → O₂ + H⁺ + electrons</text>
+<text x="24" y="155">H⁺ accumulates in the lumen.</text>
+<rect x="24" y="215" width="552" height="75" fill="#dcfce7" stroke="#166534" stroke-width="2"/>
+<rect x="55" y="205" width="270" height="95" rx="10" fill="#f1f5f9" stroke="#334155" stroke-width="2"/>
+<text x="72" y="238">PSII → carriers → PSI</text>
+<text x="112" y="274">light excites electrons</text>
+<rect x="395" y="205" width="150" height="95" rx="10" fill="#fef3c7" stroke="#334155" stroke-width="2"/>
+<text x="448" y="240">ATP</text><text x="423" y="274">synthase</text>
+<path d="M180 360V300 M180 205V173" stroke="#334155" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+<text x="40" y="343">H⁺ pumped in</text>
+<path d="M470 172V205 M470 300V361" stroke="#334155" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+<text x="490" y="336">H⁺</text>
+<text x="24" y="402" font-weight="bold">STROMA</text>
+<text x="24" y="438">Electrons + NADP + H⁺ → reduced NADP</text>
+<text x="24" y="472">Returning H⁺ drives ADP + Pᵢ → ATP</text>
+<path d="M300 490V530" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="24" y="540" width="552" height="89" rx="12" fill="#eff6ff" stroke="#1e40af" stroke-width="2"/>
+<text x="40" y="573">Calvin cycle: CO₂ + RuBP → GP → TP</text>
+<text x="40" y="607">TP supplies organic products and regenerates RuBP.</text>
+<text x="24" y="659" font-size="16">Teaching schematic, not to scale. ATP/reduced NADP act in stroma.</text>
+</g></svg>
