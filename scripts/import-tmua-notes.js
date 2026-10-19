@@ -17,6 +17,13 @@ const main = extract(source, /<main>([\s\S]*?)<\/main>/);
 const footer = extract(source, /<footer>([\s\S]*?)<\/footer>/);
 const originalScript = extract(source, /<script>([\s\S]*?)<\/script>/);
 const problems = extract(source, /const PROBLEMS = ([\s\S]*?);\r?\n/);
+if (fs.existsSync(targetPath)) {
+  const current = fs.readFileSync(targetPath, 'utf8');
+  assert.equal(extract(current, /<main[^>]*>([\s\S]*?)<\/main>/).replace(/\r\n/g, '\n'), main.replace(/\r\n/g, '\n'),
+    'Existing academic notes differ; preserve the corrections in the source before re-importing.');
+  assert.deepEqual(JSON.parse(extract(current, /const PROBLEMS = ([\s\S]*?);\r?\n/)), JSON.parse(problems),
+    'Existing academic answers differ; preserve the corrections in the source before re-importing.');
+}
 const subtitle = extract(source, /<div class="sub">(.*?)<\/div>/);
 const panel = extract(source, /<aside id="panel">([\s\S]*?)<\/aside>/)
   .replace('<button id="panel-close" title="关闭">✕</button>',

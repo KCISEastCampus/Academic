@@ -31,6 +31,9 @@ jobs:
       - name: Test back-to-top positioning
         run: node scripts/test-back-to-top.js
 
+      - name: Test TMUA import protection
+        run: node scripts/test-tmua-import.js
+
       - name: Install markdownlint-cli
         run: npm install -g markdownlint-cli
 
