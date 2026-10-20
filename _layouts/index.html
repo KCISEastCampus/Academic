@@ -4,181 +4,100 @@ layout: none
 {% assign ui = site.data.ui[page.lang] | default: site.data.ui.en %}
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: 'en' }}">
-
 <head>
   {% include head.html %}
   <meta name="keywords" content="KCISEC, A level, IGCSE, education, resources, academic, study materials">
-  <meta name="author" content="EricStoneChina">
-  <script src="/assets/js/pop_ups.js"></script>
-  <link rel="stylesheet" href="/assets/css/home.css">
-  <link rel="stylesheet" href="/assets/css/exam-timetable.css">
+  <link rel="stylesheet" href="/assets/css/index.css">
 </head>
-
-<body>
+<body class="home-page">
   <a class="skip-link" href="#main-content" data-ui="skip_content">{{ ui.skip_content }}</a>
   {% include nav.html %}
-  {% include site_header.html
-     title=ui.homepage_title
-     subtitle=ui.homepage_subtitle %}
 
-  <main id="main-content" class="container" tabindex="-1">
-    <nav class="course-shortcuts" data-ui-aria="browse_courses" aria-label="{{ ui.browse_courses }}">
+  <header class="home-intro home-width">
+    <div class="home-heading">
+      <p class="home-school">
+        <img src="https://www.kcisec.site/assets/images/school-logo.svg" width="32" height="32" data-ui-alt="school_logo" alt="{{ ui.school_logo }}">
+        <span data-ui="home_school">{{ ui.home_school }}</span>
+      </p>
+      <h1 data-ui="home_resources">{{ ui.home_resources }}</h1>
+      <p class="home-summary" data-ui="home_intro">{{ ui.home_intro }}</p>
+    </div>
+    <button type="button" class="home-search" data-open-search aria-controls="siteSearchDialog" aria-haspopup="dialog" hidden>
+      <i class="bi bi-search" aria-hidden="true"></i>
+      <span data-ui="search_topics">{{ ui.search_topics }}</span>
+      <kbd aria-hidden="true">Ctrl+K</kbd>
+    </button>
+  </header>
+
+  <main id="main-content" class="home-width" tabindex="-1">
+    <nav class="home-jump" data-ui-aria="browse_courses" aria-label="{{ ui.browse_courses }}">
+      <span data-ui="browse_courses">{{ ui.browse_courses }}</span>
       <a href="#as-courses">AS</a>
       <a href="#a2-courses">A2</a>
       <a href="#igcse-courses">IGCSE</a>
     </nav>
 
-    <!-- A-Level Section -->
-    <section class="subjects-section fade-in" style="animation-delay: 0.1s;">
-      <div class="section-header">
-        <div class="header-content">
-          <h2 class="section-title">
-            <i class="bi bi-mortarboard-fill"></i>
-            A-Level
-          </h2>
-          <p class="section-subtitle" data-ui="alevel_description">{{ ui.alevel_description }}</p>
+    <div class="home-courses">
+      <section class="home-alevel" aria-labelledby="alevel-heading">
+        <h2 id="alevel-heading" class="home-program">A-Level</h2>
+        <div class="home-stages">
+          {% assign groups = 'AS,A2' | split: ',' %}
+          {% for group in groups %}
+          <section aria-labelledby="{{ group | downcase }}-courses">
+            <h3 id="{{ group | downcase }}-courses" class="home-stage">{{ group }}</h3>
+            <div class="course-list">
+              {% for subject in site.data.subjects.alevel %}
+                {% if subject.stage == group %}
+                  {% include home_subject.html subject=subject stage=group %}
+                {% endif %}
+              {% endfor %}
+            </div>
+          </section>
+          {% endfor %}
         </div>
-        <span class="section-badge" style="--accent-rgb: var(--accent-al-rgb); --accent-color: var(--accent-al);">
-          <i class="bi bi-book"></i>
-          <span data-ui="alevel_badge">{{ ui.alevel_badge }}</span>
-        </span>
-      </div>
-      
-      {% assign course_groups = 'AS,A2,Tools' | split: ',' %}
-      {% for group in course_groups %}
-      {% assign group_id = group | downcase | append: '-courses' %}
-      <h3 id="{{ group_id }}" class="course-group-title">{% if group == 'Tools' %}Casio fx-CG50{% else %}{{ group }}{% endif %}</h3>
-      <div class="subjects-grid-modern">
-        {% for subject in site.data.subjects.alevel %}
-          {% unless subject.stage == group %}{% continue %}{% endunless %}
-          {% assign subject_name = subject.name | default: 'Subject' %}
-          {% assign subject_description = subject.description %}
-          {% assign subject_path = subject.path %}
-          {% if page.lang == 'zh-CN' %}
-            {% assign subject_name = subject.name_zh | default: subject_name %}
-            {% assign subject_description = subject.description_zh %}
-            {% assign subject_translation = site.pages | where: 'translation_of', subject.path | first %}
-            {% if subject_translation %}{% assign subject_path = subject_translation.url %}{% endif %}
-          {% endif %}
-          <a href="{{ subject_path | relative_url }}" class="modern-subject-card" style="--accent-rgb: var(--accent-al-rgb); --accent-color: var(--accent-al);" title="{{ ui.view_resources | replace: '%subject%', subject_name }}" aria-label="{{ ui.view_resources | replace: '%subject%', subject_name | strip | escape }} — {{ subject_description | escape }}">
-            <div class="card-icon" aria-hidden="true">
-              {{ subject.icon }}
-            </div>
-            <div class="card-content">
-              <div class="card-title">{{ subject_name }}</div>
-              <div class="card-meta">
-                <span class="meta-text">{{ subject_description | escape }}</span>
-                <i class="bi bi-arrow-right hover-arrow" aria-hidden="true"></i>
-              </div>
-            </div>
-          </a>
-        {% endfor %}
-      </div>
-      {% endfor %}
-    </section>
+        <div id="tools-courses" class="home-tool">
+          <i class="bi bi-calculator" aria-hidden="true"></i>
+          {% for subject in site.data.subjects.alevel %}
+            {% if subject.stage == 'Tools' %}{% include home_subject.html subject=subject %}{% endif %}
+          {% endfor %}
+        </div>
+      </section>
 
-    <!-- IGCSE Section -->
-    <section class="subjects-section fade-in" style="animation-delay: 0.2s;">
-      <div class="section-header">
-        <div class="header-content">
-          <h2 id="igcse-courses" class="section-title">
-            <i class="bi bi-book-half"></i>
-            IGCSE
-          </h2>
-          <p class="section-subtitle" data-ui="igcse_description">{{ ui.igcse_description }}</p>
+      <section class="home-igcse" aria-labelledby="igcse-courses">
+        <h2 id="igcse-courses" class="home-program">IGCSE</h2>
+        <div class="home-stage home-stage-caption" data-ui="home_igcse">{{ ui.home_igcse }}</div>
+        <div class="course-list">
+          {% for subject in site.data.subjects.igcse %}
+            {% include home_subject.html subject=subject stage='IGCSE' %}
+          {% endfor %}
         </div>
-        <span class="section-badge" style="--accent-rgb: var(--accent-ig-rgb); --accent-color: var(--accent-ig);">
-          <i class="bi bi-mortarboard"></i>
-          <span data-ui="igcse_badge">{{ ui.igcse_badge }}</span>
-        </span>
+      </section>
+    </div>
+
+    {% assign exam = site.data.exam_timetable.exams.first %}
+    <section class="home-exam" aria-labelledby="upcoming-exams-heading">
+      <div class="home-exam-date">
+        <span data-ui="upcoming_exam">{{ ui.upcoming_exam }}</span>
+        <strong>{% if page.lang == 'zh-CN' %}{{ exam.date | date: '%Y 年 %-m 月 %-d 日' }}{% else %}{{ exam.date_formatted }}{% endif %}</strong>
       </div>
-      
-      <div class="subjects-grid-modern">
-        {% for subject in site.data.subjects.igcse %}
-          {% assign subject_name = subject.name | default: 'Subject' %}
-          {% assign subject_description = subject.description %}
-          {% assign subject_path = subject.path %}
-          {% if page.lang == 'zh-CN' %}
-            {% assign subject_name = subject.name_zh | default: subject_name %}
-            {% assign subject_description = subject.description_zh %}
-            {% assign subject_translation = site.pages | where: 'translation_of', subject.path | first %}
-            {% if subject_translation %}{% assign subject_path = subject_translation.url %}{% endif %}
-          {% endif %}
-          <a href="{{ subject_path | relative_url }}" class="modern-subject-card" style="--accent-rgb: var(--accent-ig-rgb); --accent-color: var(--accent-ig);" title="{{ ui.view_resources | replace: '%subject%', subject_name }}" aria-label="{{ ui.view_resources | replace: '%subject%', subject_name | strip | escape }} — {{ subject_description | escape }}">
-            <div class="card-icon" aria-hidden="true">
-              {{ subject.icon }}
-            </div>
-            <div class="card-content">
-              <div class="card-title">{{ subject_name }}</div>
-              <div class="card-meta">
-                <span class="meta-text">{{ subject_description | escape }}</span>
-                <i class="bi bi-arrow-right hover-arrow" aria-hidden="true"></i>
-              </div>
-            </div>
-          </a>
-        {% endfor %}
+      <div class="home-exam-detail">
+        <h2 id="upcoming-exams-heading" lang="en">{{ exam.subject }} · {{ exam.paper }}</h2>
+        <p lang="en">OxfordAQA · {{ exam.code }} · {{ exam.duration }}</p>
+        <p class="home-exam-notice" data-ui="exam_start_notice">{{ ui.exam_start_notice }}</p>
+      </div>
+      <div class="home-exam-links">
+        <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/timetable/"><span data-ui="full_timetable">{{ ui.full_timetable }}</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+        <a href="{{ site.data.exam_timetable.series_info.pdf_link }}" target="_blank" rel="noopener noreferrer" data-ui="official_pdf">{{ ui.official_pdf }}</a>
       </div>
     </section>
 
-    <!-- Quick Navigation Links -->
-    <section class="quick-nav-section fade-in">
-      <div class="quick-nav-container">
-        <a href="/admissions/tmua-esat/" class="quick-nav-item" title="{{ ui.admissions_notes }}" data-ui-title="admissions_notes">
-          <div class="nav-icon">
-            <i class="bi bi-calculator" aria-hidden="true"></i>
-          </div>
-          <div class="nav-content">
-            <h3>TMUA &amp; ESAT</h3>
-            <p data-ui="admissions_description">{{ ui.admissions_description }}</p>
-          </div>
-          <i class="bi bi-chevron-right nav-arrow" aria-hidden="true"></i>
-        </a>
-
-        <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/student-council/" class="quick-nav-item" title="{{ ui.student_council }}" data-ui-title="student_council">
-          <div class="nav-icon">
-            <i class="bi bi-people-fill"></i>
-          </div>
-          <div class="nav-content">
-            <h3 data-ui="student_council">{{ ui.student_council }}</h3>
-            <p data-ui="student_council_description">{{ ui.student_council_description }}</p>
-          </div>
-          <i class="bi bi-chevron-right nav-arrow"></i>
-        </a>
-
-        <a href="/contributors/" class="quick-nav-item" title="{{ ui.contributors_title }}" data-ui-title="contributors_title">
-          <div class="nav-icon">
-            <i class="bi bi-stars"></i>
-          </div>
-          <div class="nav-content">
-            <h3 data-ui="contributors">{{ ui.contributors }}</h3>
-            <p data-ui="contributors_description">{{ ui.contributors_description }}</p>
-          </div>
-          <i class="bi bi-chevron-right nav-arrow"></i>
-        </a>
-      </div>
-    </section>
-
-    <!-- Exam Resources Section -->
-    {% include exams_section.html %}
-
-    <!-- Useful Links Section -->
-    <section class="useful-links-section fade-in mb-5" style="animation-delay: 0.4s;">
-      <a href="https://gradeboundaries.com/OxfordAqa" target="_blank" rel="noopener noreferrer" class="useful-link-item">
-        <div class="useful-link-icon">
-          <i class="bi bi-bar-chart-line"></i>
-        </div>
-        <div class="useful-link-content">
-          <h3 data-ui="grade_boundaries">{{ ui.grade_boundaries }}</h3>
-          <p data-ui="grade_boundaries_description">{{ ui.grade_boundaries_description }}</p>
-        </div>
-        <i class="bi bi-box-arrow-up-right useful-link-arrow"></i>
-      </a>
-    </section>
-
+    <nav class="home-links" data-ui-aria="home_more" aria-label="{{ ui.home_more }}">
+      <a href="/admissions/tmua-esat/"><span>TMUA &amp; ESAT</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+      <a href="https://gradeboundaries.com/OxfordAqa" target="_blank" rel="noopener noreferrer"><span data-ui="grade_boundaries">{{ ui.grade_boundaries }}</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+      <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/student-council/"><span data-ui="student_council">{{ ui.student_council }}</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+      <a href="/contributors/"><span data-ui="contributors">{{ ui.contributors }}</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+    </nav>
   </main>
-
   {% include footer.html %}
-
 </body>
-
 </html>

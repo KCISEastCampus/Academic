@@ -42,7 +42,7 @@ for (const file of ['index.html', 'zh/index.html', 'alevel/index.html', 'igcse/i
   const html = read(file);
   const chinese = file.startsWith('zh/');
   const homepage = file === 'index.html' || file === 'zh/index.html';
-  const cards = Array.from(html.matchAll(/<a\b([^>]*class="modern-subject-card"[^>]*)>([\s\S]*?)<\/a>/g));
+  const cards = Array.from(html.matchAll(/<a\b([^>]*class="(?:modern-subject-card|course-link)"[^>]*)>([\s\S]*?)<\/a>/g));
   assert.equal(cards.length, homepage ? 18 : file.includes('alevel/') ? 14 : 4, `${file}: preserve all subject/tool cards`);
   if (homepage) {
     for (const group of ['as', 'a2', 'igcse']) {
@@ -53,6 +53,11 @@ for (const file of ['index.html', 'zh/index.html', 'alevel/index.html', 'igcse/i
       homepageDestinations.map(([en, zh]) => chinese ? zh || en : en), `${file}: preserve every card destination and its order`);
   }
   cards.forEach(card => {
+    if (homepage) {
+      assert(!card[2].includes('meta-text'), `${file}: the compact directory contains names without resource-scope copy`);
+      assert(card[2].match(/<span>([^<]+)<\/span>/)?.[1].trim(), `${file}: course links have visible names`);
+      return;
+    }
     const destination = card[1].match(/href="([^"]+)"/)[1].replace(/^\/zh\//, '/');
     const description = card[2].match(/<span class="meta-text">([^<]*)<\/span>/)?.[1].trim();
     assert(description, `${file}: ${destination} has a visible resource description`);
