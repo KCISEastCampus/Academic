@@ -168,7 +168,8 @@ html[data-bs-theme="dark"] .theme-icon-nav-moon {
     font-size: 0.8rem;
   }
 
-  .site-nav-brand { gap: 0.35rem; }
+  .site-nav-brand { gap: 0.35rem; min-width: 0; flex-shrink: 1; }
+  .site-nav-title { min-width: 0; }
   .site-nav-actions { gap: 0.25rem; }
   .site-nav-inner { gap: 0.4rem; padding-inline: 0.65rem; }
   .site-nav-actions .site-language-select { max-width: 5.25rem; }
@@ -1012,6 +1013,36 @@ mark {
   border-radius: 2rem; /* Pill shape */
   box-shadow: var(--card-shadow);
   transition: all 0.2s ease;
+}
+
+[data-open-search][hidden] { display: none !important; }
+
+.search-launch {
+  width: 100%;
+  max-width: 520px;
+  color: var(--muted);
+}
+
+.site-search-dialog {
+  width: min(640px, calc(100% - 1.5rem));
+  max-height: calc(100dvh - 2rem);
+  margin: 5vh auto auto;
+  padding: 1rem;
+  border: 1px solid var(--border-hover);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.site-search-dialog::backdrop { background: rgba(0, 0, 0, 0.5); }
+body:has(.site-search-dialog[open]) { overflow: hidden; }
+
+#search-results a:focus-visible {
+  outline: 3px solid var(--link-text);
+  outline-offset: -3px;
+  background: var(--surface-hover);
+  color: var(--text);
 }
 
 .search-wrapper:focus-within {

@@ -37,6 +37,12 @@ en:
   home_logo: Homepage
   search_topics: Search topics...
   search: Search
+  close_search: Close search
+  search_language: 'Search language:'
+  search_loading: Searching…
+  search_count: '%count% results. Use the arrow keys or Tab to browse.'
+  search_error: Search is unavailable. Please try again.
+  browse_courses: Browse courses
   school_logo: KangChiao International School East Campus Logo
   homepage_title: A-level Homepage
   homepage_subtitle: A platform for A-level Students in KCISEC
@@ -147,6 +153,12 @@ zh-CN:
   home_logo: 首页
   search_topics: 搜索主题…
   search: 搜索
+  close_search: 关闭搜索
+  search_language: 搜索语言：
+  search_loading: 正在搜索…
+  search_count: '找到 %count% 条结果。使用方向键或 Tab 浏览。'
+  search_error: 搜索暂时不可用，请重试。
+  browse_courses: 按课程阶段浏览
   school_logo: 昆山康桥学校校徽
   homepage_title: A-level 学习资源
   homepage_subtitle: 昆山康桥学校 A-Level 与 IGCSE 学习资源

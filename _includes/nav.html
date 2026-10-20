@@ -35,6 +35,10 @@
       {% endfor %}
     </div>
     <div class="site-nav-actions">
+      <button type="button" class="site-nav-theme-btn" data-open-search data-ui-aria="search" aria-label="{{ ui.search }}"
+              aria-controls="siteSearchDialog" aria-haspopup="dialog" hidden>
+        <i class="bi bi-search" aria-hidden="true"></i>
+      </button>
       <select id="siteLanguage" class="site-language-select" data-ui-aria="choose_language" aria-label="{{ ui.choose_language }}" hidden>
         <option value="en" lang="en"{% unless page.lang == 'zh-CN' %} selected{% endunless %}>English</option>
         <option value="zh-CN" lang="zh-CN"{% if page.lang == 'zh-CN' %} selected{% endif %}>中文</option>
@@ -57,6 +61,7 @@
     </div>
   </div>
 </nav>
+{% include site_search.html %}
 
 <script>
   (function() {

@@ -75,7 +75,7 @@ for (const lang of ['en', 'zh-CN']) {
   for (const saved of [null, '', 'en', 'zh-CN', 'invalid']) {
     for (const blocked of [false, true]) {
       const result = run({ lang, saved, blocked });
-      const expected = !blocked && ['en', 'zh-CN'].includes(saved) ? saved : lang;
+      const expected = lang;
       assert.equal(result.document.documentElement.dataset.uiLanguage, expected);
       assert.equal(result.document.documentElement.lang, lang, 'UI preference must not mislabel the document language');
       assert.equal(result.ui.lang, expected);

@@ -11,6 +11,8 @@
   --border-hover: rgba(15, 23, 42, 0.12);
   --muted: #64748b;
   --text: #0f172a;
+  --link-text: #0369a1;
+  --link-hover: #075985;
 
   /* Accents - IGCSE = blue, A-Level = green */
   --accent-al: #16a34a;
@@ -75,6 +77,8 @@ html[data-bs-theme="dark"] {
   --border-hover: rgba(255, 255, 255, 0.15);
   --muted: #94a3b8;
   --text: #f8fafc;
+  --link-text: #7dd3fc;
+  --link-hover: #bae6fd;
 
   /* Bootstrap hook updates */
   --bs-body-bg: var(--bg);

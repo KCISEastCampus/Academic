@@ -458,22 +458,6 @@ function initTOCSearch(tocLinks, signal) {
     }
   }, { signal });
 
-  // Ctrl+K / Cmd+K to quickly focus TOC search (and open drawer if on mobile)
-  document.addEventListener("keydown", (event) => {
-    if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "k") {
-      // Check if not inside an input/textarea already
-      const activeEl = document.activeElement;
-      if (activeEl && (activeEl.tagName === "INPUT" || activeEl.tagName === "TEXTAREA") && activeEl !== searchInput) {
-        return;
-      }
-      event.preventDefault();
-      if (window.innerWidth <= 1024) {
-        toggleTOC(true);
-      }
-      searchInput.focus();
-      searchInput.select();
-    }
-  }, { signal });
 }
 
 function initReadingProgress(signal) {

@@ -7,6 +7,34 @@ on:
     branches: ["main"]
 
 jobs:
+  frontend:
+    name: Frontend build and behavior
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Build site and search index
+        run: |
+          bundle exec jekyll build
+          npx --yes pagefind --site _site
+      - name: Test shared frontend
+        run: |
+          node scripts/test-site-language.js
+          node scripts/test-subject-index-translations.js
+          node scripts/test-search-language.js
+          node scripts/test-search-excerpts.js
+          node scripts/test-search-interaction.js
+          node scripts/test-frontend-loading.js
+          node scripts/test-frontend-ux.js
+          node scripts/test-theme-init.js
+          node scripts/test-image-modal.js
+
   markdown-lint:
     name: Markdown Lint
     runs-on: ubuntu-latest

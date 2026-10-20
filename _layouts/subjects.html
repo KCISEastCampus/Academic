@@ -27,6 +27,7 @@ layout: none
 {% else %}
 <body>
 {% endif %}
+  <a class="skip-link" href="#content-container" data-ui="skip_content">{{ ui.skip_content }}</a>
   {% include nav.html show_toc=true %}
   <header class="subject-header">
     <div class="subject-header-inner">
@@ -44,9 +45,10 @@ layout: none
   </header>
 
   <div id="main-container">
-    <div id="content-container" data-pagefind-body data-toc-headings="{{ page.toc_headings | default: 'h1, h2, h3, h4' }}">
+    {% if page.tmua_notes %}{% assign content_tag = 'div' %}{% else %}{% assign content_tag = 'main' %}{% endif %}
+    <{{ content_tag }} id="content-container" tabindex="-1" data-pagefind-body data-toc-headings="{{ page.toc_headings | default: 'h1, h2, h3, h4' }}">
       {% include lazy_content.html content=content %}
-    </div>
+    </{{ content_tag }}>
     <div id="toc" class="table-of-contents" role="navigation" aria-labelledby="tocTitle" data-site-ui lang="{{ page.lang | default: 'en' }}">
       <div class="toc-header-fixed">
         <h2 id="tocTitle" class="contents-list" data-ui="{% if page.cg50_stage %}guide_contents{% else %}contents{% endif %}">{% if page.cg50_stage %}本页目录{% else %}{{ ui.contents }}{% endif %}</h2>

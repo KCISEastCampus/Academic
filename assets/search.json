@@ -9,6 +9,7 @@ layout: null
       {% assign first = false %}
       {
         "title": {{ page.title | jsonify }},
+        "lang": {{ page.lang | default: 'en' | jsonify }},
         "url": {{ page.url | relative_url | jsonify }},
         "content": {{ page.content | strip_html | strip_newlines | jsonify }}
       }

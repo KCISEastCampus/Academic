@@ -15,13 +15,18 @@ layout: none
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content" data-ui="skip_content">{{ ui.skip_content }}</a>
   {% include nav.html %}
   {% include site_header.html
      title=ui.homepage_title
      subtitle=ui.homepage_subtitle %}
 
-  <a class="skip-link sr-only-focusable" href="#main-content" data-ui="skip_content">{{ ui.skip_content }}</a>
-  <main id="main-content" class="container" role="main">
+  <main id="main-content" class="container" tabindex="-1">
+    <nav class="course-shortcuts" data-ui-aria="browse_courses" aria-label="{{ ui.browse_courses }}">
+      <a href="#as-courses">AS</a>
+      <a href="#a2-courses">A2</a>
+      <a href="#igcse-courses">IGCSE</a>
+    </nav>
 
     <!-- A-Level Section -->
     <section class="subjects-section fade-in" style="animation-delay: 0.1s;">
@@ -39,8 +44,13 @@ layout: none
         </span>
       </div>
       
+      {% assign course_groups = 'AS,A2,Tools' | split: ',' %}
+      {% for group in course_groups %}
+      {% assign group_id = group | downcase | append: '-courses' %}
+      <h3 id="{{ group_id }}" class="course-group-title">{% if group == 'Tools' %}Casio fx-CG50{% else %}{{ group }}{% endif %}</h3>
       <div class="subjects-grid-modern">
         {% for subject in site.data.subjects.alevel %}
+          {% unless subject.stage == group %}{% continue %}{% endunless %}
           {% assign subject_name = subject.name | default: 'Subject' %}
           {% assign subject_path = subject.path %}
           {% if page.lang == 'zh-CN' %}
@@ -62,13 +72,14 @@ layout: none
           </a>
         {% endfor %}
       </div>
+      {% endfor %}
     </section>
 
     <!-- IGCSE Section -->
     <section class="subjects-section fade-in" style="animation-delay: 0.2s;">
       <div class="section-header">
         <div class="header-content">
-          <h2 class="section-title">
+          <h2 id="igcse-courses" class="section-title">
             <i class="bi bi-book-half"></i>
             IGCSE
           </h2>

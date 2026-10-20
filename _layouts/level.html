@@ -13,13 +13,13 @@ layout: none
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content" data-ui="skip_content">{{ ui.skip_content }}</a>
   {% include nav.html %}
   {% include site_header.html
      title=page.title
      subtitle=page.subtitle %}
 
-  <a class="skip-link sr-only-focusable" href="#main-content" data-ui="skip_content">{{ ui.skip_content }}</a>
-  <main id="main-content" class="container" role="main">
+  <main id="main-content" class="container" tabindex="-1">
 
     <!-- Back to Home -->
     <section class="quick-nav-section fade-in">

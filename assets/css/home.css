@@ -1,4 +1,27 @@
 /* Home Page Specific Styles */
+.course-shortcuts {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.course-shortcuts a {
+  padding: 0.45rem 1.1rem;
+  color: var(--link-text);
+  background: var(--surface);
+  border: 1px solid var(--border-hover);
+  border-radius: 2rem;
+  font-weight: 600;
+}
+
+.course-group-title {
+  font-size: 1.2rem;
+  margin: 1.5rem 0 0.75rem;
+}
+
+[id$="-courses"] { scroll-margin-top: 5rem; }
 
 /* Useful Links Section */
 .useful-links-section {
