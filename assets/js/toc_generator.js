@@ -22,7 +22,7 @@ function generateTOC() {
   }
 
   const tree = buildTOCTree(headings);
-  tocContent.innerHTML = renderTOCTree(tree, window.innerWidth <= 1024);
+  tocContent.innerHTML = renderTOCTree(tree, window.innerWidth <= 1024 || contentContainer.dataset.tocCompact === "true");
 
   const tocLinks = Array.from(tocContent.querySelectorAll("a[data-toc-link]"));
   if (focusedHref) {
@@ -185,12 +185,12 @@ function renderTOCTree(nodes, compact = false) {
       html += '<div class="toc-row">';
 
       if (hasChildren) {
-        html += `<button class="toc-collapse" type="button" data-ui-aria="collapse_section" aria-label="${document.documentElement.lang === 'zh-CN' ? '展开或收起章节' : 'Collapse section'}" aria-expanded="${!compact}" aria-controls="${branchId}"></button>`;
+        html += `<button class="toc-collapse" type="button" aria-labelledby="${branchId}-action ${branchId}-title" aria-expanded="${!compact}" aria-controls="${branchId}"><span id="${branchId}-action" class="visually-hidden" data-ui="collapse_section">${document.documentElement.lang === 'zh-CN' ? '展开或收起本节' : 'Collapse or expand section'}</span></button>`;
       } else {
         html += '<span class="toc-spacer" aria-hidden="true"></span>';
       }
 
-      html += `<a data-toc-link href="#${node.id}">${escapeHtml(node.text)}</a>`;
+      html += `<a${hasChildren ? ` id="${branchId}-title"` : ''} data-toc-link href="#${node.id}">${escapeHtml(node.text)}</a>`;
       html += "</div>";
 
       if (hasChildren) {
@@ -208,9 +208,9 @@ function renderTOCTree(nodes, compact = false) {
 
 function findActiveHeading(headings) {
   const offset = 140;
-  const scrollTop = window.scrollY + offset;
   if (headings.length === 0) return null;
-  if (headings[0].offsetTop > scrollTop) return headings[0];
+  // Headings can sit inside positioned reading and example containers.
+  if (headings[0].getBoundingClientRect().top > offset) return headings[0];
 
   let low = 0;
   let high = headings.length - 1;
@@ -218,7 +218,7 @@ function findActiveHeading(headings) {
 
   while (low <= high) {
     const mid = Math.floor((low + high) / 2);
-    if (headings[mid].offsetTop <= scrollTop) {
+    if (headings[mid].getBoundingClientRect().top <= offset) {
       activeIndex = mid;
       low = mid + 1;
     } else {

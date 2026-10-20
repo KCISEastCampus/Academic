@@ -9,19 +9,27 @@ translation_of: /alevel/a2-mathematics/integration/
 permalink: /zh/alevel/a2-mathematics/integration/
 toc_headings: h2, h3, h4
 study_page: true
+reading_layout: true
 ---
 
 [纯数学](/zh/alevel/a2-mathematics/) · P2.7 积分
+{: .lesson-meta}
 
 选择方法，完成积分，再通过求导检查答案。**被积函数**（integrand）是积分号内的函数。本页题干保留英文，方法、提示与解答使用中文。
+{: .lesson-lead}
 
 - **学习：**从[选择方法](#choose-a-method)开始，并在每个[例题](#worked-examples)中说明选择理由。
 - **作业帮助：**复习[换元积分法](#substitution)、[分部积分法](#integration-by-parts)或[部分分式](/zh/alevel/a2-mathematics/partial-fractions/#integration)。
 - **复习：**先在不看解答的情况下完成[练习](#practice)，然后查看[快速参考](#quick-reference)。
+{: .lesson-routes}
+
+<div class="lesson-notes" markdown="1">
 
 教材：第 6 章，第 6.1–6.4 节（第 82–95 页）。不定积分（indefinite integral）的积分常数（constant of integration）记作 $C$。
 
 **开始前：**你应当掌握基本求导、链式法则（chain rule）、表达式变形和标准积分。
+
+</div>
 
 ## 选择方法 {#choose-a-method}
 
@@ -96,6 +104,8 @@ $$\int\sec^2(2x-1)\,dx=\frac12\tan(2x-1)+C.$$
 
 先展开或约分，再使用标准积分；化简后仍保留原式的定义域限制。
 
+<section class="worked-example" markdown="1">
+
 #### 例题 1 — 先化简再选择方法 {#example-1--simplify-before-choosing}
 
 **Question:** Find $\displaystyle\int\frac{x^2+3x}{x}\,dx$ for $x\ne0$.
@@ -108,9 +118,13 @@ $$\int(x+3)\,dx=\boxed{\frac{x^2}{2}+3x+C}.$$
 
 **检查：**求导后得到 $x+3$，当 $x\ne0$ 时它与原被积函数相同。原式在 $x=0$ 时仍无定义。
 
+</section>
+
 ### 逆用链式法则 {#reverse-chain-rule}
 
 寻找内层函数及其导数，尝试一个原函数，再通过求导确定所需系数。
+
+<section class="worked-example" markdown="1">
 
 #### 例题 2 — 逆用链式法则 {#example-2--reverse-the-chain-rule}
 
@@ -126,9 +140,13 @@ $$\int6x(x^2+1)^2\,dx=\boxed{(x^2+1)^3+C}.$$
 
 **检查：**求导后等于被积函数。链式法则还要乘上 $x^2+1$ 的导数 $2x$。
 
+</section>
+
 ### 换元积分法 {#substitution}
 
 选择能简化被积函数的新变量，求出微分关系，并把所有因子和微分都改写成新变量。不定积分完成后代回原变量。
+
+<section class="worked-example" markdown="1">
 
 #### 例题 3 — 换元后把所有部分都改写 {#example-3--rewrite-everything-in-the-new-variable}
 
@@ -152,11 +170,15 @@ $$\begin{aligned}&(x+2)^7-2(x+2)^6\\&\qquad=(x+2)^6[(x+2)-2]\\&\qquad=x(x+2)^6.\
 
 **常见错误：**把 $(x+2)$ 改写成 $u$，却仍保留因子 $x$。换元后，要把所有部分都用 $u$ 表示，包括 $dx$。
 
+</section>
+
 ### 分部积分法 {#integration-by-parts}
 
 从乘积求导法则整理出下式。选择一个求导后更简单的因子，并确认另一个因子容易积分；使用后，余下的积分应更容易处理。
 
 $$\int v\frac{du}{dx}\,dx=uv-\int u\frac{dv}{dx}\,dx.$$
+
+<section class="worked-example" markdown="1">
 
 #### 例题 4 — 适合分部积分的乘积 {#example-4--a-product-that-becomes-simpler}
 
@@ -176,6 +198,8 @@ $$\left(\frac{e^{2x}}2+xe^{2x}\right)-\frac{e^{2x}}2=xe^{2x}.$$
 
 **常见错误：**使用 $u=e^{2x}$，而不是 $\frac{e^{2x}}2$。应用分部积分法前，先求导检查 $u$。
 
+</section>
+
 #### 应用：对数函数的积分 {#integrating-a-logarithm}
 
 对数函数也可以视为乘积。若要计算 $\int\ln x\,dx$（$x>0$），把被积函数写成 $1\times\ln x$。选择 $v=\ln x$ 和 $du/dx=1$，则 $dv/dx=1/x$ 且 $u=x$：
@@ -187,6 +211,8 @@ $$\int\ln x\,dx=x\ln x-\int1\,dx=\boxed{x\ln x-x+C}.$$
 ### 识别对数形式 {#logarithmic-form}
 
 先比较分子与分母的导数；若两者成常数倍关系，可以直接使用对数形式。检查分母不为零，并在同一有效区间内使用结果。
+
+<section class="worked-example" markdown="1">
 
 #### 例题 5 — 分式不一定要做部分分式分解 {#example-5--a-fraction-does-not-always-need-partial-fractions}
 
@@ -200,9 +226,13 @@ $$\boxed{\ln\lvert x^2+2x-15\rvert+C}.$$
 
 如果分子不符合这种形式，[部分分式](/zh/alevel/a2-mathematics/partial-fractions/#integration)可能会有帮助。先比较次数。如果使用多项式除法，要保留商。
 
+</section>
+
 ## 定积分（definite integrals） {#definite-integrals}
 
 **先检查区间。**使用 $F(b)-F(a)$ 之前，要检查被积函数在从 $a$ 到 $b$ 的区间上是否连续（continuous）。尤其要检查分母是否始终不为零。
+
+<section class="worked-example" markdown="1">
 
 ### 例题 6 — 换元时也改变积分限 {#example-6--change-the-limits-with-the-variable}
 
@@ -215,6 +245,8 @@ $$\int_0^1 2x(x^2+1)^3\,dx=\int_1^2 u^3\,du=\left[\frac{u^4}{4}\right]_1^2=\boxe
 **检查：**用 $x$ 积分得到 $\frac{(x^2+1)^4}{4}$。代入 $x=1$ 和 $x=0$ 会得到相同结果。
 
 你可以用新变量和新积分限，也可以代回原变量并使用原积分限。不要把这两种做法混在一起。
+
+</section>
 
 **积分还是面积？**定积分给出带符号的面积（signed area）。要计算曲线与 $x$ 轴之间的总面积，应在曲线穿过 x 轴处拆分区间，并把正的面积相加。请参见[面积](/zh/alevel/a2-mathematics/integration-applications/#area)中的例题。
 

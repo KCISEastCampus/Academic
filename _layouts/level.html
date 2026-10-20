@@ -2,93 +2,45 @@
 layout: none
 ---
 {% assign ui = site.data.ui[page.lang] | default: site.data.ui.en %}
+{% assign level_accent = 'ig' %}
+{% assign course_groups = 'IGCSE' | split: ',' %}
+{% if page.level == 'alevel' %}
+  {% assign level_accent = 'al' %}
+  {% assign course_groups = 'AS,A2,Tools' | split: ',' %}
+{% endif %}
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: 'en' }}">
-
 <head>
   {% include head.html %}
   <meta name="keywords" content="KCISEC, {{ page.level | default: 'A-Level' }}, IGCSE, education, resources, academic, study materials">
   <meta name="author" content="EricStoneChina">
   <link rel="stylesheet" href="/assets/css/home.css">
 </head>
-
-<body>
+<body class="home-page level-page">
   <a class="skip-link" href="#main-content" data-ui="skip_content">{{ ui.skip_content }}</a>
   {% include nav.html %}
-  {% include site_header.html
-     title=page.title
-     subtitle=page.subtitle %}
-
+  {% include site_header.html title=page.title subtitle=page.subtitle %}
   <main id="main-content" class="container" tabindex="-1">
-
-    <!-- Back to Home -->
-    <section class="quick-nav-section fade-in">
-      <div class="quick-nav-container">
-        <a href="{% if page.lang == 'zh-CN' %}/zh/{% else %}/{% endif %}" class="quick-nav-item" title="{{ ui.back_home }}" data-ui-title="back_home">
-          <div class="nav-icon">
-            <i class="bi bi-house-door-fill"></i>
-          </div>
-          <div class="nav-content">
-            <h3 data-ui="homepage">{{ ui.homepage }}</h3>
-            <p data-ui="back_main_page">{{ ui.back_main_page }}</p>
-          </div>
-          <i class="bi bi-chevron-right nav-arrow"></i>
-        </a>
-      </div>
-    </section>
-
-    <!-- Subjects Section -->
-    <section class="subjects-section fade-in" style="animation-delay: 0.1s;">
-      <div class="section-header">
-        <div class="header-content">
-          <h2 class="section-title">
-            {% if page.level == "igcse" %}
-            <i class="bi bi-book-half"></i>
-            {% else %}
-            <i class="bi bi-mortarboard-fill"></i>
-            {% endif %}
-            {{ page.title }}
-          </h2>
-          <p class="section-subtitle">{{ page.subtitle }}</p>
-        </div>
-        <span class="section-badge" style="--accent-rgb: var(--accent-{{ page.level | default: 'al' }}-rgb); --accent-color: var(--accent-{{ page.level | default: 'al' }});">
-          <i class="bi bi-book"></i>
-          {{ page.badge | default: ui.study_materials }}
-        </span>
-      </div>
-
+    <nav class="course-shortcuts" data-ui-aria="browse_courses" aria-label="{{ ui.browse_courses }}">
+      <a href="{% if page.lang == 'zh-CN' %}/zh/{% else %}/{% endif %}" data-ui="back_home">{{ ui.back_home }}</a>
+      {% if page.level == 'alevel' %}
+      <a href="#as-courses">AS</a>
+      <a href="#a2-courses">A2</a>
+      <a href="#tools-courses">Casio fx-CG50</a>
+      {% endif %}
+    </nav>
+    <section class="subjects-section">
+      {% for group in course_groups %}
+      <h2 id="{{ group | downcase }}-courses" class="course-group-title">{% if group == 'Tools' %}Casio fx-CG50{% else %}{{ group }}{% endif %}</h2>
       <div class="subjects-grid-modern">
-        {% assign subjects = site.data.subjects[page.level] %}
-        {% for subject in subjects %}
-          {% assign subject_name = subject.name | default: 'Subject' %}
-          {% assign subject_description = subject.description %}
-          {% assign subject_path = subject.path %}
-          {% if page.lang == 'zh-CN' %}
-            {% assign subject_name = subject.name_zh | default: subject_name %}
-            {% assign subject_description = subject.description_zh %}
-            {% assign subject_translation = site.pages | where: 'translation_of', subject.path | first %}
-            {% if subject_translation %}{% assign subject_path = subject_translation.url %}{% endif %}
-          {% endif %}
-          <a href="{{ subject_path | relative_url }}" class="modern-subject-card" style="--accent-rgb: var(--accent-{{ page.level | default: 'al' }}-rgb); --accent-color: var(--accent-{{ page.level | default: 'al' }});" title="{{ ui.view_resources | replace: '%subject%', subject_name }}" aria-label="{{ ui.view_resources | replace: '%subject%', subject_name | strip | escape }} — {{ subject_description | escape }}">
-            <div class="card-icon" aria-hidden="true">
-              {{ subject.icon }}
-            </div>
-            <div class="card-content">
-              <div class="card-title">{{ subject_name }}</div>
-              <div class="card-meta">
-                <span class="meta-text">{{ subject_description | escape }}</span>
-                <i class="bi bi-arrow-right hover-arrow" aria-hidden="true"></i>
-              </div>
-            </div>
-          </a>
+        {% for subject in site.data.subjects[page.level] %}
+          {% if page.level == 'alevel' and subject.stage != group %}{% continue %}{% endif %}
+          {% include subject_card.html subject=subject accent=level_accent %}
         {% endfor %}
       </div>
+      {% endfor %}
     </section>
-
   </main>
-
   {% include footer.html %}
-
 </body>
-
 </html>

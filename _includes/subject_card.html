@@ -1,0 +1,17 @@
+{% assign subject = include.subject %}
+{% assign subject_name = subject.name | default: 'Subject' %}
+{% assign subject_path = subject.path %}
+{% if page.lang == 'zh-CN' %}
+  {% assign subject_name = subject.name_zh | default: subject_name %}
+  {% assign subject_translation = site.pages | where: 'translation_of', subject.path | first %}
+  {% if subject_translation %}{% assign subject_path = subject_translation.url %}{% endif %}
+{% endif %}
+{% assign course_accent = include.accent | default: 'al' %}
+{% if subject.stage == 'A2' %}{% assign course_accent = 'a2' %}{% endif %}
+<a href="{{ subject_path | relative_url }}" class="modern-subject-card" style="--accent-rgb: var(--accent-{{ course_accent }}-rgb); --accent-color: var(--accent-{{ course_accent }});" title="{{ ui.view_resources | replace: '%subject%', subject_name | escape }}" aria-label="{{ ui.view_resources | replace: '%subject%', subject_name | strip | escape }}">
+  <div class="card-icon" aria-hidden="true">{{ subject.icon }}</div>
+  <div class="card-content">
+    <div class="card-title">{{ subject_name }}</div>
+    <i class="bi bi-arrow-right hover-arrow" aria-hidden="true"></i>
+  </div>
+</a>

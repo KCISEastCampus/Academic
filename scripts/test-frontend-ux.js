@@ -52,33 +52,22 @@ for (const file of ['index.html', 'zh/index.html', 'alevel/index.html', 'igcse/i
     }
     assert.deepEqual(cards.map(card => card[1].match(/href="([^"]+)"/)[1]),
       homepageDestinations.map(([en, zh]) => chinese ? zh || en : en), `${file}: preserve every card destination and its order`);
+  } else {
+    const level = file.includes('alevel/') ? 'alevel' : 'igcse';
+    assert(html.includes('<body class="home-page level-page">'), `${file}: use the homepage card styles`);
+    assert.match(html, /<header class="container text-center py-3" role="banner">/, `${file}: center the overview title`);
+    assert.deepEqual(cards.map(card => card[1].match(/href="([^"]+)"/)[1]),
+      homepageDestinations.filter(([en]) => en.startsWith(`/${level}/`)).map(([en, zh]) => chinese ? zh || en : en),
+      `${file}: course discovery follows the homepage order and destinations`);
+    if (level === 'alevel') {
+      for (const group of ['as', 'a2', 'tools']) {
+        assert(html.includes(`id="${group}-courses"`), `${file}: retain stage navigation`);
+      }
+    }
   }
   cards.forEach(card => {
-    if (homepage) {
-      assert(!card[2].includes('meta-text'), `${file}: homepage cards omit resource-scope copy`);
-      assert(card[2].match(/<div class="card-title">([^<]+)<\/div>/)?.[1].trim(), `${file}: course cards have visible names`);
-      return;
-    }
-    const destination = card[1].match(/href="([^"]+)"/)[1].replace(/^\/zh\//, '/');
-    const description = card[2].match(/<span class="meta-text">([^<]*)<\/span>/)?.[1].trim();
-    assert(description, `${file}: ${destination} has a visible resource description`);
-    assert(card[1].match(/aria-label="([^"]+)"/)[1].includes(description),
-      `${file}: the accessible card name includes its resource scope`);
-    if (destination === '/alevel/as-economics/') {
-      assert.match(description, chinese ? /PDF.*(?:思维导图|导图)/i : /PDF.*mind\s*maps?/i,
-        `${file}: economics provides PDF mindmap links`);
-    }
-    if (destination === '/alevel/a2-physics/') {
-      for (const scope of [/PH03/, /PH04/, chinese ? /部分|精选|选定/ : /selected|partial|some/i,
-        chinese ? /笔记/ : /notes/i, chinese ? /热学/ : /thermal/i]) {
-        assert.match(description, scope, `${file}: physics distinguishes partial lessons/notes and thermal physics`);
-      }
-    }
-    if (chinese && destination.startsWith('/igcse/')) {
-      for (const scope of [/中文.*目录/, /英文.*笔记/, /→|链接|打开|前往/]) {
-        assert.match(description, scope, `${file}: the Chinese index links to English notes`);
-      }
-    }
+    assert(!card[2].includes('meta-text'), `${file}: course cards match the homepage without subtitles`);
+    assert(card[2].match(/<div class="card-title">([^<]+)<\/div>/)?.[1].trim(), `${file}: course cards have visible names`);
   });
 }
 const index = JSON.parse(read('assets/search.json'));
@@ -112,4 +101,4 @@ for (const theme of themes) {
     }
   }
 }
-console.log('Frontend UX passed: shared search, landmarks/skip links, course discovery, bilingual card scopes and destinations, fallback language and link contrast.');
+console.log('Frontend UX passed: shared search, landmarks/skip links, course discovery, bilingual card names and destinations, fallback language and link contrast.');

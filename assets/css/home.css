@@ -32,6 +32,10 @@
   margin: 1.5rem 0 0.75rem;
 }
 
+#a2-courses {
+  color: var(--accent-a2);
+}
+
 [id$="-courses"] { scroll-margin-top: 5rem; }
 
 /* Useful Links Section */

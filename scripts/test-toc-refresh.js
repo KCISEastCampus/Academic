@@ -86,6 +86,24 @@ context.tree = tree;
 assert.match(vm.runInContext('renderTOCTree(tree, true)', context), /has-children collapsed/);
 assert.match(vm.runInContext('renderTOCTree(tree, true)', context), /aria-expanded="false"/);
 assert.match(vm.runInContext('renderTOCTree(tree)', context), /has-children expanded/);
+for (const [language, action] of [['zh-CN', '展开或收起本节'], ['en', 'Collapse or expand section']]) {
+  document.documentElement.lang = language;
+  const rendered = vm.runInContext('renderTOCTree(tree)', context);
+  assert.match(rendered, /aria-labelledby="toc-branch-0-action toc-branch-0-title"/);
+  assert(rendered.includes(`data-ui="collapse_section">${action}</span>`));
+  assert.match(rendered, /id="toc-branch-0-title" data-toc-link href="#parent">Parent<\/a>/);
+  assert(!rendered.includes('data-ui-aria="collapse_section"'), 'UI translation must not replace the chapter-specific name');
+}
+document.documentElement.lang = 'zh-CN';
+// Offset parents must not change which chapter the reader is viewing.
+context.headings = [400, 820, 1200].map(top => ({
+  offsetTop: 0,
+  getBoundingClientRect: () => ({ top: top - context.window.scrollY })
+}));
+for (const [scrollY, expected] of [[0, 0], [700, 1], [1100, 2]]) {
+  context.window.scrollY = scrollY;
+  assert.equal(vm.runInContext('findActiveHeading(headings)', context), context.headings[expected]);
+}
 vm.runInContext('toggleTOC(true);', context);
 assert.equal(drawer.inert, false);
 assert.equal(navLinks.classList.contains('show'), false, 'Contents close the overlapping site navigation');
