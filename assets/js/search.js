@@ -40,22 +40,27 @@
         (item._lowerContent && item._lowerContent.includes(q))
       ))
       .slice(0, 10)
-      .map(item => ({ title: item.title, url: item.url, excerpt: item.content }));
+      .map(item => ({ title: item.title, url: item.url, section: item.section, excerpt: item.description || item.content }));
   }
 
   function cleanExcerpt(value) {
     const excerpt = String(value || '')
       .replace(/<[^>]*>/g, ' ')
-      .replace(/\$\$[\s\S]*?\$\$|\$[^$\n]*\$|\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\)/g, ' ')
-      .replace(/\\(?:[A-Za-z]+|[,;!])/g, ' ')
-      .replace(/\s+([,.;!?])/g, '$1')
-      .replace(/([,.;!?])\s*[,.!?]+/g, '$1 ')
+      // Mark whole formulas before splitting sentences, including decimal points in TeX.
+      .replace(/\$\$[\s\S]*?\$\$|\$[^$\n]*\$|\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\)/g, '\uFFFD')
       .replace(/\s+/g, ' ')
       .trim();
 
-    // Pagefind may clip TeX mid-formula; hide fragments that still resemble source.
-    if (/\\[A-Za-z]+|[$\\{}^_]|\b[A-Za-z]\w*\s*=\s*[^.;!?]{1,50}/.test(excerpt)) return '';
-    return excerpt.slice(0, 120);
+    // Omit formula-bearing sentences, not just their formulas, to preserve meaning.
+    const sentences = excerpt.split(/(?<=[。！？])|(?<=[.!?])\s+/u);
+    let summary = '';
+    for (const sentence of sentences) {
+      if (/[\uFFFD$\\{}^_]|[A-Za-z]\w*\s*=/.test(sentence)) continue;
+      const next = (summary + ' ' + sentence).trim();
+      if (next.length > 120) break;
+      summary = next;
+    }
+    return summary;
   }
 
   function renderResults(results) {
@@ -85,6 +90,13 @@
       title.classList.add('fw-bold');
       title.textContent = result.title;
       item.appendChild(title);
+
+      if (result.section && result.section !== result.title) {
+        const section = document.createElement('small');
+        section.classList.add('search-result-section');
+        section.textContent = result.section;
+        item.appendChild(section);
+      }
 
       const excerpt = cleanExcerpt(result.excerpt);
       if (excerpt) {
@@ -154,7 +166,8 @@
           const results = dataResults.map(data => ({
             title: data.meta.title,
             url: data.url,
-            excerpt: data.excerpt || ''
+            section: data.meta.section,
+            excerpt: data.meta.description || data.excerpt || ''
           }));
           renderResults(results);
         } else {
@@ -166,6 +179,7 @@
           const results = fallbackSearch(query, searchData || []).map(item => ({
             title: item.title,
             url: item.url,
+            section: item.section,
             excerpt: item.excerpt || ''
           }));
           renderResults(results);
@@ -181,6 +195,12 @@
 
   // Links receive real focus so keyboard and assistive-technology users agree.
   searchInput.addEventListener('keydown', function(e) {
+    // Search inputs otherwise consume Escape to clear text before the dialog sees it.
+    if (e.key === 'Escape' && dialog?.open) {
+      e.preventDefault();
+      dialog.close();
+      return;
+    }
     const items = searchResults.querySelectorAll('a.list-group-item');
     if (!items.length || searchResults.style.display === 'none') return;
     if (e.key === 'ArrowDown') {

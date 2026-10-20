@@ -64,6 +64,7 @@ const drawer = {
 };
 const toggle = {
   classList: classes(),
+  querySelector: () => null,
   setAttribute(key, value) { this[key] = value; },
   focus() { focused = 'toggle'; document.activeElement = this; }
 };
@@ -79,6 +80,12 @@ document.querySelectorAll = selector => {
 };
 document.getElementById = id => ({ toc: drawer, tocToggle: toggle, tocSearch: drawerInput, siteNavLinks: navLinks, siteNavToggle: navToggle })[id];
 context.window = { innerWidth: 390 };
+document.documentElement = { lang: 'zh-CN' };
+const tree = [{ id: 'parent', text: 'Parent', level: 2, children: [{ id: 'child', text: 'Child', level: 3, children: [] }] }];
+context.tree = tree;
+assert.match(vm.runInContext('renderTOCTree(tree, true)', context), /has-children collapsed/);
+assert.match(vm.runInContext('renderTOCTree(tree, true)', context), /aria-expanded="false"/);
+assert.match(vm.runInContext('renderTOCTree(tree)', context), /has-children expanded/);
 vm.runInContext('toggleTOC(true);', context);
 assert.equal(drawer.inert, false);
 assert.equal(navLinks.classList.contains('show'), false, 'Contents close the overlapping site navigation');

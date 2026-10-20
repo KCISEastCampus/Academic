@@ -113,7 +113,9 @@ function setup({ fallback = false, lang = 'en' } = {}) {
   s.input.value = 'x';
   s.input.dispatchEvent(new Event('input'));
   assert.equal(s.results.style.display, 'none', 'A short query hides prior results');
-  s.dialog.close();
+  assert(s.key(s.input, 'Escape').defaultPrevented, 'Escape bypasses the search input clear action');
+  assert.equal(s.dialog.open, false, 'One Escape closes search even with a nonempty query');
+  assert.equal(s.document.activeElement, s.trigger);
 
   for (const hidden of [true, false]) {
     const drawerLink = { getClientRects: () => hidden ? [] : [{}], closest: () => hidden ? null : { inert: true }, focus() { throw Error('Must not focus an inaccessible drawer link'); } };

@@ -22,7 +22,7 @@ function generateTOC() {
   }
 
   const tree = buildTOCTree(headings);
-  tocContent.innerHTML = renderTOCTree(tree);
+  tocContent.innerHTML = renderTOCTree(tree, window.innerWidth <= 1024);
 
   const tocLinks = Array.from(tocContent.querySelectorAll("a[data-toc-link]"));
   if (focusedHref) {
@@ -171,7 +171,7 @@ function buildTOCTree(headings) {
   return roots;
 }
 
-function renderTOCTree(nodes) {
+function renderTOCTree(nodes, compact = false) {
   let branchIndex = 0;
   const renderNodes = (list) => {
     let html = '<ul class="toc-tree">';
@@ -179,13 +179,13 @@ function renderTOCTree(nodes) {
       const levelClass = `toc-h${node.level}`;
       const hasChildren = node.children.length > 0;
       const branchId = hasChildren ? `toc-branch-${branchIndex++}` : "";
-      const itemClass = hasChildren ? "toc-item has-children expanded" : "toc-item";
+      const itemClass = hasChildren ? `toc-item has-children ${compact ? "collapsed" : "expanded"}` : "toc-item";
 
       html += `<li class="${itemClass} ${levelClass} toc-level-${node.level}">`;
       html += '<div class="toc-row">';
 
       if (hasChildren) {
-        html += `<button class="toc-collapse" type="button" data-ui-aria="collapse_section" aria-label="${document.documentElement.lang === 'zh-CN' ? '展开或收起章节' : 'Collapse section'}" aria-expanded="true" aria-controls="${branchId}"></button>`;
+        html += `<button class="toc-collapse" type="button" data-ui-aria="collapse_section" aria-label="${document.documentElement.lang === 'zh-CN' ? '展开或收起章节' : 'Collapse section'}" aria-expanded="${!compact}" aria-controls="${branchId}"></button>`;
       } else {
         html += '<span class="toc-spacer" aria-hidden="true"></span>';
       }
@@ -331,6 +331,8 @@ function toggleTOC(show, focusOnOpen = true) {
   const wasOpen = toc.classList.contains("show");
   const focusInTOC = toc.contains(document.activeElement);
   const visible = !mobile || show;
+  const toggleIcon = tocToggle.querySelector("i");
+  if (toggleIcon) toggleIcon.className = show ? "bi bi-x" : "bi bi-journal-text";
   toc.inert = !visible;
   toc.setAttribute("aria-hidden", String(!visible));
   tocToggle.setAttribute("aria-expanded", String(visible));
@@ -341,7 +343,6 @@ function toggleTOC(show, focusOnOpen = true) {
   if (show) {
     toc.classList.add("show");
     tocToggle.classList.add("active");
-    tocToggle.innerHTML = '<i class="bi bi-x" aria-hidden="true"></i>';
     if (mobile) {
       document.getElementById("siteNavLinks")?.classList.remove("show");
       document.getElementById("siteNavToggle")?.setAttribute("aria-expanded", "false");
@@ -356,7 +357,6 @@ function toggleTOC(show, focusOnOpen = true) {
   } else {
     toc.classList.remove("show");
     tocToggle.classList.remove("active");
-    tocToggle.innerHTML = '<i class="bi bi-journal-text" aria-hidden="true"></i>';
     if (wasOpen) document.body.style.overflow = "";
     document.body.classList.remove("toc-open");
     if (mobile && focusInTOC) tocToggle.focus({ preventScroll: true });

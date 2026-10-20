@@ -12,7 +12,7 @@
 <nav class="site-nav" data-site-ui lang="{{ page.lang | default: 'en' }}" data-ui-aria="main_navigation" aria-label="{{ ui.main_navigation }}">
   <div class="site-nav-inner">
     <a href="{{ home_url | relative_url }}" class="site-nav-brand" data-ui-aria="site_title" aria-label="{{ ui.site_title }}">
-      <span class="site-nav-logo">📚</span>
+      <span class="site-nav-logo" aria-hidden="true">📚</span>
       <span class="site-nav-title" data-ui="site_title">{{ ui.site_title }}</span>
     </a>
     <div class="site-nav-links" id="siteNavLinks">
@@ -31,7 +31,7 @@
         {% elsif nav_url != '/' and current_url contains nav_url %}
           {% assign active = true %}
         {% endif %}
-        <a href="{{ target_url | relative_url }}" class="site-nav-link {% if active %}active{% endif %}" data-ui="{{ nav_keys[forloop.index0] }}">{{ nav_labels[forloop.index0] }}</a>
+        <a href="{{ target_url | relative_url }}" class="site-nav-link {% if active %}active{% endif %}"{% if active %} aria-current="{% if current_url == nav_url %}page{% else %}location{% endif %}"{% endif %} data-ui="{{ nav_keys[forloop.index0] }}">{{ nav_labels[forloop.index0] }}</a>
       {% endfor %}
     </div>
     <div class="site-nav-actions">
@@ -39,6 +39,7 @@
               aria-controls="siteSearchDialog" aria-haspopup="dialog" hidden>
         <i class="bi bi-search" aria-hidden="true"></i>
       </button>
+      <div id="siteNavPreferences" class="site-nav-preferences">
       <select id="siteLanguage" class="site-language-select" data-ui-aria="choose_language" aria-label="{{ ui.choose_language }}" hidden>
         <option value="en" lang="en"{% unless page.lang == 'zh-CN' %} selected{% endunless %}>English</option>
         <option value="zh-CN" lang="zh-CN"{% if page.lang == 'zh-CN' %} selected{% endif %}>中文</option>
@@ -46,17 +47,20 @@
       {% if translation %}
       <a class="site-nav-link" id="languageSwitch" href="{{ translation.url | relative_url }}" lang="{{ translation.lang | default: 'en' }}" hreflang="{{ translation.lang | default: 'en' }}" aria-label="{{ ui.switch_label }}">{{ ui.switch_language }}</a>
       {% endif %}
-      {% if include.show_toc %}
-      <button class="site-nav-theme-btn toc-toggle" id="tocToggle" type="button" data-ui-aria="toggle_contents" data-ui-title="contents" aria-label="{{ ui.toggle_contents }}" title="{{ ui.contents }}" aria-controls="toc" aria-expanded="false">
-        <i class="bi bi-journal-text" aria-hidden="true"></i>
-      </button>
-      {% endif %}
       <button class="site-nav-theme-btn" id="navThemeBtn" type="button" data-ui-aria="dark_theme" aria-label="{{ ui.dark_theme }}" aria-pressed="false">
         <i class="bi bi-moon-fill theme-icon-nav-moon" aria-hidden="true"></i>
         <i class="bi bi-sun-fill theme-icon-nav-sun" aria-hidden="true"></i>
       </button>
-      <button class="site-nav-toggle" id="siteNavToggle" data-ui-aria="toggle_navigation" aria-label="{{ ui.toggle_navigation }}" aria-expanded="false">
-        <i class="bi bi-list"></i>
+      <span class="site-nav-preference-label" data-ui="dark_theme">{{ ui.dark_theme }}</span>
+      </div>
+      {% if include.show_toc %}
+      <button class="site-nav-theme-btn toc-toggle" id="tocToggle" type="button" data-ui-aria="toggle_contents" data-ui-title="contents" aria-label="{{ ui.toggle_contents }}" title="{{ ui.contents }}" aria-controls="toc" aria-expanded="false">
+        <i class="bi bi-journal-text" aria-hidden="true"></i>
+        <span data-ui="contents">{{ ui.contents }}</span>
+      </button>
+      {% endif %}
+      <button class="site-nav-toggle" id="siteNavToggle" type="button" data-ui-aria="toggle_navigation" aria-label="{{ ui.toggle_navigation }}" aria-expanded="false" aria-controls="siteNavLinks">
+        <i class="bi bi-list" aria-hidden="true"></i>
       </button>
     </div>
   </div>
@@ -68,6 +72,18 @@
     var toggle = document.getElementById('siteNavToggle');
     var links = document.getElementById('siteNavLinks');
     var navThemeBtn = document.getElementById('navThemeBtn');
+    var preferences = document.getElementById('siteNavPreferences');
+    if (preferences && links) {
+      var actions = preferences.parentElement;
+      var mobileNav = window.matchMedia('(max-width: 1024px)');
+      function placePreferences() {
+        var focused = preferences.contains(document.activeElement) ? document.activeElement : null;
+        (mobileNav.matches ? links : actions).appendChild(preferences);
+        if (focused) (mobileNav.matches && !links.classList.contains('show') ? toggle : focused).focus();
+      }
+      placePreferences();
+      mobileNav.addEventListener('change', placePreferences);
+    }
     var languageSwitch = document.getElementById('languageSwitch');
     if (languageSwitch) {
       languageSwitch.addEventListener('click', function() {

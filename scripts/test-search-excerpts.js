@@ -8,7 +8,7 @@ const importCall = "return import(/* webpackIgnore: true */ '/pagefind/pagefind.
 assert(original.includes(importCall), 'Pagefind import stub remains available');
 const source = original.replace(importCall, 'return Promise.resolve(window.pagefind)');
 
-async function search(mode, excerpt) {
+async function search(mode, excerpt, section) {
   function element(tag) {
     const node = new EventTarget();
     const attributes = {};
@@ -38,7 +38,7 @@ async function search(mode, excerpt) {
     pagefind: {
       async search() {
         return { results: [{ data: async () => ({
-          meta: { title: 'Capacitor lesson' },
+          meta: { title: 'Capacitor lesson', section },
           url: '/alevel/a2-physics/capacitor-charge-and-discharge/',
           excerpt
         }) }] };
@@ -53,6 +53,7 @@ async function search(mode, excerpt) {
       return { ok: true, json: async () => [{
         title: 'Capacitor lesson',
         content: excerpt,
+        section,
         url: '/alevel/a2-physics/capacitor-charge-and-discharge/'
       }] };
     },
@@ -86,10 +87,17 @@ async function search(mode, excerpt) {
   const bareEquation = await search('fallback', 'Capacitor relation: C=1/(R|m|).');
   assert.equal(bareEquation.children.length, 1, 'Omit unmarked equations instead of exposing formula fragments');
 
+  for (const mode of ['fallback', 'pagefind']) {
+    const formulaSentence = await search(mode, '极板带 $+Q$ 和 $-Q$ 电荷。先判断电容器是否连接电源。', 'A2 物理');
+    assert.equal(formulaSentence.children[1].textContent, 'A2 物理');
+    assert.equal(formulaSentence.children[2].textContent, '先判断电容器是否连接电源。', 'Discard the whole sentence containing a formula');
+    const clipped = await search(mode, 'Capacitor uses \\frac{Q}{V}.');
+    assert.equal(clipped.children.length, 1, 'Clipped TeX does not produce broken prose');
+  }
   const long = await search('fallback', 'Capacitor ' + 'clear English description '.repeat(8));
-  assert.equal(long.children[1].textContent.length, 120);
+  assert.equal(long.children.length, 1, 'Do not cut long sentences mid-word');
 
   const empty = await search('fallback', '');
   assert.equal(empty.children.length, 1, 'An empty excerpt does not create an empty snippet');
-  console.log('Search excerpts passed: Pagefind and fallback cleanup, safe omission, readability and 120-character limit.');
+  console.log('Search excerpts passed: complete prose, formula sentence omission, course context and length limit in both engines.');
 })().catch(error => { console.error(error); process.exitCode = 1; });

@@ -15,6 +15,7 @@ for (const file of ['index.html', 'zh/index.html', 'alevel/index.html', 'igcse/i
   const target = html.match(/class="skip-link[^"]*" href="#([^"]+)"/)[1];
   assert(new RegExp(`id="${target}"[^>]*tabindex="-1"`).test(html), `${file}: skip target accepts focus`);
   assert(html.includes('role="status"'), `${file}: search announces results`);
+  assert(html.includes('aria-controls="siteNavLinks"'), `${file}: navigation toggle names its panel`);
 }
 // Snapshot destinations, not copy: descriptions may change without changing the resources.
 const homepageDestinations = [
@@ -82,6 +83,19 @@ for (const file of ['index.html', 'zh/index.html', 'alevel/index.html', 'igcse/i
 }
 const index = JSON.parse(read('assets/search.json'));
 assert(index.every(item => ['en', 'zh-CN'].includes(item.lang)), 'Fallback language metadata is explicit');
+for (const [url, section] of [
+  ['/zh/alevel/a2-physics/capacitance/', 'A2 物理'],
+  ['/alevel/a2-mathematics/mechanics/', 'A2 Math - Mechanics']
+]) {
+  const item = index.find(item => item.url.replace(/\/$/, '') === url.replace(/\/$/, ''));
+  assert.equal(item?.section, section, 'Search uses the most specific course name');
+  const page = read(url.slice(1) + 'index.html');
+  assert(page.includes(`data-pagefind-meta="section[content]" content="${section}"`), 'Both search engines receive the same course context');
+  if (url.includes('capacitance')) {
+    assert(item.description.startsWith('解释电容器如何储存电荷和能量'), 'Prefer a full introduction over clipped query context');
+    assert(page.includes('data-pagefind-meta="description[content]" content="解释电容器如何储存电荷和能量'), 'Pagefind receives the same complete introduction');
+  }
+}
 
 function luminance(hex) {
   const rgb = hex.match(/[a-f\d]{2}/gi).map(channel => parseInt(channel, 16) / 255)

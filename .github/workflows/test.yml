@@ -32,6 +32,7 @@ jobs:
           node scripts/test-search-interaction.js
           node scripts/test-frontend-loading.js
           node scripts/test-frontend-ux.js
+          node scripts/test-exam-timetable.js
           node scripts/test-theme-init.js
           node scripts/test-image-modal.js
 

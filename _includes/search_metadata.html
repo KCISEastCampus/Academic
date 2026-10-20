@@ -1,0 +1,27 @@
+{%- assign search_url = page.translation_of | default: page.url | append: '/' | replace: '//', '/' -%}
+{%- assign search_subjects = site.data.subjects.alevel | concat: site.data.subjects.igcse -%}
+{%- assign search_section = '' -%}
+{%- assign search_match_length = 0 -%}
+{%- for subject in search_subjects -%}
+  {%- assign subject_path = subject.path | append: '/' | replace: '//', '/' -%}
+  {%- assign prefix = search_url | slice: 0, subject_path.size -%}
+  {%- if prefix == subject_path and subject_path.size > search_match_length -%}
+    {%- assign search_match_length = subject_path.size -%}
+    {%- assign search_section = subject.name -%}
+    {%- if page.lang == 'zh-CN' -%}{%- assign search_section = subject.name_zh | default: subject.name -%}{%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign search_description = page.description | default: '' | strip_html -%}
+{%- if search_description == '' -%}
+  {%- assign paragraphs = page.content | markdownify | split: '</p>' -%}
+  {%- for paragraph in paragraphs -%}
+    {%- unless paragraph contains '<p>' -%}{%- continue -%}{%- endunless -%}
+    {%- assign candidate = paragraph | split: '<p>' | last | strip_html | strip_newlines | strip -%}
+    {%- if candidate.size >= 40 and candidate.size <= 240 -%}
+      {%- unless candidate contains '$' or candidate contains '\' -%}
+        {%- assign search_description = candidate -%}
+        {%- break -%}
+      {%- endunless -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}

@@ -2,6 +2,7 @@
    Global Navigation Bar
    ======================================== */
 .site-nav {
+  font-family: var(--font-heading);
   position: sticky;
   top: 0;
   z-index: 1004;
@@ -91,6 +92,21 @@ html[data-bs-theme="dark"] .site-nav {
   flex-shrink: 0;
 }
 
+.site-nav-preferences {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.site-nav-preference-label { display: none; }
+
+.site-nav .toc-toggle {
+  width: auto;
+  gap: 0.35rem;
+  padding-inline: 0.6rem;
+  border-radius: 0.4rem;
+}
+
 .site-nav-theme-btn {
   display: inline-flex;
   align-items: center;
@@ -161,7 +177,7 @@ html[data-bs-theme="dark"] .theme-icon-nav-moon {
 @media (max-width: 1024px) {
   .site-nav-title {
     display: block;
-    max-width: 5rem;
+    max-width: 12rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -173,6 +189,15 @@ html[data-bs-theme="dark"] .theme-icon-nav-moon {
   .site-nav-actions { gap: 0.25rem; }
   .site-nav-inner { gap: 0.4rem; padding-inline: 0.65rem; }
   .site-nav-actions .site-language-select { max-width: 5.25rem; }
+  .site-nav-preferences {
+    border-top: 1px solid var(--border);
+    margin-top: 0.4rem;
+    padding: 0.65rem 0.75rem;
+    gap: 0.65rem;
+  }
+  .site-nav-preferences .site-language-select { min-height: 40px; margin-right: auto; }
+  .site-nav-preference-label { display: inline; font-size: 0.85rem; }
+  .site-nav-theme-btn, .site-nav-toggle { min-width: 40px; min-height: 40px; }
 
   .site-nav-toggle {
     display: inline-flex;
@@ -1222,7 +1247,7 @@ body:has(.site-search-dialog[open]) { overflow: hidden; }
 }
 
 .modern-subject-card:hover .card-title {
-  color: var(--accent-color);
+  color: var(--link-text);
 }
 
 .modern-subject-card .card-meta {
@@ -1624,6 +1649,5 @@ html[data-bs-theme="dark"] .site-breadcrumb .breadcrumb-home:hover {
   display: none;
 }
 
-@media (max-width: 360px) {
-  .site-nav-title { display: none; }
-}
+.site-search-dialog { font-family: var(--font-heading); }
+.search-result-section { display: block; color: var(--muted); margin-block: 0.2rem; }

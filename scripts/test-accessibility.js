@@ -22,6 +22,8 @@ class Element extends EventTarget {
 }
 
 const toggle = new Element();
+const toggleIcon = {};
+toggle.querySelector = () => toggleIcon;
 const toc = new Element();
 const search = new Element();
 const hiddenLink = new Element();

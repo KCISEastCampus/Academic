@@ -62,3 +62,40 @@ for (const page of translatedPages) {
 }
 console.log('Timetable data passed: 41 unique papers, valid dates/cohorts/durations, CH02 regression and official PDF link.');
 console.log(`Bilingual timetable and navigation passed on ${translatedPages.length} Chinese pages: paired switches, hreflang, active links, shared data and existing destinations.`);
+
+// Exercise responsive defaults and the calendar's accessible date controls.
+const vm = require('node:vm');
+for (const width of [390, 1360]) {
+  const buttons = ['calendar', 'list'].map(mode => ({
+    attrs: { 'data-view-mode': mode },
+    classList: { toggle() {} },
+    getAttribute(key) { return this.attrs[key]; },
+    setAttribute(key, value) { this.attrs[key] = value; },
+    addEventListener(type, handler) { this[type] = handler; }
+  }));
+  const calendar = { style: {}, querySelectorAll: () => [] };
+  const rootNode = {
+    querySelector: selector => selector === '[data-timetable-calendar]' ? calendar : null,
+    querySelectorAll: selector => selector === '[data-view-mode]' ? buttons : []
+  };
+  const ui = JSON.parse(zhHtml.match(/<script id="exam-timetable-ui"[^>]*>([\s\S]*?)<\/script>/)[1]);
+  vm.runInNewContext(read('assets/js/exam_timetable.js'), {
+    window: { innerWidth: width }, console, Intl, Date,
+    document: {
+      documentElement: { lang: 'zh-CN' },
+      querySelector: () => rootNode,
+      getElementById: id => ({
+        'exam-timetable-data': { textContent: JSON.stringify(data) },
+        'exam-timetable-ui': { textContent: JSON.stringify(ui) }
+      })[id],
+      addEventListener() {}
+    }
+  });
+  assert.equal(calendar.style.display, width === 390 ? 'none' : 'block');
+  assert.equal(buttons[1].attrs['aria-pressed'], String(width === 390));
+  assert.match(calendar.innerHTML, /data-mobile-date="2027-01-05" aria-pressed="true" aria-label="[^"]*2027[^"]*4 场考试"/);
+  buttons[0].click();
+  assert.equal(calendar.style.display, 'block', 'The mobile default never prevents choosing the calendar');
+  assert.equal(buttons[0].attrs['aria-pressed'], 'true');
+}
+console.log('Timetable interaction passed: responsive default, view switching and complete date labels.');
