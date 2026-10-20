@@ -13,6 +13,7 @@ layout: none
   <link rel="stylesheet" href="/assets/css/tmua-notes.css">
   {% endif %}
   <link rel="stylesheet" href="/assets/css/subject.css">
+  {% if page.reading_layout %}<link rel="stylesheet" href="/assets/css/reading.css">{% endif %}
   <script src="/assets/js/toc_generator.js"></script>
   <script src="/assets/js/image_modal.js"></script>
   <script src="/assets/js/table_wrapper.js"></script>
@@ -23,11 +24,13 @@ layout: none
 {% elsif page.url contains '/igcse/' %}
 <body class="scheme-igcse">
 {% elsif page.url contains '/alevel/' %}
-<body class="scheme-alevel{% if page.study_page %} study-page{% endif %}">
+<body class="scheme-alevel{% if page.grade == 'a2' or page.url contains '/a2-' %} scheme-a2{% endif %}{% if page.study_page %} study-page{% endif %}">
 {% else %}
 <body>
 {% endif %}
+  <a class="skip-link" href="#content-container" data-ui="skip_content">{{ ui.skip_content }}</a>
   {% include nav.html show_toc=true %}
+  {% capture subject_header %}
   <header class="subject-header">
     <div class="subject-header-inner">
       <div class="subject-header-text">
@@ -42,11 +45,15 @@ layout: none
       </div>
     </div>
   </header>
+  {% endcapture %}
+  {% if page.tmua_notes %}{{ subject_header }}{% endif %}
 
-  <div id="main-container">
-    <div id="content-container" data-pagefind-body data-toc-headings="{{ page.toc_headings | default: 'h1, h2, h3, h4' }}">
+  <div id="main-container"{% if page.reading_layout %} class="reading-layout"{% endif %}>
+    {% unless page.tmua_notes %}{{ subject_header }}{% endunless %}
+    {% if page.tmua_notes %}{% assign content_tag = 'div' %}{% else %}{% assign content_tag = 'main' %}{% endif %}
+    <{{ content_tag }} id="content-container" tabindex="-1" data-pagefind-body data-toc-headings="{{ page.toc_headings | default: 'h1, h2, h3, h4' }}"{% if page.reading_layout %} data-toc-compact="true"{% endif %}>
       {% include lazy_content.html content=content %}
-    </div>
+    </{{ content_tag }}>
     <div id="toc" class="table-of-contents" role="navigation" aria-labelledby="tocTitle" data-site-ui lang="{{ page.lang | default: 'en' }}">
       <div class="toc-header-fixed">
         <h2 id="tocTitle" class="contents-list" data-ui="{% if page.cg50_stage %}guide_contents{% else %}contents{% endif %}">{% if page.cg50_stage %}本页目录{% else %}{{ ui.contents }}{% endif %}</h2>

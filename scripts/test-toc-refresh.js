@@ -31,6 +31,10 @@ const context = vm.createContext({ document, AbortController, Event });
 vm.runInContext(fs.readFileSync(path.join(__dirname, '../assets/js/toc_generator.js'), 'utf8'), context);
 context.links = links;
 vm.runInContext('initTOCSearch(links);', context);
+const globalSearchShortcut = new Event('keydown', { cancelable: true });
+Object.assign(globalSearchShortcut, { key: 'k', ctrlKey: true });
+document.dispatchEvent(globalSearchShortcut);
+assert.equal(globalSearchShortcut.defaultPrevented, false, 'TOC must not consume the shared global search shortcut');
 input.dispatchEvent(new Event('input'));
 assert.equal(parent.style.display, '', 'Matched children keep their ancestors visible');
 assert.equal(child.style.display, '');
@@ -60,6 +64,7 @@ const drawer = {
 };
 const toggle = {
   classList: classes(),
+  querySelector: () => null,
   setAttribute(key, value) { this[key] = value; },
   focus() { focused = 'toggle'; document.activeElement = this; }
 };
@@ -75,6 +80,30 @@ document.querySelectorAll = selector => {
 };
 document.getElementById = id => ({ toc: drawer, tocToggle: toggle, tocSearch: drawerInput, siteNavLinks: navLinks, siteNavToggle: navToggle })[id];
 context.window = { innerWidth: 390 };
+document.documentElement = { lang: 'zh-CN' };
+const tree = [{ id: 'parent', text: 'Parent', level: 2, children: [{ id: 'child', text: 'Child', level: 3, children: [] }] }];
+context.tree = tree;
+assert.match(vm.runInContext('renderTOCTree(tree, true)', context), /has-children collapsed/);
+assert.match(vm.runInContext('renderTOCTree(tree, true)', context), /aria-expanded="false"/);
+assert.match(vm.runInContext('renderTOCTree(tree)', context), /has-children expanded/);
+for (const [language, action] of [['zh-CN', '展开或收起本节'], ['en', 'Collapse or expand section']]) {
+  document.documentElement.lang = language;
+  const rendered = vm.runInContext('renderTOCTree(tree)', context);
+  assert.match(rendered, /aria-labelledby="toc-branch-0-action toc-branch-0-title"/);
+  assert(rendered.includes(`data-ui="collapse_section">${action}</span>`));
+  assert.match(rendered, /id="toc-branch-0-title" data-toc-link href="#parent">Parent<\/a>/);
+  assert(!rendered.includes('data-ui-aria="collapse_section"'), 'UI translation must not replace the chapter-specific name');
+}
+document.documentElement.lang = 'zh-CN';
+// Offset parents must not change which chapter the reader is viewing.
+context.headings = [400, 820, 1200].map(top => ({
+  offsetTop: 0,
+  getBoundingClientRect: () => ({ top: top - context.window.scrollY })
+}));
+for (const [scrollY, expected] of [[0, 0], [700, 1], [1100, 2]]) {
+  context.window.scrollY = scrollY;
+  assert.equal(vm.runInContext('findActiveHeading(headings)', context), context.headings[expected]);
+}
 vm.runInContext('toggleTOC(true);', context);
 assert.equal(drawer.inert, false);
 assert.equal(navLinks.classList.contains('show'), false, 'Contents close the overlapping site navigation');

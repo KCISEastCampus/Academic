@@ -34,7 +34,7 @@
   var currentCohort = 'ALL';
   var currentSubject = 'ALL';
   var searchTerm = '';
-  var currentViewMode = 'calendar'; // Default to calendar view
+  var currentViewMode = window.innerWidth <= 768 ? 'list' : 'calendar';
   var selectedMobileDate = '2027-01-05'; // Default to first exam date
 
   // DOM Elements
@@ -186,7 +186,7 @@
           '<div class="exam-title-line">' + escapeHtml(exam.title) + '</div>',
         '</div>',
         '<div class="ledger-col-duration" role="cell">',
-          '<span class="duration-pill"><i class="bi bi-clock"></i> ' + escapeHtml(exam.duration) + '</span>',
+          '<span class="duration-pill"><i class="bi bi-clock" aria-hidden="true"></i> ' + escapeHtml(exam.duration) + '</span>',
         '</div>',
       '</div>'
     ].join('');
@@ -199,7 +199,7 @@
     if (!matched.length) {
       daysContainer.innerHTML = [
         '<div class="timetable-empty">',
-          '<i class="bi bi-calendar-x"></i>',
+          '<i class="bi bi-calendar-x" aria-hidden="true"></i>',
           '<h4>' + escapeHtml(ui.empty_title) + '</h4>',
           '<p>' + escapeHtml(ui.empty_hint) + '</p>',
         '</div>'
@@ -283,7 +283,7 @@
     var headerHtml = [
       '<div class="cal-header-bar">',
         '<div class="cal-month-title">',
-          '<i class="bi bi-calendar3 text-primary"></i>',
+          '<i class="bi bi-calendar3 text-primary" aria-hidden="true"></i>',
           '<span>' + escapeHtml(ui.month) + '</span>',
           '<span class="badge bg-body-secondary text-body-secondary border ms-2 fw-normal" style="font-size: 0.72rem;">' + escapeHtml(ui.series_label) + '</span>',
         '</div>',
@@ -391,7 +391,8 @@
       }
 
       return [
-        '<button type="button" class="' + dayClasses.join(' ') + '" data-mobile-date="' + escapeHtml(day.date) + '" ' + (day.isOtherMonth ? 'disabled' : '') + '>',
+        '<button type="button" class="' + dayClasses.join(' ') + '" data-mobile-date="' + escapeHtml(day.date) + '" aria-pressed="' + isSelected + '" aria-label="' +
+          escapeHtml(new Intl.DateTimeFormat(locale, { dateStyle: 'full' }).format(new Date(day.date + 'T12:00:00')) + ' · ' + dayExams.length + ' ' + ui.scheduled) + '" ' + (day.isOtherMonth ? 'disabled' : '') + '>',
           '<span class="cal-mobile-num">' + day.num + '</span>',
           dotsHtml,
         '</button>'
@@ -421,7 +422,7 @@
                 '<small class="text-muted">' + escapeHtml(ex.paper) + '</small>',
               '</div>',
             '</div>',
-            '<span class="duration-pill"><i class="bi bi-clock"></i> ' + escapeHtml(ex.duration) + '</span>',
+            '<span class="duration-pill"><i class="bi bi-clock" aria-hidden="true"></i> ' + escapeHtml(ex.duration) + '</span>',
           '</button>'
         ].join('');
       }).join('');
@@ -466,6 +467,7 @@
         if (d) {
           selectedMobileDate = d;
           renderCalendarView(matched);
+          calendarContainer.querySelector('[data-mobile-date="' + d + '"]')?.focus();
         }
       });
     });
@@ -474,6 +476,11 @@
   // Master Render function
   function render() {
     var matched = getMatchingExams();
+    viewModeButtons.forEach(function (button) {
+      var active = button.getAttribute('data-view-mode') === currentViewMode;
+      button.classList.toggle('active', active);
+      button.setAttribute('aria-pressed', String(active));
+    });
 
     if (countDisplay) {
       countDisplay.textContent = matched.length;
@@ -496,12 +503,6 @@
   viewModeButtons.forEach(function (btn) {
     btn.addEventListener('click', function () {
       currentViewMode = btn.getAttribute('data-view-mode');
-      viewModeButtons.forEach(function (b) {
-        b.classList.remove('active');
-        b.setAttribute('aria-pressed', 'false');
-      });
-      btn.classList.add('active');
-      btn.setAttribute('aria-pressed', 'true');
       render();
     });
   });

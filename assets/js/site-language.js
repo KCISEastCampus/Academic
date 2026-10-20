@@ -20,6 +20,8 @@
     pairs.set(normalize(en.pathname), pair);
     pairs.set(normalize(zh.pathname), pair);
   }
+  // An explicit translated URL governs both its content and its interface.
+  if (pairs.has(normalize(location.pathname))) language = root.lang === 'zh-CN' ? 'zh-CN' : 'en';
 
   function localizedHref(href, selected) {
     if (!href || href.startsWith('#')) return href;

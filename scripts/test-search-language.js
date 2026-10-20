@@ -34,7 +34,7 @@ async function search(lang, preferred, query = 'missing') {
       assert(results.children.length, 'Apply preferences after appending results');
       results.children.forEach(node => {
         if (node.getAttribute('data-ui') === 'no_matches') node.lang = preferred;
-        if (node.href === '/alevel/math/' && preferred === 'zh-CN') node.href = '/zh/alevel/math/';
+        if (node.getAttribute('data-language-explicit') === null && node.href === '/alevel/math/' && preferred === 'zh-CN') node.href = '/zh/alevel/math/';
       });
     }
   } } : {};
@@ -67,8 +67,8 @@ async function search(lang, preferred, query = 'missing') {
     if (preferred) assert.equal(empty.lang, preferred);
   }
   const result = await search('en', 'zh-CN', 'calculus');
-  assert.equal(result.href, '/zh/alevel/math/', 'Apply preferences to newly rendered result links');
+  assert.equal(result.href, '/alevel/math/', 'Keep indexed titles and destinations in the same language');
   assert.equal(result.children[0].textContent, 'Calculus lesson', 'Do not relabel or translate the indexed content');
   assert.equal(result.children[1].textContent, 'Original English content');
-  console.log('Search language passed: selected UI status, page-language fallback and preferences on newly rendered links.');
+  console.log('Search language passed: selected UI status, page-language fallback and matching indexed destinations.');
 })().catch(error => { console.error(error); process.exitCode = 1; });

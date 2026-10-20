@@ -239,7 +239,8 @@
 
     handleClick: function(e) {
       const link = e.target.closest('a[href^="#"]');
-      if (!link) return;
+      // Native fragment navigation also transfers focus for skip links.
+      if (!link || link.classList.contains('skip-link')) return;
 
       const targetId = link.getAttribute('href').substring(1);
       const targetElement = document.getElementById(targetId);

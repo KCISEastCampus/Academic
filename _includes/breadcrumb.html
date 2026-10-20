@@ -6,12 +6,12 @@
     <li class="breadcrumb-item">
       {% if page.url != "/" %}
       <a href="{% if page.lang == 'zh-CN' %}/zh/{% else %}/{% endif %}" class="breadcrumb-home" data-ui-aria="back_home" aria-label="{{ ui.back_home }}">
-        <i class="bi bi-house-door-fill"></i>
+        <i class="bi bi-house-door-fill" aria-hidden="true"></i>
         <span data-ui="home">{{ ui.home }}</span>
       </a>
       {% else %}
       <span class="breadcrumb-home current">
-        <i class="bi bi-house-door-fill"></i>
+        <i class="bi bi-house-door-fill" aria-hidden="true"></i>
         <span data-ui="home">{{ ui.home }}</span>
       </span>
       {% endif %}

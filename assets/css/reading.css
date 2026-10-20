@@ -1,0 +1,204 @@
+/* The integration sample uses the shared subjects shell and navigation. */
+#main-container.reading-layout {
+  max-width: 1080px;
+  grid-template-columns: var(--toc-left-width) minmax(0, 720px);
+  gap: 0 40px;
+  padding-top: 36px;
+}
+
+.reading-layout #content-container {
+  letter-spacing: 0;
+  word-spacing: normal;
+}
+
+.reading-layout #toc.table-of-contents {
+  padding-right: 20px;
+}
+
+.reading-layout .table-of-contents .toc-item > .toc-row > a {
+  font-size: 0.83rem;
+  font-weight: 400;
+  line-height: 1.6;
+  padding: 8px;
+  border-radius: 4px;
+  opacity: 1;
+  white-space: normal !important;
+  text-overflow: clip !important;
+}
+
+.reading-layout .toc-row > a.active {
+  font-weight: 600;
+}
+
+.reading-layout .toc-children {
+  margin-left: 8px;
+}
+
+.reading-layout .toc-collapse,
+.reading-layout .toc-spacer {
+  width: 24px;
+  min-width: 24px;
+  height: 32px;
+  margin-right: 0;
+}
+
+.reading-layout .toc-collapse::before {
+  top: 12px;
+  left: 9px;
+}
+
+.reading-layout .toc-search-input {
+  font-size: 0.83rem;
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+.reading-layout .reading-progress-container {
+  height: 2px;
+}
+
+.reading-layout #content-container h2 {
+  margin: 2.5rem 0 1rem !important;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+.reading-layout #content-container h3 {
+  margin: 1.75rem 0 0.75rem !important;
+  font-size: 1.22rem;
+  line-height: 1.45;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.reading-layout #content-container .lesson-meta {
+  margin-bottom: 0.6rem;
+  color: var(--muted);
+  font-size: 0.83rem;
+}
+
+.reading-layout #content-container .lesson-lead {
+  line-height: 1.8;
+}
+
+.reading-layout #content-container .lesson-routes {
+  padding-left: 0 !important;
+  margin: 1.25rem 0;
+  list-style: none;
+  font-size: 0.89rem;
+}
+
+.reading-layout .lesson-routes li {
+  margin: 0.6rem 0;
+}
+
+.reading-layout .lesson-notes {
+  margin: 1.25rem 0 2rem;
+  padding: 1rem 1.1rem;
+  border-left: 2px solid var(--border-hover);
+  background: var(--bg);
+  font-size: 0.83rem;
+  line-height: 1.8;
+}
+
+.reading-layout .lesson-notes > :last-child {
+  margin-bottom: 0 !important;
+}
+
+.reading-layout .worked-example {
+  margin: 1.5rem 0 2rem;
+  padding: 1.25rem;
+  border: 1px solid var(--border-hover);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.reading-layout #content-container .worked-example > :is(h3, h4):first-child {
+  margin: 0 0 1rem !important;
+  padding: 0 0 0.8rem;
+  border: 0;
+  border-bottom: 1px solid var(--border-hover);
+  border-radius: 0;
+  background: transparent;
+  font-size: 1.055rem;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.reading-layout .worked-example > :last-child {
+  margin-bottom: 0 !important;
+}
+
+.reading-layout #content-container .table-wrapper {
+  border-radius: 6px;
+}
+
+.reading-layout #content-container thead th {
+  background: var(--surface-hover);
+  border-bottom: 1px solid var(--border-hover);
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+body:has(> #main-container.reading-layout) .back-to-top {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--border-hover);
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+  font-size: 1.1rem;
+}
+
+@media (max-width: 1024px) {
+  #main-container.reading-layout {
+    max-width: 760px;
+    padding-top: 28px;
+  }
+
+  .reading-layout .subject-header-inner {
+    padding: 0 20px 24px;
+  }
+
+  .reading-layout #content-container {
+    padding-top: 24px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .reading-layout .table-of-contents .toc-item > .toc-row > a {
+    padding: 8px !important;
+    line-height: 1.6 !important;
+  }
+
+  .reading-layout #content-container {
+    font-size: 1.0625rem;
+  }
+
+  .reading-layout #content-container h2 {
+    font-size: 1.4rem;
+  }
+
+  .reading-layout #content-container h3 {
+    font-size: 1.18rem;
+  }
+
+  .reading-layout .worked-example {
+    padding: 16px;
+  }
+
+  .reading-layout .lesson-notes {
+    font-size: 0.875rem;
+  }
+
+  .reading-layout .toc-collapse,
+  .reading-layout .toc-spacer {
+    width: 32px;
+    min-width: 32px;
+  }
+
+  .reading-layout .toc-collapse::before {
+    left: 13px;
+  }
+}

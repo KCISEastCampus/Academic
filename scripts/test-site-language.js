@@ -75,7 +75,7 @@ for (const lang of ['en', 'zh-CN']) {
   for (const saved of [null, '', 'en', 'zh-CN', 'invalid']) {
     for (const blocked of [false, true]) {
       const result = run({ lang, saved, blocked });
-      const expected = !blocked && ['en', 'zh-CN'].includes(saved) ? saved : lang;
+      const expected = lang;
       assert.equal(result.document.documentElement.dataset.uiLanguage, expected);
       assert.equal(result.document.documentElement.lang, lang, 'UI preference must not mislabel the document language');
       assert.equal(result.ui.lang, expected);
@@ -125,6 +125,7 @@ assert.deepEqual(chinese.assigned, ['https://academic.example/alevel/math/?paper
 const unpaired = run({ lang: 'zh-CN', saved: 'en', href: 'https://academic.example/alevel/fx-cg50/', fallbackLink: false });
 assert.equal(unpaired.document.getElementById('languageSwitch'), null);
 assert.equal(unpaired.select.value, 'en', 'A Chinese-only guide must not reset an English preference');
+assert.equal(unpaired.ui.lang, 'en', 'UI containers and live regions use the chosen interface language on an unpaired guide');
 unpaired.choose('zh-CN');
 unpaired.window.siteLanguage.apply();
 assert.equal(unpaired.document.getElementById('languageSwitch'), null);
@@ -170,4 +171,5 @@ for (const pair of generated.pairs) {
 for (const english of ['/', '/alevel/', '/igcse/']) assert(seen.has(english), `Missing landing-page language pair: ${english}`);
 assert(!generated.pairs.some(pair => pair.en === '/alevel/fx-cg50/'), 'The Chinese-only guide must not invent an English counterpart');
 assert(!fs.readFileSync(path.join(site, 'alevel/fx-cg50/index.html'), 'utf8').includes('id="languageSwitch"'), 'An unpaired guide must not expose a nonexistent translation');
+assert.match(fs.readFileSync(path.join(site, 'alevel/fx-cg50/index.html'), 'utf8'), /<p id="search-status"[^>]*data-site-ui[^>]*lang="zh-CN"/, 'The search live region participates in interface-language synchronization');
 console.log(`Site language passed: preferences, safe reversible links, explicit switching, document language, storage fallback and ${seen.size} built page pairs.`);

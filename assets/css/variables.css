@@ -11,10 +11,14 @@
   --border-hover: rgba(15, 23, 42, 0.12);
   --muted: #64748b;
   --text: #0f172a;
+  --link-text: #0369a1;
+  --link-hover: #075985;
 
-  /* Accents - IGCSE = blue, A-Level = green */
+  /* Course accents: IGCSE blue, AS green, A2 red. */
   --accent-al: #16a34a;
   --accent-al-rgb: 22, 163, 74;
+  --accent-a2: #b91c1c;
+  --accent-a2-rgb: 185, 28, 28;
   --accent-ig: #0ea5e9;
   --accent-ig-rgb: 14, 165, 233;
   --accent-page: #3b82f6;
@@ -66,6 +70,12 @@
   --line-height-body: 1.8;
 }
 
+body.scheme-a2 {
+  --accent-al: var(--accent-a2);
+  --accent-al-rgb: var(--accent-a2-rgb);
+  --focus-ring: var(--accent-a2-rgb);
+}
+
 html[data-bs-theme="dark"] {
   /* Dark theme overrides */
   --bg: #0b1220;
@@ -75,6 +85,10 @@ html[data-bs-theme="dark"] {
   --border-hover: rgba(255, 255, 255, 0.15);
   --muted: #94a3b8;
   --text: #f8fafc;
+  --link-text: #7dd3fc;
+  --link-hover: #bae6fd;
+  --accent-a2: #f87171;
+  --accent-a2-rgb: 248, 113, 113;
 
   /* Bootstrap hook updates */
   --bs-body-bg: var(--bg);

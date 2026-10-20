@@ -31,6 +31,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 {% seo %}
+{% include search_metadata.html %}
+{% if search_section != '' %}
+<meta data-pagefind-meta="section[content]" content="{{ search_section | escape }}">
+{% endif %}
+{% if search_description != '' %}
+<meta data-pagefind-meta="description[content]" content="{{ search_description | escape }}">
+{% endif %}
 {% if page.translation_of %}
   {% assign translation = site.pages | where: 'url', page.translation_of | first %}
 {% else %}
@@ -53,7 +60,7 @@
 <link rel="preload" href="/assets/css/style.css" as="style">
 <!-- Preload MathJax for pages that need it -->
 {% if needs_mathjax %}
-  <link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/tex-chtml-full.js" as="script">
+  <link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/tex-chtml-full.js" as="script" crossorigin="anonymous">
 {% endif %}
 {% if page.mathjax %}
   <!-- Preload critical MathJax fonts to avoid late rendering -->

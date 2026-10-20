@@ -27,7 +27,7 @@ function languagePage(html, href) {
   const window = {};
   vm.runInNewContext(read('assets/js/site-language.js'), {
     URL, document, window,
-    location: { href, origin: new URL(href).origin, assign: url => destinations.push(url) },
+    location: { href, pathname: new URL(href).pathname, origin: new URL(href).origin, assign: url => destinations.push(url) },
     localStorage: { getItem: () => 'zh-CN', setItem() {} }
   });
   return { links, select, destinations };

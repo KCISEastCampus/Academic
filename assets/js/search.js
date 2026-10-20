@@ -7,6 +7,12 @@
   if (!searchInput || !searchResults) {
     return;
   }
+  const dialog = document.getElementById('siteSearchDialog');
+  const status = document.getElementById('search-status');
+  const pageLanguage = document.documentElement.lang === 'zh-CN' ? 'zh-CN' : 'en';
+  function announce(key, count) {
+    if (status) status.textContent = window.siteLanguage.text(key).replace('%count%', count);
+  }
 
   let pagefind = null;
 
@@ -29,46 +35,37 @@
   function fallbackSearch(query, searchData) {
     const q = query.toLowerCase().trim();
     return searchData
-      .filter(item =>
+      .filter(item => (item.lang || 'en') === pageLanguage && (
         (item._lowerTitle && item._lowerTitle.includes(q)) ||
         (item._lowerContent && item._lowerContent.includes(q))
-      )
+      ))
       .slice(0, 10)
-      .map(item => ({ title: item.title, url: item.url, excerpt: item.content }));
+      .map(item => ({ title: item.title, url: item.url, section: item.section, excerpt: item.description || item.content }));
   }
 
   function cleanExcerpt(value) {
     const excerpt = String(value || '')
       .replace(/<[^>]*>/g, ' ')
-      .replace(/\$\$[\s\S]*?\$\$|\$[^$\n]*\$|\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\)/g, ' ')
-      .replace(/\\(?:[A-Za-z]+|[,;!])/g, ' ')
-      .replace(/\s+([,.;!?])/g, '$1')
-      .replace(/([,.;!?])\s*[,.!?]+/g, '$1 ')
+      // Mark whole formulas before splitting sentences, including decimal points in TeX.
+      .replace(/\$\$[\s\S]*?\$\$|\$[^$\n]*\$|\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\)/g, '\uFFFD')
       .replace(/\s+/g, ' ')
       .trim();
 
-    // Pagefind may clip TeX mid-formula; hide fragments that still resemble source.
-    if (/\\[A-Za-z]+|[$\\{}^_]|\b[A-Za-z]\w*\s*=\s*[^.;!?]{1,50}/.test(excerpt)) return '';
-    return excerpt.slice(0, 120);
-  }
-
-  let selectedResultIndex = -1;
-
-  function updateSelectedResult() {
-    const items = searchResults.querySelectorAll('a.list-group-item');
-    items.forEach((item, index) => {
-      if (index === selectedResultIndex) {
-        item.classList.add('active');
-        item.scrollIntoView({ block: 'nearest' });
-      } else {
-        item.classList.remove('active');
-      }
-    });
+    // Omit formula-bearing sentences, not just their formulas, to preserve meaning.
+    const sentences = excerpt.split(/(?<=[。！？])|(?<=[.!?])\s+/u);
+    let summary = '';
+    for (const sentence of sentences) {
+      if (/[\uFFFD$\\{}^_]|[A-Za-z]\w*\s*=/.test(sentence)) continue;
+      const next = (summary + ' ' + sentence).trim();
+      if (next.length > 120) break;
+      summary = next;
+    }
+    return summary;
   }
 
   function renderResults(results) {
     searchResults.innerHTML = '';
-    selectedResultIndex = -1;
+    announce(results?.length ? 'search_count' : 'no_matches', results?.length || 0);
 
     if (!results || results.length === 0) {
       searchResults.style.display = 'block';
@@ -85,6 +82,8 @@
     results.forEach(result => {
       const item = document.createElement('a');
       item.href = result.url;
+      // Keep the title, excerpt and destination from the same indexed page.
+      item.setAttribute('data-language-explicit', '');
       item.classList.add('list-group-item', 'list-group-item-action');
 
       const title = document.createElement('div');
@@ -92,10 +91,17 @@
       title.textContent = result.title;
       item.appendChild(title);
 
+      if (result.section && result.section !== result.title) {
+        const section = document.createElement('small');
+        section.classList.add('search-result-section');
+        section.textContent = result.section;
+        item.appendChild(section);
+      }
+
       const excerpt = cleanExcerpt(result.excerpt);
       if (excerpt) {
         const snippet = document.createElement('small');
-        snippet.classList.add('text-muted', 'd-block');
+        snippet.classList.add('d-block');
         snippet.textContent = excerpt;
         item.appendChild(snippet);
       }
@@ -112,7 +118,10 @@
   function loadSearchData() {
     // Share the fallback download across searches, only when Pagefind is unavailable.
     return searchDataReady ||= fetch(searchUrl)
-      .then(r => r.ok ? r.json() : [])
+      .then(r => {
+        if (!r.ok) throw new Error('Search index unavailable');
+        return r.json();
+      })
       .then(data => {
         searchData = data.map(item => ({
           ...item,
@@ -120,7 +129,7 @@
           _lowerContent: item.content ? item.content.toLowerCase() : ''
         }));
       })
-      .catch(() => { searchData = []; });
+      .catch(error => { searchDataReady = null; throw error; });
   }
 
   let debounceTimer = null;
@@ -131,11 +140,13 @@
     const searchId = ++currentSearchId;
 
     clearTimeout(debounceTimer);
+    searchResults.style.display = 'none';
+    if (status) status.textContent = '';
 
     if (query.length < 2) {
-      searchResults.style.display = 'none';
       return;
     }
+    announce('search_loading');
 
     // Debounce to avoid excessive searches while typing
     debounceTimer = setTimeout(async () => {
@@ -155,7 +166,8 @@
           const results = dataResults.map(data => ({
             title: data.meta.title,
             url: data.url,
-            excerpt: data.excerpt || ''
+            section: data.meta.section,
+            excerpt: data.meta.description || data.excerpt || ''
           }));
           renderResults(results);
         } else {
@@ -167,6 +179,7 @@
           const results = fallbackSearch(query, searchData || []).map(item => ({
             title: item.title,
             url: item.url,
+            section: item.section,
             excerpt: item.excerpt || ''
           }));
           renderResults(results);
@@ -174,51 +187,72 @@
       } catch (e) {
         console.error('Search error:', e);
         if (searchId !== currentSearchId) return;
-        renderResults([]);
+        searchResults.style.display = 'none';
+        announce('search_error');
       }
     }, 200);
   });
 
-  // Hide results when clicking outside
-  document.addEventListener('click', function(e) {
-    if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
-      searchResults.style.display = 'none';
-    }
-  });
-
-  // Keyboard navigation for search results
+  // Links receive real focus so keyboard and assistive-technology users agree.
   searchInput.addEventListener('keydown', function(e) {
-    const items = searchResults.querySelectorAll('a.list-group-item');
-    if (!items.length || searchResults.style.display === 'none') {
+    // Search inputs otherwise consume Escape to clear text before the dialog sees it.
+    if (e.key === 'Escape' && dialog?.open) {
+      e.preventDefault();
+      dialog.close();
       return;
     }
-
+    const items = searchResults.querySelectorAll('a.list-group-item');
+    if (!items.length || searchResults.style.display === 'none') return;
     if (e.key === 'ArrowDown') {
       e.preventDefault();
-      selectedResultIndex = (selectedResultIndex + 1) % items.length;
-      updateSelectedResult();
+      items[0].focus();
     } else if (e.key === 'ArrowUp') {
       e.preventDefault();
-      selectedResultIndex = selectedResultIndex < 0 ? items.length - 1 : (selectedResultIndex - 1 + items.length) % items.length;
-      updateSelectedResult();
-    } else if (e.key === 'Enter') {
-      if (selectedResultIndex >= 0 && selectedResultIndex < items.length) {
-        e.preventDefault();
-        items[selectedResultIndex].click();
-      }
+      items[items.length - 1].focus();
     }
   });
+  searchResults.addEventListener('keydown', function(e) {
+    if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
+    const items = Array.from(searchResults.querySelectorAll('a.list-group-item'));
+    const index = items.indexOf(document.activeElement);
+    if (index < 0) return;
+    e.preventDefault();
+    const next = items[index + (e.key === 'ArrowDown' ? 1 : -1)];
+    (next || searchInput).focus();
+  });
 
-  // Ctrl+K / Cmd+K to focus search
-  document.addEventListener('keydown', function(e) {
-    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
-      e.preventDefault();
-      searchInput.focus();
-      searchInput.select();
-    }
-    if (e.key === 'Escape' && document.activeElement === searchInput) {
-      searchInput.blur();
+  let opener;
+  function openSearch(trigger) {
+    opener = trigger;
+    if (dialog && !dialog.open) dialog.showModal();
+    searchInput.focus();
+    searchInput.select();
+  }
+  if (dialog) {
+    document.querySelectorAll('[data-open-search]').forEach(button => {
+      button.hidden = false;
+      button.addEventListener('click', () => openSearch(button));
+    });
+    document.getElementById('search-close').addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
+    dialog.addEventListener('close', () => {
+      clearTimeout(debounceTimer);
+      ++currentSearchId;
       searchResults.style.display = 'none';
+      if (status) status.textContent = '';
+      searchInput.value = '';
+      // A drawer can close while search is open, making its old focus target inert.
+      const target = opener?.getClientRects().length && !opener.closest('[inert]')
+        ? opener : document.querySelector('[data-open-search]');
+      target?.focus();
+    });
+  }
+
+  // Native dialog handles Escape, background isolation and the Tab focus loop.
+  document.addEventListener('keydown', function(e) {
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+      e.preventDefault();
+      if (!dialog?.open) openSearch(document.activeElement);
     }
   });
 })();

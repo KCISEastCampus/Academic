@@ -15,14 +15,10 @@
   <p class="lead text-muted fs-6 mb-2">{{ include.subtitle }}</p>
   {% endif %}
 
-  <div class="position-relative d-inline-block mt-2 mx-auto" style="width: 100%; max-width: 520px;">
-    <div class="search-wrapper d-flex align-items-center px-3 py-1">
-      <i class="bi bi-search text-muted me-2"></i>
-      <input type="text" id="search-input" class="form-control border-0 p-0 bg-transparent shadow-none"
-             data-ui-placeholder="search_topics" placeholder="{{ ui.search_topics }}" data-ui-aria="search" aria-label="{{ ui.search }}"
-             data-search-source="{{ '/assets/search.json' | relative_url }}">
-      <kbd class="search-kbd d-none d-sm-inline-flex">Ctrl+K</kbd>
-    </div>
-    <div id="search-results" class="list-group position-absolute w-100 mt-2 text-start" style="display: none; z-index: 1000; max-height: 300px; overflow-y: auto; overflow-x: hidden;"></div>
-  </div>
+  <button type="button" class="search-wrapper search-launch d-inline-flex align-items-center mt-2 mx-auto px-3 py-2"
+          data-open-search aria-controls="siteSearchDialog" aria-haspopup="dialog" hidden>
+    <i class="bi bi-search me-2" aria-hidden="true"></i>
+    <span class="flex-grow-1 text-start" data-ui="search_topics">{{ ui.search_topics }}</span>
+    <kbd class="search-kbd d-none d-sm-inline-flex" aria-hidden="true">Ctrl+K</kbd>
+  </button>
 </header>

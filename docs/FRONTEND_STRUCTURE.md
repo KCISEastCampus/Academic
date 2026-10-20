@@ -10,11 +10,17 @@ Edit `_data/subjects.yml`:
 ```yaml
 alevel:
   - id: new-subject
+    stage: AS  # Required for A-Level homepage grouping: AS, A2, or Tools
     name: Subject Name
+    name_zh: 科目名称
+    description: Selected lessons and practice · English
+    description_zh: 部分学习页与练习 · 英文
     icon: "📗"
     path: /alevel/subject-path/
     color: success  # Bootstrap color: success, primary, secondary, etc.
 ```
+
+Use `description` and `description_zh` to state the actual resource type, coverage and destination language. A Chinese topic index that links to English notes should say so. Add the same bilingual descriptions for IGCSE entries; they do not need `stage`.
 
 ### Adding/Modifying Exam Links
 Edit `_data/exam_links.yml`:

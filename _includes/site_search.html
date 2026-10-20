@@ -1,0 +1,23 @@
+<dialog id="siteSearchDialog" class="site-search-dialog" aria-labelledby="siteSearchTitle" data-pagefind-ignore>
+  <div class="d-flex align-items-center justify-content-between mb-3">
+    <h2 id="siteSearchTitle" class="fs-5 m-0" data-ui="search">{{ ui.search }}</h2>
+    <button type="button" id="search-close" class="site-nav-theme-btn" data-ui-aria="close_search" aria-label="{{ ui.close_search }}">
+      <i class="bi bi-x-lg" aria-hidden="true"></i>
+    </button>
+  </div>
+  <div role="search">
+    <div class="search-wrapper d-flex align-items-center px-3 py-2">
+      <i class="bi bi-search me-2" aria-hidden="true"></i>
+      <input type="search" id="search-input" class="form-control border-0 p-0 bg-transparent shadow-none"
+             data-ui-placeholder="search_topics" placeholder="{{ ui.search_topics }}" data-ui-aria="search" aria-label="{{ ui.search }}"
+             aria-controls="search-results" aria-describedby="search-help" autocomplete="off"
+             data-search-source="{{ '/assets/search.json' | relative_url }}" autofocus>
+    </div>
+    <p id="search-help" class="small mt-2 mb-0">
+      <span data-ui="search_language">{{ ui.search_language }}</span>
+      <span lang="{{ page.lang | default: 'en' }}">{% if page.lang == 'zh-CN' %}中文{% else %}English{% endif %}</span>
+    </p>
+    <p id="search-status" class="small my-2" role="status" aria-live="polite" aria-atomic="true" data-site-ui lang="{{ page.lang | default: 'en' }}"></p>
+    <div id="search-results" class="list-group text-start" style="display: none;"></div>
+  </div>
+</dialog>

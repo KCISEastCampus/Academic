@@ -14,93 +14,60 @@ layout: none
   <link rel="stylesheet" href="/assets/css/exam-timetable.css">
 </head>
 
-<body>
+<body class="home-page">
+  <a class="skip-link" href="#main-content" data-ui="skip_content">{{ ui.skip_content }}</a>
   {% include nav.html %}
   {% include site_header.html
      title=ui.homepage_title
      subtitle=ui.homepage_subtitle %}
 
-  <a class="skip-link sr-only-focusable" href="#main-content" data-ui="skip_content">{{ ui.skip_content }}</a>
-  <main id="main-content" class="container" role="main">
+  <main id="main-content" class="container" tabindex="-1">
+    <nav class="course-shortcuts" data-ui-aria="browse_courses" aria-label="{{ ui.browse_courses }}">
+      <a href="#as-courses">AS</a>
+      <a href="#a2-courses">A2</a>
+      <a href="#igcse-courses">IGCSE</a>
+    </nav>
 
     <!-- A-Level Section -->
     <section class="subjects-section fade-in" style="animation-delay: 0.1s;">
       <div class="section-header">
         <div class="header-content">
           <h2 class="section-title">
-            <i class="bi bi-mortarboard-fill"></i>
+            <i class="bi bi-mortarboard-fill" aria-hidden="true"></i>
             A-Level
           </h2>
           <p class="section-subtitle" data-ui="alevel_description">{{ ui.alevel_description }}</p>
         </div>
-        <span class="section-badge" style="--accent-rgb: var(--accent-al-rgb); --accent-color: var(--accent-al);">
-          <i class="bi bi-book"></i>
-          <span data-ui="alevel_badge">{{ ui.alevel_badge }}</span>
-        </span>
       </div>
-      
+
+      {% assign course_groups = 'AS,A2,Tools' | split: ',' %}
+      {% for group in course_groups %}
+      {% assign group_id = group | downcase | append: '-courses' %}
+      <h3 id="{{ group_id }}" class="course-group-title">{% if group == 'Tools' %}Casio fx-CG50{% else %}{{ group }}{% endif %}</h3>
       <div class="subjects-grid-modern">
         {% for subject in site.data.subjects.alevel %}
-          {% assign subject_name = subject.name | default: 'Subject' %}
-          {% assign subject_path = subject.path %}
-          {% if page.lang == 'zh-CN' %}
-            {% assign subject_name = subject.name_zh | default: subject_name %}
-            {% assign subject_translation = site.pages | where: 'translation_of', subject.path | first %}
-            {% if subject_translation %}{% assign subject_path = subject_translation.url %}{% endif %}
-          {% endif %}
-          <a href="{{ subject_path | relative_url }}" class="modern-subject-card" style="--accent-rgb: var(--accent-al-rgb); --accent-color: var(--accent-al);" title="{{ ui.view_resources | replace: '%subject%', subject_name }}" aria-label="{{ ui.view_resources | replace: '%subject%', subject_name | strip | escape }}">
-            <div class="card-icon" aria-hidden="true">
-              {{ subject.icon }}
-            </div>
-            <div class="card-content">
-              <div class="card-title">{{ subject_name }}</div>
-              <div class="card-meta">
-                <span class="meta-text" data-ui="study_materials">{{ ui.study_materials }}</span>
-                <i class="bi bi-arrow-right hover-arrow" aria-hidden="true"></i>
-              </div>
-            </div>
-          </a>
+          {% unless subject.stage == group %}{% continue %}{% endunless %}
+          {% include subject_card.html subject=subject accent='al' %}
         {% endfor %}
       </div>
+      {% endfor %}
     </section>
 
     <!-- IGCSE Section -->
     <section class="subjects-section fade-in" style="animation-delay: 0.2s;">
       <div class="section-header">
         <div class="header-content">
-          <h2 class="section-title">
-            <i class="bi bi-book-half"></i>
+          <h2 id="igcse-courses" class="section-title">
+            <i class="bi bi-book-half" aria-hidden="true"></i>
             IGCSE
           </h2>
           <p class="section-subtitle" data-ui="igcse_description">{{ ui.igcse_description }}</p>
         </div>
-        <span class="section-badge" style="--accent-rgb: var(--accent-ig-rgb); --accent-color: var(--accent-ig);">
-          <i class="bi bi-mortarboard"></i>
-          <span data-ui="igcse_badge">{{ ui.igcse_badge }}</span>
-        </span>
       </div>
-      
+
       <div class="subjects-grid-modern">
         {% for subject in site.data.subjects.igcse %}
-          {% assign subject_name = subject.name | default: 'Subject' %}
-          {% assign subject_path = subject.path %}
-          {% if page.lang == 'zh-CN' %}
-            {% assign subject_name = subject.name_zh | default: subject_name %}
-            {% assign subject_translation = site.pages | where: 'translation_of', subject.path | first %}
-            {% if subject_translation %}{% assign subject_path = subject_translation.url %}{% endif %}
-          {% endif %}
-          <a href="{{ subject_path | relative_url }}" class="modern-subject-card" style="--accent-rgb: var(--accent-ig-rgb); --accent-color: var(--accent-ig);" title="{{ ui.view_resources | replace: '%subject%', subject_name }}" aria-label="{{ ui.view_resources | replace: '%subject%', subject_name | strip | escape }}">
-            <div class="card-icon" aria-hidden="true">
-              {{ subject.icon }}
-            </div>
-            <div class="card-content">
-              <div class="card-title">{{ subject_name }}</div>
-              <div class="card-meta">
-                <span class="meta-text" data-ui="study_materials">{{ ui.study_materials }}</span>
-                <i class="bi bi-arrow-right hover-arrow" aria-hidden="true"></i>
-              </div>
-            </div>
-          </a>
+          {% include subject_card.html subject=subject accent='ig' %}
         {% endfor %}
       </div>
     </section>
@@ -121,24 +88,24 @@ layout: none
 
         <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/student-council/" class="quick-nav-item" title="{{ ui.student_council }}" data-ui-title="student_council">
           <div class="nav-icon">
-            <i class="bi bi-people-fill"></i>
+            <i class="bi bi-people-fill" aria-hidden="true"></i>
           </div>
           <div class="nav-content">
             <h3 data-ui="student_council">{{ ui.student_council }}</h3>
             <p data-ui="student_council_description">{{ ui.student_council_description }}</p>
           </div>
-          <i class="bi bi-chevron-right nav-arrow"></i>
+          <i class="bi bi-chevron-right nav-arrow" aria-hidden="true"></i>
         </a>
 
         <a href="/contributors/" class="quick-nav-item" title="{{ ui.contributors_title }}" data-ui-title="contributors_title">
           <div class="nav-icon">
-            <i class="bi bi-stars"></i>
+            <i class="bi bi-stars" aria-hidden="true"></i>
           </div>
           <div class="nav-content">
             <h3 data-ui="contributors">{{ ui.contributors }}</h3>
             <p data-ui="contributors_description">{{ ui.contributors_description }}</p>
           </div>
-          <i class="bi bi-chevron-right nav-arrow"></i>
+          <i class="bi bi-chevron-right nav-arrow" aria-hidden="true"></i>
         </a>
       </div>
     </section>
@@ -150,13 +117,13 @@ layout: none
     <section class="useful-links-section fade-in mb-5" style="animation-delay: 0.4s;">
       <a href="https://gradeboundaries.com/OxfordAqa" target="_blank" rel="noopener noreferrer" class="useful-link-item">
         <div class="useful-link-icon">
-          <i class="bi bi-bar-chart-line"></i>
+          <i class="bi bi-bar-chart-line" aria-hidden="true"></i>
         </div>
         <div class="useful-link-content">
           <h3 data-ui="grade_boundaries">{{ ui.grade_boundaries }}</h3>
           <p data-ui="grade_boundaries_description">{{ ui.grade_boundaries_description }}</p>
         </div>
-        <i class="bi bi-box-arrow-up-right useful-link-arrow"></i>
+        <i class="bi bi-box-arrow-up-right useful-link-arrow" aria-hidden="true"></i>
       </a>
     </section>
 

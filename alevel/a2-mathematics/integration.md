@@ -7,19 +7,27 @@ subject: a2-mathematics
 permalink: /alevel/a2-mathematics/integration/
 toc_headings: h2, h3, h4
 study_page: true
+reading_layout: true
 ---
 
 [Pure Mathematics](/alevel/a2-mathematics/) · P2.7 Integration
+{: .lesson-meta}
 
 Choose a method, integrate, then check your answer by differentiation. The **integrand** is the function inside the integral sign.
+{: .lesson-lead}
 
 - **Learning:** start with [choosing a method](#choose-a-method), then explain the choice in each [worked example](#worked-examples).
 - **Homework help:** review [substitution](#substitution), [integration by parts](#integration-by-parts) or [partial fractions](/alevel/a2-mathematics/partial-fractions/#integration).
 - **Revision:** attempt [practice](#practice) with solutions closed, then use the [quick reference](#quick-reference).
+{: .lesson-routes}
+
+<div class="lesson-notes" markdown="1">
 
 Textbook: Chapter 6, Sections 6.1–6.4 (pp. 82–95). We write the constant of integration as $C$.
 
 **Before you start:** you should know basic derivatives, the chain rule, how to rearrange expressions and standard integrals.
+
+</div>
 
 ## Choose a Method
 
@@ -94,6 +102,8 @@ Differentiation multiplies by $2$, cancelling the factor $\frac12$. The same div
 
 Expand or cancel first, then use standard integrals. Retain the domain restrictions of the original expression.
 
+<section class="worked-example" markdown="1">
+
 #### Example 1 — Simplify before choosing
 
 **Question:** Find $\displaystyle\int\frac{x^2+3x}{x}\,dx$ for $x\ne0$.
@@ -106,9 +116,13 @@ $$\int(x+3)\,dx=\boxed{\frac{x^2}{2}+3x+C}.$$
 
 **Check:** Differentiation gives $x+3$, which equals the original integrand for $x\ne0$. The original expression is still undefined at $x=0$.
 
+</section>
+
 ### Reverse the chain rule {#reverse-chain-rule}
 
 Identify the inner function and its derivative. Try an antiderivative, then differentiate to determine the required coefficient.
+
+<section class="worked-example" markdown="1">
 
 #### Example 2 — Reverse the chain rule
 
@@ -124,9 +138,13 @@ $$\int6x(x^2+1)^2\,dx=\boxed{(x^2+1)^3+C}.$$
 
 **Check:** The derivative equals the integrand. The chain rule includes the derivative of $x^2+1$, which is $2x$.
 
+</section>
+
 ### Integration by substitution {#substitution}
 
 Choose a new variable that simplifies the integrand, find the differential relation and rewrite every factor and the differential in that variable. For an indefinite integral, substitute back afterwards.
+
+<section class="worked-example" markdown="1">
 
 #### Example 3 — Rewrite everything in the new variable
 
@@ -150,11 +168,15 @@ $$\begin{aligned}&(x+2)^7-2(x+2)^6\\&\qquad=(x+2)^6[(x+2)-2]\\&\qquad=x(x+2)^6.\
 
 **Common mistake:** changing $(x+2)$ to $u$ but leaving the factor $x$ behind. After substitution, write every part in terms of $u$, including $dx$.
 
+</section>
+
 ### Integration by parts {#integration-by-parts}
 
 Rearranging the product rule gives the formula below. Choose one factor that becomes simpler on differentiation and another that is easy to integrate; the remaining integral should be easier to handle.
 
 $$\int v\frac{du}{dx}\,dx=uv-\int u\frac{dv}{dx}\,dx.$$
+
+<section class="worked-example" markdown="1">
 
 #### Example 4 — A product that becomes simpler
 
@@ -174,6 +196,8 @@ $$\left(\frac{e^{2x}}2+xe^{2x}\right)-\frac{e^{2x}}2=xe^{2x}.$$
 
 **Common mistake:** using $u=e^{2x}$ instead of $\frac{e^{2x}}2$. Check $u$ by differentiation before using integration by parts.
 
+</section>
+
 #### Application: integrating a logarithm {#integrating-a-logarithm}
 
 A logarithm can be treated as a product too. To find $\int\ln x\,dx$ for $x>0$, write the integrand as $1\times\ln x$. Choose $v=\ln x$ and $du/dx=1$, so $dv/dx=1/x$ and $u=x$:
@@ -185,6 +209,8 @@ Differentiation gives $\ln x+1-1=\ln x$.
 ### Recognise the logarithmic form {#logarithmic-form}
 
 Compare the numerator with the derivative of the denominator. A constant-multiple relationship allows the logarithmic form. Check that the denominator is non-zero and use the result on a valid interval.
+
+<section class="worked-example" markdown="1">
 
 #### Example 5 — A fraction does not always need partial fractions
 
@@ -198,9 +224,13 @@ $$\boxed{\ln\lvert x^2+2x-15\rvert+C}.$$
 
 If the numerator does not have this structure, [partial fractions](/alevel/a2-mathematics/partial-fractions/#integration) may help. Compare the degrees first. If you use algebraic division, include the quotient.
 
+</section>
+
 ## Definite Integrals
 
 **Check the interval first.** Before using $F(b)-F(a)$, check that the integrand is continuous from $a$ to $b$. In particular, check that the denominator is never zero.
+
+<section class="worked-example" markdown="1">
 
 ### Example 6 — Change the limits with the variable
 
@@ -213,6 +243,8 @@ $$\int_0^1 2x(x^2+1)^3\,dx=\int_1^2 u^3\,du=\left[\frac{u^4}{4}\right]_1^2=\boxe
 **Check:** Integrating in terms of $x$ gives $\frac{(x^2+1)^4}{4}$. Substituting $x=1$ and $x=0$ gives the same result.
 
 You may either use the new variable with new limits, or substitute back and use the original limits. Do not mix the two.
+
+</section>
 
 **Integral or area?** A definite integral gives signed area. To find the total area between a curve and the $x$-axis, split the interval where the curve crosses the axis. Add the positive areas. See the worked examples in [Area](/alevel/a2-mathematics/integration-applications/#area).
 

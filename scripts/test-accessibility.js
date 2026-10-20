@@ -22,6 +22,8 @@ class Element extends EventTarget {
 }
 
 const toggle = new Element();
+const toggleIcon = {};
+toggle.querySelector = () => toggleIcon;
 const toc = new Element();
 const search = new Element();
 const hiddenLink = new Element();
@@ -142,4 +144,18 @@ for (const file of ['_includes/nav.html', '_includes/theme_button.html']) {
   }
 }
 
-console.log('Accessibility passed: TOC focus, visibility, Escape, refresh, resize, empty results and both theme controls.');
+const smoothComponent = read('assets/js/interactive_effects.js').match(/const smoothScroll = (\{[\s\S]*?\n  \});/)[1];
+for (const skip of [true, false]) {
+  let prevented = false, scrolled = false;
+  const link = { classList: { contains: () => skip }, getAttribute: () => '#content-container' };
+  const smoothScroll = vm.runInNewContext(`(${smoothComponent})`, {
+    document: { getElementById: () => ({}) },
+    history: { pushState() {} },
+    utils: { smoothScrollTo() { scrolled = true; } }
+  });
+  smoothScroll.handleClick({ target: { closest: () => link }, preventDefault() { prevented = true; } });
+  assert.equal(prevented, !skip, 'Skip links keep native focus navigation');
+  assert.equal(scrolled, !skip, 'Ordinary content anchors keep smooth scrolling');
+}
+
+console.log('Accessibility passed: TOC focus, visibility, Escape, refresh, resize, themes and native skip navigation.');

@@ -4,13 +4,13 @@
   <div class="section-header">
     <div class="header-content">
       <h2 id="upcoming-exams-heading" class="section-title">
-        <i class="bi bi-calendar-check text-info"></i>
+        <i class="bi bi-calendar-check text-info" aria-hidden="true"></i>
         <span data-ui="upcoming_exam">{{ ui.upcoming_exam }}</span>
       </h2>
       <p class="section-subtitle" lang="en">OxfordAQA International AS &amp; A-Level</p>
     </div>
     <span class="section-badge" style="--accent-rgb: 23, 162, 184; --accent-color: var(--info);">
-      <i class="bi bi-clock-history"></i>
+      <i class="bi bi-clock-history" aria-hidden="true"></i>
       <span data-ui="exam_session">{{ ui.exam_session }}</span>
     </span>
   </div>
@@ -37,15 +37,15 @@
 
         <div class="upcoming-meta-pills">
           <span class="upcoming-meta-pill">
-            <i class="bi bi-clock"></i>
+            <i class="bi bi-clock" aria-hidden="true"></i>
             <span data-ui="duration">{{ ui.duration }}</span> <span lang="en">{{ next_exam.duration }}</span>
           </span>
           <span class="upcoming-meta-pill">
-            <i class="bi bi-calendar3"></i>
+            <i class="bi bi-calendar3" aria-hidden="true"></i>
             {{ exam_data.exams.size | default: 41 }} <span data-ui="scheduled_papers">{{ ui.scheduled_papers }}</span>
           </span>
           <span class="upcoming-meta-pill">
-            <i class="bi bi-book"></i>
+            <i class="bi bi-book" aria-hidden="true"></i>
             {{ exam_data.subjects.size }} <span data-ui="oxfordaqa_subjects">{{ ui.oxfordaqa_subjects }}</span>
           </span>
         </div>
@@ -61,10 +61,10 @@
         <div class="d-flex flex-column gap-2 align-items-end">
           <a href="/timetable/" class="upcoming-cta-btn">
             <span data-ui="full_timetable">{{ ui.full_timetable }}</span>
-            <i class="bi bi-arrow-right"></i>
+            <i class="bi bi-arrow-right" aria-hidden="true"></i>
           </a>
           <a href="{{ exam_data.series_info.pdf_link | default: '/assets/pdf/exam-timetable-1X27.pdf' }}" class="btn btn-sm btn-link text-muted p-0" style="font-size: 0.76rem; text-decoration: none;" target="_blank" rel="noopener noreferrer">
-            <i class="bi bi-file-earmark-pdf me-1"></i> <span data-ui="official_pdf">{{ ui.official_pdf }}</span>
+            <i class="bi bi-file-earmark-pdf me-1" aria-hidden="true"></i> <span data-ui="official_pdf">{{ ui.official_pdf }}</span>
           </a>
         </div>
       </div>

@@ -19,7 +19,7 @@ layout: none
     <!-- Top Navigation / Breadcrumb -->
     <nav class="timetable-breadcrumb mb-3" aria-label="{{ t.breadcrumb }}">
       <a href="{{ home_url | relative_url }}" class="btn-back-link">
-        <i class="bi bi-arrow-left"></i>
+        <i class="bi bi-arrow-left" aria-hidden="true"></i>
         <span>{{ t.back_home }}</span>
       </a>
     </nav>
@@ -37,7 +37,7 @@ layout: none
 
         <div class="timetable-header-action">
           <a href="{{ site.data.exam_timetable.series_info.pdf_link | default: '/assets/pdf/exam-timetable-1X27.pdf' }}" class="btn-pdf-download" target="_blank" rel="noopener noreferrer">
-            <i class="bi bi-file-earmark-pdf"></i>
+            <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i>
             <span>{{ t.official_pdf }}</span>
           </a>
         </div>
@@ -45,7 +45,7 @@ layout: none
 
       <!-- Homeroom Teacher Notice Banner -->
       <aside class="timetable-notice" role="note" aria-label="{{ t.notice_label }}">
-        <i class="bi bi-info-circle timetable-notice-icon"></i>
+        <i class="bi bi-info-circle timetable-notice-icon" aria-hidden="true"></i>
         <div class="timetable-notice-body">
           <strong>{{ t.notice_title }}</strong>
           {{ t.notice }} {{ t.notice_detail }}
@@ -79,7 +79,7 @@ layout: none
           </div>
 
           <div class="timetable-search-wrap">
-            <i class="bi bi-search search-icon"></i>
+            <i class="bi bi-search search-icon" aria-hidden="true"></i>
             <input type="search" class="timetable-search" data-timetable-search placeholder="{{ t.search_placeholder }}" aria-label="{{ t.search_label }}">
           </div>
         </div>
@@ -95,11 +95,11 @@ layout: none
         <!-- View Mode Switcher: Calendar vs List -->
         <div class="timetable-view-control" role="group" aria-label="{{ t.view_label }}">
           <button type="button" class="view-seg-btn active" data-view-mode="calendar" aria-pressed="true">
-            <i class="bi bi-calendar3"></i>
+            <i class="bi bi-calendar3" aria-hidden="true"></i>
             <span>{{ t.calendar }}</span>
           </button>
           <button type="button" class="view-seg-btn" data-view-mode="list" aria-pressed="false">
-            <i class="bi bi-list-ul"></i>
+            <i class="bi bi-list-ul" aria-hidden="true"></i>
             <span>{{ t.list }}</span>
           </button>
         </div>
@@ -128,7 +128,7 @@ layout: none
         </div>
         <div class="footer-links">
           <a href="{{ site.data.exam_timetable.series_info.pdf_link | default: '/assets/pdf/exam-timetable-1X27.pdf' }}" target="_blank" rel="noopener noreferrer">
-            <i class="bi bi-download me-1"></i> {{ t.download_pdf }}
+            <i class="bi bi-download me-1" aria-hidden="true"></i> {{ t.download_pdf }}
           </a>
         </div>
       </footer>
@@ -146,7 +146,7 @@ layout: none
             <code class="unit-code fs-6" id="modalExamCode">CODE</code>
           </div>
           <button type="button" class="exam-modal-close" id="modalCloseBtn" aria-label="{{ t.close_details }}">
-            <i class="bi bi-x-lg"></i>
+            <i class="bi bi-x-lg" aria-hidden="true"></i>
           </button>
         </div>
         <div class="exam-modal-body">
@@ -156,35 +156,35 @@ layout: none
 
           <div class="exam-modal-grid">
             <div class="exam-modal-item">
-              <span class="modal-item-label"><i class="bi bi-calendar3"></i> {{ t.date }}</span>
+              <span class="modal-item-label"><i class="bi bi-calendar3" aria-hidden="true"></i> {{ t.date }}</span>
               <strong class="modal-item-val" id="modalExamDate">Date</strong>
               <small class="text-muted" id="modalExamDay">Day</small>
             </div>
             <div class="exam-modal-item">
-              <span class="modal-item-label"><i class="bi bi-clock"></i> {{ t.duration }}</span>
+              <span class="modal-item-label"><i class="bi bi-clock" aria-hidden="true"></i> {{ t.duration }}</span>
               <strong class="modal-item-val" id="modalExamDuration">Duration</strong>
               <small class="text-muted">{{ t.standard_timing }}</small>
             </div>
             <div class="exam-modal-item">
-              <span class="modal-item-label"><i class="bi bi-mortarboard"></i> {{ t.cohort }}</span>
+              <span class="modal-item-label"><i class="bi bi-mortarboard" aria-hidden="true"></i> {{ t.cohort }}</span>
               <strong class="modal-item-val" id="modalExamGrade">Grade</strong>
               <small class="text-muted">OxfordAQA</small>
             </div>
             <div class="exam-modal-item">
-              <span class="modal-item-label"><i class="bi bi-file-earmark-check"></i> {{ t.series }}</span>
+              <span class="modal-item-label"><i class="bi bi-file-earmark-check" aria-hidden="true"></i> {{ t.series }}</span>
               <strong class="modal-item-val">1X27</strong>
               <small class="text-muted">{{ t.month }}</small>
             </div>
           </div>
 
           <div class="exam-modal-notice">
-            <i class="bi bi-info-circle text-info me-2"></i>
+            <i class="bi bi-info-circle text-info me-2" aria-hidden="true"></i>
             <span>{{ t.notice }}</span>
           </div>
         </div>
         <div class="exam-modal-footer">
           <a href="{{ site.data.exam_timetable.series_info.pdf_link | default: '/assets/pdf/exam-timetable-1X27.pdf' }}" class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener noreferrer">
-            <i class="bi bi-file-earmark-pdf me-1"></i> {{ t.pdf }}
+            <i class="bi bi-file-earmark-pdf me-1" aria-hidden="true"></i> {{ t.pdf }}
           </a>
           <button type="button" class="btn btn-sm btn-secondary" id="modalDismissBtn">{{ t.close }}</button>
         </div>
