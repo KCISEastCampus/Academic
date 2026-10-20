@@ -13,6 +13,9 @@ assert(mermaidScript.test(diagrams), 'Pages with diagrams retain the renderer');
 const preload = home.match(/<link\b(?=[^>]*rel="preload")(?=[^>]*href="[^"]*bootstrap\.min\.css")[^>]*>/)?.[0];
 assert(preload, 'Bootstrap preload exists');
 assert(preload.includes('crossorigin="anonymous"'), 'Preload and stylesheet use the same request mode');
+const lesson = read('zh/alevel/a2-physics/capacitance/index.html');
+const mathPreload = lesson.match(/<link\b(?=[^>]*rel="preload")(?=[^>]*href="[^"]*tex-chtml-full\.js")[^>]*>/)?.[0];
+assert(mathPreload?.includes('crossorigin="anonymous"'), 'MathJax preload matches the anonymous script request');
 for (const [file, absent] of [
   ['docs/universal_math_guide.html', '/docs/'],
   ['tests/formula_test.html', '/tests/'],

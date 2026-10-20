@@ -53,7 +53,7 @@
 <link rel="preload" href="/assets/css/style.css" as="style">
 <!-- Preload MathJax for pages that need it -->
 {% if needs_mathjax %}
-  <link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/tex-chtml-full.js" as="script">
+  <link rel="preload" href="/assets/vendor/mathjax/3.2.2/es5/tex-chtml-full.js" as="script" crossorigin="anonymous">
 {% endif %}
 {% if page.mathjax %}
   <!-- Preload critical MathJax fonts to avoid late rendering -->
