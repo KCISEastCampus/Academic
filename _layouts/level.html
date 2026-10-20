@@ -61,20 +61,22 @@ layout: none
         {% assign subjects = site.data.subjects[page.level] %}
         {% for subject in subjects %}
           {% assign subject_name = subject.name | default: 'Subject' %}
+          {% assign subject_description = subject.description %}
           {% assign subject_path = subject.path %}
           {% if page.lang == 'zh-CN' %}
             {% assign subject_name = subject.name_zh | default: subject_name %}
+            {% assign subject_description = subject.description_zh %}
             {% assign subject_translation = site.pages | where: 'translation_of', subject.path | first %}
             {% if subject_translation %}{% assign subject_path = subject_translation.url %}{% endif %}
           {% endif %}
-          <a href="{{ subject_path | relative_url }}" class="modern-subject-card" style="--accent-rgb: var(--accent-{{ page.level | default: 'al' }}-rgb); --accent-color: var(--accent-{{ page.level | default: 'al' }});" title="{{ ui.view_resources | replace: '%subject%', subject_name }}" aria-label="{{ ui.view_resources | replace: '%subject%', subject_name | strip | escape }}">
+          <a href="{{ subject_path | relative_url }}" class="modern-subject-card" style="--accent-rgb: var(--accent-{{ page.level | default: 'al' }}-rgb); --accent-color: var(--accent-{{ page.level | default: 'al' }});" title="{{ ui.view_resources | replace: '%subject%', subject_name }}" aria-label="{{ ui.view_resources | replace: '%subject%', subject_name | strip | escape }} — {{ subject_description | escape }}">
             <div class="card-icon" aria-hidden="true">
               {{ subject.icon }}
             </div>
             <div class="card-content">
               <div class="card-title">{{ subject_name }}</div>
               <div class="card-meta">
-                <span class="meta-text" data-ui="study_materials">{{ ui.study_materials }}</span>
+                <span class="meta-text">{{ subject_description | escape }}</span>
                 <i class="bi bi-arrow-right hover-arrow" aria-hidden="true"></i>
               </div>
             </div>

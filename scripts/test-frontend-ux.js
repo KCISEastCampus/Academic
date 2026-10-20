@@ -16,13 +16,64 @@ for (const file of ['index.html', 'zh/index.html', 'alevel/index.html', 'igcse/i
   assert(new RegExp(`id="${target}"[^>]*tabindex="-1"`).test(html), `${file}: skip target accepts focus`);
   assert(html.includes('role="status"'), `${file}: search announces results`);
 }
-for (const file of ['index.html', 'zh/index.html']) {
+// Snapshot destinations, not copy: descriptions may change without changing the resources.
+const homepageDestinations = [
+  ['/alevel/as-mathematics/', '/zh/alevel/as-mathematics/'],
+  ['/alevel/as-further-mathematics/', null],
+  ['/alevel/as-chemistry/', null],
+  ['/alevel/as-physics/', '/zh/alevel/as-physics/'],
+  ['/alevel/as-economics/', null],
+  ['/alevel/as-biology/', null],
+  ['/alevel/a2-mathematics/', '/zh/alevel/a2-mathematics/'],
+  ['/alevel/a2-mathematics/mechanics', null],
+  ['/alevel/a2-mathematics/statistics', null],
+  ['/alevel/a2-further-mathematics/', '/zh/alevel/a2-further-mathematics/'],
+  ['/alevel/a2-physics/', '/zh/alevel/a2-physics/'],
+  ['/alevel/a2-chemistry/', '/zh/alevel/a2-chemistry/'],
+  ['/alevel/a2-biology/', '/zh/alevel/a2-biology/'],
+  ['/alevel/fx-cg50/', null],
+  ['/igcse/mathematics/', '/zh/igcse/mathematics/'],
+  ['/igcse/physics/', '/zh/igcse/physics/'],
+  ['/igcse/chemistry/', '/zh/igcse/chemistry/'],
+  ['/igcse/biology/', '/zh/igcse/biology/']
+];
+for (const file of ['index.html', 'zh/index.html', 'alevel/index.html', 'igcse/index.html',
+  'zh/alevel/index.html', 'zh/igcse/index.html']) {
   const html = read(file);
-  for (const group of ['as', 'a2', 'igcse']) {
-    assert(html.includes(`href="#${group}-courses"`));
-    assert(html.includes(`id="${group}-courses"`));
+  const chinese = file.startsWith('zh/');
+  const homepage = file === 'index.html' || file === 'zh/index.html';
+  const cards = Array.from(html.matchAll(/<a\b([^>]*class="modern-subject-card"[^>]*)>([\s\S]*?)<\/a>/g));
+  assert.equal(cards.length, homepage ? 18 : file.includes('alevel/') ? 14 : 4, `${file}: preserve all subject/tool cards`);
+  if (homepage) {
+    for (const group of ['as', 'a2', 'igcse']) {
+      assert(html.includes(`href="#${group}-courses"`));
+      assert(html.includes(`id="${group}-courses"`));
+    }
+    assert.deepEqual(cards.map(card => card[1].match(/href="([^"]+)"/)[1]),
+      homepageDestinations.map(([en, zh]) => chinese ? zh || en : en), `${file}: preserve every card destination and its order`);
   }
-  assert.equal((html.match(/class="modern-subject-card"/g) || []).length, 18, 'Grouping preserves all 14 A-level/tool and 4 IGCSE cards');
+  cards.forEach(card => {
+    const destination = card[1].match(/href="([^"]+)"/)[1].replace(/^\/zh\//, '/');
+    const description = card[2].match(/<span class="meta-text">([^<]*)<\/span>/)?.[1].trim();
+    assert(description, `${file}: ${destination} has a visible resource description`);
+    assert(card[1].match(/aria-label="([^"]+)"/)[1].includes(description),
+      `${file}: the accessible card name includes its resource scope`);
+    if (destination === '/alevel/as-economics/') {
+      assert.match(description, chinese ? /PDF.*(?:思维导图|导图)/i : /PDF.*mind\s*maps?/i,
+        `${file}: economics provides PDF mindmap links`);
+    }
+    if (destination === '/alevel/a2-physics/') {
+      for (const scope of [/PH03/, /PH04/, chinese ? /部分|精选|选定/ : /selected|partial|some/i,
+        chinese ? /笔记/ : /notes/i, chinese ? /热学/ : /thermal/i]) {
+        assert.match(description, scope, `${file}: physics distinguishes partial lessons/notes and thermal physics`);
+      }
+    }
+    if (chinese && destination.startsWith('/igcse/')) {
+      for (const scope of [/中文.*目录/, /英文.*笔记/, /→|链接|打开|前往/]) {
+        assert.match(description, scope, `${file}: the Chinese index links to English notes`);
+      }
+    }
+  });
 }
 const index = JSON.parse(read('assets/search.json'));
 assert(index.every(item => ['en', 'zh-CN'].includes(item.lang)), 'Fallback language metadata is explicit');
@@ -42,4 +93,4 @@ for (const theme of themes) {
     }
   }
 }
-console.log('Frontend UX passed: shared search, landmarks/skip links, course discovery, fallback language and link contrast.');
+console.log('Frontend UX passed: shared search, landmarks/skip links, course discovery, bilingual card scopes and destinations, fallback language and link contrast.');

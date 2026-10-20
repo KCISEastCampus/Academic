@@ -17,7 +17,7 @@
       <span data-ui="search_language">{{ ui.search_language }}</span>
       <span lang="{{ page.lang | default: 'en' }}">{% if page.lang == 'zh-CN' %}中文{% else %}English{% endif %}</span>
     </p>
-    <p id="search-status" class="small my-2" role="status" aria-live="polite" aria-atomic="true"></p>
+    <p id="search-status" class="small my-2" role="status" aria-live="polite" aria-atomic="true" data-site-ui lang="{{ page.lang | default: 'en' }}"></p>
     <div id="search-results" class="list-group text-start" style="display: none;"></div>
   </div>
 </dialog>

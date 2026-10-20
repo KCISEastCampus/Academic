@@ -221,7 +221,10 @@
       searchResults.style.display = 'none';
       if (status) status.textContent = '';
       searchInput.value = '';
-      if (opener) opener.focus();
+      // A drawer can close while search is open, making its old focus target inert.
+      const target = opener?.getClientRects().length && !opener.closest('[inert]')
+        ? opener : document.querySelector('[data-open-search]');
+      target?.focus();
     });
   }
 

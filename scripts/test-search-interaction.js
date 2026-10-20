@@ -20,6 +20,8 @@ function setup({ fallback = false, lang = 'en' } = {}) {
     node.appendChild = child => node.children.push(child);
     node.querySelectorAll = () => node.children.filter(child => child.tagName === 'a');
     node.focus = () => { document.activeElement = node; };
+    node.getClientRects = () => node.hidden ? [] : [{}];
+    node.closest = () => node.inert ? node : null;
     node.select = () => {};
     Object.defineProperty(node, 'innerHTML', { set: () => { node.children = []; } });
     return node;
@@ -32,6 +34,7 @@ function setup({ fallback = false, lang = 'en' } = {}) {
     siteSearchDialog: dialog, 'search-close': close
   })[id];
   document.querySelectorAll = () => [trigger];
+  document.querySelector = () => trigger;
   document.createElement = element;
   document.documentElement = { lang };
   let timer, failFetch = false, fetches = 0;
@@ -111,6 +114,14 @@ function setup({ fallback = false, lang = 'en' } = {}) {
   s.input.dispatchEvent(new Event('input'));
   assert.equal(s.results.style.display, 'none', 'A short query hides prior results');
   s.dialog.close();
+
+  for (const hidden of [true, false]) {
+    const drawerLink = { getClientRects: () => hidden ? [] : [{}], closest: () => hidden ? null : { inert: true }, focus() { throw Error('Must not focus an inaccessible drawer link'); } };
+    s.document.activeElement = drawerLink;
+    s.key(s.document, 'k', { ctrlKey: true });
+    s.dialog.close();
+    assert.equal(s.document.activeElement, s.trigger, 'Closing search returns to its visible launcher when the old drawer target is hidden or inert');
+  }
 
   for (const lang of ['en', 'zh-CN']) {
     const f = setup({ fallback: true, lang });
