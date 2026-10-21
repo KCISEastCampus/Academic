@@ -308,7 +308,7 @@ $$\Delta m=\frac{0.105-0.095}{2}=0.005\,\mathrm{s^{-1}}.$$
 
 ### 数据探究：选择区间并检验拟合 {#data-rc-records}
 
-*Self-written; constructed teaching data, not measurements from a completed practical.*
+*自拟题；教学构造数据，不是实际实验的测量记录。*
 
 A capacitor discharges through a $100\,\mathrm{k\Omega}$ resistor (uncertainty 2%). A high-input-resistance sensor has voltage uncertainty ±0.02 V; take timing uncertainty as negligible here. The switch closes at $t=0$.
 
@@ -424,7 +424,7 @@ $$t=1.36\ln4=\boxed{1.9\,\mathrm s}.$$
 
 ### 练习 3：斜率与面积 {#question-3-a-gradient-and-an-area}
 
-*Self-written; constructed teaching figure, not experimental data.*
+*自拟题；教学示意图，不是实验数据。*
 
 An ideal capacitor of capacitance $20\,\mathrm{\mu F}$ discharges through a fixed resistor. The graph shows the positive charge remaining on its originally positive plate. Take conventional current leaving that plate as positive.
 
@@ -432,7 +432,7 @@ An ideal capacitor of capacitance $20\,\mathrm{\mu F}$ discharges through a fixe
 2. Sketch voltage and signed current against time, with numerical intercepts and a common time scale.
 3. Estimate the area under your current graph from 0 to $20\,\mathrm s$, and use it to find the charge remaining. Check against the supplied charge curve.
 
-<img src="/assets/img/physics-rc-practice.svg" alt="Remaining positive plate charge versus time with P at ten seconds, labelled scales and no supplied tangent." width="520" height="410" data-lazy-ignore="true">
+<img src="/assets/img/physics-rc-practice.svg" alt="独立读图任务：横轴为时间，纵轴为正极板剩余电荷量，两轴均标明刻度。P 点位于 10 s；图中未提供切线，需学生自行判断变化率。" width="520" height="410" data-lazy-ignore="true">
 
 <details markdown="1">
 <summary>提示</summary>
@@ -512,7 +512,7 @@ $$\boxed{R_{\text{eff}}\approx0.91\,\mathrm{M\Omega}}.$$
 
 ### 练习 6：对数图与并联电阻 {#question-6-a-log-plot-and-parallel-resistors}
 
-**Adapted from OxfordAQA PH03, January 2020, Question 2.** The numerical readings below describe an idealised straight-line plot; they replace the original plotted readings.
+**改编自 OxfordAQA PH03, January 2020, Question 2.** The numerical readings below describe an idealised straight-line plot; they replace the original plotted readings.
 
 A capacitor initially at $5.0\,\mathrm V$ discharges through parallel resistors $R_1$ and $R_2$. A plot of $\ln(Q/1\,\mathrm C)$ against time has intercept $-7.40$ and gradient $-0.0127\,\mathrm{s^{-1}}$. $R_1=3.2\,\mathrm{M\Omega}$. Determine initial charge, capacitance, time constant and $R_2$. How does removing $R_2$ change the initial discharge rate after recharging to the same voltage?
 
@@ -548,7 +548,7 @@ $$\boxed{R_2\approx0.81\,\mathrm{M\Omega}}.$$
 
 ### 练习 7：电流读数与流失电荷 {#question-7-current-readings-and-charge-lost}
 
-**Adapted from OxfordAQA PH03, June 2024, Question 5.1–5.3.** Explicit readings replace the original graph.
+**改编自 OxfordAQA PH03, June 2024, Question 5.1–5.3.** Explicit readings replace the original graph.
 
 A charged capacitor discharges through $220\,\mathrm{k\Omega}$. Initial current magnitude is $28.5\,\mathrm{\mu A}$ and its time to halve is $1.83\,\mathrm s$. Find the initial capacitor voltage, time constant and capacitance. Explain how the area under the current graph from zero to $6.0\,\mathrm s$ can be used to find charge remaining, and calculate that remaining charge.
 
@@ -582,7 +582,7 @@ $$\boxed{Q(6.0)\approx7.8\,\mathrm{\mu C}}.$$
 
 ### 练习 8：电路与两条电流曲线 {#question-8-a-circuit-and-two-current-curves}
 
-**Adapted from OxfordAQA PH03, June 2024, Question 5.4–5.5.**
+**改编自 OxfordAQA PH03, June 2024, Question 5.4–5.5.**
 
 Describe how to connect the ammeter, resistor, capacitor and changeover switch to measure current during both charge and discharge. For the same $R$, $C$ and supply voltage, compare the charging current-magnitude curve from an uncharged capacitor with the discharge curve from a capacitor fully charged to the supply voltage.
 

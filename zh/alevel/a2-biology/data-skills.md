@@ -17,7 +17,7 @@ translation_of: /alevel/a2-biology/data-skills/
 
 开始前回顾比值、平均数、平方根、[显微测量](/zh/alevel/a2-biology/prerequisites/#microscopy)和[实验单位](/zh/alevel/a2-biology/experimental-design/#design)。新统计概念会先直接解释，再让你应用。
 
-下面所有数字和练习均为 **Self-written / 自拟题**，使用构造数据，不是真实研究的实测记录。解答用于学习反馈，不是官方评分标准。本页支持实验准备和数据分析。
+下面所有数字和练习均为 **自拟题**，使用构造数据，不是真实研究的实测记录。解答用于学习反馈，不是官方评分标准。本页支持实验准备和数据分析。
 
 ## 缩放不会改变比例尺比值 {#scale}
 
@@ -29,12 +29,12 @@ $$L_{\mathrm{actual}}=\frac{L_{\mathrm{object,image}}}{L_{\mathrm{bar,image}}}\t
 
 *这是细胞轮廓示意，不是显微照片，也不代表某一种细胞。A–B 标出测量轴。这张图用于示范，不是下面的独立题。*
 
-**Self-written / 自拟题 · 示范。**绘图坐标中，A–B 为 300 单位，比例尺为 100 单位，所以实际长度为 300/100 × 20 = 60 µm。换一个缩放级别，180 像素和 60 像素仍给出 60 µm。像素单位抵消，无须用尺子量屏幕毫米数。不能把一个缩放级别的物体长度与另一个缩放级别的比例尺长度混用。
+**自拟题 · 示范。**绘图坐标中，A–B 为 300 单位，比例尺为 100 单位，所以实际长度为 300/100 × 20 = 60 µm。换一个缩放级别，180 像素和 60 像素仍给出 60 µm。像素单位抵消，无须用尺子量屏幕毫米数。不能把一个缩放级别的物体长度与另一个缩放级别的比例尺长度混用。
 
 光学显微镜的目镜测微尺要在当前物镜下，用载物台测微尺校准。若目镜 10 格对应 25 µm，则每格为 2.5 µm；跨 16 格的物体为 40 µm。更换物镜需重新校准。图像可以有正确比例尺，却仍没有足够分辨率区分相邻结构；单纯放大显示不能恢复缺失细节。
 
 <!-- task:scale-transfer -->
-**Self-written / 自拟题 · Independent scale task**
+**自拟题 · Independent scale task**
 
 In a single resized image, a structure spans 165 pixels and a scale bar labelled 40 µm spans 55 pixels. Calculate the actual length in µm and mm. A student doubles the displayed image width and claims that the actual structure is now twice as long. Explain the error.
 <!-- /task:scale-transfer -->
@@ -63,7 +63,7 @@ $$\Delta V=\pi r^2l,\qquad R=\frac{\Delta V}{m\Delta t}.$$
 
 半径与位移必须使用相同长度单位。用 mm 计算时得到 mm³；1 cm³ = 1000 mm³，体积换算系数不能照搬长度换算。
 
-**Self-written / 自拟题 · 示范。**某吸收 CO₂、已平衡温度且无漏气的呼吸计中，液滴 5 min 移动 24 mm，内半径 0.25 mm，种子质量 0.40 g；对照漂移可忽略。
+**自拟题 · 示范。**某吸收 CO₂、已平衡温度且无漏气的呼吸计中，液滴 5 min 移动 24 mm，内半径 0.25 mm，种子质量 0.40 g；对照漂移可忽略。
 
 $$\Delta V=\pi(0.25)^2(24)=4.7124\ \mathrm{mm^3}.$$
 
@@ -74,7 +74,7 @@ $$R=\frac{4.7124}{0.40\times5}\times60=141.37\ \mathrm{mm^3\,g^{-1}\,h^{-1}}=0.1
 时间序列先看图再选区间。近似直线段的拟合斜率给出近似恒定速率，曲线某点的切线斜率给瞬时速率；两端点的斜率则是整个区间平均速率。横轴通常放自变量并标单位，不应默认直线必过原点。类别处理可能更适合不连线的汇总图，而不是连续曲线。对数轴的等间距表示等比值，零值对照应单独展示。
 
 <!-- task:rate-transfer -->
-**Self-written / 自拟题 · Independent rate task**
+**自拟题 · Independent rate task**
 
 A valid oxygen-uptake measurement uses a capillary of internal diameter 0.80 mm. The fluid moves 10 mm in 4.0 min for 0.25 g of seeds; control drift is negligible. Calculate the rate in cm³ g⁻¹ h⁻¹. Separately, an enzyme produces 0, 0.7, 1.4, 2.0 and 2.5 cm³ of oxygen at 0, 2, 4, 6 and 8 min. Compare the average rate over 0–8 min with the rate over the early linear region. State which better estimates the initial rate.
 <!-- /task:rate-transfer -->
@@ -101,12 +101,12 @@ $$R=\frac{\pi(0.40)^2\times10}{4.0\times0.25}\times\frac{60}{1000}=0.30159\ \mat
 
 $$\text{percentage change}=\frac{\text{final}-\text{initial}}{\text{initial}}\times100\%.$$
 
-**Self-written / 自拟题 · 示范。**干质量从 0.80 g 增至 1.00 g，增幅为 25%，不是 20%，因为基值是 0.80 g。存活率由 40% 升至 50%，增加 **10 个百分点（percentage points）**；相对原存活率则增加 25%。输入 800 kJ、转移 200 kJ 的效率是 25%，前提是面积、时间和系统边界口径相容；见[能量与生产](/zh/alevel/a2-biology/energy-production/)。
+**自拟题 · 示范。**干质量从 0.80 g 增至 1.00 g，增幅为 25%，不是 20%，因为基值是 0.80 g。存活率由 40% 升至 50%，增加 **10 个百分点（percentage points）**；相对原存活率则增加 25%。输入 800 kJ、转移 200 kJ 的效率是 25%，前提是面积、时间和系统边界口径相容；见[能量与生产](/zh/alevel/a2-biology/energy-production/)。
 
 检查物理界限：初始质量为正、最终质量非负时，质量百分变化不可能低于 −100%。增重除以初始质量是无量纲比值；写“每天”就改变了定义，必须有时间分母。遇到不合理数据，不能靠猜测缺失缩放因子悄悄修正。
 
 <!-- task:percent-transfer -->
-**Self-written / 自拟题 · Independent percentage task**
+**自拟题 · Independent percentage task**
 
 In a constructed experiment, survival is 30 out of 50 seedlings in treatment A and 36 out of 50 in treatment B. Calculate the difference in percentage points and the relative percentage increase in survival from A to B. A separate tissue sample changes from 1.60 g to 1.44 g. Calculate its percentage mass change and identify the denominator in each calculation.
 <!-- /task:percent-transfer -->
@@ -143,7 +143,7 @@ $$\text{95\% CI}=\bar{x}\pm t_{0.975,n-1}\,SE.$$
 
 常见的均值 ± 约 2SE 是大样本近似，正态系数为 1.96；它并非对所有样本量和分布都准确。极小样本、明显偏斜或异常值需要额外判断，不能机械套用任一规则。
 
-**Self-written / 自拟题 · 示范。**四株独立幼苗的构造生长增量为 2、4、4、6 mm。为本教学例，假定正态总体近似合理。均值为 4 mm，离均差平方和为 8 mm²。
+**自拟题 · 示范。**四株独立幼苗的构造生长增量为 2、4、4、6 mm。为本教学例，假定正态总体近似合理。均值为 4 mm，离均差平方和为 8 mm²。
 
 $$s=\sqrt{8/3}=1.633\ \mathrm{mm},\qquad SE=1.633/\sqrt4=0.8165\ \mathrm{mm}.$$
 
@@ -156,7 +156,7 @@ $$\text{95\% CI}=4\pm3.182(0.8165)\approx[1.40,6.60]\ \mathrm{mm}.$$
 **判断误差条前先读图注。**SD 条描述个体离散，SE 条描述均值精度，CI 条还取决于置信水平与计算方法。重叠或不重叠都不是普遍适用的显著性检验。比较时应考虑样本量、独立性、配对结构和相应统计模型；“两均值差的 CI”与“两个均值各自的 CI”不是同一个对象。
 
 <!-- task:variation-transfer -->
-**Self-written / 自拟题 · Independent uncertainty task**
+**自拟题 · Independent uncertainty task**
 
 A random sample of 25 independent seedlings has mean height 12.0 cm and sample SD 5.0 cm. Assuming the stated sampling model is appropriate, calculate SE and a 95% CI using the supplied multiplier 2.064. Explain what the CI estimates. A second group measures 25 leaves from one plant and uses n = 25 to claim equally precise evidence about variation among plants. Evaluate that claim.
 <!-- /task:variation-transfer -->
@@ -185,7 +185,7 @@ SE = 5.0/5 = 1.0 cm；区间为 12.0 ± 2.064 cm，约 9.94–14.06 cm。它在�
 
 $$r_s=1-\frac{6\sum d_i^2}{n(n^2-1)}\quad\text{(no ties)}.$$
 
-**Self-written / 自拟题 · 构造数据示范。**六个独立抽取的样地提供硝酸盐浓度和幼苗生物量；假设抽样保证这些配对可视为独立。
+**自拟题 · 构造数据示范。**六个独立抽取的样地提供硝酸盐浓度和幼苗生物量；假设抽样保证这些配对可视为独立。
 
 | 样地 | 硝酸盐 / mg kg⁻¹ | 生物量 / g | 硝酸盐秩 | 生物量秩 | 秩差平方 |
 | --- | --- | --- | --- | --- | --- |
@@ -206,7 +206,7 @@ $$r_s=1-\frac{6(2)}{6(36-1)}=0.942857.$$
 
 $$r_s=\frac{\sum(R_i-\bar R)(S_i-\bar S)}{\sqrt{\sum(R_i-\bar R)^2\sum(S_i-\bar S)^2}}.$$
 
-**Self-written / 自拟题 · 并列秩示范。**将 x = 1、2、2、4 与 y = 1、2、3、4 按行配对。两列平均秩都为 2.5；秩离差乘积和为 4.5，两列离差平方和分别为 4.5 和 5。因此：
+**自拟题 · 并列秩示范。**将 x = 1、2、2、4 与 y = 1、2、3、4 按行配对。两列平均秩都为 2.5；秩离差乘积和为 4.5，两列离差平方和分别为 4.5 和 5。因此：
 
 $$r_s=\frac{4.5}{\sqrt{4.5\times5}}=0.948683.$$
 
@@ -215,7 +215,7 @@ $$r_s=\frac{4.5}{\sqrt{4.5\times5}}=0.948683.$$
 ### 独立相关任务 {#spearman-task}
 
 <!-- task:spearman-transfer -->
-**Self-written / 自拟题 · Independent association task**
+**自拟题 · Independent association task**
 
 Four independent sample pairs have x values 2, 2, 5, 8 and y values 1, 3, 4, 7 in the same row order. Assign ranks to both variables. State how to calculate a valid Spearman coefficient and why the no-ties shortcut is inappropriate. A suitable test on a separate, larger dataset reports p = 0.03 for a preselected two-sided test. State the decision at 5% and explain why this does not prove causation.
 <!-- /task:spearman-transfer -->
@@ -244,7 +244,7 @@ $$\chi^2=\sum\frac{(O-E)^2}{E}.$$
 
 先确定遗传模型，再检查偏离。1:2:1 模型的期望计数是总数分别乘 1/4、1/2、1/4。原假设说总体比例符合该模型，备择假设说比例不同。如何由配子推导比例见[遗传](/zh/alevel/a2-biology/inheritance/)。
 
-**Self-written / 自拟题 · 构造计数示范。**60 个独立分类的后代中，三种表型观察数为 18、26、16；期望数为 15、30、15。
+**自拟题 · 构造计数示范。**60 个独立分类的后代中，三种表型观察数为 18、26、16；期望数为 15、30、15。
 
 $$\chi^2=\frac{(18-15)^2}{15}+\frac{(26-30)^2}{30}+\frac{(16-15)^2}{15}=1.20.$$
 
@@ -256,7 +256,7 @@ $$\chi^2=\frac{(18-15)^2}{15}+\frac{(26-30)^2}{30}+\frac{(16-15)^2}{15}=1.20.$$
 
 $$E_{ij}=\frac{(\text{row total})_i(\text{column total})_j}{\text{grand total}},\qquad df=(r-1)(c-1).$$
 
-**Self-written / 自拟题 · 构造独立性示范。**80 株独立幼苗各自随机接受一种处理，在固定时段后各分类一次。表中括号为期望数。
+**自拟题 · 构造独立性示范。**80 株独立幼苗各自随机接受一种处理，在固定时段后各分类一次。表中括号为期望数。
 
 | 处理 | 有症状 | 无症状 | 合计 |
 | --- | --- | --- | --- |
@@ -271,7 +271,7 @@ $$\chi^2=\frac{25}{25}+\frac{25}{15}+\frac{25}{25}+\frac{25}{15}=5.3333,\qquad d
 ### 独立练习：选择并检验模型 {#chi-model-task}
 
 <!-- task:chi-transfer -->
-**Self-written / 自拟题 · Independent model task**
+**自拟题 · Independent model task**
 
 A pre-specified genetic model predicts phenotype proportions 1:2:1. A valid independent sample gives counts 36, 44 and 20. Calculate expected counts, chi-squared and degrees of freedom. Use the supplied 5% critical value 5.991. State a conclusion in context without claiming that a rejected model proves a particular alternative mechanism. Explain why a test of association between treatment group and survival would require a different way of calculating expected counts.
 <!-- /task:chi-transfer -->
@@ -307,7 +307,7 @@ p 值是：**假定原假设模型及其条件成立**时，得到至少与观�
 | 两个分类变量是否关联？ | 卡方独立性 | 行列总数、独立单位、期望频数、自由度 |
 
 <!-- task:inference-retry -->
-**Self-written / 自拟题 · Diagnostic retry**
+**自拟题 · Diagnostic retry**
 
 A report says, “The two mean ± SD bars overlap, so the means are equal. Our p-value of 0.08 proves that the null hypothesis has an 8% probability of being true.” Identify both errors and write a corrected interpretation at a preselected 5% significance level, assuming the reported test was appropriate. State one additional piece of information needed to judge the biological importance of the comparison.
 <!-- /task:inference-retry -->

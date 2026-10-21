@@ -34,7 +34,7 @@ A positively charged particle passes a heavy positive nucleus and bends away. At
 
 $$K_\infty=K(r)+\frac{k(2e)(Ze)}{r},\qquad k=\frac{1}{4\pi\varepsilon_0}.$$
 
-<img src="/assets/img/physics-nuclear-approach.svg" alt="Explanation diagram, not to scale: a head-on alpha path turns back before a heavy fixed nucleus; an off-centre path curves past it. The marked distance is centre-to-centre separation, not a radius measurement." width="520" height="340" data-lazy-ignore="true">
+<img src="/assets/img/physics-nuclear-approach.svg" alt="讲解示意图，不按比例绘制：正碰的 α 粒子在固定重核前转向，偏心路径则弯曲掠过。图中所标距离为粒子与靶核的中心间距，不是核半径的测量值。" width="520" height="340" data-lazy-ignore="true">
 
 对于**正碰**，$K(r_{\min})=0$，于是：
 
@@ -46,7 +46,7 @@ $$1\,\mathrm{fm}=10^{-15}\,\mathrm m.$$
 
 ### 例题 1：计算后限定结论 {#example-1}
 
-*Self-written.*
+*自拟题。*
 
 An alpha particle approaches a fixed gold nucleus head-on from far away with kinetic energy $5.0\,\mathrm{MeV}$. Use $Z=79$, $e=1.60\times10^{-19}\,\mathrm C$, $k=8.99\times10^9\,\mathrm{N\,m^2\,C^{-2}}$ and $1\,\mathrm{MeV}=1.60\times10^{-13}\,\mathrm J$. Estimate the closest separation. Would it prove that the gold nucleus has that radius?
 
@@ -58,7 +58,7 @@ $$K_\infty=8.0\times10^{-13}\,\mathrm J,\qquad r_{\min}=\frac{(8.99\times10^9)(2
 
 电子的 de Broglie 波长为 $\lambda=h/p$。使用动量范围很窄的电子束、薄靶，以及沿散射角扫描的探测器。要分辨核尺度结构，波长需与核尺寸相当。高能电子受正核吸引，与 α 粒子受到斥力不同。角强度图有很强的前向峰、极小值和较弱的侧峰结构。
 
-<img src="/assets/img/physics-nuclear-diffraction.svg" alt="Teaching schematic of electron intensity against scattering angle: strongest at zero angle, then a nonzero minimum and a weaker side maximum. This is an explanatory pattern, not a measured dataset or a universal zero-intensity rule." width="520" height="340" data-lazy-ignore="true">
+<img src="/assets/img/physics-nuclear-diffraction.svg" alt="电子强度—散射角教学示意：零角度处强度最大，随后出现不为零的极小值及较弱侧峰。此图用于解释图样，不是实测数据，也不表示极小值必须为零。" width="520" height="340" data-lazy-ignore="true">
 
 这是参考 June 2024 Q15（键 B）的定性教学示意，不是复制原图或实测记录；不能坚持实测极小值一定为零。在相同散射模型及波长下，更大的核尺寸通常使对应极小角变小。波长分散会使特征变模糊。定量推断尺寸必须先说明模型和角度约定。
 
@@ -66,7 +66,7 @@ $$K_\infty=8.0\times10^{-13}\,\mathrm J,\qquad r_{\min}=\frac{(8.99\times10^9)(2
 
 ### 例题 2：使用题给尺寸模型 {#example-2}
 
-*Self-written. The relation below is supplied for this task, not asserted as a universal nuclear-scattering law.*
+*自拟题；下方关系仅作为本题给定模型，不称普遍核散射定律。*
 
 Electrons have momentum $3.0\times10^{-19}\,\mathrm{kg\,m\,s^{-1}}$. The first minimum is at $20^\circ$. For this task use $R\sin\theta_{\min}=0.61\lambda$, where the angle is measured from the incoming beam, and $h=6.63\times10^{-34}\,\mathrm{J\,s}$. Find the wavelength and radius estimate.
 
@@ -84,7 +84,7 @@ $$V=\frac43\pi R^3=\frac43\pi R_0^3A,\qquad \rho=\frac{A m_u}{(4/3)\pi R_0^3A}=\
 
 ### 例题 3：从一个核转到另一个核 {#example-3}
 
-*Adapted from OxfordAQA 9630 PH04 January 2024 Q7.2; QP p.17 and MS p.18 read. Ratio reasoning is made explicit; no official marks assigned.*
+*改编自 OxfordAQA 9630 PH04 January 2024 Q7.2；已核对 QP p.17与MS p.18。 明确展示比值推理，不另行标注官方分值。*
 
 A helium-4 nucleus has radius $1.68\times10^{-15}\,\mathrm m$. Assuming the same fitted radius law, estimate the radius of gold-197 in fm.
 
@@ -94,7 +94,7 @@ $$\frac{R_{\mathrm{Au}}}{R_{\mathrm{He}}}=\left(\frac{197}{4}\right)^{1/3},\qqua
 
 ## 数据探究：自己选择作图量 {#data-radius-records}
 
-*Self-written; constructed radius records for teaching, not experimental measurements. Treat each radius uncertainty as ±0.05 fm for this task only.*
+*自拟题；半径记录为教学构造，并非实验测量。仅在本题中把每个半径的不确定度取为 ±0.05 fm。*
 
 Choose graph axes that can test $R\propto A^{1/3}$ and estimate the length scale. Use a free intercept first, inspect residuals, and assess whether an intercept of zero is consistent with the stated uncertainty. Calculate the predicted average density using $m_u=1.66\times10^{-27}\,\mathrm{kg}$. Would this establish uniform density inside every nucleus?
 
@@ -124,7 +124,7 @@ Choose graph axes that can test $R\propto A^{1/3}$ and estimate the length scale
 
 ### 练习 1：论证密度模型 {#question-1}
 
-*Adapted from OxfordAQA 9630 PH04 January 2024 Q7.1; QP p.17 and MS p.18 read. Scaling extension is self-written.*
+*改编自 OxfordAQA 9630 PH04 January 2024 Q7.1；已核对 QP p.17与MS p.18。 尺度变化部分为自拟扩展。*
 
 Assume $R=R_0A^{1/3}$, a spherical nucleus and mass $A m_u$. Show that average density is independent of A. Then predict the radius and volume factors when nucleon number increases eightfold.
 
@@ -146,7 +146,7 @@ $$\rho=\frac{A m_u}{(4/3)\pi(R_0A^{1/3})^3}=\frac{3m_u}{4\pi R_0^3}.$$
 
 ### 练习 2：偏心最近处仍有动能 {#question-2}
 
-*Adapted from OxfordAQA 9630 PH04 January 2024 Q10; QP p.20 original path viewed and MS p.19 key C read. Open calculation restates the geometry; the head-on comparison is self-written.*
+*改编自 OxfordAQA 9630 PH04 January 2024 Q10；已核对 QP p.20 已查看原路径图与MS p.19 答案 C。 开放计算重新明确几何条件；正碰比较为自拟扩展。*
 
 An alpha particle starts far from a fixed nucleus of charge $+82e$ with kinetic energy $2.1\times10^{-12}\,\mathrm J$. Its off-centre path has closest separation $4.5\times10^{-14}\,\mathrm m$. Use the constants in Example 1. Find its kinetic energy there and explain why setting it to zero would fail.
 
@@ -168,7 +168,7 @@ $$K_{\min}=2.1\times10^{-12}-\frac{(8.99\times10^9)(2)(82)(1.60\times10^{-19})^2
 
 ### 练习 3：反推核子数 {#question-3}
 
-*Self-written.*
+*自拟题。*
 
 A nucleus with $A=64$ and a second nucleus follow the same radius law. The second radius is 1.50 times the first. Infer its nucleon number and compare the two average densities.
 
@@ -190,7 +190,7 @@ $$A_2=64(1.50)^3=216.$$
 
 ### 练习 4：分别改变探针与靶核 {#question-4}
 
-*Self-written transfer task; qualitative pattern informed by OxfordAQA 9630 PH04 June 2024 Q15, QP p.25 original graphs viewed and MS p.21 key B read.*
+*自拟迁移题；定性图样参考 OxfordAQA 9630 PH04 June 2024 Q15，已查看 QP p.25 原图并核对 MS p.21 的答案 B。*
 
 Sketch how the angular intensity pattern changes when the electron momentum range is broadened. Then use the supplied size relation in Example 2 to predict the change of the first-minimum angle if momentum doubles for the same target. Does the angle halve exactly?
 
@@ -210,7 +210,7 @@ Sketch how the angular intensity pattern changes when the electron momentum rang
 
 ### 练习 5：判断固定偏差的后果 {#question-5}
 
-*Self-written.*
+*自拟题。*
 
 A radius instrument adds the same positive offset to all records. A student forces a radius-versus-cube-root graph through the origin and reports a higher scale constant and a lower density. Explain the direction of both biases and propose a diagnostic comparison.
 
@@ -230,7 +230,7 @@ A radius instrument adds the same positive offset to all records. A student forc
 
 ### 练习 6：独立选择尺寸与密度关系 {#question-6}
 
-*Self-written.*
+*自拟题。*
 
 For a model nucleus with $A=216$, use $R_0=1.20\,\mathrm{fm}$ and $m_u=1.66\times10^{-27}\,\mathrm{kg}$. Estimate radius and average density. A Coulomb experiment turns an alpha particle at 30 fm. Which length represents the radius model and which is a turning-distance bound?
 
@@ -263,6 +263,4 @@ $$R=1.20(216)^{1/3}=7.20\,\mathrm{fm},\qquad \rho=\frac{216(1.66\times10^{-27})}
 
 ## 来源与范围 {#sources}
 
-OxfordAQA 9630 PH04，[大纲正文 v4.4](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf) 3.12.1，印刷第 28 页/PDF 第 27 页，2026-10-21 核对。January 2024 [QP](https://drive.google.com/file/d/1hByI4GGJhjdx9xOLQ-IGzT3-xCQsW_mV/view) 第 17/20 页与配套 [MS Version 1.0 Final](https://drive.google.com/file/d/1zmUrY-MlADO-jrtdY2kvRNR_b9RZfEyh/view) 第 18–19 页支持例题 3 和练习 1–2；June 2024 [QP](https://drive.google.com/file/d/1eA1Yb4KcuFOImkJ0it6rYzyS8R-JKA6K/view) 第 25 页与 [MS Version 1.0 Final](https://drive.google.com/file/d/1Xw_hX-WCv-vkdKVuqcYFj8L2GszlmKv8/view) 第 21 页支持衍射图样讨论，已目视原图。Jim Breithaupt 第 24.1 节印刷第 420–421 页/PDF 第 436–437 页辅助教学组织。其余示范、记录、任务与 SVG 为自拟；例题 2 的尺寸关系是题给模型。本页属于首批核能学习样章，不代表完整 PH04。
-
-教师资料库 QP/MS 链接可能需要访问权限。
+OxfordAQA 9630 PH04，[大纲正文 v4.4](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf) 3.12.1，印刷第 28 页/PDF 第 27 页，2026-10-21 核对。January 2024 QP 第 17/20 页与配套 MS 第 18–19 页支持例题 3 和练习 1–2；June 2024 QP 第 25 页与 MS 第 21 页支持衍射图样讨论，已目视原图。Jim Breithaupt 第 24.1 节印刷第 420–421 页/PDF 第 436–437 页辅助教学组织。其余示范、记录、任务与 SVG 为自拟；例题 2 的尺寸关系是题给模型。本页属于首批核能学习样章，不代表完整 PH04。

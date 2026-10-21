@@ -22,7 +22,7 @@ permalink: /igcse/physics/
 
 - **Non-contact (field) forces**: gravity, electrostatics, magnetism.
 - **Contact forces**: friction, air resistance, tension, normal contact force.
-- Friction is a force between two surfaces that **impedes motion** and may cause **heating**. Air resistance is a form of friction.
+- Friction between contacting surfaces opposes relative motion or its tendency and may cause heating. Air resistance opposes motion through air.
 
 | Quantity | Type | Examples |
 |---|---|---|
@@ -49,16 +49,16 @@ $$F = k \times e$$
 
 
 - A **distance–time graph**: gradient = speed.
-- **Velocity** is speed in a given direction: $$v = \frac{s}{t}$$
-- A **velocity–time graph**: gradient = acceleration; **area under graph** = distance travelled.
+- **Velocity** includes direction; average velocity is $$v = \frac{s}{t}$$.
+- A **velocity–time graph**: gradient = acceleration; signed area between graph and time axis = displacement. Distance travelled is the sum of the absolute areas.
 
 ## ➗ 1.3 Resultant forces
 
 
 - **Newton's First Law**: if the resultant force is zero, a moving object keeps moving at the same velocity; a stationary object stays at rest.
 - **Newton's Second Law**: a non-zero resultant force causes acceleration in its direction: $$F = m \times a$$
-- **Newton's Third Law**: when two objects interact, the forces they exert on each other are **equal in magnitude and opposite in direction**.
-- Acceleration is the **rate of change of velocity**. Deceleration is negative acceleration.
+- **Newton's Third Law**: interacting objects exert forces equal in magnitude and opposite in direction, acting on different objects.
+- Acceleration is the rate of change of velocity. Slowing down means acceleration opposes velocity; its sign depends on the chosen positive direction.
 
 $$a = \frac{\Delta v}{t}$$
 
@@ -68,7 +68,7 @@ $$a = \frac{\Delta v}{t}$$
 - **Momentum** = mass × velocity: $$p = m \times v$$
 - **Conservation of momentum**: in a closed system, total momentum before an interaction equals total momentum after it.
 - Force = rate of change of momentum: $$F = \frac{\Delta p}{t}$$
-- **Safety features** (airbags, seat belts, crumple zones, cycle helmets) increase the *time* over which momentum changes, reducing the force.
+- **Safety features** (airbags, seat belts, crumple zones, cycle helmets) increase the time for the same momentum change, reducing average force.
 
 ## 🚌 1.5 Safety in public transport
 
@@ -82,8 +82,8 @@ $$a = \frac{\Delta v}{t}$$
 
 
 - An object falling through a fluid accelerates (due to gravity), but drag increases with speed.
-- When drag = weight, resultant force = 0 → **terminal velocity**.
-- Parachutes increase drag → lower terminal velocity. Streamlining reduces drag → higher maximum velocity.
+- When buoyancy is negligible, drag = weight gives zero resultant force and **terminal velocity**.
+- Parachutes increase drag and lower terminal speed. Streamlining reduces drag and can increase attainable speed with other conditions unchanged.
 
 ## ⚖️ 1.7 Centre of mass & 1.8 Moments
 
@@ -91,16 +91,46 @@ $$a = \frac{\Delta v}{t}$$
 - **Centre of mass**: point where the mass of an object may be thought to be concentrated.
 - A freely suspended object comes to rest with its centre of mass directly below the point of suspension.
 - **Moment** (turning effect of a force): $$M = F \times d$$
-- If an object is not turning: total **clockwise moment = total anticlockwise moment**.
+- In rotational equilibrium: total **clockwise moment = total anticlockwise moment**.
 - If the line of action of the weight lies **outside the base**, the object **topples**.
 
 ## ✅ Unit 1 Quick Check
 
+Self-written quick checks. Try each question before opening its answer.
 
-1. Is speed a scalar or a vector? **(Scalar — magnitude only)**
-2. A car accelerates from rest at 2 m/s² for 5 s. What is its velocity? **(v = 0 + 2×5 = 10 m/s)**
-3. State Newton's Third Law. **(Equal and opposite forces)**
-4. What is the stopping distance made up of? **(Thinking + braking distance)**
+
+**1.** Is speed a scalar or a vector?
+
+<details markdown="1">
+<summary>Show answer</summary>
+
+Scalar — magnitude only
+
+</details>
+**2.** A car accelerates from rest at 2 m/s² for 5 s. What is its velocity?
+
+<details markdown="1">
+<summary>Show answer</summary>
+
+v = 0 + 2×5 = 10 m/s
+
+</details>
+**3.** State Newton's Third Law.
+
+<details markdown="1">
+<summary>Show answer</summary>
+
+Interacting objects exert equal and opposite forces on different objects
+
+</details>
+**4.** What is the stopping distance made up of?
+
+<details markdown="1">
+<summary>Show answer</summary>
+
+Thinking + braking distance
+
+</details>
 
 ---
 
@@ -136,10 +166,33 @@ $$a = \frac{\Delta v}{t}$$
 
 ## ✅ Unit 2 Quick Check
 
+Self-written quick checks. Try each question before opening its answer.
 
-1. A 2 kg object is raised 3 m (g = 10 N/kg). GPE gained? **(Ep = 2×10×3 = 60 J)**
-2. A device transfers 100 J in, 25 J usefully. Efficiency? **(25%)**
-3. State the conservation of energy. **(Energy cannot be created or destroyed)**
+
+**1.** A 2 kg object is raised 3 m (g = 10 N/kg). GPE gained?
+
+<details markdown="1">
+<summary>Show answer</summary>
+
+Ep = 2×10×3 = 60 J
+
+</details>
+**2.** A device transfers 100 J in, 25 J usefully. Efficiency?
+
+<details markdown="1">
+<summary>Show answer</summary>
+
+25%
+
+</details>
+**3.** State the conservation of energy.
+
+<details markdown="1">
+<summary>Show answer</summary>
+
+Energy cannot be created or destroyed
+
+</details>
 
 ---
 
@@ -149,8 +202,8 @@ $$a = \frac{\Delta v}{t}$$
 ## 🌐 3.1 General properties of waves
 
 
-- A **wave** transfers energy and information without transferring matter.
-- **Transverse**: oscillations perpendicular to direction of travel (EM waves, water waves).
+- A **wave** transfers energy and information without net transport of matter.
+- **Transverse**: oscillations perpendicular to propagation (EM waves; a simplified description of water surface waves).
 - **Longitudinal**: oscillations parallel to direction of travel (sound) — has compressions and rarefactions.
 - Waves can be **reflected, transmitted, absorbed**, and undergo **refraction** (change in speed) and **diffraction** (spreading at a gap/edge).
 - Wave speed: $$v = f \times \lambda$$
@@ -171,9 +224,9 @@ Order (increasing frequency / decreasing wavelength):
 | Gamma | shortest | sterilising, killing bacteria | genetic mutations |
 
 - All EM waves travel at the **same speed in a vacuum**.
-- **Black-body radiation**: range of EM radiation emitted by an object at a particular temperature.
+- **Black-body radiation**: an ideal black body emits a continuous electromagnetic spectrum that changes with temperature.
 - **Infrared**: dark, matt surfaces are good absorbers/emitters; light, shiny surfaces are good reflectors.
-- **X-rays**: short wavelength, high energy, ionising; absorbed strongly by bone/metal, transmitted by healthy tissue.
+- **X-rays**: short wavelength, high photon energy, ionising; absorbed strongly by bone/metal and transmitted more readily through soft tissue, rather than distinguished by whether tissue is healthy.
 
 ## 🔊 3.3 Sound and ultrasound
 
@@ -189,9 +242,9 @@ Order (increasing frequency / decreasing wavelength):
 
 - **Angle of incidence = angle of reflection** (relative to the normal).
 - Plane mirror image: **virtual, upright, laterally inverted**.
-- **Refraction**: light entering a denser medium bends **towards** the normal; into a less dense medium bends **away**.
+- **Refraction**: at oblique incidence, light entering a higher-refractive-index medium bends towards the normal; entering a lower-index medium bends away.
 - **Refractive index**: $$n = \frac{\text{speed in vacuum}}{\text{speed in medium}}$$ and Snell's law: $$n = \frac{\sin i}{\sin r}$$
-- **Total internal reflection** occurs when the angle of incidence (in the denser medium) exceeds the **critical angle**. Used in **optical fibres** (medicine, communication).
+- **Total internal reflection** occurs for light travelling towards a lower-refractive-index medium when incidence exceeds the critical angle. Used in **optical fibres** (medicine, communication).
 
 ## 👁️ 3.6 Lenses and the eye
 
@@ -205,11 +258,41 @@ Order (increasing frequency / decreasing wavelength):
 
 ## ✅ Unit 3 Quick Check
 
+Self-written quick checks. Try each question before opening its answer.
 
-1. What type of wave is sound? **(Longitudinal)**
-2. Which EM wave has the highest frequency? **(Gamma rays)**
-3. What is total internal reflection used for? **(Optical fibres)**
-4. State the wave equation. **(v = f × λ)**
+
+**1.** What type of wave is sound?
+
+<details markdown="1">
+<summary>Show answer</summary>
+
+Longitudinal
+
+</details>
+**2.** Which EM wave has the highest frequency?
+
+<details markdown="1">
+<summary>Show answer</summary>
+
+Gamma rays
+
+</details>
+**3.** What is total internal reflection used for?
+
+<details markdown="1">
+<summary>Show answer</summary>
+
+Optical fibres
+
+</details>
+**4.** State the wave equation.
+
+<details markdown="1">
+<summary>Show answer</summary>
+
+v = f × λ
+
+</details>
 
 ---
 
@@ -221,7 +304,7 @@ Order (increasing frequency / decreasing wavelength):
 
 | State | Arrangement | Motion |
 |---|---|---|
-| **Solid** | fixed, regular arrangement | vibrate about fixed positions |
+| **Solid** | particles at fixed positions; regular in a crystal | vibrate about equilibrium positions |
 | **Liquid** | close together, irregular | move around each other |
 | **Gas** | far apart | fast, random motion |
 
@@ -241,10 +324,33 @@ Order (increasing frequency / decreasing wavelength):
 
 ## ✅ Unit 4 Quick Check
 
+Self-written quick checks. Try each question before opening its answer.
 
-1. What is specific heat capacity? **(Energy to raise 1 kg by 1°C)**
-2. Why does evaporation cool a liquid? **(Fastest particles escape, lowering average KE)**
-3. What carries energy through a metal? **(Free/delocalised electrons)**
+
+**1.** What is specific heat capacity?
+
+<details markdown="1">
+<summary>Show answer</summary>
+
+Energy to raise 1 kg by 1°C
+
+</details>
+**2.** Why does evaporation cool a liquid?
+
+<details markdown="1">
+<summary>Show answer</summary>
+
+Fastest particles escape, lowering average KE
+
+</details>
+**3.** What carries energy through a metal?
+
+<details markdown="1">
+<summary>Show answer</summary>
+
+Free/delocalised electrons; lattice vibrations also transfer energy
+
+</details>
 
 ---
 
@@ -263,11 +369,11 @@ Order (increasing frequency / decreasing wavelength):
 
 | Property | Series | Parallel |
 |---|---|---|
-| Combined resistance | sum of all | less than either |
+| Combined resistance | sum of all | less than any branch resistance, for positive finite resistances |
 | Current | same everywhere | splits in branches |
 | Potential difference | shared | same across each |
 
-- **Thermistor**: resistance **decreases** as temperature rises (thermostat).
+- **NTC thermistor**: resistance decreases as temperature rises (thermostat).
 - **LDR**: resistance **decreases** as light intensity rises (street lights).
 - **Diode**: current flows one way only (forward resistance low, reverse very high).
 - **Filament lamp**: resistance increases as temperature rises.
@@ -280,16 +386,39 @@ Order (increasing frequency / decreasing wavelength):
 - Like poles **repel**, unlike poles **attract** (non-contact forces).
 - **Magnetic field**: space around a magnet where a force acts on magnetic materials (iron, steel, cobalt, nickel).
 - A current-carrying wire produces a magnetic field (concentric circles around the wire).
-- A **solenoid** (coiled wire) produces a strong, uniform field, like a bar magnet. Adding an **iron core** makes an **electromagnet**.
+- A **solenoid** produces a bar-magnet-like field; inside a long solenoid the field is approximately uniform. An iron core strengthens the field, making a common electromagnet.
 
 🔬 **Required practical**: Investigate the factors that determine the strength of an electromagnet.
 
 ## ✅ Unit 5 Quick Check
 
+Self-written quick checks. Try each question before opening its answer.
 
-1. What happens to a thermistor's resistance when temperature rises? **(Decreases)**
-2. In a parallel circuit, is current the same everywhere? **(No — it splits)**
-3. What makes an electromagnet? **(Solenoid + iron core)**
+
+**1.** What happens to a thermistor's resistance when temperature rises?
+
+<details markdown="1">
+<summary>Show answer</summary>
+
+Decreases for the NTC type discussed here
+
+</details>
+**2.** In a parallel circuit, is current the same everywhere?
+
+<details markdown="1">
+<summary>Show answer</summary>
+
+No — it splits
+
+</details>
+**3.** What makes an electromagnet?
+
+<details markdown="1">
+<summary>Show answer</summary>
+
+A current-carrying solenoid with an iron core is a common construction
+
+</details>
 
 ---
 
@@ -299,18 +428,18 @@ Order (increasing frequency / decreasing wavelength):
 ## 🔄 6.1 Generating electricity
 
 
-- **Generator effect**: a pd is induced across a conductor when it moves relative to a magnetic field, or is in a changing magnetic field.
-- Induced pd increases with: speed of movement, magnetic field strength, number of turns, coil area.
-- **Alternator** → AC; **dynamo** → DC.
-- Power stations use turbines to turn coils between magnets.
+- **Generator effect**: an induced pd can arise when a conductor cuts magnetic field lines or when magnetic flux through a coil changes.
+- For a given generating arrangement, greater movement speed, magnetic field strength, number of turns or effective coil area can increase induced pd.
+- **Alternator** → AC; a **dynamo** with a commutator produces unidirectional current.
+- Power stations commonly use turbines to drive generators, transferring mechanical energy to electrical energy.
 
 ## 🚚 6.2 Electricity transmission
 
 
-- High voltage → low current → less heating loss (more efficient).
+- For the same transmitted power, high voltage means lower current and less heating loss.
 - **Transformer**: primary + secondary coil on a soft iron core. AC in primary → changing magnetic field → induced pd in secondary.
 - **Step-up**: more secondary turns (increase voltage). **Step-down**: fewer secondary turns (decrease voltage).
-- Transformer equation: $$\frac{V_p}{V_s} = \frac{n_p}{n_s}$$
+- Ideal transformer voltage ratio: $$\frac{V_p}{V_s} = \frac{n_p}{n_s}$$
 - **Switch-mode transformers**: high frequency (50–200 kHz), small and light (phone chargers).
 
 ## 🔌 6.3 Using electricity in the home
@@ -318,23 +447,46 @@ Order (increasing frequency / decreasing wavelength):
 
 - **dc**: current always in one direction (cells/batteries). **ac**: repeatedly changes direction (mains).
 - Safety features: **earthing** (metal case → live fault → current to earth), **fuse** or **circuit breaker** in live wire.
-- Circuit breakers operate faster than fuses and can be reset. Some appliances are double insulated (no earth).
+- Circuit breakers can be reset. Double-insulated appliances do not need a protective earth connection.
 
 ## 🔧 6.4 The motor effect & 6.5 Energy transfer
 
 
-- **Motor effect**: a current-carrying conductor in a magnetic field experiences a force. Force increases with field strength, current, conductor length. Direction from **Fleming's left-hand rule**.
-- A coil carrying current in a magnetic field rotates → basis of an **electric motor**.
+- **Motor effect**: a magnetic field exerts a force on a current-carrying conductor. For perpendicular placement, force increases with field strength, current and effective conductor length. Direction follows **Fleming's left-hand rule**.
+- A current-carrying coil in a magnetic field can experience a torque, used in an **electric motor**.
 - Power: $$P = \frac{E}{t} = I \times V$$
 - Energy: $$E = P \times t \quad \text{(kWh)}$$
 - Cost of electricity = energy (kWh) × cost per kWh.
 
 ## ✅ Unit 6 Quick Check
 
+Self-written quick checks. Try each question before opening its answer.
 
-1. Why transmit electricity at high voltage? **(Reduces current → less heating loss)**
-2. What does a step-up transformer do? **(Increases voltage)**
-3. What is a fuse for? **(Safety — breaks circuit if current too high)**
+
+**1.** Why transmit electricity at high voltage?
+
+<details markdown="1">
+<summary>Show answer</summary>
+
+For the same power, lower current reduces heating loss
+
+</details>
+**2.** What does a step-up transformer do?
+
+<details markdown="1">
+<summary>Show answer</summary>
+
+Increases voltage
+
+</details>
+**3.** What is a fuse for?
+
+<details markdown="1">
+<summary>Show answer</summary>
+
+Safety — breaks circuit if current too high
+
+</details>
 
 ---
 
@@ -360,23 +512,46 @@ Order (increasing frequency / decreasing wavelength):
 - **Radioactive decay** is a **random** process — it is impossible to predict when a particular atom decays.
 - **Alpha (α)**: 2 protons + 2 neutrons (helium nucleus). Strongly ionising, low penetration (stopped by paper).
 - **Beta (β)**: high-speed electron from the nucleus (neutron → proton). Moderate ionising, stopped by a few mm of aluminium.
-- **Gamma (γ)**: electromagnetic radiation from the nucleus. Weakly ionising, very penetrating (stopped by thick lead/concrete).
-- **Half-life**: the average time for the number of nuclei (or count rate) to halve.
-- **Contamination** = unwanted radioactive atoms on other materials (hazard from decay). **Irradiation** = exposing an object to radiation (does not make it radioactive).
-- Background radiation comes from the environment, space, and devices (X-ray machines).
+- **Gamma (γ)**: electromagnetic radiation from the nucleus. Weakly ionising, very penetrating; sufficiently thick lead/concrete substantially attenuates its intensity.
+- **Half-life**: time for the number of undecayed nuclei in a large sample of one isotope, or its activity, to halve. Count-rate estimates require background subtraction and unchanged detection conditions.
+- **Contamination** = unwanted radioactive material on or in other materials. **Irradiation** = exposure to radiation; ordinary alpha, beta and gamma exposure in this course does not itself deposit radioactive contamination.
+- Background radiation comes from environmental, cosmic and some artificial sources. X-ray machines also produce artificial radiation.
 
 ## ⚛️ 7.3 Nuclear fission & 7.4 Nuclear fusion
 
 
 - **Fission**: splitting a large unstable nucleus (U-235, Pu-239) → two smaller nuclei + neutrons + energy. A **chain reaction** occurs when neutrons cause further fission. Control rods absorb neutrons.
-- **Fusion**: joining two light nuclei to form a heavier nucleus; some mass is converted into energy. Requires very high temperatures/pressures. This is how stars release energy.
+- **Fusion**: light nuclei combine into a heavier nucleus and can release energy, with a decrease in system rest mass. Very high temperatures and suitable confinement are needed. Fusion powers stars.
 
 ## ✅ Unit 7 Quick Check
 
+Self-written quick checks. Try each question before opening its answer.
 
-1. What is an alpha particle? **(A helium nucleus — 2p + 2n)**
-2. What does "half-life" mean? **(Time for the number of nuclei/count rate to halve)**
-3. Which radiation is most penetrating? **(Gamma)**
+
+**1.** What is an alpha particle?
+
+<details markdown="1">
+<summary>Show answer</summary>
+
+A helium nucleus — 2p + 2n
+
+</details>
+**2.** What does "half-life" mean?
+
+<details markdown="1">
+<summary>Show answer</summary>
+
+Time for undecayed nuclei or activity to halve; count rate requires background correction and fixed detection conditions
+
+</details>
+**3.** Which radiation is most penetrating?
+
+<details markdown="1">
+<summary>Show answer</summary>
+
+Of the three types above, gamma is generally most penetrating
+
+</details>
 
 ---
 
@@ -388,32 +563,55 @@ Order (increasing frequency / decreasing wavelength):
 
 **Star life cycles** (determined by mass):
 
-- **Small star (like the Sun)**: nebula → main sequence → red giant → white dwarf → black dwarf.
+- **Sun-like star**: nebula → main sequence → red giant → white dwarf. A black dwarf is a theoretical final cooled state; none has yet been observed.
 - **Large star**: nebula → main sequence → red supergiant → supernova → neutron star or black hole.
 - Main sequence: energy released by fusion of hydrogen → helium.
-- Elements heavier than iron are formed in a **supernova**.
+- Some elements heavier than iron can form in supernovae; this is not the only production route for all heavy elements.
 
 ## 🪐 8.2 Solar system and orbital motion
 
 
 - Our solar system: 8 planets orbiting the Sun, plus moons, asteroids, dwarf planets, comets.
-- Our Sun is one of thousands of millions of stars in the **Milky Way** galaxy.
+- Our Sun is one of hundreds of thousands of millions of stars in the **Milky Way** galaxy.
 - Gravity provides the **centripetal force** keeping planets and satellites in orbit.
-- Gravitational force decreases with separation → lower orbital speeds at larger distances.
+- For circular orbits around the same central body, larger orbital radius means weaker gravity and lower orbital speed.
 
 ## 🌌 8.3 Red shift and the expanding universe
 
 
 - **Doppler effect**: a wave source moving away → wavelength increases, frequency decreases (red shift); moving towards → wavelength decreases (blue shift).
-- **Red shift** of light from distant galaxies → galaxies moving away → space is expanding → supports the **Big Bang** model.
+- Systematic red shifts of distant galaxies support expanding space and the **Big Bang** model; cosmological red shift should not be treated only as motion through static space.
 - **CMBR** (cosmic microwave background radiation) is evidence for the Big Bang.
 
 ## ✅ Unit 8 Quick Check
 
+Self-written quick checks. Try each question before opening its answer.
 
-1. What happens to a small star like the Sun after the main sequence? **(Red giant → white dwarf → black dwarf)**
-2. What keeps planets in orbit? **(Gravity as centripetal force)**
-3. What does red shift provide evidence for? **(Expanding universe / Big Bang)**
+
+**1.** What happens to a small star like the Sun after the main sequence?
+
+<details markdown="1">
+<summary>Show answer</summary>
+
+Red giant → white dwarf; a black dwarf is a theoretical, unobserved cooled state
+
+</details>
+**2.** What keeps planets in orbit?
+
+<details markdown="1">
+<summary>Show answer</summary>
+
+Gravity as centripetal force
+
+</details>
+**3.** What does red shift provide evidence for?
+
+<details markdown="1">
+<summary>Show answer</summary>
+
+Expanding universe / Big Bang
+
+</details>
 
 ---
 

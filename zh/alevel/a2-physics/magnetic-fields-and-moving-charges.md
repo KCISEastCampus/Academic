@@ -41,7 +41,7 @@ $$1\,\mathrm T=1\,\mathrm{N\,A^{-1}\,m^{-1}}.$$
 
 使用**弗莱明左手定则（Fleming’s left-hand rule）**：食指沿磁场，中指沿常规电流，拇指沿受力。开头的情形受力向上。只反转电流或磁场，力反向；两者同时反转，力恢复原方向。电流与场平行时没有磁力，上式直接乘积适用于垂直情形。
 
-<img src="/assets/img/physics-magnetic-wire.svg" alt="Worked model: current rightwards, field into the page, upward force on the independently supported wire and downward reaction on the magnet on a balance." width="520" height="440" data-lazy-ignore="true">
+<img src="/assets/img/physics-magnetic-wire.svg" alt="例题受力模型：电流向右，磁场垂直纸面向里；独立支撑的导线受到向上磁力，放在天平上的磁体受到向下反作用力，两个力作用于不同物体。" width="520" height="440" data-lazy-ignore="true">
 
 ### 例题 1：有效长度与反作用力 {#example-1}
 
@@ -116,7 +116,7 @@ $$\lvert q\rvert E=\lvert q\rvert vB_s\quad\Rightarrow\quad\boxed{v=\frac{E}{B_s
 
 非零电荷可约去，是因为两种力都正比于同一个电荷。还必须两力反向，只比较大小不够。在图示场方向下，较快正离子初始向上偏，较慢者向下偏。负离子的两力同时反向，但选出的速率不变。
 
-<img src="/assets/img/physics-magnetic-selector.svg" alt="Worked schematic: a rightward positive-ion beam between positive upper and negative lower plates, with field into the page; a separate magnetic-only analyser returns semicircular paths to a detector on the entry line." width="520" height="740" data-lazy-ignore="true">
+<img src="/assets/img/physics-magnetic-selector.svg" alt="例题示意：正离子束向右通过上正下负的极板，磁场垂直纸面向里；另一个仅有磁场的分析区使离子沿半圆路径回到入口线上的探测器，两个区域须分别建模。" width="520" height="740" data-lazy-ignore="true">
 
 选出的离子可进入另一个没有电场的磁场 $B_a$。若走半圆回到入射直线，测得的返回距离是**直径** $2r$。速率、电荷相同时，半径正比于质量；两种同位素在探测器上的间距为：
 
@@ -136,7 +136,7 @@ $$v=\frac{1.2\times10^4}{0.080}=\boxed{1.5\times10^5\,\mathrm{m\,s^{-1}}}.$$
 
 真空中的两个中空 D 形电极（dees）置于垂直于其平面的磁场中。每个 dee 内电场近似为零，磁力使粒子以恒定速率走半圆；跨间隙时电场对粒子做正功。每次加速跨隙后，速率与半径增大。单个 dee 内的轨迹是固定半径圆弧，不是半径连续增大的螺旋。
 
-<img src="/assets/img/physics-cyclotron-model.svg" alt="Worked cyclotron schematic with two dees, an into-page magnetic field, two fixed-radius semicircular arcs and accelerating gap crossings. Dimensions are schematic." width="520" height="500" data-lazy-ignore="true">
+<img src="/assets/img/physics-cyclotron-model.svg" alt="回旋加速器讲解示意：两个 D 形盒内磁场垂直纸面向里，图中标出两段固定半径的半圆轨迹，以及粒子穿越加速间隙的路径；尺寸仅为示意。" width="520" height="500" data-lazy-ignore="true">
 
 由圆周运动得到半圈时间与驱动频率：
 
@@ -154,7 +154,7 @@ $$v_{\max}=\frac{B\lvert q\rvert R}{m},\qquad E_{k,\max}=\frac{B^2q^2R^2}{2m}.$$
 
 ## 数据探究：天平与导线 {#data-magnetic-balance}
 
-*Self-written; constructed teaching records, not a completed practical.*
+*自拟题；教学构造记录，不代表完成了实际实验。*
 
 A magnet rests on a balance. A straight horizontal wire is fixed to a separate support; $L=0.040\,\mathrm m$ lies in the uniform field, directed into the page. Positive current is **to the left**. The balance is tared with zero current. Each mass-change reading has uncertainty ±0.01 g; take current and length uncertainties as negligible for this task.
 
@@ -203,11 +203,11 @@ $$B=-\frac{(s\times10^{-3})g}{L}\approx\boxed{0.080\,\mathrm T}.$$
 
 ### 练习 1：画力与轨迹 {#question-1}
 
-*Self-written.*
+*自拟题。*
 
 Particles A, B and C enter the field shown with the same rightward velocity. A is positive, B negative and C neutral; A and B have equal masses and equal charge magnitudes. Copy the diagram, add the initial magnetic forces and sketch the subsequent paths. State what changes if the field is reversed.
 
-<img src="/assets/img/physics-magnetic-track-task.svg" alt="Particles A positive, B negative and C neutral enter a uniform field out of the page with equal rightward velocity. Force arrows and later paths have not been drawn." width="520" height="410" data-lazy-ignore="true">
+<img src="/assets/img/physics-magnetic-track-task.svg" alt="待作答轨迹图：正电粒子 A、负电粒子 B 与中性粒子 C 以相同的向右速度射入垂直纸面向外的匀强磁场；受力箭头和后续路径留待学生补画。" width="520" height="410" data-lazy-ignore="true">
 
 <details markdown="1">
 <summary>提示</summary>
@@ -225,7 +225,7 @@ A 初始向下弯，B 向上弯，本模型中半径相等；C 直行。磁力�
 
 ### 练习 2：抬起导线 {#question-2}
 
-*Adapted from OxfordAQA 9630 PH03 January 2020 Q27; QP p.37 and MS p.9 read. Numerical values and an open derivation replace the original options.*
+*改编自 OxfordAQA 9630 PH03 January 2020 Q27；已核对 QP p.37与MS p.9。 数值条件和开放推导任务替代原选择项。*
 
 A uniform wire of density $8.9\times10^3\,\mathrm{kg\,m^{-3}}$ and cross-sectional area $1.0\times10^{-6}\,\mathrm{m^2}$ rests on supports, lying horizontally left-to-right in the plane of the page. Its whole length is in a uniform $0.20\,\mathrm T$ field directed into the page. Choose the current direction so magnetic force is upwards. Derive the current needed for lift-off, calculate it and explain why the length cancels.
 
@@ -249,7 +249,7 @@ $$BIL=\rho ALg\quad\Rightarrow\quad I=\frac{\rho Ag}{B}\approx\boxed{0.44\,\math
 
 ### 练习 3：反推粒子性质 {#question-3}
 
-*Self-written.*
+*自拟题。*
 
 Positive ions start with negligible kinetic energy and are accelerated through $1000\,\mathrm V$. They then enter a separate uniform $0.20\,\mathrm T$ magnetic field at right angles, following a radius of $0.112\,\mathrm m$. Determine their mass-to-charge ratio. Can this determine mass alone? If each ion carries charge $+2e$, find its mass.
 
@@ -275,7 +275,7 @@ $$m=(2.5088\times10^{-7})(3.20\times10^{-19})\approx\boxed{8.0\times10^{-26}\,\m
 
 ### 练习 4：比较 α 与 β 轨迹 {#question-4}
 
-*Adapted from OxfordAQA 9630 PH03 January 2020 Q28; QP p.38 and MS p.9 read. Open explanation and mass data replace the original diagram choices.*
+*改编自 OxfordAQA 9630 PH03 January 2020 Q28；已核对 QP p.38与MS p.9。 开放解释任务和质量数据替代原图示选择项。*
 
 An alpha particle and a beta-minus electron enter the same uniform field with the same non-relativistic velocity perpendicular to the field. Compare their turning directions and radius magnitudes. Use alpha mass $6.64\times10^{-27}\,\mathrm{kg}$ and charge $+2e$. Would “the alpha path has greater curvature because its charge is larger” be valid?
 
@@ -299,7 +299,7 @@ $$\frac{r_\alpha}{r_\beta}=\frac{m_\alpha/(2e)}{m_e/e}=\frac{6.64\times10^{-27}}
 
 ### 练习 5：两个磁场区域 {#question-5}
 
-*Adapted from OxfordAQA 9630 PH03 Specimen 2019/V2.0 Q4.2–4.5; QP pp.10–11 and MS pp.8–9 read. The geometry is restated explicitly and the task is regrouped.*
+*改编自 OxfordAQA 9630 PH03 Specimen 2019/V2.0 Q4.2–4.5；已核对 QP pp.10–11与MS pp.8–9。 重新明确几何条件，并调整任务组织。*
 
 A selector has $E=2.0\times10^4\,\mathrm{V\,m^{-1}}$ and $B_s=0.14\,\mathrm T$, with opposite electric and magnetic forces. Singly charged nickel ions pass into a magnetic-only analyser. Each makes a semicircle back to the entrance line. A nickel-58 ion returns $0.28\,\mathrm m$ from entry P. Take each nucleon mass as $1.7\times10^{-27}\,\mathrm{kg}$ and each ion charge as $+e$.
 
@@ -331,7 +331,7 @@ $$r_{60}=\frac{60}{58}r_{58},\qquad \Delta s=2(r_{60}-r_{58})\approx\boxed{9.7\t
 
 ### 练习 6：回旋加速器的计时与能量 {#question-6}
 
-*Adapted from OxfordAQA 9630 PH03 January 2020 Q30; QP p.40 and MS p.9 read. Numerical timing and energy tasks are self-written additions.*
+*改编自 OxfordAQA 9630 PH03 January 2020 Q30；已核对 QP p.40与MS p.9。 计时与能量计算为新增自拟任务。*
 
 A proton cyclotron has uniform field $0.50\,\mathrm T$ and maximum usable radius $0.20\,\mathrm m$. Explain why a proton has acceleration but constant speed inside a dee, and why the gap voltage must reverse. Calculate the driving frequency. Starting with negligible kinetic energy, it makes 40 accelerating gap crossings, each through $1.0\,\mathrm{kV}$. Find its kinetic energy and radius after those crossings, and check whether it fits.
 
@@ -359,7 +359,7 @@ $$v=\sqrt{\frac{2E_k}{m_p}}\approx2.8\times10^6\,\mathrm{m\,s^{-1}},\qquad r=\fr
 
 ### 练习 7：辨认保持量 {#question-7}
 
-*Self-written.*
+*自拟题。*
 
 Two positive ions have the same charge; ion B has twice the mass of ion A. Each starts from rest and is accelerated through the same potential difference. They then enter the same magnetic-only analyser at right angles. Predict the ratios of their speeds, radii and orbital periods. Would both also pass unchanged through a selector set to transmit ion A at its original speed? Justify each comparison.
 
@@ -400,8 +400,8 @@ $$\frac{v_B}{v_A}=\frac1{\sqrt2},\qquad \frac{r_B}{r_A}=\sqrt2,\qquad \frac{T_B}
 
 范围为 OxfordAQA International A-level Physics 9630 PH03 的 3.10.1–3.10.2。2026-10-21 由[当前资格页](https://www.oxfordaqa.com/qualification/international-as-and-a-level-physics-9630/)进入[正文版本 4.4 的大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf)，对应印刷第 25 页/PDF 第 24 页。回旋加速器是点名应用；速度选择器和同位素分析由样卷支持。磁通、感应、交流与变压器属于后续学习。
 
-练习 2、4、6 分别使用 January 2020 PH03 Q27、Q28、Q30：[QP](https://drive.google.com/file/d/1u3DieTjGo7oCKuPMLpK01t1dBK72FlEO/view) 第 37–38/40 页与 [MS Version 1.0 Final](https://drive.google.com/file/d/191UedE9sWTca8lYxRcL0UBTkRDuI1lXl/view) 第 9 页已配对阅读，原选择题答案依次为 B、B、A。新增数值与推导任务为自拟扩展，未编造官方分值。
+练习 2、4、6 分别使用 January 2020 PH03 Q27、Q28、Q30：QP 第 37–38/40 页与 MS 第 9 页已配对阅读，原选择题答案依次为 B、B、A。新增数值与推导任务为自拟扩展，未编造官方分值。
 
-练习 5 改编自 OxfordAQA 9630 PH03 Specimen 2019/V2.0 Q4.2–4.5，已配对阅读 [QP](https://www.oxfordaqa.com/oaqaresources/science/assessment/9630-PH03-international-a-level-physics-specimen-paper-v4.2.pdf) 第 10–11 页和 [MS](https://www.oxfordaqa.com/oaqaresources/science/assessment/9630-PH03-international-a-level-physics-mark-scheme-v4.2.pdf) 第 8–9 页。题干和几何条件在此重新组织、明确，配图为原创示意。不能用文件名覆盖正文的 Specimen 2019/V2.0 身份。
+练习 5 改编自 OxfordAQA 9630 PH03 Specimen 2019/V2.0 Q4.2–4.5，已配对阅读 QP 第 10–11 页和 MS 第 8–9 页。题干和几何条件在此重新组织、明确，配图为原创示意。不能用文件名覆盖正文的 Specimen 2019/V2.0 身份。
 
 教材辅助参考：Jim Breithaupt，*Oxford International AQA Examinations: International A Level Physics*，第 20 章 20.1–20.3，印刷第 357–366 页。天平活动为原创构造数据，借鉴 June 2024 PH03 Q16 的导线/磁体反作用情境（QP 第 31 页/MS 第 21 页），重新指定电流和读数方向。它不是研究变压器效率的 RP7，也不代表实际实验已完成。答案、方向和能量关系均独立核验。

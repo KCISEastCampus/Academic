@@ -13,7 +13,9 @@ const built = url => path.join(builtRoot, decodeURIComponent(url), url.endsWith(
 const ids = html => [...html.matchAll(/\bid="([^"]+)"/g)].map(m => m[1]);
 const body = html => html.split('id="content-container"')[1].split('<div id="toc"')[0];
 const math = source => source.match(/\$\$[\s\S]*?\$\$|\$[^$\n]+\$/g) || [];
-const tasks = source => [...source.matchAll(/<!-- task:([^ ]+) -->([\s\S]*?)<!-- \/task:\1 -->/g)].map(m => m[2]);
+const tasks = source => [...source.matchAll(/<!-- task:([^ ]+) -->([\s\S]*?)<!-- \/task:\1 -->/g)].map(m => m[2]
+  .replace(/Self-written \/ 自拟题/g, '自拟题').replace(/Adapted \/ 改编题/g, '改编题')
+  .replace(/^(?:Source:|来源：)[^\n]*\n/gm, ''));
 for (const slug of slugs) {
   const url = '/alevel/a2-biology/' + (slug === 'index' ? '' : slug + '/');
   const en = read(path.join(root, 'alevel/a2-biology', slug + '.md'));

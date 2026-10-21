@@ -398,7 +398,7 @@ The interval is positive because $\alpha$ is negative. The imaginary parts cance
 
 ### Question 7 — Original AQA practice
 
-**Source:** AQA Mathematics 6360, MFP2, January 2006, Question 2. **5 + 5 marks**. Textbook cross-reference: Chapter 17, practice examination question 4, printed p. 206. [Question paper](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/January%202006%20QP%20-%20FP2%20AQA.PDF), [AQA mark scheme](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/January%202006%20MS%20-%20FP2%20AQA.PDF).
+**Source:** AQA Mathematics 6360, MFP2, January 2006, Question 2. **5 + 5 marks**. Textbook cross-reference: Chapter 17, practice examination question 4, printed p. 206. Question paper, AQA mark scheme.
 
 The cubic equation
 

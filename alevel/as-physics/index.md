@@ -48,13 +48,13 @@ permalink: /alevel/as-physics/
     * **Multiplying/Dividing ($y = ab$ or $y=a/b$)**: Add **percentage** uncertainties, $\frac{\Delta y}{\lvert y\rvert }\approx\frac{\Delta a}{\lvert a\rvert }+\frac{\Delta b}{\lvert b\rvert }$, for non-zero quantities.
     * **Powers ($y = x^n$)**: Multiply percentage uncertainty by $\lvert n\rvert $, $\frac{\Delta y}{\lvert y\rvert }\approx \lvert n\rvert \frac{\Delta x}{\lvert x\rvert }$, where the power is defined and $x,y\ne0$.
 
-> **📝 Example Question**
-> 
+> **Example Question (self-written)**
+>
 > A wire has length $L = 2.00 \pm 0.01 \text{ m}$ and radius $r = 1.0 \pm 0.1 \text{ mm}$. Calculate the percentage uncertainty in the volume $V = \pi r^2 L$.
 >
 > **Solution:**
-> 1.  % uncert in $L = \frac{0.01}{2.00} \times 100 = 0.5\%$
-> 2.  % uncert in $r = \frac{0.1}{1.0} \times 100 = 10\%$
+> 1.  % uncert in $\frac{0.01}{2.00} \times 100 = 0.5\%$
+> 2.  % uncert in $\frac{0.1}{1.0} \times 100 = 10\%$
 > 3.  Volume formula depends on $r^2$, so we multiply $r$'s uncertainty by 2.
 > 4.  Total % Uncertainty $= 0.5\% + (2 \times 10\%) = 20.5\%$
 
@@ -108,8 +108,8 @@ Neglect air resistance and assume uniform gravitational acceleration. Resolve mo
     * **GPE**: $\Delta E_p = mg\Delta h$
     * **KE**: $E_k = \frac{1}{2}mv^2$
 
-> **📝 Example Question**
-> 
+> **Example Question (self-written)**
+>
 > A car of mass 1000 kg accelerates from rest to $20 \text{ m s}^{-1}$ in 10 s. Neglecting resistance, calculate the average power output.
 >
 > **Solution:**
@@ -169,12 +169,12 @@ A measure of the stiffness of a material, independent of its dimensions.
     * **Alpha ($\alpha$)**: $_2^4\text{He}$. Highly ionising, low penetration (stopped by paper).
     * **Beta-minus ($\beta^-$)**: Electron. Neutron turns into proton. $_0^1n \rightarrow _1^1p + _{-1}^0e + \bar{\nu}_e$ (Antineutrino).
     * **Beta-plus ($\beta^+$)**: Positron. Proton turns into neutron. $_1^1p \rightarrow _0^1n + _{+1}^0e + \nu_e$ (Neutrino).
-    * **Gamma ($\gamma$)**: EM wave. Low ionising, high penetration (stopped by lead).
-* **Inverse Square Law**: Intensity of gamma radiation ($I$) varies with distance ($r$).
+* **Gamma ($\gamma$)**: EM radiation. Low ionisation, high penetration; sufficiently thick lead or concrete attenuates it substantially rather than stopping every photon.
+* **Inverse Square Law**: For a point-source approximation with negligible absorption, gamma intensity ($I$) varies with distance ($r$).
     $$I = \frac{k}{r^2}$$
 
-> **📝 Example Question**
-> 
+> **Example Question (self-written)**
+>
 > Calculate the specific charge of a Helium-4 nucleus ($^4_2\text{He}$).
 > (Proton mass $\approx$ Neutron mass $\approx 1.67 \times 10^{-27} \text{ kg}$; $e = 1.60 \times 10^{-19} \text{ C}$).
 >
@@ -188,7 +188,7 @@ A measure of the stiffness of a material, independent of its dimensions.
 
 ## 🧪 Key Required Practicals (Unit 1)
 
-1.  **Determination of $g$ by freefall**: Plot $s$ against $t^2$. Gradient $= g/2$.
+1.  **Determination of $g$ by freefall**: Release from rest; plot $s$ against $t^2$. Gradient $= g/2$.
 2.  **Young Modulus of a wire**: Measure diameter (micrometer), length, and extension. Plot Stress vs Strain. Gradient $= E$.
 
 ---
@@ -240,7 +240,7 @@ A measure of the stiffness of a material, independent of its dimensions.
 * Used to supply a **constant or variable potential difference** from a power supply.
 * The potentiometer as a measuring instrument is **not required**.
 * Common applications: **variable resistors, thermistors, and light dependent resistors (LDR)** in the divider circuit.
-* For a divider: output voltage $V_{\text{out}} = V_{\text{in}} \times \frac{R_2}{R_1 + R_2}$.
+* For an unloaded divider: output voltage $V_{\text{out}} = V_{\text{in}} \times \frac{R_2}{R_1 + R_2}$.
 
 ### 5.6 Electromotive Force and Internal Resistance
 
@@ -249,8 +249,8 @@ A measure of the stiffness of a material, independent of its dimensions.
 * **Terminal pd** $= \varepsilon - Ir$ — internal resistance causes the terminal pd to **drop** as current increases.
 * Calculations assume internal resistance is **not negligible** unless stated.
 
-> **📝 Example Question**
-> 
+> **Example Question (self-written)**
+>
 > A battery of emf 6.0 V and internal resistance 0.5 Ω is connected to a 2.5 Ω resistor. Calculate the current and the terminal pd.
 >
 > **Solution:**
@@ -278,7 +278,7 @@ A measure of the stiffness of a material, independent of its dimensions.
 
 * **Free vibrations**: Oscillate at the natural frequency.
 * **Forced vibrations**: Driven at the driving frequency.
-* **Resonance**: Large-amplitude oscillation when driving frequency $\approx$ natural frequency.
+* **Resonance**: Large-amplitude oscillation when driving frequency $\approx$ natural frequency (light damping).
 * **Damping** reduces the sharpness of the resonance peak.
 * Examples: mechanical systems and situations involving stationary waves.
 
@@ -332,7 +332,7 @@ A measure of the stiffness of a material, independent of its dimensions.
 * **The electron volt (eV)**: energy gained by an electron accelerated through 1 V. $1 \text{ eV} = 1.6 \times 10^{-19} \text{ J}$.
 * **Line spectra** (e.g., atomic hydrogen) as evidence for transitions between discrete energy levels.
     $$hf = E_1 - E_2$$
-* **X-rays**: characteristic and line spectrum; basic structure and operation of an X-ray tube; medical applications.
+* **X-rays**: characteristic line spectrum and continuous spectrum; basic structure and operation of an X-ray tube; medical applications.
 * Be able to convert between eV and J.
 
 ### 6.10 Photoelectric Effect
@@ -353,8 +353,8 @@ A measure of the stiffness of a material, independent of its dimensions.
 * Diffraction amount changes with particle momentum (higher momentum → smaller wavelength → less diffraction).
 * Appreciation of how understanding of the nature of matter changes over time.
 
-> **📝 Example Question**
-> 
+> **Example Question (self-written)**
+>
 > Calculate the de Broglie wavelength of an electron moving at $2.0 \times 10^6 \text{ m s}^{-1}$. (Electron mass $m_e = 9.11 \times 10^{-31} \text{ kg}$; $h = 6.63 \times 10^{-34} \text{ J s}$.)
 >
 > **Solution:**

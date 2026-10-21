@@ -38,7 +38,7 @@ $$\Delta E_{\mathrm{rest}}=\Delta M c^2,\qquad 1\,\mathrm{eV}=1.60\times10^{-19}
 
 ### 例题 1：解释近似换算 {#example-1}
 
-*Adapted from OxfordAQA 9630 PH04 June 2024 Q4.1; QP p.8 and MS p.11 read. The rounding discussion is added.*
+*改编自 OxfordAQA 9630 PH04 June 2024 Q4.1；已核对 QP p.8与MS p.11。 新增舍入精度讨论。*
 
 Using $1\,\mathrm u=1.661\times10^{-27}\,\mathrm{kg}$, $c=3.00\times10^8\,\mathrm{m\,s^{-1}}$ and the joule-to-MeV conversion above, show that the energy equivalent is about 930 MeV. Explain why the intermediate result need not equal 931.5 exactly.
 
@@ -56,13 +56,13 @@ $$\frac{1.4949\times10^{-10}}{1.60\times10^{-13}}\,\mathrm{MeV}\approx934\,\math
 
 $$\delta m=Z m_p+(A-Z)m_n-M_{\mathrm{nuc}},\qquad B=\delta m c^2,\qquad b=\frac BA.$$
 
-<img src="/assets/img/physics-nuclear-binding-levels.svg" alt="Explanation schematic: separated nucleons have higher rest energy than the bound nucleus. The upward separation energy and downward formation energy have the same magnitude B. No numerical answers are supplied." width="520" height="330" data-lazy-ignore="true">
+<img src="/assets/img/physics-nuclear-binding-levels.svg" alt="结合能讲解示意：相同核子完全分离时的静能高于结合成核后的静能。向上拆核需要能量 B，反向结合释放同样大小的 B；图中未给出数值答案。" width="520" height="330" data-lazy-ignore="true">
 
 总量 $B$ 对应一个核；$b$ 是每核子的平均量。两者都不能不指定反应就直接当作燃料可释放的能量。较大的 $b$ 可用于广泛比较核子结合紧密程度，但不能单独证明所有衰变渠道都被禁止。
 
 ### 例题 2：一致使用核质量 {#example-2}
 
-*Self-written; supplied rounded teaching masses.*
+*自拟题；题给质量为经过舍入的教学数值。*
 
 For a helium-4 nucleus use $m_p=1.00728\,\mathrm u$, $m_n=1.00867\,\mathrm u$, $M_{\mathrm{nuc}}=4.00150\,\mathrm u$ and $1\,\mathrm u\,c^2=931.5\,\mathrm{MeV}$. Find mass defect, total binding energy and binding energy per nucleon.
 
@@ -90,7 +90,7 @@ $$Q=(M_{\mathrm{initial}}-M_{\mathrm{final}})c^2=\sum B_{\mathrm{products}}-\sum
 
 ### 例题 3：聚变反应中的原子质量账 {#example-3}
 
-*Adapted from OxfordAQA 9630 PH04 June 2024 Q4.2; QP p.8 and MS p.11 read. The supplied values are explicitly treated as neutral atomic masses here; electron bookkeeping and the interpretation are added.*
+*改编自 OxfordAQA 9630 PH04 June 2024 Q4.2；已核对 QP p.8与MS p.11。 明确把题给数值视为中性原子质量，并补充电子数核对与解释。*
 
 Consider the reaction:
 
@@ -104,13 +104,13 @@ $$\delta m=2(3.016029)-4.002603-2(1.007823)=0.013809\,\mathrm u,\qquad Q=0.01380
 
 ## 结合能曲线：先看清纵轴 {#binding-energy-graph}
 
-<img src="/assets/img/physics-nuclear-binding-curve.svg" alt="Constructed teaching graph of average binding energy per nucleon in MeV against nucleon number. Marked raw points are A=100 at 8.6 MeV per nucleon and A=200 at 7.9 MeV per nucleon. The curve is illustrative, not measured isotope data; no reaction-energy answer is drawn." width="520" height="360" data-lazy-ignore="true">
+<img src="/assets/img/physics-nuclear-binding-curve.svg" alt="教学构造图：横轴为核子数，纵轴为每核子的平均结合能，单位 MeV。标记点为 A=100 时 8.6 MeV、A=200 时 7.9 MeV。曲线不是同位素实测数据，也未给出反应释能答案。" width="520" height="360" data-lazy-ignore="true">
 
 教学示意曲线在铁、镍附近较高。若末态**总**结合能增加，轻核聚变或重核裂变可以释放能量。图像不是适用于任意反应的万能规则：仍需检查可能产物、守恒和核子总数。纵轴不直接给出整个核的结合能，也不表示反应速率或反应堆条件。
 
 ## 数据探究：一次反应还是两次？ {#data-binding-records}
 
-*Adapted data task from OxfordAQA 9630 PH04 June 2024 Q4.3; QP p.9 and MS p.11 read. The cycle multiplicity is supplied explicitly here; questions and retry are adapted. Values are provided teaching inputs, not this school’s measurements.*
+*改编数据任务，来源：OxfordAQA 9630 PH04 June 2024 Q4.3；已核对 QP p.9与MS p.11。 明确给出每周期的反应次数，问题与再尝试均经过改编。数值是题给教学输入，不是本校实测结果。*
 
 A reaction is:
 
@@ -144,7 +144,7 @@ $$Q_{\mathrm{event}}=(1.23489-0.35593)\,\mathrm{pJ}=0.87896\,\mathrm{pJ},\qquad 
 
 ### 练习 1：切换到原子质量 {#question-1}
 
-*Self-written.*
+*自拟题。*
 
 For a neutral carbon-12 atom take mass exactly $12\,\mathrm u$, neutral hydrogen mass $1.007825\,\mathrm u$ and neutron mass $1.008665\,\mathrm u$. Neglect electronic binding-energy differences. Find total binding energy and binding energy per nucleon using 931.5 MeV per u. Explain how the electron count is handled.
 
@@ -166,7 +166,7 @@ $$\delta m=6(1.007825)+6(1.008665)-12=0.098940\,\mathrm u,\quad B\approx92.2\,\m
 
 ### 练习 2：由结合能反推核质量 {#question-2}
 
-*Self-written.*
+*自拟题。*
 
 A nucleus contains eight protons and eight neutrons and has total binding energy 127.6 MeV. Use the free-nucleon masses in Example 2 and 931.5 MeV per u. Find its nuclear mass in u. Should it be greater or smaller than the free-nucleon sum?
 
@@ -188,7 +188,7 @@ $$M_{\mathrm{nuc}}=8(1.00728)+8(1.00867)-\frac{127.6}{931.5}\approx15.99062\,\ma
 
 ### 练习 3：从图高转为反应总量 {#question-3}
 
-*Adapted from OxfordAQA 9630 PH04 June 2024 Q14; QP p.24 original graph viewed and MS p.20 key D read. The nuclide label, products and plotted values are replaced by an explicit simplified model and original teaching graph.*
+*改编自 OxfordAQA 9630 PH04 June 2024 Q14；已核对 QP p.24 已查看原图与MS p.20 答案 D。 核素标签、产物和图上数值改为明确的简化模型，并使用原创教学图。*
 
 Use the two marked points on the teaching binding-energy graph. In a simplified model, a nucleus with nucleon number 200 splits into two identical nuclei of nucleon number 100, with no free neutrons emitted. Estimate total energy release in MeV and explain why subtracting the two graph heights alone is insufficient.
 
@@ -210,7 +210,7 @@ $$Q=2(100)(8.6)-200(7.9)=140\,\mathrm{MeV}.$$
 
 ### 练习 4：检查符号与系统边界 {#question-4}
 
-*Self-written.*
+*自拟题。*
 
 An excited nucleus emits a 2.0 MeV photon. Neglect recoil energy for this estimate. Use $c=3.00\times10^8\,\mathrm{m\,s^{-1}}$ and $1\,\mathrm{MeV}=1.60\times10^{-13}\,\mathrm J$. Estimate the change of nuclear rest mass, defining change as final minus initial. Has total energy disappeared?
 
@@ -232,7 +232,7 @@ $$\Delta M\approx-\frac{2.0(1.60\times10^{-13})}{(3.00\times10^8)^2}\approx-3.6\
 
 ### 练习 5：诊断两种质量账 {#question-5}
 
-*Self-written.*
+*自拟题。*
 
 A student calculates helium binding energy using the mass of a neutral helium atom but the masses of two bare protons and two neutrons, then divides the result by four and calls it the total binding energy. Identify both errors and describe a consistent correction without looking up new numbers.
 
@@ -252,7 +252,7 @@ A student calculates helium binding energy using the mass of a neutral helium at
 
 ### 练习 6：用英文独立说明机制 {#question-6}
 
-*Self-written.*
+*自拟题。*
 
 Write a short explanation of how fusion of suitable light nuclei or fission of suitable heavy nuclei can release energy. Refer to the vertical axis of the binding-energy graph, total binding energy, rest mass, and the forms carrying released energy. Does a favourable energy balance alone guarantee a rapid reaction?
 
@@ -283,6 +283,4 @@ Write a short explanation of how fusion of suitable light nuclei or fission of s
 
 ## 来源与范围 {#sources}
 
-OxfordAQA 9630 PH04，[大纲正文 v4.4](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf) 3.12.2，印刷第 28 页/PDF 第 27 页，2026-10-21 核对。June 2024 [QP](https://drive.google.com/file/d/1eA1Yb4KcuFOImkJ0it6rYzyS8R-JKA6K/view) 第 8–9/24 页与配套 [MS Version 1.0 Final](https://drive.google.com/file/d/1Xw_hX-WCv-vkdKVuqcYFj8L2GszlmKv8/view) 第 11/20 页支持例题 1/3、反应数据任务及练习 3；已目视原表与图。本页明确原子质量标签及练习 3 的简化反应模型，避免复制有歧义的粒子标签。Jim Breithaupt 第 24.2–24.3 节印刷第 422–427 页/PDF 第 438–443 页辅助讲解，没有复刻整道教材题。其他示范、任务及教学结合能曲线为自拟。反应堆运行、安全及太阳氢循环仍需后续学习页，本页不代表那些条目完成。
-
-教师资料库 QP/MS 链接可能需要访问权限。
+OxfordAQA 9630 PH04，[大纲正文 v4.4](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf) 3.12.2，印刷第 28 页/PDF 第 27 页，2026-10-21 核对。June 2024 QP 第 8–9/24 页与配套 MS 第 11/20 页支持例题 1/3、反应数据任务及练习 3；已目视原表与图。本页明确原子质量标签及练习 3 的简化反应模型，避免复制有歧义的粒子标签。Jim Breithaupt 第 24.2–24.3 节印刷第 422–427 页/PDF 第 438–443 页辅助讲解，没有复刻整道教材题。其他示范、任务及教学结合能曲线为自拟。反应堆运行、安全及太阳氢循环仍需后续学习页，本页不代表那些条目完成。

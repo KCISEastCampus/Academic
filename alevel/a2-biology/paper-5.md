@@ -76,4 +76,4 @@ Attempt a method decision, a data task and a synoptic explanation with help clos
 
 ## Scope and sources {#sources}
 
-9610 v5.1 Units 1–4, §6 practical assessment/RP1–10 and §7 mathematical skills. The source set contains January and May/June 2025 BL05 QP/MS v1.0 Final. The learning pages identify exact adapted-task references. Entrance tasks are self-written without official marks. [Version and 2025 QWC boundary](/alevel/a2-biology/#sources).
+9610 v5.1 Units 1–4, §6 practical assessment/RP1–10 and §7 mathematical skills. The source set contains January and May/June 2025 BL05 QP/MS. The learning pages identify exact adapted-task references. Entrance tasks are self-written without official marks. [Version and 2025 QWC boundary](/alevel/a2-biology/#sources).

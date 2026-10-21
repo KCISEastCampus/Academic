@@ -830,6 +830,6 @@ Scope: [OxfordAQA Physics specification, version 5.1](https://www.oxfordaqa.com/
 
 The RP8 and RP9 raw-record investigations are additional self-written activities using constructed data. They assess fitting choices, model conditions and bias; they do not report actual practical completion.
 
-Examples 1, 3, 5 and 8 and practice 10 are **adaptations**, not verbatim reproductions, of PH04 January 2024 Q1.2, Q3.1, Q3.2–3.3, Q2 and Q3.4 respectively. Numerical results and the relevant reasoning were checked against the final official mark scheme and independently recalculated. Sources in the teacher's collection: [question paper](https://drive.google.com/file/d/1hByI4GGJhjdx9xOLQ-IGzT3-xCQsW_mV/view) and [mark scheme](https://drive.google.com/file/d/1zmUrY-MlADO-jrtdY2kvRNR_b9RZfEyh/view); access may require permission. Examples 2, 4, 6 and 7, the checkpoints and practice 1–9 are self-written. Answers are teaching explanations, without invented official mark allocations.
+Examples 1, 3, 5 and 8 and practice 10 are **adaptations**, not verbatim reproductions, of PH04 January 2024 Q1.2, Q3.1, Q3.2–3.3, Q2 and Q3.4 respectively. Numerical results and the relevant reasoning were checked against the final official mark scheme and independently recalculated. Examples 2, 4, 6 and 7, the checkpoints and practice 1–9 are self-written. Answers are teaching explanations, without invented official mark allocations.
 
 </details>

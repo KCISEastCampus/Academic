@@ -77,4 +77,4 @@ BL05 要求你自己选择并连接知识。必须使用题目的具体背景；
 
 ## 范围与来源 {#sources}
 
-9610 v5.1 Units 1–4、§6 实验评价/RP1–10 及 §7 数学技能。资料包括 2025 January、May/June BL05 QP/MS v1.0 Final；学习页标注所用改编题的具体出处。本入口的题目为自拟，不分配官方分值。[版本与 2025 QWC 边界](/zh/alevel/a2-biology/#sources)。
+9610 v5.1 Units 1–4、§6 实验评价/RP1–10 及 §7 数学技能。资料包括 2025 January、May/June BL05 QP/MS；学习页标注所用改编题的具体出处。本入口的题目为自拟，不分配官方分值。[版本与 2025 QWC 边界](/zh/alevel/a2-biology/#sources)。

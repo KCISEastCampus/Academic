@@ -7,7 +7,7 @@ const math = /\$\$[\s\S]*?\$\$|\$[^$\n]+\$/g;
 const read = file => fs.readFileSync(file, 'utf8').replace(/\r\n/g, '\n');
 const ids = html => [...html.matchAll(/<h[1-4]\b[^>]*id="([^"]+)"/g)].map(m => m[1]);
 // Source labels can be translated; the English task and supplied data must stay identical.
-const promptText = text => text.trim().replace(/^\*(?:Adapted from|Self-written|Further application)[^\n]*\*\s*\n+/, '').replace(/<img\b[^>]*>\s*/g, '').trim();
+const promptText = text => text.trim().replace(/^\*{1,2}(?:Adapted|Self-written|Further application|改编|自拟题|拓展应用)[^\n]*?\*{1,2}\s*/, '').replace(/<img\b[^>]*>\s*/g, '').trim();
 for (const slug of slugs) {
   const url = '/alevel/a2-physics/' + (slug === 'index' ? '' : slug + '/');
   const en = read(`alevel/a2-physics/${slug}.md`), zh = read(`zh/alevel/a2-physics/${slug}.md`);
@@ -20,7 +20,11 @@ for (const slug of slugs) {
   assert.deepEqual(ids(zhHtml), ids(enHtml), slug + ': heading anchors');
   assert.equal((zh.match(/<details/g) || []).length, (en.match(/<details/g) || []).length, slug + ': disclosures');
   assert.deepEqual([...zh.matchAll(/<img[^>]+src="([^"]+)"/g)].map(m => m[1]), [...en.matchAll(/<img[^>]+src="([^"]+)"/g)].map(m => m[1]), slug + ': figures');
-  for (const m of en.matchAll(/^#{2,4} (?:Example \d+:|Checkpoint:).*\n\n(?:\*(?:Adapted from|Self-written|Further application)[^\n]*\n\n)?([^\n]+)/gm)) assert(zh.includes(m[1]), slug + ': English example prompt');
+  for (const m of en.matchAll(/^#{2,4} (?:Example \d+:|Checkpoint:).*\n\n([\s\S]*?)(?=^#{2,4} |(?![\s\S]))/gm)) {
+    const prompt = promptText(m[1]).split('\n\n')[0];
+    assert(prompt.length > 0, slug + ': nonempty English example prompt');
+    assert(zh.includes(prompt), slug + ': English example prompt');
+  }
   for (const m of en.matchAll(/^### Question [^\n]+\n([\s\S]*?)(?=<details)/gm)) assert(zh.includes(promptText(m[1])), slug + ': English practice prompt');
   for (const m of zh.matchAll(/\]\((\/[^)]+)\)|<img[^>]+src="(\/[^" ]+)"/g)) {
     const [target, fragment] = (m[1] || m[2]).split('#');

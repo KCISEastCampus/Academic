@@ -186,6 +186,6 @@ The immediate prediction is unjustified: channels can initially conduct ions dow
 
 ## Sources and connections {#sources}
 
-[OxfordAQA 9610 specification v5.1](https://www.oxfordaqa.com/wp-content/uploads/2022/08/oxfordaqa-a-level-biology-specification.pdf), §3.4.3; [official resources](https://www.oxfordaqa.com/qualification/international-as-and-a-level-biology-9610/). BL04 May/June 2025 Q2, MS v1.0 Final p.7, was read for pump/channel calibration. All questions and model values here are self-written; feedback is not an official mark scheme.
+[OxfordAQA 9610 specification v5.1](https://www.oxfordaqa.com/wp-content/uploads/2022/08/oxfordaqa-a-level-biology-specification.pdf), §3.4.3; [official resources](https://www.oxfordaqa.com/qualification/international-as-and-a-level-biology-9610/). BL04 May/June 2025 Q2, MS p.7, was read for pump/channel calibration. All questions and model values here are self-written; feedback is not an official mark scheme.
 
 Connect ATP supply to [respiration](/alevel/a2-biology/respiration/) and causal explanations to [synoptic writing](/alevel/a2-biology/synoptic-writing/).

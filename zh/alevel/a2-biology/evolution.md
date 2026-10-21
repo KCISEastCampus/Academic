@@ -20,7 +20,7 @@ translation_of: /alevel/a2-biology/evolution/
 个体可以生长或改变生理状态，却不一定发生进化。进化涉及种群在世代之间的等位基因频率变化。种群遗传学中，计数前先界定可潜在相互交配的群体、地点与时间；基因库包含这个种群中的等位基因。从[遗传](/zh/alevel/a2-biology/inheritance/)及[减数分裂](/zh/alevel/a2-biology/prerequisites/#division)开始，再区分频率计算与因果解释。
 
 <!-- task:EV0 -->
-**Self-written / 自拟题 — EV0**
+**自拟题 — EV0**
 
 A lizard becomes darker during a cold morning, then returns to its original colour. Does this observation alone establish evolution? State what population-level evidence would be needed.
 <!-- /task:EV0 -->
@@ -45,7 +45,7 @@ N 个二倍体个体在一个常染色体位点共有 2N 份等位基因。每�
 
 $$p=\frac{2n_{AA}+n_{Aa}}{2N},\qquad q=\frac{2n_{aa}+n_{Aa}}{2N},\qquad p+q=1.$$
 
-**计数示范 — Self-written / 自拟题；构造数据：**100 个个体中，36 个 AA、48 个 Aa、16 个 aa。A 份数 = 2 × 36 + 48 = 120，总共 200 份，因此 p = 0.60、q = 0.40。这里的观测基因型比例恰与 p²、2pq、q² 相符，但直接计数本身并不依赖这个假设。
+**计数示范 — 自拟题；构造数据：**100 个个体中，36 个 AA、48 个 Aa、16 个 aa。A 份数 = 2 × 36 + 48 = 120，总共 200 份，因此 p = 0.60、q = 0.40。这里的观测基因型比例恰与 p²、2pq、q² 相符，但直接计数本身并不依赖这个假设。
 
 ## Hardy–Weinberg：有条件的模型 {#hardy-weinberg}
 
@@ -55,12 +55,12 @@ $$p=\frac{2n_{AA}+n_{Aa}}{2N},\qquad q=\frac{2n_{aa}+n_{Aa}}{2N},\qquad p+q=1.$$
 
 $$p^2+2pq+q^2=(p+q)^2=1.$$
 
-**反推示范 — Self-written / 自拟题：**假设种群处于平衡，完全外显的常染色体隐性表型发生率为 1/2500，则 q² = 1/2500 = 0.0004，q = 0.02、p = 0.98，携带者频率 2pq = 0.0392。携带者约占 3.92%，并不是 2%。这个推断依赖隐性模型、表型识别及平衡假设。
+**反推示范 — 自拟题：**假设种群处于平衡，完全外显的常染色体隐性表型发生率为 1/2500，则 q² = 1/2500 = 0.0004，q = 0.02、p = 0.98，携带者频率 2pq = 0.0392。携带者约占 3.92%，并不是 2%。这个推断依赖隐性模型、表型识别及平衡假设。
 
 若题目已经给出**等位基因频率**，不要再开平方。若给显性表型频率，它对应 p² + 2pq，并不只等于 p²。若存在不完全外显、环境影响或多个基因参与，简单把患病率代入的做法可能失效。
 
 <!-- task:EV1 -->
-**Self-written / 自拟题 — EV1**
+**自拟题 — EV1**
 
 A population at Hardy–Weinberg equilibrium has a dominant allele A at frequency 0.04. For 10 000 individuals, calculate expected AA, Aa and aa counts. Explain why 0.04 is not the proportion of all individuals showing the dominant phenotype.
 <!-- /task:EV1 -->
@@ -85,7 +85,7 @@ q = 0.96。AA：0.0016 × 10 000 = 16；Aa：0.0768 × 10 000 = 768；aa：0.921
 
 捕食、疾病或竞争等选择压力下，某些表型留下更多能存活、可育的后代，其等位基因因此更常被传递，多代后频率可改变。**适合度（fitness）**是在特定环境中的相对繁殖成功，不只是力量或寿命。选择通过表型发挥作用，进化结果则涉及遗传的等位基因频率。
 
-**机制示范 — Self-written / 自拟题：**某虚构昆虫种群中，可遗传变异使农药较难与靶标结合。施药后，携带者更容易存活繁殖并传递该等位基因，多代后其频率上升。农药是在变异中进行筛选，不是在指示每只昆虫产生所需突变。无农药环境下，抗性代价可能改变结果。
+**机制示范 — 自拟题：**某虚构昆虫种群中，可遗传变异使农药较难与靶标结合。施药后，携带者更容易存活繁殖并传递该等位基因，多代后其频率上升。农药是在变异中进行筛选，不是在指示每只昆虫产生所需突变。无农药环境下，抗性代价可能改变结果。
 
 ### 三种选择模式 {#selection-patterns}
 
@@ -122,7 +122,7 @@ q = 0.96。AA：0.0016 × 10 000 = 16；Aa：0.0768 × 10 000 = 768；aa：0.921
 ## 独立推断与诊断 {#practice}
 
 <!-- task:EV2 -->
-**Self-written / 自拟题 — EV2**
+**自拟题 — EV2**
 
 A storm leaves 12 survivors from an island population of 1200 beetles. A rare neutral allele is absent among the survivors, and population size later returns to 1200. Explain the change without invoking an advantage of the other allele. Explain why restored population size does not establish restored genetic diversity.
 <!-- /task:EV2 -->
@@ -142,7 +142,7 @@ A storm leaves 12 survivors from an island population of 1200 beetles. A rare ne
 </details>
 
 <!-- task:EV3 -->
-**Self-written / 自拟题 — EV3**
+**自拟题 — EV3**
 
 In a constructed seed-eating bird population, small and large beaks each produce more surviving offspring than intermediate beaks. Identify the selection pattern and explain its possible effect on phenotype frequencies. State the extra evidence required before concluding that two species have formed.
 <!-- /task:EV3 -->
@@ -162,7 +162,7 @@ In a constructed seed-eating bird population, small and large beaks each produce
 </details>
 
 <!-- task:EV4 -->
-**Self-written / 自拟题 — EV4**
+**自拟题 — EV4**
 
 A river separates two mammal populations. Their allele frequencies differ after many generations, but controlled crosses produce fertile offspring. Explain how divergence could have arisen and evaluate the claim that geographical isolation proves speciation.
 <!-- /task:EV4 -->
@@ -182,7 +182,7 @@ A river separates two mammal populations. Their allele frequencies differ after 
 </details>
 
 <!-- task:EV5 -->
-**Self-written / 自拟题 — EV5**
+**自拟题 — EV5**
 
 Retry: in a sample of 200 individuals, 80 are AA, 100 are Aa and 20 are aa. Calculate p and q directly. Then calculate Hardy–Weinberg expected counts using these frequencies. Explain why a difference between observed and expected counts is not, by itself, proof of natural selection.
 <!-- /task:EV5 -->

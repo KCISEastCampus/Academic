@@ -173,6 +173,6 @@ More convergence may improve detection of weak illumination while reducing spati
 
 ## Sources and connections {#sources}
 
-[OxfordAQA 9610 specification v5.1](https://www.oxfordaqa.com/wp-content/uploads/2022/08/oxfordaqa-a-level-biology-specification.pdf), §3.4.1–3.4.2; [official resources](https://www.oxfordaqa.com/qualification/international-as-and-a-level-biology-9610/). BL04 May/June 2025 Q5, MS v1.0 Final pp.12–13, was read to calibrate sensitivity/acuity explanations. Tasks, model diagrams and feedback here are self-written, not reproductions of that question or its marks.
+[OxfordAQA 9610 specification v5.1](https://www.oxfordaqa.com/wp-content/uploads/2022/08/oxfordaqa-a-level-biology-specification.pdf), §3.4.1–3.4.2; [official resources](https://www.oxfordaqa.com/qualification/international-as-and-a-level-biology-9610/). BL04 May/June 2025 Q5, MS pp.12–13, was read to calibrate sensitivity/acuity explanations. Tasks, model diagrams and feedback here are self-written, not reproductions of that question or its marks.
 
 Next: [synapses](/alevel/a2-biology/nervous-communication/) and [experimental design](/alevel/a2-biology/experimental-design/).

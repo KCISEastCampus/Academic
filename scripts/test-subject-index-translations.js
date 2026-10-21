@@ -33,9 +33,10 @@ function languagePage(html, href) {
   return { links, select, destinations };
 }
 
-// Chinese subject indexes point to English notes until those lessons are translated.
+// Directory-only pages still point to English notes; translated notes keep their local content.
 const subjectIndexes = ['alevel/as-physics', 'alevel/as-mathematics',
   'igcse/biology', 'igcse/chemistry', 'igcse/mathematics', 'igcse/physics'];
+const translatedNotes = ['alevel/as-physics', 'igcse/physics'];
 for (const subject of subjectIndexes) {
   const enUrl = `/${subject}/`, zhUrl = `/zh${enUrl}`;
   const en = built(enUrl), zh = built(zhUrl);
@@ -63,11 +64,29 @@ for (const subject of subjectIndexes) {
   assert(/<h2\b[^>]*class="contents-list"[^>]*>目录<\/h2>/.test(zh), `${subject}: Chinese contents`);
   assert(zh.includes('placeholder="搜索目录…"'), `${subject}: Chinese search`);
   assert(zh.includes('aria-label="阅读此页英文版"'), `${subject}: Chinese switch label`);
-  assert(zhBody.includes('本页提供中文主题目录'), `${subject}: translation scope`);
+  const translated = translatedNotes.includes(subject);
+  assert(zhBody.includes(translated ? '本页为中文复习笔记' : '本页提供中文主题目录'), `${subject}: translation scope`);
+  if (translated) {
+    const math = source => source.match(/\$\$[\s\S]*?\$\$|(?<!\$)\$(?!\$)[^\n$]+\$(?!\$)/g) || [];
+    assert.deepEqual(math(zhSource), math(enSource), subject + ': identical equations and numerical conditions');
+    if (subject === 'igcse/physics') {
+      const questions = source => [...source.matchAll(/^\*\*\d+\.\*\* (.+)$/gm)].map(m => m[1]);
+      assert.equal(questions(enSource).length, 26, 'IGCSE: all quick checks retained');
+      assert.deepEqual(questions(zhSource), questions(enSource), 'IGCSE: unchanged English questions');
+      assert.equal((zhBody.match(/<details\b/g) || []).length, 26, 'IGCSE: independently closed answers');
+      assert(!/<details\b[^>]*\bopen(?:\s|=|>)/.test(zhBody), 'IGCSE: answers closed by default');
+      assert(zhSource.includes('有符号面积为位移') && enSource.includes('signed area'), 'IGCSE: displacement is not distance');
+      assert(zhSource.includes('扣除本底') && enSource.includes('background subtraction'), 'IGCSE: corrected half-life conditions');
+    } else {
+      const questions = source => [...source.matchAll(/^> (?:A wire|A car|Calculate the specific|\(Proton mass|A battery|Calculate the de Broglie)[^\n]+/gm)].map(m => m[0]);
+      assert.equal(questions(enSource).length, 6, 'AS: five examples and their given constants');
+      assert.deepEqual(questions(zhSource), questions(enSource), 'AS: unchanged English example prompts');
+    }
+  }
   assert(!zhBody.includes('{{'), `${subject}: unrendered UI text`);
   const current = 'https://academic.example' + zhUrl;
   const runtime = languagePage(zh, current);
-  for (const link of runtime.links) {
+  for (const link of translated ? [] : runtime.links) {
     assert.equal(new URL(link.href).pathname, enUrl, subject + ': English note destination after language initialization');
   }
   const headings = [...zhBody.matchAll(/<h2\b[^>]*id="([^"]+)"[^>]*>([\s\S]*?)<\/h2>/g)];

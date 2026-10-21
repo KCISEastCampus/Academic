@@ -18,7 +18,7 @@ translation_of: /alevel/a2-biology/nervous-communication/
 目标是解释局部膜电位如何传播，以及突触怎样整合输入。感受器电位见[感受器](/zh/alevel/a2-biology/receptors/)，ATP 来源见[呼吸作用](/zh/alevel/a2-biology/respiration/)。下文电位和时间为教学示例，真实阈值与时程会变化。
 
 <!-- task:BL04-N0 -->
-**N0 · Self-written / 自拟题**
+**N0 · 自拟题**
 
 Sodium ions are more concentrated outside an axon than inside. Explain why their movement through an open channel can occur without ATP, whereas maintaining this concentration difference requires energy.
 <!-- /task:BL04-N0 -->
@@ -49,7 +49,7 @@ Sodium ions are more concentrated outside an axon than inside. Explain why their
 
 **绝对不应期（absolute refractory period）**内，失活的 Na⁺ 通道不能马上重新开放产生尖峰。随后相对不应期的恢复尚未完成，需要更强刺激。这样能把冲动分开并限制最高频率；正常传播时，后方膜仍处不应期，也有助于信号向前传。
 
-**示范 · Self-written / 自拟题：**在梯度尚存时，即使 ATP 产生被中断，复极化仍可短暂发生，因为 K⁺ 还可经开放通道外流。长时间后梯度耗散会使信号失效，但“泵把 K⁺ 推出去完成每次复极化”是错误的，泵实际把 K⁺ 运入。
+**示范 · 自拟题：**在梯度尚存时，即使 ATP 产生被中断，复极化仍可短暂发生，因为 K⁺ 还可经开放通道外流。长时间后梯度耗散会使信号失效，但“泵把 K⁺ 推出去完成每次复极化”是错误的，泵实际把 K⁺ 运入。
 
 ## 传播与传导速度 {#conduction}
 
@@ -74,7 +74,7 @@ Sodium ions are more concentrated outside an axon than inside. Explain why their
 在**神经肌肉接头（neuromuscular junction）**，靶细胞是骨骼肌纤维的运动终板。ACh 形成终板去极化，正常情况下触发肌肉动作电位，进而使肌细胞内释放 Ca²⁺。该接头为兴奋性，通常不是抑制整合的部位；神经元之间的突触则可以兴奋或抑制。后续机制见[肌肉](/zh/alevel/a2-biology/muscles/)。
 
 <!-- task:BL04-N1 -->
-**N1 · Self-written / 自拟题**
+**N1 · 自拟题**
 
 Complete the causal chain at a cholinergic synapse: presynaptic action potential → opening of ____ channels → ____ enters → vesicles ____ → acetylcholine binds to ____ → postsynaptic ion permeability changes. Explain why acetylcholinesterase is needed.
 <!-- /task:BL04-N1 -->
@@ -100,7 +100,7 @@ Complete the causal chain at a cholinergic synapse: presynaptic action potential
 抑制性突触可开放 Cl⁻ 或 K⁺ 通道、增加电导，使达到阈值更困难。它可能造成超极化，也可能通过分流减小兴奋引起的电变化。抑制不是单纯“没有递质”，而是抑制性输入主动造成的改变；不同递质和受体的作用也不同。
 
 <!-- task:BL04-N2 -->
-**N2 · Self-written / 自拟题**
+**N2 · 自拟题**
 
 A deliberately simplified model starts at −70 mV with a threshold of −55 mV. Each excitatory input contributes +6 mV for 5 ms; an inhibitory input contributes −5 mV for the same interval. Inputs sum only while their effects overlap. Compare: (A) three simultaneous excitatory inputs; (B) three excitatory inputs 10 ms apart; (C) three simultaneous excitatory inputs plus one simultaneous inhibitory input. State the model's predictions and one limitation.
 <!-- /task:BL04-N2 -->
@@ -122,7 +122,7 @@ A：−70 + 18 = −52 mV，达到阈值。B：每次只到 −64 mV，随后衰
 ## 独立预测 {#practice}
 
 <!-- task:BL04-N3 -->
-**N3 · Self-written / 自拟题**
+**N3 · 自拟题**
 
 Drug X blocks presynaptic voltage-gated calcium channels but does not affect axonal sodium channels. Drug Y blocks postsynaptic acetylcholine receptors. Predict recordings from the presynaptic axon and postsynaptic membrane after stimulation in each case. Explain one measurement that distinguishes X from Y.
 <!-- /task:BL04-N3 -->
@@ -142,7 +142,7 @@ Drug X blocks presynaptic voltage-gated calcium channels but does not affect axo
 </details>
 
 <!-- task:BL04-N4 -->
-**N4 · Self-written / 自拟题**
+**N4 · 自拟题**
 
 Two axons have the same diameter and temperature; only one is myelinated. Explain why conduction differs. Then explain why increasing temperature cannot be assumed to increase conduction speed indefinitely.
 <!-- /task:BL04-N4 -->
@@ -166,7 +166,7 @@ Two axons have the same diameter and temperature; only one is myelinated. Explai
 若把每次电位变化都归于 ATP，重看泵与通道；若一输入就写一输出，重看总和；若所有突触都写成兴奋性，分清肌肉终板和接受抑制输入的神经元。
 
 <!-- task:BL04-N5 -->
-**N5 · Self-written / 自拟题 — retry**
+**N5 · 自拟题 — retry**
 
 ATP production stops but the ion gradients initially remain. A student predicts that every sodium channel immediately stops conducting. Evaluate this prediction and describe what sustained ATP shortage would eventually do to signalling.
 <!-- /task:BL04-N5 -->
@@ -187,6 +187,6 @@ ATP production stops but the ion gradients initially remain. A student predicts 
 
 ## 来源与连接 {#sources}
 
-[OxfordAQA 9610 大纲 v5.1](https://www.oxfordaqa.com/wp-content/uploads/2022/08/oxfordaqa-a-level-biology-specification.pdf)，§3.4.3；[官方资料入口](https://www.oxfordaqa.com/qualification/international-as-and-a-level-biology-9610/)。已读 BL04 May/June 2025 Q2 的 MS v1.0 Final p.7，用于校准泵与通道的解释。本页题目和模型数值均自拟，反馈不是官方评分标准。
+[OxfordAQA 9610 大纲 v5.1](https://www.oxfordaqa.com/wp-content/uploads/2022/08/oxfordaqa-a-level-biology-specification.pdf)，§3.4.3；[官方资料入口](https://www.oxfordaqa.com/qualification/international-as-and-a-level-biology-9610/)。已读 BL04 May/June 2025 Q2 的 MS p.7，用于校准泵与通道的解释。本页题目和模型数值均自拟，反馈不是官方评分标准。
 
 把 ATP 供给连到[呼吸作用](/zh/alevel/a2-biology/respiration/)，把因果解释用于[综合写作](/zh/alevel/a2-biology/synoptic-writing/)。

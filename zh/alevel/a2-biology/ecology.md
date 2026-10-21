@@ -20,7 +20,7 @@ translation_of: /alevel/a2-biology/ecology/
 “阴处植物较少”是在描述一个模式。要解释它，还需提出机制，并用证据把光照作用与土壤水分、取食等其他差异分开。本页通过种群变化、抽样、竞争实验和演替建立这种区分。物种、平均数和植物资源需求可到[先修页](/zh/alevel/a2-biology/prerequisites/)回补。
 
 <!-- task:E0 -->
-**Self-written / 自拟题 — E0**
+**自拟题 — E0**
 
 In a pond, there are fish of one species, several plant species, water and sediment. Identify one population, the community and the ecosystem. Explain why the fish population alone is not the ecosystem.
 <!-- /task:E0 -->
@@ -61,7 +61,7 @@ $$\Delta N=(B+I)-(D+E).$$
 
 研究环境梯度时，可沿样线按规定间隔放样方，同时记录非生物变量，并在独立地点重复样线。这估计的是随位置改变的模式，不自动成为整个生境的无偏估计。观察到相关之后仍需考虑其他解释。
 
-**估计示范 — Self-written / 自拟题；构造数据：**五个 0.25 m² 样方计数为 3、5、4、2、6，平均每样方 4 个，即每平方米 16 个。若取样能代表整个 200 m² 区域，可估计共有 3200 个个体。这是估计，不是逐个普查；只有五个样方可能不能充分反映斑块分布。
+**估计示范 — 自拟题；构造数据：**五个 0.25 m² 样方计数为 3、5、4、2、6，平均每样方 4 个，即每平方米 16 个。若取样能代表整个 200 m² 区域，可估计共有 3200 个个体。这是估计，不是逐个普查；只有五个样方可能不能充分反映斑块分布。
 
 $$\text{density}=\frac{\text{mean count per quadrat}}{\text{quadrat area}},\qquad \widehat N=\text{density}\times\text{total area}.$$
 
@@ -78,7 +78,7 @@ $$\text{density}=\frac{\text{mean count per quadrat}}{\text{quadrat area}},\qqua
 使用获准的土壤／堆肥，洗手、避免吸入粉尘，在监督下使用烘干设备，不把引入物种释放到室外。
 
 <!-- task:E1 -->
-**Self-written / 自拟题 — E1**
+**自拟题 — E1**
 
 Four pots at each density are independently assigned and grown for 21 days. The mean total dry masses per pot are 1.2 g with 4 surviving plants and 1.6 g with 16 surviving plants. Calculate mean dry mass per plant at each density. Complete the causal chain from increased density to lower mass per plant, and state why the result does not show that total production decreased.
 <!-- /task:E1 -->
@@ -105,7 +105,7 @@ Four pots at each density are independently assigned and grown for 21 days. The 
 
 在当时气候和条件下，可能形成相对稳定的顶极群落，但干扰、放牧、火和环境变化都能使演替改向或中断。生物多样性常随演替改变，却不一定每一步都增加。次生演替发生在干扰后仍保留土壤的地点，过程可有所不同。
 
-**机制示范 — Self-written / 自拟题：**土壤形成后草本定居，随后灌木造成遮阴。灌木不是“想要替代”草，而是高度改变了光条件，降低不耐阴草本的竞争成功，同时可能支持其他物种。
+**机制示范 — 自拟题：**土壤形成后草本定居，随后灌木造成遮阴。灌木不是“想要替代”草，而是高度改变了光条件，降低不耐阴草本的竞争成功，同时可能支持其他物种。
 
 ## 保护：先明确目标，再看证据 {#conservation}
 
@@ -116,7 +116,7 @@ Four pots at each density are independently assigned and grown for 21 days. The 
 ## 独立证据任务 {#practice}
 
 <!-- task:E2 -->
-**Self-written / 自拟题 — E2**
+**自拟题 — E2**
 
 A student puts one tray of 40 seedlings in shade and one tray of 10 seedlings in full light. The shaded seedlings have lower mean mass. Explain two reasons why the result cannot isolate an effect of density, and redesign the experiment to test density.
 <!-- /task:E2 -->
@@ -136,7 +136,7 @@ A student puts one tray of 40 seedlings in shade and one tray of 10 seedlings in
 </details>
 
 <!-- task:E3 -->
-**Self-written / 自拟题 — E3**
+**自拟题 — E3**
 
 A reserve stops mowing. After five years, shrub cover rises and a rare grassland orchid declines. Explain a plausible mechanism, one alternative explanation and evidence needed to decide whether mowing should resume. Include one trade-off.
 <!-- /task:E3 -->
@@ -156,7 +156,7 @@ A reserve stops mowing. After five years, shrub cover rises and a rare grassland
 </details>
 
 <!-- task:E4 -->
-**Self-written / 自拟题 — E4**
+**自拟题 — E4**
 
 Retry: 60 animals are marked and released. In a later sample of 50, 10 are marked. Estimate the population. Predict the direction of bias if some marks were lost before recapture, keeping the actual number of animals and capture behaviour unchanged.
 <!-- /task:E4 -->

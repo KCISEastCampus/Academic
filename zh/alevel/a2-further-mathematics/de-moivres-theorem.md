@@ -639,7 +639,7 @@ $$\boxed{\begin{aligned}
 
 ### 第 7 题：AQA——最小正角 {#question-7--aqa-the-smallest-positive-angle}
 
-**来源：**AQA Mathematics 6360，MFP2，June 2007，原卷第 3 题。原题分值：**5 marks**。教材索引：Chapter 20, practice examination question 2, printed p. 253。[原卷](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202007%20QP%20-%20FP2%20AQA.PDF)、[AQA 评分材料](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202007%20MS%20-%20FP2%20AQA.PDF)。
+**来源：**AQA Mathematics 6360，MFP2，June 2007，原卷第 3 题。原题分值：**5 marks**。教材索引：Chapter 20, practice examination question 2, printed p. 253。原卷、AQA 评分材料。
 
 Use De Moivre's theorem to find the smallest positive angle $\theta$ for which
 
@@ -680,7 +680,7 @@ $$\boxed{\theta=\frac\pi{10}.}$$
 
 ### 第 8 题：AQA——五倍角恒等式与乘积 {#question-8--aqa-a-fifth-angle-identity-and-a-product}
 
-**来源：**AQA Mathematics 6360，MFP2，June 2011，原卷第 7 题。原题分值：**5 + 3 + 3 + 5 marks**。教材索引：Chapter 20, practice examination question 3, printed p. 253。[原卷](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202011%20QP%20-%20FP2%20AQA.pdf)、[AQA 评分材料](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202011%20MS%20-%20FP2%20AQA.PDF)。
+**来源：**AQA Mathematics 6360，MFP2，June 2011，原卷第 7 题。原题分值：**5 + 3 + 3 + 5 marks**。教材索引：Chapter 20, practice examination question 3, printed p. 253。原卷、AQA 评分材料。
 
 **a i** Use De Moivre's theorem to show that
 

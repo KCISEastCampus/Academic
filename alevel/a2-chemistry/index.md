@@ -84,7 +84,7 @@ The textbook is Lister and Renshaw, *International A Level Chemistry: AS and A L
 
 Questions come from the supplied **June 2024, January 2025 and June 2026 CH03 papers and mark schemes**. Questions follow the relevant concept and retain their original year, number, wording and marks; tables and formulae are reformatted for the web. Hints and marking explanations are course commentary. Self-written examples and tasks are labelled separately.
 
-**June 2026 source files:** [CH03 question paper](https://www.alevelcopilot.com/whfile/80/4c/f1/fc/0f/05/e8/d8/79/ad/3d/37/15/fc/51/e9.pdf) · [CH03 mark scheme, version 1.0 Final](https://www.alevelcopilot.com/whfile/7c/9b/be/0f/20/3c/b0/25/c1/90/49/e0/53/f9/29/22.pdf). These are OxfordAQA documents hosted by a third-party archive.
+**June 2026 source files:** [CH03 question paper](https://www.alevelcopilot.com/whfile/80/4c/f1/fc/0f/05/e8/d8/79/ad/3d/37/15/fc/51/e9.pdf) · [CH03 mark scheme](https://www.alevelcopilot.com/whfile/7c/9b/be/0f/20/3c/b0/25/c1/90/49/e0/53/f9/29/22.pdf). These are OxfordAQA documents hosted by a third-party archive.
 
 <span id="大纲与边界"></span>
 ### Specification and scope {#specification}

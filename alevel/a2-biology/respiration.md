@@ -129,7 +129,7 @@ Sodium hydroxide is corrosive: wear eye protection, prevent contact between orga
 <!-- task:R2 -->
 **Adapted / 改编题 — R2**
 
-Source: OxfordAQA International A-level Biology **9610, BL05, June 2025, Q2**, QP pp.10–14, Table 2 on p.12; **MS Version 1.0 Final, pp.8–9, read**. The numerical data are retained. The apparatus is described in words and the tasks below are rewritten; this is not a reproduction of the original question or its marks.
+Source: OxfordAQA International A-level Biology **9610, BL05, June 2025, Q2**, QP pp.10–14, Table 2 on p.12; **MS, pp.8–9, read**. The numerical data are retained. The apparatus is described in words and the tasks below are rewritten; this is not a reproduction of the original question or its marks.
 
 Each respirometer contains **3.5 g of germinating pea seeds** and is kept in darkness. A contains sodium hydroxide solution to absorb CO₂; B contains water without a CO₂ absorbent. Assume gas-tight equipment, stable temperature, comparable pressure when volumes are read, adequate oxygen and comparable respiratory activity of the seed samples.
 

@@ -589,7 +589,7 @@ I
 
 **检验：**根号内的式子在给定区间上始终为正。答案也可写作 $\frac{\pi\sqrt2}{8}$。
 
-[OxfordAQA 官方评分细则第 9 题](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-mark-scheme-2016-v1.pdf)检查配方、换元、系数、反正弦及上下限的使用。这是本课编写的解答。
+OxfordAQA 官方评分细则第 9 题检查配方、换元、系数、反正弦及上下限的使用。这是本课编写的解答。
 
 </details>
 
@@ -648,13 +648,13 @@ I
 
 **检验：**对 $x\sin^{-1}x+\sqrt{1-x^2}$ 求导得到 $\sin^{-1}x$，另外两项相消。$\frac{x}{\sqrt{1-x^2}}$ 的原函数中的负号必须保留。
 
-这是本课编写的解答，已对照 [AQA 评分细则第 5 题](https://colmanweb.co.uk/pastpapers/Papers/A%20Level/AQA%206360/AQA-6360-MFP2/AQA-MFP2-W-MS-JAN11.PDF)核验。
+这是本课编写的解答，已对照 AQA 评分细则第 5 题核验。
 
 </details>
 
 ### 第 8 题：AQA——利用导数求积分 {#question-8--aqa-use-a-derivative-to-find-an-integral}
 
-**AQA 原题。**AQA MFP2，2007 年 6 月，第 4 题；教材第 22 章，模拟考试练习第 4 题，印刷页码 281。**7 marks: 2 + 5.** [原卷第 4 题](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202007%20QP%20-%20FP2%20AQA.PDF)。
+**AQA 原题。**AQA MFP2，2007 年 6 月，第 4 题；教材第 22 章，模拟考试练习第 4 题，印刷页码 281。**7 marks: 2 + 5.** 原卷第 4 题。
 
 **(a)** Differentiate $x\tan^{-1}x$ with respect to $x$. **(2 marks)**
 
@@ -694,7 +694,7 @@ $$\begin{aligned}
 
 **检验：**结果为正且小于 $\frac\pi4$，因为在这个区间内有 $0\le\tan^{-1}x\le\frac\pi4$。
 
-这是本课编写的解答，已对照 [AQA 评分细则第 4 题](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202007%20MS%20-%20FP2%20AQA.PDF)核验。
+这是本课编写的解答，已对照 AQA 评分细则第 4 题核验。
 
 </details>
 

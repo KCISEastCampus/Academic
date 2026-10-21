@@ -363,7 +363,7 @@ $$\boxed{E=\frac{2kQ}{a^2}}.$$
 
 ### 练习 4：斜率、面积与能量 {#question-4-gradient-area-and-energy}
 
-*Self-written; constructed teaching figure, not experimental data.*
+*自拟题；教学示意图，不是实验数据。*
 
 The upper graph shows the potential of a fixed negative point source, with zero potential at infinity. Positive radial direction is outwards. A small test charge does not disturb the source.
 
@@ -371,7 +371,7 @@ The upper graph shows the potential of a fixed negative point source, with zero 
 2. A $+3.0\,\mathrm{nC}$ test charge moves from $0.10\,\mathrm m$ to $0.30\,\mathrm m$. Use graph readings to find its potential-energy change and the work done by the field.
 3. The lower panel shows equipotential circles for the same source. Draw a field arrow through A, explain what the spacing says about field strength, and find the work done by the field when the same charge moves from A to B. Does this imply zero field at A?
 
-<img src="/assets/img/physics-electric-practice.svg" alt="Upper panel: potential against outward radial distance for a negative source, with P at 0.20 metres. Lower panel: circular contours labelled minus one hundred, minus two hundred and minus three hundred volts; A and B are on the minus two hundred volt circle. No field arrows are supplied." width="520" height="920" data-lazy-ignore="true">
+<img src="/assets/img/physics-electric-practice.svg" alt="上图为负源电荷的电势随径向距离变化，P 点位于 0.20 m。下图为标记 −100 V、−200 V、−300 V 的同心等势线，A、B 都在 −200 V 圆周上；场方向箭头留待补画。" width="520" height="920" data-lazy-ignore="true">
 
 <details markdown="1">
 <summary>提示</summary>
@@ -431,7 +431,7 @@ $$y=\frac12a_yt^2\approx\boxed{+0.70\,\mathrm{mm}}.$$
 
 ### 练习 6：加入一个中子 {#question-6-adding-a-neutron}
 
-**Adapted from OxfordAQA PH03, January 2020, Question 16.**
+**改编自 OxfordAQA PH03, January 2020, Question 16.**
 
 A deuterium nucleus contains one proton and one neutron. Take its mass as $3.34\times10^{-27}\,\mathrm{kg}$ and its charge as $+e$. Find the ratio of the electric force magnitude to the gravitational force magnitude on an electron at distance $r$. Use $G=6.67\times10^{-11}\,\mathrm{N\,m^2\,kg^{-2}}$.
 
@@ -455,7 +455,7 @@ $$\boxed{\frac{F_{\text{electric}}}{F_{\text{gravity}}}=1.1\times10^{39}}.$$
 
 ### 练习 7：静止油滴 {#question-7-a-stationary-oil-drop}
 
-**Adapted from OxfordAQA PH03, June 2024, Question 4.**
+**改编自 OxfordAQA PH03, June 2024, Question 4.**
 
 An oil drop of mass $m$ is stationary between horizontal parallel plates. The upper plate is positive. Their potential difference magnitude is $U$ and their separation is $d$. Ignore forces due to air.
 
@@ -507,7 +507,7 @@ $$\boxed{E_{\text{resultant}}=8.7\times10^3\,\mathrm{V\,m^{-1}}}.$$
 
 ### 练习 8：等势面上交换位置 {#question-8-exchanging-positions-on-an-equipotential}
 
-**Adapted from OxfordAQA PH03, June 2024, Question 18.**
+**改编自 OxfordAQA PH03, June 2024, Question 18.**
 
 Small test charges $+3.0\,\mathrm{\mu C}$ and $-3.0\,\mathrm{\mu C}$ occupy two positions on the same equipotential surface of $25\,\mathrm{kV}$. Ignore their effect on the source field and their mutual interaction. Find each charge's potential energy in this external field. What is the net work done by the external field when their positions are exchanged? Must the field strength on that surface be zero?
 

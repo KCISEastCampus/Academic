@@ -633,7 +633,7 @@ $$\int_0^R xe^{-3x}\,\mathrm dx
 
 ### 第 7 题：AQA 级数原题练习 {#question-7--original-aqa-series-practice}
 
-**来源：**AQA Mathematics 6360，MFP3，January 2013，原卷第 2 题。原题分值：**1 + 4 marks**。教材索引：Chapter 19, practice examination question 2, printed p. 231。[原卷](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/January%202013%20QP%20-%20FP3%20AQA.pdf)、[AQA 评分材料](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/January%202013%20MS%20-%20FP3%20AQA.PDF)。
+**来源：**AQA Mathematics 6360，MFP3，January 2013，原卷第 2 题。原题分值：**1 + 4 marks**。教材索引：Chapter 19, practice examination question 2, printed p. 231。原卷、AQA 评分材料。
 
 **a** Write down the expansion of $e^{3x}$ in ascending powers of $x$ up to and including the term in $x^2$. **(1 mark)**
 

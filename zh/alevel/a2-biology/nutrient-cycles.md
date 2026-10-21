@@ -20,7 +20,7 @@ translation_of: /alevel/a2-biology/nutrient-cycles/
 植物形成生物量需要碳、氮等元素。收获会把原子带离农田，阳光不能替代损失的氮原子。分解与吸收把生物重新连到无机物储库。学习目标是指出每个箭头前后的化学形态、发生的过程及条件，再利用这些机制评价农业和气候论断。蛋白质、膜与物质转移可到[先修页](/zh/alevel/a2-biology/prerequisites/#proteins)回补。
 
 <!-- task:N0 -->
-**Self-written / 自拟题 — N0**
+**自拟题 — N0**
 
 A crop is harvested and removed from a field. Explain why recycling sunlight is not a way to replace the nitrogen removed, and name two nitrogen-containing classes of molecule in the crop.
 <!-- /task:N0 -->
@@ -79,10 +79,10 @@ CO₂ 与甲烷吸收地球向外发出的红外辐射并再辐射，改变地�
 
 硝化与固氮不能互换名称：硝化氧化土壤中已有的还原态氮；固氮把大气氮带进生物可利用的氮库；反硝化则把氮送回大气。植物可吸收硝酸盐或铵，取决于物种和条件，但不会只靠根吸收就把大气 N₂ 变成硝酸盐。
 
-**机制示范 — Self-written / 自拟题：**积水减少土壤供氧，好氧硝化可减慢，而微生物在缺氧呼吸中使用硝酸盐，反硝化可能增强，使作物可利用硝酸盐减少。根缺氧也可降低主动吸收离子的能力，因此生长不良不只支持一种机制。
+**机制示范 — 自拟题：**积水减少土壤供氧，好氧硝化可减慢，而微生物在缺氧呼吸中使用硝酸盐，反硝化可能增强，使作物可利用硝酸盐减少。根缺氧也可降低主动吸收离子的能力，因此生长不良不只支持一种机制。
 
 <!-- task:N1 -->
-**Self-written / 自拟题 — N1**
+**自拟题 — N1**
 
 Complete the explanation: organic nitrogen in dead leaves is converted to ______ by ammonification. Under aerobic conditions, ______ converts this first to nitrite and then to nitrate. Explain why this is not nitrogen fixation.
 <!-- /task:N1 -->
@@ -112,7 +112,7 @@ Complete the explanation: organic nitrogen in dead leaves is converted to ______
 ## 独立机制链与评价 {#practice}
 
 <!-- task:N2 -->
-**Self-written / 自拟题 — N2**
+**自拟题 — N2**
 
 After nutrient-rich runoff enters a lake, algae increase and fish deaths occur several days later. Write a mechanism linking nutrient input to low dissolved oxygen. Give one measurement and one comparison that would test the explanation, and explain why the time sequence alone does not prove causation.
 <!-- /task:N2 -->
@@ -132,7 +132,7 @@ After nutrient-rich runoff enters a lake, algae increase and fish deaths occur s
 </details>
 
 <!-- task:N3 -->
-**Self-written / 自拟题 — N3**
+**自拟题 — N3**
 
 A constructed annual field budget has nitrogen inputs of 100 kg ha⁻¹ from fertiliser and 20 kg ha⁻¹ from fixation. Outputs are 80 kg ha⁻¹ in harvest, 15 kg ha⁻¹ by leaching and 10 kg ha⁻¹ by denitrification. Assume all other fluxes are negligible. Calculate the change in the field's nitrogen store. Explain why this change is not automatically equal to nitrate available to the next crop.
 <!-- /task:N3 -->
@@ -152,7 +152,7 @@ A constructed annual field budget has nitrogen inputs of 100 kg ha⁻¹ from fer
 </details>
 
 <!-- task:N4 -->
-**Self-written / 自拟题 — N4**
+**自拟题 — N4**
 
 A model predicts that a 2°C increase raises a crop's yield by 8% when water and nitrate are unlimited. A farmer concludes that warming will raise yield by 8% on every farm. Evaluate the conclusion using photosynthesis, water supply and insect life cycles. Identify what the 8% is measured relative to.
 <!-- /task:N4 -->
@@ -172,7 +172,7 @@ A model predicts that a 2°C increase raises a crop's yield by 8% when water and
 </details>
 
 <!-- task:N5 -->
-**Self-written / 自拟题 — N5**
+**自拟题 — N5**
 
 Retry: a student says waterlogged soil always supplies more nitrate because bacteria grow better when wet. Give two nitrogen-cycle reasons to challenge the claim, naming the oxygen conditions and the direction of each process.
 <!-- /task:N5 -->

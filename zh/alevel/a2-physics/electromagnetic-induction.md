@@ -25,13 +25,13 @@ $$\Phi=BA\cos\theta,\qquad \Psi=N\Phi=NBA\cos\theta.$$
 
 $\Phi$ 是单匝磁通；$\Psi$ 是每匝都链过相同磁通时，$N$ 匝的磁通链。磁通单位为韦伯：$1\,\mathrm{Wb}=1\,\mathrm{T\,m^2}$。磁通链常记 Wb turns，匝数本身无量纲。若各匝磁通不同，应逐匝相加。
 
-<img src="/assets/img/physics-flux-normal.svg" alt="Worked geometry: theta is measured from the area normal to the field. A separate edge-on view shows that field parallel to the coil plane gives zero flux." width="520" height="380" data-lazy-ignore="true">
+<img src="/assets/img/physics-flux-normal.svg" alt="磁通量几何讲解：θ 是面积法线与磁场之间的夹角，不是线圈平面与磁场的夹角。另一幅侧视图说明磁场平行于线圈平面时，穿过线圈的磁通量为零。" width="520" height="380" data-lazy-ignore="true">
 
 场垂直线圈平面时磁通大小最大，平行平面时为零。反转所选法线会反转磁通符号，不会改变真实磁场。线圈整体在不变的匀强场内部平移，面积与方向不变，磁通链不变。
 
 ### 例题 1：求匝数 {#example-1}
 
-*Adapted from OxfordAQA 9630 PH03 June 2024 Q6.1–6.2; QP p.19 and MS p.16 read. The angle convention is stated explicitly.*
+*改编自 OxfordAQA 9630 PH03 June 2024 Q6.1–6.2；已核对 QP p.19与MS p.16。 本题明确给出角度约定。*
 
 A coil has $A=7.5\times10^{-4}\,\mathrm{m^2}$ and $B=4.2\times10^{-2}\,\mathrm T$. Its normal is $51^\circ$ to the field and its flux linkage is $2.4\times10^{-3}\,\mathrm{Wb}$ (turns dimensionless). Find the number of turns and explain why rotation can induce an emf even though field strength is constant.
 
@@ -67,7 +67,7 @@ $$\Delta\Psi=120(1.0-3.0)\times10^{-3}=-0.24\,\mathrm{Wb},\qquad \overline\varep
 
 ## 运动导杆与涡流 {#moving-conductor}
 
-<img src="/assets/img/physics-induction-rod.svg" alt="Worked circuit: a vertical rod slides right on rails in a field into the page. A resistor closes the loop at the left. Motion, field and rod are mutually perpendicular; no force or current answers are drawn." width="520" height="400" data-lazy-ignore="true">
+<img src="/assets/img/physics-induction-rod.svg" alt="例题电路示意：竖直导杆沿轨道向右滑动，磁场垂直纸面向里，左侧电阻闭合回路。运动方向、磁场与导杆互相垂直；图中未预给电流或受力方向。" width="520" height="400" data-lazy-ignore="true">
 
 在图示几何中，向右运动的正电荷受向上的磁力，导杆上端电势更高。孤立导杆稳定分离电荷后，电力与磁力平衡。令 $E=\varepsilon/L$：
 
@@ -99,11 +99,11 @@ $$\Psi=NBA\cos\omega t,\qquad \varepsilon=NBA\omega\sin\omega t,\qquad \omega=2\
 
 ## 图像探究：自己确定电动势 {#data-flux-graph}
 
-*Self-written; constructed teaching graph, not measured records.*
+*自拟题；教学构造图像，不是实测记录。*
 
 The graph shows total linkage $\Psi$ in Wb turns (turns dimensionless). Positive normal is out of the page; positive loop direction is anticlockwise viewed on the page. Sketch signed emf on the same time scale, calculate its value on each straight segment, and find its signed time-area. Explain why the ideal corners do not define unique instantaneous emf values. Do not multiply by the coil turn count again.
 
-<img src="/assets/img/physics-induction-flux-task.svg" alt="Task graph of total flux linkage against time: vertices at 0 s and 0 Wb, 0.20 s and 0.060 Wb, 0.50 s and 0.060 Wb, 0.60 s and 0 Wb. Only linkage is plotted; the emf graph is left for the student." width="520" height="390" data-lazy-ignore="true">
+<img src="/assets/img/physics-induction-flux-task.svg" alt="待作答磁通链—时间图：顶点依次为 (0 s, 0 Wb)、(0.20 s, 0.060 Wb)、(0.50 s, 0.060 Wb)、(0.60 s, 0 Wb)。图中只给磁通链，感应电动势图留待学生绘制。" width="520" height="390" data-lazy-ignore="true">
 
 <details markdown="1">
 <summary>提示</summary>
@@ -127,7 +127,7 @@ $$(-0.30)(0.20)+0(0.30)+(0.60)(0.10)=0\,\mathrm{V\,s}=-\Delta\Psi.$$
 
 ### 练习 1：改变模型条件 {#question-1}
 
-*Self-written.*
+*自拟题。*
 
 A closed coil is wholly inside a uniform steady field. Compare the emf when it (a) translates without rotation, (b) rotates, and (c) leaves the field region. Explain why the presence of a field alone cannot answer the question.
 
@@ -147,7 +147,7 @@ A closed coil is wholly inside a uniform steady field. Compare the emf when it (
 
 ### 练习 2：由电动势反推磁通链 {#question-2}
 
-*Adapted from OxfordAQA 9630 PH03 January 2020 Q34; QP p.42 and MS p.9 (key B) read. Algebra and an open sketch replace the graph options; the initial phase is restated.*
+*改编自 OxfordAQA 9630 PH03 January 2020 Q34；已核对 QP p.42与MS p.9 (答案 B)。 代数推理与开放作图替代原图像选择项，并重新明确初相位。*
 
 Over a full cycle, an emf is $\varepsilon=\varepsilon_0\sin\omega t$. The linkage has zero mean. Sketch linkage with a positive value at $t=0$, mark its extrema and zero crossings, and derive its amplitude.
 
@@ -169,7 +169,7 @@ $$\Psi=\frac{\varepsilon_0}{\omega}\cos\omega t.$$
 
 ### 练习 3：解释经过线圈的磁体 {#question-3}
 
-*Adapted from OxfordAQA 9630 PH03 January 2020 Q5.2/Q5.4; QP pp.18/20 and MS p.8 read. An explicitly described trace replaces the original plotted trace; exact timing is not reused.*
+*改编自 OxfordAQA 9630 PH03 January 2020 Q5.2/Q5.4；已核对 QP pp.18/20与MS p.8。 文字明确描述的波形替代原图，不沿用原图的具体计时。*
 
 A magnet on a trolley passes beneath a stationary coil. The measured emf has two lobes of opposite sign with a zero interval between them. Explain the signs and the zero interval using linkage. Predict changes if the trolley accelerates so that it passes the second lobe faster than the first.
 
@@ -189,7 +189,7 @@ A magnet on a trolley passes beneath a stationary coil. The measured emf has two
 
 ### 练习 4：反推发电机频率 {#question-4}
 
-*Adapted from OxfordAQA 9630 PH03 January 2020 Q32; QP p.40 and MS p.9 (key C) read. Open calculation and a transfer task replace the choices.*
+*改编自 OxfordAQA 9630 PH03 January 2020 Q32；已核对 QP p.40与MS p.9 (答案 C)。 开放计算与迁移任务替代原选择项。*
 
 A 40-turn coil of area $0.20\,\mathrm{m^2}$ rotates uniformly in $1.5\,\mathrm{mT}$. Its peak emf is $0.24\,\mathrm V$. Determine its rotation frequency and predict peak emf when frequency doubles.
 
@@ -211,7 +211,7 @@ $$f=\frac{0.24}{2\pi(40)(0.20)(1.5\times10^{-3})}\approx\boxed{3.2\,\mathrm{Hz}}
 
 ### 练习 5：改变回路条件 {#question-5}
 
-*Self-written.*
+*自拟题。*
 
 Use Example 3 geometry and values. Replace the $2.0\,\Omega$ load with $4.0\,\Omega$ while keeping the rod speed fixed. Find emf, current, driving force and heating power. Then state what survives when the circuit is opened.
 
@@ -233,7 +233,7 @@ $$\varepsilon=0.30\,\mathrm V,\quad I=0.075\,\mathrm A,\quad F_{\mathrm{ext}}=0.
 
 ### 练习 6：解释无接触制动 {#question-6}
 
-*Self-written.*
+*自拟题。*
 
 A magnet falls through a conducting nonmagnetic tube more slowly than through a plastic tube. Explain the energy path and predict how a long insulating slit along the conducting tube could affect the fall. Does a slower fall prove that all energy is stored magnetically?
 
@@ -265,4 +265,4 @@ A magnet falls through a conducting nonmagnetic tube more slowly than through a 
 
 ## 来源与范围 {#sources}
 
-范围：OxfordAQA 9630 PH03，[大纲正文 v4.4](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf) 3.10.3–3.10.4，印刷第 25–26 页/PDF 第 24–25 页，2026-10-21 核对。January 2020 改编题配对读取 [QP](https://drive.google.com/file/d/1u3DieTjGo7oCKuPMLpK01t1dBK72FlEO/view) 第 17–20/40/42 页与 [MS](https://drive.google.com/file/d/191UedE9sWTca8lYxRcL0UBTkRDuI1lXl/view) 第 8–9 页；Q34 为图像相位转换提供直接依据。例题 1 配对读取 June 2024 [QP](https://drive.google.com/file/d/1ah7yyGqFtyHdZ4Dxd4JchZM361qUj8gc/view) 第 19 页与 [MS](https://drive.google.com/file/d/1-18EOqSkT4F1sHO9LaevtZaWXNn4aDSM/view) 第 16 页。Jim Breithaupt 第 21.2–21.3 节印刷第 374/378 页辅助说明，其余题目、数据和图示为自拟材料。图像面积是定律的教学推论。本页不是另一个编号必做实验，也不代表完成了实物操作。
+范围：OxfordAQA 9630 PH03，[大纲正文 v4.4](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf) 3.10.3–3.10.4，印刷第 25–26 页/PDF 第 24–25 页，2026-10-21 核对。January 2020 改编题配对读取 QP 第 17–20/40/42 页与 MS 第 8–9 页；Q34 为图像相位转换提供直接依据。例题 1 配对读取 June 2024 QP 第 19 页与 MS 第 16 页。Jim Breithaupt 第 21.2–21.3 节印刷第 374/378 页辅助说明，其余题目、数据和图示为自拟材料。图像面积是定律的教学推论。本页不是另一个编号必做实验，也不代表完成了实物操作。

@@ -339,7 +339,7 @@ $$\begin{aligned}
 
 ### 第 5 题：AQA 原题练习 {#question-5--original-aqa-practice}
 
-**来源：**AQA Mathematics 6360，MFP2，June 2010，原卷第 2 题。原题分值：**3 + 5 marks**。教材索引：Chapter 18, practice examination question 6, printed p. 218。[原卷](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202010%20QP%20-%20FP2%20AQA.PDF)、[AQA 评分材料](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202010%20MS%20-%20FP2%20AQA.PDF)。
+**来源：**AQA Mathematics 6360，MFP2，June 2010，原卷第 2 题。原题分值：**3 + 5 marks**。教材索引：Chapter 18, practice examination question 6, printed p. 218。原卷、AQA 评分材料。
 
 **a** Express
 

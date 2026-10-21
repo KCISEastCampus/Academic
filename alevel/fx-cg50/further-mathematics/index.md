@@ -18,7 +18,7 @@ permalink: /alevel/fx-cg50/further-mathematics/
 
 本页介绍中文版 fx-CG50 在 OxfordAQA International A-level Further Mathematics（9665）中的复数、多项式、矩阵、三维向量与极坐标操作，对应核心任务 01–20。
 
-例题来自 FM03 真题，英文题意为改写，衔接练习标为自拟；原题和官方 Mark Scheme 链接见各主题。练习时将推导和精确答案写在答题纸上，再用计算器检查结果。
+例题来自 FM03 真题，英文题意为改写，衔接练习标为自拟；具体试卷、考季、题号及官方 Mark Scheme 页码见各主题。练习时将推导和精确答案写在答题纸上，再用计算器检查结果。
 
 开始前，先掌握初学中的[按键读法]({{ '/alevel/fx-cg50/beginner/' | relative_url }}#reading-keys)、[输入模板]({{ '/alevel/fx-cg50/beginner/' | relative_url }}#chapter-3)，再掌握进阶中的[定积分]({{ '/alevel/fx-cg50/advanced/' | relative_url }}#task-23)。
 
@@ -67,7 +67,7 @@ permalink: /alevel/fx-cg50/further-mathematics/
 
 纸上用分母的共轭数验算除法，不能把分母的 $i$ 直接删去。ReP、ImP 不会替你写出这段推导。
 
-例题：[FM03 June 2024 Q12，原题 pp22–23]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-question-paper.pdf' | relative_url }})，[官方 MS p18]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-mark-scheme.pdf' | relative_url }})。题意改写：**Find the fifth roots of $4-4i$ and compare their positions.**
+例题：FM03 June 2024 Q12，原题 pp22–23，官方 MS p18。题意改写：**Find the fifth roots of $4-4i$ and compare their positions.**
 
 ### 任务 03 求模、辐角与形式转换 {#fm-task-03}
 
@@ -152,7 +152,7 @@ $$z_1z_2=2e^{i(7\pi/20+3\pi/4)}
 
 ### 任务 06 求四次方程的数值根 {#fm-task-06}
 
-例题依据 [FM03 January 2025 Q10]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-question-paper.pdf' | relative_url }})、[官方 MS pp15–16]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-mark-scheme.pdf' | relative_url }})。题意改写：**Use the arithmetic-sequence condition to determine the roots and coefficients, then check numerically.**
+例题依据 FM03 January 2025 Q10、官方 MS pp15–16。题意改写：**Use the arithmetic-sequence condition to determine the roots and coefficients, then check numerically.**
 
 原题先用根之和、两两乘积之和以及等差数列结构求出根。完成纸笔过程后，得到
 
@@ -184,7 +184,7 @@ $$u^4-2u^3-21u^2+22u+40=0.$$
 
 ## 矩阵：输入、特征值与特征向量 {#fm-matrices}
 
-例题：[FM03 June 2024 Q11(b)，原题 pp20–21]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-question-paper.pdf' | relative_url }})，[官方 MS pp16–17]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-mark-scheme.pdf' | relative_url }})。题意改写：**After proving $c=5$, find the eigenvalues and an eigenvector for the least eigenvalue.**
+例题：FM03 June 2024 Q11(b)，原题 pp20–21，官方 MS pp16–17。题意改写：**After proving $c=5$, find the eigenvalues and an eigenvector for the least eigenvalue.**
 
 先完成题目中 $c=5$ 的参数推导，再输入数值矩阵：
 
@@ -208,7 +208,7 @@ $$M=\begin{pmatrix}1&0&2\\1&5&-11\\2&-1&1\end{pmatrix}.$$
 
 ### 任务 09 先 S 后 R，输入 RS {#fm-task-09}
 
-例题：[FM03 June 2024 Q1]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-question-paper.pdf' | relative_url }})、[官方 MS p4]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-mark-scheme.pdf' | relative_url }})。题意改写：**Find the matrix for S followed by R.**
+例题：FM03 June 2024 Q1、官方 MS p4。题意改写：**Find the matrix for S followed by R.**
 
 $$R=\begin{pmatrix}0&0&1\\0&1&0\\-1&0&0\end{pmatrix},\qquad
 S=\begin{pmatrix}-1&0&0\\0&1&0\\0&0&1\end{pmatrix}.$$
@@ -261,7 +261,7 @@ $$v=\begin{pmatrix}2\\-5\\-3\end{pmatrix}.$$
 
 ### 任务 12 奇异方程组：从增广矩阵读矛盾 {#fm-task-12}
 
-例题：[FM03 January 2025 Q8]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-question-paper.pdf' | relative_url }})、[官方 MS p13]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-mark-scheme.pdf' | relative_url }})。题意改写：**Determine the exceptional parameters and justify the number of solutions.**
+例题：FM03 January 2025 Q8、官方 MS p13。题意改写：**Determine the exceptional parameters and justify the number of solutions.**
 
 纸上先对系数矩阵求行列式，得到 $3(k-2)(k-3)$。没有唯一交点要求 $k=2$ 或 $3$；这一步还没有决定是无解还是无穷多解。
 
@@ -322,9 +322,9 @@ $$d\times n=\begin{pmatrix}-7\\-2\\3\end{pmatrix}.$$
 <figure><img src="{{ '/assets/img/fx-cg50/fm/fm-vector-triple.png' | relative_url }}" width="384" height="216" loading="lazy" data-lazy-ignore alt="代入t等于7除以3后标量三重积为0"><figcaption>共面条件是标量三重积为零；仅算叉积还没有完成判断。</figcaption></figure>
 </div>
 
-输入新的 Vct 命令时需重新打开向量页，再按 F1；不要用 ALPHA 单独的 D 代替 Vct D。与原题带参数的共面题衔接可看 [FM03 June 2024 Q2及官方 MS p5]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-mark-scheme.pdf' | relative_url }})。
+输入新的 Vct 命令时需重新打开向量页，再按 F1；不要用 ALPHA 单独的 D 代替 Vct D。与原题带参数的共面题衔接可看 FM03 June 2024 Q2及官方 MS p5。
 
-例题：[FM03 June 2024 Q10(a)，原题 p16]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-question-paper.pdf' | relative_url }})，[官方 MS p14]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-mark-scheme.pdf' | relative_url }})。题意改写：**Find the acute line–plane angle, to the nearest $0.1^\circ$.**
+例题：FM03 June 2024 Q10(a)，原题 p16，官方 MS p14。题意改写：**Find the acute line–plane angle, to the nearest $0.1^\circ$.**
 
 ### 任务 15 点积、向量模与线面角 {#fm-task-15}
 
@@ -357,7 +357,7 @@ $$\sin^{-1}\left(\frac{13}{\sqrt{231}}\right)\times\frac{180}{\pi}.$$
 
 ### 任务 16 点到直线的距离与交线回代 {#fm-task-16}
 
-例题：[FM03 June 2024 Q10(b)/(c)]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-question-paper.pdf' | relative_url }})、[官方 MS pp14–15]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-mark-scheme.pdf' | relative_url }})。题意改写：**Find an exact point–line distance and check the intersection of two planes.**
+例题：FM03 June 2024 Q10(b)/(c)、官方 MS pp14–15。题意改写：**Find an exact point–line distance and check the intersection of two planes.**
 
 取直线上的 $A=(7,1,3)$，原题给 $P=(4,1,15)$，方向 $d=(2,-1,4)^T$。先写 $\overrightarrow{AP}=(-3,0,12)^T$，再用投影求垂足参数
 
@@ -373,7 +373,7 @@ $$s=\frac{\overrightarrow{AP}\cdot d}{d\cdot d}=\frac{42}{21}=2.$$
 
 ## 极坐标：限定图像范围，再核对面积 {#fm-polar}
 
-例题：[FM03 January 2025 Q7，原题 p12]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-question-paper.pdf' | relative_url }})，[官方 MS p11]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-mark-scheme.pdf' | relative_url }})。题意改写：**Find the exact area between the curve and the rays $\theta=0$ and $\theta=\pi/6$.**
+例题：FM03 January 2025 Q7，原题 p12，官方 MS p11。题意改写：**Find the exact area between the curve and the rays $\theta=0$ and $\theta=\pi/6$.**
 
 $$r=\sec^2\theta\sqrt{2(1+\tan\theta)},\qquad
 -\frac{\pi}{4}\le\theta<\frac{\pi}{2}.$$
@@ -472,7 +472,7 @@ $$A=\left[u+\frac{u^2}{2}+\frac{u^3}{3}+\frac{u^4}{4}\right]_0^{1/\sqrt3}
 
 - [OxfordAQA Further Mathematics 9665 Specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf)：复数 FP2.2、极坐标 FP2.3、向量 FP2.12、矩阵 FP2.13–14。
 - [Casio fx-CG50 中文软件手册 v3.70](https://www.casio.com/content/dam/casio/global/support/manuals/calculators/pdf/004-zh-cn/f/fx-CG50_Soft_v370_CN.pdf)：复数 2-35 起、矩阵 2-42 起、向量 2-59 起、绘图第 5 章；版本差异以计算器屏幕为准。
-- 真题及官方 MS 链接已放在对应主题旁，均为本站 PDF，可直接打开，无需登录个人云盘。原题和评分标准版权归相应考试局；指南中的英文题意为简短改写。
+- 真题及官方 MS 的具体试卷、考季、题号及页码注明在对应主题旁。原题和评分标准版权归相应考试局；指南中的英文题意为简短改写。
 
 继续学习：
 

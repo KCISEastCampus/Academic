@@ -631,7 +631,7 @@ Since $Re^{-3R}\to0$ and $e^{-3R}\to0$, the improper integral converges to $\box
 
 ### Question 7 — Original AQA series practice
 
-**Source:** AQA Mathematics 6360, MFP3, January 2013, Question 2. **1 + 4 marks**. Textbook cross-reference: Chapter 19, practice examination question 2, printed p. 231. [Question paper](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/January%202013%20QP%20-%20FP3%20AQA.pdf), [AQA mark scheme](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/January%202013%20MS%20-%20FP3%20AQA.PDF).
+**Source:** AQA Mathematics 6360, MFP3, January 2013, Question 2. **1 + 4 marks**. Textbook cross-reference: Chapter 19, practice examination question 2, printed p. 231. Question paper, AQA mark scheme.
 
 **a** Write down the expansion of $e^{3x}$ in ascending powers of $x$ up to and including the term in $x^2$. **(1 mark)**
 

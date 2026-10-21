@@ -151,7 +151,7 @@ L&=\int_0^{\frac{\pi}{3}}\tan t\,\mathrm dt\\
 &=\boxed{\ln2}.
 \end{aligned}$$
 
-**检查：**速率非负，而且参数区间只描绘该弧段一次。本例改编自 [OxfordAQA FM03 Specimen 2018 官方样题](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-specimen-paper-2019-v3.pdf)第 11 题；解法可参照[官方评分方案](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-mark-scheme-2016-v1.pdf)。题目文字与本课解答均已改编或重写。
+**检查：**速率非负，而且参数区间只描绘该弧段一次。本例改编自 OxfordAQA FM03 Specimen 2018 官方样题第 11 题；解法可参照官方评分方案。题目文字与本课解答均已改编或重写。
 
 ### 例题 4 — 将直线绕 x 轴旋转 {#example-4--cartesian-surface-area}
 

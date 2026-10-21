@@ -22,7 +22,7 @@ translation_of: /alevel/a2-biology/respiration/
 学完后，你应能解释碳、电子、质子分别去了哪里，再区分氧耗与呼吸计的净气体变化。若 ATP、氧化还原或梯度仍不熟悉，先补[先修知识](/zh/alevel/a2-biology/prerequisites/#energy-carriers)。呼吸测量样章可以从[气体收支](#gas-balance)开始，再回查机制。
 
 <!-- task:R0 -->
-**Self-written / 自拟题 — R0**
+**自拟题 — R0**
 
 A living seed takes up oxygen but its gas chamber keeps the same volume. Does this observation alone show that respiration has stopped? Name the other gas you would need to consider.
 <!-- /task:R0 -->
@@ -70,7 +70,7 @@ Reduced NAD 和 reduced FAD 把电子交给线粒体内膜上的载体，自身�
 ![Teaching schematic: inner mitochondrial membrane separates matrix from intermembrane space; electron transfer pumps protons outward and ATP synthase returns protons to the matrix. Not to scale.](/assets/images/a2-biology/bl03-respiration-membrane.svg)
 
 <!-- task:R1 -->
-**Self-written / 自拟题 — R1**
+**自拟题 — R1**
 
 Complete the mechanism in two sentences: a membrane becomes freely permeable to protons → ______ → ATP synthesis by oxidative phosphorylation decreases. Explain why electron transfer and ATP synthesis need not decrease in exactly the same proportion.
 <!-- /task:R1 -->
@@ -95,7 +95,7 @@ Complete the mechanism in two sentences: a membrane becomes freely permeable to 
 
 在哺乳动物细胞中，丙酮酸接受 reduced NAD 的氢，成为**乳酸盐（lactate）**，这一步不释放 CO₂。在酵母中，丙酮酸先脱去 CO₂ 成为乙醛（ethanal），乙醛再接受 reduced NAD 的氢成为**乙醇（ethanol）**。两条路径都再生 NAD。在这两类途径中，糖酵解之后的转化本身不再增加 ATP 收益。
 
-**解释示范 — Self-written / 自拟题：**“为什么生成乙醇能让糖酵解继续？”不能只停在“制造 NAD”。完整英文链可以写：*Ethanal accepts hydrogen from reduced NAD, regenerating NAD. NAD can then accept hydrogen during oxidation of triose phosphate, allowing glycolysis and substrate-level phosphorylation to continue.*
+**解释示范 — 自拟题：**“为什么生成乙醇能让糖酵解继续？”不能只停在“制造 NAD”。完整英文链可以写：*Ethanal accepts hydrogen from reduced NAD, regenerating NAD. NAD can then accept hydrogen during oxidation of triose phosphate, allowing glycolysis and substrate-level phosphorylation to continue.*
 
 ## 气体收支：先定义正负，再计算 {#gas-balance}
 
@@ -107,7 +107,7 @@ $$\Delta V_A=-O,\qquad \Delta V_B=C-O,\qquad RQ=\frac{C}{O}\quad(O>0).$$
 
 ![Original gas-balance teaching diagram: oxygen leaves the gas space for the organism; carbon dioxide enters it, or is removed by an absorber. Arrows represent gas transfers, not measured rates.](/assets/images/a2-biology/bl03-gas-balance.svg)
 
-**示范 — Self-written / 自拟题；构造数据：**20 分钟内，可比样本的 ΔVₐ = −2.0 cm³，ΔVᵦ = −0.6 cm³。于是 O = 2.0 cm³，C = −0.6 + 2.0 = 1.4 cm³，RQ = 0.70。B 中的 0.6 cm³ 收缩并不是 B 的氧耗。
+**示范 — 自拟题；构造数据：**20 分钟内，可比样本的 ΔVₐ = −2.0 cm³，ΔVᵦ = −0.6 cm³。于是 O = 2.0 cm³，C = −0.6 + 2.0 = 1.4 cm³，RQ = 0.70。B 中的 0.6 cm³ 收缩并不是 B 的氧耗。
 
 毛细管中，位移 x 对应体积 πr²x；用的是**半径**，还须先校准哪一个移动方向表示收缩。若仪器测量定容条件下的压力变化，就必须使用仪器的换算关系，不能直接称作体积变化。
 
@@ -128,9 +128,9 @@ NaOH 有腐蚀性：佩戴护目镜，使生物与吸收剂隔离，使用教师
 ## June 2025 真实数据探究 {#real-data}
 
 <!-- task:R2 -->
-**Adapted / 改编题 — R2**
+**改编题 — R2**
 
-Source: OxfordAQA International A-level Biology **9610, BL05, June 2025, Q2**, QP pp.10–14, Table 2 on p.12; **MS Version 1.0 Final, pp.8–9, read**. The numerical data are retained. The apparatus is described in words and the tasks below are rewritten; this is not a reproduction of the original question or its marks.
+来源：OxfordAQA International A-level Biology **9610、BL05、June 2025、Q2**，QP pp.10–14，表 2 见 p.12；已核对 **MS pp.8–9**。数值保持原样，装置改用文字描述，下方任务经过改写；本页不是原题或官方分值的重印。
 
 Each respirometer contains **3.5 g of germinating pea seeds** and is kept in darkness. A contains sodium hydroxide solution to absorb CO₂; B contains water without a CO₂ absorbent. Assume gas-tight equipment, stable temperature, comparable pressure when volumes are read, adequate oxygen and comparable respiratory activity of the seed samples.
 
@@ -175,7 +175,7 @@ B 在 89.5–90.5 cm³ 之间波动，48 小时首尾没有净变化。在题设
 ## 独立迁移与诊断 {#practice}
 
 <!-- task:R3 -->
-**Self-written / 自拟题 — R3**
+**自拟题 — R3**
 
 A capillary of internal diameter 0.80 mm records a 12.0 mm contraction in 15.0 min with 2.00 g of seeds and a CO₂ absorbent. Calculate the oxygen uptake rate in mm³ g⁻¹ h⁻¹. A student then removes the absorbent and observes no movement. Evaluate the claim that removing the absorbent stopped respiration.
 <!-- /task:R3 -->
@@ -197,7 +197,7 @@ $$\text{rate}=\frac{\pi(0.40)^2(12.0)\times(60/15.0)}{2.00}=12.1\ \mathrm{mm^3\,
 </details>
 
 <!-- task:R4 -->
-**Self-written / 自拟题 — R4**
+**自拟题 — R4**
 
 A sealed culture produces ethanol and CO₂, but measured oxygen uptake is zero. Another produces lactate without CO₂ or oxygen uptake. Explain how glycolysis can continue in each culture and whether a finite numerical RQ can identify either substrate.
 <!-- /task:R4 -->
@@ -217,7 +217,7 @@ A sealed culture produces ethanol and CO₂, but measured oxygen uptake is zero.
 </details>
 
 <!-- task:R5 -->
-**Self-written / 自拟题 — R5**
+**自拟题 — R5**
 
 Retry: an absorber-containing respirometer warms during the run. Predict how this can affect the apparent oxygen uptake. Propose a temperature control and a blank, and explain why repeating the same uncontrolled procedure cannot remove this error.
 <!-- /task:R5 -->

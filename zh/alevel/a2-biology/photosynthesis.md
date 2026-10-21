@@ -20,7 +20,7 @@ translation_of: /alevel/a2-biology/photosynthesis/
 植物干物质中的碳需要碳原子来源；光提供能量，并不提供这些原子。光合作用把能量转移与利用 CO₂ 合成有机物连接起来。学完后，你应能分别追踪碳、电子和质子，解释限制因素，并读懂测到的净速率。叶绿体、酶、ATP 和扩散可到[先修页](/zh/alevel/a2-biology/prerequisites/)回补。
 
 <!-- task:P0 -->
-**Self-written / 自拟题 — P0**
+**自拟题 — P0**
 
 A seedling gains dry mass while growing in light. Identify the main external source of carbon in its new organic compounds. Explain why light cannot be that carbon source.
 <!-- /task:P0 -->
@@ -57,10 +57,10 @@ $$2\mathrm{H_2O}\longrightarrow4\mathrm{H^+}+4e^-+\mathrm{O_2}.$$
 
 大部分 TP 在消耗 ATP 的过程中再生 RuBP，使下一轮还能接受 CO₂；部分 TP 离开循环，形成糖类及其他有机物。合成氨基酸还需要氮来源，固定碳本身不能提供氮。
 
-**碳收支示范 — Self-written / 自拟题：**三个 CO₂ 共含三个碳，三个 RuBP 共含十五个碳，生成的六个 GP 继而成为六个 TP，共十八个碳。其中一个 TP（三碳）作为净产物离开，另外五个 TP（十五碳）再生三个 RuBP。两个净 TP 可提供一个己糖的碳骨架；这不表示植物通过一个单独反应直接生成葡萄糖。
+**碳收支示范 — 自拟题：**三个 CO₂ 共含三个碳，三个 RuBP 共含十五个碳，生成的六个 GP 继而成为六个 TP，共十八个碳。其中一个 TP（三碳）作为净产物离开，另外五个 TP（十五碳）再生三个 RuBP。两个净 TP 可提供一个己糖的碳骨架；这不表示植物通过一个单独反应直接生成葡萄糖。
 
 <!-- task:P1 -->
-**Self-written / 自拟题 — P1**
+**自拟题 — P1**
 
 Complete the carbon account for six CO₂ entering the Calvin cycle: ___ RuBP react; ___ GP form; ___ TP are a net output; the remaining ___ TP regenerate RuBP. Explain why regeneration is essential.
 <!-- /task:P1 -->
@@ -85,7 +85,7 @@ Complete the carbon account for six CO₂ entering the Calvin cycle: ___ RuBP re
 
 限制因素限制的是**当前条件下**的速率。增加该因素只能使速率上升至另一个过程成为限制。弱光可限制 ATP／reduced NADP 的供应；低 CO₂ 可限制固碳；温度会影响酶控制的反应。过高温度可破坏酶和膜，缺水导致的气孔关闭还可减少 CO₂ 进入。看到平台本身，不能确定到底是哪一个因素在限制。
 
-**比较示范 — Self-written / 自拟题；构造数据：**恒温下，光照从 100 增至 200 任意单位，净产氧从 2 增至 4 单位；光照再增至 400 时，产氧仍为 4。此时增加 CO₂，产氧升到 7。这次干预支持原平台处受到 CO₂ 限制；仅凭光照平台还不能作此判断，也不能说所有光强下都由 CO₂ 限制。
+**比较示范 — 自拟题；构造数据：**恒温下，光照从 100 增至 200 任意单位，净产氧从 2 增至 4 单位；光照再增至 400 时，产氧仍为 4。此时增加 CO₂，产氧升到 7。这次干预支持原平台处受到 CO₂ 限制；仅凭光照平台还不能作此判断，也不能说所有光强下都由 CO₂ 限制。
 
 ## RP7：测得的产氧通常是净交换 {#rp7}
 
@@ -108,7 +108,7 @@ $$R_f=\frac{\text{distance moved by pigment}}{\text{distance moved by solvent fr
 ## 独立解释 {#practice}
 
 <!-- task:P2 -->
-**Self-written / 自拟题 — P2**
+**自拟题 — P2**
 
 A chloroplast preparation is supplied with constant light and then given much less CO₂. Predict the immediate effect on GP formation and the likely initial change in RuBP, assuming the regeneration reactions continue briefly. Explain why the supply of light alone cannot maintain sugar production.
 <!-- /task:P2 -->
@@ -128,7 +128,7 @@ CO₂ 固定减少使 GP 形成速率降低。由于 RuBP 仍在再生，却较�
 </details>
 
 <!-- task:P3 -->
-**Self-written / 自拟题 — P3**
+**自拟题 — P3**
 
 An aquatic plant releases 6.0 cm³ O₂ h⁻¹ in light and consumes 1.5 cm³ O₂ h⁻¹ in darkness at the same temperature. Estimate gross oxygen production and state the required assumption. A second student moves a hot lamp closer and claims that the larger gas volume proves an effect of light intensity alone. Evaluate this claim and improve the design.
 <!-- /task:P3 -->
@@ -148,7 +148,7 @@ An aquatic plant releases 6.0 cm³ O₂ h⁻¹ in light and consumes 1.5 cm³ O�
 </details>
 
 <!-- task:P4 -->
-**Self-written / 自拟题 — P4**
+**自拟题 — P4**
 
 A pigment spot moves 36 mm while the solvent front moves 60 mm. Calculate Rf. A reference pigment has the same Rf in a different solvent. Explain why this does not establish that the pigments are identical.
 <!-- /task:P4 -->
@@ -168,7 +168,7 @@ Rf = 36/60 = 0.60。溶剂组成影响色素溶解性和移动，因此不同条
 </details>
 
 <!-- task:P5 -->
-**Self-written / 自拟题 — P5**
+**自拟题 — P5**
 
 Retry: oxygen uptake and release are equal at one light intensity. Predict the sign of net oxygen exchange immediately after the light is switched off, assuming aerobic respiration continues. State why 'no net exchange' and 'no metabolism' are different claims.
 <!-- /task:P5 -->

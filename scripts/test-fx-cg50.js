@@ -113,8 +113,8 @@ assert(mechanics.includes('fm-shm-phase.png') && mechanics.includes('最接近�
 assert(numerical.includes('差分消项') && numerical.includes('1.789473684211'));
 console.log('Further Mathematics passed: 30 core tasks, six mechanics extensions, cross-page anchors, assets, tables and MathJax configuration.');
 
-assert.equal(referencePdfs.size, 18, 'All 18 exam reference PDFs must be linked locally');
-console.log('Reference PDFs passed: 18 local files and no personal Drive links.');
+assert.equal(referencePdfs.size, 0, 'Exam references must be plain text citations');
+console.log('Exam references passed: plain text citations and no personal Drive links.');
 
 // The learning route must work across all pages, with an accurate current stage.
 for (const [url, html] of guidePages) {
@@ -188,8 +188,10 @@ for (const unit of ['', 'ma01/', 'ma02/', 'ma03/', 'ma04/', 'ma05/']) {
   }
 }
 for (let n = 1; n <= 5; n++) {
-  for (const kind of ['question-paper', 'mark-scheme']) assert(advanced.includes(`href="/assets/pdf/fx-cg50/references/oxfordaqa-ma0${n}-2025-january-${kind}.pdf"`), 'Paired January 2025 source missing');
+  const section = advanced.split('id="ma0' + n + '"')[1].split('<h3')[0];
+  assert(section.includes('2025 年 1 月 QP') && section.includes('配套 MS'), 'Paired January 2025 source description missing');
 }
+assert(!/href="[^"]+(?:question-paper|mark-scheme)\.pdf"/.test(advanced + advancedMechanics), 'Exam sources should be plain text citations');
 for (const [before, example, after] of [['task-16', 'ma01-distance', 'task-17'], ['task-21', 'ma03-iteration', 'chapter-7'], ['task-22', 'ma03-parametric', 'task-23'], ['task-27', 'ma02-binomial', 'task-28']]) {
   assert(advanced.indexOf('id="' + before + '"') < advanced.indexOf('id="' + example + '"') && advanced.indexOf('id="' + example + '"') < advanced.indexOf('id="' + after + '"'), 'Example must follow its relevant operation: ' + example);
 }

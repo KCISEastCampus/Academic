@@ -18,7 +18,7 @@ translation_of: /alevel/a2-biology/gene-expression/
 神经元和肌纤维可以有基本相同的基因组，却含有不同蛋白质。关键在于哪些基因被表达、表达多少，以及信息在哪一层受到调控。先修见[遗传信息](/zh/alevel/a2-biology/prerequisites/#information)与[细胞分裂](/zh/alevel/a2-biology/prerequisites/#division)。
 
 <!-- task:BL04-E0 -->
-**E0 · Self-written / 自拟题**
+**E0 · 自拟题**
 
 Name the process from DNA to RNA and the process from mRNA to a polypeptide. Does a cell need to change a gene's base sequence every time it changes the amount of its protein product?
 <!-- /task:BL04-E0 -->
@@ -46,7 +46,7 @@ DNA 与组蛋白组成染色质。转录因子和 RNA 聚合酶能否接近 DNA�
 
 抑癌蛋白可限制细胞周期、支持 DNA 修复，或在损伤严重时帮助启动凋亡。沉默抑癌基因会移除其中某种控制。相反，促进分裂的原癌基因活动增加，可加强致癌信号。因此异常甲基化的后果取决于哪些基因增强、哪些减弱；癌症是多步骤过程，不是加上任何甲基就必然发生。
 
-**机制示范 · Self-written / 自拟题：**功能正常的抑癌基因启动子甲基化增加 → 可接近性/转录降低 → 相应蛋白减少 → 细胞周期制约或损伤响应减弱 → 异常细胞可能更容易分裂。每一环都要有明确分子或过程，只写“甲基化致癌”漏掉了基因和机制。
+**机制示范 · 自拟题：**功能正常的抑癌基因启动子甲基化增加 → 可接近性/转录降低 → 相应蛋白减少 → 细胞周期制约或损伤响应减弱 → 异常细胞可能更容易分裂。每一环都要有明确分子或过程，只写“甲基化致癌”漏掉了基因和机制。
 
 ## RNA 干扰发生在转录之后 {#rnai}
 
@@ -57,7 +57,7 @@ DNA 与组蛋白组成染色质。转录因子和 RNA 聚合酶能否接近 DNA�
 大纲较宽泛的表述包括基因活动增加或减少。本页直接机制是沉默；放到网络中也可间接增加另一基因的活动，例如沉默一个编码抑制因子的 mRNA。如果题目提供其他情境依赖的作用，应按证据解释，不宣称所有小 RNA 的结果都完全相同。
 
 <!-- task:BL04-E1 -->
-**E1 · Self-written / 自拟题**
+**E1 · 自拟题**
 
 Complete a typical RNA-interference chain: a small RNA associates with a protein complex → its sequence recognises complementary ____ → cleavage/degradation or reduced ____ → less target protein. State why this does not itself remove the target gene from the genome.
 <!-- /task:BL04-E1 -->
@@ -91,7 +91,7 @@ Complete a typical RNA-interference chain: a small RNA associates with a protein
 <!-- /task:BL04-gene-expression-data -->
 
 <!-- task:BL04-E2 -->
-**E2 · Self-written / 自拟题**
+**E2 · 自拟题**
 
 The table contains constructed mean values measured at one time, with no uncertainty estimates supplied. Compare A and B with the control. Explain why reduced transcription is a plausible explanation for A but is not established by the data. Suggest a different regulatory level for B and one measurement that would distinguish competing explanations.
 <!-- /task:BL04-E2 -->
@@ -113,7 +113,7 @@ A 的 mRNA 比对照低 70%、蛋白低 65%；B 的 mRNA 只低 5%，蛋白却�
 </details>
 
 <!-- task:BL04-E3 -->
-**E3 · Self-written / 自拟题**
+**E3 · 自拟题**
 
 A treatment reduces methylation near the promoter of a tumour-suppressor gene in cultured cells. Explain a possible route to slower cell division. State two additional results needed before concluding that this mechanism explains the effect, and two reasons why this is not yet evidence of an effective treatment for human patients.
 <!-- /task:BL04-E3 -->
@@ -152,7 +152,7 @@ A treatment reduces methylation near the promoter of a tumour-suppressor gene in
 应用需要受控分化、存活、整合及正确功能。未分化细胞可能不当增殖，移植细胞可能被排斥，重编程和培养还可能引入或选择不良变化。评价要把恢复组织的潜力与这些风险、来源可得性、同意、胚胎伦理、成本和公平获取联系起来；不能只列伦理词语。
 
 <!-- task:BL04-E4 -->
-**E4 · Self-written / 自拟题**
+**E4 · 自拟题**
 
 A team wants to replace damaged nerve cells. Compare an embryonic pluripotent-cell source with a patient's reprogrammed induced pluripotent cells. Give a potential benefit, a biological risk and an ethical or practical issue for each. State what evidence would demonstrate successful function rather than simply cell survival.
 <!-- /task:BL04-E4 -->
@@ -178,7 +178,7 @@ A team wants to replace damaged nerve cells. Compare an embryonic pluripotent-ce
 “DNA 被翻译”混淆信息层级；“mRNA 少证明转录停止”漏掉降解；“pluripotent 能形成整个个体”混淆多能与全能。
 
 <!-- task:BL04-E5 -->
-**E5 · Self-written / 自拟题 — retry**
+**E5 · 自拟题 — retry**
 
 A scientist proposes reducing methylation at every promoter to prevent cancer. Evaluate the proposal by comparing a tumour-suppressor gene with a gene that promotes cell division. Explain why “less methylation is always safer” is not a valid rule.
 <!-- /task:BL04-E5 -->
@@ -199,6 +199,6 @@ A scientist proposes reducing methylation at every promoter to prevent cancer. E
 
 ## 来源与连接 {#sources}
 
-[OxfordAQA 9610 大纲 v5.1](https://www.oxfordaqa.com/wp-content/uploads/2022/08/oxfordaqa-a-level-biology-specification.pdf)，§3.4.9；[官方资料入口](https://www.oxfordaqa.com/qualification/international-as-and-a-level-biology-9610/)。已读 BL04 May/June 2025 Q7 的 MS v1.0 Final pp.16–18，用于校准特定基因的癌症推理与模型证据局限。本页题目、构造数据、反馈均自拟，不是官方题或分值。
+[OxfordAQA 9610 大纲 v5.1](https://www.oxfordaqa.com/wp-content/uploads/2022/08/oxfordaqa-a-level-biology-specification.pdf)，§3.4.9；[官方资料入口](https://www.oxfordaqa.com/qualification/international-as-and-a-level-biology-9610/)。已读 BL04 May/June 2025 Q7 的 MS pp.16–18，用于校准特定基因的癌症推理与模型证据局限。本页题目、构造数据、反馈均自拟，不是官方题或分值。
 
 把表达变化与[遗传](/zh/alevel/a2-biology/inheritance/)比较，再学习[基因技术](/zh/alevel/a2-biology/gene-technology/)和[实验设计](/zh/alevel/a2-biology/experimental-design/)。

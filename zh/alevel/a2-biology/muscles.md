@@ -18,7 +18,7 @@ translation_of: /alevel/a2-biology/muscles/
 本页要解释肌肉到肌节的结构层级、Ca²⁺–ATP 机制、拮抗运动及供能。先回看[神经肌肉接头](/zh/alevel/a2-biology/nervous-communication/#synapse)和[ATP 产生](/zh/alevel/a2-biology/respiration/)。
 
 <!-- task:BL04-M0 -->
-**M0 · Self-written / 自拟题**
+**M0 · 自拟题**
 
 Two overlapping strips slide farther over each other without changing their lengths. What happens to the combined end-to-end length and the overlap? Use this model to identify what a contracting muscle does NOT need to do.
 <!-- /task:BL04-M0 -->
@@ -56,7 +56,7 @@ Two overlapping strips slide farther over each other without changing their leng
 兴奋结束后，耗 ATP 的泵把 Ca²⁺ 运回 SR。Ca²⁺ 离开 troponin，tropomyosin 再遮住结合位点。因此舒张需要有效回收钙和解除横桥，并不是“ATP 耗尽就松开”。ATP 分别参与头部分离、重新储能和主动运输钙。
 
 <!-- task:BL04-M1 -->
-**M1 · Self-written / 自拟题**
+**M1 · 自拟题**
 
 Complete the sequence after a muscle action potential: Ca²⁺ leaves the ____ → Ca²⁺ binds to ____ → ____ moves away from actin binding sites → myosin can form ____. Then state what ATP binding does to an attached myosin head.
 <!-- /task:BL04-M1 -->
@@ -77,10 +77,10 @@ Complete the sequence after a muscle action potential: Ca²⁺ leaves the ____ �
 
 ## 从结构读数推断机制 {#measurement}
 
-**示范 · Self-written / 自拟题：**肌节变短而 A 带不变，应把粗肌丝长度作为内部比较。A 带不变说明粗肌丝未缩短；Z–Z 距离减小且重叠增多支持滑动。真实显微图还须比较比例尺和切片方向，才能判断变化是否来自生物本身。
+**示范 · 自拟题：**肌节变短而 A 带不变，应把粗肌丝长度作为内部比较。A 带不变说明粗肌丝未缩短；Z–Z 距离减小且重叠增多支持滑动。真实显微图还须比较比例尺和切片方向，才能判断变化是否来自生物本身。
 
 <!-- task:BL04-M2 -->
-**M2 · Self-written / 自拟题**
+**M2 · 自拟题**
 
 In a constructed sarcomere model, Z-to-Z length changes from 2.6 µm to 2.1 µm. The A band remains 1.6 µm. Calculate the percentage shortening and the combined width of the two I-band portions within the sarcomere before and after contraction. Explain why these observations support sliding rather than filament shortening.
 <!-- /task:BL04-M2 -->
@@ -116,7 +116,7 @@ $$\text{shortening}=\frac{2.6-2.1}{2.6}\times100\%=19.2\%\quad\text{(3 s.f.)}.$$
 多数肌肉是混合类型，募集程度、纤维大小、训练、氧供及活动时长都会影响表现。“快肌完全不进行有氧呼吸”不正确。
 
 <!-- task:BL04-M3 -->
-**M3 · Self-written / 自拟题**
+**M3 · 自拟题**
 
 A constructed before/after training dataset reports 6 capillary profiles per 2000 µm² of fibre cross-sectional area before training and 9 per 3000 µm² after training. Calculate the number per 1000 µm² in each case. Evaluate the claim that the number per unit area increased by 50%. State one further measurement needed to assess an endurance adaptation.
 <!-- /task:BL04-M3 -->
@@ -138,7 +138,7 @@ A constructed before/after training dataset reports 6 capillary profiles per 200
 ## 独立干预判断与重试 {#practice}
 
 <!-- task:BL04-M4 -->
-**M4 · Self-written / 自拟题**
+**M4 · 自拟题**
 
 Treatment A keeps cytoplasmic Ca²⁺ high while ATP remains available. Treatment B removes ATP while some myosin heads are attached to actin. Compare the immediate mechanical predictions and explain why “no ATP means instant relaxation” is incorrect.
 <!-- /task:BL04-M4 -->
@@ -160,7 +160,7 @@ A 保持结合位点开放，有 ATP 时可继续横桥循环并产生张力，�
 若写“actin 缩短”，回看[条带](#structure)；若只写“ATP 提供能量”，分别补出三个作用；若结论忽略面积，带上单位重算。
 
 <!-- task:BL04-M5 -->
-**M5 · Self-written / 自拟题 — retry**
+**M5 · 自拟题 — retry**
 
 A runner's postural muscles work for a long time, but a brief maximal jump needs rapid high power. Compare the likely contributions of slow and fast fibres, oxygen supply and phosphocreatine. Avoid claiming that either activity uses only one fibre type.
 <!-- /task:BL04-M5 -->
@@ -181,6 +181,6 @@ A runner's postural muscles work for a long time, but a brief maximal jump needs
 
 ## 来源与下一步 {#sources}
 
-[OxfordAQA 9610 大纲 v5.1](https://www.oxfordaqa.com/wp-content/uploads/2022/08/oxfordaqa-a-level-biology-specification.pdf)，§3.4.4；[官方资料入口](https://www.oxfordaqa.com/qualification/international-as-and-a-level-biology-9610/)。已读 BL04 May/June 2025 Q3 的 MS v1.0 Final pp.8–9，校准纤维比较与数据解释深度。本页例题和构造数据均自拟，不是该实验的结果或官方分值。
+[OxfordAQA 9610 大纲 v5.1](https://www.oxfordaqa.com/wp-content/uploads/2022/08/oxfordaqa-a-level-biology-specification.pdf)，§3.4.4；[官方资料入口](https://www.oxfordaqa.com/qualification/international-as-and-a-level-biology-9610/)。已读 BL04 May/June 2025 Q3 的 MS pp.8–9，校准纤维比较与数据解释深度。本页例题和构造数据均自拟，不是该实验的结果或官方分值。
 
 继续学习[稳态和心率](/zh/alevel/a2-biology/homeostasis/)及[数据技能](/zh/alevel/a2-biology/data-skills/)。

@@ -102,7 +102,8 @@ for (const subject of subjectIndexes) {
   assert(/<h2\b[^>]*class="contents-list"[^>]*>目录<\/h2>/.test(zh), `${subject}: Chinese contents`);
   assert(zh.includes('placeholder="搜索目录…"'), `${subject}: Chinese search`);
   assert(zh.includes('aria-label="阅读此页英文版"'), `${subject}: Chinese switch label`);
-  assert(zhBody.includes('本页提供中文主题目录'), `${subject}: translation scope`);
+  const translated = ['alevel/as-physics', 'igcse/physics'].includes(subject);
+  assert(zhBody.includes(translated ? '本页为中文复习笔记' : '本页提供中文主题目录'), `${subject}: translation scope`);
   assert(!zhBody.includes('{{'), `${subject}: unrendered UI text`);
 }
 console.log(`Bilingual subject index checks passed for ${subjectIndexes.length} pages: front matter, switches, anchors, links and UI text.`);
