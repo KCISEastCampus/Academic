@@ -26,6 +26,7 @@ Study these lessons in order. Each has worked examples, practice, hints and solu
 5. <span id="38-capacitance"></span><span id="39-parallel-plate-capacitor"></span><span id="310-energy-stored-in-a-capacitor"></span>**[Capacitance](/alevel/a2-physics/capacitance/)** — Charge and energy, graph gradients, plate geometry and dielectric changes.
 6. <span id="4--exponential-change-39"></span><span id="41-capacitor-charging-and-discharging"></span><span id="42-time-constant-capacitor"></span><span id="43-charging-and-discharging-graphs"></span>**[Capacitor Charge and Discharge](/alevel/a2-physics/capacitor-charge-and-discharge/)** — Charging and discharging, time constants, graph analysis and required practical 6.
 7. <span id="44-exponential-decay-in-radioactivity"></span><span id="45-determining-decay-constants-graphically"></span>**[Radioactive Decay](/alevel/a2-physics/radioactive-decay/)** — Random decay, activity, half-life, isotope mass and analysis of raw counting records.
+8. <span id="5--magnetic-fields-310"></span><span id="51-magnetic-flux-density"></span><span id="52-force-on-a-current-carrying-conductor"></span><span id="53-flemings-left-hand-rule"></span><span id="54-force-on-a-moving-charge"></span>**[Magnetic Fields and Moving Charges](/alevel/a2-physics/magnetic-fields-and-moving-charges/)** — Force direction, magnetic flux density and circular paths.
 
 Start with the explanations if this is new to you. For revision, go straight to the **Practice** section of your chosen lesson and keep the solutions closed.
 
@@ -33,9 +34,8 @@ Start with the explanations if this is new to you. For revision, go straight to 
 
 The remaining topics currently have reference notes. Guided lessons will follow in this order.
 
-1. <span id="5--magnetic-fields-310"></span><span id="51-magnetic-flux-density"></span><span id="52-force-on-a-current-carrying-conductor"></span><span id="53-flemings-left-hand-rule"></span><span id="54-force-on-a-moving-charge"></span>**[Magnetic Fields and Moving Charges](/alevel/a2-physics/quick-reference/#5--magnetic-fields-310)** — Force direction, magnetic flux density and circular paths.
-2. <span id="55-magnetic-flux"></span><span id="56-magnetic-flux-linkage"></span><span id="57-faradays-law-of-electromagnetic-induction"></span><span id="58-lenzs-law"></span><span id="59-motional-emf"></span>**[Electromagnetic Induction](/alevel/a2-physics/quick-reference/#55-magnetic-flux)** — Flux linkage, Faraday's law and Lenz's law.
-3. <span id="510-alternating-currents"></span><span id="511-the-transformer"></span>**[Alternating Currents and Transformers](/alevel/a2-physics/quick-reference/#510-alternating-currents)** — rms values, oscilloscope measurements, power transmission and required practical 7.
+1. <span id="55-magnetic-flux"></span><span id="56-magnetic-flux-linkage"></span><span id="57-faradays-law-of-electromagnetic-induction"></span><span id="58-lenzs-law"></span><span id="59-motional-emf"></span>**[Electromagnetic Induction](/alevel/a2-physics/quick-reference/#55-magnetic-flux)** — Flux linkage, Faraday's law and Lenz's law.
+2. <span id="510-alternating-currents"></span><span id="511-the-transformer"></span>**[Alternating Currents and Transformers](/alevel/a2-physics/quick-reference/#510-alternating-currents)** — rms values, oscilloscope measurements, power transmission and required practical 7.
 
 <span id="-key-required-practicals-unit-3"></span><span id="-summary-comparing-gravitational-fields-and-electric-fields"></span><span id="similarities"></span><span id="differences"></span><span id="-summary-electric-fields-and-magnetic-fields"></span><span id="how-electric-and-magnetic-fields-are-connected"></span><span id="charged-particles-in-electric-and-magnetic-fields"></span><span id="velocity-selector-electric--magnetic-fields-combined"></span>
 

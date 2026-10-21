@@ -564,7 +564,7 @@ The student's rule applies to a natural-log graph, not a base-10 graph. Check re
 
 Before moving on, check that you can distinguish nuclei, activity, counts and count rate; explain randomness and constant decay probability; choose consistent units; estimate a half-life from both graph types; and diagnose background or geometry bias. Reattempt a data-processing task with changed recording durations after a break, using an English explanation as well as a number.
 
-[Previous lesson: Capacitor Charge and Discharge](/alevel/a2-physics/capacitor-charge-and-discharge/) · [PH03 course index](/alevel/a2-physics/) · [Next topic: Magnetic Fields reference notes](/alevel/a2-physics/quick-reference/#5--magnetic-fields-310)
+[Previous lesson: Capacitor Charge and Discharge](/alevel/a2-physics/capacitor-charge-and-discharge/) · [PH03 course index](/alevel/a2-physics/) · [Next lesson: Magnetic Fields and Moving Charges](/alevel/a2-physics/magnetic-fields-and-moving-charges/)
 
 <details markdown="1">
 <summary>Sources and scope</summary>

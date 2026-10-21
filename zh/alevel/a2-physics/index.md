@@ -28,6 +28,7 @@ study_page: true
 5. <span id="38-capacitance"></span><span id="39-parallel-plate-capacitor"></span><span id="310-energy-stored-in-a-capacitor"></span>**[电容](/zh/alevel/a2-physics/capacitance/)**——电荷与能量、图像斜率、极板几何与电介质变化。
 6. <span id="4--exponential-change-39"></span><span id="41-capacitor-charging-and-discharging"></span><span id="42-time-constant-capacitor"></span><span id="43-charging-and-discharging-graphs"></span>**[电容器充放电](/zh/alevel/a2-physics/capacitor-charge-and-discharge/)**——充放电过程、时间常数、图像分析与必做实验 6。
 7. <span id="44-exponential-decay-in-radioactivity"></span><span id="45-determining-decay-constants-graphically"></span>**[放射性指数变化](/zh/alevel/a2-physics/radioactive-decay/)**——随机衰变、活度、半衰期、核素质量与原始计数记录分析。
+8. <span id="5--magnetic-fields-310"></span><span id="51-magnetic-flux-density"></span><span id="52-force-on-a-current-carrying-conductor"></span><span id="53-flemings-left-hand-rule"></span><span id="54-force-on-a-moving-charge"></span>**[磁场与运动电荷](/zh/alevel/a2-physics/magnetic-fields-and-moving-charges/)**——力方向、磁通密度与圆周轨迹。
 
 初学时先阅读讲解；复习时直接进入各课的**练习**，暂时保持解答关闭。
 
@@ -35,9 +36,8 @@ study_page: true
 
 以下主题目前提供参考笔记，尚未制作成同等深度的完整学习页。
 
-1. <span id="5--magnetic-fields-310"></span><span id="51-magnetic-flux-density"></span><span id="52-force-on-a-current-carrying-conductor"></span><span id="53-flemings-left-hand-rule"></span><span id="54-force-on-a-moving-charge"></span>**[磁场与运动电荷](/zh/alevel/a2-physics/quick-reference/#5--magnetic-fields-310)**——力方向、磁通密度与圆周轨迹。
-2. <span id="55-magnetic-flux"></span><span id="56-magnetic-flux-linkage"></span><span id="57-faradays-law-of-electromagnetic-induction"></span><span id="58-lenzs-law"></span><span id="59-motional-emf"></span>**[电磁感应](/zh/alevel/a2-physics/quick-reference/#55-magnetic-flux)**——磁通链、法拉第定律与楞次定律。
-3. <span id="510-alternating-currents"></span><span id="511-the-transformer"></span>**[交流电与变压器](/zh/alevel/a2-physics/quick-reference/#510-alternating-currents)**——有效值、示波器测量、输电与必做实验 7。
+1. <span id="55-magnetic-flux"></span><span id="56-magnetic-flux-linkage"></span><span id="57-faradays-law-of-electromagnetic-induction"></span><span id="58-lenzs-law"></span><span id="59-motional-emf"></span>**[电磁感应](/zh/alevel/a2-physics/quick-reference/#55-magnetic-flux)**——磁通链、法拉第定律与楞次定律。
+2. <span id="510-alternating-currents"></span><span id="511-the-transformer"></span>**[交流电与变压器](/zh/alevel/a2-physics/quick-reference/#510-alternating-currents)**——有效值、示波器测量、输电与必做实验 7。
 
 <span id="-key-required-practicals-unit-3"></span><span id="-summary-comparing-gravitational-fields-and-electric-fields"></span><span id="similarities"></span><span id="differences"></span><span id="-summary-electric-fields-and-magnetic-fields"></span><span id="how-electric-and-magnetic-fields-are-connected"></span><span id="charged-particles-in-electric-and-magnetic-fields"></span><span id="velocity-selector-electric--magnetic-fields-combined"></span>
 

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="520" height="740" preserveAspectRatio="xMinYMin meet" viewBox="0 0 520 740" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Velocity selector and separator</title><desc>Schematic of positive ions passing rightwards between a positive upper and negative lower plate with magnetic field into the page. A separate magnetic-only region has two rightward-bulging semicircular tracks returning to a vertical detector through the entry line P. Selector and separator fields have distinct labels.</desc>
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="520" height="740"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-740)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="520" height="740" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="26" y="706" style="font-family: Helvetica; font-size: 19px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,1412) scale(1,-1)">Two regions: selection, then separation</text>
+			<text x="26" y="665" style="font-family: Helvetica; font-size: 17px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,1330) scale(1,-1)">1. Velocity selector</text>
+			<rect x="90" y="555" width="370" height="76" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<path d="M 90,641 L 460,641 Z" style="stroke: rgb(14%,38%,62%); stroke-linecap: butt; stroke-width: 4;"/>
+			<text x="120" y="649" style="font-family: Helvetica; font-size: 16px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,1298) scale(1,-1)">+</text>
+			<text x="175" y="649" style="font-family: Helvetica; font-size: 16px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,1298) scale(1,-1)">+</text>
+			<text x="230" y="649" style="font-family: Helvetica; font-size: 16px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,1298) scale(1,-1)">+</text>
+			<text x="285" y="649" style="font-family: Helvetica; font-size: 16px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,1298) scale(1,-1)">+</text>
+			<text x="340" y="649" style="font-family: Helvetica; font-size: 16px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,1298) scale(1,-1)">+</text>
+			<text x="395" y="649" style="font-family: Helvetica; font-size: 16px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,1298) scale(1,-1)">+</text>
+			<text x="450" y="649" style="font-family: Helvetica; font-size: 16px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,1298) scale(1,-1)">+</text>
+			<path d="M 90,545 L 460,545 Z" style="stroke: rgb(14%,38%,62%); stroke-linecap: butt; stroke-width: 4;"/>
+			<text x="120" y="522" style="font-family: Helvetica; font-size: 16px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,1044) scale(1,-1)">-</text>
+			<text x="175" y="522" style="font-family: Helvetica; font-size: 16px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,1044) scale(1,-1)">-</text>
+			<text x="230" y="522" style="font-family: Helvetica; font-size: 16px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,1044) scale(1,-1)">-</text>
+			<text x="285" y="522" style="font-family: Helvetica; font-size: 16px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,1044) scale(1,-1)">-</text>
+			<text x="340" y="522" style="font-family: Helvetica; font-size: 16px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,1044) scale(1,-1)">-</text>
+			<text x="395" y="522" style="font-family: Helvetica; font-size: 16px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,1044) scale(1,-1)">-</text>
+			<text x="450" y="522" style="font-family: Helvetica; font-size: 16px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,1044) scale(1,-1)">-</text>
+			<path d="M 146,586 L 154,594 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 146,594 L 154,586 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 246,586 L 254,594 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 246,594 L 254,586 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 346,586 L 354,594 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 346,594 L 354,586 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 426,586 L 434,594 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 426,594 L 434,586 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 35,590 L 100,590 Z" style="stroke: rgb(61%,18%,27%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="100 590, 92.63151 593.1153, 92.63151 586.8847" style="stroke: rgb(61%,18%,27%); stroke-linecap: butt; stroke-width: 1; fill: rgb(61%,18%,27%); fill-rule: evenodd;"/>
+			<path d="M 110,590 L 430,590 Z" style="stroke: rgb(61%,18%,27%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="430 590, 422.6315 593.1153, 422.6315 586.8847" style="stroke: rgb(61%,18%,27%); stroke-linecap: butt; stroke-width: 1; fill: rgb(61%,18%,27%); fill-rule: evenodd;"/>
+			<text x="30" y="564" style="font-family: Helvetica; font-size: 14px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,1128) scale(1,-1)">positive ions</text>
+			<text x="141.60500000000002" y="490" style="font-family: Helvetica; font-size: 15px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,980) scale(1,-1)">B_s into page; plate field downward</text>
+			<text x="26" y="440" style="font-family: Helvetica; font-size: 17px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,880) scale(1,-1)">2. Separator: magnetic field only</text>
+			<rect x="145" y="74" width="330" height="298" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<path d="M 176,101 L 184,109 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 176,109 L 184,101 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 176,181 L 184,189 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 176,189 L 184,181 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 176,261 L 184,269 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 176,269 L 184,261 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 176,341 L 184,349 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 176,349 L 184,341 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 256,101 L 264,109 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 256,109 L 264,101 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 256,181 L 264,189 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 256,189 L 264,181 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 256,261 L 264,269 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 256,269 L 264,261 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 256,341 L 264,349 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 256,349 L 264,341 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 336,101 L 344,109 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 336,109 L 344,101 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 336,181 L 344,189 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 336,189 L 344,181 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 336,261 L 344,269 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 336,269 L 344,261 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 336,341 L 344,349 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 336,349 L 344,341 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 416,101 L 424,109 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 416,109 L 424,101 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 416,181 L 424,189 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 416,189 L 424,181 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 416,261 L 424,269 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 416,269 L 424,261 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 416,341 L 424,349 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 416,349 L 424,341 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 130,80 L 130,325 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 4;"/>
+			<path d="M 130 95 L 132.512861 95.039475 L 135.023242 95.157862 L 137.528665 95.355043 L 140.026659 95.630824 L 142.514757 95.984933 L 144.990505 96.41702 L 147.451459 96.926659 L 149.895191 97.513347 L 152.319288 98.176505 L 154.72136 98.915479 L 157.099034 99.729538 L 159.449964 100.617881 L 161.771831 101.57963 L 164.062343 102.613836 L 166.31924 103.719478 L 168.540294 104.895466 L 170.723313 106.140638 L 172.866144 107.453766 L 174.96667 108.833554 L 177.02282 110.27864 L 179.032564 111.787599 L 180.993919 113.358941 L 182.904949 114.991114 L 184.763768 116.68251 L 186.568542 118.431458 L 188.31749 120.236232 L 190.008886 122.095051 L 191.641059 124.006081 L 193.212401 125.967436 L 194.72136 127.97718 L 196.166446 130.03333 L 197.546234 132.133856 L 198.859362 134.276687 L 200.104534 136.459706 L 201.280522 138.68076 L 202.386164 140.937657 L 203.42037 143.228169 L 204.382119 145.550036 L 205.270462 147.900966 L 206.084521 150.27864 L 206.823495 152.680712 L 207.486653 155.104809 L 208.073341 157.548541 L 208.58298 160.009495 L 209.015067 162.485243 L 209.369176 164.973341 L 209.644957 167.471335 L 209.842138 169.976758 L 209.960525 172.487139 L 210 175 L 209.960525 177.512861 L 209.842138 180.023242 L 209.644957 182.528665 L 209.369176 185.026659 L 209.015067 187.514757 L 208.58298 189.990505 L 208.073341 192.451459 L 207.486653 194.895191 L 206.823495 197.319288 L 206.084521 199.72136 L 205.270462 202.099034 L 204.382119 204.449964 L 203.42037 206.771831 L 202.386164 209.062343 L 201.280522 211.31924 L 200.104534 213.540294 L 198.859362 215.723313 L 197.546234 217.866144 L 196.166446 219.96667 L 194.72136 222.02282 L 193.212401 224.032564 L 191.641059 225.993919 L 190.008886 227.904949 L 188.31749 229.763768 L 186.568542 231.568542 L 184.763768 233.31749 L 182.904949 235.008886 L 180.993919 236.641059 L 179.032564 238.212401 L 177.02282 239.72136 L 174.96667 241.166446 L 172.866144 242.546234 L 170.723313 243.859362 L 168.540294 245.104534 L 166.31924 246.280522 L 164.062343 247.386164 L 161.771831 248.42037 L 159.449964 249.382119 L 157.099034 250.270462 L 154.72136 251.084521 L 152.319288 251.823495 L 149.895191 252.486653 L 147.451459 253.073341 L 144.990505 253.58298 L 142.514757 254.015067 L 140.026659 254.369176 L 137.528665 254.644957 L 135.023242 254.842138 L 132.512861 254.960525 L 130 255 " style="stroke: rgb(61%,18%,27%); stroke-linecap: butt; stroke-width: 2.5; fill: none; fill-rule: evenodd;"/>
+			<path d="M 209.842138,180.023242 L 209.088652,191.999562 Z" style="stroke: rgb(61%,18%,27%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="209.0887 191.9996, 206.4421 184.45, 212.6605 184.8412" style="stroke: rgb(61%,18%,27%); stroke-linecap: butt; stroke-width: 1; fill: rgb(61%,18%,27%); fill-rule: evenodd;"/>
+			<path d="M 130 95 L 133.29813 95.051811 L 136.593005 95.207194 L 139.881373 95.465994 L 143.15999 95.827956 L 146.425619 96.292724 L 149.675038 96.859839 L 152.90504 97.52874 L 156.112438 98.298768 L 159.294066 99.169163 L 162.446784 100.139066 L 165.567482 101.207519 L 168.653078 102.373469 L 171.700529 103.635764 L 174.706826 104.993159 L 177.669002 106.444315 L 180.584136 107.987799 L 183.449349 109.622087 L 186.261813 111.345568 L 189.018755 113.15654 L 191.717451 115.053216 L 194.355241 117.033724 L 196.929519 119.09611 L 199.437746 121.238338 L 201.877446 123.458294 L 204.246212 125.753788 L 206.541706 128.122554 L 208.761662 130.562254 L 210.90389 133.070481 L 212.966276 135.644759 L 214.946784 138.282549 L 216.84346 140.981245 L 218.654432 143.738187 L 220.377913 146.550651 L 222.012201 149.415864 L 223.555685 152.330998 L 225.006841 155.293174 L 226.364236 158.299471 L 227.626531 161.346922 L 228.792481 164.432518 L 229.860934 167.553216 L 230.830837 170.705934 L 231.701232 173.887562 L 232.47126 177.09496 L 233.140161 180.324962 L 233.707276 183.574381 L 234.172044 186.84001 L 234.534006 190.118627 L 234.792806 193.406995 L 234.948189 196.70187 L 235 200 L 234.948189 203.29813 L 234.792806 206.593005 L 234.534006 209.881373 L 234.172044 213.15999 L 233.707276 216.425619 L 233.140161 219.675038 L 232.47126 222.90504 L 231.701232 226.112438 L 230.830837 229.294066 L 229.860934 232.446784 L 228.792481 235.567482 L 227.626531 238.653078 L 226.364236 241.700529 L 225.006841 244.706826 L 223.555685 247.669002 L 222.012201 250.584136 L 220.377913 253.449349 L 218.654432 256.261813 L 216.84346 259.018755 L 214.946784 261.717451 L 212.966276 264.355241 L 210.90389 266.929519 L 208.761662 269.437746 L 206.541706 271.877446 L 204.246212 274.246212 L 201.877446 276.541706 L 199.437746 278.761662 L 196.929519 280.90389 L 194.355241 282.966276 L 191.717451 284.946784 L 189.018755 286.84346 L 186.261813 288.654432 L 183.449349 290.377913 L 180.584136 292.012201 L 177.669002 293.555685 L 174.706826 295.006841 L 171.700529 296.364236 L 168.653078 297.626531 L 165.567482 298.792481 L 162.446784 299.860934 L 159.294066 300.830837 L 156.112438 301.701232 L 152.90504 302.47126 L 149.675038 303.140161 L 146.425619 303.707276 L 143.15999 304.172044 L 139.881373 304.534006 L 136.593005 304.792806 L 133.29813 304.948189 L 130 305 " style="stroke: rgb(14%,38%,62%); stroke-linecap: butt; stroke-width: 2.5; fill: none; fill-rule: evenodd;"/>
+			<path d="M 234.792806,206.593005 L 234.03932,218.569325 Z" style="stroke: rgb(14%,38%,62%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="234.0393 218.5693, 231.3928 211.0198, 237.6112 211.411" style="stroke: rgb(14%,38%,62%); stroke-linecap: butt; stroke-width: 1; fill: rgb(14%,38%,62%); fill-rule: evenodd;"/>
+			<circle cx="130" cy="95" r="4" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,14%,21%); fill-rule: evenodd;"/>
+			<text x="110" y="85" style="font-family: Helvetica; font-size: 15px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,170) scale(1,-1)">P</text>
+			<path d="M 53,95 L 118,95 Z" style="stroke: rgb(61%,18%,27%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="118 95, 110.6315 98.11535, 110.6315 91.88465" style="stroke: rgb(61%,18%,27%); stroke-linecap: butt; stroke-width: 1; fill: rgb(61%,18%,27%); fill-rule: evenodd;"/>
+			<text x="64.418" y="347" style="font-family: Helvetica; font-size: 14px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,694) scale(1,-1)">detector</text>
+			<text x="335" y="320" style="font-family: Helvetica; font-size: 15px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,640) scale(1,-1)">B_a into page</text>
+			<text x="93.09199999999998" y="43" style="font-family: Helvetica; font-size: 14px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,86) scale(1,-1)">Same entrance speed; return distances are diameters</text>
+			<text x="104.299" y="17" style="font-family: Helvetica; font-size: 13px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,34) scale(1,-1)">Schematic: separator B_a can differ from selector B_s</text>
+		</g>
+	</g>
+</svg>

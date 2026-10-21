@@ -566,7 +566,7 @@ $$T_{1/2}=\frac{\ln2}{0.0040\ln10}\approx\boxed{75\,\mathrm s}.$$
 
 继续之前，检查能否区分核数、活度、计数与计数率；解释随机性和恒定衰变概率；选用一致单位；通过两类图像估计半衰期；诊断本底或几何条件引起的偏差。间隔一段时间后，改变记录时长，重新尝试一道数据处理题，既给出数值，也用英文解释。
 
-[上一课：电容器充放电](/zh/alevel/a2-physics/capacitor-charge-and-discharge/) · [PH03 课程目录](/zh/alevel/a2-physics/) · [下一主题：磁场参考笔记](/zh/alevel/a2-physics/quick-reference/#5--magnetic-fields-310)
+[上一课：电容器充放电](/zh/alevel/a2-physics/capacitor-charge-and-discharge/) · [PH03 课程目录](/zh/alevel/a2-physics/) · [下一课：磁场与运动电荷](/zh/alevel/a2-physics/magnetic-fields-and-moving-charges/)
 
 <details markdown="1">
 <summary>来源与范围</summary>
