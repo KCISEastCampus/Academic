@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="520" height="380" preserveAspectRatio="xMinYMin meet" viewBox="0 0 520 380" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Flux angle and area normal</title><desc>Worked geometry: field, coil plane shown edge-on, and normal. Theta is between normal and field. A second view has field parallel to the coil plane and zero flux.</desc>
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="520" height="380"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-380)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="520" height="380" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="25" y="348" style="font-family: Helvetica; font-size: 19px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,696) scale(1,-1)">Measure the angle from the area normal</text>
+			<path d="M 50,200 L 145,200 Z" style="stroke: rgb(14%,38%,62%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="145 200, 137.6315 203.1153, 137.6315 196.8847" style="stroke: rgb(14%,38%,62%); stroke-linecap: butt; stroke-width: 1; fill: rgb(14%,38%,62%); fill-rule: evenodd;"/>
+			<path d="M 50,240 L 145,240 Z" style="stroke: rgb(14%,38%,62%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="145 240, 137.6315 243.1153, 137.6315 236.8847" style="stroke: rgb(14%,38%,62%); stroke-linecap: butt; stroke-width: 1; fill: rgb(14%,38%,62%); fill-rule: evenodd;"/>
+			<path d="M 50,280 L 145,280 Z" style="stroke: rgb(14%,38%,62%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="145 280, 137.6315 283.1153, 137.6315 276.8847" style="stroke: rgb(14%,38%,62%); stroke-linecap: butt; stroke-width: 1; fill: rgb(14%,38%,62%); fill-rule: evenodd;"/>
+			<text x="68" y="296" style="font-family: Helvetica; font-size: 17px;fill: rgb(14%,38%,62%); stroke:none;" transform="translate(0,592) scale(1,-1)">B</text>
+			<path d="M 165,290 L 255,160 Z" style="stroke: rgb(61%,18%,27%); stroke-linecap: butt; stroke-width: 4;"/>
+			<text x="280" y="176" style="font-family: Helvetica; font-size: 15px;fill: rgb(61%,18%,27%); stroke:none;" transform="translate(0,352) scale(1,-1)">coil plane</text>
+			<path d="M 210,225 L 318,300 Z" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="318 300, 310.1708 298.3559, 313.7247 293.2382" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,14%,21%); fill-rule: evenodd;"/>
+			<text x="325" y="300" style="font-family: Helvetica; font-size: 15px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,600) scale(1,-1)">normal</text>
+			<path d="M 210,225 L 310,225 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="254" y="242" style="font-family: Helvetica; font-size: 15px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,484) scale(1,-1)">theta</text>
+			<text x="26" y="123" style="font-family: Helvetica; font-size: 14px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,246) scale(1,-1)">Plane shown edge-on; schematic</text>
+			<path d="M 65,62 L 210,62 Z" style="stroke: rgb(61%,18%,27%); stroke-linecap: butt; stroke-width: 4;"/>
+			<path d="M 138,62 L 138,109 Z" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="138 109, 134.8847 101.6315, 141.1153 101.6315" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,14%,21%); fill-rule: evenodd;"/>
+			<path d="M 250,62 L 390,62 Z" style="stroke: rgb(14%,38%,62%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="390 62, 382.6315 65.11535, 382.6315 58.88465" style="stroke: rgb(14%,38%,62%); stroke-linecap: butt; stroke-width: 1; fill: rgb(14%,38%,62%); fill-rule: evenodd;"/>
+			<text x="252" y="33" style="font-family: Helvetica; font-size: 15px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,66) scale(1,-1)">B parallel to plane: zero flux</text>
+		</g>
+	</g>
+</svg>

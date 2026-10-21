@@ -441,6 +441,8 @@ $$y=\ln\left(\frac{r}{r_{\mathrm{ref}}}\right)=y_0-\lambda t.$$
 ### 5.1 磁通密度
 {: id="51-magnetic-flux-density"}
 
+[打开完整学习页](/zh/alevel/a2-physics/magnetic-fields-and-moving-charges/)。
+
 * **定义**：垂直于磁场的直导线，单位电流、单位长度所受的力。
     $$B = \frac{F}{IL}$$
     * $B$ = 磁通密度（T，特斯拉）
@@ -476,6 +478,8 @@ $$F = BQv$$
 
 ### 5.5 磁通量
 {: id="55-magnetic-flux"}
+
+[打开完整学习页](/zh/alevel/a2-physics/electromagnetic-induction/)。
 
 * **磁通量（$\Phi$）**：磁通密度与垂直于磁场的投影面积之积。
     $$\Phi = BA\cos\theta$$
@@ -525,17 +529,21 @@ $$\lvert \varepsilon\rvert =BLv$$
 ### 5.10 交流电
 {: id="510-alternating-currents"}
 
+[打开完整学习页](/zh/alevel/a2-physics/alternating-current/)。
+
 * 线圈在匀强磁场中以恒定角速度 $\omega$ 转动，产生正弦电动势：
     $$\varepsilon = NBA\omega \sin(\omega t)$$
 * **峰值电动势**：$\varepsilon_0 = NBA\omega$
-* **有效值（RMS，均方根值）**：
+* **正弦信号的有效值（RMS，均方根值）**：
     $$V_{\text{rms}} = \frac{V_0}{\sqrt{2}} \approx 0.707 V_0$$
     $$I_{\text{rms}} = \frac{I_0}{\sqrt{2}} \approx 0.707 I_0$$
 * **峰值因数**：$\frac{V_0}{V_{\text{rms}}} = \sqrt{2}$
-* **半周期平均值**：$V_{\text{mean}} = \frac{2V_0}{\pi} \approx 0.637 V_0$
+* **可选拓展——3.10.5 未单独列示的半周期平均值**：$V_{\text{mean}} = \frac{2V_0}{\pi} \approx 0.637 V_0$
 
 ### 5.11 变压器
 {: id="511-the-transformer"}
+
+[打开完整学习页](/zh/alevel/a2-physics/transformers-and-power-transmission/)。
 
 变压器改变交流电压的大小，由**软铁芯**和两个线圈构成：**原线圈**与**副线圈**。
 
@@ -577,7 +585,7 @@ $$\lvert \varepsilon\rvert =BLv$$
 {: id="-key-required-practicals-unit-3"}
 
 1. **必做实验 6——电容器充放电：**记录电势差随时间的变化。放电分析画 $\ln(V/V_0)$ 对 $t$；斜率为 $-1/(RC)$，时间常数等于斜率的负倒数。
-2. **必做实验 7——变压器效率：**接电阻负载，测量输入、输出的有效值电压与电流。用 $V_sI_s/(V_pI_p)$ 求效率，研究效率随负载的变化。
+2. **必做实验 7——变压器效率：**改变负载并测量输入、输出的有效值电压与电流。给定 VI 近似时用 $V_sI_s/(V_pI_p)$ 估计效率；真实交流输入功率可能需要功率计。[查看方法、记录与局限](/zh/alevel/a2-physics/transformers-and-power-transmission/#data-transformer-efficiency)。
 
 简谐系统探究属于 **AS 必做实验 4**。磁铁穿过线圈、磁通链探究是有用的演示，但不是另列的必做实验。见 [OxfordAQA 大纲](https://www.oxfordaqa.com/wp-content/uploads/2022/08/oxfordaqa-a-level-physics-specification.pdf) 6.1。
 

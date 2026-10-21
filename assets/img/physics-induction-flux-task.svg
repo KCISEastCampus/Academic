@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="520" height="390" preserveAspectRatio="xMinYMin meet" viewBox="0 0 520 390" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Independent linkage graph</title><desc>Constructed graph of total linkage with vertices (0 s,0 Wb), (0.20 s,0.060 Wb), (0.50 s,0.060 Wb), and (0.60 s,0 Wb). No emf curve or slope answers are shown.</desc>
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="520" height="390"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-390)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="520" height="390" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="24" y="355" style="font-family: Helvetica; font-size: 19px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,710) scale(1,-1)">Task: draw emf from this linkage graph</text>
+			<text x="50" y="320" style="font-family: Helvetica; font-size: 15px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,640) scale(1,-1)">Total linkage / Wb turns</text>
+			<path d="M 82,85 L 475,85 Z" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="475 85, 467.6315 88.11535, 467.6315 81.88465" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,14%,21%); fill-rule: evenodd;"/>
+			<path d="M 82,85 L 82,308 Z" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="82 308, 78.88465 300.6315, 85.11535 300.6315" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,14%,21%); fill-rule: evenodd;"/>
+			<path d="M 82,85 L 202,265 Z" style="stroke: rgb(61%,18%,27%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 202,265 L 382,265 Z" style="stroke: rgb(61%,18%,27%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 382,265 L 442,85 Z" style="stroke: rgb(61%,18%,27%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 202,82 L 202,90 Z" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<text x="188.378" y="62" style="font-family: Helvetica; font-size: 14px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,124) scale(1,-1)">0.20</text>
+			<path d="M 382,82 L 382,90 Z" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<text x="368.378" y="62" style="font-family: Helvetica; font-size: 14px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,124) scale(1,-1)">0.50</text>
+			<path d="M 442,82 L 442,90 Z" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<text x="428.378" y="62" style="font-family: Helvetica; font-size: 14px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,124) scale(1,-1)">0.60</text>
+			<text x="67" y="68" style="font-family: Helvetica; font-size: 14px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,136) scale(1,-1)">0</text>
+			<text x="32.971999999999994" y="263" style="font-family: Helvetica; font-size: 14px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,526) scale(1,-1)">0.060</text>
+			<path d="M 78,265 L 85,265 Z" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<text x="376.65999999999997" y="31" style="font-family: Helvetica; font-size: 15px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,62) scale(1,-1)">Time / s</text>
+			<text x="25" y="11" style="font-family: Helvetica; font-size: 13px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,22) scale(1,-1)">Only linkage is supplied; sketch emf separately.</text>
+		</g>
+	</g>
+</svg>

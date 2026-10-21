@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="520" height="350" preserveAspectRatio="xMinYMin meet" viewBox="0 0 520 350" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Two-end transmission model</title><desc>A source and ideal step-up transformer send power through a line to a receiving load. One lumped resistance represents the total outgoing-plus-return line resistance; sending and receiving ends are labelled separately.</desc>
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="520" height="350"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-350)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="520" height="350" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="24" y="313" style="font-family: Helvetica; font-size: 19px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,626) scale(1,-1)">Transmission: keep the two ends distinct</text>
+			<rect x="25" y="150" width="125" height="110" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<text x="54.76" y="219" style="font-family: Helvetica; font-size: 16px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,438) scale(1,-1)">Source +</text>
+			<text x="44.06249999999999" y="193" style="font-family: Helvetica; font-size: 15px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,386) scale(1,-1)">ideal step-up</text>
+			<rect x="400" y="150" width="95" height="110" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<text x="415.075" y="219" style="font-family: Helvetica; font-size: 15px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,438) scale(1,-1)">Receiving</text>
+			<text x="433.825" y="193" style="font-family: Helvetica; font-size: 15px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,386) scale(1,-1)">load</text>
+			<path d="M 150,230 L 260,230 Z" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<path d="M 325,230 L 400,230 Z" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<path d="M 150,170 L 400,170 Z" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<rect x="260" y="218" width="65" height="24" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 180,230 L 225,230 Z" style="stroke: rgb(61%,18%,27%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="225 230, 217.6315 233.1153, 217.6315 226.8847" style="stroke: rgb(61%,18%,27%); stroke-linecap: butt; stroke-width: 1; fill: rgb(61%,18%,27%); fill-rule: evenodd;"/>
+			<text x="202" y="246" style="font-family: Helvetica; font-size: 16px;fill: rgb(61%,18%,27%); stroke:none;" transform="translate(0,492) scale(1,-1)">I</text>
+			<text x="229.749" y="276" style="font-family: Helvetica; font-size: 14px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,552) scale(1,-1)">total loop resistance</text>
+			<text x="170" y="121" style="font-family: Helvetica; font-size: 15px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,242) scale(1,-1)">send</text>
+			<text x="385" y="121" style="font-family: Helvetica; font-size: 15px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,242) scale(1,-1)">receive</text>
+			<text x="25" y="77" style="font-family: Helvetica; font-size: 15px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,154) scale(1,-1)">Receiving voltage = sending voltage - line drop</text>
+			<text x="25" y="46" style="font-family: Helvetica; font-size: 14px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,92) scale(1,-1)">The single R symbol represents both line resistances.</text>
+		</g>
+	</g>
+</svg>

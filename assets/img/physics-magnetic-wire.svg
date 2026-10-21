@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="520" height="440" preserveAspectRatio="xMinYMin meet" viewBox="0 0 520 440" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Wire and magnet worked model</title><desc>Worked schematic: conventional current is rightwards, the field is into the page, force on the independently supported wire is upwards and reaction on the magnet resting on a balance is downwards.</desc>
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="520" height="440"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-440)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="520" height="440" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="26" y="404" style="font-family: Helvetica; font-size: 19px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,808) scale(1,-1)">Worked model: identify the two objects</text>
+			<text x="32" y="365" style="font-family: Helvetica; font-size: 16px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,730) scale(1,-1)">Uniform B into page (crosses)</text>
+			<path d="M 96,206 L 104,214 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 96,214 L 104,206 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 96,266 L 104,274 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 96,274 L 104,266 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 96,326 L 104,334 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 96,334 L 104,326 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 156,206 L 164,214 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 156,214 L 164,206 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 156,266 L 164,274 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 156,274 L 164,266 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 156,326 L 164,334 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 156,334 L 164,326 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 216,206 L 224,214 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 216,214 L 224,206 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 216,266 L 224,274 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 216,274 L 224,266 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 216,326 L 224,334 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 216,334 L 224,326 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 276,206 L 284,214 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 276,214 L 284,206 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 276,266 L 284,274 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 276,274 L 284,266 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 276,326 L 284,334 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 276,334 L 284,326 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 336,206 L 344,214 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 336,214 L 344,206 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 336,266 L 344,274 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 336,274 L 344,266 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 336,326 L 344,334 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 336,334 L 344,326 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 396,206 L 404,214 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 396,214 L 404,206 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 396,266 L 404,274 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 396,274 L 404,266 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 396,326 L 404,334 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 396,334 L 404,326 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 456,206 L 464,214 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 456,214 L 464,206 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 456,266 L 464,274 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 456,274 L 464,266 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 456,326 L 464,334 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 456,334 L 464,326 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 80,270 L 460,270 Z" style="stroke: rgb(61%,18%,27%); stroke-linecap: butt; stroke-width: 5;"/>
+			<path d="M 175,270 L 260,270 Z" style="stroke: rgb(61%,18%,27%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="260 270, 252.6315 273.1153, 252.6315 266.8847" style="stroke: rgb(61%,18%,27%); stroke-linecap: butt; stroke-width: 1; fill: rgb(61%,18%,27%); fill-rule: evenodd;"/>
+			<text x="150" y="240" style="font-family: Helvetica; font-size: 16px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,480) scale(1,-1)">conventional current I</text>
+			<path d="M 325,280 L 325,342 Z" style="stroke: rgb(14%,38%,62%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="325 342, 321.8847 334.6315, 328.1153 334.6315" style="stroke: rgb(14%,38%,62%); stroke-linecap: butt; stroke-width: 1; fill: rgb(14%,38%,62%); fill-rule: evenodd;"/>
+			<text x="338" y="345" style="font-family: Helvetica; font-size: 15px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,690) scale(1,-1)">force on wire</text>
+			<text x="137.435" y="176" style="font-family: Helvetica; font-size: 15px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,352) scale(1,-1)">Wire fixed to an independent support</text>
+			<rect x="150" y="95" width="220" height="38" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<text x="196.21249999999998" y="108" style="font-family: Helvetica; font-size: 15px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,216) scale(1,-1)">magnet on balance</text>
+			<path d="M 260,89 L 260,45 Z" style="stroke: rgb(14%,38%,62%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="260 45, 263.1153 52.36849, 256.8847 52.36849" style="stroke: rgb(14%,38%,62%); stroke-linecap: butt; stroke-width: 1; fill: rgb(14%,38%,62%); fill-rule: evenodd;"/>
+			<text x="282" y="53" style="font-family: Helvetica; font-size: 15px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,106) scale(1,-1)">reaction on magnet</text>
+			<text x="114.4195" y="17" style="font-family: Helvetica; font-size: 13px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,34) scale(1,-1)">Separate free-body diagrams; schematic side view</text>
+		</g>
+	</g>
+</svg>

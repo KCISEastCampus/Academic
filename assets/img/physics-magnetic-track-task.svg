@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="520" height="410" preserveAspectRatio="xMinYMin meet" viewBox="0 0 520 410" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Independent magnetic direction task</title><desc>Three particles A positive, B negative and C neutral enter from the left moving right into the same uniform field directed out of the page, represented by dots. Force arrows and subsequent tracks are deliberately absent.</desc>
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="520" height="410"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-410)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="520" height="410" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="26" y="378" style="font-family: Helvetica; font-size: 19px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,756) scale(1,-1)">Independent direction task</text>
+			<text x="26" y="340" style="font-family: Helvetica; font-size: 16px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,680) scale(1,-1)">Uniform B out of page (dots)</text>
+			<rect x="180" y="65" width="300" height="242" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<circle cx="230" cy="100" r="5" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1; fill: none; fill-rule: evenodd;"/>
+			<circle cx="230" cy="100" r="1.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,48%); fill-rule: evenodd;"/>
+			<circle cx="230" cy="160" r="5" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1; fill: none; fill-rule: evenodd;"/>
+			<circle cx="230" cy="160" r="1.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,48%); fill-rule: evenodd;"/>
+			<circle cx="230" cy="220" r="5" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1; fill: none; fill-rule: evenodd;"/>
+			<circle cx="230" cy="220" r="1.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,48%); fill-rule: evenodd;"/>
+			<circle cx="230" cy="280" r="5" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1; fill: none; fill-rule: evenodd;"/>
+			<circle cx="230" cy="280" r="1.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,48%); fill-rule: evenodd;"/>
+			<circle cx="300" cy="100" r="5" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1; fill: none; fill-rule: evenodd;"/>
+			<circle cx="300" cy="100" r="1.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,48%); fill-rule: evenodd;"/>
+			<circle cx="300" cy="160" r="5" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1; fill: none; fill-rule: evenodd;"/>
+			<circle cx="300" cy="160" r="1.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,48%); fill-rule: evenodd;"/>
+			<circle cx="300" cy="220" r="5" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1; fill: none; fill-rule: evenodd;"/>
+			<circle cx="300" cy="220" r="1.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,48%); fill-rule: evenodd;"/>
+			<circle cx="300" cy="280" r="5" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1; fill: none; fill-rule: evenodd;"/>
+			<circle cx="300" cy="280" r="1.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,48%); fill-rule: evenodd;"/>
+			<circle cx="370" cy="100" r="5" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1; fill: none; fill-rule: evenodd;"/>
+			<circle cx="370" cy="100" r="1.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,48%); fill-rule: evenodd;"/>
+			<circle cx="370" cy="160" r="5" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1; fill: none; fill-rule: evenodd;"/>
+			<circle cx="370" cy="160" r="1.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,48%); fill-rule: evenodd;"/>
+			<circle cx="370" cy="220" r="5" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1; fill: none; fill-rule: evenodd;"/>
+			<circle cx="370" cy="220" r="1.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,48%); fill-rule: evenodd;"/>
+			<circle cx="370" cy="280" r="5" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1; fill: none; fill-rule: evenodd;"/>
+			<circle cx="370" cy="280" r="1.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,48%); fill-rule: evenodd;"/>
+			<circle cx="440" cy="100" r="5" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1; fill: none; fill-rule: evenodd;"/>
+			<circle cx="440" cy="100" r="1.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,48%); fill-rule: evenodd;"/>
+			<circle cx="440" cy="160" r="5" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1; fill: none; fill-rule: evenodd;"/>
+			<circle cx="440" cy="160" r="1.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,48%); fill-rule: evenodd;"/>
+			<circle cx="440" cy="220" r="5" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1; fill: none; fill-rule: evenodd;"/>
+			<circle cx="440" cy="220" r="1.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,48%); fill-rule: evenodd;"/>
+			<circle cx="440" cy="280" r="5" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1; fill: none; fill-rule: evenodd;"/>
+			<circle cx="440" cy="280" r="1.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,48%); fill-rule: evenodd;"/>
+			<text x="30" y="287" style="font-family: Helvetica; font-size: 15px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,574) scale(1,-1)">A: positive</text>
+			<path d="M 90,265 L 170,265 Z" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="170 265, 162.6315 268.1153, 162.6315 261.8847" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,14%,21%); fill-rule: evenodd;"/>
+			<circle cx="177" cy="265" r="4" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,14%,21%); fill-rule: evenodd;"/>
+			<text x="30" y="207" style="font-family: Helvetica; font-size: 15px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,414) scale(1,-1)">B: negative</text>
+			<path d="M 90,185 L 170,185 Z" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="170 185, 162.6315 188.1153, 162.6315 181.8847" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,14%,21%); fill-rule: evenodd;"/>
+			<circle cx="177" cy="185" r="4" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,14%,21%); fill-rule: evenodd;"/>
+			<text x="30" y="127" style="font-family: Helvetica; font-size: 15px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,254) scale(1,-1)">C: neutral</text>
+			<path d="M 90,105 L 170,105 Z" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="170 105, 162.6315 108.1153, 162.6315 101.8847" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,14%,21%); fill-rule: evenodd;"/>
+			<circle cx="177" cy="105" r="4" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,14%,21%); fill-rule: evenodd;"/>
+			<text x="97.75399999999999" y="26" style="font-family: Helvetica; font-size: 14px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,52) scale(1,-1)">Same initial velocity to the right; add force and paths</text>
+		</g>
+	</g>
+</svg>

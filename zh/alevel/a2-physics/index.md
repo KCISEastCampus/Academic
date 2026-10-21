@@ -28,16 +28,17 @@ study_page: true
 5. <span id="38-capacitance"></span><span id="39-parallel-plate-capacitor"></span><span id="310-energy-stored-in-a-capacitor"></span>**[电容](/zh/alevel/a2-physics/capacitance/)**——电荷与能量、图像斜率、极板几何与电介质变化。
 6. <span id="4--exponential-change-39"></span><span id="41-capacitor-charging-and-discharging"></span><span id="42-time-constant-capacitor"></span><span id="43-charging-and-discharging-graphs"></span>**[电容器充放电](/zh/alevel/a2-physics/capacitor-charge-and-discharge/)**——充放电过程、时间常数、图像分析与必做实验 6。
 7. <span id="44-exponential-decay-in-radioactivity"></span><span id="45-determining-decay-constants-graphically"></span>**[放射性指数变化](/zh/alevel/a2-physics/radioactive-decay/)**——随机衰变、活度、半衰期、核素质量与原始计数记录分析。
+8. <span id="5--magnetic-fields-310"></span><span id="51-magnetic-flux-density"></span><span id="52-force-on-a-current-carrying-conductor"></span><span id="53-flemings-left-hand-rule"></span><span id="54-force-on-a-moving-charge"></span>**[磁场与运动电荷](/zh/alevel/a2-physics/magnetic-fields-and-moving-charges/)**——力方向、磁通密度与圆周轨迹。
+9. <span id="55-magnetic-flux"></span><span id="56-magnetic-flux-linkage"></span><span id="57-faradays-law-of-electromagnetic-induction"></span><span id="58-lenzs-law"></span><span id="59-motional-emf"></span>**[电磁感应](/zh/alevel/a2-physics/electromagnetic-induction/)**——磁通链、法拉第与楞次定律、图像转换、运动导杆、涡流与发电机。
+10. <span id="510-alternating-currents"></span>**[交流电](/zh/alevel/a2-physics/alternating-current/)**——正弦有效值、发热、校准示波器读图与波形变化。
+11. <span id="511-the-transformer"></span>**[变压器与输电](/zh/alevel/a2-physics/transformers-and-power-transmission/)**——共同磁通、效率与损耗、线路压降及必做实验 7。
 
 初学时先阅读讲解；复习时直接进入各课的**练习**，暂时保持解答关闭。
 
-## PH03 后续主题 {#ph03-topics}
+## PH03 复习与实验 {#ph03-topics}
 
-以下主题目前提供参考笔记，尚未制作成同等深度的完整学习页。
+以上学习页覆盖 PH03 主题顺序。复习时先关闭解答独立作答，再诊断错误并重新尝试。实验分析可进入 [RP6](/zh/alevel/a2-physics/capacitor-charge-and-discharge/#required-practical-6) 和 [RP7](/zh/alevel/a2-physics/transformers-and-power-transmission/#data-transformer-efficiency)。阅读或处理数据不代表完成实体实验。
 
-1. <span id="5--magnetic-fields-310"></span><span id="51-magnetic-flux-density"></span><span id="52-force-on-a-current-carrying-conductor"></span><span id="53-flemings-left-hand-rule"></span><span id="54-force-on-a-moving-charge"></span>**[磁场与运动电荷](/zh/alevel/a2-physics/quick-reference/#5--magnetic-fields-310)**——力方向、磁通密度与圆周轨迹。
-2. <span id="55-magnetic-flux"></span><span id="56-magnetic-flux-linkage"></span><span id="57-faradays-law-of-electromagnetic-induction"></span><span id="58-lenzs-law"></span><span id="59-motional-emf"></span>**[电磁感应](/zh/alevel/a2-physics/quick-reference/#55-magnetic-flux)**——磁通链、法拉第定律与楞次定律。
-3. <span id="510-alternating-currents"></span><span id="511-the-transformer"></span>**[交流电与变压器](/zh/alevel/a2-physics/quick-reference/#510-alternating-currents)**——有效值、示波器测量、输电与必做实验 7。
 
 <span id="-key-required-practicals-unit-3"></span><span id="-summary-comparing-gravitational-fields-and-electric-fields"></span><span id="similarities"></span><span id="differences"></span><span id="-summary-electric-fields-and-magnetic-fields"></span><span id="how-electric-and-magnetic-fields-are-connected"></span><span id="charged-particles-in-electric-and-magnetic-fields"></span><span id="velocity-selector-electric--magnetic-fields-combined"></span>
 
@@ -47,6 +48,6 @@ study_page: true
 
 ## 课程依据 {#course-reference}
 
-PH03 对应 [OxfordAQA 物理大纲](https://www.oxfordaqa.com/wp-content/uploads/2022/08/oxfordaqa-a-level-physics-specification.pdf) 3.6–3.10；PH04 热学对应 3.11。PH04 的其他章节尚未收录。
+PH03 对应 [OxfordAQA 物理大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf) 3.6–3.10；PH04 热学对应 3.11。PH04 的其他章节尚未收录。
 
-[打开参考笔记](/zh/alevel/a2-physics/quick-reference/)，查看完整主题提纲与公式提醒。后续完整课程增加时，速查也会继续修订。
+[打开参考笔记](/zh/alevel/a2-physics/quick-reference/)，查看主题提纲与公式提醒；解释和独立练习请进入上方学习页。
