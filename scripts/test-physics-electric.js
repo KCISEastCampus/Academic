@@ -52,8 +52,19 @@ close(.5 * me * (Math.sqrt(2 * e * 250 / me)) ** 2, e * 250);
 rounded(k * e ** 2 / (G * me * mp), '2.3e+39');
 rounded(k * e ** 2 / (G * me * 2 * mp), '1.1e+39');
 close((2 * 2 / 3 ** 2), 4 / 9);
-close(-(40 - 120) / .02, 4000); close(4000 * .02, 80);
-rounded(-e * (-80), '1.28e-17', 3);
+// Q4: negative point-source curve, signed radial field and energy work.
+const graphV=r=>-k*4e-9/r,dh=1e-6;
+const graphE=r=>-(graphV(r+dh)-graphV(r-dh))/(2*dh);
+rounded(graphE(.2),'-9.0e+2');
+const deltaPotential=graphV(.3)-graphV(.1);
+rounded(3e-9*deltaPotential,'7.2e-7');
+let graphArea=0;
+for(let i=0;i<2000;i++) graphArea+=graphE(.1+(i+.5)*.0001)*.0001;
+close(graphArea,-deltaPotential,1e-6);
+const radii=[-300,-200,-100].map(v=>-k*4e-9/v);
+assert(radii[1]-radii[0]<radii[2]-radii[1]);
+close(graphV(radii[1])-graphV(radii[1]),0);
+assert(graphE(radii[1])<0);
 // Oil-drop equilibrium uses only the external plate field; X includes both source fields.
 const plates = 16 / .0015, q = -4.8e-19, mass = -q * plates / 9.81;
 close(q * plates, -mass * 9.81);
@@ -69,7 +80,7 @@ assert(!/[\u3400-\u9fff]/u.test(source));
 assert.equal((source.match(/### Example /g) || []).length, 6);
 assert.equal((source.match(/### Question /g) || []).length, 8);
 assert.equal((html.match(/<details\b/g) || []).length, 18);
-assert.equal((html.match(/<img[^>]*data-lazy-ignore="true"/g) || []).length, 3);
+assert.equal((html.match(/<img[^>]*data-lazy-ignore="true"/g) || []).length, 4);
 for (const id of ['force-and-field-strength', 'potential-and-potential-energy', 'graphs-and-equipotentials', 'combining-fields-and-potentials', 'uniform-fields-between-plates', 'motion-across-a-uniform-field', 'comparing-electric-and-gravitational-fields', 'practice', 'quick-reference']) {
   assert(html.includes(`id="${id}"`), `Missing section: ${id}`);
 }

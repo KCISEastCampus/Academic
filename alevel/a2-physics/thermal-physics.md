@@ -23,6 +23,8 @@ This chapter covers Sections 3.11.1–3.11.4 and required practicals 8 and 9. Ad
 
 **Analyse records:** [RP8 heating](#data-specific-heat) · [RP9 Boyle](#data-boyle) · [RP9 Charles](#data-charles). These activities use constructed data and do not replace carrying out the practicals.
 
+**Work in four stages:** [1. Energy, calorimetry and RP8](#internal-energy) → [2. Steady flow and conduction](#continuous-flow) → [3. Gas state, work and RP9](#ideal-gases) → [4. Molecular explanation](#kinetic-theory). After each stage, try its linked examples and records before the mixed [practice](#practice). Continuous-flow calorimetry remains part of the core route.
+
 ## Choose a model before calculating {#method}
 
 **Learning targets:** choose an energy balance from the physical process, state its conditions, calculate with consistent units, and check the result against the process or measurements.
@@ -112,6 +114,15 @@ No. Energy absorbed increases the particles' potential energy as the structure c
 </details>
 
 ## Required Practical 8: electrical specific heat capacity {#required-practical-8}
+
+**Draw before reading the method — self-written task:** Draw a labelled arrangement for measuring the specific heat capacity of a metal block electrically. Place the ammeter, voltmeter, heater, temperature sensor and insulation. State which measured quantities give electrical energy and which give the block's temperature rise. Identify one energy transfer that the simplest calculation neglects.
+
+<details markdown="1">
+<summary>Check your apparatus</summary>
+
+The ammeter is in series; the voltmeter is across the heater. Show close thermal contact between block, heater and sensor, with insulation around the block. Electrical power and elapsed time give input energy; two temperature readings give the rise. Heat reaching the surroundings or apparatus must be considered.
+
+</details>
 
 Measure the mass $m$ of a metal block. Insert an electrical heater and thermometer into close-fitting holes; improve thermal contact with a suitable small amount of contact material and insulate the block. Connect an ammeter in series and a voltmeter **across the heater**. Measure $V$, $I$, elapsed time $t$ and temperature rise $\Delta\theta$. For approximately constant electrical power, negligible losses and negligible apparatus heat capacity:
 
@@ -366,6 +377,15 @@ $$\Delta U=Q+W=-750+300=\boxed{-450\,\mathrm J}.$$
 **3. Check.** The 750 J transferred out is supplied by 300 J of work input and a 450 J decrease in internal energy. Compression does not always raise temperature: energy can leave during the process. Compare with expansion in [Question 6](#question-6), where the work sign reverses.
 
 ## Required Practical 9: Boyle and Charles {#required-practical-9}
+
+**Draw before reading the method — self-written task:** Sketch separate arrangements for testing Boyle's law and Charles's law with a fixed gas sample. Mark the sample boundary, measured quantities and the quantity held constant in each. Show where connecting-tube volume must be included and where a boundary must move. Explain why sealing the sample does not always mean fixing its volume.
+
+<details markdown="1">
+<summary>Check your apparatus</summary>
+
+For Boyle, show a sealed gas volume connected to an absolute-pressure sensor and a slow adjustable boundary; count the tube volume and wait at each setting for thermal equilibration. For Charles, show a freely moving marker or piston and a stirred temperature bath; the fixed sample can expand at approximately constant external pressure. Sealed fixes the amount of gas, not necessarily its volume.
+
+</details>
 
 **Boyle's law:** trap a fixed gas sample in a suitable syringe or pressure–volume apparatus. Measure several volumes and corresponding **absolute** pressures at constant temperature. Change volume slowly, allow temperature to settle after each change, and check for leaks. Plot $p$ against $1/V$; an approximately straight line through the origin supports constant $pV$. Include any known connecting-tube volume. Rapid compression heats the gas, so an immediate reading need not represent an isothermal result.
 
@@ -661,6 +681,8 @@ Retain unrounded moles in the following calculations. The mass is about 0.281 g,
 
 ### Question 6: expansion and the first law {#question-6}
 
+*Further application: guided use of the earlier p–V figure; its work values are already shown.*
+
 A gas expands from $2.0\times10^{-3}\,\mathrm{m^3}$ to $5.0\times10^{-3}\,\mathrm{m^3}$ against a constant external pressure of 100 kPa. It receives 750 J by heating. Find the work done by the gas, work done on the gas and change in internal energy.
 
 <details markdown="1">
@@ -727,17 +749,27 @@ Both gases at 300 K have the same mean translational kinetic energy, $\tfrac32k_
 
 A microscope shows bright smoke particles moving irregularly in air. State what is being observed and what causes the motion. Explain, using momentum transfer, why an ideal gas exerts greater pressure when compressed at constant temperature.
 
+Now heat two separate fixed samples of the same ideal gas, initially at the same temperature and pressure. One is in a sealed rigid container; the other is beneath a frictionless piston moving slowly against constant external pressure. Neglect changes in gravitational potential energy of the gas itself. Draw each boundary and particle model before and after heating. Predict the changes in pressure, volume, number density and rms molecular speed. Explain how wall collisions account for each pressure result, and correct the claim: “Constant pressure means constant molecular speed.”
+
 <details markdown="1">
 <summary>Hint</summary>
 
-Separate the visible suspended particles from the invisible molecules that strike them. Pressure concerns momentum transfer per second per unit area.
+Separate the visible suspended particles from the invisible molecules that strike them. Identify what the container fixes before using the gas model. Pressure is momentum transfer per second per unit area; both number density and the molecular speed distribution matter.
 
 </details>
 
 <details markdown="1">
-<summary>Solution</summary>
+<summary>Solution and retry</summary>
 
-The visible objects are smoke particles. Uneven impacts from randomly moving air molecules cause their irregular motion. Isothermal compression leaves average molecular kinetic energy unchanged, but increases collision frequency with the walls. The rate of momentum transfer per unit wall area increases, giving greater pressure. Do not claim the molecules have become faster at unchanged temperature.
+The visible objects are smoke particles. Uneven impacts from randomly moving air molecules cause their irregular motion. In isothermal compression, average molecular kinetic energy and rms speed stay constant. Number density rises, increasing the rate of momentum transfer per unit wall area and therefore pressure.
+
+**Rigid container:** draw the same volume and number of particles, but longer representative velocity arrows after heating. Temperature and rms speed rise; number density is unchanged. Molecules transfer more momentum per collision on average and strike a given wall area more frequently, so pressure rises.
+
+**Constant-pressure piston:** draw a larger volume with the same particle count and longer representative velocity arrows. Temperature and rms speed rise, but number density falls as the piston moves out. In $p=\tfrac13\rho c_{\mathrm{rms}}^2$, the reduction in mass density offsets the increase in mean-square speed. Their combined effect leaves momentum transfer per second per unit area, and hence pressure, unchanged once mechanical balance is restored. Do not infer the pressure from collision count alone.
+
+The piston can move without gas leaking out. Constant pressure does not mean constant speed: the gas expands while becoming hotter. Draw arrows as representative random molecular velocities, not as an organised outward bulk flow.
+
+**Retry:** double the absolute temperature. In the rigid container pressure doubles; under constant pressure volume doubles and number density halves. Both rms speeds increase by $\sqrt2$.
 
 </details>
 

@@ -343,25 +343,35 @@ $$\boxed{W_{\text{external}}=3.13\times10^9\,\mathrm J}.$$
 
 ### 练习 4：势能梯度 {#question-4-potential-energy-gradient}
 
-A potential-energy graph for a $37\,\mathrm{kg}$ rock has a tangent gradient of $+1.4\,\mathrm{J\,m^{-1}}$ at a point. The positive direction is along increasing distance on the horizontal axis. Find the force component and the field-strength component. Explain what happens at a maximum of this graph along the line joining two source masses.
+*Self-written; constructed teaching figure, not experimental data.*
+
+The graph shows the gravitational potential energy $U$ of a $37\,\mathrm{kg}$ test rock along the line between two fixed source masses. The rock has negligible influence on the sources. Positive $x$ points to the right; potential energy is zero at infinity.
+
+Draw a tangent at P, at $x=0.60\times10^8\,\mathrm m$. Estimate the signed force and field-strength components there. Locate the zero-field position from the curve. Is the potential zero there? Predict the initial motion after a small displacement to either side of that position along the line.
+
+<img src="/assets/img/physics-gravity-practice.svg" alt="Potential energy of a thirty-seven kilogram test rock versus position between fixed sources; P is marked at 0.60 times ten to the eight metres. Both axes show scale factors; no tangent is supplied." width="520" height="410" data-lazy-ignore="true">
 
 <details markdown="1">
 <summary>提示</summary>
 
-先由负斜率得到力，再除以岩石质量得到场强。
+先读清两轴的十次幂。用 $F_x=-\mathrm dU/\mathrm dx$，再除以质量。判断平衡要比较两侧斜率，不能只看曲线高度。
 
 </details>
 
 <details markdown="1">
-<summary>解答</summary>
+<summary>解答与再尝试</summary>
 
-$$F=-1.4\,\mathrm N.$$
+P 点切线向右上方倾斜，其斜率约为：
 
-$$g=\frac{-1.4}{37}\approx\boxed{-0.038\,\mathrm{N\,kg^{-1}}}.$$
+$$\frac{\mathrm dU}{\mathrm dx}\approx\frac{0.51\times10^7\,\mathrm J}{0.10\times10^8\,\mathrm m}=+0.51\,\mathrm{J\,m^{-1}}.$$
 
-力和场均沿负方向。势能本身除以质量得到的是势，不是场强。
+这里的差值取自所画切线上的两点，不是横跨曲线的割线。合理作图可得到约 0.4–0.65 牛顿的力的大小。
 
-最大值处切线水平，两吸引力平衡、合场为零，势能仍可为负。沿连线的小位移使岩石远离这个不稳定平衡位置。
+$$F_x\approx\boxed{-0.51\,\mathrm N},\qquad g_x=\frac{F_x}{37}\approx\boxed{-0.014\,\mathrm{N\,kg^{-1}}}.$$
+
+两者均向左。水平切线在 $x=1.0\times10^8\,\mathrm m$ 附近。这里场强为零，但 $U\approx-7.4\times10^7\,\mathrm J$，引力势 $U/m\approx-2.0\times10^6\,\mathrm{J\,kg^{-1}}$ 均不为零。左侧斜率为正，力向左；右侧斜率为负，力向右，因此沿连线是不稳定平衡。
+
+**再尝试：**源质量及位置不变，测试石块质量加倍。势能曲线与力均加倍，场强及零场位置不变。曲线高度除以质量得到势，不是场强。
 
 </details>
 

@@ -361,29 +361,45 @@ The electron's force is opposite to the field, towards the positive source. Its 
 
 ### Question 4: gradient, area and energy
 
-A $V$–$x$ graph is a straight line from $120\,\mathrm V$ at $x=0$ to $40\,\mathrm V$ at $x=0.020\,\mathrm m$. Find the field component. An electron moves between these points in the positive $x$ direction. Find the signed change in its potential energy and the work done by the field.
+*Self-written; constructed teaching figure, not experimental data.*
+
+The upper graph shows the potential of a fixed negative point source, with zero potential at infinity. Positive radial direction is outwards. A small test charge does not disturb the source.
+
+1. Draw a tangent at P, at $r=0.20\,\mathrm m$, and estimate the signed radial field component. Sketch the signed field against radius and relate its area from $0.10\,\mathrm m$ to $0.30\,\mathrm m$ to the potential change.
+2. A $+3.0\,\mathrm{nC}$ test charge moves from $0.10\,\mathrm m$ to $0.30\,\mathrm m$. Use graph readings to find its potential-energy change and the work done by the field.
+3. The lower panel shows equipotential circles for the same source. Draw a field arrow through A, explain what the spacing says about field strength, and find the work done by the field when the same charge moves from A to B. Does this imply zero field at A?
+
+<img src="/assets/img/physics-electric-practice.svg" alt="Upper panel: potential against outward radial distance for a negative source, with P at 0.20 metres. Lower panel: circular contours labelled minus one hundred, minus two hundred and minus three hundred volts; A and B are on the minus two hundred volt circle. No field arrows are supplied." width="520" height="920" data-lazy-ignore="true">
 
 <details markdown="1">
 <summary>Hint</summary>
 
-Use the negative gradient for field strength and $q\Delta V$ for the change in potential energy.
+Use $E_r=-\mathrm dV/\mathrm dr$ and $\Delta E_p=q\Delta V$. Field lines cross equipotentials normally; equal potential steps allow a spacing comparison.
 
 </details>
 
 <details markdown="1">
-<summary>Solution</summary>
+<summary>Solution and retry</summary>
 
-$$E_x=-\frac{40-120}{0.020}.$$
+At P the potential tangent has positive gradient, approximately $+9.0\times10^2\,\mathrm{V\,m^{-1}}$. Thus:
 
-$$\boxed{E_x=+4.0\times10^3\,\mathrm{V\,m^{-1}}}.$$
+$$\boxed{E_r\approx-9.0\times10^2\,\mathrm{N\,C^{-1}}}.$$
 
-The signed area under the field graph is $E_x\Delta x=+80\,\mathrm V$, so $\Delta V=-80\,\mathrm V$.
+It points inwards. A reasonable tangent giving roughly 0.8–1.0 kilonewtons per coulomb in magnitude is acceptable. The field sketch lies below zero, is more negative at small radius and approaches zero as radius increases; its magnitude falls as inverse radius squared.
 
-$$\Delta E_p=(-1.60\times10^{-19})(-80).$$
+The graph gives approximately $V(0.10)=-360\,\mathrm V$ and $V(0.30)=-120\,\mathrm V$:
 
-$$\boxed{\Delta E_p=+1.28\times10^{-17}\,\mathrm J}.$$
+$$\Delta V\approx+240\,\mathrm V,\qquad \int_{0.10}^{0.30}E_r\,\mathrm dr=-\Delta V\approx-240\,\mathrm V.$$
 
-The field does $\boxed{-1.28\times10^{-17}\,\mathrm J}$ of work. The electron moves against its electric force. If no other force acts, it must have enough initial kinetic energy to complete the move; it loses this amount of kinetic energy.
+$$\Delta E_p\approx(3.0\times10^{-9})(240)=\boxed{+7.2\times10^{-7}\,\mathrm J}.$$
+
+$$W_{\text{field}}=-\Delta E_p\approx\boxed{-7.2\times10^{-7}\,\mathrm J}.$$
+
+The charge moves against its inward force: an external agent must supply energy if its kinetic energy stays constant. Through A draw an inward radial arrow, perpendicular to the circle. The equal 100 V steps are closer together nearer the source, indicating a larger field magnitude there; do not compare spacing without checking the potential intervals.
+
+A and B both have potential $-200\,\mathrm V$, so $\Delta V=0$ and field work is zero between them. The field at A is nonzero: a tangential move is perpendicular to the force. Zero work is not proof of zero force.
+
+**Retry:** replace the test charge by a negative charge of the same magnitude. Potential and field stay the same; potential-energy change and field work reverse sign.
 
 </details>
 

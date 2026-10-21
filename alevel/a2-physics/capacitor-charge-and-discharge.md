@@ -282,7 +282,7 @@ Plot $\ln[(V_s-V_C)/1\,\mathrm V]$ against $t$, not $\ln(V_C/1\,\mathrm V)$. Its
 
 <img src="/assets/img/physics-rc-log.svg" alt="Discharge voltage falls exponentially from eight volts with a ten second time constant. Its natural logarithm plotted against time is a straight line of gradient minus 0.100 per second, giving a ten second time constant." width="400" height="600" data-lazy-ignore="true">
 
-Very small discharge voltages and very small charging shortfalls have large fractional uncertainty. For discharge, approximately $\Delta(\ln V)\approx\Delta V/V$. Exclude readings below useful instrument resolution with a stated reason, rather than removing inconvenient points. A switch or timing delay shifts the log-line intercept but does not change its gradient if the subsequent discharge still follows the model.
+Very small discharge voltages and very small charging shortfalls have large fractional uncertainty. For discharge, approximately $\Delta(\ln V)\approx\Delta V/V$. Exclude readings below useful instrument resolution with a stated reason, rather than removing inconvenient points. Omitting early samples while retaining switch closure as time zero leaves the ideal log-line intercept unchanged. Resetting the time origin shifts the intercept; it leaves the gradient unchanged if the same discharge model applies.
 
 For charging, uncertainty in $V_s$ also affects the shortfall, especially near the final voltage. A curved log plot can indicate changing resistance, leakage, instrument loading or an unsuitable model. Check the circuit and readings before forcing a straight line.
 
@@ -346,13 +346,17 @@ $$y\approx2.0781-(0.09985\,\mathrm{s^{-1}})t.$$
 
 $$RC\approx10.0\,\mathrm s,\qquad C\approx100\,\mathrm{\mu F}.$$
 
-The residuals in this interval are small and alternate in sign, consistent with rounding within the stated voltage uncertainty. They do not show a systematic bend. Draw uncertainty bars before claiming a precise gradient range; add the resistance contribution when estimating uncertainty in $C$. The fitted 100 μF is an estimate, not an exact component value.
+The residuals in this interval are small, include both signs and show no clear systematic bend. Their voltage equivalents are within the stated ±0.02 V uncertainty; they do not strictly alternate. Draw uncertainty bars before claiming a precise gradient range; add the resistance contribution when estimating uncertainty in $C$. The fitted 100 μF is an estimate, not an exact component value.
 
 Late voltages carry large fractional uncertainty: taking logs makes their scatter more prominent, rather than showing that the circuit must have stopped obeying an exponential model. A zero lower limit cannot be put on a log graph.
 
 A constant meter input resistance in parallel gives a smaller constant effective resistance. The plot can remain straight while $RC$ and the inferred capacitance are biased low if the meter is ignored. If resistance grows during discharge, the magnitude of the negative log gradient decreases: the curve becomes less steep. This is a possible explanation to test, not proof of a unique cause.
 
-**Retry:** if the recording starts 3 s after the switch closes, while the resistance remains constant, which fitted quantity changes? The intercept changes; the gradient, time constant and capacitance estimate do not.
+**Retry:** readings start 3 s after closure. Compare retaining closure as time zero with resetting the logger to zero at the first reading. In the ideal model, merely omitting samples changes neither slope nor intercept; fewer readings can change their experimental estimates and uncertainty. With a reset, $t'=t-3\,\mathrm s$, so:
+
+$$y=b-\frac{t}{\tau}=\left(b-\frac{3\,\mathrm s}{\tau}\right)-\frac{t'}{\tau}.$$
+
+Only the time-coordinate change shifts the ideal intercept. The gradient, time constant and capacitance remain unchanged.
 
 </details>
 
@@ -416,21 +420,43 @@ The energy fraction is $(2.25/9.0)^2=\boxed{1/16}$, or 6.25%. Charge and voltage
 
 ### Question 3: a gradient and an area
 
-At one instant on a discharge voltage graph, the tangent gradient is $-0.30\,\mathrm{V\,s^{-1}}$. Capacitance is $200\,\mathrm{\mu F}$. Find the current magnitude. During the first $5.0\,\mathrm s$, the area under the current-magnitude graph is $0.40\,\mathrm{mC}$. If initial charge is $1.0\,\mathrm{mC}$, find the charge remaining.
+*Self-written; constructed teaching figure, not experimental data.*
+
+An ideal capacitor of capacitance $20\,\mathrm{\mu F}$ discharges through a fixed resistor. The graph shows the positive charge remaining on its originally positive plate. Take conventional current leaving that plate as positive.
+
+1. Draw a tangent at P, at $t=10\,\mathrm s$. Estimate the capacitor voltage and current there, including the current sign.
+2. Sketch voltage and signed current against time, with numerical intercepts and a common time scale.
+3. Estimate the area under your current graph from 0 to $20\,\mathrm s$, and use it to find the charge remaining. Check against the supplied charge curve.
+
+<img src="/assets/img/physics-rc-practice.svg" alt="Remaining positive plate charge versus time with P at ten seconds, labelled scales and no supplied tangent." width="520" height="410" data-lazy-ignore="true">
 
 <details markdown="1">
 <summary>Hint</summary>
 
-Use $I=C\lvert \mathrm dV_C/\mathrm dt\rvert $. The area is charge transferred during the interval.
+Use $V_C=Q/C$ and $I=-\mathrm dQ/\mathrm dt$ for the stated direction. An area under current gives charge moved, not charge remaining.
 
 </details>
 
 <details markdown="1">
-<summary>Solution</summary>
+<summary>Solution and retry</summary>
 
-$$I=(200\times10^{-6})(0.30)=\boxed{60\,\mathrm{\mu A}}.$$
+A tangent at P gives approximately $-3.7\,\mathrm{\mu C\,s^{-1}}$. Thus $I\approx+3.7\,\mathrm{\mu A}$. A decreasing stored charge does not mean negative current for the chosen outward direction.
 
-The capacitor is losing charge, so its charge gradient is negative. The current magnitude is positive. Charge remaining is $1.0-0.40=\boxed{0.60\,\mathrm{mC}}$.
+$$V_C(10)\approx\frac{37\,\mathrm{\mu C}}{20\,\mathrm{\mu F}}\approx\boxed{1.8\,\mathrm V}.$$
+
+Both sketches are positive decreasing exponentials with the same time constant, approaching zero smoothly. The voltage intercept is $5.0\,\mathrm V$; the initial charge tangent gives a current intercept of approximately $10\,\mathrm{\mu A}$.
+
+The figure was constructed from $Q=100e^{-t/10}\,\mathrm{\mu C}$; this is an answer check, not a formula supplied for the reading task. It gives:
+
+$$V_C=5.0e^{-t/10}\,\mathrm V,\qquad I=10e^{-t/10}\,\mathrm{\mu A}.$$
+
+$$\int_0^{20} I\,\mathrm dt=100(1-e^{-2})\,\mathrm{\mu C}\approx\boxed{86\,\mathrm{\mu C}}.$$
+
+$$Q(20)=100-86.5\approx\boxed{14\,\mathrm{\mu C}}.$$
+
+A graphical area of roughly 85–88 microcoulombs and a reasonable tangent near P are sufficient; the supplied curve gives about 14 microcoulombs remaining. Do not use one instantaneous current multiplied by the whole interval.
+
+**Retry:** reverse the positive current direction. The curve and its signed area become negative; the physical charge lost and remaining charge stay the same.
 
 </details>
 
@@ -591,7 +617,7 @@ Both current magnitudes start at $V_s/R$ and decrease as $e^{-t/RC}$. Therefore 
 
 Before moving on, check that you can explain why current falls, sketch all three quantities, distinguish time constant from time to halve, interpret gradients and areas, and describe how to determine $RC$ using log-linear plotting.
 
-[Previous lesson: Capacitance](/alevel/a2-physics/capacitance/) · [PH03 course index](/alevel/a2-physics/) · [Radioactivity reference notes](/alevel/a2-physics/quick-reference/#44-exponential-decay-in-radioactivity)
+[Next lesson: Radioactive Decay](/alevel/a2-physics/radioactive-decay/) · [Previous lesson: Capacitance](/alevel/a2-physics/capacitance/) · [PH03 course index](/alevel/a2-physics/)
 
 <details markdown="1">
 <summary>Sources and exam wording</summary>

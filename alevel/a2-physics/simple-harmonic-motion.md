@@ -332,29 +332,43 @@ At $x=-0.020\,\mathrm m$, $a=-100(-0.020)=+2.0\,\mathrm{m\,s^{-2}}$, towards equ
 
 ### Question 2: starting at equilibrium
 
-A particle passes through equilibrium in the positive direction at $t=0$. Its amplitude is $0.030\,\mathrm m$ and its period is $0.80\,\mathrm s$. Write an equation for $x(t)$ and find $x$, $v$ and $a$ at $t=0.20\,\mathrm s$.
+*Self-written; constructed teaching figure, not experimental data.*
+
+The trace shows a particle undergoing SHM. Read the amplitude and period from the graph, and write an equation for $x(t)$ in SI units. From the trace alone, state the signs of velocity and acceleration at $t=0.10\,\mathrm s$. Calculate $x$, $v$ and $a$ at $t=0.20\,\mathrm s$, then sketch a velocity–time graph with a numerical vertical scale.
+
+<img src="/assets/img/physics-shm-practice.svg" alt="A displacement trace in millimetres against time in seconds, starting at zero with positive slope; axis scales are supplied for independent reading." width="520" height="410" data-lazy-ignore="true">
 
 <details markdown="1">
 <summary>Hint</summary>
 
-Choose a sine equation with a positive initial velocity. The stated time is one quarter of a period.
+Use a complete repeat of the trace for the period. The initial displacement and slope determine the phase; the slope gives velocity, while acceleration points towards equilibrium.
 
 </details>
 
 <details markdown="1">
-<summary>Solution</summary>
+<summary>Solution and retry</summary>
+
+The graph gives amplitude $30\,\mathrm{mm}=0.030\,\mathrm m$ and period $0.80\,\mathrm s$. At zero time the particle crosses equilibrium in the positive direction:
 
 $$\omega=\frac{2\pi}{0.80}=2.5\pi\,\mathrm{rad\,s^{-1}}.$$
 
 $$x=0.030\sin(2.5\pi t).$$
 
-At $t=0.20\,\mathrm s$, the particle is at its positive extreme:
+At $t=0.10\,\mathrm s$, the trace is above zero and rising: velocity is positive, acceleration negative. A rising displacement does not imply positive acceleration.
+
+At $t=0.20\,\mathrm s$ the particle is at its positive extreme:
 
 $$x=+0.030\,\mathrm m,\qquad v=0.$$
 
 $$a=-(2.5\pi)^2(0.030)\approx\boxed{-1.9\,\mathrm{m\,s^{-2}}}.$$
 
-It is momentarily at rest but has acceleration towards equilibrium.
+The velocity graph has the same period, starts at its positive maximum and crosses zero at each displacement extreme:
+
+$$v=0.030(2.5\pi)\cos(2.5\pi t)\,\mathrm{m\,s^{-1}},\qquad v_{\max}\approx0.24\,\mathrm{m\,s^{-1}}.$$
+
+It is momentarily at rest at the displacement extreme, but still accelerates towards equilibrium.
+
+**Retry:** reflect the supplied trace in the time axis. The initial direction reverses; negate the displacement equation and its derivatives, while amplitude and period remain unchanged.
 
 </details>
 
@@ -442,6 +456,50 @@ Doubling the bob mass leaves the ideal small-angle period unchanged.
 
 </details>
 
+#### Choose and test a pendulum graph {#data-pendulum-records}
+
+*Self-written; constructed records for a small-angle pendulum, not a completed practical. This reuses AS timing skills.*
+
+Each timing covers 20 complete oscillations. The displayed length has uncertainty ±0.002 m and each total timing has uncertainty ±0.2 s. Keep the amplitude small and use the same bob and timing method.
+
+| Measured length / m | First total time / s | Second total time / s |
+| --- | --- | --- |
+| 0.400 | 26.0 | 26.1 |
+| 0.600 | 31.6 | 31.5 |
+| 0.800 | 36.3 | 36.4 |
+| 1.000 | 40.5 | 40.6 |
+| 1.200 | 44.3 | 44.4 |
+
+Choose a processing method and graph that use all the records to estimate $g$. Show your axes, units and gradient calculation. Decide whether to force the line through the origin, and explain what its intercept could reveal. Suggest a measurement check before claiming the model has failed.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Calculate mean total time, then period. Rearrange the small-angle period relation into a straight-line form; do not square the full 20-cycle timing as if it were one period. Consider a constant error in the measured length.
+
+</details>
+
+<details markdown="1">
+<summary>Analysis and retry</summary>
+
+Mean periods are $1.3025,1.5775,1.8175,2.0275,2.2175\,\mathrm s$. Plot their squares vertically against measured length horizontally, rather than choosing a graph only because it looks straight. A fit allowing an intercept gives:
+
+$$T^2\approx(4.032\,\mathrm{s^2\,m^{-1}})L_{\mathrm{measured}}+0.0777\,\mathrm{s^2}.$$
+
+$$g=\frac{4\pi^2}{\text{gradient}}\approx\boxed{9.8\,\mathrm{m\,s^{-2}}}.$$
+
+Use the slope, not one value of period divided by length. Plot length and period-squared uncertainty bars; approximately $\Delta(T^2)\approx2T\Delta T$ with $\Delta T=0.2/20=0.010\,\mathrm s$ as a conservative timing contribution. Repeats help assess scatter but do not remove a shared timing or length bias.
+
+The positive intercept suggests checking the length zero before forcing the line through the origin. A length offset compatible with this fit is:
+
+$$\delta L\approx\frac{0.0777}{4.032}\,\mathrm m\approx0.019\,\mathrm m.$$
+
+This would mean that the effective pendulum length is about 1.9 cm greater than the displayed length. Check the pivot-to-bob-centre measurement and compare uncertainty ranges; an intercept alone does not uniquely identify the cause or disprove the small-angle model.
+
+**Retry:** length is instead measured from the pivot to the bottom of the bob. For a bob of fixed radius this overestimates the effective length. A single-reading estimate of $g$ is then too high, while a $T^2$–measured-length fit has a negative intercept. Its slope still gives the same ideal $g$.
+
+</details>
+
 ### Question 6: explanation and derivation
 
 **Adapted from OxfordAQA PH03, January 2020, Question 1.**
@@ -504,6 +562,51 @@ The equilibrium extension changes to $Mg/k$. The mass starts at rest below this 
 
 </details>
 
+## Resonance and Damping: AS Transfer {#resonance-and-damping}
+
+Free oscillations occur at the system's natural frequency. A periodic driving force can sustain oscillations; in steady forced motion the oscillation frequency is the **driving frequency**. With light damping, the response is largest near the natural frequency: resonance. Compare responses with the same driving-force amplitude.
+
+Increased damping transfers more mechanical energy to the surroundings, lowers the resonance peak and makes it less sharp. A steady forced oscillation need not have a decreasing amplitude: average input power balances average dissipation. Once the driver is switched off, there is no continuing energy input and damping makes the free-oscillation amplitude decrease. Review [AS forced vibrations and resonance](/alevel/as-physics/#62-forced-vibrations-and-resonance) if needed.
+
+### Question 8: explain a driven system {#question-8-driven-system}
+
+*Self-written; AS transfer calibrated against OxfordAQA 9630 PH03, Specimen 2019, Q6.6–6.7 (QP pp.16–17; MS p.11), not an original exam question.*
+
+A $0.25\,\mathrm{kg}$ mass is attached to a spring of spring constant $100\,\mathrm{N\,m^{-1}}$. A driver applies a periodic force of fixed amplitude. Damping is initially light. Calculate the undamped natural frequency, then compare the steady responses when the driving frequency is 2.0, 3.2 and 5.0 Hz. State the oscillation frequency in the 2.0 Hz run. Explain what stronger damping does to the resonance curve and why a steady amplitude is possible despite energy loss. Finally describe the motion after the driver is switched off while damping remains.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Use the mass–spring period to obtain natural frequency. Separate the driver frequency from the natural frequency, and compare energy input with dissipation before and after switch-off.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and retry</summary>
+
+$$f_0=\frac{1}{2\pi}\sqrt{\frac{k}{m}}=\frac{1}{2\pi}\sqrt{\frac{100}{0.25}}\approx\boxed{3.2\,\mathrm{Hz}}.$$
+
+With light damping and the same driving-force amplitude, 3.2 Hz is closest to resonance and gives the largest steady response of the three. The steady oscillation in the 2.0 Hz run is at **2.0 Hz**, not automatically at the natural frequency. Stronger damping gives a lower, broader resonance peak.
+
+At steady amplitude the driver supplies, on average, the energy dissipated each cycle. After switch-off the system oscillates freely with decreasing amplitude as mechanical energy is transferred to the surroundings. Do not describe a steady driven oscillation as losing net energy every cycle without replacement.
+
+</details>
+
+### Retry: change the system {#retry-resonance}
+
+*Self-written.*
+
+The mass is doubled while the spring and the 3.2 Hz driver are unchanged. Predict the new natural frequency and explain why the earlier near-resonance conclusion must be reconsidered.
+
+<details markdown="1">
+<summary>Retry feedback</summary>
+
+$$f'_0=f_0/\sqrt2\approx\boxed{2.3\,\mathrm{Hz}}.$$
+
+The natural frequency is now lower while the driver remains at 3.2 Hz. Compare driver and system again rather than assuming they remain matched. The steady forced oscillation is still at the driving frequency; the response amplitude must be reconsidered.
+
+</details>
+
 ## Quick Reference
 
 | Use | Equation and condition |
@@ -531,5 +634,7 @@ This lesson follows Section 3.6.2 of the [OxfordAQA Physics specification](https
 Textbook support: Jim Breithaupt, *Oxford International AQA Examinations: International A Level Physics*, Chapter 16, printed pp. 285–296. The teacher's AS handouts inform the use of short explanations, graph reading, spring and pendulum models, and staged exercises.
 
 Questions 6–7 are adapted from OxfordAQA PH03 January 2020 Question 1 and June 2024 Question 9; the momentum checkpoint is adapted from June 2024 Question 8. The official mark schemes were consulted before drafting. Answers were derived and checked independently rather than copied from textbook answer lists.
+
+Question 8 is self-written. Its qualitative targets connect AS specification 3.5.1–3.5.2 to the direct PH03 application in the [Specimen 2019 question paper](https://www.oxfordaqa.com/oaqaresources/science/assessment/9630-PH03-international-a-level-physics-specimen-paper-v4.2.pdf), Q6.6–6.7, and the [paired mark scheme](https://www.oxfordaqa.com/oaqaresources/science/assessment/9630-PH03-international-a-level-physics-mark-scheme-v4.2.pdf), p.11. These parts were read for this addition; no damped differential equation is introduced.
 
 </details>

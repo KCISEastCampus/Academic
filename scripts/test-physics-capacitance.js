@@ -41,8 +41,12 @@ const C0=5e-6,V0=12,Q0=C0*V0,d0=.001;
 close((Q0/(C0/2))/(2*d0),V0/d0);
 close(stored(C0/2,Q0),2*stored(C0,Q0));
 close(stored(C0/2,(C0/2)*V0),stored(C0,Q0)/2);
-close(24e-6/8,3e-6); close(stored(3e-6,24e-6),96e-6);
-close(8/24e-6,1/3e-6); close(8/24,(1/3e-6)*1e-6);
+// Q3: read V against Q, then integrate between two nonzero states.
+const graphC=(40-15)*1e-6/(8-3);
+close(graphC,5e-6); close((8-3)/((40-15)*1e-6),2e5);
+close(stored(graphC,40e-6),160e-6); close(stored(graphC,15e-6),22.5e-6);
+close(stored(graphC,40e-6)-stored(graphC,15e-6),(8+3)/2*25e-6);
+round(stored(graphC,40e-6)-stored(graphC,15e-6),'0.00014');
 close(stored(.001,.001*10)-stored(.001,.001*6),.032);
 close(.75*.032,.024); close(stored(.001,.001*6),.018);
 close(.180*(9-3)/36,.030); // Jan 2020 Q23: mF, not μF.
@@ -52,7 +56,7 @@ assert(!/[\u3400-\u9fff]/u.test(source));
 assert.equal((source.match(/### Example /g)||[]).length,5);
 assert.equal((source.match(/### Question /g)||[]).length,8);
 assert.equal((html.match(/<details\b/g)||[]).length,18);
-assert.equal((html.match(/<img[^>]*data-lazy-ignore="true"/g)||[]).length,2);
+assert.equal((html.match(/<img[^>]*data-lazy-ignore="true"/g)||[]).length,3);
 for(const id of ['charge-and-capacitance','graphs-and-constant-current','parallel-plate-capacitors','energy-stored','dielectrics-and-polar-molecules','connected-or-isolated','practice','quick-reference']) assert(html.includes(`id="${id}"`),id);
 assert(html.includes('A2 Physics</a>'));
 console.log('Capacitance passed: charge transfer, energy integration, connection conditions, geometry, graph units, all numerical answers and rendered structure.');

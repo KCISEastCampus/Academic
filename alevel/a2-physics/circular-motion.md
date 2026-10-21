@@ -101,6 +101,11 @@ For uniform circular motion, the inward resultant is perpendicular to velocity. 
 
 A $0.20\,\mathrm{kg}$ particle moves in a horizontal circle on a smooth table. A horizontal string joins it to a fixed point. The radius is $0.50\,\mathrm m$ and the speed is $3.0\,\mathrm{m\,s^{-1}}$. Find the tension.
 
+Before calculating, draw the particle, circle centre and all actual forces. Identify the vertical force balance and the inward resultant. Do not add a separate force named “centripetal force”.
+
+<details markdown="1">
+<summary>Compare your force diagram and calculation</summary>
+
 The weight acts downwards and the normal reaction acts upwards. They balance because there is no vertical acceleration. Tension $F_T$ acts horizontally towards the centre:
 
 $$F_T=\frac{0.20(3.0)^2}{0.50}=\boxed{3.6\,\mathrm N}.$$
@@ -112,6 +117,8 @@ If the string can withstand at most $5.0\,\mathrm N$:
 $$v_{\max}=\sqrt{\frac{F_{T,\max}r}{m}}\approx\boxed{3.5\,\mathrm{m\,s^{-1}}}.$$
 
 **Check:** doubling the speed would require four times the tension.
+
+</details>
 
 ### Example 3: a car on a level bend
 
@@ -296,7 +303,7 @@ This exceeds $6.0\,\mathrm N$, so the string cannot sustain that motion. At fixe
 
 ### Question 4: crest or dip?
 
-A $600\,\mathrm{kg}$ car moves at $10\,\mathrm{m\,s^{-1}}$. Find the normal reaction (a) at a hill crest of radius $25\,\mathrm m$ and (b) at the bottom of a dip of the same radius. Find the maximum speed at the crest. What would happen at the crest at $18\,\mathrm{m\,s^{-1}}$?
+A $600\,\mathrm{kg}$ car moves at $10\,\mathrm{m\,s^{-1}}$. Find the normal reaction (a) at a hill crest of radius $25\,\mathrm m$ and (b) at the bottom of a dip of the same radius. Find the maximum speed at the crest. What would happen at the crest at $18\,\mathrm{m\,s^{-1}}$? Before calculating, draw the actual forces and mark the circle centre separately for the crest and dip.
 
 <details markdown="1">
 <summary>Hint</summary>
@@ -319,6 +326,8 @@ Both reactions act upwards. The crest contact limit is:
 $$v_{\max}=\sqrt{9.81(25)}\approx\boxed{16\,\mathrm{m\,s^{-1}}}.$$
 
 At $18\,\mathrm{m\,s^{-1}}$, the circular-path equation would give $N=5886-7776=-1890\,\mathrm N$. A negative reaction is not possible for this contact. The car loses contact, and the assumed circular path no longer applies.
+
+**Force-diagram check:** draw weight down and road reaction up in both cases. At the crest their resultant is down; at the dip it is up. “Centripetal force” names that radial resultant, not an extra interaction. A negative reaction diagnoses loss of contact and failure of the assumed circular path; it does not reverse the road force.
 
 </details>
 

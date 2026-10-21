@@ -36,6 +36,17 @@ jobs:
           node scripts/test-exam-timetable.js
           node scripts/test-theme-init.js
           node scripts/test-image-modal.js
+      - name: Test physics lessons and bilingual content
+        run: |
+          node scripts/test-physics-circular.js
+          node scripts/test-physics-shm.js
+          node scripts/test-physics-gravity.js
+          node scripts/test-physics-electric.js
+          node scripts/test-physics-capacitance.js
+          node scripts/test-physics-charge-discharge.js
+          node scripts/test-physics-radioactive.js
+          node scripts/test-physics-thermal.js
+          node scripts/test-physics-bilingual.js
 
   markdown-lint:
     name: Markdown Lint

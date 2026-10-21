@@ -363,29 +363,45 @@ $$\boxed{E=\frac{2kQ}{a^2}}.$$
 
 ### 练习 4：斜率、面积与能量 {#question-4-gradient-area-and-energy}
 
-A $V$–$x$ graph is a straight line from $120\,\mathrm V$ at $x=0$ to $40\,\mathrm V$ at $x=0.020\,\mathrm m$. Find the field component. An electron moves between these points in the positive $x$ direction. Find the signed change in its potential energy and the work done by the field.
+*Self-written; constructed teaching figure, not experimental data.*
+
+The upper graph shows the potential of a fixed negative point source, with zero potential at infinity. Positive radial direction is outwards. A small test charge does not disturb the source.
+
+1. Draw a tangent at P, at $r=0.20\,\mathrm m$, and estimate the signed radial field component. Sketch the signed field against radius and relate its area from $0.10\,\mathrm m$ to $0.30\,\mathrm m$ to the potential change.
+2. A $+3.0\,\mathrm{nC}$ test charge moves from $0.10\,\mathrm m$ to $0.30\,\mathrm m$. Use graph readings to find its potential-energy change and the work done by the field.
+3. The lower panel shows equipotential circles for the same source. Draw a field arrow through A, explain what the spacing says about field strength, and find the work done by the field when the same charge moves from A to B. Does this imply zero field at A?
+
+<img src="/assets/img/physics-electric-practice.svg" alt="Upper panel: potential against outward radial distance for a negative source, with P at 0.20 metres. Lower panel: circular contours labelled minus one hundred, minus two hundred and minus three hundred volts; A and B are on the minus two hundred volt circle. No field arrows are supplied." width="520" height="920" data-lazy-ignore="true">
 
 <details markdown="1">
 <summary>提示</summary>
 
-用负斜率求场强，用 $q\Delta V$ 求势能变化。
+使用 $E_r=-\mathrm dV/\mathrm dr$ 与 $\Delta E_p=q\Delta V$。场线与等势线垂直；等电势差之间的间距可用于比较场强。
 
 </details>
 
 <details markdown="1">
-<summary>解答</summary>
+<summary>解答与再尝试</summary>
 
-$$E_x=-\frac{40-120}{0.020}.$$
+P 点电势切线斜率为正，约为 $+9.0\times10^2\,\mathrm{V\,m^{-1}}$。因此：
 
-$$\boxed{E_x=+4.0\times10^3\,\mathrm{V\,m^{-1}}}.$$
+$$\boxed{E_r\approx-9.0\times10^2\,\mathrm{N\,C^{-1}}}.$$
 
-场图的有符号面积为 $E_x\Delta x=+80\,\mathrm V$，因此 $\Delta V=-80\,\mathrm V$。
+方向向内。合理切线给出的大小约 0.8–1.0 千牛每库仑可接受。场强草图位于零线下方，小半径处更负，随半径增大趋近零；其大小按距离平方反比减小。
 
-$$\Delta E_p=(-1.60\times10^{-19})(-80).$$
+图中约有 $V(0.10)=-360\,\mathrm V$、$V(0.30)=-120\,\mathrm V$：
 
-$$\boxed{\Delta E_p=+1.28\times10^{-17}\,\mathrm J}.$$
+$$\Delta V\approx+240\,\mathrm V,\qquad \int_{0.10}^{0.30}E_r\,\mathrm dr=-\Delta V\approx-240\,\mathrm V.$$
 
-电场力做功 $\boxed{-1.28\times10^{-17}\,\mathrm J}$。电子逆着电力运动；若无其他力，必须有足够初动能完成移动，并损失相应动能。
+$$\Delta E_p\approx(3.0\times10^{-9})(240)=\boxed{+7.2\times10^{-7}\,\mathrm J}.$$
+
+$$W_{\text{field}}=-\Delta E_p\approx\boxed{-7.2\times10^{-7}\,\mathrm J}.$$
+
+电荷逆着向内的力移动；若动能不变，外界须供能。通过 A 画径向向内、垂直于圆的箭头。每级均相差 100 V，靠近源处间距更小，说明场更强；比较间距前必须先核对电势差。
+
+A、B 均为 $-200\,\mathrm V$，所以 $\Delta V=0$，两点之间电场做功为零。A 处电场不为零：沿圆的切向移动与力垂直。零功不能证明零力。
+
+**再尝试：**将测试电荷改为等量负电荷，电势与电场不变，势能变化和电场做功反号。
 
 </details>
 
