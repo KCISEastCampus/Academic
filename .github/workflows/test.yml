@@ -46,6 +46,7 @@ jobs:
           node scripts/test-physics-charge-discharge.js
           node scripts/test-physics-radioactive.js
           node scripts/test-physics-magnetic.js
+          node scripts/test-physics-electromagnetism.js
           node scripts/test-physics-thermal.js
           node scripts/test-physics-bilingual.js
 

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="520" height="500" preserveAspectRatio="xMinYMin meet" viewBox="0 0 520 500" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Transformer measurement circuit</title><desc>A primary and secondary separated electrically but linked by a shared core. Primary low-voltage AC source and secondary variable resistor are in separate loops. Each side has an ammeter in series and voltmeter across the winding.</desc>
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="520" height="500"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-500)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="520" height="500" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="23" y="463" style="font-family: Helvetica; font-size: 19px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,926) scale(1,-1)">RP7: measure each winding separately</text>
+			<text x="26" y="427" style="font-family: Helvetica; font-size: 14px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,854) scale(1,-1)">Shared core; circuit schematic</text>
+			<path d="M 255,175 L 255,358 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 265,175 L 265,358 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 220 195 C 245 200 245 225 220 230 C 245 235 245 260 220 265 C 245 270 245 295 220 300 C 245 305 245 330 220 335 " style="stroke: rgb(61%,18%,27%); stroke-linecap: butt; stroke-width: 2.5; fill: none; fill-rule: evenodd;"/>
+			<path d="M 300 195 C 275 200 275 225 300 230 C 275 235 275 260 300 265 C 275 270 275 295 300 300 C 275 305 275 330 300 335 " style="stroke: rgb(61%,18%,27%); stroke-linecap: butt; stroke-width: 2.5; fill: none; fill-rule: evenodd;"/>
+			<path d="M 220,170 L 220,195 Z" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<path d="M 220,335 L 220,360 Z" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<path d="M 300,170 L 300,195 Z" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<path d="M 300,335 L 300,360 Z" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<text x="207.137" y="380" style="font-family: Helvetica; font-size: 17px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,760) scale(1,-1)">Np</text>
+			<text x="291.613" y="380" style="font-family: Helvetica; font-size: 17px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,760) scale(1,-1)">Ns</text>
+			<path d="M 50,170 L 220,170 Z" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<path d="M 300,170 L 470,170 Z" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<path d="M 50,360 L 220,360 Z" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<path d="M 300,360 L 470,360 Z" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<path d="M 50,170 L 50,242 Z" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<path d="M 50,288 L 50,360 Z" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<circle cx="50" cy="265" r="23" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="40.277" y="260" style="font-family: Helvetica; font-size: 14px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,520) scale(1,-1)">AC</text>
+			<path d="M 145,170 L 145,247 Z" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<path d="M 145,283 L 145,360 Z" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<circle cx="145" cy="265" r="18" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="140.331" y="260" style="font-family: Helvetica; font-size: 14px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,520) scale(1,-1)">V</text>
+			<text x="169" y="260" style="font-family: Helvetica; font-size: 14px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,520) scale(1,-1)">Vp</text>
+			<path d="M 370,170 L 370,247 Z" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<path d="M 370,283 L 370,360 Z" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<circle cx="370" cy="265" r="18" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="365.331" y="260" style="font-family: Helvetica; font-size: 14px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,520) scale(1,-1)">V</text>
+			<text x="394" y="260" style="font-family: Helvetica; font-size: 14px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,520) scale(1,-1)">Vs</text>
+			<circle cx="102" cy="170" r="18" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="97.331" y="165" style="font-family: Helvetica; font-size: 14px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,330) scale(1,-1)">A</text>
+			<text x="96.162" y="133" style="font-family: Helvetica; font-size: 14px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,266) scale(1,-1)">Ip</text>
+			<circle cx="417" cy="170" r="18" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="412.331" y="165" style="font-family: Helvetica; font-size: 14px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,330) scale(1,-1)">A</text>
+			<text x="411.554" y="133" style="font-family: Helvetica; font-size: 14px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,266) scale(1,-1)">Is</text>
+			<path d="M 470,170 L 470,234 Z" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<path d="M 470,296 L 470,360 Z" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<rect x="459" y="234" width="22" height="62" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 446,225 L 495,302 Z" style="stroke: rgb(14%,38%,62%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="495 302, 488.4157 297.456, 493.6723 294.1109" style="stroke: rgb(14%,38%,62%); stroke-linecap: butt; stroke-width: 1; fill: rgb(14%,38%,62%); fill-rule: evenodd;"/>
+			<text x="464" y="325" style="font-family: Helvetica; font-size: 14px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,650) scale(1,-1)">load</text>
+			<text x="26" y="88" style="font-family: Helvetica; font-size: 15px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,176) scale(1,-1)">Isolated low-voltage AC source</text>
+			<text x="26" y="58" style="font-family: Helvetica; font-size: 14px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,116) scale(1,-1)">A: series ammeter    V: parallel voltmeter</text>
+			<text x="26" y="28" style="font-family: Helvetica; font-size: 14px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,56) scale(1,-1)">Use rated apparatus; disconnect before rewiring.</text>
+		</g>
+	</g>
+</svg>

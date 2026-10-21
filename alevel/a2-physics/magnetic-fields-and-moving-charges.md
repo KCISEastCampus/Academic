@@ -392,7 +392,7 @@ Equal charge and voltage give equal kinetic energies. The heavier ion moves more
 
 Before moving on, explain one complete chain without looking at the formula table: field and motion directions → actual force → path or work → prediction when one condition changes.
 
-[Previous lesson: Radioactive Decay](/alevel/a2-physics/radioactive-decay/) · [PH03 course index](/alevel/a2-physics/) · [Next topic: Electromagnetic Induction — reference notes](/alevel/a2-physics/quick-reference/#55-magnetic-flux)
+[Previous lesson: Radioactive Decay](/alevel/a2-physics/radioactive-decay/) · [PH03 course index](/alevel/a2-physics/) · [Next lesson: Electromagnetic Induction](/alevel/a2-physics/electromagnetic-induction/)
 
 ## Sources and scope {#sources}
 

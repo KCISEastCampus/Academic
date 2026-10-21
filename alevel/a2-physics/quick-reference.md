@@ -403,6 +403,8 @@ $$y=\ln\left(\frac{r}{r_{\mathrm{ref}}}\right)=y_0-\lambda t.$$
 
 ### 5.1 Magnetic Flux Density
 
+[Open the guided lesson](/alevel/a2-physics/magnetic-fields-and-moving-charges/).
+
 * **Definition**: The force per unit current per unit length on a straight wire perpendicular to the field.
     $$B = \frac{F}{IL}$$
     * $B$ = magnetic flux density (T, tesla)
@@ -434,6 +436,8 @@ $$F = BQv$$
 * Use the sign of $q$ separately to determine the force direction.
 
 ### 5.5 Magnetic Flux
+
+[Open the guided lesson](/alevel/a2-physics/electromagnetic-induction/).
 
 * **Magnetic Flux ($\Phi$)**: The product of magnetic flux density and the area perpendicular to the field.
     $$\Phi = BA\cos\theta$$
@@ -478,16 +482,20 @@ $$\lvert \varepsilon\rvert =BLv$$
 
 ### 5.10 Alternating Currents
 
+[Open the guided lesson](/alevel/a2-physics/alternating-current/).
+
 * A coil rotating in a uniform magnetic field at constant angular velocity $\omega$ produces a sinusoidal emf:
     $$\varepsilon = NBA\omega \sin(\omega t)$$
 * **Peak emf**: $\varepsilon_0 = NBA\omega$
-* **RMS (root mean square) values**:
+* **RMS (root mean square) values for sinusoidal signals**:
     $$V_{\text{rms}} = \frac{V_0}{\sqrt{2}} \approx 0.707 V_0$$
     $$I_{\text{rms}} = \frac{I_0}{\sqrt{2}} \approx 0.707 I_0$$
 * **Peak factor**: $\frac{V_0}{V_{\text{rms}}} = \sqrt{2}$
-* **Mean (average) value** over a half-cycle: $V_{\text{mean}} = \frac{2V_0}{\pi} \approx 0.637 V_0$
+* **Optional extension — not separately listed in 3.10.5:** mean value over a half-cycle: $V_{\text{mean}} = \frac{2V_0}{\pi} \approx 0.637 V_0$
 
 ### 5.11 The Transformer
+
+[Open the guided lesson](/alevel/a2-physics/transformers-and-power-transmission/).
 
 A transformer changes the magnitude of an alternating voltage. It consists of a **soft iron core** with two coils wound around it: a **primary coil** and a **secondary coil**.
 
@@ -528,7 +536,7 @@ A transformer changes the magnitude of an alternating voltage. It consists of a 
 ## 🧪 Key Required Practicals (Unit 3)
 
 1. **Required practical 6 — charge and discharge of capacitors:** record potential difference against time. Analyse discharge using a plot of $\ln(V/V_0)$ against $t$. The gradient is $-1/(RC)$, so the time constant is the negative reciprocal of the gradient.
-2. **Required practical 7 — transformer efficiency:** measure input and output rms potential differences and currents with a resistive load. Calculate efficiency from $V_sI_s/(V_pI_p)$ and investigate changes with load.
+2. **Required practical 7 — transformer efficiency:** measure input/output rms voltages and currents as load changes. Use $V_sI_s/(V_pI_p)$ for the stated VI approximation; true AC input power may require a power meter. [Open the method, records and limitations](/alevel/a2-physics/transformers-and-power-transmission/#data-transformer-efficiency).
 
 The simple harmonic systems investigation is **AS required practical 4**. Moving magnets through coils and investigating flux linkage are useful demonstrations, but are not separate named required practicals. See Section 6.1 of the [OxfordAQA specification](https://www.oxfordaqa.com/wp-content/uploads/2022/08/oxfordaqa-a-level-physics-specification.pdf).
 

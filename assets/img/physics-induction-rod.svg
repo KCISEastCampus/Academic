@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="520" height="400" preserveAspectRatio="xMinYMin meet" viewBox="0 0 520 400" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Sliding rod and resistive circuit</title><desc>Worked geometric setup with a vertical sliding rod, rightward velocity, into-page magnetic field, a resistor and horizontal rails. No induced-current or force directions are supplied in the drawing.</desc>
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="520" height="400"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-400)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="520" height="400" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="26" y="365" style="font-family: Helvetica; font-size: 19px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,730) scale(1,-1)">Moving rod in a closed rail circuit</text>
+			<text x="26" y="325" style="font-family: Helvetica; font-size: 15px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,650) scale(1,-1)">Uniform B into page (crosses)</text>
+			<path d="M 166,161 L 174,169 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 166,169 L 174,161 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 166,221 L 174,229 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 166,229 L 174,221 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 166,281 L 174,289 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 166,289 L 174,281 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 226,161 L 234,169 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 226,169 L 234,161 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 226,221 L 234,229 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 226,229 L 234,221 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 226,281 L 234,289 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 226,289 L 234,281 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 286,161 L 294,169 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 286,169 L 294,161 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 286,221 L 294,229 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 286,229 L 294,221 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 286,281 L 294,289 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 286,289 L 294,281 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 80,140 L 430,140 Z" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<path d="M 80,285 L 430,285 Z" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<path d="M 80,140 L 80,185 Z" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<path d="M 80,240 L 80,285 Z" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<rect x="68" y="185" width="24" height="55" style="stroke: rgb(9%,14%,21%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="38" y="208" style="font-family: Helvetica; font-size: 17px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,416) scale(1,-1)">R</text>
+			<path d="M 355,140 L 355,285 Z" style="stroke: rgb(61%,18%,27%); stroke-linecap: butt; stroke-width: 5;"/>
+			<text x="350" y="112" style="font-family: Helvetica; font-size: 16px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,224) scale(1,-1)">rod</text>
+			<path d="M 370,215 L 450,215 Z" style="stroke: rgb(14%,38%,62%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="450 215, 442.6315 218.1153, 442.6315 211.8847" style="stroke: rgb(14%,38%,62%); stroke-linecap: butt; stroke-width: 1; fill: rgb(14%,38%,62%); fill-rule: evenodd;"/>
+			<text x="413" y="230" style="font-family: Helvetica; font-size: 17px;fill: rgb(14%,38%,62%); stroke:none;" transform="translate(0,460) scale(1,-1)">v</text>
+			<path d="M 330,140 L 330,285 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 325,140 L 335,140 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 325,285 L 335,285 Z" style="stroke: rgb(34%,41%,48%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="310" y="205" style="font-family: Helvetica; font-size: 17px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,410) scale(1,-1)">L</text>
+			<text x="26" y="62" style="font-family: Helvetica; font-size: 14px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,124) scale(1,-1)">Rod, field and motion are mutually perpendicular.</text>
+			<text x="26" y="38" style="font-family: Helvetica; font-size: 14px;fill: rgb(9%,14%,21%); stroke:none;" transform="translate(0,76) scale(1,-1)">Rails and rod have negligible resistance.</text>
+		</g>
+	</g>
+</svg>

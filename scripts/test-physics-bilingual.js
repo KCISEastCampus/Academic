@@ -2,12 +2,12 @@
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
-const slugs = ['index', 'circular-motion', 'simple-harmonic-motion', 'gravitational-fields-and-satellites', 'electric-fields', 'capacitance', 'capacitor-charge-and-discharge', 'radioactive-decay', 'magnetic-fields-and-moving-charges', 'quick-reference', 'thermal-physics'];
+const slugs = ['index', 'circular-motion', 'simple-harmonic-motion', 'gravitational-fields-and-satellites', 'electric-fields', 'capacitance', 'capacitor-charge-and-discharge', 'radioactive-decay', 'magnetic-fields-and-moving-charges', 'electromagnetic-induction', 'alternating-current', 'transformers-and-power-transmission', 'quick-reference', 'thermal-physics'];
 const math = /\$\$[\s\S]*?\$\$|\$[^$\n]+\$/g;
 const read = file => fs.readFileSync(file, 'utf8').replace(/\r\n/g, '\n');
 const ids = html => [...html.matchAll(/<h[1-4]\b[^>]*id="([^"]+)"/g)].map(m => m[1]);
 // Source labels can be translated; the English task and supplied data must stay identical.
-const promptText = text => text.trim().replace(/^\*(?:Adapted from|Self-written|Further application)[^\n]*\*\s*\n+/, '').replace(/<img[^>]*>\s*\n/g, '');
+const promptText = text => text.trim().replace(/^\*(?:Adapted from|Self-written|Further application)[^\n]*\*\s*\n+/, '').replace(/<img\b[^>]*>\s*/g, '').trim();
 for (const slug of slugs) {
   const url = '/alevel/a2-physics/' + (slug === 'index' ? '' : slug + '/');
   const en = read(`alevel/a2-physics/${slug}.md`), zh = read(`zh/alevel/a2-physics/${slug}.md`);
@@ -30,10 +30,10 @@ for (const slug of slugs) {
   }
   assert(zhHtml.includes('href="/zh/alevel/a2-physics/" data-ui="physics">A2 物理</a>') || slug === 'index', slug + ': Chinese breadcrumb');
   for (const formula of zh.match(math) || []) assert(!formula.includes('|'), slug + ': TeX pipe in Markdown');
-  const recordIds = slug === 'thermal-physics' ? ['data-specific-heat', 'data-boyle', 'data-charles'] : slug === 'capacitor-charge-and-discharge' ? ['data-rc-records'] : slug === 'radioactive-decay' ? ['model-constant-probability', 'checkpoint-decay-graphs', 'data-decay-records', 'challenge-decay-records', 'retry-counting'] : slug === 'simple-harmonic-motion' ? ['retry-resonance', 'data-pendulum-records'] : slug === 'magnetic-fields-and-moving-charges' ? ['data-magnetic-balance'] : [];
+  const recordIds = slug === 'thermal-physics' ? ['data-specific-heat', 'data-boyle', 'data-charles'] : slug === 'capacitor-charge-and-discharge' ? ['data-rc-records'] : slug === 'radioactive-decay' ? ['model-constant-probability', 'checkpoint-decay-graphs', 'data-decay-records', 'challenge-decay-records', 'retry-counting'] : slug === 'simple-harmonic-motion' ? ['retry-resonance', 'data-pendulum-records'] : slug === 'magnetic-fields-and-moving-charges' ? ['data-magnetic-balance'] : slug === 'electromagnetic-induction' ? ['data-flux-graph'] : slug === 'alternating-current' ? ['data-scope-records'] : slug === 'transformers-and-power-transmission' ? ['data-transformer-efficiency'] : [];
   for (const id of recordIds) {
     const prompt = promptText(en.split(`{#${id}}`)[1].split('<details')[0]);
-    assert(zh.replace(/<img[^>]*>\s*\n/g, '').includes(prompt), id + ': preserve English task and raw data');
+    assert(zh.replace(/<img\b[^>]*>\s*/g, '').includes(prompt), id + ': preserve English task and raw data');
   }
   if (slug === 'thermal-physics') {
     for (const html of [enHtml, zhHtml]) {

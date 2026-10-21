@@ -394,7 +394,7 @@ $$\frac{v_B}{v_A}=\frac1{\sqrt2},\qquad \frac{r_B}{r_A}=\sqrt2,\qquad \frac{T_B}
 
 继续前，先不看公式表，独立说明一条完整链：场与运动方向 → 实际受力 → 轨迹或功 → 某个条件改变后的预测。
 
-[上一课：放射性衰变](/zh/alevel/a2-physics/radioactive-decay/) · [PH03 课程目录](/zh/alevel/a2-physics/) · [下一主题：电磁感应——速查笔记](/zh/alevel/a2-physics/quick-reference/#55-magnetic-flux)
+[上一课：放射性衰变](/zh/alevel/a2-physics/radioactive-decay/) · [PH03 课程目录](/zh/alevel/a2-physics/) · [下一课：电磁感应](/zh/alevel/a2-physics/electromagnetic-induction/)
 
 ## 来源与范围 {#sources}
 
