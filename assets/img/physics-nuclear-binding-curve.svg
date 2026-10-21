@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="360" viewBox="0 0 600 360" role="img" aria-labelledby="title desc">
+<title id="title">Read average binding energy before summing a reaction</title>
+<desc id="desc">Constructed illustrative curve with no reaction-energy answer. Axes are nucleon number A and average binding energy per nucleon in MeV. Raw marked points: A 100, b 8.6 MeV per nucleon; A 200, b 7.9 MeV per nucleon. The curve has a broad high region near mass number 50 to 60; isotope-specific variation is omitted.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0 0L8 4L0 8Z" fill="#334155"/></marker></defs>
+<rect width="600" height="360" rx="12" fill="#fff"/>
+<g font-family="Arial,sans-serif" font-size="18" fill="#172033">
+<text x="125" y="20" font-size="17" font-weight="bold">Average binding energy per nucleon</text>
+<path d="M80 300H540" stroke="#e2e8f0"/><text x="56" y="306">0</text>
+<path d="M80 270H540" stroke="#e2e8f0"/><text x="56" y="276">1</text>
+<path d="M80 240H540" stroke="#e2e8f0"/><text x="56" y="246">2</text>
+<path d="M80 210H540" stroke="#e2e8f0"/><text x="56" y="216">3</text>
+<path d="M80 180H540" stroke="#e2e8f0"/><text x="56" y="186">4</text>
+<path d="M80 150H540" stroke="#e2e8f0"/><text x="56" y="156">5</text>
+<path d="M80 120H540" stroke="#e2e8f0"/><text x="56" y="126">6</text>
+<path d="M80 90H540" stroke="#e2e8f0"/><text x="56" y="96">7</text>
+<path d="M80 60H540" stroke="#e2e8f0"/><text x="56" y="66">8</text>
+<path d="M80 30H540" stroke="#e2e8f0"/><text x="56" y="36">9</text>
+<path d="M80 30V300" stroke="#e2e8f0"/><text x="70" y="324">0</text>
+<path d="M172 30V300" stroke="#e2e8f0"/><text x="162" y="324">50</text>
+<path d="M264 30V300" stroke="#e2e8f0"/><text x="254" y="324">100</text>
+<path d="M356 30V300" stroke="#e2e8f0"/><text x="346" y="324">150</text>
+<path d="M448 30V300" stroke="#e2e8f0"/><text x="438" y="324">200</text>
+<path d="M540 30V300" stroke="#e2e8f0"/><text x="530" y="324">250</text>
+<path d="M80 30V300H550" fill="none" stroke="#334155" stroke-width="2"/>
+<text transform="translate(25 255) rotate(-90)">b / MeV per nucleon</text>
+<text x="335" y="352">nucleon number A</text>
+<path d="M82 300C84 150 92 75 120 55C145 42 170 35 183 36C215 37 240 39 264 42C330 50 400 56 448 63L540 78" fill="none" stroke="#334155" stroke-width="2.5"/>
+<circle id="binding-point-100" cx="264" cy="42" r="5" fill="#ad2735"/><text x="266" y="83">A = 100</text>
+<circle id="binding-point-200" cx="448" cy="63" r="5" fill="#ad2735"/><text x="425" y="105">A = 200</text>
+<text x="120" y="183">Constructed teaching curve</text>
+<text x="120" y="208">Not measured isotope data</text>
+</g></svg>

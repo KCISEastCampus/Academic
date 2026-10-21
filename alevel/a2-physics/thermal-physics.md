@@ -821,7 +821,7 @@ If a hint was needed, record the question and the step that stopped you: model c
 
 Before moving on, explain a heating-curve plateau, give the sign of expansion work in the first law, distinguish the two practicals' controls, and explain gas pressure without saying molecules “want to spread out”.
 
-[Course index](/alevel/a2-physics/) · [PH03 quick reference](/alevel/a2-physics/quick-reference/)
+[Course index](/alevel/a2-physics/) · [PH03 quick reference](/alevel/a2-physics/quick-reference/) · [Next: Nuclear Radius](/alevel/a2-physics/nuclear-radius/)
 
 <details markdown="1">
 <summary>Sources and exam wording</summary>

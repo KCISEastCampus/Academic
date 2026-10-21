@@ -829,7 +829,7 @@ Now heat two separate fixed samples of the same ideal gas, initially at the same
 
 继续之前，检查能否解释加热曲线的平台，说明第一定律中膨胀功的符号，区分两个必做实验的控制条件，并从分子运动解释压强，而不是说分子“想要散开”。
 
-[课程目录](/zh/alevel/a2-physics/) · [PH03 速查](/zh/alevel/a2-physics/quick-reference/)
+[课程目录](/zh/alevel/a2-physics/) · [PH03 速查](/zh/alevel/a2-physics/quick-reference/) · [下一课：核半径](/zh/alevel/a2-physics/nuclear-radius/)
 
 <details markdown="1">
 <summary>来源与试题表述</summary>

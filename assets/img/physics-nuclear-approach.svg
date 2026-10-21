@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="340" viewBox="0 0 600 340" role="img" aria-labelledby="title desc">
+<title id="title">Closest approach depends on the path</title>
+<desc id="desc">Explanation schematic, not to scale. A head-on alpha turns back before a fixed positive nucleus; its speed is zero at that turn. An off-centre path has tangential motion at closest approach. Separation is measured between centres, not as a surface radius.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0 0L8 4L0 8Z" fill="#334155"/></marker></defs>
+<rect width="600" height="340" rx="12" fill="#fff"/>
+<g font-family="Arial,sans-serif" font-size="18" fill="#172033">
+<text x="28" y="30" font-weight="bold">Fixed heavy target; schematic, not to scale</text>
+<text x="28" y="63">Head-on</text>
+<circle cx="510" cy="110" r="24" fill="#fce8e8" stroke="#ad2735" stroke-width="2"/>
+<text x="493" y="117">+Ze</text>
+<path d="M65 105H350" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M350 125H110" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+<circle cx="385" cy="110" r="5" fill="#ad2735"/>
+<path d="M390 147H505" stroke="#64748b" stroke-dasharray="4 4"/>
+<text x="409" y="169">r_min</text><text x="294" y="82">speed = 0 at turn</text>
+<text x="66" y="91">alpha</text>
+<line x1="26" y1="187" x2="574" y2="187" stroke="#e2e8f0"/>
+<text x="28" y="217">Off-centre</text>
+<circle cx="500" cy="220" r="24" fill="#fce8e8" stroke="#ad2735" stroke-width="2"/>
+<text x="483" y="227">+Ze</text>
+<path d="M60 244H225C310 244 380 210 400 260C420 310 440 329 470 335" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+<circle cx="400" cy="260" r="5" fill="#ad2735"/>
+<path d="M404 258L478 229" stroke="#64748b" stroke-dasharray="4 4"/>
+<text x="414" y="285">separation</text>
+<text x="65" y="304">Tangential motion can remain.</text>
+</g></svg>

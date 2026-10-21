@@ -40,12 +40,18 @@ The guided lessons above cover the PH03 topic sequence. Revisit a practice task 
 
 <span id="-key-required-practicals-unit-3"></span><span id="-summary-comparing-gravitational-fields-and-electric-fields"></span><span id="similarities"></span><span id="differences"></span><span id="-summary-electric-fields-and-magnetic-fields"></span><span id="how-electric-and-magnetic-fields-are-connected"></span><span id="charged-particles-in-electric-and-magnetic-fields"></span><span id="velocity-selector-electric--magnetic-fields-combined"></span>
 
-## PH04 — Thermal Physics {#ph04-thermal-physics}
+## PH04 — Energy and Energy Resources {#ph04-thermal-physics}
 
 [Start Chapter 1: Thermal Physics](/alevel/a2-physics/thermal-physics/) — Internal energy and the first law, specific heat and latent heat, conduction and U-values, gas laws, molecular kinetic theory, and required practicals 8 and 9. Covers specification Sections 3.11.1–3.11.4, with English questions, worked examples and practice.
 
+[Nuclear Radius](/alevel/a2-physics/nuclear-radius/) — Closest-approach and diffraction evidence, radius scaling, average density and analysis of constructed radius records (3.12.1).
+
+[Mass and Binding Energy](/alevel/a2-physics/mass-and-binding-energy/) — Rest energy, nuclear and atomic mass accounts, binding-energy graphs and energy per reaction (3.12.2).
+
+**Still to come:** fission and reactor safety (3.12.3–3.12.4), fusion (3.12.5), and energy sources (3.13). These sample lessons do not yet form a complete PH04 course.
+
 ## Course Reference
 
-PH03 covers Sections 3.6–3.10 and PH04 thermal physics covers Section 3.11 of the [OxfordAQA Physics specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf). The other PH04 chapters are not yet included.
+PH03 covers Sections 3.6–3.10; the PH04 learning pages currently cover 3.11 and 3.12.1–3.12.2 of the [OxfordAQA Physics specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf).
 
 [Open the reference notes](/alevel/a2-physics/quick-reference/) for the topic outline and formula reminders; use the guided lessons above for explanations and independent practice.
