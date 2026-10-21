@@ -38,6 +38,7 @@ jobs:
           node scripts/test-image-modal.js
       - name: Test physics lessons and bilingual content
         run: |
+          node scripts/test-physics-learning-pilots.js
           node scripts/test-physics-circular.js
           node scripts/test-physics-shm.js
           node scripts/test-physics-gravity.js

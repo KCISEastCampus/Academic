@@ -5,8 +5,23 @@ mathjax: true
 grade: igcse
 subject: igcse-physics
 permalink: /igcse/physics/
+toc_headings: h2, h3, h4
+study_page: true
 ---
 
+<h2 id="start-learning">Start learning</h2>
+
+1. **[Motion and Motion Graphs](/igcse/physics/motion-and-graphs/)** — Connect a journey to position and velocity graphs; explain direction, gradients and areas.
+2. **[Forces and Motion](/igcse/physics/forces-and-motion/)** — Build force models and explain acceleration, momentum, braking and terminal velocity.
+3. **[Springs and Hooke’s Law](/igcse/physics/springs-and-hookes-law/)** — Separate length from extension, test the proportional model and evaluate a spring practical.
+
+Try a short task, then work through explanations and examples. Open hints and solutions separately; finish with independent practice, diagnosis and a retry.
+
+Follow these three learning pages in order. Other topics remain reference notes below, rather than a complete guided course. For revision, start with [first-lesson practice](/igcse/physics/motion-and-graphs/#independent-practice) or [second-lesson practice](/igcse/physics/forces-and-motion/#independent-practice).
+
+<h2 id="reference-notes">Reference notes and resources</h2>
+
+The existing topic notes, examples and resources follow. Practical summaries do not certify completion of a physical practical.
 
 > **Exam info**: OxfordAQA 9203 · Linear qualification · 2 papers (1h 30m each, 90 marks each) · 9-point grading (1–9)
 >
@@ -14,10 +29,10 @@ permalink: /igcse/physics/
 
 ---
 
-# 📦 Unit 1: Forces and their effects
+<h2 id="-unit-1-forces-and-their-effects">📦 Unit 1: Forces and their effects</h2>
 
 
-## 🔧 1.1 Forces and their interactions
+<h3 id="-11-forces-and-their-interactions">🔧 1.1 Forces and their interactions</h3>
 
 
 - **Non-contact (field) forces**: gravity, electrostatics, magnetism.
@@ -45,14 +60,14 @@ $$F = k \times e$$
 
 🔬 **Required practical**: Investigate the relationship between force and extension for a spring.
 
-## 🚗 1.2 Motion
+<h3 id="-12-motion">🚗 1.2 Motion</h3>
 
 
 - A **distance–time graph**: gradient = speed.
 - **Velocity** includes direction; average velocity is $$v = \frac{s}{t}$$.
 - A **velocity–time graph**: gradient = acceleration; signed area between graph and time axis = displacement. Distance travelled is the sum of the absolute areas.
 
-## ➗ 1.3 Resultant forces
+<h3 id="-13-resultant-forces">➗ 1.3 Resultant forces</h3>
 
 
 - **Newton's First Law**: if the resultant force is zero, a moving object keeps moving at the same velocity; a stationary object stays at rest.
@@ -62,7 +77,7 @@ $$F = k \times e$$
 
 $$a = \frac{\Delta v}{t}$$
 
-## 💥 1.4 Momentum
+<h3 id="-14-momentum">💥 1.4 Momentum</h3>
 
 
 - **Momentum** = mass × velocity: $$p = m \times v$$
@@ -70,7 +85,7 @@ $$a = \frac{\Delta v}{t}$$
 - Force = rate of change of momentum: $$F = \frac{\Delta p}{t}$$
 - **Safety features** (airbags, seat belts, crumple zones, cycle helmets) increase the time for the same momentum change, reducing average force.
 
-## 🚌 1.5 Safety in public transport
+<h3 id="-15-safety-in-public-transport">🚌 1.5 Safety in public transport</h3>
 
 
 - **Stopping distance = thinking distance + braking distance**.
@@ -78,14 +93,14 @@ $$a = \frac{\Delta v}{t}$$
 - Braking distance is affected by speed, road/weather conditions, and condition of brakes/tyres.
 - When brakes are applied, work done by friction reduces kinetic energy → brakes heat up.
 
-## 🪂 1.6 Forces and terminal velocity
+<h3 id="-16-forces-and-terminal-velocity">🪂 1.6 Forces and terminal velocity</h3>
 
 
 - An object falling through a fluid accelerates (due to gravity), but drag increases with speed.
 - When buoyancy is negligible, drag = weight gives zero resultant force and **terminal velocity**.
 - Parachutes increase drag and lower terminal speed. Streamlining reduces drag and can increase attainable speed with other conditions unchanged.
 
-## ⚖️ 1.7 Centre of mass & 1.8 Moments
+<h3 id="️-17-centre-of-mass--18-moments">⚖️ 1.7 Centre of mass & 1.8 Moments</h3>
 
 
 - **Centre of mass**: point where the mass of an object may be thought to be concentrated.
@@ -94,7 +109,7 @@ $$a = \frac{\Delta v}{t}$$
 - In rotational equilibrium: total **clockwise moment = total anticlockwise moment**.
 - If the line of action of the weight lies **outside the base**, the object **topples**.
 
-## ✅ Unit 1 Quick Check
+<h3 id="-unit-1-quick-check">✅ Unit 1 Quick Check</h3>
 
 Self-written quick checks. Try each question before opening its answer.
 
@@ -134,10 +149,10 @@ Thinking + braking distance
 
 ---
 
-# ⚡ Unit 2: Energy
+<h2 id="-unit-2-energy">⚡ Unit 2: Energy</h2>
 
 
-## 🔄 2.1 Forces and energy
+<h3 id="-21-forces-and-energy">🔄 2.1 Forces and energy</h3>
 
 
 - **Work done**: $$W = F \times d \quad \text{(J)}$$
@@ -149,7 +164,7 @@ Thinking + braking distance
 
 - **Power** is the rate of energy transfer or work done: $$P = \frac{W}{t} = \frac{E}{t}$$
 
-## ♻️ 2.2 Energy transfers, conservation and dissipation
+<h3 id="️-22-energy-transfers-conservation-and-dissipation">♻️ 2.2 Energy transfers, conservation and dissipation</h3>
 
 
 - Energy can be **transferred usefully, stored or dissipated**, but **cannot be created or destroyed**.
@@ -157,14 +172,14 @@ Thinking + braking distance
 - **Efficiency**: $$\text{Efficiency} = \frac{\text{useful output}}{\text{total input}}$$ (as decimal or %)
 - **Sankey diagrams** show how energy is redistributed in a system.
 
-## 🌍 2.3 Energy resources
+<h3 id="-23-energy-resources">🌍 2.3 Energy resources</h3>
 
 
 - **Non-renewable**: fossil fuels (coal, oil, gas) — limited, polluting.
 - **Renewable**: solar, wind, wave, geothermal, hydroelectric, biomass, tidal.
 - Fuels are chosen based on ease of storage, energy content, and safety.
 
-## ✅ Unit 2 Quick Check
+<h3 id="-unit-2-quick-check">✅ Unit 2 Quick Check</h3>
 
 Self-written quick checks. Try each question before opening its answer.
 
@@ -196,10 +211,10 @@ Energy cannot be created or destroyed
 
 ---
 
-# 🌊 Unit 3: Waves
+<h2 id="-unit-3-waves">🌊 Unit 3: Waves</h2>
 
 
-## 🌐 3.1 General properties of waves
+<h3 id="-31-general-properties-of-waves">🌐 3.1 General properties of waves</h3>
 
 
 - A **wave** transfers energy and information without net transport of matter.
@@ -208,7 +223,7 @@ Energy cannot be created or destroyed
 - Waves can be **reflected, transmitted, absorbed**, and undergo **refraction** (change in speed) and **diffraction** (spreading at a gap/edge).
 - Wave speed: $$v = f \times \lambda$$
 
-## 📡 3.2 The electromagnetic spectrum
+<h3 id="-32-the-electromagnetic-spectrum">📡 3.2 The electromagnetic spectrum</h3>
 
 
 Order (increasing frequency / decreasing wavelength):
@@ -228,7 +243,7 @@ Order (increasing frequency / decreasing wavelength):
 - **Infrared**: dark, matt surfaces are good absorbers/emitters; light, shiny surfaces are good reflectors.
 - **X-rays**: short wavelength, high photon energy, ionising; absorbed strongly by bone/metal and transmitted more readily through soft tissue, rather than distinguished by whether tissue is healthy.
 
-## 🔊 3.3 Sound and ultrasound
+<h3 id="-33-sound-and-ultrasound">🔊 3.3 Sound and ultrasound</h3>
 
 
 - Range of human hearing: **20 Hz – 20 000 Hz**.
@@ -237,7 +252,7 @@ Order (increasing frequency / decreasing wavelength):
 - Ultrasound is partially reflected at boundaries; reflection time gives distance: $$s = \frac{v \times t}{2}$$
 - Uses: **prenatal scanning**, **removing kidney stones**.
 
-## 🪞 3.4 Reflection & 3.5 Refraction
+<h3 id="-34-reflection--35-refraction">🪞 3.4 Reflection & 3.5 Refraction</h3>
 
 
 - **Angle of incidence = angle of reflection** (relative to the normal).
@@ -246,7 +261,7 @@ Order (increasing frequency / decreasing wavelength):
 - **Refractive index**: $$n = \frac{\text{speed in vacuum}}{\text{speed in medium}}$$ and Snell's law: $$n = \frac{\sin i}{\sin r}$$
 - **Total internal reflection** occurs for light travelling towards a lower-refractive-index medium when incidence exceeds the critical angle. Used in **optical fibres** (medicine, communication).
 
-## 👁️ 3.6 Lenses and the eye
+<h3 id="️-36-lenses-and-the-eye">👁️ 3.6 Lenses and the eye</h3>
 
 
 - **Convex (converging) lens**: brings parallel rays to a focus at the principal focus.
@@ -256,7 +271,7 @@ Order (increasing frequency / decreasing wavelength):
 - Near point ~25 cm; far point at infinity.
 - **Magnification**: $$\text{Magnification} = \frac{\text{image height}}{\text{object height}}$$
 
-## ✅ Unit 3 Quick Check
+<h3 id="-unit-3-quick-check">✅ Unit 3 Quick Check</h3>
 
 Self-written quick checks. Try each question before opening its answer.
 
@@ -296,10 +311,10 @@ v = f × λ
 
 ---
 
-# 🔬 Unit 4: Particle model of matter
+<h2 id="-unit-4-particle-model-of-matter">🔬 Unit 4: Particle model of matter</h2>
 
 
-## 🧊 4.1 Kinetic theory
+<h3 id="-41-kinetic-theory">🧊 4.1 Kinetic theory</h3>
 
 
 | State | Arrangement | Motion |
@@ -313,7 +328,7 @@ v = f × λ
 
 🔬 **Required practical**: Investigate cooling curves for stearic acid.
 
-## 🔥 4.2 Energy transfers and particle motion
+<h3 id="-42-energy-transfers-and-particle-motion">🔥 4.2 Energy transfers and particle motion</h3>
 
 
 - **Conduction**: vibrating particles pass energy on; free electrons carry energy through metals.
@@ -322,7 +337,7 @@ v = f × λ
 - Rate of energy transfer depends on: surface area/volume, material, nature of surface, temperature difference.
 - Most substances **expand when heated** (hazard: roofs/bridges; useful: bimetallic strip thermostat).
 
-## ✅ Unit 4 Quick Check
+<h3 id="-unit-4-quick-check">✅ Unit 4 Quick Check</h3>
 
 Self-written quick checks. Try each question before opening its answer.
 
@@ -354,10 +369,10 @@ Free/delocalised electrons; lattice vibrations also transfer energy
 
 ---
 
-# 🔌 Unit 5: Electricity and magnetism
+<h2 id="-unit-5-electricity-and-magnetism">🔌 Unit 5: Electricity and magnetism</h2>
 
 
-## ⚡ 5.1 Electrical circuits
+<h3 id="-51-electrical-circuits">⚡ 5.1 Electrical circuits</h3>
 
 
 - **Electric current** is the rate of flow of charge: $$Q = I \times t$$
@@ -380,7 +395,7 @@ Free/delocalised electrons; lattice vibrations also transfer energy
 
 🔬 **Required practical**: Investigate the V–I characteristics of a filament lamp, a diode, and a resistor at constant temperature.
 
-## 🧲 5.2 Magnetism and electromagnetism
+<h3 id="-52-magnetism-and-electromagnetism">🧲 5.2 Magnetism and electromagnetism</h3>
 
 
 - Like poles **repel**, unlike poles **attract** (non-contact forces).
@@ -390,7 +405,7 @@ Free/delocalised electrons; lattice vibrations also transfer energy
 
 🔬 **Required practical**: Investigate the factors that determine the strength of an electromagnet.
 
-## ✅ Unit 5 Quick Check
+<h3 id="-unit-5-quick-check">✅ Unit 5 Quick Check</h3>
 
 Self-written quick checks. Try each question before opening its answer.
 
@@ -422,10 +437,10 @@ A current-carrying solenoid with an iron core is a common construction
 
 ---
 
-# 🏠 Unit 6: Generating and distributing electricity & household use
+<h2 id="-unit-6-generating-and-distributing-electricity--household-use">🏠 Unit 6: Generating and distributing electricity & household use</h2>
 
 
-## 🔄 6.1 Generating electricity
+<h3 id="-61-generating-electricity">🔄 6.1 Generating electricity</h3>
 
 
 - **Generator effect**: an induced pd can arise when a conductor cuts magnetic field lines or when magnetic flux through a coil changes.
@@ -433,7 +448,7 @@ A current-carrying solenoid with an iron core is a common construction
 - **Alternator** → AC; a **dynamo** with a commutator produces unidirectional current.
 - Power stations commonly use turbines to drive generators, transferring mechanical energy to electrical energy.
 
-## 🚚 6.2 Electricity transmission
+<h3 id="-62-electricity-transmission">🚚 6.2 Electricity transmission</h3>
 
 
 - For the same transmitted power, high voltage means lower current and less heating loss.
@@ -442,14 +457,14 @@ A current-carrying solenoid with an iron core is a common construction
 - Ideal transformer voltage ratio: $$\frac{V_p}{V_s} = \frac{n_p}{n_s}$$
 - **Switch-mode transformers**: high frequency (50–200 kHz), small and light (phone chargers).
 
-## 🔌 6.3 Using electricity in the home
+<h3 id="-63-using-electricity-in-the-home">🔌 6.3 Using electricity in the home</h3>
 
 
 - **dc**: current always in one direction (cells/batteries). **ac**: repeatedly changes direction (mains).
 - Safety features: **earthing** (metal case → live fault → current to earth), **fuse** or **circuit breaker** in live wire.
 - Circuit breakers can be reset. Double-insulated appliances do not need a protective earth connection.
 
-## 🔧 6.4 The motor effect & 6.5 Energy transfer
+<h3 id="-64-the-motor-effect--65-energy-transfer">🔧 6.4 The motor effect & 6.5 Energy transfer</h3>
 
 
 - **Motor effect**: a magnetic field exerts a force on a current-carrying conductor. For perpendicular placement, force increases with field strength, current and effective conductor length. Direction follows **Fleming's left-hand rule**.
@@ -458,7 +473,7 @@ A current-carrying solenoid with an iron core is a common construction
 - Energy: $$E = P \times t \quad \text{(kWh)}$$
 - Cost of electricity = energy (kWh) × cost per kWh.
 
-## ✅ Unit 6 Quick Check
+<h3 id="-unit-6-quick-check">✅ Unit 6 Quick Check</h3>
 
 Self-written quick checks. Try each question before opening its answer.
 
@@ -490,10 +505,10 @@ Safety — breaks circuit if current too high
 
 ---
 
-# ☢️ Unit 7: Nuclear physics
+<h2 id="️-unit-7-nuclear-physics">☢️ Unit 7: Nuclear physics</h2>
 
 
-## ⚛️ 7.1 Atomic structure
+<h3 id="️-71-atomic-structure">⚛️ 7.1 Atomic structure</h3>
 
 
 | Particle | Relative mass | Relative charge |
@@ -506,7 +521,7 @@ Safety — breaks circuit if current too high
 - **Atomic number** = number of protons. **Mass number** = protons + neutrons.
 - Alpha-particle scattering by thin metal foil gives evidence of the distribution of mass in the atom.
 
-## ☢️ 7.2 Ionising radiation
+<h3 id="️-72-ionising-radiation">☢️ 7.2 Ionising radiation</h3>
 
 
 - **Radioactive decay** is a **random** process — it is impossible to predict when a particular atom decays.
@@ -517,13 +532,13 @@ Safety — breaks circuit if current too high
 - **Contamination** = unwanted radioactive material on or in other materials. **Irradiation** = exposure to radiation; ordinary alpha, beta and gamma exposure in this course does not itself deposit radioactive contamination.
 - Background radiation comes from environmental, cosmic and some artificial sources. X-ray machines also produce artificial radiation.
 
-## ⚛️ 7.3 Nuclear fission & 7.4 Nuclear fusion
+<h3 id="️-73-nuclear-fission--74-nuclear-fusion">⚛️ 7.3 Nuclear fission & 7.4 Nuclear fusion</h3>
 
 
 - **Fission**: splitting a large unstable nucleus (U-235, Pu-239) → two smaller nuclei + neutrons + energy. A **chain reaction** occurs when neutrons cause further fission. Control rods absorb neutrons.
 - **Fusion**: light nuclei combine into a heavier nucleus and can release energy, with a decrease in system rest mass. Very high temperatures and suitable confinement are needed. Fusion powers stars.
 
-## ✅ Unit 7 Quick Check
+<h3 id="-unit-7-quick-check">✅ Unit 7 Quick Check</h3>
 
 Self-written quick checks. Try each question before opening its answer.
 
@@ -555,10 +570,10 @@ Of the three types above, gamma is generally most penetrating
 
 ---
 
-# 🌌 Unit 8: Space physics
+<h2 id="-unit-8-space-physics">🌌 Unit 8: Space physics</h2>
 
 
-## ⭐ 8.1 Life cycle of a star
+<h3 id="-81-life-cycle-of-a-star">⭐ 8.1 Life cycle of a star</h3>
 
 
 **Star life cycles** (determined by mass):
@@ -568,7 +583,7 @@ Of the three types above, gamma is generally most penetrating
 - Main sequence: energy released by fusion of hydrogen → helium.
 - Some elements heavier than iron can form in supernovae; this is not the only production route for all heavy elements.
 
-## 🪐 8.2 Solar system and orbital motion
+<h3 id="-82-solar-system-and-orbital-motion">🪐 8.2 Solar system and orbital motion</h3>
 
 
 - Our solar system: 8 planets orbiting the Sun, plus moons, asteroids, dwarf planets, comets.
@@ -576,14 +591,14 @@ Of the three types above, gamma is generally most penetrating
 - Gravity provides the **centripetal force** keeping planets and satellites in orbit.
 - For circular orbits around the same central body, larger orbital radius means weaker gravity and lower orbital speed.
 
-## 🌌 8.3 Red shift and the expanding universe
+<h3 id="-83-red-shift-and-the-expanding-universe">🌌 8.3 Red shift and the expanding universe</h3>
 
 
 - **Doppler effect**: a wave source moving away → wavelength increases, frequency decreases (red shift); moving towards → wavelength decreases (blue shift).
 - Systematic red shifts of distant galaxies support expanding space and the **Big Bang** model; cosmological red shift should not be treated only as motion through static space.
 - **CMBR** (cosmic microwave background radiation) is evidence for the Big Bang.
 
-## ✅ Unit 8 Quick Check
+<h3 id="-unit-8-quick-check">✅ Unit 8 Quick Check</h3>
 
 Self-written quick checks. Try each question before opening its answer.
 
@@ -615,7 +630,7 @@ Expanding universe / Big Bang
 
 ---
 
-# Key Equations Summary
+<h2 id="key-equations-summary">Key Equations Summary</h2>
 
 
 | Equation | Formula |
@@ -641,18 +656,18 @@ Expanding universe / Big Bang
 
 ---
 
-# Revision Resources
+<h2 id="revision-resources">Revision Resources</h2>
 
 
-## Unit 1: Force & Motion
+<h3 id="unit-1-force--motion">Unit 1: Force & Motion</h3>
 
 [Force & Motion](./assets/force_motion.pdf)
 
-## Unit 2: Energy
+<h3 id="unit-2-energy">Unit 2: Energy</h3>
 
 [Energy](./assets/energy.pdf)
 
-## Unit 3: Waves
+<h3 id="unit-3-waves">Unit 3: Waves</h3>
 
 [Waves](./assets/waves.pdf)
 

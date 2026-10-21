@@ -8,7 +8,20 @@ lang: zh-CN
 translation_of: /igcse/physics/
 permalink: /zh/igcse/physics/
 toc_headings: h2, h3, h4
+study_page: true
 ---
+
+<h2 id="start-learning">开始学习</h2>
+
+1. **[运动与运动图像](/zh/igcse/physics/motion-and-graphs/)** — 把运动过程与位置、速度图像联系起来，解释方向、斜率和面积。
+2. **[力与运动](/zh/igcse/physics/forces-and-motion/)** — 建立受力模型，解释加速度、动量、制动和终端速度。
+3. **[弹簧与胡克定律](/zh/igcse/physics/springs-and-hookes-law/)** — 区分长度与伸长量，检验比例范围，并作出弹簧实验的方法选择。
+
+先完成小任务，再阅读解释与示范；提示和完整解答分别展开，最后独立练习、诊断并重试。
+
+建议依次学习这三课；其他主题仍为下方复习笔记，尚未改写为完整学习课程。已有基础时，可直接进入[第一课练习](/zh/igcse/physics/motion-and-graphs/#independent-practice)或[第二课练习](/zh/igcse/physics/forces-and-motion/#independent-practice)。
+
+<h2 id="reference-notes">复习笔记与资料</h2>
 
 本页为中文复习笔记：概念与解答用中文解释，例题和自测题保留英文，便于衔接考试表达。内容沿用现有英文笔记的主题范围，并非覆盖全部大纲要求的完整学习课程；实验概述也不代表已完成实际操作。
 
