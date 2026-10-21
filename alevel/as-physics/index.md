@@ -53,8 +53,8 @@ permalink: /alevel/as-physics/
 > A wire has length $L = 2.00 \pm 0.01 \text{ m}$ and radius $r = 1.0 \pm 0.1 \text{ mm}$. Calculate the percentage uncertainty in the volume $V = \pi r^2 L$.
 >
 > **Solution:**
-> 1.  % uncert in $\frac{0.01}{2.00} \times 100 = 0.5\%$
-> 2.  % uncert in $\frac{0.1}{1.0} \times 100 = 10\%$
+> 1.  Percentage uncertainty in length: $\frac{0.01}{2.00} \times 100 = 0.5\%$.
+> 2.  Percentage uncertainty in radius: $\frac{0.1}{1.0} \times 100 = 10\%$.
 > 3.  Volume formula depends on $r^2$, so we multiply $r$'s uncertainty by 2.
 > 4.  Total % Uncertainty $= 0.5\% + (2 \times 10\%) = 20.5\%$
 
