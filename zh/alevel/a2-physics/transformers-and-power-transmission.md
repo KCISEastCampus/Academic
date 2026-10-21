@@ -68,7 +68,7 @@ A transformer delivers $12\,\mathrm{V\ rms}$ at $2.0\,\mathrm{A\ rms}$ to a resi
 
 $$P_{\mathrm{out}}=24\,\mathrm W,\qquad\eta=\frac{24}{30}=0.80=80\%,\qquad P_{\mathrm{loss}}=6.0\,\mathrm W.$$
 
-输入输出功率并不相等，若再把理想电流关系当作精确关系，就与已知损耗矛盾。理想匝数规则可近似描述电压，不代表整台装置没有损耗。
+测得的损耗说明整台装置并非无损，但仅凭损耗不能确定绕组电流比。这些数据不足以支持直接套用理想电流比；某些有损模型仍可保持该比值。若在 VI 功率模型下同时强加精确的理想电压比和电流比，才会迫使输入输出功率相等，与测得的损耗矛盾。
 
 ## RP7：决定测什么、怎样测 {#rp7-method}
 
@@ -161,7 +161,7 @@ An ideal transformer has turns ratio $N_s/N_p=5$. It supplies a resistive load w
 
 $$I_p=5.0\,\mathrm A,\qquad V_s=50\,\mathrm V,\qquad I_s=1.0\,\mathrm A.$$
 
-电压电流若都加五倍，功率就变为 25 倍。**再尝试：**输出仍为 50 W、实际效率为 80%，输入须为 62.5 W，不能再把理想电流关系当作精确关系。
+电压电流若都加五倍，功率就变为 25 倍。**再尝试：**输出仍为 50 W、实际效率为 80%，输入须为 62.5 W。仅凭这些功率数据不能确定电流比；在 VI 功率模型下，不能同时强加精确的理想电压比和电流比。
 
 </details>
 

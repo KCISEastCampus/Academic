@@ -83,6 +83,12 @@ const high = (vs + .1) * (is + .01) / ((vp - .1) * (ip - .01));
 const low = (vs - .1) * (is - .01) / ((vp + .1) * (ip + .01));
 assert(high > eta && low < eta); assert(high - eta < .024 && eta - low < .024);
 close(10 * 600 / 300, 20); close(12 * 2 / 30, .8);
+// A 1:1 ideal core with primary winding resistance can lose power while retaining equal currents.
+const windingResistance = 1.5, windingCurrent = 2, secondaryVoltage = 12;
+const primaryVoltage = secondaryVoltage + windingCurrent * windingResistance;
+const inputPower = primaryVoltage * windingCurrent, outputPower = secondaryVoltage * windingCurrent;
+close(inputPower, 30); close(outputPower, 24);
+close(inputPower - outputPower, windingCurrent ** 2 * windingResistance); close(outputPower / inputPower, .8);
 close((12 / Math.sqrt(2)) ** 2 / 6, 12); rounded(12 / (24 / Math.sqrt(2)), '0.71');
 for (const sendV of [10000, 20000]) {
   const I = 100000 / sendV, loss = I * I * 10, receiveV = sendV - I * 10, received = 100000 - loss;

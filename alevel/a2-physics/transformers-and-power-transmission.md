@@ -66,7 +66,7 @@ A transformer delivers $12\,\mathrm{V\ rms}$ at $2.0\,\mathrm{A\ rms}$ to a resi
 
 $$P_{\mathrm{out}}=24\,\mathrm W,\qquad\eta=\frac{24}{30}=0.80=80\%,\qquad P_{\mathrm{loss}}=6.0\,\mathrm W.$$
 
-The input and output powers are unequal, so imposing the ideal current relation exactly would contradict the given loss. The ideal turns rule can be a useful voltage approximation without making the whole device lossless.
+The measured loss rules out treating the whole device as lossless, but does not by itself determine the winding-current ratio. These data do not justify assuming the ideal current ratio; a lossy model can still retain that ratio. Imposing both the exact ideal voltage and current ratios under the VI power model would force equal powers and contradict the measured loss.
 
 ## RP7: decide what and how to measure {#rp7-method}
 
@@ -159,7 +159,7 @@ Conserve power before using a current ratio.
 
 $$I_p=5.0\,\mathrm A,\qquad V_s=50\,\mathrm V,\qquad I_s=1.0\,\mathrm A.$$
 
-Increasing both voltage and current fivefold would multiply power by 25. **Retry:** if actual efficiency were 80% at the same 50 W output, input power would be 62.5 W; the ideal current relation would no longer be exact.
+Increasing both voltage and current fivefold would multiply power by 25. **Retry:** if actual efficiency were 80% at the same 50 W output, input power would be 62.5 W. Those power data alone do not determine the current ratio; the exact ideal voltage and current ratios cannot both be imposed under the VI power model.
 
 </details>
 
