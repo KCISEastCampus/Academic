@@ -370,6 +370,8 @@ $$\tau=RC,\qquad T_{1/2}=RC\ln2.$$
 
 ### 4.4 Exponential Decay in Radioactivity
 
+[Study the full lesson: Radioactive Decay](/alevel/a2-physics/radioactive-decay/) for random decay, mass–activity conversions and raw counting-data analysis.
+
 Radioactive decay follows the same exponential law:
 $$N = N_0 e^{-\lambda t}$$
 * $N$ = number of undecayed nuclei at time $t$
@@ -382,15 +384,17 @@ $$N = N_0 e^{-\lambda t}$$
 * **Half-life ($t_{1/2}$)**: The time for half the nuclei to decay.
     $$t_{1/2} = \frac{\ln 2}{\lambda} = \frac{0.693}{\lambda}$$
 
-* **Mean lifetime ($\tau$)**: The average time a nucleus survives before decaying.
+* **Optional extension — mean lifetime ($\tau$)**: The average time a nucleus survives before decaying; not a separately listed requirement in specification 3.9.2.
     $$\tau = \frac{1}{\lambda}$$
 
 ### 4.5 Determining Decay Constants Graphically
 
-* Plot $\ln N$ (or $\ln A$) against $t$:
-    * $\ln N = \ln N_0 - \lambda t$
-    * Gradient $= -\lambda$
-    * $y$-intercept $= \ln N_0$
+* For a positive, background-corrected count rate and fixed detection conditions, plot a dimensionless natural-log ratio against time:
+
+$$y=\ln\left(\frac{r}{r_{\mathrm{ref}}}\right)=y_0-\lambda t.$$
+
+* Gradient $= -\lambda$; $y$-intercept $=y_0$. Use consistent time units.
+* Subtract background **rates** before taking logarithms. A corrected count rate tracks activity only under fixed detection conditions; absolute activity needs calibration.
 
 ---
 

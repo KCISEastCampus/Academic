@@ -69,13 +69,33 @@ for (const [M, m, dl] of [[.4, .1, .05], [.6, .2, .1], [.2, .2, .04]]) {
 close(4 * pi * pi / (4 * pi * pi / 50), 50);
 close(4 * pi * pi / (4 * pi * pi / g), g);
 const source = fs.readFileSync('alevel/a2-physics/simple-harmonic-motion.md', 'utf8');
+// Fit the published repeated 20-cycle timings; do not force an origin.
+const pendulum=source.split('{#data-pendulum-records}')[1].split('<details')[0];
+const records=[...pendulum.matchAll(/^\| ([\d.]+) \| ([\d.]+) \| ([\d.]+) \|$/gm)]
+  .map(m=>[Number(m[1]),((Number(m[2])+Number(m[3]))/40)**2]);
+assert.equal(records.length,5);
+const meanL=records.reduce((s,p)=>s+p[0],0)/records.length;
+const meanT2=records.reduce((s,p)=>s+p[1],0)/records.length;
+const pendulumSlope=records.reduce((s,p)=>s+(p[0]-meanL)*(p[1]-meanT2),0)/records.reduce((s,p)=>s+(p[0]-meanL)**2,0);
+const pendulumIntercept=meanT2-pendulumSlope*meanL;
+close(pendulumSlope,4.031925);close(pendulumIntercept,.07773625);
+rounded(4*pi*pi/pendulumSlope,'9.8');rounded(pendulumIntercept/pendulumSlope,'0.019');
+// Measuring to the bottom overestimates effective length and a one-point g.
+const effectiveL=.8,bobRadius=.02,period=2*pi*Math.sqrt(effectiveL/g);
+assert(4*pi*pi*(effectiveL+bobRadius)/period**2>g);
+assert(-4*pi*pi/g*bobRadius<0);
 const html = fs.readFileSync('_site/alevel/a2-physics/simple-harmonic-motion/index.html', 'utf8');
+// The added AS transfer distinguishes driver frequency from the natural frequency.
+rounded(Math.sqrt(100 / .25) / (2 * pi), '3.2');
+rounded(Math.sqrt(100 / .50) / (2 * pi), '2.3');
+assert(source.includes('average input power balances average dissipation'));
+assert(source.includes('oscillation in the 2.0 Hz run is at **2.0 Hz**'));
 assert(!/[\u3400-\u9fff]/u.test(source), 'English content');
 assert.equal((source.match(/^#{3,4} Example /gm) || []).length, 5);
-assert.equal((source.match(/### Question /g) || []).length, 7);
-assert.equal((html.match(/<details\b/g) || []).length, 17);
-assert.equal((html.match(/<img[^>]*data-lazy-ignore="true"/g) || []).length, 3);
+assert.equal((source.match(/### Question /g) || []).length, 8);
+assert.equal((html.match(/<details\b/g) || []).length, 22);
+assert.equal((html.match(/<img[^>]*data-lazy-ignore="true"/g) || []).length, 4);
 assert(!html.includes('<p>$$'), 'MathJax display blocks');
-for (const id of ['the-condition-for-shm', 'motion-graphs-and-equations', 'speed-at-a-given-displacement', 'energy-in-shm', 'massspring-systems-and-pendulums', 'measurements-and-graphs', 'practice', 'quick-reference'])
+for (const id of ['the-condition-for-shm', 'motion-graphs-and-equations', 'speed-at-a-given-displacement', 'energy-in-shm', 'massspring-systems-and-pendulums', 'measurements-and-graphs', 'practice', 'resonance-and-damping', 'question-8-driven-system', 'quick-reference'])
   assert(html.includes(`id="${id}"`), `Missing section: ${id}`);
 console.log('Physics SHM passed: derivatives, initial conditions, energy, spring force balances, pendulum approximation, OxfordAQA models and rendered structure.');

@@ -284,7 +284,7 @@ $$V_s-V_C=V_se^{-t/RC}.$$
 
 <img src="/assets/img/physics-rc-log.svg" alt="放电电压从 8 V 指数下降，时间常数 10 s；自然对数对时间为斜率负 0.100 每秒的直线" width="400" height="600" data-lazy-ignore="true">
 
-很小的放电电压或充电剩余差值有较大相对不确定度。放电时近似 $\Delta(\ln V)\approx\Delta V/V$。可说明理由排除低于仪器有效分辨率的读数，不能只删除不合预期的点。若后续仍符合模型，开关或计时延迟只改变截距，不改变斜率。
+很小的放电电压或充电剩余差值有较大相对不确定度。放电时近似 $\Delta(\ln V)\approx\Delta V/V$。可说明理由排除低于仪器有效分辨率的读数，不能只删除不合预期的点。若仍以开关闭合为零时刻，仅略去早期样本不改变理想对数直线的截距；重新设定时间原点才会平移截距。同一放电模型下，斜率不变。
 
 充电时 $V_s$ 的不确定度也影响差值，接近末电压时尤其明显。对数图弯曲可提示电阻变化、漏电、仪器负载或模型不适合；先检查电路和读数，不要强行拟合直线。
 
@@ -350,13 +350,17 @@ $$y\approx2.0781-(0.09985\,\mathrm{s^{-1}})t.$$
 
 $$RC\approx10.0\,\mathrm s,\qquad C\approx100\,\mathrm{\mu F}.$$
 
-该区间内残差很小且正负交替，与给定电压不确定度内的舍入相符，没有显示系统弯曲。先画不确定度范围，再判断可接受斜率；估计 $C$ 的不确定度还要考虑电阻。100 μF 是估计值，不是电容的精确真值。
+该区间残差很小，正负均有，没有清楚的系统弯曲趋势。换回电压后的偏差均在给定 ±0.02 V 内，但并非严格正负交替。先画不确定度范围，再判断可接受斜率；估计 $C$ 的不确定度还要考虑电阻。100 μF 是估计值，不是电容的精确真值。
 
 末段电压的相对不确定度很大，取对数使散布更明显，不能据此断言指数模型失效。下界为零时，不能把该下界画到对数坐标上。
 
 恒定输入电阻并联会使有效电阻变小但保持恒定，因此图仍可为直线；忽略它会低估 $RC$ 及电容。若放电中电阻增大，负对数斜率的绝对值变小，曲线逐渐变缓。这是可检验的解释，不是唯一原因的证明。
 
-**再尝试：**若记录在开关闭合 3 s 后才开始，而电阻恒定，哪项拟合量改变？截距改变；斜率、时间常数与电容估计不变。
+**再尝试：**闭合 3 s 后才开始记录。比较保留闭合为时间零点与首读数处重新归零。理想模型中，仅略去样本不改变斜率和截距；实验中样本减少可影响估计值及其不确定度。若归零，$t'=t-3\,\mathrm s$，则：
+
+$$y=b-\frac{t}{\tau}=\left(b-\frac{3\,\mathrm s}{\tau}\right)-\frac{t'}{\tau}.$$
+
+只有时间坐标的改变会平移理想截距；斜率、时间常数与电容均不变。
 
 </details>
 
@@ -420,21 +424,43 @@ $$t=1.36\ln4=\boxed{1.9\,\mathrm s}.$$
 
 ### 练习 3：斜率与面积 {#question-3-a-gradient-and-an-area}
 
-At one instant on a discharge voltage graph, the tangent gradient is $-0.30\,\mathrm{V\,s^{-1}}$. Capacitance is $200\,\mathrm{\mu F}$. Find the current magnitude. During the first $5.0\,\mathrm s$, the area under the current-magnitude graph is $0.40\,\mathrm{mC}$. If initial charge is $1.0\,\mathrm{mC}$, find the charge remaining.
+*Self-written; constructed teaching figure, not experimental data.*
+
+An ideal capacitor of capacitance $20\,\mathrm{\mu F}$ discharges through a fixed resistor. The graph shows the positive charge remaining on its originally positive plate. Take conventional current leaving that plate as positive.
+
+1. Draw a tangent at P, at $t=10\,\mathrm s$. Estimate the capacitor voltage and current there, including the current sign.
+2. Sketch voltage and signed current against time, with numerical intercepts and a common time scale.
+3. Estimate the area under your current graph from 0 to $20\,\mathrm s$, and use it to find the charge remaining. Check against the supplied charge curve.
+
+<img src="/assets/img/physics-rc-practice.svg" alt="Remaining positive plate charge versus time with P at ten seconds, labelled scales and no supplied tangent." width="520" height="410" data-lazy-ignore="true">
 
 <details markdown="1">
 <summary>提示</summary>
 
-使用 $I=C\lvert \mathrm dV_C/\mathrm dt\rvert $；面积为该时间段内转移的电荷。
+按题目方向使用 $V_C=Q/C$ 与 $I=-\mathrm dQ/\mathrm dt$。电流图下面积表示转移电荷，不是剩余电荷。
 
 </details>
 
 <details markdown="1">
-<summary>解答</summary>
+<summary>解答与再尝试</summary>
 
-$$I=(200\times10^{-6})(0.30)=\boxed{60\,\mathrm{\mu A}}.$$
+P 点切线斜率约为 $-3.7\,\mathrm{\mu C\,s^{-1}}$，所以 $I\approx+3.7\,\mathrm{\mu A}$。按所选流出方向，储存电荷下降并不表示电流为负。
 
-电容器失去电荷，电荷斜率为负，但电流大小为正。剩余电荷为 $1.0-0.40=\boxed{0.60\,\mathrm{mC}}$。
+$$V_C(10)\approx\frac{37\,\mathrm{\mu C}}{20\,\mathrm{\mu F}}\approx\boxed{1.8\,\mathrm V}.$$
+
+两条草图均为正值、递减且时间常数相同的指数曲线，平滑趋近零。电压截距为 $5.0\,\mathrm V$；初始电荷切线给出电流截距约 $10\,\mathrm{\mu A}$。
+
+本图由 $Q=100e^{-t/10}\,\mathrm{\mu C}$ 构造；这是解答核验式，不是读图时预先给定的方法。由此得到：
+
+$$V_C=5.0e^{-t/10}\,\mathrm V,\qquad I=10e^{-t/10}\,\mathrm{\mu A}.$$
+
+$$\int_0^{20} I\,\mathrm dt=100(1-e^{-2})\,\mathrm{\mu C}\approx\boxed{86\,\mathrm{\mu C}}.$$
+
+$$Q(20)=100-86.5\approx\boxed{14\,\mathrm{\mu C}}.$$
+
+图解面积约 85–88 微库仑、P 点附近合理的切线均可接受；原曲线给出剩余电荷约 14 微库仑。不能用某一瞬时电流乘整个时间区间。
+
+**再尝试：**反选电流正方向，电流曲线及带符号面积均变负；实际流失量与剩余电荷不变。
 
 </details>
 
@@ -595,7 +621,7 @@ Describe how to connect the ammeter, resistor, capacitor and changeover switch t
 
 继续之前，检查能否解释电流减小、画出三类图、区分时间常数与减半时间、解释斜率和面积，并用对数线性图求 $RC$。
 
-[上一课：电容](/zh/alevel/a2-physics/capacitance/) · [课程目录](/zh/alevel/a2-physics/) · [放射性参考笔记](/zh/alevel/a2-physics/quick-reference/#44-exponential-decay-in-radioactivity)
+[下一课：放射性指数变化](/zh/alevel/a2-physics/radioactive-decay/) · [上一课：电容](/zh/alevel/a2-physics/capacitance/) · [课程目录](/zh/alevel/a2-physics/)
 
 <details markdown="1">
 <summary>来源与试题表述</summary>

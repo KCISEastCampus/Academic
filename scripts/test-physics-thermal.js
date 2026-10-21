@@ -34,11 +34,17 @@ sig(moles, 3, '0.0100'); sig(moles * 6.02e23, 3, '6.04e+21'); sig(moles * .028, 
 near(1e5 * (.005 - .002), 300); near(750 - 300, 450); near(750 - 300, 1.5 * 1e5 * (.005 - .002));
 const speed = Math.sqrt(3 * 8.31 * 300 / .028);
 sig(speed, 3, '517'); sig(speed * Math.sqrt(2), 3, '731'); near(1.5 * 1.38e-23 * 300, 6.21e-21);
+// Heating doubles T: compare fixed volume with constant external pressure.
+const particleMass=.028/6.02e23,kB=1.38e-23,numberDensity=1e5/(kB*300);
+const kineticPressure=(density,T)=>density*particleMass*(3*kB*T/particleMass)/3;
+near(kineticPressure(numberDensity,600),2e5);
+near(kineticPressure(numberDensity/2,600),1e5);
+near(Math.sqrt(600/300),Math.sqrt(2));
 const source = fs.readFileSync('alevel/a2-physics/thermal-physics.md', 'utf8');
 for (const id of ['internal-energy', 'conduction', 'ideal-gases', 'kinetic-theory', 'required-practical-8', 'required-practical-9', 'continuous-flow']) assert(source.includes(`{#${id}}`));
 assert.deepEqual([...source.matchAll(/^#{3,4} Example (\d+):/gm)].map(m => Number(m[1])), [1, 2, 3, 4, 5, 6, 7, 8]);
 assert.equal((source.match(/^### Question \d+:/gm) || []).length, 10);
-assert.equal((source.match(/<details/g) || []).length, 30);
+assert.equal((source.match(/<details/g) || []).length, 32);
 assert(!/^\$(?!\$)[^\n]+\$$/m.test(source), 'standalone calculations must use display math');
 assert(source.indexOf('{#required-practical-8}') < source.indexOf('{#latent-heat-measurement}'));
 assert(source.indexOf('{#latent-heat-measurement}') < source.indexOf('{#example-latent-heat}'));

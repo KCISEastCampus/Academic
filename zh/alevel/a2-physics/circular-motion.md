@@ -103,6 +103,11 @@ $$\boxed{F=ma=\frac{mv^2}{r}=mr\omega^2}.$$
 
 A $0.20\,\mathrm{kg}$ particle moves in a horizontal circle on a smooth table. A horizontal string joins it to a fixed point. The radius is $0.50\,\mathrm m$ and the speed is $3.0\,\mathrm{m\,s^{-1}}$. Find the tension.
 
+Before calculating, draw the particle, circle centre and all actual forces. Identify the vertical force balance and the inward resultant. Do not add a separate force named “centripetal force”.
+
+<details markdown="1">
+<summary>核对受力图与计算</summary>
+
 重力向下、支持力向上；没有竖直加速度，两者平衡。张力 $F_T$ 水平指向圆心：
 
 $$F_T=\frac{0.20(3.0)^2}{0.50}=\boxed{3.6\,\mathrm N}.$$
@@ -114,6 +119,8 @@ $$F_T=\frac{0.20(3.0)^2}{0.50}=\boxed{3.6\,\mathrm N}.$$
 $$v_{\max}=\sqrt{\frac{F_{T,\max}r}{m}}\approx\boxed{3.5\,\mathrm{m\,s^{-1}}}.$$
 
 **检查：**速率变为两倍，需要四倍张力。
+
+</details>
 
 ### 例题 3：汽车通过水平弯道 {#example-3-a-car-on-a-level-bend}
 
@@ -298,7 +305,7 @@ $$F_T=\frac{0.30(4.0)^2}{0.40}=12\,\mathrm N.$$
 
 ### 练习 4：坡顶还是谷底？ {#question-4-crest-or-dip}
 
-A $600\,\mathrm{kg}$ car moves at $10\,\mathrm{m\,s^{-1}}$. Find the normal reaction (a) at a hill crest of radius $25\,\mathrm m$ and (b) at the bottom of a dip of the same radius. Find the maximum speed at the crest. What would happen at the crest at $18\,\mathrm{m\,s^{-1}}$?
+A $600\,\mathrm{kg}$ car moves at $10\,\mathrm{m\,s^{-1}}$. Find the normal reaction (a) at a hill crest of radius $25\,\mathrm m$ and (b) at the bottom of a dip of the same radius. Find the maximum speed at the crest. What would happen at the crest at $18\,\mathrm{m\,s^{-1}}$? Before calculating, draw the actual forces and mark the circle centre separately for the crest and dip.
 
 <details markdown="1">
 <summary>提示</summary>
@@ -321,6 +328,8 @@ A $600\,\mathrm{kg}$ car moves at $10\,\mathrm{m\,s^{-1}}$. Find the normal reac
 $$v_{\max}=\sqrt{9.81(25)}\approx\boxed{16\,\mathrm{m\,s^{-1}}}.$$
 
 在 $18\,\mathrm{m\,s^{-1}}$ 时，圆周方程给出 $N=5886-7776=-1890\,\mathrm N$。这种接触不可能有负支持力；汽车失去接触，原先的圆周轨迹假设失效。
+
+**受力图检查：**两种情况都画重力向下、路面支持力向上。坡顶合力向下，谷底合力向上。“向心力”是径向合力的名称，不是额外相互作用。负支持力表示失去接触、原圆轨道假设失效，不表示路面拉着汽车。
 
 </details>
 

@@ -25,6 +25,8 @@ study_page: true
 
 **分析原始记录：**[RP8 加热](#data-specific-heat) · [RP9 玻意耳](#data-boyle) · [RP9 查理](#data-charles)。活动使用构造数据，不代替实际操作。
 
+**分四段学习：**[1. 能量、量热与 RP8](#internal-energy) → [2. 稳态流动与传导](#continuous-flow) → [3. 气体状态、功与 RP9](#ideal-gases) → [4. 分子解释](#kinetic-theory)。每段先完成相关例题和记录任务，再做综合[练习](#practice)。连续流量热仍是核心路线的一部分。
+
 ## 计算前先选择模型 {#method}
 
 **学习目标：**从物理过程选择能量平衡，说明适用条件，用统一单位计算，再用过程特征或测量结果检查答案。
@@ -114,6 +116,15 @@ Ice melts at constant temperature. Does its internal energy remain constant? Exp
 </details>
 
 ## 必做实验 8：电学法测比热容 {#required-practical-8}
+
+**阅读方法前先画图（自拟题）：** Draw a labelled arrangement for measuring the specific heat capacity of a metal block electrically. Place the ammeter, voltmeter, heater, temperature sensor and insulation. State which measured quantities give electrical energy and which give the block's temperature rise. Identify one energy transfer that the simplest calculation neglects.
+
+<details markdown="1">
+<summary>核对装置与条件</summary>
+
+电流表串联，电压表跨接加热器。标明金属块、加热器和温度传感器之间良好的热接触，以及外部保温。电功率与时间给出输入能量，两次温度读数给出温升；还须考虑环境和装置吸收的能量。
+
+</details>
 
 测金属块质量 $m$。把电热器与温度计放入紧密配合的孔中，使用少量适当的导热接触材料改善接触，并为块体保温。电流表串联，电压表**跨接电热器**。测量 $V$、$I$、加热时间 $t$ 和温升 $\Delta\theta$。若电功率近似恒定，热损失和装置自身热容可忽略：
 
@@ -370,6 +381,15 @@ $$\Delta U=Q+W=-750+300=\boxed{-450\,\mathrm J}.$$
 **3. 检查。**向外传出的 750 J 来自外界做功输入的 300 J 与内能减少的 450 J。压缩不一定升温，过程中也可能向外传能。与[练习 6](#question-6)的膨胀比较，功的符号正好反过来。
 
 ## 必做实验 9：玻意耳定律与查理定律 {#required-practical-9}
+
+**阅读方法前先画图（自拟题）：** Sketch separate arrangements for testing Boyle's law and Charles's law with a fixed gas sample. Mark the sample boundary, measured quantities and the quantity held constant in each. Show where connecting-tube volume must be included and where a boundary must move. Explain why sealing the sample does not always mean fixing its volume.
+
+<details markdown="1">
+<summary>核对装置与条件</summary>
+
+玻意耳装置应有密闭气体、绝对压强传感器及缓慢可调的边界；体积包括连接管，每次改变后等待温度平衡。查理装置应有可自由移动的标记或活塞，以及搅拌的恒温水浴；固定气量可在近似恒定外压下膨胀。密闭固定的是气量，不一定固定体积。
+
+</details>
 
 **玻意耳定律：**用合适的注射器或压强—体积装置封住固定气样。恒温下测量多组体积与对应的**绝对压强**。缓慢改变体积，每次等待温度稳定，检查漏气。画 $p$ 对 $1/V$；近似过原点的直线支持 $pV$ 恒定。计入已知的连接管体积。快速压缩会使气体升温，即时读数未必代表等温状态。
 
@@ -669,6 +689,8 @@ $$m_{\mathrm{gas}}=nM=\boxed{2.81\times10^{-4}\,\mathrm{kg}}.$$
 
 ### 练习 6：膨胀与第一定律 {#question-6}
 
+*指导练习：调用前面的 p–V 图，图中已经给出做功数值。*
+
 A gas expands from $2.0\times10^{-3}\,\mathrm{m^3}$ to $5.0\times10^{-3}\,\mathrm{m^3}$ against a constant external pressure of 100 kPa. It receives 750 J by heating. Find the work done by the gas, work done on the gas and change in internal energy.
 
 <details markdown="1">
@@ -735,17 +757,27 @@ $$c_{\mathrm{rms},600}=\sqrt2\,c_{\mathrm{rms},300}=7.31\times10^2\,\mathrm{m\,s
 
 A microscope shows bright smoke particles moving irregularly in air. State what is being observed and what causes the motion. Explain, using momentum transfer, why an ideal gas exerts greater pressure when compressed at constant temperature.
 
+Now heat two separate fixed samples of the same ideal gas, initially at the same temperature and pressure. One is in a sealed rigid container; the other is beneath a frictionless piston moving slowly against constant external pressure. Neglect changes in gravitational potential energy of the gas itself. Draw each boundary and particle model before and after heating. Predict the changes in pressure, volume, number density and rms molecular speed. Explain how wall collisions account for each pressure result, and correct the claim: “Constant pressure means constant molecular speed.”
+
 <details markdown="1">
 <summary>提示</summary>
 
-区分可见悬浮颗粒与撞击它们的不可见分子。压强取决于单位面积每秒的动量传递。
+区分可见悬浮颗粒与撞击它们的不可见分子。先辨认容器固定的量，再使用气体模型。压强是单位时间、单位面积的动量转移，数密度和分子速率分布均有影响。
 
 </details>
 
 <details markdown="1">
-<summary>解答</summary>
+<summary>解答与再尝试</summary>
 
-看到的是烟粒，随机运动的空气分子不均衡地撞击它们，使之不规则运动。等温压缩不改变平均分子动能，但提高撞壁频率，使单位壁面积每秒接收的动量增加，因此压强增大。不能说同温下分子变快了。
+可见对象是烟尘颗粒；随机运动的空气分子不均匀撞击它们，引起不规则运动。等温压缩时，平均分子动能及均方根速率不变。数密度增大，单位时间、单位壁面积的动量转移增大，压强上升。
+
+**刚性容器：**画相同体积及粒子数，加热后用更长的代表性速度箭头。温度与均方根速率增加，数密度不变。平均每次碰撞的动量转移增加，单位壁面积的碰撞也更频繁，所以压强增加。
+
+**恒压活塞：**画较大体积、相同粒子数及更长的代表性速度箭头。温度和均方根速率增加，活塞外移使数密度减小。在 $p=\tfrac13\rho c_{\mathrm{rms}}^2$ 中，质量密度下降抵消均方速率增加。恢复力学平衡后，两者共同使单位时间、单位面积的动量转移及压强不变，不能仅由碰撞次数判断压强。
+
+活塞移动不要求气体泄漏。恒压并不表示速率不变：气体升温并膨胀。箭头表示随机分子速度的代表值，不应画成整齐的向外宏观气流。
+
+**再尝试：**绝对温度加倍。刚性容器压强加倍；恒压下体积加倍、数密度减半。两者均方根速率都变为原来的 $\sqrt2$。
 
 </details>
 

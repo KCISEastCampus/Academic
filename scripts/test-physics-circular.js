@@ -65,7 +65,7 @@ const source = fs.readFileSync('alevel/a2-physics/circular-motion.md', 'utf8');
 const html = fs.readFileSync('_site/alevel/a2-physics/circular-motion/index.html', 'utf8');
 assert(!/[\u3400-\u9fff]/u.test(source));
 assert.equal((source.match(/### Question /g) || []).length, 6);
-assert.equal((html.match(/<details\b/g) || []).length, 14);
+assert.equal((html.match(/<details\b/g) || []).length, 15);
 assert.equal((html.match(/<img[^>]*data-lazy-ignore="true"/g) || []).length, 3, 'Small diagrams load without changing anchor layout');
 assert(html.includes('A2 Physics</a>'), 'Physics course breadcrumb');
 console.log('Physics circular motion passed: kinematics, force components, contact limits, OxfordAQA answers, English content and rendered links.');

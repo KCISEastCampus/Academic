@@ -341,25 +341,35 @@ This is positive because work is done against gravity. Do not put a negative sig
 
 ### Question 4: potential-energy gradient
 
-A potential-energy graph for a $37\,\mathrm{kg}$ rock has a tangent gradient of $+1.4\,\mathrm{J\,m^{-1}}$ at a point. The positive direction is along increasing distance on the horizontal axis. Find the force component and the field-strength component. Explain what happens at a maximum of this graph along the line joining two source masses.
+*Self-written; constructed teaching figure, not experimental data.*
+
+The graph shows the gravitational potential energy $U$ of a $37\,\mathrm{kg}$ test rock along the line between two fixed source masses. The rock has negligible influence on the sources. Positive $x$ points to the right; potential energy is zero at infinity.
+
+Draw a tangent at P, at $x=0.60\times10^8\,\mathrm m$. Estimate the signed force and field-strength components there. Locate the zero-field position from the curve. Is the potential zero there? Predict the initial motion after a small displacement to either side of that position along the line.
+
+<img src="/assets/img/physics-gravity-practice.svg" alt="Potential energy of a thirty-seven kilogram test rock versus position between fixed sources; P is marked at 0.60 times ten to the eight metres. Both axes show scale factors; no tangent is supplied." width="520" height="410" data-lazy-ignore="true">
 
 <details markdown="1">
 <summary>Hint</summary>
 
-First use the negative gradient to obtain force. Divide by the rock's mass to obtain field strength.
+Read the powers of ten on both axes. Use $F_x=-\mathrm dU/\mathrm dx$, then divide by mass. At equilibrium consider the slopes on both sides, not only the height of the curve.
 
 </details>
 
 <details markdown="1">
-<summary>Solution</summary>
+<summary>Solution and retry</summary>
 
-$$F=-1.4\,\mathrm N.$$
+The tangent at P slopes upwards. Its gradient is approximately:
 
-$$g=\frac{-1.4}{37}\approx\boxed{-0.038\,\mathrm{N\,kg^{-1}}}.$$
+$$\frac{\mathrm dU}{\mathrm dx}\approx\frac{0.51\times10^7\,\mathrm J}{0.10\times10^8\,\mathrm m}=+0.51\,\mathrm{J\,m^{-1}}.$$
 
-The force and field point in the negative direction. Dividing the potential energy itself by mass gives potential, not field strength.
+These changes describe two points on a drawn tangent, not a secant across the curved trace. Reasonable drawn tangents may give about 0.4–0.65 newtons for the force magnitude.
 
-At a maximum, the tangent is horizontal. The two attractions balance and the resultant field is zero. The potential energy can still be negative. A small displacement along the line takes the rock away from this unstable equilibrium.
+$$F_x\approx\boxed{-0.51\,\mathrm N},\qquad g_x=\frac{F_x}{37}\approx\boxed{-0.014\,\mathrm{N\,kg^{-1}}}.$$
+
+Both point left. The horizontal tangent occurs near $x=1.0\times10^8\,\mathrm m$. Here the field is zero, but $U\approx-7.4\times10^7\,\mathrm J$ and potential $U/m\approx-2.0\times10^6\,\mathrm{J\,kg^{-1}}$ are nonzero. To the left the slope is positive and force points left; to the right it is negative and force points right. This is unstable equilibrium along the line.
+
+**Retry:** use a test rock of twice the mass without moving the sources. The energy curve and force double; the field and zero-field position do not change. Dividing the curve height by mass gives potential, not field strength.
 
 </details>
 

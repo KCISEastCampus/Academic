@@ -334,29 +334,43 @@ A particle has acceleration $a=-100x$, with $x$ in metres. Explain why this is S
 
 ### 练习 2：从平衡位置开始 {#question-2-starting-at-equilibrium}
 
-A particle passes through equilibrium in the positive direction at $t=0$. Its amplitude is $0.030\,\mathrm m$ and its period is $0.80\,\mathrm s$. Write an equation for $x(t)$ and find $x$, $v$ and $a$ at $t=0.20\,\mathrm s$.
+*Self-written; constructed teaching figure, not experimental data.*
+
+The trace shows a particle undergoing SHM. Read the amplitude and period from the graph, and write an equation for $x(t)$ in SI units. From the trace alone, state the signs of velocity and acceleration at $t=0.10\,\mathrm s$. Calculate $x$, $v$ and $a$ at $t=0.20\,\mathrm s$, then sketch a velocity–time graph with a numerical vertical scale.
+
+<img src="/assets/img/physics-shm-practice.svg" alt="A displacement trace in millimetres against time in seconds, starting at zero with positive slope; axis scales are supplied for independent reading." width="520" height="410" data-lazy-ignore="true">
 
 <details markdown="1">
 <summary>提示</summary>
 
-选择初速度为正的正弦方程；所给时间为四分之一周期。
+由完整重复的一段读取周期。初位移和初斜率决定相位；斜率给出速度，而加速度指向平衡位置。
 
 </details>
 
 <details markdown="1">
-<summary>解答</summary>
+<summary>解答与再尝试</summary>
+
+图像给出振幅 $30\,\mathrm{mm}=0.030\,\mathrm m$、周期 $0.80\,\mathrm s$。零时刻质点沿正方向通过平衡位置：
 
 $$\omega=\frac{2\pi}{0.80}=2.5\pi\,\mathrm{rad\,s^{-1}}.$$
 
 $$x=0.030\sin(2.5\pi t).$$
 
-在 $t=0.20\,\mathrm s$ 时，质点位于正端点：
+在 $t=0.10\,\mathrm s$，曲线在零线上方且上升，所以速度为正，加速度为负。位移增加并不表示加速度为正。
+
+在 $t=0.20\,\mathrm s$，质点到达正向最远点：
 
 $$x=+0.030\,\mathrm m,\qquad v=0.$$
 
 $$a=-(2.5\pi)^2(0.030)\approx\boxed{-1.9\,\mathrm{m\,s^{-2}}}.$$
 
-瞬时静止，但仍有指向平衡位置的加速度。
+速度图周期相同，初始处于正向最大值，在位移最远点过零：
+
+$$v=0.030(2.5\pi)\cos(2.5\pi t)\,\mathrm{m\,s^{-1}},\qquad v_{\max}\approx0.24\,\mathrm{m\,s^{-1}}.$$
+
+位移最远点瞬时静止，但仍有指向平衡位置的加速度。
+
+**再尝试：**将原曲线关于时间轴翻折。初始方向反转，位移式及其导数均取反，振幅与周期不变。
 
 </details>
 
@@ -444,6 +458,50 @@ $g$ 的百分不确定度中，计时贡献为 $2(0.2/38.0)(100)\approx1.1\%$。
 
 </details>
 
+#### 自选并检验单摆图像 {#data-pendulum-records}
+
+*Self-written; constructed records for a small-angle pendulum, not a completed practical. This reuses AS timing skills.*
+
+Each timing covers 20 complete oscillations. The displayed length has uncertainty ±0.002 m and each total timing has uncertainty ±0.2 s. Keep the amplitude small and use the same bob and timing method.
+
+| Measured length / m | First total time / s | Second total time / s |
+| --- | --- | --- |
+| 0.400 | 26.0 | 26.1 |
+| 0.600 | 31.6 | 31.5 |
+| 0.800 | 36.3 | 36.4 |
+| 1.000 | 40.5 | 40.6 |
+| 1.200 | 44.3 | 44.4 |
+
+Choose a processing method and graph that use all the records to estimate $g$. Show your axes, units and gradient calculation. Decide whether to force the line through the origin, and explain what its intercept could reveal. Suggest a measurement check before claiming the model has failed.
+
+<details markdown="1">
+<summary>提示</summary>
+
+先求总计时平均值，再求周期。把小角周期关系改写为直线形式；不能将 20 周总时间直接平方当作一个周期。考虑长度可能存在恒定偏差。
+
+</details>
+
+<details markdown="1">
+<summary>分析与再尝试</summary>
+
+平均周期为 $1.3025,1.5775,1.8175,2.0275,2.2175\,\mathrm s$。以周期平方为纵轴、测量长度为横轴；选择依据应是模型关系，而非只因图像看起来直。允许截距的拟合给出：
+
+$$T^2\approx(4.032\,\mathrm{s^2\,m^{-1}})L_{\mathrm{measured}}+0.0777\,\mathrm{s^2}.$$
+
+$$g=\frac{4\pi^2}{\text{gradient}}\approx\boxed{9.8\,\mathrm{m\,s^{-2}}}.$$
+
+用斜率估计，不用单个周期与长度之比。画出长度及周期平方的不确定度范围；近似 $\Delta(T^2)\approx2T\Delta T$，以 $\Delta T=0.2/20=0.010\,\mathrm s$ 保守估计计时贡献。重复可评估散布，不能消除共有的计时或长度偏差。
+
+正截距提示先检查长度零点，不要强制直线过原点。与此拟合相容的长度偏差为：
+
+$$\delta L\approx\frac{0.0777}{4.032}\,\mathrm m\approx0.019\,\mathrm m.$$
+
+这对应有效摆长比显示长度大约 1.9 cm。检查支点至摆球中心的测量，并比较不确定度范围；单凭截距不能唯一确定原因，也不能否定小角模型。
+
+**再尝试：**改成从支点量到摆球底部。若摆球半径恒定，这会高估有效长度。由单次读数计算的 $g$ 会偏高，而 $T^2$–测量长度拟合出现负截距；理想模型的斜率仍给出相同的 $g$。
+
+</details>
+
 ### 练习 6：解释与推导 {#question-6-explanation-and-derivation}
 
 **Adapted from OxfordAQA PH03, January 2020, Question 1.**
@@ -506,6 +564,51 @@ $$\boxed{T=2\pi\sqrt{\frac{M\Delta l}{(M+m)g}}}.$$
 
 </details>
 
+## 共振与阻尼：调用 AS 知识 {#resonance-and-damping}
+
+自由振动发生在系统的固有频率附近。周期性驱动力可以维持振动；达到稳定受迫振动后，振动频率等于**驱动频率**。轻阻尼时，驱动频率接近固有频率会产生最大响应，即共振（resonance）。比较响应时，应保持驱动力振幅相同。
+
+阻尼增大时，更多机械能传给环境，共振峰降低、变宽。稳定受迫振动的振幅不必逐渐减小：平均输入功率可以恰好补偿平均耗散功率。关闭驱动后，没有持续能量输入，阻尼使自由振动的振幅逐渐减小。需要时回顾 [AS 受迫振动与共振](/alevel/as-physics/#62-forced-vibrations-and-resonance)。
+
+### 练习 8：解释受迫系统 {#question-8-driven-system}
+
+*Self-written; AS transfer calibrated against OxfordAQA 9630 PH03, Specimen 2019, Q6.6–6.7 (QP pp.16–17; MS p.11), not an original exam question.*
+
+A $0.25\,\mathrm{kg}$ mass is attached to a spring of spring constant $100\,\mathrm{N\,m^{-1}}$. A driver applies a periodic force of fixed amplitude. Damping is initially light. Calculate the undamped natural frequency, then compare the steady responses when the driving frequency is 2.0, 3.2 and 5.0 Hz. State the oscillation frequency in the 2.0 Hz run. Explain what stronger damping does to the resonance curve and why a steady amplitude is possible despite energy loss. Finally describe the motion after the driver is switched off while damping remains.
+
+<details markdown="1">
+<summary>提示</summary>
+
+由弹簧振子周期求固有频率。区分驱动频率与固有频率，再比较关闭驱动前后的能量输入和耗散。
+
+</details>
+
+<details markdown="1">
+<summary>解答与再尝试</summary>
+
+$$f_0=\frac{1}{2\pi}\sqrt{\frac{k}{m}}=\frac{1}{2\pi}\sqrt{\frac{100}{0.25}}\approx\boxed{3.2\,\mathrm{Hz}}.$$
+
+轻阻尼且驱动力振幅相同时，3.2 Hz 最接近共振条件，三者中稳定响应最大。2.0 Hz 驱动下的稳定振动频率是 **2.0 Hz**，不会自动变成固有频率。阻尼更强时，共振峰更低、更宽。
+
+振幅稳定时，驱动平均每周期补充的能量等于耗散的能量。关闭驱动后，系统自由振动，机械能传给环境，振幅逐渐减小。不能把稳定受迫振动描述成每周期都净损失能量而没有补充。
+
+</details>
+
+### 再尝试：改变系统 {#retry-resonance}
+
+*自拟题。*
+
+The mass is doubled while the spring and the 3.2 Hz driver are unchanged. Predict the new natural frequency and explain why the earlier near-resonance conclusion must be reconsidered.
+
+<details markdown="1">
+<summary>再尝试反馈</summary>
+
+$$f'_0=f_0/\sqrt2\approx\boxed{2.3\,\mathrm{Hz}}.$$
+
+固有频率已降低，驱动频率仍为 3.2 Hz。应重新比较系统与驱动频率，不能假定二者仍然匹配。稳定受迫振动仍以驱动频率进行，但需要重新判断响应振幅。
+
+</details>
+
 ## 速查 {#quick-reference}
 
 | 用途 | 方程与适用条件 |
@@ -533,5 +636,7 @@ $$\boxed{T=2\pi\sqrt{\frac{M\Delta l}{(M+m)g}}}.$$
 教材参考：Jim Breithaupt，*Oxford International AQA Examinations: International A Level Physics*，第 16 章，印刷页 285–296。短讲解、图像判读、模型与分层练习参考教师 AS 讲义。
 
 练习 6–7 改编自 PH03 January 2020 Q1、June 2024 Q9；动量检查点改编自 June 2024 Q8。英文原页说明编写时参考过官方评分标准，答案经独立推导与检查，未直接照抄教材答案。
+
+练习 8 为自拟题，将 AS 大纲 3.5.1–3.5.2 与 PH03 的实际应用连接。本次已配对阅读 [Specimen 2019 样卷](https://www.oxfordaqa.com/oaqaresources/science/assessment/9630-PH03-international-a-level-physics-specimen-paper-v4.2.pdf) Q6.6–6.7 及[评分标准](https://www.oxfordaqa.com/oaqaresources/science/assessment/9630-PH03-international-a-level-physics-mark-scheme-v4.2.pdf) p.11 的相关部分；本页不引入阻尼微分方程。
 
 </details>

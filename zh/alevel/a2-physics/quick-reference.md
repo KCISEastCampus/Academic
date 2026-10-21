@@ -405,6 +405,8 @@ $$\tau=RC,\qquad T_{1/2}=RC\ln2.$$
 ### 4.4 放射性指数衰变
 {: id="44-exponential-decay-in-radioactivity"}
 
+[完整学习页：放射性指数变化](/zh/alevel/a2-physics/radioactive-decay/)包含随机衰变、质量与活度换算及原始计数记录分析。
+
 放射性衰变遵循同样的指数规律：
 $$N = N_0 e^{-\lambda t}$$
 * $N$ = 未衰变原子核数，对应时刻 $t$
@@ -417,16 +419,18 @@ $$N = N_0 e^{-\lambda t}$$
 * **半衰期（$t_{1/2}$）**：原子核数衰变至一半所需的时间。
     $$t_{1/2} = \frac{\ln 2}{\lambda} = \frac{0.693}{\lambda}$$
 
-* **平均寿命（$\tau$）**：原子核从开始到衰变的平均存活时间。
+* **选学拓展——平均寿命（$\tau$）**：原子核从开始到衰变的平均存活时间；大纲 3.9.2 未将其单独列为要求。
     $$\tau = \frac{1}{\lambda}$$
 
 ### 4.5 用图像求衰变常量
 {: id="45-determining-decay-constants-graphically"}
 
-* 画 $\ln N$（或 $\ln A$）对 $t$ 的图：
-    * $\ln N = \ln N_0 - \lambda t$
-    * 斜率 $= -\lambda$
-    * $y$ 轴截距 $= \ln N_0$
+* 在探测条件固定、扣除本底后的计数率为正时，以无量纲自然对数比值对时间作图：
+
+$$y=\ln\left(\frac{r}{r_{\mathrm{ref}}}\right)=y_0-\lambda t.$$
+
+* 斜率 $= -\lambda$；$y$ 轴截距 $=y_0$。时间单位须一致。
+* 先扣本底**计数率**，再取对数。计数率只有在探测条件固定时才追踪活度变化；求绝对活度还需校准。
 
 ---
 

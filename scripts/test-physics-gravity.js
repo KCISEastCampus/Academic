@@ -48,7 +48,14 @@ assert(twoV(x - .01) < twoV(x) && twoV(x + .01) < twoV(x));
 close((2 * m * mu / (2 * r1) ** 2) / (m * mu / r1 ** 2), .5);
 close(V(2 * r1) / V(r1), .5); close(2 * m * V(2 * r1), m * V(r1));
 rounded(mu / (2 * R) ** 2, '2.45'); rounded(V(2 * R), '-3.13e+7');
-rounded(-100 * V(2 * R), '3.13e+9'); rounded(-1.4 / 37, '-0.038', 2);
+rounded(-100 * V(2 * R), '3.13e+9');
+// Independent Q4 graph: two fixed sources, with energy differentiated numerically.
+const graphU=x=>-6.67e-11*37*(1e24/x+4e24/(3e8-x));
+const graphForce=x=>-(graphU(x+100)-graphU(x-100))/200;
+rounded(graphForce(.6e8),'-0.51',2);rounded(graphForce(.6e8)/37,'-0.014',2);
+close(graphU(1e8),-7.4037e7);
+assert(Math.abs(graphForce(1e8))<1e-8);
+assert(graphForce(.99e8)<0&&graphForce(1.01e8)>0);
 // Authentic adapted paper questions, checked from the supplied data.
 const w = 2 * Math.PI / (27.3 * 86400), a = w * w * 4.5e8;
 rounded(w, '0.00000266'); rounded(mu / (4.5e8) ** 2, '0.0020', 2);
@@ -62,7 +69,7 @@ assert(!/[\u3400-\u9fff]/u.test(source));
 assert.equal((source.match(/### Example /g) || []).length, 6);
 assert.equal((source.match(/### Question /g) || []).length, 8);
 assert.equal((html.match(/<details\b/g) || []).length, 19);
-assert.equal((html.match(/<img[^>]*data-lazy-ignore="true"/g) || []).length, 2);
+assert.equal((html.match(/<img[^>]*data-lazy-ignore="true"/g) || []).length, 3);
 for (const id of ['force-and-field-strength', 'potential-and-potential-energy', 'graphs-equipotentials-and-combined-fields', 'circular-orbits', 'orbital-energy', 'geosynchronous-and-geostationary-orbits', 'practice', 'quick-reference']) {
   assert(html.includes(`id="${id}"`), `Missing section: ${id}`);
 }

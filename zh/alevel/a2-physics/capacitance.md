@@ -275,23 +275,35 @@ An air-gap capacitor remains connected to an ideal constant-voltage supply. Its 
 
 ### 练习 3：图轴与单位 {#question-3-graph-axes-and-units}
 
-A straight $Q$–$V$ graph passes through the origin and the point $(8.0\,\mathrm V,24\,\mathrm{\mu C})$. Find the capacitance and stored energy there. What is the gradient of the corresponding $V$–$Q$ graph when $Q$ is measured in coulombs?
+*Self-written; constructed teaching figure, not experimental data.*
+
+The graph has potential difference vertically and charge horizontally. Read the coordinates of states A and B. Determine the capacitance and the gradient in SI units. The capacitor discharges from A to B: shade the area representing the energy released and estimate that energy. Explain why the entire triangle below A is not the released energy.
+
+<img src="/assets/img/physics-capacitance-practice.svg" alt="Potential difference against charge, with states A and B marked on a straight line and labelled axis scales." width="520" height="410" data-lazy-ignore="true">
 
 <details markdown="1">
 <summary>提示</summary>
 
-第一张图以电荷为纵轴，交换坐标轴后斜率取倒数。
+用两个相隔较远的点求斜率，注意微库仑刻度。求功时，只对实际转移的电荷累加 $V\Delta Q$。
 
 </details>
 
 <details markdown="1">
-<summary>解答</summary>
+<summary>解答与再尝试</summary>
 
-$$C=\frac{24\times10^{-6}}{8.0}=\boxed{3.0\,\mathrm{\mu F}}.$$
+图中 A 为 $(40\,\mathrm{\mu C},8.0\,\mathrm V)$，B 为 $(15\,\mathrm{\mu C},3.0\,\mathrm V)$。
 
-$$E_{\text{stored}}=\frac12QV=\boxed{96\,\mathrm{\mu J}}.$$
+$$C=\frac{40\times10^{-6}}{8.0}=\boxed{5.0\,\mathrm{\mu F}}.$$
 
-$V$ 对 $Q$ 图斜率为 $1/C=\boxed{3.3\times10^5\,\mathrm{V\,C^{-1}}}$。不考虑微库仑轴标度而写 $0.33$，会得到错误 SI 数值。
+$$\frac{\Delta V}{\Delta Q}=\frac{8.0-3.0}{(40-15)\times10^{-6}}=\boxed{2.0\times10^5\,\mathrm{V\,C^{-1}}}.$$
+
+应涂出两个电荷坐标之间、直线下方的梯形：
+
+$$\Delta E_{\text{released}}\approx\frac{8.0+3.0}{2}(40-15)\times10^{-6}=137.5\,\mathrm{\mu J}\approx\boxed{1.4\times10^{-4}\,\mathrm J}.$$
+
+A 下方整个三角形表示 $160\,\mathrm{\mu J}$，但 B 处仍有 $22.5\,\mathrm{\mu J}$。两者相减与梯形面积一致。允许图像分辨率内的读数误差；只用电压差构成三角形会漏算部分功。
+
+**再尝试：**电容不变，改为从 A 放电至零，现在应取哪个面积？取 A 下方整个三角形，释放能量为 $160\,\mathrm{\mu J}$。
 
 </details>
 

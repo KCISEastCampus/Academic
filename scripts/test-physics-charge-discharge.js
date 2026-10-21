@@ -36,7 +36,15 @@ round(3.2*Math.exp(-3),'0.16');round(3.2*(1-Math.exp(-3)),'3.0');
 close(-1/-.1,10);close(10/1e5,100e-6);close((.105-.095)/2/.1+.02,.07);
 close(10e3*470e-6,4.7);round(12*(1-Math.exp(-1)),'7.6');round(1.2*Math.exp(-1),'0.44');
 round(20e3*68e-6*Math.log(2),'0.94');round(20e3*68e-6*Math.log(4),'1.9');close((2.25/9)**2,1/16);
-close(200e-6*.3,60e-6);close(.001-.0004,.0006);
+// Q3's plotted charge model: outward current is minus the derivative.
+const graphQ=t=>100e-6*Math.exp(-t/10),h=.001;
+const graphI=t=>-(graphQ(t+h)-graphQ(t-h))/(2*h);
+round(graphQ(10)/20e-6,'1.8');round(graphI(10)*1e6,'3.7');
+close(graphQ(0)/20e-6,5);close(graphI(0),10e-6,1e-7);
+let area=0;
+for(let i=0;i<2000;i++) area+=graphI((i+.5)*.01)*.01;
+close(area,graphQ(0)-graphQ(20),1e-7);
+round(area*1e6,'86');round((graphQ(0)-area)*1e6,'14');
 round(2.2*Math.log(10),'5.1');round((5-4.5)/2200*1e3,'0.23');close(.001*4.5,.0045);
 const Reff=1/(1/1e6+1/1e7);close(Reff/1e6,10/11);close(1-Reff/1e6,1/11);
 // Supplied log data replace the original graph: propagate unrounded values.
@@ -45,7 +53,7 @@ round(Q0,'0.00061');round(C*1e6,'1.2e+2');round(tau,'79');round(R2/1e6,'0.81');
 assert(R2>R);assert(5/3.2e6<5/R);
 const I0=28.5e-6,Rj=220e3,V0=I0*Rj,tauj=1.83/Math.log(2),Cj=tauj/Rj;
 round(V0,'6.3');round(Cj*1e6,'12');round(Cj*V0*Math.exp(-6/tauj)*1e6,'7.8');
-// A voltage sensor's constant fractional loading changes slope; a timing offset changes intercept only.
+// Constant parallel loading changes slope; resetting the time coordinate changes intercept only.
 const logSlope=(dt,offset,tau)=>(Math.log(8*Math.exp(-(dt+offset)/tau))-Math.log(8*Math.exp(-offset/tau)))/dt;
 close(logSlope(20,3,10),-.1);close(-1/(10*Math.LN10),Math.log10(Math.exp(-2))/20);
 const source=fs.readFileSync('alevel/a2-physics/capacitor-charge-and-discharge.md','utf8');
@@ -59,6 +67,19 @@ const slope=usable.reduce((s,p)=>s+(p[0]-meanT)*(p[1]-meanY),0)/usable.reduce((s
 close(slope,-.0998453283307354);
 const fittedIntercept=meanY-slope*meanT;
 for(const [t,y] of usable) assert(Math.abs(Math.exp(fittedIntercept+slope*t)-Math.exp(y))<.02);
+const residuals=usable.map(([t,y])=>y-(fittedIntercept+slope*t));
+assert(residuals.some(r=>r>0)&&residuals.some(r=>r<0));
+// Missing early samples leaves an ideal line unchanged; only t'=t-3 shifts its intercept.
+const fit=points=>{
+  const mx=points.reduce((s,p)=>s+p[0],0)/points.length,my=points.reduce((s,p)=>s+p[1],0)/points.length;
+  const m=points.reduce((s,p)=>s+(p[0]-mx)*(p[1]-my),0)/points.reduce((s,p)=>s+(p[0]-mx)**2,0);
+  return [m,my-m*mx];
+};
+const ideal=readings.map(([t])=>[t,Math.log(8)-t/10]);
+const later=ideal.filter(([t])=>t>=3);
+for(const points of [ideal,later]) { const [m,b]=fit(points);close(m,-.1);close(b,Math.log(8)); }
+const [resetSlope,resetIntercept]=fit(later.map(([t,y])=>[t-3,y]));
+close(resetSlope,-.1);close(resetIntercept,Math.log(8)-.3);
 assert(Math.abs((-1/slope)/100e3-100e-6)<1e-6);
 assert.equal(.02/readings.at(-1)[1],1);
 const html=fs.readFileSync('_site/alevel/a2-physics/capacitor-charge-and-discharge/index.html','utf8');
@@ -66,6 +87,6 @@ assert(!/[\u3400-\u9fff]/u.test(source));
 assert.equal((source.match(/^#{3,4} Example /gm)||[]).length,6);
 assert.equal((source.match(/### Question /g)||[]).length,8);
 assert.equal((html.match(/<details\b/g)||[]).length,20);
-assert.equal((html.match(/<img[^>]*data-lazy-ignore="true"/g)||[]).length,3);
+assert.equal((html.match(/<img[^>]*data-lazy-ignore="true"/g)||[]).length,4);
 for(const id of ['the-circuit','discharging','charging','time-constant-and-time-to-halve','reading-graphs','energy-during-discharge','required-practical-6','practice','quick-reference']) assert(html.includes(`id="${id}"`),id);
 console.log('Capacitor charge/discharge passed: numerical circuit integration, charge and energy conservation, graph units, log fitting, meter loading, adapted answers and lesson structure.');

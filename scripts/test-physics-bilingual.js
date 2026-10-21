@@ -2,10 +2,12 @@
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
-const slugs = ['index', 'circular-motion', 'simple-harmonic-motion', 'gravitational-fields-and-satellites', 'electric-fields', 'capacitance', 'capacitor-charge-and-discharge', 'quick-reference', 'thermal-physics'];
+const slugs = ['index', 'circular-motion', 'simple-harmonic-motion', 'gravitational-fields-and-satellites', 'electric-fields', 'capacitance', 'capacitor-charge-and-discharge', 'radioactive-decay', 'quick-reference', 'thermal-physics'];
 const math = /\$\$[\s\S]*?\$\$|\$[^$\n]+\$/g;
 const read = file => fs.readFileSync(file, 'utf8').replace(/\r\n/g, '\n');
 const ids = html => [...html.matchAll(/<h[1-4]\b[^>]*id="([^"]+)"/g)].map(m => m[1]);
+// Source labels can be translated; the English task and supplied data must stay identical.
+const promptText = text => text.trim().replace(/^\*(?:Adapted from|Self-written|Further application)[^\n]*\*\s*\n+/, '').replace(/<img[^>]*>\s*\n/g, '');
 for (const slug of slugs) {
   const url = '/alevel/a2-physics/' + (slug === 'index' ? '' : slug + '/');
   const en = read(`alevel/a2-physics/${slug}.md`), zh = read(`zh/alevel/a2-physics/${slug}.md`);
@@ -18,8 +20,8 @@ for (const slug of slugs) {
   assert.deepEqual(ids(zhHtml), ids(enHtml), slug + ': heading anchors');
   assert.equal((zh.match(/<details/g) || []).length, (en.match(/<details/g) || []).length, slug + ': disclosures');
   assert.deepEqual([...zh.matchAll(/<img[^>]+src="([^"]+)"/g)].map(m => m[1]), [...en.matchAll(/<img[^>]+src="([^"]+)"/g)].map(m => m[1]), slug + ': figures');
-  for (const m of en.matchAll(/^#{3,4} (?:Example \d+:|Checkpoint:).*\n\n(?:\*(?:Adapted from|Self-written\.)[^\n]*\n\n)?([^\n]+)/gm)) assert(zh.includes(m[1]), slug + ': English example prompt');
-  for (const m of en.matchAll(/^### Question [^\n]+\n([\s\S]*?)(?=<details)/gm)) assert(zh.includes(m[1]), slug + ': English practice prompt');
+  for (const m of en.matchAll(/^#{3,4} (?:Example \d+:|Checkpoint:).*\n\n(?:\*(?:Adapted from|Self-written|Further application)[^\n]*\n\n)?([^\n]+)/gm)) assert(zh.includes(m[1]), slug + ': English example prompt');
+  for (const m of en.matchAll(/^### Question [^\n]+\n([\s\S]*?)(?=<details)/gm)) assert(zh.includes(promptText(m[1])), slug + ': English practice prompt');
   for (const m of zh.matchAll(/\]\((\/[^)]+)\)|<img[^>]+src="(\/[^" ]+)"/g)) {
     const [target, fragment] = (m[1] || m[2]).split('#');
     const file = path.join('_site', target, target.endsWith('/') ? 'index.html' : '');
@@ -28,10 +30,10 @@ for (const slug of slugs) {
   }
   assert(zhHtml.includes('href="/zh/alevel/a2-physics/" data-ui="physics">A2 物理</a>') || slug === 'index', slug + ': Chinese breadcrumb');
   for (const formula of zh.match(math) || []) assert(!formula.includes('|'), slug + ': TeX pipe in Markdown');
-  const recordIds = slug === 'thermal-physics' ? ['data-specific-heat', 'data-boyle', 'data-charles'] : slug === 'capacitor-charge-and-discharge' ? ['data-rc-records'] : [];
+  const recordIds = slug === 'thermal-physics' ? ['data-specific-heat', 'data-boyle', 'data-charles'] : slug === 'capacitor-charge-and-discharge' ? ['data-rc-records'] : slug === 'radioactive-decay' ? ['model-constant-probability', 'checkpoint-decay-graphs', 'data-decay-records', 'challenge-decay-records', 'retry-counting'] : slug === 'simple-harmonic-motion' ? ['retry-resonance', 'data-pendulum-records'] : [];
   for (const id of recordIds) {
-    const prompt = en.split(`{#${id}}`)[1].split('<details')[0].trim();
-    assert(zh.includes(prompt), id + ': preserve English task and raw data');
+    const prompt = promptText(en.split(`{#${id}}`)[1].split('<details')[0]);
+    assert(zh.replace(/<img[^>]*>\s*\n/g, '').includes(prompt), id + ': preserve English task and raw data');
   }
   if (slug === 'thermal-physics') {
     for (const html of [enHtml, zhHtml]) {
@@ -54,4 +56,4 @@ for (const slug of slugs) {
     assert.equal((zh.match(/原始来源待考/g) || []).length, 7);
   }
 }
-console.log('PASS: 9 physics page pairs; formulas, English prompts, anchors, disclosures, figures, local links and language navigation');
+console.log(`PASS: ${slugs.length} physics page pairs; formulas, English prompts, anchors, disclosures, figures, local links and language navigation`);

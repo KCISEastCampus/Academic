@@ -273,23 +273,35 @@ In both cases $C\propto1/d$. The connection decides whether $V$ or $Q$ is fixed.
 
 ### Question 3: graph axes and units
 
-A straight $Q$–$V$ graph passes through the origin and the point $(8.0\,\mathrm V,24\,\mathrm{\mu C})$. Find the capacitance and stored energy there. What is the gradient of the corresponding $V$–$Q$ graph when $Q$ is measured in coulombs?
+*Self-written; constructed teaching figure, not experimental data.*
+
+The graph has potential difference vertically and charge horizontally. Read the coordinates of states A and B. Determine the capacitance and the gradient in SI units. The capacitor discharges from A to B: shade the area representing the energy released and estimate that energy. Explain why the entire triangle below A is not the released energy.
+
+<img src="/assets/img/physics-capacitance-practice.svg" alt="Potential difference against charge, with states A and B marked on a straight line and labelled axis scales." width="520" height="410" data-lazy-ignore="true">
 
 <details markdown="1">
 <summary>Hint</summary>
 
-The first graph has charge vertically. Swapping the axes inverts the gradient.
+Use two separated points for the gradient, checking the microcoulomb scale. For work, add $V\Delta Q$ over only the charge that moves.
 
 </details>
 
 <details markdown="1">
-<summary>Solution</summary>
+<summary>Solution and retry</summary>
 
-$$C=\frac{24\times10^{-6}}{8.0}=\boxed{3.0\,\mathrm{\mu F}}.$$
+The graph gives A at $(40\,\mathrm{\mu C},8.0\,\mathrm V)$ and B at $(15\,\mathrm{\mu C},3.0\,\mathrm V)$.
 
-$$E_{\text{stored}}=\frac12QV=\boxed{96\,\mathrm{\mu J}}.$$
+$$C=\frac{40\times10^{-6}}{8.0}=\boxed{5.0\,\mathrm{\mu F}}.$$
 
-The $V$–$Q$ gradient is $1/C=\boxed{3.3\times10^5\,\mathrm{V\,C^{-1}}}$. Giving $0.33$ without accounting for the microcoulomb axis scale gives the wrong SI value.
+$$\frac{\Delta V}{\Delta Q}=\frac{8.0-3.0}{(40-15)\times10^{-6}}=\boxed{2.0\times10^5\,\mathrm{V\,C^{-1}}}.$$
+
+Shade the trapezium below the line between the two charge coordinates:
+
+$$\Delta E_{\text{released}}\approx\frac{8.0+3.0}{2}(40-15)\times10^{-6}=137.5\,\mathrm{\mu J}\approx\boxed{1.4\times10^{-4}\,\mathrm J}.$$
+
+The full triangle at A is $160\,\mathrm{\mu J}$, but $22.5\,\mathrm{\mu J}$ remains at B. Subtracting them agrees with the trapezium. Readings within graph resolution are acceptable; using only the voltage difference in a triangular area would omit part of the work.
+
+**Retry:** without changing the capacitance, discharge from A to zero instead. Which area is now needed? The full triangle below A; the released energy is $160\,\mathrm{\mu J}$.
 
 </details>
 
