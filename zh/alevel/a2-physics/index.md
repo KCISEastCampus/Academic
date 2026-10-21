@@ -11,7 +11,7 @@ toc_headings: h2, h3, h4
 study_page: true
 ---
 
-**PH03——场及其影响（Fields and their consequences）。** 从下方圆周运动开始。本课程以 [AS 物理](/alevel/as-physics/)为基础。**PH04 第一章热学**已在本页下方列出。
+**PH03——场及其影响（Fields and their consequences）。** 从下方圆周运动开始。本课程以 [AS 物理](/alevel/as-physics/)为基础。**PH04 热学、核半径及质量与结合能**已在本页下方列出。
 
 **只想查公式？** 打开 [PH03 速查](/zh/alevel/a2-physics/quick-reference/)。中文页保留英文例题、练习题干与公式；先独立作答，再展开提示和中文解答。
 
@@ -42,12 +42,18 @@ study_page: true
 
 <span id="-key-required-practicals-unit-3"></span><span id="-summary-comparing-gravitational-fields-and-electric-fields"></span><span id="similarities"></span><span id="differences"></span><span id="-summary-electric-fields-and-magnetic-fields"></span><span id="how-electric-and-magnetic-fields-are-connected"></span><span id="charged-particles-in-electric-and-magnetic-fields"></span><span id="velocity-selector-electric--magnetic-fields-combined"></span>
 
-## PH04——第一章：热学 {#ph04-thermal-physics}
+## PH04——能量与能源 {#ph04-thermal-physics}
 
 **[开始学习热学（Thermal Physics）](/zh/alevel/a2-physics/thermal-physics/)**——内能与热力学第一定律、比热容与比潜热、热传导与传热系数、气体定律、分子运动论，以及必做实验 8、9。覆盖大纲 3.11.1–3.11.4；含英文题干、中文例题解答与练习。
 
+[核半径（Nuclear Radius）](/zh/alevel/a2-physics/nuclear-radius/)——最近接近与衍射证据、半径幂律、平均核密度及构造半径记录分析（3.12.1）。
+
+[质量与结合能（Mass and Binding Energy）](/zh/alevel/a2-physics/mass-and-binding-energy/)——静能、核与原子质量账、结合能图像和每次反应能量（3.12.2）。
+
+**待制作：**裂变与反应堆安全（3.12.3–3.12.4）、聚变（3.12.5）及能源（3.13）。目前这些样章尚不构成完整 PH04 课程。
+
 ## 课程依据 {#course-reference}
 
-PH03 对应 [OxfordAQA 物理大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf) 3.6–3.10；PH04 热学对应 3.11。PH04 的其他章节尚未收录。
+PH03 对应 [OxfordAQA 物理大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf) 3.6–3.10；PH04 学习页目前覆盖 3.11 和 3.12.1–3.12.2。
 
 [打开参考笔记](/zh/alevel/a2-physics/quick-reference/)，查看主题提纲与公式提醒；解释和独立练习请进入上方学习页。

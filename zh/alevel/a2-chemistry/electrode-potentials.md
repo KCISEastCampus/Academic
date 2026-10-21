@@ -267,7 +267,7 @@ MS 第 18 页。
 
 ### RP6 独立任务：分析原始读数 {#rp6-data}
 
-**Self-written task; all readings below are constructed for analysis, not measurements made by students.** Use the Zn/Cu half-cell potentials in Example 1. The positive voltmeter lead is connected to Cu. Before using the records, predict the standard EMF and electron-flow direction, choose between KNO₃ and NaOH for a salt bridge, and justify your choice for these two metal-ion solutions.
+**自拟任务；下方全部读数为教学分析构造，不是学生的实测结果。** Use the Zn/Cu half-cell potentials in Example 1. The positive voltmeter lead is connected to Cu. Before using the records, predict the standard EMF and electron-flow direction, choose between KNO₃ and NaOH for a salt bridge, and justify your choice for these two metal-ion solutions.
 
 All sets use clean electrodes, fresh solutions, a high-resistance voltmeter and 298 K. Concentrations below are in mol dm⁻³. Sets A and B use meter M, checked against a voltage reference. Set C uses meter N; apart from the meter, its stated conditions match A. The 0.001 V display step is a resolution, not an established total uncertainty.
 

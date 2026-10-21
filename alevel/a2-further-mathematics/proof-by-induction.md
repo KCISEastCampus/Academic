@@ -464,7 +464,7 @@ The minus sign matters.
 
 ### Question 6 — Original AQA practice
 
-**Source:** AQA Mathematics 6360, MFP2, June 2006, Question 6. **4 + 4 marks**. Textbook cross-reference: Chapter 18, practice examination question 5, printed p. 218. [Question paper](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202006%20QP%20-%20FP2%20AQA.PDF), [AQA mark scheme](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202006%20MS%20-%20FP2%20AQA.PDF).
+**Source:** AQA Mathematics 6360, MFP2, June 2006, Question 6. **4 + 4 marks**. Textbook cross-reference: Chapter 18, practice examination question 5, printed p. 218. Question paper, AQA mark scheme.
 
 **a** The function $f$ is given by
 
@@ -536,6 +536,6 @@ By the assumption, $f(m)$ is a multiple of $7$. Also, $15^m$ is an integer. Both
 
 The lesson follows FP2.4 of the [OxfordAQA Further Mathematics 9665 specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf). Worked examples are teaching material. Question 6 retains the AQA question and marks from the supplied textbook.
 
-For examples of how induction is assessed, see [OxfordAQA FM03 specimen mark scheme, Question 10](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-mark-scheme-2016-v1.pdf) and [AQA June 2023 mark scheme, Paper 2, Question 12](https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2023/june/AQA-73672-MS-JUN23.PDF). Our solutions include the assumption, the calculation for the next case, the initial case and a full conclusion.
+For examples of how induction is assessed, see OxfordAQA FM03 specimen mark scheme, Question 10 and AQA June 2023 mark scheme, Paper 2, Question 12. Our solutions include the assumption, the calculation for the next case, the initial case and a full conclusion.
 
 **Learning path:** [Previous: Roots and Polynomials](/alevel/a2-further-mathematics/roots-and-polynomials/) · [Back to the course](/alevel/a2-further-mathematics/) · [Next: Finite Series](/alevel/a2-further-mathematics/finite-series/).

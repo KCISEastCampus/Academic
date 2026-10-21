@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="340" viewBox="0 0 600 340" role="img" aria-labelledby="title desc">
+<title id="title">Electron diffraction intensity</title>
+<desc id="desc">Qualitative teaching graph, not measured readings. Relative electron intensity is largest in the forward direction, falls to a nonzero minimum and rises to a weaker side maximum before falling again. The horizontal coordinate is scattering angle from the incident beam.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0 0L8 4L0 8Z" fill="#334155"/></marker></defs>
+<rect width="600" height="340" rx="12" fill="#fff"/>
+<g font-family="Arial,sans-serif" font-size="18" fill="#172033">
+<text x="28" y="30" font-weight="bold">Electron intensity: qualitative pattern</text>
+<path d="M78 290H557M78 290V58" stroke="#334155" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<text x="40" y="67">I</text><text x="61" y="312">0</text><text x="475" y="318">angle θ</text>
+<path d="M80 70C145 84 183 128 210 205C230 256 245 265 266 249C289 231 297 201 320 204C350 207 367 264 406 275C452 281 504 284 545 285" fill="none" stroke="#ad2735" stroke-width="3"/>
+<path d="M247 264V290" stroke="#64748b" stroke-dasharray="4 4"/>
+<text x="215" y="315">θ_min</text>
+<text x="333" y="94">Same narrow momentum range</text>
+<text x="333" y="120">Minimum need not reach zero.</text>
+<text x="333" y="146">Not a calibrated dataset.</text>
+</g></svg>

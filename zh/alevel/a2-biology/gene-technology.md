@@ -18,7 +18,7 @@ translation_of: /alevel/a2-biology/gene-technology/
 **重组 DNA（recombinant DNA）**把不同来源的 DNA 片段组合起来。取得序列、扩增、转入及表达是不同的成果。本页沿这条链，逐步判断哪些证据支持哪些结论。先修见[DNA 与蛋白质合成](/zh/alevel/a2-biology/prerequisites/#information)及[基因表达调控](/zh/alevel/a2-biology/gene-expression/)。
 
 <!-- task:BL04-G0 -->
-**G0 · Self-written / 自拟题**
+**G0 · 自拟题**
 
 Distinguish a DNA copy, an mRNA molecule and a protein product. Which of these does an ordinary PCR reaction directly amplify?
 <!-- /task:BL04-G0 -->
@@ -74,10 +74,10 @@ $$N_n=N_0\,2^n.$$
 
 转录终止区结束转录，不能与结束翻译的终止密码子混淆；复制起点让质粒复制，启动子让转录起始。可选择标记指出摄取载体等某种性质，不自动证明目标基因序列正确。
 
-**路径示范 · Self-written / 自拟题：**要在细菌中取得人蛋白，可由编码 cDNA 而非含未处理内含子的基因出发，按正确方向与相容控制区组装并验证插入；之后测蛋白及活性。DNA 正确不保证宿主能作每一种所需修饰，因此选择宿主本身也是生物学设计的一部分。
+**路径示范 · 自拟题：**要在细菌中取得人蛋白，可由编码 cDNA 而非含未处理内含子的基因出发，按正确方向与相容控制区组装并验证插入；之后测蛋白及活性。DNA 正确不保证宿主能作每一种所需修饰，因此选择宿主本身也是生物学设计的一部分。
 
 <!-- task:BL04-G1 -->
-**G1 · Self-written / 自拟题**
+**G1 · 自拟题**
 
 A human protein-coding gene contains introns. Complete a route to a DNA coding sequence suitable for a bacterial expression construct: isolate mature ____ from a cell expressing the gene → use ____ to make cDNA → make the second DNA strand → add compatible ____ and ____ regions in a suitable vector. Explain why the coding sequence alone is insufficient.
 <!-- /task:BL04-G1 -->
@@ -99,7 +99,7 @@ mRNA → reverse transcriptase → 相容的 promoter 和 terminator。启动子
 ## 计算与对照 {#evidence}
 
 <!-- task:BL04-G2 -->
-**G2 · Self-written / 自拟题**
+**G2 · 自拟题**
 
 A constructed PCR calculation starts with 12 double-stranded target molecules and assumes perfect doubling in each of 8 cycles. Calculate the final number. Each cycle takes 20 s for denaturation, 25 s for annealing and 40 s for extension; a final extension takes 5 min. Calculate the total programmed time, excluding heating/cooling transitions. State two reasons actual target yield may be lower than the ideal estimate.
 <!-- /task:BL04-G2 -->
@@ -133,7 +133,7 @@ $$t=8(20+25+40)+5\times60=980\ \text{s}=16\ \text{min}\ 20\ \text{s}.$$
 <!-- /task:BL04-gene-technology-data -->
 
 <!-- task:BL04-G3 -->
-**G3 · Self-written / 自拟题**
+**G3 · 自拟题**
 
 The table shows constructed PCR observations. Evaluate the claim that the sample definitely contained the target before testing. Explain what the positive control and no-template control test, and propose a response to the result.
 <!-- /task:BL04-G3 -->
@@ -153,7 +153,7 @@ The table shows constructed PCR observations. Evaluate the claim that the sample
 </details>
 
 <!-- task:BL04-G4 -->
-**G4 · Self-written / 自拟题**
+**G4 · 自拟题**
 
 A plasmid contains an antibiotic-resistance marker and a separate reporter gene. The intended insertion site lies inside the reporter. A colony survives the antibiotic and has no reporter activity. Explain what each observation supports, why neither proves that the correct target protein is produced, and give the next DNA-level and protein-level checks.
 <!-- /task:BL04-G4 -->
@@ -177,7 +177,7 @@ A plasmid contains an antibiotic-resistance marker and a separate reporter gene.
 技术成功有多个层级：序列存在、产物形成、功能正确、生物在相关条件下表现适当，以及结果对人或生态真正有意义。财务与伦理评价要指出谁获益、谁承担成本、有哪些替代方案。
 
 <!-- task:BL04-G5 -->
-**G5 · Self-written / 自拟题 — retry**
+**G5 · 自拟题 — retry**
 
 A genetically modified crop produces more of a dietary precursor in laboratory plants. A company claims this alone proves that introducing it will improve population health. Evaluate the claim using a mechanism, an experimental requirement and an economic or social condition.
 <!-- /task:BL04-G5 -->
@@ -200,6 +200,6 @@ A genetically modified crop produces more of a dietary precursor in laboratory p
 
 ## 来源与连接 {#sources}
 
-[OxfordAQA 9610 大纲 v5.1](https://www.oxfordaqa.com/wp-content/uploads/2022/08/oxfordaqa-a-level-biology-specification.pdf)，§3.4.10；[官方资料入口](https://www.oxfordaqa.com/qualification/international-as-and-a-level-biology-9610/)。已读 BL04 May/June 2025 Q6 的 MS v1.0 Final pp.14–15，校准连接酶、标记及应用推理。本页任务、数值、图和反馈均自拟，不称官方分值。
+[OxfordAQA 9610 大纲 v5.1](https://www.oxfordaqa.com/wp-content/uploads/2022/08/oxfordaqa-a-level-biology-specification.pdf)，§3.4.10；[官方资料入口](https://www.oxfordaqa.com/qualification/international-as-and-a-level-biology-9610/)。已读 BL04 May/June 2025 Q6 的 MS pp.14–15，校准连接酶、标记及应用推理。本页任务、数值、图和反馈均自拟，不称官方分值。
 
 将表达连到[基因调控](/zh/alevel/a2-biology/gene-expression/)，传递连到[遗传](/zh/alevel/a2-biology/inheritance/)，对照连到[实验设计](/zh/alevel/a2-biology/experimental-design/)，评价用于[综合写作](/zh/alevel/a2-biology/synoptic-writing/)。

@@ -637,7 +637,7 @@ $$\boxed{\begin{aligned}
 
 ### Question 7 — AQA: the smallest positive angle
 
-**Source:** AQA Mathematics 6360, MFP2, June 2007, Question 3. **5 marks**. Textbook cross-reference: Chapter 20, practice examination question 2, printed p. 253. [Question paper](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202007%20QP%20-%20FP2%20AQA.PDF), [AQA mark scheme](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202007%20MS%20-%20FP2%20AQA.PDF).
+**Source:** AQA Mathematics 6360, MFP2, June 2007, Question 3. **5 marks**. Textbook cross-reference: Chapter 20, practice examination question 2, printed p. 253. Question paper, AQA mark scheme.
 
 Use De Moivre's theorem to find the smallest positive angle $\theta$ for which
 
@@ -678,7 +678,7 @@ $$\boxed{\theta=\frac\pi{10}.}$$
 
 ### Question 8 — AQA: a fifth-angle identity and a product
 
-**Source:** AQA Mathematics 6360, MFP2, June 2011, Question 7. **5 + 3 + 3 + 5 marks**. Textbook cross-reference: Chapter 20, practice examination question 3, printed p. 253. [Question paper](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202011%20QP%20-%20FP2%20AQA.pdf), [AQA mark scheme](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202011%20MS%20-%20FP2%20AQA.PDF).
+**Source:** AQA Mathematics 6360, MFP2, June 2011, Question 7. **5 + 3 + 3 + 5 marks**. Textbook cross-reference: Chapter 20, practice examination question 3, printed p. 253. Question paper, AQA mark scheme.
 
 **a i** Use De Moivre's theorem to show that
 

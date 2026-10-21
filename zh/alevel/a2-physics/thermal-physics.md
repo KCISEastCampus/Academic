@@ -74,7 +74,7 @@ $$\Delta U=Q+W$$
 
 ### 例题 1：第一定律的符号 {#example-first-law}
 
-*Adapted from PH04 January 2024 Q1.2.*
+*改编自 PH04 January 2024 Q1.2.*
 
 A gas expands, doing 350 J of work on its surroundings while receiving 20 J by heating. Find the change in internal energy.
 
@@ -151,7 +151,7 @@ A thermometer gives readings of 20.0 and 22.0 degrees Celsius, each with an unce
 
 ### 例题 2：利用加热图像 {#example-specific-heat}
 
-*Self-written.*
+*自拟题。*
 
 A 0.50 kg block is heated at 12 V and 2.0 A. Its temperature rises steadily at $0.053\,\mathrm{K\,s^{-1}}$. Estimate its specific heat capacity, ignoring losses and apparatus heat capacity.
 
@@ -167,7 +167,7 @@ $$\boxed{c=9.1\times10^2\,\mathrm{J\,kg^{-1}\,K^{-1}}}.$$
 
 ### 数据探究：一组加热记录 {#data-specific-heat}
 
-*Self-written; constructed teaching data, not a completed RP8 experiment.*
+*自拟题；教学构造数据，不代表完成了 RP8 实验。*
 
 A 0.500 kg block starts at room temperature. The heater voltage is 12.0 V and current 2.00 A throughout. Temperature readings have uncertainty ±0.1 K. Treat the mass, power and times as exact for this analysis; their uncertainties would also matter in an actual experiment.
 
@@ -229,7 +229,7 @@ $$c_{\mathrm{app}}\approx1.42\times10^3\,\mathrm{J\,kg^{-1}\,K^{-1}}.$$
 
 ### 例题 3：扣除背景融冰 {#example-latent-heat}
 
-*Adapted from PH04 January 2024 Q3.1.*
+*改编自 PH04 January 2024 Q3.1.*
 
 Without an electrical heater, 16.0 g of ice melts in 10.0 min. With a 32 W heater operating, 41.6 g melts in 5.0 min. Assume the background melting rate is unchanged. Determine the specific latent heat of fusion.
 
@@ -257,7 +257,7 @@ $$P_2-P_1=(\dot m_2-\dot m_1)c\Delta\theta$$
 
 ### 例题 4：消去稳态热损失 {#example-continuous-flow}
 
-*Self-written.*
+*自拟题。*
 
 A liquid flows through an electrical heater. In two steady runs, the inlet and outlet temperatures remain at 20.0 and 35.0 degrees Celsius. Power is 80.0 W at a mass flow rate of $1.00\times10^{-3}\,\mathrm{kg\,s^{-1}}$, and 140 W at $2.00\times10^{-3}\,\mathrm{kg\,s^{-1}}$. Assume equal heat-loss powers. Determine the specific heat capacity and heat-loss power.
 
@@ -294,7 +294,7 @@ U 值与内能 $U$ 不是同一物理量。热导率 $k$ 也不同于后文的�
 
 ### 例题 5：容器底部的热传导 {#example-conduction}
 
-*Adapted from PH04 January 2024 Q3.2.*
+*改编自 PH04 January 2024 Q3.2.*
 
 Model a flat base as a uniform slab with $k=0.12\,\mathrm{W\,m^{-1}\,K^{-1}}$, area $1.75\times10^{-2}\,\mathrm{m^2}$, thickness 1.7 mm and face temperature difference 5.5 K. Calculate conduction power and the ratio of a 32 W heater power to this power.
 
@@ -336,7 +336,7 @@ $$n=\frac{m_{\mathrm{gas}}}{M},\qquad m_0=\frac{M}{N_{\mathrm A}},\qquad m_{\mat
 
 ### 例题 6：冷却后的压强 {#example-gas-law}
 
-*Self-written.*
+*自拟题。*
 
 A sealed rigid container holds gas at 120 kPa and $27\,^{\circ}\mathrm C$. Find its pressure at $7\,^{\circ}\mathrm C$, assuming ideal-gas behaviour.
 
@@ -362,7 +362,7 @@ $$W_{\mathrm{by}}=p_{\mathrm{ext}}\Delta V,\qquad W_{\mathrm{on}}=-p_{\mathrm{ex
 
 ### 例题 7：压缩与能量守恒 {#example-gas-work}
 
-*Self-written.*
+*自拟题。*
 
 A gas is compressed slowly under a constant external pressure of 150 kPa, from $4.0\times10^{-3}\,\mathrm{m^3}$ to $2.0\times10^{-3}\,\mathrm{m^3}$. During compression it releases 750 J by heating. Calculate the work done on the gas and its change in internal energy.
 
@@ -399,7 +399,7 @@ $$\Delta U=Q+W=-750+300=\boxed{-450\,\mathrm J}.$$
 
 ### 数据探究：玻意耳定律 {#data-boyle}
 
-*Self-written; constructed teaching data, not a completed RP9 experiment.*
+*自拟题；教学构造数据，不代表完成了 RP9 实验。*
 
 A sealed gas sample settles at 296 K after each slow volume change. The pressure sensor reads **absolute** pressure with uncertainty ±0.5 kPa. Syringe volumes have uncertainty ±0.2 cm³; the connecting tube adds a fixed 2.0 cm³. Treat that tube volume and the temperature as exact for this task.
 
@@ -447,7 +447,7 @@ n&\approx\frac{4.20}{8.31\times296}\\
 
 ### 数据探究：查理定律 {#data-charles}
 
-*Self-written; constructed teaching data, not a completed RP9 experiment.*
+*自拟题；教学构造数据，不代表完成了 RP9 实验。*
 
 A fixed air sample is trapped in a uniform capillary by a movable liquid marker. While the marker moves freely, pressure remains approximately atmospheric. The table gives equilibrated bath temperatures (uncertainty ±0.2 K) and air-column lengths (uncertainty ±0.2 mm). The marker is seen to stick during the final 80.0 °C reading.
 
@@ -536,7 +536,7 @@ $$c_{\mathrm{rms}}=\sqrt{\frac{3k_{\mathrm B}T}{m_0}}=\sqrt{\frac{3RT}{M}}$$
 
 #### 例题 8：使用气体总质量 {#example-molecular-speed}
 
-*Adapted from PH04 January 2024 Q2.*
+*改编自 PH04 January 2024 Q2.*
 
 A spherical container holds $6.3\times10^{-4}\,\mathrm{kg}$ of gas at 102 kPa. The mean square molecular speed is $2.53\times10^5\,\mathrm{m^2\,s^{-2}}$ and there are $1.3\times10^{22}$ molecules. Determine the volume, radius and mean translational kinetic energy per molecule.
 
@@ -783,7 +783,7 @@ Now heat two separate fixed samples of the same ideal gas, initially at the same
 
 ### 练习 10：改进融冰实验 {#question-10}
 
-*Adapted question.* A student estimates latent heat by collecting melted ice while an electrical heater operates. The student writes: “Repeat it and use a more powerful heater.” Explain how a suitable increase in heater power could reduce a particular error, and why repetition alone cannot correct an unaccounted background heat input. State one assumption needed when subtracting an unheated background run.
+*改编题。* A student estimates latent heat by collecting melted ice while an electrical heater operates. The student writes: “Repeat it and use a more powerful heater.” Explain how a suitable increase in heater power could reduce a particular error, and why repetition alone cannot correct an unaccounted background heat input. State one assumption needed when subtracting an unheated background run.
 
 <details markdown="1">
 <summary>提示</summary>
@@ -829,7 +829,7 @@ Now heat two separate fixed samples of the same ideal gas, initially at the same
 
 继续之前，检查能否解释加热曲线的平台，说明第一定律中膨胀功的符号，区分两个必做实验的控制条件，并从分子运动解释压强，而不是说分子“想要散开”。
 
-[课程目录](/zh/alevel/a2-physics/) · [PH03 速查](/zh/alevel/a2-physics/quick-reference/)
+[课程目录](/zh/alevel/a2-physics/) · [PH03 速查](/zh/alevel/a2-physics/quick-reference/) · [下一课：核半径](/zh/alevel/a2-physics/nuclear-radius/)
 
 <details markdown="1">
 <summary>来源与试题表述</summary>
@@ -838,6 +838,6 @@ Now heat two separate fixed samples of the same ideal gas, initially at the same
 
 RP8 与 RP9 原始记录探究为新增自拟活动，使用构造数据，考查拟合选择、模型条件与偏差，不报告实际实验已完成。
 
-例题 1、3、5、8 和练习 10 分别**改编**自 PH04 January 2024 Q1.2、Q3.1、Q3.2–3.3、Q2、Q3.4，并非逐字重印。数值结果与相关推理已对照正式官方评分标准，并独立重算。教师资料库来源：[试卷](https://drive.google.com/file/d/1hByI4GGJhjdx9xOLQ-IGzT3-xCQsW_mV/view)、[评分标准](https://drive.google.com/file/d/1zmUrY-MlADO-jrtdY2kvRNR_b9RZfEyh/view)，访问可能需要权限。例题 2、4、6、7、检查点与练习 1–9 为自拟。答案用于教学，不虚构官方分值。
+例题 1、3、5、8 和练习 10 分别**改编**自 PH04 January 2024 Q1.2、Q3.1、Q3.2–3.3、Q2、Q3.4，并非逐字重印。数值结果与相关推理已对照正式官方评分标准，并独立重算。例题 2、4、6、7、检查点与练习 1–9 为自拟。答案用于教学，不虚构官方分值。
 
 </details>

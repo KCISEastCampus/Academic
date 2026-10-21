@@ -343,13 +343,13 @@ $$\boxed{W_{\text{external}}=3.13\times10^9\,\mathrm J}.$$
 
 ### 练习 4：势能梯度 {#question-4-potential-energy-gradient}
 
-*Self-written; constructed teaching figure, not experimental data.*
+*自拟题；教学示意图，不是实验数据。*
 
 The graph shows the gravitational potential energy $U$ of a $37\,\mathrm{kg}$ test rock along the line between two fixed source masses. The rock has negligible influence on the sources. Positive $x$ points to the right; potential energy is zero at infinity.
 
 Draw a tangent at P, at $x=0.60\times10^8\,\mathrm m$. Estimate the signed force and field-strength components there. Locate the zero-field position from the curve. Is the potential zero there? Predict the initial motion after a small displacement to either side of that position along the line.
 
-<img src="/assets/img/physics-gravity-practice.svg" alt="Potential energy of a thirty-seven kilogram test rock versus position between fixed sources; P is marked at 0.60 times ten to the eight metres. Both axes show scale factors; no tangent is supplied." width="520" height="410" data-lazy-ignore="true">
+<img src="/assets/img/physics-gravity-practice.svg" alt="独立读图任务：37 kg 试探岩石在固定引力源之间的势能随位置变化。P 点位置为 0.60×10⁸ m，两轴均给出数量级因子；图中没有预画切线。" width="520" height="410" data-lazy-ignore="true">
 
 <details markdown="1">
 <summary>提示</summary>
@@ -417,7 +417,7 @@ A satellite has the same period as Earth's rotation, but its circular orbit is i
 
 ### 练习 7：仅地球引力不够时 {#question-7-when-earths-field-is-not-enough}
 
-**Adapted from OxfordAQA PH03, January 2020, Question 4.**
+**改编自 OxfordAQA PH03, January 2020, Question 4.**
 
 The Moon's orbital period is $27.3$ days. A satellite at distance $4.5\times10^5\,\mathrm{km}$ from Earth's centre has the same angular speed. Calculate its angular speed, Earth's field strength there, and the centripetal acceleration required. Explain why Earth's gravity alone cannot give the stated circular motion.
 
@@ -449,7 +449,7 @@ $$a=\omega^2r\approx\boxed{3.2\times10^{-3}\,\mathrm{m\,s^{-2}}}.$$
 
 ### 练习 8：地月之间的能量障碍 {#question-8-an-energy-barrier-between-moon-and-earth}
 
-**Adapted from OxfordAQA PH03, June 2024, Question 3.** The maximum energy is supplied here instead of being read from the paper's graph.
+**改编自 OxfordAQA PH03, June 2024, Question 3.** The maximum energy is supplied here instead of being read from the paper's graph.
 
 A $37\,\mathrm{kg}$ rock moves from the Moon towards Earth along the line joining their centres. Its combined gravitational potential energy is $-1.4\times10^8\,\mathrm J$ at the launch point and reaches a maximum of $-4.8\times10^7\,\mathrm J$ between the bodies. Treat the bodies as fixed and ignore other forces. Explain why the energy is negative and why there is a maximum. Find the limiting minimum launch speed needed to reach the maximum.
 

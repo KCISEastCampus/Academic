@@ -466,7 +466,7 @@ g^{(2)}(x)&=-2e^x\sin x\\
 
 ### 第 6 题：AQA 原题练习 {#question-6--original-aqa-practice}
 
-**来源：**AQA Mathematics 6360，MFP2，June 2006，原卷第 6 题。原题分值：**4 + 4 marks**。教材索引：Chapter 18, practice examination question 5, printed p. 218。[原卷](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202006%20QP%20-%20FP2%20AQA.PDF)、[AQA 评分材料](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202006%20MS%20-%20FP2%20AQA.PDF)。
+**来源：**AQA Mathematics 6360，MFP2，June 2006，原卷第 6 题。原题分值：**4 + 4 marks**。教材索引：Chapter 18, practice examination question 5, printed p. 218。原卷、AQA 评分材料。
 
 **a** The function $f$ is given by
 
@@ -540,6 +540,6 @@ $$f(m+1)=8f(m)+7\cdot15^m.$$
 
 本课依据 [OxfordAQA Further Mathematics 9665 课程大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf)中的 FP2.4。例题为教学材料。第 6 题保留了所提供教材中的 AQA 原题与分值。
 
-数学归纳法的评分示例见 [OxfordAQA FM03 样卷评分细则第 10 题](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-mark-scheme-2016-v1.pdf)与 [AQA 2023 年 6 月试卷 2 评分细则第 12 题](https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2023/june/AQA-73672-MS-JUN23.PDF)。本站解答包含假设、下一个情形的计算、初始情形和完整结论。
+数学归纳法的评分示例见 OxfordAQA FM03 样卷评分细则第 10 题与 AQA 2023 年 6 月试卷 2 评分细则第 12 题。本站解答包含假设、下一个情形的计算、初始情形和完整结论。
 
 **学习路径：**[上一课：根与多项式](/zh/alevel/a2-further-mathematics/roots-and-polynomials/) · [返回课程](/zh/alevel/a2-further-mathematics/) · [下一课：有限级数](/zh/alevel/a2-further-mathematics/finite-series/)。

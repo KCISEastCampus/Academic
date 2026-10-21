@@ -18,7 +18,7 @@ translation_of: /alevel/a2-biology/homeostasis/
 稳态（homeostasis）在输入不断变化时，把内环境维持在一定范围内，是动态调节，不是每次读数绝对不变。本页把反馈连接到血糖与心率，再评价脉搏实验。可先复习[运输与循环](/zh/alevel/a2-biology/prerequisites/#transport)、膜和酶。
 
 <!-- task:BL04-H0 -->
-**H0 · Self-written / 自拟题**
+**H0 · 自拟题**
 
 A room becomes colder and a heater switches on. Identify the disturbance, response and effect on the original disturbance. Would switching on extra cooling have the same feedback sign?
 <!-- /task:BL04-H0 -->
@@ -62,7 +62,7 @@ A room becomes colder and a heater switches on. Identify the disturbance, respon
 
 *反馈箭头表示因果信息，不是血液流向；心脏部分表示电活动顺序，不是按比例的解剖图。*
 
-**示范 · Self-written / 自拟题：**进食后血糖升高刺激 β 细胞；胰岛素结合表面受体，肌肉/脂肪转运蛋白增加，肝脏储存增加。摄取与储存降低血糖，刺激随之减小。明确起始变量及最终作用，才真正解释了负反馈。
+**示范 · 自拟题：**进食后血糖升高刺激 β 细胞；胰岛素结合表面受体，肌肉/脂肪转运蛋白增加，肝脏储存增加。摄取与储存降低血糖，刺激随之减小。明确起始变量及最终作用，才真正解释了负反馈。
 
 ### cAMP 第二信使模型 {#second-messenger}
 
@@ -71,7 +71,7 @@ A room becomes colder and a heater switches on. Identify the disturbance, respon
 激素是细胞外第一信使，cAMP 在细胞内传递信息。受体具有结合位点，不能一律称为酶的活性位点。蛋白激酶磷酸化蛋白，不直接把糖原切成葡萄糖。胰岛素使用不同的信号途径，不能给所有激素套同一个 cAMP 链。
 
 <!-- task:BL04-H1 -->
-**H1 · Self-written / 自拟题**
+**H1 · 自拟题**
 
 Complete a liver-cell pathway after glucagon binds: membrane receptor → ____ → ____ → protein kinase → altered activity of downstream ____ → increased glucose output. Explain why the protein kinase should not be labelled “the enzyme that directly hydrolyses glycogen”.
 <!-- /task:BL04-H1 -->
@@ -91,7 +91,7 @@ Adenyl cyclase → cAMP → protein kinase → 下游 enzymes。蛋白激酶改�
 </details>
 
 <!-- task:BL04-H2 -->
-**H2 · Self-written / 自拟题**
+**H2 · 自拟题**
 
 A specific inhibitor prevents cAMP production in liver cells but does not prevent glucagon binding. Predict the immediate effect on the response to glucagon. Explain why observing normal hormone binding alone would not establish normal regulation of blood glucose.
 <!-- /task:BL04-H2 -->
@@ -119,7 +119,7 @@ A specific inhibitor prevents cAMP production in liver cells but does not preven
 过滤的葡萄糖过多可超过肾脏重吸收能力，留在小管液中的糖使水势更负，减少水重吸收、增加尿液水分丢失，脱水进而引起口渴。这里调用 AS 运输原理，不把完整肾单位/ADH 课程新增为 BL04 必考章节。
 
 <!-- task:BL04-H3 -->
-**H3 · Self-written / 自拟题**
+**H3 · 自拟题**
 
 A person has persistently high blood glucose and glucose remains in the kidney tubule fluid. Explain how this can increase urine volume and thirst. Explain why these symptoms alone do not distinguish Type 1 from Type 2 diabetes.
 <!-- /task:BL04-H3 -->
@@ -149,7 +149,7 @@ A person has persistently high blood glucose and glucose remains in the kidney t
 颈动脉窦与主动脉弓的**压力感受器（baroreceptors）**检测牵张。动脉压升高通常加强其向延髓的输入，促使交感减弱、副交感增强，减慢 SAN；压力下降时产生相反调节。心输出量还取决于每搏输出量，所以单靠心率不能直接测出血压或供氧量。
 
 <!-- task:BL04-H4 -->
-**H4 · Self-written / 自拟题**
+**H4 · 自拟题**
 
 Complete the response to a fall in arterial blood pressure: less stretch of pressure receptors → changed input to the medulla → increased ____ and reduced ____ activity to the SAN → ____ heart rate. Explain how this can oppose the original change, assuming stroke volume and other factors permit it.
 <!-- /task:BL04-H4 -->
@@ -171,7 +171,7 @@ Complete the response to a fall in arterial blood pressure: less stretch of pres
 ## RP5：计数时间窗会改变测到的量 {#practical}
 
 <!-- task:BL04-H5 -->
-**H5 · Self-written / 自拟题**
+**H5 · 自拟题**
 
 A constructed pulse record contains 18 beats during the first 10 s after exercise and 15 during the next 10 s. Calculate the two rates in beats min−1. Explain why counting for longer both reduces the relative effect of a one-beat counting error and may change the biological quantity being estimated. Plan a fair within-person comparison of two safe activity intensities.
 <!-- /task:BL04-H5 -->
@@ -199,7 +199,7 @@ $$r_1=18\times\frac{60}{10}=108\ \text{beats min}^{-1},\qquad r_2=15\times\frac{
 缺最终效果的反馈链不完整；只写激素名而不写靶组织容易歧义；没有时间窗的脉搏数据不能可靠地比较变化中的恢复心率。
 
 <!-- task:BL04-H6 -->
-**H6 · Self-written / 自拟题 — retry**
+**H6 · 自拟题 — retry**
 
 A rising CO₂ concentration lowers blood pH. Heart rate increases, improving transport to the lungs, and CO₂ is removed more rapidly. Identify the regulated disturbance and explain why an INCREASE in heart rate can form part of NEGATIVE feedback. Contrast this with a clotting reaction that recruits more platelets.
 <!-- /task:BL04-H6 -->

@@ -149,7 +149,7 @@ L&=\int_0^{\frac{\pi}{3}}\tan t\,\mathrm dt\\
 &=\boxed{\ln2}.
 \end{aligned}$$
 
-**Check:** the speed is non-negative and the interval covers the arc once. This example is adapted from Question 11 of the [OxfordAQA FM03 Specimen 2018 paper](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-specimen-paper-2019-v3.pdf); its method is supported by the [official mark scheme](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-mark-scheme-2016-v1.pdf). The question wording is adapted, and the working here is written for this lesson.
+**Check:** the speed is non-negative and the interval covers the arc once. This example is adapted from Question 11 of the OxfordAQA FM03 Specimen 2018 paper; its method is supported by the official mark scheme. The question wording is adapted, and the working here is written for this lesson.
 
 ### Example 4 — Rotate a Cartesian line about the x-axis {#example-4--cartesian-surface-area}
 

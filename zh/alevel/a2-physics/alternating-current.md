@@ -71,11 +71,11 @@ $$V_{\mathrm{pp}}=12\,\mathrm V,\quad V_0=6.0\,\mathrm V,\quad V_{\mathrm{rms}}\
 
 ## 独立读图：校准后的波形 {#data-scope-records}
 
-*Self-written; constructed oscilloscope trace, not an actual instrument capture.*
+*自拟题；教学构造的示波器波形，不是仪器实拍。*
 
 The bold horizontal centre line is zero volts. Each major square is one division. Effective vertical sensitivity is $2.0\,\mathrm{V/div}$ and time base is $0.50\,\mathrm{ms/div}$; no extra probe factor is needed. Read peak voltage, peak-to-peak voltage, period and frequency, then calculate rms voltage. Estimate the effect on frequency if the two-cycle span has reading uncertainty ±0.2 division. Explain why the trace alone does not give source resistance.
 
-<img src="/assets/img/physics-ac-scope-task.svg" alt="Task oscilloscope grid: a zero-centred sine wave has amplitude 2.5 divisions and two complete cycles over 8 horizontal divisions. The bold centre line is the zero reference; only the measured waveform is shown." width="520" height="430" data-lazy-ignore="true">
+<img src="/assets/img/physics-ac-scope-task.svg" alt="待作答示波器网格图：正弦波以零线为中心，振幅为 2.5 格，水平方向 8 格包含两个完整周期。加粗中线为零参考；图中仅给波形，供学生独立读取。" width="520" height="430" data-lazy-ignore="true">
 
 <details markdown="1">
 <summary>提示</summary>
@@ -97,7 +97,7 @@ $$V_0=5.0\,\mathrm V,\quad V_{\mathrm{pp}}=10\,\mathrm V,\quad T=2.0\,\mathrm{ms
 
 ### 练习 1：反推示波器设置 {#question-1}
 
-*Adapted from OxfordAQA 9630 PH03 June 2024 Q6.4–6.5; QP pp.20–22 and MS pp.17–18 read. Graph dimensions are stated explicitly; the sketch is not copied.*
+*改编自 OxfordAQA 9630 PH03 June 2024 Q6.4–6.5；已核对 QP pp.20–22与MS pp.17–18。 明确给出图像尺寸，示意图并非原图复制。*
 
 A zero-centred sine trace from a rotating coil has one period spanning 5.0 cm and zero-to-peak height 3.6 cm on the calibrated grid. The frequency is $50\,\mathrm{Hz}$ and rms emf is $1.27\,\mathrm V$. Determine the time base in ms/cm and vertical sensitivity in V/cm, quoting the controls to one significant figure. At 25 Hz the same coil rotates in the same field with unchanged scope controls: sketch the change in period and amplitude.
 
@@ -119,7 +119,7 @@ $$T=20\,\mathrm{ms},\quad\varepsilon_0=1.27\sqrt2\approx1.80\,\mathrm V.$$
 
 ### 练习 2：连接线圈角度与相位 {#question-2}
 
-*Adapted from OxfordAQA 9630 PH03 June 2024 Q6.3; QP pp.19–20 and MS p.17 read. Initial orientation is restated to make phase unambiguous.*
+*改编自 OxfordAQA 9630 PH03 June 2024 Q6.3；已核对 QP pp.19–20与MS p.17。 重新明确初始取向，以消除相位歧义。*
 
 A generator starts with its positive normal along the field at $t=0$ and has $\varepsilon=\varepsilon_0\sin\omega t$. At what fraction of a period does its normal first make $51^\circ$ with the field? Where is that point horizontally on a trace with 5.0 divisions per period? Is the emf then at its maximum?
 
@@ -141,7 +141,7 @@ $$\frac{t}{T}=\frac{51}{360}\approx0.142,\qquad x=5.0\frac{51}{360}\approx0.71\ 
 
 ### 练习 3：读取未知直流电平 {#question-3}
 
-*Self-written.*
+*自拟题。*
 
 With DC coupling, a steady trace is 1.5 divisions above the established zero line. The effective sensitivity is $4.0\,\mathrm{V/div}$. Find the voltage. A student selects AC coupling, sees a centred line and reports zero DC voltage. Explain the error.
 
@@ -161,7 +161,7 @@ With DC coupling, a steady trace is 1.5 divisions above the established zero lin
 
 ### 练习 4：诊断发热计算 {#question-4}
 
-*Self-written.*
+*自拟题。*
 
 A sinusoidal current has peak $0.80\,\mathrm A$ through a constant $50\,\Omega$ resistor. A student writes “average current is zero, so average power is zero”. Correct the reasoning, calculate average power, and compare with steady current 0.80 A.
 
@@ -183,7 +183,7 @@ $$I_{\mathrm{rms}}=\frac{0.80}{\sqrt2}\approx0.57\,\mathrm A,\qquad\overline P=\
 
 ### 练习 5：区分信号变化与显示变化 {#question-5}
 
-*Self-written.*
+*自拟题。*
 
 A sine wave appears twice as wide between matching peaks after a control is changed. Give two different possible causes, one involving the source and one involving the oscilloscope. State the extra information needed to distinguish them. Would the height necessarily change in each case?
 
@@ -215,4 +215,4 @@ A sine wave appears twice as wide between matching peaks after a control is chan
 
 ## 来源与范围 {#sources}
 
-OxfordAQA 9630 PH03，[大纲正文 v4.4](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf) 3.10.5，印刷第 26 页/PDF 第 25 页，2026-10-21 核对。练习 1–2 改编 June 2024 [QP](https://drive.google.com/file/d/1ah7yyGqFtyHdZ4Dxd4JchZM361qUj8gc/view) Q6.3–6.5 第 19–22 页，配对 [MS](https://drive.google.com/file/d/1-18EOqSkT4F1sHO9LaevtZaWXNn4aDSM/view) 第 17–18 页。已检查原相位/示波器图；本页明确重述尺寸和起始方向。示波器图、其他任务及例题均自拟。教材辅助参考 Jim Breithaupt 第 21.4 节印刷第 381 页。此处使用正弦有效值和纯电阻功率模型，不新增阻抗或功率因数计算章节。
+OxfordAQA 9630 PH03，[大纲正文 v4.4](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf) 3.10.5，印刷第 26 页/PDF 第 25 页，2026-10-21 核对。练习 1–2 改编 June 2024 QP Q6.3–6.5 第 19–22 页，配对 MS 第 17–18 页。已检查原相位/示波器图；本页明确重述尺寸和起始方向。示波器图、其他任务及例题均自拟。教材辅助参考 Jim Breithaupt 第 21.4 节印刷第 381 页。此处使用正弦有效值和纯电阻功率模型，不新增阻抗或功率因数计算章节。

@@ -33,7 +33,7 @@ $$\boxed{\frac{V_s}{V_p}=\frac{N_s}{N_p}}.$$
 
 ### 例题 1：电压与频率 {#example-1}
 
-*Adapted from OxfordAQA 9630 PH03 January 2020 Q35; QP p.43 and MS p.9 (key C) read. Open calculation replaces the options.*
+*改编自 OxfordAQA 9630 PH03 January 2020 Q35；已核对 QP p.43与MS p.9 (答案 C)。 开放计算替代原选择项。*
 
 An ideal transformer has $N_p=300$ and $N_s=600$. Its primary sine voltage has peak $10\,\mathrm V$ at $20\,\mathrm{Hz}$. Find the secondary peak and frequency, then its rms voltage.
 
@@ -72,7 +72,7 @@ $$P_{\mathrm{out}}=24\,\mathrm W,\qquad\eta=\frac{24}{30}=0.80=80\%,\qquad P_{\m
 
 ## RP7：决定测什么、怎样测 {#rp7-method}
 
-<img src="/assets/img/physics-transformer-meters.svg" alt="Measurement schematic: an isolated low-voltage AC source feeds the primary with series ammeter and parallel voltmeter; a separate secondary circuit has series ammeter, variable resistive load and a parallel voltmeter. Both windings share a closed core." width="520" height="500" data-lazy-ignore="true">
+<img src="/assets/img/physics-transformer-meters.svg" alt="测量电路示意：隔离低压交流源接原线圈，电流表串联、电压表并联。副线圈另接串联电流表、可变电阻负载及并联电压表；两个线圈共用闭合铁芯。" width="520" height="500" data-lazy-ignore="true">
 
 研究效率怎样随次级负载/电流变化。采集前先决定有意义、又不超过线圈、电源、变阻器及表计额定值的电流范围。从较大负载电阻和教师核准的低压隔离交流电源开始。使用量程适当的交流表；电流表串联，电压表并联在对应绕组/负载两端，不能把电流表直接跨接电源。
 
@@ -80,7 +80,7 @@ $$P_{\mathrm{out}}=24\,\mathrm W,\qquad\eta=\frac{24}{30}=0.80=80\%,\qquad P_{\m
 
 ## RP7 数据探究：自己计算效率 {#data-transformer-efficiency}
 
-*Adapted data task: seven selected rows from OxfordAQA 9630 Practical handbook, Version 2, September 2018, [p.74](https://www.oxfordaqa.com/oaqaresources/science/teaching/a-level-practical-handbook-physics.pdf), sorted here by secondary current. Only the four original meter readings are retained. They are official example data, not this school’s measurements. Tasks and uncertainty assumptions are self-written.*
+*改编数据任务：选取 OxfordAQA 9630 Practical handbook（Version 2，September 2018）[第 74 页](https://www.oxfordaqa.com/oaqaresources/science/teaching/a-level-practical-handbook-physics.pdf)的七行示例数据，按副线圈电流排序。这里只保留原来的四项电表读数；它们是官方示例数据，并非本校实测结果。任务与不确定度假设为自拟。*
 
 Use the handbook VI approximation for this exercise: estimate input and output powers from the rms meter products and report the resulting estimated efficiency. Subscripts p and s mean primary and secondary. For a teaching uncertainty comparison only, take every voltage reading as ±0.1 V and current reading as ±0.01 A. These uncertainty values are supplied here, not taken from the original table.
 
@@ -123,7 +123,7 @@ $$\frac{\Delta\eta}{\eta}\approx\frac{0.1}{20.4}+\frac{0.01}{1.00}+\frac{0.1}{11
 
 ## 输电：先说明哪一端功率不变 {#power-transmission}
 
-<img src="/assets/img/physics-transmission-model.svg" alt="Transmission model showing source, ideal step-up transformer, a two-wire line represented by total loop resistance, receiving voltage and a resistive load. Source and receiving powers are labelled separately." width="520" height="350" data-lazy-ignore="true">
+<img src="/assets/img/physics-transmission-model.svg" alt="输电模型示意：包含电源、理想升压变压器、以总回路电阻表示的双线输电线路、接收端电压及电阻负载。送出功率与接收功率分别标记，不能混作同一数值。" width="520" height="350" data-lazy-ignore="true">
 
 采用总电阻 $R_{\mathrm{line}}$ 为去线与回线电阻之和的简化线路，忽略其他线路效应，使用有效值：
 
@@ -145,7 +145,7 @@ A station sends $100\,\mathrm{kW}$ through a line with total resistance $10\,\Om
 
 ### 练习 1：检查凭空增功率的说法 {#question-1}
 
-*Self-written.*
+*自拟题。*
 
 An ideal transformer has turns ratio $N_s/N_p=5$. It supplies a resistive load with 50 W from a 10 V rms primary. Determine primary current, secondary voltage and secondary current. Diagnose the claim “both voltage and current increase fivefold”.
 
@@ -167,7 +167,7 @@ $$I_p=5.0\,\mathrm A,\qquad V_s=50\,\mathrm V,\qquad I_s=1.0\,\mathrm A.$$
 
 ### 练习 2：解释两种设计选择 {#question-2}
 
-*Adapted from OxfordAQA 9630 PH03 Specimen 2019/V2.0 Q5; QP p.12 and MS p.10 read. The explanation task is retained; no official marks are assigned here.*
+*改编自 OxfordAQA 9630 PH03 Specimen 2019/V2.0 Q5；已核对 QP p.12与MS p.10。 保留解释任务，本页不另行标注官方分值。*
 
 Explain how two distinct transformer loss mechanisms occur and how suitable design or material choices reduce each one. Give a linked explanation for each, rather than a list of names.
 
@@ -187,7 +187,7 @@ Explain how two distinct transformer loss mechanisms occur and how suitable desi
 
 ### 练习 3：固定接收端条件 {#question-3}
 
-*Self-written.*
+*自拟题。*
 
 A resistive load must receive $40\,\mathrm{kW}$ at 2.0 kV through a line of total resistance $4.0\,\Omega$. Find current, line loss, sending voltage and sending power. Repeat for the same received power at 4.0 kV.
 
@@ -211,7 +211,7 @@ A resistive load must receive $40\,\mathrm{kW}$ at 2.0 kV through a line of tota
 
 ### 练习 4：解释空载读数 {#question-4}
 
-*Self-written.*
+*自拟题。*
 
 A real transformer has its secondary open. Its primary AC meter still records current. Does this prove that power is being delivered to the secondary load? Explain what other measurements are needed to distinguish current, true input power and output power.
 
@@ -231,7 +231,7 @@ A real transformer has its secondary open. Its primary AC meter still records cu
 
 ### 练习 5：改变铁芯电阻率 {#question-5}
 
-*Adapted from OxfordAQA 9630 PH03 June 2024 Q20; QP p.33 and MS p.21 (key C) read. An explanation replaces the options; comparable flux is explicitly assumed.*
+*改编自 OxfordAQA 9630 PH03 June 2024 Q20；已核对 QP p.33与MS p.21 (答案 C)。 解释任务替代原选择项，并明确假定磁通量可作同条件比较。*
 
 Two otherwise comparable conducting cores experience the same changing flux. Explain why higher electrical resistivity can reduce eddy-current heating. Does this remove the need to consider hysteresis or winding resistance?
 
@@ -251,7 +251,7 @@ Two otherwise comparable conducting cores experience the same changing flux. Exp
 
 ### 练习 6：综合波形与功率 {#question-6}
 
-*Self-written.*
+*自拟题。*
 
 An ideal transformer has $N_p=240$, $N_s=120$. Its primary sinusoidal peak voltage is $24\,\mathrm V$ at 50 Hz. The secondary feeds a constant $6.0\,\Omega$ load. Determine secondary peak, rms voltage, average load power, primary rms current and output frequency. State one reason a real measurement could differ.
 
@@ -288,4 +288,4 @@ $$I_{p,\mathrm{rms}}=\frac{12}{24/\sqrt2}\approx0.71\,\mathrm A,\qquad f_s=50\,\
 
 ## 来源与范围 {#sources}
 
-OxfordAQA 9630 PH03，[大纲正文 v4.4](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf) 3.10.6 与 RP7，印刷第 26/38 页（PDF 第 25/37 页），2026-10-21 核对。例题 1 改编 January 2020 [QP](https://drive.google.com/file/d/1u3DieTjGo7oCKuPMLpK01t1dBK72FlEO/view) Q35 第 43 页，配对 [MS](https://drive.google.com/file/d/191UedE9sWTca8lYxRcL0UBTkRDuI1lXl/view) 第 9 页。练习 2 改编 Specimen 2019/V2.0 Q5，[QP](https://www.oxfordaqa.com/oaqaresources/science/assessment/9630-PH03-international-a-level-physics-specimen-paper-v4.2.pdf) 第 12 页与 [MS](https://www.oxfordaqa.com/oaqaresources/science/assessment/9630-PH03-international-a-level-physics-mark-scheme-v4.2.pdf) 第 10 页。练习 5 改编 June 2024 [QP](https://drive.google.com/file/d/1ah7yyGqFtyHdZ4Dxd4JchZM361qUj8gc/view) Q20 第 33 页及 [MS](https://drive.google.com/file/d/1-18EOqSkT4F1sHO9LaevtZaWXNn4aDSM/view) 第 21 页。RP7 方法与四列示例读数选自[实验手册 v2，September 2018](https://www.oxfordaqa.com/oaqaresources/science/teaching/a-level-practical-handbook-physics.pdf) 第 72–74 页；其计算列在此重算，任务未预给。效率按当前大纲的输出/输入定义；教学假定不确定度与原始记录分开说明。Jim Breithaupt 第 21.5 节印刷第 384 页辅助共同磁通解释。其他题目和配图为自拟，不认证完成实物 RP7 或学生学习试用。
+OxfordAQA 9630 PH03，[大纲正文 v4.4](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf) 3.10.6 与 RP7，印刷第 26/38 页（PDF 第 25/37 页），2026-10-21 核对。例题 1 改编 January 2020 QP Q35 第 43 页，配对 MS 第 9 页。练习 2 改编 Specimen 2019/V2.0 Q5，QP 第 12 页与 MS 第 10 页。练习 5 改编 June 2024 QP Q20 第 33 页及 MS 第 21 页。RP7 方法与四列示例读数选自[实验手册 v2，September 2018](https://www.oxfordaqa.com/oaqaresources/science/teaching/a-level-practical-handbook-physics.pdf) 第 72–74 页；其计算列在此重算，任务未预给。效率按当前大纲的输出/输入定义；教学假定不确定度与原始记录分开说明。Jim Breithaupt 第 21.5 节印刷第 384 页辅助共同磁通解释。其他题目和配图为自拟，不认证完成实物 RP7 或学生学习试用。

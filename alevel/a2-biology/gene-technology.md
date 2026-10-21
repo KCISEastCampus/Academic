@@ -199,6 +199,6 @@ If you confused PCR with protein production, return to G0. If marker survival be
 
 ## Sources and connections {#sources}
 
-[OxfordAQA 9610 specification v5.1](https://www.oxfordaqa.com/wp-content/uploads/2022/08/oxfordaqa-a-level-biology-specification.pdf), §3.4.10; [official resources](https://www.oxfordaqa.com/qualification/international-as-and-a-level-biology-9610/). BL04 May/June 2025 Q6, MS v1.0 Final pp.14–15, was read for ligase, marker and application reasoning. Tasks, values, diagrams and feedback here are self-written, with no official marks claimed.
+[OxfordAQA 9610 specification v5.1](https://www.oxfordaqa.com/wp-content/uploads/2022/08/oxfordaqa-a-level-biology-specification.pdf), §3.4.10; [official resources](https://www.oxfordaqa.com/qualification/international-as-and-a-level-biology-9610/). BL04 May/June 2025 Q6, MS pp.14–15, was read for ligase, marker and application reasoning. Tasks, values, diagrams and feedback here are self-written, with no official marks claimed.
 
 Connect expression to [gene regulation](/alevel/a2-biology/gene-expression/), transmission to [inheritance](/alevel/a2-biology/inheritance/), controls to [experimental design](/alevel/a2-biology/experimental-design/), and evaluation to [synoptic writing](/alevel/a2-biology/synoptic-writing/).

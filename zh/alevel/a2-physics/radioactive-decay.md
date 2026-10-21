@@ -573,7 +573,7 @@ $$T_{1/2}=\frac{\ln2}{0.0040\ln10}\approx\boxed{75\,\mathrm s}.$$
 
 本课对应 OxfordAQA International AS and A-level Physics **9630**，PH03 Unit 3，大纲 **3.9.2**。2026 年 10 月 21 日，[资格页面](https://www.oxfordaqa.com/qualification/international-as-and-a-level-physics-9630/)链接到 [Version 4.4 大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf)，对应印刷页第 25 页、PDF 第 24 页。[Version 5.1 官方文件](https://www.oxfordaqa.com/wp-content/uploads/2022/08/oxfordaqa-a-level-physics-specification.pdf)的印刷页第 26 页、PDF 第 25 页列有相同的相关要求。版本标签不一致，不能据此认定大纲已正式变更。
 
-练习 3 是根据 PH03 January 2020 Q26 制作的改编题（QP 第 36 页，MS Version 1.0 Final 第 9 页）；练习 4 根据 PH03 June 2024 Q7 改编（QP 第 23 页，MS Version 1.0 Final 第 19 页）。本项目取得的试卷与评分标准副本已配对阅读，选定答案已独立复算。若把所有给定中心值都视为精确值，原 Q7 的寿命与取整后的活度端点不能按指数模型精确闭合；本改编题省略寿命，明确使用给定端点。它不是未经修改的官方原题。
+练习 3 是根据 PH03 January 2020 Q26 制作的改编题（QP 第 36 页，MS 第 9 页）；练习 4 根据 PH03 June 2024 Q7 改编（QP 第 23 页，MS 第 19 页）。本项目取得的试卷与评分标准副本已配对阅读，选定答案已独立复算。若把所有给定中心值都视为精确值，原 Q7 的寿命与取整后的活度端点不能按指数模型精确闭合；本改编题省略寿命，明确使用给定端点。它不是未经修改的官方原题。
 
 补充教材：Jim Breithaupt，*International A Level Physics*，Oxford University Press，2016 年首次出版，ISBN 978-0-19-837603-3，19.5 节，所提供副本的印刷页第 350–352 页、PDF 第 366–368 页。已核读这三页正文与原图，用于补充解释，不代替大纲或评分标准。本课概率模型表与两组图像均为自编教学材料。
 

@@ -69,7 +69,7 @@ More IAA on the lower side → less elongation there → upper side elongates mo
 
 ## Read concentration evidence carefully {#data}
 
-**Adapted / 改编题:** OxfordAQA Biology **9610, BL04, May/June 2025, Q4**, QP p.10; paired **MS Version 1.0 Final, pp.10–11**, read for this page. The numerical table is retained; the graph, questions and explanations below are teaching adaptations, not the original question or official marks.
+**Adapted / 改编题:** OxfordAQA Biology **9610, BL04, May/June 2025, Q4**, QP p.10; paired **MS, pp.10–11**, read for this page. The numerical table is retained; the graph, questions and explanations below are teaching adaptations, not the original question or official marks.
 
 The source investigation used 20 mm shoot tips, ten per dish, one dish at each concentration, and measured elongation after 48 hours. The zero treatment means **no added IAA**, not that the living tips contain no endogenous IAA.
 
@@ -195,6 +195,6 @@ After redistribution, the new lower side receives more IAA and elongates faster 
 
 ## Sources and next connections {#sources}
 
-Scope: [OxfordAQA 9610 specification v5.1](https://www.oxfordaqa.com/wp-content/uploads/2022/08/oxfordaqa-a-level-biology-specification.pdf), §3.4.5 and RP10; [official qualification and resources](https://www.oxfordaqa.com/qualification/international-as-and-a-level-biology-9610/). January 2025 BL04 Q5 MS v1.0 p.16 was also read to check the direction/experimental reasoning. Page numbers are PDF pages. All tasks except the explicitly adapted P2 dataset/task are self-written; feedback is author-written.
+Scope: [OxfordAQA 9610 specification v5.1](https://www.oxfordaqa.com/wp-content/uploads/2022/08/oxfordaqa-a-level-biology-specification.pdf), §3.4.5 and RP10; [official qualification and resources](https://www.oxfordaqa.com/qualification/international-as-and-a-level-biology-9610/). January 2025 BL04 Q5 MS p.16 was also read to check the direction/experimental reasoning. Page numbers are PDF pages. All tasks except the explicitly adapted P2 dataset/task are self-written; feedback is author-written.
 
 Continue with [experimental design](/alevel/a2-biology/experimental-design/), [data skills](/alevel/a2-biology/data-skills/) and [synoptic writing](/alevel/a2-biology/synoptic-writing/).

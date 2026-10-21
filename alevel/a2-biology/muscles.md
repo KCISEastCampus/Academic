@@ -180,6 +180,6 @@ Slow fibres suit sustained postural work because abundant mitochondria, capillar
 
 ## Sources and next step {#sources}
 
-[OxfordAQA 9610 specification v5.1](https://www.oxfordaqa.com/wp-content/uploads/2022/08/oxfordaqa-a-level-biology-specification.pdf), §3.4.4; [official resources](https://www.oxfordaqa.com/qualification/international-as-and-a-level-biology-9610/). BL04 May/June 2025 Q3 MS v1.0 Final pp.8–9 was read for fibre comparisons and interpretation depth. This page uses its own examples and constructed data, not that experiment's results or official marks.
+[OxfordAQA 9610 specification v5.1](https://www.oxfordaqa.com/wp-content/uploads/2022/08/oxfordaqa-a-level-biology-specification.pdf), §3.4.4; [official resources](https://www.oxfordaqa.com/qualification/international-as-and-a-level-biology-9610/). BL04 May/June 2025 Q3 MS pp.8–9 was read for fibre comparisons and interpretation depth. This page uses its own examples and constructed data, not that experiment's results or official marks.
 
 Continue with [homeostasis and heart rate](/alevel/a2-biology/homeostasis/) and [data skills](/alevel/a2-biology/data-skills/).

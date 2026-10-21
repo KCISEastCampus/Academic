@@ -20,7 +20,7 @@ translation_of: /alevel/a2-biology/energy-production/
 一片田地可以现存大量生物量，却在这一周只新增很少。**生物量（biomass）**是在某一时刻的存量；**生产量（production）**关注一段时间内新增的生物量或其中的化学能。比较生态系统前，先说明面积或体积、时间及所测的量。本页把[光合](/zh/alevel/a2-biology/photosynthesis/)和[呼吸](/zh/alevel/a2-biology/respiration/)连到食物网及农业决策。单位和百分比可查[BL05 数据技能](/zh/alevel/a2-biology/data-skills/)。
 
 <!-- task:EN0 -->
-**Self-written / 自拟题 — EN0**
+**自拟题 — EN0**
 
 A pond contains 5 g m⁻² of algae and 10 g m⁻² of herbivores on one day. Does this show that the herbivores receive more energy per year than the algae fix? Identify the missing measurement.
 <!-- /task:EN0 -->
@@ -55,7 +55,7 @@ A pond contains 5 g m⁻² of algae and 10 g m⁻² of herbivores on one day. Do
 
 $$NPP=GPP-R.$$
 
-**收支示范 — Self-written / 自拟题；构造数据：**GPP = 24 000，生产者 R = 14 000 kJ m⁻² year⁻¹，则 NPP = 10 000 kJ m⁻² year⁻¹。NPP/GPP × 100 = 41.7%，表示扣除生产者呼吸后保留的比例，并不是入射太阳能的固定比例。后者必须以入射光能为分母。
+**收支示范 — 自拟题；构造数据：**GPP = 24 000，生产者 R = 14 000 kJ m⁻² year⁻¹，则 NPP = 10 000 kJ m⁻² year⁻¹。NPP/GPP × 100 = 41.7%，表示扣除生产者呼吸后保留的比例，并不是入射太阳能的固定比例。后者必须以入射光能为分母。
 
 ## 消费者生产：先说清边界 {#consumer-production}
 
@@ -73,7 +73,7 @@ $$N=I-(F+U+R).$$
 
 ![Original teaching energy budget: ingested energy branches into faeces, urine, respiration and net production. Arrows show destinations; widths are not quantitative. Decomposers can receive organic waste, but heat is not recycled into food.](/assets/images/a2-biology/bl03-energy-budget.svg)
 
-**收支示范 — Self-written / 自拟题；构造数据：**同一时段 I = 1000 kJ、F = 300 kJ、U = 40 kJ、R = 500 kJ，净生产量为 160 kJ，占**摄入**能量的 16%。若题目改为相对**同化**能量的生产效率，并把同化定义为 I − F，就应以 700 kJ 为分母，得到 22.9%。先读定义，不能挑一个熟悉的百分数直接套。
+**收支示范 — 自拟题；构造数据：**同一时段 I = 1000 kJ、F = 300 kJ、U = 40 kJ、R = 500 kJ，净生产量为 160 kJ，占**摄入**能量的 16%。若题目改为相对**同化**能量的生产效率，并把同化定义为 I − F，就应以 700 kJ 为分母，得到 22.9%。先读定义，不能挑一个熟悉的百分数直接套。
 
 相邻营养级的生产传递效率可定义为后一级生产量除以前一级生产量再乘 100，面积、时间和能量单位须一致。其数值不总是 10%。
 
@@ -82,7 +82,7 @@ $$\text{transfer efficiency}=\frac{\text{production at next trophic level}}{\tex
 呼吸所用能量最终变得较难用于生物做功，其中大量以热散失。能量守恒，并没有消失。粪便、遗体和未被食用的组织可支持分解者食物网，其中元素能够返回植物，但散失的热不会被光合循环利用，生态系统需要持续能量输入。
 
 <!-- task:EN1 -->
-**Self-written / 自拟题 — EN1**
+**自拟题 — EN1**
 
 Complete the explanation: an animal eats only some of the available plant biomass; some ingested material is ______; some assimilated energy is used in ______. Explain why this limits the number of trophic levels a given producer energy supply can support.
 <!-- /task:EN1 -->
@@ -114,7 +114,7 @@ Complete the explanation: an animal eats only some of the available plant biomas
 ## 独立生产量计算与评价 {#practice}
 
 <!-- task:EN2 -->
-**Self-written / 自拟题 — EN2**
+**自拟题 — EN2**
 
 In a constructed grassland budget, herbivore net production is 600 kJ m⁻² year⁻¹ and represents 12% of producer NPP. Producer respiration is 7000 kJ m⁻² year⁻¹. Find NPP and GPP. State why adding herbivore respiration to NPP would not calculate producer GPP.
 <!-- /task:EN2 -->
@@ -134,7 +134,7 @@ NPP = 600/0.12 = 5000 kJ m⁻² year⁻¹。GPP = 5000 + 7000 = 12 000 kJ m⁻²
 </details>
 
 <!-- task:EN3 -->
-**Self-written / 自拟题 — EN3**
+**自拟题 — EN3**
 
 Two constructed livestock budgets, per animal over the same 30 days, are shown below. Calculate net production and N/I × 100 for each. Evaluate whether system B is necessarily the better system for a farm.
 
@@ -161,7 +161,7 @@ A：N = 20 MJ，N/I = 16.7%；B：N = 35 MJ，N/I = 29.2%。B 把更多摄入能
 </details>
 
 <!-- task:EN4 -->
-**Self-written / 自拟题 — EN4**
+**自拟题 — EN4**
 
 A farm starts with an empty building on day 1. Each complete production cycle, including cleaning, lasts 36 days and yields 4000 saleable birds. Calculate the number sold from complete cycles in 365 days. Explain why rounding 365/36 to the nearest whole number can give an invalid production estimate.
 <!-- /task:EN4 -->
@@ -181,7 +181,7 @@ A farm starts with an empty building on day 1. Each complete production cycle, i
 </details>
 
 <!-- task:EN5 -->
-**Self-written / 自拟题 — EN5**
+**自拟题 — EN5**
 
 Retry: a pesticide raises harvest but also reduces insect pollinators. Give a mechanism for a possible short-term benefit and a longer-term cost. State one measurement needed before recommending repeated use.
 <!-- /task:EN5 -->

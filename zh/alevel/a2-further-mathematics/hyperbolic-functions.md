@@ -647,4 +647,4 @@ $$\begin{aligned}
 
 ## 资料来源 {#sources}
 
-本课范围依据 OxfordAQA《国际 A-level 高等数学大纲》[FP2.9（印刷版第 19 页）](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf) 编排。例题 3 改编自 [OxfordAQA 2018 年样卷 FM03 第 2 题](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-specimen-paper-2019-v3.pdf)的解题方法，并参考了[该题的官方评分细则](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-mark-scheme-2016-v1.pdf)。例题中的方程已作改动，因此不是官方原题，也不代表任何官方分值。
+本课范围依据 OxfordAQA《国际 A-level 高等数学大纲》[FP2.9（印刷版第 19 页）](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf) 编排。例题 3 改编自 OxfordAQA 2018 年样卷 FM03 第 2 题的解题方法，并参考了该题的官方评分细则。例题中的方程已作改动，因此不是官方原题，也不代表任何官方分值。

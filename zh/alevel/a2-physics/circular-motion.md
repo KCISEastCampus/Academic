@@ -335,7 +335,7 @@ $$v_{\max}=\sqrt{9.81(25)}\approx\boxed{16\,\mathrm{m\,s^{-1}}}.$$
 
 ### 练习 5：飞机转弯 {#question-5-an-aircraft-turning}
 
-**Adapted from OxfordAQA PH03, January 2020, Question 3.**
+**改编自 OxfordAQA PH03, January 2020, Question 3.**
 
 An aircraft of mass $1100\,\mathrm{kg}$ turns in a horizontal circle at constant height. Its wings make an angle of $25^\circ$ to the horizontal, so its lift is $25^\circ$ to the vertical. The radius is $900\,\mathrm m$.
 
@@ -379,7 +379,7 @@ $$v\approx\boxed{64\,\mathrm{m\,s^{-1}}}.$$
 
 ### 练习 6：旋转空间站 {#question-6-a-rotating-space-station}
 
-**Adapted from OxfordAQA PH03, June 2024, Question 1.**
+**改编自 OxfordAQA PH03, June 2024, Question 1.**
 
 A person stands against the outer wall inside a rotating space station. The radius of the person's circular path is taken as $150\,\mathrm m$ and the centripetal acceleration is $9.81\,\mathrm{m\,s^{-2}}$. The person's linear momentum is $2500\,\mathrm{kg\,m\,s^{-1}}$. Ignore gravitational forces from other bodies.
 

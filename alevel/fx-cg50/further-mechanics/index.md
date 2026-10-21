@@ -18,7 +18,7 @@ permalink: /alevel/fx-cg50/further-mechanics/
 
 本页介绍弹性、变力、斜面抛射、斜碰撞、简谐运动与圆周运动中的计算器操作。先画受力图、选方向、列物理方程，再用计算器核对。
 
-六项扩展均以 [FM05 June 2024 原题]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm05-2024-june-question-paper.pdf' | relative_url }}) 和 [官方 MS]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-fm05-2024-june-mark-scheme.pdf' | relative_url }}) 为依据，英文题意为改写。
+六项扩展均以 FM05 June 2024 原题 和 官方 MS 为依据，英文题意为改写。
 
 本页是高数进阶中的力学分支，可独立选读。需要先会[进阶方程求解]({{ '/alevel/fx-cg50/advanced/' | relative_url }}#chapter-4)和[定积分]({{ '/alevel/fx-cg50/advanced/' | relative_url }}#task-23)；插值和 Newton 的方法说明见[数值方法专题]({{ '/alevel/fx-cg50/further-mathematics/numerical-calculus/' | relative_url }}#fm-numerical)。
 

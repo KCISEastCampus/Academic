@@ -197,7 +197,7 @@ $$\lvert v\rvert =\sqrt{\frac{2E_k}{m}}=\sqrt{\frac{2(0.0256)}{0.20}}.$$
 
 ### 检查点：动量与能量 {#checkpoint-momentum-and-energy}
 
-**Adapted from OxfordAQA PH03, June 2024, Question 8.** When the magnitude of an oscillator's momentum is greatest, what are its displacement and kinetic energy?
+**改编自 OxfordAQA PH03, June 2024, Question 8.** When the magnitude of an oscillator's momentum is greatest, what are its displacement and kinetic energy?
 
 <details markdown="1">
 <summary>核对答案</summary>
@@ -334,11 +334,11 @@ A particle has acceleration $a=-100x$, with $x$ in metres. Explain why this is S
 
 ### 练习 2：从平衡位置开始 {#question-2-starting-at-equilibrium}
 
-*Self-written; constructed teaching figure, not experimental data.*
+*自拟题；教学示意图，不是实验数据。*
 
 The trace shows a particle undergoing SHM. Read the amplitude and period from the graph, and write an equation for $x(t)$ in SI units. From the trace alone, state the signs of velocity and acceleration at $t=0.10\,\mathrm s$. Calculate $x$, $v$ and $a$ at $t=0.20\,\mathrm s$, then sketch a velocity–time graph with a numerical vertical scale.
 
-<img src="/assets/img/physics-shm-practice.svg" alt="A displacement trace in millimetres against time in seconds, starting at zero with positive slope; axis scales are supplied for independent reading." width="520" height="410" data-lazy-ignore="true">
+<img src="/assets/img/physics-shm-practice.svg" alt="独立读图任务：横轴为时间，单位秒；纵轴为位移，单位毫米。波形从零位移出发，初始斜率为正；两轴刻度供学生自行读取。" width="520" height="410" data-lazy-ignore="true">
 
 <details markdown="1">
 <summary>提示</summary>
@@ -460,7 +460,7 @@ $g$ 的百分不确定度中，计时贡献为 $2(0.2/38.0)(100)\approx1.1\%$。
 
 #### 自选并检验单摆图像 {#data-pendulum-records}
 
-*Self-written; constructed records for a small-angle pendulum, not a completed practical. This reuses AS timing skills.*
+*自拟题；小角度单摆记录为教学构造，不代表完成了实际实验；本题调用 AS 的计时技能。*
 
 Each timing covers 20 complete oscillations. The displayed length has uncertainty ±0.002 m and each total timing has uncertainty ±0.2 s. Keep the amplitude small and use the same bob and timing method.
 
@@ -504,7 +504,7 @@ $$\delta L\approx\frac{0.0777}{4.032}\,\mathrm m\approx0.019\,\mathrm m.$$
 
 ### 练习 6：解释与推导 {#question-6-explanation-and-derivation}
 
-**Adapted from OxfordAQA PH03, January 2020, Question 1.**
+**改编自 OxfordAQA PH03, January 2020, Question 1.**
 
 A trolley connected to a horizontal spring oscillates with negligible damping. Its resultant force is $F=-kx$. State two ways to reduce percentage uncertainty when timing its period. Explain the negative sign, then derive the period equation using Newton's second law and the SHM condition.
 
@@ -536,7 +536,7 @@ $$\boxed{T=2\pi\sqrt{\frac{m}{k}}}.$$
 
 ### 练习 7：移除悬挂物 {#question-7-removing-a-hanging-mass}
 
-**Adapted from OxfordAQA PH03, June 2024, Question 9.**
+**改编自 OxfordAQA PH03, June 2024, Question 9.**
 
 A mass $M$ hangs from an ideal vertical spring. A second mass $m$ hangs below it on a light thread. The system is at rest and the spring's extension is $\Delta l$. The thread is cut and the mass $M$ oscillates. Express its period in terms of $M$, $m$, $\Delta l$ and $g$, assuming the spring stays stretched throughout.
 
@@ -572,7 +572,7 @@ $$\boxed{T=2\pi\sqrt{\frac{M\Delta l}{(M+m)g}}}.$$
 
 ### 练习 8：解释受迫系统 {#question-8-driven-system}
 
-*Self-written; AS transfer calibrated against OxfordAQA 9630 PH03, Specimen 2019, Q6.6–6.7 (QP pp.16–17; MS p.11), not an original exam question.*
+*自拟题；AS 知识迁移的要求参照 OxfordAQA 9630 PH03、Specimen 2019、Q6.6–6.7（QP pp.16–17；MS p.11）校准，并非原卷题目。*
 
 A $0.25\,\mathrm{kg}$ mass is attached to a spring of spring constant $100\,\mathrm{N\,m^{-1}}$. A driver applies a periodic force of fixed amplitude. Damping is initially light. Calculate the undamped natural frequency, then compare the steady responses when the driving frequency is 2.0, 3.2 and 5.0 Hz. State the oscillation frequency in the 2.0 Hz run. Explain what stronger damping does to the resonance curve and why a steady amplitude is possible despite energy loss. Finally describe the motion after the driver is switched off while damping remains.
 
@@ -637,6 +637,6 @@ $$f'_0=f_0/\sqrt2\approx\boxed{2.3\,\mathrm{Hz}}.$$
 
 练习 6–7 改编自 PH03 January 2020 Q1、June 2024 Q9；动量检查点改编自 June 2024 Q8。英文原页说明编写时参考过官方评分标准，答案经独立推导与检查，未直接照抄教材答案。
 
-练习 8 为自拟题，将 AS 大纲 3.5.1–3.5.2 与 PH03 的实际应用连接。本次已配对阅读 [Specimen 2019 样卷](https://www.oxfordaqa.com/oaqaresources/science/assessment/9630-PH03-international-a-level-physics-specimen-paper-v4.2.pdf) Q6.6–6.7 及[评分标准](https://www.oxfordaqa.com/oaqaresources/science/assessment/9630-PH03-international-a-level-physics-mark-scheme-v4.2.pdf) p.11 的相关部分；本页不引入阻尼微分方程。
+练习 8 为自拟题，将 AS 大纲 3.5.1–3.5.2 与 PH03 的实际应用连接。本次已配对阅读 Specimen 2019 样卷 Q6.6–6.7 及评分标准 p.11 的相关部分；本页不引入阻尼微分方程。
 
 </details>

@@ -22,7 +22,7 @@ translation_of: /alevel/a2-biology/inheritance/
 减数分裂分离同源染色体，使配子在每个位点得到一个等位基因；受精再把配子结合。不熟悉时回查[遗传信息与减数分裂先修](/zh/alevel/a2-biology/prerequisites/#information)。目标是从标注完整的模型预测后代，再判断计数是否与模型相容。概率描述重复事件，四个孩子并不必须呈现 3:1。
 
 <!-- task:I0 -->
-**Self-written / 自拟题 — I0**
+**自拟题 — I0**
 
 A plant has genotype Aa at one autosomal locus. State the allele carried by each possible gamete and explain why a gamete does not normally contain Aa at that locus.
 <!-- /task:I0 -->
@@ -43,7 +43,7 @@ A plant has genotype Aa at one autosomal locus. State the allele carried by each
 
 ## 单因子杂交：先定义符号 {#monohybrid}
 
-**模型示范 — Self-written / 自拟题：**设一个虚构种子颜色位点，AA 和 Aa 为黄种子，aa 为绿种子。假设完全显性、等概率分离、随机受精及后代存活相同。两个黄色杂合子交配：**Aa × Aa**，各产生概率为 ½ 的 A 与 a 配子。
+**模型示范 — 自拟题：**设一个虚构种子颜色位点，AA 和 Aa 为黄种子，aa 为绿种子。假设完全显性、等概率分离、随机受精及后代存活相同。两个黄色杂合子交配：**Aa × Aa**，各产生概率为 ½ 的 A 与 a 配子。
 
 | Gamete from parent 1 ↓ / parent 2 → | A (½) | a (½) |
 | --- | --- | --- |
@@ -56,7 +56,7 @@ A plant has genotype Aa at one autosomal locus. State the allele carried by each
 
 ## 双因子杂交：何时可以相乘？ {#dihybrid}
 
-**模型示范 — Self-written / 自拟题：**某虚构物种中，A/a 控制黄／绿色，B/b 控制光滑／皱缩，各位点完全显性。若两位点独立分配，**AaBb × AaBb** 的双亲都产生 **AB、Ab、aB、ab** 配子，各概率为 ¼。
+**模型示范 — 自拟题：**某虚构物种中，A/a 控制黄／绿色，B/b 控制光滑／皱缩，各位点完全显性。若两位点独立分配，**AaBb × AaBb** 的双亲都产生 **AB、Ab、aB、ab** 配子，各概率为 ¼。
 
 | Parent 1 ↓ / parent 2 → | AB | Ab | aB | ab |
 | --- | --- | --- | --- | --- |
@@ -70,7 +70,7 @@ A plant has genotype Aa at one autosomal locus. State the allele carried by each
 这个比例依赖前述条件。连锁改变配子频率，基因相互作用改变基因型到表型的对应，存活差异改变实际计数。不能仅因题目出现两个基因就自动选 9:3:3:1。
 
 <!-- task:I1 -->
-**Self-written / 自拟题 — I1**
+**自拟题 — I1**
 
 For the model above, cross AaBb with aabb, assuming independent assortment. List the gametes from each parent and the four offspring genotypes with their probabilities. Explain why the expected phenotype ratio is not 9:3:3:1.
 <!-- /task:I1 -->
@@ -93,7 +93,7 @@ AaBb 产生 AB、Ab、aB、ab，各 ¼；aabb 只产生 ab。后代 AaBb、Aabb�
 
 **共显性（codominance）**指两个等位基因在杂合子中均有可分辨效应。杂色毛中同时存在红毛和白毛，与形成一种中间颜色素不是同一机制。杂合子呈中间表型的不完全显性，不能仅因后代为 1:2:1 就自动叫共显性。
 
-**模型示范 — Self-written / 自拟题：**CᴿCᴿ 为红、CᵂCᵂ 为白、CᴿCᵂ 为红白杂色。CᴿCᵂ × CᴿCᵂ 的双亲各产生 Cᴿ 或 Cᵂ 配子，后代为 ¼ 红 CᴿCᴿ、½ 杂色 CᴿCᵂ、¼ 白 CᵂCᵂ。由于三种基因型都可辨认，基因型与表型均呈 1:2:1。
+**模型示范 — 自拟题：**CᴿCᴿ 为红、CᵂCᵂ 为白、CᴿCᵂ 为红白杂色。CᴿCᵂ × CᴿCᵂ 的双亲各产生 Cᴿ 或 Cᵂ 配子，后代为 ¼ 红 CᴿCᴿ、½ 杂色 CᴿCᵂ、¼ 白 CᵂCᵂ。由于三种基因型都可辨认，基因型与表型均呈 1:2:1。
 
 **多等位基因（multiple alleles）**是种群中存在超过两种等位形式；普通二倍体个体在该位点仍只有两个。简化 ABO 模型中，Iᴬ 与 Iᴮ 共显性，二者对 i 均显性。
 
@@ -105,7 +105,7 @@ AaBb 产生 AB、Ab、aB、ab，各 ¼；aabb 只产生 ab。后代 AaBb、Aabb�
 | O | ii |
 
 <!-- task:I2 -->
-**Self-written / 自拟题 — I2**
+**自拟题 — I2**
 
 Using the simplified ABO model, cross Iᴬi with Iᴮi. List the parental gametes and offspring genotypes and phenotypes. Explain why the existence of three alleles in the population does not give either parent three alleles at this locus.
 <!-- /task:I2 -->
@@ -128,7 +128,7 @@ Using the simplified ABO model, cross Iᴬi with Iᴮi. List the parental gamete
 
 对一个 X 连锁隐性性状，定义 Xᴴ 为不患病等位基因、Xʰ 为患病等位基因，并假设 Y 在该位点无对应等位基因。XY 个体只有一份 Xʰ 就可表现该性状；XX 个体在此模型下须为 XʰXʰ。父亲把 X 传给女儿、Y 传给儿子，所以不能把这个 X 连锁等位基因直接传给儿子。
 
-**模型示范 — Self-written / 自拟题：**XᴴXʰ × XᴴY。母方配子 Xᴴ、Xʰ，父方配子 Xᴴ、Y，各 ½。
+**模型示范 — 自拟题：**XᴴXʰ × XᴴY。母方配子 Xᴴ、Xʰ，父方配子 Xᴴ、Y，各 ½。
 
 | Maternal ↓ / paternal → | Xᴴ | Y |
 | --- | --- | --- |
@@ -141,7 +141,7 @@ Using the simplified ABO model, cross Iᴬi with Iᴮi. List the parental gamete
 
 位于同一染色体上的基因发生连锁。减数分裂时，同源染色体的非姐妹染色单体交换，可形成重组等位组合。必须写明**排列相位**，例如 AB/ab：一条同源染色体携带 AB，另一条携带 ab。只写 AaBb 不能说明相位；Ab/aB 与其不同。
 
-**模型示范 — Self-written / 自拟题：**相位 AB/ab、重组率 r = 0.20，且假设分离与存活无差异，则亲本型配子 AB、ab 各为 (1 − r)/2 = 0.40，重组型 Ab、aB 各为 r/2 = 0.10。与 ab/ab 测交，可由 AaBb、aabb、Aabb、aaBb 后代反映这些频率，不能强行给四类同为 ¼。
+**模型示范 — 自拟题：**相位 AB/ab、重组率 r = 0.20，且假设分离与存活无差异，则亲本型配子 AB、ab 各为 (1 − r)/2 = 0.40，重组型 Ab、aB 各为 r/2 = 0.10。与 ab/ab 测交，可由 AaBb、aabb、Aabb、aaBb 后代反映这些频率，不能强行给四类同为 ¼。
 
 重组率接近 0.50 时，不能区分未连锁基因与同染色体上相距很远的位点。相位也重要：Ab/aB 的常见类别正好相反。重组与表型表达是模型的两个不同部分。
 
@@ -151,7 +151,7 @@ Using the simplified ABO model, cross Iᴬi with Iᴮi. List the parental gamete
 
 上位作用（epistasis）是**不同基因**之间的相互作用，一个位点的基因型掩盖或改变另一位点的效应。显隐性则是在同一位点比较不同等位基因。比例由机制推导，“上位作用”不是某一种固定比例的名字。
 
-**模型示范 — Self-written / 自拟题：**某虚构色素途径中，C_ 允许生成色素，cc 阻断而呈白色；只在已有色素时，B_ 呈黑，bb 呈棕。对 **CcBb × CcBb**，假设独立分配，双亲各产生概率为 ¼ 的 CB、Cb、cB、cb。先列基因型类别，再合并相同表型。
+**模型示范 — 自拟题：**某虚构色素途径中，C_ 允许生成色素，cc 阻断而呈白色；只在已有色素时，B_ 呈黑，bb 呈棕。对 **CcBb × CcBb**，假设独立分配，双亲各产生概率为 ¼ 的 CB、Cb、cB、cb。先列基因型类别，再合并相同表型。
 
 | Genotype class | Probability | Phenotype under this pathway |
 | --- | --- | --- |
@@ -163,7 +163,7 @@ Using the simplified ABO model, cross Iᴬi with Iᴮi. List the parental gamete
 表型比例为 9 黑 : 3 棕 : 4 白。白色的 4/16 合并了两个基因型类别，因为 cc 使色素无法形成，与 B/b 无关。表型比例改变本身不能证明连锁；此处配子仍独立分配。
 
 <!-- task:I3 -->
-**Self-written / 自拟题 — I3**
+**自拟题 — I3**
 
 Use the pigment pathway above to cross Ccbb with ccBb. List gametes from each parent, offspring genotypes and expected phenotypes with probabilities. Explain which gene interaction changes the phenotype count.
 <!-- /task:I3 -->
@@ -190,14 +190,14 @@ Ccbb 产生 Cb 或 cb，ccBb 产生 cB 或 cb，各 ½。后代 CcBb 黑 ¼、Cc
 
 $$\chi^2=\sum\frac{(O-E)^2}{E}.$$
 
-**计算示范 — Self-written / 自拟题；构造数据：**100 个后代在 3:1 模型下期望为 75、25，观测为 78、22。两项贡献为 9/75、9/25，χ² = 0.48。df = 1，5% 临界值为 3.84，因此不拒绝该模型。这不表示模型有 95% 概率正确；显著性水平涉及原模型为真时检验的行为。
+**计算示范 — 自拟题；构造数据：**100 个后代在 3:1 模型下期望为 75、25，观测为 78、22。两项贡献为 9/75、9/25，χ² = 0.48。df = 1，5% 临界值为 3.84，因此不拒绝该模型。这不表示模型有 95% 概率正确；显著性水平涉及原模型为真时检验的行为。
 
 取样阶段也重要。某基因型若降低存活，萌发时计数可能符合受精比例，几周后却不符合。例如缺叶绿素幼苗最初可呼吸储存物质，后来需要光合供给时便可能死亡。所以必须记录何时、如何取样。
 
 ## 独立选模与重试 {#practice}
 
 <!-- task:I4 -->
-**Self-written / 自拟题 — I4**
+**自拟题 — I4**
 
 An AB/ab individual is test-crossed with ab/ab. Constructed offspring counts are 82 AaBb, 78 aabb, 22 Aabb and 18 aaBb. Identify parental and recombinant classes, calculate recombination frequency, and explain why independent assortment is not a suitable starting assumption for predicting equal counts.
 <!-- /task:I4 -->
@@ -217,7 +217,7 @@ An AB/ab individual is test-crossed with ab/ab. Constructed offspring counts are
 </details>
 
 <!-- task:I5 -->
-**Self-written / 自拟题 — I5**
+**自拟题 — I5**
 
 For a fixed 9:3:3:1 model, the constructed counts of four exclusive offspring phenotypes are 88, 32, 28 and 12, total 160. Calculate expected counts and χ². Use df = 3 and the 5% critical value 7.815 to make a conclusion. State one reason that a non-significant result cannot establish every biological assumption of the model.
 <!-- /task:I5 -->
@@ -237,7 +237,7 @@ For a fixed 9:3:3:1 model, the constructed counts of four exclusive offspring ph
 </details>
 
 <!-- task:I6 -->
-**Self-written / 自拟题 — I6**
+**自拟题 — I6**
 
 Retry: a woman with genotype XᴴXʰ and a man with genotype XʰY have children under the X-linked model above. Predict the affected fraction among daughters and among sons. Show parental gametes and all offspring genotypes; do not reuse the earlier cross without changing the father.
 <!-- /task:I6 -->
@@ -261,7 +261,7 @@ Retry: a woman with genotype XᴴXʰ and a man with genotype XʰY have children 
 共显性并不阻止另一位点独立分配。先在每个位点写出配子中的等位基因，再按独立性组合配子概率；受精后分别判断每个位点的表型，最后合并。不能因为其中一个位点共显性，就直接套上单因子 1:2:1 作为整个后代的比例。
 
 <!-- task:I7 -->
-**Self-written / 自拟题 — I7**
+**自拟题 — I7**
 
 Use CᴿCᴿ = red, CᴿCᵂ = roan, CᵂCᵂ = white. At an independent autosomal locus, A_ has horns and aa has no horns. Cross CᴿCᵂAa with CᵂCᵂaa. List all gametes, offspring genotypes and phenotypes with probabilities. Calculate the probability of an offspring being both roan and without horns.
 <!-- /task:I7 -->

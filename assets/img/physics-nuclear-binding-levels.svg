@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="330" viewBox="0 0 600 330" role="img" aria-labelledby="title desc">
+<title id="title">Binding energy and the rest-energy account</title>
+<desc id="desc">Explanatory energy-level schematic with the same constituent nucleons. Separated free nucleons have greater total rest energy than the bound nucleus. Separation requires energy B; reversing the states releases the same B.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0 0L8 4L0 8Z" fill="#334155"/></marker></defs>
+<rect width="600" height="330" rx="12" fill="#fff"/>
+<g font-family="Arial,sans-serif" font-size="18" fill="#172033">
+<text x="28" y="30" font-weight="bold">Same nucleons; different rest energies</text>
+<path d="M60 282V62" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="15" y="58">E</text>
+<line x1="100" y1="95" x2="540" y2="95" stroke="#334155" stroke-width="2"/>
+<text x="122" y="77">Separate free protons and neutrons</text>
+<line x1="100" y1="250" x2="540" y2="250" stroke="#334155" stroke-width="2"/>
+<text x="122" y="282">Bound nucleus</text>
+<path d="M170 110V232" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="186" y="157">Formation:</text><text x="186" y="184">release B</text>
+<path d="M455 235V113" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="313" y="197">Separation:</text><text x="313" y="224">supply B</text>
+</g></svg>

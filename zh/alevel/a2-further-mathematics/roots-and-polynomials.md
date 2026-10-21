@@ -400,7 +400,7 @@ $\alpha$ 为负，所以实部范围为正。在共轭根相加时，虚部抵�
 
 ### 第 7 题：AQA 原题练习 {#question-7--original-aqa-practice}
 
-**来源：**AQA Mathematics 6360，MFP2，January 2006，原卷第 2 题。原题分值：**5 + 5 marks**。教材索引：Chapter 17, practice examination question 4, printed p. 206。[原卷](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/January%202006%20QP%20-%20FP2%20AQA.PDF)、[AQA 评分材料](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/January%202006%20MS%20-%20FP2%20AQA.PDF)。
+**来源：**AQA Mathematics 6360，MFP2，January 2006，原卷第 2 题。原题分值：**5 + 5 marks**。教材索引：Chapter 17, practice examination question 4, printed p. 206。原卷、AQA 评分材料。
 
 The cubic equation
 

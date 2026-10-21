@@ -587,7 +587,7 @@ I
 
 **Check:** the radicand stays positive throughout the stated interval. The answer is also $\frac{\pi\sqrt2}{8}$.
 
-The [official OxfordAQA mark scheme, Question 9](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-mark-scheme-2016-v1.pdf) checks the completed square, substitution, coefficient, inverse sine and use of limits. This is our worked solution.
+The official OxfordAQA mark scheme, Question 9 checks the completed square, substitution, coefficient, inverse sine and use of limits. This is our worked solution.
 
 </details>
 
@@ -646,13 +646,13 @@ Thus $\boxed{a=\frac16,\ b=-\frac12}$.
 
 **Check:** differentiating $x\sin^{-1}x+\sqrt{1-x^2}$ gives $\sin^{-1}x$; the other two terms cancel. Keep the minus sign in the antiderivative of $\frac{x}{\sqrt{1-x^2}}$.
 
-This is our worked solution, checked against the [AQA mark scheme, Question 5](https://colmanweb.co.uk/pastpapers/Papers/A%20Level/AQA%206360/AQA-6360-MFP2/AQA-MFP2-W-MS-JAN11.PDF).
+This is our worked solution, checked against the AQA mark scheme, Question 5.
 
 </details>
 
 ### Question 8 — AQA: use a derivative to find an integral
 
-**Original AQA question.** AQA MFP2, June 2007, Question 4; textbook Chapter 22, practice examination Question 4, printed p. 281. **7 marks: 2 + 5.** [Question paper, Question 4](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202007%20QP%20-%20FP2%20AQA.PDF).
+**Original AQA question.** AQA MFP2, June 2007, Question 4; textbook Chapter 22, practice examination Question 4, printed p. 281. **7 marks: 2 + 5.** Question paper, Question 4.
 
 **(a)** Differentiate $x\tan^{-1}x$ with respect to $x$. **(2 marks)**
 
@@ -692,7 +692,7 @@ $$\begin{aligned}
 
 **Check:** the value is positive and less than $\frac\pi4$, since $0\le\tan^{-1}x\le\frac\pi4$ on this interval.
 
-This is our worked solution, checked against the [AQA mark scheme, Question 4](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202007%20MS%20-%20FP2%20AQA.PDF).
+This is our worked solution, checked against the AQA mark scheme, Question 4.
 
 </details>
 

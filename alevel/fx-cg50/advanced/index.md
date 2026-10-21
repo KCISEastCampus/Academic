@@ -835,16 +835,16 @@ $$P(\bar X<0.82)=\Phi\left(\frac{0.02\sqrt n}{0.25}\right)>0.74$$
 - **检验结论合理吗？** 先写假设、显著性水平与分布模型；“不拒绝”不等于证明原假设为真，结论须回到题目情境。
 - **设置对不对？** 核对角度单位、数据与频数、考试模式要求和电量。
 
-## 按考试单元复习与查阅原卷 {#mathematics-units}
+## 按考试单元复习与题源说明 {#mathematics-units}
 
-各单元的例题已按方法放在上面的章节及进阶力学篇中。复习时可按正在学的单元直接跳到题目；QP 为原卷，MS 为官方评分细则，均可直接打开或下载。
+各单元的例题已按方法放在上面的章节及进阶力学篇中。复习时可按正在学的单元直接跳到题目；题源注明具体单元及考季，QP 为原卷，MS 为官方评分细则。
 
 课程范围参考 [OxfordAQA Mathematics 9660 Specification](https://www.oxfordaqa.com/wp-content/uploads/2023/10/oxfordaqa-a-level-mathematics-specification.pdf)。英文题意是改写，完整题干、图和评分要求以 QP、MS 为准；假设检验还须使用试卷所附统计表。
 
 {% for unit in site.data.fx_cg50.mathematics_units %}
 ### {{ unit.title }} {#{{ unit.id }}}
 
-[2025 年 1 月 QP]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-' | append: unit.id | append: '-2025-january-question-paper.pdf' | relative_url }}) · [配套 MS]({{ '/assets/pdf/fx-cg50/references/oxfordaqa-' | append: unit.id | append: '-2025-january-mark-scheme.pdf' | relative_url }})
+2025 年 1 月 QP · 配套 MS
 
 {% for topic in unit.topics %}
 - [{{ topic.title }}]({{ topic.url | relative_url }}#{{ topic.anchor }})

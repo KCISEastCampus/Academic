@@ -337,7 +337,7 @@ This is the formula for $n=k+1$. The formula is true for $n=1$. If it is true fo
 
 ### Question 5 — Original AQA practice
 
-**Source:** AQA Mathematics 6360, MFP2, June 2010, Question 2. **3 + 5 marks**. Textbook cross-reference: Chapter 18, practice examination question 6, printed p. 218. [Question paper](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202010%20QP%20-%20FP2%20AQA.PDF), [AQA mark scheme](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202010%20MS%20-%20FP2%20AQA.PDF).
+**Source:** AQA Mathematics 6360, MFP2, June 2010, Question 2. **3 + 5 marks**. Textbook cross-reference: Chapter 18, practice examination question 6, printed p. 218. Question paper, AQA mark scheme.
 
 **a** Express
 

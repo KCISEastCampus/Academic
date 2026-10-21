@@ -511,7 +511,7 @@ A
 
 ### Question 6 — AQA: a Cartesian equation
 
-**Source:** AQA Mathematics 6360, MFP3, June 2014, Question 3. **4 marks**. Textbook cross-reference: Chapter 21, practice examination question 2, printed p. 267. [Question paper](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202014%20QP%20-%20FP3%20AQA.PDF), [AQA mark scheme](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202014%20MS%20-%20FP3%20AQA.PDF).
+**Source:** AQA Mathematics 6360, MFP3, June 2014, Question 3. **4 marks**. Textbook cross-reference: Chapter 21, practice examination question 2, printed p. 267. Question paper, AQA mark scheme.
 
 A curve has polar equation $r(4-3\cos\theta)=4$. Find its Cartesian equation in the form $y^2=f(x)$.
 
@@ -549,7 +549,7 @@ $$\boxed{y^2=1+\frac32x-\frac7{16}x^2.}$$
 
 ### Question 7 — AQA: a circle using the origin as pole
 
-**Source:** AQA Mathematics 6360, MFP3, June 2013, Question 2. **4 marks**. Textbook cross-reference: Chapter 21, practice examination question 3, printed p. 267. [Question paper](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202013%20QP%20-%20FP3%20AQA.pdf), [AQA mark scheme](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202013%20MS%20-%20FP3%20AQA.PDF).
+**Source:** AQA Mathematics 6360, MFP3, June 2013, Question 2. **4 marks**. Textbook cross-reference: Chapter 21, practice examination question 3, printed p. 267. Question paper, AQA mark scheme.
 
 The Cartesian equation of a circle is $(x+8)^2+(y-6)^2=100$.
 
@@ -589,7 +589,7 @@ Thus $p=12$ and $q=-16$.
 
 ### Question 8 — AQA: area of a loop
 
-**Source:** Adapted question (diagram redrawn). AQA Mathematics 6360, MFP3, January 2009, Question 3. **6 marks**. Textbook cross-reference: Chapter 21, practice examination question 1, printed p. 267. [Question paper](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/January%202009%20QP%20-%20FP3%20AQA.PDF), [AQA mark scheme](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/January%202009%20MS%20-%20FP3%20AQA.PDF). The redrawn diagram retains the original curve, pole, initial line and conditions.
+**Source:** Adapted question (diagram redrawn). AQA Mathematics 6360, MFP3, January 2009, Question 3. **6 marks**. Textbook cross-reference: Chapter 21, practice examination question 1, printed p. 267. Question paper, AQA mark scheme. The redrawn diagram retains the original curve, pole, initial line and conditions.
 
 The diagram shows a sketch of a loop, the pole $O$ and the initial line.
 

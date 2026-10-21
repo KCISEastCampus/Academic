@@ -18,7 +18,7 @@ translation_of: /alevel/a2-biology/plant-responses/
 **中心问题：**同一种信号为何能让根、茎弯向相反方向？本页把刺激、IAA 分布、特定器官的响应及不均等伸长连起来。细胞、渗透和实验变量可先回看[先修页](/zh/alevel/a2-biology/prerequisites/)。
 
 <!-- task:BL04-P0 -->
-**P0 · Self-written / 自拟题**
+**P0 · 自拟题**
 
 A flexible strip has two attached sides. Side A becomes longer than side B. Which side lies on the outside of the bend? Explain without using the word “auxin”.
 <!-- /task:BL04-P0 -->
@@ -40,7 +40,7 @@ A 在外侧，因为外侧的弧更长。器官朝伸长较少的一侧弯曲。
 
 ### 机制示范与补步骤 {#direction}
 
-**示范 · Self-written / 自拟题：**把幼嫩的茎水平放在黑暗中。重力刺激引起 IAA 向下侧重新分布，这是运输调节，并非 IAA 像较重的液体一样沉下去。在促进茎伸长的浓度范围，下侧细胞比上侧伸长更多，下侧成为弯曲外侧，茎向上弯曲，表现为负向重力性（negative gravitropism）。
+**示范 · 自拟题：**把幼嫩的茎水平放在黑暗中。重力刺激引起 IAA 向下侧重新分布，这是运输调节，并非 IAA 像较重的液体一样沉下去。在促进茎伸长的浓度范围，下侧细胞比上侧伸长更多，下侧成为弯曲外侧，茎向上弯曲，表现为负向重力性（negative gravitropism）。
 
 若从一侧照光，响应茎的背光侧积累较多 IAA；该侧伸长较多，使茎朝光弯曲，表现为正向光性（positive phototropism）。两者刺激不同，但连接信号与弯曲的共同环节是两侧伸长不同。
 
@@ -49,7 +49,7 @@ A 在外侧，因为外侧的弧更长。器官朝伸长较少的一侧弯曲。
 *自绘示意，不按比例。箭头分别标明重力、信号重新分布或生长；根的空白用于 P1。*
 
 <!-- task:BL04-P1 -->
-**P1 · Self-written / 自拟题**
+**P1 · 自拟题**
 
 A root is placed horizontally in darkness. More IAA reaches its lower side. At the concentrations present, IAA inhibits root cell elongation. Complete the chain: lower side has more IAA → ____ → ____ → direction of curvature.
 <!-- /task:BL04-P1 -->
@@ -70,7 +70,7 @@ A root is placed horizontally in darkness. More IAA reaches its lower side. At t
 
 ## 读浓度数据时保留边界 {#data}
 
-**Adapted / 改编题：**OxfordAQA Biology **9610，BL04，May/June 2025，Q4**，QP p.10；本页已读配套 **MS Version 1.0 Final，pp.10–11**。表内数值保留，下面的图、任务和解释为教学改编，不是原题或官方分值。
+**改编题：**OxfordAQA Biology **9610，BL04，May/June 2025，Q4**，QP p.10；本页已读配套 **MS，pp.10–11**。表内数值保留，下面的图、任务和解释为教学改编，不是原题或官方分值。
 
 原实验使用初始长 20 mm 的茎尖，每皿十段，每个浓度只有一皿，48 小时后测伸长量。零处理表示**未外加 IAA**，不表示活茎尖内完全没有自身产生的 IAA。
 
@@ -91,7 +91,7 @@ A root is placed horizontally in darkness. More IAA reaches its lower side. At t
 *点为引用来源中的实测均值；连线帮助阅读，不代表拟合好的生物模型。log(0) 无定义，所以零对照不放在对数轴上。来源未提供误差条，本图不虚构误差条。*
 
 <!-- task:BL04-P2 -->
-**P2 · Adapted / 改编题**
+**P2 · 改编题**
 
 Use the table and teaching graph. Explain the purpose of the zero-IAA treatment. Calculate the increase in mean elongation at 1.00 mg dm−3 relative to the zero treatment, as a percentage of the zero-treatment mean. Explain why the results do not establish direct proportionality. State one limitation of using one dish per concentration.
 <!-- /task:BL04-P2 -->
@@ -119,7 +119,7 @@ $$\text{increase relative to control}=\frac{5.4-1.4}{1.4}\times100\%=286\%\quad\
 ## 独立实验设计：检验向重力性 {#investigation}
 
 <!-- task:BL04-P3 -->
-**P3 · Self-written / 自拟题**
+**P3 · 自拟题**
 
 Design an investigation to test whether gravity can cause curvature of a seedling shoot without directional light. Define the response measured, suitable controls and independent replication. Explain why measuring final length alone would not answer the question.
 <!-- /task:BL04-P3 -->
@@ -151,7 +151,7 @@ Design an investigation to test whether gravity can cause curvature of a seedlin
 水分胁迫下，**脱落酸（abscisic acid，ABA）**信号促进钾离子和氯离子离开保卫细胞。溶质减少使细胞水势升高，即变得较不负；水顺水势梯度经渗透离开，膨压下降，气孔缩小。这减少水分散失，却也限制 CO₂ 进入，从而影响[光合作用](/zh/alevel/a2-biology/photosynthesis/)。激素传递信息，实际移动的物质则包括离子与水。
 
 <!-- task:BL04-P4 -->
-**P4 · Self-written / 自拟题**
+**P4 · 自拟题**
 
 An inhibitor prevents potassium and chloride ions leaving guard cells after ABA treatment. Predict the effect on stomatal closure and explain the water-potential mechanism. Suggest one benefit and one cost of closing stomata during drought.
 <!-- /task:BL04-P4 -->
@@ -175,7 +175,7 @@ An inhibitor prevents potassium and chloride ions leaving guard cells after ABA 
 若写“IAA 越多总是长得越快”，回看[器官与浓度](#iaa)；若两侧比较正确却弯曲方向反了，回看 P0；若把零放上对数轴或写成正比，回看[数据](#data)。
 
 <!-- task:BL04-P5 -->
-**P5 · Self-written / 自拟题 — retry**
+**P5 · 自拟题 — retry**
 
 A horizontal shoot is rotated through 180° about its long axis after a short period in darkness. Predict how the direction of NEW growth changes after IAA redistributes. Do not assume that already elongated cells become shorter.
 <!-- /task:BL04-P5 -->
@@ -196,6 +196,6 @@ A horizontal shoot is rotated through 180° about its long axis after a short pe
 
 ## 来源与后续连接 {#sources}
 
-范围依据：[OxfordAQA 9610 大纲 v5.1](https://www.oxfordaqa.com/wp-content/uploads/2022/08/oxfordaqa-a-level-biology-specification.pdf)，§3.4.5、RP10；[官方资格与资料入口](https://www.oxfordaqa.com/qualification/international-as-and-a-level-biology-9610/)。另已读 January 2025 BL04 Q5 的 MS v1.0 p.16，用于核对方向与实验推理。页码均为 PDF 页序。除明确标记的 P2 数据及任务外，其他任务均为自拟；反馈由作者编写。
+范围依据：[OxfordAQA 9610 大纲 v5.1](https://www.oxfordaqa.com/wp-content/uploads/2022/08/oxfordaqa-a-level-biology-specification.pdf)，§3.4.5、RP10；[官方资格与资料入口](https://www.oxfordaqa.com/qualification/international-as-and-a-level-biology-9610/)。另已读 January 2025 BL04 Q5 的 MS p.16，用于核对方向与实验推理。页码均为 PDF 页序。除明确标记的 P2 数据及任务外，其他任务均为自拟；反馈由作者编写。
 
 继续练习[实验设计](/zh/alevel/a2-biology/experimental-design/)、[数据技能](/zh/alevel/a2-biology/data-skills/)与[综合写作](/zh/alevel/a2-biology/synoptic-writing/)。

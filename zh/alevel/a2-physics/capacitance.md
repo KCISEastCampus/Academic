@@ -275,11 +275,11 @@ An air-gap capacitor remains connected to an ideal constant-voltage supply. Its 
 
 ### 练习 3：图轴与单位 {#question-3-graph-axes-and-units}
 
-*Self-written; constructed teaching figure, not experimental data.*
+*自拟题；教学示意图，不是实验数据。*
 
 The graph has potential difference vertically and charge horizontally. Read the coordinates of states A and B. Determine the capacitance and the gradient in SI units. The capacitor discharges from A to B: shade the area representing the energy released and estimate that energy. Explain why the entire triangle below A is not the released energy.
 
-<img src="/assets/img/physics-capacitance-practice.svg" alt="Potential difference against charge, with states A and B marked on a straight line and labelled axis scales." width="520" height="410" data-lazy-ignore="true">
+<img src="/assets/img/physics-capacitance-practice.svg" alt="独立读图任务：横轴为电荷量，纵轴为电势差，两轴均标明刻度。状态 A、B 标在同一直线上；学生据图判断电容和能量变化。" width="520" height="410" data-lazy-ignore="true">
 
 <details markdown="1">
 <summary>提示</summary>
@@ -353,7 +353,7 @@ A dielectric of relative permittivity 2.5 fully fills an air-gap capacitor witho
 
 ### 练习 6：恒定充电电流 {#question-6-a-constant-charging-current}
 
-**Adapted from OxfordAQA PH03, January 2020, Question 23.**
+**改编自 OxfordAQA PH03, January 2020, Question 23.**
 
 A $180\,\mathrm{mF}$ capacitor is charged by a constant current for $36\,\mathrm s$. Its potential difference rises from $3.0\,\mathrm V$ to $9.0\,\mathrm V$. Find the current.
 
@@ -379,7 +379,7 @@ $$I=\frac{\Delta Q}{36}=\boxed{0.030\,\mathrm A=30\,\mathrm{mA}}.$$
 
 ### 练习 7：隔离后插入介质 {#question-7-dielectric-insertion-after-isolation}
 
-**Adapted from OxfordAQA PH03, January 2020, Question 22.** A relative permittivity is supplied here to extend the original comparison.
+**改编自 OxfordAQA PH03, January 2020, Question 22.** A relative permittivity is supplied here to extend the original comparison.
 
 A parallel-plate capacitor is charged and then isolated. A dielectric of relative permittivity 3.0 fully fills the gap, with no change in geometry or loss of free plate charge. Give the new capacitance, potential difference and stored energy in terms of their initial values. Explain what stays fixed.
 
@@ -405,7 +405,7 @@ $$\boxed{E_{\text{stored}}=\frac{E_{\text{stored},0}}{3}}.$$
 
 ### 练习 8：插介质后的场强 {#question-8-field-strength-after-inserting-a-dielectric}
 
-**Adapted from OxfordAQA PH03, June 2024, Question 17.**
+**改编自 OxfordAQA PH03, June 2024, Question 17.**
 
 An air-gap capacitor initially stores charge $Q_0$ and has field strength $E_0$. The supply is disconnected, then a dielectric completely fills the gap without changing plate separation. State how free plate charge and resultant field strength change. How would the answer differ if the original constant-voltage supply stayed connected?
 

@@ -18,7 +18,7 @@ translation_of: /alevel/a2-biology/receptors/
 完整解释应连起**刺激 → 感受器 → 协调 → 效应器 → 响应**。学完后应能区分反射、趋性和非定向运动，解释 Pacinian 感受器电位，并分别讨论光敏感度、颜色辨别和视敏度。膜运输基础见[先修页](/zh/alevel/a2-biology/prerequisites/)。
 
 <!-- task:BL04-R0 -->
-**R0 · Self-written / 自拟题**
+**R0 · 自拟题**
 
 Name the structure that detects a stimulus and the structure that produces a response. In a withdrawal reflex, is the contracting muscle the detector or the effector?
 <!-- /task:BL04-R0 -->
@@ -37,7 +37,7 @@ Name the structure that detects a stimulus and the structure that produces a res
 **反射（reflex）**是快速、自动的响应。在三神经元缩回反射中，皮肤感受器刺激**感觉神经元（sensory neurone）**，冲动进入脊髓，经突触传给**中间神经元（relay neurone）**，再经突触传给**运动神经元（motor neurone）**。运动冲动到达骨骼肌，引起收缩。信息也可上传大脑，但启动缩回不需要先作有意识的决定。缩短接触时间能减少组织损伤，却不保证完全无损伤。
 
 <!-- task:BL04-R1 -->
-**R1 · Self-written / 自拟题**
+**R1 · 自拟题**
 
 Complete a three-neurone withdrawal reflex in the correct order, including both synapses: skin receptor → ____ → ____ → ____ → skeletal muscle. Explain why a response before conscious awareness can be advantageous.
 <!-- /task:BL04-R1 -->
@@ -72,7 +72,7 @@ Complete a three-neurone withdrawal reflex in the correct order, including both 
 
 *均非按解剖比例绘制，视网膜连接经过简化；通路由标签和箭头区分，不只依赖颜色。*
 
-**示范 · Self-written / 自拟题：**较强压力脉冲产生更多次每秒的冲动，但每次高度相同。解释应从更强形变、较大感受器电位，接到更频繁达到触发阈值；不能写成“刺激更强所以动作电位更大”。不同电信号的区别见[神经传递](/zh/alevel/a2-biology/nervous-communication/)。
+**示范 · 自拟题：**较强压力脉冲产生更多次每秒的冲动，但每次高度相同。解释应从更强形变、较大感受器电位，接到更频繁达到触发阈值；不能写成“刺激更强所以动作电位更大”。不同电信号的区别见[神经传递](/zh/alevel/a2-biology/nervous-communication/)。
 
 ## 视网膜：检测、颜色与分辨率 {#retina}
 
@@ -85,7 +85,7 @@ Complete a three-neurone withdrawal reflex in the correct order, including both 
 **敏感度（sensitivity）**指响应很低光强的能力；**视敏度（visual acuity）**指把相邻光点分辨为两个的能力。两者取舍受色素和连接共同影响，比较时须分清变量。
 
 <!-- task:BL04-R2 -->
-**R2 · Self-written / 自拟题**
+**R2 · 自拟题**
 
 In a simplified retinal model, pathway A combines signals from eight neighbouring receptors into one output channel. Pathway B keeps each of eight receptors in a separate output channel. The pigment sensitivity of every receptor is identical. Predict which pathway can detect weaker illumination and which better locates two nearby points of light. Explain the trade-off.
 <!-- /task:BL04-R2 -->
@@ -107,7 +107,7 @@ A 可合并弱信号，有利于弱光检测；B 保留各感受器的独立空�
 ## 独立解释与实验设计 {#practice}
 
 <!-- task:BL04-R3 -->
-**R3 · Self-written / 自拟题**
+**R3 · 自拟题**
 
 Small animals are released at the centre of an arena. In dry regions they move faster and turn more often; their initial movement directions are random. Eventually more animals occupy damp regions. Decide whether these observations demonstrate taxis or kinesis, and explain how the distribution can arise. State one additional observation that would support a directional response.
 <!-- /task:BL04-R3 -->
@@ -127,7 +127,7 @@ Small animals are released at the centre of an arena. In dry regions they move f
 </details>
 
 <!-- task:BL04-R4 -->
-**R4 · Self-written / 自拟题**
+**R4 · 自拟题**
 
 Plan a comparison of two-point touch discrimination on the fingertip and forearm. Explain how you would reduce expectation bias and control stimulus application. State why a difference would not, by itself, measure only the number of Pacinian corpuscles.
 <!-- /task:BL04-R4 -->
@@ -153,7 +153,7 @@ Plan a comparison of two-point touch discrimination on the fingertip and forearm
 “更强的冲动”混淆感受器电位与动作电位；“潮湿区动物多所以是趋性”混淆结果与运动机制；“敏感度高所以分辨率高”漏掉汇聚丢失的空间信息。
 
 <!-- task:BL04-R5 -->
-**R5 · Self-written / 自拟题 — retry**
+**R5 · 自拟题 — retry**
 
 A mutation leaves rod pigments unchanged but increases convergence onto shared retinal output pathways. Predict one possible gain and one possible loss in vision. Explain why the mutation does not necessarily improve colour discrimination.
 <!-- /task:BL04-R5 -->
@@ -174,6 +174,6 @@ A mutation leaves rod pigments unchanged but increases convergence onto shared r
 
 ## 来源与连接 {#sources}
 
-[OxfordAQA 9610 大纲 v5.1](https://www.oxfordaqa.com/wp-content/uploads/2022/08/oxfordaqa-a-level-biology-specification.pdf)，§3.4.1–3.4.2；[官方资料入口](https://www.oxfordaqa.com/qualification/international-as-and-a-level-biology-9610/)。已读 BL04 May/June 2025 Q5 的 MS v1.0 Final pp.12–13，校准敏感度与视敏度解释深度。本页任务、模型图和反馈均自拟，不复刻该题或官方分值。
+[OxfordAQA 9610 大纲 v5.1](https://www.oxfordaqa.com/wp-content/uploads/2022/08/oxfordaqa-a-level-biology-specification.pdf)，§3.4.1–3.4.2；[官方资料入口](https://www.oxfordaqa.com/qualification/international-as-and-a-level-biology-9610/)。已读 BL04 May/June 2025 Q5 的 MS pp.12–13，校准敏感度与视敏度解释深度。本页任务、模型图和反馈均自拟，不复刻该题或官方分值。
 
 下一步：[突触](/zh/alevel/a2-biology/nervous-communication/)与[实验设计](/zh/alevel/a2-biology/experimental-design/)。

@@ -198,6 +198,6 @@ Reducing methylation may restore a silenced tumour-suppressor gene, but could al
 
 ## Sources and connections {#sources}
 
-[OxfordAQA 9610 specification v5.1](https://www.oxfordaqa.com/wp-content/uploads/2022/08/oxfordaqa-a-level-biology-specification.pdf), §3.4.9; [official resources](https://www.oxfordaqa.com/qualification/international-as-and-a-level-biology-9610/). BL04 May/June 2025 Q7, MS v1.0 Final pp.16–18, was read for gene-specific cancer reasoning and limits of model evidence. All tasks, constructed data and feedback here are self-written, not official questions or marks.
+[OxfordAQA 9610 specification v5.1](https://www.oxfordaqa.com/wp-content/uploads/2022/08/oxfordaqa-a-level-biology-specification.pdf), §3.4.9; [official resources](https://www.oxfordaqa.com/qualification/international-as-and-a-level-biology-9610/). BL04 May/June 2025 Q7, MS pp.16–18, was read for gene-specific cancer reasoning and limits of model evidence. All tasks, constructed data and feedback here are self-written, not official questions or marks.
 
 Compare altered expression with [inheritance](/alevel/a2-biology/inheritance/), then study [gene technology](/alevel/a2-biology/gene-technology/) and [experimental design](/alevel/a2-biology/experimental-design/).

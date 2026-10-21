@@ -635,6 +635,6 @@ Textbook support: Jim Breithaupt, *Oxford International AQA Examinations: Intern
 
 Questions 6–7 are adapted from OxfordAQA PH03 January 2020 Question 1 and June 2024 Question 9; the momentum checkpoint is adapted from June 2024 Question 8. The official mark schemes were consulted before drafting. Answers were derived and checked independently rather than copied from textbook answer lists.
 
-Question 8 is self-written. Its qualitative targets connect AS specification 3.5.1–3.5.2 to the direct PH03 application in the [Specimen 2019 question paper](https://www.oxfordaqa.com/oaqaresources/science/assessment/9630-PH03-international-a-level-physics-specimen-paper-v4.2.pdf), Q6.6–6.7, and the [paired mark scheme](https://www.oxfordaqa.com/oaqaresources/science/assessment/9630-PH03-international-a-level-physics-mark-scheme-v4.2.pdf), p.11. These parts were read for this addition; no damped differential equation is introduced.
+Question 8 is self-written. Its qualitative targets connect AS specification 3.5.1–3.5.2 to the direct PH03 application in the Specimen 2019 question paper, Q6.6–6.7, and the paired mark scheme, p.11. These parts were read for this addition; no damped differential equation is introduced.
 
 </details>

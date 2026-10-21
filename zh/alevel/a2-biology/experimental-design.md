@@ -19,7 +19,7 @@ translation_of: /alevel/a2-biology/experimental-design/
 
 **先修：**用 [AS 先修页](/zh/alevel/a2-biology/prerequisites/)回补酶、膜、有丝分裂和运输。计算方法见[数据技能](/zh/alevel/a2-biology/data-skills/)；各实验旁有深入机制页的链接。
 
-本页所有任务和数值记录均为 **Self-written / 自拟题**；数字是构造数据，不是实测结果。建议的范围和时长需要教师用现有材料预实验。阅读、设计或处理网页数据**不等于完成必做实验**；实际操作必须有教师指导、学校批准的方法和本地风险评估。
+本页所有任务和数值记录均为 **自拟题**；数字是构造数据，不是实测结果。建议的范围和时长需要教师用现有材料预实验。阅读、设计或处理网页数据**不等于完成必做实验**；实际操作必须有教师指导、学校批准的方法和本地风险评估。
 
 ## 建立能检验的比较 {#design}
 
@@ -31,7 +31,7 @@ translation_of: /alevel/a2-biology/experimental-design/
 
 *原创示意图，不是结果；植物不按比例绘制。每个盆的边框表示共享环境，处理的独立重复发生在不同盆之间。*
 
-**Self-written / 自拟题 · 设计示范。**研究密度时，将六个相同花盆随机分为两个密度，使用同批种子，统一每盆土壤和水量，并随机安排位置。记录每盆存活数和各株高度，先算每盆平均高度，再比较每个密度的三个盆均值。这样可以分清盆间与盆内差异。三盆只是便于起步的设计，并不保证任何研究都有足够样本量；应根据预实验变异和所需精度增加独立盆数。
+**自拟题 · 设计示范。**研究密度时，将六个相同花盆随机分为两个密度，使用同批种子，统一每盆土壤和水量，并随机安排位置。记录每盆存活数和各株高度，先算每盆平均高度，再比较每个密度的三个盆均值。这样可以分清盆间与盆内差异。三盆只是便于起步的设计，并不保证任何研究都有足够样本量；应根据预实验变异和所需精度增加独立盆数。
 
 随机**抽样**帮助样本代表总体；随机**分配**帮助将处理前已有的差异分散到不同处理。两者都不能保证样本完全相同。区组设计（blocking）可在同一层架或同一供体植物等相近起点内比较处理。测量时使用不显示处理的编号有助于减少预期偏差。先规定排除规则，不能看完结果后才选择有利的删点方法；异常值应先调查原因。
 
@@ -58,7 +58,7 @@ translation_of: /alevel/a2-biology/experimental-design/
 **评价与风险控制。**装塞时漏掉气体会低估早期产量，可采用教师批准的密闭混合启动方式。若泡沫稳定性会变化，泡沫高度就不是可靠的气体体积代理。佩戴护目镜；教师配制稀过氧化氢，防止刺激眼睛和皮肤。避免吸入酶气溶胶，放稳水浴，产气反应不能封在没有出气通路的刚性容器中。
 
 <!-- task:rp1 -->
-**Self-written / 自拟题 · RP1 decision**
+**自拟题 · RP1 decision**
 
 A student obtains 12 cm³ of oxygen after 60 s at both 0.40% and 0.80% hydrogen peroxide. Explain why this does not establish equal initial rates. Specify the extra record needed and one variable that must be held constant.
 <!-- /task:rp1 -->
@@ -88,7 +88,7 @@ A student obtains 12 cm³ of oxygen after 60 s at both 0.40% and 0.80% hydrogen 
 **评价与风险控制。**吸干程度不一致会留下不同量的表面液体，过度挤压则可能损伤细胞。不同马铃薯存在差异，分析时保留供体区组。打孔器和解剖刀应在切割板上使用，远离手指切割并有教师指导。不能食用实验组织或溶液，及时擦净溢液。
 
 <!-- task:rp2 -->
-**Self-written / 自拟题 · RP2 decision**
+**自拟题 · RP2 decision**
 
 A cylinder changes from 2.40 g to 2.28 g. Calculate its percentage mass change. A second student weighs an unblotted cylinder at the end. Predict how retained surface solution affects the measured change and explain why more replicates alone do not correct this problem.
 <!-- /task:rp2 -->
@@ -118,7 +118,7 @@ A cylinder changes from 2.40 g to 2.28 g. Calculate its percentage mass change. 
 **评价与风险控制。**过大、未干的斑点会拖尾，降低分离效果；应少量多次、干燥后点样。前沿未及时标记，溶剂蒸发后就难以可靠计算。有机溶剂可能易燃、吸入有害，应按学校批准要求使用少量溶剂和通风设备或通风橱，盖好容器、远离火源、佩戴护目镜，并单独收集溶剂废液。不能用明火加热溶剂。
 
 <!-- task:rp3 -->
-**Self-written / 自拟题 · RP3 decision**
+**自拟题 · RP3 decision**
 
 A band centre is 36 mm above the baseline and the solvent front is 60 mm above it. Calculate its Rf. Another group reports the same Rf using a different solvent. Evaluate the claim that the two bands must be the same pigment.
 <!-- /task:rp3 -->
@@ -148,7 +148,7 @@ $R_f=0.60$，没有单位。改变溶剂会改变色素的分配与迁移。应�
 **评价与风险控制。**重叠或染色不清会使分子、分母都不确定。分裂期变长也可能使指数升高，未必表示细胞产生速度提高。酸、部分染色剂及热液会损伤眼睛和皮肤：使用教师准备的试剂、护目镜以及批准的温度和时长，热试管用夹具。切割应在板上进行，防止压碎盖玻片割伤手指，碎玻璃放入锐器容器。机制见[先修页](/zh/alevel/a2-biology/prerequisites/)和[基因表达](/zh/alevel/a2-biology/gene-expression/)。
 
 <!-- task:rp4 -->
-**Self-written / 自拟题 · RP4 decision**
+**自拟题 · RP4 decision**
 
 A root sample contains 80 interphase cells, 10 prophase cells, 5 metaphase cells, 3 anaphase cells and 2 telophase cells. Calculate its mitotic index. Explain why selecting only a field with many visible chromosomes biases the estimate.
 <!-- /task:rp4 -->
@@ -178,7 +178,7 @@ A root sample contains 80 interphase cells, 10 prophase cells, 5 metaphase cells
 **评价与风险控制。**15 s 计数混合的恢复过程较少，但多算或少算一次就会改变结果 4 beats min⁻¹。60 s 计数的计数分辨率较好，却混合了较早和较晚的恢复状态。必须自愿参与，并提供不运动的替代活动。按学校流程确认健康限制，避免极限运动；出现疼痛、眩晕或异常气促立即停止。清空地面、使用稳定台阶、消毒共享传感器。不能公开姓名，也不能根据课堂数据作医学诊断。
 
 <!-- task:rp5 -->
-**Self-written / 自拟题 · RP5 decision**
+**自拟题 · RP5 decision**
 
 A participant has 24 beats counted during the first 15 s after activity. Calculate the estimated pulse rate. Explain one advantage and one limitation of replacing this count with a 60 s count starting at the same moment.
 <!-- /task:rp5 -->
@@ -208,7 +208,7 @@ A participant has 24 beats counted during the first 15 s after activity. Calcula
 **评价与风险控制。**漏点可能让空气进入或使水绕过测量路径，导致气泡不能代表吸水；偏差方向取决于漏点位置。组织储水变化也会削弱吸水与蒸腾的对应。切割远离手指，小心毛细玻璃；过紧玻璃接头由教师安装。水远离电源插座和风扇，擦净溢液并固定支架。
 
 <!-- task:rp6 -->
-**Self-written / 自拟题 · RP6 decision**
+**自拟题 · RP6 decision**
 
 A bubble moves 15 mm in 5 min along a capillary of internal radius 0.20 mm. Calculate the water-uptake rate in mm³ min⁻¹. Explain why the result should not be labelled an exact measurement of water lost by transpiration.
 <!-- /task:rp6 -->
@@ -240,7 +240,7 @@ $$\text{rate}=\frac{\pi(0.20)^2\times15}{5}=0.377\ \mathrm{mm^3\,min^{-1}}.$$
 **评价与风险控制。**部分氧溶于水，开始逸出的气体未必等于最初产生的全部氧。应先平衡并维持可比收集条件。电灯远离水，防止热灯泡烫伤，小心植物切口与玻璃端部；不要将水族植物或培养水排入自然水域。
 
 <!-- task:rp7 -->
-**Self-written / 自拟题 · RP7 decision**
+**自拟题 · RP7 decision**
 
 The oxygen-production rate plateaus at high light intensity. Design a comparison to test whether carbon dioxide availability is limiting at that plateau. State one condition to control and one reason why the plateau alone is insufficient evidence.
 <!-- /task:rp7 -->
@@ -270,7 +270,7 @@ The oxygen-production rate plateaus at high light intensity. Design a comparison
 **评价与风险控制。**即使没有呼吸，温度变化也能让气体膨胀或收缩；平衡温度和设置对照可处理这一问题。漏气会削弱读数解释。碱石灰或碱液等 CO₂ 吸收剂可能有腐蚀性，由教师处理少量试剂，佩戴护目镜并遵循溢漏处理流程。防止吸收剂接触生物和皮肤，固定玻璃装置，使用安全水浴温度。
 
 <!-- task:rp8 -->
-**Self-written / 自拟题 · RP8 decision**
+**自拟题 · RP8 decision**
 
 A sealed apparatus without a carbon dioxide absorbent shows no net gas-volume change. A matched apparatus with absorbent shows a decrease. Explain how both observations can be consistent with respiration. Give one physical control needed before using the decrease to estimate oxygen uptake.
 <!-- /task:rp8 -->
@@ -300,7 +300,7 @@ A sealed apparatus without a carbon dioxide absorbent shows no net gas-volume ch
 **评价与风险控制。**植株变矮本身不能辨认竞争的是光、水还是矿质元素；后续资源干预可区分机制。同盆植物不相互独立。使用干净商业培养基，覆盖皮肤伤口，操作后洗手，避免吸入干燥堆肥粉尘，发霉培养物交教师封存处理。热干燥托盘由教师操作，不能把材质不明的塑料放进烘箱。
 
 <!-- task:rp9 -->
-**Self-written / 自拟题 · RP9 decision**
+**自拟题 · RP9 decision**
 
 A student uses one pot at each of three densities and measures ten leaves per pot. The student claims there are ten independent treatment replicates at each density. Explain the problem and redesign the replication. State why mean dry mass per seedling and total dry mass per pot may lead to different descriptions of the result.
 <!-- /task:rp9 -->
@@ -330,7 +330,7 @@ A student uses one pot at each of three densities and measures ten leaves per po
 **评价与风险控制。**光照或干燥不一致会混淆朝向效应。黑暗有助于单独研究重力，但不会自动使其他条件都相同。潮湿培养装置远离电器，接触幼苗后洗手，发霉材料封存后由教师处置。固定旋转装置，手指远离运动部件。
 
 <!-- task:rp10 -->
-**Self-written / 自拟题 · RP10 decision**
+**自拟题 · RP10 decision**
 
 Horizontal seedlings are placed beside a window. Their shoots bend upwards and towards the window. Explain why this does not isolate a response to gravity. Propose a modified comparison and a measurement that distinguishes direction from growth amount.
 <!-- /task:rp10 -->
@@ -352,7 +352,7 @@ Horizontal seedlings are placed beside a window. Their shoots bend upwards and t
 ## 独立设计与诊断 {#independent-design}
 
 <!-- task:design-transfer -->
-**Self-written / 自拟题 · Independent transfer**
+**自拟题 · Independent transfer**
 
 A student claims that plants grown in moving air develop a permanently higher rate of water uptake. Design an investigation that distinguishes a developmental effect of growth conditions from an immediate effect of air movement during measurement. Specify allocation, experimental units, measurements, controls, a record table and a limitation. Do not perform the investigation until the teacher approves the procedure.
 <!-- /task:design-transfer -->
@@ -381,7 +381,7 @@ A student claims that plants grown in moving air develop a permanently higher ra
 | 提出改进却没有说明作用 | 说明改进针对哪个读数或替代解释 |
 
 <!-- task:design-retry -->
-**Self-written / 自拟题 · Diagnostic retry**
+**自拟题 · Diagnostic retry**
 
 An enzyme assay is repeated ten times with the same leaking gas syringe. Results have a small spread. Explain whether this establishes accuracy, and propose one check that addresses the main problem.
 <!-- /task:design-retry -->
@@ -404,6 +404,6 @@ An enzyme assay is repeated ten times with the same leaking gas syringe. Results
 
 范围：OxfordAQA 9610，大纲 v5.1 §6.1 RP1–10；见[官方资格页](https://www.oxfordaqa.com/qualification/international-as-and-a-level-biology-9610/)及 [v5.1 大纲](https://www.oxfordaqa.com/wp-content/uploads/2022/08/oxfordaqa-a-level-biology-specification.pdf)。课程研究记录了资格页下载入口的另一版本；目标考季应向考点核实，不能按 URL 年份判断正文版本。
 
-方法深度参考了实际读过的 **9610 BL05 January 2025，MS v1.0 Final，Q6.2，p.15**，以及 **June 2025，MS v1.0 Final，Q5.2，p.13；Q6.2，p.14**。这些是来源记录，不是本页转载的考试任务。本页全部操作建议、示范记录和练习均由作者编写，解答不称官方评分标准；不使用 January 缺失 Figure 7 或 June 有争议的相对生长率数据。
+方法深度参考了实际读过的 **9610 BL05 January 2025，MS，Q6.2，p.15**，以及 **June 2025，MS，Q5.2，p.13；Q6.2，p.14**。这些是来源记录，不是本页转载的考试任务。本页全部操作建议、示范记录和练习均由作者编写，解答不称官方评分标准；不使用 January 缺失 Figure 7 或 June 有争议的相对生长率数据。
 
 接着学习[数据技能](/zh/alevel/a2-biology/data-skills/)，再到[综合写作](/zh/alevel/a2-biology/synoptic-writing/)把方法与限制写成清楚的英文论述。

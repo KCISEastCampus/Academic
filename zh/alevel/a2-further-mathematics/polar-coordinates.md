@@ -513,7 +513,7 @@ A
 
 ### 第 6 题：AQA——直角坐标方程 {#question-6--aqa-a-cartesian-equation}
 
-**来源：**AQA Mathematics 6360，MFP3，June 2014，原卷第 3 题。原题分值：**4 marks**。教材索引：Chapter 21, practice examination question 2, printed p. 267。[原卷](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202014%20QP%20-%20FP3%20AQA.PDF)、[AQA 评分材料](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202014%20MS%20-%20FP3%20AQA.PDF)。
+**来源：**AQA Mathematics 6360，MFP3，June 2014，原卷第 3 题。原题分值：**4 marks**。教材索引：Chapter 21, practice examination question 2, printed p. 267。原卷、AQA 评分材料。
 
 A curve has polar equation $r(4-3\cos\theta)=4$. Find its Cartesian equation in the form $y^2=f(x)$.
 
@@ -551,7 +551,7 @@ $$\boxed{y^2=1+\frac32x-\frac7{16}x^2.}$$
 
 ### 第 7 题：AQA——以原点为极点的圆 {#question-7--aqa-a-circle-using-the-origin-as-pole}
 
-**来源：**AQA Mathematics 6360，MFP3，June 2013，原卷第 2 题。原题分值：**4 marks**。教材索引：Chapter 21, practice examination question 3, printed p. 267。[原卷](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202013%20QP%20-%20FP3%20AQA.pdf)、[AQA 评分材料](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202013%20MS%20-%20FP3%20AQA.PDF)。
+**来源：**AQA Mathematics 6360，MFP3，June 2013，原卷第 2 题。原题分值：**4 marks**。教材索引：Chapter 21, practice examination question 3, printed p. 267。原卷、AQA 评分材料。
 
 The Cartesian equation of a circle is $(x+8)^2+(y-6)^2=100$.
 
@@ -591,7 +591,7 @@ $$\boxed{r=12\sin\theta-16\cos\theta.}$$
 
 ### 第 8 题：AQA——环瓣的面积 {#question-8--aqa-area-of-a-loop}
 
-**来源（改编题：题图重绘）：**AQA Mathematics 6360，MFP3，January 2009，原卷第 3 题。原题分值：**6 marks**。教材索引：Chapter 21, practice examination question 1, printed p. 267。[原卷](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/January%202009%20QP%20-%20FP3%20AQA.PDF)、[AQA 评分材料](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/January%202009%20MS%20-%20FP3%20AQA.PDF)。 题图按原卷重绘，保留曲线、极点、始线和题目条件。
+**来源（改编题：题图重绘）：**AQA Mathematics 6360，MFP3，January 2009，原卷第 3 题。原题分值：**6 marks**。教材索引：Chapter 21, practice examination question 1, printed p. 267。原卷、AQA 评分材料。 题图按原卷重绘，保留曲线、极点、始线和题目条件。
 
 The diagram shows a sketch of a loop, the pole $O$ and the initial line.
 
