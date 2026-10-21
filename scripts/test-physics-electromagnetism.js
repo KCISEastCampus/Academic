@@ -105,6 +105,10 @@ for (const prefix of ['', 'zh/']) {
     assert(!/<details\b[^>]*\bopen\b/.test(html));
     assert.equal((html.match(/<img[^>]*data-lazy-ignore="true"/g) || []).length, [3, 1, 2][i]);
     assert(!/<\/?em>[^<]*\\(?:varepsilon|eta)/.test(html));
+    if (i !== 1) {
+      const quickReference = html.split('id="quick-reference"')[1].split('<h2')[0];
+      assert.match(quickReference, /<thead>\s*<tr>\s*<th[^>]*>[^]*?<\/th>\s*<th[^>]*>[^]*?<\/th>\s*<\/tr>\s*<\/thead>/, slug + ': semantic quick-reference headers');
+    }
     if (i < 2) assert(html.includes(`href="/${prefix}alevel/a2-physics/${chapters[i + 1]}/"`));
   }
 }

@@ -276,6 +276,7 @@ $$I_{p,\mathrm{rms}}=\frac{12}{24/\sqrt2}\approx0.71\,\mathrm A,\qquad f_s=50\,\
 ## 速查与 PH03 回顾 {#quick-reference}
 
 | 模型 | 关系 |
+| --- | --- |
 | 理想电压比，使用同一种电压值 | $V_s/V_p=N_s/N_p$ |
 | 理想无损传输 | $V_pI_p=V_sI_s$ |
 | 实际效率 | $\eta=P_{\mathrm{out}}/P_{\mathrm{in}}$ |

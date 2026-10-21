@@ -254,6 +254,7 @@ A magnet falls through a conducting nonmagnetic tube more slowly than through a 
 ## 速查 {#quick-reference}
 
 | 先检查什么 | 关系 |
+| --- | --- |
 | 角度从法线量起，匀强场 | $\Psi=NBA\cos\theta$ |
 | 已给总磁通链 | $\overline\varepsilon=-\Delta\Psi/\Delta t$ |
 | 导杆、速度与场互相垂直 | $\varepsilon=BLv$ |
