@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="547.2pt" height="309.6pt" viewBox="0 0 547.2 309.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:description>Constructed teaching schematic; force arrows are not a motion path.</dc:description>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 309.6 
+L 547.2 309.6 
+L 547.2 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 229.371429 176.914286 
+L 317.828571 176.914286 
+L 317.828571 132.685714 
+L 229.371429 132.685714 
+L 229.371429 176.914286 
+z
+" clip-path="url(#p5f9e52d229)" style="fill: none; stroke: #334155; stroke-width: 1.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 247.062857 190.182857 
+C 248.82229 190.182857 250.509898 189.483827 251.754006 188.23972 
+C 252.998113 186.995613 253.697143 185.308005 253.697143 183.548571 
+C 253.697143 181.789138 252.998113 180.10153 251.754006 178.857423 
+C 250.509898 177.613316 248.82229 176.914286 247.062857 176.914286 
+C 245.303424 176.914286 243.615816 177.613316 242.371709 178.857423 
+C 241.127602 180.10153 240.428571 181.789138 240.428571 183.548571 
+C 240.428571 185.308005 241.127602 186.995613 242.371709 188.23972 
+C 243.615816 189.483827 245.303424 190.182857 247.062857 190.182857 
+L 247.062857 190.182857 
+z
+" clip-path="url(#p5f9e52d229)" style="fill: none; stroke: #334155; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 300.137143 190.182857 
+C 301.896576 190.182857 303.584184 189.483827 304.828291 188.23972 
+C 306.072398 186.995613 306.771429 185.308005 306.771429 183.548571 
+C 306.771429 181.789138 306.072398 180.10153 304.828291 178.857423 
+C 303.584184 177.613316 301.896576 176.914286 300.137143 176.914286 
+C 298.37771 176.914286 296.690102 177.613316 295.445994 178.857423 
+C 294.201887 180.10153 293.502857 181.789138 293.502857 183.548571 
+C 293.502857 185.308005 294.201887 186.995613 295.445994 188.23972 
+C 296.690102 189.483827 298.37771 190.182857 300.137143 190.182857 
+L 300.137143 190.182857 
+z
+" clip-path="url(#p5f9e52d229)" style="fill: none; stroke: #334155; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle" x="273.6" y="158.177461" transform="rotate(-0 273.6 158.177461)">5 kg</text>
+   </g>
+   <g id="patch_5">
+    <path d="M 319.82485 154.8 
+Q 384.170492 154.8 446.280067 154.8 
+" style="fill: none; stroke: #2563a8; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 439.480067 151.4 
+L 446.280067 154.8 
+L 439.480067 158.2 
+z
+" style="fill: #2563a8; stroke: #2563a8; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle" x="388.594286" y="143.742857" transform="rotate(-0 388.594286 143.742857)">Pull 40 N</text>
+   </g>
+   <g id="patch_6">
+    <path d="M 227.37515 154.8 
+Q 196.201385 154.8 167.263688 154.8 
+" style="fill: none; stroke: #2563a8; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 174.063688 158.2 
+L 167.263688 154.8 
+L 174.063688 151.4 
+z
+" style="fill: #2563a8; stroke: #2563a8; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle" x="163.028571" y="174.702857" transform="rotate(-0 163.028571 174.702857)">Resistance 10 N</text>
+   </g>
+   <g id="patch_7">
+    <path d="M 273.6 130.685926 
+Q 273.6 97.303981 273.6 66.158103 
+" style="fill: none; stroke: #334155; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 270.2 72.958103 
+L 273.6 66.158103 
+L 277 72.958103 
+z
+" style="fill: #334155; stroke: #334155; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start" x="282.445714" y="84.034286" transform="rotate(-0 282.445714 84.034286)">Normal 49 N</text>
+   </g>
+   <g id="patch_8">
+    <path d="M 273.6 192.182645 
+Q 273.6 225.564591 273.6 256.710468 
+" style="fill: none; stroke: #334155; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 277 249.910468 
+L 273.6 256.710468 
+L 270.2 249.910468 
+z
+" style="fill: #334155; stroke: #334155; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start" x="282.445714" y="236.622857" transform="rotate(-0 282.445714 236.622857)">Weight 49 N</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start" x="61.302857" y="53.074286" transform="rotate(-0 61.302857 53.074286)">Forces on the trolley</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #64748b" x="481.474286" y="269.794286" transform="rotate(-0 481.474286 269.794286)">East is right; arrows not to scale</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p5f9e52d229">
+   <rect x="52.457143" y="30.96" width="442.285714" height="247.68"/>
+  </clipPath>
+ </defs>
+</svg>

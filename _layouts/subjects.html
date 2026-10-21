@@ -22,7 +22,7 @@ layout: none
 {% if page.tmua_notes %}
 <body class="tmua-notes scheme-alevel">
 {% elsif page.url contains '/igcse/' %}
-<body class="scheme-igcse">
+<body class="scheme-igcse{% if page.study_page %} study-page{% endif %}">
 {% elsif page.url contains '/alevel/' %}
 <body class="scheme-alevel{% if page.grade == 'a2' or page.url contains '/a2-' %} scheme-a2{% endif %}{% if page.study_page %} study-page{% endif %}">
 {% else %}

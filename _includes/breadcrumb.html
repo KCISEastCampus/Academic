@@ -55,6 +55,14 @@
                 <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/alevel/a2-chemistry/">{% if page.lang == 'zh-CN' %}A2 化学{% else %}A2 Chemistry{% endif %}</a>
               {% when "a2-physics" %}
                 <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/alevel/a2-physics/" data-ui="physics">{{ ui.physics }}</a>
+              {% when "as-physics" %}
+                <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/alevel/as-physics/">{% if page.lang == 'zh-CN' %}AS 物理{% else %}AS Physics{% endif %}</a>
+              {% when "physics" %}
+                {% if page.grade == 'igcse' %}
+                <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/igcse/physics/">{% if page.lang == 'zh-CN' %}IGCSE 物理{% else %}IGCSE Physics{% endif %}</a>
+                {% else %}
+                <span>{{ crumb | capitalize }}</span>
+                {% endif %}
               {% when "a2-biology" %}
                 <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/alevel/a2-biology/">{% if page.lang == 'zh-CN' %}A2 生物{% else %}A2 Biology{% endif %}</a>
               {% when "mechanics" %}

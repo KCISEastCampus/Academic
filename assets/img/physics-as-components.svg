@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="547.2pt" height="309.6pt" viewBox="0 0 547.2 309.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:description>Constructed teaching schematic; force arrows are not a motion path.</dc:description>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 309.6 
+L 547.2 309.6 
+L 547.2 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 178.338462 237.36 
+C 178.338462 231.810007 177.610933 226.283881 176.174489 220.923 
+C 174.738045 215.562118 172.605041 210.412589 169.830044 205.606154 
+" clip-path="url(#pfffc046034)" style="fill: none; stroke: #64748b; stroke-linejoin: miter"/>
+   </g>
+   <g id="component-vector">
+    <path d="M 114.830769 237.36 
+L 389.827144 78.590769 
+" clip-path="url(#pfffc046034)" style="fill: none; stroke: #18794e; stroke-width: 2.4; stroke-linecap: square"/>
+   </g>
+   <g id="component-triangle">
+    <path d="M 114.830769 237.36 
+L 389.827144 237.36 
+L 389.827144 78.590769 
+" clip-path="url(#pfffc046034)" style="fill: none; stroke-dasharray: 5.55,2.4; stroke-dashoffset: 0; stroke: #64748b; stroke-width: 1.5"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 116.832706 237.36 
+Q 281.539415 237.36 444.010055 237.36 
+" style="fill: none; stroke: #64748b; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 437.210055 233.96 
+L 444.010055 237.36 
+L 437.210055 240.76 
+z
+" style="fill: #64748b; stroke: #64748b; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 114.830769 235.362302 
+Q 114.830769 138.924836 114.830769 44.723437 
+" style="fill: none; stroke: #64748b; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 111.430769 51.523437 
+L 114.830769 44.723437 
+L 118.230769 51.523437 
+z
+" style="fill: #64748b; stroke: #64748b; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end" x="441.895385" y="258" transform="rotate(-0 441.895385 258)">East x</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start" x="92.603077" y="40.486154" transform="rotate(-0 92.603077 40.486154)">North y</text>
+   </g>
+   <g id="patch_5">
+    <path d="M 116.563763 236.359455 
+Q 252.330247 157.974639 386.16024 80.707857 
+" style="fill: none; stroke: #18794e; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 378.571267 81.163371 
+L 386.16024 80.707857 
+L 381.971267 87.052344 
+z
+" style="fill: #18794e; stroke: #18794e; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle" x="252.328956" y="258" transform="rotate(-0 252.328956 258)">Fx</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start" x="397.765605" y="161.352338" transform="rotate(-0 397.765605 161.352338)">Fy</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start" x="251.372308" y="135.747692" transform="rotate(-0 251.372308 135.747692)">10 N</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start" x="181.513846" y="224.658462" transform="rotate(-0 181.513846 224.658462)">30°</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start" x="102.129231" y="256.412308" transform="rotate(-0 102.129231 256.412308)">O</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pfffc046034">
+   <rect x="83.076923" y="30.96" width="381.046154" height="247.68"/>
+  </clipPath>
+ </defs>
+</svg>
