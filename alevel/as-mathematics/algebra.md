@@ -316,6 +316,12 @@ Translation by $(-4,0)$, taking the point to $(-3,-2)$.
 
 </details>
 
+## After this lesson {#next-step}
+
+Close the solutions and check that you can complete each group’s retry independently and explain the method and its conditions. Revisit the relevant example if needed, then continue to the next lesson.
+
+[Course route](/alevel/as-mathematics/#learning-route) · [Next lesson: Coordinate geometry](/alevel/as-mathematics/coordinate-geometry/)
+
 ## Sources and scope {#sources}
 
 Organised against the [current official 9660 specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf). Paired marking material informs the expected reasoning; every task here is separately self-written and is not an official question or official mark scheme.

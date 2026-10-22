@@ -5,45 +5,74 @@ mathjax: true
 grade: as
 subject: as-mathematics
 permalink: /alevel/as-mathematics/
-toc_headings: "#learning-route, #how-to-study, #sources-and-scope, #legacy-reference"
+toc_headings: "#learning-route, #pure-foundations, #further-pure, #statistics, #mechanics, #how-to-study, #sources-and-scope, #legacy-reference"
 redirect_from:
   - /alevel/mathematics/
   - /alevel/mathematics/index.html
 ---
 
-## Bilingual learning route {#learning-route}
+## Start here {#learning-route}
 
-This page provides a bilingual MA01/MA02 learning route with 15 topic lessons and 25 learning groups. The old English reference outline is archived in the closed panel at the end of this page. Scope: OxfordAQA 9660, specification Version 5.2; no automatic migration to 9760.
+Build from algebra and graphs towards calculus, statistics and mechanics. You will need fractions, expansion and factorisation. Follow the route below when learning for the first time, or choose a topic when revising.
 
-| Unit / topic | Lesson and learning groups |
-| --- | --- |
-| MA01 · P1.1 | [Algebra](/alevel/as-mathematics/algebra/) · [L01](/alevel/as-mathematics/algebra/#l01)、[L02](/alevel/as-mathematics/algebra/#l02)、[L03](/alevel/as-mathematics/algebra/#l03)、[L05](/alevel/as-mathematics/algebra/#l05) |
-| MA01 · P1.2 | [Coordinate geometry](/alevel/as-mathematics/coordinate-geometry/) · [L04](/alevel/as-mathematics/coordinate-geometry/#l04) |
-| MA01 · P1.3 | [Differentiation](/alevel/as-mathematics/differentiation/) · [L06](/alevel/as-mathematics/differentiation/#l06)、[L07](/alevel/as-mathematics/differentiation/#l07) |
-| MA01 · P1.4 | [Integration](/alevel/as-mathematics/integration/) · [L08](/alevel/as-mathematics/integration/#l08)、[L09](/alevel/as-mathematics/integration/#l09) |
-| MA01 · P1.5 | [Sequences and series](/alevel/as-mathematics/sequences/) · [L10](/alevel/as-mathematics/sequences/#l10)、[L11](/alevel/as-mathematics/sequences/#l11)、[L12](/alevel/as-mathematics/sequences/#l12)、[L13](/alevel/as-mathematics/sequences/#l13) |
-| MA02 · PP1.1 | [Circles](/alevel/as-mathematics/circles/) · [L14](/alevel/as-mathematics/circles/#l14) |
-| MA02 · PP1.2 | [Trigonometry](/alevel/as-mathematics/trigonometry/) · [L15](/alevel/as-mathematics/trigonometry/#l15)、[L16](/alevel/as-mathematics/trigonometry/#l16) |
-| MA02 · PP1.3 | [Exponentials and logarithms](/alevel/as-mathematics/exponentials-logarithms/) · [L17](/alevel/as-mathematics/exponentials-logarithms/#l17) |
-| MA02 · S1.1 | [Further probability](/alevel/as-mathematics/probability/) · [L18](/alevel/as-mathematics/probability/#l18) |
-| MA02 · S1.2 | [Discrete random variables](/alevel/as-mathematics/random-variables/) · [L19](/alevel/as-mathematics/random-variables/#l19)、[L20](/alevel/as-mathematics/random-variables/#l20) |
-| MA02 · S1.3 | [Bernoulli and binomial distributions](/alevel/as-mathematics/binomial/) · [L21](/alevel/as-mathematics/binomial/#l21) |
-| MA02 · M1.1 | [Constant acceleration](/alevel/as-mathematics/constant-acceleration/) · [L22](/alevel/as-mathematics/constant-acceleration/#l22) |
-| MA02 · M1.2 | [Variable acceleration](/alevel/as-mathematics/variable-acceleration/) · [L23](/alevel/as-mathematics/variable-acceleration/#l23) |
-| MA02 · M1.3 | [Forces and Newton’s laws](/alevel/as-mathematics/forces/) · [L24](/alevel/as-mathematics/forces/#l24) |
-| MA02 · M1.4 | [Momentum and impulse](/alevel/as-mathematics/momentum/) · [L25](/alevel/as-mathematics/momentum/#l25) |
+**[Start the first lesson: Algebra](/alevel/as-mathematics/algebra/)**
 
-## How to study {#how-to-study}
+OxfordAQA AS Mathematics 9660: MA01 (P1) and MA02 (PSM1). Lessons are available in English and Chinese, with the same English practice questions.
 
-Learn algebra, coordinates and graphs before calculus and series. MA02 statistics develops events → distributions → independent combinations → binomial models. Mechanics develops signed motion → forces → impulse, providing the prerequisite bridge to MA05 collision analysis. Read each concept and worked example, then complete the supported attempt and independent English task with solutions closed. Diagnose the error and try the retry. All new questions are self-written, with no official marks. Hints and solutions open separately.
+## Pure mathematics foundations · MA01 {#pure-foundations}
 
-Command words matter: show/prove need reasoning; hence must connect to earlier work; sketch requires key features; solve requires all permitted solutions. Follow each question’s precision requirement. Numerical checks support, but do not replace, the requested working.
+Start with algebra and coordinates, then apply them to calculus and series.
+
+1. **[Algebra](/alevel/as-mathematics/algebra/)** — Choose exact forms, solve equations and track graph transformations.
+2. **[Coordinate geometry](/alevel/as-mathematics/coordinate-geometry/)** — Connect straight-line equations, gradients and intersections.
+3. **[Differentiation](/alevel/as-mathematics/differentiation/)** — Find gradients and stationary points, and justify how a function changes.
+4. **[Integration and approximation](/alevel/as-mathematics/integration/)** — Recover functions, interpret signed areas and use the trapezium rule.
+5. **[Sequences and series](/alevel/as-mathematics/sequences/)** — Choose arithmetic or geometric models and justify sums and convergence.
+
+## Further pure mathematics · MA02 {#further-pure}
+
+Apply algebra and graphs to circles, periodic change and exponential relationships.
+
+1. **[Circles](/alevel/as-mathematics/circles/)** — Connect circle equations with centres, radii and tangents.
+2. **[Trigonometry](/alevel/as-mathematics/trigonometry/)** — Use radians, identities and graphs to find every solution in an interval.
+3. **[Exponentials and logarithms](/alevel/as-mathematics/exponentials-logarithms/)** — Solve exponential equations and check logarithm conditions.
+
+## Statistics · MA02 {#statistics}
+
+Move from events to random variables and distribution models.
+
+1. **[Probability](/alevel/as-mathematics/probability/)** — Distinguish conditional probability from independence.
+2. **[Discrete random variables](/alevel/as-mathematics/random-variables/)** — Build distributions and find expectation and variance.
+3. **[Binomial distributions](/alevel/as-mathematics/binomial/)** — Check a binomial model and calculate probabilities.
+
+## Mechanics · MA02 {#mechanics}
+
+Describe motion before explaining why it changes. Variable acceleration needs calculus.
+
+1. **[Constant acceleration](/alevel/as-mathematics/constant-acceleration/)** — Set a positive direction and connect motion equations with graphs.
+2. **[Variable acceleration](/alevel/as-mathematics/variable-acceleration/)** — Connect displacement, velocity and acceleration using calculus.
+3. **[Forces and Newton’s laws](/alevel/as-mathematics/forces/)** — Draw force diagrams, choose systems and form equations of motion.
+4. **[Momentum and impulse](/alevel/as-mathematics/momentum/)** — Use signed momentum and impulse within a clearly defined system.
+
+## How to complete a lesson {#how-to-study}
+
+1. Read the goal, explanation and worked example. Understand why the method fits.
+2. Attempt the supported question on paper. Open a hint before a solution if stuck.
+3. Close solutions and attempt the independent English question. Check method, conditions and result, then complete the diagnosis and retry.
+4. When you can explain the method and complete the retry independently, use “Next lesson” at the end. Otherwise revisit the relevant example.
+
+All practice questions are self-written, with separate hints and solutions. Show/prove need reasoning; hence must use an earlier result. Calculator checks do not replace the required working.
 
 ## Sources and examination scope {#sources-and-scope}
+
+<details markdown="1">
+<summary>View specification, marking sources and calculator guidance</summary>
 
 Based on the [current qualification page](https://www.oxfordaqa.com/qualification/international-as-and-a-level-mathematics-9660/) and [official specification v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf), plus documented paired MA01/MA02 January 2025 QP and Final MS reading. Each lesson identifies its marking evidence. The inconsistent MA02 Q7(b) data are not reused as a valid model. The two local AS specification PDFs remain historical v5.1 assets; use the current official link.
 
 Conforming graphical calculators are permitted; this does not approve every CAS/plugin configuration. Consult the [current Handbook](https://www.oxfordaqa.com/wp-content/uploads/2026/09/oxfordaqa-exams-administration-handbook.pdf). No new hardware/examination-mode validation or item-by-item formula-booklet inventory is claimed.
+
+</details>
 
 ## Archived reference {#legacy-reference}
 

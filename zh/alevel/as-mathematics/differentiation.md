@@ -164,6 +164,12 @@ $f'=3(x-1)(x+1)$ 在 $-1,1$ 分隔的三区间符号依次为正、负、正。�
 
 </details>
 
+## 学完之后 {#next-step}
+
+收起解答，检查自己能否独立完成本课各组的再尝试，并解释方法与适用条件。仍有困难时回看对应示范；完成后继续下一课。
+
+[上一课：坐标几何](/zh/alevel/as-mathematics/coordinate-geometry/) · [课程目录](/zh/alevel/as-mathematics/#learning-route) · [下一课：积分与近似](/zh/alevel/as-mathematics/integration/)
+
 ## 来源与范围 {#sources}
 
 按[当前 9660 官方大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf)组织。配套评分材料用于核对作答证据；本页题目全部另行自拟，不能称为官方原题或官方评分标准。

@@ -170,6 +170,12 @@ $0\le2x\le2\pi$ gives $2x=\pi/6,5\pi/6$, hence $x=\pi/12,5\pi/12$. Tangent has p
 
 </details>
 
+## After this lesson {#next-step}
+
+Close the solutions and check that you can complete each group’s retry independently and explain the method and its conditions. Revisit the relevant example if needed, then continue to the next lesson.
+
+[Previous lesson: Circles](/alevel/as-mathematics/circles/) · [Course route](/alevel/as-mathematics/#learning-route) · [Next lesson: Exponentials and logarithms](/alevel/as-mathematics/exponentials-logarithms/)
+
 ## Sources and scope {#sources}
 
 Organised against the [current official 9660 specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf). Paired marking material informs the expected reasoning; every task here is separately self-written and is not an official question or official mark scheme.

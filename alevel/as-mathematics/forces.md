@@ -89,6 +89,12 @@ $F-300=500(-2)$ gives $F=-700$ N, so the bar pushes backwards with 700 N and is 
 
 </details>
 
+## After this lesson {#next-step}
+
+Close the solutions and check that you can complete each group’s retry independently and explain the method and its conditions. Revisit the relevant example if needed, then continue to the next lesson.
+
+[Previous lesson: Variable acceleration](/alevel/as-mathematics/variable-acceleration/) · [Course route](/alevel/as-mathematics/#learning-route) · [Next lesson: Momentum and impulse](/alevel/as-mathematics/momentum/)
+
 ## Sources and scope {#sources}
 
 Organised against the [current official 9660 specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf). Paired marking material informs the expected reasoning; every task here is separately self-written and is not an official question or official mark scheme.

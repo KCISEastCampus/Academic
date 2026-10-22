@@ -164,6 +164,12 @@ The sum has variance $2+2+2=6$; $3X$ has variance $3^2(2)=18$.
 
 </details>
 
+## After this lesson {#next-step}
+
+Close the solutions and check that you can complete each group’s retry independently and explain the method and its conditions. Revisit the relevant example if needed, then continue to the next lesson.
+
+[Previous lesson: Probability](/alevel/as-mathematics/probability/) · [Course route](/alevel/as-mathematics/#learning-route) · [Next lesson: Binomial distributions](/alevel/as-mathematics/binomial/)
+
 ## Sources and scope {#sources}
 
 Organised against the [current official 9660 specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf). Paired marking material informs the expected reasoning; every task here is separately self-written and is not an official question or official mark scheme.

@@ -93,6 +93,12 @@ $4=(1+3)V$ 得 $V=1\,\mathrm{m\,s^{-1}}$ 向右。冲量为 $1(1-4)=-3\,\mathrm{
 
 </details>
 
+## 学完之后 {#next-step}
+
+你已到达本路线最后一课。收起解答，独立完成本课再尝试，并解释系统选择与方向约定；然后回课程目录，选择仍需巩固的主题。
+
+[上一课：力与牛顿运动定律](/zh/alevel/as-mathematics/forces/) · [课程目录](/zh/alevel/as-mathematics/#learning-route)
+
 ## 来源与范围 {#sources}
 
 按[当前 9660 官方大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf)组织。配套评分材料用于核对作答证据；本页题目全部另行自拟，不能称为官方原题或官方评分标准。

@@ -7,42 +7,71 @@ subject: as-mathematics
 lang: zh-CN
 translation_of: /alevel/as-mathematics/
 permalink: /zh/alevel/as-mathematics/
-toc_headings: "#learning-route, #how-to-study, #sources-and-scope, #legacy-reference"
+toc_headings: "#learning-route, #pure-foundations, #further-pure, #statistics, #mechanics, #how-to-study, #sources-and-scope, #legacy-reference"
 ---
 
-## 双语学习路线 {#learning-route}
+## 从这里开始 {#learning-route}
 
-本页提供 MA01／MA02 双语学习路线与英文速查提纲归档，共 15 个主题页、25 组学习活动。旧提纲与主题索引默认收起在页末，请优先使用下列中文学习页。依据 OxfordAQA 9660 大纲正文 Version 5.2，未自动迁移至 9760。
+从代数与图像出发，逐步学习微积分、统计和力学。需要先具备分数、展开与因式分解的基础；第一次学习请按下方顺序，复习时可直接选择主题。
 
-| 单元／主题 | 学习页与组号 |
-| --- | --- |
-| MA01 · P1.1 | [代数](/zh/alevel/as-mathematics/algebra/) · [L01](/zh/alevel/as-mathematics/algebra/#l01)、[L02](/zh/alevel/as-mathematics/algebra/#l02)、[L03](/zh/alevel/as-mathematics/algebra/#l03)、[L05](/zh/alevel/as-mathematics/algebra/#l05) |
-| MA01 · P1.2 | [坐标几何](/zh/alevel/as-mathematics/coordinate-geometry/) · [L04](/zh/alevel/as-mathematics/coordinate-geometry/#l04) |
-| MA01 · P1.3 | [微分](/zh/alevel/as-mathematics/differentiation/) · [L06](/zh/alevel/as-mathematics/differentiation/#l06)、[L07](/zh/alevel/as-mathematics/differentiation/#l07) |
-| MA01 · P1.4 | [积分与梯形近似](/zh/alevel/as-mathematics/integration/) · [L08](/zh/alevel/as-mathematics/integration/#l08)、[L09](/zh/alevel/as-mathematics/integration/#l09) |
-| MA01 · P1.5 | [数列与级数](/zh/alevel/as-mathematics/sequences/) · [L10](/zh/alevel/as-mathematics/sequences/#l10)、[L11](/zh/alevel/as-mathematics/sequences/#l11)、[L12](/zh/alevel/as-mathematics/sequences/#l12)、[L13](/zh/alevel/as-mathematics/sequences/#l13) |
-| MA02 · PP1.1 | [圆](/zh/alevel/as-mathematics/circles/) · [L14](/zh/alevel/as-mathematics/circles/#l14) |
-| MA02 · PP1.2 | [三角](/zh/alevel/as-mathematics/trigonometry/) · [L15](/zh/alevel/as-mathematics/trigonometry/#l15)、[L16](/zh/alevel/as-mathematics/trigonometry/#l16) |
-| MA02 · PP1.3 | [指数与对数](/zh/alevel/as-mathematics/exponentials-logarithms/) · [L17](/zh/alevel/as-mathematics/exponentials-logarithms/#l17) |
-| MA02 · S1.1 | [概率与条件](/zh/alevel/as-mathematics/probability/) · [L18](/zh/alevel/as-mathematics/probability/#l18) |
-| MA02 · S1.2 | [离散随机变量](/zh/alevel/as-mathematics/random-variables/) · [L19](/zh/alevel/as-mathematics/random-variables/#l19)、[L20](/zh/alevel/as-mathematics/random-variables/#l20) |
-| MA02 · S1.3 | [伯努利与二项分布](/zh/alevel/as-mathematics/binomial/) · [L21](/zh/alevel/as-mathematics/binomial/#l21) |
-| MA02 · M1.1 | [匀加速直线运动](/zh/alevel/as-mathematics/constant-acceleration/) · [L22](/zh/alevel/as-mathematics/constant-acceleration/#l22) |
-| MA02 · M1.2 | [变加速直线运动](/zh/alevel/as-mathematics/variable-acceleration/) · [L23](/zh/alevel/as-mathematics/variable-acceleration/#l23) |
-| MA02 · M1.3 | [力与牛顿运动定律](/zh/alevel/as-mathematics/forces/) · [L24](/zh/alevel/as-mathematics/forces/#l24) |
-| MA02 · M1.4 | [动量与冲量](/zh/alevel/as-mathematics/momentum/) · [L25](/zh/alevel/as-mathematics/momentum/#l25) |
+**[开始第一课：代数](/zh/alevel/as-mathematics/algebra/)**
 
-## 怎样使用课程 {#how-to-study}
+OxfordAQA AS 数学 9660：MA01（P1）与 MA02（PSM1）。中文页保留英文练习题，也可切换至英文课程。
 
-先学代数、坐标与图像，再学微积分和数列。MA02 统计按事件 → 分布 → 独立和差 → 二项模型推进；力学按有向运动 → 受力 → 冲量推进，构成 MA05 碰撞分析先修。每组读完概念和示范后，先做支架题，再关闭解答完成独立英文题，诊断错误后再尝试。新题全部为自拟题，没有官方分值；提示与解答分别展开。
+## 纯数学基础 · MA01 {#pure-foundations}
 
-考试指令也是目标：show/prove 要有推理链，hence 要使用前面结果，sketch 要标关键特征，solve 要找全允许范围内的解。精度按各题要求，数值核验不能替代题目要求的过程。
+先学代数和坐标，再用它们理解微积分与数列。
+
+1. **[代数](/zh/alevel/as-mathematics/algebra/)** — 选择恰当的精确形式，解方程，并追踪图像变换。
+2. **[坐标几何](/zh/alevel/as-mathematics/coordinate-geometry/)** — 联系直线方程、斜率与交点。
+3. **[微分](/zh/alevel/as-mathematics/differentiation/)** — 求梯度和驻点，并说明函数如何变化。
+4. **[积分与近似](/zh/alevel/as-mathematics/integration/)** — 由导数还原函数，解释有向面积，并用梯形法近似。
+5. **[数列与级数](/zh/alevel/as-mathematics/sequences/)** — 选择等差或等比模型，说明求和方法与收敛条件。
+
+## 继续学习纯数学 · MA02 {#further-pure}
+
+把代数与图像方法用于圆、周期变化和指数关系。
+
+1. **[圆](/zh/alevel/as-mathematics/circles/)** — 把圆的方程与圆心、半径和切线联系起来。
+2. **[三角函数](/zh/alevel/as-mathematics/trigonometry/)** — 用弧度、恒等式和图像找全指定区间内的解。
+3. **[指数与对数](/zh/alevel/as-mathematics/exponentials-logarithms/)** — 解指数方程，并检查对数的适用条件。
+
+## 统计 · MA02 {#statistics}
+
+先描述事件，再建立随机变量和分布模型。
+
+1. **[概率](/zh/alevel/as-mathematics/probability/)** — 区分条件概率与独立性，选择恰当的概率关系。
+2. **[离散随机变量](/zh/alevel/as-mathematics/random-variables/)** — 建立概率分布，计算期望与方差。
+3. **[二项分布](/zh/alevel/as-mathematics/binomial/)** — 判断二项模型是否适用，并计算相应概率。
+
+## 力学 · MA02 {#mechanics}
+
+先描述运动，再解释运动为何改变。变加速运动需要微积分基础。
+
+1. **[匀加速直线运动](/zh/alevel/as-mathematics/constant-acceleration/)** — 约定正方向，把运动方程与图像联系起来。
+2. **[变加速直线运动](/zh/alevel/as-mathematics/variable-acceleration/)** — 用微积分联系位移、速度和加速度。
+3. **[力与牛顿运动定律](/zh/alevel/as-mathematics/forces/)** — 画受力图、选择研究对象，并建立运动方程。
+4. **[动量与冲量](/zh/alevel/as-mathematics/momentum/)** — 在明确的系统内使用有向动量与冲量。
+
+## 怎样学完一课 {#how-to-study}
+
+1. 阅读目标、概念与示范，理解为什么选择这个方法。
+2. 在纸上完成支架题；卡住时先展开提示，再看解答。
+3. 收起解答，独立完成英文题。检查方法、条件与结果，再完成纠错和再尝试。
+4. 能解释方法并独立完成再尝试后，用课末的“下一课”继续；否则回到对应示范。
+
+练习均为自拟题，提示与解答分别展开。show／prove 需要推理，hence 需要使用前面结果；计算器核验不能替代题目要求的过程。
 
 ## 来源与考试范围 {#sources-and-scope}
+
+<details markdown="1">
+<summary>查看大纲、评分材料与计算器规定</summary>
 
 依据[当前资格页](https://www.oxfordaqa.com/qualification/international-as-and-a-level-mathematics-9660/)及[官方大纲 v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf)，并参考已记录的 MA01／MA02 January 2025 成对原卷与 Final MS 阅读。各学习页列对应评分证据，不把数据矛盾的 MA02 Q7(b) 当正常模型使用。AS assets 内两份大纲保留为旧 v5.1 存档，当前范围应看官方链接。
 
 符合规定的图形计算器允许使用，不等于批准任意 CAS 或插件配置，见[现行 Handbook](https://www.oxfordaqa.com/wp-content/uploads/2026/09/oxfordaqa-exams-administration-handbook.pdf)。本次未重新验证实体机、考试模式或逐条核对公式册收录。
+
+</details>
 
 ## 旧版参考资料 {#legacy-reference}
 

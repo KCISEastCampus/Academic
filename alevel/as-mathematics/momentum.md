@@ -91,6 +91,12 @@ $4=(1+3)V$ gives $V=1\,\mathrm{m\,s^{-1}}$ rightwards. The impulse is $1(1-4)=-3
 
 </details>
 
+## After this lesson {#next-step}
+
+This is the final lesson in this route. Close the solutions and attempt the retries independently, explaining your system and sign convention. Return to the course route to choose topics that need more practice.
+
+[Previous lesson: Forces and Newton’s laws](/alevel/as-mathematics/forces/) · [Course route](/alevel/as-mathematics/#learning-route)
+
 ## Sources and scope {#sources}
 
 Organised against the [current official 9660 specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf). Paired marking material informs the expected reasoning; every task here is separately self-written and is not an official question or official mark scheme.

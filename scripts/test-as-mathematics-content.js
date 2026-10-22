@@ -31,11 +31,16 @@ const ids = text => [
 const enIndex = read('alevel/as-mathematics/index.md');
 const zhIndex = read('zh/alevel/as-mathematics/index.md');
 for (const source of [enIndex, zhIndex]) {
-  assert(source.includes('toc_headings: "#learning-route, #how-to-study, #sources-and-scope, #legacy-reference"'), 'index TOC excludes archived headings');
+  assert(source.includes('toc_headings: "#learning-route, #pure-foundations, #further-pure, #statistics, #mechanics, #how-to-study, #sources-and-scope, #legacy-reference"'), 'index TOC includes learner routes and excludes archived headings');
   assert(source.includes('<details markdown="1">') && !/<details[^>]*\bopen\b/.test(source) && source.trim().endsWith('</details>'), 'old outline is archived in a closed panel');
 }
 for (const id of ids(enIndex)) assert(ids(zhIndex).includes(id), `index anchor: ${id}`);
-assert(zhIndex.includes('双语学习路线与英文速查提纲'));
+assert(zhIndex.includes('开始第一课：代数') && enIndex.includes('Start the first lesson: Algebra'));
+for (const source of [enIndex, zhIndex]) {
+  const route = source.split('{#learning-route}')[1].split('{#how-to-study}')[0];
+  assert(!/\[L\d+\]|\| MA0/.test(route), 'learning route uses topic names rather than code tables');
+  assert.equal((route.match(/^\d+\. \*\*\[/gm) || []).length, 15, 'all lessons have a route entry');
+}
 assert(!zhIndex.includes('ui.subject_index_intro'), 'remove old English-only directory introduction');
 let count = 0, questions = 0, disclosures = 0;
 for (const [name, topic, groups] of topics) {
@@ -51,6 +56,16 @@ for (const [name, topic, groups] of topics) {
   assert(en.includes(topic) && zh.includes(topic), `${name}: specification topic`);
   assert(enIndex.includes(`](${url})`) && zhIndex.includes(`](/zh${url})`));
   assert(en.includes('self-written') && zh.includes('自拟题'));
+  const position = topics.findIndex(row => row[0] === name);
+  for (const [source, prefix] of [[en, ''], [zh, '/zh']]) {
+    const nextStep = source.split('{#next-step}')[1].split('{#sources}')[0];
+    assert(nextStep.includes(`${prefix}/alevel/as-mathematics/#learning-route`), `${name}: return to route`);
+    for (const neighbor of [topics[position - 1], topics[position + 1]].filter(Boolean)) {
+      assert(nextStep.includes(`${prefix}/alevel/as-mathematics/${neighbor[0]}/`), `${name}: named adjacent lesson`);
+    }
+    if (position === 0) assert(!/Previous lesson:|上一课：/.test(nextStep), 'first lesson has no previous lesson');
+    if (position === topics.length - 1) assert(!/Next lesson:|下一课：/.test(nextStep), 'final lesson has no phantom next lesson');
+  }
   assert.deepEqual(math(zh), math(en), `${name}: bilingual formula order and content`);
   assert.deepEqual(ids(zh), ids(en), `${name}: stable paired anchors`);
   assert.equal(new Set(ids(en)).size, ids(en).length, `${name}: no duplicate IDs`);
