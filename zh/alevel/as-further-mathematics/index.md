@@ -7,11 +7,12 @@ subject: as-further-mathematics
 lang: zh-CN
 translation_of: /alevel/as-further-mathematics/
 permalink: /zh/alevel/as-further-mathematics/
+toc_headings: "#learning-route, #entry-diagnosis, #route-a, #route-b, #route-s, #route-m, #exit-check, #course-sources, #reference-notes"
 ---
 
 ## 学习路线：FM01 与 FM02 {#learning-route}
 
-这里是 OxfordAQA **9665 v5.2** 的学习路线：20 组课页覆盖 18 个 AS 主题。先阅读解释与示范，完成补步骤，再独立选法；提示与完整解答分别展开。根据错误反馈重新尝试。原英文长笔记保留作参考，阅读笔记不等于完成独立能力检查。
+这里是 OxfordAQA **9665 v5.2** 的学习路线：20 组课页覆盖 18 个 AS 主题。先阅读解释与示范，完成补步骤，再独立选法；提示与完整解答分别展开。根据错误反馈重新尝试。旧长笔记及索引默认收起在页末，按需展开查阅。
 
 **先修：**FM01 假定普通 AS 数学的纯数内容；FM02 假定普通 AS 数学及 FP1。进入 FP1 前诊断代数、三角、微积分；进入 FM02 对应分支前诊断概率、随机变量、牛顿定律、动量。二维向量记号由 M1 直接教起，不预设已学归纳、De Moivre、三阶逆或特征值。
 
@@ -101,7 +102,10 @@ $$G_{X+Y}(t)=(t+2t^2+t^3)/4;\quad P(X+Y=2)=1/2;\quad\operatorname{Var}(X+Y)=1/4+
 
 [英文长笔记（参考）](/alevel/as-further-mathematics/#reference-notes) · [A2 高数](/zh/alevel/a2-further-mathematics/)
 
-## 英文旧笔记参考目录 {#reference-notes}
+## 旧版参考资料 {#reference-notes}
+
+<details markdown="1">
+<summary>展开旧主题索引与英文参考链接</summary>
 
 下列为英文原笔记的定位目录，保留原有锚点以支持语言切换。**旧笔记正文尚未全文汉化**；链接均明确指向英文对应段落。完整中文教学、练习与反馈请使用上面的双语学习路线。
 
@@ -217,3 +221,5 @@ $$G_{X+Y}(t)=(t+2t^2+t^3)/4;\quad P(X+Y=2)=1/2;\quad\operatorname{Var}(X+Y)=1/4+
 - <span id="pure-mathematics"></span><a href="/alevel/as-further-mathematics/#pure-mathematics" hreflang="en">英文参考：Pure Mathematics</a>
 - <span id="statistics"></span><a href="/alevel/as-further-mathematics/#statistics" hreflang="en">英文参考：Statistics</a>
 - <span id="mechanics"></span><a href="/alevel/as-further-mathematics/#mechanics" hreflang="en">英文参考：Mechanics</a>
+
+</details>

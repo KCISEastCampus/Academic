@@ -67,6 +67,8 @@ for (const [slug, topics] of Object.entries(route)) {
 assert.equal(Object.keys(route).length, 20);
 assert.equal(new Set(Object.values(route).flat()).size, 18);
 for (const index of [enIndex, zhIndex]) {
+  assert.ok(index.includes('toc_headings: "#learning-route, #entry-diagnosis, #route-a, #route-b, #route-s, #route-m, #exit-check, #course-sources, #reference-notes"'), 'course TOC excludes archived headings');
+  assert.ok(index.split('{#reference-notes}')[1].includes('<details markdown="1">') && index.trim().endsWith('</details>'), 'legacy content stays in an archive panel');
   assert.ok(index.includes('{#learning-route}') && index.includes('{#entry-diagnosis}') && index.includes('{#exit-check}'));
   assert.ok(index.includes('Specimen 2018 Morning'));
 }
@@ -193,6 +195,7 @@ const legacyIds = [
   "mechanics"
 ];
 for (const id of legacyIds) {
+  assert.ok(enIndex.includes(`id="${id}"`), `English archived anchor ${id}`);
   assert.ok(zhIndex.includes(`id="${id}"`), `legacy anchor ${id}`);
   assert.ok(zhIndex.includes(`href="/alevel/as-further-mathematics/#${id}" hreflang="en"`), `English reference target ${id}`);
 }
