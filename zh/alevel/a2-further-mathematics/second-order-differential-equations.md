@@ -512,6 +512,35 @@ $$\boxed{y=x^3+2x^2+1},\qquad 0\le x\le1.$$
 
 </details>
 
+## 纠错与独立重试 {#diagnose-and-retry}
+
+以下两项均为自拟教学任务，无官方分值。先写下错误原因，再看反馈；随后关闭所有解答，独立完成新任务。需要提示的任务应在稍后重新独立尝试。
+
+**Diagnose:** For $y^{\prime\prime}-4y^{\prime}+4y=8e^{2x}$, a learner tries $y_p=Cxe^{2x}$. Test the trial before trying to determine $C$.
+
+<details markdown="1">
+<summary>反馈</summary>
+
+代入后对任意 $C$ 都得到零，因为该试探式属于 CF。改用 $Cx^2e^{2x}$，代入后得到 $2Ce^{2x}$，所以 $C=4$。对于重根，只多乘一个 $x$ 仍然不够。
+
+</details>
+
+**Independent retry:** A homogeneous constant-coefficient equation has general solution $y=(A+Bx)e^{-x}$ and leading coefficient 1. Recover its differential equation. Then solve the equation with the same left side and right side $6e^{-x}$, given $y(0)=1$ and $y^{\prime}(0)=0$.
+
+<details markdown="1">
+<summary>提示</summary>
+
+从整个解族反推辅助多项式，再检查非齐次项是否与解族重合。
+
+</details>
+
+<details markdown="1">
+<summary>重试解答与检验</summary>
+
+辅助多项式为 $(m+1)^2$，对应方程 $y^{\prime\prime}+2y^{\prime}+y=0$。新的右边需要 $y_p=Cx^2e^{-x}$，代入得到 $2Ce^{-x}$，所以 $C=3$。总解为 $(A+Bx+3x^2)e^{-x}$。由初值得 $A=1$ 和 $B-A=0$，因此 $y=(1+x+3x^2)e^{-x}$。代回检验非齐次项与两个初值。
+
+</details>
+
 ## 快速参考 {#quick-reference}
 
 | 步骤 | 应写出的内容 | 检查要点 |
@@ -540,8 +569,10 @@ $$\boxed{y=x^3+2x^2+1},\qquad 0\le x\le1.$$
 
 **练习之后：**凡是展开过提示的题目，都再独立做一次。写出辅助方程、CF、所设 PI 及代入过程；先写通解，再使用给定条件。
 
-**学习路径：**[上一课：一阶微分方程](/zh/alevel/a2-further-mathematics/first-order-differential-equations/) · FP2.12 向量与三维坐标几何（准备中） · [高等纯数学](/zh/alevel/a2-further-mathematics/)。
+**学习路径：**[上一课：一阶微分方程](/zh/alevel/a2-further-mathematics/first-order-differential-equations/) · [下一课：向量积与共面](/zh/alevel/a2-further-mathematics/vector-products-and-coplanarity/) · [高等纯数学](/zh/alevel/a2-further-mathematics/)。
 
 ## 资料来源 {#sources}
 
 本课范围依据 [OxfordAQA 国际 A-level 高等数学课程大纲 FP2.11，印刷页码 20](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf)。例题 7 改编自 2018 年样卷 FM03 第 7 题的方法，并对照官方评分细则第 7 题核对：代入 PI、比较系数、加上 CF，再使用给定条件，并说明趋于零的乘积极限。本题改变了方程与数值，不对应官方配分。其余例题和练习均为自拟题。
+
+[OxfordAQA Specimen 2018, Q7, QP PDF p. 12](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-specimen-paper-2019-v3.pdf#page=12); [MS Q7, PDF p. 10](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-mark-scheme-2016-v1.pdf#page=10). 本轮已读取对应题干及评分材料（2026-10-22）；只借用已注明的方法，不把改编题或新增自拟任务称为原题。

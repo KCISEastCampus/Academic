@@ -496,6 +496,35 @@ Check: $y^{\prime\prime}=6x+4$, $y(0)=1$ and $y(1)=4$. The forcing is degree 1, 
 
 </details>
 
+## Diagnose and Retry {#diagnose-and-retry}
+
+Both tasks are self-written and have no official marks. Explain the error before opening feedback; then close every solution and attempt the new task independently. If you need a hint, return later for another independent attempt.
+
+**Diagnose:** For $y^{\prime\prime}-4y^{\prime}+4y=8e^{2x}$, a learner tries $y_p=Cxe^{2x}$. Test the trial before trying to determine $C$.
+
+<details markdown="1">
+<summary>Feedback</summary>
+
+Substitution gives zero for every $C$, since this trial is in the CF. Use $Cx^2e^{2x}$ instead; it contributes $2Ce^{2x}$, so $C=4$. One extra factor of $x$ was insufficient for the repeated root.
+
+</details>
+
+**Independent retry:** A homogeneous constant-coefficient equation has general solution $y=(A+Bx)e^{-x}$ and leading coefficient 1. Recover its differential equation. Then solve the equation with the same left side and right side $6e^{-x}$, given $y(0)=1$ and $y^{\prime}(0)=0$.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Recover the auxiliary polynomial from the whole solution family, then compare the forcing with that family.
+
+</details>
+
+<details markdown="1">
+<summary>Retry solution and check</summary>
+
+The auxiliary polynomial is $(m+1)^2$, so the equation is $y^{\prime\prime}+2y^{\prime}+y=0$. For the new right side, $y_p=Cx^2e^{-x}$ contributes $2Ce^{-x}$, giving $C=3$. The total solution is $(A+Bx+3x^2)e^{-x}$. Its initial values give $A=1$ and $B-A=0$, hence $y=(1+x+3x^2)e^{-x}$. Substitution checks the forcing and both conditions.
+
+</details>
+
 ## Quick Reference {#quick-reference}
 
 | Step | What to write | What to check |
@@ -524,8 +553,10 @@ Check: $y^{\prime\prime}=6x+4$, $y(0)=1$ and $y(1)=4$. The forcing is degree 1, 
 
 **After practice:** redo any question for which you opened a hint. Show the auxiliary equation, CF, PI trial and substitution, then write the general solution before applying conditions.
 
-**Learning path:** [Previous lesson: first-order differential equations](/alevel/a2-further-mathematics/first-order-differential-equations/) · FP2.12 Vectors and three-dimensional coordinate geometry (in preparation) · [Further Pure Mathematics](/alevel/a2-further-mathematics/).
+**Learning path:** [Previous lesson: first-order differential equations](/alevel/a2-further-mathematics/first-order-differential-equations/) · [Next lesson: vector products and coplanarity](/alevel/a2-further-mathematics/vector-products-and-coplanarity/) · [Further Pure Mathematics](/alevel/a2-further-mathematics/).
 
 ## Sources {#sources}
 
 The scope follows [OxfordAQA's International A-level Further Mathematics specification, FP2.11, printed p. 20](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf). Example 7 adapts the approach in Specimen 2018 FM03, Question 7, checked against the official mark scheme, Question 7: substitute a PI, match coefficients, add the CF, then apply the conditions and justify the decaying product limit. The equation and numbers are changed; no official mark allocation is implied. All other worked examples and practice questions are original.
+
+[OxfordAQA Specimen 2018, Q7, QP PDF p. 12](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-specimen-paper-2019-v3.pdf#page=12); [MS Q7, PDF p. 10](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-mark-scheme-2016-v1.pdf#page=10). Question and matching mark scheme read on 2026-10-22. Only the identified method is adapted; the adapted question and additional self-written tasks are not official questions.

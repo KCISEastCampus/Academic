@@ -23,6 +23,8 @@ study_page: true
 
 **开始前：**复习[复数](/alevel/as-further-mathematics/#3-complex-numbers-fp13)、[数学归纳法](/zh/alevel/a2-further-mathematics/proof-by-induction/)和[积分](/zh/alevel/a2-mathematics/integration/)。你应已掌握模（modulus）、辐角（argument）、共轭复数（complex conjugate）、二项式定理（binomial theorem）和基本三角恒等式。本课所有角度均使用**弧度（radian）**。
 
+**题目身份：**除明确标出官方原题或教学改编的题目外，本课例题与练习均为自拟教学题，不分配官方分值。
+
 ## 方法 {#method}
 
 **学习目标：**用棣莫弗定理（De Moivre's theorem）计算整数次幂，找出全部复数根，解释它们在阿尔冈图（Argand diagram，又称复平面图）上的位置，并用复数推导三角函数的结果。
@@ -639,7 +641,7 @@ $$\boxed{\begin{aligned}
 
 ### 第 7 题：AQA——最小正角 {#question-7--aqa-the-smallest-positive-angle}
 
-**来源：**AQA Mathematics 6360，MFP2，June 2007，原卷第 3 题。原题分值：**5 marks**。教材索引：Chapter 20, practice examination question 2, printed p. 253。原卷、AQA 评分材料。
+**来源：**AQA Mathematics 6360，MFP2，June 2007，原卷第 3 题。原题分值：**5 marks**。教材索引：Chapter 20, practice examination question 2, printed p. 253。[Question paper, Q3 (PDF p. 2)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202007%20QP%20-%20FP2%20AQA.PDF#page=2); [AQA mark scheme, Q3 (PDF p. 4)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202007%20MS%20-%20FP2%20AQA.PDF#page=4). 本轮已读取题干及配套评分材料（2026-10-22）；链接为 PMT 托管的 AQA 编写材料，部分原卷为压缩排版版本。
 
 Use De Moivre's theorem to find the smallest positive angle $\theta$ for which
 
@@ -680,7 +682,7 @@ $$\boxed{\theta=\frac\pi{10}.}$$
 
 ### 第 8 题：AQA——五倍角恒等式与乘积 {#question-8--aqa-a-fifth-angle-identity-and-a-product}
 
-**来源：**AQA Mathematics 6360，MFP2，June 2011，原卷第 7 题。原题分值：**5 + 3 + 3 + 5 marks**。教材索引：Chapter 20, practice examination question 3, printed p. 253。原卷、AQA 评分材料。
+**来源：**AQA Mathematics 6360，MFP2，June 2011，原卷第 7 题。原题分值：**5 + 3 + 3 + 5 marks**。教材索引：Chapter 20, practice examination question 3, printed p. 253。[Question paper, Q7 (PDF p. 4)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202011%20QP%20-%20FP2%20AQA.pdf#page=4); [AQA mark scheme, Q7 (PDF p. 7)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202011%20MS%20-%20FP2%20AQA.PDF#page=7). 本轮已读取题干及配套评分材料（2026-10-22）；链接为 PMT 托管的 AQA 编写材料，部分原卷为压缩排版版本。
 
 **a i** Use De Moivre's theorem to show that
 
@@ -769,6 +771,35 @@ $$\boxed{\tan\frac\pi5\tan\frac{2\pi}{5}=\sqrt5.}$$
 **检验：**以 $t^2$ 为未知量的二次方程的根为 $5\pm2\sqrt5$，两者都为正，乘积为 $5$。$ab$ 的符号仍须根据第一象限来判断。
 
 **评分材料核对：**展开五次幂并比较实部与虚部；在 cosθ 非零时除以 cos⁵θ。找齐四个正切根后，还须说明为什么所求乘积取正值 √5。本课解答已对照上述 AQA 评分材料检查；这些解释由本课编写，并非官方评分细则。
+
+</details>
+
+## 纠错与独立重试 {#diagnose-and-retry}
+
+以下两项均为自拟教学任务，无官方分值。先写下错误原因，再看反馈；随后关闭所有解答，独立完成新任务。需要提示的任务应在稍后重新独立尝试。
+
+**Diagnose:** A learner solves $z^4=1$ by dividing the argument zero by four and gives only $z=1$. Repair the argument step.
+
+<details markdown="1">
+<summary>反馈</summary>
+
+除以四以前，应保留全部辐角 $0+2k\pi$。四个根为 $e^{ik\pi/2}$，其中 $k=0,1,2,3$；后续取值只会重复。
+
+</details>
+
+**Independent retry:** The four roots of a monic quartic form a square centred at $1$ with radius $2$. One root is $3$. Find all the roots and construct the quartic.
+
+<details markdown="1">
+<summary>提示</summary>
+
+先考虑各根相对于圆心的位移，再利用这些位移相同的四次方。
+
+</details>
+
+<details markdown="1">
+<summary>重试解答与检验</summary>
+
+位移为 $2,2i,-2,-2i$，所以根为 $3,1+2i,-1,1-2i$，且 $(z-1)^4=16$。展开得 $z^4-4z^3+6z^2-4z-15=0$。逐根减去圆心后取四次方，即可检验。
 
 </details>
 

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300" role="img" aria-labelledby="title desc">
+  <title id="title">Positive rotations: three views towards the origin</title>
+  <desc id="desc">Right-handed axes. Each panel looks from the positive rotation axis towards the origin. In the perpendicular plane, an anticlockwise quarter-turn takes the rightward basis vector to the upward one: y to z about x, z to x about y, and x to y about z. A circled dot shows the positive rotation axis pointing towards the viewer. Schematic, not to scale.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 8 4 0 8Z" fill="#203e50"/></marker>
+    <marker id="turn" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 8 4 0 8Z" fill="#9c4728"/></marker>
+  </defs>
+  <rect width="900" height="300" rx="12" fill="#f5f8fa"/>
+  <g font-family="Arial, sans-serif" fill="#203e50" text-anchor="middle">
+    <text x="450" y="26" font-size="17" font-weight="bold">View from the positive rotation axis towards O</text>
+    <text x="150" y="57" font-size="16">About +x</text>
+    <text x="450" y="57" font-size="16">About +y</text>
+    <text x="750" y="57" font-size="16">About +z</text>
+    <g stroke="#203e50" stroke-width="2" fill="none" marker-end="url(#arrow)">
+      <path d="M94 214H244 M94 214V86"/>
+      <path d="M394 214H544 M394 214V86"/>
+      <path d="M694 214H844 M694 214V86"/>
+    </g>
+    <g stroke="#9c4728" stroke-width="2.5" fill="none" marker-end="url(#turn)">
+      <path d="M165 214 A71 71 0 0 0 94 143"/>
+      <path d="M465 214 A71 71 0 0 0 394 143"/>
+      <path d="M765 214 A71 71 0 0 0 694 143"/>
+    </g>
+    <g font-size="17">
+      <text x="255" y="220">e_y</text><text x="94" y="76">e_z</text>
+      <text x="555" y="220">e_z</text><text x="394" y="76">e_x</text>
+      <text x="855" y="220">e_x</text><text x="694" y="76">e_y</text>
+    </g>
+    <g fill="#f5f8fa" stroke="#203e50" stroke-width="1.5">
+      <circle cx="94" cy="214" r="8"/><circle cx="394" cy="214" r="8"/><circle cx="694" cy="214" r="8"/>
+    </g>
+    <g><circle cx="94" cy="214" r="2.4"/><circle cx="394" cy="214" r="2.4"/><circle cx="694" cy="214" r="2.4"/></g>
+    <g font-size="14">
+      <text x="71" y="238">O</text><text x="371" y="238">O</text><text x="671" y="238">O</text>
+      <text x="174" y="139" fill="#9c4728">+90°</text><text x="474" y="139" fill="#9c4728">+90°</text><text x="774" y="139" fill="#9c4728">+90°</text>
+      <text x="450" y="277">Circled dot: positive axis towards viewer · schematic, not to scale</text>
+    </g>
+  </g>
+</svg>

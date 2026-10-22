@@ -21,6 +21,8 @@ Textbook: Chapter 17, Sections 17.1–17.2, printed pp. 198–206, in *Internati
 
 **Before you start:** review [AS Further Mathematics](/alevel/as-further-mathematics/#3-complex-numbers-fp13) for complex numbers. You should know the factor theorem, algebraic division, the quadratic formula and differentiation. Remember that $i^2=-1$.
 
+**Task status:** Unless an official question or teaching adaptation is explicitly identified, the worked examples and exercises are self-written teaching tasks with no official marks.
+
 ## Method
 
 **Learning goal:** use the relations between roots and coefficients, form an equation with given roots and find all roots when one complex root is given.
@@ -224,7 +226,7 @@ Let $f(x)=x^3-3x^2+4x-5$.
 
 **1. Show that there is exactly one real root.**
 
-$$f'(x)=3x^2-6x+4=3(x-1)^2+1>0$$
+$$f^{\prime}(x)=3x^2-6x+4=3(x-1)^2+1>0$$
 
 for every real $x$. Thus the cubic is strictly increasing. Its values tend to opposite infinities at the two ends, so it crosses the $x$-axis exactly once.
 
@@ -398,7 +400,7 @@ The interval is positive because $\alpha$ is negative. The imaginary parts cance
 
 ### Question 7 — Original AQA practice
 
-**Source:** AQA Mathematics 6360, MFP2, January 2006, Question 2. **5 + 5 marks**. Textbook cross-reference: Chapter 17, practice examination question 4, printed p. 206. Question paper, AQA mark scheme.
+**Source:** AQA Mathematics 6360, MFP2, January 2006, Question 2. **5 + 5 marks**. Textbook cross-reference: Chapter 17, practice examination question 4, printed p. 206. [Question paper, Q2 (PDF p. 2)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/January%202006%20QP%20-%20FP2%20AQA.PDF#page=2); [AQA mark scheme, Q2 (PDF p. 3)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/January%202006%20MS%20-%20FP2%20AQA.PDF#page=3). Question and matching mark scheme read on 2026-10-22; these are AQA-authored documents hosted by PMT, with some question papers in condensed layout.
 
 The cubic equation
 
@@ -441,6 +443,35 @@ $$\boxed{p=-4,\quad q=-2,\quad r=20.}$$
 **Check:** $(x+2)(x^2-6x+10)=x^3-4x^2-2x+20$. The sum of the squares is $(3+i)^2+(3-i)^2+(-2)^2=20$. Show the coefficient relations, the square identity, the reason for the conjugate root and the product calculation.
 
 **Mark-scheme comparison:** Use the sum of roots, the sum-of-squares identity and the conjugate root to obtain p = −4, q = −2 and r = 20. Our working has been checked against the linked AQA mark scheme; these explanations are our own, not an official mark scheme.
+
+</details>
+
+## Diagnose and Retry {#diagnose-and-retry}
+
+Both tasks are self-written and have no official marks. Explain the error before opening feedback; then close every solution and attempt the new task independently. If you need a hint, return later for another independent attempt.
+
+**Diagnose:** A learner says that a root $1+i$ of $z^2-(2+i)z+1+i=0$ forces $1-i$ to be another root. Identify the missing condition and correct the conclusion.
+
+<details markdown="1">
+<summary>Feedback</summary>
+
+The coefficients are not all real, so the conjugate-pair theorem does not apply. The root sum gives $(2+i)-(1+i)=1$; indeed the polynomial is $(z-1)(z-1-i)$.
+
+</details>
+
+**Independent retry:** A real monic cubic has one root $2$, sum of roots $6$ and product of roots $10$. Find the other roots and the cubic, without assuming that the other roots are real.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Use the sum and product of the two remaining roots to form their quadratic.
+
+</details>
+
+<details markdown="1">
+<summary>Retry solution and check</summary>
+
+The other roots have sum $4$ and product $5$, so satisfy $z^2-4z+5=0$. They are $2\pm i$, and the cubic is $z^3-6z^2+13z-10=0$, from $(z-2)(z^2-4z+5)$. Check all three coefficient relations.
 
 </details>
 

@@ -24,10 +24,15 @@ Further Pure Mathematics · FP2 · FM03. Learn a method, work through examples, 
 9. **[Hyperbolic Functions](/alevel/a2-further-mathematics/hyperbolic-functions/)** — Use exponential definitions, prove identities and apply inverse functions in calculus.
 10. **[First-order Differential Equations](/alevel/a2-further-mathematics/first-order-differential-equations/)** — Use an integrating factor or a complementary function and particular integral, then apply the given condition.
 11. **[Second-order Differential Equations](/alevel/a2-further-mathematics/second-order-differential-equations/)** — Use the auxiliary equation and a particular integral, then apply initial or boundary conditions.
+12. **[Vector Products and Coplanarity](/alevel/a2-further-mathematics/vector-products-and-coplanarity/)** — Connect perpendicular directions, areas, volumes and coplanarity.
+13. **[Lines and Planes](/alevel/a2-further-mathematics/lines-and-planes/)** — Change representations, find intersections and justify angles, distances and reflections.
+14. **[Matrix Algebra](/alevel/a2-further-mathematics/matrix-algebra/)** — Use three-dimensional transformations, determinants, inverses and invariant objects.
+15. **[Linear Equations and Three Planes](/alevel/a2-further-mathematics/linear-equations/)** — Classify all solutions, keep exceptional parameters and explain the common geometry.
+16. **[Eigenvalues and Eigenvectors](/alevel/a2-further-mathematics/eigenvalues-and-eigenvectors/)** — Derive characteristic equations, handle repeated real eigenvalues and verify nonzero eigenvectors.
 
-Follow the lessons in order, or choose the topic you need. The remaining lessons are in preparation.
+Follow the lessons in order, or choose the topic you need. Together the lessons cover all fourteen syllabus topics FP2.1–FP2.14; some topics need more than one lesson.
 
-**Chinese explanations:** all eleven available lessons have [Chinese versions](/zh/alevel/a2-further-mathematics/), with English questions and formulas retained. Use the language switch to change languages at the same section.
+**Chinese explanations:** all sixteen lessons have [Chinese versions](/zh/alevel/a2-further-mathematics/), with English questions and formulas retained. Use the language switch to change languages at the same section.
 
 **Before you start:** you should know AS Pure Mathematics and the pure content of [AS Further Mathematics](/alevel/as-further-mathematics/), including complex numbers, roots and coefficients, algebraic division and differentiation.
 
@@ -58,11 +63,13 @@ Page numbers are printed textbook pages, not PDF page numbers. The FP2 labels fo
 | FP2.9 Hyperbolic functions | 24: Hyperbolic Functions, pp. 288–305 | [Open lesson](/alevel/a2-further-mathematics/hyperbolic-functions/) |
 | FP2.10 First-order differential equations | 25.1 and 25.3, pp. 306–307 and 318–319 | [Open lesson](/alevel/a2-further-mathematics/first-order-differential-equations/) |
 | FP2.11 Second-order differential equations | 25.2, pp. 308–317; review questions on p. 319 | [Open lesson](/alevel/a2-further-mathematics/second-order-differential-equations/) |
-| FP2.12 Vectors and three-dimensional coordinate geometry | 26: Vectors and Three-Dimensional Coordinate Geometry, pp. 320–344 | In preparation |
-| FP2.14 Solution of linear equations | 27: Solutions of Linear Equations, pp. 346–352 | In preparation |
-| FP2.13 Matrix algebra | 28: Matrix Algebra, pp. 354–368 | In preparation |
+| FP2.12 Vectors and three-dimensional coordinate geometry | 26: Vectors and Three-Dimensional Coordinate Geometry, pp. 320–344 | [Vector products](/alevel/a2-further-mathematics/vector-products-and-coplanarity/) · [Lines and planes](/alevel/a2-further-mathematics/lines-and-planes/) |
+| FP2.14 Solution of linear equations | 27: Solutions of Linear Equations, pp. 346–352 | [Open lesson](/alevel/a2-further-mathematics/linear-equations/) |
+| FP2.13 Matrix algebra | 28: Matrix Algebra, pp. 354–368 | [Matrix algebra](/alevel/a2-further-mathematics/matrix-algebra/) · [Eigenvalues and eigenvectors](/alevel/a2-further-mathematics/eigenvalues-and-eigenvectors/) |
 {: .wide-table}
 
 </details>
+
+Matrix algebra comes before linear equations in the learning route so that inverse matrices are explained before they are used. This is a teaching sequence, not a change to the syllabus numbering or textbook chapters.
 
 **Studying a different course?** [AS Further Mathematics](/alevel/as-further-mathematics/) · [A2 Pure Mathematics (MA03)](/alevel/a2-mathematics/).

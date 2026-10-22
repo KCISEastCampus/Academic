@@ -86,7 +86,7 @@ assert(!source.includes('with Mechanics'), 'Use the shared textbook name');
 assert(source.includes('+C'), 'Integration constants use +C');
 assert.equal((source.match(/^#{3,4} Example /gm) || []).length, 10);
 assert.equal((source.match(/### Question /g) || []).length, 8);
-assert.equal((html.match(/<details\b/g) || []).length, 16);
+assert.equal((html.match(/<details\b/g) || []).length, 19);
 assert.equal((html.match(/<table\b/g) || []).length, 1, 'Absolute-value pipes must not create tables');
 for (const row of html.match(/<tr\b[\s\S]*?<\/tr>/g) || []) assert.equal((row.match(/<(?:td|th)\b/g) || []).length, 3);
 assert(!html.includes('<p>$$'), 'Display math must reach MathJax intact');

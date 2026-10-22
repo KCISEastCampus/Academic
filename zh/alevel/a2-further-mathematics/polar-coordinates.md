@@ -23,6 +23,8 @@ study_page: true
 
 **开始前：**复习[模与辐角](/zh/alevel/a2-further-mathematics/de-moivres-theorem/#powers-and-proof)、[三角函数](/zh/alevel/a2-mathematics/trigonometric-functions-and-formulae/)和[积分](/zh/alevel/a2-mathematics/integration/)。你应掌握扇形面积、二倍角恒等式，并能根据点所在的象限确定角度。全课使用**弧度（radians）**。
 
+**题目身份：**除明确标出官方原题或教学改编的题目外，本课例题与练习均为自拟教学题，不分配官方分值。
+
 ## 方法 {#method}
 
 **学习目标：**在极坐标与直角坐标（Cartesian coordinates）之间转换，用正半径绘制曲线草图，求交点并计算指定区域的面积。
@@ -513,7 +515,7 @@ A
 
 ### 第 6 题：AQA——直角坐标方程 {#question-6--aqa-a-cartesian-equation}
 
-**来源：**AQA Mathematics 6360，MFP3，June 2014，原卷第 3 题。原题分值：**4 marks**。教材索引：Chapter 21, practice examination question 2, printed p. 267。原卷、AQA 评分材料。
+**来源：**AQA Mathematics 6360，MFP3，June 2014，原卷第 3 题。原题分值：**4 marks**。教材索引：Chapter 21, practice examination question 2, printed p. 267。[Question paper, Q3 (PDF p. 6)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202014%20QP%20-%20FP3%20AQA.PDF#page=6); [AQA mark scheme, Q3 (PDF p. 5)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202014%20MS%20-%20FP3%20AQA.PDF#page=5). 本轮已读取题干及配套评分材料（2026-10-22）；链接为 PMT 托管的 AQA 编写材料，部分原卷为压缩排版版本。
 
 A curve has polar equation $r(4-3\cos\theta)=4$. Find its Cartesian equation in the form $y^2=f(x)$.
 
@@ -551,7 +553,7 @@ $$\boxed{y^2=1+\frac32x-\frac7{16}x^2.}$$
 
 ### 第 7 题：AQA——以原点为极点的圆 {#question-7--aqa-a-circle-using-the-origin-as-pole}
 
-**来源：**AQA Mathematics 6360，MFP3，June 2013，原卷第 2 题。原题分值：**4 marks**。教材索引：Chapter 21, practice examination question 3, printed p. 267。原卷、AQA 评分材料。
+**来源：**AQA Mathematics 6360，MFP3，June 2013，原卷第 2 题。原题分值：**4 marks**。教材索引：Chapter 21, practice examination question 3, printed p. 267。[Question paper, Q2 (PDF p. 2)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202013%20QP%20-%20FP3%20AQA.pdf#page=2); [AQA mark scheme, Q2 (PDF p. 4)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202013%20MS%20-%20FP3%20AQA.PDF#page=4). 本轮已读取题干及配套评分材料（2026-10-22）；链接为 PMT 托管的 AQA 编写材料，部分原卷为压缩排版版本。
 
 The Cartesian equation of a circle is $(x+8)^2+(y-6)^2=100$.
 
@@ -591,7 +593,7 @@ $$\boxed{r=12\sin\theta-16\cos\theta.}$$
 
 ### 第 8 题：AQA——环瓣的面积 {#question-8--aqa-area-of-a-loop}
 
-**来源（改编题：题图重绘）：**AQA Mathematics 6360，MFP3，January 2009，原卷第 3 题。原题分值：**6 marks**。教材索引：Chapter 21, practice examination question 1, printed p. 267。原卷、AQA 评分材料。 题图按原卷重绘，保留曲线、极点、始线和题目条件。
+**来源（改编题：题图重绘）：**AQA Mathematics 6360，MFP3，January 2009，原卷第 3 题。原题分值：**6 marks (original question)**。教材索引：Chapter 21, practice examination question 1, printed p. 267。[Question paper, Q3 (PDF p. 3)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/January%202009%20QP%20-%20FP3%20AQA.PDF#page=3); [AQA mark scheme, Q3 (PDF p. 4)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/January%202009%20MS%20-%20FP3%20AQA.PDF#page=4). 本轮已读取题干及配套评分材料（2026-10-22）；链接为 PMT 托管的 AQA 编写材料，部分原卷为压缩排版版本。 题图按原卷重绘，保留曲线、极点、始线和题目条件。
 
 The diagram shows a sketch of a loop, the pole $O$ and the initial line.
 
@@ -631,6 +633,47 @@ A
 **检验：**交换积分上下限可消去负号。面积为正；该环瓣并不关于 $y$ 轴对称，因此不能把半个环瓣的面积乘以二。
 
 **评分材料核对：**使用从 0 到 π 的 r² 积分的一半；可展开或换元积分，得到面积 13/3。本课解答已对照上述 AQA 评分材料检查；这些解释由本课编写，并非官方评分细则。
+
+</details>
+
+## 纠错与独立重试 {#diagnose-and-retry}
+
+以下两项均为自拟教学任务，无官方分值。先写下错误原因，再看反馈；随后关闭所有解答，独立完成新任务。需要提示的任务应在稍后重新独立尝试。
+
+**Diagnose:** A learner uses
+
+$$\frac12\int(r_1-r_2)^2\,\mathrm d\theta$$
+
+ for an area between two polar curves. Explain the error before doing any integration.
+
+<details markdown="1">
+<summary>反馈</summary>
+
+每个扇形面积与各自半径的平方成正比。应先分别求面积再相减，得到
+
+$$\frac12\int(r_1^2-r_2^2)\,\mathrm d\theta$$
+
+，前提是所选区间满足 $r_1\ge r_2\ge0$。先减半径再平方会多出交叉项。
+
+</details>
+
+**Independent retry:** Find the area inside $r=2$ and outside $r=1+\cos\theta$, for $-\pi\le\theta\le\pi$. Explain whether the boundary order changes.
+
+<details markdown="1">
+<summary>提示</summary>
+
+在整个区间内比较两个半径，包括极点和相切点。
+
+</details>
+
+<details markdown="1">
+<summary>重试解答与检验</summary>
+
+由于 $0\le1+\cos\theta\le2$，圆始终是外边界，无须交换边界。面积为
+
+$$\frac12\int_{-\pi}^{\pi}[4-(1+\cos\theta)^2]\,\mathrm d\theta=4\pi-\frac{3\pi}{2}=\frac{5\pi}{2}.$$
+
+这里只将心形线内部面积从圆面积中减去一次。
 
 </details>
 

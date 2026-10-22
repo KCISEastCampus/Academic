@@ -23,6 +23,8 @@ study_page: true
 
 **开始前：**应熟悉求和符号（summation notation）、数列（sequence）、指数运算法则（index laws）和代数因式分解（algebraic factorisation）。学习后面的例题前，请复习 [AS 高等数学](/alevel/as-further-mathematics/)与 [A2 纯数学](/zh/alevel/a2-mathematics/)中的复数（complex number）、和角公式（compound angle formulae）、求导（differentiation）与矩阵乘法（matrix multiplication）。
 
+**题目身份：**除明确标出官方原题或教学改编的题目外，本课例题与练习均为自拟教学题，不分配官方分值。
+
 ## 方法 {#method}
 
 **学习目标：**针对级数（series）、递推关系（recurrence relation）、整除性（divisibility）命题，或其他含有正整数的公式，写出完整的数学归纳法证明（proof by induction）。
@@ -212,7 +214,7 @@ $$f^{(n)}(x)=2^{n/2}e^x\sin\left(x+\frac{n\pi}{4}\right).$$
 **初始情形：**由乘积法则（product rule），
 
 $$\begin{aligned}
-f'(x)&=e^x(\sin x+\cos x)\\
+f^{\prime}(x)&=e^x(\sin x+\cos x)\\
 &=\sqrt2\,e^x\sin\left(x+\frac{\pi}{4}\right).
 \end{aligned}$$
 
@@ -438,7 +440,7 @@ $$g^{(n)}(x)=2^{n/2}e^x\cos\left(x+\frac{n\pi}{4}\right).$$
 当 $n=1$ 时，
 
 $$\begin{aligned}
-g'(x)&=e^x(\cos x-\sin x)\\
+g^{\prime}(x)&=e^x(\cos x-\sin x)\\
 &=\sqrt2\,e^x\cos\left(x+\frac{\pi}{4}\right).
 \end{aligned}$$
 
@@ -466,7 +468,7 @@ g^{(2)}(x)&=-2e^x\sin x\\
 
 ### 第 6 题：AQA 原题练习 {#question-6--original-aqa-practice}
 
-**来源：**AQA Mathematics 6360，MFP2，June 2006，原卷第 6 题。原题分值：**4 + 4 marks**。教材索引：Chapter 18, practice examination question 5, printed p. 218。原卷、AQA 评分材料。
+**来源：**AQA Mathematics 6360，MFP2，June 2006，原卷第 6 题。原题分值：**4 + 4 marks**。教材索引：Chapter 18, practice examination question 5, printed p. 218。[Question paper, Q6 (PDF p. 4)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202006%20QP%20-%20FP2%20AQA.PDF#page=4); [AQA mark scheme, Q6 (PDF p. 6)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202006%20MS%20-%20FP2%20AQA.PDF#page=6). 本轮已读取题干及配套评分材料（2026-10-22）；链接为 PMT 托管的 AQA 编写材料，部分原卷为压缩排版版本。
 
 **a** The function $f$ is given by
 
@@ -524,6 +526,39 @@ $$f(m+1)=8f(m)+7\cdot15^m.$$
 
 </details>
 
+## 纠错与独立重试 {#diagnose-and-retry}
+
+以下两项均为自拟教学任务，无官方分值。先写下错误原因，再看反馈；随后关闭所有解答，独立完成新任务。需要提示的任务应在稍后重新独立尝试。
+
+**Diagnose:** A learner checks the first three cases and writes, “The pattern continues, so the result holds for all positive integers.” What logical step is missing?
+
+<details markdown="1">
+<summary>反馈</summary>
+
+几个数值不能说明任意一个成立的情形都能推出下一个情形。需要对允许范围内的任意整数作归纳假设，利用它证明下一步，再与初始情形连接。
+
+</details>
+
+**Independent retry:** Prove by induction, in complete English sentences, that
+
+$$\sum_{r=1}^n r2^{r-1}=(n-1)2^n+1$$
+
+ for all integers $n\ge1$.
+
+<details markdown="1">
+<summary>提示</summary>
+
+在假设中的和后加上真正的下一项 $(k+1)2^k$。
+
+</details>
+
+<details markdown="1">
+<summary>重试解答与检验</summary>
+
+For $n=1$, both sides are $1$. Assume the formula holds for an arbitrary integer $k\ge1$. Then $S_{k+1}=(k-1)2^k+1+(k+1)2^k=k2^{k+1}+1$, the required formula at $k+1$. The initial case and this implication prove the result for all integers $n\ge1$ by induction.
+
+</details>
+
 ## 快速参考 {#quick-reference}
 
 | 证明的部分 | 应写出的内容 |
@@ -540,6 +575,6 @@ $$f(m+1)=8f(m)+7\cdot15^m.$$
 
 本课依据 [OxfordAQA Further Mathematics 9665 课程大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf)中的 FP2.4。例题为教学材料。第 6 题保留了所提供教材中的 AQA 原题与分值。
 
-数学归纳法的评分示例见 OxfordAQA FM03 样卷评分细则第 10 题与 AQA 2023 年 6 月试卷 2 评分细则第 12 题。本站解答包含假设、下一个情形的计算、初始情形和完整结论。
+[FM03 June 2024 Q7, MS PDF pp. 10–11](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-mark-scheme.pdf#page=10); [FM03 January 2025 Q5, MS PDF p. 8](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-mark-scheme.pdf#page=8). 本轮已读：评分证据包含正确起始情形、任意归纳假设、由假设得到下一步及覆盖完整范围的结论。
 
 **学习路径：**[上一课：根与多项式](/zh/alevel/a2-further-mathematics/roots-and-polynomials/) · [返回课程](/zh/alevel/a2-further-mathematics/) · [下一课：有限级数](/zh/alevel/a2-further-mathematics/finite-series/)。

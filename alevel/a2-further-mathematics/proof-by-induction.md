@@ -21,6 +21,8 @@ Textbook: Chapter 18, Section 18.1, printed pp. 208–215; review and practice e
 
 **Before you start:** you should know summation notation, sequences, index laws and algebraic factorisation. For the later examples, review complex numbers, compound angle formulae, differentiation and matrix multiplication in [AS Further Mathematics](/alevel/as-further-mathematics/) and [A2 Pure Mathematics](/alevel/a2-mathematics/).
 
+**Task status:** Unless an official question or teaching adaptation is explicitly identified, the worked examples and exercises are self-written teaching tasks with no official marks.
+
 ## Method
 
 **Learning goal:** write a complete proof by induction for a series, a recurrence relation, a divisibility statement or another formula involving a positive integer.
@@ -210,7 +212,7 @@ Here $f^{(n)}$ means the $n$th derivative, not the $n$th power. Angles are in ra
 **Initial case:** by the product rule,
 
 $$\begin{aligned}
-f'(x)&=e^x(\sin x+\cos x)\\
+f^{\prime}(x)&=e^x(\sin x+\cos x)\\
 &=\sqrt2\,e^x\sin\left(x+\frac{\pi}{4}\right).
 \end{aligned}$$
 
@@ -436,7 +438,7 @@ Use $\cos t-\sin t=\sqrt2\cos(t+\frac{\pi}{4})$.
 At $n=1$,
 
 $$\begin{aligned}
-g'(x)&=e^x(\cos x-\sin x)\\
+g^{\prime}(x)&=e^x(\cos x-\sin x)\\
 &=\sqrt2\,e^x\cos\left(x+\frac{\pi}{4}\right).
 \end{aligned}$$
 
@@ -464,7 +466,7 @@ The minus sign matters.
 
 ### Question 6 — Original AQA practice
 
-**Source:** AQA Mathematics 6360, MFP2, June 2006, Question 6. **4 + 4 marks**. Textbook cross-reference: Chapter 18, practice examination question 5, printed p. 218. Question paper, AQA mark scheme.
+**Source:** AQA Mathematics 6360, MFP2, June 2006, Question 6. **4 + 4 marks**. Textbook cross-reference: Chapter 18, practice examination question 5, printed p. 218. [Question paper, Q6 (PDF p. 4)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202006%20QP%20-%20FP2%20AQA.PDF#page=4); [AQA mark scheme, Q6 (PDF p. 6)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202006%20MS%20-%20FP2%20AQA.PDF#page=6). Question and matching mark scheme read on 2026-10-22; these are AQA-authored documents hosted by PMT, with some question papers in condensed layout.
 
 **a** The function $f$ is given by
 
@@ -520,6 +522,39 @@ By the assumption, $f(m)$ is a multiple of $7$. Also, $15^m$ is an integer. Both
 
 </details>
 
+## Diagnose and Retry {#diagnose-and-retry}
+
+Both tasks are self-written and have no official marks. Explain the error before opening feedback; then close every solution and attempt the new task independently. If you need a hint, return later for another independent attempt.
+
+**Diagnose:** A learner checks the first three cases and writes, “The pattern continues, so the result holds for all positive integers.” What logical step is missing?
+
+<details markdown="1">
+<summary>Feedback</summary>
+
+The calculation does not show that an arbitrary true case implies the next. State an assumption at an arbitrary allowed integer, use it in the next case, and combine that implication with the initial case.
+
+</details>
+
+**Independent retry:** Prove by induction, in complete English sentences, that
+
+$$\sum_{r=1}^n r2^{r-1}=(n-1)2^n+1$$
+
+ for all integers $n\ge1$.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Add the actual next term $(k+1)2^k$ to the assumed sum.
+
+</details>
+
+<details markdown="1">
+<summary>Retry solution and check</summary>
+
+For $n=1$, both sides are $1$. Assume the formula holds for an arbitrary integer $k\ge1$. Then $S_{k+1}=(k-1)2^k+1+(k+1)2^k=k2^{k+1}+1$, the required formula at $k+1$. The initial case and this implication prove the result for all integers $n\ge1$ by induction.
+
+</details>
+
 ## Quick Reference
 
 | Part of a proof | What to write |
@@ -536,6 +571,6 @@ By the assumption, $f(m)$ is a multiple of $7$. Also, $15^m$ is an integer. Both
 
 The lesson follows FP2.4 of the [OxfordAQA Further Mathematics 9665 specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf). Worked examples are teaching material. Question 6 retains the AQA question and marks from the supplied textbook.
 
-For examples of how induction is assessed, see OxfordAQA FM03 specimen mark scheme, Question 10 and AQA June 2023 mark scheme, Paper 2, Question 12. Our solutions include the assumption, the calculation for the next case, the initial case and a full conclusion.
+[FM03 June 2024 Q7, MS PDF pp. 10–11](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-mark-scheme.pdf#page=10); [FM03 January 2025 Q5, MS PDF p. 8](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-mark-scheme.pdf#page=8). Read this round: assessment evidence includes the correct initial case, an arbitrary induction hypothesis, the next step derived from it, and a conclusion covering the full range.
 
 **Learning path:** [Previous: Roots and Polynomials](/alevel/a2-further-mathematics/roots-and-polynomials/) · [Back to the course](/alevel/a2-further-mathematics/) · [Next: Finite Series](/alevel/a2-further-mathematics/finite-series/).
