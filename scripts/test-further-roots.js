@@ -71,7 +71,7 @@ for (const formula of ['2x^3-3x^2-8x+12', 't^3+4t^2-9t-36', 'z^3-5z^2+11z-15',
 assert(!/[\u3400-\u9fff]/u.test(source));
 assert.equal((source.match(/### Example /g) || []).length, 6);
 assert.equal((source.match(/### Question /g) || []).length, 7);
-assert.equal((html.match(/<details\b/g) || []).length, 14);
+assert.equal((html.match(/<details\b/g) || []).length, 17);
 assert(!html.includes('<p>$$'));
 assert(html.includes('A2 Further Pure Mathematics</a>'), 'Full course breadcrumb');
 for (const id of ['method', 'roots-and-coefficients', 'complex-roots', 'real-roots', 'practice', 'quick-reference'])

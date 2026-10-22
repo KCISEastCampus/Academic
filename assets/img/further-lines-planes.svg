@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="350" viewBox="0 0 840 350" role="img" aria-labelledby="title desc">
+  <title id="title">Angle to a plane and reflection across a plane</title>
+  <desc id="desc">Left: a line crosses a plane at O; theta is between the line and its projection into the plane, not between the line and the dashed normal. Right: in a perpendicular section, P and its image Q lie at equal distances on opposite sides of a plane. H is their midpoint and the segment is perpendicular to the plane. Schematic, not to scale.</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#1e3a5f"/></marker></defs>
+  <rect width="840" height="350" fill="#fff"/>
+  <g fill="none" stroke="#526a83" stroke-width="2">
+    <path d="M40 265L275 265L355 205L120 205Z" fill="#eaf2f8"/>
+    <path d="M120 275L315 105" stroke="#1e3a5f" stroke-width="3"/>
+    <path d="M180 223L180 82" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
+    <path d="M180 223L315 223" stroke-dasharray="6 5"/>
+    <path d="M226 223A46 46 0 0 0 215 193" stroke="#1e3a5f"/>
+    <path d="M315 105L315 223" stroke-dasharray="4 5"/>
+    <path d="M460 205L790 205" stroke-width="3"/>
+    <path d="M625 80L625 330" stroke="#1e3a5f"/>
+    <path d="M625 188L642 188L642 205"/>
+    <path d="M618 140L632 140M618 270L632 270" stroke-width="3"/>
+  </g>
+  <g fill="#172b40" font-family="Arial,sans-serif" font-size="21">
+    <text x="35" y="37">Line–plane angle</text><text x="460" y="37">Reflection: perpendicular section</text>
+    <text x="159" y="248">O</text><text x="193" y="93">normal</text>
+    <text x="245" y="205">θ</text><text x="233" y="250" font-size="17">projection</text>
+    <text x="325" y="117">line</text><text x="70" y="256">plane</text>
+    <text x="642" y="87">P</text><text x="648" y="225">H</text><text x="642" y="328">Q</text>
+    <text x="465" y="193">plane</text><text x="600" y="62" font-size="16">equal lengths</text>
+    <text x="40" y="327" font-size="17">Schematic — not to scale</text>
+  </g>
+  <g fill="#1e3a5f"><circle cx="180" cy="223" r="4"/><circle cx="625" cy="80" r="4"/><circle cx="625" cy="205" r="4"/><circle cx="625" cy="330" r="4"/></g>
+</svg>

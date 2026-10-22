@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="400" viewBox="0 0 760 400" role="img" aria-labelledby="title desc">
+  <title id="title">Base, normal and height of a parallelepiped</title>
+  <desc id="desc">Schematic, not to scale. Adjacent base edges u and v start at A. A third edge w reaches the translated top face. The normal N is perpendicular to the base; the dashed height h is parallel to N. Arrowheads distinguish the vectors.</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#1e3a5f"/></marker></defs>
+  <rect width="760" height="400" fill="#fff"/>
+  <g stroke="#566b80" stroke-width="2" fill="none">
+    <path d="M155 320L465 320L585 245L275 245Z" fill="#eaf2f8"/>
+    <path d="M205 160L515 160L635 85L325 85Z" fill="#f3f6fa"/>
+    <path d="M465 320L515 160M585 245L635 85M275 245L325 85"/>
+    <path d="M205 160L205 289" stroke-dasharray="7 5"/>
+  </g>
+  <g stroke="#1e3a5f" stroke-width="3" marker-end="url(#arrow)" fill="none">
+    <path d="M155 320L465 320"/><path d="M155 320L275 245"/>
+    <path d="M155 320L205 160"/><path d="M380 280L380 110"/>
+  </g>
+  <g fill="#172b40" font-family="Arial,sans-serif" font-size="22">
+    <text x="130" y="346">A</text><text x="300" y="349">u</text><text x="197" y="280">v</text>
+    <text x="148" y="225">w</text><text x="390" y="125">N</text><text x="217" y="231">h</text>
+    <text x="420" y="375" font-size="17">Schematic — not to scale</text>
+    <text x="30" y="40" font-size="21">Base edges, perpendicular normal and height</text>
+  </g>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="330" viewBox="0 0 960 330" role="img" aria-labelledby="title desc">
+<title id="title">Common intersections of three planes</title>
+<desc id="desc">Constructed schematics: three planes meet at one point, at one line, or pairwise in three parallel lines with no point common to all three. Dashed edges distinguish hidden parts. Not to scale.</desc>
+<rect width="960" height="330" fill="#fff"/>
+<g font-family="Arial, sans-serif" font-size="17" fill="#172b4d" stroke-linejoin="round">
+<text x="160" y="34" text-anchor="middle">One common point</text>
+<text x="480" y="34" text-anchor="middle">One common line</text>
+<text x="780" y="34" text-anchor="middle">No common point</text>
+<polygon points="193,229 127,261 127,141 193,109" fill="#1b699c" fill-opacity="0.12" stroke="#1b699c" stroke-width="2"/>
+<polygon points="113,229 207,261 207,141 113,109" fill="#b65725" fill-opacity="0.12" stroke="#b65725" stroke-width="2"/>
+<polygon points="146,153 240,185 174,217 80,185" fill="#237b53" fill-opacity="0.12" stroke="#237b53" stroke-width="2"/>
+<circle cx="160" cy="185" r="4" fill="#172b4d"/><text x="169" y="176">P</text>
+<polygon points="513,229 447,261 447,141 513,109" fill="#1b699c" fill-opacity="0.12" stroke="#1b699c" stroke-width="2"/>
+<polygon points="433,229 527,261 527,141 433,109" fill="#b65725" fill-opacity="0.12" stroke="#b65725" stroke-width="2"/>
+<polygon points="466,213 494,277 494,157 466,93" fill="#237b53" fill-opacity="0.12" stroke="#237b53" stroke-width="2"/>
+<line x1="480" y1="245" x2="480" y2="125" stroke="#172b4d" stroke-width="3"/>
+<text x="490" y="113">L</text>
+<polygon points="780,245 714,277 714,157 780,125" fill="#1b699c" fill-opacity="0.12" stroke="#1b699c" stroke-width="2"/>
+<polygon points="780,245 874,277 874,157 780,125" fill="#b65725" fill-opacity="0.12" stroke="#b65725" stroke-width="2"/>
+<polygon points="874,277 714,277 714,157 874,157" fill="#237b53" fill-opacity="0.12" stroke="#237b53" stroke-width="2"/>
+<line x1="780" y1="245" x2="780" y2="125" stroke="#172b4d" stroke-width="3" stroke-dasharray="5 4"/>
+<line x1="874" y1="277" x2="874" y2="157" stroke="#172b4d" stroke-width="3"/>
+<line x1="714" y1="277" x2="714" y2="157" stroke="#172b4d" stroke-width="3"/>
+<text x="160" y="305" text-anchor="middle">All three contain P</text><text x="480" y="305" text-anchor="middle">All three contain L</text><text x="795" y="305" text-anchor="middle">Three parallel intersection lines</text></g></svg>

@@ -26,10 +26,15 @@ study_page: true
 9. **[双曲函数](/zh/alevel/a2-further-mathematics/hyperbolic-functions/)** — 运用指数定义、证明恒等式，并在微积分中使用反双曲函数。
 10. **[一阶微分方程](/zh/alevel/a2-further-mathematics/first-order-differential-equations/)** — 使用积分因子法，或将齐次通解与一个特解相加，再代入题目给定的条件。
 11. **[二阶微分方程](/zh/alevel/a2-further-mathematics/second-order-differential-equations/)** — 利用辅助方程求齐次通解，选取合适的特解，再代入初始条件或边界条件。
+12. **[向量积与共面](/zh/alevel/a2-further-mathematics/vector-products-and-coplanarity/)** — 连接垂直方向、面积、体积与共面条件。
+13. **[直线与平面](/zh/alevel/a2-further-mathematics/lines-and-planes/)** — 转换表征，求交点与交线，解释夹角、距离和反射。
+14. **[矩阵代数](/zh/alevel/a2-further-mathematics/matrix-algebra/)** — 运用三维变换、行列式、逆矩阵及不变几何对象。
+15. **[线性方程组与三个平面](/zh/alevel/a2-further-mathematics/linear-equations/)** — 讨论全部解，保留例外参数，并解释公共交集。
+16. **[特征值与特征向量](/zh/alevel/a2-further-mathematics/eigenvalues-and-eigenvectors/)** — 推导特征方程，处理重复实特征值，核验非零特征向量。
 
-可以按顺序学习，也可以直接选择当前需要的主题。尚未列出的课程正在准备中。
+可以按顺序学习，也可以选择当前需要的主题。课程合起来覆盖 FP2.1–FP2.14 全部十四个大纲主题；部分主题分成两节讲解。
 
-**中文讲解：**已上线的十一节课程均提供中英文版本。题干与公式保留英文原文，专业术语附英文原词，方便对应英文考试用语。下方链接打开中文课程；可用页面顶部的语言切换继续阅读同一小节的英文版。
+**中文讲解：**十六节课程均提供中英文版本。题干与公式保留英文原文，专业术语附英文原词，方便对应英文考试用语。下方链接打开中文课程；可用页面顶部的语言切换继续阅读同一小节的英文版。
 
 **开始前：**你应当掌握 AS 纯数学，以及 [AS 高等数学](/alevel/as-further-mathematics/)中的纯数学内容，包括复数、根与系数的关系、多项式除法和求导。
 
@@ -60,11 +65,13 @@ study_page: true
 | FP2.9 双曲函数 | 第 24 章，第 288–305 页 | <a href="/zh/alevel/a2-further-mathematics/hyperbolic-functions/" hreflang="zh-CN" lang="zh-CN">中文课程</a> |
 | FP2.10 一阶微分方程 | 第 25.1 与 25.3 节，第 306–307 与 318–319 页 | <a href="/zh/alevel/a2-further-mathematics/first-order-differential-equations/" hreflang="zh-CN" lang="zh-CN">中文课程</a> |
 | FP2.11 二阶微分方程 | 第 25.2 节，第 308–317 页；复习题在第 319 页 | <a href="/zh/alevel/a2-further-mathematics/second-order-differential-equations/" hreflang="zh-CN" lang="zh-CN">中文课程</a> |
-| FP2.12 向量与三维坐标几何 | 第 26 章，第 320–344 页 | 准备中 |
-| FP2.14 线性方程组的解 | 第 27 章，第 346–352 页 | 准备中 |
-| FP2.13 矩阵代数 | 第 28 章，第 354–368 页 | 准备中 |
+| FP2.12 向量与三维坐标几何 | 第 26 章，第 320–344 页 | <a href="/zh/alevel/a2-further-mathematics/vector-products-and-coplanarity/" hreflang="zh-CN" lang="zh-CN">向量积与共面</a> · <a href="/zh/alevel/a2-further-mathematics/lines-and-planes/" hreflang="zh-CN" lang="zh-CN">直线与平面</a> |
+| FP2.14 线性方程组的解 | 第 27 章，第 346–352 页 | <a href="/zh/alevel/a2-further-mathematics/linear-equations/" hreflang="zh-CN" lang="zh-CN">中文课程</a> |
+| FP2.13 矩阵代数 | 第 28 章，第 354–368 页 | <a href="/zh/alevel/a2-further-mathematics/matrix-algebra/" hreflang="zh-CN" lang="zh-CN">矩阵代数</a> · <a href="/zh/alevel/a2-further-mathematics/eigenvalues-and-eigenvectors/" hreflang="zh-CN" lang="zh-CN">特征值与特征向量</a> |
 {: .wide-table}
 
 </details>
+
+学习路线把矩阵代数放在线性方程组之前，先解释逆矩阵再运用它；这只是教学顺序，不改变大纲编号与教材章次。
 
 **学习其他课程？**[AS 高等数学](/alevel/as-further-mathematics/) · [A2 纯数学（MA03）](/zh/alevel/a2-mathematics/)。

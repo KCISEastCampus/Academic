@@ -21,6 +21,8 @@ Textbook: Chapter 18, Section 18.2, printed pp. 215–216; review and practice e
 
 **Before you start:** review [Partial Fractions](/alevel/a2-mathematics/partial-fractions/) and [Proof by Induction](/alevel/a2-further-mathematics/proof-by-induction/). You should be able to expand brackets and use summation notation.
 
+**Task status:** Unless an official question or teaching adaptation is explicitly identified, the worked examples and exercises are self-written teaching tasks with no official marks.
+
 ## Method
 
 **Learning goal:** choose a method for a finite sum, show how the terms cancel and give a formula with the correct lower and upper limits.
@@ -337,7 +339,7 @@ This is the formula for $n=k+1$. The formula is true for $n=1$. If it is true fo
 
 ### Question 5 — Original AQA practice
 
-**Source:** AQA Mathematics 6360, MFP2, June 2010, Question 2. **3 + 5 marks**. Textbook cross-reference: Chapter 18, practice examination question 6, printed p. 218. Question paper, AQA mark scheme.
+**Source:** AQA Mathematics 6360, MFP2, June 2010, Question 2. **3 + 5 marks**. Textbook cross-reference: Chapter 18, practice examination question 6, printed p. 218. [Question paper, Q2 (PDF p. 3)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202010%20QP%20-%20FP2%20AQA.PDF#page=3); [AQA mark scheme, Q2 (PDF p. 4)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202010%20MS%20-%20FP2%20AQA.PDF#page=4). Question and matching mark scheme read on 2026-10-22; these are AQA-authored documents hosted by PMT, with some question papers in condensed layout.
 
 **a** Express
 
@@ -381,6 +383,55 @@ The middle terms cancel because the positive denominators run from $1$ to $48$ a
 **Check:** the exact answer is a little less than $\frac34$, as the two remaining negative fractions are small and positive.
 
 **Mark-scheme comparison:** The partial fractions have coefficients 1/2 and −1/2. Show the cancellation, retain both end pairs, and simplify to 894/1225. Our working has been checked against the linked AQA mark scheme; these explanations are our own, not an official mark scheme.
+
+</details>
+
+## Diagnose and Retry {#diagnose-and-retry}
+
+Both tasks are self-written and have no official marks. Explain the error before opening feedback; then close every solution and attempt the new task independently. If you need a hint, return later for another independent attempt.
+
+**Diagnose:** For Example 2, a learner keeps only
+
+$$\frac12(1-\frac1{n+2})$$
+
+. Which uncancelled terms have been lost?
+
+<details markdown="1">
+<summary>Feedback</summary>
+
+The shift is two, so the missing terms are
+
+$$\frac12(\frac12-\frac1{n+1})$$
+
+. For a one-term sum check directly; do not rely on a cancellation sketch with overlapping ends.
+
+</details>
+
+**Independent retry:** A series has partial sums
+
+$$S_n=\frac{n}{n+1}$$
+
+ for integers $n\ge1$, and $S_0=0$. Recover its general term and verify the first term.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+An individual term is the change between successive partial sums.
+
+</details>
+
+<details markdown="1">
+<summary>Retry solution and check</summary>
+
+For $n\ge1$,
+
+$$u_n=S_n-S_{n-1}=\frac{n}{n+1}-\frac{n-1}{n}=\frac1{n(n+1)}$$
+
+. At $n=1$, this gives
+
+$$u_1=\frac12=S_1-S_0$$
+
+. Summing these differences recovers the specified partial sum.
 
 </details>
 

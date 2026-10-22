@@ -23,6 +23,8 @@ study_page: true
 
 **开始前：**复习 [AS 高等数学](/alevel/as-further-mathematics/#3-complex-numbers-fp13)中的复数。你应当掌握因式定理（factor theorem）、多项式除法、二次方程求根公式及求导。记住 $i^2=-1$。
 
+**题目身份：**除明确标出官方原题或教学改编的题目外，本课例题与练习均为自拟教学题，不分配官方分值。
+
 ## 方法 {#method}
 
 **学习目标：**运用根与系数的关系，建立具有指定根的方程，并在已知一个复数根时求出所有根。
@@ -226,7 +228,7 @@ Let $f(x)=x^3-3x^2+4x-5$.
 
 **1. Show that there is exactly one real root.**
 
-$$f'(x)=3x^2-6x+4=3(x-1)^2+1>0$$
+$$f^{\prime}(x)=3x^2-6x+4=3(x-1)^2+1>0$$
 
 对每一个实数 $x$ 都成立。因此该三次函数严格递增；两端的函数值分别趋于相反方向的无穷，所以图像恰好与 $x$ 轴相交一次。
 
@@ -400,7 +402,7 @@ $\alpha$ 为负，所以实部范围为正。在共轭根相加时，虚部抵�
 
 ### 第 7 题：AQA 原题练习 {#question-7--original-aqa-practice}
 
-**来源：**AQA Mathematics 6360，MFP2，January 2006，原卷第 2 题。原题分值：**5 + 5 marks**。教材索引：Chapter 17, practice examination question 4, printed p. 206。原卷、AQA 评分材料。
+**来源：**AQA Mathematics 6360，MFP2，January 2006，原卷第 2 题。原题分值：**5 + 5 marks**。教材索引：Chapter 17, practice examination question 4, printed p. 206。[Question paper, Q2 (PDF p. 2)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/January%202006%20QP%20-%20FP2%20AQA.PDF#page=2); [AQA mark scheme, Q2 (PDF p. 3)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/January%202006%20MS%20-%20FP2%20AQA.PDF#page=3). 本轮已读取题干及配套评分材料（2026-10-22）；链接为 PMT 托管的 AQA 编写材料，部分原卷为压缩排版版本。
 
 The cubic equation
 
@@ -445,6 +447,35 @@ $$\boxed{p=-4,\quad q=-2,\quad r=20.}$$
 这里给出的是本课编写的解答，并非官方评分细则。解答中应展示系数关系、平方恒等式、使用共轭根的理由及根的乘积计算。
 
 **评分材料核对：**利用根的和、平方和恒等式及共轭根，得到 p = −4、q = −2、r = 20。本课解答已对照上述 AQA 评分材料检查；这些解释由本课编写，并非官方评分细则。
+
+</details>
+
+## 纠错与独立重试 {#diagnose-and-retry}
+
+以下两项均为自拟教学任务，无官方分值。先写下错误原因，再看反馈；随后关闭所有解答，独立完成新任务。需要提示的任务应在稍后重新独立尝试。
+
+**Diagnose:** A learner says that a root $1+i$ of $z^2-(2+i)z+1+i=0$ forces $1-i$ to be another root. Identify the missing condition and correct the conclusion.
+
+<details markdown="1">
+<summary>反馈</summary>
+
+系数并非全为实数，因此不能使用共轭根定理。由根的和得 $(2+i)-(1+i)=1$；原多项式确实为 $(z-1)(z-1-i)$。
+
+</details>
+
+**Independent retry:** A real monic cubic has one root $2$, sum of roots $6$ and product of roots $10$. Find the other roots and the cubic, without assuming that the other roots are real.
+
+<details markdown="1">
+<summary>提示</summary>
+
+先求其余两根的和与积，再建立它们满足的二次方程。
+
+</details>
+
+<details markdown="1">
+<summary>重试解答与检验</summary>
+
+其余两根的和为 $4$、积为 $5$，所以满足 $z^2-4z+5=0$。它们为 $2\pm i$；三次方程为 $z^3-6z^2+13z-10=0$，由 $(z-2)(z^2-4z+5)$ 展开得到。再检查三个系数关系。
 
 </details>
 

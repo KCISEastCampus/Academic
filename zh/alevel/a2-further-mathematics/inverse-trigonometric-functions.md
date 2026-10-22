@@ -23,6 +23,8 @@ study_page: true
 
 **开始前：**复习[三角函数](/zh/alevel/a2-mathematics/trigonometric-functions-and-formulae/)、[求导](/zh/alevel/a2-mathematics/differentiation/)和[积分](/zh/alevel/a2-mathematics/integration/)。你应掌握链式法则（chain rule）、配方（completing the square）、换元积分（substitution）与分部积分（integration by parts）。若被积函数在端点处无定义，复习[反常积分](/zh/alevel/a2-further-mathematics/series-and-limits/#improper-integrals)。全课使用**弧度（radians）**。
 
+**题目身份：**除明确标出官方原题或教学改编的题目外，本课例题与练习均为自拟教学题，不分配官方分值。
+
 ## 方法 {#method}
 
 **学习目标：**说明定义域（domain）与值域（range），绘制反三角函数图像，求复合函数（composite function）的导数，并用反正弦（inverse sine）或反正切（inverse tangent）求积分的精确值。
@@ -139,11 +141,11 @@ $$\begin{aligned}
 
 $$\boxed{\begin{aligned}
 \frac{\mathrm d}{\mathrm dx}\sin^{-1}u
-&=\frac{u'}{\sqrt{1-u^2}},\\
+&=\frac{u^{\prime}}{\sqrt{1-u^2}},\\
 \frac{\mathrm d}{\mathrm dx}\cos^{-1}u
-&=-\frac{u'}{\sqrt{1-u^2}},\\
+&=-\frac{u^{\prime}}{\sqrt{1-u^2}},\\
 \frac{\mathrm d}{\mathrm dx}\tan^{-1}u
-&=\frac{u'}{1+u^2}.
+&=\frac{u^{\prime}}{1+u^2}.
 \end{aligned}}$$
 
 前两个公式适用于 $-1<u<1$ 的范围。第三个公式适用于 $u$ 有定义且可导的所有位置。
@@ -183,7 +185,7 @@ $$\begin{aligned}
 
 对于 $z$，令 $u=\frac{x}{1+x^2}$。由商法则（quotient rule）得
 
-$$u'=\frac{1+x^2-2x^2}{(1+x^2)^2}
+$$u^{\prime}=\frac{1+x^2-2x^2}{(1+x^2)^2}
 =\frac{1-x^2}{(1+x^2)^2}.$$
 
 因此
@@ -551,7 +553,7 @@ $$\tan^{-1}\left(\frac{1+x}{1-x}\right)
 
 ### 第 6 题：AQA——配方并求积分的精确值 {#question-6--aqa-complete-the-square-and-find-an-exact-integral}
 
-**AQA 原题。**AQA MFP2，2012 年 1 月；教材第 22 章，模拟考试练习第 1 题，印刷页码 281。同一题亦见于 OxfordAQA FM03 2018 年样卷第 9 题。**8 marks: 2 + 6.**
+**AQA 原题。**AQA Mathematics 6360，MFP2，2012 年 1 月，原卷第 6 题；教材第 22 章，模拟考试练习第 1 题，印刷页码 281。同一题亦见于 OxfordAQA FM03 2018 年样卷第 9 题。**8 marks: 2 + 6.** [Question paper, Q6 (PDF p. 3)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/January%202012%20QP%20-%20FP2%20AQA.pdf#page=3); [AQA mark scheme, Q6 (PDF p. 7)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/January%202012%20MS%20-%20FP2%20AQA.PDF#page=7). 本轮已核读题干及配套 MS（2026-10-22）；PMT 托管 AQA 编写材料，部分 QP 为压缩排版。
 
 **(a)** Express $7+4x-2x^2$ in the form $a-b(x-c)^2$, where $a$, $b$ and $c$ are integers. **(2 marks)**
 
@@ -589,13 +591,13 @@ I
 
 **检验：**根号内的式子在给定区间上始终为正。答案也可写作 $\frac{\pi\sqrt2}{8}$。
 
-OxfordAQA 官方评分细则第 9 题检查配方、换元、系数、反正弦及上下限的使用。这是本课编写的解答。
+[OxfordAQA Specimen 2018 Q9, QP PDF pp. 15–16](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-specimen-paper-2019-v3.pdf#page=15); [MS Q9, PDF p. 12](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-mark-scheme-2016-v1.pdf#page=12). OxfordAQA 官方评分细则第 9 题检查配方、换元、系数、反正弦及上下限的使用。这是本课编写的解答。
 
 </details>
 
 ### 第 7 题：AQA——对反正弦进行分部积分 {#question-7--aqa-integrate-inverse-sine-by-parts}
 
-**AQA 原题。**AQA MFP2，2011 年 1 月，第 5 题；教材第 22 章，模拟考试练习第 3 题，印刷页码 281。**8 marks: 2 + 6.**
+**AQA 原题。**AQA MFP2，2011 年 1 月，第 5 题；教材第 22 章，模拟考试练习第 3 题，印刷页码 281。**8 marks: 2 + 6.** [Question paper, Q5 (PDF p. 3)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/January%202011%20QP%20-%20FP2%20AQA.pdf#page=3); [AQA mark scheme, Q5 (PDF p. 5)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/January%202011%20MS%20-%20FP2%20AQA.PDF#page=5). 本轮已核读题干及配套 MS（2026-10-22）；PMT 托管 AQA 编写材料，部分 QP 为压缩排版。
 
 **(a)** Given that $u=\sqrt{1-x^2}$, find $\frac{\mathrm du}{\mathrm dx}$. **(2 marks)**
 
@@ -654,7 +656,7 @@ I
 
 ### 第 8 题：AQA——利用导数求积分 {#question-8--aqa-use-a-derivative-to-find-an-integral}
 
-**AQA 原题。**AQA MFP2，2007 年 6 月，第 4 题；教材第 22 章，模拟考试练习第 4 题，印刷页码 281。**7 marks: 2 + 5.** 原卷第 4 题。
+**AQA 原题。**AQA MFP2，2007 年 6 月，第 4 题；教材第 22 章，模拟考试练习第 4 题，印刷页码 281。**7 marks: 2 + 5.** 原卷第 4 题。 [Question paper, Q4 (PDF p. 3)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202007%20QP%20-%20FP2%20AQA.PDF#page=3); [AQA mark scheme, Q4 (PDF p. 5)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202007%20MS%20-%20FP2%20AQA.PDF#page=5). 本轮已核读题干及配套 MS（2026-10-22）；PMT 托管 AQA 编写材料，部分 QP 为压缩排版。
 
 **(a)** Differentiate $x\tan^{-1}x$ with respect to $x$. **(2 marks)**
 
@@ -695,6 +697,35 @@ $$\begin{aligned}
 **检验：**结果为正且小于 $\frac\pi4$，因为在这个区间内有 $0\le\tan^{-1}x\le\frac\pi4$。
 
 这是本课编写的解答，已对照 AQA 评分细则第 4 题核验。
+
+</details>
+
+## 纠错与独立重试 {#diagnose-and-retry}
+
+以下两项均为自拟教学任务，无官方分值。先写下错误原因，再看反馈；随后关闭所有解答，独立完成新任务。需要提示的任务应在稍后重新独立尝试。
+
+**Diagnose:** A learner writes $\sin^{-1}(\sin(3\pi/4))=3\pi/4$. Correct the value and identify the failed condition.
+
+<details markdown="1">
+<summary>反馈</summary>
+
+所给角度不在 $[-\pi/2,\pi/2]$ 内。主值为 $\pi/4$，它具有相同正弦值，并且属于规定区间。
+
+</details>
+
+**Independent retry:** A function has $y^{\prime}=3/(1+9x^2)$ for every real $x$, and $y(0)=\pi/6$. Find the function. Must its values all lie in the principal range of inverse tangent?
+
+<details markdown="1">
+<summary>提示</summary>
+
+识别带缩放的反正切导数，再保留加法常数。
+
+</details>
+
+<details markdown="1">
+<summary>重试解答与检验</summary>
+
+积分并代入条件得 $y=\tan^{-1}(3x)+\pi/6$。值域为 $(-\pi/3,2\pi/3)$，无须限制在反正切的主值范围，因为这里还作了竖直平移。求导可恢复给定导数。
 
 </details>
 

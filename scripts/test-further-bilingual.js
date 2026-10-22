@@ -8,7 +8,10 @@ const root = path.join(__dirname, '..');
 const read = file => fs.readFileSync(path.join(root, file), 'utf8').replace(/\r\n/g, '\n');
 const course = 'alevel/a2-further-mathematics';
 const slugs = ['roots-and-polynomials', 'proof-by-induction', 'finite-series',
-  'series-and-limits', 'de-moivres-theorem', 'polar-coordinates', 'inverse-trigonometric-functions'];
+  'series-and-limits', 'de-moivres-theorem', 'polar-coordinates', 'inverse-trigonometric-functions',
+  'arc-length-and-surface-area', 'hyperbolic-functions', 'first-order-differential-equations',
+  'second-order-differential-equations', 'vector-products-and-coplanarity', 'lines-and-planes',
+  'matrix-algebra', 'linear-equations', 'eigenvalues-and-eigenvectors'];
 const math = source => source.match(/\$\$[\s\S]*?\$\$|\$[^$\r\n]+\$/g) || [];
 const body = html => html.split('id="content-container"')[1].split('<div id="toc"')[0];
 const ids = html => [...html.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
@@ -61,13 +64,15 @@ for (const slug of slugs) {
   for (const [, href] of body(zhHtml).matchAll(/href="([/#][^"]*)"/g)) {
     const [url, fragment] = href.split('#');
     const target = url ? built(url) : zhHtml;
-    if (fragment) assert(ids(target).includes(decodeURI(fragment)), `${slug}: broken anchor ${href}`);
+    if (fragment && !/\.pdf$/i.test(url))
+      assert(ids(target).includes(decodeURI(fragment)), `${slug}: broken anchor ${href}`);
     if (url.startsWith(`/${course}/`)) assert.fail(`${slug}: Chinese course link falls back to English: ${href}`);
   }
   assert(index.includes(`href="${zhUrl}" hreflang="zh-CN"`), `${slug}: Chinese syllabus link`);
 }
 assert(!index.includes('\u82f1\u6587\u8bfe\u7a0b'), 'No obsolete English-only syllabus labels');
-assert.equal((index.match(/hreflang="zh-CN" lang="zh-CN">/g) || []).length, 11, 'All eleven available syllabus rows link to Chinese');
+assert.equal((index.match(/hreflang="zh-CN" lang="zh-CN">/g) || []).length, slugs.length,
+  'Every lesson in the syllabus links to Chinese');
 assert(body(built(`/zh/${course}/arc-length-and-surface-area/`)).includes(`href="/zh/${course}/inverse-trigonometric-functions/"`), 'Adjacent Chinese lesson returns to translated predecessor');
 
 // Exercise the existing navigation script: switching languages preserves the section.
@@ -91,5 +96,5 @@ init({ loader: { load: ['input/tex', 'output/svg'] }, tex: { packages: ['base', 
       const svg = mj.startup.adaptor.outerHTML(mj.tex2svg(formula.slice(width, -width), { display }));
       assert(!svg.includes('data-mml-node="merror"') && !svg.includes('data-mjx-error'), `Invalid TeX: ${formula}`);
     }
-    console.log(`Further bilingual passed: 7 paired lessons, English prompts/formulas, anchors, disclosures, links, syllabus, language persistence and ${formulas.size} unique TeX formulas.`);
+    console.log(`Further bilingual passed: ${slugs.length} paired lessons, English prompts/formulas, anchors, disclosures, links, syllabus, language persistence and ${formulas.size} unique TeX formulas.`);
   }).catch(error => { console.error(error); process.exitCode = 1; });

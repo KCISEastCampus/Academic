@@ -69,7 +69,7 @@ for (const [prefix, source, language, target] of [
   const html = read(`_site/${prefix}${topic}/index.html`);
   assert(html.includes(`<html lang="${language}">`));
   assert(html.includes(`id="languageSwitch" href="${target}"`));
-  assert.equal((html.match(/<details\b/g) || []).length, 24);
+  assert.equal((html.match(/<details\b/g) || []).length, 27);
   for (const id of ids(source)) assert(html.includes(`id="${id}"`), `Missing anchor ${id}`);
   for (const match of source.matchAll(/\]\((\/[^)#]+)(?:#[^)]*)?\)/g)) {
     const url = match[1];

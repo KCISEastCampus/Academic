@@ -21,6 +21,8 @@ Textbook: Chapter 19, Sections 19.1–19.4, printed pp. 220–230; review and pr
 
 **Before you start:** review [Finite Series](/alevel/a2-further-mathematics/finite-series/), [Binomial Series](/alevel/a2-mathematics/binomial-series/) and [Integration](/alevel/a2-mathematics/integration/). You should know factorials, geometric series, differentiation and integration by parts. Use radians in trigonometric series.
 
+**Task status:** Unless an official question or teaching adaptation is explicitly identified, the worked examples and exercises are self-written teaching tasks with no official marks.
+
 ## Method
 
 **Learning goal:** find and use a Maclaurin expansion, state its range of validity, find a limit after cancellation and show whether an improper integral has a finite value.
@@ -105,7 +107,7 @@ A **power series** is a series in ascending non-negative integer powers of $x$. 
 For functions that can be represented this way, Maclaurin's theorem gives
 
 $$\begin{aligned}
-f(x)={}&f(0)+xf'(0)+\frac{x^2}{2!}f^{(2)}(0)\\
+f(x)={}&f(0)+xf^{\prime}(0)+\frac{x^2}{2!}f^{(2)}(0)\\
 &+\frac{x^3}{3!}f^{(3)}(0)+\cdots.
 \end{aligned}$$
 
@@ -120,7 +122,7 @@ Here $f^{(r)}(0)$ is the $r$th derivative evaluated at zero, so the coefficient 
 The derivative values are
 
 $$\begin{aligned}
-f(0)&=1,& f'(0)&=2,\\
+f(0)&=1,& f^{\prime}(0)&=2,\\
 f^{(2)}(0)&=4,& f^{(3)}(0)&=8.
 \end{aligned}$$
 
@@ -419,7 +421,7 @@ $$\boxed{\int_0^\infty xe^{-2x}\,\mathrm dx=\frac14.}$$
 
 State the range for expansions. For limits, show the first terms that do not cancel. For improper integrals, show the limiting process.
 
-Questions 1–6 are self-written exercises. Question 7 is an original AQA question reproduced in the supplied textbook. Question 8 is textbook-derived teaching practice; its original exam source and official marks have not been verified.
+Questions 1–6 are self-written exercises. Question 7 is an original AQA question reproduced in the supplied textbook. Question 8 is textbook-derived teaching practice traced to the original exam below; no official marks are assigned to the adaptation.
 
 ### Question 1 — A range of convergence
 
@@ -631,7 +633,7 @@ Since $Re^{-3R}\to0$ and $e^{-3R}\to0$, the improper integral converges to $\box
 
 ### Question 7 — Original AQA series practice
 
-**Source:** AQA Mathematics 6360, MFP3, January 2013, Question 2. **1 + 4 marks**. Textbook cross-reference: Chapter 19, practice examination question 2, printed p. 231. Question paper, AQA mark scheme.
+**Source:** AQA Mathematics 6360, MFP3, January 2013, Question 2. **1 + 4 marks**. Textbook cross-reference: Chapter 19, practice examination question 2, printed p. 231. [Question paper, Q2 (PDF p. 2)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/January%202013%20QP%20-%20FP3%20AQA.pdf#page=2); [AQA mark scheme, Q2 (PDF p. 4)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/January%202013%20MS%20-%20FP3%20AQA.PDF#page=4). Question and matching mark scheme read on 2026-10-22; these are AQA-authored documents hosted by PMT, with some question papers in condensed layout.
 
 **a** Write down the expansion of $e^{3x}$ in ascending powers of $x$ up to and including the term in $x^2$. **(1 mark)**
 
@@ -673,7 +675,7 @@ The required **term** is $\boxed{3x^2}$.
 
 ### Question 8 — Textbook-derived integral practice
 
-**Source:** teaching practice adapted from the supplied textbook, Chapter 19, practice examination question 5, printed p. 232. Its original exam source and official marks have not been verified.
+**Source:** teaching practice adapted from the supplied textbook, Chapter 19, practice examination question 5, printed p. 232. The original is AQA Mathematics 6360, MFP3, June 2011, Question 3. [Original QP, Q3 (PDF p. 2)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202011%20QP%20-%20FP3%20AQA.pdf#page=2); [matching AQA MS, Q3 (PDF p. 6)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202011%20MS%20-%20FP3%20AQA.PDF#page=6). Both were read on 2026-10-22; these AQA-authored documents are hosted by PMT. This teaching adaptation carries no new official mark allocation.
 
 **a** Find $\int x^2\ln x\,\mathrm dx$.
 
@@ -716,7 +718,48 @@ $$\boxed{\int_0^e x^2\ln x\,\mathrm dx=\frac{2e^3}{9}.}$$
 
 **Check:** differentiating the answer in part a gives $x^2\ln x$; the extra $\frac13x^2$ terms cancel.
 
-This is a teaching solution; no official mark scheme has been verified for this question.
+This teaching solution was checked against the original AQA Q3 mark scheme: integration by parts, the undefined endpoint, an explicit lower-bound limit and its vanishing logarithmic term.
+
+</details>
+
+## Diagnose and Retry {#diagnose-and-retry}
+
+Both tasks are self-written and have no official marks. Explain the error before opening feedback; then close every solution and attempt the new task independently. If you need a hint, return later for another independent attempt.
+
+**Diagnose:** A learner truncates $e^{2x}$ after $1+2x$ and concludes that
+
+$$\lim_{x\to0}(e^{2x}-1-2x)/x^2=0$$
+
+. Explain why that truncation cannot decide the limit.
+
+<details markdown="1">
+<summary>Feedback</summary>
+
+The retained terms all cancel. The first surviving numerator term is $2x^2$, so the limit is $2$. A discarded term matters when division brings it to constant order.
+
+</details>
+
+**Independent retry:** Find the real constant $a$ for which
+
+$$\lim_{x\to0}(e^{ax}-1-2x)/x^2$$
+
+ is finite, and evaluate that limit.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Inspect the linear coefficient before calculating the quadratic coefficient.
+
+</details>
+
+<details markdown="1">
+<summary>Retry solution and check</summary>
+
+The numerator is
+
+$$(a-2)x+\frac{a^2}{2}x^2+\cdots$$
+
+. A finite two-sided limit requires $a=2$, eliminating the term proportional to $1/x$ after division. The limit is then $a^2/2=2$.
 
 </details>
 
@@ -738,6 +781,6 @@ This is a teaching solution; no official mark scheme has been verified for this 
 
 **You should be able to:** use all five standard expansions, state the range for a related function, find a limit after cancellation and evaluate or reject an improper integral using a limiting process.
 
-The lesson follows FP2.6 of the [OxfordAQA Further Mathematics 9665 specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf). Worked examples are teaching material. Question 7 retains the AQA wording and marks from the supplied textbook. Question 8 is textbook-derived teaching practice with an unverified original exam source and no official marks assigned here.
+The lesson follows FP2.6 of the [OxfordAQA Further Mathematics 9665 specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf). Worked examples are teaching material. Question 7 retains the AQA wording and marks from the supplied textbook. Question 8 is textbook-derived teaching practice traced to AQA MFP3 June 2011 Q3 and checked against its matching MS; no official marks are assigned to the adaptation.
 
 **Learning path:** [Previous: Finite Series](/alevel/a2-further-mathematics/finite-series/) · [Next: De Moivre's Theorem](/alevel/a2-further-mathematics/de-moivres-theorem/) · [Back to the course](/alevel/a2-further-mathematics/).

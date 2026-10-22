@@ -21,6 +21,8 @@ Textbook: Chapter 20, Sections 20.1–20.3, printed pp. 234–252; review and pr
 
 **Before you start:** review [complex numbers](/alevel/as-further-mathematics/#3-complex-numbers-fp13), [proof by induction](/alevel/a2-further-mathematics/proof-by-induction/) and [integration](/alevel/a2-mathematics/integration/). You should know modulus, argument, complex conjugates, the binomial theorem and basic trigonometric identities. Use **radians** throughout this lesson.
 
+**Task status:** Unless an official question or teaching adaptation is explicitly identified, the worked examples and exercises are self-written teaching tasks with no official marks.
+
 ## Method
 
 **Learning goal:** use De Moivre's theorem for integer powers, find every complex root, explain their positions on an Argand diagram and use complex numbers to obtain trigonometric results.
@@ -637,7 +639,7 @@ $$\boxed{\begin{aligned}
 
 ### Question 7 — AQA: the smallest positive angle
 
-**Source:** AQA Mathematics 6360, MFP2, June 2007, Question 3. **5 marks**. Textbook cross-reference: Chapter 20, practice examination question 2, printed p. 253. Question paper, AQA mark scheme.
+**Source:** AQA Mathematics 6360, MFP2, June 2007, Question 3. **5 marks**. Textbook cross-reference: Chapter 20, practice examination question 2, printed p. 253. [Question paper, Q3 (PDF p. 2)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202007%20QP%20-%20FP2%20AQA.PDF#page=2); [AQA mark scheme, Q3 (PDF p. 4)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202007%20MS%20-%20FP2%20AQA.PDF#page=4). Question and matching mark scheme read on 2026-10-22; these are AQA-authored documents hosted by PMT, with some question papers in condensed layout.
 
 Use De Moivre's theorem to find the smallest positive angle $\theta$ for which
 
@@ -678,7 +680,7 @@ $$\boxed{\theta=\frac\pi{10}.}$$
 
 ### Question 8 — AQA: a fifth-angle identity and a product
 
-**Source:** AQA Mathematics 6360, MFP2, June 2011, Question 7. **5 + 3 + 3 + 5 marks**. Textbook cross-reference: Chapter 20, practice examination question 3, printed p. 253. Question paper, AQA mark scheme.
+**Source:** AQA Mathematics 6360, MFP2, June 2011, Question 7. **5 + 3 + 3 + 5 marks**. Textbook cross-reference: Chapter 20, practice examination question 3, printed p. 253. [Question paper, Q7 (PDF p. 4)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202011%20QP%20-%20FP2%20AQA.pdf#page=4); [AQA mark scheme, Q7 (PDF p. 7)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202011%20MS%20-%20FP2%20AQA.PDF#page=7). Question and matching mark scheme read on 2026-10-22; these are AQA-authored documents hosted by PMT, with some question papers in condensed layout.
 
 **a i** Use De Moivre's theorem to show that
 
@@ -767,6 +769,35 @@ $$\boxed{\tan\frac\pi5\tan\frac{2\pi}{5}=\sqrt5.}$$
 **Check:** the quadratic in $t^2$ has roots $5\pm2\sqrt5$, both positive, with product $5$. The sign of $ab$ still needs the first-quadrant check.
 
 **Mark-scheme comparison:** Expand the fifth power and compare parts; divide by cos⁵θ where it is nonzero. Identify all four tangent roots, then justify the positive product √5. Our working has been checked against the linked AQA mark scheme; these explanations are our own, not an official mark scheme.
+
+</details>
+
+## Diagnose and Retry {#diagnose-and-retry}
+
+Both tasks are self-written and have no official marks. Explain the error before opening feedback; then close every solution and attempt the new task independently. If you need a hint, return later for another independent attempt.
+
+**Diagnose:** A learner solves $z^4=1$ by dividing the argument zero by four and gives only $z=1$. Repair the argument step.
+
+<details markdown="1">
+<summary>Feedback</summary>
+
+Use all arguments $0+2k\pi$ before division. The four roots are $e^{ik\pi/2}$ for $k=0,1,2,3$; later values repeat these roots.
+
+</details>
+
+**Independent retry:** The four roots of a monic quartic form a square centred at $1$ with radius $2$. One root is $3$. Find all the roots and construct the quartic.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Work with displacements from the centre, then use their common fourth power.
+
+</details>
+
+<details markdown="1">
+<summary>Retry solution and check</summary>
+
+The displacements are $2,2i,-2,-2i$. Thus the roots are $3,1+2i,-1,1-2i$, and $(z-1)^4=16$. Expanding gives $z^4-4z^3+6z^2-4z-15=0$. Subtracting the centre and taking fourth powers checks every root.
 
 </details>
 

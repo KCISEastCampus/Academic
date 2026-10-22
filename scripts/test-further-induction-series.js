@@ -90,7 +90,7 @@ for (const [slug, examples, questions] of [['proof-by-induction', 6, 6], ['finit
   assert(!/(?<!\$)\$(?!\$)[^\n$]*\\begin\{pmatrix\}/.test(source), 'Keep matrix row breaks in display math');
   assert.equal((source.match(/### Example /g) || []).length, examples);
   assert.equal((source.match(/### Question /g) || []).length, questions);
-  assert.equal((html.match(/<details\b/g) || []).length, questions * 2);
+  assert.equal((html.match(/<details\b/g) || []).length, questions * 2 + 3);
   assert(!html.includes('<p>$$'), 'Display math must reach MathJax intact');
   assert(html.includes('A2 Further Pure Mathematics</a>'), 'Full course breadcrumb');
 }

@@ -23,6 +23,10 @@ study_page: true
 
 **开始前：**请先熟悉指数与对数运算律（exponential and logarithmic laws）、链式法则（chain rule）、隐函数求导（implicit differentiation）和换元（substitution）。留意每个函数及其导数的定义域。
 
+**学习目标：**由指数定义证明恒等式，解释六个核心图像的特征，筛选方程中的正指数根，并在正确分支上推导和使用反函数、导数与积分。
+
+**题目身份：**除明确标出官方原题或教学改编的题目外，本课例题与练习均为自拟教学题，不分配官方分值。
+
 ## 定义 {#definitions}
 
 双曲正弦（**hyperbolic sine**）、双曲余弦（**hyperbolic cosine**）和双曲正切（**hyperbolic tangent**）由指数函数定义：
@@ -196,15 +200,15 @@ $$\begin{aligned}
 
 $\operatorname{coth}$ 和 $\operatorname{cosech}$ 的求导公式要求 $x\ne0$。
 
-若内层函数 $u=u(x)$ 可导，再乘上 $u'=\frac{\mathrm du}{\mathrm dx}$：
+若内层函数 $u=u(x)$ 可导，再乘上 $u^{\prime}=\frac{\mathrm du}{\mathrm dx}$：
 
 $$\boxed{\begin{aligned}
-\frac{\mathrm d}{\mathrm dx}\sinh u&=u'\cosh u,&
-\frac{\mathrm d}{\mathrm dx}\cosh u&=u'\sinh u,\\
-\frac{\mathrm d}{\mathrm dx}\tanh u&=u'\operatorname{sech}^2u,&
-\frac{\mathrm d}{\mathrm dx}\operatorname{sech}u&=-u'\operatorname{sech}u\tanh u,\\
-\frac{\mathrm d}{\mathrm dx}\operatorname{coth}u&=-u'\operatorname{cosech}^2u,&
-\frac{\mathrm d}{\mathrm dx}\operatorname{cosech}u&=-u'\operatorname{cosech}u\operatorname{coth}u.
+\frac{\mathrm d}{\mathrm dx}\sinh u&=u^{\prime}\cosh u,&
+\frac{\mathrm d}{\mathrm dx}\cosh u&=u^{\prime}\sinh u,\\
+\frac{\mathrm d}{\mathrm dx}\tanh u&=u^{\prime}\operatorname{sech}^2u,&
+\frac{\mathrm d}{\mathrm dx}\operatorname{sech}u&=-u^{\prime}\operatorname{sech}u\tanh u,\\
+\frac{\mathrm d}{\mathrm dx}\operatorname{coth}u&=-u^{\prime}\operatorname{cosech}^2u,&
+\frac{\mathrm d}{\mathrm dx}\operatorname{cosech}u&=-u^{\prime}\operatorname{cosech}u\operatorname{coth}u.
 \end{aligned}}$$
 
 倒数型函数仍须满足相同的限制：$\operatorname{coth}u$ 和 $\operatorname{cosech}u$ 要求 $u\ne0$。
@@ -232,9 +236,9 @@ $$1=\operatorname{sech}^2y\frac{\mathrm dy}{\mathrm dx}=(1-x^2)\frac{\mathrm dy}
 若内层函数 $u=u(x)$ 可导，应用链式法则得到
 
 $$\boxed{\begin{aligned}
-\frac{\mathrm d}{\mathrm dx}\sinh^{-1}u&=\frac{u'}{\sqrt{1+u^2}},\\
-\frac{\mathrm d}{\mathrm dx}\cosh^{-1}u&=\frac{u'}{\sqrt{u^2-1}},\\
-\frac{\mathrm d}{\mathrm dx}\tanh^{-1}u&=\frac{u'}{1-u^2}.
+\frac{\mathrm d}{\mathrm dx}\sinh^{-1}u&=\frac{u^{\prime}}{\sqrt{1+u^2}},\\
+\frac{\mathrm d}{\mathrm dx}\cosh^{-1}u&=\frac{u^{\prime}}{\sqrt{u^2-1}},\\
+\frac{\mathrm d}{\mathrm dx}\tanh^{-1}u&=\frac{u^{\prime}}{1-u^2}.
 \end{aligned}}$$
 
 第一条公式适用于 $u$ 为实数且可导的所有位置；第二条要求 $u>1$，此时导数才有限；第三条要求 $-1<u<1$。
@@ -266,7 +270,7 @@ $$\boxed{\begin{aligned}
 
 $$\int\frac{\mathrm dx}{a^2-x^2}=\frac1{2a}\ln\left\lvert \frac{a+x}{a-x}\right\rvert +C.$$
 
-换元积分法（integration by substitution）中，令 $u=g(x)$ 后，要把每个 $x$ 和 $\mathrm dx$ 都换成新变量，并计入 $\mathrm du=g'(x)\,\mathrm dx$ 带来的因子。不定积分（indefinite integral）要保留积分常数（constant of integration）$+C$。定积分应随换元改变积分限，或者先代回原变量再使用原积分限。
+换元积分法（integration by substitution）中，令 $u=g(x)$ 后，要把每个 $x$ 和 $\mathrm dx$ 都换成新变量，并计入 $\mathrm du=g^{\prime}(x)\,\mathrm dx$ 带来的因子。不定积分（indefinite integral）要保留积分常数（constant of integration）$+C$。定积分应随换元改变积分限，或者先代回原变量再使用原积分限。
 
 ## 例题 {#worked-examples}
 
@@ -626,6 +630,35 @@ $$\begin{aligned}
 
 </details>
 
+## 纠错与独立重试 {#diagnose-and-retry}
+
+以下两项均为自拟教学任务，无官方分值。先写下错误原因，再看反馈；随后关闭所有解答，独立完成新任务。需要提示的任务应在稍后重新独立尝试。
+
+**Diagnose:** A learner inserts an absolute value into the logarithm for $\cosh^{-1}(-2)$ and claims this creates a real inverse value. Explain why this cannot repair the problem.
+
+<details markdown="1">
+<summary>反馈</summary>
+
+对所有实数输入 $y$，都有 $\cosh y\ge1$，因此不存在实数 $y$ 满足 $\cosh y=-2$。修改对数写法不能改变反函数的定义域。
+
+</details>
+
+**Independent retry:** Let $y=\sinh^{-1}(kx)$, where $k>0$. Its gradient at the origin is $2$. Determine $k$ and find the value of $x$ for which $y=\ln3$. Sketch the resulting function, marking the origin and the point you found; explain how its slope changes.
+
+<details markdown="1">
+<summary>提示</summary>
+
+先用链式法则解释斜率，再回到反函数对应的直接函数定义。
+
+</details>
+
+<details markdown="1">
+<summary>重试解答与检验</summary>
+
+导数为 $k/\sqrt{1+k^2x^2}$，所以零处斜率给出 $k=2$。函数值条件化为 $2x=\sinh(\ln3)=(3-1/3)/2=4/3$，得到 $x=2/3$。代回可得 $\sinh^{-1}(4/3)=\ln3$。图像为奇函数且递增，标出 $(0,0)$ 和 $(2/3,\ln3)$；由导数可见，斜率在原点为 $2$，并随着 $\lvert x\rvert$ 增大而减小，但图像没有水平渐近线。
+
+</details>
+
 ## 快速参考 {#quick-reference}
 
 | 内容 | 结果 | 注意条件 |
@@ -636,8 +669,8 @@ $$\begin{aligned}
 | 加法公式 | $\sinh(x+y)=\sinh x\cosh y+\cosh x\sinh y$ | 可由指数定义证明 |
 | 线性组合方程 | $a\sinh x+b\cosh x=c$ 可化为 $(a+b)t^2-2ct+(b-a)=0$ | $t=e^x>0$；舍去非正根 |
 | 反函数对数公式 | $\sinh^{-1}x=\ln(x+\sqrt{x^2+1})$; $\cosh^{-1}x=\ln(x+\sqrt{x^2-1})$; $\tanh^{-1}x=\frac12\ln\frac{1+x}{1-x}$ | 定义域： $\mathbb R$, $x\ge1$, $-1<x<1$ |
-| 导数 | $\sinh' x=\cosh x$, $\cosh' x=\sinh x$, $\tanh' x=\operatorname{sech}^2x$ | 链式法则需乘以内层导数 $u'$ |
-| 反函数的导数 | $(\sinh^{-1}x)'=\frac1{\sqrt{1+x^2}}$, $(\cosh^{-1}x)'=\frac1{\sqrt{x^2-1}}$, $(\tanh^{-1}x)'=\frac1{1-x^2}$ | 注意反函数的定义域；$\cosh^{-1}$ 的导数要求 $x>1$ |
+| 导数 | $\sinh^{\prime} x=\cosh x$, $\cosh^{\prime} x=\sinh x$, $\tanh^{\prime} x=\operatorname{sech}^2x$ | 链式法则需乘以内层导数 $u^{\prime}$ |
+| 反函数的导数 | $(\sinh^{-1}x)^{\prime}=\frac1{\sqrt{1+x^2}}$, $(\cosh^{-1}x)^{\prime}=\frac1{\sqrt{x^2-1}}$, $(\tanh^{-1}x)^{\prime}=\frac1{1-x^2}$ | 注意反函数的定义域；$\cosh^{-1}$ 的导数要求 $x>1$ |
 | 积分 | 可逆用六个求导公式，或使用三种标准反双曲积分形式 | 按内层导数缩放，注明定义域，并加上 $+C$ |
 {: .wide-table}
 
@@ -648,3 +681,5 @@ $$\begin{aligned}
 ## 资料来源 {#sources}
 
 本课范围依据 OxfordAQA《国际 A-level 高等数学大纲》[FP2.9（印刷版第 19 页）](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf) 编排。例题 3 改编自 OxfordAQA 2018 年样卷 FM03 第 2 题的解题方法，并参考了该题的官方评分细则。例题中的方程已作改动，因此不是官方原题，也不代表任何官方分值。
+
+[OxfordAQA Specimen 2018, Q2, QP PDF p. 4](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-specimen-paper-2019-v3.pdf#page=4); [MS Q2, PDF p. 5](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-mark-scheme-2016-v1.pdf#page=5). 本轮已读取对应题干及评分材料（2026-10-22）；只借用已注明的方法，不把改编题或新增自拟任务称为原题。

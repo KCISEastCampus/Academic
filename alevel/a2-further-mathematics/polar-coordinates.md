@@ -21,6 +21,8 @@ Textbook: Chapter 21, Sections 21.1–21.3, printed pp. 256–266; review and pr
 
 **Before you start:** review [modulus and argument](/alevel/a2-further-mathematics/de-moivres-theorem/#powers-and-proof), [trigonometry](/alevel/a2-mathematics/trigonometric-functions-and-formulae/) and [integration](/alevel/a2-mathematics/integration/). You should know the area of a circular sector, the double-angle identities and how to find an angle in the correct quadrant. Use **radians** throughout.
 
+**Task status:** Unless an official question or teaching adaptation is explicitly identified, the worked examples and exercises are self-written teaching tasks with no official marks.
+
 ## Method
 
 **Learning goal:** move between polar and Cartesian coordinates, sketch curves using positive radii, find intersections and calculate the area of a specified region.
@@ -511,7 +513,7 @@ A
 
 ### Question 6 — AQA: a Cartesian equation
 
-**Source:** AQA Mathematics 6360, MFP3, June 2014, Question 3. **4 marks**. Textbook cross-reference: Chapter 21, practice examination question 2, printed p. 267. Question paper, AQA mark scheme.
+**Source:** AQA Mathematics 6360, MFP3, June 2014, Question 3. **4 marks**. Textbook cross-reference: Chapter 21, practice examination question 2, printed p. 267. [Question paper, Q3 (PDF p. 6)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202014%20QP%20-%20FP3%20AQA.PDF#page=6); [AQA mark scheme, Q3 (PDF p. 5)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202014%20MS%20-%20FP3%20AQA.PDF#page=5). Question and matching mark scheme read on 2026-10-22; these are AQA-authored documents hosted by PMT, with some question papers in condensed layout.
 
 A curve has polar equation $r(4-3\cos\theta)=4$. Find its Cartesian equation in the form $y^2=f(x)$.
 
@@ -549,7 +551,7 @@ $$\boxed{y^2=1+\frac32x-\frac7{16}x^2.}$$
 
 ### Question 7 — AQA: a circle using the origin as pole
 
-**Source:** AQA Mathematics 6360, MFP3, June 2013, Question 2. **4 marks**. Textbook cross-reference: Chapter 21, practice examination question 3, printed p. 267. Question paper, AQA mark scheme.
+**Source:** AQA Mathematics 6360, MFP3, June 2013, Question 2. **4 marks**. Textbook cross-reference: Chapter 21, practice examination question 3, printed p. 267. [Question paper, Q2 (PDF p. 2)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202013%20QP%20-%20FP3%20AQA.pdf#page=2); [AQA mark scheme, Q2 (PDF p. 4)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202013%20MS%20-%20FP3%20AQA.PDF#page=4). Question and matching mark scheme read on 2026-10-22; these are AQA-authored documents hosted by PMT, with some question papers in condensed layout.
 
 The Cartesian equation of a circle is $(x+8)^2+(y-6)^2=100$.
 
@@ -589,7 +591,7 @@ Thus $p=12$ and $q=-16$.
 
 ### Question 8 — AQA: area of a loop
 
-**Source:** Adapted question (diagram redrawn). AQA Mathematics 6360, MFP3, January 2009, Question 3. **6 marks**. Textbook cross-reference: Chapter 21, practice examination question 1, printed p. 267. Question paper, AQA mark scheme. The redrawn diagram retains the original curve, pole, initial line and conditions.
+**Source:** Adapted question (diagram redrawn). AQA Mathematics 6360, MFP3, January 2009, Question 3. **6 marks (original question)**. Textbook cross-reference: Chapter 21, practice examination question 1, printed p. 267. [Question paper, Q3 (PDF p. 3)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/January%202009%20QP%20-%20FP3%20AQA.PDF#page=3); [AQA mark scheme, Q3 (PDF p. 4)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/January%202009%20MS%20-%20FP3%20AQA.PDF#page=4). Question and matching mark scheme read on 2026-10-22; these are AQA-authored documents hosted by PMT, with some question papers in condensed layout. The redrawn diagram retains the original curve, pole, initial line and conditions.
 
 The diagram shows a sketch of a loop, the pole $O$ and the initial line.
 
@@ -629,6 +631,47 @@ A
 **Check:** reversing the limits removes the minus sign. The area is positive, and there is no symmetry about the $y$-axis to justify doubling half of this loop.
 
 **Mark-scheme comparison:** Use one half of the integral of r² from 0 to π, integrate a valid expanded form or substitution, and obtain area 13/3. Our working has been checked against the linked AQA mark scheme; these explanations are our own, not an official mark scheme.
+
+</details>
+
+## Diagnose and Retry {#diagnose-and-retry}
+
+Both tasks are self-written and have no official marks. Explain the error before opening feedback; then close every solution and attempt the new task independently. If you need a hint, return later for another independent attempt.
+
+**Diagnose:** A learner uses
+
+$$\frac12\int(r_1-r_2)^2\,\mathrm d\theta$$
+
+ for an area between two polar curves. Explain the error before doing any integration.
+
+<details markdown="1">
+<summary>Feedback</summary>
+
+Each sector area is proportional to the square of its own radius. Subtract sector areas, giving
+
+$$\frac12\int(r_1^2-r_2^2)\,\mathrm d\theta$$
+
+ where $r_1\ge r_2\ge0$ on the chosen interval. Subtracting radii first introduces an unwanted cross term.
+
+</details>
+
+**Independent retry:** Find the area inside $r=2$ and outside $r=1+\cos\theta$, for $-\pi\le\theta\le\pi$. Explain whether the boundary order changes.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Compare the two radii throughout the interval, including the pole and the touching point.
+
+</details>
+
+<details markdown="1">
+<summary>Retry solution and check</summary>
+
+Since $0\le1+\cos\theta\le2$, the circle is always the outer boundary; no switch is needed. The area is
+
+$$\frac12\int_{-\pi}^{\pi}[4-(1+\cos\theta)^2]\,\mathrm d\theta=4\pi-\frac{3\pi}{2}=\frac{5\pi}{2}.$$
+
+The cardioid area is subtracted once from the circle area.
 
 </details>
 

@@ -23,6 +23,8 @@ study_page: true
 
 **开始前：**复习[部分分式](/zh/alevel/a2-mathematics/partial-fractions/)与[数学归纳法（proof by induction）](/zh/alevel/a2-further-mathematics/proof-by-induction/)。应能够展开括号，并使用求和符号（summation notation）。
 
+**题目身份：**除明确标出官方原题或教学改编的题目外，本课例题与练习均为自拟教学题，不分配官方分值。
+
 ## 方法 {#method}
 
 **学习目标：**为有限项的和选择合适的方法，展示各项如何相消，并给出求和上下限正确的公式。
@@ -339,7 +341,7 @@ $$\begin{aligned}
 
 ### 第 5 题：AQA 原题练习 {#question-5--original-aqa-practice}
 
-**来源：**AQA Mathematics 6360，MFP2，June 2010，原卷第 2 题。原题分值：**3 + 5 marks**。教材索引：Chapter 18, practice examination question 6, printed p. 218。原卷、AQA 评分材料。
+**来源：**AQA Mathematics 6360，MFP2，June 2010，原卷第 2 题。原题分值：**3 + 5 marks**。教材索引：Chapter 18, practice examination question 6, printed p. 218。[Question paper, Q2 (PDF p. 3)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202010%20QP%20-%20FP2%20AQA.PDF#page=3); [AQA mark scheme, Q2 (PDF p. 4)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202010%20MS%20-%20FP2%20AQA.PDF#page=4). 本轮已读取题干及配套评分材料（2026-10-22）；链接为 PMT 托管的 AQA 编写材料，部分原卷为压缩排版版本。
 
 **a** Express
 
@@ -385,6 +387,55 @@ $$\begin{aligned}
 这是本站编写的详细解答，并非官方评分细则。
 
 **评分材料核对：**部分分式的系数为 1/2 和 −1/2。须展示相消过程、保留首尾各两项，并化简为 894/1225。本课解答已对照上述 AQA 评分材料检查；这些解释由本课编写，并非官方评分细则。
+
+</details>
+
+## 纠错与独立重试 {#diagnose-and-retry}
+
+以下两项均为自拟教学任务，无官方分值。先写下错误原因，再看反馈；随后关闭所有解答，独立完成新任务。需要提示的任务应在稍后重新独立尝试。
+
+**Diagnose:** For Example 2, a learner keeps only
+
+$$\frac12(1-\frac1{n+2})$$
+
+. Which uncancelled terms have been lost?
+
+<details markdown="1">
+<summary>反馈</summary>
+
+指标偏移量为二，遗漏的部分为
+
+$$\frac12(\frac12-\frac1{n+1})$$
+
+。只有一项时应直接核对，不能依赖首尾重叠的相消图。
+
+</details>
+
+**Independent retry:** A series has partial sums
+
+$$S_n=\frac{n}{n+1}$$
+
+ for integers $n\ge1$, and $S_0=0$. Recover its general term and verify the first term.
+
+<details markdown="1">
+<summary>提示</summary>
+
+单项等于相邻两个部分和的增量。
+
+</details>
+
+<details markdown="1">
+<summary>重试解答与检验</summary>
+
+对于 $n\ge1$，
+
+$$u_n=S_n-S_{n-1}=\frac{n}{n+1}-\frac{n-1}{n}=\frac1{n(n+1)}$$
+
+。当 $n=1$ 时，
+
+$$u_1=\frac12=S_1-S_0$$
+
+。将这些增量相加，能恢复给定的部分和。
 
 </details>
 

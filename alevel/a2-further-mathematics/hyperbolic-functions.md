@@ -21,6 +21,10 @@ Textbook: Chapter 24, printed pp. 288–305, in *International A Level Further M
 
 **Before you start:** you should know exponential and logarithmic laws, the chain rule, implicit differentiation and substitution. Keep track of where every function and derivative is defined.
 
+**Learning goal:** prove identities from exponentials, explain the features of the six core graphs, select valid exponential roots, and derive and use inverse functions, derivatives and integrals on the correct branches.
+
+**Task status:** Unless an official question or teaching adaptation is explicitly identified, the worked examples and exercises are self-written teaching tasks with no official marks.
+
 ## Definitions {#definitions}
 
 The **hyperbolic sine**, **hyperbolic cosine** and **hyperbolic tangent** are defined by exponentials:
@@ -194,15 +198,15 @@ $$\begin{aligned}
 
 The $\operatorname{coth}$ and $\operatorname{cosech}$ formulae require $x\ne0$.
 
-For a differentiable inner function $u=u(x)$, multiply by $u'=\frac{\mathrm du}{\mathrm dx}$:
+For a differentiable inner function $u=u(x)$, multiply by $u^{\prime}=\frac{\mathrm du}{\mathrm dx}$:
 
 $$\boxed{\begin{aligned}
-\frac{\mathrm d}{\mathrm dx}\sinh u&=u'\cosh u,&
-\frac{\mathrm d}{\mathrm dx}\cosh u&=u'\sinh u,\\
-\frac{\mathrm d}{\mathrm dx}\tanh u&=u'\operatorname{sech}^2u,&
-\frac{\mathrm d}{\mathrm dx}\operatorname{sech}u&=-u'\operatorname{sech}u\tanh u,\\
-\frac{\mathrm d}{\mathrm dx}\operatorname{coth}u&=-u'\operatorname{cosech}^2u,&
-\frac{\mathrm d}{\mathrm dx}\operatorname{cosech}u&=-u'\operatorname{cosech}u\operatorname{coth}u.
+\frac{\mathrm d}{\mathrm dx}\sinh u&=u^{\prime}\cosh u,&
+\frac{\mathrm d}{\mathrm dx}\cosh u&=u^{\prime}\sinh u,\\
+\frac{\mathrm d}{\mathrm dx}\tanh u&=u^{\prime}\operatorname{sech}^2u,&
+\frac{\mathrm d}{\mathrm dx}\operatorname{sech}u&=-u^{\prime}\operatorname{sech}u\tanh u,\\
+\frac{\mathrm d}{\mathrm dx}\operatorname{coth}u&=-u^{\prime}\operatorname{cosech}^2u,&
+\frac{\mathrm d}{\mathrm dx}\operatorname{cosech}u&=-u^{\prime}\operatorname{cosech}u\operatorname{coth}u.
 \end{aligned}}$$
 
 Use the same exclusions for reciprocal functions: $\operatorname{coth}u$ and $\operatorname{cosech}u$ require $u\ne0$.
@@ -230,9 +234,9 @@ Thus $\displaystyle\frac{\mathrm d}{\mathrm dx}\tanh^{-1}x=\frac1{1-x^2}$ for $-
 For a differentiable inner function $u=u(x)$, the chain rule gives
 
 $$\boxed{\begin{aligned}
-\frac{\mathrm d}{\mathrm dx}\sinh^{-1}u&=\frac{u'}{\sqrt{1+u^2}},\\
-\frac{\mathrm d}{\mathrm dx}\cosh^{-1}u&=\frac{u'}{\sqrt{u^2-1}},\\
-\frac{\mathrm d}{\mathrm dx}\tanh^{-1}u&=\frac{u'}{1-u^2}.
+\frac{\mathrm d}{\mathrm dx}\sinh^{-1}u&=\frac{u^{\prime}}{\sqrt{1+u^2}},\\
+\frac{\mathrm d}{\mathrm dx}\cosh^{-1}u&=\frac{u^{\prime}}{\sqrt{u^2-1}},\\
+\frac{\mathrm d}{\mathrm dx}\tanh^{-1}u&=\frac{u^{\prime}}{1-u^2}.
 \end{aligned}}$$
 
 The first formula applies wherever $u$ is real and differentiable; the second requires $u>1$ for a finite derivative; the third requires $-1<u<1$.
@@ -264,7 +268,7 @@ The first integrand is real for every real $x$. The second formula is stated for
 
 $$\int\frac{\mathrm dx}{a^2-x^2}=\frac1{2a}\ln\left\lvert \frac{a+x}{a-x}\right\rvert +C.$$
 
-When substituting $u=g(x)$, replace every $x$ and $\mathrm dx$, and include the factor from $\mathrm du=g'(x)\,\mathrm dx$. Keep $+C$ for an indefinite integral. For a definite integral, change the limits with the substitution or return to the original variable before using the original limits.
+When substituting $u=g(x)$, replace every $x$ and $\mathrm dx$, and include the factor from $\mathrm du=g^{\prime}(x)\,\mathrm dx$. Keep $+C$ for an indefinite integral. For a definite integral, change the limits with the substitution or return to the original variable before using the original limits.
 
 ## Worked Examples {#worked-examples}
 
@@ -624,6 +628,35 @@ The original integrand is real for $\lvert x\rvert>\frac32$. This exercise asks 
 
 </details>
 
+## Diagnose and Retry {#diagnose-and-retry}
+
+Both tasks are self-written and have no official marks. Explain the error before opening feedback; then close every solution and attempt the new task independently. If you need a hint, return later for another independent attempt.
+
+**Diagnose:** A learner inserts an absolute value into the logarithm for $\cosh^{-1}(-2)$ and claims this creates a real inverse value. Explain why this cannot repair the problem.
+
+<details markdown="1">
+<summary>Feedback</summary>
+
+For every real input $y$, $\cosh y\ge1$. Thus no real $y$ can satisfy $\cosh y=-2$. Changing a logarithm cannot change the domain of the inverse function.
+
+</details>
+
+**Independent retry:** Let $y=\sinh^{-1}(kx)$, where $k>0$. Its gradient at the origin is $2$. Determine $k$ and find the value of $x$ for which $y=\ln3$. Sketch the resulting function, marking the origin and the point you found; explain how its slope changes.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Use the chain rule to interpret the gradient, then return to the defining direct function.
+
+</details>
+
+<details markdown="1">
+<summary>Retry solution and check</summary>
+
+The derivative is $k/\sqrt{1+k^2x^2}$, so at zero $k=2$. The value condition becomes $2x=\sinh(\ln3)=(3-1/3)/2=4/3$, giving $x=2/3$. Substitution gives $\sinh^{-1}(4/3)=\ln3$. The graph is odd and increasing; mark $(0,0)$ and $(2/3,\ln3)$. The derivative gives slope $2$ at the origin, decreasing as $\lvert x\rvert$ increases, but the graph has no horizontal asymptote.
+
+</details>
+
 ## Quick Reference {#quick-reference}
 
 | Topic | Result | Condition to remember |
@@ -634,8 +667,8 @@ The original integrand is real for $\lvert x\rvert>\frac32$. This exercise asks 
 | Addition | $\sinh(x+y)=\sinh x\cosh y+\cosh x\sinh y$ | Prove from exponential definitions |
 | Linear equation | $a\sinh x+b\cosh x=c$ becomes $(a+b)t^2-2ct+(b-a)=0$ | $t=e^x>0$; reject non-positive roots |
 | Inverse logarithms | $\sinh^{-1}x=\ln(x+\sqrt{x^2+1})$; $\cosh^{-1}x=\ln(x+\sqrt{x^2-1})$; $\tanh^{-1}x=\frac12\ln\frac{1+x}{1-x}$ | Domains: $\mathbb R$, $x\ge1$, $-1<x<1$ |
-| Derivatives | $\sinh' x=\cosh x$, $\cosh' x=\sinh x$, $\tanh' x=\operatorname{sech}^2x$ | Chain rule multiplies by $u'$ |
-| Inverse derivatives | $(\sinh^{-1}x)'=\frac1{\sqrt{1+x^2}}$, $(\cosh^{-1}x)'=\frac1{\sqrt{x^2-1}}$, $(\tanh^{-1}x)'=\frac1{1-x^2}$ | Respect the inverse domains; $\cosh^{-1}$ derivative requires $x>1$ |
+| Derivatives | $\sinh^{\prime} x=\cosh x$, $\cosh^{\prime} x=\sinh x$, $\tanh^{\prime} x=\operatorname{sech}^2x$ | Chain rule multiplies by $u^{\prime}$ |
+| Inverse derivatives | $(\sinh^{-1}x)^{\prime}=\frac1{\sqrt{1+x^2}}$, $(\cosh^{-1}x)^{\prime}=\frac1{\sqrt{x^2-1}}$, $(\tanh^{-1}x)^{\prime}=\frac1{1-x^2}$ | Respect the inverse domains; $\cosh^{-1}$ derivative requires $x>1$ |
 | Integration | Reverse the six derivative formulae or use the three standard inverse-hyperbolic forms | Scale by the inner derivative, state domain, and include $+C$ |
 {: .wide-table}
 
@@ -646,3 +679,5 @@ The original integrand is real for $\lvert x\rvert>\frac32$. This exercise asks 
 ## Sources {#sources}
 
 The scope follows OxfordAQA's [International A-level Further Mathematics specification, FP2.9, printed p. 19](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf). Example 3 adapts the solution method from OxfordAQA Specimen 2018 FM03, Question 2, checked against its official mark scheme, Question 2. The example changes the equation; it is not an official question and no official mark allocation is implied.
+
+[OxfordAQA Specimen 2018, Q2, QP PDF p. 4](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-specimen-paper-2019-v3.pdf#page=4); [MS Q2, PDF p. 5](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-mark-scheme-2016-v1.pdf#page=5). Question and matching mark scheme read on 2026-10-22. Only the identified method is adapted; the adapted question and additional self-written tasks are not official questions.

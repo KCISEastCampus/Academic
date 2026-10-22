@@ -21,6 +21,8 @@ Textbook: Chapter 22, Sections 22.1–22.2, printed pp. 270–279; review and pr
 
 **Before you start:** review [trigonometric functions](/alevel/a2-mathematics/trigonometric-functions-and-formulae/), [differentiation](/alevel/a2-mathematics/differentiation/) and [integration](/alevel/a2-mathematics/integration/). You should know the chain rule, completing the square, substitution and integration by parts. For an undefined endpoint, review [improper integrals](/alevel/a2-further-mathematics/series-and-limits/#improper-integrals). Use **radians** throughout.
 
+**Task status:** Unless an official question or teaching adaptation is explicitly identified, the worked examples and exercises are self-written teaching tasks with no official marks.
+
 ## Method
 
 **Learning goal:** state domains and ranges, sketch inverse trigonometric graphs, differentiate composite functions and find exact integrals using inverse sine or inverse tangent.
@@ -137,11 +139,11 @@ For a differentiable inner function $u=u(x)$, the chain rule gives
 
 $$\boxed{\begin{aligned}
 \frac{\mathrm d}{\mathrm dx}\sin^{-1}u
-&=\frac{u'}{\sqrt{1-u^2}},\\
+&=\frac{u^{\prime}}{\sqrt{1-u^2}},\\
 \frac{\mathrm d}{\mathrm dx}\cos^{-1}u
-&=-\frac{u'}{\sqrt{1-u^2}},\\
+&=-\frac{u^{\prime}}{\sqrt{1-u^2}},\\
 \frac{\mathrm d}{\mathrm dx}\tan^{-1}u
-&=\frac{u'}{1+u^2}.
+&=\frac{u^{\prime}}{1+u^2}.
 \end{aligned}}$$
 
 The first two formulae apply where $-1<u<1$. The third applies wherever $u$ is defined and differentiable.
@@ -181,7 +183,7 @@ This derivative formula applies for $-\frac12<x<\frac12$.
 
 For $z$, put $u=\frac{x}{1+x^2}$. The quotient rule gives
 
-$$u'=\frac{1+x^2-2x^2}{(1+x^2)^2}
+$$u^{\prime}=\frac{1+x^2-2x^2}{(1+x^2)^2}
 =\frac{1-x^2}{(1+x^2)^2}.$$
 
 Therefore
@@ -549,7 +551,7 @@ At $x=1$, the left side is undefined.
 
 ### Question 6 — AQA: complete the square and find an exact integral
 
-**Original AQA question.** AQA MFP2, January 2012; textbook Chapter 22, practice examination Question 1, printed p. 281. The same question appears as Question 9 of the OxfordAQA FM03 Specimen 2018 paper. **8 marks: 2 + 6.**
+**Original AQA question.** AQA Mathematics 6360, MFP2, January 2012, Question 6; textbook Chapter 22, practice examination Question 1, printed p. 281. The same question appears as Question 9 of the OxfordAQA FM03 Specimen 2018 paper. **8 marks: 2 + 6.** [Question paper, Q6 (PDF p. 3)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/January%202012%20QP%20-%20FP2%20AQA.pdf#page=3); [AQA mark scheme, Q6 (PDF p. 7)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/January%202012%20MS%20-%20FP2%20AQA.PDF#page=7). Question and matching MS read on 2026-10-22; AQA-authored documents hosted by PMT, with some QPs in condensed layout.
 
 **(a)** Express $7+4x-2x^2$ in the form $a-b(x-c)^2$, where $a$, $b$ and $c$ are integers. **(2 marks)**
 
@@ -587,13 +589,13 @@ I
 
 **Check:** the radicand stays positive throughout the stated interval. The answer is also $\frac{\pi\sqrt2}{8}$.
 
-The official OxfordAQA mark scheme, Question 9 checks the completed square, substitution, coefficient, inverse sine and use of limits. This is our worked solution.
+[OxfordAQA Specimen 2018 Q9, QP PDF pp. 15–16](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-specimen-paper-2019-v3.pdf#page=15); [MS Q9, PDF p. 12](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-mark-scheme-2016-v1.pdf#page=12). The official OxfordAQA mark scheme, Question 9 checks the completed square, substitution, coefficient, inverse sine and use of limits. This is our worked solution.
 
 </details>
 
 ### Question 7 — AQA: integrate inverse sine by parts
 
-**Original AQA question.** AQA MFP2, January 2011, Question 5; textbook Chapter 22, practice examination Question 3, printed p. 281. **8 marks: 2 + 6.**
+**Original AQA question.** AQA MFP2, January 2011, Question 5; textbook Chapter 22, practice examination Question 3, printed p. 281. **8 marks: 2 + 6.** [Question paper, Q5 (PDF p. 3)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/January%202011%20QP%20-%20FP2%20AQA.pdf#page=3); [AQA mark scheme, Q5 (PDF p. 5)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/January%202011%20MS%20-%20FP2%20AQA.PDF#page=5). Question and matching MS read on 2026-10-22; AQA-authored documents hosted by PMT, with some QPs in condensed layout.
 
 **(a)** Given that $u=\sqrt{1-x^2}$, find $\frac{\mathrm du}{\mathrm dx}$. **(2 marks)**
 
@@ -652,7 +654,7 @@ This is our worked solution, checked against the AQA mark scheme, Question 5.
 
 ### Question 8 — AQA: use a derivative to find an integral
 
-**Original AQA question.** AQA MFP2, June 2007, Question 4; textbook Chapter 22, practice examination Question 4, printed p. 281. **7 marks: 2 + 5.** Question paper, Question 4.
+**Original AQA question.** AQA MFP2, June 2007, Question 4; textbook Chapter 22, practice examination Question 4, printed p. 281. **7 marks: 2 + 5.** Question paper, Question 4. [Question paper, Q4 (PDF p. 3)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202007%20QP%20-%20FP2%20AQA.PDF#page=3); [AQA mark scheme, Q4 (PDF p. 5)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202007%20MS%20-%20FP2%20AQA.PDF#page=5). Question and matching MS read on 2026-10-22; AQA-authored documents hosted by PMT, with some QPs in condensed layout.
 
 **(a)** Differentiate $x\tan^{-1}x$ with respect to $x$. **(2 marks)**
 
@@ -693,6 +695,35 @@ $$\begin{aligned}
 **Check:** the value is positive and less than $\frac\pi4$, since $0\le\tan^{-1}x\le\frac\pi4$ on this interval.
 
 This is our worked solution, checked against the AQA mark scheme, Question 4.
+
+</details>
+
+## Diagnose and Retry {#diagnose-and-retry}
+
+Both tasks are self-written and have no official marks. Explain the error before opening feedback; then close every solution and attempt the new task independently. If you need a hint, return later for another independent attempt.
+
+**Diagnose:** A learner writes $\sin^{-1}(\sin(3\pi/4))=3\pi/4$. Correct the value and identify the failed condition.
+
+<details markdown="1">
+<summary>Feedback</summary>
+
+The proposed angle is outside $[-\pi/2,\pi/2]$. The principal value is $\pi/4$, which has the same sine and is inside that interval.
+
+</details>
+
+**Independent retry:** A function has $y^{\prime}=3/(1+9x^2)$ for every real $x$, and $y(0)=\pi/6$. Find the function. Must its values all lie in the principal range of inverse tangent?
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Recognise a scaled inverse-tangent derivative, then keep the additive constant.
+
+</details>
+
+<details markdown="1">
+<summary>Retry solution and check</summary>
+
+Integration and the condition give $y=\tan^{-1}(3x)+\pi/6$. Its range is $(-\pi/3,2\pi/3)$, so it need not lie in the principal inverse-tangent range: the function includes a vertical translation. Differentiation recovers the specified derivative.
 
 </details>
 

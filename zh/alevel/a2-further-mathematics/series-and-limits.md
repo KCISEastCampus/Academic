@@ -23,6 +23,8 @@ study_page: true
 
 **开始前：**复习[有限级数](/zh/alevel/a2-further-mathematics/finite-series/)、[二项式级数](/zh/alevel/a2-mathematics/binomial-series/)和[积分](/zh/alevel/a2-mathematics/integration/)。你应已掌握阶乘（factorial）、等比级数（geometric series）、求导和分部积分法（integration by parts）。三角函数级数中的角度须使用弧度（radian）。
 
+**题目身份：**除明确标出官方原题或教学改编的题目外，本课例题与练习均为自拟教学题，不分配官方分值。
+
 ## 方法 {#method}
 
 **学习目标：**求出并使用麦克劳林展开（Maclaurin expansion），说明其有效范围（range of validity），在相消后求极限，并判断反常积分是否有有限值。
@@ -107,7 +109,7 @@ $$L=\lim_{n\to\infty}\left\lvert\frac{u_{n+1}}{u_n}\right\rvert,$$
 对于可以用这种方式表示的函数，麦克劳林定理（Maclaurin's theorem）给出
 
 $$\begin{aligned}
-f(x)={}&f(0)+xf'(0)+\frac{x^2}{2!}f^{(2)}(0)\\
+f(x)={}&f(0)+xf^{\prime}(0)+\frac{x^2}{2!}f^{(2)}(0)\\
 &+\frac{x^3}{3!}f^{(3)}(0)+\cdots.
 \end{aligned}$$
 
@@ -122,7 +124,7 @@ f(x)={}&f(0)+xf'(0)+\frac{x^2}{2!}f^{(2)}(0)\\
 各阶导数在零处的值为
 
 $$\begin{aligned}
-f(0)&=1,& f'(0)&=2,\\
+f(0)&=1,& f^{\prime}(0)&=2,\\
 f^{(2)}(0)&=4,& f^{(3)}(0)&=8.
 \end{aligned}$$
 
@@ -421,7 +423,7 @@ $$\boxed{\int_0^\infty xe^{-2x}\,\mathrm dx=\frac14.}$$
 
 展开题须说明有效范围；极限题须展示相消后的首个非零项；反常积分题须写出取极限的过程。
 
-第 1–6 题为自拟题。第 7 题为所提供教材中转载的 AQA 原题。第 8 题为根据教材改编的教学练习，其原始考试来源及官方分值尚未核实。
+第 1–6 题为自拟题。第 7 题为所提供教材中转载的 AQA 原题。第 8 题为根据教材改编的教学练习，原始考试来源已在下文定位，本课不为改编题指定官方分值。
 
 ### 第 1 题：收敛范围 {#question-1--a-range-of-convergence}
 
@@ -633,7 +635,7 @@ $$\int_0^R xe^{-3x}\,\mathrm dx
 
 ### 第 7 题：AQA 级数原题练习 {#question-7--original-aqa-series-practice}
 
-**来源：**AQA Mathematics 6360，MFP3，January 2013，原卷第 2 题。原题分值：**1 + 4 marks**。教材索引：Chapter 19, practice examination question 2, printed p. 231。原卷、AQA 评分材料。
+**来源：**AQA Mathematics 6360，MFP3，January 2013，原卷第 2 题。原题分值：**1 + 4 marks**。教材索引：Chapter 19, practice examination question 2, printed p. 231。[Question paper, Q2 (PDF p. 2)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/January%202013%20QP%20-%20FP3%20AQA.pdf#page=2); [AQA mark scheme, Q2 (PDF p. 4)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/January%202013%20MS%20-%20FP3%20AQA.PDF#page=4). 本轮已读取题干及配套评分材料（2026-10-22）；链接为 PMT 托管的 AQA 编写材料，部分原卷为压缩排版版本。
 
 **a** Write down the expansion of $e^{3x}$ in ascending powers of $x$ up to and including the term in $x^2$. **(1 mark)**
 
@@ -675,7 +677,7 @@ $$\frac92+(3)(-3)+\frac{15}{2}=3.$$
 
 ### 第 8 题：根据教材改编的积分练习 {#question-8--textbook-derived-integral-practice}
 
-**来源：**根据所提供教材第 19 章模拟考试练习第 5 题改编，印刷页码 232。其原始考试来源及官方分值尚未核实。
+**来源：**根据所提供教材第 19 章模拟考试练习第 5 题改编，印刷页码 232。原题已定位为 AQA Mathematics 6360，MFP3，June 2011，Question 3。[原卷 Q3（PDF 第 2 页）](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202011%20QP%20-%20FP3%20AQA.pdf#page=2)；[配套 AQA MS Q3（PDF 第 6 页）](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202011%20MS%20-%20FP3%20AQA.PDF#page=6)。两份正文均于 2026-10-22 实际读取，为 PMT 托管的 AQA 文件。本教学改编不另指定官方分值。
 
 **a** Find $\int x^2\ln x\,\mathrm dx$.
 
@@ -718,7 +720,48 @@ $$\boxed{\int_0^e x^2\ln x\,\mathrm dx=\frac{2e^3}{9}.}$$
 
 **检验：**对 a 小题的答案求导得到 $x^2\ln x$；额外产生的 $\frac13x^2$ 项相消。
 
-这是教学解答，本题尚未对照核实官方评分细则。
+本教学解答已与原题 AQA Q3 评分标准比较：分部积分、端点未定义、显式下限极限，以及对数边界项趋于零。
+
+</details>
+
+## 纠错与独立重试 {#diagnose-and-retry}
+
+以下两项均为自拟教学任务，无官方分值。先写下错误原因，再看反馈；随后关闭所有解答，独立完成新任务。需要提示的任务应在稍后重新独立尝试。
+
+**Diagnose:** A learner truncates $e^{2x}$ after $1+2x$ and concludes that
+
+$$\lim_{x\to0}(e^{2x}-1-2x)/x^2=0$$
+
+. Explain why that truncation cannot decide the limit.
+
+<details markdown="1">
+<summary>反馈</summary>
+
+保留的项全部相消，不能据此把余项当成零。分子首个剩余项为 $2x^2$，所以极限为 $2$。除法会使被舍去的项变为常数阶。
+
+</details>
+
+**Independent retry:** Find the real constant $a$ for which
+
+$$\lim_{x\to0}(e^{ax}-1-2x)/x^2$$
+
+ is finite, and evaluate that limit.
+
+<details markdown="1">
+<summary>提示</summary>
+
+先检查一次项系数，再计算二次项系数。
+
+</details>
+
+<details markdown="1">
+<summary>重试解答与检验</summary>
+
+分子为
+
+$$(a-2)x+\frac{a^2}{2}x^2+\cdots$$
+
+。要使双侧极限有限，必须有 $a=2$，从而消去除法后与 $1/x$ 成比例的项。此时极限为 $a^2/2=2$。
 
 </details>
 
@@ -740,6 +783,6 @@ $$\boxed{\int_0^e x^2\ln x\,\mathrm dx=\frac{2e^3}{9}.}$$
 
 **你应能够：**使用全部五种标准展开式，说明相关函数的有效范围，在相消后求极限，并通过取极限的过程计算反常积分或判断其发散。
 
-本课依据 [OxfordAQA 高等数学 9665 课程大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf) FP2.6。例题解答为教学材料。第 7 题保留所提供教材中的 AQA 原题措辞与分值；第 8 题为根据教材改编的教学练习，原始考试来源尚未核实，本课未为其指定官方分值。
+本课依据 [OxfordAQA 高等数学 9665 课程大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf) FP2.6。例题解答为教学材料。第 7 题保留所提供教材中的 AQA 原题措辞与分值；第 8 题为根据教材改编的教学练习，已追溯到 AQA MFP3 June 2011 Q3 并读取配套 MS；本课未为改编题指定官方分值。
 
 **学习路径：**[上一课：有限级数](/zh/alevel/a2-further-mathematics/finite-series/) · [下一课：棣莫弗定理](/zh/alevel/a2-further-mathematics/de-moivres-theorem/) · [返回课程](/zh/alevel/a2-further-mathematics/)。
