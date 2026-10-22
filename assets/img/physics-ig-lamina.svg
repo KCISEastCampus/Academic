@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="547.2pt" height="309.6pt" viewBox="0 0 547.2 309.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Academic; constructed teaching diagram</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 309.6
+L 547.2 309.6
+L 547.2 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="lamina-outline">
+    <path d="M 177.162 239.8368
+L 356.5236 239.8368
+L 376.9056 182.7672
+L 319.836 154.2324
+L 340.218 89.01
+L 250.5372 64.5516
+L 193.4676 117.5448
+L 226.0788 166.4616
+z
+" clip-path="url(#p7803bd1fc4)" style="fill: #edf5fc; stroke: #2563a8; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_2">
+    <path d="M 250.5372 81.26484
+C 251.293952 81.26484 252.019811 80.964179 252.554915 80.429075
+C 253.090019 79.893971 253.39068 79.168112 253.39068 78.41136
+C 253.39068 77.654608 253.090019 76.928749 252.554915 76.393645
+C 252.019811 75.858541 251.293952 75.55788 250.5372 75.55788
+C 249.780448 75.55788 249.054589 75.858541 248.519485 76.393645
+C 247.984381 76.928749 247.68372 77.654608 247.68372 78.41136
+C 247.68372 79.168112 247.984381 79.893971 248.519485 80.429075
+C 249.054589 80.964179 249.780448 81.26484 250.5372 81.26484
+z
+" clip-path="url(#p7803bd1fc4)" style="fill: #334155; stroke: #334155; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 358.96944 183.99012
+C 359.726192 183.99012 360.452051 183.689459 360.987155 183.154355
+C 361.522259 182.619251 361.82292 181.893392 361.82292 181.13664
+C 361.82292 180.379888 361.522259 179.654029 360.987155 179.118925
+C 360.452051 178.583821 359.726192 178.28316 358.96944 178.28316
+C 358.212688 178.28316 357.486829 178.583821 356.951725 179.118925
+C 356.416621 179.654029 356.11596 180.379888 356.11596 181.13664
+C 356.11596 181.893392 356.416621 182.619251 356.951725 183.154355
+C 357.486829 183.689459 358.212688 183.99012 358.96944 183.99012
+z
+" clip-path="url(#p7803bd1fc4)" style="fill: #334155; stroke: #334155; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start" x="257.87472" y="76.7808" transform="rotate(-0 257.87472 76.7808)">P</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start" x="366.30696" y="179.50608" transform="rotate(-0 366.30696 179.50608)">Q</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #334155" x="148.6272" y="44.1696" transform="rotate(-0 148.6272 44.1696)">Plan view before suspension</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #64748b" x="148.6272" y="264.2952" transform="rotate(-0 148.6272 264.2952)">Schematic: mark each plumb-line trace after free suspension</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p7803bd1fc4">
+   <rect x="136.398" y="27.864" width="285.348" height="244.584"/>
+  </clipPath>
+ </defs>
+</svg>

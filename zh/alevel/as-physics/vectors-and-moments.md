@@ -342,5 +342,5 @@ A 20 N force acts at the end of a 0.40 m rod pivoted at its other end. Compare t
 
 用[官方大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf)核对范围。完成这些任务不代表完成实体实验或整个力学单元。
 
-[上一课：测量与不确定度](/zh/alevel/as-physics/measurements-and-uncertainties/) · [返回AS物理](/zh/alevel/as-physics/) · [下一课：直线运动与匀加速](/zh/alevel/as-physics/straight-line-motion/)。二维抛体仍为复习笔记。
+[上一课：测量与不确定度](/zh/alevel/as-physics/measurements-and-uncertainties/) · [返回AS物理](/zh/alevel/as-physics/) · [下一课：直线运动与匀加速](/zh/alevel/as-physics/straight-line-motion/)。抛体运动接续本路线后课。
 

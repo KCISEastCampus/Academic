@@ -332,4 +332,4 @@ $$v=-6+2t,\qquad t_{\mathrm{turn}}=3.0\,\mathrm{s},\qquad s=-6\times5+\frac12\ti
 
 范围：OxfordAQA International AS Physics 9630，PH01 的 3.2.3 与 Required practical 1。图像任务参考 PH01 June 2024 Q04.1 及配套评分标准，修改后的图明确标为改编。其他任务及自由落体记录为自拟或构造材料，不套用官方分值，也不声称已完成实体实验。范围依据为[官方大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf)。
 
-[上一课：向量与力矩](/zh/alevel/as-physics/vectors-and-moments/) · [返回 AS 物理](/zh/alevel/as-physics/) · [现有抛体运动笔记](/zh/alevel/as-physics/#23-projectile-motion)。二维抛体和后续动力学目前仍为复习笔记，不把这三课称为完整学习课程。
+[上一课：向量与力矩](/zh/alevel/as-physics/vectors-and-moments/) · [返回 AS 物理](/zh/alevel/as-physics/) · [下一课：抛体运动](/zh/alevel/as-physics/projectile-motion/)。后续动力学仍需继续制作学习页。

@@ -348,7 +348,7 @@ A book rests on a horizontal table. Earth pulls the book down and the table push
 
 <h2 id="sources-and-next">范围与下一步</h2>
 
-本页发展 OxfordAQA International GCSE Physics 9203 的3.1.1中力与重力基础，以及3.1.3–3.1.6。弹簧形变接续下一课；质心与力矩仍为复习笔记，本页不等于完整的力学单元。
+本页发展 OxfordAQA International GCSE Physics 9203 的3.1.1中力与重力基础，以及3.1.3–3.1.6。弹簧形变接续下一课；质心与力矩接续本路线后课，本页不等于完整的力学单元。
 
 范围依据[官方大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-gcse-physics-specification.pdf)。样卷改编任务旁已标具体试卷和题号；其他任务与数值记录均为自拟。改编及自拟任务不标官方分值。
 

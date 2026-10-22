@@ -346,7 +346,7 @@ Earth's pull on the book pairs with the book's gravitational pull on Earth. The 
 
 <h2 id="sources-and-next">Scope and next step</h2>
 
-This lesson develops the force/weight foundations of OxfordAQA International GCSE Physics 9203 Section 3.1.1 and Sections 3.1.3–3.1.6. Continue with spring deformation in the next lesson. Centre of mass and moments remain reference notes; this is not the entire forces unit.
+This lesson develops the force/weight foundations of OxfordAQA International GCSE Physics 9203 Section 3.1.1 and Sections 3.1.3–3.1.6. Continue with spring deformation in the next lesson. Centre of mass and moments have a later lesson in this route; this page is not the entire forces unit.
 
 Scope follows the [official specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-gcse-physics-specification.pdf). The specimen adaptation is identified beside its task; all other tasks and numerical records are self-written. No official marks are assigned to the adaptations or self-written tasks.
 

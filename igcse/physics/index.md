@@ -14,10 +14,11 @@ study_page: true
 1. **[Motion and Motion Graphs](/igcse/physics/motion-and-graphs/)** — Connect a journey to position and velocity graphs; explain direction, gradients and areas.
 2. **[Forces and Motion](/igcse/physics/forces-and-motion/)** — Build force models and explain acceleration, momentum, braking and terminal velocity.
 3. **[Springs and Hooke’s Law](/igcse/physics/springs-and-hookes-law/)** — Separate length from extension, test the proportional model and evaluate a spring practical.
+4. **[Centre of Mass, Stability and Moments](/igcse/physics/centre-of-mass-and-moments/)** — Locate a centre of mass, explain toppling and choose moment arms to balance levers.
 
 Try a short task, then work through explanations and examples. Open hints and solutions separately; finish with independent practice, diagnosis and a retry.
 
-Follow these three learning pages in order. Other topics remain reference notes below, rather than a complete guided course. For revision, start with [first-lesson practice](/igcse/physics/motion-and-graphs/#independent-practice) or [second-lesson practice](/igcse/physics/forces-and-motion/#independent-practice).
+Follow these four learning pages in order. Other topics remain reference notes below, rather than a complete guided course. For revision, start with [first-lesson practice](/igcse/physics/motion-and-graphs/#independent-practice) or [second-lesson practice](/igcse/physics/forces-and-motion/#independent-practice).
 
 <h2 id="reference-notes">Reference notes and resources</h2>
 

@@ -330,4 +330,4 @@ The graph joins (0,−6) to (5,+4), crossing zero at 3 s. It travels 9 m west an
 
 Scope: OxfordAQA International AS Physics 9630, PH01 Section 3.2.3 and Required practical 1. The graph task references PH01 June 2024 Q04.1 and its paired mark scheme; its altered graph is explicitly adapted. All other tasks and freefall records are self-written or constructed. No official marks or physical-practical completion are claimed. Scope follows the [official specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf).
 
-[Previous: Vectors and Moments](/alevel/as-physics/vectors-and-moments/) · [Back to AS Physics](/alevel/as-physics/) · [Existing projectile notes](/alevel/as-physics/#23-projectile-motion). Two-dimensional projectiles and subsequent dynamics are still reference notes, not a completed learning route.
+[Previous: Vectors and Moments](/alevel/as-physics/vectors-and-moments/) · [Back to AS Physics](/alevel/as-physics/) · [Next: Projectile Motion](/alevel/as-physics/projectile-motion/). Subsequent dynamics still needs its learning pages.

@@ -340,5 +340,5 @@ Scope: OxfordAQA International AS Physics 9630, PH01 Sections 3.2.1–3.2.2. The
 
 Use the [official specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf) for scope. Solving these tasks does not certify physical practical skills or the whole mechanics unit.
 
-[Previous: Measurements and Uncertainties](/alevel/as-physics/measurements-and-uncertainties/) · [Back to AS Physics](/alevel/as-physics/) · [Next: Straight-line Motion and Uniform Acceleration](/alevel/as-physics/straight-line-motion/). Two-dimensional projectiles remain reference notes.
+[Previous: Measurements and Uncertainties](/alevel/as-physics/measurements-and-uncertainties/) · [Back to AS Physics](/alevel/as-physics/) · [Next: Straight-line Motion and Uniform Acceleration](/alevel/as-physics/straight-line-motion/). Projectiles follow in the next stage of the route.
 
