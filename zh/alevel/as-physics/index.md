@@ -16,10 +16,11 @@ study_page: true
 1. **[测量与不确定度](/zh/alevel/as-physics/measurements-and-uncertainties/)** — 判断测量质量，合成不确定度，并用误差棒约束图线。
 2. **[向量与力矩](/zh/alevel/as-physics/vectors-and-moments/)** — 分解向量，同时检验力与力矩平衡，区分力偶并检查支承条件。
 3. **[直线运动与匀加速](/zh/alevel/as-physics/straight-line-motion/)** — 联系运动图像，判断匀加速模型条件，并分析 RP1 自由落体数据。
+4. **[抛体运动](/zh/alevel/as-physics/projectile-motion/)** — 用共同时间连接分运动，选择目标事件，并检验无阻力模型。
 
 先完成小任务，再阅读解释与示范；提示和完整解答分别展开，最后独立练习、诊断并重试。
 
-建议依次学习这三课；其他主题仍为下方复习笔记，尚未改写为完整学习课程。已有基础时，可直接进入[第一课练习](/zh/alevel/as-physics/measurements-and-uncertainties/#independent-practice)或[第二课练习](/zh/alevel/as-physics/vectors-and-moments/#independent-practice)。
+建议依次学习这四课；其他主题仍为下方复习笔记，尚未改写为完整学习课程。已有基础时，可直接进入[第一课练习](/zh/alevel/as-physics/measurements-and-uncertainties/#independent-practice)或[第二课练习](/zh/alevel/as-physics/vectors-and-moments/#independent-practice)。
 
 <h2 id="reference-notes">复习笔记与资料</h2>
 

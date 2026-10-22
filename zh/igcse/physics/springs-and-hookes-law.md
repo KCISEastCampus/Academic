@@ -267,4 +267,4 @@ $$k=\frac{3.0-1.0}{(82-72)\times10^{-3}}=200\,\mathrm{N\,m^{-1}}$$
 
 范围：OxfordAQA International GCSE Physics 9203，3.1.1 中的形变、力与伸长量关系，以及弹簧必做实验。本页任务、数值和图中记录均为自拟或构造材料，没有套用官方分值。范围依据为[官方大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-gcse-physics-specification.pdf)。
 
-[上一课：力与运动](/zh/igcse/physics/forces-and-motion/) · [返回 IGCSE 物理](/zh/igcse/physics/)。质心与力矩目前仍为[复习笔记](/zh/igcse/physics/#%EF%B8%8F-17-centre-of-mass--18-moments)，尚未制作成完整学习页。
+[上一课：力与运动](/zh/igcse/physics/forces-and-motion/) · [返回 IGCSE 物理](/zh/igcse/physics/)。[下一课：质心、稳定性与力矩](/zh/igcse/physics/centre-of-mass-and-moments/)。

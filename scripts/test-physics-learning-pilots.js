@@ -15,7 +15,9 @@ for (const [subject, slug, scheme, taskCount, label, helpCount, record, imageCou
   ['igcse/physics', 'forces-and-motion', 'scheme-igcse', 8, 'IGCSE 物理', 16, 'braking-record', 2],
   ['alevel/as-physics', 'vectors-and-moments', 'scheme-alevel', 8, 'AS 物理', 16, null, 2],
   ['igcse/physics', 'springs-and-hookes-law', 'scheme-igcse', 7, 'IGCSE 物理', 14, 'spring-record', 1],
-  ['alevel/as-physics', 'straight-line-motion', 'scheme-alevel', 8, 'AS 物理', 16, 'freefall-record', 2]
+  ['alevel/as-physics', 'straight-line-motion', 'scheme-alevel', 8, 'AS 物理', 16, 'freefall-record', 2],
+  ['igcse/physics', 'centre-of-mass-and-moments', 'scheme-igcse', 8, 'IGCSE 物理', 16, 'stability-record', 3],
+  ['alevel/as-physics', 'projectile-motion', 'scheme-alevel', 8, 'AS 物理', 16, 'projectile-record', 2]
 ]) {
   const url = `/${subject}/${slug}/`;
   const en = read(`${subject}/${slug}.md`), zh = read(`zh/${subject}/${slug}.md`);
@@ -144,7 +146,7 @@ assert.deepEqual(reactions(2.5), [40,140]);
 assert.deepEqual(reactions(3.8), [-12,192]);
 assert.deepEqual(reactions(3.5), [0,180]);
 close(12*.3, 3.6);
-for (const [subject,slug,previous] of [['igcse/physics','forces-and-motion','motion-and-graphs'], ['alevel/as-physics','vectors-and-moments','measurements-and-uncertainties'], ['igcse/physics','springs-and-hookes-law','forces-and-motion'], ['alevel/as-physics','straight-line-motion','vectors-and-moments']]) {
+for (const [subject,slug,previous] of [['igcse/physics','forces-and-motion','motion-and-graphs'], ['alevel/as-physics','vectors-and-moments','measurements-and-uncertainties'], ['igcse/physics','springs-and-hookes-law','forces-and-motion'], ['alevel/as-physics','straight-line-motion','vectors-and-moments'], ['igcse/physics','centre-of-mass-and-moments','springs-and-hookes-law'], ['alevel/as-physics','projectile-motion','straight-line-motion']]) {
   for (const prefix of ['', '/zh/']) {
     const base=prefix ? prefix+subject : subject;
     const lesson=read(`${base}/${slug}.md`), before=read(`${base}/${previous}.md`);
@@ -172,6 +174,61 @@ close(2*18/3-9, 3); close(-6*5+5**2, -5); close(.5*3*6+.5*2*4, 13);
 const freefall = svgGraph('physics-as-freefall.svg');
 const line = vertices(freefall.svg.match(/id="freefall-model">\s*<path d="([^"]+)"/)[1]);
 close((line[0][1]-line[1][1])/freefall.height*.9 / ((line[1][0]-line[0][0])/freefall.width*.18), 4.9, 1e-5);
+
+// Check the actual plotted trajectory against the equations and the supplied record.
+const trajectory = svgGraph('physics-as-projectile-path.svg');
+const trajectoryPoints = vertices(trajectory.svg.match(/id="projectile-trajectory">\s*<path d="([^"]+)"/)[1]);
+assert(trajectoryPoints.length > 15);
+for (const [px,py] of trajectoryPoints) {
+  const x = (px-trajectory.x)/trajectory.width*10.8-.6;
+  const y = 2.25-(py-trajectory.y)/trajectory.height*2.45;
+  const t = x/8;
+  close(y, 6*t-5*t*t, 1e-6);
+}
+const projectileComponents = svgGraph('physics-as-projectile-components.svg');
+for (const [id, points] of [['horizontal-component',[[0,8],[1.2,8]]],['vertical-component',[[0,6],[1.2,-6]]]]) {
+  const rendered = vertices(projectileComponents.svg.match(new RegExp(`id="${id}">\\s*<path d="([^"]+)"`))[1]);
+  points.forEach(([x,y],i) => {
+    close(rendered[i][0],projectileComponents.x+(x+.05)/1.3*projectileComponents.width);
+    close(rendered[i][1],projectileComponents.y+(11-y)/18*projectileComponents.height);
+  });
+}
+const projectileSource = read('alevel/as-physics/projectile-motion.md');
+const answerFigure = projectileSource.indexOf('<img src="/assets/img/physics-as-projectile-components.svg"');
+const answerDetails = projectileSource.lastIndexOf('<details markdown="1">',answerFigure);
+assert(answerDetails > projectileSource.lastIndexOf('</details>',answerFigure), 'answer graph stays in closed solution');
+assert(projectileSource.slice(answerDetails,answerFigure).includes('<summary>Solution and check</summary>'));
+assert(projectileSource.includes('Q08.1–08.6'));
+assert(read('igcse/physics/centre-of-mass-and-moments.md').includes('Q02.4–02.6'));
+
+// Pixel geometry must agree with gravity and the retained contact edge, not just the labels.
+const tiltSvg = read('assets/img/physics-ig-tilting.svg');
+for (const [label,height] of [['A',.3],['B',.9]]) {
+  const floor = vertices(tiltSvg.match(new RegExp(`id="floor-${label}">\\s*<path d="([^"]+)"`))[1]);
+  const weight = vertices(tiltSvg.match(new RegExp(`id="weight-line-${label}">\\s*<path d="([^"]+)"`))[1]);
+  close(weight[0][0],weight[1][0]);
+  const pixelScale=(floor[1][0]-floor[0][0])/1.5;
+  const edge=floor[0][0]+.65*pixelScale;
+  const offset=-.3*Math.cos(rad(25))+height*Math.sin(rad(25));
+  close((weight[0][0]-edge)/pixelScale,offset,1e-6);
+  assert(label==='A' ? weight[0][0]<edge : weight[0][0]>edge);
+}
+close(560*1.7,952); close(420*2.4,1008); close(420*2.4/560,1.8);
+close(560+420+100,1080); close(300*.4/1.2,100); close(300*.6/1.2,150);
+close((80*.5+40*1.5)/1.5,200/3); close(120-200/3,160/3);
+const launchX=15*Math.cos(rad(38)), launchY=15*Math.sin(rad(38));
+const targetSpeed=Math.sqrt(launchY**2-2*9.81*2.56);
+const targetTimes=[(launchY-targetSpeed)/9.81,(launchY+targetSpeed)/9.81];
+for (const t of targetTimes) close(launchY*t-9.81*t*t/2,2.56);
+assert(launchY-9.81*targetTimes[0]>0 && launchY-9.81*targetTimes[1]<0);
+close(launchX*targetTimes[1],18.261344859,1e-8);
+close(launchY**2/(2*9.81),4.346778122,1e-8);
+const ledgeTime=(6+Math.sqrt(136))/10;
+close(6*ledgeTime-5*ledgeTime**2,-5); assert(ledgeTime>1.2);
+for (const [angle,time,height] of [[30,2,5],[60,Math.sqrt(12),15]]) {
+  const vertical=20*Math.sin(rad(angle)), horizontal=20*Math.cos(rad(angle));
+  close(2*vertical/10,time); close(vertical**2/20,height); close(horizontal*time,20*Math.sqrt(3));
+}
 
 // Legacy bookmark IDs from the notes before adding the learning routes.
 for (const id of ["-unit-1-forces-and-their-effects", "-11-forces-and-their-interactions", "-12-motion", "-13-resultant-forces", "-14-momentum", "-15-safety-in-public-transport", "-16-forces-and-terminal-velocity", "\ufe0f-17-centre-of-mass--18-moments", "-unit-1-quick-check", "-unit-2-energy", "-21-forces-and-energy", "\ufe0f-22-energy-transfers-conservation-and-dissipation", "-23-energy-resources", "-unit-2-quick-check", "-unit-3-waves", "-31-general-properties-of-waves", "-32-the-electromagnetic-spectrum", "-33-sound-and-ultrasound", "-34-reflection--35-refraction", "\ufe0f-36-lenses-and-the-eye", "-unit-3-quick-check", "-unit-4-particle-model-of-matter", "-41-kinetic-theory", "-42-energy-transfers-and-particle-motion", "-unit-4-quick-check", "-unit-5-electricity-and-magnetism", "-51-electrical-circuits", "-52-magnetism-and-electromagnetism", "-unit-5-quick-check", "-unit-6-generating-and-distributing-electricity--household-use", "-61-generating-electricity", "-62-electricity-transmission", "-63-using-electricity-in-the-home", "-64-the-motor-effect--65-energy-transfer", "-unit-6-quick-check", "\ufe0f-unit-7-nuclear-physics", "\ufe0f-71-atomic-structure", "\ufe0f-72-ionising-radiation", "\ufe0f-73-nuclear-fission--74-nuclear-fusion", "-unit-7-quick-check", "-unit-8-space-physics", "-81-life-cycle-of-a-star", "-82-solar-system-and-orbital-motion", "-83-red-shift-and-the-expanding-universe", "-unit-8-quick-check", "key-equations-summary", "revision-resources", "unit-1-force--motion", "unit-2-energy", "unit-3-waves"]) {

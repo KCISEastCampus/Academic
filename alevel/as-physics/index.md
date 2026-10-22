@@ -14,10 +14,11 @@ study_page: true
 1. **[Measurements and Uncertainties](/alevel/as-physics/measurements-and-uncertainties/)** — Judge measurement quality, combine uncertainties and use error bars to constrain a line.
 2. **[Vectors and Moments](/alevel/as-physics/vectors-and-moments/)** — Resolve vectors, check force and moment equilibrium, distinguish couples and test support conditions.
 3. **[Straight-line Motion and Uniform Acceleration](/alevel/as-physics/straight-line-motion/)** — Connect motion graphs, choose constant-acceleration models and analyse freefall data for RP1.
+4. **[Projectile Motion](/alevel/as-physics/projectile-motion/)** — Connect two motion components through time, choose a target event and test the no-drag model.
 
 Try a short task, then work through explanations and examples. Open hints and solutions separately; finish with independent practice, diagnosis and a retry.
 
-Follow these three learning pages in order. Other topics remain reference notes below, rather than a complete guided course. For revision, start with [first-lesson practice](/alevel/as-physics/measurements-and-uncertainties/#independent-practice) or [second-lesson practice](/alevel/as-physics/vectors-and-moments/#independent-practice).
+Follow these four learning pages in order. Other topics remain reference notes below, rather than a complete guided course. For revision, start with [first-lesson practice](/alevel/as-physics/measurements-and-uncertainties/#independent-practice) or [second-lesson practice](/alevel/as-physics/vectors-and-moments/#independent-practice).
 
 <h2 id="reference-notes">Reference notes and resources</h2>
 

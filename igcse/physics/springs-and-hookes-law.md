@@ -265,4 +265,4 @@ At 1.0 N the extension is 5.0 mm, so the unloaded length is 67 mm. The 72 mm rea
 
 Scope: OxfordAQA International GCSE Physics 9203, Section 3.1.1 deformation and force–extension content, including the spring required practical. All tasks, numbers and plotted records are self-written or constructed; no official marks are assigned. See the [official specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-gcse-physics-specification.pdf).
 
-[Previous: Forces and Motion](/igcse/physics/forces-and-motion/) · [Back to IGCSE Physics](/igcse/physics/). Centre of mass and moments remain [reference notes](/igcse/physics/#%EF%B8%8F-17-centre-of-mass--18-moments), not yet a guided learning page.
+[Previous: Forces and Motion](/igcse/physics/forces-and-motion/) · [Back to IGCSE Physics](/igcse/physics/). [Next: Centre of Mass, Stability and Moments](/igcse/physics/centre-of-mass-and-moments/).
