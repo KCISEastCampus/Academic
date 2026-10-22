@@ -11,6 +11,8 @@ study_page: true
 
 [A2 Mechanics](/alevel/a2-mathematics/mechanics/) · M2.6 Work and Energy
 
+**Collision prerequisite:** try the [AS Momentum Bridge](/alevel/a2-mathematics/mechanics/momentum-bridge/) before comparing kinetic energies after impact. Check the system's external impulse and all direction branches before using momentum conservation.
+
 Find work done by a force, use power to solve vehicle problems, and compare kinetic and potential energy to find speeds and distances.
 
 - **Learning:** start with [work](#work-done-by-a-force), then study [power](#power) and [the work-energy principle](#the-work-energy-principle).
@@ -22,6 +24,12 @@ Textbook: Chapter 14, *Work, Power and Energy*, Sections 14.1–14.3 (printed pp
 **Before you start:** review [Newton's Laws of Motion](/alevel/a2-mathematics/mechanics/newtons-laws-of-motion/) and [Forces, Equilibrium and Friction](/alevel/a2-mathematics/mechanics/forces-equilibrium-and-friction/). Use $g=9.8\,\mathrm{m\,s^{-2}}$ unless stated otherwise. Keep exact values until the final answer; give numerical answers to three significant figures, or one decimal place for angles, unless asked otherwise.
 
 Model bodies as particles unless stated otherwise. All worked examples and practice questions are self-written, not official past-paper questions. No official marks are assigned. Diagrams show the model and are not drawn to scale.
+
+<!-- motion-sources:start -->
+## Sources and Scope
+
+**Scope and assessment:** [OxfordAQA 9660 specification v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf), M2.6; method references: MA05 January 2025 Q1, Q7(a) and Q8, read with the paired [question paper](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-question-paper.pdf) and [mark scheme, Version 1.0 Final](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-mark-scheme.pdf). The tasks remain self-written with no official marks. Their precision convention is stated above; authentic questions follow the paper and question. The threaded-wire examples use energy and a permanent constraint; they do not introduce FM05 non-uniform vertical-circle force equations.
+<!-- motion-sources:end -->
 
 ## Work Done by a Force
 
@@ -528,6 +536,62 @@ $$\boxed{u=\sqrt{31.36}=5.6\,\mathrm{m\,s^{-1}}}.$$
 Part (b) gives the **limiting speed** for passing over the top. In this ideal model, the bead approaches the highest point with speed tending to zero at the threshold. A greater initial speed is needed to pass over it.
 
 </details>
+
+<!-- motion-transfer:start -->
+## Independent Method Choice
+
+**Self-written diagnostic task.** Select a method without a method label in the question. Keep the reasoning hint and feedback closed until you have made an attempt.
+
+**Question:** A $2\,\mathrm{kg}$ block is projected at $6\,\mathrm{m\,s^{-1}}$ up a fixed straight rough slope with $\sin\alpha=1/4$. While it slides upwards, a constant frictional force of $1\,\mathrm N$ opposes motion. There is no driving force and air resistance is ignored. Find its speed after $5\,\mathrm m$ and decide whether it can first reach a marker $8\,\mathrm m$ up the slope before stopping. A student writes $36+2g(s/4)-s=v^2$. Explain the error and find where the upward motion ends. Do not model the subsequent motion.
+
+<details markdown="1">
+<summary>Reasoning hint</summary>
+
+Time is not requested. Name the energy supplied initially and the two uses of it during upward motion. Check reachability before taking a square root.
+
+</details>
+
+<details markdown="1">
+<summary>Feedback and independent check</summary>
+
+The work-energy principle avoids finding time. With launch level as the fixed zero of PE, gravity is counted through the increase in PE:
+
+$$36=v^2+2g\left(\frac s4\right)+s,\qquad v^2=36-5.9s.$$
+
+At $s=5$, $v^2=6.5$, so $\boxed{v=\sqrt{6.5}\approx2.55\,\mathrm{m\,s^{-1}}}$. At $s=8$, the proposed upward model gives $v^2=-11.2$, so the marker is unreachable during that stage. The upward motion ends at
+
+$$\boxed{s_{\text{stop}}=\frac{36}{5.9}=\frac{360}{59}\approx6.10\,\mathrm m}.$$
+
+The student's gravity term has the wrong sign: climbing uses energy instead of supplying it. Equivalently, work by weight is negative. If you obtained a negative $v^2$, do not take its absolute value: locate the stopping point and end this stage there. Static friction or a later reversal would require another model.
+
+Independently, resolve uphill: $2a=-2g/4-1=-5.9$, so $a=-2.95\,\mathrm{m\,s^{-2}}$. Then $v^2=6^2+2as$ gives the same expression and stopping distance. This second method checks the signs as well as the arithmetic.
+
+</details>
+
+### Retry: change the structure
+
+**Question:** A $2\,\mathrm{kg}$ block starts from rest and slides $4\,\mathrm m$ down a fixed slope with $\sin\alpha=1/4$, against constant friction $1\,\mathrm N$. It then enters a fixed smooth horizontal track through a smooth join of negligible height change; assume no energy is lost at the join. Find its speed on entering the horizontal track and after travelling a further $3\,\mathrm m$ along it. Explain whether friction from the slope belongs in the second stage. Ignore air resistance.
+
+<details markdown="1">
+<summary>Retry hint</summary>
+
+Split the energy account where the surface changes. Decide afresh which forces do work on the horizontal track.
+
+</details>
+
+<details markdown="1">
+<summary>Retry feedback and check</summary>
+
+On the slope, the vertical drop is $1\,\mathrm m$:
+
+$$2g(1)-1(4)=\frac12(2)v^2,\qquad v^2=15.6.$$
+
+$$\boxed{v_{\text{entry}}=\sqrt{15.6}\approx3.95\,\mathrm{m\,s^{-1}}},\qquad \boxed{v_{\text{after }3\,\mathrm m}=\sqrt{15.6}\approx3.95\,\mathrm{m\,s^{-1}}}.$$
+
+On the smooth horizontal stage, weight and reaction do no work and there is no friction. The speed stays constant. Do not carry the old $1\,\mathrm N$ force into the second stage. Independently, the slope gives $a=(2g/4-1)/2=1.95\,\mathrm{m\,s^{-2}}$ and $v^2=2(1.95)(4)=15.6$; the horizontal resultant is zero. The smooth, loss-free join assumption is needed to keep this speed through the change of direction.
+
+</details>
+<!-- motion-transfer:end -->
 
 ## Method Summary
 

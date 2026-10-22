@@ -52,6 +52,13 @@ jobs:
           node scripts/test-physics-nuclear.js
           node scripts/test-physics-bilingual.js
 
+      - name: Test mathematics courses and bilingual content
+        run: |
+          node scripts/test-bilingual.js
+          for check in scripts/test-mechanics-*.js scripts/test-as-mathematics-*.js scripts/test-as-further-*.js; do
+            node "$check"
+          done
+
   markdown-lint:
     name: Markdown Lint
     runs-on: ubuntu-latest

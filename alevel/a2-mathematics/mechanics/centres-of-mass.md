@@ -396,6 +396,64 @@ $$\boxed{T_{\text{left}}=19.6\,\mathrm N},\qquad
 
 </details>
 
+## Independent Task: Infer the Mass Distribution {#independent-task-infer-the-mass-distribution}
+
+**Self-written task.** Two rectangular laminae are rigidly joined along an edge. In body coordinates measured in metres, the left rectangle has opposite corners $(0,0)$ and $(2,2)$ and constant mass per unit area $\rho\,\mathrm{kg\,m^{-2}}$, where $\rho>0$. The right rectangle has opposite corners $(2,0)$ and $(4,2)$ and constant mass per unit area $1\,\mathrm{kg\,m^{-2}}$. A $4\,\mathrm{kg}$ particle is fixed at $(4,2)$. The body is freely suspended from $P=(0,2)$ in stable equilibrium. The acute angle $\theta$ between the edge from $P$ to $(0,0)$ and the vertical satisfies $\tan\theta=2$. Find $\rho$. Assess the claim: “The rectangles have equal area, so their masses cancel and only the particle can break the symmetry.” Choose and explain your method.
+
+<details markdown="1">
+<summary>Reasoning hint</summary>
+
+Find the two actual lamina masses before including the particle. Calculate $G$ in body coordinates; after suspension, $PG$ is vertical. Which ratio gives the angle from the downward edge at $P$?
+
+</details>
+
+<details markdown="1">
+<summary>Feedback and check</summary>
+
+The component masses are $4\rho$, $4$ and $4\,\mathrm{kg}$, with centres $(1,1)$, $(3,1)$ and $(4,2)$. Their total mass is $4\rho+8\,\mathrm{kg}$, so
+
+$$\bar x=\frac{4\rho+12+16}{4\rho+8}=\frac{\rho+7}{\rho+2},\qquad \bar y=\frac{4\rho+4+8}{4\rho+8}=\frac{\rho+3}{\rho+2}.$$
+
+From $P$ to $G$, the changes are $\bar x$ across and $2-\bar y$ down. For $\rho>0$, both are positive. Hence
+
+$$\tan\theta=\frac{\bar x}{2-\bar y}=\frac{\rho+7}{\rho+1}=2,\qquad \boxed{\rho=5}.$$
+
+The left surface density is therefore $5\,\mathrm{kg\,m^{-2}}$. At this value, the masses are $20$, $4$ and $4\,\mathrm{kg}$, giving
+
+$$G=\left(\frac{12}{7},\frac87\right)\mathrm m,\qquad \frac{12/7}{2-8/7}=2.$$
+
+Rotating towards the stable position makes the horizontal component of $PG$ zero and leaves $G$ below $P$. Equal areas do not imply equal masses when surface densities differ. The left lamina already breaks the mass symmetry. If you averaged the three centres equally, restore the mass column; if you used $\bar y$ in the angle denominator, measure from $P$, not the origin.
+
+**English explanation to complete:** “Area weighting is valid only when …; the vertical passes through …”.
+
+</details>
+
+### Retry: Replace Suspension by Two Supports {#retry-replace-suspension-by-two-supports}
+
+**Self-written task.** Remove the particle. Use the same two rectangles, but treat the left surface density $\rho\,\mathrm{kg\,m^{-2}}$ as unknown again; the right density remains $1\,\mathrm{kg\,m^{-2}}$. Two vertical strings attached at $P=(0,2)$ and $Q=(4,2)$ support the rigid body with $PQ$ horizontal. The tension at $P$ is twice that at $Q$. Find $\rho$, the combined centre of mass and both tensions. Explain why the centre of mass need not lie directly below either attachment point.
+
+<details markdown="1">
+<summary>Retry hint</summary>
+
+Use the tension ratio with vertical force balance and moments. The single-suspension angle condition no longer applies.
+
+</details>
+
+<details markdown="1">
+<summary>Retry check</summary>
+
+Set $T_Q=T$ and $T_P=2T$. With total mass $M=4\rho+4$, vertical balance gives $3T=Mg$. Moments about $P$ give $4T=Mg\bar x$, so $\bar x=4/3$.
+
+$$\frac{4\rho(1)+4(3)}{4\rho+4}=\frac43,\qquad 3(\rho+3)=4(\rho+1),\qquad \boxed{\rho=5}.$$
+
+The two component centres both have $y=1$, hence
+
+$$\boxed{G=\left(\frac43,1\right)\mathrm m},\qquad \boxed{T_P=156.8\,\mathrm N\approx157\,\mathrm N,\quad T_Q=78.4\,\mathrm N}.$$
+
+The tensions are positive and sum to $24g=235.2\,\mathrm N$. About $Q$, the check is $4T_P=24g(4-4/3)=627.2\,\mathrm{N\,m}$. The two upward forces together balance the weight and its moment; neither individual support must lie directly above $G$. Do not carry over the removed particle or the previous total mass of $28\,\mathrm{kg}$.
+
+</details>
+
 ## Quick Reference
 
 | Model | Method and condition |
@@ -409,5 +467,11 @@ $$\boxed{T_{\text{left}}=19.6\,\mathrm N},\qquad
 | Two vertical support strings | Balance vertical forces and take moments; check both tensions |
 
 Before finishing, check the total mass is positive, coordinates use one origin, and the result moves towards added mass or away from removed mass. For positive masses, each coordinate lies between the smallest and largest coordinates of the component centres.
+
+## Sources and Scope {#sources-and-scope}
+
+Scope: [OxfordAQA Mathematics 9660 specification v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf), §3.5 M2.3. Integration methods for centres of mass are not required. Assessment reference actually read: **9660/MA05 Unit M2, January 2025, Q6**, [Question Paper, pp.12–13](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-question-paper.pdf) and [Mark Scheme, Version 1.0 Final, p.12](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-mark-scheme.pdf). It requires the meaning of uniform surface density, inclusion of both particles and lamina, exact coordinates, and suspension geometry. These stored paired documents informed the teaching checks; all tasks here remain self-written, without official marks.
+
+The rounding convention at the start applies to this page's self-written tasks. The January 2025 paper defaults to two significant figures for calculator final answers unless stated otherwise; Q6(b) explicitly asks for exact coordinates. Follow each original instruction when attempting official questions.
 
 **Learning path:** [Previous: Moments and Rigid Objects in Equilibrium](/alevel/a2-mathematics/mechanics/moments-and-rigid-objects/) · [Mechanics topic index](/alevel/a2-mathematics/mechanics/) · [Next: Newton's Laws of Motion](/alevel/a2-mathematics/mechanics/newtons-laws-of-motion/).

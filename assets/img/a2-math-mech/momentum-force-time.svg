@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" role="img" aria-labelledby="title desc">
+  <title id="title">Constructed resultant force against time</title>
+  <desc id="desc">The force rises linearly from zero at time zero to three newtons at one second, then falls linearly to zero at two seconds.</desc>
+  <rect width="640" height="320" rx="12" fill="#fff"/>
+  <g font-family="Arial, sans-serif" font-size="19" fill="#172033">
+    <path d="M90 270V36M90 270H605" fill="none" stroke="#172033" stroke-width="2"/>
+    <path d="M84 47L90 35L96 47M593 264L605 270L593 276" fill="none" stroke="#172033" stroke-width="2"/>
+    <path d="M90 270L330 75L570 270Z" fill="#e8f0ff" stroke="#2453a6" stroke-width="3"/>
+    <path d="M90 75H330V270" fill="none" stroke="#6b7280" stroke-dasharray="6 5"/>
+    <path d="M330 264V276M570 264V276M84 75H96" stroke="#172033" stroke-width="2"/>
+    <text x="67" y="295">0</text><text x="323" y="298">1</text><text x="563" y="298">2</text>
+    <text x="63" y="82">3</text><text x="36" y="32">F / N</text><text x="573" y="313">t / s</text>
+    <text x="375" y="70" font-size="17">Constructed data</text>
+  </g>
+</svg>

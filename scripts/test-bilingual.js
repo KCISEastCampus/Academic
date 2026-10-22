@@ -69,10 +69,10 @@ for (const hash of ['', '#practice']) {
   click();
   assert.equal(new URL(link.href).hash, hash);
 }
-assert(!built('/alevel/a2-mathematics/mechanics/').includes('id="languageSwitch"'), 'Untranslated page must not link to a missing translation');
+assert(built('/alevel/a2-mathematics/mechanics/').match(/<a[^>]*id="languageSwitch"[^>]*>/)?.[0].includes('href="/zh/alevel/a2-mathematics/mechanics/"'), 'Mechanics index switches to its Chinese route');
 console.log(`Bilingual checks passed for ${chapters.length} pages: paired switches, formulas, heading IDs, links, details and Chinese controls.`);
 
-// Chinese subject indexes point to English notes until those lessons are translated.
+// Indexes distinguish translated notes, learning routes and English-note directories.
 const subjectIndexes = ['alevel/as-physics', 'alevel/as-mathematics',
   'igcse/biology', 'igcse/chemistry', 'igcse/mathematics', 'igcse/physics'];
 for (const subject of subjectIndexes) {
@@ -103,7 +103,8 @@ for (const subject of subjectIndexes) {
   assert(zh.includes('placeholder="搜索目录…"'), `${subject}: Chinese search`);
   assert(zh.includes('aria-label="阅读此页英文版"'), `${subject}: Chinese switch label`);
   const translated = ['alevel/as-physics', 'igcse/physics'].includes(subject);
-  assert(zhBody.includes(translated ? '本页为中文复习笔记' : '本页提供中文主题目录'), `${subject}: translation scope`);
+  const scope = subject === 'alevel/as-mathematics' ? '双语学习路线与英文速查提纲' : translated ? '本页为中文复习笔记' : '本页提供中文主题目录';
+  assert(zhBody.includes(scope), `${subject}: translation scope`);
   assert(!zhBody.includes('{{'), `${subject}: unrendered UI text`);
 }
 console.log(`Bilingual subject index checks passed for ${subjectIndexes.length} pages: front matter, switches, anchors, links and UI text.`);

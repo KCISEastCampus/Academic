@@ -33,7 +33,7 @@ function languagePage(html, href) {
   return { links, select, destinations };
 }
 
-// Directory-only pages still point to English notes; translated notes keep their local content.
+// Directory-only pages point to English notes; learning routes link to paired lessons.
 const subjectIndexes = ['alevel/as-physics', 'alevel/as-mathematics',
   'igcse/biology', 'igcse/chemistry', 'igcse/mathematics', 'igcse/physics'];
 const translatedNotes = ['alevel/as-physics', 'igcse/physics'];
@@ -65,7 +65,9 @@ for (const subject of subjectIndexes) {
   assert(zh.includes('placeholder="搜索目录…"'), `${subject}: Chinese search`);
   assert(zh.includes('aria-label="阅读此页英文版"'), `${subject}: Chinese switch label`);
   const translated = translatedNotes.includes(subject);
-  assert(zhBody.includes(translated ? '本页为中文复习笔记' : '本页提供中文主题目录'), `${subject}: translation scope`);
+  const learningCourse = subject === 'alevel/as-mathematics';
+  const scope = learningCourse ? '双语学习路线与英文速查提纲' : translated ? '本页为中文复习笔记' : '本页提供中文主题目录';
+  assert(zhBody.includes(scope), `${subject}: translation scope`);
   if (translated) {
     const math = source => source.match(/\$\$[\s\S]*?\$\$|(?<!\$)\$(?!\$)[^\n$]+\$(?!\$)/g) || [];
     assert.deepEqual(math(zhSource), math(enSource), subject + ': identical equations and numerical conditions');
@@ -86,8 +88,14 @@ for (const subject of subjectIndexes) {
   assert(!zhBody.includes('{{'), `${subject}: unrendered UI text`);
   const current = 'https://academic.example' + zhUrl;
   const runtime = languagePage(zh, current);
-  for (const link of translated ? [] : runtime.links) {
+  for (const link of translated || learningCourse ? [] : runtime.links) {
     assert.equal(new URL(link.href).pathname, enUrl, subject + ': English note destination after language initialization');
+  }
+  if (learningCourse) {
+    assert(runtime.links.some(link => new URL(link.href).pathname === zhUrl + 'algebra/'), 'AS mathematics: Chinese lesson destination');
+    for (const link of runtime.links.filter(link => link.getAttribute('hreflang') === 'en')) {
+      assert.equal(new URL(link.href).pathname, enUrl, 'AS mathematics: explicit English outline destination');
+    }
   }
   const headings = [...zhBody.matchAll(/<h2\b[^>]*id="([^"]+)"[^>]*>([\s\S]*?)<\/h2>/g)];
   assert(headings.length > 0, subject + ': topic headings');

@@ -34,6 +34,8 @@ Learn to resolve forces before working with moments and centres of mass.
 
 Use force equations to find acceleration, and energy equations to find speeds and distances.
 
+Before collision-energy problems, try the [AS Momentum Bridge](/alevel/a2-mathematics/mechanics/momentum-bridge/): diagnose signed momentum, external impulse, direction branches and kinetic-energy changes. No coefficient of restitution is required.
+
 1. <span id="m24-newtons-laws-of-motion"></span><span id="newtons-laws-of-motion"></span>**[Newton's Laws of Motion](/alevel/a2-mathematics/mechanics/newtons-laws-of-motion/)** — Motion on planes, connected particles and variable forces.
 2. <span id="m25-projectiles"></span><span id="projectiles"></span>**[Projectiles](/alevel/a2-mathematics/mechanics/projectiles/)** — Flight time, greatest height, range and trajectories.
 3. <span id="m26-work-and-energy"></span><span id="work-and-energy"></span>**[Work and Energy](/alevel/a2-mathematics/mechanics/work-and-energy/)** — Work done, power and conservation of mechanical energy.
@@ -67,5 +69,7 @@ Sources: *AQA A2 Maths: Pure and Mechanics*, Chapters 10–15 (printed pp. 148�
 </details>
 
 **Before you start:** review [AS Mathematics](/alevel/as-mathematics/) and the Pure lessons on [vectors](/alevel/a2-mathematics/vectors/), [differentiation](/alevel/a2-mathematics/differentiation/) and [integration](/alevel/a2-mathematics/integration/) as needed.
+
+**Precision:** self-written tasks follow each lesson's stated convention. Authentic papers follow their cover and question instructions. For example, January 2025 MA05 defaults to two significant figures for calculator final answers, with question-specific overrides; do not automatically apply the lessons' three-significant-figure convention to that paper.
 
 Other A2 mathematics units: [Pure Mathematics (MA03)](/alevel/a2-mathematics/) · [Statistics (MA04)](/alevel/a2-mathematics/statistics/).

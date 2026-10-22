@@ -23,6 +23,12 @@ Textbook: Chapter 13, Section 13.3 (printed pp. 207–215). This lesson uses the
 
 All worked examples and practice questions are self-written, not official past-paper questions. No official marks are assigned. Diagrams show the model and are not drawn to scale.
 
+<!-- motion-sources:start -->
+## Sources and Scope
+
+**Scope and assessment:** [OxfordAQA 9660 specification v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf), M2.5; method reference: MA05 January 2025 Q4 and Q7(b)(c), read with the paired [question paper](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-question-paper.pdf) and [mark scheme, Version 1.0 Final](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-mark-scheme.pdf). The tasks below remain self-written. Their default precision is the convention above; authentic questions follow their own paper and question instructions. This lesson considers gravity-only flight and horizontal landing levels; inclined-plane landing and resisted projectiles are outside its assessment scope.
+<!-- motion-sources:end -->
+
 ## The Projectile Model
 
 A **projectile** is a body moving freely after projection under gravity alone. Model it as a particle, ignore air resistance and take $g$ as constant. The force is its weight vertically downwards, so acceleration is $-g\mathbf j$ when $\mathbf j$ points upwards. There is no forward force after release in this model.
@@ -463,6 +469,60 @@ $$\boxed{R=20\sqrt3\,\mathrm m\approx34.6\,\mathrm m}.$$
 **Check:** the boundary reaches height $5$ at $t=1$. A path at this angle touches the ceiling; the range is the limit approached by flights with smaller angles, not a permitted collision-free maximum.
 
 </details>
+
+<!-- motion-transfer:start -->
+## Independent Method Choice
+
+**Self-written diagnostic task.** Choose your equations and explain why they answer the question before calculating. Keep the hint and feedback closed on the first attempt.
+
+**Question:** A particle is projected from a point $4.9\,\mathrm m$ above horizontal ground with velocity components $8\,\mathrm{m\,s^{-1}}$ horizontally and $14.7\,\mathrm{m\,s^{-1}}$ upwards. Ignore air resistance. Find both horizontal positions where it is $14.7\,\mathrm m$ above the ground and state its velocity at each. A student says, "There is only one position because the velocity is zero at the top." Diagnose this claim and find the speed at the top. Take the origin at launch and stop the model at first ground contact.
+
+<details markdown="1">
+<summary>Reasoning hint</summary>
+
+Translate height above ground into displacement above launch. Use the same time in both components and distinguish zero vertical velocity from zero velocity.
+
+</details>
+
+<details markdown="1">
+<summary>Feedback and independent check</summary>
+
+Position and direction need the component equations; a same-level range formula does not locate an intermediate height. The requested level is $14.7-4.9=9.8\,\mathrm m$ above launch:
+
+$$9.8=14.7t-4.9t^2,\qquad (t-1)(t-2)=0.$$
+
+$$\boxed{x=8\,\mathrm m\text{ at }t=1\,\mathrm s},\qquad \boxed{x=16\,\mathrm m\text{ at }t=2\,\mathrm s}.$$
+
+$$\boxed{\mathbf v(1)=8\mathbf i+4.9\mathbf j\,\mathrm{m\,s^{-1}}},\qquad \boxed{\mathbf v(2)=8\mathbf i-4.9\mathbf j\,\mathrm{m\,s^{-1}}}.$$
+
+Both times are before first ground contact: the positive root of $-4.9=14.7t-4.9t^2$ is $(3+\sqrt{13})/2\approx3.30\,\mathrm s$. The two velocities have equal speed $\sqrt{88.01}\approx9.38\,\mathrm{m\,s^{-1}}$, with directions $31.5^\circ$ above and below horizontal respectively. At $t=1.5\,\mathrm s$, only the vertical velocity is zero; the speed is $\boxed{8\,\mathrm{m\,s^{-1}}}$. The top is $15.925\,\mathrm m$ above ground, higher than the requested level, so two crossings are consistent.
+
+If you found only one root, substitute both roots into the original height equation. If you set the top speed to zero, write both velocity components there. An independent energy check at either crossing gives $v^2=8^2+14.7^2-2g(9.8)=88.01$; it checks the speed but does not choose the upward or downward branch.
+
+</details>
+
+### Retry: change the structure
+
+**Question:** A different particle is projected horizontally from $19.6\,\mathrm m$ above horizontal ground and first lands $18\,\mathrm m$ from the foot of the launch point. With no air resistance, find its initial speed and impact velocity. Explain which component determines the flight time.
+
+<details markdown="1">
+<summary>Retry hint</summary>
+
+The initial vertical component is zero. Find a positive landing time before using the measured horizontal distance.
+
+</details>
+
+<details markdown="1">
+<summary>Retry feedback and check</summary>
+
+$$-19.6=-4.9t^2,\qquad \boxed{T=2\,\mathrm s},\qquad u_x=\frac{18}{2}=9\,\mathrm{m\,s^{-1}}.$$
+
+$$\boxed{\text{initial speed}=9\,\mathrm{m\,s^{-1}}},\qquad \boxed{\mathbf v=9\mathbf i-19.6\mathbf j\,\mathrm{m\,s^{-1}}}.$$
+
+The vertical component determines landing time. The impact speed is $\sqrt{465.16}\approx21.6\,\mathrm{m\,s^{-1}}$, directed $65.3^\circ$ below horizontal. Check $x(2)=18$, $y(2)=-19.6$ and $v^2=9^2+2g(19.6)$. This is an inverse problem: the landing position determines an unknown launch component.
+
+</details>
+<!-- motion-transfer:end -->
 
 ## Quick Reference
 

@@ -13,6 +13,101 @@ redirect_from:
 > **Qualification**: OxfordAQA International AS Further Mathematics (9665) · Modular<br>
 > **Assessment**: Unit FP1 + Unit FPSM1 · 1h 30m each · 80 marks each · 50% of AS each
 
+
+## Learning route: FM01 and FM02 {#learning-route}
+
+This is the learning route for OxfordAQA **9665 v5.2**, with 20 linked lesson groups covering all 18 AS topics. Start with explanation and demonstrations, complete the scaffold, then choose a method for the independent task before opening its separate hint and solution. Use the feedback to attempt the retry. The original long notes below remain a reference; reading them is not an independent check of understanding.
+
+**Prerequisites:** FM01 assumes the pure content of ordinary AS Mathematics; FM02 assumes ordinary AS Mathematics and FP1. Diagnose algebra, trigonometry and calculus before FP1, and probability, random variables, Newton's laws and momentum before the relevant FM02 branches. Two-dimensional vector notation is introduced in M1. No induction, De Moivre, 3×3 inverse or eigenvalue course is assumed.
+
+Both units are 90-minute, 80-mark papers, each 50% of AS. FM02 is **40 pure / 20 statistics / 20 mechanics** within one paper. Paper-specific precision and command words control the required answer; “show” needs reasoning, “hence” connects an earlier result, and “sketch”/“plot” require appropriate graphical evidence. Calculators can check results but do not replace these steps; no new calculator, exam-mode or student trial is claimed.
+
+### Entry diagnosis {#entry-diagnosis}
+
+**Entry tasks (self-written):** (1) Factor $x^2-x-2$. (2) Solve $\sin\theta=1/2$ for $0\le\theta<2\pi$. (3) Differentiate $x^3$ and integrate $x^2$ from 0 to 2. (4) If $P(A)=0.4$ and $P(B\mid A)=0.2$, find $P(A\cap B)$. (5) A 2 kg particle changes velocity from −1 to 3 m s⁻¹; find its signed impulse.
+
+<details markdown="1"><summary>Diagnosis check and repair route</summary>
+
+$$(x-2)(x+1);\quad \theta=\pi/6,5\pi/6;\quad 3x^2,8/3;\quad P(A\cap B)=0.08;\quad J=8\ \mathrm{N\,s}.$$
+
+If (1) fails, review factoring and quadratics in ordinary AS before A1. For (2), review the unit circle before A3. For (3), review powers in calculus before A6/A7. For (4), review conditional probability before S1. For (5), review signed momentum before M3. Retest the same skill with a changed example before proceeding.
+
+</details>
+
+### FM01 · FP1 {#route-a}
+
+Follow A1 → A2, A3 → A4, and A5 → A6 → A7 as their prerequisites permit.
+
+- **A1 · FP1.1:** [Rational functions: graphs and range](/alevel/as-further-mathematics/rational-functions/)
+- **A2 · FP1.1 FP1.2:** [Conics, loci and tangencies](/alevel/as-further-mathematics/conics-and-loci/)
+- **A3 · FP1.6:** [Complete trigonometric solutions](/alevel/as-further-mathematics/trigonometric-solutions/)
+- **A4 · FP1.3 FP1.4:** [Complex numbers, Argand diagrams and roots](/alevel/as-further-mathematics/complex-numbers-and-roots/)
+- **A5 · FP1.5:** [Finite sums and infinite-series limits](/alevel/as-further-mathematics/series/)
+- **A6 · FP1.7:** [From secants to rates and approximations](/alevel/as-further-mathematics/rates-and-approximations/)
+- **A7 · FP1.7:** [Improper integrals: convergence or divergence](/alevel/as-further-mathematics/improper-integrals/)
+
+### FM02 · pure mathematics {#route-b}
+
+B1 → B2; A6 supports B4 → B5. B3 uses ordinary AS logarithms.
+
+- **B1 · FPP1.1:** [Matrix algebra and inverse order](/alevel/as-further-mathematics/matrix-algebra/)
+- **B2 · FPP1.1:** [Transformations and affine invariant lines](/alevel/as-further-mathematics/transformations/)
+- **B3 · FPP1.2:** [Linearisation, plotting and fitting](/alevel/as-further-mathematics/linearisation/)
+- **B4 · FPP1.3:** [Numerical roots with traceable updates](/alevel/as-further-mathematics/numerical-roots/)
+- **B5 · FPP1.3:** [Euler updates and their limits](/alevel/as-further-mathematics/euler-method/)
+
+### FM02 · statistics {#route-s}
+
+S1 → S2/S3 → S4 → S5; return to the moment derivations when using PGFs.
+
+- **S1 · FS1.1:** [Bayes: changing the sample space](/alevel/as-further-mathematics/bayes/)
+- **S2 · FS1.2:** [Discrete uniform probabilities and moments](/alevel/as-further-mathematics/discrete-uniform/)
+- **S3 · FS1.3:** [Geometric trials and moment derivations](/alevel/as-further-mathematics/geometric-distribution/)
+- **S4 · FS1.4:** [Probability generating functions](/alevel/as-further-mathematics/generating-functions/)
+- **S5 · FS1.5:** [Linear combinations and covariance](/alevel/as-further-mathematics/linear-combinations/)
+
+### FM02 · mechanics {#route-m}
+
+M1 and M2 establish notation and checks for M3.
+
+- **M1 · FM1.1:** [Vectors, interception and closest approach](/alevel/as-further-mathematics/relative-motion/)
+- **M2 · FM1.2:** [Dimensions, units and model limits](/alevel/as-further-mathematics/dimensions/)
+- **M3 · FM1.3:** [Variable-force impulse and collisions](/alevel/as-further-mathematics/impulse-and-collisions/)
+
+### Mixed exit check {#exit-check}
+
+All exit tasks are self-written. Select a method without opening the lesson headings; give conditions and reasons, not just numbers. A wrong answer identifies a return route; it is not a claim about exam grades.
+
+**Mixed tasks (self-written):** (1) Give the complete real solution of $\cos(2x)=1/2$ and decide whether $\int_1^\infty x^{-2}\,dx$ is finite. (2) A transformation is $\operatorname{diag}(3,1)$. Find its invariant lines, including any that miss the origin. (3) Independent X,Y have PGFs $(1+t)/2$ and $(t+t^2)/2$. Find $P(X+Y=2)$ and the variance of their sum. (4) Two particles have relative position $(4-t,3)$ m for $t\ge0$ s. Find their closest distance and explain whether they collide.
+
+<details markdown="1"><summary>Exit hints</summary>
+
+(1) Separate the periodic equation and the endpoint limit. (2) Retain the line intercept and test vertical lines. (3) Match powers and retain independence. (4) Minimise a squared magnitude over the allowed times.
+
+</details>
+
+<details markdown="1"><summary>Exit solutions and return routes</summary>
+
+$$x=\pm\pi/6+n\pi\ (n\in\mathbb Z);\qquad\int_1^\infty x^{-2}\,dx=\lim_{R\to\infty}(1-1/R)=1.$$
+
+(1) Missing a sign or a cutoff: revisit A3/A7. (2) All $y=k$ and $x=0$ are invariant; only points on $x=0$ are fixed. Missing nonzero intercepts: revisit B2.
+
+$$G_{X+Y}(t)=(t+2t^2+t^3)/4;\quad P(X+Y=2)=1/2;\quad\operatorname{Var}(X+Y)=1/4+1/4=1/2.$$
+
+(3) A missing cross coefficient suggests S4; an incorrect variance suggests S5. (4) The nearest point occurs at $t=4$ s with distance 3 m; the second component never vanishes, so there is no collision. Wrong time or confusing path intersection with meeting: revisit M1.
+
+</details>
+
+### Source identity and reference notes {#course-sources}
+
+Scope follows the [9665 specification v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf), §§3.1–3.2. The FM01 public specimen QP body says **Specimen 2018 Morning**; its filename contains 2019/v3 and footer versions vary. Its officially paired specimen MS has copyright 2017. It is not a formal 2019 sitting or a standardised final mark scheme from a live exam. FM02 evidence is **June 2024**, examined 16 May 2024, with Version 1.0 Final MS. Each lesson identifies the questions and QP/MS pages actually read in the research. All new tasks here are self-written, not official questions or marks.
+
+This authored route has not yet been trialled with students. Scope coverage, correct calculations and a passing build do not by themselves establish learning effectiveness.
+
+## Reference notes {#reference-notes}
+
+The original notes below support lookup and review. Follow the learning route above for explanations, diagrams and independent tasks.
+
 # 🏗️ AS Level Course Structure
 
 
@@ -80,8 +175,8 @@ For rational function $$y = \frac{P(x)}{Q(x)}$$:
 
 1. Set $y = k$ to get $$P(x) = kQ(x)$$
 2. Rearrange into quadratic: $Ax^2 + Bx + C = 0$
-3. For real solutions to exist: $B^2 - 4AC ≥ 0$
-4. Solve for range of $k$ to find stationary points
+3. When $A\ne0$, real solutions require $B^2-4AC\geq0$. Treat $A=0$ separately: the equation may become linear, inconsistent or an identity.
+4. Check every candidate against the original denominator restrictions. A repeated admissible root can identify a tangency and hence a stationary value; a boundary caused by a missing point, a limiting value or degree reduction need not be a stationary point.
 
 **Example with Detailed Working:**
 
@@ -352,7 +447,7 @@ $$x^2 - (S^3 - 3PS)x + P^3 = 0$$
 ### 5.1 Essential Summation Formulas
 
 
-**Must Memorize** these three fundamental results:
+**Use and understand** these three fundamental results:
 
 $$\sum_{r=1}^n r = \frac{n(n+1)}{2}$$
 
@@ -403,9 +498,9 @@ $$\sum_{r=1}^n r(r+1)(r+2) = \frac{1}{4}n(n+1)(n+2)(n+3)$$
 
 Find $\sum_{r=1}^n (2r-1)(2r+1)$
 
-**Method:** Use method of differences to show that $(2r-1)(2r+1)$ can be expressed as a telescoping series.
+**Method:** Expand $(2r-1)(2r+1)=4r^2-1$ and use the square-sum formula.
 
-After applying the telescoping technique, the sum simplifies to a manageable form.
+$$\sum_{r=1}^n(2r-1)(2r+1)=\frac{n(4n^2+6n-1)}3.$$
 
 ---
 
@@ -509,7 +604,7 @@ $$\frac{dy}{dt} = \frac{dy}{dx} × \frac{dx}{dt}$$
 
 **Example:** Pressure-Volume Relationship
 
-If $P = kV^3$ and volume $V$ is changing with time:
+In this hypothetical mathematical model, $P = kV^3$ with constant $k$; this is a stipulated relationship, not a general gas law. If volume $V$ is changing with time:
 
 $$\frac{dP}{dt} = \frac{dP}{dV} × \frac{dV}{dt} = 3kV^2 × \frac{dV}{dt}$$
 
@@ -753,7 +848,7 @@ Plot $\frac{1}{y}$ against $\frac{1}{x}$: gradient $= b$, intercept $= a$.
 Plot $y^2$ against $x^3$: gradient $= a$, intercept $= b$.
 
 **Worked Example**:
-Experimental data gives:
+The following constructed data illustrate an exact power law; they are not experimental measurements:
 
 | $x$ | 1 | 2 | 3 | 4 | 5 |
 |-----|---|---|---|---|---|
@@ -803,7 +898,7 @@ If $f(x)$ is continuous on $[a,b]$ and $f(a)$ and $f(b)$ have opposite signs, th
 | 4 | 1.25 | 1.375 | 1.3125 | -0.052 |
 | 5 | 1.3125 | 1.375 | 1.34375 | 0.083 |
 
-After 5 iterations, root ≈ 1.324 (accurate to 0.03).
+After five iterations the retained interval is $[1.3125,1.34375]$. Its midpoint is $1.328125$, with absolute error at most $0.015625$ for the root in this bracket. These five steps do not justify reporting $1.324$; continue the table if more precision is required. Continuity gives a root in each sign-changing bracket, and $f'(x)=3x^2-1>0$ on $[1,2]$ makes this root unique.
 
 ### 3.3 Linear Interpolation
 
@@ -872,7 +967,7 @@ Solve $\frac{dy}{dx} = x + y$ with $y(0) = 1$, step $h = 0.1$, find $y(0.3)$.
 
 Thus $y(0.3) \approx 1.362$.
 
-**Accuracy**: Smaller $h$ gives better approximation but more steps.
+**Accuracy**: On a fixed finite interval, Euler's method converges as $h$ tends to zero under suitable smoothness and stability conditions. Reducing $h$ often improves accuracy, but two close approximations alone do not prove an error bound. Check the model, endpoint and accumulated rounding; do not assume that every individual smaller step must improve the answer.
 
 ---
 
@@ -969,7 +1064,7 @@ $$\text{Var}(X)=\text{Var}(Y)=\frac{(N-1)(2N-1)}{6}-\left(\frac{N-1}{2}\right)^2
 
 $$P(c\leq X\leq d)=\frac{d-c+1}{N}\quad\text{for integers }a\leq c\leq d\leq b$$
 
-**Example (self-written / 自拟题)**: $X$ is uniform on $\{2,3,4,5,6,7,8\}$. Find $P(X>5)$.
+**Example (self-written)**: $X$ is uniform on $\{2,3,4,5,6,7,8\}$. Find $P(X>5)$.
 
 The favourable values are $6,7,8$, so $P(X>5)=3/7$. Also, $E(X)=5$ and $\text{Var}(X)=(7^2-1)/12=4$.
 
@@ -1186,7 +1281,7 @@ Position after $t$:
 $A$: $(ut, 0)$
 $B$: $(100, 10t)$
 
-For interception: $ut = 100$ and $0 = 10t$ ⇒ $t = 0$ (trivial). No interception possible because $A$ has no $y$-component. This shows interception requires velocity components to align.
+For interception: $ut = 100$ and $0 = 10t$ ⇒ $t=0$ from the y equation, which fails the x equation. No interception is possible: both position components must agree at the same valid time; path geometry alone is insufficient.
 
 ### 1.5 Closest Approach
 
@@ -1285,7 +1380,7 @@ $T$: $-1 = -2a$ ⇒ $a = \frac{1}{2}$
 
 Then $b = -a = -\frac{1}{2}$
 
-Thus $v = k \sqrt{\frac{T}{\mu}}$. Experiment shows $k = 1$.
+Thus $v = k \sqrt{\frac{T}{\mu}}$. An ideal flexible-string wave model gives $k=1$; dimensional analysis alone cannot establish that model or coefficient.
 
 ---
 

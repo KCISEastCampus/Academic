@@ -23,6 +23,8 @@ Textbook: Chapter 13, Sections 13.1–13.2 (printed pp. 202–207). This lesson 
 
 All worked examples and practice questions are self-written, not official past-paper questions. No official marks are assigned. Diagrams show directions; arrow lengths are not a common force scale.
 
+Use an inertial reference frame and constant mass throughout this lesson. Before collision or impulse problems, use the [AS momentum bridge: direction and energy](/alevel/a2-mathematics/mechanics/momentum-bridge/) to check the external impulse and distinguish momentum conservation from kinetic-energy conservation. That bridge revises MA02 prerequisites; coefficient of restitution is not needed here.
+
 ## Newton's Laws and the Resultant Force
 
 1. With zero resultant force, a body stays at rest or moves with constant velocity.
@@ -470,6 +472,80 @@ $$\boxed{\lvert\mathbf F(0)\rvert=3\sqrt5\,\mathrm N\approx6.71\,\mathrm N}.$$
 
 </details>
 
+## Independent Task: Motion Direction or Force Direction? {#independent-task-motion-direction-or-force-direction}
+
+**Self-written task.** A $2\,\mathrm{kg}$ block is moving up a long rough plane inclined at $30^\circ$ with speed $3\,\mathrm{m\,s^{-1}}$. A constant applied force of $6\,\mathrm N$ acts up the plane, parallel to it. The coefficient of friction is $1/(2\sqrt3)$; use this coefficient for both sliding friction and the maximum static friction. A student says: “The force is up the slope and the block is going up, so it must speed up.” Assess the claim. Find its signed acceleration, the time and distance to its first stop, and whether it can then remain at rest. Assume it stays on the plane. Choose your method without assuming the acceleration direction.
+
+<details markdown="1">
+<summary>Reasoning hint</summary>
+
+Draw all forces and choose a positive direction. During upward sliding, which way does friction act? At zero speed, replace sliding friction by the static friction needed for equilibrium and check its limit.
+
+</details>
+
+<details markdown="1">
+<summary>Feedback and check</summary>
+
+Take up the plane as positive. The perpendicular equation gives the positive reaction
+
+$$R=2g\cos30^\circ=9.8\sqrt3\,\mathrm N,\qquad \mu R=4.9\,\mathrm N.$$
+
+During upward sliding, both friction and the weight component act down the plane. The $6\,\mathrm N$ is an applied force, not the resultant:
+
+$$6-2g\sin30^\circ-4.9=2a,\qquad \boxed{a=-4.35\,\mathrm{m\,s^{-2}}}.$$
+
+The acceleration is constant until the first stop, so
+
+$$0=3-4.35t,\qquad \boxed{t=\frac{20}{29}\,\mathrm s\approx0.690\,\mathrm s},$$
+
+$$0=3^2+2(-4.35)s,\qquad \boxed{s=\frac{30}{29}\,\mathrm m\approx1.03\,\mathrm m}.$$
+
+At rest, the friction needed to balance the other forces is $9.8-6=3.8\,\mathrm N$ **up** the plane. Since $3.8<4.9$, the block can remain at rest. Friction changes from $4.9\,\mathrm N$ down the plane while sliding to $3.8\,\mathrm N$ up the plane in equilibrium; it is not automatically limiting at rest.
+
+**Check:** the mean speed before stopping is $1.5\,\mathrm{m\,s^{-1}}$, so multiplying by $20/29$ gives $30/29\,\mathrm m$. At rest, $6+3.8-9.8=0$. If you used $a=3$, you treated the applied force as the resultant; if you continued with $a=-4.35$ after stopping, you retained an obsolete friction model.
+
+**English explanation to complete:** “Although the velocity is …, the resultant is …; after stopping …”.
+
+</details>
+
+### Retry: Use a Force Record in Space {#retry-use-a-force-record-in-space}
+
+**Self-written task.** A particle of mass $2\,\mathrm{kg}$ experiences resultant force
+
+$$\mathbf F=(4t\mathbf i-4\mathbf j+12t\mathbf k)\,\mathrm N,\qquad 0\leq t\leq3.$$
+
+Time $t$ is in seconds and $\mathbf i$, $\mathbf j$, $\mathbf k$ are fixed perpendicular unit vectors. At $t=1$, its velocity is $(\mathbf j+2\mathbf k)\,\mathrm{m\,s^{-1}}$ and its position is $(2\mathbf i+3\mathbf j+\mathbf k)\,\mathrm m$. Find its velocity and position at $t=2$ and its distance from its position at $t=1$. Explain why neither a constant-acceleration formula using the final force nor the magnitude of the final position vector answers the whole question.
+
+<details markdown="1">
+<summary>Retry hint</summary>
+
+The force already includes all external forces. Divide by mass and integrate each component twice. Apply both conditions at one second, then form a displacement vector between the two positions.
+
+</details>
+
+<details markdown="1">
+<summary>Retry check</summary>
+
+The acceleration is $2t\mathbf i-2\mathbf j+6t\mathbf k$. Integrating and using the velocity at $t=1$ gives
+
+$$\mathbf v=(t^2-1)\mathbf i+(3-2t)\mathbf j+(3t^2-1)\mathbf k.$$
+
+Integrating again and using the position at $t=1$ gives
+
+$$\mathbf r=\left(\frac{t^3}{3}-t+\frac83\right)\mathbf i+(3t-t^2+1)\mathbf j+(t^3-t+1)\mathbf k.$$
+
+Thus
+
+$$\boxed{\mathbf v(2)=3\mathbf i-\mathbf j+11\mathbf k\,\mathrm{m\,s^{-1}}},\qquad \boxed{\mathbf r(2)=\frac{10}{3}\mathbf i+3\mathbf j+7\mathbf k\,\mathrm m}.$$
+
+The displacement from the one-second position is
+
+$$\mathbf r(2)-\mathbf r(1)=\frac43\mathbf i+6\mathbf k,\qquad \boxed{\text{distance}=\frac{2\sqrt{85}}{3}\,\mathrm m\approx6.15\,\mathrm m}.$$
+
+Differentiate twice and multiply by $2$ to recover the given force; at $t=1$, both given conditions hold. Acceleration varies with time, and $\lvert\mathbf r(2)\rvert$ measures distance from the origin, not from the one-second position. The distance between the two positions is also distinct from total distance travelled along the curved path. If you omitted constants because “initially at rest”, reread the conditions: no such initial condition was given.
+
+</details>
+
 ## Quick Reference
 
 | Given or asked for | Method and condition |
@@ -484,5 +560,11 @@ $$\boxed{\lvert\mathbf F(0)\rvert=3\sqrt5\,\mathrm N\approx6.71\,\mathrm N}.$$
 | Speed or force magnitude | Take the magnitude of the corresponding vector |
 
 Check the answer in the original force equations. For integrated motion, differentiate to recover the force and substitute the given times to recover position and velocity. When eliminating time, keep the part of the path allowed by the time interval.
+
+## Sources and Scope {#sources-and-scope}
+
+Scope: [OxfordAQA Mathematics 9660 specification v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf), §3.5 M2.4. Assessment reference actually read: **9660/MA05 Unit M2, January 2025, Q9**, [Question Paper, p.18](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-question-paper.pdf) and [Mark Scheme, Version 1.0 Final, p.17](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-mark-scheme.pdf). It connects a three-dimensional resultant, two integrations with conditions, and distance as a vector magnitude. These stored paired documents informed the method and checking requirements; all tasks on this page remain self-written, without official marks.
+
+The rounding convention at the start applies to this page's self-written tasks. The January 2025 paper defaults to two significant figures for calculator final answers unless stated otherwise; Q9 specifically asks for three significant figures. Follow the original paper and question when using official work.
 
 **Learning path:** [Previous: Centres of Mass](/alevel/a2-mathematics/mechanics/centres-of-mass/) · [Mechanics topic index](/alevel/a2-mathematics/mechanics/) · [Next: Projectiles](/alevel/a2-mathematics/mechanics/projectiles/).
