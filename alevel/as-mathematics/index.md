@@ -5,6 +5,7 @@ mathjax: true
 grade: as
 subject: as-mathematics
 permalink: /alevel/as-mathematics/
+toc_headings: "#learning-route, #how-to-study, #sources-and-scope, #legacy-reference"
 redirect_from:
   - /alevel/mathematics/
   - /alevel/mathematics/index.html
@@ -12,7 +13,7 @@ redirect_from:
 
 ## Bilingual learning route {#learning-route}
 
-This page provides a bilingual MA01/MA02 learning route plus the retained English reference outline. There are 15 topic lessons with 25 learning groups. Scope: OxfordAQA 9660, specification Version 5.2; no automatic migration to 9760.
+This page provides a bilingual MA01/MA02 learning route with 15 topic lessons and 25 learning groups. The old English reference outline is archived in the closed panel at the end of this page. Scope: OxfordAQA 9660, specification Version 5.2; no automatic migration to 9760.
 
 | Unit / topic | Lesson and learning groups |
 | --- | --- |
@@ -44,7 +45,12 @@ Based on the [current qualification page](https://www.oxfordaqa.com/qualificatio
 
 Conforming graphical calculators are permitted; this does not approve every CAS/plugin configuration. Consult the [current Handbook](https://www.oxfordaqa.com/wp-content/uploads/2026/09/oxfordaqa-exams-administration-handbook.pdf). No new hardware/examination-mode validation or item-by-item formula-booklet inventory is claimed.
 
-**English reference outline: the existing notes below retain their old links. Use the lessons above for worked and independent learning.**
+## Archived reference {#legacy-reference}
+
+Use the lessons above for current learning and practice. The old outline is retained here for reference and existing bookmarks.
+
+<details markdown="1">
+<summary>Open the old English reference outline</summary>
 
 > **Qualification**: OxfordAQA International AS Mathematics (9660) · Modular<br>
 > **Assessment**: Unit P1 + Unit PSM1 · 1h 30m each · 80 marks each · 50% of AS each
@@ -66,7 +72,7 @@ AS Mathematics forms the first part of the A-Level Mathematics qualification. Th
 
 ---
 
-# 3.1 International AS Unit P1 (Pure Maths)
+<h1 id="31-international-as-unit-p1-pure-maths">3.1 International AS Unit P1 (Pure Maths)</h1>
 
 
 ## P1.1: Algebra
@@ -201,7 +207,7 @@ AS Mathematics forms the first part of the A-Level Mathematics qualification. Th
 
 ---
 
-# 3.2 International AS Unit PSM1 (Pure Maths, Statistics and Mechanics)
+<h1 id="32-international-as-unit-psm1-pure-maths-statistics-and-mechanics">3.2 International AS Unit PSM1 (Pure Maths, Statistics and Mechanics)</h1>
 
 
 ## PP1.1: Circles
@@ -376,3 +382,5 @@ AS Mathematics forms the first part of the A-Level Mathematics qualification. Th
 - **Conservation**: Total momentum is conserved when the resultant external impulse is zero; use signed velocities along one chosen axis
 - **Impulse**: Change in momentum, $I=m(v-u)$ for constant mass, using the same positive direction
 - **Direct Impact**: With fixed smooth surface
+
+</details>

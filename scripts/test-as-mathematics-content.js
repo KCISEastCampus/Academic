@@ -30,6 +30,10 @@ const ids = text => [
 ];
 const enIndex = read('alevel/as-mathematics/index.md');
 const zhIndex = read('zh/alevel/as-mathematics/index.md');
+for (const source of [enIndex, zhIndex]) {
+  assert(source.includes('toc_headings: "#learning-route, #how-to-study, #sources-and-scope, #legacy-reference"'), 'index TOC excludes archived headings');
+  assert(source.includes('<details markdown="1">') && !/<details[^>]*\bopen\b/.test(source) && source.trim().endsWith('</details>'), 'old outline is archived in a closed panel');
+}
 for (const id of ids(enIndex)) assert(ids(zhIndex).includes(id), `index anchor: ${id}`);
 assert(zhIndex.includes('双语学习路线与英文速查提纲'));
 assert(!zhIndex.includes('ui.subject_index_intro'), 'remove old English-only directory introduction');

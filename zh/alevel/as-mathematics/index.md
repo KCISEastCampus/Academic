@@ -7,12 +7,12 @@ subject: as-mathematics
 lang: zh-CN
 translation_of: /alevel/as-mathematics/
 permalink: /zh/alevel/as-mathematics/
-toc_headings: h2
+toc_headings: "#learning-route, #how-to-study, #sources-and-scope, #legacy-reference"
 ---
 
 ## 双语学习路线 {#learning-route}
 
-本页提供 MA01／MA02 双语学习路线与英文速查提纲，共 15 个主题页、25 组学习活动。下方保留旧主题锚点及英文参考笔记，中文学习正文请进入上方课程。依据 OxfordAQA 9660 大纲正文 Version 5.2，未自动迁移至 9760。
+本页提供 MA01／MA02 双语学习路线与英文速查提纲归档，共 15 个主题页、25 组学习活动。旧提纲与主题索引默认收起在页末，请优先使用下列中文学习页。依据 OxfordAQA 9660 大纲正文 Version 5.2，未自动迁移至 9760。
 
 | 单元／主题 | 学习页与组号 |
 | --- | --- |
@@ -44,7 +44,12 @@ toc_headings: h2
 
 符合规定的图形计算器允许使用，不等于批准任意 CAS 或插件配置，见[现行 Handbook](https://www.oxfordaqa.com/wp-content/uploads/2026/09/oxfordaqa-exams-administration-handbook.pdf)。本次未重新验证实体机、考试模式或逐条核对公式册收录。
 
-**旧主题索引与英文速查：以下保留原有定位，中文正文请使用上方课程页。**
+## 旧版参考资料 {#legacy-reference}
+
+旧索引仅供查阅及兼容原有书签，学习与练习请使用上方新课程。
+
+<details markdown="1">
+<summary>展开旧主题索引与英文速查链接</summary>
 
 <h2 id="assessment-structure">考核结构</h2>
 
@@ -104,3 +109,5 @@ toc_headings: h2
 - <span id="forces-and-equilibrium"></span><a href="/alevel/as-mathematics/#forces-and-equilibrium" hreflang="en">力与平衡（Forces and Equilibrium）</a>
 - <span id="m14-momentum-and-impulse"></span><a href="/alevel/as-mathematics/#m14-momentum-and-impulse" hreflang="en">M1.4：动量与冲量（M1.4: Momentum and Impulse）</a>
 - <span id="momentum-principles"></span><a href="/alevel/as-mathematics/#momentum-principles" hreflang="en">动量原理（Momentum Principles）</a>
+
+</details>
