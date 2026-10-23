@@ -1,0 +1,94 @@
+{
+  "results": [
+    {
+      "lang": "",
+      "width": 1365,
+      "theme": "light",
+      "initialClosed": true,
+      "keyboard": true,
+      "overflow": false,
+      "mathErrors": 0,
+      "tasks": 15,
+      "brokenImages": 0
+    },
+    {
+      "lang": "",
+      "width": 1365,
+      "theme": "dark",
+      "initialClosed": true,
+      "keyboard": true,
+      "overflow": false,
+      "mathErrors": 0,
+      "tasks": 15,
+      "brokenImages": 0
+    },
+    {
+      "lang": "",
+      "width": 390,
+      "theme": "light",
+      "initialClosed": true,
+      "keyboard": true,
+      "overflow": false,
+      "mathErrors": 0,
+      "tasks": 15,
+      "brokenImages": 0
+    },
+    {
+      "lang": "",
+      "width": 390,
+      "theme": "dark",
+      "initialClosed": true,
+      "keyboard": true,
+      "overflow": false,
+      "mathErrors": 0,
+      "tasks": 15,
+      "brokenImages": 0
+    },
+    {
+      "lang": "zh/",
+      "width": 1365,
+      "theme": "light",
+      "initialClosed": true,
+      "keyboard": true,
+      "overflow": false,
+      "mathErrors": 0,
+      "tasks": 15,
+      "brokenImages": 0
+    },
+    {
+      "lang": "zh/",
+      "width": 1365,
+      "theme": "dark",
+      "initialClosed": true,
+      "keyboard": true,
+      "overflow": false,
+      "mathErrors": 0,
+      "tasks": 15,
+      "brokenImages": 0
+    },
+    {
+      "lang": "zh/",
+      "width": 390,
+      "theme": "light",
+      "initialClosed": true,
+      "keyboard": true,
+      "overflow": false,
+      "mathErrors": 0,
+      "tasks": 15,
+      "brokenImages": 0
+    },
+    {
+      "lang": "zh/",
+      "width": 390,
+      "theme": "dark",
+      "initialClosed": true,
+      "keyboard": true,
+      "overflow": false,
+      "mathErrors": 0,
+      "tasks": 15,
+      "brokenImages": 0
+    }
+  ],
+  "localLinks": 28,
+  "languageHash": true
+}
