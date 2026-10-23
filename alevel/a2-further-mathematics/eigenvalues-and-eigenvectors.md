@@ -5,8 +5,9 @@ mathjax: true
 grade: a2
 subject: a2-further-mathematics
 permalink: /alevel/a2-further-mathematics/eigenvalues-and-eigenvectors/
-toc_headings: h2, h3, h4
+toc_headings: "#definition, #characteristic-equation, #two-by-two, #three-by-three, #repeated-eigenvalues, #invariant-directions, #practice, #repeated-retry, #common-pitfalls, #sources"
 study_page: true
+reading_layout: true
 ---
 
 [Further Pure Mathematics](/alevel/a2-further-mathematics/) · FP2.13 Eigenvalues and eigenvectors
@@ -23,6 +24,8 @@ Which nonzero vectors are transformed into real multiples of themselves? Learn t
 
 A general real matrix can also have non-real eigenvalues; this lesson stays within the real-eigenvalue cases specified for FP2.13. All free parameters below are real.
 
+If matrix–vector multiplication is insecure, recover [row–column multiplication](/alevel/as-further-mathematics/matrix-algebra/#demonstration), then retry the [image check](#image-check). If free parameters or the nonzero restriction are unclear, complete [homogeneous-system Question 6](/alevel/a2-further-mathematics/linear-equations/#question-6). If coefficient comparison fails, recover [roots and coefficients](/alevel/a2-further-mathematics/roots-and-polynomials/#roots-and-coefficients), then reconstruct the parameter example.
+
 ## Definition and first checks {#definition}
 
 For a real square matrix A, an **eigenvector** is a nonzero vector whose image is a scalar multiple of itself. Its associated scalar is the **eigenvalue**:
@@ -35,6 +38,10 @@ The zero vector must be excluded: it satisfies the equation for every scalar and
 - A negative eigenvalue reverses the ray but retains its supporting line through the origin.
 - Eigenvalue 1 fixes every point along that direction.
 - Eigenvalue 0 collapses that direction to the origin.
+
+<section class="lesson-check" markdown="1">
+
+### Check an image {#image-check}
 
 **Original diagnostic.** For the following matrix, calculate the images of both given vectors. Which is an eigenvector, and what is its eigenvalue?
 
@@ -51,6 +58,8 @@ A\mathbf w=\begin{pmatrix}2\\1\end{pmatrix}.$$
 The first vector is an eigenvector with eigenvalue 3. The second image is not a multiple of the second input vector, so that input is not an eigenvector. A ratio test must include zero components; dividing only the nonzero first components would miss the contradiction in the second component.
 
 </details>
+
+</section>
 
 ## Deriving the characteristic equation {#characteristic-equation}
 
@@ -78,6 +87,8 @@ A(q\mathbf v)=\lambda(q\mathbf v),\qquad q\ne0.$$
 
 Every nonzero scalar multiple is another eigenvector for the same eigenvalue. Unit length is required only if the question requests it. Choose integer components when convenient.
 
+<section class="worked-example" markdown="1">
+
 ## Second-order example {#two-by-two}
 
 For the diagnostic matrix, expand the determinant:
@@ -90,6 +101,16 @@ At the first root, solve the system:
 
 $$\lambda=3:\quad -x+y=0,\quad x-y=0
 \quad\Longrightarrow\quad\mathbf v=t\begin{pmatrix}1\\1\end{pmatrix},\quad t\ne0.$$
+
+Set the determinant equal to zero to obtain roots 1 and 3. The equations above give every nonzero vector for root 3; choose t=1 for a direct check:
+
+$$A\begin{pmatrix}1\\1\end{pmatrix}=\begin{pmatrix}3\\3\end{pmatrix}=3\begin{pmatrix}1\\1\end{pmatrix}.$$
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Pause: solve the other root {#other-root-task}
 
 **Original completion task.** Find all eigenvectors for the other root and check one directly.
 
@@ -111,7 +132,11 @@ The supporting line is fixed pointwise. The eigenvectors for eigenvalue 3 lie on
 
 </details>
 
+</section>
+
 ## Third-order matrices and a parameter {#three-by-three}
+
+<section class="worked-example" markdown="1">
 
 ### Adapted example: characteristic equation to a geometric direction {#parameter-example}
 
@@ -121,15 +146,8 @@ $$M_c=\begin{pmatrix}c&0&0\\0&2&1\\0&1&2\end{pmatrix}.$$
 
 > The three distinct eigenvalues have pairwise-product sum 11. Show that $c=2$, find the three eigenvalues, and find an eigenvector corresponding to the least eigenvalue. Establish the characteristic equation before using the roots condition.
 
-<details markdown="1">
-<summary>Hint</summary>
-
 Expand along the first row. For a monic cubic, the coefficient of the linear term is the sum of the three pairwise products. After finding the least root, solve all three component equations.
 
-</details>
-
-<details markdown="1">
-<summary>Solution</summary>
 
 Use the monic convention for a direct coefficient comparison:
 
@@ -160,7 +178,7 @@ M_2\begin{pmatrix}0\\1\\-1\end{pmatrix}=\begin{pmatrix}0\\1\\-1\end{pmatrix}.$$
 
 The zero first component causes no problem; the complete vector is nonzero. The characteristic equation and coefficient comparison establish the parameter for all possibilities, whereas testing a guessed parameter would not prove “show that”.
 
-</details>
+</section>
 
 ### A check using trace and determinant {#coefficient-checks}
 
@@ -177,6 +195,8 @@ In the example the sum is 6 and the product is 6. These checks can expose an exp
 ## Repeated eigenvalues {#repeated-eigenvalues}
 
 A root's **algebraic multiplicity** is the number of times its factor occurs in the characteristic polynomial. It does **not** tell you how many independent eigenvectors exist. Vectors are independent if none in the chosen collection is a combination of the others; scalar multiples provide only one independent direction.
+
+<section class="worked-example" markdown="1">
 
 ### The same repeated root, different solution families {#repeated-comparison}
 
@@ -200,6 +220,10 @@ There is only one independent direction. For C, the homogeneous equations impose
 $$C\mathbf v=2\mathbf v\quad\text{for every }\mathbf v\ne\mathbf0.$$
 
 Two independent examples are the two coordinate unit vectors. There are infinitely many eigenvectors in both examples, but the numbers of independent directions are different. Repeating a vector or multiplying it by another number does not create independence.
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### Third-order repeated-root task {#repeated-three-by-three}
 
@@ -231,6 +255,8 @@ There is one independent direction. This follows from the component equations; i
 
 </details>
 
+</section>
+
 ## Eigenvectors and invariant directions {#invariant-directions}
 
 For a line through the origin with direction vector an eigenvector, a general point is transformed as follows:
@@ -250,6 +276,8 @@ The additional base-point condition keeps the image on the same line; a nonzero 
 ## Mixed practice {#practice}
 
 All tasks below are original and have no official marks. Attempt each before opening a hint. Where asked to “show”, display the calculation that establishes the statement.
+
+<section class="lesson-check" markdown="1">
 
 ### Question 1: diagnose three proposed eigenvectors {#practice-1}
 
@@ -274,6 +302,10 @@ A\begin{pmatrix}2\\2\end{pmatrix}=\begin{pmatrix}6\\6\end{pmatrix}=3\begin{pmatr
 The second candidate is an eigenvector for eigenvalue 1, not 3; the third is correct. A non-unit vector is allowed.
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### Question 2: zero and negative values {#practice-2}
 
@@ -306,6 +338,10 @@ $$\mathbf r=t\begin{pmatrix}0\\0\\1\end{pmatrix},\qquad t\in\mathbb R.$$
 The origin is a fixed point even though it is not an eigenvector.
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### Question 3: do not count repeated factors as vectors {#practice-3}
 
@@ -343,6 +379,10 @@ Compare this matrix with F: the characteristic polynomials agree, but their eige
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### Question 4: recover a parameter without trial values {#practice-4}
 
 > For M_c in the adapted example, the product of all three eigenvalues, counted with multiplicity, is 9. Determine c. Then find all eigenvectors for every distinct eigenvalue, including any repeated eigenvalue. Do not assume that the earlier distinct-root condition still holds.
@@ -372,6 +412,53 @@ Changing the condition changes both the parameter and the multiplicities. The pr
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
+## Retry the repeated-root target {#repeated-retry}
+
+If multiplicity was used to count independent vectors, recover the [repeated-root comparison](#repeated-comparison), then use an unseen [Question 3](#practice-3) or [Question 4](#practice-4). If both answers have been seen, attempt this fresh task with help closed. The distinct-root mixed retry does not test this repair.
+
+> **Original task / 自拟题.** For the matrix
+
+$$
+T=\begin{pmatrix}4&0&1\\0&4&0\\0&0&4\end{pmatrix},
+$$
+
+> derive the characteristic equation and find all eigenvectors. Give a largest independent collection and prove that no larger collection is possible. Compare with $T_0=4I$: the characteristic equations agree, but do the maximum independent collections have the same size? Check representative vectors by multiplication; multiplicity alone is not a justification.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Keep the off-diagonal entry after substituting the root. Find the full family, then prove your chosen vectors are independent and span every solution.
+
+</details>
+
+<details markdown="1">
+<summary>Solution</summary>
+
+$$\det(\lambda I-T)=\det\begin{pmatrix}\lambda-4&0&-1\\0&\lambda-4&0\\0&0&\lambda-4\end{pmatrix}=(\lambda-4)^3=0.$$
+
+$$(T-4I)\begin{pmatrix}x\\y\\z\end{pmatrix}=\begin{pmatrix}z\\0\\0\end{pmatrix}=\mathbf0
+\iff z=0,\qquad\mathbf v=\begin{pmatrix}a\\b\\0\end{pmatrix},\quad(a,b)\ne(0,0).$$
+
+$$T\mathbf e_x=4\mathbf e_x,\qquad T\mathbf e_y=4\mathbf e_y,\qquad
+\mathbf v=a\mathbf e_x+b\mathbf e_y.$$
+
+The two unit vectors are independent: a zero combination forces both coefficients to vanish. Every solution is in their span, so at most two are independent. Multiplicity 3 does not supply a third vector. For the other matrix:
+
+$$\det(\lambda I-T_0)=(\lambda-4)^3=0,\qquad
+(T_0-4I)\mathbf v=\mathbf0\quad\text{for every }\mathbf v,\qquad T_0\mathbf e_i=4\mathbf e_i\ (i=x,y,z).$$
+
+Every nonzero vector is now an eigenvector. The three coordinate unit vectors are independent and span space, so the maximum is 3. The same characteristic polynomial gives maxima 2 and 3 because the homogeneous constraints differ.
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ## Independent retry {#independent-retry}
 
 **Original task.** A map sends $(x,y,z)$ to $(y,x,2z)$. Construct its matrix and characteristic equation, find all eigenvectors, and identify the lines through the origin that are fixed pointwise. Decide whether the line $(t,t,1)$, with t real, maps onto itself. Choose and explain your own checks.
@@ -396,6 +483,8 @@ It maps to a different parallel line. Its direction is an eigenvector, but its b
 
 </details>
 
+</section>
+
 ## Quick reference {#quick-reference}
 
 | Question | Required evidence |
@@ -417,13 +506,15 @@ It maps to a different parallel line. Its direction is an eigenvector, but its b
 - **Inventing vectors from multiplicity:** compare B with C, and F with J; solve the actual equations.
 - **Checking only one component:** all components must satisfy the same scalar multiplier.
 
-**After practice:** retry a task you initially needed help with, then do the independent retry without a method label. Write one complete English explanation distinguishing a repeated root from the number of independent eigenvector directions.
+**Next output:** repair a repeated-root error with the [same-target retry](#repeated-retry); use the [mixed independent retry](#independent-retry) for confusion between a direction and an offset line. Write one English explanation distinguishing a repeated root from independent directions. Then complete the course [mixed review](/alevel/a2-further-mathematics/#mixed-review) and, after intervening study, its [later review](/alevel/a2-further-mathematics/#later-review), combining solution sets, eigen-directions and the geometry of a reflection.
 
 **Calculator check / written evidence:** a calculator can check numerical roots and matrix–vector products. It cannot replace a requested determinant expansion, a roots–coefficients proof for a parameter, the nonzero-vector condition or an explanation of repeated roots. This lesson does not add a calculator key sequence or require a diagonalisation theorem.
 
 **Learning path:** [Previous: linear equations](/alevel/a2-further-mathematics/linear-equations/) · [Matrix algebra](/alevel/a2-further-mathematics/matrix-algebra/) · [Further Pure Mathematics](/alevel/a2-further-mathematics/).
 
 ## Sources {#sources}
+
+The 9665 specification and June 2024 Q11(b) QP/MS passages listed below were reread on **23 October 2026**. New repeated-root tasks follow the specification and comparable characteristic/homogeneous-system methods; they carry no official marks.
 
 Scope: OxfordAQA International A-level Further Mathematics **9665**, [specification Version 5.2, FP2.13, printed p.21 / PDF p.20](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf#page=20): characteristic equations, eigenvalues and eigenvectors of second- and third-order matrices, real eigenvalues only, including repeated values.
 

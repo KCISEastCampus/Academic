@@ -7,8 +7,9 @@ subject: a2-further-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-further-mathematics/de-moivres-theorem/
 permalink: /zh/alevel/a2-further-mathematics/de-moivres-theorem/
-toc_headings: h2, h3, h4
+toc_headings: "#method, #powers-and-proof, #complex-roots, #roots-of-unity, #trigonometric-identities, #integration, #practice, #diagnose-and-retry, #later-review, #quick-reference"
 study_page: true
+reading_layout: true
 ---
 
 [高等纯数学](/zh/alevel/a2-further-mathematics/) · FP2.2 棣莫弗定理
@@ -21,7 +22,7 @@ study_page: true
 
 教材：*International A Level Further Mathematics*，第 20 章，第 20.1–20.3 节，印刷页码 234–252；复习与练习见第 253–254 页。
 
-**开始前：**复习[复数](/alevel/as-further-mathematics/#3-complex-numbers-fp13)、[数学归纳法](/zh/alevel/a2-further-mathematics/proof-by-induction/)和[积分](/zh/alevel/a2-mathematics/integration/)。你应已掌握模（modulus）、辐角（argument）、共轭复数（complex conjugate）、二项式定理（binomial theorem）和基本三角恒等式。本课所有角度均使用**弧度（radian）**。
+**开始前：**先在 [AS 模与辐角](/zh/alevel/as-further-mathematics/complex-numbers-and-roots/#geometry)恢复象限判断，在[共轭](/zh/alevel/as-further-mathematics/complex-numbers-and-roots/#conjugate)恢复倒数运算。证明卡住时回看[归纳法的假设与归纳步](/zh/alevel/a2-further-mathematics/proof-by-induction/#method)；乘积展开回补[和差角公式](/zh/alevel/a2-mathematics/trigonometric-functions-and-formulae/#compound-angle-formulae)。积分前回补[三角积分](/zh/alevel/a2-mathematics/integration/#trigonometric-integrals)和[指数积分](/zh/alevel/a2-mathematics/integration/#exponential-logarithmic-integrals)，再回到[例 9–10](#integration)检查每项的内层系数。还需会用二项式展开。全课用**弧度**。
 
 **题目身份：**除明确标出官方原题或教学改编的题目外，本课例题与练习均为自拟教学题，不分配官方分值。
 
@@ -110,6 +111,8 @@ $$\begin{aligned}
 
 题目要求**主辐角（principal argument）**时，使用范围 $-\pi<\theta\le\pi$。
 
+<section class="worked-example" markdown="1">
+
 ### 例 1：幂及其辐角 {#example-1--a-power-and-its-argument}
 
 **Question:** express $(1-i)^6$ in $a+ib$ form.
@@ -125,6 +128,10 @@ $$\begin{aligned}
 
 **检验：**$(1-i)^2=-2i$，所以 $(1-i)^6=(-2i)^3=8i$。最后的模为 $(\sqrt2)^6=8$。
 
+</section>
+
+<section class="worked-example" markdown="1">
+
 ### 例 2：负整数次幂 {#example-2--a-negative-power}
 
 **Question:** find $(\sqrt3+i)^{-3}$ in $a+ib$ form.
@@ -138,6 +145,10 @@ $$\begin{aligned}
 \end{aligned}$$
 
 **检验：**$(\sqrt3+i)^3=8i$，且 $\frac1{8i}=-\frac i8$。负整数次幂不仅改变辐角，也改变模。
+
+</section>
+
+<span id="roots"></span>
 
 ## 复数的根 {#complex-roots}
 
@@ -157,6 +168,8 @@ k&=0,1,\ldots,n-1.
 若 $R=0$，方程为 $z^n=0$，其唯一不同的根为 $0$。利用辐角求根的方法适用于右边非零的情形。
 
 **常见错误：**先除以指数，再加上 $2\pi$。相邻根的辐角差为 $\frac{2\pi}{n}$，而非 $2\pi$。
+
+<section class="worked-example" markdown="1">
 
 ### 例 3：三个根及其阿尔冈图 {#example-3--three-roots-and-an-argand-diagram}
 
@@ -182,6 +195,38 @@ z_2&=-2i.
 
 **检验：**任取一个根，三次方的模均为 $8$，辐角与 $\frac\pi2$ 相差 $2\pi$ 的整数倍。此外，三个根的和为零。
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 先完成一个根的推理链 {#supported-root-arguments}
+
+**Supported attempt (self-written):** For $v^2=-4i$, complete the modulus equation and the argument equation before listing the two roots. Explain why taking just the principal argument after division loses a root.
+
+<details markdown="1">
+<summary>提示</summary>
+
+先用 $-4i=4e^{-i\pi/2}$ 写出右边的模与辐角，在除以前加整周。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检验</summary>
+
+$$\begin{aligned}
+\lvert v\rvert^2&=4,\qquad 2\arg v=-\frac\pi2+2k\pi,\\
+v_k&=2e^{i(-\pi/4+k\pi)},\quad k=0,1,\\
+v&=\sqrt2-i\sqrt2,\quad-\sqrt2+i\sqrt2.
+\end{aligned}$$
+
+相差一整周的右边辐角，除以二后相差半周；两根并不相同。
+
+</details>
+
+</section>
+
+<section class="worked-example" markdown="1">
+
 ### 例 4：由平方根求精确三角函数值 {#example-4--an-exact-trigonometric-value-from-square-roots}
 
 **Question:** solve $z^2=\sqrt3+i$, and hence find $\cos\frac\pi{12}$ in surd form.
@@ -206,6 +251,11 @@ $$a^2=\frac{2+\sqrt3}{2},
 $$a=\frac{\sqrt3+1}{2},
 \qquad b=\frac{\sqrt3-1}{2}.$$
 
+这里的根式化简可由平方重建；两个候选值都正：
+
+$$\left(\frac{\sqrt3\pm1}{2}\right)^2
+=\frac{4\pm2\sqrt3}{4}=\frac{2\pm\sqrt3}{2}.$$
+
 另一个根的两个符号都相反：
 
 $$\boxed{z=\pm\left(\frac{\sqrt3+1}{2}
@@ -213,10 +263,16 @@ $$\boxed{z=\pm\left(\frac{\sqrt3+1}{2}
 
 对于第一个根，$a=\sqrt2\cos\frac\pi{12}$。所以
 
-$$\boxed{\cos\frac\pi{12}
-=\frac{\sqrt6+\sqrt2}{4}.}$$
+$$\begin{aligned}
+\cos\frac\pi{12}&=\frac{a}{\sqrt2}
+=\frac{\sqrt3+1}{2\sqrt2}
+=\frac{\sqrt2(\sqrt3+1)}4
+=\boxed{\frac{\sqrt6+\sqrt2}{4}}.
+\end{aligned}$$
 
 **检验：**$a^2-b^2=\sqrt3$ 且 $2ab=1$。正号是根据象限选定的，不能只凭平方根方程来确定。
+
+</section>
 
 ## 单位根 {#roots-of-unity}
 
@@ -233,6 +289,8 @@ $$1+\omega+\omega^2+\cdots+\omega^{n-1}
 =\frac{1-\omega^n}{1-\omega}=0.$$
 
 这里 $\omega^n=1$ 且 $\omega\ne1$。分母为零时，不能使用这一分式。
+
+<section class="worked-example" markdown="1">
 
 ### 例 5：余弦之和 {#example-5--a-cosine-sum}
 
@@ -260,6 +318,10 @@ $$1+2\cos\frac{2\pi}{5}+2\cos\frac{4\pi}{5}=0,$$
 
 **检验：**虚部之和也为零，因为每对共轭复数的虚部互为相反数。
 
+</section>
+
+<section class="worked-example" markdown="1">
+
 ### 例 6：方程两边都有幂 {#example-6--powers-on-both-sides-of-an-equation}
 
 **Question:** solve $16z^4=(z-1)^4$.
@@ -285,6 +347,8 @@ z&=\frac{1+2i}{5},\quad\frac{1-2i}{5}.
 
 **常见错误：**只取实数的四次单位根。复数单位根还会给出另外两个解。
 
+</section>
+
 ## 三角恒等式 {#trigonometric-identities}
 
 ### 用幂次表示倍角 {#multiple-angles-in-terms-of-powers}
@@ -295,6 +359,8 @@ z&=\frac{1+2i}{5},\quad\frac{1-2i}{5}.
 - **虚部**为 $\sin n\theta$，来自 $i$ 的奇数次幂。
 
 虚部是 $i$ 的实数系数，本身不含 $i$。计算时使用 $i^2=-1$、$i^3=-i$ 和 $i^4=1$。
+
+<section class="worked-example" markdown="1">
 
 #### 例 7：三倍角公式 {#example-7--triple-angle-formulae}
 
@@ -329,6 +395,8 @@ $$\boxed{\tan3\theta=\frac{3t-t^3}{1-3t^2}.}$$
 
 **检验：**正弦表达式是 $\theta$ 的奇函数（odd function），余弦表达式是偶函数（even function）。当 $\theta=0$ 时，两式分别给出 $0$ 和 $1$。
 
+</section>
+
 ### 用倍角表示幂次 {#powers-in-terms-of-multiple-angles}
 
 现在令 $z=\cos\theta+i\sin\theta=e^{i\theta}$。由于 $\lvert z\rvert=1$，
@@ -350,6 +418,8 @@ z^m-\frac1{z^m}&=2i\sin m\theta.
 \end{aligned}}$$
 
 这些倒数恒等式要求**模为 1（unit modulus）**。若原复数的模为 $r\ne1$，应先使用 $\frac zr=e^{i\theta}$。
+
+<section class="worked-example" markdown="1">
 
 #### 例 8：用倍角表示五次幂 {#example-8--express-a-fifth-power-using-multiple-angles}
 
@@ -381,11 +451,15 @@ $$\boxed{\begin{aligned}
 
 **检验：**当 $\theta=\frac\pi2$ 时，右边为 $\frac1{16}+\frac5{16}+\frac58=1$。
 
+</section>
+
 ## 积分 {#integration}
 
 ### 先改写为倍角项 {#integrate-multiple-angle-terms}
 
 用前面的恒等式把三角函数的幂改写为倍角项，再逐项积分，并检查各项的内层系数。
+
+<section class="worked-example" markdown="1">
 
 #### 例 9：三角函数幂的积分 {#example-9--integrate-a-trigonometric-power}
 
@@ -398,27 +472,42 @@ $$\int\sin kx\,\mathrm dx=-\frac1k\cos kx+C
 
 因此
 
-$$\boxed{\begin{aligned}
+$$\begin{aligned}
 \int\sin^5x\,\mathrm dx
-&=-\frac1{80}\cos5x\\
-&\quad+\frac5{48}\cos3x-\frac58\cos x+C.
-\end{aligned}}$$
+&=\frac1{16}\int\sin5x\,\mathrm dx
+-\frac5{16}\int\sin3x\,\mathrm dx
++\frac58\int\sin x\,\mathrm dx\\
+&=\frac1{16}\left(-\frac{\cos5x}{5}\right)
+-\frac5{16}\left(-\frac{\cos3x}{3}\right)
++\frac58(-\cos x)+C\\
+&=\boxed{-\frac1{80}\cos5x+\frac5{48}\cos3x-\frac58\cos x+C}.
+\end{aligned}$$
 
 **检验：**求导得到 $\frac1{16}\sin5x-\frac5{16}\sin3x+\frac58\sin x$，由例 8 可知它等于 $\sin^5x$。
 
 **常见错误：**忘记因子 $\frac1k$；对 $\sin kx$ 或 $\cos kx$ 积分时，必须保留这一因子。
 
+</section>
+
 ### 用复指数积分 {#integrate-complex-exponentials}
 
 先把被积函数表示为复指数的实部或虚部，积分该复指数，再取所需的实部或虚部，并加上实积分常数。
+
+<section class="worked-example" markdown="1">
 
 #### 例 10：在积分中使用指数形式 {#example-10--use-exponential-form-in-an-integral}
 
 **Question:** find $\int e^{2x}\cos3x\,\mathrm dx$ using exponential form.
 
-由于 $\cos3x$ 是 $e^{3ix}$ 的实部，被积函数就是 $e^{(2+3i)x}$ 的实部。这一复指数函数的一个原函数（antiderivative）为
+由于 $\cos3x$ 是 $e^{3ix}$ 的实部，被积函数就是 $e^{(2+3i)x}$ 的实部。积分时除以内层的非零常系数；等价地作线性换元
 
-$$\frac{e^{(2+3i)x}}{2+3i}.$$
+$$\begin{aligned}
+u&=(2+3i)x,\qquad \mathrm du=(2+3i)\,\mathrm dx,\\
+\int e^{(2+3i)x}\,\mathrm dx
+&=\frac1{2+3i}\int e^u\,\mathrm du
+=\frac{e^u}{2+3i}+C_{\mathbb C}\\
+&=\frac{e^{(2+3i)x}}{2+3i}+C_{\mathbb C}.
+\end{aligned}$$
 
 将系数有理化（rationalise）：
 
@@ -428,7 +517,9 @@ $$\frac1{2+3i}=\frac{2-3i}{13}.$$
 
 $$\begin{aligned}
 &\frac{e^{(2+3i)x}}{2+3i}\\
-&\quad=\frac{e^{2x}}{13}(2-3i)(\cos3x+i\sin3x).
+&\quad=\frac{e^{2x}}{13}(2-3i)(\cos3x+i\sin3x)\\
+&\quad=\frac{e^{2x}}{13}\big[(2\cos3x+3\sin3x)
++i(2\sin3x-3\cos3x)\big].
 \end{aligned}$$
 
 取实部，再加上实常数：
@@ -442,9 +533,13 @@ $$\boxed{\begin{aligned}
 
 若求正弦的积分，则改取**虚部**。连续两次分部积分也是一种方法，但指数形式能缩短这里的计算。
 
+</section>
+
 ## 练习 {#practice}
 
-每题都先独立尝试，再展开提示或解答。第 1–6 题为**本课编写的自拟练习题**；第 7–8 题保留所提供教材转载的 AQA 原题措辞与分值。
+每题都先独立尝试，再展开提示或解答。第 1–6、9–11 题为**本课自拟练习，无官方分值**；第 11 题承接复指数示范作为拓展；第 7–8 题保留所提供教材转载的 AQA 原题措辞与分值。
+
+<section class="lesson-check" markdown="1">
 
 ### 第 1 题：检查象限 {#question-1--a-quadrant-check}
 
@@ -473,6 +568,10 @@ $$\begin{aligned}
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### 第 2 题：正弦与余弦的正确顺序 {#question-2--put-sine-and-cosine-in-the-correct-order}
 
 Simplify $(\sin\theta+i\cos\theta)^6$ into multiple-angle form.
@@ -499,9 +598,13 @@ e^{i(3\pi-6\theta)}
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### 第 3 题：找齐四个根 {#question-3--all-four-roots}
 
-Solve $z^4=-16$ in $a+ib$ form. State the radius of the circle containing the roots and the angle between adjacent roots.
+Solve $z^4=-16$ in $a+ib$ form. State the radius of the circle containing the roots and the angle between adjacent roots. Draw the four roots on an Argand diagram with equal axis scales; label each Cartesian coordinate and argument, the circle and its radius. Explain why your list is complete.
 
 <details markdown="1">
 <summary>提示</summary>
@@ -530,7 +633,33 @@ $$\boxed{\begin{aligned}
 
 **检验：**任取一个根，四次方的模均为 $16$，辐角为 $\pi$ 的奇数倍，所以值为 $-16$。
 
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 380" role="img" aria-labelledby="four-root-title four-root-desc" style="width:100%;height:auto">
+<title id="four-root-title">四根的自拟核对图；答案内显示</title>
+<desc id="four-root-desc">等比例实虚轴，以原点为圆心、半径二的圆内，四个顶点分别为正负根号二的坐标组合，辐角为四十五度起每隔九十度。</desc>
+<g fill="none" stroke="currentColor" stroke-width="1.5">
+<path d="M55 190H400M225 35V345"/>
+<path d="M392 186L400 190L392 194M221 43L225 35L229 43"/>
+<circle cx="225" cy="190" r="106.066" stroke-dasharray="4 4"/>
+<path d="M300 115H150V265H300Z"/>
+<path d="M225 190H331.066" stroke-dasharray="3 3"/>
+</g>
+<g fill="currentColor" font-size="22" font-family="sans-serif">
+<circle cx="300" cy="115" r="4"/><circle cx="150" cy="115" r="4"/>
+<circle cx="150" cy="265" r="4"/><circle cx="300" cy="265" r="4"/>
+<text x="403" y="184">Re</text><text x="234" y="35">Im</text><text x="203" y="215">O</text>
+<text x="270" y="183">r = 2</text>
+<text x="306" y="81">(√2, √2)</text><text x="306" y="108">π/4</text>
+<text x="144" y="81" text-anchor="end">(−√2, √2)</text><text x="144" y="108" text-anchor="end">3π/4</text>
+<text x="144" y="294" text-anchor="end">(−√2, −√2)</text><text x="144" y="321" text-anchor="end">5π/4</text>
+<text x="306" y="294">(√2, −√2)</text><text x="306" y="321">7π/4</text>
+</g>
+</svg>
+
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### 第 4 题：平移后的根 {#question-4--roots-after-a-translation}
 
@@ -555,6 +684,10 @@ $$\boxed{z=3,\quad i\sqrt3,\quad-i\sqrt3.}$$
 **检验：**三个值均与圆心相距 $2$，圆心为 $1$。将每个值减去 $1$ 后取三次方，都得到 $8$。
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### 第 5 题：实部与虚部 {#question-5--real-and-imaginary-parts}
 
@@ -603,6 +736,10 @@ $$\begin{aligned}
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### 第 6 题：余弦的幂及其积分 {#question-6--a-cosine-power-and-its-integral}
 
 Using $z=\cos x+i\sin x$, express $\cos^4x$ in terms of cosines of multiple angles. Hence find $\int\cos^4x\,\mathrm dx$.
@@ -629,19 +766,26 @@ $$\boxed{\cos^4x=\frac18\cos4x+\frac12\cos2x+\frac38.}$$
 
 逐项积分，得到
 
-$$\boxed{\begin{aligned}
+$$\begin{aligned}
 \int\cos^4x\,\mathrm dx
-&=\frac1{32}\sin4x+\frac14\sin2x\\
-&\quad+\frac38x+C.
-\end{aligned}}$$
+&=\frac18\int\cos4x\,\mathrm dx
++\frac12\int\cos2x\,\mathrm dx+\frac38\int1\,\mathrm dx\\
+&=\frac18\left(\frac{\sin4x}{4}\right)
++\frac12\left(\frac{\sin2x}{2}\right)+\frac38x+C\\
+&=\boxed{\frac1{32}\sin4x+\frac14\sin2x+\frac38x+C}.
+\end{aligned}$$
 
 **检验：**求导得到上面的倍角表达式。常数项 $\frac38$ 积分后为 $\frac38x$，并非常数。
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### 第 7 题：AQA——最小正角 {#question-7--aqa-the-smallest-positive-angle}
 
-**来源：**AQA Mathematics 6360，MFP2，June 2007，原卷第 3 题。原题分值：**5 marks**。教材索引：Chapter 20, practice examination question 2, printed p. 253。[Question paper, Q3 (PDF p. 2)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202007%20QP%20-%20FP2%20AQA.PDF#page=2); [AQA mark scheme, Q3 (PDF p. 4)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202007%20MS%20-%20FP2%20AQA.PDF#page=4). 本轮已读取题干及配套评分材料（2026-10-22）；链接为 PMT 托管的 AQA 编写材料，部分原卷为压缩排版版本。
+**来源：**AQA Mathematics 6360，MFP2，June 2007，原卷第 3 题。原题分值：**5 marks**。教材索引：Chapter 20, practice examination question 2, printed p. 253。[Question paper, Q3 (PDF p. 2)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202007%20QP%20-%20FP2%20AQA.PDF#page=2); [AQA mark scheme, Q3 (PDF p. 4)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202007%20MS%20-%20FP2%20AQA.PDF#page=4). 本轮重新读取题干及配套评分材料（2026-10-23）；链接为 PMT 托管的 AQA 编写材料，部分原卷为压缩排版版本。
 
 Use De Moivre's theorem to find the smallest positive angle $\theta$ for which
 
@@ -680,9 +824,13 @@ $$\boxed{\theta=\frac\pi{10}.}$$
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### 第 8 题：AQA——五倍角恒等式与乘积 {#question-8--aqa-a-fifth-angle-identity-and-a-product}
 
-**来源：**AQA Mathematics 6360，MFP2，June 2011，原卷第 7 题。原题分值：**5 + 3 + 3 + 5 marks**。教材索引：Chapter 20, practice examination question 3, printed p. 253。[Question paper, Q7 (PDF p. 4)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202011%20QP%20-%20FP2%20AQA.pdf#page=4); [AQA mark scheme, Q7 (PDF p. 7)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202011%20MS%20-%20FP2%20AQA.PDF#page=7). 本轮已读取题干及配套评分材料（2026-10-22）；链接为 PMT 托管的 AQA 编写材料，部分原卷为压缩排版版本。
+**来源：**AQA Mathematics 6360，MFP2，June 2011，原卷第 7 题。原题分值：**5 + 3 + 3 + 5 marks**。教材索引：Chapter 20, practice examination question 3, printed p. 253。[Question paper, Q7 (PDF p. 4)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202011%20QP%20-%20FP2%20AQA.pdf#page=4); [AQA mark scheme, Q7 (PDF p. 7)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202011%20MS%20-%20FP2%20AQA.PDF#page=7). 本轮重新读取题干及配套评分材料（2026-10-23）；链接为 PMT 托管的 AQA 编写材料，部分原卷为压缩排版版本。
 
 **a i** Use De Moivre's theorem to show that
 
@@ -774,9 +922,167 @@ $$\boxed{\tan\frac\pi5\tan\frac{2\pi}{5}=\sqrt5.}$$
 
 </details>
 
+**连接旧知识：**完成此题后，回到[根与多项式的稍后任务](/zh/alevel/a2-further-mathematics/roots-and-polynomials/#later-review)，在没有三角式提示的新条件下重建根与方程。
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 第 9 题：英文证明 {#question-9--an-integer-power-proof}
+
+**Self-written task; no official marks.** Starting from the compound-angle formulae, prove in English that
+
+$$(\cos t-i\sin t)^n=\cos nt-i\sin nt$$
+
+for every integer $n$. Give an induction hypothesis and step for positive integers, then justify zero and negative integers. Do not quote De Moivre's theorem as the proof.
+
+<details markdown="1">
+<summary>提示</summary>
+
+先证明正整数，再用模为一说明倒数存在。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检验</summary>
+
+Put $v=\cos t-i\sin t$. For $n=1$ the identity is immediate. Assume that it holds for an arbitrary positive integer $k$. Then
+
+$$\begin{aligned}
+v^{k+1}&=(\cos kt-i\sin kt)(\cos t-i\sin t)\\
+&=(\cos kt\cos t-\sin kt\sin t)
+-i(\sin kt\cos t+\cos kt\sin t)\\
+&=\cos((k+1)t)-i\sin((k+1)t).
+\end{aligned}$$
+
+Thus the statement holds for all positive integers by induction. For zero, both sides equal one. Also
+
+$$v\overline v=\cos^2t+\sin^2t=1,$$
+
+so $v$ is nonzero. For a positive integer $m$,
+
+$$\begin{aligned}
+v^{-m}&=\frac1{\cos mt-i\sin mt}
+=\frac{\cos mt+i\sin mt}{\cos^2mt+\sin^2mt}\\
+&=\cos mt+i\sin mt
+=\cos(-mt)-i\sin(-mt).
+\end{aligned}$$
+
+The identity therefore holds for every integer.
+
+检查：给出“任意 k”的假设、实际乘积与和差角连接、归纳结论；零和负整数分别说明。若只验证具体 n，尚未证明。收起答案后，以角变量 2t 重写负整数部分，并写出分母为何非零。
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 第 10 题：从复数根得到精确值 {#question-10--an-exact-value-from-a-complex-root}
+
+**Self-written task; no official marks.** Let $w=a+ib$ lie in the first quadrant and satisfy $w^2=1+i$. Find $a$ and $b$ exactly. Use both the Cartesian and polar forms of $w$ to deduce an exact surd expression for $\cos\frac\pi8$, explaining every sign choice.
+
+<details markdown="1">
+<summary>提示</summary>
+
+把平方差、模长平方及象限连接起来。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检验</summary>
+
+比较实、虚部，再用模长建立第三个关系。
+
+$$\begin{aligned}
+a^2-b^2&=1,\quad 2ab=1,\quad
+\lvert w\rvert^2=\lvert1+i\rvert=\sqrt2,\\
+a^2+b^2&=\sqrt2,\\
+a^2&=\frac{\sqrt2+1}{2},\qquad b^2=\frac{\sqrt2-1}{2},\\
+a&=\sqrt{\frac{\sqrt2+1}{2}},\qquad
+b=\sqrt{\frac{\sqrt2-1}{2}}.
+\end{aligned}$$
+
+第一象限使两个平方根都取正值。指数形式为
+
+$$\begin{aligned}
+1+i&=\sqrt2e^{i\pi/4},\qquad w=2^{1/4}e^{i\pi/8},\\
+\cos\frac\pi8&=\frac{a}{2^{1/4}}
+=\sqrt{\frac{\sqrt2+1}{2\sqrt2}}
+=\boxed{\frac{\sqrt{2+\sqrt2}}{2}}.
+\end{aligned}$$
+
+检验：由这些正值算得 2ab=1，且平方差为一；除以根的模长，而非原数的模长。若选错符号，收起解答，完成[下方独立重试](#exact-value-retry)。
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+#### 重试：符号与单位方向 {#exact-value-retry}
+
+**Self-written retry; no official marks.** A root $w$ of $w^2=1+i$ lies in the third quadrant. Find $w$ and $w/\lvert w\rvert$ exactly. Explain every sign choice.
+
+本题为自拟重试，无官方分值。收起上题解答，独立写出两个精确结果及符号理由，再展开检查。
+
+<details markdown="1">
+<summary>精确值重试检查</summary>
+
+$$w=-\sqrt{\frac{\sqrt2+1}{2}}-i\sqrt{\frac{\sqrt2-1}{2}},\qquad
+\frac{w}{\lvert w\rvert}=-\frac{\sqrt{2+\sqrt2}}2-i\frac{\sqrt{2-\sqrt2}}2.$$
+
+两部分都负；平方仍为原来的复数。只取正平方根会违反指定象限。
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 第 11 题：复指数的定积分 {#question-11--a-definite-integral}
+
+**Self-written extension; no official marks.** Evaluate $\int_0^{\pi/2}e^x\sin2x\,\mathrm dx$ using complex exponential form. Show the complex integral, coefficient calculation, selected part, antiderivative and both endpoint values.
+
+<details markdown="1">
+<summary>提示</summary>
+
+先把正弦看作虚部；代上限后还须减去非零下限值。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检验</summary>
+
+实变量积分可逐实部与虚部分别进行。这里需要虚部。
+
+$$\begin{aligned}
+u&=(1+2i)x,\qquad \mathrm du=(1+2i)\,\mathrm dx,\\
+\int e^{(1+2i)x}\,\mathrm dx
+&=\frac1{1+2i}\int e^u\,\mathrm du
+=\frac{e^{(1+2i)x}}{1+2i}+C_{\mathbb C},\\
+\frac1{1+2i}&=\frac{1-2i}{5},\\
+\frac{e^{(1+2i)x}}{1+2i}
+&=\frac{e^x}{5}(1-2i)(\cos2x+i\sin2x)\\
+&=\frac{e^x}{5}\big[(\cos2x+2\sin2x)+i(\sin2x-2\cos2x)\big],\\
+\int_0^{\pi/2}e^x\sin2x\,\mathrm dx
+&=\left[\frac{e^x}{5}(\sin2x-2\cos2x)\right]_0^{\pi/2}\\
+&=\frac{e^{\pi/2}}5(\sin\pi-2\cos\pi)
+-\frac15(\sin0-2\cos0)\\
+&=\boxed{\frac25(e^{\pi/2}+1)}.
+\end{aligned}$$
+
+检验：区间内被积函数非负，答案应为正；原函数求导的正弦系数为一、余弦系数为零。若取错实部，回到例 10 识别被积函数，再收起解答重做。
+
+</details>
+
+</section>
+
 ## 纠错与独立重试 {#diagnose-and-retry}
 
 以下两项均为自拟教学任务，无官方分值。先写下错误原因，再看反馈；随后关闭所有解答，独立完成新任务。需要提示的任务应在稍后重新独立尝试。
+
+<section class="lesson-check" markdown="1">
 
 **Diagnose:** A learner solves $z^4=1$ by dividing the argument zero by four and gives only $z=1$. Repair the argument step.
 
@@ -787,7 +1093,11 @@ $$\boxed{\tan\frac\pi5\tan\frac{2\pi}{5}=\sqrt5.}$$
 
 </details>
 
-**Independent retry:** The four roots of a monic quartic form a square centred at $1$ with radius $2$. One root is $3$. Find all the roots and construct the quartic.
+</section>
+
+<section class="lesson-check" markdown="1">
+
+**Independent retry:** The four roots of a monic quartic form a square centred at $1$ with radius $2$. One root is $3$. Find all the roots and construct the quartic. List all arguments of the fourth power of a displacement before dividing by four. Explain why four choices are distinct and later choices repeat.
 
 <details markdown="1">
 <summary>提示</summary>
@@ -799,9 +1109,61 @@ $$\boxed{\tan\frac\pi5\tan\frac{2\pi}{5}=\sqrt5.}$$
 <details markdown="1">
 <summary>重试解答与检验</summary>
 
+$$\begin{aligned}
+w&=z-1,\qquad w^4=16,\\
+4\arg w&=0+2k\pi,\qquad
+w_k=2e^{ik\pi/2},\quad k=0,1,2,3.
+\end{aligned}$$
+
+这四个辐角模整周互不相同；再增加四个指标就多一整周，因此重复。列出全部辐角是本次重试的必要证据。
+
+
 位移为 $2,2i,-2,-2i$，所以根为 $3,1+2i,-1,1-2i$，且 $(z-1)^4=16$。展开得 $z^4-4z^3+6z^2-4z-15=0$。逐根减去圆心后取四次方，即可检验。
 
 </details>
+
+</section>
+
+## 稍后连接与回顾 {#later-review}
+
+先完成[极坐标面积](/zh/alevel/a2-further-mathematics/polar-coordinates/#areas)，再做下题，记录是否用了提示。
+
+<section class="lesson-check" markdown="1">
+
+### 根、射线与区域 {#later-roots-and-area}
+
+**Later task (self-written):** After completing polar-coordinate areas, return with the solutions closed. Find all roots of $z^3=8$ and plot them. Two adjacent root rays bound a region inside $r=2$. Find the area of the smaller sector, and check the root sum from the polynomial coefficients.
+
+<details markdown="1">
+<summary>提示</summary>
+
+先找全根，再判断题目要求圆弧区域还是直线边界。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检验</summary>
+
+$$\begin{aligned}
+z_k&=2e^{2k\pi i/3},\quad k=0,1,2,\\
+z&=2,\quad-1+i\sqrt3,\quad-1-i\sqrt3,\\
+\sum z_k&=2-1-1+i\sqrt3-i\sqrt3=0.
+\end{aligned}$$
+
+草图是以原点为中心、外接圆半径为二的等边三角形；由正实轴逆时针取一对相邻射线，面积为
+
+$$\begin{aligned}
+A&=\frac12\int_0^{2\pi/3}2^2\,\mathrm d\theta
+=2\int_0^{2\pi/3}1\,\mathrm d\theta\\
+&=[2\theta]_0^{2\pi/3}
+=2\left(\frac{2\pi}{3}\right)-2(0)=\boxed{\frac{4\pi}{3}}.
+\end{aligned}$$
+
+注意取圆弧扇形而非三角形。根之和为零也与三次式的二次项系数为零一致。
+
+</details>
+
+</section>
 
 ## 快速参考 {#quick-reference}
 
@@ -825,3 +1187,5 @@ $$\boxed{\tan\frac\pi5\tan\frac{2\pi}{5}=\sqrt5.}$$
 本课依据 [OxfordAQA 高等数学 9665 课程大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf) FP2.2。例题解答为教学材料。第 7–8 题保留所提供教材中的 AQA 原题及其分值；题目前附有来源说明，以下解答为本课编写，并非官方评分细则。
 
 **学习路径：**[上一课：级数与极限](/zh/alevel/a2-further-mathematics/series-and-limits/) · [下一课：极坐标](/zh/alevel/a2-further-mathematics/polar-coordinates/) · [返回课程](/zh/alevel/a2-further-mathematics/)。
+
+**学后下一步：**完成本课[稍后任务](#later-review)，再到课程入口的[跨主题综合](/zh/alevel/a2-further-mathematics/#mixed-review)与[延后回顾](/zh/alevel/a2-further-mathematics/#later-review)，记录首次作答、提示使用和重试结果。

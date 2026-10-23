@@ -83,7 +83,8 @@ assert(!/[\u3400-\u9fff]/u.test(source), 'English content');
 assert(!source.includes('with Mechanics'), 'Shared textbook name');
 assert.equal((source.match(/^#{3,4} Example /gm) || []).length, 9);
 assert.equal((source.match(/### Question /g) || []).length, 8);
-assert.equal((html.match(/<details\b/g) || []).length, 19);
+assert.equal((html.match(/<details\b/g) || []).length, (source.match(/<details\b/g) || []).length,
+  'Every source hint and solution must survive rendering');
 assert.equal((html.match(/<table\b/g) || []).length, 3, 'Absolute-value pipes must not create tables');
 for (const row of html.match(/<tr\b[\s\S]*?<\/tr>/g) || []) assert.equal((row.match(/<(?:td|th)\b/g) || []).length, 3);
 assert(!html.includes('<p>$$'), 'Display math must reach MathJax intact');

@@ -5,8 +5,9 @@ mathjax: true
 grade: a2
 subject: a2-further-mathematics
 permalink: /alevel/a2-further-mathematics/roots-and-polynomials/
-toc_headings: h2, h3, h4
+toc_headings: "#method, #roots-and-coefficients, #complex-roots, #real-roots, #practice, #diagnose-and-retry, #later-review, #quick-reference"
 study_page: true
+reading_layout: true
 ---
 
 [Further Pure Mathematics](/alevel/a2-further-mathematics/) · FP2.1 Roots and polynomials
@@ -19,7 +20,7 @@ Use the coefficients of a polynomial to find information about its roots. Find m
 
 Textbook: Chapter 17, Sections 17.1–17.2, printed pp. 198–206, in *International A Level Further Mathematics*.
 
-**Before you start:** review [AS Further Mathematics](/alevel/as-further-mathematics/#3-complex-numbers-fp13) for complex numbers. You should know the factor theorem, algebraic division, the quadratic formula and differentiation. Remember that $i^2=-1$.
+**Before you start:** if arithmetic or conjugates are uncertain, revisit [AS complex arithmetic](/alevel/as-further-mathematics/complex-numbers-and-roots/#model), [conjugates](/alevel/as-further-mathematics/complex-numbers-and-roots/#conjugate) and [complex roots](/alevel/as-further-mathematics/complex-numbers-and-roots/#roots). For the factor theorem and division, complete [AS algebra L03 worked reasoning and supported attempt](/alevel/as-mathematics/algebra/#l03-worked); recover quadratics at [L02](/alevel/as-mathematics/algebra/#l02-worked). Before counting real roots, revisit [stationary points and derivative signs](/alevel/a2-mathematics/differentiation/#tangents-normals-and-stationary-points). Then return to the [relevant example](#complex-roots) and expand a conjugate factor yourself. Remember that $i^2=-1$.
 
 **Task status:** Unless an official question or teaching adaptation is explicitly identified, the worked examples and exercises are self-written teaching tasks with no official marks.
 
@@ -80,6 +81,8 @@ For $n\ge2$, the sum of the products of all pairs of roots is $\frac{a_{n-2}}{a_
 
 **Check the missing terms:** in $2x^4-3x+5=0$, the coefficients of $x^3$ and $x^2$ are zero. The sum of the roots and the sum of their pairwise products are both zero; the product of all four roots is $\frac{5}{2}$.
 
+<section class="worked-example" markdown="1">
+
 ### Example 1 — Find information without solving
 
 The roots of $2x^3-3x^2-8x+12=0$ are $\alpha,\beta,\gamma$. Find their sum, their product and $\alpha^2+\beta^2+\gamma^2$.
@@ -100,6 +103,10 @@ Therefore
 $$\boxed{\alpha^2+\beta^2+\gamma^2=\left(\frac{3}{2}\right)^2-2(-4)=\frac{41}{4}.}$$
 
 **Check:** the polynomial factorises as $(2x-3)(x-2)(x+2)$. Its roots are $\frac{3}{2},2,-2$, which give the same sum, product and sum of squares. Factorisation checks the results; it was not needed to find them.
+
+</section>
+
+<section class="worked-example" markdown="1">
 
 ### Example 2 — Form an equation with new roots
 
@@ -127,6 +134,33 @@ $$\boxed{t^3+4t^2-9t-36=0.}$$
 
 **Check:** the new roots are $3,-4,-3$. Multiplying $(t-3)(t+4)(t+3)$ gives the same cubic. Use a new variable, such as $t$, so you can distinguish the new equation from the old one.
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Complete the algebraic link {#supported-root-products}
+
+**Supported attempt (self-written):** In Example 2, write the common factor of $uv+vw+wu$ before simplifying. Explain why the constant term of the new monic cubic has the opposite sign to $uvw$.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Count how often each old root occurs in the three products, then revisit the three-factor expansion.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+$$uv+vw+wu=\alpha\beta\gamma(\beta+\gamma+\alpha),\qquad
+(t-u)(t-v)(t-w)\big\rvert_{t=0}=(-u)(-v)(-w)=-uvw.$$
+
+This checks the factorisation and its sign; now move to the coefficient condition.
+
+</details>
+
+</section>
+
 ## Complex Roots
 
 ### Complex conjugate pairs
@@ -145,6 +179,8 @@ $$\begin{aligned}
 \end{aligned}$$
 
 **Common mistake:** the constant is $p^2+q^2$, not $p^2-q^2$, because $i^2=-1$.
+
+<section class="worked-example" markdown="1">
 
 ### Example 3 — Find the other roots of a cubic
 
@@ -172,6 +208,10 @@ $$\boxed{z=1+2i,\quad 1-2i,\quad 3.}$$
 
 **Check:** the sum is $5$, the pairwise products have sum $11$ and the product is $15$. State all three roots, not just the real one.
 
+</section>
+
+<section class="worked-example" markdown="1">
+
 ### Example 4 — A quartic with an unknown coefficient
 
 The polynomial $f(z)=z^4-6z^3+kz^2-18z+10$, where $k$ is real, has a root $1+i$. Find $k$ and all the other roots.
@@ -197,6 +237,10 @@ $$\boxed{1+i,\quad 1-i,\quad 2+i,\quad 2-i.}$$
 
 **Check:** their sum is $6$. Their product is $(1^2+1^2)(2^2+1^2)=10$. Expanding the two quadratics checks every coefficient, including $k$.
 
+</section>
+
+<section class="worked-example" markdown="1">
+
 ### Example 5 — When the coefficients are not all real
 
 The equation $z^2-(3+i)z+2+2i=0$ has a root $1+i$. Find the other root.
@@ -206,6 +250,8 @@ The coefficient of $z$ is not real, so you cannot assume that $1-i$ is a root. T
 $$(1+i)+\beta=3+i,\qquad \boxed{\beta=2.}$$
 
 **Check:** $(1+i)\times2=2+2i$, matching the constant term. The roots are not a complex conjugate pair.
+
+</section>
 
 ## Real Roots
 
@@ -219,6 +265,8 @@ To decide how many real roots there are, differentiate:
 - If there are two stationary points and one stationary value is zero, there is a double root. Count it twice when using roots and coefficients.
 
 If there is just one stationary point, check its type. For example, $f(x)=x^3$ has a stationary point of inflection and a triple root at zero.
+
+<section class="worked-example" markdown="1">
 
 ### Example 6 — Bound a real root and the real parts of two complex roots
 
@@ -248,11 +296,15 @@ $$\boxed{0<p<\frac{1}{2}.}$$
 
 **Check your reasoning:** the sign change locates a root. The derivative shows it is the only real root. You need both steps before concluding that the other two roots are non-real.
 
+</section>
+
 ## Practice
 
 Work on paper first. Open a hint only if needed, then use the solution to check each step.
 
 Questions 1–6 are self-written exercises with no official marks. Question 7 is an original AQA question reproduced in the supplied textbook; it is from a different qualification, not an OxfordAQA FM03 paper.
+
+<section class="lesson-check" markdown="1">
 
 ### Question 1 — Coefficients and sums of squares
 
@@ -275,6 +327,10 @@ $$\boxed{\alpha^2+\beta^2+\gamma^2=(-2)^2-2(-3)=10.}$$
 Dividing the equation by $3$ gives $x^3+2x^2-3x-4=0$, confirming the same three coefficient ratios.
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### Question 2 — A polynomial of degree five
 
@@ -300,6 +356,10 @@ Division gives $f(x)=(x+1)(2x^4-5x^3+9x^2-9x+8)$. The quartic has sum $\frac{5}{
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### Question 3 — Shift each root
 
 The roots of $x^3-2x^2-x+2=0$ are $\alpha,\beta,\gamma$. Find a cubic equation with roots $\alpha+1,\beta+1,\gamma+1$.
@@ -323,6 +383,10 @@ $$\boxed{t^3-5t^2+6t=0.}$$
 The old equation factorises as $(x-2)(x-1)(x+1)=0$. Adding $1$ to the roots gives $3,2,0$, matching $t(t-2)(t-3)=0$.
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### Question 4 — Find all roots of a quartic
 
@@ -350,6 +414,10 @@ Substituting $z=3\pm2\sqrt{2}i$ gives $(z-3)^2+8=-8+8=0$, so both values make th
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### Question 5 — A complex coefficient
 
 The equation $z^2-(4-i)z+k=0$ has a root $1+i$. Find the other root and the complex constant $k$.
@@ -368,9 +436,13 @@ The sum is $4-i$, so the other root is $(4-i)-(1+i)=3-2i$.
 
 $$\boxed{k=(1+i)(3-2i)=5+i.}$$
 
-Expanding $[z-(1+i)][z-(3-2i)]$ gives $z^2-(4-i)z+5+i$, as required.
+Expanding $\bigl(z-(1+i)\bigr)\bigl(z-(3-2i)\bigr)$ gives $z^2-(4-i)z+5+i$, as required.
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### Question 6 — Exactly one real root
 
@@ -398,9 +470,13 @@ The interval is positive because $\alpha$ is negative. The imaginary parts cance
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### Question 7 — Original AQA practice
 
-**Source:** AQA Mathematics 6360, MFP2, January 2006, Question 2. **5 + 5 marks**. Textbook cross-reference: Chapter 17, practice examination question 4, printed p. 206. [Question paper, Q2 (PDF p. 2)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/January%202006%20QP%20-%20FP2%20AQA.PDF#page=2); [AQA mark scheme, Q2 (PDF p. 3)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/January%202006%20MS%20-%20FP2%20AQA.PDF#page=3). Question and matching mark scheme read on 2026-10-22; these are AQA-authored documents hosted by PMT, with some question papers in condensed layout.
+**Source:** AQA Mathematics 6360, MFP2, January 2006, Question 2. **5 + 5 marks**. Textbook cross-reference: Chapter 17, practice examination question 4, printed p. 206. [Question paper, Q2 (PDF p. 2)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/January%202006%20QP%20-%20FP2%20AQA.PDF#page=2); [AQA mark scheme, Q2 (PDF p. 3)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/January%202006%20MS%20-%20FP2%20AQA.PDF#page=3). Question and matching mark scheme re-read on 2026-10-23; these are AQA-authored documents hosted by PMT, with some question papers in condensed layout.
 
 The cubic equation
 
@@ -446,9 +522,13 @@ $$\boxed{p=-4,\quad q=-2,\quad r=20.}$$
 
 </details>
 
+</section>
+
 ## Diagnose and Retry {#diagnose-and-retry}
 
 Both tasks are self-written and have no official marks. Explain the error before opening feedback; then close every solution and attempt the new task independently. If you need a hint, return later for another independent attempt.
+
+<section class="lesson-check" markdown="1">
 
 **Diagnose:** A learner says that a root $1+i$ of $z^2-(2+i)z+1+i=0$ forces $1-i$ to be another root. Identify the missing condition and correct the conclusion.
 
@@ -459,7 +539,45 @@ The coefficients are not all real, so the conjugate-pair theorem does not apply.
 
 </details>
 
-**Independent retry:** A real monic cubic has one root $2$, sum of roots $6$ and product of roots $10$. Find the other roots and the cubic, without assuming that the other roots are real.
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Check the conjugate condition again {#conjugate-retry}
+
+**Independent retry (self-written):** The equation $z^2-(3+2i)z+2+4i=0$ has a root $1+2i$. A learner proposes $1-2i$ as the other root. Decide whether this inference is justified; find the actual other root and check both the sum and product.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Check the coefficient condition before using the root sum; do not guess the second root.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+The coefficients are not all real, so the conjugate inference is unjustified. If the other root is beta, then
+
+$$\begin{aligned}
+\beta&=(3+2i)-(1+2i)=2,\\
+(1+2i)+2&=3+2i,\qquad (1+2i)\,2=2+4i,\\
+[z-(1+2i)](z-2)&=z^2-(3+2i)z+2+4i.
+\end{aligned}$$
+
+A condition decision and the actual root are both required. If you still assumed a conjugate, revisit Example 5, close its solution and try again.
+
+</details>
+
+</section>
+
+## Connect and Return Later {#later-review}
+
+After [De Moivre Question 8](/alevel/a2-further-mathematics/de-moivres-theorem/#question-8--aqa-a-fifth-angle-identity-and-a-product), close the solutions here and try this self-written task. Reconstruct the roots from coefficient information, then explain why non-real roots must pair.
+
+<section class="lesson-check" markdown="1">
+
+**Later task:** A real monic cubic has one root $2$, sum of roots $6$ and product of roots $10$. Find the other roots and the cubic, without assuming that the other roots are real.
 
 <details markdown="1">
 <summary>Hint</summary>
@@ -471,9 +589,11 @@ Use the sum and product of the two remaining roots to form their quadratic.
 <details markdown="1">
 <summary>Retry solution and check</summary>
 
-The other roots have sum $4$ and product $5$, so satisfy $z^2-4z+5=0$. They are $2\pm i$, and the cubic is $z^3-6z^2+13z-10=0$, from $(z-2)(z^2-4z+5)$. Check all three coefficient relations.
+The other roots have sum $4$ and product $5$, so satisfy $z^2-4z+5=0$. Since $(z-2)^2=-1$, they are $2\pm i$, and the cubic is $z^3-6z^2+13z-10=0$, from $(z-2)(z^2-4z+5)$. Check all three coefficient relations.
 
 </details>
+
+</section>
 
 ## Quick Reference
 
@@ -494,3 +614,5 @@ The other roots have sum $4$ and product $5$, so satisfy $z^2-4z+5=0$. They are 
 The lesson follows FP2.1 of the [OxfordAQA Further Mathematics 9665 specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf). Examples 1–6 are teaching examples; Questions 1–6 are self-written exercises. Question 7 retains the AQA question and marks from the supplied textbook.
 
 **Learning path:** [Back to the course](/alevel/a2-further-mathematics/) · [Next: Proof by Induction](/alevel/a2-further-mathematics/proof-by-induction/).
+
+**Next steps:** complete this lesson's [later task](#later-review), then attempt the course [mixed review](/alevel/a2-further-mathematics/#mixed-review) and [delayed review](/alevel/a2-further-mathematics/#later-review). Record your first attempt, hints used and retry result.

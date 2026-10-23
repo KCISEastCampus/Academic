@@ -5,8 +5,9 @@ mathjax: true
 grade: a2
 subject: a2-further-mathematics
 permalink: /alevel/a2-further-mathematics/finite-series/
-toc_headings: h2, h3, h4
+toc_headings: "#method, #partial-fractions, #differencing, #other-starting-points, #practice, #diagnose-and-retry, #later-review, #quick-reference"
 study_page: true
+reading_layout: true
 ---
 
 [Further Pure Mathematics](/alevel/a2-further-mathematics/) · FP2.5 Finite series
@@ -17,13 +18,11 @@ Find a sum without adding every term separately. Use partial fractions and the m
 - **Homework help:** choose [partial fractions](#partial-fractions), [differencing](#differencing) or [other starting points](#other-starting-points).
 - **Revision:** try [practice](#practice) first, then use the [quick reference](#quick-reference).
 
-Textbook: Chapter 18, Section 18.2, printed pp. 215–216; review and practice examination questions on pp. 217–218, in *International A Level Further Mathematics*.
-
-**Before you start:** review [Partial Fractions](/alevel/a2-mathematics/partial-fractions/) and [Proof by Induction](/alevel/a2-further-mathematics/proof-by-induction/). You should be able to expand brackets and use summation notation.
+**Before you start:** use [standard sums and summation notation](/alevel/as-further-mathematics/series/#model), [changing the lower limit](/alevel/as-further-mathematics/series/#lower-limits), [partial-fraction coefficients](/alevel/a2-mathematics/partial-fractions/#method) and the [induction step](/alevel/a2-further-mathematics/proof-by-induction/#method). If you cannot decide which earlier terms to remove, repair lower limits before Example 4. If the fraction coefficients are unclear, revisit that skill and check the identity in Example 1.
 
 **Task status:** Unless an official question or teaching adaptation is explicitly identified, the worked examples and exercises are self-written teaching tasks with no official marks.
 
-## Method
+## Method {#method}
 
 **Learning goal:** choose a method for a finite sum, show how the terms cancel and give a formula with the correct lower and upper limits.
 
@@ -33,7 +32,7 @@ $$\sum_{r=a}^{b}u_r=u_a+u_{a+1}+\cdots+u_b,$$
 
 $r$ is the summation index. If $a$ and $b$ are integers with $a\le b$, there are $b-a+1$ terms.
 
-### Choose a method
+### Choose a method {#choose-a-method}
 
 | Form of the terms | First step |
 |---|---|
@@ -43,13 +42,15 @@ $r$ is the summation index. If $a$ and $b$ are integers with $a\le b$, there are
 | A difference such as $v_r-v_{r+1}$ | Write out the first few and last few terms |
 | A formula is given and you must prove it by induction | Check the initial case, then use $S_{k+1}=S_k+u_{k+1}$ |
 
-**Use partial fractions to rewrite each term. Use the method of differences to find the sum.** After the rewrite, write enough terms to see what cancels. Do not reduce each fraction to a single number before showing the cancellation.
+For a rational term that splits into shifted pieces, rewrite it and then use differences; for a polynomial, consider sums of powers first. After the rewrite, write enough terms to see what cancels. Do not reduce each fraction to a single number before showing the cancellation.
 
 **Common mistake:** using the formula for a sum from $r=1$ when the question starts at another value. Either write the actual first term or subtract an earlier sum.
 
-## Partial Fractions
+## Partial Fractions {#partial-fractions}
 
-### Example 1 — Consecutive denominators
+<section class="worked-example" markdown="1">
+
+### Example 1 — Consecutive denominators {#example-1--consecutive-denominators}
 
 **Question:** find
 
@@ -59,7 +60,11 @@ First write
 
 $$\frac{1}{r(r+1)}=\frac{1}{r}-\frac{1}{r+1}.$$
 
-The identity follows by putting the right side over a common denominator. Now expand the sum:
+To determine the coefficients, set $\frac1{r(r+1)}=A/r+B/(r+1)$. Clearing denominators gives
+
+$$1=A(r+1)+Br=(A+B)r+A,$$
+
+so $A=1$ and $B=-1$. Now expand the sum:
 
 $$\begin{aligned}
 S_n
@@ -75,13 +80,17 @@ $$\boxed{S_n=1-\frac1{n+1}=\frac{n}{n+1}.}$$
 
 **Check:** at $n=1$, the original sum is $\frac12$, and the formula gives $\frac12$.
 
-### Example 2 — A gap of two
+</section>
+
+<section class="worked-example" markdown="1">
+
+### Example 2 — A gap of two {#example-2--a-gap-of-two}
 
 **Question:** find
 
 $$T_n=\sum_{r=1}^{n}\frac{1}{r(r+2)}.$$
 
-Partial fractions give
+Clearing denominators in $A/r+B/(r+2)$ gives $1=A(r+2)+Br$. Comparing coefficients gives $2A=1$ and $A+B=0$, so
 
 $$\frac{1}{r(r+2)}
 =\frac12\left(\frac1r-\frac1{r+2}\right).$$
@@ -104,7 +113,9 @@ This also holds at $n=1$: the expression gives $\frac12(1-\frac13)=\frac13$, as 
 
 **Common mistake:** keeping only the first and last terms. The shift is two, so keep **two terms at each end**. For short sums, check the formula directly when the displayed cancellation pattern overlaps.
 
-## Differencing
+</section>
+
+## Differencing {#differencing}
 
 The **method of differences**, also called differencing, uses cancellation between terms of a sum. In its simplest form,
 
@@ -112,7 +123,9 @@ $$\boxed{\sum_{r=a}^{b}(v_r-v_{r+1})=v_a-v_{b+1}.}$$
 
 Notice the final index $b+1$, not $b$. If the difference is $v_r-v_{r+2}$, two terms at each end remain.
 
-### Example 3 — Three factors in the denominator
+<section class="worked-example" markdown="1">
+
+### Example 3 — Three factors in the denominator {#example-3--three-factors-in-the-denominator}
 
 **Question:** find
 
@@ -127,7 +140,14 @@ $$\begin{aligned}
 
 It follows because the numerator on the right is $(r+2)-r=2$.
 
-Put $v_r=\frac{1}{r(r+1)}$. The term is $v_r-v_{r+1}$, so
+Put $v_r=\frac{1}{r(r+1)}$. Expanding shows how each negative term cancels the next positive term:
+
+$$\begin{aligned}
+U_n&=(v_1-v_2)+(v_2-v_3)+\cdots+(v_n-v_{n+1})\\
+&=v_1-v_{n+1}=\frac1{1\cdot2}-\frac1{(n+1)(n+2)}.
+\end{aligned}$$
+
+Therefore
 
 $$\boxed{U_n=\frac12-\frac{1}{(n+1)(n+2)}.}$$
 
@@ -146,9 +166,13 @@ which is the same answer. At $n=1$, either final formula gives $\frac13$.
 
 **Choose the shorter route:** a difference of two fractions with quadratic denominators can make cancellation easier to see than three separate linear fractions.
 
-## Other Starting Points
+</section>
 
-### Example 4 — A different lower limit
+## Other Starting Points {#other-starting-points}
+
+<section class="worked-example" markdown="1">
+
+### Example 4 — A different lower limit {#example-4--a-different-lower-limit}
 
 **Question:** find
 
@@ -177,7 +201,11 @@ $$\boxed{V_n=\frac{n(n+1)(2n+7)}6-11.}$$
 
 **Common mistake:** a constant inside a sum is counted once for every term. Here $\sum_{r=3}^{n}c=(n-2)c$, not $c$.
 
-### Proving a sum by induction
+</section>
+
+<section class="worked-example" markdown="1">
+
+### Proving a sum by induction {#proving-a-sum-by-induction}
 
 If the question says **prove by induction**, cancellation alone does not meet that instruction. For Example 1, a proof by induction is:
 
@@ -198,22 +226,32 @@ S_{k+1}
 
 This is the formula for $n=k+1$. The formula is true for $n=1$. If it is true for $n=k$, it is true for $n=k+1$. Therefore $S_n=\frac{n}{n+1}$ for all integers $n\ge1$ by mathematical induction.
 
-## Practice
+</section>
 
-For Questions 1–3, show the partial fractions or difference you use and the terms left after cancellation. For Question 4, write a complete induction proof.
+## Practice {#practice}
+
+Choose a method from the structure of each sum and explain your choice. If you use cancellation, show every surviving boundary term. Keep the specified methods in Question 4 and the original Question 5.
 
 Questions 1–4 are self-written exercises. Question 5 is an original AQA question reproduced in the supplied textbook.
 
-### Question 1 — Odd denominators
+<section class="lesson-check" markdown="1">
 
-Find, for integers $n\ge1$,
+### Question 1 — Compare two sums {#question-1--odd-denominators}
+
+**a** Find, for integers $n\ge1$,
 
 $$\sum_{r=1}^{n}\frac1{(2r-1)(2r+1)}.$$
+
+**b** Find, for integers $n\ge3$,
+
+$$\sum_{r=3}^{n}(2r-1)^2.$$
+
+For each sum, state your chosen method and explain why it fits the terms. Check the smallest allowed value of $n$.
 
 <details markdown="1">
 <summary>Hint</summary>
 
-Use $\frac12\left(\frac1{2r-1}-\frac1{2r+1}\right)$.
+Use $\frac12\left(\frac1{2r-1}-\frac1{2r+1}\right)$. For part b, expand the square before deciding which standard sums apply.
 
 </details>
 
@@ -239,11 +277,26 @@ After cancellation,
 
 $$\boxed{\frac12\left(1-\frac1{2n+1}\right)=\frac{n}{2n+1}.}$$
 
-**Check:** at $n=2$, $\frac13+\frac1{15}=\frac25$.
+**a check:** at $n=1$, the original sum and formula both give $\frac13$; at $n=2$, $\frac13+\frac1{15}=\frac25$.
+
+**b** Expansion gives a polynomial, so standard sums combine directly without partial fractions. First sum from $r=1$, then remove the terms at $r=1,2$:
+
+$$\begin{aligned}
+\sum_{r=3}^n(2r-1)^2
+&=4\sum_{r=1}^n r^2-4\sum_{r=1}^n r+\sum_{r=1}^n1-(1+9)\\
+&=\frac{2n(n+1)(2n+1)}3-2n(n+1)+n-10\\
+&=\boxed{\frac{n(4n^2-1)}3-10},\qquad n\ge3.
+\end{aligned}$$
+
+At $n=3$, the original sum is just $5^2=25$, and the formula gives $35-10=25$. Part a uses partial fractions to create cancellation; part b uses sums of powers after expansion. Other methods with complete reasoning are valid. If you omitted why the method applies, supply the structural reason before the [later review](#later-review); if you removed the wrong terms, revisit [lower limits](/alevel/as-further-mathematics/series/#lower-limits).
 
 </details>
 
-### Question 2 — Start at r = 2
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Question 2 — Start at r = 2 {#question-2--start-at-r--2}
 
 Find, for integers $n\ge2$,
 
@@ -271,7 +324,11 @@ At $n=2$, the same expression gives $\frac13$, so the formula holds for every in
 
 </details>
 
-### Question 3 — A sum over a shorter interval
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Question 3 — A sum over a shorter interval {#question-3--a-sum-over-a-shorter-interval}
 
 Find
 
@@ -301,7 +358,11 @@ $$\boxed{\frac12\left(\frac1{5\cdot6}-\frac1{13\cdot14}\right)
 
 </details>
 
-### Question 4 — Prove a sum by induction
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Question 4 — Prove a sum by induction {#question-4--prove-a-sum-by-induction}
 
 Prove that, for all integers $n\ge1$,
 
@@ -337,9 +398,13 @@ This is the formula for $n=k+1$. The formula is true for $n=1$. If it is true fo
 
 </details>
 
-### Question 5 — Original AQA practice
+</section>
 
-**Source:** AQA Mathematics 6360, MFP2, June 2010, Question 2. **3 + 5 marks**. Textbook cross-reference: Chapter 18, practice examination question 6, printed p. 218. [Question paper, Q2 (PDF p. 3)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202010%20QP%20-%20FP2%20AQA.PDF#page=3); [AQA mark scheme, Q2 (PDF p. 4)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202010%20MS%20-%20FP2%20AQA.PDF#page=4). Question and matching mark scheme read on 2026-10-22; these are AQA-authored documents hosted by PMT, with some question papers in condensed layout.
+<section class="lesson-check" markdown="1">
+
+### Question 5 — Original AQA practice {#question-5--original-aqa-practice}
+
+**Source:** AQA Mathematics 6360, MFP2, June 2010, Question 2. **3 + 5 marks**. Textbook cross-reference: Chapter 18, practice examination question 6, printed p. 218. [Question paper, Q2 (PDF p. 3)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202010%20QP%20-%20FP2%20AQA.PDF#page=3); [AQA mark scheme, Q2 (PDF p. 4)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202010%20MS%20-%20FP2%20AQA.PDF#page=4). Question and matching mark scheme re-read on 2026-10-23; these are AQA-authored documents hosted by PMT, with some question papers in condensed layout.
 
 **a** Express
 
@@ -374,11 +439,15 @@ Multiplying by $r(r+2)$ gives $1=A(r+2)+Br$. Comparing coefficients gives $2A=1$
 $$\begin{aligned}
 \sum_{r=1}^{48}\frac1{r(r+2)}
 &=\frac12\sum_{r=1}^{48}\left(\frac1r-\frac1{r+2}\right)\\
-&=\frac12\left(1+\frac12-\frac1{49}-\frac1{50}\right)\\
-&=\boxed{\frac{3576}{4900}=\frac{894}{1225}}.
+&=\frac12\biggl[\left(1-\frac13\right)+\left(\frac12-\frac14\right)\\
+&\qquad+\left(\frac13-\frac15\right)+\cdots+\left(\frac1{48}-\frac1{50}\right)\biggr].
 \end{aligned}$$
 
-The middle terms cancel because the positive denominators run from $1$ to $48$ and the negative denominators run from $3$ to $50$.
+For every denominator from $3$ to $48$, a positive fraction cancels its negative partner: for example, the $-\frac13$ in the first pair cancels the $+\frac13$ in the third pair. The only surviving terms are the positive $1$ and $\frac12$, and the negative $-\frac1{49}$ and $-\frac1{50}$. Hence
+
+$$\sum_{r=1}^{48}\frac1{r(r+2)}
+=\frac12\left(1+\frac12-\frac1{49}-\frac1{50}\right)
+=\boxed{\frac{3576}{4900}=\frac{894}{1225}}.$$
 
 **Check:** the exact answer is a little less than $\frac34$, as the two remaining negative fractions are small and positive.
 
@@ -386,9 +455,13 @@ The middle terms cancel because the positive denominators run from $1$ to $48$ a
 
 </details>
 
+</section>
+
 ## Diagnose and Retry {#diagnose-and-retry}
 
-Both tasks are self-written and have no official marks. Explain the error before opening feedback; then close every solution and attempt the new task independently. If you need a hint, return later for another independent attempt.
+The diagnosis, retry and reverse task are self-written and have no official marks. Explain the error before opening feedback; then close every solution and attempt the new task independently. If you need a hint, return later for another independent attempt.
+
+<section class="lesson-check" markdown="1">
 
 **Diagnose:** For Example 2, a learner keeps only
 
@@ -407,7 +480,53 @@ $$\frac12(\frac12-\frac1{n+1})$$
 
 </details>
 
-**Independent retry:** A series has partial sums
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Independent retry {#boundary-retry}
+
+Self-written. Revisit [shifted cancellation](#example-2--a-gap-of-two), then close the demonstration and feedback before answering.
+
+Find, for all integers $n\ge2$,
+
+$$W_n=\sum_{r=2}^{n}\frac3{r(r+3)}.$$
+
+Show the uncancelled terms at both ends and check the shortest allowed sum.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Check $1/r-1/(r+3)$ over a common denominator. Where does each row of denominators begin and end?
+
+</details>
+
+<details markdown="1">
+<summary>Retry solution and check</summary>
+
+$$\frac3{r(r+3)}=\frac1r-\frac1{r+3}.$$
+
+For $n\ge4$, the two rows are
+
+$$\begin{aligned}
+W_n&=\left(\frac12+\frac13+\frac14+\cdots+\frac1n\right)\\
+&\quad-\left(\frac15+\frac16+\cdots+\frac1{n+3}\right)\\
+&=\boxed{\frac12+\frac13+\frac14-\frac1{n+1}-\frac1{n+2}-\frac1{n+3}}.
+\end{aligned}$$
+
+Three terms survive at each end. At $n=2$, the overlapping $1/3$ and $1/4$ cancel, leaving $1/2-1/5=3/10$, the original single term. At $n=3$, the formula gives $1/2+1/3-1/5-1/6=7/15=3/10+1/6$. Thus it holds for the whole stated range. If you still kept only one term, mark both complete index ranges again and check all three boundary terms at each end.
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Reverse task {#reverse-task}
+
+This retained self-written task connects partial sums to individual terms; use the separate boundary task to recheck cancellation.
+
+**Independent task:** A series has partial sums
 
 $$S_n=\frac{n}{n+1}$$
 
@@ -435,7 +554,42 @@ $$u_1=\frac12=S_1-S_0$$
 
 </details>
 
-## Quick Reference
+</section>
+
+## Return after studying convergence {#later-review}
+
+After the next lesson's [convergence and partial sums](/alevel/a2-further-mathematics/series-and-limits/#convergence), close this page's examples and attempt this self-written task. Choose and justify a method, find the finite sum, and only then find the infinite sum.
+
+<section class="lesson-check" markdown="1">
+
+Find $S_n=\sum_{r=3}^n\frac1{r(r+2)}$ for integers $n\ge3$. Hence determine whether $\sum_{r=3}^{\infty}\frac1{r(r+2)}$ converges, and find its sum if it does.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Choose a rewrite from the denominator structure. Decide convergence from the partial sums.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and recovery</summary>
+
+Partial fractions create shifted cancellation, which suits a symbolic upper limit:
+
+$$\begin{aligned}
+\frac1{r(r+2)}&=\frac12\left(\frac1r-\frac1{r+2}\right),\\
+S_n&=\frac12\left[\left(\frac13-\frac15\right)+\cdots+\left(\frac1n-\frac1{n+2}\right)\right]\\
+&=\frac12\left(\frac13+\frac14-\frac1{n+1}-\frac1{n+2}\right),\\
+\lim_{n\to\infty}S_n&=\frac12\left(\frac13+\frac14\right)=\boxed{\frac7{24}}.
+\end{aligned}$$
+
+At $n=3$, the overlapping $1/4$ cancels, giving $1/15$, the original single term. The finite limit of the partial sums proves convergence; terms tending to zero alone would not suffice. For lost boundaries use the [boundary retry](#boundary-retry); for the convergence argument revisit the next lesson's definition, then close the answer and explain it again.
+
+</details>
+
+</section>
+
+## Quick Reference {#quick-reference}
 
 | Task | Method | Check |
 |---|---|---|
@@ -450,6 +604,11 @@ $$u_1=\frac12=S_1-S_0$$
 
 **You should be able to:** choose a method, show the cancellation, handle a different lower limit and give an exact sum.
 
+Textbook: Chapter 18, Section 18.2, printed pp. 215–216; review and practice examination questions on pp. 217–218, in *International A Level Further Mathematics*.
+{: .lesson-meta}
+
 The lesson follows FP2.5 of the [OxfordAQA Further Mathematics 9665 specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf). Worked examples are teaching material. Question 5 retains the AQA question and marks from the supplied textbook.
+
+**After this lesson:** close the chapter solutions and attempt the course [mixed review](/alevel/a2-further-mathematics/#mixed-review). Return at the interval specified there for the [later review](/alevel/a2-further-mathematics/#later-review). Keep your independent work and check it by objective; revisit the linked prerequisite and retry any objective that required a hint.
 
 **Learning path:** [Previous: Proof by Induction](/alevel/a2-further-mathematics/proof-by-induction/) · [Back to the course](/alevel/a2-further-mathematics/) · [Next: Series and Limits](/alevel/a2-further-mathematics/series-and-limits/).

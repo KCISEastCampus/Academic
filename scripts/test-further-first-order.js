@@ -66,6 +66,12 @@ const ids = source => Array.from(source.matchAll(/\{#([^}]+)\}/g), match => matc
 assert.deepEqual(math(zh), math(en), 'Chinese formulas must match English in order');
 assert.deepEqual(zh.match(/^>.*$/gm), en.match(/^>.*$/gm), 'Keep English questions unchanged');
 assert.deepEqual(ids(zh), ids(en), 'Preserve section anchors when changing language');
+const firstExample = en.split('{#example-1-normalise-and-solve}')[1].split('</section>')[0];
+assert(firstExample.includes('\\int(e^{2x}y)^{\\prime}\\,\\mathrm dx')
+  && firstExample.includes('3\\int e^{2x}\\,\\mathrm dx'),
+  'Keep the intermediate integration requested in the student feedback');
+assert(firstExample.includes('3\\left(\\frac12e^{2x}\\right)+C'),
+  'Show why the exponential antiderivative has its coefficient');
 assert(zh.includes(`translation_of: /${topic}/`));
 assert(zh.includes(`permalink: /zh/${topic}/`));
 assert(zh.includes('lang: zh-CN'));

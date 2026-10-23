@@ -1,0 +1,624 @@
+{
+  "note": "Initial pre-repair run; failures were fixed and rechecked. Use final/browser-results.json for acceptance.",
+  "views": 134,
+  "failures": [
+    {
+      "slug": "index",
+      "lang": "en",
+      "width": 1365,
+      "theme": "light",
+      "nestedTasks": 0,
+      "mathErrors": [],
+      "flattenedMatrixCandidates": [
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        },
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "index",
+      "lang": "en",
+      "width": 1365,
+      "theme": "dark",
+      "nestedTasks": 0,
+      "mathErrors": [],
+      "flattenedMatrixCandidates": [
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        },
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "index",
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "nestedTasks": 0,
+      "mathErrors": [],
+      "flattenedMatrixCandidates": [
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        },
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "index",
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "nestedTasks": 0,
+      "mathErrors": [],
+      "flattenedMatrixCandidates": [
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        },
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "index",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "light",
+      "nestedTasks": 0,
+      "mathErrors": [],
+      "flattenedMatrixCandidates": [
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        },
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "index",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "dark",
+      "nestedTasks": 0,
+      "mathErrors": [],
+      "flattenedMatrixCandidates": [
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        },
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "index",
+      "lang": "zh",
+      "width": 390,
+      "theme": "light",
+      "nestedTasks": 0,
+      "mathErrors": [],
+      "flattenedMatrixCandidates": [
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        },
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "index",
+      "lang": "zh",
+      "width": 390,
+      "theme": "dark",
+      "nestedTasks": 0,
+      "mathErrors": [],
+      "flattenedMatrixCandidates": [
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        },
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "arc-length-and-surface-area",
+      "lang": "en",
+      "width": 1365,
+      "error": "Error: page.waitForURL: net::ERR_NETWORK_IO_SUSPENDED\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================"
+    },
+    {
+      "slug": "eigenvalues-and-eigenvectors",
+      "lang": "en",
+      "width": 1365,
+      "theme": "light",
+      "nestedTasks": 0,
+      "mathErrors": [],
+      "flattenedMatrixCandidates": [
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "eigenvalues-and-eigenvectors",
+      "lang": "en",
+      "width": 1365,
+      "theme": "dark",
+      "nestedTasks": 0,
+      "mathErrors": [],
+      "flattenedMatrixCandidates": [
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "eigenvalues-and-eigenvectors",
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "nestedTasks": 0,
+      "mathErrors": [],
+      "flattenedMatrixCandidates": [
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "eigenvalues-and-eigenvectors",
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "nestedTasks": 0,
+      "mathErrors": [],
+      "flattenedMatrixCandidates": [
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "eigenvalues-and-eigenvectors",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "light",
+      "nestedTasks": 0,
+      "mathErrors": [],
+      "flattenedMatrixCandidates": [
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "eigenvalues-and-eigenvectors",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "dark",
+      "nestedTasks": 0,
+      "mathErrors": [],
+      "flattenedMatrixCandidates": [
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "eigenvalues-and-eigenvectors",
+      "lang": "zh",
+      "width": 390,
+      "theme": "light",
+      "nestedTasks": 0,
+      "mathErrors": [],
+      "flattenedMatrixCandidates": [
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "eigenvalues-and-eigenvectors",
+      "lang": "zh",
+      "width": 390,
+      "theme": "dark",
+      "nestedTasks": 0,
+      "mathErrors": [],
+      "flattenedMatrixCandidates": [
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "inverse-trigonometric-functions",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "light",
+      "nestedTasks": 1,
+      "mathErrors": [],
+      "flattenedMatrixCandidates": []
+    },
+    {
+      "slug": "inverse-trigonometric-functions",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "dark",
+      "nestedTasks": 1,
+      "mathErrors": [],
+      "flattenedMatrixCandidates": []
+    },
+    {
+      "slug": "inverse-trigonometric-functions",
+      "lang": "zh",
+      "width": 390,
+      "theme": "light",
+      "nestedTasks": 1,
+      "mathErrors": [],
+      "flattenedMatrixCandidates": []
+    },
+    {
+      "slug": "inverse-trigonometric-functions",
+      "lang": "zh",
+      "width": 390,
+      "theme": "dark",
+      "nestedTasks": 1,
+      "mathErrors": [],
+      "flattenedMatrixCandidates": []
+    },
+    {
+      "slug": "matrix-algebra",
+      "lang": "en",
+      "width": 1365,
+      "theme": "light",
+      "nestedTasks": 0,
+      "mathErrors": [],
+      "flattenedMatrixCandidates": [
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        },
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        },
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        },
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "matrix-algebra",
+      "lang": "en",
+      "width": 1365,
+      "theme": "dark",
+      "nestedTasks": 0,
+      "mathErrors": [],
+      "flattenedMatrixCandidates": [
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        },
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        },
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        },
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "matrix-algebra",
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "nestedTasks": 0,
+      "mathErrors": [],
+      "flattenedMatrixCandidates": [
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        },
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        },
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        },
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "matrix-algebra",
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "nestedTasks": 0,
+      "mathErrors": [],
+      "flattenedMatrixCandidates": [
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        },
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        },
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        },
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "matrix-algebra",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "light",
+      "nestedTasks": 0,
+      "mathErrors": [],
+      "flattenedMatrixCandidates": [
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        },
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        },
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        },
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "matrix-algebra",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "dark",
+      "nestedTasks": 0,
+      "mathErrors": [],
+      "flattenedMatrixCandidates": [
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        },
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        },
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        },
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "matrix-algebra",
+      "lang": "zh",
+      "width": 390,
+      "theme": "light",
+      "nestedTasks": 0,
+      "mathErrors": [],
+      "flattenedMatrixCandidates": [
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        },
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        },
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        },
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "matrix-algebra",
+      "lang": "zh",
+      "width": 390,
+      "theme": "dark",
+      "nestedTasks": 0,
+      "mathErrors": [],
+      "flattenedMatrixCandidates": [
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        },
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        },
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        },
+        {
+          "rows": 1,
+          "columns": [
+            7
+          ]
+        }
+      ]
+    }
+  ]
+}

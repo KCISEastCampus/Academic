@@ -5,8 +5,9 @@ mathjax: true
 grade: a2
 subject: a2-further-mathematics
 permalink: /alevel/a2-further-mathematics/matrix-algebra/
-toc_headings: h2, h3, h4
+toc_headings: "#dimensions-and-order, #determinants-and-volume, #cofactors-and-inverses, #basis-images, #rotations, #reflections, #compositions, #invariant-points-and-lines, #practice, #common-pitfalls, #sources"
 study_page: true
+reading_layout: true
 ---
 
 [Further Pure Mathematics](/alevel/a2-further-mathematics/) · FP2.13 Matrix algebra
@@ -20,6 +21,8 @@ How can one matrix describe both an operation on coordinates and a reversible tr
 **Goals:** justify a product's dimensions; find a third-order determinant and inverse; describe the specified spatial transformations completely; distinguish a fixed point, a line mapped onto itself and a collapsed line.
 
 **Before you start:** revise AS matrix addition, scalar multiplication, multiplication, transpose and second-order inverses in [AS Further Mathematics](/alevel/as-further-mathematics/), and coordinate vectors in [lines and planes](/alevel/a2-further-mathematics/lines-and-planes/). Matrices act on **column vectors** throughout. All entries and parameters here are real unless stated otherwise.
+
+Recover the exact prerequisite: [row–column multiplication](/alevel/as-further-mathematics/matrix-algebra/#demonstration) for dimension or entry errors, [what an inverse undoes](/alevel/as-further-mathematics/matrix-algebra/#inverse) for transpose/inverse confusion, and [following an input through the maps](/alevel/as-further-mathematics/transformations/#demonstration) for order errors. Then attempt the [noncommuting retry](#order-retry).
 
 ## Dimensions and order {#dimensions-and-order}
 
@@ -48,6 +51,8 @@ If you wrote SR, follow one input vector through both transformations before mul
 
 </details>
 
+<section class="worked-example" markdown="1">
+
 ### A non-square example {#non-square-example}
 
 **Original example.** Calculate both products for
@@ -65,6 +70,8 @@ $$PQ=\begin{pmatrix}3&2\\-1&1\end{pmatrix},\qquad
 QP=\begin{pmatrix}1&2&0\\0&1&-1\\1&0&2\end{pmatrix}.$$
 
 The products exist in both orders, but are different objects. Even when both matrices are square, multiplication is generally not commutative.
+
+</section>
 
 ## Determinants and volume {#determinants-and-volume}
 
@@ -125,11 +132,38 @@ The matrix C contains the cofactors in their original positions. Its transpose i
 $$AC^{\mathsf T}=C^{\mathsf T}A=(\det A)I,\qquad
 \boxed{A^{-1}=\frac1{\det A}C^{\mathsf T}},\quad \det A\ne0.$$
 
-### Worked inverse and a missing step {#worked-inverse}
+<section class="worked-example" markdown="1">
 
-For N above, deleting row 1 and column 2 gives
+### A complete third-order inverse {#worked-inverse}
 
-$$C_{12}=-\det\begin{pmatrix}0&1\\2&1\end{pmatrix}=2.$$
+For the same N, the determinant is 5, so an inverse exists. Delete the selected row and column, then apply the checkerboard sign. Here are all nine cofactor calculations.
+
+$$\begin{aligned}
+C_{11}&=1(1)-1(0)=1,&C_{12}&=-[0(1)-1(2)]=2,&C_{13}&=0(0)-1(2)=-2,\\
+C_{21}&=-[2(1)-0(0)]=-2,&C_{22}&=1(1)-0(2)=1,&C_{23}&=-[1(0)-2(2)]=4,\\
+C_{31}&=2(1)-0(1)=2,&C_{32}&=-[1(1)-0(0)]=-1,&C_{33}&=1(1)-2(0)=1.
+\end{aligned}$$
+
+$$C=\begin{pmatrix}1&2&-2\\-2&1&4\\2&-1&1\end{pmatrix},\qquad
+C^{\mathsf T}=\begin{pmatrix}1&-2&2\\2&1&-1\\-2&4&1\end{pmatrix},\qquad
+N^{-1}=\frac15 C^{\mathsf T}.$$
+
+Transposition turns the first cofactor row into the first adjugate column. Dividing C by 5 would omit this step. Check a diagonal and an off-diagonal entry, then both full products:
+
+$$(NN^{-1})_{11}=\frac{1(1)+2(2)+0(-2)}5=1,\qquad
+(NN^{-1})_{12}=\frac{1(-2)+2(1)+0(4)}5=0.$$
+
+$$NC^{\mathsf T}=\begin{pmatrix}5&0&0\\0&5&0\\0&0&5\end{pmatrix},\qquad
+C^{\mathsf T}N=\begin{pmatrix}5&0&0\\0&5&0\\0&0&5\end{pmatrix}
+\quad\Longrightarrow\quad NN^{-1}=N^{-1}N=I.$$
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Pause: cover the demonstration and reconstruct {#inverse-completion}
+
+This is guided reconstruction, not independent evidence on a new matrix. Use the [joint task](#inverse-system-task) for that.
 
 **Original completion task.** Calculate the cofactor in row 2, column 3, then transpose the completed cofactor matrix and check one off-diagonal entry of the product with N.
 
@@ -158,23 +192,24 @@ If you used C without transposing, a nonzero off-diagonal entry exposes the erro
 
 </details>
 
+</section>
+
+<section class="worked-example" markdown="1">
+
 ### Adapted example: preserve a parameter restriction {#parameter-inverse}
 
 **Adapted example — OxfordAQA 9665/FM03 January 2025 Q13(a), MS p.20.** The matrix and parameter have been changed. Find when the following matrix is nonsingular, then find its inverse in terms of t.
 
 $$N_t=\begin{pmatrix}1&2&0\\0&1&1\\t&0&1\end{pmatrix}.$$
 
-<details markdown="1">
-<summary>Hint</summary>
-
 Find the determinant before dividing. The cofactor calculation above can be repeated with a variable in the bottom-left position.
 
-</details>
 
-<details markdown="1">
-<summary>Solution</summary>
+$$\det N_t=1(1)-2(0-t)=1+2t,\qquad t\ne-\frac12.$$
 
-$$\det N_t=1+2t,\qquad t\ne-\frac12,\qquad
+$$C_t=\begin{pmatrix}1&t&-t\\-2&1&2t\\2&-1&1\end{pmatrix},\qquad C_t^{\mathsf T}=\begin{pmatrix}1&-2&2\\t&1&-1\\-t&2t&1\end{pmatrix}.$$
+
+$$
 N_t^{-1}=\frac1{1+2t}\begin{pmatrix}1&-2&2\\t&1&-1\\-t&2t&1\end{pmatrix}.$$
 
 The restriction belongs to the final answer. Multiplying N_t by the displayed numerator gives
@@ -183,7 +218,7 @@ $$N_t\begin{pmatrix}1&-2&2\\t&1&-1\\-t&2t&1\end{pmatrix}=(1+2t)I.$$
 
 At the excluded value this identity still holds, but division is impossible. A singular matrix cannot be repaired by cancelling factors in a proposed inverse.
 
-</details>
+</section>
 
 ## Building a transformation from its columns {#basis-images}
 
@@ -254,6 +289,8 @@ A negative factor reverses each radial direction; a zero factor collapses all sp
 
 ## Compositions and reverse problems {#compositions}
 
+<section class="worked-example" markdown="1">
+
 ### Adapted example: describe, combine, check {#composition-example}
 
 **Adapted example — OxfordAQA 9665/FM03 June 2024 Q1, MS p.4.** The rotation angle has been reversed. Let
@@ -263,15 +300,8 @@ S=S_{x=0}=\begin{pmatrix}-1&0&0\\0&1&0\\0&0&1\end{pmatrix}.$$
 
 > Describe each transformation fully. Find the matrix for S followed by R, and check whether reversing the order gives the same transformation.
 
-<details markdown="1">
-<summary>Hint</summary>
-
 Apply the rightmost matrix first. One basis vector suffices to disprove equality of the two products.
 
-</details>
-
-<details markdown="1">
-<summary>Solution</summary>
 
 R is a rotation about the y-axis through a right angle, clockwise viewed from the positive y-axis towards the origin. S is reflection in the plane x=0. The products are
 
@@ -280,7 +310,9 @@ SR=\begin{pmatrix}0&0&1\\0&1&0\\1&0&0\end{pmatrix}.$$
 
 They send the x basis vector to opposite z directions. The composite RS swaps and negates the x and z coordinates while retaining y; this explains its action without confusing it with a rotation.
 
-</details>
+</section>
+
+<section class="worked-example" markdown="1">
 
 ### Adapted example: undo the transformation on the correct side {#reverse-transformation}
 
@@ -291,15 +323,8 @@ B=\begin{pmatrix}0&0&1\\s&c&0\\c&-s&0\end{pmatrix}.$$
 
 > Show that A is independent of the rotation angle, and describe the single transformation represented by A.
 
-<details markdown="1">
-<summary>Hint</summary>
-
 Right-multiply the relation by the inverse of R. Use the sine–cosine identity to simplify the product for every angle; one numerical angle does not prove independence.
 
-</details>
-
-<details markdown="1">
-<summary>Solution</summary>
 
 $$\begin{aligned}
 A&=BR^{-1}\\
@@ -311,7 +336,7 @@ A&=BR^{-1}\\
 
 No angle remains, so A is independent of it. The matrix swaps x and z, hence it represents reflection in the plane x=z. Left-multiplying by the inverse would not isolate A.
 
-</details>
+</section>
 
 ## Invariant points and lines {#invariant-points-and-lines}
 
@@ -335,6 +360,8 @@ For every point of the line to be fixed, stronger conditions are needed:
 
 $$\boxed{A\mathbf a=\mathbf a,\qquad A\mathbf d=\mathbf d.}$$
 
+<section class="worked-example" markdown="1">
+
 ### A line away from the origin {#offset-line}
 
 **Original example.** Consider
@@ -350,6 +377,12 @@ D\begin{pmatrix}t\\1\\0\end{pmatrix}=\begin{pmatrix}2t\\1\\0\end{pmatrix}.$$
 
 The fixed points form a plane. The line L does not pass through the origin, but it is mapped onto itself because twice a real parameter still ranges over all real numbers. Only its point with parameter zero is fixed; the whole line is not fixed pointwise.
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Pause: check whether the whole line is reached {#collapse-check}
+
 **Original correction task.** Replace the first diagonal entry of D by zero. A student says, “The direction still lies on L, so L is invariant.” Explain the missing check.
 
 <details markdown="1">
@@ -364,9 +397,13 @@ The image is contained in L but is not the entire line. When a question uses “
 
 </details>
 
+</section>
+
 ## Practice {#practice}
 
 The following tasks are original. Keep the hints and solutions closed for your first attempt. Give reasons, not only matrix entries.
+
+<section class="lesson-check" markdown="1">
 
 ### Question 1: a reversed condition {#practice-1}
 
@@ -389,6 +426,10 @@ The reflection is invertible, so multiplying by its inverse determines one matri
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### Question 2: find and repair an inverse {#practice-2}
 
 > A student proposes one fifth of the cofactor matrix C in the worked inverse as the inverse of N. Use one product entry to disprove this, then give the corrected matrix. Explain what would happen to the inverse problem if two rows of N were identical.
@@ -409,6 +450,10 @@ N^{-1}=\frac15\begin{pmatrix}1&-2&2\\2&1&-1\\-2&4&1\end{pmatrix}.$$
 Identical rows give a singular matrix, so no inverse exists. This is not a cofactor sign error that another transpose can fix.
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### Question 3: choose a representation {#practice-3}
 
@@ -436,6 +481,10 @@ All and only the points of this line are fixed. The two reflections can be perfo
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### Question 4: test an offset line {#practice-4}
 
 > For D in the offset-line example, decide whether each line is mapped onto itself: (i) $(t,2,3)$; (ii) $(1,t,0)$, with t real. For any invariant line, decide whether it is fixed pointwise. Justify each conclusion with a general point.
@@ -457,6 +506,10 @@ The first line maps onto itself, but its nonzero-parameter points move. The seco
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ## Independent retry {#independent-retry}
 
 **Original task.** A map sends $(x,y,z)$ to $(-x,z,y)$. Without copying a previous matrix, find its matrix and determinant, all fixed points, and the image of the line $(t,1,1)$. Is that line invariant, fixed pointwise or collapsed? Finally decide whether the plane x=1 is mapped to itself. Choose your methods and justify the claims.
@@ -472,6 +525,123 @@ $$H\begin{pmatrix}t\\1\\1\end{pmatrix}=\begin{pmatrix}-t\\1\\1\end{pmatrix}.$$
 Every real parameter is attained, so the line is invariant; only the point with parameter zero is fixed. It is not collapsed. The plane with x-coordinate 1 maps to the different plane with x-coordinate −1. The determinant alone could not answer either set-invariance question.
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Joint task on a new input: inverse and equations {#inverse-system-task}
+
+> **Original task / 自拟题.** Let
+
+$$
+K=\begin{pmatrix}1&1&0\\0&1&1\\1&0&2\end{pmatrix},\qquad
+\mathbf b=\begin{pmatrix}3\\5\\7\end{pmatrix}.
+$$
+
+> (a) Find the determinant, calculate all nine cofactors, transpose to obtain the inverse, and check both matrix products. (b) **Use your inverse from (a)** to solve $K\mathbf x=\mathbf b$, justify uniqueness and check all three original equations. (c) Replace the bottom-right entry by $q$. Determine when the original system has a unique solution and classify it at the excluded value. At that value, what changes if the third entry of the right side is −2?
+
+<details markdown="1">
+<summary>Hint</summary>
+
+This is also the next lesson's joint task. Transpose cofactors in their original positions, left-multiply the right side, and return to the original equations at a singular parameter.
+
+</details>
+
+<details markdown="1">
+<summary>Solution</summary>
+
+$$\det K=1(2)-1(0-1)=3,\qquad
+C_{11}=2,\ C_{12}=1,\ C_{13}=-1,\ C_{21}=-2,\ C_{22}=2,\ C_{23}=1,\ C_{31}=1,\ C_{32}=-1,\ C_{33}=1.$$
+
+$$C=\begin{pmatrix}2&1&-1\\-2&2&1\\1&-1&1\end{pmatrix},\quad
+M=C^{\mathsf T}=\begin{pmatrix}2&-2&1\\1&2&-1\\-1&1&1\end{pmatrix},\quad K^{-1}=\frac13M.$$
+
+$$KM=\begin{pmatrix}2+1&-2+2&1-1\\1-1&2+1&-1+1\\2-2&-2+2&1+2\end{pmatrix}=3I.$$
+
+$$MK=\begin{pmatrix}2+1&2-2&-2+2\\1-1&1+2&2-2\\-1+1&-1+1&1+2\end{pmatrix}=3I.$$
+
+$$\mathbf x=K^{-1}\mathbf b
+=\frac13\begin{pmatrix}2(3)-2(5)+7\\3+2(5)-7\\-3+5+7\end{pmatrix}
+=\frac13\begin{pmatrix}3\\6\\9\end{pmatrix}
+=\begin{pmatrix}1\\2\\3\end{pmatrix}.$$
+
+$$1+2=3,\qquad2+3=5,\qquad1+2(3)=7.$$
+
+The nonzero determinant guarantees uniqueness, beyond merely finding one candidate. If the bottom-right entry becomes q:
+
+$$\det K_q=q+1,\qquad q\ne-1\ \Longrightarrow\ \text{a unique solution}.$$
+
+$$q=-1:\quad x+y=3,\quad y+z=5\quad\Longrightarrow\quad x-z=-2\ne7.$$
+
+Thus the original right side is inconsistent at q equal to −1. If its third entry is also changed to −2, the third equation agrees with the first two: setting x=t gives $(x,y,z)=(t,3-t,2+t)$, the common line of the three planes. Singularity blocks inversion; it does not by itself decide consistency.
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Independent retry after an order error {#order-retry}
+
+> **Original task / 自拟题.** A transformation $T$ is followed by reflection in $y=z$. The result is a positive $90^\circ$ rotation about the $z$-axis (viewed from the positive axis towards the origin). Find $T$, justify uniqueness, and use one basis vector to show that writing the product in the reverse order gives a different, incorrect candidate.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Write both actions on one input before the matrix equation. Undo the known reflection on the correct side.
+
+</details>
+
+<details markdown="1">
+<summary>Solution</summary>
+
+$$S=\begin{pmatrix}1&0&0\\0&0&1\\0&1&0\end{pmatrix},\quad R=\begin{pmatrix}0&-1&0\\1&0&0\\0&0&1\end{pmatrix}.$$
+
+$$ST=R\quad\Longrightarrow\quad T=S^{-1}R=SR
+=\begin{pmatrix}0&-1&0\\0&0&1\\1&0&0\end{pmatrix}.$$
+
+$$RS=\begin{pmatrix}0&0&-1\\1&0&0\\0&1&0\end{pmatrix}\ne SR.$$
+
+$$\mathbf e_x\xrightarrow{T}\mathbf e_z\xrightarrow{S}\mathbf e_y=R\mathbf e_x,\qquad
+\mathbf e_x\xrightarrow{RS}\mathbf e_y\xrightarrow{S}\mathbf e_z\ne R\mathbf e_x.$$
+
+The reflection has an inverse, so T is unique. An identity target can conceal an order error; here the reversed candidate fails on an explicit input.
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Three maps {#transformation-check}
+
+> **Original task / 自拟题.** Without a transformation-type label, describe each matrix fully and justify your descriptions using basis images or a general point:
+
+$$
+U=\begin{pmatrix}1&0&0\\0&0&-1\\0&1&0\end{pmatrix},\quad
+V=\begin{pmatrix}0&0&1\\0&1&0\\1&0&0\end{pmatrix},\quad
+W=\begin{pmatrix}-2&0&0\\0&-2&0\\0&0&-2\end{pmatrix}.
+$$
+
+<details markdown="1">
+<summary>Hint</summary>
+
+State the coordinate action first, identify the transformation yourself, then include every detail needed to determine it.
+
+</details>
+
+<details markdown="1">
+<summary>Solution</summary>
+
+$$U\mathbf e_x=\mathbf e_x,\quad U\mathbf e_y=\mathbf e_z,\quad U\mathbf e_z=-\mathbf e_y;\qquad
+V(x,y,z)^{\mathsf T}=(z,y,x)^{\mathsf T};\qquad W(x,y,z)^{\mathsf T}=(-2x,-2y,-2z)^{\mathsf T}.$$
+
+U is a positive 90° rotation about the x-axis, anticlockwise viewed from the positive x-axis towards the origin. V is reflection in x=z: points of that plane are fixed and its normal $(1,0,-1)$ reverses. W is an enlargement centred at the origin with scale factor −2; every radial direction reverses. Both centre and signed factor are required.
+
+</details>
+
+</section>
 
 ## Quick reference {#quick-reference}
 
@@ -489,7 +659,7 @@ Every real parameter is attained, so the line is invariant; only the point with 
 
 ## Common pitfalls and next steps {#common-pitfalls}
 
-- **Wrong order:** trace one column vector through the maps, then retry Practice 1.
+- **Wrong order:** trace one column vector through the maps, then attempt the [noncommuting retry](#order-retry).
 - **Untransposed cofactors:** test an off-diagonal product entry, then reconstruct the inverse without looking.
 - **Wrong determinant factor:** scaling three edges by the same factor scales volume by its cube.
 - **Incomplete rotation:** “clockwise” needs a viewing direction. Use the stated basis-image convention.
@@ -498,9 +668,13 @@ Every real parameter is attained, so the line is invariant; only the point with 
 
 **Calculator check / written evidence:** numerical products, determinants and inverses can check an answer. The written solution must still establish dimensions, cofactor construction when requested, parameter restrictions, composition order and geometric descriptions. Symbolic identities require reasoning for all allowed parameters; a few numerical trials do not prove them. No new calculator button sequence is required here.
 
+**Next output:** complete the [new-input joint task](#inverse-system-task), then interpret its equation and plane geometry in [linear equations](/alevel/a2-further-mathematics/linear-equations/#joint-inverse-task). Use [Three maps](#transformation-check) for identification and the [independent retry](#independent-retry) for invariance errors. Then complete the course [mixed review](/alevel/a2-further-mathematics/#mixed-review) and, after intervening study, its [later review](/alevel/a2-further-mathematics/#later-review).
+
 **Learning path:** [Previous: lines and planes](/alevel/a2-further-mathematics/lines-and-planes/) · [Next: linear equations](/alevel/a2-further-mathematics/linear-equations/) · [Further Pure Mathematics](/alevel/a2-further-mathematics/).
 
 ## Sources {#sources}
+
+The listed specification and QP/MS passages were reread on **23 October 2026**; these adaptations target 9665.
 
 Scope: OxfordAQA International A-level Further Mathematics **9665**, [specification Version 5.2, FP2.13, printed p.21 / PDF p.20](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf#page=20), with FPP1.1 matrix operations as prerequisites. Coordinate-axis rotations, the six listed reflection planes, enlargements, compositions, third-order determinants/inverses, volume factors and invariant points/lines are covered here; eigenvalues follow after linear equations.
 

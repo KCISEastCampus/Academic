@@ -7,8 +7,9 @@ subject: a2-further-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-further-mathematics/roots-and-polynomials/
 permalink: /zh/alevel/a2-further-mathematics/roots-and-polynomials/
-toc_headings: h2, h3, h4
+toc_headings: "#method, #roots-and-coefficients, #complex-roots, #real-roots, #practice, #diagnose-and-retry, #later-review, #quick-reference"
 study_page: true
+reading_layout: true
 ---
 
 [高等纯数学](/zh/alevel/a2-further-mathematics/) · FP2.1 根与多项式
@@ -21,7 +22,7 @@ study_page: true
 
 教材：*International A Level Further Mathematics*，第 17 章，第 17.1–17.2 节，印刷页码 198–206。
 
-**开始前：**复习 [AS 高等数学](/alevel/as-further-mathematics/#3-complex-numbers-fp13)中的复数。你应当掌握因式定理（factor theorem）、多项式除法、二次方程求根公式及求导。记住 $i^2=-1$。
+**开始前：**若复数运算或共轭条件不熟，回补 [AS 复数运算](/zh/alevel/as-further-mathematics/complex-numbers-and-roots/#model)、[共轭](/zh/alevel/as-further-mathematics/complex-numbers-and-roots/#conjugate)和[复数根](/zh/alevel/as-further-mathematics/complex-numbers-and-roots/#roots)。因式定理与除法卡住时，做 [AS 代数 L03 示范及补步](/zh/alevel/as-mathematics/algebra/#l03-worked)；二次式回补 [L02](/zh/alevel/as-mathematics/algebra/#l02-worked)。判断实根数前复习[驻点与导数符号](/zh/alevel/a2-mathematics/differentiation/#tangents-normals-and-stationary-points)。补完后返回[相应例题](#complex-roots)，先自己展开一个共轭因式。记住 $i^2=-1$。
 
 **题目身份：**除明确标出官方原题或教学改编的题目外，本课例题与练习均为自拟教学题，不分配官方分值。
 
@@ -82,6 +83,8 @@ $$\boxed{\begin{aligned}
 
 **注意缺项：**在 $2x^4-3x+5=0$ 中，$x^3$ 和 $x^2$ 的系数都是零。因此，根的和以及各对根的乘积之和均为零；四个根的乘积为 $\frac{5}{2}$。
 
+<section class="worked-example" markdown="1">
+
 ### 例 1：不解方程，直接利用系数 {#example-1--find-information-without-solving}
 
 The roots of $2x^3-3x^2-8x+12=0$ are $\alpha,\beta,\gamma$. Find their sum, their product and $\alpha^2+\beta^2+\gamma^2$.
@@ -102,6 +105,10 @@ $$\alpha^2+\beta^2+\gamma^2
 $$\boxed{\alpha^2+\beta^2+\gamma^2=\left(\frac{3}{2}\right)^2-2(-4)=\frac{41}{4}.}$$
 
 **检验：**该多项式可分解为 $(2x-3)(x-2)(x+2)$，根为 $\frac{3}{2},2,-2$。它们的和、积及平方和都与上面的结果相同。因式分解可用来检验，但求这些结果并不需要先分解。
+
+</section>
+
+<section class="worked-example" markdown="1">
 
 ### 例 2：建立具有新根的方程 {#example-2--form-an-equation-with-new-roots}
 
@@ -129,6 +136,33 @@ $$\boxed{t^3+4t^2-9t-36=0.}$$
 
 **检验：**新根为 $3,-4,-3$。展开 $(t-3)(t+4)(t+3)$，可得到相同的三次多项式。使用 $t$ 这样的新变量，可以区分新方程与原方程。
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 先补一句理由 {#supported-root-products}
+
+**Supported attempt (self-written):** In Example 2, write the common factor of $uv+vw+wu$ before simplifying. Explain why the constant term of the new monic cubic has the opposite sign to $uvw$.
+
+<details markdown="1">
+<summary>提示</summary>
+
+逐项写出三个旧根各出现几次，再回看三因式展开。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检验</summary>
+
+$$uv+vw+wu=\alpha\beta\gamma(\beta+\gamma+\alpha),\qquad
+(t-u)(t-v)(t-w)\big\rvert_{t=0}=(-u)(-v)(-w)=-uvw.$$
+
+这里检验的是提公因式及符号解释；完成后再进入复系数条件。
+
+</details>
+
+</section>
+
 ## 复数根 {#complex-roots}
 
 ### 共轭复数根（complex conjugate pairs） {#complex-conjugate-pairs}
@@ -147,6 +181,8 @@ $$\begin{aligned}
 \end{aligned}$$
 
 **常见错误：**常数项是 $p^2+q^2$，而不是 $p^2-q^2$，因为 $i^2=-1$。
+
+<section class="worked-example" markdown="1">
 
 ### 例 3：求三次方程的其余根 {#example-3--find-the-other-roots-of-a-cubic}
 
@@ -174,6 +210,10 @@ $$\boxed{z=1+2i,\quad 1-2i,\quad 3.}$$
 
 **检验：**根的和为 $5$，各对根的乘积之和为 $11$，所有根的乘积为 $15$。答案应列出全部三个根。
 
+</section>
+
+<section class="worked-example" markdown="1">
+
 ### 例 4：含未知系数的四次多项式 {#example-4--a-quartic-with-an-unknown-coefficient}
 
 The polynomial $f(z)=z^4-6z^3+kz^2-18z+10$, where $k$ is real, has a root $1+i$. Find $k$ and all the other roots.
@@ -199,6 +239,10 @@ $$\boxed{1+i,\quad 1-i,\quad 2+i,\quad 2-i.}$$
 
 **检验：**根的和为 $6$，所有根的乘积为 $(1^2+1^2)(2^2+1^2)=10$。展开两个二次因式，可以检验包括 $k$ 在内的每一个系数。
 
+</section>
+
+<section class="worked-example" markdown="1">
+
 ### 例 5：系数不全为实数时 {#example-5--when-the-coefficients-are-not-all-real}
 
 The equation $z^2-(3+i)z+2+2i=0$ has a root $1+i$. Find the other root.
@@ -208,6 +252,8 @@ $z$ 的系数不是实数，所以不能直接断定 $1-i$ 也是根。两个根
 $$(1+i)+\beta=3+i,\qquad \boxed{\beta=2.}$$
 
 **检验：**$(1+i)\times2=2+2i$，与常数项一致。这两个根并不构成共轭复数对。
+
+</section>
 
 ## 实数根（real roots） {#real-roots}
 
@@ -221,6 +267,8 @@ $$(1+i)+\beta=3+i,\qquad \boxed{\beta=2.}$$
 - 若有两个驻点，且其中一处函数值为零，则存在一个二重根（double root）。使用根与系数的关系时，应将它计入两次。
 
 若只有一个驻点，应检查其类型。例如，$f(x)=x^3$ 在零点处有水平拐点（stationary point of inflection），零是它的三重根（triple root）。
+
+<section class="worked-example" markdown="1">
 
 ### 例 6：确定实数根及两个复数根实部（real part）的范围 {#example-6--bound-a-real-root-and-the-real-parts-of-two-complex-roots}
 
@@ -250,11 +298,15 @@ $$\boxed{0<p<\frac{1}{2}.}$$
 
 **检查推理：**变号帮助确定根的位置；导数说明它是唯一的实数根。完成这两步，才能断定其余两个根是非实数。
 
+</section>
+
 ## 练习 {#practice}
 
 先在纸上独立尝试。需要时再展开提示，完成后利用解答逐步检验。
 
 第 1–6 题是自拟题，没有官方分值。第 7 题是所提供教材收录的 AQA 原题，来自另一项考试资格，并非 OxfordAQA FM03 试卷。
+
+<section class="lesson-check" markdown="1">
 
 ### 第 1 题：系数与平方和 {#question-1--coefficients-and-sums-of-squares}
 
@@ -277,6 +329,10 @@ $$\boxed{\alpha^2+\beta^2+\gamma^2=(-2)^2-2(-3)=10.}$$
 将方程除以 $3$，得到 $x^3+2x^2-3x-4=0$，可核对相同的三个系数比值。
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### 第 2 题：五次多项式 {#question-2--a-polynomial-of-degree-five}
 
@@ -302,6 +358,10 @@ $$\boxed{\text{sum}=\frac{5}{2},\qquad \text{product}=4.}$$
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### 第 3 题：将每个根平移 {#question-3--shift-each-root}
 
 The roots of $x^3-2x^2-x+2=0$ are $\alpha,\beta,\gamma$. Find a cubic equation with roots $\alpha+1,\beta+1,\gamma+1$.
@@ -325,6 +385,10 @@ $$\boxed{t^3-5t^2+6t=0.}$$
 原方程可分解为 $(x-2)(x-1)(x+1)=0$。每个根加上 $1$ 后得到 $3,2,0$，与 $t(t-2)(t-3)=0$ 一致。
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### 第 4 题：求四次方程的所有根 {#question-4--find-all-roots-of-a-quartic}
 
@@ -352,6 +416,10 @@ $$\boxed{1-i,\quad 3+2\sqrt{2}i,\quad 3-2\sqrt{2}i.}$$
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### 第 5 题：复数系数 {#question-5--a-complex-coefficient}
 
 The equation $z^2-(4-i)z+k=0$ has a root $1+i$. Find the other root and the complex constant $k$.
@@ -370,9 +438,13 @@ The equation $z^2-(4-i)z+k=0$ has a root $1+i$. Find the other root and the comp
 
 $$\boxed{k=(1+i)(3-2i)=5+i.}$$
 
-展开 $[z-(1+i)][z-(3-2i)]$，得到 $z^2-(4-i)z+5+i$，与所求结果一致。
+展开 $\bigl(z-(1+i)\bigr)\bigl(z-(3-2i)\bigr)$，得到 $z^2-(4-i)z+5+i$，与所求结果一致。
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### 第 6 题：恰有一个实数根 {#question-6--exactly-one-real-root}
 
@@ -400,9 +472,13 @@ $\alpha$ 为负，所以实部范围为正。在共轭根相加时，虚部抵�
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### 第 7 题：AQA 原题练习 {#question-7--original-aqa-practice}
 
-**来源：**AQA Mathematics 6360，MFP2，January 2006，原卷第 2 题。原题分值：**5 + 5 marks**。教材索引：Chapter 17, practice examination question 4, printed p. 206。[Question paper, Q2 (PDF p. 2)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/January%202006%20QP%20-%20FP2%20AQA.PDF#page=2); [AQA mark scheme, Q2 (PDF p. 3)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/January%202006%20MS%20-%20FP2%20AQA.PDF#page=3). 本轮已读取题干及配套评分材料（2026-10-22）；链接为 PMT 托管的 AQA 编写材料，部分原卷为压缩排版版本。
+**来源：**AQA Mathematics 6360，MFP2，January 2006，原卷第 2 题。原题分值：**5 + 5 marks**。教材索引：Chapter 17, practice examination question 4, printed p. 206。[Question paper, Q2 (PDF p. 2)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/January%202006%20QP%20-%20FP2%20AQA.PDF#page=2); [AQA mark scheme, Q2 (PDF p. 3)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/January%202006%20MS%20-%20FP2%20AQA.PDF#page=3). 本轮重新读取题干及配套评分材料（2026-10-23）；链接为 PMT 托管的 AQA 编写材料，部分原卷为压缩排版版本。
 
 The cubic equation
 
@@ -450,9 +526,13 @@ $$\boxed{p=-4,\quad q=-2,\quad r=20.}$$
 
 </details>
 
+</section>
+
 ## 纠错与独立重试 {#diagnose-and-retry}
 
 以下两项均为自拟教学任务，无官方分值。先写下错误原因，再看反馈；随后关闭所有解答，独立完成新任务。需要提示的任务应在稍后重新独立尝试。
+
+<section class="lesson-check" markdown="1">
 
 **Diagnose:** A learner says that a root $1+i$ of $z^2-(2+i)z+1+i=0$ forces $1-i$ to be another root. Identify the missing condition and correct the conclusion.
 
@@ -463,7 +543,45 @@ $$\boxed{p=-4,\quad q=-2,\quad r=20.}$$
 
 </details>
 
-**Independent retry:** A real monic cubic has one root $2$, sum of roots $6$ and product of roots $10$. Find the other roots and the cubic, without assuming that the other roots are real.
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 再次辨认共轭条件 {#conjugate-retry}
+
+**Independent retry (self-written):** The equation $z^2-(3+2i)z+2+4i=0$ has a root $1+2i$. A learner proposes $1-2i$ as the other root. Decide whether this inference is justified; find the actual other root and check both the sum and product.
+
+<details markdown="1">
+<summary>提示</summary>
+
+先判断系数条件，再求根的和；不要先猜另一根。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检验</summary>
+
+系数并非全为实数，所以不能推出共轭根。设另一根为 beta，则
+
+$$\begin{aligned}
+\beta&=(3+2i)-(1+2i)=2,\\
+(1+2i)+2&=3+2i,\qquad (1+2i)\,2=2+4i,\\
+[z-(1+2i)](z-2)&=z^2-(3+2i)z+2+4i.
+\end{aligned}$$
+
+必须同时写条件判断及实际根，才能看出原错误是否修复。若仍强推共轭，回读例 5，再收起解答重做。
+
+</details>
+
+</section>
+
+## 稍后连接与回顾 {#later-review}
+
+完成 [De Moivre 第 8 题](/zh/alevel/a2-further-mathematics/de-moivres-theorem/#question-8--aqa-a-fifth-angle-identity-and-a-product)后，收起本课解答再做以下自拟任务。先由系数信息重建根，再解释为什么非实根必须配对。
+
+<section class="lesson-check" markdown="1">
+
+**Later task:** A real monic cubic has one root $2$, sum of roots $6$ and product of roots $10$. Find the other roots and the cubic, without assuming that the other roots are real.
 
 <details markdown="1">
 <summary>提示</summary>
@@ -475,9 +593,11 @@ $$\boxed{p=-4,\quad q=-2,\quad r=20.}$$
 <details markdown="1">
 <summary>重试解答与检验</summary>
 
-其余两根的和为 $4$、积为 $5$，所以满足 $z^2-4z+5=0$。它们为 $2\pm i$；三次方程为 $z^3-6z^2+13z-10=0$，由 $(z-2)(z^2-4z+5)$ 展开得到。再检查三个系数关系。
+其余两根的和为 $4$、积为 $5$，所以满足 $z^2-4z+5=0$。配方得 $(z-2)^2=-1$，所以它们为 $2\pm i$；三次方程为 $z^3-6z^2+13z-10=0$，由 $(z-2)(z^2-4z+5)$ 展开得到。再检查三个系数关系。
 
 </details>
+
+</section>
 
 ## 快速参考 {#quick-reference}
 
@@ -498,3 +618,5 @@ $$\boxed{p=-4,\quad q=-2,\quad r=20.}$$
 本课依据 [OxfordAQA 高等数学 9665 课程大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf)的 FP2.1。例 1–6 为教学例题；练习第 1–6 题为自拟题；第 7 题保留所提供教材中的 AQA 原题及分值。
 
 **学习路径：**[返回课程目录](/zh/alevel/a2-further-mathematics/) · [下一课：数学归纳法](/zh/alevel/a2-further-mathematics/proof-by-induction/)。
+
+**学后下一步：**完成本课[稍后任务](#later-review)，再到课程入口的[跨主题综合](/zh/alevel/a2-further-mathematics/#mixed-review)与[延后回顾](/zh/alevel/a2-further-mathematics/#later-review)，记录首次作答、提示使用和重试结果。

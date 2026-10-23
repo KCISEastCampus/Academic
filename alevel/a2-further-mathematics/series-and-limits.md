@@ -5,8 +5,9 @@ mathjax: true
 grade: a2
 subject: a2-further-mathematics
 permalink: /alevel/a2-further-mathematics/series-and-limits/
-toc_headings: h2, h3, h4
+toc_headings: "#method, #convergence, #maclaurin-series, #related-functions, #limits, #improper-integrals, #practice, #diagnose-and-retry, #later-review, #quick-reference"
 study_page: true
+reading_layout: true
 ---
 
 [Further Pure Mathematics](/alevel/a2-further-mathematics/) · FP2.6 Series and limits
@@ -17,13 +18,18 @@ Use power series to expand functions and find limits. Decide when a series conve
 - **Homework help:** choose [convergence](#convergence), [Maclaurin series](#maclaurin-series), [related functions](#related-functions), [limits](#limits) or [improper integrals](#improper-integrals).
 - **Revision:** try [practice](#practice) before opening the solutions, then use the [quick reference](#quick-reference).
 
-Textbook: Chapter 19, Sections 19.1–19.4, printed pp. 220–230; review and practice examination questions on pp. 231–232, in *International A Level Further Mathematics*.
+**Before you start:** repair the particular step you need and return with one line of working:
 
-**Before you start:** review [Finite Series](/alevel/a2-further-mathematics/finite-series/), [Binomial Series](/alevel/a2-mathematics/binomial-series/) and [Integration](/alevel/a2-mathematics/integration/). You should know factorials, geometric series, differentiation and integration by parts. Use radians in trigonometric series.
+- [Differencing in finite series](/alevel/a2-further-mathematics/finite-series/#differencing): obtain partial sums from a term; here we then test their limit.
+- [Binomial series](/alevel/a2-mathematics/binomial-series/#the-binomial-series): substitute the whole inner expression and state the standard range.
+- [Standard derivatives](/alevel/a2-mathematics/differentiation/#standard-derivatives) and [chain rule](/alevel/a2-mathematics/differentiation/#composite-functions): calculate the successive derivatives in Question 2 independently. The later product review also needs the [product rule](/alevel/a2-mathematics/differentiation/#products-and-quotients).
+- [Power integrals](/alevel/a2-mathematics/integration/#power-integrals), [exponential and logarithmic integrals](/alevel/a2-mathematics/integration/#exponential-logarithmic-integrals), [integration by parts](/alevel/a2-mathematics/integration/#integration-by-parts) and [finite-bound evaluation](/alevel/a2-mathematics/integration/#definite-integrals): calculate a finite integral before treating its improper endpoint.
+
+A factorial multiplies successive positive integers; $0!=1$ and $3!=3\cdot2\cdot1=6$. Use radians for trigonometric functions.
 
 **Task status:** Unless an official question or teaching adaptation is explicitly identified, the worked examples and exercises are self-written teaching tasks with no official marks.
 
-## Method
+## Method {#method}
 
 **Learning goal:** find and use a Maclaurin expansion, state its range of validity, find a limit after cancellation and show whether an improper integral has a finite value.
 
@@ -37,7 +43,7 @@ Choose your first step:
 
 **Keep the notation clear:** $=\cdots+\cdots$ denotes a full series with further terms. Use $\approx$ when using a finite number of terms to estimate a value. A valid infinite expansion does not mean that a short approximation is accurate far from $x=0$.
 
-## Convergence
+## Convergence {#convergence}
 
 For an infinite series $\sum_{r=1}^{\infty}u_r$, define the **partial sum**
 
@@ -59,7 +65,9 @@ For example, $1+\frac12+\frac14+\cdots=2$. When $q=1$ and $a\ne0$, the partial s
 
 **Common mistake:** saying that a series converges because $u_n\to0$. This is a necessary condition, but it does not prove convergence.
 
-### Example 1 — Terms tend to zero, but the sum diverges
+<section class="worked-example" markdown="1">
+
+### Example 1 — Terms tend to zero, but the sum diverges {#example-1--terms-tend-to-zero-but-the-sum-diverges}
 
 **Question:** show that the harmonic series $\sum_{r=1}^{\infty}\frac1r$ diverges.
 
@@ -83,8 +91,9 @@ This grows without bound as $m\to\infty$. The partial sums cannot tend to a fini
 
 **Check:** each extra block adds at least $\frac12$; smaller individual terms do not guarantee a finite total.
 
-<details markdown="1">
-<summary>A useful check: the ratio test</summary>
+</section>
+
+### The ratio test {#ratio-test}
 
 This helps with the convergence exercises in the textbook. For non-zero terms, find
 
@@ -96,11 +105,16 @@ if this limit exists.
 - If $L>1$, the series diverges.
 - If $L=1$, this test gives no answer. Use another argument.
 
-For $u_n=\frac{3^n}{n!}$, the ratio is $\frac3{n+1}\to0$, so the series converges. For the harmonic series the ratio tends to $1$, so the test does not settle the question; use the block argument above.
+For example, let $u_n=\frac{3^n}{n!}$. Cancel the powers and the factorial factors:
 
-</details>
+$$\left\lvert\frac{u_{n+1}}{u_n}\right\rvert
+=\frac{3^{n+1}}{(n+1)!}\frac{n!}{3^n}
+=\frac3{n+1}\longrightarrow0<1.$$
 
-## Maclaurin Series
+The series therefore converges. For the harmonic series the ratio tends to $1$, so use the block argument above instead.
+
+
+## Maclaurin Series {#maclaurin-series}
 
 A **power series** is a series in ascending non-negative integer powers of $x$. A **Maclaurin series** is a power series about $x=0$.
 
@@ -115,11 +129,18 @@ Here $f^{(r)}(0)$ is the $r$th derivative evaluated at zero, so the coefficient 
 
 **Common mistake:** using $f^{(r)}(0)$ as the coefficient without dividing by $r!$.
 
-### Example 2 — Find coefficients from derivatives
+<section class="worked-example" markdown="1">
+
+### Example 2 — Find coefficients from derivatives {#example-2--find-coefficients-from-derivatives}
 
 **Question:** use Maclaurin's theorem to expand $f(x)=e^{2x}$ up to and including the term in $x^3$.
 
-The derivative values are
+First differentiate successively using the chain rule:
+
+$$f(x)=e^{2x},\quad f^{\prime}(x)=2e^{2x},\quad
+f^{(2)}(x)=4e^{2x},\quad f^{(3)}(x)=8e^{2x}.$$
+
+Now evaluate at zero:
 
 $$\begin{aligned}
 f(0)&=1,& f^{\prime}(0)&=2,\\
@@ -138,7 +159,9 @@ The full expansion is valid for every real $x$. A short approximation is most us
 
 **Check:** replacing $x$ by $2x$ in the standard expansion of $e^x$ gives the same coefficients.
 
-### Standard expansions and ranges
+</section>
+
+### Standard expansions and ranges {#standard-expansions-and-ranges}
 
 Use these formulae directly unless a question asks you to derive them.
 
@@ -181,7 +204,9 @@ For negative or non-integer rational $p$, use $\lvert x\rvert<1$ as the standard
 
 Check that logarithm laws apply before splitting the expression. Expand each part, then intersect the ranges in which all the series are valid.
 
-#### Example 3 — Two logarithms and a shared range
+<section class="worked-example" markdown="1">
+
+#### Example 3 — Two logarithms and a shared range {#example-3--two-logarithms-and-a-shared-range}
 
 **Question:** expand
 
@@ -207,11 +232,15 @@ $$\boxed{-\frac12<x<\frac12.}$$
 
 **Check:** the even powers cancel. At $x=\frac12$ the denominator is zero; at $x=-\frac12$ the logarithm's argument is zero. Neither endpoint is allowed.
 
+</section>
+
 ### Truncate products by total degree {#multiply-series}
 
 Choose the highest required power first. Degrees add when terms multiply: retain every cross term that can contribute through that power, then collect like terms.
 
-#### Example 4 — Multiply two series
+<section class="worked-example" markdown="1">
+
+#### Example 4 — Multiply two series {#example-4--multiply-two-series}
 
 **Question:** expand $e^{2x}\sin x$ up to and including the term in $x^4$.
 
@@ -235,11 +264,15 @@ The full series is valid for every real $x$.
 
 **Check:** the coefficient of $x^4$ includes the product $(2x)(-\frac16x^3)$. Do not miss cross terms just because one factor has no $x^4$ term.
 
+</section>
+
 ### Track orders in a composite expansion {#compose-series}
 
 Use a temporary variable for the inner function and substitute into the outer standard expansion. Check how each inner term contributes to the required powers before truncating.
 
-#### Example 5 — A function inside an exponential
+<section class="worked-example" markdown="1">
+
+#### Example 5 — A function inside an exponential {#example-5--a-function-inside-an-exponential}
 
 **Question:** expand $e^{\sin x}$ up to and including the term in $x^4$.
 
@@ -268,13 +301,17 @@ The $x^3$ coefficient is zero. The full expansion is valid for every real $x$.
 
 **Common mistake:** keeping only the $x$ term of $\sin x$. Its $x^3$ term affects both the $x^3$ and $x^4$ coefficients in the answer.
 
-## Limits
+</section>
+
+## Limits {#limits}
 
 The value of a function at a point and its limit at that point are different questions. A function may be undefined at $x=0$ but still have a limit as $x\to0$.
 
 The form $\frac00$ does not determine the limit. Expand the numerator and denominator far enough to get their first non-zero terms after cancellation. Cancel a power of $x$ for $x\ne0$, then let $x$ tend to zero.
 
-### Example 6 — Cancellation in an exponential
+<section class="worked-example" markdown="1">
+
+### Example 6 — Cancellation in an exponential {#example-6--cancellation-in-an-exponential}
 
 **Question:** find
 
@@ -292,7 +329,11 @@ As $x\to0$, the remaining positive powers of $x$ tend to zero, so the limit is $
 
 **Common mistake:** stopping the expansion after $1+2x$. Those terms cancel, so they cannot give the limit.
 
-### Example 7 — Expand numerator and denominator
+</section>
+
+<section class="worked-example" markdown="1">
+
+### Example 7 — Expand numerator and denominator {#example-7--expand-numerator-and-denominator}
 
 **Question:** find
 
@@ -316,7 +357,9 @@ $$\boxed{\frac{1/6}{2}=\frac1{12}.}$$
 
 **Check:** both numerator and denominator start with the same power, $x^3$. Dividing by $x^2$ would leave a zero in both places and would not finish the calculation.
 
-### Two standard limits
+</section>
+
+### Two standard limits {#two-standard-limits}
 
 For any real $k>0$,
 
@@ -331,7 +374,7 @@ Replacing $x$ by $ax$, with $a>0$, also gives $\lim_{x\to\infty}x^ke^{-ax}=0$.
 
 **Check the direction:** $\ln x$ is defined only for $x>0$, so the second limit is from the right.
 
-## Improper Integrals
+## Improper Integrals {#improper-integrals}
 
 An integral is **improper** if a bound is infinite, or the integrand is undefined or unbounded at an endpoint or inside the interval.
 
@@ -349,16 +392,22 @@ The integral **converges** only if the limit is finite. If the limiting process 
 
 If there is a problem inside the interval, split the integral there and check both sides separately. Both must converge. Equal and opposite divergences cannot be cancelled to give an ordinary improper integral.
 
-### Example 8 — An infinite upper bound
+<section class="worked-example" markdown="1">
+
+### Example 8 — An infinite upper bound {#example-8--an-infinite-upper-bound}
 
 **Question:** evaluate $\int_1^\infty\frac1{x^2}\,\mathrm dx$, showing the limiting process.
+
+By the power rule,
+
+$$\int x^{-2}\,\mathrm dx=\frac{x^{-1}}{-1}+C=-\frac1x+C.$$
 
 For $R>1$,
 
 $$\begin{aligned}
 \int_1^R x^{-2}\,\mathrm dx
 &=\left[-\frac1x\right]_1^R\\
-&=1-\frac1R.
+&=-\frac1R-(-1)=1-\frac1R.
 \end{aligned}$$
 
 Therefore
@@ -367,24 +416,46 @@ $$\int_1^\infty\frac1{x^2}\,\mathrm dx
 =\lim_{R\to\infty}\left(1-\frac1R\right)
 =\boxed{1}.$$
 
-**Compare:** $\int_1^R\frac1x\,\mathrm dx=\ln R\to+\infty$, so $\int_1^\infty\frac1x\,\mathrm dx$ diverges. In both cases the integrand tends to zero; that alone does not decide convergence.
+**Compare:** for $x>0$, use the logarithmic primitive and substitute both bounds:
 
-### Example 9 — A logarithm at zero
+$$\int\frac1x\,\mathrm dx=\ln x+C,\qquad
+\int_1^R\frac1x\,\mathrm dx=[\ln x]_1^R=\ln R-\ln1=\ln R.$$
+
+As $R\to\infty$, $\ln R\to+\infty$, so $\int_1^\infty\frac1x\,\mathrm dx$ diverges. Both integrands tend to zero; that alone cannot decide convergence.
+
+</section>
+
+<section class="worked-example" markdown="1">
+
+### Example 9 — A logarithm at zero {#example-9--a-logarithm-at-zero}
 
 **Question:** evaluate $\int_0^1 x\ln x\,\mathrm dx$, showing the limiting process.
 
 The expression $\ln x$ is undefined at $x=0$. Replace the lower bound by $\varepsilon>0$.
 
-Integration by parts gives
+Differentiate the logarithmic factor because its derivative removes the logarithm:
 
-$$\int x\ln x\,\mathrm dx
-=\frac{x^2}{2}\ln x-\frac{x^2}{4}+C.$$
+$$\begin{aligned}
+u&=\ln x,\quad \mathrm du=\frac1x\,\mathrm dx,\\
+\mathrm dv&=x\,\mathrm dx,\quad v=\int x\,\mathrm dx=\frac{x^2}{2}.
+\end{aligned}$$
+
+$$\begin{aligned}
+\int x\ln x\,\mathrm dx
+&=uv-\int v\,\mathrm du\\
+&=\frac{x^2}{2}\ln x-\int\frac{x^2}{2}\frac1x\,\mathrm dx\\
+&=\frac{x^2}{2}\ln x-\frac12\int x\,\mathrm dx\\
+&=\frac{x^2}{2}\ln x-\frac12\frac{x^2}{2}+C\\
+&=\frac{x^2}{2}\ln x-\frac{x^2}{4}+C.
+\end{aligned}$$
 
 Hence
 
 $$\begin{aligned}
 \int_\varepsilon^1 x\ln x\,\mathrm dx
 &=\left[\frac{x^2}{2}\ln x-\frac{x^2}{4}\right]_\varepsilon^1\\
+&=\left(\frac{1^2}{2}\ln1-\frac{1^2}{4}\right)\\
+&\quad-\left(\frac{\varepsilon^2}{2}\ln\varepsilon-\frac{\varepsilon^2}{4}\right)\\
 &=-\frac14-\frac{\varepsilon^2}{2}\ln\varepsilon
 +\frac{\varepsilon^2}{4}.
 \end{aligned}$$
@@ -395,35 +466,57 @@ $$\boxed{\int_0^1 x\ln x\,\mathrm dx=-\frac14.}$$
 
 **Check:** $x\ln x<0$ for $0<x<1$, so the integral must be negative. Do not write $\ln0$ in the evaluation.
 
-### Example 10 — Integration by parts at infinity
+</section>
+
+<section class="worked-example" markdown="1">
+
+### Example 10 — Integration by parts at infinity {#example-10--integration-by-parts-at-infinity}
 
 **Question:** evaluate $\int_0^\infty xe^{-2x}\,\mathrm dx$, showing the limiting process.
 
-Integration by parts, with $u=x$ and $\mathrm dv=e^{-2x}\mathrm dx$, gives
+Differentiate the polynomial factor. First integrate the exponential, dividing by its inner derivative $-2$:
 
-$$\int xe^{-2x}\,\mathrm dx
-=-\left(\frac{x}{2}+\frac14\right)e^{-2x}+C.$$
+$$\begin{aligned}
+u&=x,\quad \mathrm du=\mathrm dx,\\
+\mathrm dv&=e^{-2x}\,\mathrm dx,\\
+v&=\int e^{-2x}\,\mathrm dx=-\frac12e^{-2x}.
+\end{aligned}$$
+
+$$\begin{aligned}
+\int xe^{-2x}\,\mathrm dx
+&=-\frac x2e^{-2x}+\frac12\int e^{-2x}\,\mathrm dx\\
+&=-\frac x2e^{-2x}+\frac12\left(-\frac12e^{-2x}\right)+C\\
+&=-\left(\frac x2+\frac14\right)e^{-2x}+C.
+\end{aligned}$$
 
 For a finite $R>0$,
 
 $$\begin{aligned}
 \int_0^R xe^{-2x}\,\mathrm dx
+&=\left[-\left(\frac x2+\frac14\right)e^{-2x}\right]_0^R\\
+&=-\left(\frac R2+\frac14\right)e^{-2R}-\left[-\left(0+\frac14\right)e^0\right]\\
 &=\frac14-\left(\frac{R}{2}+\frac14\right)e^{-2R}.
 \end{aligned}$$
 
 Both $Re^{-2R}$ and $e^{-2R}$ tend to zero as $R\to\infty$. Therefore
 
-$$\boxed{\int_0^\infty xe^{-2x}\,\mathrm dx=\frac14.}$$
+$$\int_0^\infty xe^{-2x}\,\mathrm dx
+=\lim_{R\to\infty}\left[\frac14-\left(\frac R2+\frac14\right)e^{-2R}\right]
+=\boxed{\frac14}.$$
 
 **Common mistake:** treating $\infty$ as a number to substitute into the antiderivative. Use the finite bound $R$ and show its limit.
 
-## Practice
+</section>
+
+## Practice {#practice}
 
 State the range for expansions. For limits, show the first terms that do not cancel. For improper integrals, show the limiting process.
 
 Questions 1–6 are self-written exercises. Question 7 is an original AQA question reproduced in the supplied textbook. Question 8 is textbook-derived teaching practice traced to the original exam below; no official marks are assigned to the adaptation.
 
-### Question 1 — A range of convergence
+<section class="lesson-check" markdown="1">
+
+### Question 1 — A range of convergence {#question-1--a-range-of-convergence}
 
 For which real values of $x$ does
 
@@ -457,14 +550,22 @@ $$\boxed{-2<x<2.}$$
 
 </details>
 
-### Question 2 — A negative substitution
+</section>
 
-Expand $\ln(1-3x)$ up to and including the term in $x^3$. State the range of validity, including any allowed endpoint.
+<section class="lesson-check" markdown="1">
+
+### Question 2 — Two expansions {#question-2--a-negative-substitution}
+
+**a** Expand $\ln(1-3x)$ up to and including the term in $x^3$. State the range of validity, including any allowed endpoint.
+
+**b — Self-written task:** Let $f(x)=\ln(2+x)$. Calculate $f(0)$, $f^{\prime}(0)$, $f^{(2)}(0)$ and $f^{(3)}(0)$ from actual derivatives. Use them to form the Maclaurin expansion through $x^3$. State its range of validity, including any allowed endpoint. Show the derivatives before checking with a standard series.
 
 <details markdown="1">
 <summary>Hint</summary>
 
 Substitute $-3x$ into $\ln(1+u)$. Solve $-1<-3x\le1$ carefully.
+
+For b, differentiate the logarithm three times. After forming the coefficients, split the logarithm to check the range.
 
 </details>
 
@@ -483,9 +584,34 @@ $$\boxed{-\frac13\le x<\frac13.}$$
 
 **Check:** at $x=-\frac13$, the logarithm is $\ln2$ and its series converges. At $x=\frac13$, the argument is zero and the function is undefined.
 
+**b**
+
+$$\begin{aligned}
+f(x)&=\ln(2+x),& f(0)&=\ln2,\\
+f^{\prime}(x)&=\frac1{2+x},& f^{\prime}(0)&=\frac12,\\
+f^{(2)}(x)&=-\frac1{(2+x)^2},& f^{(2)}(0)&=-\frac14,\\
+f^{(3)}(x)&=\frac2{(2+x)^3},& f^{(3)}(0)&=\frac14.
+\end{aligned}$$
+
+$$\begin{aligned}
+\ln(2+x)&=\ln2+\frac12x+\frac{-1/4}{2!}x^2+\frac{1/4}{3!}x^3+\cdots\\
+&=\ln2+\frac x2-\frac{x^2}{8}+\frac{x^3}{24}+\cdots.
+\end{aligned}$$
+
+After forming the coefficients, check the range:
+
+$$\ln(2+x)=\ln2+\ln\left(1+\frac x2\right),\qquad
+-1<\frac x2\le1\quad\Longrightarrow\quad -2<x\le2.$$
+
+The constant term agrees with the value $\ln2$. The third derivative $\frac14$ must be divided by $3!=6$ to give the cubic coefficient $\frac1{24}$.
+
 </details>
 
-### Question 3 — Factor out the constant
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Question 3 — Factor out the constant {#question-3--factor-out-the-constant}
 
 Expand $(4-x)^{-1/2}$ up to and including the term in $x^3$. State the standard range of validity.
 
@@ -519,7 +645,11 @@ The standard range is $\left\lvert\frac{x}{4}\right\rvert<1$, so $\boxed{-4<x<4}
 
 </details>
 
-### Question 4 — The inner function has a constant term
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Question 4 — The inner function has a constant term {#question-4--the-inner-function-has-a-constant-term}
 
 Expand $e^{\cos x}$ up to and including the term in $x^4$.
 
@@ -551,7 +681,11 @@ The full expansion is valid for every real $x$.
 
 </details>
 
-### Question 5 — Two limits
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Question 5 — Two limits {#question-5--two-limits}
 
 Find
 
@@ -589,7 +723,11 @@ Subtract $2$, divide by $x$ and let $x\to0$. The limit is $\boxed{\frac14}$.
 
 </details>
 
-### Question 6 — Convergent or divergent integrals
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Question 6 — Convergent or divergent integrals {#question-6--convergent-or-divergent-integrals}
 
 Show whether each integral converges. Give its value if it does.
 
@@ -611,19 +749,37 @@ For a, replace zero by $\varepsilon>0$. For b, use integration by parts with a f
 
 **a**
 
-$$\int_\varepsilon^1\frac1x\,\mathrm dx=-\ln\varepsilon.$$
+$$\int\frac1x\,\mathrm dx=\ln x+C\quad(x>0),$$
+
+$$\int_\varepsilon^1\frac1x\,\mathrm dx
+=[\ln x]_\varepsilon^1=\ln1-\ln\varepsilon=-\ln\varepsilon.$$
+
+$$\int_0^1\frac1x\,\mathrm dx
+=\lim_{\varepsilon\to0^+}(-\ln\varepsilon)=+\infty.$$
 
 As $\varepsilon\to0^+$, this tends to $+\infty$, so the integral diverges.
 
 **b**
 
-$$\int xe^{-3x}\,\mathrm dx
-=-\left(\frac{x}{3}+\frac19\right)e^{-3x}+C.$$
+Use the integration-by-parts choice from Example 10: $u=x$, $\mathrm dv=e^{-3x}\,\mathrm dx$, $v=-\frac13e^{-3x}$.
+
+$$\begin{aligned}
+\int xe^{-3x}\,\mathrm dx
+&=-\frac x3e^{-3x}+\frac13\int e^{-3x}\,\mathrm dx\\
+&=-\left(\frac x3+\frac19\right)e^{-3x}+C.
+\end{aligned}$$
 
 Thus
 
-$$\int_0^R xe^{-3x}\,\mathrm dx
-=\frac19-\left(\frac{R}{3}+\frac19\right)e^{-3R}.$$
+$$\begin{aligned}
+\int_0^R xe^{-3x}\,\mathrm dx
+&=\left[-\left(\frac x3+\frac19\right)e^{-3x}\right]_0^R\\
+&=-\left(\frac R3+\frac19\right)e^{-3R}-\left[-\left(0+\frac19\right)e^0\right]\\
+&=\frac19-\left(\frac R3+\frac19\right)e^{-3R}.
+\end{aligned}$$
+
+$$\int_0^\infty xe^{-3x}\,\mathrm dx
+=\lim_{R\to\infty}\left[\frac19-\left(\frac R3+\frac19\right)e^{-3R}\right]=\frac19.$$
 
 Since $Re^{-3R}\to0$ and $e^{-3R}\to0$, the improper integral converges to $\boxed{\frac19}$.
 
@@ -631,9 +787,13 @@ Since $Re^{-3R}\to0$ and $e^{-3R}\to0$, the improper integral converges to $\box
 
 </details>
 
-### Question 7 — Original AQA series practice
+</section>
 
-**Source:** AQA Mathematics 6360, MFP3, January 2013, Question 2. **1 + 4 marks**. Textbook cross-reference: Chapter 19, practice examination question 2, printed p. 231. [Question paper, Q2 (PDF p. 2)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/January%202013%20QP%20-%20FP3%20AQA.pdf#page=2); [AQA mark scheme, Q2 (PDF p. 4)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/January%202013%20MS%20-%20FP3%20AQA.PDF#page=4). Question and matching mark scheme read on 2026-10-22; these are AQA-authored documents hosted by PMT, with some question papers in condensed layout.
+<section class="lesson-check" markdown="1">
+
+### Question 7 — Original AQA series practice {#question-7--original-aqa-series-practice}
+
+**Source:** AQA Mathematics 6360, MFP3, January 2013, Question 2. **1 + 4 marks**. Textbook cross-reference: Chapter 19, practice examination question 2, printed p. 231. [Question paper, Q2 (PDF p. 2)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/January%202013%20QP%20-%20FP3%20AQA.pdf#page=2); [AQA mark scheme, Q2 (PDF p. 4)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/January%202013%20MS%20-%20FP3%20AQA.PDF#page=4). Question and matching mark scheme re-read on 2026-10-23; these are AQA-authored documents hosted by PMT, with some question papers in condensed layout.
 
 **a** Write down the expansion of $e^{3x}$ in ascending powers of $x$ up to and including the term in $x^2$. **(1 mark)**
 
@@ -673,9 +833,13 @@ The required **term** is $\boxed{3x^2}$.
 
 </details>
 
-### Question 8 — Textbook-derived integral practice
+</section>
 
-**Source:** teaching practice adapted from the supplied textbook, Chapter 19, practice examination question 5, printed p. 232. The original is AQA Mathematics 6360, MFP3, June 2011, Question 3. [Original QP, Q3 (PDF p. 2)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202011%20QP%20-%20FP3%20AQA.pdf#page=2); [matching AQA MS, Q3 (PDF p. 6)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202011%20MS%20-%20FP3%20AQA.PDF#page=6). Both were read on 2026-10-22; these AQA-authored documents are hosted by PMT. This teaching adaptation carries no new official mark allocation.
+<section class="lesson-check" markdown="1">
+
+### Question 8 — Textbook-derived integral practice {#question-8--textbook-derived-integral-practice}
+
+**Source:** teaching practice adapted from the supplied textbook, Chapter 19, practice examination question 5, printed p. 232. The original is AQA Mathematics 6360, MFP3, June 2011, Question 3. [Original QP, Q3 (PDF p. 2)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202011%20QP%20-%20FP3%20AQA.pdf#page=2); [matching AQA MS, Q3 (PDF p. 6)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202011%20MS%20-%20FP3%20AQA.PDF#page=6). Both were re-read on 2026-10-23; these AQA-authored documents are hosted by PMT. This teaching adaptation carries no new official mark allocation.
 
 **a** Find $\int x^2\ln x\,\mathrm dx$.
 
@@ -696,8 +860,15 @@ Use integration by parts. Replace the lower bound by $\varepsilon>0$, and use $\
 **a** Take $u=\ln x$ and $\mathrm dv=x^2\mathrm dx$:
 
 $$\begin{aligned}
+u&=\ln x,\quad\mathrm du=\frac1x\,\mathrm dx,\\
+\mathrm dv&=x^2\,\mathrm dx,\quad v=\int x^2\,\mathrm dx=\frac{x^3}{3}.
+\end{aligned}$$
+
+$$\begin{aligned}
 \int x^2\ln x\,\mathrm dx
+&=\frac{x^3}{3}\ln x-\int\frac{x^3}{3}\frac1x\,\mathrm dx\\
 &=\frac{x^3}{3}\ln x-\frac13\int x^2\,\mathrm dx\\
+&=\frac{x^3}{3}\ln x-\frac13\frac{x^3}{3}+C\\
 &=\boxed{\frac{x^3}{3}\ln x-\frac{x^3}{9}+C}.
 \end{aligned}$$
 
@@ -708,13 +879,17 @@ $$\begin{aligned}
 $$\begin{aligned}
 \int_\varepsilon^e x^2\ln x\,\mathrm dx
 &=\left[\frac{x^3}{3}\ln x-\frac{x^3}{9}\right]_\varepsilon^e\\
+&=\left(\frac{e^3}{3}\ln e-\frac{e^3}{9}\right)\\
+&\quad-\left(\frac{\varepsilon^3}{3}\ln\varepsilon-\frac{\varepsilon^3}{9}\right)\\
 &=\frac{2e^3}{9}
 -\frac{\varepsilon^3}{3}\ln\varepsilon+\frac{\varepsilon^3}{9}.
 \end{aligned}$$
 
 Both terms involving $\varepsilon$ tend to zero as $\varepsilon\to0^+$. Hence
 
-$$\boxed{\int_0^e x^2\ln x\,\mathrm dx=\frac{2e^3}{9}.}$$
+$$\int_0^e x^2\ln x\,\mathrm dx
+=\lim_{\varepsilon\to0^+}\left(\frac{2e^3}{9}-\frac{\varepsilon^3}{3}\ln\varepsilon+\frac{\varepsilon^3}{9}\right)
+=\boxed{\frac{2e^3}{9}}.$$
 
 **Check:** differentiating the answer in part a gives $x^2\ln x$; the extra $\frac13x^2$ terms cancel.
 
@@ -722,9 +897,13 @@ This teaching solution was checked against the original AQA Q3 mark scheme: inte
 
 </details>
 
+</section>
+
 ## Diagnose and Retry {#diagnose-and-retry}
 
 Both tasks are self-written and have no official marks. Explain the error before opening feedback; then close every solution and attempt the new task independently. If you need a hint, return later for another independent attempt.
+
+<section class="lesson-check" markdown="1">
 
 **Diagnose:** A learner truncates $e^{2x}$ after $1+2x$ and concludes that
 
@@ -738,6 +917,10 @@ $$\lim_{x\to0}(e^{2x}-1-2x)/x^2=0$$
 The retained terms all cancel. The first surviving numerator term is $2x^2$, so the limit is $2$. A discarded term matters when division brings it to constant order.
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 **Independent retry:** Find the real constant $a$ for which
 
@@ -763,7 +946,122 @@ $$(a-2)x+\frac{a^2}{2}x^2+\cdots$$
 
 </details>
 
-## Quick Reference
+</section>
+
+### Coefficient diagnosis and a new retry {#coefficient-retry}
+
+These self-written tasks have no official marks. Diagnose first, then close the feedback and expand the new function independently.
+
+<section class="lesson-check" markdown="1">
+
+**Diagnose:** A learner finds $f^{(3)}(0)=12$ and writes $12x^3$ as the cubic term. Explain and correct the error.
+
+<details markdown="1">
+<summary>Feedback</summary>
+
+A derivative value is not its coefficient; the cubic term is $\frac{12}{3!}x^3=2x^3$. Revisit the [Maclaurin definition](#maclaurin-series) and record derivative values separately from coefficients.
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+**Independent retry — self-written:** For $h(x)=\sqrt{1+2x}$, calculate the first three derivatives and their values at zero. Use these derivatives to form the Maclaurin expansion through $x^3$, showing the factorial divisors. State the standard range. Use the binomial series only afterwards as a check.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Write the square root as a power and include the inner derivative each time. Keep the third derivative separate from the cubic coefficient.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+$$\begin{aligned}
+h^{\prime}(x)&=\tfrac12(1+2x)^{-1/2}\cdot2\\
+&=(1+2x)^{-1/2},\\
+h^{(2)}(x)&=-\tfrac12(1+2x)^{-3/2}\cdot2\\
+&=-(1+2x)^{-3/2},\\
+h^{(3)}(x)&=-(-\tfrac32)(1+2x)^{-5/2}\cdot2\\
+&=3(1+2x)^{-5/2}.
+\end{aligned}$$
+
+$$h(0)=1,\quad h^{\prime}(0)=1,\quad h^{(2)}(0)=-1,\quad h^{(3)}(0)=3.$$
+
+$$h(x)=1+x+\frac{-1}{2!}x^2+\frac3{3!}x^3+\cdots
+=1+x-\frac{x^2}{2}+\frac{x^3}{2}+\cdots.$$
+
+The standard binomial range is $\lvert2x\rvert<1$, $-\frac12<x<\frac12$. If you still missed a factorial, separate derivative values and coefficients into two columns, then close the solution and retry. The new square-root representation tests the same coefficient objective.
+
+</details>
+
+</section>
+
+## Subsequent mixed application {#later-review}
+
+After the [next chapter practice](/alevel/a2-further-mathematics/de-moivres-theorem/#practice), attempt this self-written connection with this chapter's solutions closed. The course entrance supplies the broader mixed and later reviews linked below.
+
+<section class="lesson-check" markdown="1">
+
+**a** For $F(x)=(1+x)e^{-x}$, obtain its Maclaurin expansion through $x^3$ from actual derivatives. Hence find $\lim_{x\to0}(F(x)-1)/x^2$.
+
+**b** Evaluate $\int_0^{\infty}F(x)\,\mathrm dx$, showing the integration and limiting process.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+For a, apply the product rule first. For b, split the integrand and integrate its linear factor by parts.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+**a**
+
+$$\begin{aligned}
+F^{\prime}(x)&=e^{-x}-(1+x)e^{-x}=-xe^{-x},\\
+F^{(2)}(x)&=-e^{-x}+xe^{-x}=(x-1)e^{-x},\\
+F^{(3)}(x)&=e^{-x}-(x-1)e^{-x}=(2-x)e^{-x}.
+\end{aligned}$$
+
+$$F(0)=1,\quad F^{\prime}(0)=0,\quad F^{(2)}(0)=-1,\quad F^{(3)}(0)=2.$$
+
+$$F(x)=1+0x-\frac{x^2}{2!}+\frac{2x^3}{3!}+\cdots
+=1-\frac{x^2}{2}+\frac{x^3}{3}+\cdots.$$
+
+$$\frac{F(x)-1}{x^2}=-\frac12+\frac x3+\cdots\quad(x\ne0),\qquad
+\lim_{x\to0}\frac{F(x)-1}{x^2}=-\frac12.$$
+
+**b**
+
+Split the integral and integrate the linear factor by parts as in Example 10: $u=x$, $\mathrm dv=e^{-x}\,\mathrm dx$, $v=-e^{-x}$.
+
+$$\begin{aligned}
+\int(1+x)e^{-x}\,\mathrm dx
+&=\int e^{-x}\,\mathrm dx-xe^{-x}+\int e^{-x}\,\mathrm dx\\
+&=-e^{-x}-xe^{-x}-e^{-x}+C\\
+&=-(x+2)e^{-x}+C.
+\end{aligned}$$
+
+$$\begin{aligned}
+\int_0^R F(x)\,\mathrm dx
+&=[-(x+2)e^{-x}]_0^R\\
+&=-(R+2)e^{-R}-[-(0+2)e^0]\\
+&=2-(R+2)e^{-R},\\
+\int_0^{\infty}F(x)\,\mathrm dx
+&=\lim_{R\to\infty}[2-(R+2)e^{-R}]=2.
+\end{aligned}$$
+
+The last step uses $Re^{-R}\to0$ and $e^{-R}\to0$. For a missed factorial, return to the coefficient retry. For a lower-bound sign error, return to Example 10's two-bound substitution, then close the answer and rewrite that step independently.
+
+</details>
+
+</section>
+
+## Quick Reference {#quick-reference}
 
 | Task | Method | Check |
 |---|---|---|
@@ -781,6 +1079,11 @@ $$(a-2)x+\frac{a^2}{2}x^2+\cdots$$
 
 **You should be able to:** use all five standard expansions, state the range for a related function, find a limit after cancellation and evaluate or reject an improper integral using a limiting process.
 
+Textbook: Chapter 19, Sections 19.1–19.4, printed pp. 220–230; review and practice examination questions on pp. 231–232, in *International A Level Further Mathematics*.
+{: .lesson-meta}
+
 The lesson follows FP2.6 of the [OxfordAQA Further Mathematics 9665 specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf). Worked examples are teaching material. Question 7 retains the AQA wording and marks from the supplied textbook. Question 8 is textbook-derived teaching practice traced to AQA MFP3 June 2011 Q3 and checked against its matching MS; no official marks are assigned to the adaptation.
+
+**After this lesson:** close the chapter solutions and attempt the course [mixed review](/alevel/a2-further-mathematics/#mixed-review). Return at the interval specified there for the [later review](/alevel/a2-further-mathematics/#later-review). Keep your independent work and check it by objective; revisit the linked prerequisite and retry any objective that required a hint.
 
 **Learning path:** [Previous: Finite Series](/alevel/a2-further-mathematics/finite-series/) · [Next: De Moivre's Theorem](/alevel/a2-further-mathematics/de-moivres-theorem/) · [Back to the course](/alevel/a2-further-mathematics/).

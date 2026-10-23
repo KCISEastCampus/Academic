@@ -50,7 +50,11 @@ $$a(x)y^{\prime}+b(x)y=c(x),$$
 
 $$\mu y^{\prime}+\mu P y=\mu Q.$$
 
-由乘积法则，$(\mu y)^{\prime}=\mu y^{\prime}+\mu^{\prime} y$。若 $\mu^{\prime}=P\mu$，方程左边就等于这个乘积的导数。解这一关系式，得到**积分因子**
+由乘积法则，$(\mu y)^{\prime}=\mu y^{\prime}+\mu^{\prime} y$。若 $\mu^{\prime}=P\mu$，方程左边就等于这个乘积的导数。选取 $P$ 的一个原函数 $F$，使 $F^{\prime}=P$，构造 $\mu=e^F$，再求导核验：
+
+$$\mu^{\prime}=F^{\prime}e^F=P\mu.$$
+
+因此可取**积分因子**
 
 $$\boxed{\mu=e^{\int P(x)\,\mathrm dx}.}$$
 
@@ -82,7 +86,11 @@ y&=\boxed{\frac1\mu\left(\int\mu Q\,\mathrm dx+C\right)}.
 
 这里完整观看一次示范。未知函数和它的导数都是线性的，可以使用积分因子（integrating factor）。先将**每一项**除以 2：标准形式为 $y^{\prime}+2y=3$，所以 $P=2$、$Q=3$。直接把 4 当作 $P$，匹配的就是另一个方程。
 
-选取 $\mu=e^{2x}$，因为它的导数等于自身的两倍。各项乘以它，得到
+选取 $\mu=e^{2x}$，因为它的导数等于自身的两倍。
+
+这里由 $\int2\,\mathrm dx=2x$ 得到积分因子的指数。下面积分右边时，链式法则给出 $\frac{\mathrm d}{\mathrm dx}e^{2x}=2e^{2x}$，因此原函数必须带有系数 $1/2$。
+
+各项乘以积分因子，得到
 
 $$e^{2x}y^{\prime}+2e^{2x}y=3e^{2x}.$$
 
@@ -94,6 +102,8 @@ $$\frac{\mathrm d}{\mathrm dx}(e^{2x}y)=e^{2x}y^{\prime}+2e^{2x}y.$$
 
 $$\begin{aligned}
 (e^{2x}y)^{\prime}&=3e^{2x},\\
+\int(e^{2x}y)^{\prime}\,\mathrm dx&=3\int e^{2x}\,\mathrm dx,\\
+e^{2x}y&=3\left(\frac12e^{2x}\right)+C,\\
 e^{2x}y&=\frac32e^{2x}+C,\\
 y&=\frac32+Ce^{-2x}.
 \end{aligned}$$
@@ -126,12 +136,13 @@ $$\boxed{y=\frac32-\frac12e^{-2x}},\qquad x\in\mathbb R.$$
 
 由于 $x>0$，
 
-$$\mu=e^{2\ln x}=x^2.$$
+$$\int\frac2x\,\mathrm dx=2\int\frac1x\,\mathrm dx=2\ln x,\qquad \mu=e^{2\ln x}=x^2.$$
 
 每项相乘后得 $x^2y^{\prime}+2xy=x^3$。乘积法则给出 $(x^2y)^{\prime}=x^2y^{\prime}+2xy$，因为 $\mu^{\prime}=2x=(2/x)\mu$。于是
 
 $$\begin{aligned}
 (x^2y)^{\prime}&=x^3,\\
+x^2y&=\int x^3\,\mathrm dx=\frac{x^{3+1}}{3+1}+C,\\
 x^2y&=\frac{x^4}{4}+C,\\
 y&=\frac{x^2}{4}+\frac{C}{x^2}.
 \end{aligned}$$
@@ -148,11 +159,15 @@ $$\boxed{y=\frac{x^2}{4}+\frac{7}{4x^2}},\qquad x>0.$$
 
 </section>
 
+<section class="lesson-check" markdown="1">
+
 ### 例 3：三角函数系数 {#example-3-trigonometric-coefficient}
 
 > **Adapted example.** On $0<x<\frac\pi2$, solve $y^{\prime}+\frac{\sec^2x}{\tan x}y=2\tan x$, given $y(\frac\pi4)=1$.
 
 这是改编题：以 OxfordAQA 2018 年 FM03 样卷第 5 题为基础，修改了方程右边与给定条件。求解沿用同样的积分因子方法；本题并非官方原题。
+
+需要时先回补[三角函数积分](/zh/alevel/a2-mathematics/integration/#trigonometric-integrals)与[换元法](/zh/alevel/a2-mathematics/integration/#substitution)，再尝试本题。
 
 <details markdown="1">
 <summary>提示</summary>
@@ -166,13 +181,16 @@ $$\boxed{y=\frac{x^2}{4}+\frac{7}{4x^2}},\qquad x>0.$$
 
 在给定区间上，$\tan x>0$，所以
 
-$$\int\frac{\sec^2x}{\tan x}\,\mathrm dx=\ln(\tan x),\qquad \mu=\tan x.$$
+令 $u=\tan x$，则 $\mathrm du=\sec^2x\,\mathrm dx$：
 
-将方程各项乘以 $\tan x$，得
+$$\int\frac{\sec^2x}{\tan x}\,\mathrm dx=\int\frac1u\,\mathrm du=\ln\lvert u\rvert=\ln(\tan x),\qquad \mu=\tan x.$$
+
+将方程各项乘以 $\tan x$，得到下面的乘积导数。积分右侧前，先用 $\tan^2x=\sec^2x-1$ 改写：
 
 $$\begin{aligned}
 (y\tan x)^{\prime}&=2\tan^2x,\\
-y\tan x&=2\int(\sec^2x-1)\,\mathrm dx,\\
+y\tan x&=2\int\tan^2x\,\mathrm dx,\\
+y\tan x&=2\int\sec^2x\,\mathrm dx-2\int1\,\mathrm dx,\\
 y\tan x&=2\tan x-2x+C.
 \end{aligned}$$
 
@@ -184,13 +202,19 @@ $$\boxed{y=\frac{2\tan x-2x+\pi/2-1}{\tan x}},\qquad 0<x<\frac\pi2.$$
 
 </details>
 
+</section>
+
 ## 齐次通解与一个特解 {#cf-and-pi}
 
 ### 将解分成两部分 {#general-cf-pi}
 
 对于 $y^{\prime}+Py=Q$，对应的**齐次方程（homogeneous equation）**为 $y^{\prime}+Py=0$。它的通解称为**齐次通解（CF）**：
 
-$$\boxed{y_c=Ce^{-\int P\,\mathrm dx}=\frac C\mu.}$$
+$$\begin{aligned}
+(\mu y_c)^{\prime}&=0,\\
+\mu y_c&=\int0\,\mathrm dx=C,\\
+y_c&=Ce^{-\int P\,\mathrm dx}=\frac C\mu.
+\end{aligned}$$
 
 当 $C=0$ 时，这个公式也包含零解。从积分因子推导，可避免因除以 $y$ 而误丢零解。
 
@@ -221,19 +245,13 @@ $$y_p=\frac1\mu\int\mu Q\,\mathrm dx,$$
 
 当 $a=0$ 时，方程就是 $y^{\prime}=Q$，直接积分即可。当 $P(x)$ 为变系数时，以上试设形式并不普遍适用；若看不出合适的 PI，就使用积分因子。
 
+<section class="worked-example" markdown="1">
+
 ### 例 4：多项式形式的 PI {#example-4-polynomial-pi}
 
 > **Original example.** Find the general solution of $y^{\prime}+2y=4x+3$. Hence find the solution satisfying the boundary condition $y(1)=2$.
 
-<details markdown="1">
-<summary>提示</summary>
-
-CF 为 $Ce^{-2x}$。试设 $y_p=Ax+B$，注意保留常数项。
-
-</details>
-
-<details markdown="1">
-<summary>解答</summary>
+先计算齐次部分：$\int2\,\mathrm dx=2x$。于是 $(e^{2x}y_c)^{\prime}=0$；两边积分得 $e^{2x}y_c=\int0\,\mathrm dx=C$，因此 CF 为 $Ce^{-2x}$。
 
 由齐次方程得 $y_c=Ce^{-2x}$。试设 $y_p=Ax+B$，代入得
 
@@ -249,7 +267,9 @@ $$\boxed{y=2x+\frac12-\frac12e^{2-2x}},\qquad x\in\mathbb R.$$
 
 检验：CF 代入 $y^{\prime}+2y$ 后得到零，PI 代入后得到 $2+4x+1=4x+3$。当 $x=1$ 时，上述解的值为 $2$。
 
-</details>
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### 例 5：指数形式的 PI {#example-5-exponential-pi}
 
@@ -265,6 +285,8 @@ CF 为 $Ce^{3x}$。试设 $y_p=Ae^x$。
 <details markdown="1">
 <summary>解答</summary>
 
+先计算齐次部分：$\int(-3)\,\mathrm dx=-3x$。于是 $(e^{-3x}y_c)^{\prime}=0$；两边积分得 $e^{-3x}y_c=\int0\,\mathrm dx=C$，因此 CF 为 $Ce^{3x}$。
+
 由齐次方程得 $y_c=Ce^{3x}$。代入 $y_p=Ae^x$，得
 
 $$Ae^x-3Ae^x=2e^x,$$
@@ -277,19 +299,15 @@ $$\boxed{y=5e^{3x}-e^x},\qquad x\in\mathbb R.$$
 
 </details>
 
+</section>
+
+<section class="worked-example" markdown="1">
+
 ### 例 6：指数项与 CF 重复 {#example-6-repeated-exponential}
 
 > **Original example.** Find the general solution of $y^{\prime}+2y=3e^{-2x}$. Explain why the trial $y_p=Ae^{-2x}$ fails.
 
-<details markdown="1">
-<summary>提示</summary>
-
-题目中的试设形式已包含在 CF 中。将它乘以 $x$，或使用积分因子 $e^{2x}$。
-
-</details>
-
-<details markdown="1">
-<summary>解答</summary>
+先计算齐次部分：$\int2\,\mathrm dx=2x$。于是 $(e^{2x}y_c)^{\prime}=0$；两边积分得 $e^{2x}y_c=\int0\,\mathrm dx=C$，因此 CF 为 $Ce^{-2x}$。
 
 CF 为 $Ce^{-2x}$。试设 $Ae^{-2x}$ 时，代入后总有 $y_p^{\prime}+2y_p=0$；这个结果与 $A$ 的取值无关，因此无法得到方程右边的非零项。
 
@@ -301,9 +319,9 @@ $$y_p^{\prime}=Ae^{-2x}-2Axe^{-2x},\quad y_p^{\prime}+2y_p=Ae^{-2x}.$$
 
 $$\boxed{y=(C+3x)e^{-2x}},\qquad x\in\mathbb R.$$
 
-积分因子法也能直接得到相同答案：$(e^{2x}y)^{\prime}=3$，所以 $e^{2x}y=3x+C$。在这个一阶常系数方程中，额外乘上 $x$，便能处理指数项与 CF 重复的问题。
+积分因子法也能直接得到相同答案：$(e^{2x}y)^{\prime}=3$，所以 $e^{2x}y=\int3\,\mathrm dx=3\int1\,\mathrm dx=3x+C$。在这个一阶常系数方程中，额外乘上 $x$，便能处理指数项与 CF 重复的问题。
 
-</details>
+</section>
 
 ## 练习 {#practice}
 
@@ -325,7 +343,11 @@ $$\boxed{y=(C+3x)e^{-2x}},\qquad x\in\mathbb R.$$
 <details markdown="1">
 <summary>解答</summary>
 
-标准形式为 $y^{\prime}+2y=4$。于是 $(e^{2x}y)^{\prime}=4e^{2x}$，得到 $y=2+Ce^{-2x}$。当 $x=0$ 时，$C=3$：
+标准形式为 $y^{\prime}+2y=4$。由 $\int2\,\mathrm dx=2x$，选取 $\mu=e^{2x}$，得到 $(e^{2x}y)^{\prime}=4e^{2x}$。两边积分：
+
+$$e^{2x}y=4\int e^{2x}\,\mathrm dx=4\left(\frac12e^{2x}\right)+C=2e^{2x}+C.$$
+
+除以积分因子得 $y=2+Ce^{-2x}$。当 $x=0$ 时，$C=3$：
 
 $$\boxed{y=2+3e^{-2x}},\qquad x\in\mathbb R.$$
 
@@ -351,7 +373,11 @@ $$\boxed{y=2+3e^{-2x}},\qquad x\in\mathbb R.$$
 <details markdown="1">
 <summary>解答</summary>
 
-由于 $(xy)^{\prime}=2x$，积分得 $xy=x^2+C$，所以 $y=x+C/x$。由条件得 $5=2+C/2$，于是
+由 $\int(1/x)\,\mathrm dx=\ln x$，选取 $\mu=x$。于是 $(xy)^{\prime}=2x$，两边积分得
+
+$$xy=2\int x\,\mathrm dx=2\frac{x^2}{2}+C=x^2+C.$$
+
+所以 $y=x+C/x$。由条件得 $5=2+C/2$，于是
 
 $$\boxed{y=x+\frac6x},\qquad x>0.$$
 
@@ -379,7 +405,11 @@ $$\boxed{y=x+\frac6x},\qquad x>0.$$
 <details markdown="1">
 <summary>解答</summary>
 
-乘以积分因子后，得 $(e^{x^2}y)^{\prime}=2xe^{x^2}$。于是 $e^{x^2}y=e^{x^2}+C$，且 $y=1+Ce^{-x^2}$。由条件得 $C=2$：
+由 $\int2x\,\mathrm dx=2(x^2/2)=x^2$，乘以 $\mu=e^{x^2}$ 后得 $(e^{x^2}y)^{\prime}=2xe^{x^2}$。令 $u=x^2$，则 $\mathrm du=2x\,\mathrm dx$：
+
+$$e^{x^2}y=\int2xe^{x^2}\,\mathrm dx=\int e^u\,\mathrm du=e^u+C=e^{x^2}+C.$$
+
+因此 $y=1+Ce^{-x^2}$。由条件得 $C=2$：
 
 $$\boxed{y=1+2e^{-x^2}},\qquad x\in\mathbb R.$$
 
@@ -388,6 +418,8 @@ $$\boxed{y=1+2e^{-x^2}},\qquad x\in\mathbb R.$$
 </details>
 
 </section>
+
+<section class="lesson-check" markdown="1">
 
 ### 第 4 题：多项式 PI 与边界条件 {#practice-4}
 
@@ -403,6 +435,8 @@ $$\boxed{y=1+2e^{-x^2}},\qquad x\in\mathbb R.$$
 <details markdown="1">
 <summary>解答</summary>
 
+先计算齐次部分：$\int1\,\mathrm dx=x$。于是 $(e^xy_c)^{\prime}=0$；两边积分得 $e^xy_c=\int0\,\mathrm dx=C$，因此 CF 为 $Ce^{-x}$。
+
 CF 为 $Ce^{-x}$。代入试设形式，得
 
 $$y_p^{\prime}+y_p=Ax^2+(2A+B)x+(B+D).$$
@@ -415,7 +449,11 @@ $$\boxed{y=x^2-2x+2-e^{1-x}},\qquad x\in\mathbb R.$$
 
 </details>
 
-### 第 5 题：与 CF 重复的指数 PI {#practice-5}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 第 5 题：一族解与一个条件 {#practice-5}
 
 > Find the general solution of $y^{\prime}-y=4e^x$, then use $y(0)=2$.
 
@@ -429,6 +467,8 @@ CF 为 $Ce^x$，所以试设 $y_p=Axe^x$。
 <details markdown="1">
 <summary>解答</summary>
 
+这里 $\int(-1)\,\mathrm dx=-x$，齐次方程的乘积积分为 $e^{-x}y_c=\int0\,\mathrm dx=C$，所以 $y_c=Ce^x$。
+
 对于 $y_p=Axe^x$，有 $y_p^{\prime}-y_p=Ae^x$，得 $A=4$。于是 $y=(C+4x)e^x$。由初始条件得 $C=2$：
 
 $$\boxed{y=(2+4x)e^x},\qquad x\in\mathbb R.$$
@@ -436,6 +476,10 @@ $$\boxed{y=(2+4x)e^x},\qquad x\in\mathbb R.$$
 求导得 $y^{\prime}=(6+4x)e^x$，所以 $y^{\prime}-y=4e^x$，且 $y(0)=2$。
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### 第 6 题：负半轴上的区间 {#practice-6}
 
@@ -455,13 +499,15 @@ $$\boxed{y=(2+4x)e^x},\qquad x\in\mathbb R.$$
 
 $$\frac{y^{\prime}}x-\frac y{x^2}=1,\qquad \left(\frac yx\right)^{\prime}=1.$$
 
-于是 $y/x=x+C$，且 $y=x^2+Cx$。由条件得 $2=1-C$，所以
+两边积分得 $y/x=\int1\,\mathrm dx=x+C$，因此 $y=x^2+Cx$。由条件得 $2=1-C$，所以
 
 $$\boxed{y=x^2-x},\qquad x<0.$$
 
 检验：$y^{\prime}-y/x=(2x-1)-(x-1)=x$。虽然解的表达式是多项式，但原方程在 $x=0$ 处无定义，因此这个原方程的解应限定在 $x<0$ 上。
 
 </details>
+
+</section>
 
 ## 纠错与独立重试 {#diagnose-and-retry}
 
@@ -502,7 +548,7 @@ $$y^{\prime}+\left(\frac2x-1\right)y=xe^x,\qquad P=\frac2x-1,\quad Q=xe^x.$$
 
 对标准形式的系数积分，得到
 
-$$\mu=e^{2\ln x-x}=x^2e^{-x}.$$
+$$\int\left(\frac2x-1\right)\,\mathrm dx=2\int\frac1x\,\mathrm dx-\int1\,\mathrm dx=2\ln x-x,\qquad \mu=e^{2\ln x-x}=x^2e^{-x}.$$
 
 求导后确实得到所需的系数关系：
 
@@ -512,6 +558,7 @@ $$\mu^{\prime}=(2x-x^2)e^{-x}=\left(\frac2x-1\right)\mu.$$
 
 $$\begin{aligned}
 (x^2e^{-x}y)^{\prime}&=x^3,\\
+x^2e^{-x}y&=\int x^3\,\mathrm dx=\frac{x^{3+1}}{3+1}+C,\\
 x^2e^{-x}y&=\frac{x^4}{4}+C,\\
 y&=e^x\left(\frac{x^2}{4}+\frac{C}{x^2}\right).
 \end{aligned}$$
@@ -531,6 +578,8 @@ $$xy^{\prime}+(2-x)y=e^x(xf^{\prime}+2f)=e^xx^2.$$
 </details>
 
 </section>
+
+<section class="lesson-check" markdown="1">
 
 ### 从解族反推方程 {#recover-equation}
 
@@ -552,6 +601,8 @@ $$xy^{\prime}+(2-x)y=e^x(xf^{\prime}+2f)=e^xx^2.$$
 
 </details>
 
+</section>
+
 ## 继续学习后再回来 {#later-review}
 
 尝试[下一课的练习](/zh/alevel/a2-further-mathematics/second-order-differential-equations/#practice)后，收起前面解答，再回来完成这一组题。记录自己能否在不借助提示的情况下选法并完成检验。
@@ -570,16 +621,25 @@ $$xy^{\prime}+(2-x)y=e^x(xf^{\prime}+2f)=e^xx^2.$$
 
 <details markdown="1"><summary>回顾解答与回补</summary>
 
-对于 (A)，在非零解上分离变量，得到 $\ln\lvert y\rvert=x^2+C$。初始条件选出
+对于 (A)，在非零解上分离变量为 $\mathrm dy/y=2x\,\mathrm dx$，然后积分：
+
+$$\int\frac1y\,\mathrm dy=2\int x\,\mathrm dx,\qquad \ln\lvert y\rvert=2\frac{x^2}{2}+C=x^2+C.$$
+
+两边取指数得 $y=Ke^{x^2}$，其中常数可正可负但非零。由初值得 $K=2$，选出
 
 $$y=2e^{x^2},\qquad x\in\mathbb R.$$
 
 它的导数为 $4xe^{x^2}=2xy$。除以未知函数时漏掉的零解不满足给定初值。使用积分因子也正确；分离变量只是便利的选择，不是唯一允许的方法。
 
-对于 (B)，将各项除以正的自变量，得到标准形式中的系数 $P=1/x$、$Q=x$，所以选取 $\mu=x$。于是
+对于 (B)，将各项除以正的自变量，得到标准形式中的系数 $P=1/x$、$Q=x$。在这个区间上先计算积分因子：
+
+$$\int\frac1x\,\mathrm dx=\ln x,\qquad \mu=e^{\ln x}=x\quad(x>0).$$
+
+于是
 
 $$\begin{aligned}
 (xy)^{\prime}&=x^2,\\
+xy&=\int x^2\,\mathrm dx=\frac{x^{2+1}}{2+1}+C,\\
 xy&=\frac{x^3}{3}+C,\\
 y&=\frac{x^2}{3}+\frac Cx.
 \end{aligned}$$
@@ -620,6 +680,10 @@ $$y=\frac{x^2-x^{-1}}3,\qquad x>0.$$
 - 未说明区间上的正负号就去掉 $\ln\lvert x\rvert $ 中的绝对值，或让解的区间跨越奇点。
 
 **练习后：**重新独立完成曾需要提示的题目。写出标准形式、积分因子与乘积的导数，或明确写出 CF 与 PI。最后同时检验方程及其给定条件。
+
+指数积分遗漏系数时，回看[例 1](#example-1-normalise-and-solve)及[指数积分](/zh/alevel/a2-mathematics/integration/#exponential-logarithmic-integrals)，再尝试 [Q1](#practice-1)。幂函数积分出错时，回补[幂积分](/zh/alevel/a2-mathematics/integration/#power-integrals)，再做[标准化重试](#normalisation-retry)。混淆 CF 和 PI 时，先回看[例 4](#example-4-polynomial-pi)，再做 [Q4](#practice-4)；重复指数处理出错时，先回看[例 6](#example-6-repeated-exponential)，再做 [Q5](#practice-5)。先收起答案，并如实记录是否已经看过同一道题。
+
+学习其他主题后，尝试课程的[跨章综合](/zh/alevel/a2-further-mathematics/#mixed-review)与[延后回顾](/zh/alevel/a2-further-mathematics/#later-review)。
 
 **学习路径：**[上一课：双曲函数](/zh/alevel/a2-further-mathematics/hyperbolic-functions/) · [下一课：二阶微分方程](/zh/alevel/a2-further-mathematics/second-order-differential-equations/) · [高等纯数学](/zh/alevel/a2-further-mathematics/)。
 

@@ -69,7 +69,8 @@ function check(slug, bindings, run) {
   // a question or its answer requires updating and reviewing this check too.
   for (const prefix of ['', 'zh/']) {
     const file = path.join(root, prefix, 'alevel/a2-further-mathematics', `${slug}.md`);
-    const source = fs.readFileSync(file, 'utf8').split('{#diagnose-and-retry}')[1]?.split('\n## ')[0];
+    // Earlier valid tasks may now sit in the later-review section after a new retry.
+    const source = fs.readFileSync(file, 'utf8').split('{#diagnose-and-retry}')[1];
     assert(source, `${slug}: diagnosis/retry section exists`);
     const compact = source.replace(/\s|\$/g, '');
     for (const binding of bindings) assert(compact.includes(binding.replace(/\s|\$/g, '')), `${slug}: source binding ${binding}`);
@@ -79,10 +80,14 @@ function check(slug, bindings, run) {
   console.log(`Retry maths passed: ${slug}`);
 }
 
-check('roots-and-polynomials', ['z^2-(2+i)z+1+i=0', 'z^3-6z^2+13z-10=0', '2\\pm i'], () => {
+check('roots-and-polynomials', ['z^2-(2+i)z+1+i=0', 'z^2-(3+2i)z+2+4i=0',
+  'z^3-6z^2+13z-10=0', '2\\pm i'], () => {
   // Diagnosis: (z-1)(z-1-i), so the second root is 1, not 1-i.
   eq(cadd(cp(1, 1), cp(1)), cp(2, 1));
   eq(cmul(cp(1, 1), cp(1)), cp(1, 1));
+  // The new retry must challenge the same complex-coefficient inference.
+  eq(cadd(cp(1, 2), cp(2)), cp(3, 2));
+  eq(cmul(cp(1, 2), cp(2)), cp(2, 4));
   const cubic = times(poly({ 1: 1, 0: -2 }), poly({ 2: 1, 1: -4, 0: 5 }));
   peq(cubic, poly({ 3: 1, 2: -6, 1: 13, 0: -10 }));
   for (const z of [cp(2), cp(2, 1), cp(2, -1)]) eq(cvalue(cubic, z), cp(0));

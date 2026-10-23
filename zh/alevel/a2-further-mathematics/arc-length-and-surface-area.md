@@ -7,8 +7,9 @@ subject: a2-further-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-further-mathematics/arc-length-and-surface-area/
 permalink: /zh/alevel/a2-further-mathematics/arc-length-and-surface-area/
-toc_headings: h2, h3, h4
+toc_headings: "#method, #cartesian-arc-length, #parametric-arc-length, #surface-area-about-the-x-axis, #worked-examples, #practice, #diagnose-and-retry, #quick-reference, #sources"
 study_page: true
+reading_layout: true
 ---
 
 [高等纯数学](/zh/alevel/a2-further-mathematics/) · FP2.8 弧长与绕 x 轴的旋转曲面面积
@@ -21,7 +22,7 @@ study_page: true
 
 教材：第 23 章，第 282–287 页，*International A Level Further Mathematics*。
 
-**开始前：**复习[微分](/zh/alevel/a2-mathematics/differentiation/)、[积分](/zh/alevel/a2-mathematics/integration/)和[参数方程](/zh/alevel/a2-mathematics/parametric-equations/)。你应当会对曲线求导、计算定积分，并能使用非负平方根。
+**开始前：**用[链式法则](/zh/alevel/a2-mathematics/differentiation/#composite-functions)和[参数求导](/zh/alevel/a2-mathematics/parametric-equations/#parametric-differentiation)写出两个坐标的导数。积分不熟时，回补[幂函数积分](/zh/alevel/a2-mathematics/integration/#power-integrals)、[换元](/zh/alevel/a2-mathematics/integration/#substitution)、[对数形式](/zh/alevel/a2-mathematics/integration/#logarithmic-form)或[分部积分](/zh/alevel/a2-mathematics/integration/#integration-by-parts)，再回对应示范解释每个系数。Q2 先推导原函数再代限，不要求先学双曲函数。
 
 **题目身份：**除明确标出官方原题或教学改编的题目外，本课例题与练习均为自拟教学题，不分配官方分值。
 
@@ -55,6 +56,8 @@ $$L=\int_a^b\sqrt{1+\left(\frac{\mathrm dy}{\mathrm dx}\right)^2}\,\mathrm dx.$$
 
 整个计算都使用变量 x，因此积分限也应是 x 值。如果端点处导数或被积函数无定义，就从区间内部取极限。
 
+<section class="worked-example" markdown="1">
+
 ### 例题 1 — 用换元法计算直角坐标弧长 {#example-1--cartesian-arc-length-by-substitution}
 
 **Question:** Find the length of the curve $y=\frac23x^{\frac32}$ for $0\le x\le3$.
@@ -65,11 +68,15 @@ $$\frac{\mathrm dy}{\mathrm dx}=\sqrt{x}.$$
 
 $$\begin{aligned}
 L&=\int_0^3\sqrt{1+x}\,\mathrm dx\\
-&=\left[\frac23(1+x)^{\frac32}\right]_0^3\\
+&=\int_1^4 u^{1/2}\,\mathrm du\quad(u=1+x,\ \mathrm du=\mathrm dx)\\
+&=\left[\frac23u^{3/2}\right]_1^4\\
+&=\frac23(4^{3/2}-1^{3/2})=\frac23(8-1)\\
 &=\boxed{\frac{14}{3}}.
 \end{aligned}$$
 
 **检查：**整个区间上的被积函数为正，答案也大于水平距离 $3$，符合预期。
+
+</section>
 
 ## 参数形式下的弧长 {#parametric-arc-length}
 
@@ -103,6 +110,8 @@ $$S=2\pi\int_\alpha^\beta\lvert y(t)\rvert\frac{\mathrm ds}{\mathrm dt}\,\mathrm
 
 ## 例题 {#worked-examples}
 
+<section class="worked-example" markdown="1">
+
 ### 例题 2 — 保留平方根中的绝对值 {#example-2--keep-the-absolute-value}
 
 **Question:** Find the length of $y=\frac{x^2}{4}-\frac12\ln x$ for $1\le x\le2$.
@@ -121,12 +130,17 @@ $$\sqrt{1+\left(\frac{\mathrm dy}{\mathrm dx}\right)^2}
 最后一个等号利用了 $x>0$ 和整个区间内 $x^2+1>0$。
 
 $$\begin{aligned}
-L&=\int_1^2\frac{x^2+1}{2x}\,\mathrm dx\\
+L&=\int_1^2\left(\frac x2+\frac1{2x}\right)\,\mathrm dx\\
 &=\left[\frac{x^2}{4}+\frac12\ln x\right]_1^2\\
+&=\left(1+\frac12\ln2\right)-\left(\frac14+\frac12\ln1\right)\\
 &=\boxed{\frac34+\frac12\ln2}.
 \end{aligned}$$
 
 **检查：**把 $\sqrt{g^2}$ 直接写成 $g$，只有当区间上 $g\ge0$ 时才正确。本题符合这一条件，但必须先检查。
+
+</section>
+
+<section class="worked-example" markdown="1">
 
 ### 例题 3 — 改编官方样题的参数弧长题 {#example-3--adapted-specimen-question}
 
@@ -150,12 +164,18 @@ $$\begin{aligned}
 在此区间内，正弦非负、正割为正。因此
 
 $$\begin{aligned}
-L&=\int_0^{\frac{\pi}{3}}\tan t\,\mathrm dt\\
-&=[-\ln(\cos t)]_0^{\frac{\pi}{3}}\\
+L&=\int_0^{\pi/3}\frac{\sin t}{\cos t}\,\mathrm dt\\
+&=-\int_1^{1/2}\frac{\mathrm dw}{w}\quad(w=\cos t,\ \mathrm dw=-\sin t\,\mathrm dt)\\
+&=[-\ln w]_1^{1/2}\\
+&=-\ln(1/2)-(-\ln1)\\
 &=\boxed{\ln2}.
 \end{aligned}$$
 
 **检查：**速率非负，而且参数区间只描绘该弧段一次。本例改编自 OxfordAQA FM03 Specimen 2018 官方样题第 11 题；解法可参照官方评分方案。题目文字与本课解答均已改编或重写。
+
+</section>
+
+<section class="worked-example" markdown="1">
 
 ### 例题 4 — 将直线绕 x 轴旋转 {#example-4--cartesian-surface-area}
 
@@ -165,11 +185,17 @@ L&=\int_0^{\frac{\pi}{3}}\tan t\,\mathrm dt\\
 
 $$\begin{aligned}
 S&=2\pi\int_1^3(4-x)\sqrt{1+(-1)^2}\,\mathrm dx\\
+&=2\pi\sqrt2\int_1^3(4-x)\,\mathrm dx\\
 &=2\pi\sqrt2\left[4x-\frac{x^2}{2}\right]_1^3\\
+&=2\pi\sqrt2\left[\left(12-\frac92\right)-\left(4-\frac12\right)\right]\\
 &=\boxed{8\pi\sqrt2}.
 \end{aligned}$$
 
 **检查：**半径从 3 逐渐减小到 1，结果不包括两端的圆盘。
+
+</section>
+
+<section class="worked-example" markdown="1">
 
 ### 例题 5 — 曲线穿过 x 轴时的参数曲面面积 {#example-5--radius-absolute-value}
 
@@ -186,10 +212,16 @@ $$\frac{\mathrm dx}{\mathrm dt}=1,\qquad
 $$\begin{aligned}
 S&=2\pi\sqrt2\int_0^2\lvert t-1\rvert\,\mathrm dt\\
 &=2\pi\sqrt2\left(\int_0^1(1-t)\,\mathrm dt+\int_1^2(t-1)\,\mathrm dt\right)\\
+&=2\pi\sqrt2\left(\left[t-\frac{t^2}{2}\right]_0^1+\left[\frac{t^2}{2}-t\right]_1^2\right)\\
+&=2\pi\sqrt2\left[\left(1-\frac12-0\right)+\left((2-2)-(\tfrac12-1)\right)\right]\\
 &=\boxed{2\pi\sqrt2}.
 \end{aligned}$$
 
 这条曲线生成两个尖端相接的圆锥曲面。两端的圆形边界属于曲面的边缘，并非端盖。
+
+</section>
+
+<section class="worked-example" markdown="1">
 
 ### 例题 6 — 圆弧参数方程所生成的曲面面积 {#example-6--parametric-surface-area}
 
@@ -205,17 +237,23 @@ $$\frac{\mathrm ds}{\mathrm dt}
 
 $$\begin{aligned}
 S&=2\pi\int_0^{\frac{\pi}{2}}(2\sin t)(2)\,\mathrm dt\\
-&=8\pi[-\cos t]_0^{\frac{\pi}{2}}\\
+&=8\pi\int_0^{\pi/2}\sin t\,\mathrm dt\\
+&=8\pi[-\cos t]_0^{\pi/2}\\
+&=8\pi\left(-\cos\frac\pi2+\cos0\right)=8\pi(0+1)\\
 &=\boxed{8\pi}.
 \end{aligned}$$
 
 该弧段生成半球的曲面。弧段并没有扫出平坦的圆形底面，因此答案不含底面。
+
+</section>
 
 ## 练习 {#practice}
 
 **独立练习 · 25–30 分钟**
 
 每题先写出公式和积分限，再开始计算。说明如何处理绝对值，并检查速率是否非负。以下是自拟练习题，并非官方考试题；没有官方分值。
+
+<section class="lesson-check" markdown="1">
 
 ### Q1 — 直线的长度 {#q1--straight-line-length}
 
@@ -232,11 +270,16 @@ S&=2\pi\int_0^{\frac{\pi}{2}}(2\sin t)(2)\,\mathrm dt\\
 <summary>解答</summary>
 
 $$\begin{aligned}
-L&=\int_0^2\sqrt{1+3^2}\,\mathrm dx\\
+L&=\int_0^2\sqrt{10}\,\mathrm dx\\
+&=[\sqrt{10}\,x]_0^2=\sqrt{10}(2-0)\\
 &=\boxed{2\sqrt{10}}.
 \end{aligned}$$
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### Q2 — 对非恒定速率积分 {#q2--non-constant-cartesian-speed}
 
@@ -252,13 +295,36 @@ L&=\int_0^2\sqrt{1+3^2}\,\mathrm dx\\
 <details markdown="1">
 <summary>解答</summary>
 
+先推导所需原函数，避免只引用结果。分部积分取 $u=\sqrt{1+x^2}$、$\mathrm dv=\mathrm dx$，并用 $x^2=(1+x^2)-1$。再对剩下的积分换元：
+
+$$\begin{aligned}
+I&=\int\sqrt{1+x^2}\,\mathrm dx\\
+&=x\sqrt{1+x^2}-\int\frac{x^2}{\sqrt{1+x^2}}\,\mathrm dx\\
+&=x\sqrt{1+x^2}-I+\int\frac{\mathrm dx}{\sqrt{1+x^2}}.
+\end{aligned}$$
+
+$$\begin{aligned}
+u&=x+\sqrt{1+x^2}>0,\\
+\mathrm du&=\left(1+\frac{x}{\sqrt{1+x^2}}\right)\mathrm dx
+=\frac{u}{\sqrt{1+x^2}}\,\mathrm dx,\\
+\int\frac{\mathrm dx}{\sqrt{1+x^2}}&=\int\frac{\mathrm du}{u}=\ln u+C,\\
+2I&=x\sqrt{1+x^2}+\ln\left(x+\sqrt{1+x^2}\right)+C.
+\end{aligned}$$
+
+因此 $I=\frac12(x\sqrt{1+x^2}+\ln(x+\sqrt{1+x^2}))+C$。现在代限：
+
 $$\begin{aligned}
 L&=\int_0^2\sqrt{1+x^2}\,\mathrm dx\\
 &=\left[\frac12\left(x\sqrt{1+x^2}+\ln\left(x+\sqrt{1+x^2}\right)\right)\right]_0^2\\
+&=\frac12\left[(2\sqrt5+\ln(2+\sqrt5))-(0+\ln1)\right]\\
 &=\boxed{\sqrt5+\frac12\ln(2+\sqrt5)}.
 \end{aligned}$$
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### Q3 — 参数方程表示的四分之一圆 {#q3--parametric-quarter-circle}
 
@@ -278,11 +344,16 @@ $$\begin{aligned}
 \frac{\mathrm ds}{\mathrm dt}
 &=\sqrt{(-3\sin t)^2+(3\cos t)^2}\\
 &=3,\\
-L&=\int_0^{\frac{\pi}{2}}3\,\mathrm dt\\
+L&=\int_0^{\pi/2}3\,\mathrm dt\\
+&=[3t]_0^{\pi/2}=3(\pi/2-0)\\
 &=\boxed{\frac{3\pi}{2}}.
 \end{aligned}$$
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### Q4 — 直角坐标曲线的旋转曲面面积 {#q4--cartesian-surface-area}
 
@@ -300,11 +371,17 @@ L&=\int_0^{\frac{\pi}{2}}3\,\mathrm dt\\
 
 $$\begin{aligned}
 S&=2\pi\int_0^2x\sqrt{1+1^2}\,\mathrm dx\\
+&=2\pi\sqrt2\int_0^2x\,\mathrm dx\\
 &=2\pi\sqrt2\left[\frac{x^2}{2}\right]_0^2\\
+&=2\pi\sqrt2\left(\frac{2^2}{2}-\frac{0^2}{2}\right)\\
 &=\boxed{4\pi\sqrt2}.
 \end{aligned}$$
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### Q5 — 曲线在 x 轴两侧的旋转曲面面积 {#q5--surface-crosses-the-axis}
 
@@ -325,10 +402,16 @@ S&=2\pi\int_0^2x\sqrt{1+1^2}\,\mathrm dx\\
 $$\begin{aligned}
 S&=2\pi\sqrt2\int_0^4\lvert x-2\rvert\,\mathrm dx\\
 &=2\pi\sqrt2\left(\int_0^2(2-x)\,\mathrm dx+\int_2^4(x-2)\,\mathrm dx\right)\\
+&=2\pi\sqrt2\left(\left[2x-\frac{x^2}{2}\right]_0^2+\left[\frac{x^2}{2}-2x\right]_2^4\right)\\
+&=2\pi\sqrt2\left[((4-2)-0)+((8-8)-(2-4))\right]\\
 &=\boxed{8\pi\sqrt2}.
 \end{aligned}$$
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### Q6 — 两段弧是否会生成两个不同的曲面？ {#q6--avoid-counting-the-same-surface-twice}
 
@@ -346,19 +429,33 @@ S&=2\pi\sqrt2\int_0^4\lvert x-2\rvert\,\mathrm dx\\
 
 速率为 1，因此整个圆的长度为
 
-$$L=\int_0^{2\pi}1\,\mathrm dt=2\pi.$$
+$$L=\int_0^{2\pi}1\,\mathrm dt=[t]_0^{2\pi}=2\pi-0=2\pi.$$
 
 求不重复计数的曲面面积时，只取上半圆 $0\le t\le\pi$：
 
 $$\begin{aligned}
 S&=2\pi\int_0^\pi\sin t\,\mathrm dt\\
 &=2\pi[-\cos t]_0^\pi\\
+&=2\pi(-\cos\pi+\cos0)=2\pi(1+1)\\
 &=\boxed{4\pi}.
 \end{aligned}$$
 
-如果计算曲面面积时使用 $0\le t\le2\pi$，就会得到 $8\pi$，相当于把球面每一点计算两次。求弧长时，圆周本身并没有被重复描绘；重复发生在上下两半圆旋转后彼此重叠。
+若计算曲面面积时用 $0\le t\le2\pi$，就把球面计算两次：
+
+$$\begin{aligned}
+2\pi\int_0^{2\pi}\lvert\sin t\rvert\,\mathrm dt
+&=2\pi\left(\int_0^\pi\sin t\,\mathrm dt-\int_\pi^{2\pi}\sin t\,\mathrm dt\right)\\
+&=2\pi\left([ -\cos t]_0^\pi+[\cos t]_\pi^{2\pi}\right)\\
+&=2\pi[(1-(-1))+(1-(-1))]=8\pi.
+\end{aligned}$$
+
+所以曲面积的参数区间必须另行选择。求弧长时，圆周本身并没有被重复描绘；重复发生在上下两半圆旋转后彼此重叠。
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### Q7 — 用一个参数方程求弧长和曲面面积 {#q7--combined-parametric-problem}
 
@@ -382,6 +479,7 @@ $$\frac{\mathrm dx}{\mathrm dt}=2t,\qquad
 
 $$\begin{aligned}
 L&=\int_0^1 2\sqrt2\,t\,\mathrm dt\\
+&=2\sqrt2\left[\frac{t^2}{2}\right]_0^1=2\sqrt2\left(\frac12-0\right)\\
 &=\boxed{\sqrt2}.
 \end{aligned}$$
 
@@ -389,15 +487,21 @@ L&=\int_0^1 2\sqrt2\,t\,\mathrm dt\\
 
 $$\begin{aligned}
 S&=2\pi\int_0^1(1-t^2)(2\sqrt2\,t)\,\mathrm dt\\
+&=4\pi\sqrt2\int_0^1(t-t^3)\,\mathrm dt\\
 &=4\pi\sqrt2\left[\frac{t^2}{2}-\frac{t^4}{4}\right]_0^1\\
+&=4\pi\sqrt2\left[\left(\frac12-\frac14\right)-(0-0)\right]\\
 &=\boxed{\pi\sqrt2}.
 \end{aligned}$$
 
 </details>
 
+</section>
+
 ## 纠错与独立重试 {#diagnose-and-retry}
 
-以下两项均为自拟教学任务，无官方分值。先写下错误原因，再看反馈；随后关闭所有解答，独立完成新任务。需要提示的任务应在稍后重新独立尝试。
+以下任务均为自拟教学任务，无官方分值。先写下错误原因，再看反馈；随后关闭所有解答，独立完成新任务。需要提示的任务应在稍后重新独立尝试。
+
+<section class="lesson-check" markdown="1">
 
 **Diagnose:** A learner calculates the surface generated by $y=3x$, $0\le x\le1$, using
 
@@ -410,11 +514,19 @@ $$\int_0^1 2\pi y\,\mathrm dx$$
 
 窄条的宽度沿倾斜的曲线量取，因此 $\mathrm ds=\sqrt{10}\,\mathrm dx$。曲面面积为
 
-$$2\pi\sqrt{10}\int_0^1 3x\,\mathrm dx=3\pi\sqrt{10}$$
+$$\begin{aligned}
+S&=6\pi\sqrt{10}\int_0^1x\,\mathrm dx\\
+&=6\pi\sqrt{10}\left[\frac{x^2}{2}\right]_0^1
+=6\pi\sqrt{10}\left(\frac12-0\right)=3\pi\sqrt{10}.
+\end{aligned}$$
 
 ；使用水平宽度会低估面积。
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 **Independent retry:** A straight segment joins $(0,1)$ to $(3,5)$. Find its length and the curved area generated by revolving it about the x-axis. Exclude end caps.
 
@@ -430,11 +542,19 @@ $$2\pi\sqrt{10}\int_0^1 3x\,\mathrm dx=3\pi\sqrt{10}$$
 
 可取 $x=3t$、$y=1+4t$、$0\le t\le1$。速率为 $5$，所以 $L=5$。半径始终为正，曲面面积为
 
-$$S=2\pi\int_0^1(1+4t)5\,\mathrm dt=30\pi.$$
+$$\begin{aligned}
+L&=\int_0^1 5\,\mathrm dt=[5t]_0^1=5-0=5,\\
+S&=10\pi\int_0^1(1+4t)\,\mathrm dt\\
+&=10\pi[t+2t^2]_0^1=10\pi[(1+2)-(0+0)]=30\pi.
+\end{aligned}$$
 
 参数只描过母线一次，不计两端圆盘。
 
 </details>
+
+</section>
+
+**学后下一步：**先关闭本章答案，去课程入口完成[跨主题综合](/zh/alevel/a2-further-mathematics/#mixed-review)；完成后续学习，再做[延后任务](/zh/alevel/a2-further-mathematics/#later-review)。记录首次是否独立、使用了什么提示、错误原因及重试结果；若方法或条件出错，按本章“练习后”返回对应示范，再关闭解答重试。
 
 ## 快速参考 {#quick-reference}
 
@@ -453,8 +573,12 @@ $$S=2\pi\int_0^1(1+4t)5\,\mathrm dt=30\pi.$$
 
 **你应当能够：**计算直角坐标与参数形式下的弧长，使用 $\lvert y\rvert$ 作为绕 x 轴旋转时的半径，并区分曲面本身、端盖和重叠曲面。
 
+## 来源与范围 {#sources}
+
+本轮范围核对：2026-10-23，从当前 9665 资格页打开大纲，核对正文 v5.2 及本课条目；没有迁移至 9765。下列试卷／评分材料仅重新读取所注明题目与配套评分部分的 PDF 文本，未完成原卷图像的视觉核验。官方题身份与分值保留，改编与自拟任务不称官方题。
+
 本课依据 [OxfordAQA Further Mathematics 9665 课程大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf)中 FP2.8（印刷页码第 18 页）的要求：掌握直角坐标或参数形式下的弧长与旋转曲面面积。例题 3 改编自官方样题；练习题为自拟题，没有官方分值。
 
-[OxfordAQA Specimen 2018, Q11, QP PDF p. 18](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-specimen-paper-2019-v3.pdf#page=18); [MS Q11, PDF p. 14](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-mark-scheme-2016-v1.pdf#page=14). 本轮已读取对应题干及评分材料（2026-10-22）；只借用已注明的方法，不把改编题或新增自拟任务称为原题。
+[OxfordAQA Specimen 2018, Q11, QP PDF p. 18](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-specimen-paper-2019-v3.pdf#page=18); [MS Q11, PDF p. 14](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-mark-scheme-2016-v1.pdf#page=14). 本轮重新读取对应题干及评分材料（2026-10-23，PDF 文本）；只借用已注明的方法，不把改编题或新增自拟任务称为原题。
 
 **学习路径：**[上一节：反三角函数的微积分](/zh/alevel/a2-further-mathematics/inverse-trigonometric-functions/) · [下一节：双曲函数](/zh/alevel/a2-further-mathematics/hyperbolic-functions/) · [返回高等纯数学课程](/zh/alevel/a2-further-mathematics/)

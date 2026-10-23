@@ -5,8 +5,9 @@ mathjax: true
 grade: a2
 subject: a2-further-mathematics
 permalink: /alevel/a2-further-mathematics/proof-by-induction/
-toc_headings: h2, h3, h4
+toc_headings: "#method, #series-and-sequences, #divisibility, #other-applications, #practice, #diagnose-and-retry, #later-review, #quick-reference"
 study_page: true
+reading_layout: true
 ---
 
 [Further Pure Mathematics](/alevel/a2-further-mathematics/) · FP2.4 Proof by induction
@@ -17,13 +18,17 @@ Prove that a statement is true for every integer in a given range. Learn how to 
 - **Homework help:** choose [series and sequences](#series-and-sequences), [divisibility](#divisibility) or [other applications](#other-applications).
 - **Revision:** try [practice](#practice) before opening the solutions, then use the [quick reference](#quick-reference).
 
-Textbook: Chapter 18, Section 18.1, printed pp. 208–215; review and practice examination questions on pp. 217–218, in *International A Level Further Mathematics*.
+**Before you start:** repair only the skill you need, then return to its proof:
 
-**Before you start:** you should know summation notation, sequences, index laws and algebraic factorisation. For the later examples, review complex numbers, compound angle formulae, differentiation and matrix multiplication in [AS Further Mathematics](/alevel/as-further-mathematics/) and [A2 Pure Mathematics](/alevel/a2-mathematics/).
+- [Summation and standard sums](/alevel/as-further-mathematics/series/#model): write the actual next term before Example 1.
+- [Index laws](/alevel/as-mathematics/algebra/#l01) and [factorisation](/alevel/as-mathematics/algebra/#l03): split the next power and extract a common factor before divisibility.
+- [Complex arithmetic](/alevel/as-further-mathematics/complex-numbers-and-roots/#model): multiply using the square of the imaginary unit; Example 4 supplies the compound-angle identities in use.
+- [Product rule](/alevel/a2-mathematics/differentiation/#products-and-quotients) and [chain rule](/alevel/a2-mathematics/differentiation/#composite-functions): differentiate the assumed derivative once more in Example 5.
+- [Matrix multiplication demonstration](/alevel/as-further-mathematics/matrix-algebra/#demonstration): calculate each entry by row times column before Example 6.
 
 **Task status:** Unless an official question or teaching adaptation is explicitly identified, the worked examples and exercises are self-written teaching tasks with no official marks.
 
-## Method
+## Method {#method}
 
 **Learning goal:** write a complete proof by induction for a series, a recurrence relation, a divisibility statement or another formula involving a positive integer.
 
@@ -38,7 +43,7 @@ A proof by induction has four parts:
 
 The assumption for $n=k$ is the **induction hypothesis**. You are proving: *if the statement is true at $k$, then it is true at $k+1$*. You are not assuming that it is already true for all $n$.
 
-### Choose the next step
+### Choose the next step {#choose-the-next-step}
 
 | Type of statement | Start the inductive step with | What to show |
 |---|---|---|
@@ -54,9 +59,11 @@ The assumption for $n=k$ is the **induction hypothesis**. You are proving: *if t
 
 Use complete sentences in the proof. In the conclusion, include the initial case and the link from $k$ to $k+1$; do not write only “proved by induction”. If the question starts at $n=2$, check $n=2$ and conclude for all integers $n\ge2$.
 
-## Series and Sequences
+## Series and Sequences {#series-and-sequences}
 
-### Example 1 — A sum of squares
+<section class="worked-example" markdown="1">
+
+### Example 1 — A sum of squares {#example-1--a-sum-of-squares}
 
 **Question:** prove that, for all integers $n\ge1$,
 
@@ -85,7 +92,11 @@ This is the required formula with $n=k+1$, since $2(k+1)+1=2k+3$.
 
 **Check:** at $n=2$, both sides equal $5$. This checks the calculation; the inductive step proves the general result.
 
-### Example 2 — A recurrence relation
+</section>
+
+<section class="worked-example" markdown="1">
+
+### Example 2 — A recurrence relation {#example-2--a-recurrence-relation}
 
 **Question:** a sequence is defined by
 
@@ -111,11 +122,13 @@ This is the required formula at $k+1$.
 
 **Check:** the recurrence gives $u_2=6$ and $u_3=11$, which agree with the formula.
 
-### When two previous terms are needed
+</section>
+
+### When two previous terms are needed {#when-two-previous-terms-are-needed}
 
 If a recurrence uses both $u_n$ and $u_{n+1}$ to define $u_{n+2}$, check **two initial cases**. Assume the formula for both $u_k$ and $u_{k+1}$, then use them to prove the formula for $u_{k+2}$. Question 2 gives practice with this form.
 
-## Divisibility
+## Divisibility {#divisibility}
 
 To say that $u_n$ is divisible by $d$ means that $u_n=dm$ for some integer $m$.
 
@@ -129,7 +142,9 @@ where $a$ and $b$ are integers. If $u_k$ is divisible by $d$, both terms on the 
 
 **Common mistake:** proving that $d u_{k+1}$ is divisible by $d$. That is automatic for any integer $u_{k+1}$ and tells you nothing about whether $u_{k+1}$ itself is divisible by $d$.
 
-### Example 3 — Proving divisibility by 6
+<section class="worked-example" markdown="1">
+
+### Example 3 — Proving divisibility by 6 {#example-3--proving-divisibility-by-6}
 
 **Question:** prove that $7^n+4^n+1$ is divisible by $6$ for all integers $n\ge1$.
 
@@ -153,9 +168,13 @@ Since $k\ge1$, $2k-1\ge1$ and the expression in brackets is an integer. Thus $u_
 
 **Check:** $u_2=49+16+1=66$. When proving divisibility, state why the factor left after taking out $6$ is an integer.
 
-## Other Applications
+</section>
 
-### Example 4 — De Moivre's theorem
+## Other Applications {#other-applications}
+
+<section class="worked-example" markdown="1">
+
+### Example 4 — De Moivre's theorem {#example-4--de-moivres-theorem}
 
 **Question:** prove that, for every positive integer $n$,
 
@@ -201,7 +220,11 @@ $$z^{k+1}=\cos((k+1)\theta)+i\sin((k+1)\theta).$$
 
 **Common mistake:** using De Moivre's theorem to justify the multiplication in a proof of De Moivre's theorem. Use the compound angle formulae instead.
 
-### Example 5 — An nth derivative
+</section>
+
+<section class="worked-example" markdown="1">
+
+### Example 5 — An nth derivative {#example-5--an-nth-derivative}
 
 **Question:** for $f(x)=e^x\sin x$, prove that, for all integers $n\ge1$,
 
@@ -235,7 +258,11 @@ This is the required expression at $k+1$.
 
 **Check:** differentiating twice gives $f^{(2)}(x)=2e^x\cos x$, which agrees with $2e^x\sin(x+\frac{\pi}{2})$.
 
-### Example 6 — A matrix power
+</section>
+
+<section class="worked-example" markdown="1">
+
+### Example 6 — A matrix power {#example-6--a-matrix-power}
 
 **Question:** given
 
@@ -272,13 +299,17 @@ $$A^2=\begin{pmatrix}9&8\\0&1\end{pmatrix}.$$
 
 Do not square each entry of $A$.
 
-## Practice
+</section>
+
+## Practice {#practice}
 
 Try each proof without the solution. Show the initial case, the assumption, the inductive step and the conclusion.
 
 Questions 1–5 are self-written exercises. Question 6 is an original AQA question reproduced in the supplied textbook.
 
-### Question 1 — A sum of cubes
+<section class="lesson-check" markdown="1">
+
+### Question 1 — A sum of cubes {#question-1--a-sum-of-cubes}
 
 Prove that, for all integers $n\ge1$,
 
@@ -312,7 +343,11 @@ This is the required formula for $n=k+1$. The formula is true for $n=1$. If it i
 
 </details>
 
-### Question 2 — Two initial cases
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Question 2 — Two initial cases {#question-2--two-initial-cases}
 
 A sequence has $u_1=1$, $u_2=3$ and
 
@@ -347,7 +382,11 @@ The formula is true for $n=1$ and $n=2$. If it is true for both $n=k$ and $n=k+1
 
 </details>
 
-### Question 3 — Choose a useful multiple
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Question 3 — Choose a useful multiple {#question-3--choose-a-useful-multiple}
 
 Prove that $11^n-3^n$ is divisible by $8$ for all integers $n\ge1$.
 
@@ -375,7 +414,11 @@ The result is true for $n=1$. If it is true for $n=k$, it is true for $n=k+1$. T
 
 </details>
 
-### Question 4 — A different matrix
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Question 4 — A different matrix {#question-4--a-different-matrix}
 
 Given
 
@@ -419,7 +462,11 @@ $$B^2=\begin{pmatrix}1&0\\10&1\end{pmatrix}.$$
 
 </details>
 
-### Question 5 — A derivative with cosine
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Question 5 — A derivative with cosine {#question-5--a-derivative-with-cosine}
 
 For $g(x)=e^x\cos x$, prove that, for all integers $n\ge1$,
 
@@ -464,9 +511,13 @@ The minus sign matters.
 
 </details>
 
-### Question 6 — Original AQA practice
+</section>
 
-**Source:** AQA Mathematics 6360, MFP2, June 2006, Question 6. **4 + 4 marks**. Textbook cross-reference: Chapter 18, practice examination question 5, printed p. 218. [Question paper, Q6 (PDF p. 4)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202006%20QP%20-%20FP2%20AQA.PDF#page=4); [AQA mark scheme, Q6 (PDF p. 6)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202006%20MS%20-%20FP2%20AQA.PDF#page=6). Question and matching mark scheme read on 2026-10-22; these are AQA-authored documents hosted by PMT, with some question papers in condensed layout.
+<section class="lesson-check" markdown="1">
+
+### Question 6 — Original AQA practice {#question-6--original-aqa-practice}
+
+**Source:** AQA Mathematics 6360, MFP2, June 2006, Question 6. **4 + 4 marks**. Textbook cross-reference: Chapter 18, practice examination question 5, printed p. 218. [Question paper, Q6 (PDF p. 4)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202006%20QP%20-%20FP2%20AQA.PDF#page=4); [AQA mark scheme, Q6 (PDF p. 6)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202006%20MS%20-%20FP2%20AQA.PDF#page=6). Question and matching mark scheme re-read on 2026-10-23; these are AQA-authored documents hosted by PMT, with some question papers in condensed layout.
 
 **a** The function $f$ is given by
 
@@ -522,9 +573,13 @@ By the assumption, $f(m)$ is a multiple of $7$. Also, $15^m$ is an integer. Both
 
 </details>
 
+</section>
+
 ## Diagnose and Retry {#diagnose-and-retry}
 
 Both tasks are self-written and have no official marks. Explain the error before opening feedback; then close every solution and attempt the new task independently. If you need a hint, return later for another independent attempt.
+
+<section class="lesson-check" markdown="1">
 
 **Diagnose:** A learner checks the first three cases and writes, “The pattern continues, so the result holds for all positive integers.” What logical step is missing?
 
@@ -534,6 +589,10 @@ Both tasks are self-written and have no official marks. Explain the error before
 The calculation does not show that an arbitrary true case implies the next. State an assumption at an arbitrary allowed integer, use it in the next case, and combine that implication with the initial case.
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 **Independent retry:** Prove by induction, in complete English sentences, that
 
@@ -555,7 +614,36 @@ For $n=1$, both sides are $1$. Assume the formula holds for an arbitrary integer
 
 </details>
 
-## Quick Reference
+</section>
+
+## Subsequent use and review {#later-review}
+
+Next attempt [Finite Series Question 4](/alevel/a2-further-mathematics/finite-series/#question-4--prove-a-sum-by-induction): state the induction hypothesis and identify the next term independently. After studying [Maclaurin coefficients](/alevel/a2-further-mathematics/series-and-limits/#maclaurin-series), close Question 5's solution and attempt this connection.
+
+<section class="lesson-check" markdown="1">
+
+**Self-written task:** Use your proved formula in Question 5 to find the coefficient of $x^4$ in the Maclaurin expansion of $g(x)=e^x\cos x$. Explain why the fourth derivative itself is not the coefficient.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Put $n=4$ into the proved formula, evaluate at $x=0$, then divide by the factorial.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+$$g^{(4)}(0)=2^{4/2}e^0\cos\pi=-4,\qquad
+\frac{g^{(4)}(0)}{4!}=\frac{-4}{24}=-\frac16.$$
+
+The fourth derivative is $-4$; the coefficient is $-\frac16$. If you missed the factorial, revisit the Maclaurin definition and retry this connection independently.
+
+</details>
+
+</section>
+
+## Quick Reference {#quick-reference}
 
 | Part of a proof | What to write |
 |---|---|
@@ -569,8 +657,13 @@ For $n=1$, both sides are $1$. Assume the formula holds for an arbitrary integer
 
 **You should be able to:** explain why checking examples is not a proof, write an induction hypothesis, use it in the next case and state the correct range in your conclusion.
 
+Textbook: Chapter 18, Section 18.1, printed pp. 208–215; review and practice examination questions on pp. 217–218, in *International A Level Further Mathematics*.
+{: .lesson-meta}
+
 The lesson follows FP2.4 of the [OxfordAQA Further Mathematics 9665 specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf). Worked examples are teaching material. Question 6 retains the AQA question and marks from the supplied textbook.
 
-[FM03 June 2024 Q7, MS PDF pp. 10–11](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-mark-scheme.pdf#page=10); [FM03 January 2025 Q5, MS PDF p. 8](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-mark-scheme.pdf#page=8). Read this round: assessment evidence includes the correct initial case, an arbitrary induction hypothesis, the next step derived from it, and a conclusion covering the full range.
+[FM03 June 2024 Q7, MS PDF pp. 10–11](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-mark-scheme.pdf#page=10); [FM03 January 2025 Q5, MS PDF p. 8](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-mark-scheme.pdf#page=8). Re-read on 2026-10-23: assessment evidence includes the correct initial case, an arbitrary induction hypothesis, the next step derived from it, and a conclusion covering the full range.
+
+**After this lesson:** close the chapter solutions and attempt the course [mixed review](/alevel/a2-further-mathematics/#mixed-review). Return at the interval specified there for the [later review](/alevel/a2-further-mathematics/#later-review). Keep your independent work and check it by objective; revisit the linked prerequisite and retry any objective that required a hint.
 
 **Learning path:** [Previous: Roots and Polynomials](/alevel/a2-further-mathematics/roots-and-polynomials/) · [Back to the course](/alevel/a2-further-mathematics/) · [Next: Finite Series](/alevel/a2-further-mathematics/finite-series/).

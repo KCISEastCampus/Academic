@@ -7,8 +7,9 @@ subject: a2-further-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-further-mathematics/matrix-algebra/
 permalink: /zh/alevel/a2-further-mathematics/matrix-algebra/
-toc_headings: h2, h3, h4
+toc_headings: "#dimensions-and-order, #determinants-and-volume, #cofactors-and-inverses, #basis-images, #rotations, #reflections, #compositions, #invariant-points-and-lines, #practice, #common-pitfalls, #sources"
 study_page: true
+reading_layout: true
 ---
 
 [高等纯数学](/zh/alevel/a2-further-mathematics/) · FP2.13 矩阵代数
@@ -22,6 +23,8 @@ study_page: true
 **目标：**说明乘积维数是否相容；求三阶行列式与逆矩阵；完整描述规定的空间变换；区分固定点、整条映回自身的直线与被压成一点的直线。
 
 **开始前：**复习 [AS 高数（英文先修）](/alevel/as-further-mathematics/)的矩阵加法、数乘、乘法、转置及二阶逆矩阵，以及[直线与平面](/zh/alevel/a2-further-mathematics/lines-and-planes/)中的坐标向量。全文使用矩阵左乘**列向量（column vector）**的约定。除非另作说明，元素和参数均为实数。
+
+先修回补：乘积维数或元素计算出错，回 [AS 矩阵行列乘法](/zh/alevel/as-further-mathematics/matrix-algebra/#demonstration)；转置与逆混淆，回[逆的作用](/zh/alevel/as-further-mathematics/matrix-algebra/#inverse)；作用顺序出错，回[追踪输入](/zh/alevel/as-further-mathematics/transformations/#demonstration)，然后做本课[非交换重试](#order-retry)。先修不必从整个 AS 目录重找。
 
 ## 维数与乘法次序 {#dimensions-and-order}
 
@@ -52,6 +55,8 @@ $$\mathbf x\longmapsto S\mathbf x\longmapsto R(S\mathbf x)=(RS)\mathbf x.$$
 
 </details>
 
+<section class="worked-example" markdown="1">
+
 ### 非方阵的运算示范 {#non-square-example}
 
 **Original example.** Calculate both products for
@@ -71,6 +76,8 @@ $$PQ=\begin{pmatrix}3&2\\-1&1\end{pmatrix},\qquad
 QP=\begin{pmatrix}1&2&0\\0&1&-1\\1&0&2\end{pmatrix}.$$
 
 两个次序的乘积都存在，但维数和内容不同。即使两个矩阵都是方阵，乘法一般也不满足交换律。
+
+</section>
 
 ## 行列式与体积 {#determinants-and-volume}
 
@@ -135,11 +142,38 @@ $$C_{ij}=(-1)^{i+j}\det A_{(i\mid j)},\qquad
 $$AC^{\mathsf T}=C^{\mathsf T}A=(\det A)I,\qquad
 \boxed{A^{-1}=\frac1{\det A}C^{\mathsf T}},\quad \det A\ne0.$$
 
-### 求逆示范与补步 {#worked-inverse}
+<section class="worked-example" markdown="1">
 
-对上面的 N，删去第一行、第二列后，得到
+### 完整三阶求逆示范 {#worked-inverse}
 
-$$C_{12}=-\det\begin{pmatrix}0&1\\2&1\end{pmatrix}=2.$$
+沿上面的同一矩阵 N，行列式为 5，所以可以构造逆。每个代数余子式都先删行删列，再使用棋盘符号；下面列出全部九个计算。
+
+$$\begin{aligned}
+C_{11}&=1(1)-1(0)=1,&C_{12}&=-[0(1)-1(2)]=2,&C_{13}&=0(0)-1(2)=-2,\\
+C_{21}&=-[2(1)-0(0)]=-2,&C_{22}&=1(1)-0(2)=1,&C_{23}&=-[1(0)-2(2)]=4,\\
+C_{31}&=2(1)-0(1)=2,&C_{32}&=-[1(1)-0(0)]=-1,&C_{33}&=1(1)-2(0)=1.
+\end{aligned}$$
+
+$$C=\begin{pmatrix}1&2&-2\\-2&1&4\\2&-1&1\end{pmatrix},\qquad
+C^{\mathsf T}=\begin{pmatrix}1&-2&2\\2&1&-1\\-2&4&1\end{pmatrix},\qquad
+N^{-1}=\frac15 C^{\mathsf T}.$$
+
+转置使第一行余子式变成第一列，不能直接把 C 除以 5。乘回时，先检查一个对角和一个非对角元素，再把两侧完整乘积列出：
+
+$$(NN^{-1})_{11}=\frac{1(1)+2(2)+0(-2)}5=1,\qquad
+(NN^{-1})_{12}=\frac{1(-2)+2(1)+0(4)}5=0.$$
+
+$$NC^{\mathsf T}=\begin{pmatrix}5&0&0\\0&5&0\\0&0&5\end{pmatrix},\qquad
+C^{\mathsf T}N=\begin{pmatrix}5&0&0\\0&5&0\\0&0&5\end{pmatrix}
+\quad\Longrightarrow\quad NN^{-1}=N^{-1}N=I.$$
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 暂停：遮住示范后重构 {#inverse-completion}
+
+这是有支架的重构，不作为新输入的独立求逆证据；新输入在[共同任务](#inverse-system-task)。
 
 **Original completion task.** Calculate the cofactor in row 2, column 3, then transpose the completed cofactor matrix and check one off-diagonal entry of the product with N.
 
@@ -170,6 +204,10 @@ $$ (NN^{-1})_{12}=\frac{-2+2}{5}=0,\qquad NN^{-1}=N^{-1}N=I.$$
 
 </details>
 
+</section>
+
+<section class="worked-example" markdown="1">
+
 ### 改编例题：保留参数限制 {#parameter-inverse}
 
 **Adapted example — OxfordAQA 9665/FM03 January 2025 Q13(a), MS p.20.** The matrix and parameter have been changed. Find when the following matrix is nonsingular, then find its inverse in terms of t.
@@ -178,17 +216,14 @@ $$ (NN^{-1})_{12}=\frac{-2+2}{5}=0,\qquad NN^{-1}=N^{-1}N=I.$$
 
 $$N_t=\begin{pmatrix}1&2&0\\0&1&1\\t&0&1\end{pmatrix}.$$
 
-<details markdown="1">
-<summary>提示</summary>
-
 除法之前先求行列式。沿用上面的余子式计算，把左下角元素改成变量。
 
-</details>
 
-<details markdown="1">
-<summary>解答</summary>
+$$\det N_t=1(1)-2(0-t)=1+2t,\qquad t\ne-\frac12.$$
 
-$$\det N_t=1+2t,\qquad t\ne-\frac12,\qquad
+$$C_t=\begin{pmatrix}1&t&-t\\-2&1&2t\\2&-1&1\end{pmatrix},\qquad C_t^{\mathsf T}=\begin{pmatrix}1&-2&2\\t&1&-1\\-t&2t&1\end{pmatrix}.$$
+
+$$
 N_t^{-1}=\frac1{1+2t}\begin{pmatrix}1&-2&2\\t&1&-1\\-t&2t&1\end{pmatrix}.$$
 
 最终答案必须保留参数限制。N_t 乘所给分子矩阵，得到
@@ -197,7 +232,7 @@ $$N_t\begin{pmatrix}1&-2&2\\t&1&-1\\-t&2t&1\end{pmatrix}=(1+2t)I.$$
 
 在被排除的参数值，乘积恒等式仍然成立，但不能除以零。把候选逆矩阵中的因子约去，不能让奇异矩阵变成可逆矩阵。
 
-</details>
+</section>
 
 ## 从基向量的像构造矩阵 {#basis-images}
 
@@ -268,6 +303,8 @@ $$E_k=kI=\begin{pmatrix}k&0&0\\0&k&0\\0&0&k\end{pmatrix},\qquad
 
 ## 复合变换与逆向问题 {#compositions}
 
+<section class="worked-example" markdown="1">
+
 ### 改编例题：描述、组合与检验 {#composition-example}
 
 **Adapted example — OxfordAQA 9665/FM03 June 2024 Q1, MS p.4.** The rotation angle has been reversed. Let
@@ -281,15 +318,8 @@ S=S_{x=0}=\begin{pmatrix}-1&0&0\\0&1&0\\0&0&1\end{pmatrix}.$$
 
 完整描述两个变换；求先 S 后 R 的矩阵，并检验反向次序是否相同。
 
-<details markdown="1">
-<summary>提示</summary>
-
 最右边的矩阵先作用。要否定两个乘积相等，找一个基向量使两者的像不同即可。
 
-</details>
-
-<details markdown="1">
-<summary>解答</summary>
 
 R 为绕 y 轴的直角旋转，从 y 正半轴朝原点观察为顺时针；S 为关于平面 x=0 的反射。两个次序的乘积为
 
@@ -298,7 +328,9 @@ SR=\begin{pmatrix}0&0&1\\0&1&0\\1&0&0\end{pmatrix}.$$
 
 它们把 x 基向量送往相反的 z 方向。组合 RS 交换 x、z 并同时取反，保持 y；这样描述其坐标作用，就不会误把它当成旋转。
 
-</details>
+</section>
+
+<section class="worked-example" markdown="1">
 
 ### 改编例题：在正确的一侧撤销变换 {#reverse-transformation}
 
@@ -313,15 +345,8 @@ B=\begin{pmatrix}0&0&1\\s&c&0\\c&-s&0\end{pmatrix}.$$
 
 证明 A 与旋转角无关，并描述 A 表示的单一变换。
 
-<details markdown="1">
-<summary>提示</summary>
-
 在等式右侧乘 R 的逆矩阵。用正弦、余弦恒等式对任意角度化简；只代入一个数值角度不能证明结果与角度无关。
 
-</details>
-
-<details markdown="1">
-<summary>解答</summary>
 
 $$\begin{aligned}
 A&=BR^{-1}\\
@@ -333,7 +358,7 @@ A&=BR^{-1}\\
 
 结果中不再含角度，故 A 与旋转角无关。它交换 x、z，因此是关于平面 x=z 的反射。在左侧乘逆矩阵并不能分离 A。
 
-</details>
+</section>
 
 ## 不变点与不变直线 {#invariant-points-and-lines}
 
@@ -357,6 +382,8 @@ A(\mathbf a+t\mathbf d)=\mathbf a+(\nu+\mu t)\mathbf d.$$
 
 $$\boxed{A\mathbf a=\mathbf a,\qquad A\mathbf d=\mathbf d.}$$
 
+<section class="worked-example" markdown="1">
+
 ### 不经过原点的直线 {#offset-line}
 
 **Original example.** Consider
@@ -374,6 +401,12 @@ D\begin{pmatrix}t\\1\\0\end{pmatrix}=\begin{pmatrix}2t\\1\\0\end{pmatrix}.$$
 
 固定点构成一个平面。L 虽然不经过原点，仍映到自身，因为实参数乘 2 后仍遍历全部实数。但只有参数为零的那个点固定；整条线并非逐点固定。
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 暂停：检查是否整线映满 {#collapse-check}
+
 **Original correction task.** Replace the first diagonal entry of D by zero. A student says, “The direction still lies on L, so L is invariant.” Explain the missing check.
 
 **自拟纠错：**把 D 的第一个对角元素改成零。有人说“方向仍在 L 上，所以 L 不变”，指出遗漏的检验。
@@ -390,9 +423,13 @@ D_0\begin{pmatrix}t\\1\\0\end{pmatrix}=\begin{pmatrix}0\\1\\0\end{pmatrix}.$$
 
 </details>
 
+</section>
+
 ## 练习 {#practice}
 
 以下题目均为自拟题。首次尝试时保持提示和解答关闭。写出理由，不只给矩阵元素。
+
+<section class="lesson-check" markdown="1">
 
 ### 第1题：由组合结果反求变换 {#practice-1}
 
@@ -417,6 +454,10 @@ $$S_{y=z}T=I\quad\Longrightarrow\quad T=S_{y=z}^{-1}=S_{y=z}
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### 第2题：找错并修正逆矩阵 {#practice-2}
 
 > A student proposes one fifth of the cofactor matrix C in the worked inverse as the inverse of N. Use one product entry to disprove this, then give the corrected matrix. Explain what would happen to the inverse problem if two rows of N were identical.
@@ -439,6 +480,10 @@ N^{-1}=\frac15\begin{pmatrix}1&-2&2\\2&1&-1\\-2&4&1\end{pmatrix}.$$
 重复行会使矩阵奇异，因而不存在逆矩阵。这不是再转置一次就能修好的余子式符号错误。
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### 第3题：自主选择表征 {#practice-3}
 
@@ -468,6 +513,10 @@ $$y=x,\quad x=y,\quad -z=z\quad\Longrightarrow\quad
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### 第4题：检验非原点直线 {#practice-4}
 
 > For D in the offset-line example, decide whether each line is mapped onto itself: (i) $(t,2,3)$; (ii) $(1,t,0)$, with t real. For any invariant line, decide whether it is fixed pointwise. Justify each conclusion with a general point.
@@ -491,6 +540,10 @@ D\begin{pmatrix}1\\t\\0\end{pmatrix}=\begin{pmatrix}2\\t\\0\end{pmatrix}.$$
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ## 独立重试 {#independent-retry}
 
 **Original task.** A map sends $(x,y,z)$ to $(-x,z,y)$. Without copying a previous matrix, find its matrix and determinant, all fixed points, and the image of the line $(t,1,1)$. Is that line invariant, fixed pointwise or collapsed? Finally decide whether the plane x=1 is mapped to itself. Choose your methods and justify the claims.
@@ -509,6 +562,123 @@ $$H\begin{pmatrix}t\\1\\1\end{pmatrix}=\begin{pmatrix}-t\\1\\1\end{pmatrix}.$$
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 新输入共同任务：求逆并解方程 {#inverse-system-task}
+
+> **Original task / 自拟题.** Let
+
+$$
+K=\begin{pmatrix}1&1&0\\0&1&1\\1&0&2\end{pmatrix},\qquad
+\mathbf b=\begin{pmatrix}3\\5\\7\end{pmatrix}.
+$$
+
+> (a) Find the determinant, calculate all nine cofactors, transpose to obtain the inverse, and check both matrix products. (b) **Use your inverse from (a)** to solve $K\mathbf x=\mathbf b$, justify uniqueness and check all three original equations. (c) Replace the bottom-right entry by $q$. Determine when the original system has a unique solution and classify it at the excluded value. At that value, what changes if the third entry of the right side is −2?
+
+<details markdown="1">
+<summary>提示</summary>
+
+本题也是下一课的共同任务。余子式放回原位置后转置；解列向量应左乘逆。奇异参数要回原方程比较，不能继续除。
+
+</details>
+
+<details markdown="1">
+<summary>解答</summary>
+
+$$\det K=1(2)-1(0-1)=3,\qquad
+C_{11}=2,\ C_{12}=1,\ C_{13}=-1,\ C_{21}=-2,\ C_{22}=2,\ C_{23}=1,\ C_{31}=1,\ C_{32}=-1,\ C_{33}=1.$$
+
+$$C=\begin{pmatrix}2&1&-1\\-2&2&1\\1&-1&1\end{pmatrix},\quad
+M=C^{\mathsf T}=\begin{pmatrix}2&-2&1\\1&2&-1\\-1&1&1\end{pmatrix},\quad K^{-1}=\frac13M.$$
+
+$$KM=\begin{pmatrix}2+1&-2+2&1-1\\1-1&2+1&-1+1\\2-2&-2+2&1+2\end{pmatrix}=3I.$$
+
+$$MK=\begin{pmatrix}2+1&2-2&-2+2\\1-1&1+2&2-2\\-1+1&-1+1&1+2\end{pmatrix}=3I.$$
+
+$$\mathbf x=K^{-1}\mathbf b
+=\frac13\begin{pmatrix}2(3)-2(5)+7\\3+2(5)-7\\-3+5+7\end{pmatrix}
+=\frac13\begin{pmatrix}3\\6\\9\end{pmatrix}
+=\begin{pmatrix}1\\2\\3\end{pmatrix}.$$
+
+$$1+2=3,\qquad2+3=5,\qquad1+2(3)=7.$$
+
+行列式非零保证解唯一，不只是“算到一组数”。若右下元素改为 q：
+
+$$\det K_q=q+1,\qquad q\ne-1\ \Longrightarrow\ \text{a unique solution}.$$
+
+$$q=-1:\quad x+y=3,\quad y+z=5\quad\Longrightarrow\quad x-z=-2\ne7.$$
+
+故 q 为 −1 时原右端无解。若第三式右端同时改成 −2，则第三式与前两式相容；令 x=t，得到 $(x,y,z)=(t,3-t,2+t)$，是三平面的公共直线。奇异只说明不能用逆，不自动等于无解。
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 次序错误后的独立重试 {#order-retry}
+
+> **Original task / 自拟题.** A transformation $T$ is followed by reflection in $y=z$. The result is a positive $90^\circ$ rotation about the $z$-axis (viewed from the positive axis towards the origin). Find $T$, justify uniqueness, and use one basis vector to show that writing the product in the reverse order gives a different, incorrect candidate.
+
+<details markdown="1">
+<summary>提示</summary>
+
+先从一个输入写出两次作用，再列方程；撤销已知反射时保留乘法侧。
+
+</details>
+
+<details markdown="1">
+<summary>解答</summary>
+
+$$S=\begin{pmatrix}1&0&0\\0&0&1\\0&1&0\end{pmatrix},\quad R=\begin{pmatrix}0&-1&0\\1&0&0\\0&0&1\end{pmatrix}.$$
+
+$$ST=R\quad\Longrightarrow\quad T=S^{-1}R=SR
+=\begin{pmatrix}0&-1&0\\0&0&1\\1&0&0\end{pmatrix}.$$
+
+$$RS=\begin{pmatrix}0&0&-1\\1&0&0\\0&1&0\end{pmatrix}\ne SR.$$
+
+$$\mathbf e_x\xrightarrow{T}\mathbf e_z\xrightarrow{S}\mathbf e_y=R\mathbf e_x,\qquad
+\mathbf e_x\xrightarrow{RS}\mathbf e_y\xrightarrow{S}\mathbf e_z\ne R\mathbf e_x.$$
+
+反射的逆存在，故解唯一。上题结果为恒等时，错误次序可能碰巧得到同一候选；这里直接追踪输入，反序无法通过检查。
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 三个映射 {#transformation-check}
+
+> **Original task / 自拟题.** Without a transformation-type label, describe each matrix fully and justify your descriptions using basis images or a general point:
+
+$$
+U=\begin{pmatrix}1&0&0\\0&0&-1\\0&1&0\end{pmatrix},\quad
+V=\begin{pmatrix}0&0&1\\0&1&0\\1&0&0\end{pmatrix},\quad
+W=\begin{pmatrix}-2&0&0\\0&-2&0\\0&0&-2\end{pmatrix}.
+$$
+
+<details markdown="1">
+<summary>提示</summary>
+
+先说明坐标怎样变化，再自行辨认变换；检查描述是否包含决定它所需的全部信息。
+
+</details>
+
+<details markdown="1">
+<summary>解答</summary>
+
+$$U\mathbf e_x=\mathbf e_x,\quad U\mathbf e_y=\mathbf e_z,\quad U\mathbf e_z=-\mathbf e_y;\qquad
+V(x,y,z)^{\mathsf T}=(z,y,x)^{\mathsf T};\qquad W(x,y,z)^{\mathsf T}=(-2x,-2y,-2z)^{\mathsf T}.$$
+
+U：绕 x 轴正向 90° 旋转，从 x 正半轴朝原点看为逆时针。V：关于平面 x=z 反射；平面内点固定，法向 $(1,0,-1)$ 反向。W：以原点为中心、比例因子 −2 的放大，每个径向都反向；不能漏掉负号或中心。
+
+</details>
+
+</section>
+
 ## 快速参考 {#quick-reference}
 
 | 任务 | 检查要点 |
@@ -525,7 +695,7 @@ $$H\begin{pmatrix}t\\1\\1\end{pmatrix}=\begin{pmatrix}-t\\1\\1\end{pmatrix}.$$
 
 ## 常见错误与下一步 {#common-pitfalls}
 
-- **乘法次序错：**追踪一个列向量依次经过变换，再重试练习1。
+- **乘法次序错：**追踪一个列向量依次经过变换，再做[非交换重试](#order-retry)。
 - **余子式未转置：**检验非对角乘积，再不看答案重构逆矩阵。
 - **行列式倍率错：**三条边各乘同一比例，体积乘该比例的立方。
 - **旋转描述不完整：**“顺时针”需要观察方向；按本课基向量的像检验。
@@ -534,9 +704,13 @@ $$H\begin{pmatrix}t\\1\\1\end{pmatrix}=\begin{pmatrix}-t\\1\\1\end{pmatrix}.$$
 
 **计算器能检查什么／答卷须写什么：**数值乘积、行列式与逆矩阵可以用来核验答案。书面解答仍须说明维数、题目要求时的余子式构造、参数限制、组合次序和几何描述。符号恒等式需要对所有允许参数成立的推理；少量数值试验不是证明。本课不新增计算器按键流程。
 
+**学后下一步：**完成[新输入共同任务](#inverse-system-task)后，在[线性方程组](/zh/alevel/a2-further-mathematics/linear-equations/#joint-inverse-task)解释同一乘法的方程与平面意义；变换识别用[三个映射](#transformation-check)，不变性错因用[独立重试](#independent-retry)。随后完成课程[跨主题综合](/zh/alevel/a2-further-mathematics/#mixed-review)与隔开学习后的[延后任务](/zh/alevel/a2-further-mathematics/#later-review)。
+
 **学习路径：**[上一课：直线与平面](/zh/alevel/a2-further-mathematics/lines-and-planes/) · [下一课：线性方程组](/zh/alevel/a2-further-mathematics/linear-equations/) · [高等纯数学](/zh/alevel/a2-further-mathematics/)。
 
 ## 资料来源 {#sources}
+
+本轮于 **2026-10-23** 重新读取所列大纲与 QP／MS 原文；改编仍以 9665 为目标。
 
 范围依据 OxfordAQA International A-level Further Mathematics **9665** [大纲 Version 5.2，FP2.13，印刷 p.21／PDF p.20](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf#page=20)，以 FPP1.1 的矩阵运算为先修。本课覆盖坐标轴旋转、六个指定反射平面、放大、组合、三阶行列式与逆矩阵、体积倍率及不变点／线；特征值在线性方程组之后学习。
 

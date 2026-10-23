@@ -1,0 +1,105 @@
+[
+  {
+    "type": "visible-integrating-factor-example",
+    "width": 1365,
+    "formulas": 20
+  },
+  {
+    "type": "keyboard-scroll",
+    "slug": "first-order-differential-equations",
+    "width": 1365,
+    "focused": true,
+    "moved": 5,
+    "maximum": 5
+  },
+  {
+    "type": "visible-integrating-factor-example",
+    "width": 390,
+    "formulas": 20
+  },
+  {
+    "type": "keyboard-scroll",
+    "slug": "first-order-differential-equations",
+    "width": 390,
+    "focused": true,
+    "moved": 40,
+    "maximum": 68
+  },
+  {
+    "type": "keyboard-scroll",
+    "slug": "first-order-differential-equations",
+    "width": 390,
+    "focused": true,
+    "moved": 40,
+    "maximum": 129
+  },
+  {
+    "type": "keyboard-scroll",
+    "slug": "finite-series",
+    "width": 390,
+    "focused": true,
+    "moved": 4,
+    "maximum": 4
+  },
+  {
+    "type": "keyboard-scroll",
+    "slug": "finite-series",
+    "width": 390,
+    "focused": true,
+    "moved": 6,
+    "maximum": 6
+  },
+  {
+    "type": "keyboard-scroll",
+    "slug": "de-moivres-theorem",
+    "width": 390,
+    "focused": true,
+    "moved": 40,
+    "maximum": 78
+  },
+  {
+    "type": "keyboard-scroll",
+    "slug": "de-moivres-theorem",
+    "width": 390,
+    "focused": true,
+    "moved": 40,
+    "maximum": 148
+  },
+  {
+    "type": "keyboard-scroll",
+    "slug": "inverse-trigonometric-functions",
+    "width": 390,
+    "focused": true,
+    "moved": 34,
+    "maximum": 34
+  },
+  {
+    "type": "keyboard-scroll",
+    "slug": "inverse-trigonometric-functions",
+    "width": 390,
+    "focused": true,
+    "moved": 12,
+    "maximum": 12
+  },
+  {
+    "type": "keyboard-scroll",
+    "slug": "matrix-algebra",
+    "width": 390,
+    "focused": true,
+    "moved": 40,
+    "maximum": 147
+  },
+  {
+    "type": "keyboard-scroll",
+    "slug": "matrix-algebra",
+    "width": 390,
+    "focused": true,
+    "moved": 40,
+    "maximum": 200
+  },
+  {
+    "type": "precise-prerequisite-click",
+    "href": "http://127.0.0.1:8832/zh/alevel/as-further-mathematics/complex-numbers-and-roots/#model",
+    "actualURL": "http://127.0.0.1:8832/zh/alevel/as-further-mathematics/complex-numbers-and-roots/#model"
+  }
+]

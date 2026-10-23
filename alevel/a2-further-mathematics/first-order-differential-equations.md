@@ -48,7 +48,11 @@ Multiply the standard form by a function $\mu(x)$:
 
 $$\mu y^{\prime}+\mu P y=\mu Q.$$
 
-The product rule gives $(\mu y)^{\prime}=\mu y^{\prime}+\mu^{\prime} y$. The left side becomes this derivative if $\mu^{\prime}=P\mu$. Solving that relation gives an **integrating factor**
+The product rule gives $(\mu y)^{\prime}=\mu y^{\prime}+\mu^{\prime} y$. The left side becomes this derivative if $\mu^{\prime}=P\mu$. For $P$, choose an antiderivative $F$, so $F^{\prime}=P$. Construct $\mu=e^F$ and differentiate to check:
+
+$$\mu^{\prime}=F^{\prime}e^F=P\mu.$$
+
+Thus an **integrating factor** is
 
 $$\boxed{\mu=e^{\int P(x)\,\mathrm dx}.}$$
 
@@ -80,7 +84,11 @@ For $P=1/x$, $\int P\,\mathrm dx=\ln\lvert x\rvert $, so the formula gives $\mu=
 
 This is a complete demonstration. The unknown function and its derivative occur linearly, so an integrating factor is available. We first divide **every term** by 2: the standard form is $y^{\prime}+2y=3$, so $P=2$ and $Q=3$. Using 4 as $P$ would match the wrong equation.
 
-Choose $\mu=e^{2x}$ because its derivative is twice itself. Multiplication gives
+Choose $\mu=e^{2x}$ because its derivative is twice itself.
+
+Here $\int2\,\mathrm dx=2x$ supplies the exponent of the factor. When integrating the right side below, the chain rule gives $\frac{\mathrm d}{\mathrm dx}e^{2x}=2e^{2x}$, so its antiderivative needs a factor of $1/2$.
+
+Multiplication gives
 
 $$e^{2x}y^{\prime}+2e^{2x}y=3e^{2x}.$$
 
@@ -92,6 +100,8 @@ The matching coefficients are what make the method work. Integrate this product 
 
 $$\begin{aligned}
 (e^{2x}y)^{\prime}&=3e^{2x},\\
+\int(e^{2x}y)^{\prime}\,\mathrm dx&=3\int e^{2x}\,\mathrm dx,\\
+e^{2x}y&=3\left(\frac12e^{2x}\right)+C,\\
 e^{2x}y&=\frac32e^{2x}+C,\\
 y&=\frac32+Ce^{-2x}.
 \end{aligned}$$
@@ -124,12 +134,13 @@ Use $\int 2/x\,\mathrm dx=2\ln x$. The integrating factor is $x^2$.
 
 Since $x>0$,
 
-$$\mu=e^{2\ln x}=x^2.$$
+$$\int\frac2x\,\mathrm dx=2\int\frac1x\,\mathrm dx=2\ln x,\qquad \mu=e^{2\ln x}=x^2.$$
 
 Multiplying every term gives $x^2y^{\prime}+2xy=x^3$. The product rule gives $(x^2y)^{\prime}=x^2y^{\prime}+2xy$, since $\mu^{\prime}=2x=(2/x)\mu$. Thus
 
 $$\begin{aligned}
 (x^2y)^{\prime}&=x^3,\\
+x^2y&=\int x^3\,\mathrm dx=\frac{x^{3+1}}{3+1}+C,\\
 x^2y&=\frac{x^4}{4}+C,\\
 y&=\frac{x^2}{4}+\frac{C}{x^2}.
 \end{aligned}$$
@@ -146,11 +157,15 @@ If you multiplied the right side incorrectly, return to [step 3](#integrating-fa
 
 </section>
 
+<section class="lesson-check" markdown="1">
+
 ### Example 3: trigonometric coefficient {#example-3-trigonometric-coefficient}
 
 > **Adapted example.** On $0<x<\frac\pi2$, solve $y^{\prime}+\frac{\sec^2x}{\tan x}y=2\tan x$, given $y(\frac\pi4)=1$.
 
 This changes the right side and condition from OxfordAQA Specimen 2018 FM03, Question 5. It follows the same integrating-factor method; it is not the official question.
+
+If needed, recover [trigonometric integrals](/alevel/a2-mathematics/integration/#trigonometric-integrals) and [substitution](/alevel/a2-mathematics/integration/#substitution) before attempting this example.
 
 <details markdown="1">
 <summary>Hint</summary>
@@ -164,13 +179,16 @@ The numerator $\sec^2x$ is the derivative of $\tan x$. Then use $\tan^2x=\sec^2x
 
 On the stated interval, $\tan x>0$, so
 
-$$\int\frac{\sec^2x}{\tan x}\,\mathrm dx=\ln(\tan x),\qquad \mu=\tan x.$$
+Use $u=\tan x$, so $\mathrm du=\sec^2x\,\mathrm dx$:
 
-Multiplying the equation by $\tan x$ gives
+$$\int\frac{\sec^2x}{\tan x}\,\mathrm dx=\int\frac1u\,\mathrm du=\ln\lvert u\rvert=\ln(\tan x),\qquad \mu=\tan x.$$
+
+Multiplying the equation by $\tan x$ gives the product derivative below. To integrate its right side, use $\tan^2x=\sec^2x-1$:
 
 $$\begin{aligned}
 (y\tan x)^{\prime}&=2\tan^2x,\\
-y\tan x&=2\int(\sec^2x-1)\,\mathrm dx,\\
+y\tan x&=2\int\tan^2x\,\mathrm dx,\\
+y\tan x&=2\int\sec^2x\,\mathrm dx-2\int1\,\mathrm dx,\\
 y\tan x&=2\tan x-2x+C.
 \end{aligned}$$
 
@@ -182,13 +200,19 @@ To check the differential equation, differentiate $y\tan x$: its derivative is $
 
 </details>
 
+</section>
+
 ## Complementary Functions and Particular Integrals {#cf-and-pi}
 
 ### Split the solution into two parts {#general-cf-pi}
 
 For $y^{\prime}+Py=Q$, the associated **homogeneous equation** is $y^{\prime}+Py=0$. Its general solution is the **complementary function (CF)**:
 
-$$\boxed{y_c=Ce^{-\int P\,\mathrm dx}=\frac C\mu.}$$
+$$\begin{aligned}
+(\mu y_c)^{\prime}&=0,\\
+\mu y_c&=\int0\,\mathrm dx=C,\\
+y_c&=Ce^{-\int P\,\mathrm dx}=\frac C\mu.
+\end{aligned}$$
 
 This formula also includes the zero solution when $C=0$. Deriving it from the integrating factor avoids dividing by $y$ and accidentally losing that solution.
 
@@ -219,19 +243,13 @@ For $y^{\prime}+ay=Q(x)$ with constant $a$, substitution can find a PI quickly.
 
 When $a=0$, the equation is simply $y^{\prime}=Q$ and direct integration works. For variable $P(x)$, these trials are not a general recipe; use the integrating factor if a suitable PI is not apparent.
 
+<section class="worked-example" markdown="1">
+
 ### Example 4: polynomial particular integral {#example-4-polynomial-pi}
 
 > **Original example.** Find the general solution of $y^{\prime}+2y=4x+3$. Hence find the solution satisfying the boundary condition $y(1)=2$.
 
-<details markdown="1">
-<summary>Hint</summary>
-
-The CF is $Ce^{-2x}$. Try $y_p=Ax+B$, including the constant term.
-
-</details>
-
-<details markdown="1">
-<summary>Solution</summary>
+For the homogeneous part, $\int2\,\mathrm dx=2x$. Thus $(e^{2x}y_c)^{\prime}=0$; integration gives $e^{2x}y_c=\int0\,\mathrm dx=C$ and the CF is $Ce^{-2x}$.
 
 The homogeneous equation gives $y_c=Ce^{-2x}$. For $y_p=Ax+B$, substitution gives
 
@@ -247,7 +265,9 @@ $$\boxed{y=2x+\frac12-\frac12e^{2-2x}},\qquad x\in\mathbb R.$$
 
 Check: the CF contributes zero to $y^{\prime}+2y$, while the PI contributes $2+4x+1=4x+3$. At $x=1$, the displayed solution is $2$.
 
-</details>
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### Example 5: exponential particular integral {#example-5-exponential-pi}
 
@@ -263,6 +283,8 @@ The CF is $Ce^{3x}$. Try $y_p=Ae^x$.
 <details markdown="1">
 <summary>Solution</summary>
 
+For the homogeneous part, $\int(-3)\,\mathrm dx=-3x$. Thus $(e^{-3x}y_c)^{\prime}=0$; integration gives $e^{-3x}y_c=\int0\,\mathrm dx=C$ and the CF is $Ce^{3x}$.
+
 The homogeneous equation gives $y_c=Ce^{3x}$. Substituting $y_p=Ae^x$ gives
 
 $$Ae^x-3Ae^x=2e^x,$$
@@ -275,19 +297,15 @@ Check: $y^{\prime}-3y=(15e^{3x}-e^x)-(15e^{3x}-3e^x)=2e^x$, and $y(0)=4$.
 
 </details>
 
+</section>
+
+<section class="worked-example" markdown="1">
+
 ### Example 6: repeated exponential {#example-6-repeated-exponential}
 
 > **Original example.** Find the general solution of $y^{\prime}+2y=3e^{-2x}$. Explain why the trial $y_p=Ae^{-2x}$ fails.
 
-<details markdown="1">
-<summary>Hint</summary>
-
-The proposed trial is part of the CF. Multiply it by $x$, or use the integrating factor $e^{2x}$.
-
-</details>
-
-<details markdown="1">
-<summary>Solution</summary>
+For the homogeneous part, $\int2\,\mathrm dx=2x$. Thus $(e^{2x}y_c)^{\prime}=0$; integration gives $e^{2x}y_c=\int0\,\mathrm dx=C$ and the CF is $Ce^{-2x}$.
 
 The CF is $Ce^{-2x}$. The trial $Ae^{-2x}$ gives $y_p^{\prime}+2y_p=0$ for every $A$, so it cannot produce the nonzero right side.
 
@@ -299,9 +317,9 @@ Hence $A=3$ and
 
 $$\boxed{y=(C+3x)e^{-2x}},\qquad x\in\mathbb R.$$
 
-The integrating factor reaches the same answer directly: $(e^{2x}y)^{\prime}=3$, so $e^{2x}y=3x+C$. The extra factor $x$ repairs the repeated exponential trial in this first-order constant-coefficient case.
+The integrating factor reaches the same answer directly: $(e^{2x}y)^{\prime}=3$, so $e^{2x}y=\int3\,\mathrm dx=3\int1\,\mathrm dx=3x+C$. The extra factor $x$ repairs the repeated exponential trial in this first-order constant-coefficient case.
 
-</details>
+</section>
 
 ## Practice Questions {#practice}
 
@@ -323,7 +341,11 @@ Divide by 3. Use $\mu=e^{2x}$.
 <details markdown="1">
 <summary>Solution</summary>
 
-The standard form is $y^{\prime}+2y=4$. Then $(e^{2x}y)^{\prime}=4e^{2x}$, giving $y=2+Ce^{-2x}$. At $x=0$, $C=3$:
+The standard form is $y^{\prime}+2y=4$. From $\int2\,\mathrm dx=2x$, use $\mu=e^{2x}$, giving $(e^{2x}y)^{\prime}=4e^{2x}$. Integrate both sides:
+
+$$e^{2x}y=4\int e^{2x}\,\mathrm dx=4\left(\frac12e^{2x}\right)+C=2e^{2x}+C.$$
+
+Dividing by the factor gives $y=2+Ce^{-2x}$. At $x=0$, $C=3$:
 
 $$\boxed{y=2+3e^{-2x}},\qquad x\in\mathbb R.$$
 
@@ -349,7 +371,11 @@ Use $\mu=x$, and recognise $(xy)^{\prime}$.
 <details markdown="1">
 <summary>Solution</summary>
 
-Since $(xy)^{\prime}=2x$, integration gives $xy=x^2+C$, so $y=x+C/x$. The condition gives $5=2+C/2$, hence
+Since $\int(1/x)\,\mathrm dx=\ln x$, use $\mu=x$. Then $(xy)^{\prime}=2x$, so
+
+$$xy=2\int x\,\mathrm dx=2\frac{x^2}{2}+C=x^2+C.$$
+
+Thus $y=x+C/x$. The condition gives $5=2+C/2$, hence
 
 $$\boxed{y=x+\frac6x},\qquad x>0.$$
 
@@ -377,7 +403,11 @@ Use $\mu=e^{x^2}$; its derivative is $2xe^{x^2}$.
 <details markdown="1">
 <summary>Solution</summary>
 
-Multiplication gives $(e^{x^2}y)^{\prime}=2xe^{x^2}$. Hence $e^{x^2}y=e^{x^2}+C$ and $y=1+Ce^{-x^2}$. The condition gives $C=2$:
+Since $\int2x\,\mathrm dx=2(x^2/2)=x^2$, multiplication by $\mu=e^{x^2}$ gives $(e^{x^2}y)^{\prime}=2xe^{x^2}$. Put $u=x^2$, so $\mathrm du=2x\,\mathrm dx$:
+
+$$e^{x^2}y=\int2xe^{x^2}\,\mathrm dx=\int e^u\,\mathrm du=e^u+C=e^{x^2}+C.$$
+
+Therefore $y=1+Ce^{-x^2}$. The condition gives $C=2$:
 
 $$\boxed{y=1+2e^{-x^2}},\qquad x\in\mathbb R.$$
 
@@ -386,6 +416,8 @@ Check: $y^{\prime}=-4xe^{-x^2}$ cancels the exponential term in $2xy$, leaving $
 </details>
 
 </section>
+
+<section class="lesson-check" markdown="1">
 
 ### Question 4: polynomial PI and boundary condition {#practice-4}
 
@@ -401,6 +433,8 @@ Try $y_p=Ax^2+Bx+D$. Include the linear and constant terms.
 <details markdown="1">
 <summary>Solution</summary>
 
+For the homogeneous part, $\int1\,\mathrm dx=x$. Thus $(e^xy_c)^{\prime}=0$; integration gives $e^xy_c=\int0\,\mathrm dx=C$ and the CF is $Ce^{-x}$.
+
 The CF is $Ce^{-x}$. The trial gives
 
 $$y_p^{\prime}+y_p=Ax^2+(2A+B)x+(B+D).$$
@@ -413,7 +447,11 @@ The polynomial contributes $x^2$ to $y^{\prime}+y$, the exponential contributes 
 
 </details>
 
-### Question 5: repeated exponential PI {#practice-5}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Question 5: a general family and a condition {#practice-5}
 
 > Find the general solution of $y^{\prime}-y=4e^x$, then use $y(0)=2$.
 
@@ -427,6 +465,8 @@ The CF is $Ce^x$, so try $y_p=Axe^x$.
 <details markdown="1">
 <summary>Solution</summary>
 
+Here $\int(-1)\,\mathrm dx=-x$, and the homogeneous product integrates to $e^{-x}y_c=\int0\,\mathrm dx=C$, giving $y_c=Ce^x$.
+
 For $y_p=Axe^x$, $y_p^{\prime}-y_p=Ae^x$, giving $A=4$. Hence $y=(C+4x)e^x$. The initial condition gives $C=2$:
 
 $$\boxed{y=(2+4x)e^x},\qquad x\in\mathbb R.$$
@@ -434,6 +474,10 @@ $$\boxed{y=(2+4x)e^x},\qquad x\in\mathbb R.$$
 Differentiating gives $y^{\prime}=(6+4x)e^x$, so $y^{\prime}-y=4e^x$ and $y(0)=2$.
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### Question 6: negative interval {#practice-6}
 
@@ -453,13 +497,15 @@ Since $\int-1/x\,\mathrm dx=-\ln\lvert x\rvert $, use $\mu=1/x$ on the stated in
 
 $$\frac{y^{\prime}}x-\frac y{x^2}=1,\qquad \left(\frac yx\right)^{\prime}=1.$$
 
-Thus $y/x=x+C$ and $y=x^2+Cx$. The condition gives $2=1-C$, so
+Integrating both sides gives $y/x=\int1\,\mathrm dx=x+C$, hence $y=x^2+Cx$. The condition gives $2=1-C$, so
 
 $$\boxed{y=x^2-x},\qquad x<0.$$
 
 Check: $y^{\prime}-y/x=(2x-1)-(x-1)=x$. Although the formula is a polynomial, the original equation is undefined at $x=0$, so this solution of the original equation is stated on $x<0$.
 
 </details>
+
+</section>
 
 ## Diagnose and Retry {#diagnose-and-retry}
 
@@ -500,7 +546,7 @@ $$y^{\prime}+\left(\frac2x-1\right)y=xe^x,\qquad P=\frac2x-1,\quad Q=xe^x.$$
 
 Integrating the normalised coefficient gives
 
-$$\mu=e^{2\ln x-x}=x^2e^{-x}.$$
+$$\int\left(\frac2x-1\right)\,\mathrm dx=2\int\frac1x\,\mathrm dx-\int1\,\mathrm dx=2\ln x-x,\qquad \mu=e^{2\ln x-x}=x^2e^{-x}.$$
 
 Its logarithmic derivative is the required coefficient:
 
@@ -510,6 +556,7 @@ Multiplying every term, including the right side, gives
 
 $$\begin{aligned}
 (x^2e^{-x}y)^{\prime}&=x^3,\\
+x^2e^{-x}y&=\int x^3\,\mathrm dx=\frac{x^{3+1}}{3+1}+C,\\
 x^2e^{-x}y&=\frac{x^4}{4}+C,\\
 y&=e^x\left(\frac{x^2}{4}+\frac{C}{x^2}\right).
 \end{aligned}$$
@@ -529,6 +576,8 @@ If your coefficient was not normalised, return to [standard form](#standard-form
 </details>
 
 </section>
+
+<section class="lesson-check" markdown="1">
 
 ### Reverse the construction {#recover-equation}
 
@@ -550,6 +599,8 @@ Substitution gives $2x-C/x^2+P(x)(x^2+C/x)=Q(x)$. The coefficient of $C$ gives $
 
 </details>
 
+</section>
+
 ## Return after further study {#later-review}
 
 After attempting the [next lesson's practice](/alevel/a2-further-mathematics/second-order-differential-equations/#practice), return here with the earlier solutions covered. Note whether you can choose a method and complete the checks without help.
@@ -568,16 +619,25 @@ Compare what can be separated directly and what becomes a product derivative aft
 
 <details markdown="1"><summary>Review solution and recovery</summary>
 
-For (A), separation for a nonzero solution gives $\ln\lvert y\rvert=x^2+C$. The initial value selects
+For (A), separate a nonzero solution as $\mathrm dy/y=2x\,\mathrm dx$ and integrate:
+
+$$\int\frac1y\,\mathrm dy=2\int x\,\mathrm dx,\qquad \ln\lvert y\rvert=2\frac{x^2}{2}+C=x^2+C.$$
+
+Exponentiation gives $y=Ke^{x^2}$ with a nonzero signed constant. The initial value gives $K=2$, selecting
 
 $$y=2e^{x^2},\qquad x\in\mathbb R.$$
 
 Its derivative is $4xe^{x^2}=2xy$. The zero solution lost when dividing by the unknown function does not meet the initial value. An integrating factor is also valid here; separation is a convenient choice, not the only correct one.
 
-For (B), divide by the positive independent variable. The standard-form coefficients are $P=1/x$ and $Q=x$, so use $\mu=x$. Thus
+For (B), divide by the positive independent variable. The standard-form coefficients are $P=1/x$ and $Q=x$. Calculate the factor on this interval:
+
+$$\int\frac1x\,\mathrm dx=\ln x,\qquad \mu=e^{\ln x}=x\quad(x>0).$$
+
+Thus
 
 $$\begin{aligned}
 (xy)^{\prime}&=x^2,\\
+xy&=\int x^2\,\mathrm dx=\frac{x^{2+1}}{2+1}+C,\\
 xy&=\frac{x^3}{3}+C,\\
 y&=\frac{x^2}{3}+\frac Cx.
 \end{aligned}$$
@@ -618,6 +678,10 @@ Differentiating gives $y^{\prime}=(2x+x^{-2})/3$; substitution yields $xy^{\prim
 - Dropping the absolute value in $\ln\lvert x\rvert $ without specifying a sign interval, or allowing a solution interval to cross a singular point.
 
 **After practice:** redo any question for which you needed a hint. Show the standard form, integrating factor and product derivative, or explicitly identify the CF and PI. Finish by checking both the equation and its condition.
+
+If an exponential integral lost its coefficient, revisit [example 1](#example-1-normalise-and-solve) and [exponential integrals](/alevel/a2-mathematics/integration/#exponential-logarithmic-integrals), then retry [Q1](#practice-1). For a power-rule error, revisit [power integrals](/alevel/a2-mathematics/integration/#power-integrals), then try the [normalisation retry](#normalisation-retry). If CF and PI were confused, revisit [example 4](#example-4-polynomial-pi) before [Q4](#practice-4); for a repeated exponential, revisit [example 6](#example-6-repeated-exponential) before [Q5](#practice-5). Close the answer first and record when the same question has already been seen.
+
+After other topics, attempt the course's [mixed tasks](/alevel/a2-further-mathematics/#mixed-review) and [later review](/alevel/a2-further-mathematics/#later-review).
 
 **Learning path:** [Previous lesson: hyperbolic functions](/alevel/a2-further-mathematics/hyperbolic-functions/) · [Next lesson: second-order differential equations](/alevel/a2-further-mathematics/second-order-differential-equations/) · [Further Pure Mathematics](/alevel/a2-further-mathematics/).
 
