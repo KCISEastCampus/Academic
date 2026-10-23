@@ -24,7 +24,7 @@ Single-context layout: one `CONTEXT.md` plus `docs/adr/` at the repo root. See `
 
 以下适用于 IGCSE、AS、A2 的新课、改写与汉化。它们是项目制作要求；考试范围、工具许可、推导深度和评分要求以目标资格及考季的官方材料为准。研究依据和适用边界见 [跨学科研究记录](docs/agents/research-subject-content-guidelines-2026-10-15.md)；物理详细方案见 [物理学习设计](docs/agents/research-physics-learning-design-2026-10-15.md)。
 
-**新建课程、重组章节、改写或汉化学习页、审核课程质量前，必须先读 [课程内容长期标准](docs/agents/course-content-standard.md)。** 该标准规定目标与任务的对应、样章验收和改进记录；本文件继续规定学科正确性、来源与技术要求。交付按目标逐项说明学习证据，不能以栏目齐全、页面数量或构建通过代替课程质量验收。
+**新建课程、重组章节、改写或汉化学习页、调整内容结构与格式、审核课程质量前，必须先读 [课程内容长期标准](docs/agents/course-content-standard.md)。** 该标准规定目标与任务的对应、内容层次与实际阅读验收、样章验收和改进记录；本文件继续规定学科正确性、来源与技术要求。交付按目标逐项说明学习证据，不能以栏目齐全、页面数量或构建通过代替课程质量验收。
 
 ### 制作前与章节安排
 
