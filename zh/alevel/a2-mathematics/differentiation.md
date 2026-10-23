@@ -7,23 +7,32 @@ subject: a2-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-mathematics/differentiation/
 permalink: /zh/alevel/a2-mathematics/differentiation/
-toc_headings: h2, h3, h4
+toc_headings: h2, h3
+reading_layout: true
 study_page: true
 ---
 
 [纯数学](/zh/alevel/a2-mathematics/) · P2.6 求导与导数
 
+<div class="lesson-lead" markdown="1">
+
 选择合适的求导法则，求曲线斜率（gradient），并用它求切线（tangent）、法线（normal）和驻点（stationary point）。本页例题与练习的题干保留英文，讲解、提示与解答使用中文。
+
+</div>
 
 - **学习：**从[基本导数](#standard-derivatives)开始，再学习[乘积与商](#products-and-quotients)、[复合函数](#composite-functions)和[隐函数](#implicit-functions)。
 - **作业帮助：**选择法则前先辨认最外层运算。保留原函数的定义域；求三角函数的导数时使用弧度制。
 - **复习：**先在不看解答的情况下尝试[练习](#practice)，然后查看[快速参考](#quick-reference)。
 
+<div class="lesson-notes" markdown="1">
+
 教材：第 5 章第 5.1–5.5 节（印刷版第 58–71 页），并结合本章复习中的应用题。第 5.6–5.7 节讲参数方程及其求导，参见[参数方程课程](/zh/alevel/a2-mathematics/parametric-equations/)。
 
-**开始前：**你应当掌握多项式求导、斜率、直线方程，以及[指数与对数函数](/zh/alevel/a2-mathematics/exponential-and-logarithmic-functions/)和[三角函数与恒等式](/zh/alevel/a2-mathematics/trigonometric-functions-and-formulae/)。
+**从这里开始：**先读基本导数，再读乘积与商；例题 3 会先解释所需的链式步骤，随后在复合函数段系统练习。请先会[幂函数求导与点斜式](/zh/alevel/as-mathematics/differentiation/#l06)、[导数符号与驻点](/zh/alevel/as-mathematics/differentiation/#l07)、[自然对数](/zh/alevel/a2-mathematics/exponential-and-logarithmic-functions/#natural-logarithms)及[反三角函数的主值](/zh/alevel/a2-mathematics/trigonometric-functions-and-formulae/#inverse-trigonometric-functions)。复习时可直接做[独立混合题](#check-mixed)，用过提示请记录；学完参数方程后再回到[稍后回顾](#later-review)。
 
-本页所有例题和练习题均为自拟题，并非官方真题。建议练习时间仅供参考；题目没有官方分值。
+本页所有例题、数据情境与练习均为自拟，并非官方真题或实测数据；题目没有官方分值。提示与解答分别默认关闭。
+
+</div>
 
 ## 基本导数 {#standard-derivatives}
 
@@ -44,6 +53,8 @@ study_page: true
 
 函数 $e^x$ 的导数仍为自身。由 $y=\ln x$ 可得 $x=e^y$，于是 $\frac{dx}{dy}=e^y=x$，所以 $\frac{dy}{dx}=\frac1x$（适用于 $x>0$）。
 
+<section class="worked-example" markdown="1">
+
 ### 例题 1 — 求给定点处的斜率 {#example-1--a-gradient-at-a-given-point}
 
 **Question:** Find the gradient of $y=2e^x+\ln x-3\cos x$ at $x=1$.
@@ -55,6 +66,8 @@ $$\frac{dy}{dx}=2e^x+\frac1x+3\sin x.$$
 $$\boxed{m=2e+1+3\sin1=8.9610\ldots}.$$
 
 **检查：**该点满足定义域限制 $x>0$。余弦函数求导会带来负号，因此对 $-3\cos x$ 求导得到 $+3\sin x$。
+
+</section>
 
 ## 乘积与商 {#products-and-quotients}
 
@@ -70,6 +83,8 @@ $$\frac{dy}{dx}=\frac{v\frac{du}{dx}-u\frac{dv}{dx}}{v^2}.$$
 
 分子中的顺序不要写反：分母乘分子导数，再减去分子乘分母导数。
 
+<section class="worked-example" markdown="1">
+
 ### 例题 2 — 推导正切函数的导数 {#example-2--derive-the-tangent-derivative}
 
 **Question:** Use the quotient rule to differentiate $\tan x$.
@@ -84,15 +99,27 @@ $$\begin{aligned}
 
 此结果适用于 $\cos x\ne0$。表中的其他倒数三角函数导数也可以用商法则或链式法则（chain rule）推导。
 
+</section>
+
+<section class="worked-example" markdown="1">
+
 ### 例题 3 — 对乘积求导 {#example-3--differentiate-a-product}
 
 **Question:** Differentiate $y=x^2e^{3x}$.
 
-令 $u=x^2$、$v=e^{3x}$。它们的导数分别为 $2x$ 和 $3e^{3x}$；第二个结果用到了链式法则。
+最外层是两个变动因子的乘积，不能只对指数部分求导。先把指数部分拆为 $v=e^w$、$w=3x$。链式法则说明“对 $x$ 的变化率＝对 $w$ 的变化率 × $w$ 对 $x$ 的变化率”：
+
+$$\frac{dv}{dx}=\frac{dv}{dw}\frac{dw}{dx}=e^w\times3=3e^{3x}.$$
+
+再令 $u=x^2$，于是 $u^{\prime}=2x$。将这两个导数放进乘积法则，保留两项：
 
 $$\boxed{\frac{dy}{dx}=2xe^{3x}+3x^2e^{3x}=xe^{3x}(2+3x)}.$$
 
 **检查：**两个项都不可少。当 $x=0$ 时导数为零；这并不表示函数是常数。
+
+</section>
+
+<section class="worked-example" markdown="1">
 
 ### 例题 4 — 对商求导 {#example-4--differentiate-a-quotient}
 
@@ -106,6 +133,8 @@ $$\frac{dy}{dx}=\frac{x(\frac1x)-\ln x(1)}{x^2}=\boxed{\frac{1-\ln x}{x^2}}.$$
 
 **计算前先选择：**把分式化简或改写为乘积，可能比使用商法则更简单。例如，对 $y=\frac{x^2+1}{x}=x+\frac1x$ 求导，得到 $1-\frac1{x^2}$，其中 $x\ne0$。
 
+</section>
+
 ## 复合函数 {#composite-functions}
 
 若 $y=f(u)$ 且 $u=g(x)$，则链式法则给出
@@ -116,13 +145,15 @@ $$\frac{dy}{dx}=\frac{dy}{du}\frac{du}{dx}.$$
 
 常用形式如下：
 
-$$\frac{d}{dx}e^{g(x)}=e^{g(x)}g'(x),$$
+$$\frac{d}{dx}e^{g(x)}=e^{g(x)}g^{\prime}(x),$$
 
-$$\frac{d}{dx}\ln g(x)=\frac{g'(x)}{g(x)},\qquad g(x)>0,$$
+$$\frac{d}{dx}\ln g(x)=\frac{g^{\prime}(x)}{g(x)},\qquad g(x)>0,$$
 
-$$\frac{d}{dx}[g(x)]^n=n[g(x)]^{n-1}g'(x),$$
+$$\frac{d}{dx}[g(x)]^n=n[g(x)]^{n-1}g^{\prime}(x),$$
 
-前提是原来的幂函数和导数都有定义。三角函数也要乘以内层导数，例如 $\frac{d}{dx}\sin g(x)=\cos g(x)g'(x)$。
+前提是原来的幂函数和导数都有定义。三角函数也要乘以内层导数，例如 $\frac{d}{dx}\sin g(x)=\cos g(x)g^{\prime}(x)$。
+
+<section class="worked-example" markdown="1">
 
 ### 例题 5 — 两层求导 {#example-5--two-layers-of-differentiation}
 
@@ -144,6 +175,10 @@ $$\begin{aligned}
 
 **常见错误：**漏掉内层角度带来的因子 $2$。此外，$\cos^3(2x)$ 不等于 $\cos(6x)$。
 
+</section>
+
+<section class="worked-example" markdown="1">
+
 ### 例题 6 — 已知 x 关于 y 的表达式 {#example-6--when-x-is-given-in-terms-of-y}
 
 **Question:** Given $x=y^3+y$, find $\frac{dy}{dx}$ at $y=1$.
@@ -157,6 +192,8 @@ $$\frac{dx}{dy}=3y^2+1.$$
 $$\frac{dy}{dx}=\frac1{3y^2+1},\qquad \boxed{\left.\frac{dy}{dx}\right\vert _{y=1}=\frac14}.$$
 
 **检查：**$y=1$ 时 $x=2$，所以斜率对应点 $(2,1)$，而不是 $(1,2)$。如果 $\frac{dx}{dy}=0$，这个倒数公式不能给出有限斜率；应先考察曲线，再判断切线方向。
+
+</section>
 
 ## 切线、法线与驻点 {#tangents-normals-and-stationary-points}
 
@@ -173,19 +210,23 @@ $$y-b=m(x-a).$$
 - 若 $y^{\prime\prime}(a)>0$，则为局部极小值；若 $y^{\prime\prime}(a)<0$，则为局部极大值。
 - 若 $y^{\prime\prime}(a)=0$，二阶导数判别法不能确定。请改用其他方法。
 
+<section class="worked-example" markdown="1">
+
 ### 例题 7 — 切线、法线与驻点 {#example-7--tangent-normal-and-a-stationary-point}
 
 **Question:** For $y=xe^{-x}$, find the tangent and normal at $x=0$, then find and classify its stationary point.
 
 使用乘积法则和链式法则可得
 
-$$y'=e^{-x}(1-x),\qquad y^{\prime\prime}=e^{-x}(x-2).$$
+$$y^{\prime}=e^{-x}(1-x),\qquad y^{\prime\prime}=e^{-x}(x-2).$$
 
 当 $x=0$ 时，$y=0$ 且 $m=1$。因此切线为 $\boxed{y=x}$，法线为 $\boxed{y=-x}$。
 
-因为 $e^{-x}>0$，所以 $y'=0$ 只有在 $x=1$ 时成立。驻点为 $\boxed{(1,e^{-1})}$。又因 $y^{\prime\prime}(1)=-e^{-1}<0$，该点是局部极大值点。
+因为 $e^{-x}>0$，所以 $y^{\prime}=0$ 只有在 $x=1$ 时成立。驻点为 $\boxed{(1,e^{-1})}$。又因 $y^{\prime\prime}(1)=-e^{-1}<0$，该点是局部极大值点。
 
-**检查：**$y'>0$ 对应 $x<1$，$y'<0$ 对应 $x>1$，这确认了该点是极大值点。在此驻点处，切线为 $y=e^{-1}$，法线为 $x=1$。
+**检查：**$y^{\prime}>0$ 对应 $x<1$，$y^{\prime}<0$ 对应 $x>1$，这确认了该点是极大值点。在此驻点处，切线为 $y=e^{-1}$，法线为 $x=1$。
+
+</section>
 
 ## 隐函数（implicit function） {#implicit-functions}
 
@@ -199,6 +240,8 @@ $$\frac{d}{dx}(xy)=y+x\frac{dy}{dx}.$$
 
 对等式两边求导，把所有 $\frac{dy}{dx}$ 项移到一起，再解出导数。如果分母为零，应回到原来的求导关系检查，而不要把这个商当成有限斜率。
 
+<section class="worked-example" markdown="1">
+
 ### 例题 8 — 隐函数的切线与法线 {#example-8--an-implicit-tangent-and-normal}
 
 **Question:** For $x^2+xy+y^2=7$, find $\frac{dy}{dx}$ and the tangent and normal at $(1,2)$.
@@ -207,7 +250,9 @@ $$\frac{d}{dx}(xy)=y+x\frac{dy}{dx}.$$
 
 $$2x+y+x\frac{dy}{dx}+2y\frac{dy}{dx}=0.$$
 
-因此
+把含导数的两项合并，其他项移到右侧：
+
+$$(x+2y)\frac{dy}{dx}=-(2x+y).$$
 
 $$\boxed{\frac{dy}{dx}=-\frac{2x+y}{x+2y}},\qquad x+2y\ne0.$$
 
@@ -225,6 +270,10 @@ $$(a+2b)(x-a)-(2a+b)(y-b)=0\qquad\text{(normal)}.$$
 
 这两种形式也适用于水平线和竖直线。由于 $a^2+ab+b^2=7$，两个系数不可能同时为零。令 $a=1$、$b=2$，即可得到上面的切线和法线。
 
+</section>
+
+<section class="worked-example" markdown="1">
+
 ### 例题 9 — 推导反三角函数（inverse trigonometric function）的导数 {#example-9--derive-an-inverse-trigonometric-derivative}
 
 **Question:** Given $y=\sin^{-1}x$, show that $\frac{dy}{dx}=\frac1{\sqrt{1-x^2}}$ for $-1<x<1$.
@@ -241,7 +290,7 @@ $$\boxed{\frac{dy}{dx}=\frac1{\sqrt{1-x^2}}},\qquad -1<x<1.$$
 
 **检查：**反函数在 $x=\pm1$ 处有定义，但导数在这些点没有有限值。函数的定义域与导数的定义域可能不同。
 
-同理，基本反三角函数的导数为
+对 $y=\cos^{-1}x$，先写 $\cos y=x$，于是 $-\sin y\,y^{\prime}=1$。在主值范围内部，$0<y<\pi$ 给出 $\sin y=+\sqrt{1-x^2}$，因此导数为负。对 $y=\tan^{-1}x$，写 $\tan y=x$，得到 $\sec^2 y\,y^{\prime}=1$；由 $\sec^2 y=1+x^2>0$ 可解出导数。于是
 
 $$\frac{d}{dx}\cos^{-1}x=-\frac1{\sqrt{1-x^2}},\qquad -1<x<1,$$
 
@@ -249,11 +298,17 @@ $$\frac{d}{dx}\tan^{-1}x=\frac1{1+x^2},\qquad x\in\mathbb R.$$
 
 复合反三角函数也要使用链式法则。
 
+反三角导数在这里用作连接主值与隐式求导的推导练习；P2.6 没有把它们单列为一张必背导数清单。
+
+</section>
+
 ## 练习 {#practice}
 
 建议用时约 **35–45 分钟**。写明所用法则，保留定义域，并给出精确的斜率和直线方程。
 
-### Q1 — 基本导数与倒数三角函数 {#q1--standard-and-reciprocal-derivatives}
+<section class="lesson-check" markdown="1">
+
+### 题目 1 {#q1--standard-and-reciprocal-derivatives}
 
 Differentiate $3e^x-2\ln x+4\sin x$. Also differentiate $\sec(3x)$ and $\cot(2x)$, stating their domains.
 
@@ -277,7 +332,11 @@ $$\boxed{\frac{d}{dx}\cot(2x)=-2\cosec^2(2x)},\qquad\sin(2x)\ne0.$$
 
 </details>
 
-### Q2 — 乘积与切线 {#q2--product-and-tangent}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 题目 2 {#q2--product-and-tangent}
 
 For $y=x\ln x$, find $\frac{dy}{dx}$ and the tangent at $x=1$.
 
@@ -291,13 +350,17 @@ For $y=x\ln x$, find $\frac{dy}{dx}$ and the tangent at $x=1$.
 <details markdown="1">
 <summary>解答与检查</summary>
 
-$$\boxed{y'=\ln x+1},\qquad x>0.$$
+$$\boxed{y^{\prime}=\ln x+1},\qquad x>0.$$
 
 当 $x=1$ 时，$y=0$ 且 $m=1$，所以切线为 $\boxed{y=x-1}$。它经过 $(1,0)$，且斜率符合要求。
 
 </details>
 
-### Q3 — 商 {#q3--quotient}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 题目 3 {#q3--quotient}
 
 Differentiate $y=\frac{e^x}{x+1}$ and state the domain.
 
@@ -311,13 +374,17 @@ Differentiate $y=\frac{e^x}{x+1}$ and state the domain.
 <details markdown="1">
 <summary>解答与检查</summary>
 
-$$\boxed{y'=\frac{(x+1)e^x-e^x}{(x+1)^2}=\frac{xe^x}{(x+1)^2}},\qquad x\ne-1.$$
+$$\boxed{y^{\prime}=\frac{(x+1)e^x-e^x}{(x+1)^2}=\frac{xe^x}{(x+1)^2}},\qquad x\ne-1.$$
 
 把函数写成乘积 $e^x(x+1)^{-1}$，也会得到相同导数。
 
 </details>
 
-### Q4 — 复合函数 {#q4--composite-functions}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 题目 4 {#q4--composite-functions}
 
 Differentiate $e^{\sin x}$, $\ln(4-x^2)$ and $\sin^2(3x)$. State the logarithm's domain.
 
@@ -341,27 +408,35 @@ $$\boxed{\frac{d}{dx}\sin^2(3x)=6\sin(3x)\cos(3x)=3\sin6x}.$$
 
 </details>
 
-### Q5 — 驻点与竖直法线 {#q5--stationary-point-and-a-vertical-normal}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 题目 5 {#q5--stationary-point-and-a-vertical-normal}
 
 Find and classify the stationary point of $y=\ln x-x$, then give the normal there.
 
 <details markdown="1">
 <summary>提示</summary>
 
-使用 $x>0$，求解 $y'=0$ 并求出 $y^{\prime\prime}$。切线斜率为零时，法线是竖直的。
+使用 $x>0$，求解 $y^{\prime}=0$ 并求出 $y^{\prime\prime}$。切线斜率为零时，法线是竖直的。
 
 </details>
 
 <details markdown="1">
 <summary>解答与检查</summary>
 
-$y'=\frac1x-1=0$ 得 $x=1$，且 $y=-1$。由于 $y^{\prime\prime}=-\frac1{x^2}<0$，所以 $\boxed{(1,-1)}$ 是局部极大值点。法线为 $\boxed{x=1}$。
+$y^{\prime}=\frac1x-1=0$ 得 $x=1$，且 $y=-1$。由于 $y^{\prime\prime}=-\frac1{x^2}<0$，所以 $\boxed{(1,-1)}$ 是局部极大值点。法线为 $\boxed{x=1}$。
 
 导数在 $1$ 处由正变负，也确认了这一分类。不要把 $-1/0$ 当成有限的法线斜率。
 
 </details>
 
-### Q6 — 倒数关系求导 {#q6--reciprocal-derivative}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 题目 6 {#q6--reciprocal-derivative}
 
 For $x=y^2+2y$, find $\frac{dy}{dx}$ at $y=1$ and the tangent there.
 
@@ -381,7 +456,11 @@ $\frac{dx}{dy}=2y+2$，所以 $\frac{dy}{dx}=\frac1{2y+2}$，其中 $y\ne-1$。�
 
 </details>
 
-### Q7 — 隐式求导 {#q7--implicit-differentiation}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 题目 7 {#q7--implicit-differentiation}
 
 For $x^2+xy+y^2=3$, find the tangent and normal at $(1,1)$.
 
@@ -403,7 +482,11 @@ $$\frac{dy}{dx}=-\frac{2x+y}{x+2y}.$$
 
 </details>
 
-### Q8 — 反函数求导与链式法则 {#q8--inverse-derivative-and-the-chain-rule}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 题目 8 {#q8--inverse-derivative-and-the-chain-rule}
 
 Use implicit differentiation to derive the derivative of $y=\tan^{-1}x$. Hence differentiate $\tan^{-1}(2x)$. Also differentiate $\sin^{-1}(3x)$ and state where its derivative is finite.
 
@@ -427,21 +510,216 @@ $$\boxed{\frac{d}{dx}\sin^{-1}(3x)=\frac3{\sqrt{1-9x^2}}},\qquad -\frac13<x<\fra
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 独立连接 {#check-mixed}
+
+<!-- task:check-mixed -->
+
+**(a)** Differentiate the following function, state its domain and explain your first method choice.
+
+$$f(x)=\frac{e^{x^2}}{x}.$$
+
+**(b)** A curve has equation $x^2+2xy+3y^2=6$. At a general point $(a,b)$ on the curve, find equations of the tangent and normal that also work when the tangent is vertical. Justify that these equations determine lines.
+
+<!-- /task:check-mixed -->
+
+<details markdown="1">
+<summary>提示</summary>
+
+先辨认 (a) 的最外层运算，内层导数还需单独求出。(b) 先保留求导后的线性关系，避免急于除以可能为零的系数。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+**(a)** 原函数要求 $x\ne0$。可用商法则；分子还需链式法则，得到 $(e^{x^2})^{\prime}=2xe^{x^2}$。因此
+
+$$f^{\prime}(x)=\frac{x(2xe^{x^2})-e^{x^2}}{x^2}=\frac{e^{x^2}(2x^2-1)}{x^2}.$$
+
+用 $x^{-1}e^{x^2}$ 的乘积形式重算，得到同一结果。
+
+**(b)** 逐项求导得到 $2x+2y+2xy^{\prime}+6yy^{\prime}=0$，所以 $(a+b)+(a+3b)m=0$。由此得
+
+$$(a+b)(x-a)+(a+3b)(y-b)=0\quad\text{(tangent)},$$
+
+$$(a+3b)(x-a)-(a+b)(y-b)=0\quad\text{(normal)}.$$
+
+两式都经过 $(a,b)$，方向相互垂直。两个系数若同时为零，则 $a=b=0$，与曲线条件矛盾。当 $a+3b=0$ 时切线为 $x=a$，法线为 $y=b$；不把除零当有限斜率。
+
+</details>
+
+</section>
+
+## 修复后再试 {#repair-and-retry}
+
+先找出自己的错误，再沿对应链接回看推理。收起刚才的答案，用新题检验修复；提示后完成请如实记录。
+
+**若只留下两个导数的乘积，或漏掉内层因子：**回看[例题 3](#example-3--differentiate-a-product)的两项与[复合函数](#composite-functions)的各层。
+
+<section class="lesson-check" markdown="1">
+
+### 再试一组表达式 {#retry-rules}
+
+<!-- task:retry-rules -->
+
+Differentiate $x^2\sin(1/x)$ and $(\ln x)/x^2$. State the original domains and show how you combine the rules.
+
+<!-- /task:retry-rules -->
+
+<details markdown="1">
+<summary>提示</summary>
+
+两题都不止一个会变化的因子。第一题的内层输入是 $1/x$；第二题可以改写为乘积，也可以用商法则。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+第一题的乘积两项及内层导数给出
+
+$$\frac{d}{dx}[x^2\sin(1/x)]=2x\sin(1/x)+x^2\cos(1/x)(-x^{-2})=2x\sin(1/x)-\cos(1/x),\quad x\ne0.$$
+
+第二题写成 $x^{-2}\ln x$，所以
+
+$$\frac{d}{dx}[x^{-2}\ln x]=-2x^{-3}\ln x+x^{-2}/x=\frac{1-2\ln x}{x^3},\quad x>0.$$
+
+用商法则可重核第二个结果；不能因整理后的式子有定义就扩大原对数的定义域。
+
+</details>
+
+</section>
+
+**若把分母为零当驻点，或把二阶导数为零当结论：**回看[隐函数](#implicit-functions)的未除法关系与[驻点判别](#tangents-normals-and-stationary-points)。
+
+<section class="lesson-check" markdown="1">
+
+### 检查点处的直线 {#retry-geometry}
+
+<!-- task:retry-geometry -->
+
+**(a)** Find the tangent and normal to $x^2+y^2=9$ at $(3,0)$, explaining your reasoning.
+
+**(b)** Find and classify the stationary point of $y=x^3$ and give its normal.
+
+<!-- /task:retry-geometry -->
+
+<details markdown="1">
+<summary>提示</summary>
+
+在 (a) 中用圆的几何性质，或局部把 $x$ 看作 $y$ 的函数；不能在竖直切线处套用假设 $dy/dx$ 有限的公式。(b) 比较一阶导数符号，并检查凹凸性。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+**(a)** 在 $(3,0)$ 附近使用 $x=\sqrt{9-y^2}$，对 $y$ 求导得到
+
+$$\frac{dx}{dy}=-\frac{y}{\sqrt{9-y^2}},$$
+
+在 $y=0$ 处为零。曲线在此沿 $y$ 方向运动：切线为 $x=3$，法线为 $y=0$。半径水平，也验证了切线竖直。$-x/y$ 在此没有有限值，不能把分母零当作导数零。
+
+**(b)** $y^{\prime}=3x^2=0$ 给出 $(0,0)$，但 $y^{\prime\prime}(0)=0$ 无法分类。两侧 $y^{\prime}>0$，没有由增到减或由减到增，因此不是极值点。又因 $y^{\prime\prime}=6x$ 在 $0$ 处变号，可确认这是驻点拐点；法线为 $x=0$。
+
+</details>
+
+</section>
+
+**若反三角导数符号或范围错误：**回看[例题 9](#example-9--derive-an-inverse-trigonometric-derivative)的主值选择，区分函数定义域与有限导数区间。
+
+<section class="lesson-check" markdown="1">
+
+### 换一个输入 {#retry-inverse}
+
+<!-- task:retry-inverse -->
+
+Let $y=\cos^{-1}(2x-1)$. Derive $dy/dx$ from an implicit relation and state both the domain of $y$ and the interval where its derivative is finite.
+
+<!-- /task:retry-inverse -->
+
+<details markdown="1">
+<summary>提示</summary>
+
+写成 $\cos y=2x-1$。先根据主值判断 $\sin y$ 的符号，再用勾股恒等式。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+函数定义域满足 $-1\le2x-1\le1$，即 $0\le x\le1$。在内部 $0<y<\pi$，因此 $\sin y>0$。隐式求导得 $-\sin y\,y^{\prime}=2$，所以
+
+$$y^{\prime}=-\frac{2}{\sqrt{1-(2x-1)^2}}=-\frac1{\sqrt{x(1-x)}},\qquad 0<x<1.$$
+
+端点处函数仍有定义，但导数不有限。
+
+</details>
+
+</section>
+
+## 稍后回顾 {#later-review-section}
+
+学完参数方程后，离开本页的示范再做下面任务；比较首次作答、帮助与错误原因。
+
+<section class="lesson-check" markdown="1">
+
+### 重新选法 {#later-review}
+
+<!-- task:later-review -->
+
+**(a)** For $y=x^2e^{-x}$, find all stationary points, classify them and give their normals.
+
+**(b)** Differentiate $\ln(\sin x)$ and $\sin^{-1}(x/2)$, keeping the relevant domain restrictions.
+
+<!-- /task:later-review -->
+
+<details markdown="1">
+<summary>提示</summary>
+
+先独立辨认最外层运算。(a) 可用一阶导数符号分类；(b) 要先检查输入能否进入原函数。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+**(a)** 乘积与链式法则给出 $y^{\prime}=xe^{-x}(2-x)$。由于 $e^{-x}>0$，符号依次为负、正、负，因此 $(0,0)$ 为局部极小值，$(2,4e^{-2})$ 为局部极大值。法线分别为 $x=0$ 和 $x=2$。
+
+**(b)**
+
+$$\frac{d}{dx}\ln(\sin x)=\frac{\cos x}{\sin x}=\cot x,\qquad \sin x>0,$$
+
+$$\frac{d}{dx}\sin^{-1}(x/2)=\frac1{\sqrt{4-x^2}},\qquad -2<x<2.$$
+
+后一个函数本身的定义域为 $-2\le x\le2$。若错误重现，分别返回[法则重试](#retry-rules)、[直线重试](#retry-geometry)或[反函数重试](#retry-inverse)，之后再记录一次无帮助作答。
+
+</details>
+
+</section>
+
 ## 快速参考 {#quick-reference}
 
 | 任务 | 方法 | 检查 |
 |---|---|---|
 | 和函数或常数倍 | 逐项求导 | 常数的导数为零 |
-| 乘积 | $u v'+v u'$ | 两项都要保留 |
-| 商 | $\frac{v u'-u v'}{v^2}$ | 保持分子顺序，并对分母平方 |
+| 乘积 | $u v^{\prime}+v u^{\prime}$ | 两项都要保留 |
+| 商 | $\frac{v u^{\prime}-u v^{\prime}}{v^2}$ | 保持分子顺序，并对分母平方 |
 | 复合函数 | 外层导数乘以内层导数 | 外层求导时保持输入不变 |
 | 已知 $x$ 关于 $y$ 的表达式 | 先求 $dx/dy$，再取倒数 | $dx/dy$ 必须非零，结果才是有限值 |
 | 隐函数 | 对每一项求导，再合并 $dy/dx$ 项 | 含 $y$ 的项要用链式法则；$xy$ 要用乘积法则 |
 | 切线或法线 | 先求点和斜率 | 水平线和竖直线要分别处理 |
-| 驻点 | 解 $y'=0$ 并分类 | 给出两个坐标；$y^{\prime\prime}=0$ 时无法判定 |
+| 驻点 | 解 $y^{\prime}=0$ 并分类 | 给出两个坐标；$y^{\prime\prime}=0$ 时无法判定 |
 
 **如果答案看起来不对：**检查外层运算、内层导数、符号、弧度制、原函数定义域和点的坐标。数值差分可以帮助发现错误，但不能代替推导。
 
 **你应当能够：**选择并组合求导法则，求直线方程，判断驻点类型，并对隐函数和反函数求导。
 
 **学习路径：**[上一节：指数与对数函数](/zh/alevel/a2-mathematics/exponential-and-logarithmic-functions/) · [下一节：参数方程](/zh/alevel/a2-mathematics/parametric-equations/) · [返回纯数学主题索引](/zh/alevel/a2-mathematics/)。
+
+
+**下一步：**能独立完成混合题后，进入[参数方程](/zh/alevel/a2-mathematics/parametric-equations/)，把这里的链式关系用于两个参数变化率。来源与范围：[9660 大纲 v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf)，P2.6；过程要求参考 January 2025 MA03 [QP](https://aqamat.alevelclouds.com/25_01_QP_P2.pdf) Q3、Q11 与配套 [MS](https://aqamat.alevelclouds.com/25_01_MS_P2.pdf)。本页题目仍为自拟题。

@@ -7,23 +7,32 @@ subject: a2-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-mathematics/exponential-and-logarithmic-functions/
 permalink: /zh/alevel/a2-mathematics/exponential-and-logarithmic-functions/
-toc_headings: h2, h3, h4
+toc_headings: h2, h3
+reading_layout: true
 study_page: true
 ---
 
 [纯数学](/zh/alevel/a2-mathematics/) · P2.5 指数函数与对数函数
+{: .lesson-meta}
 
-建立增长与衰减模型，运用自然对数解方程，并描绘指数函数与对数函数的图像。
+<div class="lesson-lead" markdown="1">
 
-- **学习：**先学习[增长与衰减](#exponential-growth-and-decay)，再学习[指数函数](#the-exponential-function)和[自然对数](#natural-logarithms)。
-- **作业帮助：**计算前检查变化倍数（multiplier）、时间单位、不等号方向和定义域。
-- **复习：**先尝试[练习](#practice)，再打开解答。用[快速参考](#quick-reference)核对方法。
+固定百分比作用于当时的数量，对应每次乘以固定倍数。把这种模型连接到指数图像及其对数反函数，再用正性和原定义域判断哪些答案成立。
 
-教材：第 4 章第 4.1–4.4 节及复习题（印刷版第 50–57 页）。内容包括指数增长与衰减、指数函数、自然对数和对数函数。
+</div>
 
-**开始前：**你应当掌握指数运算法则（laws of indices）、一般底数的对数、不等式、[反函数（inverse function）](/zh/alevel/a2-mathematics/functions/)和[图像变换（transformations）](/zh/alevel/a2-mathematics/modulus-and-transformations/)。
+1. [选择增长或衰减模型](#exponential-growth-and-decay)，说明时间单位并检查阈值。
+2. 把[指数函数](#the-exponential-function)与[自然对数](#natural-logarithms)连接起来，再[解方程](#solving-equations)。
+3. [描绘对数图像并求反函数](#the-logarithmic-function)，然后做[练习](#practice)，稍后返回[回顾任务](#later-review)。
+{: .lesson-routes}
 
-本页所有例题和练习均为自拟题，并非官方真题。建议用时仅供参考；题目没有官方分值。
+<div class="lesson-notes" markdown="1">
+
+**开始前：**按需回补[指数法则](/zh/alevel/as-mathematics/algebra/#l01)、[二次式分解与不等式](/zh/alevel/as-mathematics/algebra/#l02)、[一般底数的对数与固定倍数变化](/zh/alevel/as-mathematics/exponentials-logarithms/#l17)、[反函数](/zh/alevel/a2-mathematics/functions/#inverse-functions)或[图像变换](/zh/alevel/a2-mathematics/modulus-and-transformations/)。自然对数和 $e$ 的作用在本课介绍，不要求先会求导。
+
+所有例题、任务和数据均为自拟，没有官方分值。提示与解答分别展开，并记录使用的帮助。课后可查[来源与范围](#lesson-sources)。
+
+</div>
 
 ## 指数增长与衰减（exponential growth and decay） {#exponential-growth-and-decay}
 
@@ -39,7 +48,11 @@ $$N=Aq^n.$$
 
 若已知相隔 $m$ 个时间间隔的两个数量，可用 $q^m=\frac{N_m}{N_0}$ 求变化倍数。时间单位必须一致：若倍数按月计算，时间也要用月表示。
 
+这里 $\ln$ 表示以 $e$（约为 $2.71828$）为底的对数，遵循 AS 先修中的一般对数法则；[自然对数](#natural-logarithms)一节再解释它的反函数关系。
+
 求数量达到某个阈值（threshold）的时间时，先取对数，再解不等式。衰减时 $\ln q<0$，所以除以 $\ln q$ 时必须**改变不等号方向**。若题目要求完整的时间间隔数，应找出满足原严格不等式的第一个整数，不能直接四舍五入。
+
+<section class="worked-example" markdown="1">
 
 ### 例题 1 — 增长与首次超过阈值的整年 {#example-1--growth-and-the-first-whole-year}
 
@@ -54,6 +67,10 @@ $$n>\frac{\ln1.5}{\ln1.06}=6.9585\ldots.$$
 首次超过阈值的整年为 $\boxed{n=7}$。
 
 **检查：**$N_6=2837.04\ldots<3000$，而 $N_7=3007.26\ldots>3000$。这两个相邻年份的数值都符合严格不等式的要求，确认了答案。
+
+</section>
+
+<section class="worked-example" markdown="1">
 
 ### 例题 2 — 衰减与负的对数值 {#example-2--decay-and-a-negative-logarithm}
 
@@ -70,6 +87,38 @@ $$n>\frac{\ln0.4}{\ln0.85}=5.6381\ldots.$$
 因此 $\boxed{n=6}$。代入检查，得到 $N_5=2218.53\ldots>2000$ 和 $N_6=1885.75\ldots<2000$。
 
 **常见错误：**把 $0.15$ 当作变化倍数。减少 $15\%$ 后，剩余的是当时数量的 $85\%$。
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 暂停，补完一步 {#check-threshold}
+
+<!-- task:check-threshold -->
+
+A model is $N_n=500(0.8)^n$. From $n\ln0.8<\ln0.4$, complete the inequality for $n$ and find the first whole $n$ for which $N_n<200$. Check the neighbouring integers.
+
+<!-- /task:check-threshold -->
+
+<details markdown="1">
+<summary>提示</summary>
+
+先判断除数符号；严格阈值题不能四舍五入到最近的整数。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+因为 $\ln0.8<0$，
+
+$$n>\frac{\ln0.4}{\ln0.8}=4.1062\ldots.$$
+
+首次满足的整数为 $n=5$。$n=4$ 时数量为 $204.8$，$n=5$ 时为 $163.84$，同时检查了不等号方向和首个满足条件的整数。
+
+</details>
+
+</section>
 
 ### 检查模型是否合理 {#check-whether-the-model-is-reasonable}
 
@@ -92,6 +141,8 @@ $$e=1+\frac1{1!}+\frac1{2!}+\frac1{3!}+\cdots.$$
 
 底数满足 $a>0$、$a\ne1$ 时，函数 $a^x$ 是指数函数。以 $e$ 为底的形式在[求导](/zh/alevel/a2-mathematics/differentiation/)中尤其有用。
 
+<section class="worked-example" markdown="1">
+
 ### 例题 3 — 描绘变换后的指数函数图像 {#example-3--sketch-a-transformed-exponential-curve}
 
 **Question:** Sketch $y=2-e^{-x}$. State its domain, range, intercepts and asymptote.
@@ -105,6 +156,8 @@ $$e=1+\frac1{1!}+\frac1{2!}+\frac1{3!}+\cdots.$$
 $$e^{-x}=2\quad\Rightarrow\quad\boxed{x=-\ln2}.$$
 
 **检查：**随着 $x$ 增大，$e^{-x}$ 趋近于零，所以图像从下方趋近 $2$，但不会达到渐近线。
+
+</section>
 
 ## 自然对数（natural logarithm） {#natural-logarithms}
 
@@ -128,6 +181,8 @@ $$\ln\left(\frac ab\right)=\ln a-\ln b,\qquad\ln(a^k)=k\ln a.$$
 
 不存在 $\ln(a+b)=\ln a+\ln b$ 这样的法则。
 
+<section class="worked-example" markdown="1">
+
 ### 例题 4 — 合并对数并保留定义域 {#example-4--combine-logarithms-and-retain-the-domain}
 
 **Question:** Express $2\ln(x-1)-\ln(x+2)$ as a single logarithm and state its domain.
@@ -138,12 +193,16 @@ $$\boxed{2\ln(x-1)-\ln(x+2)=\ln\left(\frac{(x-1)^2}{x+2}\right)},\qquad x>1.$$
 
 **检查：**当 $x=2$ 时，两种形式都得到 $-\ln4$。虽然合并后的分式在 $x=0$ 时为正，但原来的 $\ln(x-1)$ 在该处无定义。因此不能扩大定义域。
 
+</section>
+
 ## 解方程 {#solving-equations}
 
 1. 写出对数的定义域限制。
 2. 整理方程，将指数式或对数式单独放在等式一边。
 3. 使用对数法则、两边取指数，或令 $u=e^x$，将方程化为二次方程。
 4. 把候选解代回原方程检查。换元 $u=e^x$ 时，必须保留 $u>0$ 的条件。
+
+<section class="worked-example" markdown="1">
 
 ### 例题 5 — 舍去不符合定义域的解 {#example-5--reject-an-invalid-logarithmic-root}
 
@@ -156,6 +215,10 @@ $$\ln\big((x-1)(x+1)\big)=\ln8\quad\Rightarrow\quad x^2-1=8.$$
 于是 $x=3$ 或 $-3$。只有 $\boxed{x=3}$ 属于原定义域。
 
 **检查：**代入 $3$，左边得到 $\ln2+\ln4=\ln8$。代入 $-3$ 时，原式两个真数都为负，所以它不是实数范围内的解。
+
+</section>
+
+<section class="worked-example" markdown="1">
 
 ### 例题 6 — 以指数式为未知量的二次方程 {#example-6--a-quadratic-in-an-exponential}
 
@@ -171,6 +234,8 @@ $$u^2-3u-4=0\quad\Rightarrow\quad(u-4)(u+1)=0.$$
 
 例如，方程 $e^{3x-1}=5$ 两边取对数，得到 $3x-1=\ln5$，所以 $x=\frac{1+\ln5}{3}$。
 
+</section>
+
 ## 对数函数（logarithmic function） {#the-logarithmic-function}
 
 函数 $y=\ln x$ 是 $y=e^x$ 的反函数。它的图像由指数函数图像关于 $y=x$ 翻折得到。
@@ -181,6 +246,8 @@ $$u^2-3u-4=0\quad\Rightarrow\quad(u-4)(u+1)=0.$$
 - 当 $x$ 从正数一侧趋近于零时，$\ln x$ 不断减小，没有下界。
 
 ![指数函数与自然对数函数的图像关于虚线 y=x 对称，并标出点 (0,1) 和 (1,0)。](/assets/img/exponential-logarithm-inverses.svg)
+
+<section class="worked-example" markdown="1">
 
 ### 例题 7 — 对数函数图像的定义域与渐近线 {#example-7--domain-and-asymptote-of-a-logarithmic-curve}
 
@@ -193,6 +260,10 @@ $$u^2-3u-4=0\quad\Rightarrow\quad(u-4)(u+1)=0.$$
 函数递增。将 $y=\ln x$ 的图像作单向伸缩，伸缩因子为 $\frac12$，方向平行于 $x$ 轴；再平移 $2$ 个单位，方向为 $x$ 轴正方向。
 
 **检查：**$x=3$ 时，$y=\ln2$。当 $x$ 从右侧趋近 $2$ 时，真数从正数一侧趋近于零，因此 $y$ 不断减小，没有下界。
+
+</section>
+
+<section class="worked-example" markdown="1">
 
 ### 例题 8 — 求反函数及其定义域 {#example-8--find-an-inverse-and-its-domain}
 
@@ -212,6 +283,8 @@ $$\boxed{f^{-1}(x)=\frac12\ln(3-x)},\qquad x<3.$$
 
 **检查：**$f(0)=2$，因此 $f^{-1}(2)=0$。原函数的水平渐近线 $y=3$ 对应反函数的竖直渐近线 $x=3$。
 
+</section>
+
 ## 两种模型形式的联系 {#connecting-the-models}
 
 因为 $q=e^{\ln q}$，表达式 $Aq^t$ 也可写成 $Ae^{kt}$，其中 $k=\ln q$。这里 $q$ 表示 $t$ 每增加一个单位时的变化倍数。每单位增加 $8\%$ 时，$q=1.08$，$k=\ln1.08$，不能取 $k=0.08$。
@@ -224,11 +297,17 @@ $$\boxed{f^{-1}(x)=\frac12\ln(3-x)},\qquad x<3.$$
 
 建议用时约 **30–40 分钟**。中间计算保留计算器的完整精度，最后再取近似值。求首次超过或低于阈值的整年时，也要检查前一年。
 
-### Q1 — 增长与模型比较 {#q1--growth-and-comparing-models}
+<section class="lesson-check" markdown="1">
+
+### 题目 1 {#q1--growth-and-comparing-models}
+
+<!-- task:q1--growth-and-comparing-models -->
 
 A model has $N=500(1.08)^n$. Find the first whole year when $N>1000$.
 
 Two further models are $A_n=1200(1.04)^n$ and $B_n=1000(1.07)^n$. Find the first whole year when $B_n>A_n$.
+
+<!-- /task:q1--growth-and-comparing-models -->
 
 <details markdown="1">
 <summary>提示</summary>
@@ -250,9 +329,17 @@ $$\left(\frac{1.07}{1.04}\right)^n>1.2\quad\Rightarrow\quad n>\frac{\ln1.2}{\ln(
 
 </details>
 
-### Q2 — 衰减与模型假设 {#q2--decay-and-model-assumptions}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 题目 2 {#q2--decay-and-model-assumptions}
+
+<!-- task:q2--decay-and-model-assumptions -->
 
 A quantity starts at $800$ and decreases by $10\%$ each year. Find the first whole year when it is below $200$. State one assumption and one reason the model may fail later.
+
+<!-- /task:q2--decay-and-model-assumptions -->
 
 <details markdown="1">
 <summary>提示</summary>
@@ -272,9 +359,17 @@ $$n>\frac{\ln0.25}{\ln0.9}=13.1576\ldots\quad\Rightarrow\quad\boxed{n=14}.$$
 
 </details>
 
-### Q3 — 两个变换后的图像 {#q3--two-transformed-graphs}
+</section>
 
-State the domain, range, intercepts and asymptote for (a) $y=1-e^{2x}$ and (b) $y=\ln(3-x)$. Describe whether each curve increases or decreases.
+<section class="lesson-check" markdown="1">
+
+### 题目 3 {#q3--two-transformed-graphs}
+
+<!-- task:q3--two-transformed-graphs -->
+
+Sketch (a) $y=1-e^{2x}$ and (b) $y=\ln(3-x)$, labelling intercepts and asymptotes. State the domain and range and describe whether each curve increases or decreases.
+
+<!-- /task:q3--two-transformed-graphs -->
 
 <details markdown="1">
 <summary>提示</summary>
@@ -294,9 +389,17 @@ State the domain, range, intercepts and asymptote for (a) $y=1-e^{2x}$ and (b) $
 
 </details>
 
-### Q4 — 对数法则与定义域 {#q4--logarithm-laws-and-domains}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 题目 4 {#q4--logarithm-laws-and-domains}
+
+<!-- task:q4--logarithm-laws-and-domains -->
 
 Express $3\ln(x+1)-\frac12\ln x$ as a single logarithm. State its domain. Also express $\ln(x^2)$ using a logarithm of $\lvert x\rvert$, and explain why $2\ln x$ is insufficient for all its real inputs.
+
+<!-- /task:q4--logarithm-laws-and-domains -->
 
 <details markdown="1">
 <summary>提示</summary>
@@ -316,9 +419,17 @@ $$\boxed{\ln\left(\frac{(x+1)^3}{\sqrt x}\right)},\qquad \boxed{x>0}.$$
 
 </details>
 
-### Q5 — 检查原式中的对数 {#q5--check-the-original-logarithms}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 题目 5 {#q5--check-the-original-logarithms}
+
+<!-- task:q5--check-the-original-logarithms -->
 
 Solve $\ln(x-2)+\ln x=\ln3$. Also show that $2\ln(x+1)-\ln x=0$ has no real solution.
+
+<!-- /task:q5--check-the-original-logarithms -->
 
 <details markdown="1">
 <summary>提示</summary>
@@ -336,9 +447,17 @@ Solve $\ln(x-2)+\ln x=\ln3$. Also show that $2\ln(x+1)-\ln x=0$ has no real solu
 
 </details>
 
-### Q6 — 指数方程 {#q6--exponential-equations}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 题目 6 {#q6--exponential-equations}
+
+<!-- task:q6--exponential-equations -->
 
 Solve (a) $e^{2x}-5e^x+6=0$ and (b) $e^{2x-1}=7$ exactly.
+
+<!-- /task:q6--exponential-equations -->
 
 <details markdown="1">
 <summary>提示</summary>
@@ -356,9 +475,17 @@ Solve (a) $e^{2x}-5e^x+6=0$ and (b) $e^{2x-1}=7$ exactly.
 
 </details>
 
-### Q7 — 反函数与复合函数（composite function） {#q7--inverse-and-a-composite-function}
+</section>
 
-Let $f(x)=\ln(2x-1)$ for $x>\frac12$ and $g(x)=e^x+1$ for real $x$. Find $f^{-1}(x)$, its domain and range. Find $f(g(x))$ and solve $f(g(x))=\ln5$ exactly.
+<section class="lesson-check" markdown="1">
+
+### 题目 7 {#q7--inverse-and-a-composite-function}
+
+<!-- task:q7--inverse-and-a-composite-function -->
+
+Let $f(x)=\ln(2x-1)$ for $x>\frac12$ and $g(x)=e^x+1$ for real $x$. Find $f^{-1}(x)$, its domain and range. Find $f(g(x))$ and solve $f(g(x))=\ln5$ exactly. Describe how the graphs of $f$ and $f^{-1}$ are related.
+
+<!-- /task:q7--inverse-and-a-composite-function -->
 
 <details markdown="1">
 <summary>提示</summary>
@@ -380,7 +507,234 @@ $$\boxed{f(g(x))=\ln(2e^x+1)}$$
 
 由 $2e^x+1=5$ 得 $e^x=2$，所以 $\boxed{x=\ln2}$。代入得到 $\ln(2(2)+1)=\ln5$。
 
+两个图像关于 $y=x$ 对称：例如，$f$ 上的 $(1,0)$ 对应反函数上的 $(0,1)$。
+
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 题目 8 {#q8}
+
+<!-- task:q8 -->
+
+The following data are constructed, not measured.
+
+| Time $t$ (months) | Quantity $N$ |
+| --- | --- |
+| 0 | 240 |
+| 2 | 135 |
+| 4 | 75.9375 |
+
+Suggest a model $N(t)$ supported by these values and justify your choice. Find the first whole month with $N<100$. Write the same model as $Ae^{kt}$ and state one limitation of extending it beyond the data.
+
+<!-- /task:q8 -->
+
+<details markdown="1">
+<summary>提示</summary>
+
+比较相等的两个月间隔；两个月的变化倍数不能直接当作每月倍数。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+两个两月比值都为 $0.5625$，支持固定倍数模型。正的每月倍数为 $q=\sqrt{0.5625}=0.75$，所以 $N(t)=240(0.75)^t$。
+
+$$t>\frac{\ln(100/240)}{\ln0.75}=3.04318\ldots.$$
+
+首次满足的整月为 $4$：第 $3$、$4$ 月分别为 $101.25$ 和 $75.9375$。另一形式中，$A=240$，$k=\ln0.75$，单位为每月。拟合三个值不能证明以后倍数保持不变，条件改变可能使预测失效。非整数时刻还需要合理的连续解释。
+
+</details>
+
+</section>
+
+## 修复后再尝试 {#repair}
+
+找到最早判断失效的位置，回看对应讲解，收起答案后做新题。只得到正确数值，却缺定义域或阈值检查，仍不是完整证据。
+
+| 作答中的错误 | 回补位置 | 新尝试 |
+| --- | --- | --- |
+| 题目 1–2、8 的倍数、时间单位、不等号或首个整时刻错误 | [增长/衰减](#exponential-growth-and-decay)、[负的对数](#example-2--decay-and-a-negative-logarithm)、[模型转换](#connecting-the-models) | [重试 A](#retry-model) |
+| 题目 4 合并对数后扩大定义域 | [原真数](#example-4--combine-logarithms-and-retain-the-domain) | [重试 B](#retry-laws) |
+| 题目 5–6 接受不合法候选值，或把指数看成系数 | [对数根](#example-5--reject-an-invalid-logarithmic-root)、[指数换元](#example-6--a-quadratic-in-an-exponential) | [重试 C](#retry-equations) |
+| 题目 3、7 的渐近线侧别、反函数定义域或复合错误 | [对数图像](#example-7--domain-and-asymptote-of-a-logarithmic-curve)、[反函数](#example-8--find-an-inverse-and-its-domain)、[题目 7](#q7--inverse-and-a-composite-function) | [重试 D](#retry-graphs) |
+
+<section class="lesson-check" markdown="1">
+
+### 重试 A {#retry-model}
+
+<!-- task:retry-model -->
+
+A constant-factor model has $N_0=100$ and $N_2=81$, with time in years. Find the positive annual factor, an expression for $N_n$ and the first whole year with $N_n<81$. State the corresponding $k$ if $N=100e^{kt}$.
+
+<!-- /task:retry-model -->
+
+<details markdown="1">
+<summary>提示</summary>
+
+两年对应每年倍数的两次作用；等于阈值不属于低于。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+$q^2=0.81$ 给出 $q=0.9$，所以 $N_n=100(0.9)^n$。严格不等式要求 $n>2$，因此首个整年为 $3$；$N_2=81$，$N_3=72.9$。这里 $k=\ln0.9$，单位为每年，不能用 $-0.1$ 代替。
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 重试 B {#retry-laws}
+
+<!-- task:retry-laws -->
+
+Express $2\ln(x-2)-\ln x$ as one logarithm, retaining the original domain. Is $x=1$ allowed? Explain.
+
+<!-- /task:retry-laws -->
+
+<details markdown="1">
+<summary>提示</summary>
+
+使用幂和商的对数法则前，先检查两个原真数。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+原式要求 $x-2>0$ 和 $x>0$，所以 $x>2$。
+
+$$2\ln(x-2)-\ln x=\ln\left(\frac{(x-2)^2}{x}\right),\qquad x>2.$$
+
+$x=1$ 时合并后的真数虽为正，原来的第一个对数却无定义，因此不是允许的输入。
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 重试 C {#retry-equations}
+
+<!-- task:retry-equations -->
+
+Solve (a) $\ln(x-3)+\ln(x+1)=\ln5$ and (b) $e^{2x}+e^x-6=0$ exactly. Explain every rejected candidate.
+
+<!-- /task:retry-equations -->
+
+<details markdown="1">
+<summary>提示</summary>
+
+(a) 保留原对数定义域；(b) 保留换元后变量的正性。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+(a) 定义域为 $x>3$。由 $(x-3)(x+1)=5$ 得 $(x-4)(x+2)=0$。保留 $x=4$，舍去 $-2$；保留解对应的真数为 $1$ 和 $5$。
+
+(b) 令 $u=e^x>0$。由 $(u+3)(u-2)=0$，舍去 $u=-3$，保留 $u=2$，所以 $x=\ln2$。回代检查为 $4+2-6=0$。
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 重试 D {#retry-graphs}
+
+<!-- task:retry-graphs -->
+
+Let $f(x)=2+e^{-x}$ for real $x$. Sketch $f$, then find and sketch $f^{-1}$. State both domains, ranges, asymptotes and the intercepts that show their reflection relationship. If $g(x)=\ln x$, find $f(g(x))$ and its domain.
+
+<!-- /task:retry-graphs -->
+
+<details markdown="1">
+<summary>提示</summary>
+
+先利用 $e^{-x}>0$；整理关系再交换变量，反函数的输入必须属于原值域。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+$f$ 递减，经过 $(0,3)$；随 $x$ 增大从上方趋近 $y=2$，没有 $x$ 轴截距。定义域为全体实数，值域为 $y>2$。
+
+$$f^{-1}(x)=-\ln(x-2),\qquad x>2.$$
+
+反函数的值域为全体实数，递减且经过 $(3,0)$，竖直渐近线为 $x=2$，从右侧趋近。接近此线时输出趋向正无穷；输入 $x$ 无界增大时输出趋向负无穷。它没有 $y$ 轴截距。两个图像关于 $y=x$ 对称，截距与渐近线相互交换。复合函数为 $f(g(x))=2+e^{-\ln x}=2+1/x$，必须保留 $g$ 的条件 $x>0$。化简后的分式在负 $x$ 处有定义，但原复合函数没有。
+
+</details>
+
+</section>
+
+## 稍后返回 {#review}
+
+学完另一主题后，收起所有帮助返回这里。根据关系本身选方法，记录检查过的定义域或边界。
+
+<section class="lesson-check" markdown="1">
+
+### 回顾任务 A {#later-review}
+
+<!-- task:later-review -->
+
+Find the real intersection of $y=\ln(5-e^x)$ and $y=x$. State the domain of the logarithmic expression and explain why there is exactly one intersection.
+
+<!-- /task:later-review -->
+
+<details markdown="1">
+<summary>提示</summary>
+
+先确定对数存在的范围，再用反函数关系。无需求导也可用单调性说明唯一性。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+定义域为 $x<\ln5$。对方程两边取指数得 $5-e^x=e^x$，所以交点为
+
+$$(x,y)=\big(\ln(5/2),\ln(5/2)\big).$$
+
+该值属于定义域，真数为 $5/2>0$。在定义域内，对数曲线递减，直线递增，所以至多相交一次；求出的点又保证交点存在。也可由 $e^x$ 的单射性和 $2e^x=5$ 说明唯一性。若漏正性，回看[原真数](#natural-logarithms)。
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 回顾任务 B {#later-model}
+
+<!-- task:later-model -->
+
+A continuous model starts at $640$ units and halves every $3$ hours. Find when it first reaches $80$ units and the first whole hour when it is strictly below $80$. State the model and check the boundary.
+
+<!-- /task:later-model -->
+
+<details markdown="1">
+<summary>提示</summary>
+
+三小时半衰期给出的是三小时的倍数；区分等于与严格小于。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+$N(t)=640(1/2)^{t/3}$。令数量等于 $80$ 得 $(1/2)^{t/3}=1/8$，所以 $t=9$ 小时。模型严格递减，因此恰在 $t>9$ 时低于 $80$。首个整小时为 $10$；第 $9$ 小时仍恰为 $80$，第 $10$ 小时约为 $63.50$。时间单位有误时回看[模型倍数](#exponential-growth-and-decay)；边界等号有误时做[重试 A](#retry-model)。
+
+</details>
+
+</section>
 
 ## 快速参考 {#quick-reference}
 
@@ -400,3 +754,14 @@ $$\boxed{f(g(x))=\ln(2e^x+1)}$$
 **你应当能够：**建立变化倍数不变的模型，求达到阈值的时间，在正确的定义域内使用对数法则，并描绘或求出指数函数与对数函数的反函数。
 
 **学习路径：**[上一节：三角函数与公式](/zh/alevel/a2-mathematics/trigonometric-functions-and-formulae/) · [下一节：求导](/zh/alevel/a2-mathematics/differentiation/) · [返回纯数学主题目录](/zh/alevel/a2-mathematics/)。
+
+## 下一步 {#next-step}
+
+能够独立选择模型、说明局限并在原定义域内求解后，继续学习[求导](/zh/alevel/a2-mathematics/differentiation/)，并保留图像与正性的联系。检查失败时，先做[对应恢复任务](#repair)，隔一段时间后再做[两个回顾任务](#review)。
+
+<details id="lesson-sources" markdown="1">
+<summary>来源与范围</summary>
+
+范围：OxfordAQA 9660 MA03 P2.5，连接 P2.1 的反函数、复合与图像，[大纲 v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf)印刷 pp21、23。制作时实读 January 2025 MA03 Q10(b)(i) 的 [QP pp18–19](https://aqamat.alevelclouds.com/25_01_QP_P2.pdf) 与 [MS p15](https://aqamat.alevelclouds.com/25_01_MS_P2.pdf)，核对建立指数二次方程及明确舍去负的指数值；这不代表每个模型或对数任务都由该题核验，本页题目为独立核算的自拟题。原教材定位：第 4 章第 4.1–4.4 节及复习、印刷 pp50–57；本轮未重查原书。微分方程推导在后续链接页。
+
+</details>

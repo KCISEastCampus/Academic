@@ -5,11 +5,13 @@ mathjax: true
 grade: a2
 subject: a2-mathematics
 permalink: /alevel/a2-mathematics/algebraic-fractions-and-division/
-toc_headings: h2, h3, h4
+toc_headings: h2, h3
+reading_layout: true
 study_page: true
 ---
 
 [Pure Mathematics](/alevel/a2-mathematics/) · P2.1 Algebra and Functions
+{: .lesson-meta}
 
 Learn to simplify algebraic fractions, use the four operations and express an improper fraction as a polynomial plus a proper fraction. Keep the restrictions from the original expression.
 
@@ -18,8 +20,13 @@ Textbook: Chapter 1, Sections 1.6–1.7 (pp. 13–16). The four operations are i
 - **Learning:** start with [simplification](#simplification), then work through the examples.
 - **Homework help:** use [operations with fractions](#operations-with-fractions) or [algebraic division](#algebraic-division).
 - **Revision:** try the [practice questions](#practice) before opening the solutions.
+{: .lesson-routes}
 
-**Before you start:** you should know how to factorise quadratics, expand brackets and collect like terms. Review [domains](/alevel/a2-mathematics/functions/#domain-and-range) if needed.
+<div class="lesson-notes" markdown="1">
+
+**Before you start:** expand and collect terms, factorise quadratics ([AS Algebra L02](/alevel/as-mathematics/algebra/#l02)) and substitute into polynomials ([L03](/alevel/as-mathematics/algebra/#l03)). The parameter question below shows how to eliminate an unknown from two linear equations. Recover [domains](/alevel/a2-mathematics/functions/#domain-and-range), then ask: which inputs remain unavailable after a rewrite? Begin with restrictions, then study division and remainders. Use [independent practice](#practice), [new retries](#repair-and-retry) and [later review](#later-review) when revising.
+
+</div>
 
 ## Simplification
 
@@ -42,6 +49,8 @@ $$\frac{x(x+2)}{x(x+5)}=\frac{x+2}{x+5},\qquad x\ne0,-5,$$
 
 but $\frac{x+2}{x+5}$ cannot be simplified by cancelling the two occurrences of $x$.
 
+<section class="worked-example" markdown="1">
+
 ### Example 1 — A cancelled factor still gives a restriction
 
 **Question:** Simplify $\displaystyle\frac{x^2-9}{x^2+x-6}$ and state its domain.
@@ -57,6 +66,8 @@ $$\boxed{\frac{x^2-9}{x^2+x-6}=\frac{x-3}{x-2},\qquad x\ne-3,2}.$$
 The domain is all real $x$ except $-3$ and $2$.
 
 **Check:** At $x=0$, both expressions give $\frac32$. At $x=-3$, the simplified formula alone would give $\frac65$, but the original fraction is undefined. The restriction must remain.
+
+</section>
 
 ### Fractions within a fraction
 
@@ -80,6 +91,8 @@ Use the same rules as for numerical fractions. The letters below represent expre
 
 The product $bd$ is a common denominator. If $b$ and $d$ share a factor, you can use a smaller common denominator.
 
+<section class="worked-example" markdown="1">
+
 ### Example 2 — Subtract the whole numerator
 
 **Question:** Express $\displaystyle\frac{2}{x-1}-\frac{x}{x+2}$ as a single fraction.
@@ -102,6 +115,10 @@ The numerator factorises as $-(x-4)(x+1)$, so no factor cancels with the denomin
 
 **Common mistake:** writing $-x(x-1)=-x^2-x$. The correct expansion is $-x^2+x$.
 
+</section>
+
+<section class="worked-example" markdown="1">
+
 ### Example 3 — Division adds a restriction
 
 **Question:** Simplify $\displaystyle\frac{x^2-9}{x^2-1}\div\frac{x-3}{x+1}$ and state all restrictions.
@@ -120,6 +137,8 @@ $$\boxed{\frac{x+3}{x-1},\qquad x\ne-1,1,3}.$$
 **Check:** At $x=0$, the original expression is $9\div(-3)=-3$, which agrees with the answer.
 
 **Common mistake:** keeping only $x\ne1$ because it is the only restriction visible in the final denominator. At $x=3$, the original expression would require division by zero.
+
+</section>
 
 ## Algebraic Division
 
@@ -142,6 +161,8 @@ $$\frac{F(x)}{G(x)}=Q(x)+\frac{R(x)}{G(x)}.$$
 
 If the remainder is non-zero, its degree must be less than the degree of $G$. A zero remainder means the division is exact.
 
+<section class="worked-example" markdown="1">
+
 ### Example 4 — Rearrange a simple numerator
 
 **Question:** Express $\displaystyle\frac{3x+5}{x-2}$ as a constant plus a proper fraction.
@@ -155,6 +176,16 @@ Therefore,
 $$\boxed{\frac{3x+5}{x-2}=3+\frac{11}{x-2},\qquad x\ne2}.$$
 
 **Check:** Multiply the answer by $x-2$: $3(x-2)+11=3x+5$.
+
+</section>
+
+**Why does substitution give the remainder?** For a linear divisor $ax+b$, where $a\ne0$, the remainder has degree below $1$, so it is a constant $R$:
+
+$$F(x)\equiv(ax+b)Q(x)+R.$$
+
+Set $x=-b/a$: the factor multiplying $Q(x)$ vanishes, leaving $R=F(-b/a)$. Substitute into the polynomial identity, not the original fraction. With two unknown coefficients and two remainder conditions, substitute the roots of the two divisors to obtain two equations, then solve them.
+
+<section class="worked-example" markdown="1">
 
 ### Example 5 — Remainder theorem and comparison of coefficients
 
@@ -205,6 +236,8 @@ Stop because the constant remainder has lower degree than the linear divisor. Th
 
 **A different linear divisor:** For $kx-b$ with $k\ne0$, the constant remainder is $F(\frac bk)$. The quotient coefficients must still account for the leading coefficient $k$.
 
+</section>
+
 ### Factor theorem
 
 The **factor theorem** says that $ax+b$ is a factor of the polynomial $F(x)$ if and only if $F(-\frac ba)=0$, where $a\ne0$. This is the remainder theorem with a zero remainder.
@@ -220,6 +253,8 @@ $$\begin{aligned}F(x)&=(2x+1)(x^2-4)\\&=(2x+1)(x-2)(x+2).\end{aligned}$$
 Expanding checks the factorisation.
 
 **Common mistake:** substituting $-b$ instead of $-\frac ba$ for a divisor $ax+b$.
+
+<section class="worked-example" markdown="1">
 
 ### Example 6 — Divide before using partial fractions
 
@@ -247,11 +282,15 @@ $$\begin{aligned}&(x-1)(x+2)+2(x+2)+3(x-1)\\&\qquad=x^2+6x-1.\end{aligned}$$
 
 **Common mistake:** giving only the two partial fractions and losing the quotient $1$.
 
+</section>
+
 ## Practice
 
 Show your factorisation or division steps. State all restrictions, then check your result before opening the solution.
 
-### Question 1 — Keep the original domain
+<section class="lesson-check" markdown="1">
+
+### Question 1 {#question-1--keep-the-original-domain}
 
 Simplify $\displaystyle\frac{x^2-4}{x^2-5x+6}$ and state its domain.
 
@@ -273,7 +312,11 @@ The domain is all real $x$ except $2$ and $3$.
 
 </details>
 
-### Question 2 — A shared denominator factor
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Question 2 {#question-2--a-shared-denominator-factor}
 
 Express $\displaystyle\frac1{x-2}-\frac3{(x-2)(x+1)}$ as a single fraction in its simplest form. State the restrictions.
 
@@ -293,7 +336,11 @@ $$\frac{x+1-3}{(x-2)(x+1)}=\frac{x-2}{(x-2)(x+1)}=\frac1{x+1},\qquad x\ne2,-1.$$
 
 </details>
 
-### Question 3 — Check the divisor too
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Question 3 {#question-3--check-the-divisor-too}
 
 Simplify $\displaystyle\frac{x^2-1}{x^2-4}\div\frac{x+1}{x-2}$ and state all restrictions.
 
@@ -315,7 +362,11 @@ $$\frac{(x-1)(x+1)}{(x-2)(x+2)}\times\frac{x-2}{x+1}=\frac{x-1}{x+2},\qquad x\ne
 
 </details>
 
-### Question 4 — Find a quotient and remainder
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Question 4 {#question-4--find-a-quotient-and-remainder}
 
 Express $\displaystyle\frac{x^2+4}{x-2}$ as a polynomial plus a proper fraction. Check the remainder using the remainder theorem.
 
@@ -341,7 +392,20 @@ $$\frac{x^2+4}{x-2}=x+2+\frac8{x-2},\qquad x\ne2.$$
 
 </details>
 
-**Follow-up:** For $P(x)=2x^3-3x^2-8x+12$, show that $2x-3$ is a factor, then factorise $P(x)$ fully.
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Follow-up {#factor-follow-up}
+
+ For $P(x)=2x^3-3x^2-8x+12$, show that $2x-3$ is a factor, then factorise $P(x)$ fully.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Solve $2x-3=0$, then substitute that input into the polynomial.
+
+</details>
 
 <details markdown="1">
 <summary>Solution and check</summary>
@@ -354,9 +418,13 @@ Expand the factors to check the original polynomial.
 
 </details>
 
-### Question 5 — A quadratic divisor
+</section>
 
-Express $\displaystyle\frac{x^3+2x^2+3x+4}{x^2-1}$ as a polynomial plus a proper fraction. Then express that proper fraction in partial fractions.
+<section class="lesson-check" markdown="1">
+
+### Question 5 {#question-5--a-quadratic-divisor}
+
+Express $\displaystyle\frac{x^3+2x^2+3x+4}{x^2-1}$ as a polynomial plus a proper fraction. State its domain and verify the identity. After studying Partial Fractions, return and decompose the proper fraction.
 
 <details markdown="1">
 <summary>Hint</summary>
@@ -374,7 +442,7 @@ The quotient is $x+2$ and the remainder is $4x+6$:
 
 $$\frac{x^3+2x^2+3x+4}{x^2-1}=x+2+\frac{4x+6}{(x-1)(x+1)},\qquad x\ne1,-1.$$
 
-For the proper fraction, write
+**After studying the next page:** For the proper fraction, write
 
 $$4x+6\equiv A(x+1)+B(x-1).$$
 
@@ -387,6 +455,193 @@ $$\boxed{x+2+\frac5{x-1}-\frac1{x+1},\qquad x\ne1,-1}.$$
 $$\begin{aligned}&(x^2-1)(x+2)+(4x+6)\\&\qquad=x^3+2x^2+3x+4.\end{aligned}$$
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Question 6 {#check-remainders}
+
+<!-- task:check-remainders -->
+Let $P(x)=2x^3+bx^2+cx+1$. The remainder on division by $2x-1$ is $4$, and the remainder on division by $x+1$ is $-2$. Find $b$ and $c$, showing the equations used.
+<!-- /task:check-remainders -->
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Find the value of $x$ making each divisor zero and substitute into $P$; a remainder is an output, not the input.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+$$P\left(\frac12\right)=\frac14+\frac b4+\frac c2+1=4\quad\Rightarrow\quad b+2c=11.$$
+
+$$P(-1)=-2+b-c+1=-2\quad\Rightarrow\quad b-c=-1.$$
+
+Subtract the second equation from the first: $3c=12$, so $c=4$. Then $b-c=-1$ gives $b=3$.
+
+$$\boxed{b=3,\qquad c=4}.$$
+
+Check $P(\frac12)=4$ and $P(-1)=-2$. Substituting $1$ in the first condition ignores the leading coefficient of the divisor; review the remainder identity, then attempt R3.
+
+</details>
+
+</section>
+
+## Repair and try again {#repair-and-retry}
+
+Close the old answer and choose a new task for your error. Check the identity and the domain separately.
+
+| Error | Recovery action | New task |
+| --- | --- | --- |
+| Cancelled terms or lost an excluded input | Review [factor cancellation](#factorise-first); list original denominator zeros | [R1](#retry-domain) |
+| Treated multiplication and division restrictions alike | Review [division](#example-3--division-adds-a-restriction); also check whether the divisor is zero | [R2](#retry-operations) |
+| Wrong input for a non-monic divisor | Review [the remainder demonstration](#example-5--remainder-theorem-and-comparison-of-coefficients); solve divisor equals zero first | [R3](#retry-remainder) |
+| Lost quotient or wrong remainder degree | Review [the division identity](#algebraic-division); expand GQ+R | [R4](#retry-division) |
+
+<section class="lesson-check" markdown="1">
+
+### R1 {#retry-domain}
+
+<!-- task:retry-domain -->
+Simplify $\displaystyle\frac{x^2+x-6}{x^2-4}$ and give the domain of the original expression. Explain whether $x=2$ becomes allowed.
+<!-- /task:retry-domain -->
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Factorise both polynomials; a value for the simplified formula does not make the original input allowed.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+$$\frac{(x+3)(x-2)}{(x-2)(x+2)}=\frac{x+3}{x+2},\qquad x\ne-2,2.$$
+
+The original is still undefined at $x=2$. At $x=0$, both forms give $\frac32$; that substitution is a check, while factorisation establishes the identity.
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### R2 {#retry-operations}
+
+<!-- task:retry-operations -->
+Let $A(x)=\displaystyle\frac{x^2-4}{x-1}$ and $B(x)=\displaystyle\frac{x-2}{x+1}$. Simplify $A(x)B(x)$ and $A(x)\div B(x)$, stating every restriction for each. Explain any difference.
+<!-- /task:retry-operations -->
+
+<details markdown="1">
+<summary>Hint</summary>
+
+The product requires both expressions to be defined; the quotient also requires $B(x)\ne0$.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+$$A(x)B(x)=\frac{(x-2)^2(x+2)}{(x-1)(x+1)},\qquad x\ne-1,1.$$
+
+$$A(x)\div B(x)=\frac{(x+2)(x+1)}{x-1},\qquad x\ne-1,1,2.$$
+
+The product is defined and equals zero at $x=2$. The quotient would divide by zero there, so that input remains excluded after cancellation.
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### R3 {#retry-remainder}
+
+<!-- task:retry-remainder -->
+For $H(x)=4x^3-4x^2-7x+4$, determine the remainder on division by $2x-1$. Decide whether $2x-1$ is a factor and find the quotient.
+<!-- /task:retry-remainder -->
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Calculate $H(\frac12)$; if the remainder is zero, verify the factor by multiplying it by the quotient.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+$$H\left(\frac12\right)=\frac12-1-\frac72+4=0.$$
+
+$$H(x)=(2x-1)(2x^2-x-4).$$
+
+The remainder is $0$, so $2x-1$ is a factor and the quotient is $2x^2-x-4$. Expansion recovers the polynomial; this does not define the original fraction at $x=\frac12$.
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### R4 {#retry-division}
+
+<!-- task:retry-division -->
+Express $\displaystyle\frac{2x^3+x^2+1}{x^2-1}$ as a polynomial plus a proper fraction. State the quotient, remainder and original domain, and check the identity.
+<!-- /task:retry-division -->
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Divide leading terms at each step. The remainder may be linear; keep the original domain if you simplify the remainder fraction.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+$$2x^3+x^2+1=(x^2-1)(2x+1)+(2x+2).$$
+
+$$\frac{2x^3+x^2+1}{x^2-1}=2x+1+\frac{2x+2}{x^2-1}=2x+1+\frac2{x-1},\qquad x\ne-1,1.$$
+
+The quotient is $2x+1$ and remainder $2x+2$, of degree $1<2$. Expanding the product and adding the remainder recovers the numerator. Final cancellation does not allow $x=-1$.
+
+</details>
+
+</section>
+
+## Return later {#review}
+
+After Partial Fractions, attempt this without the examples and explain your starting decision.
+
+<section class="lesson-check" markdown="1">
+
+### Review task {#later-review}
+
+<!-- task:later-review -->
+Write $\displaystyle\frac{x^3-2x^2+x-2}{x^2-4}$ as a polynomial plus a proper fraction in its simplest form, keeping the original domain. Find the remainder when the original numerator is divided by $x-2$, and explain how that agrees with your simplification.
+<!-- /task:later-review -->
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Grouping and long division are both possible. Multiply by the original denominator to check the rewrite, and check the domain separately.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+$$x^3-2x^2+x-2=(x-2)(x^2+1),\qquad x^2-4=(x-2)(x+2).$$
+
+$$\frac{x^3-2x^2+x-2}{x^2-4}=x-2+\frac5{x+2},\qquad x\ne-2,2.$$
+
+Let $P$ denote the original numerator. The remainder is $P(2)=0$, agreeing with the numerator factor $x-2$. Check division using $(x+2)(x-2)+5=x^2+1$. Direct division by the original quadratic divisor gives the same quotient $x-2$ but remainder $5x-10$, not $5$: a remainder belongs to a specified divisor. If you lost the excluded input $2$, return to R1; for a remainder error, return to R4.
+
+</details>
+
+</section>
 
 ## Quick Reference
 
@@ -404,5 +659,16 @@ $$\begin{aligned}&(x^2-1)(x+2)+(4x+6)\\&\qquad=x^3+2x^2+3x+4.\end{aligned}$$
 **Can you explain it?** Why can a cancelled factor still exclude an input? Why does division need one more check than multiplication? When is the remainder a constant, and when can it be linear?
 
 [Next: Partial Fractions](/alevel/a2-mathematics/partial-fractions/) · [Back to the topic index](/alevel/a2-mathematics/) · [All reference notes](/alevel/a2-mathematics/quick-reference/#algebraic-fractions)
+
+<details markdown="1">
+<summary>Scope and sources</summary>
+
+[OxfordAQA 9660 specification v5.2, P2.1](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf).
+
+Official questions and paired marking material consulted (mirrors of the published papers): January 2025 Q1, QP p3 / MS p4. [January 2025 QP](https://aqamat.alevelclouds.com/25_01_QP_P2.pdf) · [MS](https://aqamat.alevelclouds.com/25_01_MS_P2.pdf).
+
+The classroom examples, practice, retries and review are self-written teaching material, with no official marks.
+
+</details>
 
 **Learning path:** [Previous: Modulus Functions and Transformations](/alevel/a2-mathematics/modulus-and-transformations/) · [Next: Partial Fractions](/alevel/a2-mathematics/partial-fractions/).

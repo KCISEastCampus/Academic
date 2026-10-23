@@ -7,27 +7,57 @@ subject: a2-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-mathematics/vectors/
 permalink: /zh/alevel/a2-mathematics/vectors/
-toc_headings: h2, h3, h4
+toc_headings: h2, h3
+reading_layout: true
 study_page: true
 ---
 
 [纯数学](/zh/alevel/a2-mathematics/) · P2.10 向量
 
-用向量描述三维空间中的点和直线。判断两条直线的位置关系，求角度并计算垂直距离。
+用向量描述二维平面和三维空间中的点与直线。把箭头、坐标和几何约束连起来，再求交点、角度与垂直距离。
 
 - **学习：**从[向量与位置向量](#vectors-and-position-vectors)开始，然后学习[直线](#straight-lines)、[两条直线的位置关系](#pairs-of-lines)和[数量积](#scalar-product)。
 - **作业帮助：**仔细选择所需向量。位置向量（position vector）、方向向量（direction vector）以及连接两点的向量作用不同。
 - **复习：**先完成[练习](#practice)，再打开提示与解答。
 
 教材：第 9 章，第 9.1–9.9 节（第 124–147 页，印刷页码）。本课介绍本章中关于点与直线的方法。本章不涉及平面方程。
+{: .lesson-meta}
 
-**开始前：**你应当掌握坐标几何、联立方程、勾股定理和余弦的知识。若答案要求用角度制，求反余弦时请使用角度模式。
+<div class="lesson-notes" markdown="1">
+
+**起点：**能用终点减起点求坐标变化、用勾股求长度、解两个线性方程，并用余弦求角；缺失时回补 [AS 坐标几何](/zh/alevel/as-mathematics/coordinate-geometry/#l04)和[代数](/zh/alevel/as-mathematics/algebra/#l02)。本页先从平面箭头建立向量，再加入第三分量。逆余弦求角度时用 degree mode。目标是自己选向量、联立全部必要分量，并解释几何约束。复习从[练习](#practice)进入；错误走[恢复](#repair)，后续做[稍后回顾](#review-later)。
+
+</div>
 
 所有例题与练习题均为自编题，并非官方真题。建议练习时间仅供参考；题目没有官方分值。
 
 ## 向量与位置向量 {#vectors-and-position-vectors}
 
 **向量**（vector）既有大小也有方向。**标量**（scalar）只有大小。点 $A$ 的**位置向量**是 $\overrightarrow{OA}$，其中 $O$ 为原点。
+
+### 先把箭头画出来 {#plane-vectors}
+
+二维向量只有 $x,y$ 两个分量；在同一平面坐标系中
+
+$$\begin{pmatrix}a_1\\a_2\end{pmatrix}+\begin{pmatrix}b_1\\b_2\end{pmatrix}=\begin{pmatrix}a_1+b_1\\a_2+b_2\end{pmatrix},\qquad \lvert\mathbf a\rvert=\sqrt{a_1^2+a_2^2}.$$
+
+先按括号运算，再乘标量，例如 $2(\mathbf a-\mathbf b)=2\mathbf a-2\mathbf b$。相加的向量必须同维、用同一坐标系；二维图嵌入三维 $xy$ 平面时，明确补 $z=0$，不能任意丢掉第三分量。乘零得到零向量，没有方向；非零平行向量互为非零标量倍数。
+
+<section class="worked-example" markdown="1">
+
+#### 平面箭头示范 {#plane-worked}
+
+**Question:** For $A=(1,1)$ and $B=(4,5)$, draw $\overrightarrow{OA}$, $\overrightarrow{AB}$ and $\overrightarrow{OB}$; find $AB$.
+
+在纸上标三点，箭头首尾相接走 $O\to A\to B$。从 $A$ 到 $B$ 横向增加 $3$、竖向增加 $4$，所以
+
+$$\overrightarrow{AB}=\begin{pmatrix}3\\4\end{pmatrix},\qquad \overrightarrow{OA}+\overrightarrow{AB}=\begin{pmatrix}1\\1\end{pmatrix}+\begin{pmatrix}3\\4\end{pmatrix}=\begin{pmatrix}4\\5\end{pmatrix}=\overrightarrow{OB}.$$
+
+由勾股 $AB=5$。把 $\overrightarrow{AB}$ 平移到原点不改变向量；它不会因此变成位置向量 $\overrightarrow{OB}$。在图上反转 $AB$ 箭头应得到 $(-3,-4)$。
+
+</section>
+
+### 加入第三个分量 {#three-dimensional-vectors}
 
 沿坐标轴正方向的单位向量（Cartesian unit vectors）$\mathbf i$、$\mathbf j$ 和 $\mathbf k$ 分别沿 $x$、$y$ 和 $z$ 轴的正方向。例如，
 
@@ -45,7 +75,11 @@ $$\overrightarrow{AB}=\mathbf b-\mathbf a,\qquad \overrightarrow{OM}=\frac{\math
 
 其中 $M$ 是线段 $AB$ 的中点。由**三角形法则**（triangle law）可得 $\overrightarrow{AB}+\overrightarrow{BC}=\overrightarrow{AC}$。
 
-### 例题 1 — 连接两点并求中点 {#example-1--join-two-points-and-find-their-midpoint}
+
+
+<section class="worked-example" markdown="1">
+
+#### 例题 1 — 连接两点并求中点 {#example-1--join-two-points-and-find-their-midpoint}
 
 **Question:** $A=(1,-2,3)$ and $B=(5,0,4)$. Find $\overrightarrow{AB}$, the length $AB$, a unit vector in its direction and the midpoint $M$.
 
@@ -67,6 +101,8 @@ $$\boxed{M=\left(3,-1,\frac72\right)}.$$
 
 **常见错误：**用 $\mathbf a-\mathbf b$ 表示 $\overrightarrow{AB}$。这样得到的是 $\overrightarrow{BA}$，方向相反。
 
+</section>
+
 ## 直线 {#straight-lines}
 
 一条直线可以用其上一点的位置向量 $\mathbf a$ 和一个非零的**方向向量** $\mathbf b$ 表示：
@@ -76,6 +112,8 @@ $$\boxed{\mathbf r=\mathbf a+\lambda\mathbf b,\quad\lambda\in\mathbb R}.$$
 $\mathbf r$ 表示直线上一般点的位置向量。若直线经过不同的两点 $A$ 和 $B$，可取 $\mathbf b=\overrightarrow{AB}$。
 
 直线方程的形式并不唯一：用直线上另一个点，或用方向向量的任意非零倍数，在改变参数后都能表示同一条直线。
+
+<section class="worked-example" markdown="1">
 
 ### 例题 2 — 写出直线方程并检查一个点 {#example-2--find-an-equation-and-check-a-point}
 
@@ -97,6 +135,34 @@ $$\boxed{\left(\frac32,\frac74,0\right)}.$$
 
 **常见错误：**对每个坐标分别使用不同的参数值。直线上的点必须用同一个参数值满足三个方程。
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 一个平面构型 {#check-plane}
+
+$A=(-1,2)$ and $B=(3,0)$. Draw $\overrightarrow{OA}$, $\overrightarrow{OB}$ and $\overrightarrow{AB}$. Find $\overrightarrow{AB}$, its magnitude and a unit vector in its direction. Find the intersection of the line through $A,B$ with $\mathbf r=(1,-3)+s(0,1)$.
+
+<details markdown="1">
+<summary>提示</summary>
+
+先写经过 A、B 的直线，再联立两个分量；不同直线用不同参数。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+$$\overrightarrow{AB}=(4,-2),\qquad AB=2\sqrt5,\qquad\text{unit vector}=\frac1{\sqrt5}(2,-1).$$
+
+$$\mathbf r=(-1,2)+t(4,-2),\quad -1+4t=1,\quad2-2t=-3+s.$$
+
+得 $t=\frac12$、$s=4$，交点 $(1,1)$。把两个参数分别代回对应直线；箭头应满足 $\overrightarrow{OA}+\overrightarrow{AB}=\overrightarrow{OB}$。
+
+</details>
+
+</section>
+
 ## 两条直线的位置关系 {#pairs-of-lines}
 
 对于 $\mathbf r=\mathbf a+\lambda\mathbf b$ 和 $\mathbf r=\mathbf c+\mu\mathbf d$，先比较 $\mathbf b$ 和 $\mathbf d$。
@@ -107,7 +173,11 @@ $$\boxed{\left(\frac32,\frac74,0\right)}.$$
 | 不互为标量倍数 | 是否存在一对 $(\lambda,\mu)$，能同时满足三个分量方程？ | 若是，则相交；若否，则为异面直线 |
 {: .wide-table}
 
+上表的异面分支适用于三维。二维平面内不平行的直线必相交；联立两个分量即可。三维还必须核第三分量，不能把平面图上看似相交当作证据。
+
 **异面直线**（skew lines）是三维空间中既不平行也不相交的直线。两条直线要分别使用参数；它们相交时参数值不必相同。
+
+<section class="worked-example" markdown="1">
 
 ### 例题 3 — 检查第三个坐标 {#example-3--check-the-third-coordinate}
 
@@ -124,6 +194,10 @@ $$M:\quad\mathbf r=\begin{pmatrix}3\\3\\-1\end{pmatrix}+\mu\begin{pmatrix}0\\1\\
 $$\boxed{(3,4,0)}.$$
 
 **检查：**将 $\lambda=2$ 代入 $L$，将 $\mu=1$ 代入 $M$，会得到相同的三个坐标。
+
+</section>
+
+<section class="worked-example" markdown="1">
 
 ### 例题 4 — 方程相似，位置关系不同 {#example-4--similar-equations-different-relationships}
 
@@ -145,11 +219,15 @@ $$\mathbf r=\begin{pmatrix}2\\2\\1\end{pmatrix}+s\begin{pmatrix}2\\4\\-2\end{pma
 
 **常见错误：**认为方向向量互为标量倍数就一定是两条不同的平行直线。也要检查它们是否为同一条直线。
 
+</section>
+
 ## 数量积 {#scalar-product}
 
 **数量积**（scalar product）是一个数：
 
 $$\mathbf a\cdot\mathbf b=a_1b_1+a_2b_2+a_3b_3.$$
+
+二维时只加两个对应分量的乘积：$\mathbf a\cdot\mathbf b=a_1b_1+a_2b_2$。先相减得到所需方向，再算数量积；结果是标量，不是新方向向量。
 
 对于非零向量，数量积也等于 $\lvert\mathbf a\rvert\lvert\mathbf b\rvert\cos\theta$，其中 $0\le\theta\le180^\circ$ 是两向量方向之间的夹角。因此
 
@@ -158,6 +236,8 @@ $$\cos\theta=\frac{\mathbf a\cdot\mathbf b}{\lvert\mathbf a\rvert\lvert\mathbf b
 两个非零向量的数量积为零时，它们互相垂直。零向量没有方向，因此不能将它代入夹角公式。
 
 **求三角形的角：**从该顶点出发使用两个向量。例如求角 $ABC$，应使用 $\overrightarrow{BA}$ 和 $\overrightarrow{BC}$。若改用 $\overrightarrow{AB}$，其中一个方向会相反，所得角就是**补角**（supplementary angle）。
+
+<section class="worked-example" markdown="1">
 
 ### 例题 5 — 两个向量的夹角 {#example-5--angle-between-two-vectors}
 
@@ -168,6 +248,10 @@ $$\mathbf a\cdot\mathbf b=2-2+4=4,\qquad \lvert\mathbf a\rvert=\lvert\mathbf b\r
 $$\cos\theta=\frac49,\qquad \boxed{\theta\approx63.6^\circ}.$$
 
 **检查：**数量积为正，所以向量夹角是锐角。使用角度模式求反余弦；计算前不要把 $\frac49$ 四舍五入。
+
+</section>
+
+<section class="worked-example" markdown="1">
 
 ### 例题 6 — 两条直线的锐角 {#example-6--acute-angle-between-lines}
 
@@ -183,6 +267,22 @@ $$\boxed{\phi\approx70.5^\circ}.$$
 
 **检查：**反转任意一个方向向量，得到的两直线锐角不变。若题目要求两个有向向量之间的夹角，就不要自动取绝对值。
 
+</section>
+
+<section class="worked-example" markdown="1">
+
+### 从角的顶点出发 {#vertex-angle}
+
+**Question:** $A=(0,0)$, $B=(2,0)$ and $C=(3,1)$. Find angle $ABC$.
+
+画三角形，在 $B$ 标角。从顶点出发的两条射线是 $BA$ 和 $BC$，故
+
+$$\overrightarrow{BA}=(-2,0),\qquad\overrightarrow{BC}=(1,1),\qquad\cos\angle ABC=\frac{-2}{2\sqrt2}=-\frac1{\sqrt2}.$$
+
+所以 $\angle ABC=135^\circ$。草图应为钝角。若用了 $AB$，会得到 $45^\circ$；这并非舍入误差，而是反转一个方向后的补角。
+
+</section>
+
 ## 垂足与距离 {#foot-of-the-perpendicular-and-distance}
 
 从点 $P$ 向直线作垂线，垂线与直线垂直相交于垂足（foot of the perpendicular）$H$；此时 $PH$ 与直线成直角。线段 $PH$ 的长度就是点到直线的垂直距离。
@@ -192,7 +292,11 @@ $$\boxed{\phi\approx70.5^\circ}.$$
 3. 使用 $\overrightarrow{PH}\cdot\mathbf b=0$ 求 $\lambda$。
 4. 求出 $H$ 的坐标，然后计算 $\lvert\overrightarrow{PH}\rvert$。
 
+为什么这是最短距离？对直线上任意另一点 $X$，$HX$ 沿直线，且 $PH\perp HX$。由勾股 $PX^2=PH^2+HX^2\ge PH^2$。三角形面积应用中，若底边为 $AB$，对应高度就是第三顶点到直线 $AB$ 的距离，因此面积为 $\frac12 AB\times PH$；垂足即使在底边延长线上也成立。
+
 ![示意图：A 和 H 位于一条直线上。线段 PH 与直线垂直，表示垂直距离。](/assets/img/vectors-perpendicular.svg)
+
+<section class="worked-example" markdown="1">
 
 ### 例题 7 — 先求垂足，再求距离 {#example-7--find-the-foot-then-the-distance}
 
@@ -218,13 +322,17 @@ $$\overrightarrow{PH}=\begin{pmatrix}-2\\1\\0\end{pmatrix},\qquad \boxed{PH=\sqr
 
 **常见错误：**计算 $P$ 到直线起点的距离。通常这不是最短距离。
 
+</section>
+
 ## 练习 {#practice}
 
 **独立练习 · 30–40 分钟**
 
 写出所用的向量，不要只写数值结果。求交点时检查三个坐标。求距离时，同时检查垂足在直线上，以及连接向量与直线垂直。
 
-### Q1 — 位置、方向与中点 {#q1--position-direction-and-midpoint}
+<section class="lesson-check" markdown="1">
+
+### Q1 {#q1--position-direction-and-midpoint}
 
 $A=(2,-1,0)$ and $B=(-2,3,4)$. Find $\overrightarrow{AB}$, $AB$, a unit vector in the direction $AB$, and the midpoint of $AB$.
 
@@ -246,7 +354,11 @@ $$\overrightarrow{AB}=\begin{pmatrix}-4\\4\\4\end{pmatrix},\qquad AB=\sqrt{48}=4
 
 </details>
 
-### Q2 — 经过两点的直线 {#q2--a-line-through-two-points}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Q2 {#q2--a-line-through-two-points}
 
 Find an equation of the line through $A=(0,1,2)$ and $B=(2,2,-2)$. Does $P=(4,3,-6)$ lie on it? Where does it meet the $xy$-plane?
 
@@ -268,7 +380,11 @@ $\lambda=2$ 时，直线上对应的点为 $(4,3,-6)$，所以 $P$ 在直线上�
 
 </details>
 
-### Q3 — 相交还是异面？ {#q3--intersecting-or-skew}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Q3 {#q3--intersecting-or-skew}
 
 Investigate the lines
 
@@ -294,7 +410,11 @@ $x$ 方程给出 $\lambda=2$，$y$ 方程给出 $\mu=2$。两条直线都给出 
 
 </details>
 
-### Q4 — 平行还是同一直线？ {#q4--parallel-or-the-same-line}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Q4 {#q4--parallel-or-the-same-line}
 
 The line $L$ is $\mathbf r=(1,2,3)+\lambda(2,-1,1)$. Compare it with **(a)** $\mathbf r=(3,1,4)+s(4,-2,2)$ and **(b)** $\mathbf r=(3,1,5)+s(4,-2,2)$.
 
@@ -314,7 +434,11 @@ The line $L$ is $\mathbf r=(1,2,3)+\lambda(2,-1,1)$. Compare it with **(a)** $\m
 
 </details>
 
-### Q5 — 垂直关系与夹角 {#q5--perpendicularity-and-angles}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Q5 {#q5--perpendicularity-and-angles}
 
 **(a)** Find $k$ if $(2,k,1)$ is perpendicular to $(1,-1,3)$.
 
@@ -342,7 +466,11 @@ $$\cos\theta=-\frac2{\sqrt6},\qquad \boxed{\theta\approx144.7^\circ}.$$
 
 </details>
 
-### Q6 — 垂直距离 {#q6--a-perpendicular-distance}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Q6 {#q6--a-perpendicular-distance}
 
 Find the foot of the perpendicular from $P=(3,2,0)$ to $\mathbf r=(1,0,0)+\lambda(1,1,0)$. Hence find the distance from $P$ to the line.
 
@@ -362,7 +490,11 @@ $\overrightarrow{PH}=(\lambda-2,\lambda-2,0)$。它与方向向量的数量积�
 
 </details>
 
-### Q7 — 先求垂足再测量 {#q7--find-the-foot-before-measuring}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Q7 {#q7--find-the-foot-before-measuring}
 
 Find the foot of the perpendicular from $P=(4,0,2)$ to $\mathbf r=(0,1,0)+\lambda(1,0,1)$, and find the perpendicular distance.
 
@@ -384,6 +516,173 @@ $$\overrightarrow{PH}=(-1,1,1),\qquad \boxed{PH=\sqrt3}.$$
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 一个三角形 {#mixed-geometry}
+
+$A=(0,0)$, $B=(4,2)$ and $C=(0,5)$. Draw triangle $ABC$. Find angle $BAC$ to $1$ decimal place, the distance from $C$ to the line $AB$, and the area of the triangle. Show your geometric choices.
+
+<details markdown="1">
+<summary>提示</summary>
+
+从角的顶点选向量；再决定哪条线作为底边，怎样找到对应高度。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+$$\cos\angle BAC=\frac{(4,2)\cdot(0,5)}{\sqrt{20}\times5}=\frac1{\sqrt5},\qquad\angle BAC\approx63.4^\circ.$$
+
+$$H=(4t,2t),\quad\overrightarrow{CH}=(4t,2t-5),\quad\overrightarrow{CH}\cdot(4,2)=20t-10=0.$$
+
+$$t=\frac12,\quad H=(2,1),\quad CH=\sqrt{2^2+(-4)^2}=2\sqrt5.$$
+
+$$\text{Area}=\frac12(2\sqrt5)(2\sqrt5)=10\text{ square units}.$$
+
+画出 $CH$ 并标直角；独立检查：以 $AC=5$ 为底，$B$ 到 $y$ 轴的距离为 $4$，面积也为 $10$。
+
+</details>
+
+</section>
+
+## 根据错误恢复 {#repair}
+
+关闭原答案，按错误回看后再做对应新题。
+
+| 错误 | 恢复动作 | 重试 |
+| --- | --- | --- |
+| AB 写反或丢掉分量 | 标箭头起终点，回看[平面向量](#plane-vectors) | [方向](#repair-direction) |
+| 只核两个坐标/共用参数 | 分别列参数、核全部分量，回看[两直线](#pairs-of-lines) | [直线](#repair-lines) |
+| 顶点角变成补角 | 从同一顶点重画两箭头，回看[顶点角](#vertex-angle) | [角](#repair-angle) |
+| 量到任意起点 | 需同时满足在线与垂直，回看[垂足](#foot-of-the-perpendicular-and-distance) | [距离](#repair-foot) |
+
+<section class="lesson-check" markdown="1">
+
+### 方向 {#repair-direction}
+
+$P=(2,-1)$ and $Q=(-1,3)$. Draw $\overrightarrow{PQ}$ and $-2\overrightarrow{PQ}$. Find a unit vector in the direction $PQ$ and the magnitude of $-2\overrightarrow{PQ}$.
+
+<details markdown="1">
+<summary>提示</summary>
+
+负标量改变方向；模乘以标量的绝对值。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+$$\overrightarrow{PQ}=(-3,4),\quad\text{unit vector}=(-3/5,4/5),\quad-2\overrightarrow{PQ}=(6,-8),\quad\lvert-2\overrightarrow{PQ}\rvert=10.$$
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 两条直线 {#repair-lines}
+
+Determine the relationship between $L:\mathbf r=(0,1,2)+t(1,2,1)$ and $M:\mathbf r=(2,0,2)+s(0,1,1)$. Justify your answer.
+
+<details markdown="1">
+<summary>提示</summary>
+
+先比较方向，再核所有坐标。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+$$t=2,\qquad1+2t=s\Rightarrow s=5.$$
+
+此时 $L$ 的 $z=4$，$M$ 的 $z=7$，不相交；方向不成倍数，故异面。两个坐标给候选参数，第三个否决它。
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 一个角 {#repair-angle}
+
+$A=(0,0)$, $B=(1,0)$, $C=(2,1)$. Find angle $ABC$ and the acute angle between the lines $AB$ and $BC$.
+
+<details markdown="1">
+<summary>提示</summary>
+
+一个角有指定顶点，直线的锐角可反转方向。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+$$\overrightarrow{BA}=(-1,0),\quad\overrightarrow{BC}=(1,1),\quad\angle ABC=135^\circ,\quad\text{acute line angle}=45^\circ.$$
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 一个距离 {#repair-foot}
+
+Find the distance from $P=(1,3)$ to $\mathbf r=t(1,1)$. Give and check the nearest point.
+
+<details markdown="1">
+<summary>提示</summary>
+
+设直线上一般点，再使用垂直条件。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+$$H=(t,t),\quad\overrightarrow{PH}=(t-1,t-3),\quad2t-4=0.$$
+
+$$H=(2,2),\quad PH=\sqrt2,\quad(1,-1)\cdot(1,1)=0.$$
+
+H 满足直线方程，连接向量垂直；两项一起成立。
+
+</details>
+
+</section>
+
+## 稍后回顾 {#review-later}
+
+学完证明后，不看本页方法做下题，再与首次作答比较。
+
+<section class="lesson-check" markdown="1">
+
+### 一个移动点 {#review-point}
+
+$A=(1,0,2)$ and $B=(3,2,0)$. Show that $P=(1+4u,4u,2-4u)$ lies on the line $AB$ for every real $u$. Find the value of $u$ for which $OP$ is perpendicular to $AB$.
+
+<details markdown="1">
+<summary>提示</summary>
+
+“每个 u”需要统一的参数关系；垂直条件另列。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+$$\overrightarrow{AB}=(2,2,-2),\qquad P=A+(2u)\overrightarrow{AB}.$$
+
+$$\overrightarrow{OP}\cdot\overrightarrow{AB}=2(1+4u)+8u-2(2-4u)=24u-2=0,\quad u=\frac1{12}.$$
+
+参数 $t=2u$ 对任意实数 u 都有效；不能只检验几个 u。
+
+</details>
+
+</section>
+
 ## 快速参考 {#quick-reference}
 
 | 任务 | 方法 | 检查 |
@@ -392,8 +691,8 @@ $$\overrightarrow{PH}=(-1,1,1),\qquad \boxed{PH=\sqrt3}.$$
 | 求长度或单位向量 | $\lvert\mathbf v\rvert$ 或 $\frac{\mathbf v}{\lvert\mathbf v\rvert}$ | 单位方向要求 $\mathbf v\ne\mathbf0$ |
 | 求中点 | $\frac12(\mathbf a+\mathbf b)$ | 对各坐标分别取平均 |
 | 写直线方程 | $\mathbf r=\mathbf a+\lambda\mathbf b$ | 使用直线上一点和非零方向向量 |
-| 判断点是否在直线上 | 代入各分量方程 | 同一个参数值须满足三个方程 |
-| 判断两直线的位置关系 | 比较方向，再联立各分量方程 | 检查第三个坐标，并区分同一直线 |
+| 判断点是否在直线上 | 代入各分量方程 | 同一个参数值须满足所有分量方程 |
+| 判断两直线的位置关系 | 比较方向，再联立各分量方程 | 检查所有分量，并区分同一直线 |
 | 求向量夹角 | $\frac{\mathbf a\cdot\mathbf b}{\lvert\mathbf a\rvert\lvert\mathbf b\rvert}$ 给出夹角的余弦 | 保留符号；两个向量均不能为零 |
 | 求两直线的锐角 | 对数量积取绝对值 | 使用方向向量，不要用位置向量 |
 | 求垂直距离 | 在直线上求 $H$，使 $\overrightarrow{PH}\cdot\mathbf b=0$ | 检查直线方程，再求 $\lvert\overrightarrow{PH}\rvert$ |
@@ -404,3 +703,15 @@ $$\overrightarrow{PH}=(-1,1,1),\qquad \boxed{PH=\sqrt3}.$$
 **你应当能够：**表示直线，判断两直线的位置关系，求夹角，并通过确定垂足求垂直距离。
 
 **学习路径：**[上一节：数值方法](/zh/alevel/a2-mathematics/numerical-methods/) · [下一节：数学证明](/zh/alevel/a2-mathematics/mathematical-proof/) · [返回纯数学主题索引](/zh/alevel/a2-mathematics/)。
+
+**下一步：**带着[移动点](#review-point)的全范围论证进入[数学证明](/zh/alevel/a2-mathematics/mathematical-proof/)，完成后回来复查。
+{: #next-step}
+
+<details markdown="1">
+<summary>来源与核验范围</summary>
+
+范围为 9660 MA03 P2.10。实读 January 2025 MA03 Q4（QP pp8–9、MS pp8–9），核连点方向、模、数量积求角与参数一致性；January 2024 Q12（QP pp26–27、MS pp21–22）核一般参数、垂足、底高面积与角。这里的所有练习仍是自拟题。
+
+[9660 specification v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf) · [January 2024 QP](https://aqamat.alevelclouds.com/24_01_QP_P2.pdf) / [MS](https://aqamat.alevelclouds.com/24_01_MS_P2.pdf) · [January 2025 QP](https://aqamat.alevelclouds.com/25_01_QP_P2.pdf) / [MS](https://aqamat.alevelclouds.com/25_01_MS_P2.pdf)
+
+</details>

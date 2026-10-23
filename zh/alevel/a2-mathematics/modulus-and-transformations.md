@@ -7,21 +7,28 @@ subject: a2-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-mathematics/modulus-and-transformations/
 permalink: /zh/alevel/a2-mathematics/modulus-and-transformations/
-toc_headings: h2, h3, h4
+toc_headings: h2, h3
+reading_layout: true
 study_page: true
 ---
 
 [纯数学](/zh/alevel/a2-mathematics/) · P2.1 代数与函数
+{: .lesson-meta}
 
-学习描绘绝对值图像、组合函数图像变换（transformations）以及解含绝对值的方程。每次变换都用原图像上的一个点来检查。
+学习描绘绝对值图像、组合函数图像变换（transformations）以及解含绝对值的方程与不等式。每次变换都用原图像上的一个点来检查。
 
 教材：第 1 章，第 1.4–1.5 节（第 8–13 页）。例题 7 的题目为课程大纲示例；其余例题和所有练习均为自拟教学题。
 
 - **学习：**从[绝对值图像](#modulus-graphs)开始，再学习例题。
 - **作业帮助：**查看[组合变换](#combinations-of-transformations)或[方程与不等式](#equations-and-inequalities)。
 - **复习：**先尝试[练习题](#practice)，再打开解答。
+{: .lesson-routes}
 
-**开始前：**你应当会描绘直线和二次函数图像、解线性方程以及求定义域和值域。如有需要，先复习[函数](/zh/alevel/a2-mathematics/functions/)。
+<div class="lesson-notes" markdown="1">
+
+**开始前：**会画直线、二次函数并解线性方程（[AS 代数 L02](/zh/alevel/as-mathematics/algebra/#l02)）；会跟踪变换前后的一个点（[L05](/zh/alevel/as-mathematics/algebra/#l05)）。遇到输入限制先回补[定义域和值域](/zh/alevel/a2-mathematics/functions/#domain-and-range)。本页从“改输入还是改输出”开始，再用坐标检验变换，最后根据图像关系解方程与不等式。复习可从[独立练习](#practice)开始；[恢复与新尝试](#repair-and-retry)和[稍后回顾](#later-review)可直接定位。
+
+</div>
 
 ## 绝对值图像 {#modulus-graphs}
 
@@ -38,6 +45,8 @@ $$\lvert x\rvert=\begin{cases}x,&x\geq0,\\-x,&x<0.\end{cases}$$
 {: .wide-table}
 
 对于 $y=\lvert f(x)\rvert$，定义域不变。对于 $y=f(\lvert x\rvert)$，输入 $x$ 只有在 $\lvert x\rvert$ 属于 $f$ 的定义域时才允许。表中的图像规则只适用于允许的非负输入值。
+
+<section class="worked-example" markdown="1">
 
 ### 例题 1 — 两种绝对值图像并不相同 {#example-1--the-two-modulus-graphs-are-different}
 
@@ -59,6 +68,10 @@ $$y=\begin{cases}x-1,&x\geq0,\\-x-1,&x<0.\end{cases}$$
 
 **检查：**当 $x=-2$ 时，第一个图像的函数值为 $3$，第二个为 $1$。绝对值符号放在函数内部，并不会使所有输出都变为非负数。
 
+</section>
+
+<section class="worked-example" markdown="1">
+
 ### 例题 2 — 只翻折二次函数的一部分 {#example-2--reflect-only-part-of-a-quadratic}
 
 **Question:** Sketch $y=\lvert x^2-4\rvert$.
@@ -73,13 +86,15 @@ $$y=\begin{cases}x^2-4,&x\leq-2\text{ or }x\geq2,\\4-x^2,&-2<x<2.\end{cases}$$
 
 **常见错误：**把整条抛物线都翻折。例如，$(3,5)$ 仍在 $(3,5)$，因为它的输出已经是正数。
 
+</section>
+
 ## 组合函数图像变换 {#combinations-of-transformations}
 
 从 $y=f(x)$ 开始。描述每次变换时，说明变换所沿的坐标轴、方向，以及伸缩因子（scale factor）或平移向量（translation vector）。
 
 | 新图像 | 变换 | 点 $(p,q)$ 移至 |
 |---|---|---|
-| $y=f(x-a)+b$ | 沿向量 $\begin{pmatrix}a\\\\b\end{pmatrix}$ 平移 | $(p+a,q+b)$ |
+| $y=f(x-a)+b$ | 沿向量 $\binom{a}{b}$ 平移 | $(p+a,q+b)$ |
 | $y=af(x)$，$a>0$ | 沿平行于 $y$ 轴的方向单向伸缩（one-way stretch），伸缩因子为 $a$ | $(p,aq)$ |
 | $y=f(ax)$，$a>0$ | 沿平行于 $x$ 轴的方向单向伸缩，伸缩因子为 $\displaystyle\frac1a$ | $(\displaystyle\frac pa,q)$ |
 | $y=-f(x)$ | 关于 $x$ 轴翻折（reflection） | $(p,-q)$ |
@@ -87,6 +102,14 @@ $$y=\begin{cases}x^2-4,&x\leq-2\text{ or }x\geq2,\\4-x^2,&-2<x<2.\end{cases}$$
 {: .wide-table}
 
 **函数内部的变化：**改变输入坐标。**函数外部的变化：**改变输出坐标。伸缩因子介于 $0$ 与 $1$ 之间时，图像沿所述方向变窄或变矮。
+
+输入伸缩的因子为什么要取倒数？若原点为 $(p,q)$，新函数 $f(ax)$ 必须仍把 $p$ 送进 $f$，所以先解 $ax=p$，得到 $x=p/a$；纵坐标仍为 $q$。对更一般的 $Af(Bx+C)+D$（$B\ne0$），先解输入匹配，再处理输出：
+
+$$Bx+C=p,\qquad x=\frac{p-C}{B},\qquad y=Aq+D.$$
+
+这样可以检验任意正确变换顺序，不依赖背诵“里面反着来”。
+
+<section class="worked-example" markdown="1">
 
 ### 例题 3 — 先因式分解输入表达式，再确定变换顺序 {#example-3--factorise-the-input-before-choosing-the-order}
 
@@ -97,9 +120,9 @@ $$y=\begin{cases}x^2-4,&x\leq-2\text{ or }x\geq2,\\4-x^2,&-2<x<2.\end{cases}$$
 | 步骤 | 变换 | 变换后的图像 |
 |---|---|---|
 | 1 | 沿平行于 $x$ 轴的方向单向伸缩，伸缩因子为 $\displaystyle\frac12$ | $y=f(2x)$ |
-| 2 | 沿 $\begin{pmatrix}2\\\\0\end{pmatrix}$ 平移 | $y=f(2(x-2))$ |
+| 2 | 沿 $\binom{2}{0}$ 平移 | $y=f(2(x-2))$ |
 | 3 | 沿平行于 $y$ 轴的方向单向伸缩，伸缩因子为 $2$ | $y=2f(2(x-2))$ |
-| 4 | 沿 $\begin{pmatrix}0\\\\-1\end{pmatrix}$ 平移 | $y=2f(2x-4)-1$ |
+| 4 | 沿 $\binom{0}{-1}$ 平移 | $y=2f(2x-4)-1$ |
 {: .wide-table}
 
 **用一个点检查：**如果原图像上有点 $(p,q)$，新的输入必须满足 $2x-4=p$。因此，
@@ -110,16 +133,48 @@ $$x=\frac p2+2,\qquad y=2q-1.$$
 
 **常见错误：**做完水平伸缩后再向右平移 $4$。根据因式分解后的输入，这一步应该向右平移 $2$。先向右平移 $4$ 再做水平伸缩，则是另一种正确的变换顺序。
 
+</section>
+
+<section class="worked-example" markdown="1">
+
 ### 例题 4 — 先翻折，再平移 {#example-4--reflection-followed-by-translation}
 
 **Question:** Describe how to obtain $y=3-x^2$ from $y=x^2$.
 
 1. 关于 $x$ 轴翻折，得到 $y=-x^2$。
-2. 沿 $\begin{pmatrix}0\\\\3\end{pmatrix}$ 平移，得到 $y=-x^2+3$。
+2. 沿 $\binom{0}{3}$ 平移，得到 $y=-x^2+3$。
 
 最低点 $(0,0)$ 变成最高点 $(0,3)$。点 $(2,4)$ 变成 $(2,-1)$。
 
 **检查顺序：**如果先向上平移 $3$，再翻折，会得到 $y=-(x^2+3)=-x^2-3$，这是不同的图像。
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 暂停尝试 {#check-point}
+
+<!-- task:check-point -->
+A point $(6,-2)$ lies on $y=f(x)$. For $y=-2f(3x)+1$, complete the input-matching equation and find the new point.
+<!-- /task:check-point -->
+
+<details markdown="1">
+<summary>提示</summary>
+
+先让送入 $f$ 的数仍为 $6$，再改变原来的输出 $-2$。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+$$3x=6\Rightarrow x=2,\qquad y=-2(-2)+1=5.$$
+
+新点为 $(2,5)$。若写成 $(18,5)$，把输入的三倍误当成了坐标的三倍；回看输入匹配方程。
+
+</details>
+
+</section>
 
 ## 方程与不等式 {#equations-and-inequalities}
 
@@ -131,6 +186,8 @@ $$x=\frac p2+2,\qquad y=2q-1.$$
 4. 将每个符合条件的答案代回原方程。
 
 画草图有助于判断预期的交点个数。如果方程为 $\lvert u(x)\rvert=v(x)$，那么每个解还必须满足 $v(x)\geq0$。
+
+<section class="worked-example" markdown="1">
 
 ### 例题 5 — 检查两个解 {#example-5--check-both-solutions}
 
@@ -145,6 +202,10 @@ $$x=\frac p2+2,\qquad y=2q-1.$$
 $$\boxed{x=\frac23\text{ or }x=4}.$$
 
 **检查：**当 $x=4$ 时，两边都等于 $5$。当 $x=\frac23$ 时，两边都等于 $\frac53$。
+
+</section>
+
+<section class="worked-example" markdown="1">
 
 ### 例题 6 — 绝对值不等式 {#example-6--a-modulus-inequality}
 
@@ -166,15 +227,21 @@ $$\lvert u\rvert>a\iff u<-a\text{ or }u>a.$$
 
 界限为负数时不能使用这些法则。绝对值不可能为负，所以 $\lvert u\rvert<-2$ 无解。
 
+</section>
+
+<section class="worked-example" markdown="1">
+
 ### 例题 7 — 等式两边都有绝对值 {#example-7--modulus-on-both-sides}
 
 **Question:** Solve $\lvert x+2\rvert<3\lvert x\rvert$.
 
-**来源：**[OxfordAQA Mathematics (9660) 课程大纲，P2.1，印刷第 21 页](https://www.oxfordaqa.com/wp-content/uploads/2023/10/oxfordaqa-a-level-mathematics-specification.pdf)的示例；解答由本站编写。
+**来源：**[OxfordAQA Mathematics (9660) 课程大纲，P2.1，印刷第 21 页](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf)的示例；解答由本站编写。
 
 先找出图像 $y=\lvert x+2\rvert$ 和 $y=3\lvert x\rvert$ 的交点。两边都非负，因此两边同时平方不会改变等式的解：
 
 $$(x+2)^2=9x^2\quad\Rightarrow\quad(2x+1)(x-1)=0.$$
+
+请在同一坐标系画两条 V 形图：顶点 $(-2,0)$ 属于 $y=\lvert x+2\rvert$，顶点 $(0,0)$ 属于 $y=3\lvert x\rvert$；交点是 $(-\frac12,\frac32)$ 与 $(1,3)$。所求区间对应第一个图像严格在第二个下方。草图与下面的区间检验互相检查。
 
 边界值为 $x=-\frac12$ 和 $x=1$。两条 V 形图像在这些交点处交换上下位置。在三个区间内各取一个值进行检验：
 
@@ -190,11 +257,15 @@ $$(x+2)^2=9x^2\quad\Rightarrow\quad(2x+1)(x-1)=0.$$
 
 **常见错误：**套用 $\lvert u\rvert<a$ 的法则时，误把 $3\lvert x\rvert$ 当作固定常数。
 
+</section>
+
 ## 练习 {#practice}
 
 请在纸上描图并标出重要点。每道题都先自己尝试，再打开提示或解答。
 
-### 题目 1 — 绝对值在函数内还是函数外？ {#question-1--inside-or-outside}
+<section class="lesson-check" markdown="1">
+
+### 题目 1 {#question-1--inside-or-outside}
 
 For $f(x)=x+2$, defined for all real $x$, sketch $y=\lvert f(x)\rvert$ and $y=f(\lvert x\rvert)$. State the minimum point and range of each graph.
 
@@ -216,7 +287,11 @@ For $f(x)=x+2$, defined for all real $x$, sketch $y=\lvert f(x)\rvert$ and $y=f(
 
 </details>
 
-### 题目 2 — 二次函数的绝对值图像 {#question-2--a-quadratic-modulus-graph}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 题目 2 {#question-2--a-quadratic-modulus-graph}
 
 Sketch $y=\lvert x^2-9\rvert$. State its intercepts and range, and give a formula for each part.
 
@@ -238,7 +313,11 @@ $x$ 轴截距为 $(-3,0)$ 和 $(3,0)$，$y$ 轴截距为 $(0,9)$，值域为 $y\
 
 </details>
 
-### 题目 3 — 组合变换 {#question-3--a-combination-of-transformations}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 题目 3 {#question-3--a-combination-of-transformations}
 
 Describe a sequence of transformations from $y=f(x)$ to $y=-3f(2x+6)+4$. Find the new coordinates of the point $(2,5)$.
 
@@ -253,10 +332,10 @@ Describe a sequence of transformations from $y=f(x)$ to $y=-3f(2x+6)+4$. Find th
 <summary>解答与检查</summary>
 
 1. 沿平行于 $x$ 轴的方向单向伸缩，伸缩因子为 $\frac12$。
-2. 沿 $\begin{pmatrix}-3\\\\0\end{pmatrix}$ 平移。
+2. 沿 $\binom{-3}{0}$ 平移。
 3. 沿平行于 $y$ 轴的方向单向伸缩，伸缩因子为 $3$。
 4. 关于 $x$ 轴翻折。
-5. 沿 $\begin{pmatrix}0\\\\4\end{pmatrix}$ 平移。
+5. 沿 $\binom{0}{4}$ 平移。
 
 新坐标为 $(-2,-11)$：$2(-2)+6=2$，且 $-3(5)+4=-11$。
 
@@ -264,7 +343,11 @@ Describe a sequence of transformations from $y=f(x)$ to $y=-3f(2x+6)+4$. Find th
 
 </details>
 
-### 题目 4 — 排除不符合分类条件的答案 {#question-4--reject-an-answer-from-the-wrong-case}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 题目 4 {#question-4--reject-an-answer-from-the-wrong-case}
 
 Solve $\lvert2x-3\rvert=3x+1$.
 
@@ -288,7 +371,11 @@ $$\boxed{x=\frac25}.$$
 
 </details>
 
-### 题目 5 — 解集有两个区间的不等式 {#question-5--an-inequality-with-two-intervals}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 题目 5 {#question-5--an-inequality-with-two-intervals}
 
 Solve $\lvert2x+1\rvert\geq5$.
 
@@ -312,7 +399,11 @@ $$\boxed{x\leq-3\text{ or }x\geq2}.$$
 
 </details>
 
-### 题目 6 — 比较两个绝对值图像 {#question-6--compare-two-modulus-graphs}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 题目 6 {#question-6--compare-two-modulus-graphs}
 
 Solve $\lvert x-1\rvert\leq2\lvert x\rvert$. Find the intersection points of the two graphs and explain which intervals satisfy the inequality.
 
@@ -334,6 +425,131 @@ Solve $\lvert x-1\rvert\leq2\lvert x\rvert$. Find the intersection points of the
 
 </details>
 
+</section>
+
+## 恢复与新尝试 {#repair-and-retry}
+
+根据错误回看指定推理，收起旧解答后再做一题。
+
+| 错误 | 恢复动作 | 新任务 |
+| --- | --- | --- |
+| 内外绝对值混淆或遗漏定义域 | 回看[两种图像](#example-1--the-two-modulus-graphs-are-different)，先写允许的输入 | [R1](#retry-graphs) |
+| 平移方向、伸缩因子或顺序不对 | 回看[组合变换](#combinations-of-transformations)，先解输入匹配方程 | [R2](#retry-transform) |
+| 分类答案不满足原条件 | 回看[分类步骤](#solve-a-modulus-equation-in-cases)，保留每种情况的区间 | [R3](#retry-equation) |
+| 不等式只保留交点，或区间方向错 | 回看[图像比较](#example-7--modulus-on-both-sides)，标交点后检验图像上下关系 | [稍后回顾](#later-review) |
+
+<section class="lesson-check" markdown="1">
+
+### R1 {#retry-graphs}
+
+<!-- task:retry-graphs -->
+Let $f(x)=x-2$ for $1\leq x\leq4$. Sketch $y=\lvert f(x)\rvert$ and $y=f(\lvert x\rvert)$. State both domains and ranges and label their endpoints.
+<!-- /task:retry-graphs -->
+
+<details markdown="1">
+<summary>提示</summary>
+
+原函数只接受 $[1,4]$。分别检查输入为 $x$ 和输入为 $\lvert x\rvert$ 的条件。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+$y=\lvert x-2\rvert$ 的定义域为 $[1,4]$，值域为 $[0,2]$。画折线段 $(1,1)\to(2,0)\to(4,2)$。
+
+$y=\lvert x\rvert-2$ 要求 $1\leq\lvert x\rvert\leq4$，所以定义域为 $[-4,-1]\cup[1,4]$，值域为 $[-1,2]$。画两段线段 $(-4,2)\to(-1,-1)$ 和 $(1,-1)\to(4,2)$，四个端点都是实心点。不能连接中间被排除的 $-1<x<1$。
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### R2 {#retry-transform}
+
+<!-- task:retry-transform -->
+The domain of $f$ is $0\leq x\leq4$, and $(1,3)$ lies on its graph. Describe a sequence from $y=f(x)$ to $y=-2f(4-x)+1$, find the image of $(1,3)$ and state the new domain.
+<!-- /task:retry-transform -->
+
+<details markdown="1">
+<summary>提示</summary>
+
+先解 $4-x=1$ 来检查变换顺序。定义域要满足 $0\leq4-x\leq4$。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+一种顺序：关于 $y$ 轴反射，向右平移 $4$，沿 $y$ 轴方向伸缩因子 $2$，关于 $x$ 轴反射，向上平移 $1$。
+
+$$4-x=1\Rightarrow x=3,\qquad y=-2(3)+1=-5.$$
+
+点为 $(3,-5)$；定义域为 $[0,4]$。若先向右平移 $4$ 再关于 $y$ 轴反射，会把输入变成 $-x-4$，不能得到所求函数。
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### R3 {#retry-equation}
+
+<!-- task:retry-equation -->
+Solve $\lvert x+1\rvert=2x-1$, showing why each candidate is accepted or rejected.
+<!-- /task:retry-equation -->
+
+<details markdown="1">
+<summary>提示</summary>
+
+分类点来自 $x+1=0$；解还要满足右边非负。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+当 $x\geq-1$ 时，$x+1=2x-1$，得到 $x=2$，符合条件。当 $x<-1$ 时，$-x-1=2x-1$，得到 $x=0$，不符合该情况，舍去。唯一解为 $\boxed{x=2}$；原式两边都为 $3$。候选 $0$ 的右边为 $-1$，也不可能等于绝对值。
+
+</details>
+
+</section>
+
+## 稍后回顾 {#review}
+
+在下一主题后完成，不先看速查。用草图与代数互查，记录是否借助提示。
+
+<section class="lesson-check" markdown="1">
+
+### 回顾任务 {#later-review}
+
+<!-- task:later-review -->
+Sketch $y=\lvert x-2\rvert$ and $y=2\lvert x+1\rvert$ on the same axes. Label their vertices and intersections, then solve $\lvert x-2\rvert\geq2\lvert x+1\rvert$, explaining the graph order. Separately, $(4,-1)$ lies on $y=f(x)$; find its image on $y=f(2-3x)+4$.
+<!-- /task:later-review -->
+
+<details markdown="1">
+<summary>提示</summary>
+
+相等给出区间边界。平方前说明两边的符号；对点变换匹配输入。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+顶点为 $(2,0)$ 和 $(-1,0)$。两边非负，故平方保持等式与不等式：
+
+$$(x-2)^2\geq4(x+1)^2\iff -3x(x+4)\geq0.$$
+
+交点为 $(-4,6)$ 和 $(0,2)$。在 $-4\leq x\leq0$ 内，第一个图像在第二个上方或与其相交；外侧次序相反。因此解为 $\boxed{[-4,0]}$，包含两个交点输入。比如 $x=-1$ 时 $3\geq0$，$x=1$ 时 $1\not\geq4$。
+
+点变换满足 $2-3x=4$，所以新点为 $(-\frac23,3)$。若图像区间错，回看例7；若横坐标错，回看输入匹配再做 R2。
+
+</details>
+
+</section>
+
 ## 快速参考 {#quick-reference}
 
 | 任务 | 第一步 | 检查 |
@@ -347,5 +563,16 @@ Solve $\lvert x-1\rvert\leq2\lvert x\rvert$. Find the intersection points of the
 **能解释吗？**为什么 $\lvert x-1\rvert$ 和 $\lvert x\rvert-1$ 不同？为什么 $f(2x)$ 的水平伸缩因子是 $\frac12$？为什么必须检查分类求得的解是否符合对应条件？
 
 [返回主题目录](/zh/alevel/a2-mathematics/) · [查看全部参考笔记](/zh/alevel/a2-mathematics/quick-reference/#modulus-function)
+
+<details markdown="1">
+<summary>范围与来源</summary>
+
+[OxfordAQA 9660 大纲 v5.2，P2.1](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf)。
+
+参考的官方题与配套评分材料（官方出版物镜像）：January 2025 Q6(c), QP p13 / MS p11; January 2024 Q2, QP p3 / MS p5. [January 2025 QP](https://aqamat.alevelclouds.com/25_01_QP_P2.pdf) · [MS](https://aqamat.alevelclouds.com/25_01_MS_P2.pdf) · [January 2024 QP](https://aqamat.alevelclouds.com/24_01_QP_P2.pdf) · [MS](https://aqamat.alevelclouds.com/24_01_MS_P2.pdf).
+
+本页课堂例题、练习、重试与回顾为自拟教学材料，没有官方分值。 模值例7保留为大纲示例，解答为本站编写。
+
+</details>
 
 **学习路径：**[上一节：函数](/zh/alevel/a2-mathematics/functions/) · [下一节：代数分式与多项式除法](/zh/alevel/a2-mathematics/algebraic-fractions-and-division/)。

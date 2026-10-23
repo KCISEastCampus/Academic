@@ -7,11 +7,13 @@ subject: a2-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-mathematics/algebraic-fractions-and-division/
 permalink: /zh/alevel/a2-mathematics/algebraic-fractions-and-division/
-toc_headings: h2, h3, h4
+toc_headings: h2, h3
+reading_layout: true
 study_page: true
 ---
 
 [纯数学](/zh/alevel/a2-mathematics/) · P2.1 代数与函数
+{: .lesson-meta}
 
 学习化简代数分式（algebraic fraction），进行加减乘除，并把假分式（improper fraction）写成多项式与真分式（proper fraction）之和。原式中的限制条件要保留。
 
@@ -20,8 +22,13 @@ study_page: true
 - **学习：**从[化简](#simplification)开始，再完成例题。
 - **作业帮助：**查看[分式运算](#operations-with-fractions)或[多项式除法](#algebraic-division)。
 - **复习：**先尝试[练习题](#practice)，再打开解答。
+{: .lesson-routes}
 
-**开始前：**你应当会因式分解二次式、展开括号和合并同类项。如有需要，先复习[定义域](/zh/alevel/a2-mathematics/functions/#domain-and-range)。
+<div class="lesson-notes" markdown="1">
+
+**开始前：**会展开和合并同类项、分解二次式（[AS 代数 L02](/zh/alevel/as-mathematics/algebra/#l02)），并代入多项式（[L03](/zh/alevel/as-mathematics/algebra/#l03)）。下方参数题会示范怎样从两个一次方程消去一个未知数。先回补[定义域](/zh/alevel/a2-mathematics/functions/#domain-and-range)，再问“改写后哪些输入仍然不能用？”本页先练习保持限制，再学习除法与余数。复习入口为[独立练习](#practice)，错误后转[新重试](#repair-and-retry)，后续课程用[稍后回顾](#later-review)。
+
+</div>
 
 ## 化简 {#simplification}
 
@@ -44,6 +51,8 @@ $$\frac{x(x+2)}{x(x+5)}=\frac{x+2}{x+5},\qquad x\ne0,-5,$$
 
 但不能在 $\frac{x+2}{x+5}$ 中约去两个 $x$，因为它们不是相乘的因式。
 
+<section class="worked-example" markdown="1">
+
 ### 例题 1 — 约去因式后仍有定义域限制 {#example-1--a-cancelled-factor-still-gives-a-restriction}
 
 **Question:** Simplify $\displaystyle\frac{x^2-9}{x^2+x-6}$ and state its domain.
@@ -59,6 +68,8 @@ $$\boxed{\frac{x^2-9}{x^2+x-6}=\frac{x-3}{x-2},\qquad x\ne-3,2}.$$
 定义域为所有实数 $x$，但要排除 $-3$ 和 $2$。
 
 **检查：**当 $x=0$ 时，两个表达式都等于 $\frac32$。当 $x=-3$ 时，单看化简后的表达式会得到 $\frac65$，但原分式无定义。必须保留这个限制。
+
+</section>
 
 ### 分式中含有分数 {#fractions-within-a-fraction}
 
@@ -82,6 +93,8 @@ $$\frac{\frac12x+1}{\frac14x-2}=\frac{2x+4}{x-8},\qquad x\ne8.$$
 
 乘积 $bd$ 是一个公分母。如果 $b$ 和 $d$ 有公因式，也可以使用较小的公分母。
 
+<section class="worked-example" markdown="1">
+
 ### 例题 2 — 减去整个分子 {#example-2--subtract-the-whole-numerator}
 
 **Question:** Express $\displaystyle\frac{2}{x-1}-\frac{x}{x+2}$ as a single fraction.
@@ -104,6 +117,10 @@ $$\boxed{\frac{2}{x-1}-\frac{x}{x+2}=\frac{-x^2+3x+4}{(x-1)(x+2)},\qquad x\ne1,-
 
 **常见错误：**写成 $-x(x-1)=-x^2-x$。正确展开是 $-x^2+x$。
 
+</section>
+
+<section class="worked-example" markdown="1">
+
 ### 例题 3 — 除法会增加一项限制 {#example-3--division-adds-a-restriction}
 
 **Question:** Simplify $\displaystyle\frac{x^2-9}{x^2-1}\div\frac{x-3}{x+1}$ and state all restrictions.
@@ -122,6 +139,8 @@ $$\boxed{\frac{x+3}{x-1},\qquad x\ne-1,1,3}.$$
 **检查：**当 $x=0$ 时，原式等于 $9\div(-3)=-3$，与答案一致。
 
 **常见错误：**只保留 $x\ne1$，因为它是最终分母中唯一看得见的限制。当 $x=3$ 时，原式要求除以零。
+
+</section>
 
 ## 多项式除法 {#algebraic-division}
 
@@ -144,6 +163,8 @@ $$\frac{F(x)}{G(x)}=Q(x)+\frac{R(x)}{G(x)}.$$
 
 如果余数不为零，它的次数必须小于 $G$ 的次数。余数为零表示除法能整除。
 
+<section class="worked-example" markdown="1">
+
 ### 例题 4 — 整理简单的分子 {#example-4--rearrange-a-simple-numerator}
 
 **Question:** Express $\displaystyle\frac{3x+5}{x-2}$ as a constant plus a proper fraction.
@@ -157,6 +178,16 @@ $$3x+5=3(x-2)+11.$$
 $$\boxed{\frac{3x+5}{x-2}=3+\frac{11}{x-2},\qquad x\ne2}.$$
 
 **检查：**将答案乘以 $x-2$：$3(x-2)+11=3x+5$。
+
+</section>
+
+**余数为什么能靠代入求出？**除以一次式 $ax+b$（$a\ne0$）时，余数次数低于 $1$，所以是常数 $R$。恒等式为
+
+$$F(x)\equiv(ax+b)Q(x)+R.$$
+
+令 $x=-b/a$，乘着 $Q(x)$ 的因式为零，只剩下 $R=F(-b/a)$。这是把数代入多项式恒等式，不是代入原分式。若有两个未知系数和两个余数条件，就分别代入两个除式的根，得到两个方程后求解。
+
+<section class="worked-example" markdown="1">
 
 ### 例题 5 — 余数定理与比较系数（comparison of coefficients） {#example-5--remainder-theorem-and-comparison-of-coefficients}
 
@@ -207,6 +238,8 @@ $$\boxed{\frac{2x^3+3x^2-5x+4}{x+2}=2x^2-x-3+\frac{10}{x+2},\qquad x\ne-2}.$$
 
 **除式是另一个一次式时：**若除式为 $kx-b$ 且 $k\ne0$，常数余数是 $F(\frac bk)$。求商的系数时仍须考虑首项系数 $k$。
 
+</section>
+
 ### 因式定理 {#factor-theorem}
 
 因式定理（factor theorem）指出，$ax+b$ 是多项式 $F(x)$ 的一个因式，当且仅当 $F(-\frac ba)=0$；其中 $a\ne0$。这就是余数为零时的余数定理。
@@ -222,6 +255,8 @@ $$\begin{aligned}F(x)&=(2x+1)(x^2-4)\\&=(2x+1)(x-2)(x+2).\end{aligned}$$
 展开即可检查因式分解是否正确。
 
 **常见错误：**代入 $-b$ 而不是 $-\frac ba$，这是除式为 $ax+b$ 时的常见错误。
+
+<section class="worked-example" markdown="1">
 
 ### 例题 6 — 使用部分分式前先做除法 {#example-6--divide-before-using-partial-fractions}
 
@@ -249,11 +284,15 @@ $$\begin{aligned}&(x-1)(x+2)+2(x+2)+3(x-1)\\&\qquad=x^2+6x-1.\end{aligned}$$
 
 **常见错误：**只写两个部分分式，漏掉商 $1$。
 
+</section>
+
 ## 练习 {#practice}
 
 写出因式分解或除法过程。列明所有限制条件，然后先检查答案，再打开解答。
 
-### 题目 1 — 保留原定义域 {#question-1--keep-the-original-domain}
+<section class="lesson-check" markdown="1">
+
+### 题目 1 {#question-1--keep-the-original-domain}
 
 Simplify $\displaystyle\frac{x^2-4}{x^2-5x+6}$ and state its domain.
 
@@ -275,7 +314,11 @@ $$\frac{(x-2)(x+2)}{(x-2)(x-3)}=\frac{x+2}{x-3},\qquad x\ne2,3.$$
 
 </details>
 
-### 题目 2 — 分母有公因式 {#question-2--a-shared-denominator-factor}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 题目 2 {#question-2--a-shared-denominator-factor}
 
 Express $\displaystyle\frac1{x-2}-\frac3{(x-2)(x+1)}$ as a single fraction in its simplest form. State the restrictions.
 
@@ -295,7 +338,11 @@ $$\frac{x+1-3}{(x-2)(x+1)}=\frac{x-2}{(x-2)(x+1)}=\frac1{x+1},\qquad x\ne2,-1.$$
 
 </details>
 
-### 题目 3 — 除数也要检查 {#question-3--check-the-divisor-too}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 题目 3 {#question-3--check-the-divisor-too}
 
 Simplify $\displaystyle\frac{x^2-1}{x^2-4}\div\frac{x+1}{x-2}$ and state all restrictions.
 
@@ -317,7 +364,11 @@ $$\frac{(x-1)(x+1)}{(x-2)(x+2)}\times\frac{x-2}{x+1}=\frac{x-1}{x+2},\qquad x\ne
 
 </details>
 
-### 题目 4 — 求商和余数 {#question-4--find-a-quotient-and-remainder}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 题目 4 {#question-4--find-a-quotient-and-remainder}
 
 Express $\displaystyle\frac{x^2+4}{x-2}$ as a polynomial plus a proper fraction. Check the remainder using the remainder theorem.
 
@@ -343,7 +394,20 @@ $$\frac{x^2+4}{x-2}=x+2+\frac8{x-2},\qquad x\ne2.$$
 
 </details>
 
-**Follow-up:** For $P(x)=2x^3-3x^2-8x+12$, show that $2x-3$ is a factor, then factorise $P(x)$ fully.
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 后续任务 {#factor-follow-up}
+
+ For $P(x)=2x^3-3x^2-8x+12$, show that $2x-3$ is a factor, then factorise $P(x)$ fully.
+
+<details markdown="1">
+<summary>提示</summary>
+
+先解 $2x-3=0$，再把得到的输入代入多项式。
+
+</details>
 
 <details markdown="1">
 <summary>解答与检查</summary>
@@ -356,9 +420,13 @@ $$\boxed{P(x)=(2x-3)(x^2-4)=(2x-3)(x-2)(x+2).}$$
 
 </details>
 
-### 题目 5 — 二次除式 {#question-5--a-quadratic-divisor}
+</section>
 
-Express $\displaystyle\frac{x^3+2x^2+3x+4}{x^2-1}$ as a polynomial plus a proper fraction. Then express that proper fraction in partial fractions.
+<section class="lesson-check" markdown="1">
+
+### 题目 5 {#question-5--a-quadratic-divisor}
+
+Express $\displaystyle\frac{x^3+2x^2+3x+4}{x^2-1}$ as a polynomial plus a proper fraction. State its domain and verify the identity. After studying Partial Fractions, return and decompose the proper fraction.
 
 <details markdown="1">
 <summary>提示</summary>
@@ -376,7 +444,7 @@ Express $\displaystyle\frac{x^3+2x^2+3x+4}{x^2-1}$ as a polynomial plus a proper
 
 $$\frac{x^3+2x^2+3x+4}{x^2-1}=x+2+\frac{4x+6}{(x-1)(x+1)},\qquad x\ne1,-1.$$
 
-对于真分式，写成
+**学完下一页后再核对：**对于真分式，写成
 
 $$4x+6\equiv A(x+1)+B(x-1).$$
 
@@ -389,6 +457,193 @@ $$\boxed{x+2+\frac5{x-1}-\frac1{x+1},\qquad x\ne1,-1}.$$
 $$\begin{aligned}&(x^2-1)(x+2)+(4x+6)\\&\qquad=x^3+2x^2+3x+4.\end{aligned}$$
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 题目 6 {#check-remainders}
+
+<!-- task:check-remainders -->
+Let $P(x)=2x^3+bx^2+cx+1$. The remainder on division by $2x-1$ is $4$, and the remainder on division by $x+1$ is $-2$. Find $b$ and $c$, showing the equations used.
+<!-- /task:check-remainders -->
+
+<details markdown="1">
+<summary>提示</summary>
+
+先解两个除式为零时的 $x$，分别代入 $P$，不要把余数本身当成输入。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+$$P\left(\frac12\right)=\frac14+\frac b4+\frac c2+1=4\quad\Rightarrow\quad b+2c=11.$$
+
+$$P(-1)=-2+b-c+1=-2\quad\Rightarrow\quad b-c=-1.$$
+
+第一个方程减去第二个：$3c=12$，所以 $c=4$。再由 $b-c=-1$ 得 $b=3$。
+
+$$\boxed{b=3,\qquad c=4}.$$
+
+检查 $P(\frac12)=4$、$P(-1)=-2$。把 $1$ 代入第一个条件会丢失除式的首项系数；回看余数恒等式后做 R3。
+
+</details>
+
+</section>
+
+## 恢复与新尝试 {#repair-and-retry}
+
+收起原解答，按错误选新题。等式变形和定义域要分别核对。
+
+| 错误 | 恢复动作 | 新任务 |
+| --- | --- | --- |
+| 约去项，或丢掉不可用输入 | 回看[因式相消](#factorise-first)，先列原分母零点 | [R1](#retry-domain) |
+| 把乘除限制混为一谈 | 回看[除法例题](#example-3--division-adds-a-restriction)，另查除数是否为零 | [R2](#retry-operations) |
+| 非首一除式代错输入 | 回看[余数示范](#example-5--remainder-theorem-and-comparison-of-coefficients)，先解除式为零 | [R3](#retry-remainder) |
+| 漏商或余数次数不对 | 回看[除法恒等式](#algebraic-division)，展开 GQ+R | [R4](#retry-division) |
+
+<section class="lesson-check" markdown="1">
+
+### R1 {#retry-domain}
+
+<!-- task:retry-domain -->
+Simplify $\displaystyle\frac{x^2+x-6}{x^2-4}$ and give the domain of the original expression. Explain whether $x=2$ becomes allowed.
+<!-- /task:retry-domain -->
+
+<details markdown="1">
+<summary>提示</summary>
+
+先分解分子和分母；“化简后的公式有值”与“原式允许输入”是两件事。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+$$\frac{(x+3)(x-2)}{(x-2)(x+2)}=\frac{x+3}{x+2},\qquad x\ne-2,2.$$
+
+在 $x=2$ 处原式仍无定义。取 $x=0$，两式都为 $\frac32$，但这一次代值只能作检查，恒等关系由因式分解保证。
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### R2 {#retry-operations}
+
+<!-- task:retry-operations -->
+Let $A(x)=\displaystyle\frac{x^2-4}{x-1}$ and $B(x)=\displaystyle\frac{x-2}{x+1}$. Simplify $A(x)B(x)$ and $A(x)\div B(x)$, stating every restriction for each. Explain any difference.
+<!-- /task:retry-operations -->
+
+<details markdown="1">
+<summary>提示</summary>
+
+乘积要求两个式子有定义；商还要求 $B(x)\ne0$。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+$$A(x)B(x)=\frac{(x-2)^2(x+2)}{(x-1)(x+1)},\qquad x\ne-1,1.$$
+
+$$A(x)\div B(x)=\frac{(x+2)(x+1)}{x-1},\qquad x\ne-1,1,2.$$
+
+乘积在 $x=2$ 有定义且为零；商在此处除以零，必须排除。约去因式后不能删除这项限制。
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### R3 {#retry-remainder}
+
+<!-- task:retry-remainder -->
+For $H(x)=4x^3-4x^2-7x+4$, determine the remainder on division by $2x-1$. Decide whether $2x-1$ is a factor and find the quotient.
+<!-- /task:retry-remainder -->
+
+<details markdown="1">
+<summary>提示</summary>
+
+先算 $H(\frac12)$；若余数为零，用商乘回除式核验因式。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+$$H\left(\frac12\right)=\frac12-1-\frac72+4=0.$$
+
+$$H(x)=(2x-1)(2x^2-x-4).$$
+
+因此余数为 $0$，$2x-1$ 是因式，商为 $2x^2-x-4$。展开得到原多项式；这验证的是多项式恒等式，未声称原分式在 $x=\frac12$ 有定义。
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### R4 {#retry-division}
+
+<!-- task:retry-division -->
+Express $\displaystyle\frac{2x^3+x^2+1}{x^2-1}$ as a polynomial plus a proper fraction. State the quotient, remainder and original domain, and check the identity.
+<!-- /task:retry-division -->
+
+<details markdown="1">
+<summary>提示</summary>
+
+每一步用首项相除。余数可为一次式；化简余数分式时仍保留原域。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+$$2x^3+x^2+1=(x^2-1)(2x+1)+(2x+2).$$
+
+$$\frac{2x^3+x^2+1}{x^2-1}=2x+1+\frac{2x+2}{x^2-1}=2x+1+\frac2{x-1},\qquad x\ne-1,1.$$
+
+商为 $2x+1$，余数为 $2x+2$，其次数 $1<2$。展开右边恒等式的乘积再加余数，得到原分子。最后相消不使 $x=-1$ 可用。
+
+</details>
+
+</section>
+
+## 稍后回顾 {#review}
+
+学完部分分式后，不看例题完成，说明为什么这样开始。
+
+<section class="lesson-check" markdown="1">
+
+### 回顾任务 {#later-review}
+
+<!-- task:later-review -->
+Write $\displaystyle\frac{x^3-2x^2+x-2}{x^2-4}$ as a polynomial plus a proper fraction in its simplest form, keeping the original domain. Find the remainder when the original numerator is divided by $x-2$, and explain how that agrees with your simplification.
+<!-- /task:later-review -->
+
+<details markdown="1">
+<summary>提示</summary>
+
+分组因式分解与长除法都可以。将等式乘回原分母，分别核验化简和定义域。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+$$x^3-2x^2+x-2=(x-2)(x^2+1),\qquad x^2-4=(x-2)(x+2).$$
+
+$$\frac{x^3-2x^2+x-2}{x^2-4}=x-2+\frac5{x+2},\qquad x\ne-2,2.$$
+
+记本题原分子为 $P$。余数为 $P(2)=0$，与分子包含因式 $x-2$ 一致。用 $(x+2)(x-2)+5=x^2+1$ 检查除法。若直接除以原二次分母，商仍是 $x-2$，但余数为 $5x-10$，不是 $5$；“余数”必须说明是除以哪个多项式。若漏掉输入 $2$，返回 R1；若余数混淆，返回 R4。
+
+</details>
+
+</section>
 
 ## 快速参考 {#quick-reference}
 
@@ -406,5 +661,16 @@ $$\begin{aligned}&(x^2-1)(x+2)+(4x+6)\\&\qquad=x^3+2x^2+3x+4.\end{aligned}$$
 **能解释吗？**为什么约去一个因式后，某个输入仍可能被排除？除法为什么比乘法多一项检查？余数什么时候是常数，什么时候可能是一次式？
 
 [下一节：部分分式](/zh/alevel/a2-mathematics/partial-fractions/) · [返回主题目录](/zh/alevel/a2-mathematics/) · [查看全部参考笔记](/zh/alevel/a2-mathematics/quick-reference/#algebraic-fractions)
+
+<details markdown="1">
+<summary>范围与来源</summary>
+
+[OxfordAQA 9660 大纲 v5.2，P2.1](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf)。
+
+参考的官方题与配套评分材料（官方出版物镜像）：January 2025 Q1, QP p3 / MS p4. [January 2025 QP](https://aqamat.alevelclouds.com/25_01_QP_P2.pdf) · [MS](https://aqamat.alevelclouds.com/25_01_MS_P2.pdf).
+
+本页课堂例题、练习、重试与回顾为自拟教学材料，没有官方分值。
+
+</details>
 
 **学习路径：**[上一节：绝对值函数与变换](/zh/alevel/a2-mathematics/modulus-and-transformations/) · [下一节：部分分式](/zh/alevel/a2-mathematics/partial-fractions/)。

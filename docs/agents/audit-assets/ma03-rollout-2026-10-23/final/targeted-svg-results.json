@@ -1,0 +1,50 @@
+[
+  {
+    "viewportWidth": 390,
+    "theme": "light",
+    "clientWidth": 313,
+    "clientHeight": 522,
+    "contentWidth": 293,
+    "naturalWidth": 420,
+    "naturalHeight": 720,
+    "alt": "余割、正割和余切在零到 2π 区间内的图像，虚线表示竖直渐近线。",
+    "bodyOverflow": false,
+    "axisLabelPixels": 12.557142857142857
+  },
+  {
+    "viewportWidth": 390,
+    "theme": "dark",
+    "clientWidth": 313,
+    "clientHeight": 522,
+    "contentWidth": 293,
+    "naturalWidth": 420,
+    "naturalHeight": 720,
+    "alt": "余割、正割和余切在零到 2π 区间内的图像，虚线表示竖直渐近线。",
+    "bodyOverflow": false,
+    "axisLabelPixels": 12.557142857142857
+  },
+  {
+    "viewportWidth": 1365,
+    "theme": "light",
+    "clientWidth": 440,
+    "clientHeight": 740,
+    "contentWidth": 420,
+    "naturalWidth": 420,
+    "naturalHeight": 720,
+    "alt": "余割、正割和余切在零到 2π 区间内的图像，虚线表示竖直渐近线。",
+    "bodyOverflow": false,
+    "axisLabelPixels": 18
+  },
+  {
+    "viewportWidth": 1365,
+    "theme": "dark",
+    "clientWidth": 440,
+    "clientHeight": 740,
+    "contentWidth": 420,
+    "naturalWidth": 420,
+    "naturalHeight": 720,
+    "alt": "余割、正割和余切在零到 2π 区间内的图像，虚线表示竖直渐近线。",
+    "bodyOverflow": false,
+    "axisLabelPixels": 18
+  }
+]

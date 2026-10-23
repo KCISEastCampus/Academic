@@ -1,4 +1,4 @@
-// Run after `bundle exec jekyll build`: numerical maths and rendered lesson links.
+// Use --source-only before the main agent builds; default also checks rendered HTML.
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
@@ -15,6 +15,7 @@ const answers = [
   [x => sin(x) - sin(x)**3/3, x => cos(x)**3],
   [x => sin(x)**3/3 - sin(x)**5/5, x => sin(x)**2*cos(x)**3],
   [x => tan(2*x)/2 - x, x => tan(2*x)**2],
+  [x => x/8 - sin(4*x)/32, x => sin(x)**2*cos(x)**2],
 ];
 for (const [F, f] of answers) {
   for (const x of [-0.4, 0.2, 0.6]) {
@@ -43,6 +44,33 @@ close(integral(x => abs(x*x-4), -3, 3), 46/3);
 close(PI*integral(x => cos(2*x)**2, 0, PI/4), PI*PI/8);
 close(PI*integral(y => y-1, 1, 4), 9*PI/2);
 
+// New transfer/retry answers are checked against the original integrands.
+close(integral(x => x*(x-1), 0, 2), 2/3);
+close(integral(x => abs(x*(x-1)), 0, 2), 1);
+close(PI*integral(y => y**4, 0, 2), 32*PI/5);
+close(integral(x => sin(x)*cos(x), 0, PI/2), 1/2);
+close(PI*integral(x => sin(x)**2*cos(x)**2, 0, PI/2), PI*PI/16);
+
+const source = fs.readFileSync(path.join(root, 'alevel/a2-mathematics/integration-applications.md'), 'utf8');
+const chinese = fs.readFileSync(path.join(root, 'zh/alevel/a2-mathematics/integration-applications.md'), 'utf8');
+assert(!/[\u3400-\u9fff]/u.test(source), 'English lesson must use English.');
+const taskBlocks = md => [...md.matchAll(/<section class="lesson-check" markdown="1">([\s\S]*?)<\/section>/g)].map(m => m[1]);
+for (const md of [source, chinese]) {
+  assert(md.includes('reading_layout: true'));
+  assert(!/[\x00-\x09\x0B\x0C\x0E-\x1F]/.test(md), 'Damaged TeX/control character');
+  assert.equal((md.match(/<section\b/g)||[]).length, (md.match(/<\/section>/g)||[]).length);
+  assert(!/<details\b[^>]*\bopen\b/.test(md), 'Help must initially be closed');
+  for (const block of taskBlocks(md)) {
+    assert(!block.includes('<section'), 'Task boundaries must not nest');
+    assert.equal((block.match(/<details\b/g)||[]).length, 2, 'Each task needs separate hint and solution');
+    assert.equal((block.match(/<\/details>/g)||[]).length, 2);
+  }
+  for (const id of ['repair-trig','repair-area','repair-volume','review-later','next-step']) assert(md.includes(`#${id}`));
+}
+const prompts = md => taskBlocks(md).map(b => b.split('<details')[0].replace(/^\s*### .+\n/m,'').trim().replace(/\s+/g,' '));
+assert.deepEqual(prompts(source), prompts(chinese), 'Bilingual task conditions must match');
+console.log('Integration applications maths/source passed: 8 derivatives, 16 definite results, bilingual task conditions and closed separate help.');
+if (!process.argv.includes('--source-only')) {
 const lessons = ['index', 'functions', 'modulus-and-transformations', 'algebraic-fractions-and-division', 'partial-fractions', 'integration', 'integration-applications', 'differential-equations', 'numerical-methods', 'vectors', 'binomial-series', 'trigonometric-functions-and-formulae', 'exponential-and-logarithmic-functions', 'differentiation', 'parametric-equations', 'mathematical-proof', 'quick-reference'];
 for (const lesson of lessons) {
   const file = path.join(root, '_site/alevel/a2-mathematics', lesson === 'index' ? '' : lesson, 'index.html');
@@ -59,9 +87,8 @@ for (const lesson of lessons) {
     }
   }
 }
-const source = fs.readFileSync(path.join(root, 'alevel/a2-mathematics/integration-applications.md'), 'utf8');
-assert(!/[\u3400-\u9fff]/u.test(source), 'Lesson must use English.');
 const rendered = fs.readFileSync(path.join(root, '_site/alevel/a2-mathematics/integration-applications/index.html'), 'utf8');
-assert.equal((rendered.match(/<details\b/g) || []).length, 14);
+assert.equal((rendered.match(/<details\b/g) || []).length, (source.match(/<details\b/g) || []).length);
 assert(!rendered.includes('<p>$$'), 'Display maths must render as MathJax input.');
-console.log('Integration applications passed: 7 derivatives, 11 definite results, lesson links, English content and 14 practice disclosures.');
+console.log('Integration applications rendered HTML and course links passed.');
+} else console.log('Rendered HTML checks skipped (--source-only); main-agent build required.');

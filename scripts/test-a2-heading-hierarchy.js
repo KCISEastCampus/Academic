@@ -15,8 +15,10 @@ for (const subject of subjects) {
       const file = prefix + directory + '/' + name;
       const source = read(file), url = source.match(/^permalink: (.+)$/m)?.[1];
       assert(url, file + ': permalink');
-      assert(source.includes('toc_headings: h2, h3, h4\n'), file + ': nested TOC');
+      const toc = source.match(/^toc_headings: (.+)$/m)?.[1].replace(/^"|"$/g, '');
+      assert(toc, file + ': declared TOC topics');
       const html = read('_site' + url + 'index.html');
+      assert(html.includes('data-toc-headings="' + toc + '"'), file + ': declared TOC selector reaches HTML');
       const body = html.split('id="content-container"')[1]?.split('<div id="toc"')[0];
       assert(body, file + ': content');
       const tree = [...body.matchAll(/<h([1-6])\b[^>]*id="([^"]+)"/g)].map(([, level, id]) => [Number(level), id]);

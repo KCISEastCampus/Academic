@@ -5,25 +5,38 @@ mathjax: true
 grade: a2
 subject: a2-mathematics
 permalink: /alevel/a2-mathematics/trigonometric-functions-and-formulae/
-toc_headings: h2, h3, h4
+toc_headings: h2, h3
+reading_layout: true
 study_page: true
 ---
 
 [Pure Mathematics](/alevel/a2-mathematics/) · P2.4 Trigonometric Functions and Formulae
+{: .lesson-meta}
 
-Use inverse and reciprocal functions, prove identities and choose formulae to solve trigonometric equations.
+<div class="lesson-lead" markdown="1">
 
-- **Learning:** study each method, then use the worked examples to check signs and intervals.
-- **Homework help:** use the [method table](#choose-a-method). Check the angle unit, undefined values and the full interval before calculating.
-- **Revision:** try [practice](#practice) with solutions closed, then check the [quick reference](#quick-reference).
+An inverse gives one permitted angle; an equation may need several. Learn to choose a useful trigonometric form while keeping every allowed solution and excluding undefined expressions.
 
-Textbook: Chapter 3, Sections 3.1–3.6 (printed pp. 32–49). This lesson follows its inverse functions, reciprocal functions, trigonometric formulae, compound angle formulae, expressions of the form $a\cos\theta+b\sin\theta$, and double angle formulae.
+</div>
 
-**Before you start:** you should know sine, cosine and tangent graphs, exact values, quadrants, radians, [inverse functions](/alevel/a2-mathematics/functions/) and [transformations](/alevel/a2-mathematics/modulus-and-transformations/).
+1. [Distinguish inverses](#inverse-trigonometric-functions) from [reciprocals](#reciprocal-trigonometric-functions), using their domains and graphs.
+2. [Prove and connect forms](#trigonometric-identities), then use [compound angles](#compound-angle-formulae) and [single sine or cosine forms](#sine-and-cosine-forms).
+3. [Work with double angles](#double-angle-formulae), then attempt [practice](#practice). Return to [review](#later-review) after another topic.
+{: .lesson-routes}
 
-All worked examples and practice questions are self-written, not official past-paper questions. The suggested practice time is a guide; no official marks are assigned.
+<div class="lesson-notes" markdown="1">
 
-## Choose a Method
+**Before you start:** recover [radians and exact triangle values](/alevel/as-mathematics/trigonometry/#l15), [periodic graphs, quadrants and interval solutions](/alevel/as-mathematics/trigonometry/#l16), [factorising quadratics](/alevel/as-mathematics/algebra/#l02), [inverse functions](/alevel/a2-mathematics/functions/#inverse-functions) or [graph transformations](/alevel/a2-mathematics/modulus-and-transformations/) as needed. You do not need the compound-angle formulae in advance; they are introduced below.
+
+All examples and tasks are self-written, with no official marks. A task completed with a hint is supported work; close the help before a new retry. [Sources and scope](#lesson-sources) follow the lesson.
+
+</div>
+
+## Choose a Method {#choose-a-method}
+
+
+<details markdown="1">
+<summary>Method reference for revision</summary>
 
 | Task | First step | Check |
 |---|---|---|
@@ -37,7 +50,9 @@ All worked examples and practice questions are self-written, not official past-p
 
 Use degrees when a question gives degrees. Otherwise this lesson uses radians. Keep exact values until the final answer; use full calculator values when finding decimal solutions.
 
-## Inverse Trigonometric Functions
+</details>
+
+## Inverse Trigonometric Functions {#inverse-trigonometric-functions}
 
 Sine, cosine and tangent must be restricted to give one-to-one functions before finding their inverses.
 
@@ -53,7 +68,9 @@ For example, $\sin^{-1}\left(\frac12\right)=\frac\pi6$. It gives one angle in th
 
 The inverse graph is the reflection of the restricted original graph in $y=x$.
 
-### Example 1 — Domain, range and a transformed inverse graph
+<section class="worked-example" markdown="1">
+
+### Example 1 — Domain, range and a transformed inverse graph {#example-1--domain-range-and-a-transformed-inverse-graph}
 
 **Question:** Find the domain and range of $y=\cos^{-1}(3x-2)$. Give three points for a sketch and solve $\cos^{-1}(3x-2)=\frac\pi3$.
 
@@ -71,7 +88,9 @@ To solve the equation, $3x-2=\cos\frac\pi3=\frac12$, giving $\boxed{x=\frac56}$.
 
 **Check:** $\frac56$ is in the domain, and $\frac\pi3$ is in the inverse range. If the right-hand side had been $\frac{4\pi}3$, there would be no solution: it is outside that range.
 
-## Reciprocal Trigonometric Functions
+</section>
+
+## Reciprocal Trigonometric Functions {#reciprocal-trigonometric-functions}
 
 $$\cosec\theta=\frac1{\sin\theta},\qquad \sec\theta=\frac1{\cos\theta},$$
 
@@ -87,7 +106,9 @@ Here $k$ is any integer. The undefined values give vertical asymptotes. Cosecant
 
 ![Graphs of cosecant, secant and cotangent from zero to two pi, with dashed vertical asymptotes.](/assets/img/trigonometric-reciprocals.svg)
 
-### Example 2 — Transform the interval as well as the angle
+<section class="worked-example" markdown="1">
+
+### Example 2 — Transform the interval as well as the angle {#example-2--transform-the-interval-as-well-as-the-angle}
 
 **Question:** Solve $\sec\left(2\theta-\frac\pi3\right)=-2$ for $0\le\theta\le\pi$.
 
@@ -101,7 +122,35 @@ $$\boxed{\theta=\frac\pi2,\ \frac{5\pi}6}.$$
 
 **Check:** both values are in $[0,\pi]$, and their cosine values are non-zero. Taking only $\cos^{-1}(-\frac12)=\frac{2\pi}3$ would miss the second solution.
 
-## Trigonometric Identities
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Pause and complete {#check-angle-interval}
+
+<!-- task:check-angle-interval -->
+
+Let $\phi=2\theta-\pi/3$, with $0\le\theta\le\pi$. Write the interval for $\phi$, then solve $\sec\phi=2$ for all the corresponding $\theta$ values.
+
+<!-- /task:check-angle-interval -->
+
+<details markdown="1">
+<summary>Hint</summary>
+
+The cosine is now positive. Include the ends of the transformed interval if they satisfy the equation.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+The interval is $-\pi/3\le\phi\le5\pi/3$. The equation is $\cos\phi=1/2$, with $\phi=-\pi/3,\pi/3,5\pi/3$. Thus $\theta=0,\pi/3,\pi$. Each gives a non-zero cosine and satisfies the original secant equation.
+
+</details>
+
+</section>
+
+## Trigonometric Identities {#trigonometric-identities}
 
 Starting with $\sin^2\theta+\cos^2\theta=1$, divide by $\cos^2\theta$ or $\sin^2\theta$ to get
 
@@ -109,7 +158,9 @@ $$1+\tan^2\theta=\sec^2\theta,\qquad 1+\cot^2\theta=\cosec^2\theta.$$
 
 Each identity holds where its expressions are defined. For a proof, start with one side and use known identities until you reach the other side. Numerical checks can find a mistake, but they do not prove an identity.
 
-### Example 3 — Prove an identity
+<section class="worked-example" markdown="1">
+
+### Example 3 — Prove an identity {#example-3--prove-an-identity}
 
 **Question:** Prove $\sec\theta-\cos\theta=\sin\theta\tan\theta$ where both sides are defined.
 
@@ -127,7 +178,11 @@ This is the right-hand side. The restriction is $\cos\theta\ne0$.
 
 **Common mistake:** assuming the required result and rearranging it without explaining that every step is reversible.
 
-### Example 4 — Eliminate a parameter
+</section>
+
+<section class="worked-example" markdown="1">
+
+### Example 4 — Eliminate a parameter {#example-4--eliminate-a-parameter}
 
 **Question:** Given $x=3\sec\theta$ and $y=2\tan\theta$, eliminate $\theta$ and state the possible $x$ values.
 
@@ -141,7 +196,9 @@ Since $\sec\theta\le-1$ or $\sec\theta\ge1$, $\boxed{x\le-3\text{ or }x\ge3}$. T
 
 When the parameter has a restricted interval, keep any extra restrictions on the resulting curve.
 
-## Compound Angle Formulae
+</section>
+
+## Compound Angle Formulae {#compound-angle-formulae}
 
 $$\begin{aligned}
 \sin(A+B)&=\sin A\cos B+\cos A\sin B,\\
@@ -162,7 +219,9 @@ $$(\cos A-\cos B)^2+(\sin A-\sin B)^2.$$
 
 Expanding and using $\sin^2 A+\cos^2 A=1$ gives $2-2(\cos A\cos B+\sin A\sin B)$. Equating the results gives the cosine difference formula. Replace $B$ by $-B$ to get the sum formula; use complementary angles to derive the sine formulae. Dividing the sine sum formula by the cosine sum formula gives the tangent sum formula where defined.
 
-### Example 5 — Exact value and recognising a formula
+<section class="worked-example" markdown="1">
+
+### Example 5 — Exact value and recognising a formula {#example-5--exact-value-and-recognising-a-formula}
 
 **Question:** Find $\sin15^\circ$ exactly. Simplify $\sin\theta\cos\frac\pi4-\cos\theta\sin\frac\pi4$ and find the smallest positive value of $\theta$ at which the maximum occurs.
 
@@ -178,7 +237,9 @@ The second expression is $\sin\left(\theta-\frac\pi4\right)$. Its maximum is $1$
 
 **Check:** $\sin15^\circ$ is positive and less than $\sin30^\circ=\frac12$. Do not use $\sin(A-B)=\sin A-\sin B$.
 
-## Sine and Cosine Forms
+</section>
+
+## Sine and Cosine Forms {#sine-and-cosine-forms}
 
 Choose the requested sine or cosine form and expand it **before** comparing coefficients. For example,
 
@@ -192,7 +253,9 @@ Take $r>0$ when at least one of $a,b$ is non-zero. Choose $\alpha$ using **both*
 
 For $r\sin(\theta+\alpha)$, instead compare $r\sin\alpha=a$ and $r\cos\alpha=b$. The angle is not generally the same as for the cosine form.
 
-### Example 6 — A sine form, maximum and minimum
+<section class="worked-example" markdown="1">
+
+### Example 6 — A sine form, maximum and minimum {#example-6--a-sine-form-maximum-and-minimum}
 
 **Question:** Express $4\sin\theta-3\cos\theta$ as $r\sin(\theta-\alpha)$, with $r>0$ and $0<\alpha<90^\circ$. Find the maximum and minimum of $2+4\sin\theta-3\cos\theta$ and the angles at which they occur in $0\le\theta\le360^\circ$.
 
@@ -208,7 +271,11 @@ The maximum is $\boxed{7}$ at $\boxed{\theta=126.9^\circ}$, and the minimum is $
 
 **Check:** at $\theta=0$, the original expression is $-3$, and the sine form gives $-5\sin\alpha=-3$. Keep $\alpha$ unrounded until the final angles.
 
-### Example 7 — Solve using a cosine form
+</section>
+
+<section class="worked-example" markdown="1">
+
+### Example 7 — Solve using a cosine form {#example-7--solve-using-a-cosine-form}
 
 **Question:** Solve $\cos\theta+\sqrt3\sin\theta=1$ for $0\le\theta\le2\pi$.
 
@@ -222,7 +289,9 @@ Therefore $\boxed{\theta=0,\frac{2\pi}3,2\pi}$.
 
 **Check:** both endpoints are included in the question, so list both $0$ and $2\pi$. Substitution into the original equation confirms all three solutions.
 
-## Double Angle Formulae
+</section>
+
+## Double Angle Formulae {#double-angle-formulae}
 
 Put $B=A$ in the compound angle formulae:
 
@@ -241,9 +310,13 @@ $$\sin^2 A=\frac{1-\cos2A}{2},\qquad\cos^2 A=\frac{1+\cos2A}{2}.$$
 
 These forms are useful in [trigonometric integration](/alevel/a2-mathematics/integration-applications/#trigonometric-integrals).
 
-### Example 8 — Keep solutions when factorising
+<section class="worked-example" markdown="1">
+
+### Example 8 — Keep solutions when factorising {#example-8--keep-solutions-when-factorising}
 
 **Question:** Solve $\sin2x=\sin x$ for $0\le x\le2\pi$.
+
+The two sine terms suggest using the sine double-angle formula. Moving everything to one side exposes a common factor, so we can split cases without dividing by a possibly zero quantity.
 
 $$2\sin x\cos x-\sin x=0\quad\Rightarrow\quad\sin x(2\cos x-1)=0.$$
 
@@ -253,7 +326,11 @@ $$\boxed{x=0,\frac\pi3,\pi,\frac{5\pi}3,2\pi}.$$
 
 **Common mistake:** dividing by $\sin x$. That would lose $0,\pi,2\pi$. Factor instead, then check all candidates in the original equation.
 
-### Example 9 — Derive a further identity
+</section>
+
+<section class="worked-example" markdown="1">
+
+### Example 9 — Derive a further identity {#example-9--derive-a-further-identity}
 
 **Question:** Prove $\cos3A=4\cos^3 A-3\cos A$.
 
@@ -267,13 +344,21 @@ $$\begin{aligned}
 
 **Check:** at $A=0$, both sides are $1$. The algebra above proves the identity for all real angles; the single-value check alone would not.
 
-## Practice
+</section>
+
+## Practice {#practice}
 
 Allow about **35–45 minutes**. Give exact answers unless a question asks for decimals. State any restrictions used in a proof or elimination.
 
-### Q1 — Inverse values and graph
+<section class="lesson-check" markdown="1">
 
-Find $\sin^{-1}(-\frac12)$ and $\tan^{-1}(-\sqrt3)$ exactly. Find the domain, range and three sketch points for $y=\sin^{-1}(2x+1)$.
+### Question 1 {#q1--inverse-values-and-graph}
+
+<!-- task:q1--inverse-values-and-graph -->
+
+Find $\sin^{-1}(-\frac12)$ and $\tan^{-1}(-\sqrt3)$ exactly. Sketch $y=\sin^{-1}(2x+1)$, stating the domain and range and labelling three points.
+
+<!-- /task:q1--inverse-values-and-graph -->
 
 <details markdown="1">
 <summary>Hint</summary>
@@ -291,9 +376,19 @@ The graph increases through $(-1,-\frac\pi2)$, $(-\frac12,0)$ and $(0,\frac\pi2)
 
 </details>
 
-### Q2 — Reciprocal equation
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Question 2 {#q2--reciprocal-equation}
+
+<!-- task:q2--reciprocal-equation -->
 
 Solve $\cosec\theta=-2$ for $0\le\theta\le360^\circ$. Give the asymptotes and period of $y=\cot\theta$ using radians.
+
+Use the secant panel above to construct a sketch of $y=2\sec(2\theta)$ on $0\le\theta\le\pi$. Label its asymptotes, turning points and range.
+
+<!-- /task:q2--reciprocal-equation -->
 
 <details markdown="1">
 <summary>Hint</summary>
@@ -309,11 +404,21 @@ $\boxed{\theta=210^\circ,330^\circ}$. Both sines are $-\frac12$, so the reciproc
 
 Cotangent has asymptotes $\boxed{\theta=k\pi}$, for integer $k$, and period $\boxed{\pi}$. Its zeros are $\frac\pi2+k\pi$, where cotangent is defined even though tangent is not.
 
+For the new graph, horizontal coordinates in the secant panel are halved and heights doubled. Asymptotes are $\theta=\pi/4,3\pi/4$; turning points (including the boundary extrema) are $(0,2)$, $(\pi/2,-2)$ and $(\pi,2)$. The outer branches lie at $y\ge2$ and the middle branch at $y\le-2$. Draw the branches tending without bound beside each asymptote; do not join across them.
+
 </details>
 
-### Q3 — An identity and its domain
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Question 3 {#q3--an-identity-and-its-domain}
+
+<!-- task:q3--an-identity-and-its-domain -->
 
 Prove $\tan\theta+\cot\theta=\sec\theta\cosec\theta$ and state the restrictions.
+
+<!-- /task:q3--an-identity-and-its-domain -->
 
 <details markdown="1">
 <summary>Hint</summary>
@@ -336,9 +441,17 @@ Both $\sin\theta\ne0$ and $\cos\theta\ne0$ are required. At $\theta=\frac\pi4$, 
 
 </details>
 
-### Q4 — Eliminate the parameter
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Question 4 {#q4--eliminate-the-parameter}
+
+<!-- task:q4--eliminate-the-parameter -->
 
 Eliminate $\theta$ from $x=2\cosec\theta$, $y=3\cot\theta$. State the possible $x$ values.
+
+<!-- /task:q4--eliminate-the-parameter -->
 
 <details markdown="1">
 <summary>Hint</summary>
@@ -356,9 +469,17 @@ The parameter excludes $\theta=k\pi$. At $\theta=\frac\pi2$ and $\frac{3\pi}2$, 
 
 </details>
 
-### Q5 — Exact values and a compound angle equation
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Question 5 {#q5--exact-values-and-a-compound-angle-equation}
+
+<!-- task:q5--exact-values-and-a-compound-angle-equation -->
 
 Find $\cos15^\circ$ exactly. Solve $\sin(\theta+\frac\pi6)=\cos\theta$ for $0\le\theta\le2\pi$.
+
+<!-- /task:q5--exact-values-and-a-compound-angle-equation -->
 
 <details markdown="1">
 <summary>Hint</summary>
@@ -378,9 +499,17 @@ If $\cos\theta=0$, this equation is false, so division by $\cos\theta$ loses no 
 
 </details>
 
-### Q6 — Coefficients, signs and extrema
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Question 6 {#q6--coefficients-signs-and-extrema}
+
+<!-- task:q6--coefficients-signs-and-extrema -->
 
 Express $3\cos\theta-4\sin\theta$ as $r\cos(\theta+\alpha)$, with $r>0$ and $0<\alpha<90^\circ$. Find the maximum and minimum of $1+3\cos\theta-4\sin\theta$ and their angles in $0\le\theta\le360^\circ$, to one decimal place.
+
+<!-- /task:q6--coefficients-signs-and-extrema -->
 
 <details markdown="1">
 <summary>Hint</summary>
@@ -398,9 +527,17 @@ The maximum is $\boxed{6}$ at $\boxed{306.9^\circ}$; the minimum is $\boxed{-4}$
 
 </details>
 
-### Q7 — A quadratic equation
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Question 7 {#q7--a-quadratic-equation}
+
+<!-- task:q7--a-quadratic-equation -->
 
 Solve $\cos2x=\sin x$ for $0\le x\le2\pi$.
+
+<!-- /task:q7--a-quadratic-equation -->
 
 <details markdown="1">
 <summary>Hint</summary>
@@ -418,9 +555,17 @@ Thus $\sin x=\frac12$ or $-1$, giving $\boxed{x=\frac\pi6,\frac{5\pi}6,\frac{3\p
 
 </details>
 
-### Q8 — Double angle and powers
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Question 8 {#q8--double-angle-and-powers}
+
+<!-- task:q8--double-angle-and-powers -->
 
 Given $\tan A=\frac12$, find $\tan2A$ exactly. Express $6\sin^2 x-2$ in terms of $\cos2x$.
+
+<!-- /task:q8--double-angle-and-powers -->
 
 <details markdown="1">
 <summary>Hint</summary>
@@ -440,7 +585,194 @@ The tangent denominator is $\frac34\ne0$. For the second result, $x=0$ gives $-2
 
 </details>
 
-## Quick Reference
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Question 9 {#q9}
+
+<!-- task:q9 -->
+
+Solve $2\tan^2(x-\pi/6)=\sec(x-\pi/6)+1$ for $0\le x<2\pi$. Give exact answers.
+
+<!-- /task:q9 -->
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Work with one trigonometric quantity. Keep its domain restrictions and the interval for the whole angle.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+Put $\phi=x-\pi/6$, so $-\pi/6\le\phi<11\pi/6$ and $\cos\phi\ne0$. Using $\tan^2\phi=\sec^2\phi-1$ gives
+
+$$2\sec^2\phi-\sec\phi-3=0\quad\Rightarrow\quad(2\sec\phi-3)(\sec\phi+1)=0.$$
+
+Let $\beta=\cos^{-1}(2/3)$. The cosine cases are $2/3$ and $-1$. In this interval their angles are $\beta,2\pi-\beta,\pi$; $-\beta$ lies below the lower end. Therefore
+
+$$x=\frac\pi6+\beta,\quad\frac{7\pi}6,\quad\frac{13\pi}6-\beta.$$
+
+Each is in the original interval and has non-zero cosine. For secant $3/2$, the two sides both equal $5/2$; for secant $-1$, both are zero. The cosine cases enumerate the whole interval, which supplies completeness beyond substitution alone.
+
+</details>
+
+</section>
+
+## Repair and try again {#repair}
+
+Return to the explanation for the first step that failed. Close the old solution before trying the new question; judge valid alternative methods by their reasoning, restrictions and full solution set.
+
+| Error in your work | Recover here | New attempt |
+| --- | --- | --- |
+| Inverse value outside its range, or incorrect inverse graph in Question 1 | [Inverse ranges](#inverse-trigonometric-functions) | [Retry A](#retry-inverse) |
+| A numerical check offered as proof, or a lost curve restriction in Questions 3–4 | [Proof](#example-3--prove-an-identity), [parameter elimination](#example-4--eliminate-a-parameter) | [Retry B](#retry-identities) |
+| Wrong sign/quadrant or extremum angle in Questions 5–6 | [Compound angles](#compound-angle-formulae), [coefficient comparison](#sine-and-cosine-forms) | [Retry C](#retry-phase) |
+| Wrong reciprocal graph, lost zero factor, endpoints or angle branches in Questions 2, 7–9 | [Reciprocal graph](#reciprocal-trigonometric-functions), [transformed interval](#example-2--transform-the-interval-as-well-as-the-angle), [factorising](#example-8--keep-solutions-when-factorising) | [Retry D](#retry-zero-factor); redo the graph part of Question 2 separately if needed |
+
+<section class="lesson-check" markdown="1">
+
+### Retry A {#retry-inverse}
+
+<!-- task:retry-inverse -->
+
+Sketch $y=\cos^{-1}(1-2x)$ with its domain, range and three labelled points. Can its value equal $3\pi/2$?
+
+<!-- /task:retry-inverse -->
+
+<details markdown="1">
+<summary>Hint</summary>
+
+First constrain $1-2x$ to the cosine inverse domain. Then use the principal range.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+The domain is $0\le x\le1$, the range is $0\le y\le\pi$, and the increasing curve passes through $(0,0),(1/2,\pi/2),(1,\pi)$. It cannot equal $3\pi/2$, which is outside its range. The reflection of the restricted cosine curve explains why the inverse is a single-valued graph.
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Retry B {#retry-identities}
+
+<!-- task:retry-identities -->
+
+(a) Prove $(\sec^2x-1)\cos^2x=\sin^2x$, stating the restriction. (b) Eliminate $t$ from $u=2\sec t$, $v=\tan t$, where $0\le t<\pi/2$, retaining all curve restrictions.
+
+<!-- /task:retry-identities -->
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Use an identity with a known domain. The parameter interval in (b) selects only part of the Cartesian curve.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+(a) For $\cos x\ne0$, the left side is $\tan^2x\cos^2x=\sin^2x$.
+
+(b) $u^2/4-v^2=1$, with $u\ge2$ and $v\ge0$. At $t=0$ the point is $(2,0)$; increasing $t$ covers the upper half of the right branch. Keeping the full left branch or negative $v$ would add points the parameter cannot reach.
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Retry C {#retry-phase}
+
+<!-- task:retry-phase -->
+
+Find the maximum and minimum of $2+\sin x+\cos x$ and where they occur for $0\le x\le2\pi$. Also solve $\sin x+\cos x=0$ on the same interval. Show a valid method of your choice.
+
+<!-- /task:retry-phase -->
+
+<details markdown="1">
+<summary>Hint</summary>
+
+If using a single sine or cosine form, expand it to check both coefficients. For an equation, justify any division.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+One form is $\sin x+\cos x=\sqrt2\cos(x-\pi/4)$. The maximum is $2+\sqrt2$ at $x=\pi/4$; the minimum is $2-\sqrt2$ at $x=5\pi/4$. The equation gives $x=3\pi/4,7\pi/4$. Alternatively, tangent can solve the equation after checking that $\cos x=0$ supplies no root.
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Retry D {#retry-zero-factor}
+
+<!-- task:retry-zero-factor -->
+
+Solve $\sin2x=\cos x$ for $-\pi/2\le x\le3\pi/2$. Explain why your list is complete. Then sketch $y=\cosec(2x)$ for $0<x<\pi$, labelling its asymptotes and turning points.
+
+<!-- /task:retry-zero-factor -->
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Before dividing by a trigonometric factor, consider where it is zero. For the sketch, map the argument interval and take reciprocals of sine heights.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+$\cos x(2\sin x-1)=0$. The cosine case gives $-\pi/2,\pi/2,3\pi/2$; the sine case $1/2$ gives $\pi/6,5\pi/6$. These cases exhaust the factorisation. All five satisfy the original equation, including both endpoints.
+
+For the graph, $2x$ covers $(0,2\pi)$, so vertical asymptotes are $x=0,\pi/2,\pi$ (including the boundaries). The positive branch has minimum $(\pi/4,1)$; the negative branch has maximum $(3\pi/4,-1)$. The graph has range $y\le-1$ or $y\ge1$, and no zero.
+
+</details>
+
+</section>
+
+## Return later {#review}
+
+After another topic, close the method table and examples and attempt this task. Record your chosen method and any help used.
+
+<section class="lesson-check" markdown="1">
+
+### Review task {#later-review}
+
+<!-- task:later-review -->
+
+Solve $\cos2x=\cos x$ for $0\le x\le2\pi$. Explain why no solution is lost or added. Use any valid exact method.
+
+<!-- /task:later-review -->
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Connect the angles or express the equation using one function. Treat the endpoints as distinct inputs.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+One route is $2\cos^2x-\cos x-1=0$, so $(2\cos x+1)(\cos x-1)=0$. Thus $x=0,2\pi/3,4\pi/3,2\pi$. No factor was divided out; the two cosine cases supply all roots on the interval.
+
+An equally valid route uses $2x=2k\pi\pm x$ and enumerates the same interval. Substitution checks each root but is not, by itself, proof that the list is complete. For missing endpoints return to [the interval example](#example-7--solve-using-a-cosine-form); for a lost factor use [Retry D](#retry-zero-factor).
+
+</details>
+
+</section>
+
+## Quick Reference {#quick-reference}
 
 | Formula or task | Use | Check |
 |---|---|---|
@@ -458,3 +790,14 @@ The tangent denominator is $\frac34\ne0$. For the second result, $x=0$ gives $-2
 **You should be able to:** sketch inverse and reciprocal functions, prove identities, eliminate a parameter and solve equations using compound and double angle formulae.
 
 **Learning path:** [Previous: Binomial Series](/alevel/a2-mathematics/binomial-series/) · [Next: Exponential and Logarithmic Functions](/alevel/a2-mathematics/exponential-and-logarithmic-functions/) · [Return to the Pure Mathematics topic index](/alevel/a2-mathematics/).
+
+## Next step {#next-step}
+
+When you can justify the domain and complete solution set without a method label, continue to [Exponential and Logarithmic Functions](/alevel/a2-mathematics/exponential-and-logarithmic-functions/). A failed graph, sign or completeness check has its own [recovery route](#repair); return to [review](#later-review) after a gap.
+
+<details id="lesson-sources" markdown="1">
+<summary>Sources and scope</summary>
+
+Scope: OxfordAQA 9660 MA03 P2.4, with P2.1 inverse/graph and P2.3 parameter connections, [specification v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf), printed pp21–22. Preparation checked January 2025 MA03 Q7(a)(i)–(ii), Q7(b), [QP pp14–15](https://aqamat.alevelclouds.com/25_01_QP_P2.pdf) and [MS p12](https://aqamat.alevelclouds.com/25_01_MS_P2.pdf), for coefficient signs, interval branches and a reciprocal quadratic. All page questions remain self-written. Original textbook locator: Chapter 3, Sections 3.1–3.6, printed pp32–49; not rechecked against the book in this revision. Inverse-function addition formulae are not required here. Integration uses are linked to the later integration lesson.
+
+</details>

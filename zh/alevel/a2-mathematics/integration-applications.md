@@ -7,7 +7,8 @@ subject: a2-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-mathematics/integration-applications/
 permalink: /zh/alevel/a2-mathematics/integration-applications/
-toc_headings: h2, h3, h4
+toc_headings: h2, h3
+reading_layout: true
 study_page: true
 ---
 
@@ -20,8 +21,13 @@ study_page: true
 - **复习：**先在不看解答的情况下尝试[练习](#practice)，再查看[快速参考](#quick-reference)。
 
 教材：第 6 章第 6.5–6.6 节（印刷版第 95–100 页）。面积部分复习较早学过的定积分，并为体积题作准备。积分常数记作 $C$。
+{: .lesson-meta}
 
-**开始前：**你应当掌握标准积分、换元积分法（integration by substitution）和三角恒等式。如有需要，请复习[积分：方法选择](/zh/alevel/a2-mathematics/integration/)。
+<div class="lesson-notes" markdown="1">
+
+**起点与先修：**会逐项积分幂函数、代入上下限并求曲线交点；不会时先回补 [AS 二次函数与交点](/zh/alevel/as-mathematics/algebra/#l02)。三角积分需要弧度、二倍角和换元的微分关系，回补[二倍角](/zh/alevel/a2-mathematics/trigonometric-functions-and-formulae/#double-angle-formulae)、[标准积分](/zh/alevel/a2-mathematics/integration/#standard-integrals)和[换元](/zh/alevel/a2-mathematics/integration/#substitution)。目标是自己选择恒等式、画区域并解释面积符号或旋转截面的半径。复习可从[练习](#practice)开始，错误走[恢复题](#repair)，学过下一节后做[稍后回顾](#review-later)。
+
+</div>
 
 本页所有例题和练习题均为自拟题，并非官方真题；题目没有官方分值。
 
@@ -38,6 +44,10 @@ study_page: true
 {: .wide-table}
 
 若角的表达式是 $2x$ 或 $3x$ 等形式，对整个角使用相同恒等式。积分时要补上内层函数导数所对应的倒数系数。
+
+先检查剩余因子能否组成所选新变量的微分，再决定换元。只有偶次幂时，二倍角把它改写成可逐项积分的和。不能把 $x^n$ 的积分规则直接用于 $\sin^n x$：对正弦的幂求导时还会出现余弦因子。每次先核对恒等式，再积分。
+
+<section class="worked-example" markdown="1">
 
 ### 例题 1 — 保留一个正弦因子 {#example-1--keep-one-sine-factor}
 
@@ -57,6 +67,10 @@ $$\boxed{-\frac12\cos(2x)+\frac16\cos^3(2x)+C}.$$
 
 **常见错误：**漏掉负号或系数 $\frac12$；这个系数来自用 $du$ 替换原微分项。
 
+</section>
+
+<section class="worked-example" markdown="1">
+
 ### 例题 2 — 使用二倍角恒等式 {#example-2--use-a-double-angle-identity}
 
 **Question:** Find $\displaystyle\int\cos^2(3x)\,dx$.
@@ -70,6 +84,10 @@ $$\boxed{\frac{x}{2}+\frac{\sin(6x)}{12}+C}.$$
 **检查：**求导得到 $\frac12+\frac12\cos(6x)=\cos^2(3x)$。
 
 **常见错误：**把 $\cos^2(3x)$ 写成 $\frac{1+\cos(3x)}2$。恒等式中的角要整体加倍。
+
+</section>
+
+<section class="worked-example" markdown="1">
 
 ### 例题 3 — 化简四次幂 {#example-3--reduce-a-fourth-power}
 
@@ -89,6 +107,10 @@ $$\boxed{\frac{3x}{8}+\frac{\sin(4x)}8+\frac{\sin(8x)}{64}+C}.$$
 
 对于偶次幂的乘积，也可以留意 $\sin(2x)=2\sin x\cos x$。例如，$\sin^2x\cos^2x=\frac18[1-\cos(4x)]$。
 
+</section>
+
+<section class="worked-example" markdown="1">
+
 ### 例题 4 — 化简正切函数的幂 {#example-4--reduce-a-tangent-power}
 
 **Question:** Find $\displaystyle\int\tan^3x\,dx$.
@@ -105,6 +127,8 @@ $$\boxed{\frac12\tan^2x+\ln\lvert\cos x\rvert+C}.$$
 
 此结果适用于 $\cos x\ne0$ 的区间。不要跨过 $\tan x$ 无定义的点积分。
 
+</section>
+
 ## 面积 {#area}
 
 **定积分给出带符号的面积（signed area）。**曲线在 $x$ 轴上方的部分贡献正值，在下方的部分贡献负值。总面积则是所有部分面积大小之和。
@@ -115,6 +139,8 @@ $$\boxed{\frac12\tan^2x+\ln\lvert\cos x\rvert+C}.$$
 4. 把各段正面积相加，并用平方单位表示答案。
 
 ![Example 5: the curve x squared minus one crosses the x-axis at minus one and one, with shaded areas above and below. Example 6: the shaded region lies between the line y equals two x and the curve y equals x squared, from zero to two.](/assets/img/integration-area.svg)
+
+<section class="worked-example" markdown="1">
 
 ### 例题 5 — 在曲线穿过坐标轴处拆分 {#example-5--split-where-the-curve-crosses-the-axis}
 
@@ -130,6 +156,10 @@ $$A=\frac43+\frac43+\frac43=\boxed{4\text{ square units}}.$$
 
 **检查：**$\int_{-2}^{2}(x^2-1)\,dx=\frac43$ 是带符号的积分值，不是总面积。即使对这个单一结果取绝对值，仍然得不到正确总面积。
 
+</section>
+
+<section class="worked-example" markdown="1">
+
 ### 例题 6 — 上方曲线减去下方曲线 {#example-6--upper-curve-minus-lower-curve}
 
 **Question:** Find the area enclosed by $y=2x$ and $y=x^2$.
@@ -141,6 +171,8 @@ $$A=\int_0^2(2x-x^2)\,dx=\left[x^2-\frac{x^3}{3}\right]_0^2.$$
 $$\boxed{\frac43\text{ square units}}.$$
 
 **检查：**被积函数在 $[0,2]$ 上非负。如果给定区间内上下两条曲线的顺序发生变化，就应在交点处拆分积分。
+
+</section>
 
 ## 旋转体体积（volume of revolution） {#volume-of-revolution}
 
@@ -155,11 +187,13 @@ $$\boxed{\frac43\text{ square units}}.$$
 
 这些公式描述的是没有空洞的圆形截面。如果所给区域没有延伸到旋转轴，先确定外半径和内半径；不要未经检查就把某一条曲线到轴的距离当作半径。
 
+<section class="worked-example" markdown="1">
+
 ### 例题 7 — 平方整个表达式 {#example-7--square-the-whole-expression}
 
 **Question:** The region between $y=x+1$, the $x$-axis and the lines $x=0$ and $x=2$ is rotated completely about the $x$-axis. Find its volume.
 
-半径为 $y=x+1$。它的平方为 $(x+1)^2=x^2+2x+1$。
+画从 $x$ 轴到曲线的竖直小条，厚度为 $dx$；旋转得到圆盘。半径为 $y=x+1$，它的平方为 $(x+1)^2=x^2+2x+1$。
 
 $$V=\pi\int_0^2(x+1)^2\,dx.$$
 
@@ -169,11 +203,15 @@ $$=\pi\left[\frac{x^3}{3}+x^2+x\right]_0^2=\boxed{\frac{26\pi}{3}\text{ cubic un
 
 **检查：**半径从 $1$ 增加到 $3$，所对应的区间长度为 $2$。体积应介于以最小半径和最大半径构成的圆柱体体积 $2\pi$ 与 $18\pi$ 之间。
 
+</section>
+
+<section class="worked-example" markdown="1">
+
 ### 例题 8 — 绕 y 轴旋转时更换变量 {#example-8--change-the-variable-for-the-y-axis}
 
 **Question:** The region in $x\ge0$ enclosed by $y=x^2+2$, the line $y=6$ and the $y$-axis is rotated completely about the $y$-axis. Find its volume.
 
-$y$ 的积分范围为 $2$ 到 $6$。把曲线改写为 $x^2=y-2$。
+画从 $y$ 轴到曲线的水平小条，厚度为 $dy$。旋转半径是 $x$，不是高度 $y$。区域从 $x=0$ 对应的 $y=2$ 延伸到 $y=6$，故用这两个 $y$ 值作积分限，并将曲线改写为 $x^2=y-2$。
 
 $$V=\pi\int_2^6(y-2)\,dy=\pi\left[\frac{(y-2)^2}{2}\right]_2^6.$$
 
@@ -183,6 +221,8 @@ $$\boxed{8\pi\text{ cubic units}}.$$
 
 **检查：**半径从 $0$ 增加到 $2$。该立体位于半径为 $2$、高为 $4$ 的圆柱体内部，而此圆柱体的体积为 $16\pi$。
 
+</section>
+
 **面积与体积使用不同的被积函数。**对于曲线 $y=\sin x$ 在 $0\le x\le\frac\pi2$ 上的部分，求面积时积分 $\sin x$；绕 $x$ 轴旋转时则积分 $\pi\sin^2x$。因此，体积题可能需要先使用三角恒等式。
 
 ## 练习 {#practice}
@@ -191,7 +231,11 @@ $$\boxed{8\pi\text{ cubic units}}.$$
 
 时间仅供参考。每道三角积分题都写出所用恒等式；每道面积或体积题都先画出区域草图，并列出积分式，再开始计算。遇到困难时再打开提示。
 
-### Q1 — 余弦的奇次幂 {#q1--an-odd-cosine-power}
+先独立画出每道应用题的区域；体积题再标旋转轴、一条截面小条及其半径。教学图只对应例题，练习图由你完成。记录首次答案、帮助、错误和重试。
+
+<section class="lesson-check" markdown="1">
+
+### Q1 {#q1--an-odd-cosine-power}
 
 Find $\displaystyle\int\cos^3x\,dx$.
 
@@ -217,7 +261,11 @@ $$\boxed{\sin x-\frac{\sin^3x}{3}+C}.$$
 
 </details>
 
-### Q2 — 三角函数幂的乘积 {#q2--a-product-of-powers}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Q2 {#q2--a-product-of-powers}
 
 Find $\displaystyle\int\sin^2x\cos^3x\,dx$.
 
@@ -243,7 +291,11 @@ $$\boxed{\frac{\sin^3x}{3}-\frac{\sin^5x}{5}+C}.$$
 
 </details>
 
-### Q3 — 带积分限的偶次幂 {#q3--an-even-power-with-limits}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Q3 {#q3--an-even-power-with-limits}
 
 Evaluate $\displaystyle\int_0^{\frac\pi4}\sin^2(2x)\,dx$ exactly.
 
@@ -263,7 +315,11 @@ $$\left[\frac{x}{2}-\frac{\sin(4x)}8\right]_0^{\frac\pi4}=\boxed{\frac\pi8}.$$
 
 </details>
 
-### Q4 — 正切的平方 {#q4--a-tangent-square}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Q4 {#q4--a-tangent-square}
 
 Find $\displaystyle\int\tan^2(2x)\,dx$ on an interval where $\cos(2x)\ne0$.
 
@@ -283,7 +339,11 @@ $$\int[\sec^2(2x)-1]\,dx=\boxed{\frac12\tan(2x)-x+C}.$$
 
 </details>
 
-### Q5 — 两条曲线之间的面积 {#q5--area-between-two-curves}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Q5 {#q5--area-between-two-curves}
 
 Find the area enclosed by $y=4x-x^2$ and $y=x$.
 
@@ -305,7 +365,11 @@ $$\boxed{\frac92\text{ square units}}.$$
 
 </details>
 
-### Q6 — 带符号积分还是总面积？ {#q6--signed-integral-or-total-area}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Q6 {#q6--signed-integral-or-total-area}
 
 For $y=x^2-4$ on $-3\le x\le3$, find **(a)** the definite integral and **(b)** the total area between the curve and the $x$-axis.
 
@@ -331,7 +395,11 @@ $$A=\frac73+\frac{32}{3}+\frac73=\boxed{\frac{46}{3}\text{ square units}}.$$
 
 </details>
 
-### Q7 — 选择旋转轴和积分变量 {#q7--choose-the-axis-and-the-variable}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Q7 {#q7--choose-the-axis-and-the-variable}
 
 **(a)** The region between $y=\cos(2x)$, the $x$-axis and the lines $x=0$ and $x=\frac\pi4$ is rotated completely about the $x$-axis. Find the volume exactly.
 
@@ -367,6 +435,124 @@ $$\boxed{\frac{9\pi}{2}\text{ cubic units}}.$$
 
 </details>
 
+</section>
+
+## 根据错误恢复 {#repair}
+
+关闭原答案后做相应新题。
+
+| 错误 | 原因与回看 | 重试 |
+| --- | --- | --- |
+| 角或系数错误 | 先核恒等式，再核反向链式法则；[三角积分](#trigonometric-integrals)例 1–4 | [A](#repair-trig) |
+| 直接对总积分取绝对值 | 跨轴抵消不能最后补救；[面积](#area)例 5–6 | [B](#repair-area) |
+| 半径、变量、限不一致 | 重画截面，标半径和厚度；[旋转体](#volume-of-revolution)例 7–8 | [C](#repair-volume) |
+
+<section class="lesson-check" markdown="1">
+
+### 表达式 A {#repair-trig}
+
+Find $\displaystyle\int\sin^2x\cos^2x\,dx$. Explain your first rewrite.
+
+<details markdown="1">
+<summary>提示</summary>
+
+先合并两个因子，再处理平方。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+$$\sin^2x\cos^2x=\frac14\sin^2(2x)=\frac18[1-\cos(4x)],$$
+
+$$\int\sin^2x\cos^2x\,dx=\frac{x}{8}-\frac{\sin(4x)}{32}+C.$$
+
+求导回原式，核对整体角和系数。
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 区域 B {#repair-area}
+
+Sketch $y=x(x-1)$ for $0\le x\le2$. Find the definite integral and the total area with the $x$-axis.
+
+<details markdown="1">
+<summary>提示</summary>
+
+标零点并检查两段符号。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+$$F(x)=\frac{x^3}{3}-\frac{x^2}{2},\qquad \int_0^2x(x-1)\,dx=\frac23.$$
+
+$$A=-\int_0^1x(x-1)\,dx+\int_1^2x(x-1)\,dx=\frac16+\frac56=1.$$
+
+草图在 $0<x<1$ 低于轴，在 $1<x\le2$ 高于轴；面积用平方单位。
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 立体 C {#repair-volume}
+
+The region bounded by $x=y^2$, the $y$-axis and $y=2$, with $y\ge0$, is rotated completely about the $y$-axis. Draw a slice and find the volume.
+
+<details markdown="1">
+<summary>提示</summary>
+
+半径是 $x$，它已由 $y$ 给出。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+$$V=\pi\int_0^2(y^2)^2\,dy=\pi\left[\frac{y^5}{5}\right]_0^2=\frac{32\pi}{5}\text{ cubic units}.$$
+
+最大半径为 $4$，高为 $2$；结果小于包围圆柱体体积 $32\pi$。
+
+</details>
+
+</section>
+
+## 稍后回顾 {#review-later}
+
+学过微分方程后，遮住方法表与解答再做下题。分别记录即时重试和稍后独立选法。
+
+<section class="lesson-check" markdown="1">
+
+### 再次遇到一个区域 {#review-region}
+
+The region $R$ is bounded by $y=\sin x\cos x$, the $x$-axis, $x=0$ and $x=\frac\pi2$. Sketch $R$. Find (a) its area and (b) the volume when $R$ rotates completely about the $x$-axis. Explain why the two integrands differ.
+
+<details markdown="1">
+<summary>提示</summary>
+
+先标小条高度，再确定所累加的量。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+$$A=\int_0^{\pi/2}\sin x\cos x\,dx=\left[\frac12\sin^2x\right]_0^{\pi/2}=\frac12.$$
+
+$$V=\pi\int_0^{\pi/2}\sin^2x\cos^2x\,dx=\pi\left[\frac{x}{8}-\frac{\sin(4x)}{32}\right]_0^{\pi/2}=\frac{\pi^2}{16}.$$
+
+曲线在轴上方；面积用高度，体积用 $\pi$ 乘半径平方。单位分别为平方和立方单位，不能直接比较两个数的大小检验量纲不同的量。
+
+</details>
+
+</section>
+
 ## 快速参考 {#quick-reference}
 
 | 任务 | 法则或第一步 | 检查 |
@@ -382,8 +568,18 @@ $$\boxed{\frac{9\pi}{2}\text{ cubic units}}.$$
 
 **如果答案看起来不对：**对不定积分结果求导；检查面积计算中的符号，以及体积计算中的半径、积分限和单位。像 $\pi$ 这样的精确值应尽量保留到最后。
 
-**练习后：**不看解答，解释一次恒等式的选择，并写出一道面积题或体积题的积分式。重新完成那些方法或积分限选错的题目。
+**下一步：**用[恢复题](#repair)修复错误，保留首次答案，再学微分方程；稍后回到[区域回顾](#review-region)。
+{: #next-step}
 
 返回[积分：方法选择](/zh/alevel/a2-mathematics/integration/)或查看[积分公式参考](/zh/alevel/a2-mathematics/quick-reference/#p27-integration)。
 
 **学习路径：**[上一节：积分：方法选择](/zh/alevel/a2-mathematics/integration/) · [下一节：微分方程](/zh/alevel/a2-mathematics/differential-equations/)。
+
+<details markdown="1">
+<summary>来源与核验范围</summary>
+
+范围为 9660 MA03 P2.4 三角恒等式与 P2.7 积分应用；面积为先修回顾。实读 January 2025 MA03 Q5（QP p11、MS p10）：完整半径平方、恒等式化简、积分、代限与精确结果。本页题目仍均为自拟题，不分配官方分值。
+
+[9660 specification v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf) · [January 2025 QP](https://aqamat.alevelclouds.com/25_01_QP_P2.pdf) / [MS](https://aqamat.alevelclouds.com/25_01_MS_P2.pdf)
+
+</details>

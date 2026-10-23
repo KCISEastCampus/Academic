@@ -42,9 +42,12 @@ for (const name of chapters) {
     assert(zhSource.includes(question.trim()), `${name}: English question wording changed`);
   }
   const practice = enSource.split(/^## Practice\b.*$/m)[1]?.split(/^## /m)[0];
-  for (const exercise of practice?.split(/^### .+$/m).slice(1) || []) {
-    const prompt = exercise.split('<details')[0].trim();
-    assert(zhSource.replace(/\r\n/g, '\n').includes(prompt.replace(/\r\n/g, '\n')), `${name}: English practice prompt changed`);
+  const bounded = [...(practice || '').matchAll(/<section class="lesson-check" markdown="1">([\s\S]*?)<\/section>/g)];
+  const exercises = bounded.length ? bounded.map(match => match[1]) : practice?.split(/^#{3,4} .+$/m).slice(1) || [];
+  for (const exercise of exercises) {
+    const prompt = exercise.split('<details')[0].replace(/^#{3,4} .+$/gm, '').trim();
+    const normalize = text => text.replace(/\s+/g, ' ').trim();
+    assert(normalize(zhSource).includes(normalize(prompt)), name + ': English practice prompt changed');
   }
   assert(/<h2\b[^>]*class="contents-list"[^>]*>目录<\/h2>/.test(zh));
   assert(zh.includes('placeholder="搜索目录…"'));

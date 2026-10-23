@@ -53,6 +53,29 @@ close((2**4-1)/4,15/4);
 close(Math.log(2)-Math.log(1),Math.log(2));
 close((5/3)*(Math.log(3)-Math.log(3)-Math.log(1)+Math.log(2)),(5/3)*Math.log(2));
 
+// New method-choice retries and course synthesis: verify primitives and models independently.
+for (const [F, f, inputs] of [
+  [x=>Math.sin(3*x*x)/3, x=>2*x*Math.cos(3*x*x), [-.7,.3,1]],
+  [x=>Math.log(Math.abs(x+1))+2*Math.log(Math.abs(x+2)), x=>(3*x+4)/((x+1)*(x+2)), [-3,-.5,1]],
+  [x=>((3*x+1)*Math.log(3*x+1)-(3*x+1))/3, x=>Math.log(3*x+1), [0,.4,1]],
+  [x=>2*Math.sqrt(x*x*x+1)/3, x=>x*x/Math.sqrt(x*x*x+1), [-.5,0,.7]]
+]) for (const x of inputs) close(derivative(F,x), f(x));
+for (const x of [.2,.6,1]) {
+  close(derivative(x=>(x*x-Math.log(x*x+1))/2,x), x**3/(x*x+1));
+  close(derivative(x=>Math.log(x*x+1)+1/(x*x+1),x), 2*x**3/(x*x+1)**2);
+}
+close((2-Math.log(2)-1)/2, (1-Math.log(2))/2);
+close(Math.log(4)+1/4-1, Math.log(4)-3/4);
+close(Math.log(2)+2*Math.log(3)-2*Math.log(2), Math.log(4.5));
+close((4*Math.log(4)-4+1)/3, (4*Math.log(4)-3)/3);
+for (const x of [.1,.3,.5]) close(1/(1+x)-(1-x+x*x), -(x**3)/(1+x));
+assert(5/12 > Math.log(1.5));
+for (const t of [0,.3,1,4]) close(derivative(t=>10-8*Math.exp(-t),t), 10-(10-8*Math.exp(-t)));
+close(10-8*Math.exp(-Math.log(2)), 6);
+for (const x of [1.1,2,5]) close(((2*x+1)/(x-1)+1)/((2*x+1)/(x-1)-2), x);
+close(2*3**1.5-.4*3**2.5-(2-.4), (12*Math.sqrt(3)-8)/5);
+for (const theta of [Math.PI/3,4*Math.PI/3]) close(Math.sin(2*theta)/(1+Math.cos(2*theta)), Math.sqrt(3));
+
 // New diagram/practice values and the general implicit tangent/normal.
 let iterate = .7;
 for (const expected of [.6711,.6895,.6778]) {
@@ -136,7 +159,10 @@ console.log('Content inventory: '+course.length+' lessons, '+examples+' worked e
       getElementById(id){ return expectedId && id===expectedId ? {scrollIntoView(options){calls.push(options);}} : null; }
     };
     const context={
-      window:{location:{hash},addEventListener(name,callback,options){assert.equal(name,'load');assert(options.once);releaseLoad=callback;}},
+      window:{location:{hash},addEventListener(name,callback,options){
+        if(name==='hashchange') {assert.equal(typeof callback,'function');return;}
+        assert.equal(name,'load');assert(options.once);releaseLoad=callback;
+      }},
       document,Event:class {},requestAnimationFrame:callback=>frames.push(callback)
     };
     vm.runInNewContext(config,context);
