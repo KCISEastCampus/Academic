@@ -55,7 +55,7 @@ jobs:
       - name: Test mathematics courses and bilingual content
         run: |
           node scripts/test-bilingual.js
-          for check in scripts/test-mechanics-*.js scripts/test-as-mathematics-*.js scripts/test-as-further-*.js; do
+          for check in scripts/test-mechanics-*.js scripts/test-as-mathematics-*.js scripts/test-as-further-*.js scripts/test-further-*.js; do
             node "$check"
           done
 
