@@ -33,7 +33,11 @@ const families = [
     [-1, 0, 1], [1, 0, -Math.E]],
   [x => 1, x => -1, x => 4 * Math.exp(x), (x, c) => (c + 4 * x) * Math.exp(x),
     [-1, 0, 1], [0, 2, 2]],
-  [x => 1, x => -1 / x, x => x, (x, c) => x * x + c * x, [-2, -1, -.5], [-1, 2, -1]]
+  [x => 1, x => -1 / x, x => x, (x, c) => x * x + c * x, [-2, -1, -.5], [-1, 2, -1]],
+  [x => x, x => 2 - x, x => x * x * Math.exp(x),
+    (x, c) => Math.exp(x) * (x * x / 4 + c / (x * x)), [.5, 1, 2], [1, 0, -.25]],
+  [x => 1, x => -2 * x, x => 0, (x, c) => c * Math.exp(x * x), [-1, 0, 1], [0, 2, 2]],
+  [x => x, x => 1, x => x * x, (x, c) => x * x / 3 + c / x, [.5, 1, 2], [1, 0, -1 / 3]]
 ];
 for (const [a, b, rhs, solution, points, condition] of families) {
   const constants = [-2, 0, 3];
@@ -50,6 +54,11 @@ for (const [a, b, rhs, solution, points, condition] of families) {
 for (const x of [-2, -1, -.5]) {
   assert(1 / x !== 0);
   close(derivative(t => 1 / t, x), (-1 / x) * (1 / x));
+}
+for (const x of [.5, 1, 2]) {
+  const factor = t => t * t * Math.exp(-t);
+  assert(factor(x) > 0);
+  close(derivative(factor, x), (2 / x - 1) * factor(x));
 }
 
 const math = source => source.match(/\$\$[\s\S]*?\$\$|\$[^$\r\n]+\$/g) || [];
@@ -69,7 +78,22 @@ for (const [prefix, source, language, target] of [
   const html = read(`_site/${prefix}${topic}/index.html`);
   assert(html.includes(`<html lang="${language}">`));
   assert(html.includes(`id="languageSwitch" href="${target}"`));
-  assert.equal((html.match(/<details\b/g) || []).length, 27);
+  assert.equal((html.match(/<details\b/g) || []).length, (source.match(/<details\b/g) || []).length,
+    'All source disclosures must survive rendering');
+  const worked = html.match(/<section class="worked-example">([\s\S]*?)<\/section>/);
+  assert(worked && worked[1].includes('id="example-1-normalise-and-solve"'));
+  assert(!worked[1].includes('<details'), 'The necessary worked demonstration must remain visible');
+  const checks = [...html.matchAll(/<section class="lesson-check">([\s\S]*?)<\/section>/g)];
+  for (const [, check] of checks) {
+    assert(!check.includes('<section'), 'Student tasks must not nest');
+    assert(!/<details\b[^>]*\bopen\b/.test(check), 'Student hints and answers start closed');
+  }
+  for (const id of ['normalisation-retry', 'mixed-review']) {
+    const task = checks.find(([, check]) => check.includes(`id="${id}"`));
+    assert(task, `Missing independent task ${id}`);
+    assert.equal((task[1].match(/<details\b/g) || []).length, 2,
+      'Hint and answer must be separately available');
+  }
   for (const id of ids(source)) assert(html.includes(`id="${id}"`), `Missing anchor ${id}`);
   for (const match of source.matchAll(/\]\((\/[^)#]+)(?:#[^)]*)?\)/g)) {
     const url = match[1];
@@ -98,6 +122,6 @@ init({ loader: { load: ['input/tex', 'output/svg'] }, tex: { packages: ['base', 
       const svg = mj.startup.adaptor.outerHTML(mj.tex2svg(formula.slice(width, -width), { display }));
       assert(!svg.includes('data-mml-node="merror"') && !svg.includes('data-mjx-error'), `Invalid TeX: ${formula}`);
     }
-    console.log(`First-order equations passed: 12 solution families, 11 conditions, negative-interval factor, bilingual questions/formulas/anchors, generated links/disclosures and ${formulas.size} TeX formulas.`);
+    console.log(`First-order equations passed: ${families.length} solution families, ${families.filter(f => f[5]).length} conditions, integrating factors, bilingual questions/formulas/anchors, visible demonstration, closed independent feedback, generated links and ${formulas.size} TeX formulas.`);
   })
   .catch(error => { console.error(error); process.exitCode = 1; });

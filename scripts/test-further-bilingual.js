@@ -36,7 +36,9 @@ for (const slug of slugs) {
 
   // Keep the full exercise prompt; source descriptions may be translated.
   for (const question of en.split(/^### Question .+$/m).slice(1)) {
-    const prompt = question.split('<details')[0].trim().split(/\n\s*\n/)
+    const paragraphs = question.split('<details')[0].trim().split(/\n\s*\n/);
+    // Quoted exam prompts stay English; surrounding skill-recovery guidance is translated.
+    const prompt = paragraphs.some(p => p.startsWith('>')) ? paragraphs.filter(p => p.startsWith('>')) : paragraphs
       .filter(paragraph => !/^\*\*(?:Source:|Original AQA question\.)/.test(paragraph) && !paragraph.startsWith('!['));
     for (const paragraph of prompt) assert(zh.includes(paragraph), `${slug}: English exercise prompt ${paragraph.slice(0, 70)}`);
   }
