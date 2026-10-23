@@ -241,7 +241,7 @@ $5-x\geq0$，所以**定义域**为 $x\leq5$。输出非负且没有上界，因
 
 </details>
 
-### Q2 — 限制定义域并不总能得到反函数 {#q2--a-restricted-domain-does-not-always-give-an-inverse}
+### Q2 — 值域与反函数是否存在 {#q2--a-restricted-domain-does-not-always-give-an-inverse}
 
 Let $f(x)=x^2$ for $-2\leq x\leq1$. Find its range. Does it have an inverse function on this domain? Explain your answer.
 
@@ -313,7 +313,7 @@ $$f(f^{-1}(x))=\frac{\frac{2(3x+1)}{x-2}+1}{\frac{3x+1}{x-2}-3}=\frac{\frac{7x}{
 
 </details>
 
-### Q5 — 选择负平方根 {#q5--choose-the-negative-square-root}
+### Q5 — 求反函数并检查 {#q5--choose-the-negative-square-root}
 
 Let $f(x)=(x+2)^2-1$ for $x\leq-2$. Find $f^{-1}$, including its domain and range. Check $f^{-1}(f(x))$ on the original domain.
 

@@ -35,7 +35,7 @@ layout: none
     <div class="subject-header-inner">
       <div class="subject-header-text">
         {% include breadcrumb.html skip_parent=page.breadcrumb_skip_parent %}
-        <h1 class="subject-page-title">{{ page.title | default: site.title }}</h1>
+        <h1 class="subject-page-title" data-pagefind-body>{{ page.title | default: site.title }}</h1>
         {% if page.tmua_notes %}
         <div class="notes-controls">
           <p class="sub">{{ page.subtitle | escape }}</p>

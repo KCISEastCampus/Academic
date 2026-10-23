@@ -5,8 +5,9 @@ mathjax: true
 grade: a2
 subject: a2-further-mathematics
 permalink: /alevel/a2-further-mathematics/hyperbolic-functions/
-toc_headings: h2, h3, h4
+toc_headings: "#definitions, #graphs-and-identities, #linear-combinations, #inverse-hyperbolic-functions, #differentiation, #integration, #practice, #diagnose-and-retry, #quick-reference, #sources"
 study_page: true
+reading_layout: true
 ---
 
 [Further Pure Mathematics](/alevel/a2-further-mathematics/) · FP2.9 Hyperbolic functions
@@ -19,7 +20,7 @@ Learn the definitions, graphs, identities, equations, inverse functions, derivat
 
 Textbook: Chapter 24, printed pp. 288–305, in *International A Level Further Mathematics*.
 
-**Before you start:** you should know exponential and logarithmic laws, the chain rule, implicit differentiation and substitution. Keep track of where every function and derivative is defined.
+**Before you start:** review exponential/logarithmic relationships in [exponential and logarithmic integration](/alevel/a2-mathematics/integration/#exponential-logarithmic-integrals), and repair [inverse-function branches](/alevel/a2-mathematics/functions/#inverse-functions), the [chain rule](/alevel/a2-mathematics/differentiation/#composite-functions), [implicit differentiation](/alevel/a2-mathematics/differentiation/#implicit-functions) and [substitution](/alevel/a2-mathematics/integration/#substitution). Return to Example 2 to state exponential positivity, or to inverse-cosh to justify rejecting the other branch.
 
 **Learning goal:** prove identities from exponentials, explain the features of the six core graphs, select valid exponential roots, and derive and use inverse functions, derivatives and integrals on the correct branches.
 
@@ -41,6 +42,8 @@ $$e^x=\cosh x+\sinh x,\qquad e^{-x}=\cosh x-\sinh x.$$
 
 The notation $\sinh^{-1}x$ means the inverse function of $\sinh x$; it does not mean $1/\sinh x$. The reciprocal is $\operatorname{cosech}x$. The same distinction applies to $\cosh^{-1}x$ and $\tanh^{-1}x$.
 
+<section class="worked-example" markdown="1">
+
 ### Example 1 — Exact values from exponentials {#example-1-exact-values}
 
 **Question:** Find $\sinh(\ln3)$, $\cosh(\ln3)$, $\tanh(\ln3)$ and $\operatorname{sech}(\ln3)$.
@@ -55,6 +58,8 @@ $$\begin{aligned}
 \end{aligned}$$
 
 **Check:** $\cosh^2(\ln3)-\sinh^2(\ln3)=\frac{25}{9}-\frac{16}{9}=1$, and $1-\tanh^2(\ln3)=\frac9{25}=\operatorname{sech}^2(\ln3)$.
+
+</section>
 
 ## Graphs and Identities {#graphs-and-identities}
 
@@ -126,6 +131,92 @@ $$a\sinh x+b\cosh x=c
 
 When $a+b=0$, the quadratic term vanishes; solve the remaining equation in $t$. Do not take logarithms of a zero or negative root.
 
+<section class="worked-example" markdown="1">
+
+### Example 2 — Solve a linear combination and reject a root {#example-2-solve-a-linear-combination}
+
+**Question:** Solve $2\sinh x+\cosh x=2$.
+
+Put $t=e^x$, where $t>0$. Substitution gives
+
+$$\begin{aligned}
+2\sinh x+\cosh x=2
+&\Longleftrightarrow\frac{2(t-t^{-1})+(t+t^{-1})}{2}=2\\
+&\Longleftrightarrow 3t^2-4t-1=0.
+\end{aligned}$$
+
+Therefore
+
+$$t=\frac{2\pm\sqrt7}{3}.$$
+
+Since $\frac{2-\sqrt7}{3}<0$, reject it: it cannot equal $e^x$. The positive root gives
+
+$$\boxed{x=\ln\left(\frac{2+\sqrt7}{3}\right)}.$$
+
+**Check:** the retained value has $e^x>0$ and satisfies the quadratic obtained from the original equation.
+
+</section>
+
+<section class="worked-example" markdown="1">
+
+### Example 3 — Use an addition formula (adapted method) {#example-3-use-an-addition-formula}
+
+**Question:** Solve $\cosh(x-\ln3)=2\sinh x$.
+
+This is a teaching adaptation of the method in OxfordAQA Specimen 2018 FM03 Question 2; it is not the official question. Use $\cosh(x-y)=\cosh x\cosh y-\sinh x\sinh y$, together with $\cosh(\ln3)=\frac53$ and $\sinh(\ln3)=\frac43$:
+
+$$\begin{aligned}
+\frac53\cosh x-\frac43\sinh x&=2\sinh x,\\
+\frac53\cosh x&=\frac{10}{3}\sinh x,\\
+\tanh x&=\frac12.
+\end{aligned}$$
+
+From $\tanh x=\frac{e^{2x}-1}{e^{2x}+1}$,
+
+$$\frac{e^{2x}-1}{e^{2x}+1}=\frac12
+\quad\Longrightarrow\quad e^{2x}=3
+\quad\Longrightarrow\quad
+\boxed{x=\frac12\ln3}.$$
+
+**Check:** $e^{2x}=3$ gives $\tanh x=\frac{3-1}{3+1}=\frac12$, as required.
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Select admissible solutions independently {#equation-selection-task}
+
+**Self-written independent task.** Solve $3\sinh x+\cosh x=2$ over the real numbers. Show every candidate produced by your substitution, decide which are admissible, and check the retained solution in the original equation.
+
+Self-written, with no official marks. Complete the substitution, all candidates and the admissibility argument before revealing help.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+What condition accompanies an exponential substitution? Use it before taking logarithms.
+
+</details>
+
+<details markdown="1">
+<summary>Answer and check</summary>
+
+$$\begin{aligned}
+t&=e^x>0,\\
+\frac{3(t-t^{-1})+(t+t^{-1})}{2}&=2,\\
+4t^2-4t-2&=0\quad\Longleftrightarrow\quad2t^2-2t-1=0,\\
+t&=\frac{1\pm\sqrt3}{2}.
+\end{aligned}$$
+
+$$\boxed{x=\ln\left(\frac{1+\sqrt3}{2}\right)}.$$
+
+$$3\sinh x+\cosh x=2t-\frac1t=2$$
+
+Since $1-\sqrt3<0$, the negative candidate cannot equal an exponential and must be rejected. The last check follows by dividing $2t^2-2t-1=0$ by $t>0$. If you retained the negative candidate, revisit Example 2, state exponential positivity, then retry with answers closed.
+
+</details>
+
+</section>
+
 ## Inverse Hyperbolic Functions {#inverse-hyperbolic-functions}
 
 The logarithmic forms follow by solving the definitions for $e^y$ and remembering that $e^y>0$.
@@ -165,6 +256,24 @@ The ratio is positive exactly when $-1<x<1$. Thus
 $$\boxed{\tanh^{-1}x=\frac12\ln\left(\frac{1+x}{1-x}\right)},\qquad -1<x<1.$$
 
 The domain restriction is essential: the real inverse hyperbolic tangent function does not accept $x=\pm1$.
+
+<section class="worked-example" markdown="1">
+
+### Example 4 — Use the logarithmic forms {#example-4-use-the-logarithmic-forms}
+
+**Question:** Find $\sinh^{-1}3$, $\cosh^{-1}2$ and $\tanh^{-1}\left(\frac13\right)$.
+
+Apply the logarithmic forms, checking each input is in its domain:
+
+$$\begin{aligned}
+\sinh^{-1}3&=\ln(3+\sqrt{10}),\\
+\cosh^{-1}2&=\ln(2+\sqrt3),\\
+\tanh^{-1}\left(\frac13\right)&=\frac12\ln\left(\frac{1+\frac13}{1-\frac13}\right)=\frac12\ln2.
+\end{aligned}$$
+
+**Check:** the first two logarithm arguments are positive, $2\ge1$ is in the domain of $\cosh^{-1}$, and $\frac13$ lies between $-1$ and $1$.
+
+</section>
 
 ## Differentiation {#differentiation}
 
@@ -241,6 +350,42 @@ $$\boxed{\begin{aligned}
 
 The first formula applies wherever $u$ is real and differentiable; the second requires $u>1$ for a finite derivative; the third requires $-1<u<1$.
 
+<section class="worked-example" markdown="1">
+
+### Example 5 — Differentiate a direct composite {#example-5-differentiate-a-direct-composite}
+
+**Question:** Differentiate $y=3\sinh(2x)-4\operatorname{coth}x$ and state its domain.
+
+Use the chain rule and the derivative of $\operatorname{coth}x$:
+
+$$\begin{aligned}
+\frac{\mathrm dy}{\mathrm dx}
+&=3\cdot2\cosh(2x)-4\left(-\operatorname{cosech}^2x\right)\\
+&=\boxed{6\cosh(2x)+4\operatorname{cosech}^2x}.
+\end{aligned}$$
+
+The function and derivative are defined for $x\ne0$, because $\operatorname{coth}x$ and $\operatorname{cosech}x$ are undefined at zero.
+
+</section>
+
+<section class="worked-example" markdown="1">
+
+### Example 6 — Differentiate a composite inverse function {#example-6-differentiate-a-composite-inverse-function}
+
+**Question:** Differentiate $y=\cosh^{-1}(2x+1)$ and state where the derivative exists.
+
+The function requires $2x+1\ge1$, so $x\ge0$. Its derivative formula requires the stricter condition $2x+1>1$, so $x>0$:
+
+$$\begin{aligned}
+\frac{\mathrm dy}{\mathrm dx}
+&=\frac2{\sqrt{(2x+1)^2-1}}\\
+&=\boxed{\frac1{\sqrt{x(x+1)}}},\qquad x>0.
+\end{aligned}$$
+
+**Check:** at $x=0$, the function has value $\cosh^{-1}1=0$, but the denominator in the derivative is zero. The endpoint is in the function's domain, not the derivative's.
+
+</section>
+
 ## Integration {#integration}
 
 ### Standard integrals {#standard-integrals}
@@ -272,90 +417,7 @@ When substituting $u=g(x)$, replace every $x$ and $\mathrm dx$, and include the 
 
 ## Worked Examples {#worked-examples}
 
-### Example 2 — Solve a linear combination and reject a root {#example-2-solve-a-linear-combination}
-
-**Question:** Solve $2\sinh x+\cosh x=2$.
-
-Put $t=e^x$, where $t>0$. Substitution gives
-
-$$\begin{aligned}
-2\sinh x+\cosh x=2
-&\Longleftrightarrow\frac{2(t-t^{-1})+(t+t^{-1})}{2}=2\\
-&\Longleftrightarrow 3t^2-4t-1=0.
-\end{aligned}$$
-
-Therefore
-
-$$t=\frac{2\pm\sqrt7}{3}.$$
-
-Since $\frac{2-\sqrt7}{3}<0$, reject it: it cannot equal $e^x$. The positive root gives
-
-$$\boxed{x=\ln\left(\frac{2+\sqrt7}{3}\right)}.$$
-
-**Check:** the retained value has $e^x>0$ and satisfies the quadratic obtained from the original equation.
-
-### Example 3 — Use an addition formula (adapted method) {#example-3-use-an-addition-formula}
-
-**Question:** Solve $\cosh(x-\ln3)=2\sinh x$.
-
-This is a teaching adaptation of the method in OxfordAQA Specimen 2018 FM03 Question 2; it is not the official question. Use $\cosh(x-y)=\cosh x\cosh y-\sinh x\sinh y$, together with $\cosh(\ln3)=\frac53$ and $\sinh(\ln3)=\frac43$:
-
-$$\begin{aligned}
-\frac53\cosh x-\frac43\sinh x&=2\sinh x,\\
-\frac53\cosh x&=\frac{10}{3}\sinh x,\\
-\tanh x&=\frac12.
-\end{aligned}$$
-
-From $\tanh x=\frac{e^{2x}-1}{e^{2x}+1}$,
-
-$$\frac{e^{2x}-1}{e^{2x}+1}=\frac12
-\quad\Longrightarrow\quad e^{2x}=3
-\quad\Longrightarrow\quad
-\boxed{x=\frac12\ln3}.$$
-
-**Check:** $e^{2x}=3$ gives $\tanh x=\frac{3-1}{3+1}=\frac12$, as required.
-
-### Example 4 — Use the logarithmic forms {#example-4-use-the-logarithmic-forms}
-
-**Question:** Find $\sinh^{-1}3$, $\cosh^{-1}2$ and $\tanh^{-1}\left(\frac13\right)$.
-
-Apply the logarithmic forms, checking each input is in its domain:
-
-$$\begin{aligned}
-\sinh^{-1}3&=\ln(3+\sqrt{10}),\\
-\cosh^{-1}2&=\ln(2+\sqrt3),\\
-\tanh^{-1}\left(\frac13\right)&=\frac12\ln\left(\frac{1+\frac13}{1-\frac13}\right)=\frac12\ln2.
-\end{aligned}$$
-
-**Check:** the first two logarithm arguments are positive, $2\ge1$ is in the domain of $\cosh^{-1}$, and $\frac13$ lies between $-1$ and $1$.
-
-### Example 5 — Differentiate a direct composite {#example-5-differentiate-a-direct-composite}
-
-**Question:** Differentiate $y=3\sinh(2x)-4\operatorname{coth}x$ and state its domain.
-
-Use the chain rule and the derivative of $\operatorname{coth}x$:
-
-$$\begin{aligned}
-\frac{\mathrm dy}{\mathrm dx}
-&=3\cdot2\cosh(2x)-4\left(-\operatorname{cosech}^2x\right)\\
-&=\boxed{6\cosh(2x)+4\operatorname{cosech}^2x}.
-\end{aligned}$$
-
-The function and derivative are defined for $x\ne0$, because $\operatorname{coth}x$ and $\operatorname{cosech}x$ are undefined at zero.
-
-### Example 6 — Differentiate a composite inverse function {#example-6-differentiate-a-composite-inverse-function}
-
-**Question:** Differentiate $y=\cosh^{-1}(2x+1)$ and state where the derivative exists.
-
-The function requires $2x+1\ge1$, so $x\ge0$. Its derivative formula requires the stricter condition $2x+1>1$, so $x>0$:
-
-$$\begin{aligned}
-\frac{\mathrm dy}{\mathrm dx}
-&=\frac2{\sqrt{(2x+1)^2-1}}\\
-&=\boxed{\frac1{\sqrt{x(x+1)}}},\qquad x>0.
-\end{aligned}$$
-
-**Check:** at $x=0$, the function has value $\cosh^{-1}1=0$, but the denominator in the derivative is zero. The endpoint is in the function's domain, not the derivative's.
+<section class="worked-example" markdown="1">
 
 ### Example 7 — Substitute into a standard integral {#example-7-substitute-into-a-standard-integral}
 
@@ -371,6 +433,10 @@ $$\begin{aligned}
 
 **Check:** differentiating the answer gives $(2x+1)\operatorname{sech}^2(x^2+x)$.
 
+</section>
+
+<section class="worked-example" markdown="1">
+
 ### Example 8 — Scale an inverse-hyperbolic-sine integral {#example-8-scale-an-inverse-hyperbolic-integral}
 
 **Question:** Find $\displaystyle\int\frac{\mathrm dx}{\sqrt{9x^2+4}}$.
@@ -379,11 +445,16 @@ Factor the constant inside the square root and use $u=\frac{3x}{2}$, so $\mathrm
 
 $$\begin{aligned}
 \int\frac{\mathrm dx}{\sqrt{9x^2+4}}
-&=\frac13\int\frac{\mathrm du}{\sqrt{u^2+1}}\\
+&=\frac{2/3}{2}\int\frac{\mathrm du}{\sqrt{u^2+1}}\\
+&=\frac13\sinh^{-1}u+C\\
 &=\boxed{\frac13\sinh^{-1}\left(\frac{3x}{2}\right)+C}.
 \end{aligned}$$
 
 The integrand is real for every real $x$. **Check:** the derivative of the boxed result is $\frac1{\sqrt{9x^2+4}}$.
+
+</section>
+
+<section class="worked-example" markdown="1">
 
 ### Example 9 — Integrate a scaled difference of squares {#example-9-integrate-a-scaled-difference-of-squares}
 
@@ -394,18 +465,29 @@ Factor out $4$ and use $a=2$ in the standard form:
 $$\begin{aligned}
 \int\frac{\mathrm dx}{16-4x^2}
 &=\frac14\int\frac{\mathrm dx}{2^2-x^2}\\
+&=\frac14\cdot\frac12\tanh^{-1}\left(\frac x2\right)+C\\
 &=\boxed{\frac18\tanh^{-1}\left(\frac x2\right)+C},\qquad \lvert x\rvert<2.
 \end{aligned}$$
 
-The logarithmic form is
+For the two logarithms, use $u=2+x$, $\mathrm du=\mathrm dx$, and $v=2-x$, $\mathrm dv=-\mathrm dx$; the second substitution supplies the minus sign. Partial fractions give
 
-$$\frac1{16}\ln\left\lvert\frac{2+x}{2-x}\right\rvert+C.$$
+$$\begin{aligned}
+\frac1{16-4x^2}&=\frac1{16}\left(\frac1{2+x}+\frac1{2-x}\right),\\
+\int\frac{\mathrm dx}{16-4x^2}
+&=\frac1{16}\left(\int\frac{\mathrm dx}{2+x}+\int\frac{\mathrm dx}{2-x}\right)\\
+&=\frac1{16}\left(\ln\lvert2+x\rvert-\ln\lvert2-x\rvert\right)+C\\
+&=\frac1{16}\ln\left\lvert\frac{2+x}{2-x}\right\rvert+C.
+\end{aligned}$$
 
 The original integrand is defined for $x\ne\pm2$; the antiderivative is considered separately on each interval $(-\infty,-2)$, $(-2,2)$ and $(2,\infty)$. The inverse-hyperbolic form shown above applies only on $(-2,2)$.
+
+</section>
 
 ## Practice {#practice}
 
 Questions 1–8 are **original practice written for this lesson (not official questions)**. Try each before opening its hint and solution. Question 3 practises the same positive-substitution method used in OxfordAQA specimen work; it is not copied from a paper.
+
+<section class="lesson-check" markdown="1">
 
 ### Question 1 — Check the identities {#question-1-check-the-identities}
 
@@ -435,6 +517,10 @@ The denominator is non-zero for every real $x$, since $\cosh x>0$.
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### Question 2 — Read domains and asymptotes {#question-2-read-domains-and-asymptotes}
 
 State the domain and range of $\tanh x$, $\tanh^{-1}x$ and $\operatorname{coth}x$. Give each function's asymptotes and parity where applicable.
@@ -458,6 +544,61 @@ For $\operatorname{coth}x$, the domain is $\mathbb R\setminus\lbrace0\rbrace$, t
 **Check:** the range bounds $(-1,1)$ of $\tanh x$ become the excluded endpoints of the domain of $\tanh^{-1}x$.
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Construct the graphs and justify the branch {#graph-and-branch-task}
+
+**Self-written graph and branch task.** With the reference figure covered, sketch the six core graphs on labelled axes. Mark domains, ranges, intercepts or endpoints and asymptotes. Use exponentials to justify the parity of $\sinh x$ and $\cosh x$ and the minimum of $\cosh x$. Starting from $x=\cosh y$, derive the logarithmic formula for $y=\cosh^{-1}x$, explain the rejected branch, and derive its derivative with its domain.
+
+Self-written, with no official marks. Produce six sketches, exponential arguments and a branch derivation; do not copy the reference table.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Compare positive and negative inputs using exponentials. After solving the quadratic in the exponential, distinguish positivity from being at least 1. Reflection swaps the domain and range.
+
+</details>
+
+<details markdown="1">
+<summary>Answer and output criteria</summary>
+
+$$\begin{aligned}
+\sinh(-x)&=\frac{e^{-x}-e^x}{2}
+=-\frac{e^x-e^{-x}}{2}=-\sinh x,\\
+\cosh(-x)&=\frac{e^{-x}+e^x}{2}
+=\frac{e^x+e^{-x}}{2}=\cosh x.
+\end{aligned}$$
+
+Thus sinh is odd and cosh is even. Also, since $e^x>0$,
+
+$$\cosh x-1=\frac{e^{2x}-2e^x+1}{2e^x}
+=\frac{(e^x-1)^2}{2e^x}\ge0.$$
+
+Equality holds exactly when $e^x=1$, so $x=0$ and the minimum value of cosh is 1.
+
+$$\begin{aligned}
+t&=e^y\ge1,\qquad x=\frac{t+t^{-1}}2\ge1,\\
+t^2-2xt+1&=0,\qquad t=x\pm\sqrt{x^2-1},\\
+(x+\sqrt{x^2-1})(x-\sqrt{x^2-1})&=1,\\
+y&=\boxed{\ln(x+\sqrt{x^2-1})},\qquad x\ge1.
+\end{aligned}$$
+
+$$1=\sinh y\frac{\mathrm dy}{\mathrm dx},\qquad
+\sinh y=+\sqrt{x^2-1},\qquad
+\boxed{\frac{\mathrm dy}{\mathrm dx}=\frac1{\sqrt{x^2-1}}\quad(x>1).}$$
+
+For the inverse, when $x>1$ the plus root exceeds 1 and the minus root is its reciprocal in $(0,1)$, corresponding to negative $y$; at $x=1$ both roots are 1. The nonnegative output branch selects the positive square root in differentiation; the function is defined at 1 but has no finite derivative there.
+
+Sketch check: sinh and asinh are odd and increasing on all real inputs, through the origin, with no asymptotes; cosh is even with minimum $(0,1)$ and range $[1,\infty)$; acosh increases from $(1,0)$ with domain $[1,\infty)$ and range $[0,\infty)$, without asymptotes; tanh has all real inputs, range $(-1,1)$ and horizontal asymptotes $y=\pm1$; atanh has domain $(-1,1)$, all real outputs and vertical asymptotes $x=\pm1$. The last two are odd and increasing through the origin. Compare with the six reference graphs after drawing. If the branch argument is missing, revisit inverse-cosh and reconstruct the graph independently.
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### Question 3 — Keep only positive exponential roots {#question-3-keep-only-positive-roots}
 
@@ -488,6 +629,10 @@ Substitution into the original equation gives $3\sinh(-\ln7)+4\cosh(-\ln7)=4$ an
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### Question 4 — Apply the inverse logarithmic forms {#question-4-apply-the-inverse-logarithmic-forms}
 
 Find $\sinh^{-1}(-3)$, $\cosh^{-1}3$ and $\tanh^{-1}\left(\frac13\right)$. State why $\cosh^{-1}(-3)$ is not real.
@@ -512,6 +657,10 @@ The first logarithm argument is positive because $\sqrt{10}>3$. The input $3$ is
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### Question 5 — Differentiate using direct-function rules {#question-5-differentiate-using-direct-rules}
 
 Differentiate $y=2\cosh(3x)-\operatorname{sech}(x^2)$.
@@ -535,6 +684,10 @@ $$\begin{aligned}
 The plus sign in the second term comes from subtracting the negative derivative of $\operatorname{sech}u$.
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### Question 6 — Differentiate an inverse composite {#question-6-differentiate-an-inverse-composite}
 
@@ -562,6 +715,10 @@ The function and derivative are defined on each interval between the excluded po
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### Question 7 — Substitute into a hyperbolic integral {#question-7-substitute-into-a-hyperbolic-integral}
 
 Find $\displaystyle\int 2x\cosh(x^2+1)\,\mathrm dx$.
@@ -586,6 +743,10 @@ Differentiating the answer gives $2x\cosh(x^2+1)$.
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### Question 8 — Scale three standard integrals {#question-8-scale-standard-integrals}
 
 Find $\displaystyle\int\frac{\mathrm dx}{\sqrt{4x^2+9}}$ and $\displaystyle\int\frac{\mathrm dx}{25-4x^2}$, and, for $x>\frac32$, find $\displaystyle\int\frac{\mathrm dx}{\sqrt{4x^2-9}}$. State where each original integrand is defined.
@@ -602,7 +763,12 @@ For the first, use $u=\frac{2x}{3}$. For the second, write the denominator as $5
 
 For the first integral, $u=\frac{2x}{3}$ gives $\mathrm dx=\frac32\,\mathrm du$:
 
-$$\int\frac{\mathrm dx}{\sqrt{4x^2+9}}=\boxed{\frac12\sinh^{-1}\left(\frac{2x}{3}\right)+C}.$$
+$$\begin{aligned}
+\int\frac{\mathrm dx}{\sqrt{4x^2+9}}
+&=\frac{3/2}{3}\int\frac{\mathrm du}{\sqrt{1+u^2}}\\
+&=\frac12\sinh^{-1}u+C\\
+&=\boxed{\frac12\sinh^{-1}\left(\frac{2x}{3}\right)+C}.
+\end{aligned}$$
 
 It is defined for every real $x$.
 
@@ -611,6 +777,7 @@ For the second, let $u=2x$, so $\mathrm dx=\frac12\,\mathrm du$:
 $$\begin{aligned}
 \int\frac{\mathrm dx}{25-4x^2}
 &=\frac12\int\frac{\mathrm du}{25-u^2}\\
+&=\frac12\cdot\frac15\tanh^{-1}\left(\frac u5\right)+C\\
 &=\boxed{\frac1{10}\tanh^{-1}\left(\frac{2x}{5}\right)+C},\qquad \lvert x\rvert<\frac52.
 \end{aligned}$$
 
@@ -620,7 +787,8 @@ For the third integral, let $u=\frac{2x}{3}$, so $\mathrm dx=\frac32\,\mathrm du
 
 $$\begin{aligned}
 \int\frac{\mathrm dx}{\sqrt{4x^2-9}}
-&=\frac12\int\frac{\mathrm du}{\sqrt{u^2-1}}\\
+&=\frac{3/2}{3}\int\frac{\mathrm du}{\sqrt{u^2-1}}\\
+&=\frac12\cosh^{-1}u+C\\
 &=\boxed{\frac12\cosh^{-1}\left(\frac{2x}{3}\right)+C},\qquad x>\frac32.
 \end{aligned}$$
 
@@ -628,9 +796,13 @@ The original integrand is real for $\lvert x\rvert>\frac32$. This exercise asks 
 
 </details>
 
+</section>
+
 ## Diagnose and Retry {#diagnose-and-retry}
 
-Both tasks are self-written and have no official marks. Explain the error before opening feedback; then close every solution and attempt the new task independently. If you need a hint, return later for another independent attempt.
+These tasks are self-written and have no official marks. Explain the error before opening feedback; then close every solution and attempt the new task independently. If you need a hint, return later for another independent attempt.
+
+<section class="lesson-check" markdown="1">
 
 **Diagnose:** A learner inserts an absolute value into the logarithm for $\cosh^{-1}(-2)$ and claims this creates a real inverse value. Explain why this cannot repair the problem.
 
@@ -640,6 +812,44 @@ Both tasks are self-written and have no official marks. Explain the error before
 For every real input $y$, $\cosh y\ge1$. Thus no real $y$ can satisfy $\cosh y=-2$. Changing a logarithm cannot change the domain of the inverse function.
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Retry the inverse-cosh conditions {#acosh-branch-retry}
+
+**Branch retry (self-written).** Solve $\cosh y=2$ for all real $y$, and state $\cosh^{-1}2$. Then decide separately whether $\cosh^{-1}(-2)$ and $\cosh^{-1}1$ are real, and whether the derivative of $\cosh^{-1}x$ is finite at $x=1$. Justify every decision.
+
+Self-written, with no official marks. Close the diagnosis feedback and distinguish equation solutions, the principal inverse, the input domain and the derivative domain.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Cosh is even; acosh also restricts the output to be nonnegative.
+
+</details>
+
+<details markdown="1">
+<summary>Retry answer and check</summary>
+
+$$\begin{aligned}
+t=e^y>0:\quad t^2-4t+1&=0,\\
+t&=2\pm\sqrt3,\\
+(2+\sqrt3)(2-\sqrt3)&=1,\\
+y&=\pm\ln(2+\sqrt3),\\
+\cosh^{-1}2&=\ln(2+\sqrt3).
+\end{aligned}$$
+
+Both exponential roots are positive, so the equation has positive and negative solutions; the inverse returns only the nonnegative one. $\cosh^{-1}(-2)$ has no real value because cosh of a real number is at least 1; $\cosh^{-1}1=0$ is defined. However, $1/\sqrt{x^2-1}$ gives no finite value at $x=1$, so there is no finite derivative there. If you still identify the function domain with the derivative domain, revisit Example 6 and retry with answers closed.
+
+</details>
+
+</section>
+
+The retained asinh task below separately combines slope, values and graph shape.
+
+<section class="lesson-check" markdown="1">
 
 **Independent retry:** Let $y=\sinh^{-1}(kx)$, where $k>0$. Its gradient at the origin is $2$. Determine $k$ and find the value of $x$ for which $y=\ln3$. Sketch the resulting function, marking the origin and the point you found; explain how its slope changes.
 
@@ -656,6 +866,10 @@ Use the chain rule to interpret the gradient, then return to the defining direct
 The derivative is $k/\sqrt{1+k^2x^2}$, so at zero $k=2$. The value condition becomes $2x=\sinh(\ln3)=(3-1/3)/2=4/3$, giving $x=2/3$. Substitution gives $\sinh^{-1}(4/3)=\ln3$. The graph is odd and increasing; mark $(0,0)$ and $(2/3,\ln3)$. The derivative gives slope $2$ at the origin, decreasing as $\lvert x\rvert$ increases, but the graph has no horizontal asymptote.
 
 </details>
+
+</section>
+
+**Next after practice:** close this chapter and attempt the course [mixed review](/alevel/a2-further-mathematics/#mixed-review). After subsequent learning, attempt the [later retrieval tasks](/alevel/a2-further-mathematics/#later-review). Record whether the first attempt was independent, any hint used, the error and the retry result. If a method or condition was wrong, use this chapter’s after-practice route to repair that skill, then retry with solutions closed.
 
 ## Quick Reference {#quick-reference}
 
@@ -678,6 +892,8 @@ The derivative is $k/\sqrt{1+k^2x^2}$, so at zero $k=2$. The value condition bec
 
 ## Sources {#sources}
 
+Scope check on 2026-10-23: the current 9665 qualification page led to specification v5.2; the relevant FP2 section was checked without migrating to 9765. For the papers and schemes below, only the identified questions and matching marking sections were reread as PDF text; visual verification of the original PDF pages was not completed. Official identities and marks are retained; adaptations and self-written tasks are labelled separately.
+
 The scope follows OxfordAQA's [International A-level Further Mathematics specification, FP2.9, printed p. 19](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf). Example 3 adapts the solution method from OxfordAQA Specimen 2018 FM03, Question 2, checked against its official mark scheme, Question 2. The example changes the equation; it is not an official question and no official mark allocation is implied.
 
-[OxfordAQA Specimen 2018, Q2, QP PDF p. 4](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-specimen-paper-2019-v3.pdf#page=4); [MS Q2, PDF p. 5](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-mark-scheme-2016-v1.pdf#page=5). Question and matching mark scheme read on 2026-10-22. Only the identified method is adapted; the adapted question and additional self-written tasks are not official questions.
+[OxfordAQA Specimen 2018, Q2, QP PDF p. 4](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-specimen-paper-2019-v3.pdf#page=4); [MS Q2, PDF p. 5](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-mark-scheme-2016-v1.pdf#page=5). Question and matching mark scheme reread on 2026-10-23 (PDF text). Only the identified method is adapted; the adapted question and additional self-written tasks are not official questions.

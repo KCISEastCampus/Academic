@@ -386,6 +386,43 @@ $$\boxed{\text{distance travelled}=\lvert-1-3\rvert+\lvert0-(-1)\rvert=5\,\mathr
 
 </details>
 
+## Independent Check
+
+**Self-written task.** For $0\leq t\leq2$, particles A and B have positions $\mathbf r_A=t\mathbf i+t^2\mathbf j$ and $\mathbf r_B=(3-t)\mathbf i+\mathbf j$, in metres with time in seconds. Sketch their paths, including their directions of motion. Their paths pass through a common point. Decide whether they collide during the interval and justify your decision. No method is specified.
+
+<details markdown="1">
+<summary>Reasoning hint</summary>
+
+A path intersection allows a different parameter value for each particle. A collision requires one common time satisfying both component equations.
+
+</details>
+
+<details markdown="1">
+<summary>Solution, feedback and retry</summary>
+
+A follows the part of the parabola with increasing horizontal coordinate; B moves left along a horizontal segment:
+
+$$y_A=x_A^2,\quad 0\leq x_A\leq2;\qquad y_B=1,\quad1\leq x_B\leq3.$$
+
+Their common point is $(1,1)$, reached by A at $t=1$ and B at $t=2$. These are different times. Alternatively, equal horizontal positions require $t=3-t$, giving $t=\frac32$, when their vertical coordinates are $\frac94$ and $1$. They do not collide. Finding the common point alone does not establish a collision.
+
+**Retry, with this panel closed:** A different particle has position $\mathbf r=\cos t\,\mathbf i+\sin t\,\mathbf j$ for $0\leq t\leq\frac\pi2$. A student differentiates its distance from the origin and concludes that it is at rest. Assess the reasoning. Find its speed and total distance travelled over the interval.
+
+</details>
+
+<details markdown="1">
+<summary>Retry check</summary>
+
+$$\lvert\mathbf r\rvert=1,\qquad\mathbf v=-\sin t\,\mathbf i+\cos t\,\mathbf j,\qquad\lvert\mathbf v\rvert=1.$$
+
+The particle remains a constant distance from the origin while its position changes. Its speed is $1\,\mathrm{m\,s^{-1}}$ and its total distance travelled is $\frac\pi2\,\mathrm m$. Differentiating distance from the origin measures radial motion; it is not generally speed along a path.
+
+</details>
+
+## Sources and Scope
+
+Scope: [OxfordAQA 9660 specification v5.2, M2.2 and M2.4](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf), with A2 Pure differentiation, integration and vectors as prerequisites. **MA05 January 2025 Q3(b) and Q9**, read with their [question paper](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-question-paper.pdf) and [final mark scheme](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-mark-scheme.pdf), provide assessment examples for component differentiation, two integrations and conditions. This page's tasks are self-written.
+
 ## Quick Reference
 
 | Asked for | Method | Check |

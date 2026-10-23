@@ -5,8 +5,9 @@ mathjax: true
 grade: a2
 subject: a2-further-mathematics
 permalink: /alevel/a2-further-mathematics/vector-products-and-coplanarity/
-toc_headings: h2, h3, h4
+toc_headings: "#cross-product, #area, #triple-product, #practice, #common-pitfalls, #sources"
 study_page: true
+reading_layout: true
 ---
 
 [Further Pure Mathematics](/alevel/a2-further-mathematics/) · FP2.12 Vectors and three-dimensional coordinate geometry
@@ -22,6 +23,8 @@ How can a perpendicular direction measure area, volume and whether points share 
 **Before you start:** revise components, magnitudes, displacement vectors and the scalar product in [MA03 Vectors](/alevel/a2-mathematics/vectors/). You need a right-handed orthonormal coordinate system. All coordinates below are mathematical examples, not measured data.
 
 Labels **Original diagnostic**, **Original example** and **Original task** identify author-written material. Official questions and adaptations have separate source labels.
+
+If subtraction fails, recover [position and displacement vectors](/alevel/a2-mathematics/vectors/#vectors-and-position-vectors); if perpendicularity fails, recover the [scalar product](/alevel/a2-mathematics/vectors/#scalar-product), then retry the diagnostic with its check closed. The [normal-to-plane bridge](#plane-bridge) below supplies the plane equation needed in Question 3.
 
 ## Prerequisite Check {#prerequisite-check}
 
@@ -78,19 +81,14 @@ $$\mathbf i\times(\mathbf i\times\mathbf j)=-\mathbf j,\qquad (\mathbf i\times\m
 
 Check a calculated cross product by taking its scalar product with each input. Both results must be zero, although this check alone does not establish its magnitude or sign.
 
+<section class="worked-example" markdown="1">
+
 ### Example: compute and check {#example-cross-product}
 
 > **Original example.** For $\mathbf a=(1,2,0)$ and $\mathbf b=(0,1,2)$, find $\mathbf a\times\mathbf b$ and check perpendicularity.
 
-<details markdown="1">
-<summary>Hint</summary>
-
 Compute the three components separately. The middle component is $a_3b_1-a_1b_3$.
 
-</details>
-
-<details markdown="1">
-<summary>Solution</summary>
 
 $$\mathbf a\times\mathbf b=(2\cdot2-0\cdot1,\ 0\cdot0-1\cdot2,\ 1\cdot1-2\cdot0)=(4,-2,1).$$
 
@@ -101,7 +99,7 @@ $$\begin{aligned}
 
 Both perpendicularity checks pass. Reversing the inputs would give the negative vector, with the same magnitude.
 
-</details>
+</section>
 
 ## Area from Two Edges {#area}
 
@@ -118,6 +116,8 @@ For the previous example the parallelogram area is $\sqrt{21}$ and the triangle 
 ![Schematic parallelepiped with adjacent edges u and v from A, a third edge w, a normal N perpendicular to the base, and a dashed perpendicular height h; not to scale.](/assets/img/further-vector-products.svg)
 
 The diagram connects the base area to the height used below. It is a conceptual schematic, not a diagram for an independent question.
+
+<section class="lesson-check" markdown="1">
 
 ### Complete a step and repair an error {#repair-area}
 
@@ -138,6 +138,8 @@ $$A_{\mathrm{triangle}}=\frac12\sqrt{4^2+(-2)^2+1^2}=\frac{\sqrt{21}}2.$$
 The first expression measures the parallelogram. A zero cross product means the inputs are dependent (parallel when both are nonzero); it cannot define a normal direction. Two parallel directions do not determine a unique plane.
 
 </details>
+
+</section>
 
 ## Scalar Triple Product and Volume {#triple-product}
 
@@ -169,6 +171,8 @@ $$A,B,C,D\text{ are coplanar}\iff(\mathbf b-\mathbf a)\cdot\big((\mathbf c-\math
 
 Three position vectors being coplanar tests a plane through the origin. It does not in general test whether four given points lie in one plane. Three collinear points also do not specify a unique plane, even though the four-point triple product is zero for any fourth point.
 
+<section class="worked-example" markdown="1">
+
 ### Example: coplanar or parallel? {#example-coplanar-or-parallel}
 
 **Original OxfordAQA question:** 9665/FM03, June 2024, Q2, QP p. 4; paired MS p. 5. The parts describe separate cases.
@@ -185,17 +189,10 @@ Three position vectors being coplanar tests a plane through the origin. It does 
 >
 > (c) In the case when $\mathbf c$ is parallel to $\mathbf a\times\mathbf b$ find the value of $t$. **[2 marks]**
 
-Try (a). In (b), complete the scalar equation before reading the solution; in (c), decide whether the required result should be a zero scalar product or a multiple of a vector.
-
-<details markdown="1">
-<summary>Hint</summary>
+This complete demonstration turns two different geometric conditions into their respective equations. In the independent tasks you will select the condition yourself.
 
 For (b), the triple product is $(\mathbf a\times\mathbf b)\cdot\mathbf c$. For (c), write $\mathbf c=\lambda(\mathbf a\times\mathbf b)$ and check all three components.
 
-</details>
-
-<details markdown="1">
-<summary>Solution</summary>
 
 $$\mathbf a\times\mathbf b=(10-9,\ 9-5,\ 3-6)=(1,4,-3).$$
 
@@ -209,7 +206,9 @@ $$(-3,t,9)=\lambda(1,4,-3)\quad\Longrightarrow\quad\lambda=-3,\qquad\boxed{t=-12
 
 The third component agrees: $9=(-3)(-3)$. In the first case the third vector lies in the plane; in the second it points along the plane's normal. These are different geometric requirements.
 
-</details>
+</section>
+
+<section class="worked-example" markdown="1">
 
 ### Example: a volume with two possible parameters {#example-volume}
 
@@ -221,15 +220,8 @@ The third component agrees: $9=(-3)(-3)$. In the first case the third vector lie
 >
 > Its volume is 4 cubic units. Find all possible values of $k$.
 
-<details markdown="1">
-<summary>Hint</summary>
-
 Form edge vectors before taking products. An absolute value equal to a positive number leads to two signed equations.
 
-</details>
-
-<details markdown="1">
-<summary>Solution</summary>
 
 $$\overrightarrow{AB}=(k+1,2,1),\quad\overrightarrow{AC}=(3,3,1),\quad\overrightarrow{AD}=(k+2,-1,3).$$
 
@@ -247,11 +239,30 @@ $$\lvert9k-13\rvert=4\quad\Longrightarrow\quad 9k-13=4\ \text{or}\ 9k-13=-4\quad
 
 Substitution gives signed products 4 and −4, so both produce the required nonzero volume. Keeping only the positive signed product loses a valid configuration.
 
-</details>
+</section>
+
+<section class="worked-example" markdown="1">
+
+### From a normal to a plane equation {#plane-bridge}
+
+The cross product of two independent in-plane edges gives a nonzero normal $\mathbf n$. If $A$ is a known point on that plane, every in-plane displacement $\mathbf r-\mathbf a$ is perpendicular to $\mathbf n$. Hence
+
+$$\mathbf n\cdot(\mathbf r-\mathbf a)=0
+\iff \mathbf n\cdot\mathbf r=\mathbf n\cdot\mathbf a.$$
+
+For example, the plane through $(0,1,2)$ with normal $(1,2,-1)$ has equation
+
+$$x+2(y-1)-(z-2)=0\iff x+2y-z=0.$$
+
+The normal is nonzero, so this is a plane. Substitution checks the known point: $0+2-2=0$. Use this bridge to check the four-point answers; the [next lesson](/alevel/a2-further-mathematics/lines-and-planes/#planes) develops the other plane forms.
+
+</section>
 
 ## Independent Practice {#practice}
 
 All questions in this section are **original tasks**, with no official marks. Choose methods yourself; keep the solutions closed until you have written a complete attempt.
+
+<section class="lesson-check" markdown="1">
 
 ### Question 1: four points, not three positions {#practice-1}
 
@@ -279,6 +290,10 @@ The proposed position-vector calculation tests whether the origin and the first 
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### Question 2: reverse the normal condition {#practice-2}
 
 > Let $\mathbf u=(1,1,0)$ and $\mathbf v=(2,s,1)$. Find $s$ so that $\mathbf u\times\mathbf v$ is parallel to $(1,-1,2)$. Is it possible for these two inputs to be parallel for any $s$? Justify both answers.
@@ -298,6 +313,10 @@ $$\mathbf u\times\mathbf v=(1,-1,s-2)=\lambda(1,-1,2)\quad\Longrightarrow\quad\l
 The cross product has first component 1 for every parameter value; it cannot be zero. Thus the two input vectors cannot be parallel. A nonzero multiple condition and a zero-product condition must not be interchanged.
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### Question 3: independent retry {#practice-3}
 
@@ -322,6 +341,10 @@ Hence $h=3$. The plane through the first three points is $-2x-y+2z=-5$; substitu
 $$A_{ABC}=\frac12\sqrt{4+1+4}=\frac32.$$
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### Question 4: a volume under a changed edge {#practice-4}
 
@@ -353,6 +376,8 @@ So that volume is still 3 cubic units. Doubling the third edge doubles the signe
 
 </details>
 
+</section>
+
 ## Quick Reference {#quick-reference}
 
 | Task | Method | Condition or check |
@@ -374,11 +399,13 @@ So that volume is still 3 cubic units. Doubling the third edge doubles the signe
 - Only one parameter solution from a volume: write both signed equations before simplifying.
 - Position vectors used as edges: subtract one common starting vertex first.
 
-**Before moving on:** in English, explain why exchanging two edges changes the triple-product sign but not the volume. Then redo one task without its hint. Check a coplanarity answer by substituting the points into one plane, rather than repeating the same triple product.
+**Next output:** if position vectors replaced edges or the plane check failed, recover the [normal bridge](#plane-bridge), then attempt [Question 3](#practice-3) with help closed. If a volume branch was lost, attempt [Question 4](#practice-4). Continue to the course [mixed review](/alevel/a2-further-mathematics/#mixed-review); after intervening study, attempt its [later review](/alevel/a2-further-mathematics/#later-review), connecting a reflecting plane's normal with its matrix transformation.
 
 **Learning route:** [Previous: second-order differential equations](/alevel/a2-further-mathematics/second-order-differential-equations/) · [Next: lines and planes](/alevel/a2-further-mathematics/lines-and-planes/) · [Further Pure Mathematics](/alevel/a2-further-mathematics/).
 
 ## Sources and Scope {#sources}
+
+The specification and the listed QP/MS passages below were reread on **23 October 2026** for qualification 9665.
 
 - OxfordAQA International A-level Further Mathematics **9665**, Unit FP2/FM03, specification **Version 5.2**, [FP2.12, PDF p. 19 / printed p. 20](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf#page=19). This lesson covers vector products, areas, scalar triple products, volumes and coplanarity; the next lesson completes the line/plane geometry.
 - [June 2024 FM03 QP, Q2 p. 4](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-question-paper.pdf#page=4) and [paired MS p. 5](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-mark-scheme.pdf#page=5): original question above, including its specified scalar-triple-product method.

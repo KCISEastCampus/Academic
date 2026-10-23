@@ -532,6 +532,66 @@ $$\boxed{\tan\alpha=\frac{11}{8},\qquad\alpha\approx54.0^\circ}.$$
 
 </details>
 
+## Independent Task: Which Condition Fails First? {#independent-task-which-condition-fails-first}
+
+**Self-written task.** A uniform rigid box has weight $200\,\mathrm N$, a horizontal base of width $1.2\,\mathrm m$ and height $2\,\mathrm m$. It stands on rough horizontal ground with coefficient of friction $0.3$. A horizontal force $P$ to the right is applied at height $1.5\,\mathrm m$. It is increased slowly from zero. A student claims that the box remains in equilibrium at $P=70\,\mathrm N$ because the turning effect is too small to tip it. Assess the claim and determine the first loss of equilibrium. Model the ground contact by a resultant upward normal force acting somewhere within the base and a horizontal friction force at ground level. No other forces act. Choose and justify your method.
+
+<details markdown="1">
+<summary>Reasoning hint</summary>
+
+Find the friction needed for force balance and the location of the normal resultant needed for moment balance. Both must be possible. At a tipping boundary, the normal resultant reaches an edge of the base.
+
+</details>
+
+<details markdown="1">
+<summary>Feedback and check</summary>
+
+Take the bottom-left corner as origin, with $x$ to the right. Let the normal resultant $N$ act at $(x,0)$, and let $F$ be the leftward friction magnitude. Force balance gives $N=200$ and $F=P$. Moments about the origin give
+
+$$200x=200(0.6)+1.5P,\qquad x=0.6+\frac{1.5P}{200}.$$
+
+Static contact requires both
+
+$$0\leq x\leq1.2,\qquad F\leq0.3N.$$
+
+The candidate tipping boundary is $P=80\,\mathrm N$, but the sliding boundary is $P=60\,\mathrm N$. Thus the first loss of equilibrium is **sliding**, with limiting equilibrium at $P=60\,\mathrm N$. At that point $x=1.05\,\mathrm m$, still within the base. The tipping value is a hypothetical boundary if sliding could be prevented; the stated box has already reached its sliding limit.
+
+At $P=70\,\mathrm N$, the required normal position is $x=1.125\,\mathrm m$, but the required friction $70\,\mathrm N$ exceeds $60\,\mathrm N$. The student's moment check alone cannot establish equilibrium. If you set $F=0.3N$ at every value of $P$, revisit the distinction between required static friction and its maximum.
+
+**English explanation to complete:** “The box cannot remain at rest because …, even though …”.
+
+</details>
+
+### Retry: Change the Pull and the Contact {#retry-change-the-pull-and-the-contact}
+
+**Self-written task.** Use a box with the same dimensions and weight, but coefficient of friction $0.6$. A rope attached at its top-left corner pulls upwards and to the right at $30^\circ$ to the horizontal. Its tension $T$ is increased slowly from zero. Determine whether sliding or tipping occurs first, and check that contact is maintained up to that boundary. Treat the rope as light and the box as rigid. Use the same ground-contact model as above.
+
+<details markdown="1">
+<summary>Retry hint</summary>
+
+The normal force is no longer the full weight. Resolve vertically, then compare a friction boundary with the moment condition about the bottom-right edge.
+
+</details>
+
+<details markdown="1">
+<summary>Retry check</summary>
+
+With the bottom-left corner as origin, the rope acts at $(0,2)$. Its upward component has zero moment about that corner. Force and moment balance require
+
+$$N=200-\frac T2,\qquad F=\frac{\sqrt3}{2}T,\qquad xN=120+\sqrt3 T.$$
+
+At the tipping boundary, $x=1.2$:
+
+$$1.2\left(200-\frac T2\right)=120+\sqrt3 T,\qquad T_{\mathrm{tip}}=\frac{120}{\sqrt3+0.6}\approx51.5\,\mathrm N.$$
+
+The candidate sliding boundary is
+
+$$\frac{\sqrt3}{2}T=0.6\left(200-\frac T2\right),\qquad T_{\mathrm{slide}}=\frac{120}{\sqrt3/2+0.3}\approx103\,\mathrm N.$$
+
+Tipping therefore occurs first. At its boundary, $N\approx174\,\mathrm N>0$ and $F\approx44.6\,\mathrm N<0.6N\approx105\,\mathrm N$. Before it, $x$ increases from $0.6$ to $1.2$ and $N$ remains positive. A calculation using $N=200$ would miss the rope's upward component. Comparing the two candidate limits is essential; the later one does not describe the subsequent motion.
+
+</details>
+
 ## Quick Reference
 
 | Task | Method | Check |
@@ -549,5 +609,11 @@ $$\boxed{\tan\alpha=\frac{11}{8},\qquad\alpha\approx54.0^\circ}.$$
 **After practice:** record whether an error came from the point of action, perpendicular distance, rotation sign or contact condition. Redraw the diagram and check the angle before repeating the question.
 
 **You should be able to:** calculate signed moments, find supporting and hinge forces, identify a tipping limit, and check equilibrium of ladders and rods with friction.
+
+## Sources and Scope {#sources-and-scope}
+
+Scope: [OxfordAQA Mathematics 9660 specification v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf), §3.5 M2.3. Assessment reference actually read: **9660/MA05 Unit M2, January 2025, Q5**, [Question Paper, pp.10–11](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-question-paper.pdf) and [Mark Scheme, Version 1.0 Final, p.11](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-mark-scheme.pdf). It connects a reason for the wall reaction with moments of a non-uniform rod. The stored paper and its paired scheme informed the explanation requirements; the tasks on this page remain self-written, without official marks.
+
+The rounding convention at the start applies to this page's self-written tasks. In the January 2025 paper, calculator final answers default to two significant figures unless a question states otherwise. Follow the actual paper and question when attempting official work.
 
 **Learning path:** [Previous: Forces, Equilibrium and Friction](/alevel/a2-mathematics/mechanics/forces-equilibrium-and-friction/) · [Mechanics topic index](/alevel/a2-mathematics/mechanics/) · [Next: Centres of Mass](/alevel/a2-mathematics/mechanics/centres-of-mass/).

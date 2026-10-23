@@ -1,0 +1,130 @@
+[
+  {
+    "lang": "en",
+    "width": 1365,
+    "initial": {
+      "overflow": false,
+      "mathErrors": 0,
+      "math": 179
+    },
+    "themes": [
+      {
+        "theme": "light",
+        "expanded": {
+          "overflow": false,
+          "mathErrors": 0,
+          "math": 179
+        }
+      },
+      {
+        "theme": "dark",
+        "expanded": {
+          "overflow": false,
+          "mathErrors": 0,
+          "math": 179
+        }
+      }
+    ],
+    "taskBoundaries": 8,
+    "keyboard": true,
+    "toc": true,
+    "localLinks": true,
+    "languageAnchor": true
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "initial": {
+      "overflow": false,
+      "mathErrors": 0,
+      "math": 179
+    },
+    "themes": [
+      {
+        "theme": "light",
+        "expanded": {
+          "overflow": false,
+          "mathErrors": 0,
+          "math": 179
+        }
+      },
+      {
+        "theme": "dark",
+        "expanded": {
+          "overflow": false,
+          "mathErrors": 0,
+          "math": 179
+        }
+      }
+    ],
+    "taskBoundaries": 8,
+    "keyboard": true,
+    "toc": true,
+    "localLinks": true,
+    "languageAnchor": true
+  },
+  {
+    "lang": "zh",
+    "width": 1365,
+    "initial": {
+      "overflow": false,
+      "mathErrors": 0,
+      "math": 179
+    },
+    "themes": [
+      {
+        "theme": "light",
+        "expanded": {
+          "overflow": false,
+          "mathErrors": 0,
+          "math": 179
+        }
+      },
+      {
+        "theme": "dark",
+        "expanded": {
+          "overflow": false,
+          "mathErrors": 0,
+          "math": 179
+        }
+      }
+    ],
+    "taskBoundaries": 8,
+    "keyboard": true,
+    "toc": true,
+    "localLinks": true,
+    "languageAnchor": true
+  },
+  {
+    "lang": "zh",
+    "width": 390,
+    "initial": {
+      "overflow": false,
+      "mathErrors": 0,
+      "math": 179
+    },
+    "themes": [
+      {
+        "theme": "light",
+        "expanded": {
+          "overflow": false,
+          "mathErrors": 0,
+          "math": 179
+        }
+      },
+      {
+        "theme": "dark",
+        "expanded": {
+          "overflow": false,
+          "mathErrors": 0,
+          "math": 179
+        }
+      }
+    ],
+    "taskBoundaries": 8,
+    "keyboard": true,
+    "toc": true,
+    "localLinks": true,
+    "languageAnchor": true
+  }
+]

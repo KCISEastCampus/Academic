@@ -7,11 +7,12 @@ subject: a2-further-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-further-mathematics/
 permalink: /zh/alevel/a2-further-mathematics/
-toc_headings: h2, h3, h4
+toc_headings: "#start-here, #course-outline, #mixed-review, #later-review"
+reading_layout: true
 study_page: true
 ---
 
-高等纯数学（Further Pure Mathematics）· FP2 · FM03。先学习方法，再跟着例题完成推导，最后独立尝试练习，完成后再打开解答。
+OxfordAQA 9665 · A2 高等纯数学 · FP2 / FM03。从根与多项式开始，按下方路线学习；已学过的同学可直接进入[跨章综合](#mixed-review)。
 
 ## 从这里开始 {#start-here}
 
@@ -36,7 +37,7 @@ study_page: true
 
 **中文讲解：**十六节课程均提供中英文版本。题干与公式保留英文原文，专业术语附英文原词，方便对应英文考试用语。下方链接打开中文课程；可用页面顶部的语言切换继续阅读同一小节的英文版。
 
-**开始前：**你应当掌握 AS 纯数学，以及 [AS 高等数学](/alevel/as-further-mathematics/)中的纯数学内容，包括复数、根与系数的关系、多项式除法和求导。
+**开始前：**按需回补[复数形式](/zh/alevel/as-further-mathematics/complex-numbers-and-roots/)、[代数](/zh/alevel/as-mathematics/algebra/)或[积分](/zh/alevel/as-mathematics/integration/)。每章另有更具体的先修入口。完成一组主题后做[跨章综合](#mixed-review)，学习其他内容后再做[新回顾题](#later-review)。
 
 ## 课程概览 {#course-outline}
 
@@ -74,4 +75,252 @@ study_page: true
 
 学习路线把矩阵代数放在线性方程组之前，先解释逆矩阵再运用它；这只是教学顺序，不改变大纲编号与教材章次。
 
-**学习其他课程？**[AS 高等数学](/alevel/as-further-mathematics/) · [A2 纯数学（MA03）](/zh/alevel/a2-mathematics/)。
+**学习其他课程？**[AS 高等数学](/zh/alevel/as-further-mathematics/) · [A2 纯数学（MA03）](/zh/alevel/a2-mathematics/)。
+
+## 跨章综合 {#mixed-review}
+
+以下均为自拟题，连接多个主题，标题不提示方法。先在纸上作答，再打开帮助；记录用过的提示，按错因返回具体课程。这些题抽查知识连接，不能替代各章的独立检查。
+<section class="lesson-check" markdown="1">
+
+### 综合 A {#mixed-a}
+
+> Find all complex roots of $z^3=8$, plot them on an Argand diagram, and explain why their sum and the sum of their squares are both zero. Give a second check using coefficients of a polynomial.
+
+<details markdown="1">
+<summary>提示</summary>
+
+先求模和全部互不相同的辐角。系数核验需要同时用到根的和与两两乘积的和。
+
+</details>
+
+<details markdown="1">
+<summary>解答与回补</summary>
+
+全部根为
+
+$$
+z_k=2\left(\cos\frac{2k\pi}{3}+i\sin\frac{2k\pi}{3}\right),\quad k=0,1,2,
+$$
+
+在图上标出 $(2,0)$、$(-1,\sqrt3)$、$(-1,-\sqrt3)$：它们构成以原点为中心的等边三角形。实部与虚部分别相加都为零。平方使辐角加倍、模平方，三个平方后的根仍具有辐角 $0,2\pi/3,4\pi/3$，所以它们的和也为零。
+
+另用系数核验。设三个根为 $\alpha,\beta,\gamma$，由 $z^3+0z^2+0z-8$，
+
+$$
+\alpha+\beta+\gamma=0,\quad
+\alpha\beta+\beta\gamma+\gamma\alpha=0,
+$$
+
+$$
+\alpha^2+\beta^2+\gamma^2
+=(\alpha+\beta+\gamma)^2-2(\alpha\beta+\beta\gamma+\gamma\alpha)=0.
+$$
+
+漏根或重复时回看[复数开方](/zh/alevel/a2-further-mathematics/de-moivres-theorem/#roots)；系数关系不清楚时回看[根与系数](/zh/alevel/a2-further-mathematics/roots-and-polynomials/)。
+
+</details>
+
+</section>
+<section class="lesson-check" markdown="1">
+
+### 综合 B {#mixed-b}
+
+> A function satisfies $y'+2y=\sinh x$ and $y(0)=0$. Find $y$ explicitly and $y(\ln2)$ exactly. Determine $\displaystyle\lim_{x\to0}y/x^2$ without using a decimal approximation.
+
+<details markdown="1">
+<summary>提示</summary>
+
+把右侧函数写成指数形式。解出函数后，研究极限时保留到二次项。
+
+</details>
+
+<details markdown="1">
+<summary>解答与回补</summary>
+
+方程已经标准化，而且是线性的。用 $\sinh x=(e^x-e^{-x})/2$ 改写右侧，积分因子为 $e^{\int2\,dx}=e^{2x}$，得到
+
+$$
+(e^{2x}y)'=\frac12(e^{3x}-e^x).
+$$
+
+两边积分，保留指数求导带出的系数：
+
+$$
+\begin{aligned}
+e^{2x}y&=\frac12\int e^{3x}\,dx-\frac12\int e^x\,dx\\
+&=\frac12\left(\frac{e^{3x}}3\right)-\frac12e^x+C,\\
+y&=\frac16e^x-\frac12e^{-x}+Ce^{-2x}.
+\end{aligned}
+$$
+
+代入 $x=0$，有 $0=1/6-1/2+C$，所以 $C=1/3$。因此
+
+$$
+y(\ln2)=\frac{2}{6}-\frac{1}{4}+\frac{1}{12}=\frac16.
+$$
+
+在 $x\to0$ 时使用指数展开：
+
+$$
+\begin{aligned}
+y&=\frac16\left(1+x+\frac{x^2}{2}+O(x^3)\right)
+-\frac12\left(1-x+\frac{x^2}{2}+O(x^3)\right)\\
+&\quad+\frac13\left(1-2x+2x^2+O(x^3)\right)\\
+&=\frac12x^2+O(x^3),\qquad
+\lim_{x\to0}\frac{y}{x^2}=\frac12.
+\end{aligned}
+$$
+
+把函数求导代回原方程，并检查 $y(0)=0$。指数定义中的符号有误，回看[双曲函数定义](/zh/alevel/a2-further-mathematics/hyperbolic-functions/)；积分有误，回看[完整积分因子例题](/zh/alevel/a2-further-mathematics/first-order-differential-equations/#example-1-normalise-and-solve)；常数项或一次项未抵消，回看[级数与极限](/zh/alevel/a2-further-mathematics/series-and-limits/)。
+
+</details>
+
+</section>
+<section class="lesson-check" markdown="1">
+
+### 综合 C {#mixed-c}
+
+> Let the matrix be
+
+$$A=\begin{pmatrix}2&1&0\\0&2&0\\0&0&3\end{pmatrix}.$$
+
+> Solve $A\mathbf{x}=(3,2,3)^{\mathsf T}$. Find every real eigenvalue and its full eigenspace. Decide whether $(1,1,0)^{\mathsf T}$ is an eigenvector and justify your answer.
+
+<details markdown="1">
+<summary>提示</summary>
+
+三角结构有助于两部分计算。特征方程中重复的根不直接决定独立特征向量的个数。
+
+</details>
+
+<details markdown="1">
+<summary>解答与回补</summary>
+
+从后两行先得 $z=1$、$y=1$，第一行再给出 $2x+1=3$，所以 $\mathbf{x}=(1,1,1)^{\mathsf T}$。行列式为非零的 $12$，也核验了解的唯一性。
+
+$$
+\det(A-\lambda I)=(2-\lambda)^2(3-\lambda)=0.
+$$
+
+当 $\lambda=2$，方程化为 $y=0,z=0$，特征空间是 $\{t(1,0,0)^{\mathsf T}:t\in\mathbb R\}$。当 $\lambda=3$，方程化为 $y=x,y=0$，特征空间是 $\{t(0,0,1)^{\mathsf T}:t\in\mathbb R\}$。每个空间中只有非零向量才是特征向量。
+
+$$
+A(1,1,0)^{\mathsf T}=(3,2,0)^{\mathsf T}\ne\lambda(1,1,0)^{\mathsf T}
+\quad\text{for every scalar }\lambda.
+$$
+
+第一坐标要求 $\lambda=3$，第二坐标却要求 $\lambda=2$，互相矛盾。按出错步骤回补[矩阵与向量的乘法](/zh/alevel/a2-further-mathematics/matrix-algebra/)、[解方程组](/zh/alevel/a2-further-mathematics/linear-equations/)或[重复特征值](/zh/alevel/a2-further-mathematics/eigenvalues-and-eigenvectors/)。
+
+</details>
+
+</section>
+## 稍后再做 {#later-review}
+
+学习其他主题后，先收起之前的答案，再尝试以下自拟题。对照前后两次的推理；需要帮助时记下所用提示，回补后再重新作答。
+<section class="lesson-check" markdown="1">
+
+### 回顾 A {#later-a}
+
+> Sketch the complete curve $r=2\cos\theta$, identify its Cartesian form, and find its enclosed area exactly. Explain why your angular interval traces the curve once.
+
+<details markdown="1">
+<summary>提示</summary>
+
+两边乘以半径，辨认直角坐标方程。选择非负半径的区间即可完整描绘此曲线。
+
+</details>
+
+<details markdown="1">
+<summary>解答与回补</summary>
+
+因为 $r^2=2r\cos\theta$，直角坐标方程是 $x^2+y^2=2x$，即 $(x-1)^2+y^2=1$。画出圆心为 $(1,0)$、半径为 $1$ 的圆，它经过原点和 $(2,0)$，在原点处与 y 轴相切。在 $-\pi/2\le\theta\le\pi/2$ 内半径非负，下、上半圆在 $(2,0)$ 连接，只有区间两端重复经过极点。
+
+用 $2\cos^2\theta=1+\cos2\theta$ 展开积分：
+
+$$
+\begin{aligned}
+\mathcal A&=\frac12\int_{-\pi/2}^{\pi/2}(2\cos\theta)^2\,d\theta
+=\int_{-\pi/2}^{\pi/2}(1+\cos2\theta)\,d\theta\\
+&=\left[\theta+\frac12\sin2\theta\right]_{-\pi/2}^{\pi/2}\\
+&=\left(\frac\pi2+\frac12\sin\pi\right)
+-\left(-\frac\pi2+\frac12\sin(-\pi)\right)=\pi.
+\end{aligned}
+$$
+
+结果与直角坐标中的圆面积一致。按错因回补[曲线描绘与角度范围](/zh/alevel/a2-further-mathematics/polar-coordinates/)或[倍角恒等式](/zh/alevel/a2-further-mathematics/de-moivres-theorem/)。
+
+</details>
+
+</section>
+<section class="lesson-check" markdown="1">
+
+### 回顾 B {#later-b}
+
+> A curve is given by $x=t$, $y=t^2/2$, $0\le t\le1$. Find its length exactly, explaining any substitution and its limits.
+
+<details markdown="1">
+<summary>提示</summary>
+
+先列参数弧长积分。双曲换元可以把根式变成正的双曲函数。
+
+</details>
+
+<details markdown="1">
+<summary>解答与回补</summary>
+
+这里 $dx/dt=1$、$dy/dt=t$，所以 $L=\int_0^1\sqrt{1+t^2}\,dt$。设 $t=\sinh u$、$dt=\cosh u\,du$；因为 $\cosh u>0$，所以 $\sqrt{1+\sinh^2u}=\cosh u$。端点变为 $0$ 与 $a=\operatorname{arsinh}1=\ln(1+\sqrt2)$。
+
+$$
+\begin{aligned}
+L&=\int_0^a\cosh^2u\,du
+=\frac12\int_0^a(1+\cosh2u)\,du\\
+&=\left[\frac u2+\frac14\sinh2u\right]_0^a\\
+&=\frac a2+\frac14(2\sinh a\cosh a)-0
+=\frac{\ln(1+\sqrt2)+\sqrt2}{2}.
+\end{aligned}
+$$
+
+这里用了 $\sinh a=1$ 与 $\cosh a=\sqrt2$。由于区间内 $1\le\sqrt{1+t^2}\le\sqrt2$，弧长介于 $1$ 和 $\sqrt2$，与结果相容。按错因回补[参数弧长模型](/zh/alevel/a2-further-mathematics/arc-length-and-surface-area/)或[双曲换元](/zh/alevel/a2-further-mathematics/hyperbolic-functions/)。
+
+</details>
+
+</section>
+<section class="lesson-check" markdown="1">
+
+### 回顾 C {#later-c}
+
+> The transformation $T$ has matrix
+
+$$M=\begin{pmatrix}0&1&0\\1&0&0\\0&0&1\end{pmatrix}.$$
+
+> Find its fixed points and its real eigenspaces. Describe the transformation geometrically and justify your description using a normal vector.
+
+<details markdown="1">
+<summary>提示</summary>
+
+比较一般点与它的像，再检验一个垂直于不动点集合的向量。
+
+</details>
+
+<details markdown="1">
+<summary>解答与回补</summary>
+
+因为 $M(x,y,z)^{\mathsf T}=(y,x,z)^{\mathsf T}$，不动点构成平面 $x=y$。它的法向量是 $\mathbf n=(1,-1,0)^{\mathsf T}$，且 $M\mathbf n=-\mathbf n$。
+
+$$
+\det(M-\lambda I)=(1-\lambda)(\lambda^2-1).
+$$
+
+特征值 $1$ 对应的特征空间为 $\{(s,s,t)^{\mathsf T}:s,t\in\mathbb R\}$；特征值 $-1$ 对应的特征空间为 $\{s(1,-1,0)^{\mathsf T}:s\in\mathbb R\}$。任意向量都能分成平面内与沿法线的两个部分：
+
+$$
+(x,y,z)^{\mathsf T}
+=\left(\frac{x+y}2,\frac{x+y}2,z\right)^{\mathsf T}
++\frac{x-y}2(1,-1,0)^{\mathsf T}.
+$$
+
+第一部分不动，第二部分反向，所以这是关于平面 $x=y$ 的反射。几何论证不完整时，回补[平面法向量](/zh/alevel/a2-further-mathematics/lines-and-planes/)或[不变几何对象与变换](/zh/alevel/a2-further-mathematics/matrix-algebra/)。
+
+</details>
+
+</section>

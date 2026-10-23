@@ -7,8 +7,9 @@ subject: a2-further-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-further-mathematics/eigenvalues-and-eigenvectors/
 permalink: /zh/alevel/a2-further-mathematics/eigenvalues-and-eigenvectors/
-toc_headings: h2, h3, h4
+toc_headings: "#definition, #characteristic-equation, #two-by-two, #three-by-three, #repeated-eigenvalues, #invariant-directions, #practice, #repeated-retry, #common-pitfalls, #sources"
 study_page: true
+reading_layout: true
 ---
 
 [高等纯数学](/zh/alevel/a2-further-mathematics/) · FP2.13 特征值与特征向量
@@ -25,6 +26,8 @@ study_page: true
 
 一般实矩阵也可能具有非实特征值；本课只处理 FP2.13 规定的实特征值情形。下文所有自由参数均为实数。
 
+若矩阵乘向量不能逐行算，回[行列乘法](/zh/alevel/as-further-mathematics/matrix-algebra/#demonstration)后重做[像的检查](#image-check)；若自由参数或非零限制不清，先做[齐次方程第 6 题](/zh/alevel/a2-further-mathematics/linear-equations/#question-6)；若根系数比较出错，回[根与系数](/zh/alevel/a2-further-mathematics/roots-and-polynomials/#roots-and-coefficients)后重建本课参数例题。
+
 ## 定义与初步判断 {#definition}
 
 对实方阵 A，**特征向量（eigenvector）**是一个非零向量，其像为自身的某个标量倍数；这个标量称为对应的**特征值（eigenvalue）**：
@@ -37,6 +40,10 @@ $$\boxed{A\mathbf v=\lambda\mathbf v,\qquad\mathbf v\ne\mathbf0.}$$
 - 负特征值反转射线方向，但仍在同一条过原点的直线上。
 - 特征值为 1 时，该方向上的每个点都固定。
 - 特征值为 0 时，该方向被压到原点。
+
+<section class="lesson-check" markdown="1">
+
+### 检查向量的像 {#image-check}
 
 **Original diagnostic.** For the following matrix, calculate the images of both given vectors. Which is an eigenvector, and what is its eigenvalue?
 
@@ -55,6 +62,8 @@ A\mathbf w=\begin{pmatrix}2\\1\end{pmatrix}.$$
 第一个向量是特征值 3 对应的特征向量；第二个像不是第二个输入向量的标量倍数，所以第二个输入不是特征向量。用分量比例判断时，零分量也必须满足条件；只除非零的第一分量，会漏掉第二分量的矛盾。
 
 </details>
+
+</section>
 
 ## 推导特征方程 {#characteristic-equation}
 
@@ -82,6 +91,8 @@ A(q\mathbf v)=\lambda(q\mathbf v),\qquad q\ne0.$$
 
 非零数乘一个特征向量，得到的仍是同一特征值对应的特征向量。只有题目要求时才需要单位长度；方便时可选整数分量。
 
+<section class="worked-example" markdown="1">
+
 ## 二阶矩阵示范 {#two-by-two}
 
 对诊断题中的矩阵，展开行列式：
@@ -94,6 +105,16 @@ $$\det(A-\lambda I)
 
 $$\lambda=3:\quad -x+y=0,\quad x-y=0
 \quad\Longrightarrow\quad\mathbf v=t\begin{pmatrix}1\\1\end{pmatrix},\quad t\ne0.$$
+
+令行列式等于零，得到两个根 1、3。上面解出了根 3 的全部非零向量；取 t=1 乘回检查：
+
+$$A\begin{pmatrix}1\\1\end{pmatrix}=\begin{pmatrix}3\\3\end{pmatrix}=3\begin{pmatrix}1\\1\end{pmatrix}.$$
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 暂停：解另一个根 {#other-root-task}
 
 **Original completion task.** Find all eigenvectors for the other root and check one directly.
 
@@ -117,7 +138,11 @@ A\begin{pmatrix}1\\-1\end{pmatrix}=\begin{pmatrix}1\\-1\end{pmatrix}.$$
 
 </details>
 
+</section>
+
 ## 三阶矩阵与参数 {#three-by-three}
+
+<section class="worked-example" markdown="1">
 
 ### 改编例题：从特征方程到几何方向 {#parameter-example}
 
@@ -131,15 +156,8 @@ $$M_c=\begin{pmatrix}c&0&0\\0&2&1\\0&1&2\end{pmatrix}.$$
 
 三个互异特征值的两两乘积之和为 11。先建立特征方程，再证明参数为 2，求三个特征值及最小值对应的一个特征向量。
 
-<details markdown="1">
-<summary>提示</summary>
-
 沿第一行展开。首一三次多项式的一次项系数，等于三个根两两乘积之和。求出最小根后，再解全部三个分量方程。
 
-</details>
-
-<details markdown="1">
-<summary>解答</summary>
 
 使用首一多项式约定，方便直接比较系数：
 
@@ -170,7 +188,7 @@ M_2\begin{pmatrix}0\\1\\-1\end{pmatrix}=\begin{pmatrix}0\\1\\-1\end{pmatrix}.$$
 
 第一分量为零不构成问题；完整向量非零即可。特征方程和系数比较排除了其他参数可能，而猜一个参数再代回，并没有完成“show that”要求的证明。
 
-</details>
+</section>
 
 ### 用迹与行列式检验 {#coefficient-checks}
 
@@ -187,6 +205,8 @@ $$\lambda_1+\lambda_2+\lambda_3=\operatorname{tr}A,\qquad
 ## 重复特征值 {#repeated-eigenvalues}
 
 一个根的**代数重数（algebraic multiplicity）**，是其因子在特征多项式中出现的次数；它**不能**直接告诉你有几个独立特征向量。若所选向量组中没有任何向量能由其余向量线性组合得到，就称它们线性无关；标量倍数只提供一个独立方向。
+
+<section class="worked-example" markdown="1">
 
 ### 相同重根，不同解族 {#repeated-comparison}
 
@@ -212,6 +232,10 @@ $$\begin{pmatrix}0&1\\0&0\end{pmatrix}\begin{pmatrix}x\\y\end{pmatrix}=\mathbf0
 $$C\mathbf v=2\mathbf v\quad\text{for every }\mathbf v\ne\mathbf0.$$
 
 两个坐标单位向量就是两个独立的例子。两个矩阵都各有无穷多个特征向量，但独立方向数不同。把同一个向量重写一次或乘另一个数，并不会产生线性无关性。
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### 三阶重根任务 {#repeated-three-by-three}
 
@@ -245,6 +269,8 @@ $$\lambda=3:\quad x=y=0,\quad
 
 </details>
 
+</section>
+
 ## 特征向量与不变方向 {#invariant-directions}
 
 对过原点、以某个特征向量为方向的直线，一般点的变换为
@@ -265,11 +291,13 @@ A\mathbf a-\mathbf a=\nu\mathbf v.$$
 
 以下均为自拟题，不赋予官方分值。每题先独立尝试，再展开提示。凡题目要求“show”，必须给出确立结论的计算过程。
 
+<section class="lesson-check" markdown="1">
+
 ### 第1题：诊断三个候选向量 {#practice-1}
 
 > For A in the second-order example, a student lists the zero vector, $(1,-1)$ with eigenvalue 3, and $(2,2)$ with eigenvalue 3. Identify every error and justify your decision by multiplication or by the definition.
 
-诊断零向量、与错误特征值配对的向量和非单位向量三个候选情况，用定义或直接乘回说明。
+逐项检验三个候选及所称特征值，用定义或直接乘回说明每个判断。
 
 <details markdown="1">
 <summary>提示</summary>
@@ -290,6 +318,10 @@ A\begin{pmatrix}2\\2\end{pmatrix}=\begin{pmatrix}6\\6\end{pmatrix}=3\begin{pmatr
 第二项是特征值 1 而非 3 对应的特征向量；第三项正确。不要求向量必须是单位向量。
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### 第2题：零与负特征值 {#practice-2}
 
@@ -324,6 +356,10 @@ $$\mathbf r=t\begin{pmatrix}0\\0\\1\end{pmatrix},\qquad t\in\mathbb R.$$
 原点是固定点，尽管零向量不是特征向量。
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### 第3题：重因子不等于独立向量 {#practice-3}
 
@@ -363,6 +399,10 @@ $$J\begin{pmatrix}1\\0\\0\end{pmatrix}=2\begin{pmatrix}1\\0\\0\end{pmatrix}.$$
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### 第4题：不用试值反求参数 {#practice-4}
 
 > For M_c in the adapted example, the product of all three eigenvalues, counted with multiplicity, is 9. Determine c. Then find all eigenvectors for every distinct eigenvalue, including any repeated eigenvalue. Do not assume that the earlier distinct-root condition still holds.
@@ -394,6 +434,53 @@ $$\lambda=1:\quad x=0,\ z=-y,\quad
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
+## 重根的同目标重试 {#repeated-retry}
+
+若把重数当独立向量数，先回[重根比较](#repeated-comparison)，再选尚未看解答的[第 3 题](#practice-3)或[第 4 题](#practice-4)。两题均已看过时，关闭帮助完成下面新题；后面的 distinct-root 混合重试不能代替此项。
+
+> **Original task / 自拟题.** For the matrix
+
+$$
+T=\begin{pmatrix}4&0&1\\0&4&0\\0&0&4\end{pmatrix},
+$$
+
+> derive the characteristic equation and find all eigenvectors. Give a largest independent collection and prove that no larger collection is possible. Compare with $T_0=4I$: the characteristic equations agree, but do the maximum independent collections have the same size? Check representative vectors by multiplication; multiplicity alone is not a justification.
+
+<details markdown="1">
+<summary>提示</summary>
+
+代入根后，保留所有非对角项；先写完整解族，再证明所选向量独立且能表示所有解。
+
+</details>
+
+<details markdown="1">
+<summary>解答</summary>
+
+$$\det(\lambda I-T)=\det\begin{pmatrix}\lambda-4&0&-1\\0&\lambda-4&0\\0&0&\lambda-4\end{pmatrix}=(\lambda-4)^3=0.$$
+
+$$(T-4I)\begin{pmatrix}x\\y\\z\end{pmatrix}=\begin{pmatrix}z\\0\\0\end{pmatrix}=\mathbf0
+\iff z=0,\qquad\mathbf v=\begin{pmatrix}a\\b\\0\end{pmatrix},\quad(a,b)\ne(0,0).$$
+
+$$T\mathbf e_x=4\mathbf e_x,\qquad T\mathbf e_y=4\mathbf e_y,\qquad
+\mathbf v=a\mathbf e_x+b\mathbf e_y.$$
+
+两个单位向量线性无关，因为其线性组合为零会使两个系数都为零；所有解都在它们张成的平面内，故最多两个独立向量。虽然根的重数为 3，不能凭空补第三个。对另一个矩阵：
+
+$$\det(\lambda I-T_0)=(\lambda-4)^3=0,\qquad
+(T_0-4I)\mathbf v=\mathbf0\quad\text{for every }\mathbf v,\qquad T_0\mathbf e_i=4\mathbf e_i\ (i=x,y,z).$$
+
+它的任意非零向量都是特征向量；三个坐标单位向量线性无关，且张成三维空间，故最大数为 3。同一个特征多项式，前者两个、后者三个，区别来自齐次约束。
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ## 独立重试 {#independent-retry}
 
 **Original task.** A map sends $(x,y,z)$ to $(y,x,2z)$. Construct its matrix and characteristic equation, find all eigenvectors, and identify the lines through the origin that are fixed pointwise. Decide whether the line $(t,t,1)$, with t real, maps onto itself. Choose and explain your own checks.
@@ -420,6 +507,8 @@ $$K\begin{pmatrix}t\\t\\1\end{pmatrix}=\begin{pmatrix}t\\t\\2\end{pmatrix}.$$
 
 </details>
 
+</section>
+
 ## 快速参考 {#quick-reference}
 
 | 问题 | 应提供的证据 |
@@ -441,13 +530,15 @@ $$K\begin{pmatrix}t\\t\\1\end{pmatrix}=\begin{pmatrix}t\\t\\2\end{pmatrix}.$$
 - **按重数凭空补向量：**比较 B 与 C、F 与 J，解实际方程。
 - **只检查一个分量：**所有分量必须服从同一个标量倍数。
 
-**练习后：**先重新独立完成原先需要提示的题目，再不看方法标签做独立重试。用一段完整英文解释“重复的根”与“独立特征向量方向数”的区别。
+**学后下一步：**重根错因按[同目标重试](#repeated-retry)重新检验；方向与非原点直线混淆则做[混合独立重试](#independent-retry)。写一段英文说明重复根与独立方向数的区别。然后完成课程[跨主题综合](/zh/alevel/a2-further-mathematics/#mixed-review)和隔开学习后的[延后任务](/zh/alevel/a2-further-mathematics/#later-review)，再次联系解集、特征方向与反射的几何意义。
 
 **计算器能检查什么／答卷须写什么：**计算器可以核验数值根和矩阵向量乘积，但不能替代题目要求的行列式展开、用根与系数关系证明参数、非零向量条件或重根解释。本课不新增按键流程，也不要求对角化定理。
 
 **学习路径：**[上一课：线性方程组](/zh/alevel/a2-further-mathematics/linear-equations/) · [矩阵代数](/zh/alevel/a2-further-mathematics/matrix-algebra/) · [高等纯数学](/zh/alevel/a2-further-mathematics/)。
 
 ## 资料来源 {#sources}
+
+本轮于 **2026-10-23** 重新读取下列 9665 大纲及 June 2024 Q11(b) 的 QP／MS 原文。新增重根题按大纲和同类特征方程／齐次方程方法核查，不冒称官方题或官方分值。
 
 范围依据 OxfordAQA International A-level Further Mathematics **9665** [大纲 Version 5.2，FP2.13，印刷 p.21／PDF p.20](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf#page=20)：二阶、三阶矩阵的特征方程、特征值与特征向量，仅考虑实特征值，包括重复值。
 

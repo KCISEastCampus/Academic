@@ -81,4 +81,4 @@ P2 编号依据 [OxfordAQA 数学课程说明](https://www.oxfordaqa.com/wp-cont
 
 </details>
 
-A2 数学的其他单元：[力学（MA05）](/alevel/a2-mathematics/mechanics/) · [统计学（MA04）](/alevel/a2-mathematics/statistics/)。
+A2 数学的其他单元：[力学（MA05）](/zh/alevel/a2-mathematics/mechanics/) · [统计学（MA04）](/alevel/a2-mathematics/statistics/)。

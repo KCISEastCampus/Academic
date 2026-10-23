@@ -7,8 +7,9 @@ subject: a2-further-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-further-mathematics/vector-products-and-coplanarity/
 permalink: /zh/alevel/a2-further-mathematics/vector-products-and-coplanarity/
-toc_headings: h2, h3, h4
+toc_headings: "#cross-product, #area, #triple-product, #practice, #common-pitfalls, #sources"
 study_page: true
+reading_layout: true
 ---
 
 [高等纯数学](/zh/alevel/a2-further-mathematics/) · FP2.12 向量与三维坐标几何
@@ -24,6 +25,8 @@ study_page: true
 **开始前：**复习 [MA03 向量](/zh/alevel/a2-mathematics/vectors/)中的分量、模、位移向量与点积。使用右手正交单位坐标系。本课坐标均为数学例题数据，不是实测数据。
 
 标为 **Original diagnostic**、**Original example** 和 **Original task** 的内容均为自拟；官方原题与改编题另列来源标识。
+
+若位移相减出错，回补 [MA03 位置与位移](/zh/alevel/a2-mathematics/vectors/#vectors-and-position-vectors)；若垂直判断出错，回补[点积](/zh/alevel/a2-mathematics/vectors/#scalar-product)，再关闭检查重做下面诊断。第 3 题用到的平面方程在本课的[法向桥接](#plane-bridge)先讲清。
 
 ## 先修诊断 {#prerequisite-check}
 
@@ -80,19 +83,14 @@ $$\mathbf i\times(\mathbf i\times\mathbf j)=-\mathbf j,\qquad (\mathbf i\times\m
 
 计算后，将叉积分别与两个输入向量作点积，两次都应为零。不过，仅凭这项检查还不能确定模和正负方向都正确。
 
+<section class="worked-example" markdown="1">
+
 ### 示例：计算并核验 {#example-cross-product}
 
 > **Original example.** For $\mathbf a=(1,2,0)$ and $\mathbf b=(0,1,2)$, find $\mathbf a\times\mathbf b$ and check perpendicularity.
 
-<details markdown="1">
-<summary>提示</summary>
-
 分别计算三个分量。中间分量是 $a_3b_1-a_1b_3$。
 
-</details>
-
-<details markdown="1">
-<summary>解答</summary>
 
 $$\mathbf a\times\mathbf b=(2\cdot2-0\cdot1,\ 0\cdot0-1\cdot2,\ 1\cdot1-2\cdot0)=(4,-2,1).$$
 
@@ -103,7 +101,7 @@ $$\begin{aligned}
 
 两次垂直检验都成立。若交换输入次序，结果取负，但模不变。
 
-</details>
+</section>
 
 ## 由两条边求面积 {#area}
 
@@ -120,6 +118,8 @@ $$A_{ABC}=\frac12\lVert(\mathbf b-\mathbf a)\times(\mathbf c-\mathbf a)\rVert.$$
 ![平行六面体示意：从 A 出发的相邻底边 u、v，第三条边 w，垂直底面的法向 N 和虚线垂直高度 h；不按比例。](/assets/img/further-vector-products.svg)
 
 此图连接底面积与下文的垂直高度，是概念示意，不对应独立练习的待求结果。
+
+<section class="lesson-check" markdown="1">
 
 ### 补步与纠错 {#repair-area}
 
@@ -140,6 +140,8 @@ $$A_{\mathrm{triangle}}=\frac12\sqrt{4^2+(-2)^2+1^2}=\frac{\sqrt{21}}2.$$
 原式是平行四边形的面积。叉积为零表示输入向量线性相关；二者非零时就是平行。零向量不能指定法向方向，两条平行方向也不能唯一确定平面。
 
 </details>
+
+</section>
 
 ## 标量三重积与体积 {#triple-product}
 
@@ -171,6 +173,8 @@ $$A,B,C,D\text{ are coplanar}\iff(\mathbf b-\mathbf a)\cdot\big((\mathbf c-\math
 
 三个位置向量共面检验的是经过原点的平面，通常不能判断四个给定点是否共面。前三点共线时也不能确定唯一平面，尽管对任意第四点，四点检验的三重积都为零。
 
+<section class="worked-example" markdown="1">
+
 ### 示例：共面还是平行 {#example-coplanar-or-parallel}
 
 **OxfordAQA 官方原题：**9665/FM03，June 2024，Q2，QP 第 4 页；实际核读配套 MS 第 5 页。各小问描述不同情形。
@@ -187,17 +191,10 @@ $$A,B,C,D\text{ are coplanar}\iff(\mathbf b-\mathbf a)\cdot\big((\mathbf c-\math
 >
 > (c) In the case when $\mathbf c$ is parallel to $\mathbf a\times\mathbf b$ find the value of $t$. **[2 marks]**
 
-先尝试 (a)。在 (b) 中先补出标量方程，再看解答；在 (c) 中，先判断需要零点积，还是一个向量为另一个的倍数。
-
-<details markdown="1">
-<summary>提示</summary>
+下面完整示范怎样把两个不同几何条件分别写成方程；随后在独立题中自行选择条件。
 
 (b) 使用的三重积为 $(\mathbf a\times\mathbf b)\cdot\mathbf c$。(c) 写出 $\mathbf c=\lambda(\mathbf a\times\mathbf b)$，检查全部三个分量。
 
-</details>
-
-<details markdown="1">
-<summary>解答</summary>
 
 $$\mathbf a\times\mathbf b=(10-9,\ 9-5,\ 3-6)=(1,4,-3).$$
 
@@ -211,7 +208,9 @@ $$(-3,t,9)=\lambda(1,4,-3)\quad\Longrightarrow\quad\lambda=-3,\qquad\boxed{t=-12
 
 第三个分量也吻合：$9=(-3)(-3)$。第一种情形中，第三个向量位于该平面内；第二种情形中，它沿平面的法向。二者的几何条件不同。
 
-</details>
+</section>
+
+<section class="worked-example" markdown="1">
 
 ### 示例：体积条件的两个参数解 {#example-volume}
 
@@ -223,15 +222,8 @@ $$(-3,t,9)=\lambda(1,4,-3)\quad\Longrightarrow\quad\lambda=-3,\qquad\boxed{t=-12
 >
 > Its volume is 4 cubic units. Find all possible values of $k$.
 
-<details markdown="1">
-<summary>提示</summary>
-
 先求边向量再作运算。绝对值等于正数时，对应两个带正负号的方程。
 
-</details>
-
-<details markdown="1">
-<summary>解答</summary>
 
 $$\overrightarrow{AB}=(k+1,2,1),\quad\overrightarrow{AC}=(3,3,1),\quad\overrightarrow{AD}=(k+2,-1,3).$$
 
@@ -249,11 +241,30 @@ $$\lvert9k-13\rvert=4\quad\Longrightarrow\quad 9k-13=4\ \text{or}\ 9k-13=-4\quad
 
 代回分别得到有向三重积 4 和 −4，两者均给出所需的非零体积。只保留正的有向三重积，会漏掉一个有效构型。
 
-</details>
+</section>
+
+<section class="worked-example" markdown="1">
+
+### 从法向到平面方程 {#plane-bridge}
+
+两条独立面内边的叉积给出非零法向 $\mathbf n$。若已知平面过点 $A$，面内任意位移 $\mathbf r-\mathbf a$ 都垂直于 $\mathbf n$，所以
+
+$$\mathbf n\cdot(\mathbf r-\mathbf a)=0
+\iff \mathbf n\cdot\mathbf r=\mathbf n\cdot\mathbf a.$$
+
+例如，过 $(0,1,2)$、法向为 $(1,2,-1)$ 的平面满足
+
+$$x+2(y-1)-(z-2)=0\iff x+2y-z=0.$$
+
+法向非零，因此确为平面；代入已知点得 $0+2-2=0$。用这座桥检查四点题；[下一课](/zh/alevel/a2-further-mathematics/lines-and-planes/#planes)再发展其他平面表示。
+
+</section>
 
 ## 独立练习 {#practice}
 
 本节全部是**自拟题**，无官方分值。自行选择方法，先完成完整尝试，再展开解答。
+
+<section class="lesson-check" markdown="1">
 
 ### 第 1 题：四个点不等于三个位置向量 {#practice-1}
 
@@ -281,6 +292,10 @@ $$A_{ABC}=\frac12\sqrt{16+4+1}=\frac{\sqrt{21}}2.$$
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### 第 2 题：从法向条件反求参数 {#practice-2}
 
 > Let $\mathbf u=(1,1,0)$ and $\mathbf v=(2,s,1)$. Find $s$ so that $\mathbf u\times\mathbf v$ is parallel to $(1,-1,2)$. Is it possible for these two inputs to be parallel for any $s$? Justify both answers.
@@ -300,6 +315,10 @@ $$\mathbf u\times\mathbf v=(1,-1,s-2)=\lambda(1,-1,2)\quad\Longrightarrow\quad\l
 叉积的第一个分量恒为 1，因此不可能为零，两个输入向量不可能平行。“非零倍数”与“零积”不是同一条件。
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### 第 3 题：独立重试 {#practice-3}
 
@@ -324,6 +343,10 @@ $$\overrightarrow{AB}\times\overrightarrow{AC}=(-2,-1,2),\qquad (-2,-1,2)\cdot(2
 $$A_{ABC}=\frac12\sqrt{4+1+4}=\frac32.$$
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### 第 4 题：改变一条边后的体积 {#practice-4}
 
@@ -355,6 +378,8 @@ $$\begin{aligned}
 
 </details>
 
+</section>
+
 ## 快速参考 {#quick-reference}
 
 | 任务 | 方法 | 条件或检查 |
@@ -376,11 +401,13 @@ $$\begin{aligned}
 - 体积只得到一个参数解：化简前先列出两个带正负号的方程。
 - 位置向量充当边：先减去同一个起点的位置向量。
 
-**继续前：**用英文解释为什么交换两条边改变三重积的正负，但不改变体积。再不看提示重做一题。判断共面后，把各点代入一个平面方程检查，而不是只重复同一个三重积。
+**学后下一步：**位置向量误作边或平面检查失败，先回[法向桥接](#plane-bridge)，再关闭帮助完成[第 3 题](#practice-3)；绝对值漏支则完成[第 4 题](#practice-4)。随后做课程入口的[跨主题综合](/zh/alevel/a2-further-mathematics/#mixed-review)，隔开一段学习后完成[延后任务](/zh/alevel/a2-further-mathematics/#later-review)，把反射平面的法向与矩阵变换联系起来。
 
 **学习路径：**[上一课：二阶微分方程](/zh/alevel/a2-further-mathematics/second-order-differential-equations/) · [下一课：直线与平面](/zh/alevel/a2-further-mathematics/lines-and-planes/) · [高等纯数学](/zh/alevel/a2-further-mathematics/)。
 
 ## 来源与范围 {#sources}
+
+本轮于 **2026-10-23** 重新读取下列 9665 大纲及所列 QP／MS 原文；不是沿用旧报告的已读状态。
 
 - OxfordAQA International A-level Further Mathematics **9665**，Unit FP2/FM03，大纲 **Version 5.2**，[FP2.12，PDF 第 19 页／印刷第 20 页](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf#page=19)。本课涵盖向量积、面积、标量三重积、体积与共面；下一课承接直线与平面几何。
 - [June 2024 FM03 QP，Q2 第 4 页](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-question-paper.pdf#page=4)与[配套 MS 第 5 页](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-mark-scheme.pdf#page=5)：上文原题保留指定的标量三重积方法。

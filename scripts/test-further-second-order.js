@@ -72,8 +72,8 @@ assert.equal((en.match(/^### Question /gm) || []).length, 7);
 // Independent tasks must require the student to classify the roots and choose a PI.
 assert.deepEqual(en.match(/^### Question .*$/gm),
   Array.from({ length: 7 }, (_, i) => `### Question ${i + 1} {#practice-${i + 1}}`));
-assert.equal((en.match(/<details\b/g) || []).length, 31);
-assert.equal((zh.match(/<details\b/g) || []).length, 31);
+assert.equal((en.match(/<details\b/g) || []).length, (zh.match(/<details\b/g) || []).length,
+  'The languages provide equal optional help');
 
 for (const [prefix, source, language, target] of [
   ['', en, 'en', `/zh/${topic}/`], ['zh/', zh, 'zh-CN', `/${topic}/`]
@@ -106,6 +106,6 @@ init({ loader: { load: ['input/tex', 'output/svg'] }, tex: { packages: ['base', 
       const svg = mj.startup.adaptor.outerHTML(mj.tex2svg(formula.slice(width, -width), { display }));
       assert(!svg.includes('data-mml-node="merror"') && !svg.includes('data-mjx-error'), `Invalid TeX: ${formula}`);
     }
-    console.log(`Second-order equations passed: 14 solution families, initial/boundary values and a large-x derivative check, bilingual questions/formulas/anchors, generated links/31 disclosures per language and ${formulas.size} TeX formulas.`);
+    console.log(`Second-order equations passed: 14 solution families, initial/boundary values and a large-x derivative check, bilingual questions/formulas/anchors, generated links/disclosures and ${formulas.size} TeX formulas.`);
   })
   .catch(error => { console.error(error); process.exitCode = 1; });

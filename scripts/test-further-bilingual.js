@@ -20,12 +20,39 @@ const built = url => read(path.join('_site', decodeURI(url), url.endsWith('/') ?
 const index = body(built(`/zh/${course}/`));
 const formulas = new Set();
 
+// Markdown consumes inline matrix row separators before MathJax sees them.
+for (const prefix of ['', 'zh/']) for (const slug of ['index', ...slugs]) {
+  const source = read(`${prefix}${course}/${slug}.md`);
+  assert(!math(source).some(formula => !formula.startsWith('$$') &&
+    /\\begin\{(?:[pbvVB])?matrix\}/.test(formula) && formula.includes('\\\\')),
+  `${prefix}${slug}: put multi-row matrices in display math`);
+}
+
+// The course entrance now includes cross-topic tasks, not just a directory.
+const enIndex = read(course + '/index.md'), zhIndex = read('zh/' + course + '/index.md');
+assert.deepEqual(math(zhIndex), math(enIndex), 'Course tasks: bilingual mathematics');
+assert.deepEqual(zhIndex.match(/^>.*$/gm), enIndex.match(/^>.*$/gm), 'Course tasks: English prompts');
+for (const formula of math(enIndex)) formulas.add(formula);
+for (const prefix of ['', 'zh/']) {
+  const content = body(built('/' + prefix + course + '/'));
+  for (const anchor of ['mixed-review', 'mixed-a', 'mixed-b', 'mixed-c',
+    'later-review', 'later-a', 'later-b', 'later-c'])
+    assert(content.includes('id="' + anchor + '"'), 'Missing course task ' + anchor);
+  const tasks = [...content.matchAll(/<section class="lesson-check">([\s\S]*?)<\/section>/g)];
+  assert.equal(tasks.length, 6, 'Three mixed tasks and three later tasks must render');
+  for (const [, task] of tasks) {
+    assert(!task.includes('<section'), 'Course tasks must not nest');
+    assert.equal((task.match(/<details\b/g) || []).length, 2, 'Separate optional hint and solution');
+    assert(!/<details\b[^>]*\bopen\b/.test(task), 'Help starts closed');
+  }
+}
+
 for (const slug of slugs) {
   const enUrl = `/${course}/${slug}/`, zhUrl = `/zh${enUrl}`;
   const en = read(`${course}/${slug}.md`), zh = read(`zh/${course}/${slug}.md`);
   assert.deepEqual(math(zh), math(en), `${slug}: formulas and their order`);
-  assert.deepEqual(zh.match(/\*\*[^*\r\n]*\bmarks?[^*\r\n]*\*\*/g) || [],
-    en.match(/\*\*[^*\r\n]*\bmarks?[^*\r\n]*\*\*/g) || [], `${slug}: original marks`);
+  assert.deepEqual(zh.match(/\*\*[^*\r\n]*\d[^*\r\n]*\bmarks?[^*\r\n]*\*\*/g) || [],
+    en.match(/\*\*[^*\r\n]*\d[^*\r\n]*\bmarks?[^*\r\n]*\*\*/g) || [], `${slug}: original marks`);
   assert.deepEqual(zh.match(/https:\/\/[^)\s]+/g) || [],
     en.match(/https:\/\/[^)\s]+/g) || [], `${slug}: source URLs`);
   for (const formula of math(zh)) formulas.add(formula);
@@ -36,7 +63,9 @@ for (const slug of slugs) {
 
   // Keep the full exercise prompt; source descriptions may be translated.
   for (const question of en.split(/^### Question .+$/m).slice(1)) {
-    const prompt = question.split('<details')[0].trim().split(/\n\s*\n/)
+    const paragraphs = question.split('<details')[0].trim().split(/\n\s*\n/);
+    // Quoted exam prompts stay English; surrounding skill-recovery guidance is translated.
+    const prompt = paragraphs.some(p => p.startsWith('>')) ? paragraphs.filter(p => p.startsWith('>')) : paragraphs
       .filter(paragraph => !/^\*\*(?:Source:|Original AQA question\.)/.test(paragraph) && !paragraph.startsWith('!['));
     for (const paragraph of prompt) assert(zh.includes(paragraph), `${slug}: English exercise prompt ${paragraph.slice(0, 70)}`);
   }
@@ -51,6 +80,21 @@ for (const slug of slugs) {
     [...en.matchAll(/!\[[^\]]*\]\(([^)]+)\)/g)].map(match => match[1]), `${slug}: images`);
 
   const enHtml = built(enUrl), zhHtml = built(zhUrl);
+  for (const [source, html] of [[en, enHtml], [zh, zhHtml]]) {
+    assert(source.includes('reading_layout: true'), 'Use the accepted reading layout: ' + slug);
+    const content = body(html);
+    const sections = [...content.matchAll(/<section class="(worked-example|lesson-check)">([\s\S]*?)<\/section>/g)];
+    assert(sections.some(([, type]) => type === 'worked-example'), 'Visible demonstration: ' + slug);
+    for (const [, type, section] of sections) {
+      assert(!section.includes('<section'), 'Learning blocks must not nest: ' + slug);
+      if (type === 'lesson-check')
+        assert(!/<details\b[^>]*\bopen\b/.test(section), 'Student help starts closed: ' + slug);
+    }
+    for (const type of ['worked-example', 'lesson-check'])
+      assert.equal((content.match(new RegExp('<section class="' + type + '">', 'g')) || []).length,
+        (source.match(new RegExp('<section class="' + type + '"', 'g')) || []).length,
+        'Learning boundaries must survive rendering: ' + slug);
+  }
   assert.deepEqual(headings(body(zhHtml)), headings(body(enHtml)), `${slug}: identical heading anchors`);
   assert.equal(new Set(ids(body(zhHtml))).size, ids(body(zhHtml)).length, `${slug}: unique IDs`);
   for (const [html, lang, target] of [[enHtml, 'en', zhUrl], [zhHtml, 'zh-CN', enUrl]]) {

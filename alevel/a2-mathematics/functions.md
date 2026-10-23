@@ -239,7 +239,7 @@ For any output $y\geq0$, the input $x=5-y^2$ is allowed and gives $f(x)=y$. This
 
 </details>
 
-### Q2 — A restricted domain does not always give an inverse
+### Q2 — Range and invertibility {#q2--a-restricted-domain-does-not-always-give-an-inverse}
 
 Let $f(x)=x^2$ for $-2\leq x\leq1$. Find its range. Does it have an inverse function on this domain? Explain your answer.
 
@@ -311,7 +311,7 @@ $$f(f^{-1}(x))=\frac{\frac{2(3x+1)}{x-2}+1}{\frac{3x+1}{x-2}-3}=\frac{\frac{7x}{
 
 </details>
 
-### Q5 — Choose the negative square root
+### Q5 — Find and check an inverse {#q5--choose-the-negative-square-root}
 
 Let $f(x)=(x+2)^2-1$ for $x\leq-2$. Find $f^{-1}$, including its domain and range. Check $f^{-1}(f(x))$ on the original domain.
 

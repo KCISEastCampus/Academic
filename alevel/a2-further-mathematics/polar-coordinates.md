@@ -5,8 +5,9 @@ mathjax: true
 grade: a2
 subject: a2-further-mathematics
 permalink: /alevel/a2-further-mathematics/polar-coordinates/
-toc_headings: h2, h3, h4
+toc_headings: "#method, #coordinates, #equations, #sketching, #intersections, #areas, #practice, #diagnose-and-retry, #later-review, #quick-reference"
 study_page: true
+reading_layout: true
 ---
 
 [Further Pure Mathematics](/alevel/a2-further-mathematics/) · FP2.3 Polar coordinates
@@ -19,7 +20,7 @@ Describe a point using a distance and an angle. Convert equations, sketch polar 
 
 Textbook: Chapter 21, Sections 21.1–21.3, printed pp. 256–266; review and practice on pp. 267–269, in *International A Level Further Mathematics*.
 
-**Before you start:** review [modulus and argument](/alevel/a2-further-mathematics/de-moivres-theorem/#powers-and-proof), [trigonometry](/alevel/a2-mathematics/trigonometric-functions-and-formulae/) and [integration](/alevel/a2-mathematics/integration/). You should know the area of a circular sector, the double-angle identities and how to find an angle in the correct quadrant. Use **radians** throughout.
+**Before you start:** recover quadrants and distances at [AS modulus and argument](/alevel/as-further-mathematics/complex-numbers-and-roots/#geometry), then return to [coordinates](#coordinates) and check the signs. Areas need [double-angle formulae](/alevel/a2-mathematics/trigonometric-functions-and-formulae/#double-angle-formulae), [simplifying and integrating term by term](/alevel/a2-mathematics/integration/#simplify-and-integrate), and [evaluating definite integrals](/alevel/a2-mathematics/integration/#definite-integrals); Question 8 also needs [substitution with changed limits](/alevel/a2-mathematics/integration/#substitution). Then return to the [area examples](#areas) and explain the angular interval first. You also need circular-sector area. Use **radians** throughout.
 
 **Task status:** Unless an official question or teaching adaptation is explicitly identified, the worked examples and exercises are self-written teaching tasks with no official marks.
 
@@ -54,6 +55,8 @@ For a non-zero point, $r=\sqrt{x^2+y^2}>0$. If $x\ne0$, $\tan\theta=\frac yx$, b
 
 Angles that differ by an integer multiple of $2\pi$ locate the same point. When a principal value is requested, use $-\pi<\theta\le\pi$. At the pole, the angle is not unique.
 
+<section class="worked-example" markdown="1">
+
 ### Example 1 — Convert points in both directions
 
 **Question:** convert $P=(4,\frac\pi6)$ from polar to Cartesian coordinates. Convert $Q=(-1,-\sqrt3)$ from Cartesian to polar coordinates, using a principal angle.
@@ -78,9 +81,13 @@ $$\boxed{Q=\left(2,-\frac{2\pi}{3}\right)
 
 **Check:** $2\cos(-\frac{2\pi}{3})=-1$ and $2\sin(-\frac{2\pi}{3})=-\sqrt3$. The angle $\frac\pi3$ would give both coordinates positive.
 
+</section>
+
 ## Equations
 
 Keep the allowed range of $\theta$ when converting an equation. A Cartesian equation may describe more of a curve than a restricted polar domain does.
+
+<section class="worked-example" markdown="1">
 
 ### Example 2 — A circle through the pole
 
@@ -108,6 +115,10 @@ The circle has centre $(2,0)$ and radius $2$.
 
 **Common mistake:** dividing by $r$ and forgetting to check the pole separately.
 
+</section>
+
+<section class="worked-example" markdown="1">
+
 ### Example 3 — A straight line
 
 **Question:** find the Cartesian equation of
@@ -132,6 +143,8 @@ For positive $r$, the denominator must be positive. One interval that covers the
 
 **Check:** the intercepts are $(4,0)$ and $(0,\frac4{\sqrt3})$. Every point on the line has $\frac12x+\frac{\sqrt3}{2}y=2>0$, as required.
 
+</section>
+
 ## Sketching
 
 Start with the specified angular domain. Find where $r>0$ before making a table.
@@ -143,6 +156,8 @@ Start with the specified angular domain. Find where $r>0$ before making a table.
 - If replacing $\theta$ by $\pi-\theta$ leaves the equation and domain unchanged, the curve is symmetric about the line $\theta=\frac\pi2$.
 
 Check the zeros and largest values of $r$. Plot points at simple angles, then join them smoothly. A **loop** starts and ends at the pole. Do not join two parts through an interval where $r<0$ or the function is undefined.
+
+<section class="worked-example" markdown="1">
 
 ### Example 4 — Three loops
 
@@ -171,6 +186,10 @@ $$\left(-\frac{5\pi}{6},-\frac\pi2\right)
 Their middle angles are $-\frac{2\pi}{3}$ and $\frac{2\pi}{3}$. There are three congruent loops, each reaching radius $2$.
 
 **Check:** increasing $\theta$ by $\frac{2\pi}{3}$ leaves $\cos3\theta$ unchanged, so the three loops repeat by rotation.
+
+</section>
+
+<section class="worked-example" markdown="1">
 
 ### Example 5 — Exclude a negative-radius part
 
@@ -201,11 +220,15 @@ Reflect the upper part in the initial line to obtain the lower part.
 
 **Check:** at $\theta=\pi$, the formula gives $r=-1$. That point must not appear on this course's sketch. Some graphing tools draw an extra inner loop from negative radii; exclude it.
 
+</section>
+
 ## Intersections
 
 For two curves $r=f(\theta)$ and $r=g(\theta)$ with positive radii, non-pole intersections on the same ray satisfy $f(\theta)=g(\theta)$. Keep only solutions in both domains with $r>0$.
 
 **Check the pole separately.** Two curves may pass through it at different angles, so equating their radii at the same angle can miss that intersection.
+
+<section class="worked-example" markdown="1">
 
 ### Example 6 — Intersections and a chord
 
@@ -229,6 +252,8 @@ $$\boxed{AB=2\sqrt3.}$$
 
 **Check:** the chord is vertical and has length $2(2\sin\frac\pi3)$. The pole lies on the first curve but not on the circle, so it is not another intersection.
 
+</section>
+
 ## Areas
 
 If $r=f(\theta)$ bounds a region swept from $\theta=\alpha$ to $\theta=\beta$, its area is
@@ -238,6 +263,38 @@ $$\boxed{A=\frac12\int_\alpha^\beta r^2\,\mathrm d\theta.}$$
 A small angular slice is approximately a circular sector of area $\frac12r^2\,\mathrm d\theta$. Adding the slices gives the integral.
 
 Use an interval on which the curve has non-negative radius and the required region is swept **once**. For a full loop, find its two ends at the pole. Squaring $r$ does not make a negative-radius interval valid.
+
+<section class="lesson-check" markdown="1">
+
+### Set up before integrating {#supported-area-setup}
+
+**Supported attempt (self-written):** For $r=3\cos2\theta$, identify the loop around the initial line. Write its two endpoint angles and its area integral; do not evaluate it yet.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Find the radius zeros on either side of angle zero and check its sign between them.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+$$2\theta=\pm\frac\pi2,\qquad -\frac\pi4\le\theta\le\frac\pi4,
+\qquad A=\frac12\int_{-\pi/4}^{\pi/4}9\cos^22\theta\,\mathrm d\theta.$$
+
+The radius is positive inside this interval; the next example demonstrates the squared trigonometric integral and both endpoints.
+
+</details>
+
+</section>
+
+Before integrating, replace the square by multiple-angle terms; this also explains how the constant factors combine. Each antiderivative must still account for its inner angle coefficient:
+
+$$\cos^2u=\frac{1+\cos2u}{2},\qquad
+\sin^2u=\frac{1-\cos2u}{2}.$$
+
+<section class="worked-example" markdown="1">
 
 ### Example 7 — Area of one loop
 
@@ -250,12 +307,17 @@ A
 &=\frac12\int_{-\pi/6}^{\pi/6}4\cos^23\theta\,\mathrm d\theta\\
 &=\int_{-\pi/6}^{\pi/6}(1+\cos6\theta)\,\mathrm d\theta\\
 &=\left[\theta+\frac16\sin6\theta\right]_{-\pi/6}^{\pi/6}\\
-&=\boxed{\frac\pi3}.
+&=\left(\frac\pi6+\frac{\sin\pi}{6}\right)
+-\left(-\frac\pi6+\frac{\sin(-\pi)}{6}\right)=\boxed{\frac\pi3}.
 \end{aligned}$$
 
 **Check:** symmetry gives the same answer from twice the area between $0$ and $\frac\pi6$. All three loops together have area $\pi$.
 
 **Common mistake:** using a full revolution to find one loop, or integrating over intervals with negative $r$.
+
+</section>
+
+<section class="worked-example" markdown="1">
 
 ### Example 8 — A spiral sector
 
@@ -266,6 +328,7 @@ The radius increases from $\pi$ to $2\pi$ over this interval. The region lies be
 $$\begin{aligned}
 A
 &=\frac12\int_{\pi/2}^{\pi}(2\theta)^2\,\mathrm d\theta\\
+&=2\int_{\pi/2}^{\pi}\theta^2\,\mathrm d\theta\\
 &=2\left[\frac{\theta^3}{3}\right]_{\pi/2}^{\pi}\\
 &=\frac23\left(\pi^3-\frac{\pi^3}{8}\right)\\
 &=\boxed{\frac{7\pi^3}{12}}.
@@ -273,9 +336,13 @@ A
 
 **Check:** the region is in the second quadrant. The integral does not start at zero because the specified first radius is $\theta=\frac\pi2$.
 
+</section>
+
 ### Common regions and changing boundaries {#common-regions}
 
 For a common region, use the smaller radius on each ray. Split the integral at angles where the bounding curve changes.
+
+<section class="worked-example" markdown="1">
 
 #### Example 9 — The bounding curve changes
 
@@ -313,17 +380,26 @@ For the first part, use $\sin^2\theta=\frac12(1-\cos2\theta)$:
 
 $$\begin{aligned}
 A_1
+&=\frac12\int_0^{\pi/3}3\sin^2\theta\,\mathrm d\theta
+=\frac34\int_0^{\pi/3}(1-\cos2\theta)\,\mathrm d\theta\\
 &=\frac34\left[\theta-\frac12\sin2\theta\right]_0^{\pi/3}\\
-&=\frac\pi4-\frac{3\sqrt3}{16}.
+&=\frac34\left[\left(\frac\pi3-\frac12\sin\frac{2\pi}{3}\right)
+-\left(0-\frac12\sin0\right)\right]\\
+&=\frac34\left(\frac\pi3-\frac{\sqrt3}{4}\right)
+=\frac\pi4-\frac{3\sqrt3}{16}.
 \end{aligned}$$
 
 For the second part, expand the square and use $\cos^2\theta=\frac12(1+\cos2\theta)$:
 
 $$\begin{aligned}
 A_2
-&=\frac12\left[\frac32\theta+2\sin\theta
-+\frac14\sin2\theta\right]_{\pi/3}^{\pi}\\
-&=\frac\pi2-\frac{9\sqrt3}{16}.
+&=\frac12\int_{\pi/3}^{\pi}(1+2\cos\theta+\cos^2\theta)\,\mathrm d\theta\\
+&=\int_{\pi/3}^{\pi}\left(\frac34+\cos\theta+\frac14\cos2\theta\right)\,\mathrm d\theta\\
+&=\left[\frac34\theta+\sin\theta+\frac18\sin2\theta\right]_{\pi/3}^{\pi}\\
+&=\left(\frac{3\pi}{4}+\sin\pi+\frac18\sin2\pi\right)
+-\left(\frac\pi4+\sin\frac\pi3+\frac18\sin\frac{2\pi}{3}\right)\\
+&=\frac{3\pi}{4}-\left(\frac\pi4+\frac{\sqrt3}{2}+\frac{\sqrt3}{16}\right)
+=\frac\pi2-\frac{9\sqrt3}{16}.
 \end{aligned}$$
 
 Therefore
@@ -331,6 +407,8 @@ Therefore
 $$\boxed{A=A_1+A_2=\frac{3\pi}{4}-\frac{3\sqrt3}{4}.}$$
 
 **Check:** the common region has area less than the whole circle, whose area is $\frac{3\pi}{4}$. It uses the **smaller radius** on each ray.
+
+</section>
 
 ### Regions between two curves {#area-between-curves}
 
@@ -343,7 +421,9 @@ Do not use $\frac12\int(r_{\text{outer}}-r_{\text{inner}})^2\,\mathrm d\theta$. 
 
 ## Practice
 
-Try each question before opening the hint or solution. Questions 1–5 are **original practice written for this lesson**. Questions 6–8 retain the AQA wording and marks reproduced in the supplied textbook.
+Try each question before opening the hint or solution. Questions 1–5 are **original practice written for this lesson**. Questions 6–7 retain the AQA wording and marks reproduced in the supplied textbook; Question 8 is an adaptation with a redrawn diagram, and its stated 6 marks belong to the original question.
+
+<section class="lesson-check" markdown="1">
 
 ### Question 1 — Coordinates and a quadrant
 
@@ -378,6 +458,10 @@ The Cartesian coordinates are $\boxed{(-\frac{3\sqrt3}{2},\frac32)}$.
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### Question 2 — Convert and keep the domain
 
 Find a polar equation for $xy=2$. State where positive radii are possible in $-\pi<\theta\le\pi$.
@@ -410,6 +494,10 @@ $$\boxed{-\pi<\theta<-\frac\pi2
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### Question 3 — Positive-radius loops
 
 Sketch $r=2\sin2\theta$ for $0\le\theta\le2\pi$, using this course's radius convention. State the number of loops and find the area of one loop.
@@ -439,12 +527,17 @@ A
 &=\frac12\int_0^{\pi/2}4\sin^22\theta\,\mathrm d\theta\\
 &=\int_0^{\pi/2}(1-\cos4\theta)\,\mathrm d\theta\\
 &=\left[\theta-\frac14\sin4\theta\right]_0^{\pi/2}\\
-&=\boxed{\frac\pi2}.
+&=\left(\frac\pi2-\frac14\sin2\pi\right)-\left(0-\frac14\sin0\right)
+=\boxed{\frac\pi2}.
 \end{aligned}$$
 
 **Check:** the two loops are related by a rotation of $\pi$, so their combined area is $\pi$. A four-loop plot would include negative radii and does not follow the convention used here.
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### Question 4 — Part of a circle
 
@@ -463,17 +556,23 @@ Use the stated angular limits, rather than the limits of the whole circle. Apply
 $$\begin{aligned}
 A
 &=\frac12\int_0^{\pi/4}16\cos^2\theta\,\mathrm d\theta\\
+&=4\int_0^{\pi/4}(1+\cos2\theta)\,\mathrm d\theta\\
 &=4\left[\theta+\frac12\sin2\theta\right]_0^{\pi/4}\\
-&=\boxed{\pi+2}.
+&=4\left[\left(\frac\pi4+\frac12\sin\frac\pi2\right)
+-\left(0+\frac12\sin0\right)\right]=\boxed{\pi+2}.
 \end{aligned}$$
 
 **Check:** the whole circle has area $4\pi$, and the upper half has area $2\pi$. The specified region has smaller area than either. Its angle is measured at the pole, not at the circle's centre.
 
 </details>
 
-### Question 5 — A pole intersection at different angles
+</section>
 
-The circles $r=2\cos\theta$ and $r=2\sin\theta$ meet at the pole and at one other point. Find that point and the area inside both circles.
+<section class="lesson-check" markdown="1">
+
+### Question 5 — Two curves {#question-5--a-pole-intersection-at-different-angles}
+
+For the curves $r=2\cos\theta$ and $r=2\sin\theta$, find all intersection points and justify that none are missing. Sketch both curves, shade their common region and find its area using the course radius convention.
 
 <details markdown="1">
 <summary>Hint</summary>
@@ -498,22 +597,36 @@ Thus the other point is $\boxed{(\sqrt2,\frac\pi4)}$, or $(1,1)$ in Cartesian co
 
 For $0<\theta<\frac\pi4$, $2\sin\theta$ is smaller. For $\frac\pi4<\theta<\frac\pi2$, $2\cos\theta$ is smaller. Therefore
 
+
+
+The sketch should show unit circles centred at (1,0) and (0,1), with their lens-shaped common region in the first quadrant and intersections O and (1,1) labelled. Away from the pole, the positive-radius domains overlap only in the first quadrant. Tangent is strictly increasing there, so the equal-radius equation has only the solution above; no other intersections are missing.
+
 $$\begin{aligned}
 A
 &=\frac12\int_0^{\pi/4}4\sin^2\theta\,\mathrm d\theta\\
 &\quad+\frac12\int_{\pi/4}^{\pi/2}4\cos^2\theta\,\mathrm d\theta\\
-&=\left[\theta-\frac12\sin2\theta\right]_0^{\pi/4}\\
-&\quad+\left[\theta+\frac12\sin2\theta\right]_{\pi/4}^{\pi/2}\\
-&=\boxed{\frac\pi2-1}.
+&=\int_0^{\pi/4}(1-\cos2\theta)\,\mathrm d\theta
++\int_{\pi/4}^{\pi/2}(1+\cos2\theta)\,\mathrm d\theta\\
+&=\left[\theta-\frac12\sin2\theta\right]_0^{\pi/4}
++\left[\theta+\frac12\sin2\theta\right]_{\pi/4}^{\pi/2}\\
+&=\left[\left(\frac\pi4-\frac12\sin\frac\pi2\right)-(0-0)\right]\\
+&\quad+\left[\left(\frac\pi2+\frac12\sin\pi\right)
+-\left(\frac\pi4+\frac12\sin\frac\pi2\right)\right]\\
+&=\left(\frac\pi4-\frac12\right)+\left(\frac\pi4-\frac12\right)
+=\boxed{\frac\pi2-1}.
 \end{aligned}$$
 
 **Check:** each circle has radius $1$, so the common area must be less than $\pi$. The two integral pieces are equal by reflection in the line $y=x$.
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### Question 6 — AQA: a Cartesian equation
 
-**Source:** AQA Mathematics 6360, MFP3, June 2014, Question 3. **4 marks**. Textbook cross-reference: Chapter 21, practice examination question 2, printed p. 267. [Question paper, Q3 (PDF p. 6)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202014%20QP%20-%20FP3%20AQA.PDF#page=6); [AQA mark scheme, Q3 (PDF p. 5)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202014%20MS%20-%20FP3%20AQA.PDF#page=5). Question and matching mark scheme read on 2026-10-22; these are AQA-authored documents hosted by PMT, with some question papers in condensed layout.
+**Source:** AQA Mathematics 6360, MFP3, June 2014, Question 3. **4 marks**. Textbook cross-reference: Chapter 21, practice examination question 2, printed p. 267. [Question paper, Q3 (PDF p. 6)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202014%20QP%20-%20FP3%20AQA.PDF#page=6); [AQA mark scheme, Q3 (PDF p. 5)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202014%20MS%20-%20FP3%20AQA.PDF#page=5). Question and matching mark scheme re-read on 2026-10-23; these are AQA-authored documents hosted by PMT, with some question papers in condensed layout.
 
 A curve has polar equation $r(4-3\cos\theta)=4$. Find its Cartesian equation in the form $y^2=f(x)$.
 
@@ -549,9 +662,13 @@ $$\boxed{y^2=1+\frac32x-\frac7{16}x^2.}$$
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### Question 7 — AQA: a circle using the origin as pole
 
-**Source:** AQA Mathematics 6360, MFP3, June 2013, Question 2. **4 marks**. Textbook cross-reference: Chapter 21, practice examination question 3, printed p. 267. [Question paper, Q2 (PDF p. 2)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202013%20QP%20-%20FP3%20AQA.pdf#page=2); [AQA mark scheme, Q2 (PDF p. 4)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202013%20MS%20-%20FP3%20AQA.PDF#page=4). Question and matching mark scheme read on 2026-10-22; these are AQA-authored documents hosted by PMT, with some question papers in condensed layout.
+**Source:** AQA Mathematics 6360, MFP3, June 2013, Question 2. **4 marks**. Textbook cross-reference: Chapter 21, practice examination question 3, printed p. 267. [Question paper, Q2 (PDF p. 2)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202013%20QP%20-%20FP3%20AQA.pdf#page=2); [AQA mark scheme, Q2 (PDF p. 4)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202013%20MS%20-%20FP3%20AQA.PDF#page=4). Question and matching mark scheme re-read on 2026-10-23; these are AQA-authored documents hosted by PMT, with some question papers in condensed layout.
 
 The Cartesian equation of a circle is $(x+8)^2+(y-6)^2=100$.
 
@@ -589,9 +706,13 @@ Thus $p=12$ and $q=-16$.
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### Question 8 — AQA: area of a loop
 
-**Source:** Adapted question (diagram redrawn). AQA Mathematics 6360, MFP3, January 2009, Question 3. **6 marks (original question)**. Textbook cross-reference: Chapter 21, practice examination question 1, printed p. 267. [Question paper, Q3 (PDF p. 3)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/January%202009%20QP%20-%20FP3%20AQA.PDF#page=3); [AQA mark scheme, Q3 (PDF p. 4)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/January%202009%20MS%20-%20FP3%20AQA.PDF#page=4). Question and matching mark scheme read on 2026-10-22; these are AQA-authored documents hosted by PMT, with some question papers in condensed layout. The redrawn diagram retains the original curve, pole, initial line and conditions.
+**Source:** Adapted question (diagram redrawn). AQA Mathematics 6360, MFP3, January 2009, Question 3. **6 marks (original question)**. Textbook cross-reference: Chapter 21, practice examination question 1, printed p. 267. [Question paper, Q3 (PDF p. 3)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/January%202009%20QP%20-%20FP3%20AQA.PDF#page=3); [AQA mark scheme, Q3 (PDF p. 4)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/January%202009%20MS%20-%20FP3%20AQA.PDF#page=4). Question and matching mark scheme re-read on 2026-10-23; these are AQA-authored documents hosted by PMT, with some question papers in condensed layout. The redrawn diagram retains the original curve, pole, initial line and conditions.
 
 The diagram shows a sketch of a loop, the pole $O$ and the initial line.
 
@@ -623,7 +744,7 @@ Use $u=2+\cos\theta$ and $\mathrm du=-\sin\theta\,\mathrm d\theta$. The limits a
 $$\begin{aligned}
 A
 &=-\frac12\int_3^1u^2\,\mathrm du\\
-&=\frac12\left[\frac{u^3}{3}\right]_1^3\\
+&=\frac12\int_1^3u^2\,\mathrm du=\frac12\left[\frac{u^3}{3}\right]_1^3\\
 &=\frac{27-1}{6}\\
 &=\boxed{\frac{13}{3}}.
 \end{aligned}$$
@@ -634,9 +755,13 @@ A
 
 </details>
 
+</section>
+
 ## Diagnose and Retry {#diagnose-and-retry}
 
 Both tasks are self-written and have no official marks. Explain the error before opening feedback; then close every solution and attempt the new task independently. If you need a hint, return later for another independent attempt.
+
+<section class="lesson-check" markdown="1">
 
 **Diagnose:** A learner uses
 
@@ -655,6 +780,10 @@ $$\frac12\int(r_1^2-r_2^2)\,\mathrm d\theta$$
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 **Independent retry:** Find the area inside $r=2$ and outside $r=1+\cos\theta$, for $-\pi\le\theta\le\pi$. Explain whether the boundary order changes.
 
 <details markdown="1">
@@ -669,11 +798,58 @@ Compare the two radii throughout the interval, including the pole and the touchi
 
 Since $0\le1+\cos\theta\le2$, the circle is always the outer boundary; no switch is needed. The area is
 
-$$\frac12\int_{-\pi}^{\pi}[4-(1+\cos\theta)^2]\,\mathrm d\theta=4\pi-\frac{3\pi}{2}=\frac{5\pi}{2}.$$
+$$\begin{aligned}
+A&=\frac12\int_{-\pi}^{\pi}[4-(1+\cos\theta)^2]\,\mathrm d\theta\\
+&=\frac12\int_{-\pi}^{\pi}(3-2\cos\theta-\cos^2\theta)\,\mathrm d\theta\\
+&=\int_{-\pi}^{\pi}\left(\frac54-\cos\theta-\frac14\cos2\theta\right)\,\mathrm d\theta\\
+&=\left[\frac54\theta-\sin\theta-\frac18\sin2\theta\right]_{-\pi}^{\pi}\\
+&=\left(\frac{5\pi}{4}-0-0\right)-\left(-\frac{5\pi}{4}-0-0\right)
+=\boxed{\frac{5\pi}{2}}.
+\end{aligned}$$
 
 The cardioid area is subtracted once from the circle area.
 
 </details>
+
+</section>
+
+## Connect and Return Later {#later-review}
+
+After the next lesson, close these solutions and try a new region. An immediate correction alone does not establish retention.
+
+<section class="lesson-check" markdown="1">
+
+### Identify the region {#later-region}
+
+**Later task (self-written):** After the next lesson, return without reading the area examples. Sketch $r=2$ and $r=2\cos\theta$, find all intersections and calculate the area inside the first curve and outside the second. Explain the angular domains and whether any part needs a single-boundary integral.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Compare the positions of the circles and keep the positive-radius convention.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+The circles have centres (0,0), (1,0) and radii two and one. The second lies inside the first; they touch only at (2,0). The pole lies only on the second curve. Use a square difference on the right half-plane and the larger circle alone on the left.
+
+$$\begin{aligned}
+A_R&=\frac12\int_{-\pi/2}^{\pi/2}(4-4\cos^2\theta)\,\mathrm d\theta
+=\int_{-\pi/2}^{\pi/2}(1-\cos2\theta)\,\mathrm d\theta\\
+&=\left[\theta-\frac12\sin2\theta\right]_{-\pi/2}^{\pi/2}
+=\left(\frac\pi2-0\right)-\left(-\frac\pi2-0\right)=\pi,\\
+A_L&=\frac12\int_{\pi/2}^{3\pi/2}4\,\mathrm d\theta
+=[2\theta]_{\pi/2}^{3\pi/2}=3\pi-\pi=2\pi,\\
+A&=A_R+A_L=\boxed{3\pi}.
+\end{aligned}$$
+
+Check using the difference of the two circle areas. Squaring and subtracting the second curve over a negative-radius interval would subtract its area twice. Then complete the [De Moivre roots-and-region task](/alevel/a2-further-mathematics/de-moivres-theorem/#later-roots-and-area).
+
+</details>
+
+</section>
 
 ## Quick Reference
 
@@ -693,6 +869,8 @@ The cardioid area is subtracted once from the circle area.
 
 **You should be able to:** convert points and equations, sketch positive-radius curves, identify every intersection and use a sketch to set up the area integral for the required region.
 
-The lesson follows FP2.3 of the [OxfordAQA Further Mathematics 9665 specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf). Worked examples are teaching material. Questions 6–8 retain the AQA questions and marks from the supplied textbook.
+The lesson follows FP2.3 of the [OxfordAQA Further Mathematics 9665 specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf). Worked examples are teaching material. Questions 6–7 retain the AQA questions and marks from the supplied textbook. Question 8 is adapted with a redrawn diagram; the 6 marks are those of the original question.
 
 **Learning path:** [Previous: De Moivre's Theorem](/alevel/a2-further-mathematics/de-moivres-theorem/) · [Next: Calculus of Inverse Trigonometric Functions](/alevel/a2-further-mathematics/inverse-trigonometric-functions/) · [Back to the course](/alevel/a2-further-mathematics/).
+
+**Next steps:** complete this lesson's [later task](#later-review), then attempt the course [mixed review](/alevel/a2-further-mathematics/#mixed-review) and [delayed review](/alevel/a2-further-mathematics/#later-review). Record your first attempt, hints used and retry result.

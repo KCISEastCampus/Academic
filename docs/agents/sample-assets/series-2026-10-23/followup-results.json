@@ -1,0 +1,46 @@
+[
+  {
+    "lang": "en",
+    "width": 1365,
+    "wideMath": [],
+    "functions": {
+      "neutralTitles": true,
+      "stableAnchors": true,
+      "closedHelp": true,
+      "mathErrors": 0
+    }
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "wideMath": [],
+    "functions": {
+      "neutralTitles": true,
+      "stableAnchors": true,
+      "closedHelp": true,
+      "mathErrors": 0
+    }
+  },
+  {
+    "lang": "zh",
+    "width": 1365,
+    "wideMath": [],
+    "functions": {
+      "neutralTitles": true,
+      "stableAnchors": true,
+      "closedHelp": true,
+      "mathErrors": 0
+    }
+  },
+  {
+    "lang": "zh",
+    "width": 390,
+    "wideMath": [],
+    "functions": {
+      "neutralTitles": true,
+      "stableAnchors": true,
+      "closedHelp": true,
+      "mathErrors": 0
+    }
+  }
+]

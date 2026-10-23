@@ -504,6 +504,37 @@ At $P=60$, $f=12\,\mathrm N$, so friction acts up the plane. At $P=100$, $f=-20\
 
 </details>
 
+## Independent Check
+
+**Self-written task.** In Q8 the coefficient of friction is increased, with all other conditions unchanged. A student claims that both endpoints of the equilibrium range must increase. Assess this claim without recalculating the endpoints. Explain what happens if the coefficient is reduced to zero instead.
+
+<details markdown="1">
+<summary>Reasoning hint</summary>
+
+For each fixed value of $P$, the required signed friction and the reaction do not depend on $\mu$. Compare the old and new friction inequalities.
+
+</details>
+
+<details markdown="1">
+<summary>Feedback and retry</summary>
+
+Increasing the coefficient increases the available friction without changing the friction required at a fixed $P$. Every previously feasible value remains feasible; the lower boundary cannot rise. With zero coefficient the required friction must be zero, so Q8 gives $P=75\,\mathrm N$, with positive reaction. A larger maximum friction does not force the actual friction to become larger.
+
+**Retry, with this panel closed:** A particle rests on a rough surface with zero friction acting. Does this prove the surface is smooth? Explain using the distinction between an actual force and an upper bound.
+
+</details>
+
+<details markdown="1">
+<summary>Retry check</summary>
+
+No. A rough surface can have zero actual friction when no tangential force is required for equilibrium. Smooth means the model supplies no friction at that contact, including when a nonzero tangential force would be needed.
+
+</details>
+
+## Sources and Scope
+
+Scope: [OxfordAQA 9660 specification v5.2, M2.3](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf). **MA05 January 2025 Q2 and Q3(a)** were read with the corresponding [question paper](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-question-paper.pdf) and [final mark scheme](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-mark-scheme.pdf) to check equilibrium, limiting friction and explanation requirements. The tasks here are self-written and have their own stated precision convention.
+
 ## Quick Reference
 
 | Task | Method | Check |

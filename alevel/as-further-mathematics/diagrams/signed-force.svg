@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" role="img" aria-labelledby="title desc">
+  <title id="title">A net force with positive and negative signed areas</title>
+  <desc id="desc">A straight net-force line goes from four newtons at zero seconds through zero at two seconds to minus two newtons at three seconds. The region above the time axis is labelled plus with diagonal hatching; the region below is labelled minus with dot hatching. Both axes have units and equally spaced numerical ticks.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#172b4d"/></marker>
+    <pattern id="positive" width="12" height="12" patternUnits="userSpaceOnUse"><path d="M-3,3 L3,-3 M0,12 L12,0 M9,15 L15,9" stroke="#0e7490" stroke-width="1.2"/></pattern>
+    <pattern id="negative" width="12" height="12" patternUnits="userSpaceOnUse"><circle cx="6" cy="6" r="1.8" fill="#9a3412"/></pattern>
+  </defs>
+  <style>text{font:26px sans-serif;fill:#172b4d}.axis{stroke:#475467;stroke-width:2;fill:none;marker-end:url(#arrow)}.guide{stroke:#667085;stroke-width:1.5;stroke-dasharray:5 5;fill:none}</style>
+  <rect width="560" height="420" fill="white"/>
+  <text x="24" y="35">Signed force–time area</text>
+  <path d="M90,110 L330,270 H90 Z" fill="url(#positive)"/>
+  <path d="M330,270 L450,350 V270 Z" fill="url(#negative)"/>
+  <path class="axis" d="M62,270 H510 M90,380 V70"/>
+  <path class="guide" d="M450,270 V350 H90"/>
+  <path d="M90,110 L450,350" fill="none" stroke="#155e75" stroke-width="4"/>
+  <path d="M210,264 V276 M330,264 V276 M450,264 V276 M84,110 H96 M84,190 H96 M84,350 H96" stroke="#475467" stroke-width="2"/>
+  <text x="108" y="81">F (N)</text><text x="432" y="404">t (s)</text>
+  <text x="57" y="302">0</text><text x="201" y="302">1</text><text x="321" y="302">2</text><text x="441" y="302">3</text>
+  <text x="52" y="119">4</text><text x="52" y="199">2</text><text x="33" y="358">−2</text>
+  <text x="155" y="230">+</text><text x="384" y="296">−</text>
+  <text x="259" y="110">F = 4 − 2t</text>
+</svg>

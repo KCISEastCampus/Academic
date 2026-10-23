@@ -7,8 +7,9 @@ subject: a2-further-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-further-mathematics/proof-by-induction/
 permalink: /zh/alevel/a2-further-mathematics/proof-by-induction/
-toc_headings: h2, h3, h4
+toc_headings: "#method, #series-and-sequences, #divisibility, #other-applications, #practice, #diagnose-and-retry, #later-review, #quick-reference"
 study_page: true
+reading_layout: true
 ---
 
 [高等纯数学](/zh/alevel/a2-further-mathematics/) · FP2.4 数学归纳法
@@ -19,9 +20,13 @@ study_page: true
 - **作业帮助：**根据题型选择[级数与数列](#series-and-sequences)、[整除性](#divisibility)或[其他应用](#other-applications)。
 - **复习：**先尝试[练习](#practice)，再展开解答，最后使用[快速参考](#quick-reference)。
 
-教材：*International A Level Further Mathematics*，第 18 章第 18.1 节，印刷页码 208–215；复习题与考试练习题见第 217–218 页。
+**开始前：**按需要回补后，回来完成对应步骤：
 
-**开始前：**应熟悉求和符号（summation notation）、数列（sequence）、指数运算法则（index laws）和代数因式分解（algebraic factorisation）。学习后面的例题前，请复习 [AS 高等数学](/alevel/as-further-mathematics/)与 [A2 纯数学](/zh/alevel/a2-mathematics/)中的复数（complex number）、和角公式（compound angle formulae）、求导（differentiation）与矩阵乘法（matrix multiplication）。
+- [求和符号与幂和](/zh/alevel/as-further-mathematics/series/#model)：能写出部分和的下一项，再做例 1。
+- [指数运算](/zh/alevel/as-mathematics/algebra/#l01)与[因式分解](/zh/alevel/as-mathematics/algebra/#l03)：能拆开下一次幂并提公因式，再做整除性证明。
+- [复数运算](/zh/alevel/as-further-mathematics/complex-numbers-and-roots/#model)：能用虚数单位平方处理乘积；例 4 当场列出需要的和角关系。
+- [乘积求导](/zh/alevel/a2-mathematics/differentiation/#products-and-quotients)与[链式求导](/zh/alevel/a2-mathematics/differentiation/#composite-functions)：能对假设中的导数式再求一次导，回来做例 5。
+- [矩阵乘法示范](/zh/alevel/as-further-mathematics/matrix-algebra/#demonstration)：能按行乘列算出每个元素，回来做例 6。
 
 **题目身份：**除明确标出官方原题或教学改编的题目外，本课例题与练习均为自拟教学题，不分配官方分值。
 
@@ -58,6 +63,8 @@ $n=k$ 时成立的假设称为**归纳假设（induction hypothesis）**。你�
 
 ## 级数与数列 {#series-and-sequences}
 
+<section class="worked-example" markdown="1">
+
 ### 例 1：平方和 {#example-1--a-sum-of-squares}
 
 **Question:** prove that, for all integers $n\ge1$,
@@ -87,6 +94,10 @@ S_{k+1}
 
 **检验：**当 $n=2$ 时，两边都等于 $5$。这检验了计算，而归纳步骤证明了普遍结论。
 
+</section>
+
+<section class="worked-example" markdown="1">
+
 ### 例 2：递推关系 {#example-2--a-recurrence-relation}
 
 **Question:** a sequence is defined by
@@ -113,6 +124,8 @@ u_{k+1}&=u_k+2k+1\\
 
 **检验：**由递推关系得 $u_2=6$ 和 $u_3=11$，均与公式一致。
 
+</section>
+
 ### 需要用到前两项时 {#when-two-previous-terms-are-needed}
 
 若递推关系同时使用 $u_n$ 和 $u_{n+1}$ 来定义 $u_{n+2}$，就要检验**两个初始情形**。假设 $u_k$ 和 $u_{k+1}$ 都满足公式，再利用它们证明 $u_{k+2}$ 也满足公式。第 2 题练习的就是这种形式。
@@ -130,6 +143,8 @@ $$u_{k+1}=a u_k+d b,$$
 **选择合适的 $a$ 来化简幂。**例如，若 $u_k$ 含有 $7^k$ 和 $4^k$，减去 $7u_k$ 或 $4u_k$ 就能消去其中一个幂。有时只需考虑 $u_{k+1}-u_k$。
 
 **常见错误：**证明 $d u_{k+1}$ 能被 $d$ 整除。对任意整数 $u_{k+1}$，这一点自动成立，不能说明 $u_{k+1}$ 本身是否能被 $d$ 整除。
+
+<section class="worked-example" markdown="1">
 
 ### 例 3：证明能被 6 整除 {#example-3--proving-divisibility-by-6}
 
@@ -155,7 +170,11 @@ u_{k+1}-u_k
 
 **检验：**$u_2=49+16+1=66$。证明整除性时，要说明提取 $6$ 后剩下的因子为什么是整数。
 
+</section>
+
 ## 其他应用 {#other-applications}
+
+<section class="worked-example" markdown="1">
 
 ### 例 4：棣莫弗定理（De Moivre's theorem） {#example-4--de-moivres-theorem}
 
@@ -203,6 +222,10 @@ $$z^{k+1}=\cos((k+1)\theta)+i\sin((k+1)\theta).$$
 
 **常见错误：**在证明棣莫弗定理时，用棣莫弗定理本身来说明乘法结果。应使用和角公式。
 
+</section>
+
+<section class="worked-example" markdown="1">
+
 ### 例 5：n 阶导数 {#example-5--an-nth-derivative}
 
 **Question:** for $f(x)=e^x\sin x$, prove that, for all integers $n\ge1$,
@@ -236,6 +259,10 @@ f^{(k+1)}(x)
 **结论：**公式在 $n=1$ 时成立。若在 $n=k$ 时成立，则在 $n=k+1$ 时也成立。因此，由数学归纳法，公式对所有整数 $n\ge1$ 都成立。
 
 **检验：**求两次导数得 $f^{(2)}(x)=2e^x\cos x$，与 $2e^x\sin(x+\frac{\pi}{2})$ 一致。
+
+</section>
+
+<section class="worked-example" markdown="1">
 
 ### 例 6：矩阵的幂 {#example-6--a-matrix-power}
 
@@ -274,11 +301,15 @@ $$A^2=\begin{pmatrix}9&8\\0&1\end{pmatrix}.$$
 
 不要将 $A$ 中的每个元素分别平方。
 
+</section>
+
 ## 练习 {#practice}
 
 先不看解答，尝试完成每个证明。写出初始情形、假设、归纳步骤与结论。
 
 第 1–5 题为自拟练习题。第 6 题是所提供教材中转载的 AQA 原题。
+
+<section class="lesson-check" markdown="1">
 
 ### 第 1 题：立方和 {#question-1--a-sum-of-cubes}
 
@@ -313,6 +344,10 @@ S_{k+1}
 **检验：**$1^3+2^3=9=\frac{2^2\cdot3^2}{4}$。
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### 第 2 题：两个初始情形 {#question-2--two-initial-cases}
 
@@ -349,6 +384,10 @@ u_{k+2}
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### 第 3 题：选择合适的倍数 {#question-3--choose-a-useful-multiple}
 
 Prove that $11^n-3^n$ is divisible by $8$ for all integers $n\ge1$.
@@ -376,6 +415,10 @@ $$u_{k+1}-3u_k=8\cdot11^k.$$
 **检验：**$u_2=121-9=112=8(14)$。
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### 第 4 题：另一个矩阵 {#question-4--a-different-matrix}
 
@@ -420,6 +463,10 @@ B^{k+1}
 $$B^2=\begin{pmatrix}1&0\\10&1\end{pmatrix}.$$
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### 第 5 题：含余弦的导数 {#question-5--a-derivative-with-cosine}
 
@@ -466,9 +513,13 @@ g^{(2)}(x)&=-2e^x\sin x\\
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### 第 6 题：AQA 原题练习 {#question-6--original-aqa-practice}
 
-**来源：**AQA Mathematics 6360，MFP2，June 2006，原卷第 6 题。原题分值：**4 + 4 marks**。教材索引：Chapter 18, practice examination question 5, printed p. 218。[Question paper, Q6 (PDF p. 4)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202006%20QP%20-%20FP2%20AQA.PDF#page=4); [AQA mark scheme, Q6 (PDF p. 6)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202006%20MS%20-%20FP2%20AQA.PDF#page=6). 本轮已读取题干及配套评分材料（2026-10-22）；链接为 PMT 托管的 AQA 编写材料，部分原卷为压缩排版版本。
+**来源：**AQA Mathematics 6360，MFP2，June 2006，原卷第 6 题。原题分值：**4 + 4 marks**。教材索引：Chapter 18, practice examination question 5, printed p. 218。[Question paper, Q6 (PDF p. 4)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202006%20QP%20-%20FP2%20AQA.PDF#page=4); [AQA mark scheme, Q6 (PDF p. 6)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP2/Papers-AQA/June%202006%20MS%20-%20FP2%20AQA.PDF#page=6). 本次重新读取题干及配套评分材料（2026-10-23）；链接为 PMT 托管的 AQA 编写材料，部分原卷为压缩排版版本。
 
 **a** The function $f$ is given by
 
@@ -526,9 +577,13 @@ $$f(m+1)=8f(m)+7\cdot15^m.$$
 
 </details>
 
+</section>
+
 ## 纠错与独立重试 {#diagnose-and-retry}
 
 以下两项均为自拟教学任务，无官方分值。先写下错误原因，再看反馈；随后关闭所有解答，独立完成新任务。需要提示的任务应在稍后重新独立尝试。
+
+<section class="lesson-check" markdown="1">
 
 **Diagnose:** A learner checks the first three cases and writes, “The pattern continues, so the result holds for all positive integers.” What logical step is missing?
 
@@ -538,6 +593,10 @@ $$f(m+1)=8f(m)+7\cdot15^m.$$
 几个数值不能说明任意一个成立的情形都能推出下一个情形。需要对允许范围内的任意整数作归纳假设，利用它证明下一步，再与初始情形连接。
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 **Independent retry:** Prove by induction, in complete English sentences, that
 
@@ -559,6 +618,35 @@ For $n=1$, both sides are $1$. Assume the formula holds for an arbitrary integer
 
 </details>
 
+</section>
+
+## 后续调用与回顾 {#later-review}
+
+先到[有限级数第 4 题](/zh/alevel/a2-further-mathematics/finite-series/#question-4--prove-a-sum-by-induction)，独立选择归纳假设并写出下一项。学完[麦克劳林系数](/zh/alevel/a2-further-mathematics/series-and-limits/#maclaurin-series)后，再关闭第 5 题解答，完成以下连接任务。
+
+<section class="lesson-check" markdown="1">
+
+**Self-written task:** Use your proved formula in Question 5 to find the coefficient of $x^4$ in the Maclaurin expansion of $g(x)=e^x\cos x$. Explain why the fourth derivative itself is not the coefficient.
+
+<details markdown="1">
+<summary>提示</summary>
+
+先在已证明的通式中令 $n=4$，再在 $x=0$ 处求值；最后除以阶乘。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检验</summary>
+
+$$g^{(4)}(0)=2^{4/2}e^0\cos\pi=-4,\qquad
+\frac{g^{(4)}(0)}{4!}=\frac{-4}{24}=-\frac16.$$
+
+四阶导数是 $-4$，而四次项系数是 $-\frac16$。若漏掉阶乘，回到麦克劳林系数定义后，独立重做该连接。
+
+</details>
+
+</section>
+
 ## 快速参考 {#quick-reference}
 
 | 证明的部分 | 应写出的内容 |
@@ -573,8 +661,13 @@ For $n=1$, both sides are $1$. Assume the formula holds for an arbitrary integer
 
 **你应能够：**解释为什么检验几个例子并不构成证明，写出归纳假设，在下一个情形中使用它，并在结论中写明正确的范围。
 
+教材：*International A Level Further Mathematics*，第 18 章第 18.1 节，印刷页码 208–215；复习题与考试练习题见第 217–218 页。
+{: .lesson-meta}
+
 本课依据 [OxfordAQA Further Mathematics 9665 课程大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf)中的 FP2.4。例题为教学材料。第 6 题保留了所提供教材中的 AQA 原题与分值。
 
-[FM03 June 2024 Q7, MS PDF pp. 10–11](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-mark-scheme.pdf#page=10); [FM03 January 2025 Q5, MS PDF p. 8](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-mark-scheme.pdf#page=8). 本轮已读：评分证据包含正确起始情形、任意归纳假设、由假设得到下一步及覆盖完整范围的结论。
+[FM03 June 2024 Q7, MS PDF pp. 10–11](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-mark-scheme.pdf#page=10); [FM03 January 2025 Q5, MS PDF p. 8](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-mark-scheme.pdf#page=8). 2026-10-23 重新读取：评分证据包含正确起始情形、任意归纳假设、由假设得到下一步及覆盖完整范围的结论。
+
+**学后下一步：**先关闭本章答案，完成课程入口的[跨主题综合任务](/zh/alevel/a2-further-mathematics/#mixed-review)；按入口规定的间隔再做[延后回顾任务](/zh/alevel/a2-further-mathematics/#later-review)。保留独立作答，按目标核对；需要提示的目标再回对应回补段后重试。
 
 **学习路径：**[上一课：根与多项式](/zh/alevel/a2-further-mathematics/roots-and-polynomials/) · [返回课程](/zh/alevel/a2-further-mathematics/) · [下一课：有限级数](/zh/alevel/a2-further-mathematics/finite-series/)。

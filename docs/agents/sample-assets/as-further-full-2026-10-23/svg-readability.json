@@ -1,0 +1,1643 @@
+[
+  {
+    "name": "bayes.svg",
+    "viewBox": [
+      0,
+      -75,
+      560,
+      665
+    ],
+    "texts": [
+      {
+        "text": "Source → observation →joint probability",
+        "x": 17,
+        "y": -72,
+        "width": 310.640625,
+        "height": 73,
+        "font": 26
+      },
+      {
+        "text": "A: 0.5",
+        "x": 80,
+        "y": 64,
+        "width": 69,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "D: 0.02",
+        "x": 200,
+        "y": 40,
+        "width": 85.765625,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "0.01",
+        "x": 365,
+        "y": 55,
+        "width": 52,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "not D: 0.98",
+        "x": 200,
+        "y": 152,
+        "width": 135.6875,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "0.49",
+        "x": 365,
+        "y": 119,
+        "width": 52,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "B: 0.3",
+        "x": 80,
+        "y": 234,
+        "width": 67.03125,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "D: 0.04",
+        "x": 200,
+        "y": 210,
+        "width": 86.509765625,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "0.012",
+        "x": 365,
+        "y": 225,
+        "width": 67.25,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "not D: 0.96",
+        "x": 200,
+        "y": 322,
+        "width": 135.6875,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "0.288",
+        "x": 365,
+        "y": 289,
+        "width": 67.25,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "C: 0.2",
+        "x": 80,
+        "y": 404,
+        "width": 68.109375,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "D: 0.1",
+        "x": 200,
+        "y": 380,
+        "width": 70.515625,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "0.02",
+        "x": 365,
+        "y": 395,
+        "width": 52,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "not D: 0.9",
+        "x": 200,
+        "y": 492,
+        "width": 120.453125,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "0.18",
+        "x": 365,
+        "y": 459,
+        "width": 52,
+        "height": 35,
+        "font": 26
+      }
+    ],
+    "outside": [],
+    "collisions": [],
+    "desktop": {
+      "width": 560,
+      "height": 665,
+      "minFont": 26
+    },
+    "mobile": {
+      "width": 314,
+      "height": 373,
+      "minFont": 14.57857142857143
+    }
+  },
+  {
+    "name": "collision-line.svg",
+    "viewBox": [
+      0,
+      0,
+      560,
+      460
+    ],
+    "texts": [
+      {
+        "text": "Before",
+        "x": 24,
+        "y": 6,
+        "width": 80.921875,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "positive",
+        "x": 394,
+        "y": 7,
+        "width": 96.9375,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "uA = +3",
+        "x": 95,
+        "y": 49,
+        "width": 103.53125,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "uB = −1",
+        "x": 350,
+        "y": 49,
+        "width": 101.546875,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "A: 2 kg",
+        "x": 53,
+        "y": 167,
+        "width": 85.421875,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "B: 1 kg",
+        "x": 353,
+        "y": 167,
+        "width": 83.4375,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "After",
+        "x": 24,
+        "y": 222,
+        "width": 63.0380859375,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "vA = +1",
+        "x": 94,
+        "y": 258,
+        "width": 102.15625,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "vB = +3",
+        "x": 349,
+        "y": 258,
+        "width": 100.171875,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "Velocities in m s⁻¹",
+        "x": 129,
+        "y": 378,
+        "width": 221.765625,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "Particle positions schematic",
+        "x": 70,
+        "y": 414,
+        "width": 344.3125,
+        "height": 35,
+        "font": 26
+      }
+    ],
+    "outside": [],
+    "collisions": [],
+    "desktop": {
+      "width": 560,
+      "height": 460,
+      "minFont": 26
+    },
+    "mobile": {
+      "width": 314,
+      "height": 258,
+      "minFont": 14.57857142857143
+    }
+  },
+  {
+    "name": "conic-tangents.svg",
+    "viewBox": [
+      0,
+      -60,
+      560,
+      850
+    ],
+    "texts": [
+      {
+        "text": "x",
+        "x": 490,
+        "y": 182,
+        "width": 14,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "y",
+        "x": 119,
+        "y": 17,
+        "width": 15,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "Tangents to y²=4x from (−1,0)",
+        "x": 20,
+        "y": -48,
+        "width": 372.984375,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "(1,-2)",
+        "x": 230,
+        "y": 252,
+        "width": 65.375,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "(1,2)",
+        "x": 230,
+        "y": 77,
+        "width": 54.125,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "(−1,0)",
+        "x": 40,
+        "y": 197,
+        "width": 73.40625,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "y=x+1",
+        "x": 314,
+        "y": 47,
+        "width": 81.765625,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "y=−x−1",
+        "x": 314,
+        "y": 272,
+        "width": 101.046875,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "x",
+        "x": 490,
+        "y": 532,
+        "width": 14,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "y",
+        "x": 111,
+        "y": 377,
+        "width": 15,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "Single translation by (2,−1)",
+        "x": 30,
+        "y": 335,
+        "width": 335.59375,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "(0,0)",
+        "x": 155,
+        "y": 487,
+        "width": 54.125,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "(2,−1)",
+        "x": 260,
+        "y": 597,
+        "width": 73.40625,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "(y+1)²=4(x−2)",
+        "x": 355,
+        "y": 462,
+        "width": 175.6875,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "Teal: original; purple:tangent or translated curve.",
+        "x": 25,
+        "y": 710,
+        "width": 345.515625,
+        "height": 73,
+        "font": 26
+      }
+    ],
+    "outside": [],
+    "collisions": [],
+    "desktop": {
+      "width": 560,
+      "height": 850,
+      "minFont": 26
+    },
+    "mobile": {
+      "width": 314,
+      "height": 477,
+      "minFont": 14.57857142857143
+    }
+  },
+  {
+    "name": "conics.svg",
+    "viewBox": [
+      0,
+      -60,
+      560,
+      1270
+    ],
+    "texts": [
+      {
+        "text": "x",
+        "x": 516,
+        "y": 147,
+        "width": 14,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "y",
+        "x": 114,
+        "y": 22,
+        "width": 15,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "Parabola: y²=4x",
+        "x": 30,
+        "y": -48,
+        "width": 194.755859375,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "(0,0)",
+        "x": 65,
+        "y": 192,
+        "width": 54.125,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "x",
+        "x": 516,
+        "y": 447,
+        "width": 14,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "y",
+        "x": 249,
+        "y": 337,
+        "width": 15,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "Ellipse: x²/9+y²/4=1",
+        "x": 60,
+        "y": 302,
+        "width": 246.6875,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "(3,0)",
+        "x": 440,
+        "y": 482,
+        "width": 54.125,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "(0,2)",
+        "x": 320,
+        "y": 342,
+        "width": 54.125,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "x",
+        "x": 516,
+        "y": 747,
+        "width": 14,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "y",
+        "x": 249,
+        "y": 637,
+        "width": 15,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "Hyperbola: x²/4−y²=1",
+        "x": 60,
+        "y": 602,
+        "width": 271.46875,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "y=±x/2",
+        "x": 329,
+        "y": 672,
+        "width": 92.875,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "(2,0)",
+        "x": 455,
+        "y": 787,
+        "width": 54.125,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "x",
+        "x": 516,
+        "y": 1047,
+        "width": 14,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "y",
+        "x": 249,
+        "y": 937,
+        "width": 15,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "Rectangular hyperbola: xy=1",
+        "x": 60,
+        "y": 902,
+        "width": 356.53125,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "(1,1)",
+        "x": 346.8800048828125,
+        "y": 1006.25,
+        "width": 54.125,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "Asymptotes: x=0, y=0",
+        "x": 80,
+        "y": 1157,
+        "width": 271.234375,
+        "height": 35,
+        "font": 26
+      }
+    ],
+    "outside": [],
+    "collisions": [],
+    "desktop": {
+      "width": 560,
+      "height": 1270,
+      "minFont": 26
+    },
+    "mobile": {
+      "width": 314,
+      "height": 713,
+      "minFont": 14.57857142857143
+    }
+  },
+  {
+    "name": "euler.svg",
+    "viewBox": [
+      0,
+      -75,
+      560,
+      500
+    ],
+    "texts": [
+      {
+        "text": "x",
+        "x": 516,
+        "y": 319,
+        "width": 14,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "y",
+        "x": 39,
+        "y": 4,
+        "width": 15,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "(0,1)",
+        "x": 60,
+        "y": 23.330001831054688,
+        "width": 54.125,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "(0.2,0.8)",
+        "x": 280,
+        "y": 117,
+        "width": 97.140625,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "(0.4,0.68)",
+        "x": 325,
+        "y": 282,
+        "width": 112.390625,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "Euler polygon (solid teal);exact curve (purple)",
+        "x": 20,
+        "y": -72,
+        "width": 316.03125,
+        "height": 73,
+        "font": 26
+      },
+      {
+        "text": "First slope −1; next slope −0.6",
+        "x": 40,
+        "y": 377,
+        "width": 375.1875,
+        "height": 35,
+        "font": 26
+      }
+    ],
+    "outside": [],
+    "collisions": [],
+    "desktop": {
+      "width": 560,
+      "height": 500,
+      "minFont": 26
+    },
+    "mobile": {
+      "width": 314,
+      "height": 281,
+      "minFont": 14.57857142857143
+    }
+  },
+  {
+    "name": "improper.svg",
+    "viewBox": [
+      0,
+      -75,
+      560,
+      475
+    ],
+    "texts": [
+      {
+        "text": "x",
+        "x": 516,
+        "y": 299,
+        "width": 14,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "y",
+        "x": 39,
+        "y": 4,
+        "width": 15,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "R=4",
+        "x": 367.5,
+        "y": 60.66999816894531,
+        "width": 52.2578125,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "tail",
+        "x": 367.5,
+        "y": 235.67001342773438,
+        "width": 37.90625,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "y=1/x²: finite cutoffand remaining tail",
+        "x": 19,
+        "y": -72,
+        "width": 242.2958984375,
+        "height": 73,
+        "font": 26
+      },
+      {
+        "text": "14x",
+        "x": 90,
+        "y": 330,
+        "width": 424,
+        "height": 35,
+        "font": 26
+      }
+    ],
+    "outside": [],
+    "collisions": [],
+    "desktop": {
+      "width": 560,
+      "height": 475,
+      "minFont": 26
+    },
+    "mobile": {
+      "width": 314,
+      "height": 267,
+      "minFont": 14.57857142857143
+    }
+  },
+  {
+    "name": "impulse.svg",
+    "viewBox": [
+      0,
+      -20,
+      560,
+      555
+    ],
+    "texts": [
+      {
+        "text": "x",
+        "x": 516,
+        "y": 252,
+        "width": 14,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "y",
+        "x": 39,
+        "y": 17,
+        "width": 15,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "F (N) = 6t(1−t)",
+        "x": 60,
+        "y": -3,
+        "width": 181.203125,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "t (s), contact 0 to 1",
+        "x": 280,
+        "y": 277,
+        "width": 232.6875,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "signed area = 1 N s",
+        "x": 140,
+        "y": 187,
+        "width": 242.21875,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "Separate two-particle demonstration:",
+        "x": 55,
+        "y": 327,
+        "width": 464.59375,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "Before: A, 2 kg → +3 m/s;B, 1 kg ← −1 m/s",
+        "x": 55,
+        "y": 367,
+        "width": 318.59375,
+        "height": 73,
+        "font": 26
+      },
+      {
+        "text": "After:   A, 2 kg → +1 m/s;B, 1 kg → +3 m/s",
+        "x": 55,
+        "y": 447,
+        "width": 300.765625,
+        "height": 73,
+        "font": 26
+      }
+    ],
+    "outside": [],
+    "collisions": [],
+    "desktop": {
+      "width": 560,
+      "height": 555,
+      "minFont": 26
+    },
+    "mobile": {
+      "width": 314,
+      "height": 312,
+      "minFont": 14.57857142857143
+    }
+  },
+  {
+    "name": "linearisation.svg",
+    "viewBox": [
+      0,
+      -60,
+      560,
+      472
+    ],
+    "texts": [
+      {
+        "text": "X",
+        "x": 540,
+        "y": 270,
+        "width": 17,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "Y",
+        "x": 39,
+        "y": 4,
+        "width": 17,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "0",
+        "x": 60,
+        "y": 310.79998779296875,
+        "width": 15.25,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "0.2",
+        "x": 172.5,
+        "y": 310.79998779296875,
+        "width": 36.765625,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "0.4",
+        "x": 285,
+        "y": 310.79998779296875,
+        "width": 37.505859375,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "0.6",
+        "x": 397.5,
+        "y": 310.79998779296875,
+        "width": 36.765625,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "0.8",
+        "x": 510,
+        "y": 310.79998779296875,
+        "width": 36.765625,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "0.5",
+        "x": 15,
+        "y": 224,
+        "width": 36.765625,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "1",
+        "x": 15,
+        "y": 154,
+        "width": 15.25,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "1.5",
+        "x": 15,
+        "y": 84,
+        "width": 36.765625,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "2",
+        "x": 15,
+        "y": 14,
+        "width": 15.25,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "Constructed data: Y=2X+0.39794",
+        "x": 20,
+        "y": -48,
+        "width": 412.982421875,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "X=log₁₀ x",
+        "x": 280,
+        "y": 372,
+        "width": 119.7646484375,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "Y=log₁₀ y",
+        "x": 64,
+        "y": 37,
+        "width": 119.685546875,
+        "height": 35,
+        "font": 26
+      }
+    ],
+    "outside": [],
+    "collisions": [],
+    "desktop": {
+      "width": 560,
+      "height": 472,
+      "minFont": 26
+    },
+    "mobile": {
+      "width": 314,
+      "height": 265,
+      "minFont": 14.57857142857143
+    }
+  },
+  {
+    "name": "numerical.svg",
+    "viewBox": [
+      0,
+      -60,
+      560,
+      490
+    ],
+    "texts": [
+      {
+        "text": "x",
+        "x": 516,
+        "y": 239,
+        "width": 14,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "y",
+        "x": 39,
+        "y": 4,
+        "width": 15,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "f(x)=x³−x−1",
+        "x": 20,
+        "y": -48,
+        "width": 149.4375,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "chord: 7/6",
+        "x": 55,
+        "y": 377,
+        "width": 127.328125,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "tangent: 1.347826…",
+        "x": 285,
+        "y": 377,
+        "width": 245.265625,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "1",
+        "x": 97.5,
+        "y": 306,
+        "width": 15.25,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "2",
+        "x": 472.5,
+        "y": 306,
+        "width": 15.25,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "chord",
+        "x": 280,
+        "y": 42,
+        "width": 71.78125,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "tangent at 1.5",
+        "x": 330,
+        "y": 214,
+        "width": 173.375,
+        "height": 35,
+        "font": 26
+      }
+    ],
+    "outside": [],
+    "collisions": [],
+    "desktop": {
+      "width": 560,
+      "height": 490,
+      "minFont": 26
+    },
+    "mobile": {
+      "width": 314,
+      "height": 275,
+      "minFont": 14.57857142857143
+    }
+  },
+  {
+    "name": "rational.svg",
+    "viewBox": [
+      0,
+      -60,
+      560,
+      440
+    ],
+    "texts": [
+      {
+        "text": "x",
+        "x": 516,
+        "y": 171.72999572753906,
+        "width": 14,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "y",
+        "x": 226.5,
+        "y": 4,
+        "width": 15,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "x=2",
+        "x": 330,
+        "y": 39.44999694824219,
+        "width": 47.71875,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "y=1",
+        "x": 66.5,
+        "y": 131.08999633789062,
+        "width": 49.296875,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "y=(x+1)/(x−2)",
+        "x": 19,
+        "y": -48,
+        "width": 175.3125,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "(−1,0)",
+        "x": 125,
+        "y": 202,
+        "width": 73.40625,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "(0,−1/2)",
+        "x": 145,
+        "y": 250,
+        "width": 99.765625,
+        "height": 35,
+        "font": 26
+      }
+    ],
+    "outside": [],
+    "collisions": [],
+    "desktop": {
+      "width": 560,
+      "height": 440,
+      "minFont": 26
+    },
+    "mobile": {
+      "width": 314,
+      "height": 247,
+      "minFont": 14.57857142857143
+    }
+  },
+  {
+    "name": "secant.svg",
+    "viewBox": [
+      0,
+      -60,
+      560,
+      460
+    ],
+    "texts": [
+      {
+        "text": "x",
+        "x": 516,
+        "y": 273.54998779296875,
+        "width": 14,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "y",
+        "x": 75,
+        "y": 4,
+        "width": 15,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "P(1,1)",
+        "x": 130,
+        "y": 257,
+        "width": 70.03125,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "Q(2,4)",
+        "x": 380,
+        "y": 72,
+        "width": 75.3125,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "y=x²: secant slope 3, tangent slope 2",
+        "x": 19,
+        "y": -48,
+        "width": 457.5625,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "P stays fixed as Q approaches P.",
+        "x": 35,
+        "y": 350,
+        "width": 393.046875,
+        "height": 35,
+        "font": 26
+      }
+    ],
+    "outside": [],
+    "collisions": [],
+    "desktop": {
+      "width": 560,
+      "height": 460,
+      "minFont": 26
+    },
+    "mobile": {
+      "width": 314,
+      "height": 258,
+      "minFont": 14.57857142857143
+    }
+  },
+  {
+    "name": "shear.svg",
+    "viewBox": [
+      0,
+      -60,
+      560,
+      440
+    ],
+    "texts": [
+      {
+        "text": "x",
+        "x": 516,
+        "y": 259,
+        "width": 14,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "y",
+        "x": 82.55000305175781,
+        "y": 4,
+        "width": 15,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "(0,1)",
+        "x": 75,
+        "y": 87,
+        "width": 54.125,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "(1,1)",
+        "x": 263.2300109863281,
+        "y": 107.33000183105469,
+        "width": 54.125,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "(1,0)",
+        "x": 219.67999267578125,
+        "y": 280.6700134277344,
+        "width": 54.125,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "Shear: x′=x+y, y′=y",
+        "x": 20,
+        "y": -48,
+        "width": 236.7138671875,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "Original and image area = 1/2",
+        "x": 60,
+        "y": 322,
+        "width": 375.375,
+        "height": 35,
+        "font": 26
+      }
+    ],
+    "outside": [],
+    "collisions": [],
+    "desktop": {
+      "width": 560,
+      "height": 440,
+      "minFont": 26
+    },
+    "mobile": {
+      "width": 314,
+      "height": 247,
+      "minFont": 14.57857142857143
+    }
+  },
+  {
+    "name": "signed-force.svg",
+    "viewBox": [
+      0,
+      0,
+      560,
+      420
+    ],
+    "texts": [
+      {
+        "text": "Signed force–time area",
+        "x": 24,
+        "y": 7,
+        "width": 287.0625,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "F (N)",
+        "x": 108,
+        "y": 53,
+        "width": 60.015625,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "t (s)",
+        "x": 432,
+        "y": 376,
+        "width": 46.796875,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "0",
+        "x": 57,
+        "y": 274,
+        "width": 15.25,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "1",
+        "x": 201,
+        "y": 274,
+        "width": 15.25,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "2",
+        "x": 321,
+        "y": 274,
+        "width": 15.25,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "3",
+        "x": 441,
+        "y": 274,
+        "width": 15.25,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "4",
+        "x": 51,
+        "y": 91,
+        "width": 17,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "2",
+        "x": 52,
+        "y": 171,
+        "width": 15.25,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "−2",
+        "x": 33,
+        "y": 330,
+        "width": 34.53125,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "+",
+        "x": 155,
+        "y": 202,
+        "width": 19.296875,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "−",
+        "x": 384,
+        "y": 268,
+        "width": 19.296875,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "F = 4 − 2t",
+        "x": 259,
+        "y": 82,
+        "width": 123.6484375,
+        "height": 35,
+        "font": 26
+      }
+    ],
+    "outside": [],
+    "collisions": [],
+    "desktop": {
+      "width": 560,
+      "height": 420,
+      "minFont": 26
+    },
+    "mobile": {
+      "width": 314,
+      "height": 236,
+      "minFont": 14.57857142857143
+    }
+  },
+  {
+    "name": "trig.svg",
+    "viewBox": [
+      0,
+      -60,
+      560,
+      465
+    ],
+    "texts": [
+      {
+        "text": "Unit circle: sin θ=1/2",
+        "x": 20,
+        "y": -48,
+        "width": 258.015625,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "cos θ",
+        "x": 450,
+        "y": 187,
+        "width": 65.84375,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "sin θ",
+        "x": 285,
+        "y": 20,
+        "width": 59.21875,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "1/2",
+        "x": 435,
+        "y": 109,
+        "width": 41.609375,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "π/6",
+        "x": 364,
+        "y": 87,
+        "width": 45.171875,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "5π/6",
+        "x": 125,
+        "y": 87,
+        "width": 59.421875,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "Equal horizontal and vertical scales",
+        "x": 20,
+        "y": 357,
+        "width": 434.796875,
+        "height": 35,
+        "font": 26
+      }
+    ],
+    "outside": [],
+    "collisions": [],
+    "desktop": {
+      "width": 560,
+      "height": 465,
+      "minFont": 26
+    },
+    "mobile": {
+      "width": 314,
+      "height": 261,
+      "minFont": 14.57857142857143
+    }
+  },
+  {
+    "name": "uniform.svg",
+    "viewBox": [
+      0,
+      -60,
+      560,
+      670
+    ],
+    "texts": [
+      {
+        "text": "Uniform on {1,2,3,4}: PMF and CDF",
+        "x": 20,
+        "y": -48,
+        "width": 429.703125,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "x",
+        "x": 516,
+        "y": 222,
+        "width": 14,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "y",
+        "x": 39,
+        "y": 27,
+        "width": 15,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "1",
+        "x": 141,
+        "y": 237.57000732421875,
+        "width": 15.25,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "2",
+        "x": 231,
+        "y": 237.57000732421875,
+        "width": 15.25,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "3",
+        "x": 321,
+        "y": 237.57000732421875,
+        "width": 15.25,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "4",
+        "x": 410,
+        "y": 237.57000732421875,
+        "width": 17,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "P(X=k)",
+        "x": 70,
+        "y": 32,
+        "width": 83.484375,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "1/4",
+        "x": 70,
+        "y": 77,
+        "width": 42.35546875,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "x",
+        "x": 516,
+        "y": 537,
+        "width": 14,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "y",
+        "x": 39,
+        "y": 302,
+        "width": 15,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "F(x)",
+        "x": 70,
+        "y": 302,
+        "width": 44.359375,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "1",
+        "x": 141,
+        "y": 556,
+        "width": 15.25,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "2",
+        "x": 231,
+        "y": 556,
+        "width": 15.25,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "3",
+        "x": 321,
+        "y": 556,
+        "width": 15.25,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "4",
+        "x": 410,
+        "y": 556,
+        "width": 17,
+        "height": 35,
+        "font": 26
+      },
+      {
+        "text": "1",
+        "x": 70,
+        "y": 342,
+        "width": 15.25,
+        "height": 35,
+        "font": 26
+      }
+    ],
+    "outside": [],
+    "collisions": [],
+    "desktop": {
+      "width": 560,
+      "height": 670,
+      "minFont": 26
+    },
+    "mobile": {
+      "width": 314,
+      "height": 376,
+      "minFont": 14.57857142857143
+    }
+  }
+]

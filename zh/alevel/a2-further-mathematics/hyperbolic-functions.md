@@ -7,8 +7,9 @@ subject: a2-further-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-further-mathematics/hyperbolic-functions/
 permalink: /zh/alevel/a2-further-mathematics/hyperbolic-functions/
-toc_headings: h2, h3, h4
+toc_headings: "#definitions, #graphs-and-identities, #linear-combinations, #inverse-hyperbolic-functions, #differentiation, #integration, #practice, #diagnose-and-retry, #quick-reference, #sources"
 study_page: true
+reading_layout: true
 ---
 
 [高等纯数学](/zh/alevel/a2-further-mathematics/) · FP2.9 双曲函数
@@ -21,7 +22,7 @@ study_page: true
 
 教材目录对应第 24 章，印刷页码 288–305（本课内容按 FP2.9 官方范围编排）。
 
-**开始前：**请先熟悉指数与对数运算律（exponential and logarithmic laws）、链式法则（chain rule）、隐函数求导（implicit differentiation）和换元（substitution）。留意每个函数及其导数的定义域。
+**开始前：**用[指数与对数积分](/zh/alevel/a2-mathematics/integration/#exponential-logarithmic-integrals)回顾指数对数关系，用[反函数](/zh/alevel/a2-mathematics/functions/#inverse-functions)回补一一对应与分支，用[链式法则](/zh/alevel/a2-mathematics/differentiation/#composite-functions)、[隐式求导](/zh/alevel/a2-mathematics/differentiation/#implicit-functions)及[换元](/zh/alevel/a2-mathematics/integration/#substitution)准备微积分。回到例 2 写出指数正性，或回 inverse-cosh 段独立说明为何舍去另一根。
 
 **学习目标：**由指数定义证明恒等式，解释六个核心图像的特征，筛选方程中的正指数根，并在正确分支上推导和使用反函数、导数与积分。
 
@@ -43,6 +44,8 @@ $$e^x=\cosh x+\sinh x,\qquad e^{-x}=\cosh x-\sinh x.$$
 
 记号 $\sinh^{-1}x$ 表示函数 $\sinh x$ 的反函数（inverse function）；它并不表示 $1/\sinh x$。倒数函数记作 $\operatorname{cosech}x$。$\cosh^{-1}x$ 和 $\tanh^{-1}x$ 也遵循同样的记号区别。
 
+<section class="worked-example" markdown="1">
+
 ### 例题 1 — 由指数定义求精确值 {#example-1-exact-values}
 
 **Question:** Find $\sinh(\ln3)$, $\cosh(\ln3)$, $\tanh(\ln3)$ and $\operatorname{sech}(\ln3)$.
@@ -57,6 +60,8 @@ $$\begin{aligned}
 \end{aligned}$$
 
 **检查：**$\cosh^2(\ln3)-\sinh^2(\ln3)=\frac{25}{9}-\frac{16}{9}=1$，且 $1-\tanh^2(\ln3)=\frac9{25}=\operatorname{sech}^2(\ln3)$。
+
+</section>
 
 ## 图像与恒等式 {#graphs-and-identities}
 
@@ -128,6 +133,92 @@ $$a\sinh x+b\cosh x=c
 
 当 $a+b=0$ 时，二次项消失，应直接求解剩下的关于 $t$ 的方程。零根或负根都不能取对数。
 
+<section class="worked-example" markdown="1">
+
+### 例题 2 — 求解线性组合并舍去不合条件的根 {#example-2-solve-a-linear-combination}
+
+**Question:** Solve $2\sinh x+\cosh x=2$.
+
+令 $t=e^x$，因此 $t>0$。代入并整理可得
+
+$$\begin{aligned}
+2\sinh x+\cosh x=2
+&\Longleftrightarrow\frac{2(t-t^{-1})+(t+t^{-1})}{2}=2\\
+&\Longleftrightarrow 3t^2-4t-1=0.
+\end{aligned}$$
+
+因此
+
+$$t=\frac{2\pm\sqrt7}{3}.$$
+
+由于 $\frac{2-\sqrt7}{3}<0$，舍去该根，因为它不可能等于 $e^x$。保留正根，得到
+
+$$\boxed{x=\ln\left(\frac{2+\sqrt7}{3}\right)}.$$
+
+**检查：**保留的根满足 $e^x>0$，并且满足由原方程得到的二次方程。
+
+</section>
+
+<section class="worked-example" markdown="1">
+
+### 例题 3 — 使用加法公式（改编方法） {#example-3-use-an-addition-formula}
+
+**Question:** Solve $\cosh(x-\ln3)=2\sinh x$.
+
+本题借鉴 OxfordAQA 2018 年样卷 FM03 第 2 题的解题方法并作了教学改编，并非官方原题。使用 $\cosh(x-y)=\cosh x\cosh y-\sinh x\sinh y$，并代入 $\cosh(\ln3)=\frac53$ 和 $\sinh(\ln3)=\frac43$：
+
+$$\begin{aligned}
+\frac53\cosh x-\frac43\sinh x&=2\sinh x,\\
+\frac53\cosh x&=\frac{10}{3}\sinh x,\\
+\tanh x&=\frac12.
+\end{aligned}$$
+
+利用 $\tanh x=\frac{e^{2x}-1}{e^{2x}+1}$，
+
+$$\frac{e^{2x}-1}{e^{2x}+1}=\frac12
+\quad\Longrightarrow\quad e^{2x}=3
+\quad\Longrightarrow\quad
+\boxed{x=\frac12\ln3}.$$
+
+**检查：**由 $e^{2x}=3$ 可得 $\tanh x=\frac{3-1}{3+1}=\frac12$，符合要求。
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 独立筛选有效解 {#equation-selection-task}
+
+**Self-written independent task.** Solve $3\sinh x+\cosh x=2$ over the real numbers. Show every candidate produced by your substitution, decide which are admissible, and check the retained solution in the original equation.
+
+自拟题，无官方分值。先完成代换、全部候选和筛选理由，再展开。
+
+<details markdown="1">
+<summary>提示</summary>
+
+指数代换保留什么条件？在取对数前使用它。
+
+</details>
+
+<details markdown="1">
+<summary>答案与检验</summary>
+
+$$\begin{aligned}
+t&=e^x>0,\\
+\frac{3(t-t^{-1})+(t+t^{-1})}{2}&=2,\\
+4t^2-4t-2&=0\quad\Longleftrightarrow\quad2t^2-2t-1=0,\\
+t&=\frac{1\pm\sqrt3}{2}.
+\end{aligned}$$
+
+$$\boxed{x=\ln\left(\frac{1+\sqrt3}{2}\right)}.$$
+
+$$3\sinh x+\cosh x=2t-\frac1t=2$$
+
+因为 $1-\sqrt3<0$，负候选不能等于指数，必须舍去。检验的最后一步来自 $2t^2-2t-1=0$ 除以 $t>0$。若保留负候选，回例 2，先写指数正性，再关闭答案重试。
+
+</details>
+
+</section>
+
 ## 反双曲函数（inverse hyperbolic functions） {#inverse-hyperbolic-functions}
 
 求反双曲函数的对数形式时，可从定义出发解出 $e^y$，并始终记住 $e^y>0$。
@@ -167,6 +258,24 @@ t=\frac{1+x}{1-x}.$$
 $$\boxed{\tanh^{-1}x=\frac12\ln\left(\frac{1+x}{1-x}\right)},\qquad -1<x<1.$$
 
 这个定义域限制不可省略：实数范围内的反双曲正切函数不接受 $x=\pm1$。
+
+<section class="worked-example" markdown="1">
+
+### 例题 4 — 使用对数形式 {#example-4-use-the-logarithmic-forms}
+
+**Question:** Find $\sinh^{-1}3$, $\cosh^{-1}2$ and $\tanh^{-1}\left(\frac13\right)$.
+
+代入对数形式，并逐一检查输入值是否属于对应定义域：
+
+$$\begin{aligned}
+\sinh^{-1}3&=\ln(3+\sqrt{10}),\\
+\cosh^{-1}2&=\ln(2+\sqrt3),\\
+\tanh^{-1}\left(\frac13\right)&=\frac12\ln\left(\frac{1+\frac13}{1-\frac13}\right)=\frac12\ln2.
+\end{aligned}$$
+
+**检查：**前两个对数的真数均为正；$2\ge1$，符合 $\cosh^{-1}$ 的定义域；$\frac13$ 介于 $-1$ 与 $1$ 之间。
+
+</section>
 
 ## 求导 {#differentiation}
 
@@ -243,6 +352,42 @@ $$\boxed{\begin{aligned}
 
 第一条公式适用于 $u$ 为实数且可导的所有位置；第二条要求 $u>1$，此时导数才有限；第三条要求 $-1<u<1$。
 
+<section class="worked-example" markdown="1">
+
+### 例题 5 — 对双曲函数的复合式求导 {#example-5-differentiate-a-direct-composite}
+
+**Question:** Differentiate $y=3\sinh(2x)-4\operatorname{coth}x$ and state its domain.
+
+使用链式法则，以及 $\operatorname{coth}x$ 的导数公式：
+
+$$\begin{aligned}
+\frac{\mathrm dy}{\mathrm dx}
+&=3\cdot2\cosh(2x)-4\left(-\operatorname{cosech}^2x\right)\\
+&=\boxed{6\cosh(2x)+4\operatorname{cosech}^2x}.
+\end{aligned}$$
+
+当 $x\ne0$ 时，原函数及其导数才有定义，因为 $\operatorname{coth}x$ 和 $\operatorname{cosech}x$ 在零点无定义。
+
+</section>
+
+<section class="worked-example" markdown="1">
+
+### 例题 6 — 对复合反函数求导 {#example-6-differentiate-a-composite-inverse-function}
+
+**Question:** Differentiate $y=\cosh^{-1}(2x+1)$ and state where the derivative exists.
+
+函数有定义要求 $2x+1\ge1$，即 $x\ge0$。导数公式要求更严格的条件 $2x+1>1$，所以只有 $x>0$ 时导数才存在：
+
+$$\begin{aligned}
+\frac{\mathrm dy}{\mathrm dx}
+&=\frac2{\sqrt{(2x+1)^2-1}}\\
+&=\boxed{\frac1{\sqrt{x(x+1)}}},\qquad x>0.
+\end{aligned}$$
+
+**检查：**当 $x=0$ 时，函数值为 $\cosh^{-1}1=0$，但导数表达式的分母为零。因此端点属于函数的定义域，却不属于导数的定义域。
+
+</section>
+
 ## 积分 {#integration}
 
 ### 标准积分 {#standard-integrals}
@@ -274,90 +419,7 @@ $$\int\frac{\mathrm dx}{a^2-x^2}=\frac1{2a}\ln\left\lvert \frac{a+x}{a-x}\right\
 
 ## 例题 {#worked-examples}
 
-### 例题 2 — 求解线性组合并舍去不合条件的根 {#example-2-solve-a-linear-combination}
-
-**Question:** Solve $2\sinh x+\cosh x=2$.
-
-令 $t=e^x$，因此 $t>0$。代入并整理可得
-
-$$\begin{aligned}
-2\sinh x+\cosh x=2
-&\Longleftrightarrow\frac{2(t-t^{-1})+(t+t^{-1})}{2}=2\\
-&\Longleftrightarrow 3t^2-4t-1=0.
-\end{aligned}$$
-
-因此
-
-$$t=\frac{2\pm\sqrt7}{3}.$$
-
-由于 $\frac{2-\sqrt7}{3}<0$，舍去该根，因为它不可能等于 $e^x$。保留正根，得到
-
-$$\boxed{x=\ln\left(\frac{2+\sqrt7}{3}\right)}.$$
-
-**检查：**保留的根满足 $e^x>0$，并且满足由原方程得到的二次方程。
-
-### 例题 3 — 使用加法公式（改编方法） {#example-3-use-an-addition-formula}
-
-**Question:** Solve $\cosh(x-\ln3)=2\sinh x$.
-
-本题借鉴 OxfordAQA 2018 年样卷 FM03 第 2 题的解题方法并作了教学改编，并非官方原题。使用 $\cosh(x-y)=\cosh x\cosh y-\sinh x\sinh y$，并代入 $\cosh(\ln3)=\frac53$ 和 $\sinh(\ln3)=\frac43$：
-
-$$\begin{aligned}
-\frac53\cosh x-\frac43\sinh x&=2\sinh x,\\
-\frac53\cosh x&=\frac{10}{3}\sinh x,\\
-\tanh x&=\frac12.
-\end{aligned}$$
-
-利用 $\tanh x=\frac{e^{2x}-1}{e^{2x}+1}$，
-
-$$\frac{e^{2x}-1}{e^{2x}+1}=\frac12
-\quad\Longrightarrow\quad e^{2x}=3
-\quad\Longrightarrow\quad
-\boxed{x=\frac12\ln3}.$$
-
-**检查：**由 $e^{2x}=3$ 可得 $\tanh x=\frac{3-1}{3+1}=\frac12$，符合要求。
-
-### 例题 4 — 使用对数形式 {#example-4-use-the-logarithmic-forms}
-
-**Question:** Find $\sinh^{-1}3$, $\cosh^{-1}2$ and $\tanh^{-1}\left(\frac13\right)$.
-
-代入对数形式，并逐一检查输入值是否属于对应定义域：
-
-$$\begin{aligned}
-\sinh^{-1}3&=\ln(3+\sqrt{10}),\\
-\cosh^{-1}2&=\ln(2+\sqrt3),\\
-\tanh^{-1}\left(\frac13\right)&=\frac12\ln\left(\frac{1+\frac13}{1-\frac13}\right)=\frac12\ln2.
-\end{aligned}$$
-
-**检查：**前两个对数的真数均为正；$2\ge1$，符合 $\cosh^{-1}$ 的定义域；$\frac13$ 介于 $-1$ 与 $1$ 之间。
-
-### 例题 5 — 对双曲函数的复合式求导 {#example-5-differentiate-a-direct-composite}
-
-**Question:** Differentiate $y=3\sinh(2x)-4\operatorname{coth}x$ and state its domain.
-
-使用链式法则，以及 $\operatorname{coth}x$ 的导数公式：
-
-$$\begin{aligned}
-\frac{\mathrm dy}{\mathrm dx}
-&=3\cdot2\cosh(2x)-4\left(-\operatorname{cosech}^2x\right)\\
-&=\boxed{6\cosh(2x)+4\operatorname{cosech}^2x}.
-\end{aligned}$$
-
-当 $x\ne0$ 时，原函数及其导数才有定义，因为 $\operatorname{coth}x$ 和 $\operatorname{cosech}x$ 在零点无定义。
-
-### 例题 6 — 对复合反函数求导 {#example-6-differentiate-a-composite-inverse-function}
-
-**Question:** Differentiate $y=\cosh^{-1}(2x+1)$ and state where the derivative exists.
-
-函数有定义要求 $2x+1\ge1$，即 $x\ge0$。导数公式要求更严格的条件 $2x+1>1$，所以只有 $x>0$ 时导数才存在：
-
-$$\begin{aligned}
-\frac{\mathrm dy}{\mathrm dx}
-&=\frac2{\sqrt{(2x+1)^2-1}}\\
-&=\boxed{\frac1{\sqrt{x(x+1)}}},\qquad x>0.
-\end{aligned}$$
-
-**检查：**当 $x=0$ 时，函数值为 $\cosh^{-1}1=0$，但导数表达式的分母为零。因此端点属于函数的定义域，却不属于导数的定义域。
+<section class="worked-example" markdown="1">
 
 ### 例题 7 — 代入标准积分形式 {#example-7-substitute-into-a-standard-integral}
 
@@ -373,6 +435,10 @@ $$\begin{aligned}
 
 **检查：**对答案求导，得到 $(2x+1)\operatorname{sech}^2(x^2+x)$。
 
+</section>
+
+<section class="worked-example" markdown="1">
+
 ### 例题 8 — 换元化为反双曲正弦的标准积分 {#example-8-scale-an-inverse-hyperbolic-integral}
 
 **Question:** Find $\displaystyle\int\frac{\mathrm dx}{\sqrt{9x^2+4}}$.
@@ -381,11 +447,16 @@ $$\begin{aligned}
 
 $$\begin{aligned}
 \int\frac{\mathrm dx}{\sqrt{9x^2+4}}
-&=\frac13\int\frac{\mathrm du}{\sqrt{u^2+1}}\\
+&=\frac{2/3}{2}\int\frac{\mathrm du}{\sqrt{u^2+1}}\\
+&=\frac13\sinh^{-1}u+C\\
 &=\boxed{\frac13\sinh^{-1}\left(\frac{3x}{2}\right)+C}.
 \end{aligned}$$
 
 对所有实数 $x$，被积函数都有实数值。**检查：**对框出的结果求导，得到 $\frac1{\sqrt{9x^2+4}}$。
+
+</section>
+
+<section class="worked-example" markdown="1">
 
 ### 例题 9 — 分母为平方差的积分 {#example-9-integrate-a-scaled-difference-of-squares}
 
@@ -396,18 +467,29 @@ $$\begin{aligned}
 $$\begin{aligned}
 \int\frac{\mathrm dx}{16-4x^2}
 &=\frac14\int\frac{\mathrm dx}{2^2-x^2}\\
+&=\frac14\cdot\frac12\tanh^{-1}\left(\frac x2\right)+C\\
 &=\boxed{\frac18\tanh^{-1}\left(\frac x2\right)+C},\qquad \lvert x\rvert<2.
 \end{aligned}$$
 
-对应的对数形式为
+对两个对数分别用 $u=2+x$、$\mathrm du=\mathrm dx$ 及 $v=2-x$、$\mathrm dv=-\mathrm dx$；后一个换元提供负号。由部分分式得
 
-$$\frac1{16}\ln\left\lvert\frac{2+x}{2-x}\right\rvert+C.$$
+$$\begin{aligned}
+\frac1{16-4x^2}&=\frac1{16}\left(\frac1{2+x}+\frac1{2-x}\right),\\
+\int\frac{\mathrm dx}{16-4x^2}
+&=\frac1{16}\left(\int\frac{\mathrm dx}{2+x}+\int\frac{\mathrm dx}{2-x}\right)\\
+&=\frac1{16}\left(\ln\lvert2+x\rvert-\ln\lvert2-x\rvert\right)+C\\
+&=\frac1{16}\ln\left\lvert\frac{2+x}{2-x}\right\rvert+C.
+\end{aligned}$$
 
 原被积函数在 $x\ne\pm2$ 时有定义；原函数须分别在区间 $(-\infty,-2)$、$(-2,2)$ 和 $(2,\infty)$ 上考虑。上面给出的反双曲函数形式仅适用于 $(-2,2)$。
+
+</section>
 
 ## 练习 {#practice}
 
 练习 1–8 均为本课原创题目，并非官方试题。请先独立作答，再打开提示和解答。第 3 题练习指数换元时只保留正根的做法，与 OxfordAQA 样卷的解题思路相同，但并未照抄试卷题目。
+
+<section class="lesson-check" markdown="1">
 
 ### 练习 1 — 验证恒等式 {#question-1-check-the-identities}
 
@@ -437,6 +519,10 @@ $$1-\tanh^2x=\frac{\cosh^2x-\sinh^2x}{\cosh^2x}=\frac1{\cosh^2x}=\operatorname{s
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### 练习 2 — 判断定义域与渐近线 {#question-2-read-domains-and-asymptotes}
 
 State the domain and range of $\tanh x$, $\tanh^{-1}x$ and $\operatorname{coth}x$. Give each function's asymptotes and parity where applicable.
@@ -460,6 +546,61 @@ $\operatorname{coth}x$ 的定义域为 $\mathbb R\setminus\lbrace0\rbrace$，值
 **检验：**值域边界 $(-1,1)$（对应 $\tanh x$）是 $\tanh^{-1}x$ 定义域中不包含的端点。
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 六图与分支的独立产出 {#graph-and-branch-task}
+
+**Self-written graph and branch task.** With the reference figure covered, sketch the six core graphs on labelled axes. Mark domains, ranges, intercepts or endpoints and asymptotes. Use exponentials to justify the parity of $\sinh x$ and $\cosh x$ and the minimum of $\cosh x$. Starting from $x=\cosh y$, derive the logarithmic formula for $y=\cosh^{-1}x$, explain the rejected branch, and derive its derivative with its domain.
+
+自拟题，无官方分值。交六幅草图、指数论证和分支推导；先遮住参考图，不要照表描图。
+
+<details markdown="1">
+<summary>提示</summary>
+
+用指数定义比较正负输入。二次方程解出指数变量后，区分正数与至少为 1；反射时交换定义域与值域。
+
+</details>
+
+<details markdown="1">
+<summary>答案与产出判据</summary>
+
+$$\begin{aligned}
+\sinh(-x)&=\frac{e^{-x}-e^x}{2}
+=-\frac{e^x-e^{-x}}{2}=-\sinh x,\\
+\cosh(-x)&=\frac{e^{-x}+e^x}{2}
+=\frac{e^x+e^{-x}}{2}=\cosh x.
+\end{aligned}$$
+
+所以 sinh 是奇函数，cosh 是偶函数。又因为 $e^x>0$，
+
+$$\cosh x-1=\frac{e^{2x}-2e^x+1}{2e^x}
+=\frac{(e^x-1)^2}{2e^x}\ge0.$$
+
+等号当且仅当 $e^x=1$，即 $x=0$ 成立，所以 cosh 的最小值为 1。
+
+$$\begin{aligned}
+t&=e^y\ge1,\qquad x=\frac{t+t^{-1}}2\ge1,\\
+t^2-2xt+1&=0,\qquad t=x\pm\sqrt{x^2-1},\\
+(x+\sqrt{x^2-1})(x-\sqrt{x^2-1})&=1,\\
+y&=\boxed{\ln(x+\sqrt{x^2-1})},\qquad x\ge1.
+\end{aligned}$$
+
+$$1=\sinh y\frac{\mathrm dy}{\mathrm dx},\qquad
+\sinh y=+\sqrt{x^2-1},\qquad
+\boxed{\frac{\mathrm dy}{\mathrm dx}=\frac1{\sqrt{x^2-1}}\quad(x>1).}$$
+
+对于反函数，当 $x>1$，加号根大于 1，减号根是其倒数、位于 $(0,1)$，对应负的 $y$；在 $x=1$ 两根同为 1。选定非负输出分支后，求导取正平方根；函数在 1 有定义，但没有有限导数。
+
+作图核对：sinh 与 asinh 均在全实域奇对称、递增并过原点，无渐近线；cosh 偶对称、最低点 $(0,1)$、值域 $[1,\infty)$；acosh 从 $(1,0)$ 递增，定义域 $[1,\infty)$、值域 $[0,\infty)$，无渐近线；tanh 全实域、值域 $(-1,1)$、水平渐近线 $y=\pm1$；atanh 定义域 $(-1,1)$、值域全实、垂直渐近线 $x=\pm1$。后二者均奇对称、递增并过原点。画完后再与六图比较，缺分支理由则回 inverse-cosh 段后独立重画。
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### 练习 3 — 指数换元只取正根 {#question-3-keep-only-positive-roots}
 
@@ -490,6 +631,10 @@ $$\boxed{x=-\ln7\quad\text{or}\quad x=0.}$$
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### 练习 4 — 应用反函数的对数形式 {#question-4-apply-the-inverse-logarithmic-forms}
 
 Find $\sinh^{-1}(-3)$, $\cosh^{-1}3$ and $\tanh^{-1}\left(\frac13\right)$. State why $\cosh^{-1}(-3)$ is not real.
@@ -514,6 +659,10 @@ $$\begin{aligned}
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### 练习 5 — 应用双曲函数求导公式 {#question-5-differentiate-using-direct-rules}
 
 Differentiate $y=2\cosh(3x)-\operatorname{sech}(x^2)$.
@@ -537,6 +686,10 @@ $$\begin{aligned}
 第二项出现正号，是因为原式减去了 $\operatorname{sech}u$ 的负导数。
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### 练习 6 — 对反函数复合式求导 {#question-6-differentiate-an-inverse-composite}
 
@@ -564,6 +717,10 @@ $$\begin{aligned}
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### 练习 7 — 对双曲函数积分换元 {#question-7-substitute-into-a-hyperbolic-integral}
 
 Find $\displaystyle\int 2x\cosh(x^2+1)\,\mathrm dx$.
@@ -588,6 +745,10 @@ $$\begin{aligned}
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### 练习 8 — 缩放三种标准积分 {#question-8-scale-standard-integrals}
 
 Find $\displaystyle\int\frac{\mathrm dx}{\sqrt{4x^2+9}}$ and $\displaystyle\int\frac{\mathrm dx}{25-4x^2}$, and, for $x>\frac32$, find $\displaystyle\int\frac{\mathrm dx}{\sqrt{4x^2-9}}$. State where each original integrand is defined.
@@ -604,7 +765,12 @@ Find $\displaystyle\int\frac{\mathrm dx}{\sqrt{4x^2+9}}$ and $\displaystyle\int\
 
 对于第一题，令 $u=\frac{2x}{3}$，则 $\mathrm dx=\frac32\,\mathrm du$：
 
-$$\int\frac{\mathrm dx}{\sqrt{4x^2+9}}=\boxed{\frac12\sinh^{-1}\left(\frac{2x}{3}\right)+C}.$$
+$$\begin{aligned}
+\int\frac{\mathrm dx}{\sqrt{4x^2+9}}
+&=\frac{3/2}{3}\int\frac{\mathrm du}{\sqrt{1+u^2}}\\
+&=\frac12\sinh^{-1}u+C\\
+&=\boxed{\frac12\sinh^{-1}\left(\frac{2x}{3}\right)+C}.
+\end{aligned}$$
 
 对所有实数 $x$，该被积函数都有定义。
 
@@ -613,6 +779,7 @@ $$\int\frac{\mathrm dx}{\sqrt{4x^2+9}}=\boxed{\frac12\sinh^{-1}\left(\frac{2x}{3
 $$\begin{aligned}
 \int\frac{\mathrm dx}{25-4x^2}
 &=\frac12\int\frac{\mathrm du}{25-u^2}\\
+&=\frac12\cdot\frac15\tanh^{-1}\left(\frac u5\right)+C\\
 &=\boxed{\frac1{10}\tanh^{-1}\left(\frac{2x}{5}\right)+C},\qquad \lvert x\rvert<\frac52.
 \end{aligned}$$
 
@@ -622,7 +789,8 @@ $$\begin{aligned}
 
 $$\begin{aligned}
 \int\frac{\mathrm dx}{\sqrt{4x^2-9}}
-&=\frac12\int\frac{\mathrm du}{\sqrt{u^2-1}}\\
+&=\frac{3/2}{3}\int\frac{\mathrm du}{\sqrt{u^2-1}}\\
+&=\frac12\cosh^{-1}u+C\\
 &=\boxed{\frac12\cosh^{-1}\left(\frac{2x}{3}\right)+C},\qquad x>\frac32.
 \end{aligned}$$
 
@@ -630,9 +798,13 @@ $$\begin{aligned}
 
 </details>
 
+</section>
+
 ## 纠错与独立重试 {#diagnose-and-retry}
 
-以下两项均为自拟教学任务，无官方分值。先写下错误原因，再看反馈；随后关闭所有解答，独立完成新任务。需要提示的任务应在稍后重新独立尝试。
+以下任务均为自拟教学任务，无官方分值。先写下错误原因，再看反馈；随后关闭所有解答，独立完成新任务。需要提示的任务应在稍后重新独立尝试。
+
+<section class="lesson-check" markdown="1">
 
 **Diagnose:** A learner inserts an absolute value into the logarithm for $\cosh^{-1}(-2)$ and claims this creates a real inverse value. Explain why this cannot repair the problem.
 
@@ -642,6 +814,44 @@ $$\begin{aligned}
 对所有实数输入 $y$，都有 $\cosh y\ge1$，因此不存在实数 $y$ 满足 $\cosh y=-2$。修改对数写法不能改变反函数的定义域。
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 反双曲余弦条件重试 {#acosh-branch-retry}
+
+**Branch retry (self-written).** Solve $\cosh y=2$ for all real $y$, and state $\cosh^{-1}2$. Then decide separately whether $\cosh^{-1}(-2)$ and $\cosh^{-1}1$ are real, and whether the derivative of $\cosh^{-1}x$ is finite at $x=1$. Justify every decision.
+
+自拟题，无官方分值。关闭诊断反馈后，分别处理方程全解、反函数主值、输入域和导数域。
+
+<details markdown="1">
+<summary>提示</summary>
+
+cosh 为偶函数；acosh 还限制输出非负。
+
+</details>
+
+<details markdown="1">
+<summary>重试答案与检验</summary>
+
+$$\begin{aligned}
+t=e^y>0:\quad t^2-4t+1&=0,\\
+t&=2\pm\sqrt3,\\
+(2+\sqrt3)(2-\sqrt3)&=1,\\
+y&=\pm\ln(2+\sqrt3),\\
+\cosh^{-1}2&=\ln(2+\sqrt3).
+\end{aligned}$$
+
+两个指数根均正，所以原方程有正负两个解；反函数只返回非负者。$\cosh^{-1}(-2)$ 没有实值，因为实数的 cosh 至少为 1；$\cosh^{-1}1=0$ 有定义。但 $1/\sqrt{x^2-1}$ 在 $x=1$ 不给有限值，那里没有有限导数。若仍把“函数有定义”当作“导数存在”，回例 6 后关闭答案重试。
+
+</details>
+
+</section>
+
+以下保留的 asinh 任务另考斜率、取值与图像综合。
+
+<section class="lesson-check" markdown="1">
 
 **Independent retry:** Let $y=\sinh^{-1}(kx)$, where $k>0$. Its gradient at the origin is $2$. Determine $k$ and find the value of $x$ for which $y=\ln3$. Sketch the resulting function, marking the origin and the point you found; explain how its slope changes.
 
@@ -658,6 +868,10 @@ $$\begin{aligned}
 导数为 $k/\sqrt{1+k^2x^2}$，所以零处斜率给出 $k=2$。函数值条件化为 $2x=\sinh(\ln3)=(3-1/3)/2=4/3$，得到 $x=2/3$。代回可得 $\sinh^{-1}(4/3)=\ln3$。图像为奇函数且递增，标出 $(0,0)$ 和 $(2/3,\ln3)$；由导数可见，斜率在原点为 $2$，并随着 $\lvert x\rvert$ 增大而减小，但图像没有水平渐近线。
 
 </details>
+
+</section>
+
+**学后下一步：**先关闭本章答案，去课程入口完成[跨主题综合](/zh/alevel/a2-further-mathematics/#mixed-review)；完成后续学习，再做[延后任务](/zh/alevel/a2-further-mathematics/#later-review)。记录首次是否独立、使用了什么提示、错误原因及重试结果；若方法或条件出错，按本章“练习后”返回对应示范，再关闭解答重试。
 
 ## 快速参考 {#quick-reference}
 
@@ -680,6 +894,8 @@ $$\begin{aligned}
 
 ## 资料来源 {#sources}
 
+本轮范围核对：2026-10-23，从当前 9665 资格页打开大纲，核对正文 v5.2 及本课条目；没有迁移至 9765。下列试卷／评分材料仅重新读取所注明题目与配套评分部分的 PDF 文本，未完成原卷图像的视觉核验。官方题身份与分值保留，改编与自拟任务不称官方题。
+
 本课范围依据 OxfordAQA《国际 A-level 高等数学大纲》[FP2.9（印刷版第 19 页）](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf) 编排。例题 3 改编自 OxfordAQA 2018 年样卷 FM03 第 2 题的解题方法，并参考了该题的官方评分细则。例题中的方程已作改动，因此不是官方原题，也不代表任何官方分值。
 
-[OxfordAQA Specimen 2018, Q2, QP PDF p. 4](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-specimen-paper-2019-v3.pdf#page=4); [MS Q2, PDF p. 5](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-mark-scheme-2016-v1.pdf#page=5). 本轮已读取对应题干及评分材料（2026-10-22）；只借用已注明的方法，不把改编题或新增自拟任务称为原题。
+[OxfordAQA Specimen 2018, Q2, QP PDF p. 4](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-specimen-paper-2019-v3.pdf#page=4); [MS Q2, PDF p. 5](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-mark-scheme-2016-v1.pdf#page=5). 本轮重新读取对应题干及评分材料（2026-10-23，PDF 文本）；只借用已注明的方法，不把改编题或新增自拟任务称为原题。

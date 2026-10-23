@@ -252,6 +252,37 @@ Does the result depend on the body's dimensions or on where forces act?
 
 </details>
 
+## Independent Check
+
+**Self-written task.** A car pulls a trailer along a straight level road with a horizontal rope. A student writes a common acceleration and a common tension because “the rope is light”. Identify the missing assumptions. Explain which conclusion must be reconsidered if the rope stretches, and which must be reconsidered if its mass is not negligible. Describe what can happen to the tension when the car brakes and the trailer closes the gap. Do not calculate a force.
+
+<details markdown="1">
+<summary>Reasoning hint</summary>
+
+Separate constraints on length from the force balance on the rope itself. Can a flexible rope push the trailer backwards?
+
+</details>
+
+<details markdown="1">
+<summary>Feedback and retry</summary>
+
+A common acceleration in this straight, fixed arrangement requires the rope to remain taut and inextensible. “Light” concerns mass, so does not supply that constraint. If the rope stretches, separation can change and the accelerations need not be equal. A light rope has negligible resultant force in its own equation, giving equal end tensions here; with significant rope mass, different end forces may be needed to accelerate it. While braking, the trailer can close the gap and the rope can become slack. A flexible rope cannot transmit a compressive push; its tension then becomes zero and the taut-rope equations cease to apply.
+
+**Retry, with this panel closed:** Replace the rope by a light rigid tow bar. Which part of the braking conclusion changes, and which length constraint can still be used? State the body on which each tow-bar force acts.
+
+</details>
+
+<details markdown="1">
+<summary>Retry check</summary>
+
+A rigid tow bar can transmit compression as well as tension, so it can push backwards on the trailer while pushing forwards on the car. Those forces act on different bodies. The fixed-length, straight arrangement still constrains their accelerations to be equal. This does not determine the acceleration without the other external forces.
+
+</details>
+
+## Sources and Scope
+
+The scope is [OxfordAQA 9660 specification v5.2, M2.1](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf). Assessment explanations were checked against **MA05 January 2025 Q5(a) and Q6(a)** and the corresponding [question paper](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-question-paper.pdf) and [final mark scheme](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-mark-scheme.pdf). These are sources for the type of reasoning expected; this page's questions remain self-written.
+
 ## Quick Reference
 
 | Stage | What to write |

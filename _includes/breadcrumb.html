@@ -51,6 +51,10 @@
                 <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/alevel/a2-mathematics/" data-ui="pure_mathematics">{{ ui.pure_mathematics }}</a>
               {% when "a2-further-mathematics" %}
                 <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/alevel/a2-further-mathematics/" data-ui="further_pure_mathematics">{{ ui.further_pure_mathematics }}</a>
+              {% when "as-mathematics" %}
+                <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/alevel/as-mathematics/">{% if page.lang == 'zh-CN' %}AS 数学{% else %}AS Mathematics{% endif %}</a>
+              {% when "as-further-mathematics" %}
+                <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/alevel/as-further-mathematics/">{% if page.lang == 'zh-CN' %}AS 高等数学{% else %}AS Further Mathematics{% endif %}</a>
               {% when "a2-chemistry" %}
                 <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/alevel/a2-chemistry/">{% if page.lang == 'zh-CN' %}A2 化学{% else %}A2 Chemistry{% endif %}</a>
               {% when "a2-physics" %}
@@ -66,7 +70,7 @@
               {% when "a2-biology" %}
                 <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/alevel/a2-biology/">{% if page.lang == 'zh-CN' %}A2 生物{% else %}A2 Biology{% endif %}</a>
               {% when "mechanics" %}
-                <a href="/alevel/a2-mathematics/mechanics/">A2 Mechanics</a>
+                <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/alevel/a2-mathematics/mechanics/">{% if page.lang == 'zh-CN' %}A2 力学{% else %}A2 Mechanics{% endif %}</a>
               {% when "student-council" %}
                 <a href="/student-council/">Student Council</a>
               {% else %}

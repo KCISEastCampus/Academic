@@ -1,25 +1,374 @@
 ---
 title: AS Further Mathematics
 layout: subjects
+reading_layout: true
 mathjax: true
 grade: as
 subject: as-further-mathematics
 permalink: /alevel/as-further-mathematics/
+toc_headings: "#learning-route, #entry-diagnosis, #route-a, #route-b, #route-s, #route-m, #exit-check, #course-sources, #reference-notes"
 redirect_from:
   - /alevel/asfm/
   - /alevel/asfm/index.html
 ---
 
-> **Qualification**: OxfordAQA International AS Further Mathematics (9665) · Modular<br>
-> **Assessment**: Unit FP1 + Unit FPSM1 · 1h 30m each · 80 marks each · 50% of AS each
+## Start here {#learning-route}
 
-# 🏗️ AS Level Course Structure
+This course builds on ordinary AS Mathematics and covers OxfordAQA **9665 FM01 and FM02**. New to the course? Start with [rational functions](/alevel/as-further-mathematics/rational-functions/). If you have already studied part of it, choose a branch below.
+
+Each lesson builds the idea, shows complete reasoning, then gives you a turn. Hints and solutions open separately; record a hinted attempt as supported work. Use the feedback to repair an error, then attempt its matching retry.
+
+Use the [entry diagnosis](#entry-diagnosis) if unsure about prerequisites, and the [mixed and later review](#exit-check) after a branch. The [old reference notes](#reference-notes) remain at the end for lookup.
+
+### FM01 · Pure mathematics {#route-a}
+
+Follow the order below. Complex numbers use trigonometry and quadratics; series uses factorisation; calculus builds on AS differentiation and integration.
+
+- [Rational functions](/alevel/as-further-mathematics/rational-functions/) — Sketch, solve inequalities and justify a range.
+- [Conics and loci](/alevel/as-further-mathematics/conics-and-loci/) — Connect distance conditions, equations and tangency.
+- [Trigonometric equations](/alevel/as-further-mathematics/trigonometric-solutions/) — Give all solutions and explain their completeness.
+- [Complex numbers and roots](/alevel/as-further-mathematics/complex-numbers-and-roots/) — Connect arithmetic, Argand geometry and transformed roots.
+- [Series](/alevel/as-further-mathematics/series/) — Choose a summation method and test an infinite limit.
+- [Rates and approximations](/alevel/as-further-mathematics/rates-and-approximations/) — Build a derivative, connect rates and check a small-change estimate.
+- [Improper integrals](/alevel/as-further-mathematics/improper-integrals/) — Replace a singular endpoint by the correct limit.
+
+### FM02 · Pure mathematics {#route-b}
+
+Study matrices before transformations. Linearisation needs logarithms. Study rates before numerical roots, then Euler.
+
+- [Matrix algebra](/alevel/as-further-mathematics/matrix-algebra/) — Check dimensions, inverses and multiplication order.
+- [Plane transformations](/alevel/as-further-mathematics/transformations/) — Describe compositions, area and complete invariant lines.
+- [Linearisation](/alevel/as-further-mathematics/linearisation/) — Choose axes, plot transformed data and estimate constants.
+- [Numerical roots](/alevel/as-further-mathematics/numerical-roots/) — Trace each update and justify the precision claimed.
+- [Euler’s method](/alevel/as-further-mathematics/euler-method/) — Use the old-point gradient and interpret the approximation.
+
+### FM02 · Statistics {#route-s}
+
+Start with Bayes, then the two distributions. Derive their moments before PGFs, then study linear combinations.
+
+- [Bayes’ theorem](/alevel/as-further-mathematics/bayes/) — Build the tree and change the conditioning sample space.
+- [Discrete uniform distribution](/alevel/as-further-mathematics/discrete-uniform/) — Check equal probabilities and derive both moments.
+- [Geometric distribution](/alevel/as-further-mathematics/geometric-distribution/) — Define what is counted, calculate tails and derive moments.
+- [Probability generating functions](/alevel/as-further-mathematics/generating-functions/) — Derive PGFs, extract probabilities and combine independent variables.
+- [Linear combinations](/alevel/as-further-mathematics/linear-combinations/) — Handle negative coefficients, covariance and correlation.
+
+### FM02 · Mechanics {#route-m}
+
+Relative motion introduces two-dimensional vectors; dimensions checks equations; collisions also needs signed momentum from ordinary AS.
+
+- [Relative motion](/alevel/as-further-mathematics/relative-motion/) — Model interception and closest approach with vectors and geometry.
+- [Dimensional analysis](/alevel/as-further-mathematics/dimensions/) — Find units and exponents, then explain what dimensions cannot establish.
+- [Impulse and collisions](/alevel/as-further-mathematics/impulse-and-collisions/) — Choose the system and direction before applying impulse or collision laws.
+
+### Entry diagnosis and recovery {#entry-diagnosis}
+
+Choose the parts relevant to your next branch. Show working before opening help; you do not need all five as a gate to starting a lesson.
+
+<section class="lesson-check" markdown="1">
+
+#### Prerequisite check
+
+**Task (self-written):** (a) Factor $x^2-x-2$. (b) Solve $\sin\theta=1/2$ for $0\le\theta<2\pi$. (c) Differentiate $x^3$ and integrate $x^2$ from 0 to 2. (d) If $P(A)=0.4$ and $P(B\mid A)=0.2$, find $P(A\cap B)$. (e) A 2 kg particle changes velocity from −1 to 3 m s⁻¹; find its signed impulse.
+
+<details markdown="1"><summary>Hint</summary>
+
+Check product and sum, unit-circle quadrants, power rules, a joint probability and signed velocities.
+
+</details>
+
+<details markdown="1"><summary>Solution, checks and recovery</summary>
+
+$$\begin{aligned}
+    (a)&\quad(x-2)(x+1),\\
+    (b)&\quad\theta=\pi/6,\ 5\pi/6,\\
+    (c)&\quad3x^2,\quad[x^3/3]_0^2=8/3,\\
+    (d)&\quad P(A\cap B)=0.4(0.2)=0.08,\\
+    (e)&\quad J=2[3-(-1)]=8\ \mathrm{N\,s}.
+    \end{aligned}$$
+
+(a) [Quadratics](/alevel/as-mathematics/algebra/#l02); (b) [periodic interval solutions](/alevel/as-mathematics/trigonometry/#l16); (c) [derivatives](/alevel/as-mathematics/differentiation/#l06) and [definite integrals](/alevel/as-mathematics/integration/#l08); (d) [conditional probability](/alevel/as-mathematics/probability/#l18); (e) [signed momentum](/alevel/as-mathematics/momentum/). Expand the factors to check; use both sine quadrants; multiply probabilities along one path; subtract initial momentum from final momentum. After recovery, close this solution and attempt the matching part below.
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+#### Retry after recovery
+
+**Task (self-written):** (a) Factor $x^2+2x-3$. (b) Solve $\cos\theta=-1/2$ for $0\le\theta<2\pi$. (c) Differentiate $x^4$ and integrate $x$ from 0 to 3. (d) If $P(C)=0.3$ and $P(D\mid C)=0.5$, find $P(C\cap D)$. (e) A 3 kg particle changes velocity from 2 to −1 m s⁻¹; find its signed impulse.
+
+<details markdown="1"><summary>Hint</summary>
+
+Use the repaired principle; independently check signs and the interval.
+
+</details>
+
+<details markdown="1"><summary>Solution, checks and recovery</summary>
+
+$$\begin{aligned}
+    (a)&\quad(x+3)(x-1),\\
+    (b)&\quad\theta=2\pi/3,\ 4\pi/3,\\
+    (c)&\quad4x^3,\quad[x^2/2]_0^3=9/2,\\
+    (d)&\quad P(C\cap D)=0.15,\\
+    (e)&\quad J=3(-1-2)=-9\ \mathrm{N\,s}.
+    \end{aligned}$$
+
+The negative impulse points opposite to the chosen positive direction. If an error remains, use the matching recovery link above, then the chosen lesson’s entry check.
+
+</details>
+
+</section>
+
+### Mixed and later review {#exit-check}
+
+After the relevant branches, close the lesson pages and select a method yourself. These tasks sample connections; use them alongside each lesson’s more detailed independent checks, not as a complete examination.
+
+<section class="lesson-check" markdown="1">
+
+#### Mixed task 1
+
+**Task (self-written):** Give the complete real solution of $\cos(2x)=1/2$ and decide whether $\int_1^\infty x^{-2}\,dx$ is finite. Explain both conclusions.
+
+<details markdown="1"><summary>Hint</summary>
+
+The periodic equation and infinite endpoint need different arguments.
+
+</details>
+
+<details markdown="1"><summary>Solution, checks and recovery</summary>
+
+$$x=\pm\pi/6+n\pi,\qquad n\in\mathbb Z.$$
+
+$$\int_1^\infty x^{-2}\,dx=\lim_{R\to\infty}(1-1/R)=1.$$
 
 
-## Two Compulsory Units:
+Cosine gives two phases per turn; dividing by 2 changes the period to π. Infinity is not a substitution value. Return to trigonometric solutions for missing branches or improper integrals for a missing limit, then their retries.
+
+[Trigonometric equations](/alevel/as-further-mathematics/trigonometric-solutions/#model) · [Improper integrals](/alevel/as-further-mathematics/improper-integrals/#model)
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+#### Mixed task 2
+
+**Task (self-written):** A transformation is $\operatorname{diag}(3,1)$. Find all its invariant lines, including any that miss the origin, and all its fixed points.
+
+<details markdown="1"><summary>Hint</summary>
+
+Retain the intercept as well as slope, and check vertical lines separately.
+
+</details>
+
+<details markdown="1"><summary>Solution, checks and recovery</summary>
+
+For $y=mx+c$, the image point is $(3x,mx+c)$. Requiring $mx+c=3mx+c$ for every $x$ gives $m=0$. Thus all $y=c$ are invariant. A vertical line $x=k$ maps to $x=3k$, so only $x=0$ is invariant. Fixed points satisfy $3x=x$, hence every point on $x=0$ and no others.
+
+An invariant line allows points to move along it; a line of fixed points does not. If intercepts or verticals were missed, return to transformations and its retry.
+
+[Plane transformations](/alevel/as-further-mathematics/transformations/#invariant-lines)
+
+[Matching retry](/alevel/as-further-mathematics/transformations/#retry-lines)
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+#### Mixed task 3
+
+**Task (self-written):** Independent $X,Y$ have PGFs $(1+t)/2$ and $(t+t^2)/2$. Find $P(X+Y=2)$ and the variance of their sum, explaining where independence is used.
+
+<details markdown="1"><summary>Hint</summary>
+
+Use coefficients or enumerate outcomes for the probability, then independently check the variance.
+
+</details>
+
+<details markdown="1"><summary>Solution, checks and recovery</summary>
+
+$$\begin{aligned}G_{X+Y}(t)&=(t+2t^2+t^3)/4,\\P(X+Y=2)&=1/2,\\\operatorname{Var}(X+Y)&=1/4+1/4=1/2.\end{aligned}$$
+
+Independence allows joint probabilities and PGFs to multiply and makes covariance zero. X is equally likely 0 or 1, Y equally likely 1 or 2; two of four equally likely pairs sum to 2. Recover coefficients in PGFs or variance cross terms in linear combinations.
+
+[Probability generating functions](/alevel/as-further-mathematics/generating-functions/#model) · [Linear combinations](/alevel/as-further-mathematics/linear-combinations/#model)
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+#### Mixed task 4
+
+**Task (self-written):** Two particles have relative position $(4-t,3)$ m for $t\ge0$ s. Find their closest distance and explain whether they collide. Give a geometric check.
+
+<details markdown="1"><summary>Hint</summary>
+
+Check the permitted times and whether the relative path passes through the origin.
+
+</details>
+
+<details markdown="1"><summary>Solution, checks and recovery</summary>
+
+$$d^2=(t-4)^2+9.$$
+
+The minimum occurs at $t=4$ s, which is allowed, and $d=3$ m. The relative path is the horizontal line $y=3$; its perpendicular distance from the origin is 3 m. It never reaches the origin, so the particles do not collide.
+
+For confusion between intersecting paths and meeting, revisit common time and initial conditions in relative motion. Also return there if the time domain was not checked.
+
+[Common time and initial conditions](/alevel/as-further-mathematics/relative-motion/#relative-position) · [Allowed nearest point](/alevel/as-further-mathematics/relative-motion/#closest-approach) · [Matching retries](/alevel/as-further-mathematics/relative-motion/#retry)
+
+</details>
+
+</section>
+
+#### Return later
+
+After studying another topic, close the old solutions and attempt these tasks. Record your first working, help used, error and retry; choose the interval to suit your course.
+
+<section class="lesson-check" markdown="1">
+
+#### Later task 1
+
+**Task (self-written):** For integer $n\ge1$, let $X$ be uniform on $\{1,\ldots,n\}$ and let $Y=2X-1$. Derive $E(X)$ and $\operatorname{Var}(X)$ using finite sums, then find $E(Y)$ and $\operatorname{Var}(Y)$. Is $Y$ uniform on $\{1,2,\ldots,2n-1\}$? Explain.
+
+<details markdown="1"><summary>Hint</summary>
+
+Start with the probability of each value and calculate both moments; separately check the support.
+
+</details>
+
+<details markdown="1"><summary>Solution, checks and recovery</summary>
+
+$$\begin{aligned}
+    E(X)&=\frac1n\frac{n(n+1)}2=\frac{n+1}2,\\
+    E(X^2)&=\frac{(n+1)(2n+1)}6,\\
+    \operatorname{Var}(X)&=\frac{n^2-1}{12},\\
+    E(Y)&=2E(X)-1=n,\\
+    \operatorname{Var}(Y)&=4\operatorname{Var}(X)=\frac{n^2-1}3.
+    \end{aligned}$$
+
+Y takes only the odd integers 1,3,…,2n−1, each with probability 1/n. For n>1 it is not uniform on the full consecutive set stated; for n=1 both sets are {1}. Recover [squared coefficients](/alevel/as-further-mathematics/linear-combinations/#model) or [finite-sum moment derivations](/alevel/as-further-mathematics/discrete-uniform/#demonstration), close the old solution, then attempt [recovery retry 1](#later-retry-1) below.
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+#### Later task 2
+
+**Task (self-written):** A ball of mass $m>0$ hits a fixed smooth wall normally at speed $u>0$. Take the incoming direction as positive; its velocity after impact is $-eu$, where $0\le e\le1$ ($e=0$ means no immediate rebound). Find its impulse. Someone proposes that the contact duration is $km/u$, with dimensionless $k$. Assess this proposal, then check the dimensions of impulse.
+
+<details markdown="1"><summary>Hint</summary>
+
+Draw the signed velocities before and after; check system and units separately.
+
+</details>
+
+<details markdown="1"><summary>Solution, checks and recovery</summary>
+
+$$J=m(-eu-u)=-(1+e)mu.$$
+
+$$\begin{aligned}[km/u]&=MTL^{-1}\ne T,\\{}[J]&=MLT^{-1}.\end{aligned}$$
+
+The wall supplies an external impulse, so momentum of the ball alone is not conserved. The duration has wrong dimensions and must be rejected; even matching dimensions would not determine a contact model or dimensionless constant. Recover [impulse and system choice](/alevel/as-further-mathematics/impulse-and-collisions/#wall-model) and [dimensional model limits](/alevel/as-further-mathematics/dimensions/#model-limits), then close this solution and attempt [recovery retry 2](#later-retry-2).
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+#### Recovery retry 1 {#later-retry-1}
+
+**Task (self-written):** For integer $r\ge1$, $U$ is uniform on $\{0,\ldots,r-1\}$ and $V=3U+2$. Derive $E(U)$ and $\operatorname{Var}(U)$ from finite sums, then find $E(V)$ and $\operatorname{Var}(V)$. Is $V$ uniform on all integers from 2 to $3r-1$? Include the single-point case.
+
+<details markdown="1"><summary>Hint</summary>
+
+Write each probability, then weight values and squares separately.
+
+</details>
+
+<details markdown="1"><summary>Solution and check</summary>
+
+$$\begin{aligned}
+ E(U)&=\frac1r\sum_{j=0}^{r-1}j=\frac{r-1}2,\\
+ E(U^2)&=\frac1r\sum_{j=0}^{r-1}j^2\\
+ &=\frac{(r-1)(2r-1)}6,\\
+ \operatorname{Var}(U)&=E(U^2)-[E(U)]^2\\
+ &=\frac{r^2-1}{12},\\
+ E(V)&=3E(U)+2=\frac{3r+1}2,\\
+ \operatorname{Var}(V)&=9\operatorname{Var}(U)=\frac{3(r^2-1)}4.
+ \end{aligned}$$
+
+V has support 2,5,…,3r−1, with probability 1/r each. For r>1 there are gaps, so it is not uniform over the full consecutive set. At r=1 it is constant at 2, with variance zero. The finite-sum reasoning is required; quoting a distribution formula still leaves the derivation difficulty unrepaired.
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+#### Recovery retry 2 {#later-retry-2}
+
+**Task (self-written):** A 0.5 kg ball approaches a fixed wall at speed 4 m s⁻¹ and leaves at speed 1 m s⁻¹. Take the direction away from the wall as positive. Find the signed impulse on the ball, and explain whether its momentum is conserved. A student proposes $J=mv^2$ for impulse, with $v$ a speed. Check this dimensionally; would matching dimensions prove a collision law?
+
+<details markdown="1"><summary>Hint</summary>
+
+Assign both signed velocities first, then check the system boundary and MLT.
+
+</details>
+
+<details markdown="1"><summary>Solution and check</summary>
+
+$$\begin{aligned}
+ u&=-4\ \mathrm{m\,s^{-1}},\\
+ v&=1\ \mathrm{m\,s^{-1}},\\
+ J&=0.5[1-(-4)]\\
+ &=2.5\ \mathrm{N\,s},\\
+ [mv^2]&=ML^2T^{-2},\\
+ {}[J]&=MLT^{-1}.
+ \end{aligned}$$
+
+The positive impulse points away from the wall. The wall exerts an external impulse on the ball, whose momentum alone is not conserved. The proposed dimensions fail; even matching dimensions would only pass a necessary check, not prove a model or determine dimensionless constants. If speeds were used as signed velocities, draw the arrows first, then close this answer and reconstruct the momentum change.
+
+</details>
+
+</section>
+
+### Scope, assessment and sources {#course-sources}
+
+<details markdown="1"><summary>Course identity and reference material</summary>
+
+Scope follows the [9665 specification v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf), §§3.1–3.2: FM01 is FP1; FM02 comprises FPP1, FS1 and FM1. Each paper is 90 minutes, 80 marks, 50% of AS; FM02 has 40 pure, 20 statistics and 20 mechanics marks. FM01 assumes ordinary AS pure mathematics; FM02 assumes ordinary AS and FP1. The 20 lesson groups cover 18 official topics; induction, De Moivre, 3×3 inverses and eigenvalues are not prerequisites or required additions here.
+
+The public FM01 QP body says **Specimen 2018 Morning**; its 2019/v3 filename and the paired MS copyright 2017 do not identify a formal 2019 sitting. FM02 is **June 2024**, examined 16 May 2024, with Version 1.0 Final MS. Lessons identify the QP/MS questions and pages actually read. All new tasks are self-written; their checks are not official marks.
+
+Paper-specific precision and command words determine the evidence needed; calculators do not replace proofs, derivations or graphs. No new calculator hardware or exam-mode verification is claimed. Content and technical checks are recorded separately in the implementation documents; this course awaits student trial and makes no claim of verified learning effectiveness.
+
+</details>
+
+## Archived reference {#reference-notes}
+
+The old notes are retained for lookup and existing bookmarks. Use the learning route above for current lessons and practice.
+
+<details markdown="1">
+<summary>Open the old English reference notes</summary>
 
 
-### Unit FP1: Pure Mathematics
+<h1 id="️-as-level-course-structure">🏗️ AS Level Course Structure</h1>
+
+
+<h2 id="two-compulsory-units">Two Compulsory Units:</h2>
+
+
+<h3 id="unit-fp1-pure-mathematics">Unit FP1: Pure Mathematics</h3>
 
 - **Duration**: 1 hour 30 minutes
 - **Marks**: 80
@@ -27,7 +376,7 @@ redirect_from:
 - **Calculator**: Allowed
 - **Focus**: Advanced algebra, complex numbers, series, calculus
 
-### Unit FPSM1: Pure Mathematics, Statistics and Mechanics
+<h3 id="unit-fpsm1-pure-mathematics-statistics-and-mechanics">Unit FPSM1: Pure Mathematics, Statistics and Mechanics</h3>
 
 - **Duration**: 1 hour 30 minutes
 - **Marks**: 80
@@ -40,12 +389,12 @@ redirect_from:
 
 ---
 
-# 📘 Unit FP1: Pure Mathematics
+<h1 id="-unit-fp1-pure-mathematics">📘 Unit FP1: Pure Mathematics</h1>
 
-## 1. Algebra and Graphs (FP1.1)
+<h2 id="1-algebra-and-graphs-fp11">1. Algebra and Graphs (FP1.1)</h2>
 
 
-### 1.1 Rational Functions - Complete Foundation
+<h3 id="11-rational-functions---complete-foundation">1.1 Rational Functions - Complete Foundation</h3>
 
 
 **Basic Forms:**
@@ -80,8 +429,8 @@ For rational function $$y = \frac{P(x)}{Q(x)}$$:
 
 1. Set $y = k$ to get $$P(x) = kQ(x)$$
 2. Rearrange into quadratic: $Ax^2 + Bx + C = 0$
-3. For real solutions to exist: $B^2 - 4AC ≥ 0$
-4. Solve for range of $k$ to find stationary points
+3. When $A\ne0$, real solutions require $B^2-4AC\geq0$. Treat $A=0$ separately: the equation may become linear, inconsistent or an identity.
+4. Check every candidate against the original denominator restrictions. A repeated admissible root can identify a tangency and hence a stationary value; a boundary caused by a missing point, a limiting value or degree reduction need not be a stationary point.
 
 **Example with Detailed Working:**
 
@@ -111,7 +460,7 @@ Therefore: $k ≤ -1$ or $k ≥ \frac{1}{2}$
 
 Stationary points occur at boundaries: $(1, -1)$ and $(-2, \frac{1}{2})$
 
-### 1.2 Conic Sections - Deep Understanding
+<h3 id="12-conic-sections---deep-understanding">1.2 Conic Sections - Deep Understanding</h3>
 
 
 The four main conic sections have distinct geometric properties:
@@ -142,10 +491,10 @@ For the horizontal major axis described below, assume $a>b>0$.
 
 ---
 
-## 2. Coordinate Geometry (FP1.2)
+<h2 id="2-coordinate-geometry-fp12">2. Coordinate Geometry (FP1.2)</h2>
 
 
-### Locus Problems - Systematic Approach
+<h3 id="locus-problems---systematic-approach">Locus Problems - Systematic Approach</h3>
 
 
 **Distance Formulas:**
@@ -185,9 +534,9 @@ This is the equation of a parabola.
 
 ---
 
-## 3. Complex Numbers (FP1.3)
+<h2 id="3-complex-numbers-fp13">3. Complex Numbers (FP1.3)</h2>
 
-### 3.1 What are Complex Numbers?
+<h3 id="31-what-are-complex-numbers">3.1 What are Complex Numbers?</h3>
 
 
 (Tips: Real Part function and Imaginary Part function looks like $$\Re(z)$$ and $$\Im(z)$$ in computer respectively.)
@@ -198,7 +547,7 @@ This is the equation of a parabola.
 - Real part: $$\Re(z) = x$$
 - Imaginary part: $$\Im(z) = y$$
 
-### 3.2 Basic Operations - Step by Step
+<h3 id="32-basic-operations---step-by-step">3.2 Basic Operations - Step by Step</h3>
 
 
 **Addition:**
@@ -224,7 +573,7 @@ $$\frac{a + bi}{c + di} × \frac{c - di}{c - di} = \frac{(a + bi)(c - di)}{c^2 +
 
 $$\frac{3 + 2i}{1 - i} = \frac{(3 + 2i)(1 + i)}{(1 - i)(1 + i)} = \frac{3 + 3i + 2i + 2i^2}{1 + 1} = \frac{1 + 5i}{2}$$
 
-### 3.3 Different Forms of Complex Numbers
+<h3 id="33-different-forms-of-complex-numbers">3.3 Different Forms of Complex Numbers</h3>
 
 
 **Cartesian Form:**
@@ -250,7 +599,7 @@ For $3 + 4i$:
 For $2(\cos 60° + i\sin 60°)$:
 $$2(0.5 + i\tfrac{\sqrt{3}}{2}) = 1 + i\sqrt{3}$$
 
-### 3.4 Complex Conjugates
+<h3 id="34-complex-conjugates">3.4 Complex Conjugates</h3>
 
 
 **Definition:**
@@ -263,7 +612,7 @@ If $z = x + iy$, then the conjugate $z^* = x - iy$
 - $$z - z^* = 2i\Im(z)$$
 - $$zz^* = \lvert z\rvert^2 = x^2 + y^2$$
 
-### 3.5 Argand Diagram and Loci
+<h3 id="35-argand-diagram-and-loci">3.5 Argand Diagram and Loci</h3>
 
 
 **Basic Loci Equations**
@@ -297,10 +646,10 @@ Fixed angle $θ$ emanating from point $a$
 
 ---
 
-## 4. Roots and Coefficients (FP1.4)
+<h2 id="4-roots-and-coefficients-fp14">4. Roots and Coefficients (FP1.4)</h2>
 
 
-### 4.1 Fundamental Relationships
+<h3 id="41-fundamental-relationships">4.1 Fundamental Relationships</h3>
 
 
 For quadratic equation $$ax^2 + bx + c = 0$$ with roots $α$ and $β$:
@@ -311,7 +660,7 @@ $$α + β = -\frac{b}{a}$$
 **Product of roots:**
 $$αβ = \frac{c}{a}$$
 
-### 4.2 Advanced Manipulations
+<h3 id="42-advanced-manipulations">4.2 Advanced Manipulations</h3>
 
 
 **Common Expressions** (derived from sum and product):
@@ -324,7 +673,7 @@ $$α^4 + β^4 = (α^2 + β^2)^2 - 2(αβ)^2$$
 
 $$\frac{1}{α} + \frac{1}{β} = \frac{α + β}{αβ}$$
 
-### 4.3 Forming New Equations
+<h3 id="43-forming-new-equations">4.3 Forming New Equations</h3>
 
 
 **Process** for equations with transformed roots:
@@ -346,13 +695,13 @@ $$x^2 - (S^3 - 3PS)x + P^3 = 0$$
 
 ---
 
-## 5. Series (FP1.5)
+<h2 id="5-series-fp15">5. Series (FP1.5)</h2>
 
 
-### 5.1 Essential Summation Formulas
+<h3 id="51-essential-summation-formulas">5.1 Essential Summation Formulas</h3>
 
 
-**Must Memorize** these three fundamental results:
+**Use and understand** these three fundamental results:
 
 $$\sum_{r=1}^n r = \frac{n(n+1)}{2}$$
 
@@ -360,7 +709,7 @@ $$\sum_{r=1}^n r^2 = \frac{n(n+1)(2n+1)}{6}$$
 
 $$\sum_{r=1}^n r^3 = \left[\frac{n(n+1)}{2}\right]^2$$
 
-### 5.2 Method of Differences
+<h3 id="52-method-of-differences">5.2 Method of Differences</h3>
 
 
 **Principle:** Express terms as differences of consecutive terms in a sequence
@@ -386,7 +735,7 @@ $$1 - \frac{1}{n+1} = \frac{n}{n+1}$$
 
 ---
 
-### 5.3 Advanced Summation Examples
+<h3 id="53-advanced-summation-examples">5.3 Advanced Summation Examples</h3>
 
 
 **Example 1:**
@@ -403,16 +752,16 @@ $$\sum_{r=1}^n r(r+1)(r+2) = \frac{1}{4}n(n+1)(n+2)(n+3)$$
 
 Find $\sum_{r=1}^n (2r-1)(2r+1)$
 
-**Method:** Use method of differences to show that $(2r-1)(2r+1)$ can be expressed as a telescoping series.
+**Method:** Expand $(2r-1)(2r+1)=4r^2-1$ and use the square-sum formula.
 
-After applying the telescoping technique, the sum simplifies to a manageable form.
+$$\sum_{r=1}^n(2r-1)(2r+1)=\frac{n(4n^2+6n-1)}3.$$
 
 ---
 
-## 6. Trigonometry (FP1.6) - General Solutions
+<h2 id="6-trigonometry-fp16---general-solutions">6. Trigonometry (FP1.6) - General Solutions</h2>
 
 
-### 6.1 Solving Trigonometric Equations
+<h3 id="61-solving-trigonometric-equations">6.1 Solving Trigonometric Equations</h3>
 
 
 **General Solutions Formulas:**
@@ -431,7 +780,7 @@ $$\text{where } α = \tan^{-1}k$$
 
 ---
 
-### 6.2 Exact Values - Must Know
+<h3 id="62-exact-values---must-know">6.2 Exact Values - Must Know</h3>
 
 
 **Standard Angles:**
@@ -446,7 +795,7 @@ $$\text{where } α = \tan^{-1}k$$
 
 ---
 
-### 6.3 Worked Examples
+<h3 id="63-worked-examples">6.3 Worked Examples</h3>
 
 
 **Example 1:** Solve $\sin 2x = \frac{\sqrt{3}}{2}$
@@ -473,10 +822,10 @@ $$x = 2nπ + \frac{3π}{4} - \frac{π}{6} \quad \text{or} \quad x = 2nπ - \frac
 
 ---
 
-## 7. Calculus (FP1.7)
+<h2 id="7-calculus-fp17">7. Calculus (FP1.7)</h2>
 
 
-### 7.1 First Principles Differentiation
+<h3 id="71-first-principles-differentiation">7.1 First Principles Differentiation</h3>
 
 
 **Definition:**
@@ -500,7 +849,7 @@ Therefore, $f'(x) = 2x$
 
 ---
 
-### 7.2 Connected Rates of Change
+<h3 id="72-connected-rates-of-change">7.2 Connected Rates of Change</h3>
 
 
 Using the chain rule to relate rates of change of different variables:
@@ -509,7 +858,7 @@ $$\frac{dy}{dt} = \frac{dy}{dx} × \frac{dx}{dt}$$
 
 **Example:** Pressure-Volume Relationship
 
-If $P = kV^3$ and volume $V$ is changing with time:
+In this hypothetical mathematical model, $P = kV^3$ with constant $k$; this is a stipulated relationship, not a general gas law. If volume $V$ is changing with time:
 
 $$\frac{dP}{dt} = \frac{dP}{dV} × \frac{dV}{dt} = 3kV^2 × \frac{dV}{dt}$$
 
@@ -517,7 +866,7 @@ This shows how the rate of change of pressure depends on both the current volume
 
 ---
 
-### 7.3 Small Changes
+<h3 id="73-small-changes">7.3 Small Changes</h3>
 
 
 For small changes in independent variable, we can estimate changes in dependent variable:
@@ -544,7 +893,7 @@ Therefore, $y$ decreases by approximately $0.032$ when $x$ increases to $5.1$.
 
 ---
 
-### 7.4 Improper Integrals
+<h3 id="74-improper-integrals">7.4 Improper Integrals</h3>
 
 
 **Type 1**: Infinite limits $$\int_a^∞ f(x)dx = \lim\limits_{b \to ∞} \int_a^b f(x)dx$$
@@ -557,34 +906,34 @@ Therefore, $y$ decreases by approximately $0.032$ when $x$ increases to $5.1$.
 
 ---
 
-# 📗 Unit FPSM1: Pure Mathematics, Statistics and Mechanics
+<h1 id="-unit-fpsm1-pure-mathematics-statistics-and-mechanics">📗 Unit FPSM1: Pure Mathematics, Statistics and Mechanics</h1>
 
 
-## FPP1.1: Matrices and Transformations
+<h2 id="fpp11-matrices-and-transformations">FPP1.1: Matrices and Transformations</h2>
 
 
-### 1.1 Matrix Algebra
+<h3 id="11-matrix-algebra">1.1 Matrix Algebra</h3>
 
 
-### Definitions
+<h3 id="definitions">Definitions</h3>
 
 A **matrix** is a rectangular array of numbers. An $m \times n$ matrix has $m$ rows and $n$ columns.
 
-### Addition and Subtraction
+<h3 id="addition-and-subtraction">Addition and Subtraction</h3>
 
 Matrices can be added or subtracted only if they have the same dimensions. Add or subtract corresponding elements.
 
 **Example**:
 $$\begin{pmatrix} 2 & -1 \\ 3 & 0 \end{pmatrix} + \begin{pmatrix} 1 & 4 \\ -2 & 5 \end{pmatrix} = \begin{pmatrix} 3 & 3 \\ 1 & 5 \end{pmatrix}$$
 
-### Scalar Multiplication
+<h3 id="scalar-multiplication">Scalar Multiplication</h3>
 
 Multiply every element by the scalar.
 
 **Example**:
 $$3\begin{pmatrix} 2 & -1 \\ 0 & 4 \end{pmatrix} = \begin{pmatrix} 6 & -3 \\ 0 & 12 \end{pmatrix}$$
 
-### Matrix Multiplication
+<h3 id="matrix-multiplication">Matrix Multiplication</h3>
 
 For $A_{m \times n}$ and $B_{n \times p}$, the product $C = AB$ is $m \times p$ where:
 $$c_{ij} = \sum_{k=1}^{n} a_{ik} b_{kj}$$
@@ -594,14 +943,14 @@ $$c_{ij} = \sum_{k=1}^{n} a_{ik} b_{kj}$$
 **Example**:
 $$\begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix} \begin{pmatrix} 5 & 6 \\ 7 & 8 \end{pmatrix} = \begin{pmatrix} 1\times5 + 2\times7 & 1\times6 + 2\times8 \\ 3\times5 + 4\times7 & 3\times6 + 4\times8 \end{pmatrix} = \begin{pmatrix} 19 & 22 \\ 43 & 50 \end{pmatrix}$$
 
-### Identity Matrix
+<h3 id="identity-matrix">Identity Matrix</h3>
 
 The $n \times n$ identity matrix $I_n$ has 1s on the main diagonal and 0s elsewhere.
 $$I_2 = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}, \quad I_3 = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix}$$
 
 For any matrix $A$, $AI = IA = A$ (provided dimensions are compatible).
 
-### Inverse of a $2 \times 2$ Matrix
+<h3 id="inverse-of-a-2-times-2-matrix">Inverse of a $2 \times 2$ Matrix</h3>
 
 For $A = \begin{pmatrix} a & b \\\\ c & d \end{pmatrix}$:
 - **Determinant**: $\det(A) = ad - bc$
@@ -620,7 +969,7 @@ $\det(A) = 2\times3 - 1\times5 = 6 - 5 = 1$
 
 $$A^{-1} = \frac{1}{1} \begin{pmatrix} 3 & -1 \\ -5 & 2 \end{pmatrix} = \begin{pmatrix} 3 & -1 \\ -5 & 2 \end{pmatrix}$$
 
-### Transpose of a Matrix
+<h3 id="transpose-of-a-matrix">Transpose of a Matrix</h3>
 
 The transpose $A^T$ is obtained by swapping rows and columns.
 - $(A^T)\_{ij} = A\_{ji}$
@@ -629,13 +978,13 @@ The transpose $A^T$ is obtained by swapping rows and columns.
 
 ---
 
-### 1.2 Transformations in the $x$-$y$ Plane
+<h3 id="12-transformations-in-the-x-y-plane">1.2 Transformations in the $x$-$y$ Plane</h3>
 
 
 A $2 \times 2$ matrix $M$ represents a linear transformation mapping a point $(x,y)$ to $(x',y')$:
 $$\begin{pmatrix} x' \\ y' \end{pmatrix} = M \begin{pmatrix} x \\ y \end{pmatrix}$$
 
-### Standard Transformation Matrices
+<h3 id="standard-transformation-matrices">Standard Transformation Matrices</h3>
 
 
 | Transformation | Matrix | Effect on Point |
@@ -658,7 +1007,7 @@ $$\begin{pmatrix} x' \\ y' \end{pmatrix} = M \begin{pmatrix} x \\ y \end{pmatrix
 | Parallel to $x$-axis (factor $k$) | $\begin{pmatrix} 1 & k \\\\ 0 & 1 \end{pmatrix}$ | $(x,y) \to (x+ky, y)$ |
 | Parallel to $y$-axis (factor $k$) | $\begin{pmatrix} 1 & 0 \\\\ k & 1 \end{pmatrix}$ | $(x,y) \to (x, kx+y)$ |
 
-### Combinations of Transformations
+<h3 id="combinations-of-transformations">Combinations of Transformations</h3>
 
 If transformation $T_1$ has matrix $M_1$ and $T_2$ has matrix $M_2$, then applying $T_1$ **followed by** $T_2$ gives:
 $$\begin{pmatrix} x' \\ y' \end{pmatrix} = M_2 M_1 \begin{pmatrix} x \\ y \end{pmatrix}$$
@@ -672,7 +1021,7 @@ Reflection in $x$-axis: $S = \begin{pmatrix} 1 & 0 \\\\ 0 & -1 \end{pmatrix}$
 
 Combined: $SR = \begin{pmatrix} 1 & 0 \\\\ 0 & -1 \end{pmatrix} \begin{pmatrix} 0 & -1 \\\\ 1 & 0 \end{pmatrix} = \begin{pmatrix} 0 & -1 \\\\ -1 & 0 \end{pmatrix}$
 
-### Determinant and Area Scale Factor
+<h3 id="determinant-and-area-scale-factor">Determinant and Area Scale Factor</h3>
 
 For a $2 \times 2$ matrix $M$:
 - $\lvert \det(M) \rvert$ = factor by which area is scaled
@@ -683,10 +1032,10 @@ For a $2 \times 2$ matrix $M$:
 
 ---
 
-### 1.3 Invariant Points and Lines
+<h3 id="13-invariant-points-and-lines">1.3 Invariant Points and Lines</h3>
 
 
-### Invariant Points
+<h3 id="invariant-points">Invariant Points</h3>
 
 A point $\mathbf{x}$ is **invariant** if $M\mathbf{x} = \mathbf{x}$.
 
@@ -700,11 +1049,11 @@ Solve $\begin{pmatrix} -1 & 1 \\\\ 1 & -1 \end{pmatrix} \begin{pmatrix} x \\\\ y
 
 Thus all points on the line $y = x$ are invariant (the mirror line itself).
 
-### Lines of Invariant Points
+<h3 id="lines-of-invariant-points">Lines of Invariant Points</h3>
 
 A **line of invariant points** means every point on that line is individually invariant (maps to itself).
 
-### Invariant Lines
+<h3 id="invariant-lines">Invariant Lines</h3>
 
 A line is **invariant** if every point on it maps to a point on the same line (not necessarily itself). The method below finds invariant lines through the origin.
 
@@ -724,36 +1073,36 @@ Thus the invariant lines through the origin are $y=0$ and $x=0$. More generally,
 
 ---
 
-## FPP1.2: Linear Graphs – Reducing to Linear Form
+<h2 id="fpp12-linear-graphs--reducing-to-linear-form">FPP1.2: Linear Graphs – Reducing to Linear Form</h2>
 
 
-### 2.1 Transforming Non-Linear Relationships
+<h3 id="21-transforming-non-linear-relationships">2.1 Transforming Non-Linear Relationships</h3>
 
 
 When experimental data suggests a relationship of the form $y = kx^n$ or $y = k \cdot a^x$, we can take logarithms to obtain a linear equation.
 
-### Case 1: Power Law $y = kx^n$
+<h3 id="case-1-power-law-y--kxn">Case 1: Power Law $y = kx^n$</h3>
 
 Take natural logs (or $\log_{10}$):
 $$\ln y = \ln k + n \ln x$$
 Plot $\ln y$ against $\ln x$: gradient $= n$, intercept $= \ln k$.
 
-### Case 2: Exponential Law $y = k \cdot a^x$
+<h3 id="case-2-exponential-law-y--k-cdot-ax">Case 2: Exponential Law $y = k \cdot a^x$</h3>
 
 Take logs:
 $$\ln y = \ln k + x \ln a$$
 Plot $\ln y$ against $x$: gradient $= \ln a$, intercept $= \ln k$.
 
-### Case 3: Reciprocal Relationship $\frac{1}{y} = a + \frac{b}{x}$
+<h3 id="case-3-reciprocal-relationship-frac1y--a--fracbx">Case 3: Reciprocal Relationship $\frac{1}{y} = a + \frac{b}{x}$</h3>
 
 Plot $\frac{1}{y}$ against $\frac{1}{x}$: gradient $= b$, intercept $= a$.
 
-### Case 4: Quadratic Form $y^2 = ax^3 + b$
+<h3 id="case-4-quadratic-form-y2--ax3--b">Case 4: Quadratic Form $y^2 = ax^3 + b$</h3>
 
 Plot $y^2$ against $x^3$: gradient $= a$, intercept $= b$.
 
 **Worked Example**:
-Experimental data gives:
+The following constructed data illustrate an exact power law; they are not experimental measurements:
 
 | $x$ | 1 | 2 | 3 | 4 | 5 |
 |-----|---|---|---|---|---|
@@ -774,15 +1123,15 @@ Thus $y = 2.5x^2$.
 
 ---
 
-## FPP1.3: Numerical Methods
+<h2 id="fpp13-numerical-methods">FPP1.3: Numerical Methods</h2>
 
 
-### 3.1 Location of Roots
+<h3 id="31-location-of-roots">3.1 Location of Roots</h3>
 
 
 If $f(x)$ is continuous on $[a,b]$ and $f(a)$ and $f(b)$ have opposite signs, then there is at least one root in $(a,b)$.
 
-### 3.2 Interval Bisection
+<h3 id="32-interval-bisection">3.2 Interval Bisection</h3>
 
 
 **Algorithm**:
@@ -803,9 +1152,9 @@ If $f(x)$ is continuous on $[a,b]$ and $f(a)$ and $f(b)$ have opposite signs, th
 | 4 | 1.25 | 1.375 | 1.3125 | -0.052 |
 | 5 | 1.3125 | 1.375 | 1.34375 | 0.083 |
 
-After 5 iterations, root ≈ 1.324 (accurate to 0.03).
+After five iterations the retained interval is $[1.3125,1.34375]$. Its midpoint is $1.328125$, with absolute error at most $0.015625$ for the root in this bracket. These five steps do not justify reporting $1.324$; continue the table if more precision is required. Continuity gives a root in each sign-changing bracket, and $f'(x)=3x^2-1>0$ on $[1,2]$ makes this root unique.
 
-### 3.3 Linear Interpolation
+<h3 id="33-linear-interpolation">3.3 Linear Interpolation</h3>
 
 
 Use similar triangles to estimate root:
@@ -818,7 +1167,7 @@ $$c = 1 - \frac{(-1)(2-1)}{5 - (-1)} = 1 - \frac{-1}{6} = 1 + \frac{1}{6} = 1.16
 
 This is often faster than bisection but less reliable.
 
-### 3.4 Newton-Raphson Method
+<h3 id="34-newton-raphson-method">3.4 Newton-Raphson Method</h3>
 
 
 **Formula**:
@@ -850,7 +1199,7 @@ Converges rapidly to root ≈ 1.3247.
 
 ---
 
-### 3.5 Euler's Method for Differential Equations
+<h3 id="35-eulers-method-for-differential-equations">3.5 Euler’s Method for Differential Equations</h3>
 
 
 Given $\frac{dy}{dx} = f(x,y)$ with initial condition $(x_0, y_0)$ and step size $h$:
@@ -872,27 +1221,27 @@ Solve $\frac{dy}{dx} = x + y$ with $y(0) = 1$, step $h = 0.1$, find $y(0.3)$.
 
 Thus $y(0.3) \approx 1.362$.
 
-**Accuracy**: Smaller $h$ gives better approximation but more steps.
+**Accuracy**: On a fixed finite interval, Euler's method converges as $h$ tends to zero under suitable smoothness and stability conditions. Reducing $h$ often improves accuracy, but two close approximations alone do not prove an error bound. Check the model, endpoint and accumulated rounding; do not assume that every individual smaller step must improve the answer.
 
 ---
 
-## FS1.1: Bayes' Theorem
+<h2 id="fs11-bayes-theorem">FS1.1: Bayes’ Theorem</h2>
 
 
-### 1.1 Conditional Probability Review
+<h3 id="11-conditional-probability-review">1.1 Conditional Probability Review</h3>
 
 
 $$P(A \mid B) = \frac{P(A \cap B)}{P(B)}$$
 
 **Multiplication Rule**: $P(A \cap B) = P(A \mid B)P(B) = P(B \mid A)P(A)$
 
-### 1.2 Law of Total Probability
+<h3 id="12-law-of-total-probability">1.2 Law of Total Probability</h3>
 
 
 For a partition of the sample space into events $A_1, A_2, \dots, A_n$:
 $$P(B) = \sum_{i=1}^n P(B \mid A_i)P(A_i)$$
 
-### 1.3 Bayes' Theorem
+<h3 id="13-bayes-theorem">1.3 Bayes’ Theorem</h3>
 
 
 $$P(A_i \mid B) = \frac{P(B \mid A_i)P(A_i)}{\sum_{j=1}^n P(B \mid A_j)P(A_j)}$$
@@ -918,7 +1267,7 @@ $P(D) = 0.4\times0.02 + 0.35\times0.03 + 0.25\times0.04 = 0.008 + 0.0105 + 0.01 
 
 $P(A \mid D) = \frac{0.4 \times 0.02}{0.0285} = \frac{0.008}{0.0285} = 0.2807$
 
-### 1.4 Tree Diagrams
+<h3 id="14-tree-diagrams">1.4 Tree Diagrams</h3>
 
 
 Bayes' theorem problems are often solved using tree diagrams:
@@ -929,27 +1278,27 @@ Bayes' theorem problems are often solved using tree diagrams:
 
 ---
 
-## FS1.2: Discrete Uniform Distribution
+<h2 id="fs12-discrete-uniform-distribution">FS1.2: Discrete Uniform Distribution</h2>
 
 
-### 2.1 Definition
+<h3 id="21-definition">2.1 Definition</h3>
 
 
 A discrete random variable $X$ is **uniform** on the consecutive integers $a,a+1,\ldots,b$ if each has the same probability. Let $N=b-a+1$, with integers $a\leq b$.
 
-### 2.2 Probability Mass Function (PMF)
+<h3 id="22-probability-mass-function-pmf">2.2 Probability Mass Function (PMF)</h3>
 
 
 $$P(X=x)=\begin{cases}1/N, & x\in\{a,a+1,\ldots,b\} \\ 0, & \text{otherwise}\end{cases}$$
 
-### 2.3 Cumulative Distribution Function (CDF)
+<h3 id="23-cumulative-distribution-function-cdf">2.3 Cumulative Distribution Function (CDF)</h3>
 
 
 $$F(x)=\begin{cases}0, & x<a \\ (\lfloor x\rfloor-a+1)/N, & a\leq x<b \\ 1, & x\geq b\end{cases}$$
 
 The CDF is a step function; $\lfloor x\rfloor$ is the greatest integer not exceeding $x$.
 
-### 2.4 Mean and Variance
+<h3 id="24-mean-and-variance">2.4 Mean and Variance</h3>
 
 
 $$E(X) = \frac{a+b}{2}$$
@@ -964,42 +1313,42 @@ $$E(Y)=\frac{N-1}{2},\qquad E(Y^2)=\frac{(N-1)(2N-1)}{6}$$
 
 $$\text{Var}(X)=\text{Var}(Y)=\frac{(N-1)(2N-1)}{6}-\left(\frac{N-1}{2}\right)^2=\frac{N^2-1}{12}$$
 
-### 2.5 Probability Calculations
+<h3 id="25-probability-calculations">2.5 Probability Calculations</h3>
 
 
 $$P(c\leq X\leq d)=\frac{d-c+1}{N}\quad\text{for integers }a\leq c\leq d\leq b$$
 
-**Example (self-written / 自拟题)**: $X$ is uniform on $\{2,3,4,5,6,7,8\}$. Find $P(X>5)$.
+**Example (self-written)**: $X$ is uniform on $\{2,3,4,5,6,7,8\}$. Find $P(X>5)$.
 
 The favourable values are $6,7,8$, so $P(X>5)=3/7$. Also, $E(X)=5$ and $\text{Var}(X)=(7^2-1)/12=4$.
 
 ---
 
-## FS1.3: Geometric Distribution
+<h2 id="fs13-geometric-distribution">FS1.3: Geometric Distribution</h2>
 
 
-### 3.1 Definition
+<h3 id="31-definition">3.1 Definition</h3>
 
 
 The geometric distribution models the number of trials needed to achieve the **first success** in a sequence of independent Bernoulli trials, each with probability of success $p$.
 
 **Notation**: $X \sim \text{Geom}(p)$
 
-### 3.2 Probability Mass Function
+<h3 id="32-probability-mass-function">3.2 Probability Mass Function</h3>
 
 
 $$P(X = k) = (1-p)^{k-1}p, \quad k = 1, 2, 3, \dots$$
 
 **Interpretation**: First $k-1$ trials are failures (probability $1-p$ each), then the $k$th trial is a success (probability $p$).
 
-### 3.3 Cumulative Distribution Function
+<h3 id="33-cumulative-distribution-function">3.3 Cumulative Distribution Function</h3>
 
 
 $$P(X \leq k) = 1 - (1-p)^k$$
 
 $$P(X > k) = (1-p)^k$$
 
-### 3.4 Mean and Variance
+<h3 id="34-mean-and-variance">3.4 Mean and Variance</h3>
 
 
 $$E(X) = \frac{1}{p}$$
@@ -1011,7 +1360,7 @@ $$E(X) = \sum_{k=1}^\infty k(1-p)^{k-1}p = p \sum_{k=1}^\infty k(1-p)^{k-1}$$
 Using $\sum_{k=1}^\infty k r^{k-1} = \frac{1}{(1-r)^2}$ for $\lvert r \rvert < 1$:
 $$E(X) = p \cdot \frac{1}{[1-(1-p)]^2} = p \cdot \frac{1}{p^2} = \frac{1}{p}$$
 
-### 3.5 Memoryless Property
+<h3 id="35-memoryless-property">3.5 Memoryless Property</h3>
 
 
 $$P(X > m+n \mid X > m) = P(X > n)$$
@@ -1024,10 +1373,10 @@ $P(X = 4) = (0.8)^3 \times 0.2 = 0.512 \times 0.2 = 0.1024$
 
 ---
 
-## FS1.4: Probability Generating Functions (PGF)
+<h2 id="fs14-probability-generating-functions-pgf">FS1.4: Probability Generating Functions (PGF)</h2>
 
 
-### 4.1 Definition
+<h3 id="41-definition">4.1 Definition</h3>
 
 
 For a discrete random variable $X$ taking non-negative integer values, the **probability generating function** is:
@@ -1035,7 +1384,7 @@ $$G_X(t) = E(t^X) = \sum_{x=0}^\infty t^x P(X = x)$$
 
 $t$ is a dummy variable; the series converges for $\lvert t \rvert \leq 1$.
 
-### 4.2 Properties
+<h3 id="42-properties">4.2 Properties</h3>
 
 
 **Property 1**: $G_X(1) = \sum_{x=0}^\infty P(X = x) = 1$
@@ -1053,7 +1402,7 @@ $G_X'(t) = \sum_{x=0}^\infty x t^{x-1} P(X = x)$, so $G_X'(1) = \sum x P(X = x) 
 $G_X''(t) = \sum_{x=0}^\infty x(x-1) t^{x-2} P(X = x)$, so $G_X''(1) = E(X(X-1))$
 Then $\text{Var}(X) = E(X^2) - [E(X)]^2 = E(X(X-1)) + E(X) - [E(X)]^2$
 
-### 4.3 PGFs for Common Distributions
+<h3 id="43-pgfs-for-common-distributions">4.3 PGFs for Common Distributions</h3>
 
 
 | Distribution | PGF $G_X(t)$ |
@@ -1067,7 +1416,7 @@ Then $\text{Var}(X) = E(X^2) - [E(X)]^2 = E(X(X-1)) + E(X) - [E(X)]^2$
 **Derivation for Poisson**:
 $$G_X(t) = \sum_{x=0}^\infty t^x \frac{e^{-\lambda}\lambda^x}{x!} = e^{-\lambda} \sum_{x=0}^\infty \frac{(\lambda t)^x}{x!} = e^{-\lambda} e^{\lambda t} = e^{\lambda(t-1)}$$
 
-### 4.4 Sum of Independent Random Variables
+<h3 id="44-sum-of-independent-random-variables">4.4 Sum of Independent Random Variables</h3>
 
 
 If $X$ and $Y$ are independent discrete random variables, then:
@@ -1081,10 +1430,10 @@ Thus $X+Y \sim \text{Po}(\lambda_1+\lambda_2)$.
 
 ---
 
-## FS1.5: Linear Combinations of Discrete Random Variables
+<h2 id="fs15-linear-combinations-of-discrete-random-variables">FS1.5: Linear Combinations of Discrete Random Variables</h2>
 
 
-### 5.1 Expectation of a Linear Combination
+<h3 id="51-expectation-of-a-linear-combination">5.1 Expectation of a Linear Combination</h3>
 
 
 For constants $a$ and $b$:
@@ -1093,7 +1442,7 @@ $$E(aX + bY) = aE(X) + bE(Y)$$
 More generally:
 $$E\left(\sum_{i=1}^n a_i X_i\right) = \sum_{i=1}^n a_i E(X_i)$$
 
-### 5.2 Variance of a Linear Combination
+<h3 id="52-variance-of-a-linear-combination">5.2 Variance of a Linear Combination</h3>
 
 
 For $Z = aX + bY$:
@@ -1102,7 +1451,7 @@ $$\text{Var}(Z) = a^2\text{Var}(X) + b^2\text{Var}(Y) + 2ab\,\text{Cov}(X,Y)$$
 If $X$ and $Y$ are **independent**, $\text{Cov}(X,Y) = 0$:
 $$\text{Var}(aX + bY) = a^2\text{Var}(X) + b^2\text{Var}(Y)$$
 
-### 5.3 Covariance
+<h3 id="53-covariance">5.3 Covariance</h3>
 
 
 $$\text{Cov}(X,Y) = E[(X - \mu_X)(Y - \mu_Y)] = E(XY) - E(X)E(Y)$$
@@ -1113,7 +1462,7 @@ Properties:
 - $\text{Cov}(aX, bY) = ab\,\text{Cov}(X,Y)$
 - If $X$ and $Y$ are independent, $\text{Cov}(X,Y) = 0$ (converse not necessarily true)
 
-### 5.4 Correlation Coefficient
+<h3 id="54-correlation-coefficient">5.4 Correlation Coefficient</h3>
 
 
 $$\rho(X,Y) = \frac{\text{Cov}(X,Y)}{\sqrt{\text{Var}(X)\text{Var}(Y)}}$$
@@ -1135,10 +1484,10 @@ $= 4\times4 + 9\times9 + 12\times3 = 16 + 81 + 36 = 133$
 
 ---
 
-## FM1.1: Constant Velocity in Two Dimensions
+<h2 id="fm11-constant-velocity-in-two-dimensions">FM1.1: Constant Velocity in Two Dimensions</h2>
 
 
-### 1.1 Vector Representation
+<h3 id="11-vector-representation">1.1 Vector Representation</h3>
 
 
 Position vector: $\mathbf{r} = x\mathbf{i} + y\mathbf{j} = \begin{pmatrix} x \\\\ y \end{pmatrix}$
@@ -1147,14 +1496,14 @@ Velocity vector: $\mathbf{v} = \frac{d\mathbf{r}}{dt} = v_x\mathbf{i} + v_y\math
 
 For constant velocity: $\mathbf{r}(t) = \mathbf{r}_0 + \mathbf{v}t$
 
-### 1.2 Speed and Distance
+<h3 id="12-speed-and-distance">1.2 Speed and Distance</h3>
 
 
 Speed = $\lvert \mathbf{v} \rvert = \sqrt{v_x^2 + v_y^2}$
 
 Distance travelled = $\lvert \mathbf{v} \rvert \times t$
 
-### 1.3 Relative Velocity
+<h3 id="13-relative-velocity">1.3 Relative Velocity</h3>
 
 
 Velocity of $A$ relative to $B$:
@@ -1172,7 +1521,7 @@ $\mathbf{v}_{AB} = (10-5)\mathbf{i} + (0-5)\mathbf{j} = 5\mathbf{i} - 5\mathbf{j
 
 Speed = $\sqrt{5^2 + (-5)^2} = \sqrt{50} = 5\sqrt{2}$ km/h
 
-### 1.4 Interception Problems
+<h3 id="14-interception-problems">1.4 Interception Problems</h3>
 
 
 For $A$ to intercept $B$, there exists $t > 0$ such that:
@@ -1186,9 +1535,9 @@ Position after $t$:
 $A$: $(ut, 0)$
 $B$: $(100, 10t)$
 
-For interception: $ut = 100$ and $0 = 10t$ ⇒ $t = 0$ (trivial). No interception possible because $A$ has no $y$-component. This shows interception requires velocity components to align.
+For interception: $ut = 100$ and $0 = 10t$ ⇒ $t=0$ from the y equation, which fails the x equation. No interception is possible: both position components must agree at the same valid time; path geometry alone is insufficient.
 
-### 1.5 Closest Approach
+<h3 id="15-closest-approach">1.5 Closest Approach</h3>
 
 
 For two particles moving with constant velocities, the **squared distance** between them is a quadratic function of time (possibly with a zero quadratic coefficient). Minimise it over the allowed time interval, checking its endpoints as well as any stationary point.
@@ -1210,10 +1559,10 @@ Minimum occurs at $t = 0$ (since $t \geq 0$): $d = \sqrt{100} = 10$
 
 ---
 
-## FM1.2: Dimensional Analysis
+<h2 id="fm12-dimensional-analysis">FM1.2: Dimensional Analysis</h2>
 
 
-### 2.1 Base Dimensions
+<h3 id="21-base-dimensions">2.1 Base Dimensions</h3>
 
 
 In mechanics, all physical quantities can be expressed in terms of three base dimensions:
@@ -1224,7 +1573,7 @@ In mechanics, all physical quantities can be expressed in terms of three base di
 | Length | $L$ |
 | Time | $T$ |
 
-### 2.2 Derived Dimensions
+<h3 id="22-derived-dimensions">2.2 Derived Dimensions</h3>
 
 
 | Quantity | Formula | Dimensions |
@@ -1241,7 +1590,7 @@ In mechanics, all physical quantities can be expressed in terms of three base di
 | Pressure | $\frac{F}{A}$ | $ML^{-1}T^{-2}$ |
 | Density | $\frac{m}{V}$ | $ML^{-3}$ |
 
-### 2.3 Dimensional Homogeneity
+<h3 id="23-dimensional-homogeneity">2.3 Dimensional Homogeneity</h3>
 
 
 In any valid physical equation, both sides must have the same dimensions. This principle can be used to:
@@ -1249,7 +1598,7 @@ In any valid physical equation, both sides must have the same dimensions. This p
 - Derive relationships between quantities
 - Determine units
 
-### 2.4 Deriving Formulae by Dimensional Analysis
+<h3 id="24-deriving-formulae-by-dimensional-analysis">2.4 Deriving Formulae by Dimensional Analysis</h3>
 
 
 **Method**:
@@ -1285,21 +1634,21 @@ $T$: $-1 = -2a$ ⇒ $a = \frac{1}{2}$
 
 Then $b = -a = -\frac{1}{2}$
 
-Thus $v = k \sqrt{\frac{T}{\mu}}$. Experiment shows $k = 1$.
+Thus $v = k \sqrt{\frac{T}{\mu}}$. An ideal flexible-string wave model gives $k=1$; dimensional analysis alone cannot establish that model or coefficient.
 
 ---
 
-## FM1.3: Collisions in One Dimension
+<h2 id="fm13-collisions-in-one-dimension">FM1.3: Collisions in One Dimension</h2>
 
 
-### 3.1 Momentum
+<h3 id="31-momentum">3.1 Momentum</h3>
 
 
 Linear momentum: $\mathbf{p} = m\mathbf{v}$ (vector quantity)
 
 Units: kg·m/s or N·s
 
-### 3.2 Impulse
+<h3 id="32-impulse">3.2 Impulse</h3>
 
 
 **Impulse** = change in momentum:
@@ -1313,14 +1662,14 @@ $$\mathbf{I} = \int_{t_1}^{t_2} \mathbf{F} \, dt$$
 
 Impulse is a vector; its direction is the same as the change in momentum.
 
-### 3.3 Conservation of Momentum
+<h3 id="33-conservation-of-momentum">3.3 Conservation of Momentum</h3>
 
 
 For a system of particles with no external impulse (or when external forces are negligible), total momentum is conserved:
 
 $$m_1\mathbf{u}_1 + m_2\mathbf{u}_2 = m_1\mathbf{v}_1 + m_2\mathbf{v}_2$$
 
-### 3.4 Newton's Experimental Law (Coefficient of Restitution)
+<h3 id="34-newtons-experimental-law-coefficient-of-restitution">3.4 Newton’s Experimental Law (Coefficient of Restitution)</h3>
 
 
 For two particles colliding along the line of centres:
@@ -1338,7 +1687,7 @@ where:
 | $0 < e < 1$ | Partially elastic (some KE lost) |
 | $e = 0$ | Perfectly inelastic: $v_1=v_2$ immediately after impact; permanent adhesion is not implied |
 
-### 3.5 Impact with a Fixed Surface
+<h3 id="35-impact-with-a-fixed-surface">3.5 Impact with a Fixed Surface</h3>
 
 
 For a particle hitting a fixed smooth surface perpendicularly:
@@ -1352,7 +1701,7 @@ With upwards positive, velocity just before impact: $u=-\sqrt{2gh}$ (downwards)
 Velocity just after impact: $v = e\sqrt{2gh}$ (upwards)
 Height after bounce: $h_1 = \frac{v^2}{2g} = e^2 h$
 
-### 3.6 Worked Example: Two-Particle Collision
+<h3 id="36-worked-example-two-particle-collision">3.6 Worked Example: Two-Particle Collision</h3>
 
 
 Particle $A$ of mass 2 kg moves at 3 m/s towards particle $B$ of mass 3 kg moving at 1 m/s in the same direction. They collide. Coefficient of restitution $e = 0.5$. Find velocities after collision.
@@ -1385,10 +1734,10 @@ Both move in original direction.
 
 ---
 
-## Key Formulae Summary
+<h2 id="key-formulae-summary">Key Formulae Summary</h2>
 
 
-### Pure Mathematics
+<h3 id="pure-mathematics">Pure Mathematics</h3>
 
 
 | Topic | Formula |
@@ -1399,7 +1748,7 @@ Both move in original direction.
 | Newton-Raphson | $x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$ |
 | Euler's method | $y_{n+1} = y_n + h f(x_n, y_n)$ |
 
-### Statistics
+<h3 id="statistics">Statistics</h3>
 
 
 | Topic | Formula |
@@ -1417,7 +1766,7 @@ Both move in original direction.
 | Covariance | $\text{Cov}(X,Y) = E(XY) - E(X)E(Y)$ |
 | Correlation | $\rho = \frac{\text{Cov}(X,Y)}{\sqrt{\text{Var}(X)\text{Var}(Y)}}$ |
 
-### Mechanics
+<h3 id="mechanics">Mechanics</h3>
 
 
 | Topic | Formula |
@@ -1428,3 +1777,5 @@ Both move in original direction.
 | Momentum conservation | $m_1u_1 + m_2u_2 = m_1v_1 + m_2v_2$ |
 | Newton's law | $v_2 - v_1 = -e(u_2 - u_1)$ |
 | Impact with wall | $v=-eu$, with signed velocities along the same axis |
+
+</details>

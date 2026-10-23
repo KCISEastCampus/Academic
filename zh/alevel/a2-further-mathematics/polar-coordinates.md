@@ -7,8 +7,9 @@ subject: a2-further-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-further-mathematics/polar-coordinates/
 permalink: /zh/alevel/a2-further-mathematics/polar-coordinates/
-toc_headings: h2, h3, h4
+toc_headings: "#method, #coordinates, #equations, #sketching, #intersections, #areas, #practice, #diagnose-and-retry, #later-review, #quick-reference"
 study_page: true
+reading_layout: true
 ---
 
 [高等纯数学](/zh/alevel/a2-further-mathematics/) · FP2.3 极坐标（polar coordinates）
@@ -21,7 +22,7 @@ study_page: true
 
 教材：*International A Level Further Mathematics*，第 21 章，第 21.1–21.3 节，印刷页码 256–266；复习与练习见第 267–269 页。
 
-**开始前：**复习[模与辐角](/zh/alevel/a2-further-mathematics/de-moivres-theorem/#powers-and-proof)、[三角函数](/zh/alevel/a2-mathematics/trigonometric-functions-and-formulae/)和[积分](/zh/alevel/a2-mathematics/integration/)。你应掌握扇形面积、二倍角恒等式，并能根据点所在的象限确定角度。全课使用**弧度（radians）**。
+**开始前：**象限或模不熟时，回补 [AS 模与辐角](/zh/alevel/as-further-mathematics/complex-numbers-and-roots/#geometry)，然后返回[坐标转换](#coordinates)检验符号。面积计算需要[二倍角公式](/zh/alevel/a2-mathematics/trigonometric-functions-and-formulae/#double-angle-formulae)、[化简后逐项积分](/zh/alevel/a2-mathematics/integration/#simplify-and-integrate)和[定积分代上下限](/zh/alevel/a2-mathematics/integration/#definite-integrals)；第 8 题还需[换元时改变积分限](/zh/alevel/a2-mathematics/integration/#substitution)。补完后回到[面积例题](#areas)，先解释所选角域。还需会用圆扇形面积。全课用**弧度**。
 
 **题目身份：**除明确标出官方原题或教学改编的题目外，本课例题与练习均为自拟教学题，不分配官方分值。
 
@@ -56,6 +57,8 @@ r^2&=x^2+y^2.
 
 相差 $2\pi$ 整数倍的角度表示同一个点。题目要求主值（principal value）时，使用 $-\pi<\theta\le\pi$。在极点处，角度不唯一。
 
+<section class="worked-example" markdown="1">
+
 ### 例 1：双向转换点的坐标 {#example-1--convert-points-in-both-directions}
 
 **Question:** convert $P=(4,\frac\pi6)$ from polar to Cartesian coordinates. Convert $Q=(-1,-\sqrt3)$ from Cartesian to polar coordinates, using a principal angle.
@@ -80,9 +83,13 @@ $$\boxed{Q=\left(2,-\frac{2\pi}{3}\right)
 
 **检验：**$2\cos(-\frac{2\pi}{3})=-1$，且 $2\sin(-\frac{2\pi}{3})=-\sqrt3$。若取 $\frac\pi3$，则两个坐标都会为正。
 
+</section>
+
 ## 方程 {#equations}
 
 转换方程时，应保留 $\theta$ 的允许范围。直角坐标方程描述的曲线可能比限制了角度定义域的极坐标方程更完整。
+
+<section class="worked-example" markdown="1">
 
 ### 例 2：经过极点的圆 {#example-2--a-circle-through-the-pole}
 
@@ -110,6 +117,10 @@ $$x^2-4x+y^2=0
 
 **常见错误：**将方程除以 $r$ 后，忘记单独检查极点。
 
+</section>
+
+<section class="worked-example" markdown="1">
+
 ### 例 3：直线 {#example-3--a-straight-line}
 
 **Question:** find the Cartesian equation of
@@ -134,6 +145,8 @@ $$\boxed{x+\sqrt3\,y=4.}$$
 
 **检验：**直线与坐标轴的交点为 $(4,0)$ 和 $(0,\frac4{\sqrt3})$。直线上的每个点都满足 $\frac12x+\frac{\sqrt3}{2}y=2>0$，符合要求。
 
+</section>
+
 ## 绘制草图 {#sketching}
 
 先查看题目指定的角度定义域。列表前，先确定 $r>0$ 的范围。
@@ -145,6 +158,8 @@ $$\boxed{x+\sqrt3\,y=4.}$$
 - 若将 $\theta$ 替换为 $\pi-\theta$ 后，方程与定义域均不变，则曲线关于直线 $\theta=\frac\pi2$ 对称。
 
 检查 $r$ 的零点和最大值。选取简单角度描点，再用平滑曲线连接。**环瓣**从极点出发，最终回到极点。若某个区间上 $r<0$ 或函数无定义，不要跨过这个区间将两部分连接起来。
+
+<section class="worked-example" markdown="1">
 
 ### 例 4：三个环瓣 {#example-4--three-loops}
 
@@ -173,6 +188,10 @@ $$\left(-\frac{5\pi}{6},-\frac\pi2\right)
 它们的中间角度分别为 $-\frac{2\pi}{3}$ 和 $\frac{2\pi}{3}$。共有三个全等的环瓣，每个环瓣的最大半径均为 $2$。
 
 **检验：**将 $\theta$ 增加 $\frac{2\pi}{3}$ 后，$\cos3\theta$ 不变，因此三个环瓣可通过旋转相互重合。
+
+</section>
+
+<section class="worked-example" markdown="1">
 
 ### 例 5：排除负半径部分 {#example-5--exclude-a-negative-radius-part}
 
@@ -203,11 +222,15 @@ $$\boxed{-\frac{2\pi}{3}<\theta<\frac{2\pi}{3}.}$$
 
 **检验：**当 $\theta=\pi$ 时，公式给出 $r=-1$。按照本课程约定，不应在草图上画出这个点。某些绘图工具会用负半径绘制额外的内环瓣；应将它排除。
 
+</section>
+
 ## 交点 {#intersections}
 
 对于半径为正的两条曲线 $r=f(\theta)$ 和 $r=g(\theta)$，同一射线上的非极点交点满足 $f(\theta)=g(\theta)$。只保留同时属于两个定义域且满足 $r>0$ 的解。
 
 **单独检查极点。**两条曲线可能在不同角度下经过极点，因此只在同一角度令半径相等，可能漏掉这个交点。
+
+<section class="worked-example" markdown="1">
 
 ### 例 6：交点与弦长 {#example-6--intersections-and-a-chord}
 
@@ -231,6 +254,8 @@ $$\boxed{AB=2\sqrt3.}$$
 
 **检验：**这条弦（chord）为竖直线段，长度为 $2(2\sin\frac\pi3)$。极点位于第一条曲线上，但不在圆上，因此不是另一个交点。
 
+</section>
+
 ## 面积 {#areas}
 
 若 $r=f(\theta)$ 围成的区域由射线从 $\theta=\alpha$ 扫过至 $\theta=\beta$，则该区域的面积为
@@ -240,6 +265,38 @@ $$\boxed{A=\frac12\int_\alpha^\beta r^2\,\mathrm d\theta.}$$
 一个很窄的角度小片近似为扇形，其面积为 $\frac12r^2\,\mathrm d\theta$。将这些小片的面积相加，就得到上述积分。
 
 所选区间必须使曲线的半径非负，并且所求区域恰好被扫过**一次**。对于完整的环瓣，应找出它在极点处的两个端点。即使将 $r$ 平方，也不能使负半径区间符合课程约定。
+
+<section class="lesson-check" markdown="1">
+
+### 先决定角域和被积函数 {#supported-area-setup}
+
+**Supported attempt (self-written):** For $r=3\cos2\theta$, identify the loop around the initial line. Write its two endpoint angles and its area integral; do not evaluate it yet.
+
+<details markdown="1">
+<summary>提示</summary>
+
+先找紧邻零角两侧的零半径，再判断其间半径符号。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检验</summary>
+
+$$2\theta=\pm\frac\pi2,\qquad -\frac\pi4\le\theta\le\frac\pi4,
+\qquad A=\frac12\int_{-\pi/4}^{\pi/4}9\cos^22\theta\,\mathrm d\theta.$$
+
+区间内部半径为正；下一例会示范怎样处理平方三角函数和两个端点。
+
+</details>
+
+</section>
+
+积分时先把平方化为倍角项；这也说明前面的常系数怎样合并。每个原函数仍须除以内层角系数：
+
+$$\cos^2u=\frac{1+\cos2u}{2},\qquad
+\sin^2u=\frac{1-\cos2u}{2}.$$
+
+<section class="worked-example" markdown="1">
 
 ### 例 7：一个环瓣的面积 {#example-7--area-of-one-loop}
 
@@ -252,12 +309,17 @@ A
 &=\frac12\int_{-\pi/6}^{\pi/6}4\cos^23\theta\,\mathrm d\theta\\
 &=\int_{-\pi/6}^{\pi/6}(1+\cos6\theta)\,\mathrm d\theta\\
 &=\left[\theta+\frac16\sin6\theta\right]_{-\pi/6}^{\pi/6}\\
-&=\boxed{\frac\pi3}.
+&=\left(\frac\pi6+\frac{\sin\pi}{6}\right)
+-\left(-\frac\pi6+\frac{\sin(-\pi)}{6}\right)=\boxed{\frac\pi3}.
 \end{aligned}$$
 
 **检验：**利用对称性，将 $0$ 到 $\frac\pi6$ 之间的面积乘以二，也会得到同一答案。三个环瓣的总面积为 $\pi$。
 
 **常见错误：**求一个环瓣的面积时使用整周角，或在 $r$ 为负的区间上积分。
+
+</section>
+
+<section class="worked-example" markdown="1">
 
 ### 例 8：螺线围成的扇形区域 {#example-8--a-spiral-sector}
 
@@ -268,6 +330,7 @@ A
 $$\begin{aligned}
 A
 &=\frac12\int_{\pi/2}^{\pi}(2\theta)^2\,\mathrm d\theta\\
+&=2\int_{\pi/2}^{\pi}\theta^2\,\mathrm d\theta\\
 &=2\left[\frac{\theta^3}{3}\right]_{\pi/2}^{\pi}\\
 &=\frac23\left(\pi^3-\frac{\pi^3}{8}\right)\\
 &=\boxed{\frac{7\pi^3}{12}}.
@@ -275,9 +338,13 @@ A
 
 **检验：**该区域位于第二象限。题目指定的第一条半径方向为 $\theta=\frac\pi2$，因此积分不能从零开始。
 
+</section>
+
 ### 公共区域与分段边界 {#common-regions}
 
 公共区域在每条射线上取较小半径；若边界曲线发生变化，应在交点对应的角度处分段积分。
+
+<section class="worked-example" markdown="1">
 
 #### 例 9：边界曲线发生变化 {#example-9--the-bounding-curve-changes}
 
@@ -315,17 +382,26 @@ A
 
 $$\begin{aligned}
 A_1
+&=\frac12\int_0^{\pi/3}3\sin^2\theta\,\mathrm d\theta
+=\frac34\int_0^{\pi/3}(1-\cos2\theta)\,\mathrm d\theta\\
 &=\frac34\left[\theta-\frac12\sin2\theta\right]_0^{\pi/3}\\
-&=\frac\pi4-\frac{3\sqrt3}{16}.
+&=\frac34\left[\left(\frac\pi3-\frac12\sin\frac{2\pi}{3}\right)
+-\left(0-\frac12\sin0\right)\right]\\
+&=\frac34\left(\frac\pi3-\frac{\sqrt3}{4}\right)
+=\frac\pi4-\frac{3\sqrt3}{16}.
 \end{aligned}$$
 
 第二部分先展开平方，再使用 $\cos^2\theta=\frac12(1+\cos2\theta)$：
 
 $$\begin{aligned}
 A_2
-&=\frac12\left[\frac32\theta+2\sin\theta
-+\frac14\sin2\theta\right]_{\pi/3}^{\pi}\\
-&=\frac\pi2-\frac{9\sqrt3}{16}.
+&=\frac12\int_{\pi/3}^{\pi}(1+2\cos\theta+\cos^2\theta)\,\mathrm d\theta\\
+&=\int_{\pi/3}^{\pi}\left(\frac34+\cos\theta+\frac14\cos2\theta\right)\,\mathrm d\theta\\
+&=\left[\frac34\theta+\sin\theta+\frac18\sin2\theta\right]_{\pi/3}^{\pi}\\
+&=\left(\frac{3\pi}{4}+\sin\pi+\frac18\sin2\pi\right)
+-\left(\frac\pi4+\sin\frac\pi3+\frac18\sin\frac{2\pi}{3}\right)\\
+&=\frac{3\pi}{4}-\left(\frac\pi4+\frac{\sqrt3}{2}+\frac{\sqrt3}{16}\right)
+=\frac\pi2-\frac{9\sqrt3}{16}.
 \end{aligned}$$
 
 因此
@@ -333,6 +409,8 @@ A_2
 $$\boxed{A=A_1+A_2=\frac{3\pi}{4}-\frac{3\sqrt3}{4}.}$$
 
 **检验：**公共区域的面积小于整个圆的面积，后者为 $\frac{3\pi}{4}$。在每条射线上，公共区域均取**较小的半径**。
+
+</section>
 
 ### 两曲线之间的区域 {#area-between-curves}
 
@@ -345,7 +423,9 @@ $$A=\frac12\int_\alpha^\beta
 
 ## 练习 {#practice}
 
-先独立尝试每题，再展开提示或解答。第 1–5 题是**为本课编写的原创练习题**。第 6–8 题保留所提供教材中转载的 AQA 题干与分值。
+先独立尝试每题，再展开提示或解答。第 1–5 题是**为本课编写的原创练习题**。第 6–7 题保留所提供教材中转载的 AQA 题干与分值；第 8 题因题图重绘标为改编，所列 6 分属于原题。
+
+<section class="lesson-check" markdown="1">
 
 ### 第 1 题：坐标与象限 {#question-1--coordinates-and-a-quadrant}
 
@@ -380,6 +460,10 @@ y&=3\sin\frac{5\pi}{6}=\frac32.
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### 第 2 题：转换方程并保留定义域 {#question-2--convert-and-keep-the-domain}
 
 Find a polar equation for $xy=2$. State where positive radii are possible in $-\pi<\theta\le\pi$.
@@ -412,6 +496,10 @@ $$\boxed{-\pi<\theta<-\frac\pi2
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### 第 3 题：正半径环瓣 {#question-3--positive-radius-loops}
 
 Sketch $r=2\sin2\theta$ for $0\le\theta\le2\pi$, using this course's radius convention. State the number of loops and find the area of one loop.
@@ -441,12 +529,17 @@ A
 &=\frac12\int_0^{\pi/2}4\sin^22\theta\,\mathrm d\theta\\
 &=\int_0^{\pi/2}(1-\cos4\theta)\,\mathrm d\theta\\
 &=\left[\theta-\frac14\sin4\theta\right]_0^{\pi/2}\\
-&=\boxed{\frac\pi2}.
+&=\left(\frac\pi2-\frac14\sin2\pi\right)-\left(0-\frac14\sin0\right)
+=\boxed{\frac\pi2}.
 \end{aligned}$$
 
 **检验：**两个环瓣可通过旋转 $\pi$ 相互重合，因此总面积为 $\pi$。画出四个环瓣就包含了负半径，不符合这里使用的约定。
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### 第 4 题：圆的一部分 {#question-4--part-of-a-circle}
 
@@ -465,17 +558,23 @@ Find the area swept by $r=4\cos\theta$ between $\theta=0$ and $\theta=\frac\pi4$
 $$\begin{aligned}
 A
 &=\frac12\int_0^{\pi/4}16\cos^2\theta\,\mathrm d\theta\\
+&=4\int_0^{\pi/4}(1+\cos2\theta)\,\mathrm d\theta\\
 &=4\left[\theta+\frac12\sin2\theta\right]_0^{\pi/4}\\
-&=\boxed{\pi+2}.
+&=4\left[\left(\frac\pi4+\frac12\sin\frac\pi2\right)
+-\left(0+\frac12\sin0\right)\right]=\boxed{\pi+2}.
 \end{aligned}$$
 
 **检验：**整个圆的面积为 $4\pi$，上半圆的面积为 $2\pi$。指定区域的面积小于这两个面积。这里的角度以极点为顶点量取，并非以圆心为顶点。
 
 </details>
 
-### 第 5 题：不同角度下的极点交点 {#question-5--a-pole-intersection-at-different-angles}
+</section>
 
-The circles $r=2\cos\theta$ and $r=2\sin\theta$ meet at the pole and at one other point. Find that point and the area inside both circles.
+<section class="lesson-check" markdown="1">
+
+### 第 5 题：两条曲线 {#question-5--a-pole-intersection-at-different-angles}
+
+For the curves $r=2\cos\theta$ and $r=2\sin\theta$, find all intersection points and justify that none are missing. Sketch both curves, shade their common region and find its area using the course radius convention.
 
 <details markdown="1">
 <summary>提示</summary>
@@ -500,22 +599,36 @@ $$\begin{aligned}
 
 当 $0<\theta<\frac\pi4$ 时，$2\sin\theta$ 较小；当 $\frac\pi4<\theta<\frac\pi2$ 时，$2\cos\theta$ 较小。因此
 
+
+
+草图应显示圆心在 (1,0)、(0,1) 的两个单位圆，阴影为第一象限的透镜形公共区域；交点标 O 和 (1,1)。除极点外，两条曲线同时有正半径的角域只在第一象限，正切在那里严格递增，等半径方程只有上述一个解，因此无遗漏。
+
 $$\begin{aligned}
 A
 &=\frac12\int_0^{\pi/4}4\sin^2\theta\,\mathrm d\theta\\
 &\quad+\frac12\int_{\pi/4}^{\pi/2}4\cos^2\theta\,\mathrm d\theta\\
-&=\left[\theta-\frac12\sin2\theta\right]_0^{\pi/4}\\
-&\quad+\left[\theta+\frac12\sin2\theta\right]_{\pi/4}^{\pi/2}\\
-&=\boxed{\frac\pi2-1}.
+&=\int_0^{\pi/4}(1-\cos2\theta)\,\mathrm d\theta
++\int_{\pi/4}^{\pi/2}(1+\cos2\theta)\,\mathrm d\theta\\
+&=\left[\theta-\frac12\sin2\theta\right]_0^{\pi/4}
++\left[\theta+\frac12\sin2\theta\right]_{\pi/4}^{\pi/2}\\
+&=\left[\left(\frac\pi4-\frac12\sin\frac\pi2\right)-(0-0)\right]\\
+&\quad+\left[\left(\frac\pi2+\frac12\sin\pi\right)
+-\left(\frac\pi4+\frac12\sin\frac\pi2\right)\right]\\
+&=\left(\frac\pi4-\frac12\right)+\left(\frac\pi4-\frac12\right)
+=\boxed{\frac\pi2-1}.
 \end{aligned}$$
 
 **检验：**每个圆的半径均为 $1$，因此公共面积必须小于 $\pi$。两部分积分区域关于直线 $y=x$ 对称，所以面积相等。
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### 第 6 题：AQA——直角坐标方程 {#question-6--aqa-a-cartesian-equation}
 
-**来源：**AQA Mathematics 6360，MFP3，June 2014，原卷第 3 题。原题分值：**4 marks**。教材索引：Chapter 21, practice examination question 2, printed p. 267。[Question paper, Q3 (PDF p. 6)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202014%20QP%20-%20FP3%20AQA.PDF#page=6); [AQA mark scheme, Q3 (PDF p. 5)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202014%20MS%20-%20FP3%20AQA.PDF#page=5). 本轮已读取题干及配套评分材料（2026-10-22）；链接为 PMT 托管的 AQA 编写材料，部分原卷为压缩排版版本。
+**来源：**AQA Mathematics 6360，MFP3，June 2014，原卷第 3 题。原题分值：**4 marks**。教材索引：Chapter 21, practice examination question 2, printed p. 267。[Question paper, Q3 (PDF p. 6)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202014%20QP%20-%20FP3%20AQA.PDF#page=6); [AQA mark scheme, Q3 (PDF p. 5)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202014%20MS%20-%20FP3%20AQA.PDF#page=5). 本轮重新读取题干及配套评分材料（2026-10-23）；链接为 PMT 托管的 AQA 编写材料，部分原卷为压缩排版版本。
 
 A curve has polar equation $r(4-3\cos\theta)=4$. Find its Cartesian equation in the form $y^2=f(x)$.
 
@@ -551,9 +664,13 @@ $$\boxed{y^2=1+\frac32x-\frac7{16}x^2.}$$
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### 第 7 题：AQA——以原点为极点的圆 {#question-7--aqa-a-circle-using-the-origin-as-pole}
 
-**来源：**AQA Mathematics 6360，MFP3，June 2013，原卷第 2 题。原题分值：**4 marks**。教材索引：Chapter 21, practice examination question 3, printed p. 267。[Question paper, Q2 (PDF p. 2)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202013%20QP%20-%20FP3%20AQA.pdf#page=2); [AQA mark scheme, Q2 (PDF p. 4)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202013%20MS%20-%20FP3%20AQA.PDF#page=4). 本轮已读取题干及配套评分材料（2026-10-22）；链接为 PMT 托管的 AQA 编写材料，部分原卷为压缩排版版本。
+**来源：**AQA Mathematics 6360，MFP3，June 2013，原卷第 2 题。原题分值：**4 marks**。教材索引：Chapter 21, practice examination question 3, printed p. 267。[Question paper, Q2 (PDF p. 2)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202013%20QP%20-%20FP3%20AQA.pdf#page=2); [AQA mark scheme, Q2 (PDF p. 4)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/June%202013%20MS%20-%20FP3%20AQA.PDF#page=4). 本轮重新读取题干及配套评分材料（2026-10-23）；链接为 PMT 托管的 AQA 编写材料，部分原卷为压缩排版版本。
 
 The Cartesian equation of a circle is $(x+8)^2+(y-6)^2=100$.
 
@@ -591,9 +708,13 @@ $$\boxed{r=12\sin\theta-16\cos\theta.}$$
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### 第 8 题：AQA——环瓣的面积 {#question-8--aqa-area-of-a-loop}
 
-**来源（改编题：题图重绘）：**AQA Mathematics 6360，MFP3，January 2009，原卷第 3 题。原题分值：**6 marks (original question)**。教材索引：Chapter 21, practice examination question 1, printed p. 267。[Question paper, Q3 (PDF p. 3)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/January%202009%20QP%20-%20FP3%20AQA.PDF#page=3); [AQA mark scheme, Q3 (PDF p. 4)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/January%202009%20MS%20-%20FP3%20AQA.PDF#page=4). 本轮已读取题干及配套评分材料（2026-10-22）；链接为 PMT 托管的 AQA 编写材料，部分原卷为压缩排版版本。 题图按原卷重绘，保留曲线、极点、始线和题目条件。
+**来源（改编题：题图重绘）：**AQA Mathematics 6360，MFP3，January 2009，原卷第 3 题。原题分值：**6 marks (original question)**。教材索引：Chapter 21, practice examination question 1, printed p. 267。[Question paper, Q3 (PDF p. 3)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/January%202009%20QP%20-%20FP3%20AQA.PDF#page=3); [AQA mark scheme, Q3 (PDF p. 4)](https://pmt.physicsandmathstutor.com/download/Maths/A-level/FP3/Papers-AQA/January%202009%20MS%20-%20FP3%20AQA.PDF#page=4). 本轮重新读取题干及配套评分材料（2026-10-23）；链接为 PMT 托管的 AQA 编写材料，部分原卷为压缩排版版本。 题图按原卷重绘，保留曲线、极点、始线和题目条件。
 
 The diagram shows a sketch of a loop, the pole $O$ and the initial line.
 
@@ -625,7 +746,7 @@ $$A=\frac12\int_0^\pi(2+\cos\theta)^2\sin\theta\,\mathrm d\theta.$$
 $$\begin{aligned}
 A
 &=-\frac12\int_3^1u^2\,\mathrm du\\
-&=\frac12\left[\frac{u^3}{3}\right]_1^3\\
+&=\frac12\int_1^3u^2\,\mathrm du=\frac12\left[\frac{u^3}{3}\right]_1^3\\
 &=\frac{27-1}{6}\\
 &=\boxed{\frac{13}{3}}.
 \end{aligned}$$
@@ -636,9 +757,13 @@ A
 
 </details>
 
+</section>
+
 ## 纠错与独立重试 {#diagnose-and-retry}
 
 以下两项均为自拟教学任务，无官方分值。先写下错误原因，再看反馈；随后关闭所有解答，独立完成新任务。需要提示的任务应在稍后重新独立尝试。
+
+<section class="lesson-check" markdown="1">
 
 **Diagnose:** A learner uses
 
@@ -657,6 +782,10 @@ $$\frac12\int(r_1^2-r_2^2)\,\mathrm d\theta$$
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 **Independent retry:** Find the area inside $r=2$ and outside $r=1+\cos\theta$, for $-\pi\le\theta\le\pi$. Explain whether the boundary order changes.
 
 <details markdown="1">
@@ -671,11 +800,58 @@ $$\frac12\int(r_1^2-r_2^2)\,\mathrm d\theta$$
 
 由于 $0\le1+\cos\theta\le2$，圆始终是外边界，无须交换边界。面积为
 
-$$\frac12\int_{-\pi}^{\pi}[4-(1+\cos\theta)^2]\,\mathrm d\theta=4\pi-\frac{3\pi}{2}=\frac{5\pi}{2}.$$
+$$\begin{aligned}
+A&=\frac12\int_{-\pi}^{\pi}[4-(1+\cos\theta)^2]\,\mathrm d\theta\\
+&=\frac12\int_{-\pi}^{\pi}(3-2\cos\theta-\cos^2\theta)\,\mathrm d\theta\\
+&=\int_{-\pi}^{\pi}\left(\frac54-\cos\theta-\frac14\cos2\theta\right)\,\mathrm d\theta\\
+&=\left[\frac54\theta-\sin\theta-\frac18\sin2\theta\right]_{-\pi}^{\pi}\\
+&=\left(\frac{5\pi}{4}-0-0\right)-\left(-\frac{5\pi}{4}-0-0\right)
+=\boxed{\frac{5\pi}{2}}.
+\end{aligned}$$
 
 这里只将心形线内部面积从圆面积中减去一次。
 
 </details>
+
+</section>
+
+## 稍后连接与回顾 {#later-review}
+
+在下一课学习后，收起这些解答再做新区域题；即时做对不代表延后保持已经验证。
+
+<section class="lesson-check" markdown="1">
+
+### 确定区域 {#later-region}
+
+**Later task (self-written):** After the next lesson, return without reading the area examples. Sketch $r=2$ and $r=2\cos\theta$, find all intersections and calculate the area inside the first curve and outside the second. Explain the angular domains and whether any part needs a single-boundary integral.
+
+<details markdown="1">
+<summary>提示</summary>
+
+先比较两个圆的位置；始终遵守正半径约定。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检验</summary>
+
+圆的直角坐标中心分别为 (0,0)、(1,0)，半径分别为二和一。第二个圆完全在第一个圆内；两圆只在 (2,0) 相切，极点仅在第二条曲线上。右半平面作平方差，左半平面只积大圆。
+
+$$\begin{aligned}
+A_R&=\frac12\int_{-\pi/2}^{\pi/2}(4-4\cos^2\theta)\,\mathrm d\theta
+=\int_{-\pi/2}^{\pi/2}(1-\cos2\theta)\,\mathrm d\theta\\
+&=\left[\theta-\frac12\sin2\theta\right]_{-\pi/2}^{\pi/2}
+=\left(\frac\pi2-0\right)-\left(-\frac\pi2-0\right)=\pi,\\
+A_L&=\frac12\int_{\pi/2}^{3\pi/2}4\,\mathrm d\theta
+=[2\theta]_{\pi/2}^{3\pi/2}=3\pi-\pi=2\pi,\\
+A&=A_R+A_L=\boxed{3\pi}.
+\end{aligned}$$
+
+检验：也可用两个圆的面积之差。若把第二条曲线的负半径区间也平方后扣除，会重复扣掉一次。再完成 [De Moivre 的根与区域任务](/zh/alevel/a2-further-mathematics/de-moivres-theorem/#later-roots-and-area)。
+
+</details>
+
+</section>
 
 ## 快速参考 {#quick-reference}
 
@@ -695,6 +871,8 @@ $$\frac12\int_{-\pi}^{\pi}[4-(1+\cos\theta)^2]\,\mathrm d\theta=4\pi-\frac{3\pi}
 
 **你应能够：**转换点的坐标与曲线方程，绘制正半径曲线，找出全部交点，并利用草图为指定区域建立面积积分。
 
-本课范围依据 [OxfordAQA Further Mathematics 9665 课程大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf) FP2.3。例题为教学材料。第 6–8 题保留所提供教材中的 AQA 原题与分值。
+本课范围依据 [OxfordAQA Further Mathematics 9665 课程大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf) FP2.3。例题为教学材料。第 6–7 题保留所提供教材中的 AQA 原题与分值；第 8 题为题图重绘的改编题，6 分是原题分值。
 
 **学习路径：**[上一课：棣莫弗定理](/zh/alevel/a2-further-mathematics/de-moivres-theorem/) · [下一课：反三角函数的微积分](/zh/alevel/a2-further-mathematics/inverse-trigonometric-functions/) · [返回课程](/zh/alevel/a2-further-mathematics/)。
+
+**学后下一步：**完成本课[稍后任务](#later-review)，再到课程入口的[跨主题综合](/zh/alevel/a2-further-mathematics/#mixed-review)与[延后回顾](/zh/alevel/a2-further-mathematics/#later-review)，记录首次作答、提示使用和重试结果。

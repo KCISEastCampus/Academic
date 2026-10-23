@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 310" role="img" aria-labelledby="title desc">
+  <title id="title">Circle and ray in the Argand plane</title>
+  <desc id="desc">A circle centred at 1 has radius 2. A ray starts at the excluded point 1 and extends at pi/4 to the positive real direction. The radius and angle are labelled; the intersection is not labelled.</desc>
+  <defs>
+    <marker id="axis-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7" fill="none" stroke="#344054"/></marker>
+    <marker id="ray-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7" fill="none" stroke="#6d28d9"/></marker>
+  </defs>
+  <style>text{font:19px sans-serif;fill:#172b4d}.axis{fill:none;stroke:#344054;stroke-width:1.5}.circle{fill:none;stroke:#155e75;stroke-width:2.5}.radius{fill:none;stroke:#344054;stroke-width:1.5;stroke-dasharray:5 4}.ray{fill:none;stroke:#6d28d9;stroke-width:2.5}</style>
+  <rect width="360" height="310" fill="white"/>
+  <circle class="circle" cx="150" cy="150" r="100"/>
+  <path class="axis" d="M20 150 H320" marker-end="url(#axis-arrow)"/>
+  <path class="axis" d="M100 270 V20" marker-end="url(#axis-arrow)"/>
+  <text x="290" y="179">Re z</text><text x="106" y="28">Im z</text><text x="80" y="174">0</text>
+  <path class="radius" d="M150 150 V250"/><text x="158" y="223">2</text>
+  <path class="ray" d="M150 150 L270 30" marker-end="url(#ray-arrow)"/>
+  <path class="axis" d="M185 150 A35 35 0 0 0 174.75 125.25"/><text x="194" y="133">π/4</text>
+  <circle cx="150" cy="150" r="5" fill="white" stroke="#172b4d" stroke-width="2"/>
+  <text x="157" y="177">1 (excluded)</text>
+  <text x="20" y="300">|z−1|=2; arg(z−1)=π/4</text>
+</svg>

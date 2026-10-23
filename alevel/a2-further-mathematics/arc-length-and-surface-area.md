@@ -5,8 +5,9 @@ mathjax: true
 grade: a2
 subject: a2-further-mathematics
 permalink: /alevel/a2-further-mathematics/arc-length-and-surface-area/
-toc_headings: h2, h3, h4
+toc_headings: "#method, #cartesian-arc-length, #parametric-arc-length, #surface-area-about-the-x-axis, #worked-examples, #practice, #diagnose-and-retry, #quick-reference, #sources"
 study_page: true
+reading_layout: true
 ---
 
 [Further Pure Mathematics](/alevel/a2-further-mathematics/) · FP2.8 Arc length and area of surface of revolution about the x-axis
@@ -19,7 +20,7 @@ Find the length of a curve in Cartesian or parametric form. Then use that length
 
 Textbook: Chapter 23, pp. 282–287, in *International A Level Further Mathematics*.
 
-**Before you start:** review [differentiation](/alevel/a2-mathematics/differentiation/), [integration](/alevel/a2-mathematics/integration/) and [parametric equations](/alevel/a2-mathematics/parametric-equations/). You should be able to differentiate a curve, evaluate definite integrals and use a positive square root.
+**Before you start:** use the [chain rule](/alevel/a2-mathematics/differentiation/#composite-functions) and [parametric differentiation](/alevel/a2-mathematics/parametric-equations/#parametric-differentiation) to obtain both coordinate derivatives. For the integrations, repair [power integrals](/alevel/a2-mathematics/integration/#power-integrals), [substitution](/alevel/a2-mathematics/integration/#substitution), [logarithmic form](/alevel/a2-mathematics/integration/#logarithmic-form) or [integration by parts](/alevel/a2-mathematics/integration/#integration-by-parts), then return to the corresponding example and explain each coefficient. In Q2, derive the primitive before evaluating it; no knowledge of hyperbolic functions is needed.
 
 **Task status:** Unless an official question or teaching adaptation is explicitly identified, the worked examples and exercises are self-written teaching tasks with no official marks.
 
@@ -53,6 +54,8 @@ $$L=\int_a^b\sqrt{1+\left(\frac{\mathrm dy}{\mathrm dx}\right)^2}\,\mathrm dx.$$
 
 The variable is x throughout, so keep the limits as x-values. If an endpoint makes the derivative or integrand undefined, treat the integral as a limit from inside the interval.
 
+<section class="worked-example" markdown="1">
+
 ### Example 1 — Cartesian arc length by substitution {#example-1--cartesian-arc-length-by-substitution}
 
 **Question:** Find the length of the curve $y=\frac23x^{\frac32}$ for $0\le x\le3$.
@@ -63,11 +66,15 @@ $$\frac{\mathrm dy}{\mathrm dx}=\sqrt{x}.$$
 
 $$\begin{aligned}
 L&=\int_0^3\sqrt{1+x}\,\mathrm dx\\
-&=\left[\frac23(1+x)^{\frac32}\right]_0^3\\
+&=\int_1^4 u^{1/2}\,\mathrm du\quad(u=1+x,\ \mathrm du=\mathrm dx)\\
+&=\left[\frac23u^{3/2}\right]_1^4\\
+&=\frac23(4^{3/2}-1^{3/2})=\frac23(8-1)\\
 &=\boxed{\frac{14}{3}}.
 \end{aligned}$$
 
 **Check:** the integrand is positive throughout the interval, and the answer is greater than the horizontal distance $3$.
+
+</section>
 
 ## Parametric Arc Length {#parametric-arc-length}
 
@@ -101,6 +108,8 @@ In Cartesian coordinates, substitute the Cartesian length element. In parametric
 
 ## Worked Examples {#worked-examples}
 
+<section class="worked-example" markdown="1">
+
 ### Example 2 — Keep the absolute value from a square root {#example-2--keep-the-absolute-value}
 
 **Question:** Find the length of $y=\frac{x^2}{4}-\frac12\ln x$ for $1\le x\le2$.
@@ -119,12 +128,17 @@ $$\sqrt{1+\left(\frac{\mathrm dy}{\mathrm dx}\right)^2}
 The final equality uses $x>0$ and $x^2+1>0$ on the whole interval.
 
 $$\begin{aligned}
-L&=\int_1^2\frac{x^2+1}{2x}\,\mathrm dx\\
+L&=\int_1^2\left(\frac x2+\frac1{2x}\right)\,\mathrm dx\\
 &=\left[\frac{x^2}{4}+\frac12\ln x\right]_1^2\\
+&=\left(1+\frac12\ln2\right)-\left(\frac14+\frac12\ln1\right)\\
 &=\boxed{\frac34+\frac12\ln2}.
 \end{aligned}$$
 
 **Check:** replacing $\sqrt{g^2}$ directly by $g$ is only valid when $g\ge0$ on the interval. Here that is true, but it must be checked.
+
+</section>
+
+<section class="worked-example" markdown="1">
 
 ### Example 3 — Parametric arc length from an adapted specimen question {#example-3--adapted-specimen-question}
 
@@ -148,12 +162,18 @@ $$\begin{aligned}
 Sine is non-negative and secant is positive on this interval. Hence
 
 $$\begin{aligned}
-L&=\int_0^{\frac{\pi}{3}}\tan t\,\mathrm dt\\
-&=[-\ln(\cos t)]_0^{\frac{\pi}{3}}\\
+L&=\int_0^{\pi/3}\frac{\sin t}{\cos t}\,\mathrm dt\\
+&=-\int_1^{1/2}\frac{\mathrm dw}{w}\quad(w=\cos t,\ \mathrm dw=-\sin t\,\mathrm dt)\\
+&=[-\ln w]_1^{1/2}\\
+&=-\ln(1/2)-(-\ln1)\\
 &=\boxed{\ln2}.
 \end{aligned}$$
 
 **Check:** the speed is non-negative and the interval covers the arc once. This example is adapted from Question 11 of the OxfordAQA FM03 Specimen 2018 paper; its method is supported by the official mark scheme. The question wording is adapted, and the working here is written for this lesson.
+
+</section>
+
+<section class="worked-example" markdown="1">
 
 ### Example 4 — Rotate a Cartesian line about the x-axis {#example-4--cartesian-surface-area}
 
@@ -163,11 +183,17 @@ On this interval, $y\ge0$, so the radius is $y=4-x$. Also, $\frac{\mathrm dy}{\m
 
 $$\begin{aligned}
 S&=2\pi\int_1^3(4-x)\sqrt{1+(-1)^2}\,\mathrm dx\\
+&=2\pi\sqrt2\int_1^3(4-x)\,\mathrm dx\\
 &=2\pi\sqrt2\left[4x-\frac{x^2}{2}\right]_1^3\\
+&=2\pi\sqrt2\left[\left(12-\frac92\right)-\left(4-\frac12\right)\right]\\
 &=\boxed{8\pi\sqrt2}.
 \end{aligned}$$
 
 **Check:** the radius decreases from 3 to 1, and no end disks are included.
+
+</section>
+
+<section class="worked-example" markdown="1">
 
 ### Example 5 — Parametric surface area when the curve crosses the axis {#example-5--radius-absolute-value}
 
@@ -184,10 +210,16 @@ Split at the crossing $t=1$:
 $$\begin{aligned}
 S&=2\pi\sqrt2\int_0^2\lvert t-1\rvert\,\mathrm dt\\
 &=2\pi\sqrt2\left(\int_0^1(1-t)\,\mathrm dt+\int_1^2(t-1)\,\mathrm dt\right)\\
+&=2\pi\sqrt2\left(\left[t-\frac{t^2}{2}\right]_0^1+\left[\frac{t^2}{2}-t\right]_1^2\right)\\
+&=2\pi\sqrt2\left[\left(1-\frac12-0\right)+\left((2-2)-(\tfrac12-1)\right)\right]\\
 &=\boxed{2\pi\sqrt2}.
 \end{aligned}$$
 
 This is the curved area of two cones joined at their tips. The two circular ends are boundaries of the surface, not end caps.
+
+</section>
+
+<section class="worked-example" markdown="1">
 
 ### Example 6 — Parametric surface area from a circular arc {#example-6--parametric-surface-area}
 
@@ -203,17 +235,23 @@ Since $y\ge0$ on the interval, the radius is $2\sin t$:
 
 $$\begin{aligned}
 S&=2\pi\int_0^{\frac{\pi}{2}}(2\sin t)(2)\,\mathrm dt\\
-&=8\pi[-\cos t]_0^{\frac{\pi}{2}}\\
+&=8\pi\int_0^{\pi/2}\sin t\,\mathrm dt\\
+&=8\pi[-\cos t]_0^{\pi/2}\\
+&=8\pi\left(-\cos\frac\pi2+\cos0\right)=8\pi(0+1)\\
 &=\boxed{8\pi}.
 \end{aligned}$$
 
 This arc generates the curved surface of a hemisphere. Its flat circular base is not part of the surface traced by the arc.
+
+</section>
 
 ## Practice {#practice}
 
 **Independent practice · 25–30 minutes**
 
 For each question, write the correct formula and limits before calculating. Show how you handle absolute values, and check that the speed is non-negative. These are original practice questions, not official exam questions; no official marks are assigned.
+
+<section class="lesson-check" markdown="1">
 
 ### Q1 — Length of a straight line {#q1--straight-line-length}
 
@@ -230,11 +268,16 @@ The gradient is constant. Use the Cartesian arc-length formula.
 <summary>Solution</summary>
 
 $$\begin{aligned}
-L&=\int_0^2\sqrt{1+3^2}\,\mathrm dx\\
+L&=\int_0^2\sqrt{10}\,\mathrm dx\\
+&=[\sqrt{10}\,x]_0^2=\sqrt{10}(2-0)\\
 &=\boxed{2\sqrt{10}}.
 \end{aligned}$$
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### Q2 — Integrate a non-constant speed {#q2--non-constant-cartesian-speed}
 
@@ -250,13 +293,36 @@ You may use $\frac12\left(x\sqrt{1+x^2}+\ln\left(x+\sqrt{1+x^2}\right)\right)$ a
 <details markdown="1">
 <summary>Solution</summary>
 
+Derive the primitive rather than only quoting it. Integrate by parts with $u=\sqrt{1+x^2}$ and $\mathrm dv=\mathrm dx$, and write $x^2=(1+x^2)-1$. Substitute in the remaining integral:
+
+$$\begin{aligned}
+I&=\int\sqrt{1+x^2}\,\mathrm dx\\
+&=x\sqrt{1+x^2}-\int\frac{x^2}{\sqrt{1+x^2}}\,\mathrm dx\\
+&=x\sqrt{1+x^2}-I+\int\frac{\mathrm dx}{\sqrt{1+x^2}}.
+\end{aligned}$$
+
+$$\begin{aligned}
+u&=x+\sqrt{1+x^2}>0,\\
+\mathrm du&=\left(1+\frac{x}{\sqrt{1+x^2}}\right)\mathrm dx
+=\frac{u}{\sqrt{1+x^2}}\,\mathrm dx,\\
+\int\frac{\mathrm dx}{\sqrt{1+x^2}}&=\int\frac{\mathrm du}{u}=\ln u+C,\\
+2I&=x\sqrt{1+x^2}+\ln\left(x+\sqrt{1+x^2}\right)+C.
+\end{aligned}$$
+
+Thus $I=\frac12(x\sqrt{1+x^2}+\ln(x+\sqrt{1+x^2}))+C$. Now use the limits:
+
 $$\begin{aligned}
 L&=\int_0^2\sqrt{1+x^2}\,\mathrm dx\\
 &=\left[\frac12\left(x\sqrt{1+x^2}+\ln\left(x+\sqrt{1+x^2}\right)\right)\right]_0^2\\
+&=\frac12\left[(2\sqrt5+\ln(2+\sqrt5))-(0+\ln1)\right]\\
 &=\boxed{\sqrt5+\frac12\ln(2+\sqrt5)}.
 \end{aligned}$$
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### Q3 — A quarter-circle in parametric form {#q3--parametric-quarter-circle}
 
@@ -276,11 +342,16 @@ $$\begin{aligned}
 \frac{\mathrm ds}{\mathrm dt}
 &=\sqrt{(-3\sin t)^2+(3\cos t)^2}\\
 &=3,\\
-L&=\int_0^{\frac{\pi}{2}}3\,\mathrm dt\\
+L&=\int_0^{\pi/2}3\,\mathrm dt\\
+&=[3t]_0^{\pi/2}=3(\pi/2-0)\\
 &=\boxed{\frac{3\pi}{2}}.
 \end{aligned}$$
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### Q4 — Surface area from a Cartesian graph {#q4--cartesian-surface-area}
 
@@ -298,11 +369,17 @@ Here $y\ge0$, so the radius is $x$. The gradient is 1.
 
 $$\begin{aligned}
 S&=2\pi\int_0^2x\sqrt{1+1^2}\,\mathrm dx\\
+&=2\pi\sqrt2\int_0^2x\,\mathrm dx\\
 &=2\pi\sqrt2\left[\frac{x^2}{2}\right]_0^2\\
+&=2\pi\sqrt2\left(\frac{2^2}{2}-\frac{0^2}{2}\right)\\
 &=\boxed{4\pi\sqrt2}.
 \end{aligned}$$
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### Q5 — Surface area on both sides of the x-axis {#q5--surface-crosses-the-axis}
 
@@ -323,10 +400,16 @@ The gradient is 1, so the speed factor is $\sqrt2$. Thus
 $$\begin{aligned}
 S&=2\pi\sqrt2\int_0^4\lvert x-2\rvert\,\mathrm dx\\
 &=2\pi\sqrt2\left(\int_0^2(2-x)\,\mathrm dx+\int_2^4(x-2)\,\mathrm dx\right)\\
+&=2\pi\sqrt2\left(\left[2x-\frac{x^2}{2}\right]_0^2+\left[\frac{x^2}{2}-2x\right]_2^4\right)\\
+&=2\pi\sqrt2\left[((4-2)-0)+((8-8)-(2-4))\right]\\
 &=\boxed{8\pi\sqrt2}.
 \end{aligned}$$
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### Q6 — Do two arcs generate two different surfaces? {#q6--avoid-counting-the-same-surface-twice}
 
@@ -344,19 +427,33 @@ The circle is traced once over $0\le t\le2\pi$. On rotation, the upper and lower
 
 The speed is 1, so the full circle has length
 
-$$L=\int_0^{2\pi}1\,\mathrm dt=2\pi.$$
+$$L=\int_0^{2\pi}1\,\mathrm dt=[t]_0^{2\pi}=2\pi-0=2\pi.$$
 
 For the distinct surface area, use just the upper semicircle, $0\le t\le\pi$:
 
 $$\begin{aligned}
 S&=2\pi\int_0^\pi\sin t\,\mathrm dt\\
 &=2\pi[-\cos t]_0^\pi\\
+&=2\pi(-\cos\pi+\cos0)=2\pi(1+1)\\
 &=\boxed{4\pi}.
 \end{aligned}$$
 
-Using $0\le t\le2\pi$ for the surface would give $8\pi$, counting every point of the sphere twice. The curve itself is not retraced for its arc length; the duplication happens when the two halves are revolved.
+Using $0\le t\le2\pi$ would count the sphere twice:
+
+$$\begin{aligned}
+2\pi\int_0^{2\pi}\lvert\sin t\rvert\,\mathrm dt
+&=2\pi\left(\int_0^\pi\sin t\,\mathrm dt-\int_\pi^{2\pi}\sin t\,\mathrm dt\right)\\
+&=2\pi\left([ -\cos t]_0^\pi+[\cos t]_\pi^{2\pi}\right)\\
+&=2\pi[(1-(-1))+(1-(-1))]=8\pi.
+\end{aligned}$$
+
+This is why the surface interval must be restricted. The curve itself is not retraced for its arc length; the duplication happens when the two halves are revolved.
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### Q7 — Find length and surface area from one parameterisation {#q7--combined-parametric-problem}
 
@@ -380,6 +477,7 @@ Therefore
 
 $$\begin{aligned}
 L&=\int_0^1 2\sqrt2\,t\,\mathrm dt\\
+&=2\sqrt2\left[\frac{t^2}{2}\right]_0^1=2\sqrt2\left(\frac12-0\right)\\
 &=\boxed{\sqrt2}.
 \end{aligned}$$
 
@@ -387,15 +485,21 @@ On this interval, $y=1-t^2\ge0$, so the radius is $1-t^2$:
 
 $$\begin{aligned}
 S&=2\pi\int_0^1(1-t^2)(2\sqrt2\,t)\,\mathrm dt\\
+&=4\pi\sqrt2\int_0^1(t-t^3)\,\mathrm dt\\
 &=4\pi\sqrt2\left[\frac{t^2}{2}-\frac{t^4}{4}\right]_0^1\\
+&=4\pi\sqrt2\left[\left(\frac12-\frac14\right)-(0-0)\right]\\
 &=\boxed{\pi\sqrt2}.
 \end{aligned}$$
 
 </details>
 
+</section>
+
 ## Diagnose and Retry {#diagnose-and-retry}
 
-Both tasks are self-written and have no official marks. Explain the error before opening feedback; then close every solution and attempt the new task independently. If you need a hint, return later for another independent attempt.
+These tasks are self-written and have no official marks. Explain the error before opening feedback; then close every solution and attempt the new task independently. If you need a hint, return later for another independent attempt.
+
+<section class="lesson-check" markdown="1">
 
 **Diagnose:** A learner calculates the surface generated by $y=3x$, $0\le x\le1$, using
 
@@ -408,11 +512,19 @@ $$\int_0^1 2\pi y\,\mathrm dx$$
 
 The strip width follows the sloping curve, so $\mathrm ds=\sqrt{10}\,\mathrm dx$. The curved area is
 
-$$2\pi\sqrt{10}\int_0^1 3x\,\mathrm dx=3\pi\sqrt{10}$$
+$$\begin{aligned}
+S&=6\pi\sqrt{10}\int_0^1x\,\mathrm dx\\
+&=6\pi\sqrt{10}\left[\frac{x^2}{2}\right]_0^1
+=6\pi\sqrt{10}\left(\frac12-0\right)=3\pi\sqrt{10}.
+\end{aligned}$$
 
 ; using horizontal width underestimates it.
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 **Independent retry:** A straight segment joins $(0,1)$ to $(3,5)$. Find its length and the curved area generated by revolving it about the x-axis. Exclude end caps.
 
@@ -428,11 +540,19 @@ Construct an equation or parameterisation from the endpoints; distinguish the ro
 
 Use $x=3t$, $y=1+4t$, $0\le t\le1$. The speed is $5$, so $L=5$. The radius is positive and the curved area is
 
-$$S=2\pi\int_0^1(1+4t)5\,\mathrm dt=30\pi.$$
+$$\begin{aligned}
+L&=\int_0^1 5\,\mathrm dt=[5t]_0^1=5-0=5,\\
+S&=10\pi\int_0^1(1+4t)\,\mathrm dt\\
+&=10\pi[t+2t^2]_0^1=10\pi[(1+2)-(0+0)]=30\pi.
+\end{aligned}$$
 
 The segment traces the generating arc once; the two circular end disks are excluded.
 
 </details>
+
+</section>
+
+**Next after practice:** close this chapter and attempt the course [mixed review](/alevel/a2-further-mathematics/#mixed-review). After subsequent learning, attempt the [later retrieval tasks](/alevel/a2-further-mathematics/#later-review). Record whether the first attempt was independent, any hint used, the error and the retry result. If a method or condition was wrong, use this chapter’s after-practice route to repair that skill, then retry with solutions closed.
 
 ## Quick Reference {#quick-reference}
 
@@ -451,8 +571,12 @@ The segment traces the generating arc once; the two circular end disks are exclu
 
 **You should be able to:** calculate Cartesian and parametric arc lengths, use $\lvert y\rvert$ as the radius about the x-axis, and distinguish the curved surface from end caps or overlapping patches.
 
+## Sources and scope {#sources}
+
+Scope check on 2026-10-23: the current 9665 qualification page led to specification v5.2; the relevant FP2 section was checked without migrating to 9765. For the papers and schemes below, only the identified questions and matching marking sections were reread as PDF text; visual verification of the original PDF pages was not completed. Official identities and marks are retained; adaptations and self-written tasks are labelled separately.
+
 This lesson follows FP2.8 (printed p. 18) of the [OxfordAQA Further Mathematics 9665 specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf). The specification covers arc length and surface area in Cartesian or parametric coordinates. Example 3 is adapted from the official specimen paper; practice questions are original and have no official marks.
 
-[OxfordAQA Specimen 2018, Q11, QP PDF p. 18](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-specimen-paper-2019-v3.pdf#page=18); [MS Q11, PDF p. 14](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-mark-scheme-2016-v1.pdf#page=14). Question and matching mark scheme read on 2026-10-22. Only the identified method is adapted; the adapted question and additional self-written tasks are not official questions.
+[OxfordAQA Specimen 2018, Q11, QP PDF p. 18](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-specimen-paper-2019-v3.pdf#page=18); [MS Q11, PDF p. 14](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-mark-scheme-2016-v1.pdf#page=14). Question and matching mark scheme reread on 2026-10-23 (PDF text). Only the identified method is adapted; the adapted question and additional self-written tasks are not official questions.
 
 **Learning path:** [Previous: The calculus of inverse trigonometric functions](/alevel/a2-further-mathematics/inverse-trigonometric-functions/) · [Next: Hyperbolic functions](/alevel/a2-further-mathematics/hyperbolic-functions/) · [Back to the course](/alevel/a2-further-mathematics/).

@@ -5,8 +5,9 @@ mathjax: true
 grade: a2
 subject: a2-further-mathematics
 permalink: /alevel/a2-further-mathematics/second-order-differential-equations/
-toc_headings: h2, h3, h4
+toc_headings: "#equation-and-conditions, #auxiliary-equation, #cf-and-pi, #pi-trials, #practice, #diagnose-and-retry, #quick-reference, #common-pitfalls, #sources"
 study_page: true
+reading_layout: true
 ---
 
 [Further Pure Mathematics](/alevel/a2-further-mathematics/) · FP2.11 Second-order differential equations
@@ -19,7 +20,9 @@ Solve second-order linear differential equations with constant coefficients. Bui
 
 Textbook: Chapter 25.2, printed pp. 308–317, with review on printed p. 319, in *International A Level Further Mathematics*.
 
-**Before you start:** revise the product rule, complex roots of quadratics and [FP2.10 first-order differential equations](/alevel/a2-further-mathematics/first-order-differential-equations/).
+**Before you start:** repair the [product rule](/alevel/a2-mathematics/differentiation/#products-and-quotients), [complex quadratic roots](/alevel/as-further-mathematics/complex-numbers-and-roots/#conjugate) and [first-order CF and PI](/alevel/a2-further-mathematics/first-order-differential-equations/#cf-and-pi). Read through the completing-the-square example and the negative-discriminant explanation in the complex-roots section. Return to Example 2 to expand both product derivatives, or Example 3 to explain the real part and frequency by completing the square. Repeated-zero-root integration also needs [power integrals](/alevel/a2-mathematics/integration/#power-integrals).
+
+**Independent outputs:** in Q1–3 construct the CF from the roots and use the conditions; in Q4–7 choose and verify the PI; in Example 7 combine polynomial and exponential terms and justify an asymptotic condition. Check each original equation and all conditions using the total solution.
 
 ## The Equation and Its Conditions {#equation-and-conditions}
 
@@ -55,19 +58,13 @@ Its roots determine the **complementary function (CF)**, the general solution of
 
 In the repeated-root case, writing two copies of $e^{mx}$ gives only one independent function. The second function is $xe^{mx}$. For complex roots, the real sine–cosine form supplies two real independent functions. A zero root is allowed: $e^{0x}=1$; a repeated zero root gives $A+Bx$.
 
+<section class="worked-example" markdown="1">
+
 ### Example 1: distinct real roots {#example-1-distinct-roots}
 
 > **Original example.** Solve $2y^{\prime\prime}-2y^{\prime}-4y=0$, given $y(0)=3$ and $y^{\prime}(0)=0$.
 
-<details markdown="1">
-<summary>Hint</summary>
-
-Factor $2m^2-2m-4$. Differentiate the general solution before applying the second condition.
-
-</details>
-
-<details markdown="1">
-<summary>Solution</summary>
+**Complete demonstration:** follow the choice of method, substitution and check before attempting the later tasks independently.
 
 The auxiliary equation is $2(m-2)(m+1)=0$, with roots $2,-1$. Therefore
 
@@ -79,21 +76,15 @@ $$\boxed{y=e^{2x}+2e^{-x}}.$$
 
 Each exponential satisfies the homogeneous equation. The displayed solution has $y(0)=3$ and $y^{\prime}(0)=2-2=0$.
 
-</details>
+</section>
+
+<section class="worked-example" markdown="1">
 
 ### Example 2: a repeated real root {#example-2-repeated-roots}
 
 > **Original example.** Solve $y^{\prime\prime}+4y^{\prime}+4y=0$, given $y(0)=1$ and $y^{\prime}(0)=0$.
 
-<details markdown="1">
-<summary>Hint</summary>
-
-The auxiliary equation has a repeated root. Use $(A+Bx)e^{-2x}$ and the product rule.
-
-</details>
-
-<details markdown="1">
-<summary>Solution</summary>
+**Complete demonstration:** follow the choice of method, substitution and check before attempting the later tasks independently.
 
 Since $(m+2)^2=0$, the general solution is $y=(A+Bx)e^{-2x}$. Then
 
@@ -105,21 +96,15 @@ $$\boxed{y=(1+2x)e^{-2x}}.$$
 
 Here $y^{\prime}=-4xe^{-2x}$ and $y^{\prime\prime}=(-4+8x)e^{-2x}$. Thus $y^{\prime\prime}+4y^{\prime}+4y=0$, and both initial conditions hold.
 
-</details>
+</section>
+
+<section class="worked-example" markdown="1">
 
 ### Example 3: complex roots {#example-3-complex-roots}
 
 > **Original example.** Solve $y^{\prime\prime}+2y^{\prime}+5y=0$, given $y(0)=2$ and $y^{\prime}(0)=0$.
 
-<details markdown="1">
-<summary>Hint</summary>
-
-Complete the square in $m^2+2m+5$. The exponential factor and trigonometric frequency come from different parts of the roots.
-
-</details>
-
-<details markdown="1">
-<summary>Solution</summary>
+**Complete demonstration:** follow the choice of method, substitution and check before attempting the later tasks independently.
 
 The auxiliary equation is $(m+1)^2+4=0$, giving $m=-1\pm2i$. Hence
 
@@ -135,7 +120,7 @@ $$\boxed{y=e^{-x}(2\cos2x+\sin2x)}.$$
 
 To check the equation, write $y=e^{-x}v$. Then $y^{\prime\prime}+2y^{\prime}+5y=e^{-x}(v^{\prime\prime}+4v)=0$ for $v=2\cos2x+\sin2x$. The values at zero also agree.
 
-</details>
+</section>
 
 ## Complementary Function Plus Particular Integral {#cf-and-pi}
 
@@ -164,6 +149,43 @@ Use **undetermined coefficients**: choose a suitable trial, differentiate it, su
 
 Use both sine and cosine in a trigonometric trial, even if only one appears on the right: the $by^{\prime}$ term can mix them. Include every lower power in a polynomial trial because differentiation creates lower powers.
 
+<section class="worked-example" markdown="1">
+
+### A polynomial PI {#polynomial-demonstration}
+
+> **Self-written example.** Find the general solution of $y^{\prime\prime}+y=x^2+1$.
+
+**Complete demonstration (self-written, no official marks).** Zero is not an auxiliary root, so include every power up to degree 2 in the trial. The constant term must be found after differentiating the quadratic.
+
+$$\begin{aligned}
+m^2+1&=0\quad\Longrightarrow\quad y_c=A\cos x+B\sin x,\\
+y_p&=Cx^2+Dx+E,\quad y_p^{\prime}=2Cx+D,\quad y_p^{\prime\prime}=2C,\\
+y_p^{\prime\prime}+y_p&=Cx^2+Dx+(E+2C)=x^2+0x+1,\\
+C&=1,\quad D=0,\quad E+2=1\quad\Longrightarrow\quad E=-1,\\
+y&=\boxed{A\cos x+B\sin x+x^2-1}.
+\end{aligned}$$
+
+Check: the PI contributes $2+(x^2-1)=x^2+1$; the CF contributes zero. In practice Q4 the degree changes, so determine all coefficients afresh.
+
+</section>
+
+<section class="worked-example" markdown="1">
+
+### When zero is a repeated root {#zero-root-demonstration}
+
+> **Self-written example.** Find the general solution of $y^{\prime\prime}=2x$.
+
+**Complete demonstration (self-written, no official marks).** The auxiliary polynomial is $m^2$, giving CF $A+Bx$. Integrate the forcing twice and retain a new constant at each stage.
+
+$$\begin{aligned}
+y^{\prime}&=\int2x\,\mathrm dx=2\frac{x^2}{2}+B=x^2+B,\\
+y&=\int(x^2+B)\,\mathrm dx=\frac{x^3}{3}+Bx+A.
+\end{aligned}$$
+
+The PI $x^3/3$ has second derivative $2x$. Its degree is 3 although the forcing has degree 1; multiplying a linear trial by $x^2$ removes the repeated-zero-root overlap. In Q7 also use the boundary values.
+
+</section>
+
 ### Resonance: when a trial duplicates the CF {#resonance}
 
 If a trial is already a homogeneous solution, substitution produces zero. This overlap is called **resonance**. Multiply the entire overlapping trial by the smallest power of $x$ that removes the overlap:
@@ -174,23 +196,20 @@ If a trial is already a homogeneous solution, substitution produces zero. This o
 
 For example, if $c=0$ but $b\ne0$, a constant forcing needs a linear PI. If $b=c=0$, the equation is $ay^{\prime\prime}=f(x)$ and direct integration twice is simplest. A forcing polynomial of degree 4 can then have a PI of degree 6: the degree restriction concerns $f(x)$, not the answer.
 
+<section class="worked-example" markdown="1">
+
 ### Example 4: an exponential PI {#example-4-exponential-pi}
 
 > **Original example.** Find the general solution of $y^{\prime\prime}-y=6e^{2x}$.
 
-<details markdown="1">
-<summary>Hint</summary>
-
-The auxiliary roots are $1,-1$. The forcing exponential is not in the CF, so try $Ce^{2x}$.
-
-</details>
-
-<details markdown="1">
-<summary>Solution</summary>
+**Complete demonstration:** follow the choice of method, substitution and check before attempting the later tasks independently.
 
 The CF is $y_c=Ae^x+Be^{-x}$. For $y_p=Ce^{2x}$, substitution gives
 
-$$y_p^{\prime\prime}-y_p=(4C-C)e^{2x}=6e^{2x},$$
+$$\begin{aligned}
+y_p&=Ce^{2x},\qquad y_p^{\prime}=2Ce^{2x},\qquad y_p^{\prime\prime}=4Ce^{2x},\\
+y_p^{\prime\prime}-y_p&=(4C-C)e^{2x}=6e^{2x}.
+\end{aligned}$$
 
 so $C=2$. Therefore
 
@@ -198,21 +217,15 @@ $$\boxed{y=Ae^x+Be^{-x}+2e^{2x}}.$$
 
 The CF contributes zero and $2e^{2x}$ contributes $6e^{2x}$ to $y^{\prime\prime}-y$.
 
-</details>
+</section>
+
+<section class="worked-example" markdown="1">
 
 ### Example 5: a trigonometric PI {#example-5-trigonometric-pi}
 
 > **Original example.** Find the general solution of $y^{\prime\prime}+y^{\prime}+2y=3\cos x$.
 
-<details markdown="1">
-<summary>Hint</summary>
-
-Try $C\cos x+D\sin x$. A cosine-only trial cannot cancel the sine term created by $y^{\prime}$.
-
-</details>
-
-<details markdown="1">
-<summary>Solution</summary>
+**Complete demonstration:** follow the choice of method, substitution and check before attempting the later tasks independently.
 
 The auxiliary roots are $(-1\pm i\sqrt7)/2$, giving
 
@@ -232,30 +245,54 @@ $$\boxed{\begin{aligned}y={}&e^{-x/2}\left(A\cos\frac{\sqrt7x}{2}+B\sin\frac{\sq
 
 The matched coefficients confirm that the PI contributes exactly $3\cos x$.
 
-</details>
+</section>
+
+<section class="worked-example" markdown="1">
+
+### Resonance at a simple root {#simple-resonance-demonstration}
+
+> **Self-written example.** Find the general solution of $y^{\prime\prime}-y=4e^x$.
+
+**Complete demonstration (self-written, no official marks).** The roots are $1,-1$. The ordinary trial $Ce^x$ contributes $Ce^x-Ce^x=0$, so it cannot produce the nonzero forcing. Test the next trial instead of guessing its coefficient.
+
+$$\begin{aligned}
+y_p&=Cxe^x,\\
+y_p^{\prime}&=C(1+x)e^x,\qquad y_p^{\prime\prime}=C(2+x)e^x,\\
+y_p^{\prime\prime}-y_p&=C[(2+x)-x]e^x=2Ce^x=4e^x,\\
+C&=2,\qquad y=\boxed{Ae^x+Be^{-x}+2xe^x}.
+\end{aligned}$$
+
+The PI contributes exactly $4e^x$. One factor of $x$ suffices here because 1 is simple; compare the repeated-root example next.
+
+</section>
+
+<section class="worked-example" markdown="1">
 
 ### Example 6: resonance at a repeated root {#example-6-repeated-resonance}
 
 > **Original example.** Find the general solution of $y^{\prime\prime}-4y^{\prime}+4y=8e^{2x}$. Explain why neither $Ce^{2x}$ nor $Cxe^{2x}$ is a suitable PI.
 
-<details markdown="1">
-<summary>Hint</summary>
-
-The root 2 is repeated. Both proposed trials belong to the CF. Try $Cx^2e^{2x}$.
-
-</details>
-
-<details markdown="1">
-<summary>Solution</summary>
+**Complete demonstration:** follow the choice of method, substitution and check before attempting the later tasks independently.
 
 The auxiliary equation is $(m-2)^2=0$, so $y_c=(A+Bx)e^{2x}$. Both proposed trials contribute zero to the differential equation.
+
+
+Test both failed trials explicitly; multiplying by x once is not itself a guarantee:
+
+$$\begin{aligned}
+v&=Ce^{2x},\quad v^{\prime}=2Ce^{2x},\quad v^{\prime\prime}=4Ce^{2x},\\
+v^{\prime\prime}-4v^{\prime}+4v&=C(4-8+4)e^{2x}=0,\\
+w&=Cxe^{2x},\quad w^{\prime}=C(1+2x)e^{2x},\quad w^{\prime\prime}=C(4+4x)e^{2x},\\
+w^{\prime\prime}-4w^{\prime}+4w&=C[(4+4x)-4(1+2x)+4x]e^{2x}=0.
+\end{aligned}$$
 
 For $y_p=Cx^2e^{2x}$,
 
 $$\begin{aligned}
 y_p^{\prime}&=C(2x+2x^2)e^{2x},\\
 y_p^{\prime\prime}&=C(2+8x+4x^2)e^{2x},\\
-y_p^{\prime\prime}-4y_p^{\prime}+4y_p&=2Ce^{2x}.
+y_p^{\prime\prime}-4y_p^{\prime}+4y_p&=C[(2+8x+4x^2)-4(2x+2x^2)+4x^2]e^{2x}\\
+&=2Ce^{2x}.
 \end{aligned}$$
 
 Hence $C=4$ and
@@ -264,9 +301,33 @@ $$\boxed{y=(A+Bx+4x^2)e^{2x}}.$$
 
 The extra factor is $x^2$, because both $e^{2x}$ and $xe^{2x}$ already occur in the CF.
 
-</details>
+</section>
+
+<section class="worked-example" markdown="1">
+
+### Resonance with sine and cosine {#trig-resonance-demonstration}
+
+> **Self-written example.** Find the general solution of $y^{\prime\prime}+y=2\cos x$.
+
+**Complete demonstration (self-written, no official marks).** The auxiliary roots are $\pm i$, so the ordinary sine–cosine trial is already in the CF and contributes zero. Multiply the whole trial by $x$; keep both coefficients until substitution decides them.
+
+$$\begin{aligned}
+y_p&=x(C\cos x+D\sin x),\\
+y_p^{\prime}&=C\cos x+D\sin x+x(-C\sin x+D\cos x),\\
+y_p^{\prime\prime}&=-2C\sin x+2D\cos x-x(C\cos x+D\sin x),\\
+y_p^{\prime\prime}+y_p&=-2C\sin x+2D\cos x=0\sin x+2\cos x,\\
+C&=0,\quad D=1,\qquad y=\boxed{A\cos x+B\sin x+x\sin x}.
+\end{aligned}$$
+
+The PI contributes $2\cos x$ after cancellation of the terms containing $x$. In Q6 the frequency and forcing change and conditions must be applied to the total solution.
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### Example 7: mixed forcing and an asymptotic condition {#example-7-mixed-forcing}
+
+**Now attempt independently:** combine the polynomial and simple-resonance methods. Write the CF, each PI contribution and coefficient comparison before applying the asymptotic condition to the total solution. Keep both controls closed.
 
 > **Adapted example.** For $x\ge0$, solve $y^{\prime\prime}+y^{\prime}-2y=4x-6e^{-2x}$, given $y(0)=2$ and $y^{\prime}\to-2$ as $x\to\infty$.
 
@@ -292,7 +353,11 @@ $$\begin{aligned}y_p^{\prime}&=C+E(1-2x)e^{-2x},\\y_p^{\prime\prime}&=E(4x-4)e^{
 
 Substitution gives
 
-$$y_p^{\prime\prime}+y_p^{\prime}-2y_p=-2Cx+(C-2D)-3Ee^{-2x}.$$
+$$\begin{aligned}
+y_p^{\prime\prime}+y_p^{\prime}-2y_p
+&=C-2(Cx+D)+E[(4x-4)+(1-2x)-2x]e^{-2x}\\
+&=-2Cx+(C-2D)-3Ee^{-2x}.
+\end{aligned}$$
 
 Matching coefficients with $4x-6e^{-2x}$ gives
 
@@ -316,9 +381,13 @@ Check: its exponential part contributes $-6e^{-2x}$ to the equation and its poly
 
 </details>
 
+</section>
+
 ## Practice Questions {#practice}
 
 All seven questions below are original practice questions. Identify the CF and PI where appropriate. State the general solution before applying conditions, and check the equation and every condition. Work in the order Q5, Q2, Q6, Q1, Q7, Q3, Q4 so the tasks are mixed. Before opening a hint, explain how the auxiliary roots determine the CF and why your PI trial is independent of it.
+
+<section class="lesson-check" markdown="1">
 
 ### Question 1 {#practice-1}
 
@@ -342,6 +411,10 @@ Both terms solve the equation because their exponents are auxiliary roots. Also 
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### Question 2 {#practice-2}
 
 > Solve $y^{\prime\prime}-2y^{\prime}+y=0$, given $y(0)=0$ and $y^{\prime}(0)=2$.
@@ -363,6 +436,10 @@ $$\boxed{y=2xe^x}.$$
 Here $y^{\prime}=2(1+x)e^x$ and $y^{\prime\prime}=2(2+x)e^x$, giving $y^{\prime\prime}-2y^{\prime}+y=0$. The two initial values agree.
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### Question 3 {#practice-3}
 
@@ -386,6 +463,10 @@ Differentiating twice gives $y^{\prime\prime}=-9y$; at zero, $y=1$ and $y^{\prim
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### Question 4 {#practice-4}
 
 > Find the general solution of $y^{\prime\prime}+y=x^4$.
@@ -402,7 +483,13 @@ Try $Cx^4+Dx^3+Ex^2+Fx+G$. Include the missing lower powers before matching coef
 
 The CF is $A\cos x+B\sin x$. For the proposed polynomial,
 
-$$\begin{aligned}y_p^{\prime\prime}+y_p&=Cx^4+Dx^3+(E+12C)x^2\\&\quad+(F+6D)x+(G+2E).\end{aligned}$$
+$$\begin{aligned}
+y_p&=Cx^4+Dx^3+Ex^2+Fx+G,\\
+y_p^{\prime}&=4Cx^3+3Dx^2+2Ex+F,\\
+y_p^{\prime\prime}&=12Cx^2+6Dx+2E,\\
+y_p^{\prime\prime}+y_p&=Cx^4+Dx^3+(E+12C)x^2\\
+&\quad+(F+6D)x+(G+2E).
+\end{aligned}$$
 
 Matching coefficients gives $C=1$, $D=0$, $E=-12$, $F=0$, $G=24$. Hence
 
@@ -411,6 +498,10 @@ $$\boxed{y=A\cos x+B\sin x+x^4-12x^2+24}.$$
 Check: the polynomial has $y_p^{\prime\prime}=12x^2-24$, so $y_p^{\prime\prime}+y_p=x^4$.
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### Question 5 {#practice-5}
 
@@ -438,6 +529,10 @@ The substitution above checks the PI; the auxiliary equation checks the CF.
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### Question 6 {#practice-6}
 
 > Solve $y^{\prime\prime}+4y=8\sin2x$, given $y(0)=0$ and $y^{\prime}(0)=0$.
@@ -454,7 +549,12 @@ The ordinary sine–cosine trial is in the CF. Multiply it by $x$ and use the pr
 
 The CF is $A\cos2x+B\sin2x$. Try $y_p=x(C\cos2x+D\sin2x)$. Differentiation gives
 
-$$y_p^{\prime\prime}+4y_p=-4C\sin2x+4D\cos2x.$$
+$$\begin{aligned}
+y_p^{\prime}&=C\cos2x+D\sin2x+x(-2C\sin2x+2D\cos2x),\\
+y_p^{\prime\prime}&=-4C\sin2x+4D\cos2x-4x(C\cos2x+D\sin2x),\\
+y_p^{\prime\prime}+4y_p&=-4C\sin2x+4D\cos2x\\
+&=8\sin2x+0\cos2x.
+\end{aligned}$$
 
 Thus $C=-2$, $D=0$, and the general solution is $y=A\cos2x+B\sin2x-2x\cos2x$.
 
@@ -470,6 +570,10 @@ The PI contributes $8\sin2x$ and the CF contributes zero; both initial condition
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
 ### Question 7 {#practice-7}
 
 > On $0\le x\le1$, solve $y^{\prime\prime}=6x+4$, given $y(0)=1$ and $y(1)=4$. Identify a CF and a PI.
@@ -484,6 +588,15 @@ The auxiliary equation is $m^2=0$. Integrate twice; do not use only a degree-1 p
 <details markdown="1">
 <summary>Solution</summary>
 
+Write the two integrations separately, introducing one constant each time:
+
+$$\begin{aligned}
+y^{\prime}&=\int(6x+4)\,\mathrm dx
+=6\frac{x^2}{2}+4x+B=3x^2+4x+B,\\
+y&=\int(3x^2+4x+B)\,\mathrm dx\\
+&=3\frac{x^3}{3}+4\frac{x^2}{2}+Bx+A=x^3+2x^2+Bx+A.
+\end{aligned}$$
+
 The repeated zero root gives $y_c=A+Bx$. Integration twice gives a PI $y_p=x^3+2x^2$, so
 
 $$y=x^3+2x^2+A+Bx.$$
@@ -496,9 +609,13 @@ Check: $y^{\prime\prime}=6x+4$, $y(0)=1$ and $y(1)=4$. The forcing is degree 1, 
 
 </details>
 
+</section>
+
 ## Diagnose and Retry {#diagnose-and-retry}
 
-Both tasks are self-written and have no official marks. Explain the error before opening feedback; then close every solution and attempt the new task independently. If you need a hint, return later for another independent attempt.
+These tasks are self-written and have no official marks. Explain the error before opening feedback; then close every solution and attempt the new task independently. If you need a hint, return later for another independent attempt.
+
+<section class="lesson-check" markdown="1">
 
 **Diagnose:** For $y^{\prime\prime}-4y^{\prime}+4y=8e^{2x}$, a learner tries $y_p=Cxe^{2x}$. Test the trial before trying to determine $C$.
 
@@ -508,6 +625,10 @@ Both tasks are self-written and have no official marks. Explain the error before
 Substitution gives zero for every $C$, since this trial is in the CF. Use $Cx^2e^{2x}$ instead; it contributes $2Ce^{2x}$, so $C=4$. One extra factor of $x$ was insufficient for the repeated root.
 
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 **Independent retry:** A homogeneous constant-coefficient equation has general solution $y=(A+Bx)e^{-x}$ and leading coefficient 1. Recover its differential equation. Then solve the equation with the same left side and right side $6e^{-x}$, given $y(0)=1$ and $y^{\prime}(0)=0$.
 
@@ -521,9 +642,28 @@ Recover the auxiliary polynomial from the whole solution family, then compare th
 <details markdown="1">
 <summary>Retry solution and check</summary>
 
-The auxiliary polynomial is $(m+1)^2$, so the equation is $y^{\prime\prime}+2y^{\prime}+y=0$. For the new right side, $y_p=Cx^2e^{-x}$ contributes $2Ce^{-x}$, giving $C=3$. The total solution is $(A+Bx+3x^2)e^{-x}$. Its initial values give $A=1$ and $B-A=0$, hence $y=(1+x+3x^2)e^{-x}$. Substitution checks the forcing and both conditions.
+The auxiliary polynomial is $(m+1)^2$, so the homogeneous equation is $y^{\prime\prime}+2y^{\prime}+y=0$. The forcing overlaps a repeated root. Test the new trial before applying conditions to the total solution:
+
+$$\begin{aligned}
+y_p&=Cx^2e^{-x},\\
+y_p^{\prime}&=C(2x-x^2)e^{-x},\\
+y_p^{\prime\prime}&=C(2-4x+x^2)e^{-x},\\
+y_p^{\prime\prime}+2y_p^{\prime}+y_p
+&=C[(2-4x+x^2)+2(2x-x^2)+x^2]e^{-x}\\
+&=2Ce^{-x}=6e^{-x}\quad\Longrightarrow\quad C=3,\\
+y&=(A+Bx+3x^2)e^{-x},\\
+y^{\prime}&=[B+6x-(A+Bx+3x^2)]e^{-x},\\
+y(0)&=A=1,\qquad y^{\prime}(0)=B-A=0,\\
+y&=\boxed{(1+x+3x^2)e^{-x}}.
+\end{aligned}$$
+
+Substitution gives $6e^{-x}$ on the left, and the two initial conditions have been checked separately above.
 
 </details>
+
+</section>
+
+**Next after practice:** close this chapter and attempt the course [mixed review](/alevel/a2-further-mathematics/#mixed-review). After subsequent learning, attempt the [later retrieval tasks](/alevel/a2-further-mathematics/#later-review). Record whether the first attempt was independent, any hint used, the error and the retry result. If a method or condition was wrong, use this chapter’s after-practice route to repair that skill, then retry with solutions closed.
 
 ## Quick Reference {#quick-reference}
 
@@ -557,6 +697,8 @@ The auxiliary polynomial is $(m+1)^2$, so the equation is $y^{\prime\prime}+2y^{
 
 ## Sources {#sources}
 
+Scope check on 2026-10-23: the current 9665 qualification page led to specification v5.2; the relevant FP2 section was checked without migrating to 9765. For the papers and schemes below, only the identified questions and matching marking sections were reread as PDF text; visual verification of the original PDF pages was not completed. Official identities and marks are retained; adaptations and self-written tasks are labelled separately.
+
 The scope follows [OxfordAQA's International A-level Further Mathematics specification, FP2.11, printed p. 20](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf). Example 7 adapts the approach in Specimen 2018 FM03, Question 7, checked against the official mark scheme, Question 7: substitute a PI, match coefficients, add the CF, then apply the conditions and justify the decaying product limit. The equation and numbers are changed; no official mark allocation is implied. All other worked examples and practice questions are original.
 
-[OxfordAQA Specimen 2018, Q7, QP PDF p. 12](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-specimen-paper-2019-v3.pdf#page=12); [MS Q7, PDF p. 10](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-mark-scheme-2016-v1.pdf#page=10). Question and matching mark scheme read on 2026-10-22. Only the identified method is adapted; the adapted question and additional self-written tasks are not official questions.
+[OxfordAQA Specimen 2018, Q7, QP PDF p. 12](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-specimen-paper-2019-v3.pdf#page=12); [MS Q7, PDF p. 10](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-mark-scheme-2016-v1.pdf#page=10). Question and matching mark scheme reread on 2026-10-23 (PDF text). Only the identified method is adapted; the adapted question and additional self-written tasks are not official questions.

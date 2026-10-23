@@ -24,7 +24,7 @@ alevel:
     name: A2 Math - Mechanics
     name_zh: A2 数学 · 力学
     description: MA05 lessons and practice · English
-    description_zh: MA05 学习页与练习 · 英文
+    description_zh: MA05 学习页与练习 · 中文
     icon: "📕"
     path: /alevel/a2-mathematics/mechanics
   - id: a2math_statistics
@@ -71,16 +71,16 @@ alevel:
     stage: AS
     name: AS Math
     name_zh: AS 数学
-    description: P1/PSM1 notes · English
-    description_zh: 中文目录 → P1/PSM1 英文笔记
+    description: MA01/MA02 lessons and practice · English
+    description_zh: MA01/MA02 学习页与练习 · 中文
     icon: "📗"
     path: /alevel/as-mathematics/
   - id: asfurthermathematics
     stage: AS
     name: AS Further Math
     name_zh: AS 高等数学
-    description: FP1/FPSM1 notes · English
-    description_zh: FP1/FPSM1 参考笔记 · 英文
+    description: FM01/FM02 lessons and practice · English
+    description_zh: FM01/FM02 学习页与练习 · 中文
     icon: "📗"
     path: /alevel/as-further-mathematics/
   - id: chemistry

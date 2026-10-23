@@ -7,6 +7,7 @@ const read = file => fs.readFileSync(path.join(site, file), 'utf8');
 for (const file of ['index.html', 'zh/index.html', 'alevel/index.html', 'igcse/index.html',
   'zh/alevel/a2-physics/capacitance/index.html', 'alevel/fx-cg50/index.html', 'admissions/tmua-esat/index.html']) {
   const html = read(file);
+  if (html.includes('subject-page-title')) assert.match(html, /<h1\b[^>]*class="subject-page-title"[^>]*data-pagefind-body/, `${file}: full lesson title is searchable`);
   for (const id of ['search-input', 'search-results', 'siteSearchDialog']) {
     assert.equal(html.split(`id="${id}"`).length - 1, 1, `${file}: exactly one ${id}`);
   }
@@ -20,13 +21,13 @@ for (const file of ['index.html', 'zh/index.html', 'alevel/index.html', 'igcse/i
 // Snapshot destinations, not copy: descriptions may change without changing the resources.
 const homepageDestinations = [
   ['/alevel/as-mathematics/', '/zh/alevel/as-mathematics/'],
-  ['/alevel/as-further-mathematics/', null],
+  ['/alevel/as-further-mathematics/', '/zh/alevel/as-further-mathematics/'],
   ['/alevel/as-chemistry/', null],
   ['/alevel/as-physics/', '/zh/alevel/as-physics/'],
   ['/alevel/as-economics/', null],
   ['/alevel/as-biology/', null],
   ['/alevel/a2-mathematics/', '/zh/alevel/a2-mathematics/'],
-  ['/alevel/a2-mathematics/mechanics', null],
+  ['/alevel/a2-mathematics/mechanics', '/zh/alevel/a2-mathematics/mechanics/'],
   ['/alevel/a2-mathematics/statistics', null],
   ['/alevel/a2-further-mathematics/', '/zh/alevel/a2-further-mathematics/'],
   ['/alevel/a2-physics/', '/zh/alevel/a2-physics/'],

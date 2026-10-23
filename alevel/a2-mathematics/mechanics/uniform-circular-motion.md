@@ -23,6 +23,12 @@ Textbook: Chapter 15, *Uniform Circular Motion*, Sections 15.1–15.3 (printed p
 
 Model bodies as particles unless stated otherwise. All worked examples and practice questions are self-written, not official past-paper questions. No official marks are assigned. Diagrams show the model and are not drawn to scale.
 
+<!-- motion-sources:start -->
+## Sources and Scope
+
+**Scope and assessment:** [OxfordAQA 9660 specification v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf), M2.7; method reference: MA05 January 2025 Q3, read with the paired [question paper](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-question-paper.pdf) and [mark scheme, Version 1.0 Final](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-mark-scheme.pdf). The tasks remain self-written without official marks. The convention above applies to these tasks; authentic questions follow their own precision instructions. This lesson treats uniform motion in horizontal circles and central-force circular orbits, not FM05 non-uniform vertical circles.
+<!-- motion-sources:end -->
+
 ## Angular Speed and Angular Velocity
 
 **Angular speed** is the rate at which a particle turns about the centre of its circle. Write it as $\omega$ and measure it in **radians per second**. One complete revolution is $2\pi$ radians.
@@ -676,6 +682,66 @@ $$\boxed{\tau=\frac{2\pi}{\omega}\approx5.38\times10^3\,\mathrm s}.$$
 **Check:** use unrounded values to find $r\omega^2=9\,\mathrm{m\,s^{-2}}$ and $v\tau=2\pi r$. There is no supporting reaction or tension to add to gravity.
 
 </details>
+
+<!-- motion-transfer:start -->
+## Independent Method Choice
+
+**Self-written diagnostic task.** Choose the force equations and a criterion for possible motion. Keep the reasoning hint and feedback closed on your first attempt.
+
+**Question:** Two small blocks are to rotate without slipping on a rough horizontal turntable. Block $P$ has mass $0.2\,\mathrm{kg}$, radius $0.25\,\mathrm m$ and coefficient of friction $0.2$; block $Q$ has mass $0.8\,\mathrm{kg}$, radius $0.75\,\mathrm m$ and coefficient of friction $0.3$. At a constant angular speed $2\,\mathrm{rad\,s^{-1}}$, test the proposed motion for each block. Find the greatest common angular speed at which both can remain fixed relative to the disc. A student says the heavier block must be safer because its limiting friction is larger. Assess that reasoning. Ignore air resistance and model the blocks as particles.
+
+<details markdown="1">
+<summary>Reasoning hint</summary>
+
+Find the required radial force as well as the available limiting friction. Test an inequality for each block; do not assume friction is already limiting at every speed.
+
+</details>
+
+<details markdown="1">
+<summary>Feedback and independent check</summary>
+
+Vertically $R=mg$. Static friction is the only horizontal force, so for no slip it must provide $f=mr\omega^2$ towards the centre, subject to $f\leq\mu mg$.
+
+$$f_P=0.2(0.25)(2^2)=0.2\,\mathrm N<0.2(0.2g)=0.392\,\mathrm N.$$
+
+$$f_Q=0.8(0.75)(2^2)=2.4\,\mathrm N>0.3(0.8g)=2.352\,\mathrm N.$$
+
+Thus $P$ can stay fixed relative to the disc, but the proposed no-slip motion of $Q$ is impossible. The value $2.4\,\mathrm N$ is the force it would need, not an available static-friction force. We have not modelled its subsequent slipping motion.
+
+$$\omega^2\leq\frac{0.2g}{0.25}=7.84\quad(P),\qquad \omega^2\leq\frac{0.3g}{0.75}=3.92\quad(Q).$$
+
+$$\boxed{\omega_{\text{max}}=\sqrt{3.92}\approx1.98\,\mathrm{rad\,s^{-1}}}.$$
+
+The mass cancels in each inequality: the required force also grows with mass. Compare $r\omega^2$ with $\mu g$, not the friction limits alone. If you used the same linear speed for both, return to $v=r\omega$. Independently, at the common boundary $f_Q=2.352\,\mathrm N$ while $f_P=0.196\,\mathrm N<0.392\,\mathrm N$; only $Q$ is limiting.
+
+</details>
+
+### Retry: change the structure
+
+**Question:** A $0.5\,\mathrm{kg}$ particle moves in a horizontal circle on a fixed smooth horizontal plane. A light inextensible string of length $1\,\mathrm m$ joins it to a fixed point $0.6\,\mathrm m$ above the plane. The string is taut, and the normal reaction is measured as half the particle's weight. Find the angular speed, tension and linear speed. Check that the assumed contact is possible. Ignore air resistance.
+
+<details markdown="1">
+<summary>Retry hint</summary>
+
+Use the measured reaction in vertical balance to determine the vertical tension component. Then use the horizontal component for the radial resultant.
+
+</details>
+
+<details markdown="1">
+<summary>Retry feedback and check</summary>
+
+The radius is $\sqrt{1^2-0.6^2}=0.8\,\mathrm m$ and $R=0.5mg=2.45\,\mathrm N$. Therefore:
+
+$$0.6T=mg-R=2.45,\qquad \boxed{T=\frac{49}{12}\approx4.08\,\mathrm N}.$$
+
+$$0.8T=0.5(0.8)\omega^2,\qquad \boxed{\omega=\sqrt{\frac{49}{6}}\approx2.86\,\mathrm{rad\,s^{-1}}}.$$
+
+$$\boxed{v=0.8\sqrt{\frac{49}{6}}\approx2.29\,\mathrm{m\,s^{-1}}}.$$
+
+Here $R>0$, $T>0$ and $0.6\omega^2=4.9<g$, so the contact model is consistent. Independently, $R=m(g-h\omega^2)$ recovers $2.45\,\mathrm N$. There is no friction on this smooth plane; the measured reaction supplies information about the tension, not an extra inward force.
+
+</details>
+<!-- motion-transfer:end -->
 
 ## Method Summary
 

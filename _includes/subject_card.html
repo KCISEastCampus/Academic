@@ -3,7 +3,8 @@
 {% assign subject_path = subject.path %}
 {% if page.lang == 'zh-CN' %}
   {% assign subject_name = subject.name_zh | default: subject_name %}
-  {% assign subject_translation = site.pages | where: 'translation_of', subject.path | first %}
+  {% assign subject_lookup_path = subject.path | append: '/' | replace: '//', '/' %}
+  {% assign subject_translation = site.pages | where: 'translation_of', subject_lookup_path | first %}
   {% if subject_translation %}{% assign subject_path = subject_translation.url %}{% endif %}
 {% endif %}
 {% assign course_accent = include.accent | default: 'al' %}

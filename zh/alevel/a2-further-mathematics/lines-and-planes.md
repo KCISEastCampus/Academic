@@ -7,8 +7,9 @@ subject: a2-further-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-further-mathematics/lines-and-planes/
 permalink: /zh/alevel/a2-further-mathematics/lines-and-planes/
-toc_headings: h2, h3, h4
+toc_headings: "#directions-and-lines, #planes, #intersections, #angles, #distances-and-reflections, #official-problems, #practice, #common-pitfalls, #sources"
 study_page: true
+reading_layout: true
 ---
 
 [高等纯数学](/zh/alevel/a2-further-mathematics/) · FP2.12 向量与三维坐标几何
@@ -24,6 +25,8 @@ study_page: true
 **开始前：**复习 [MA03 向量](/zh/alevel/a2-mathematics/vectors/)与[向量积及共面](/zh/alevel/a2-further-mathematics/vector-products-and-coplanarity/)。需要点积、叉积、联立方程与非零方向向量。新例题均使用构造的数学数据。
 
 标为 **Original example** 和 **Original task** 的内容均为自拟；官方原题另列资格、考季、题号及配套评分材料定位。
+
+若不会从对称式读方向，先回 [MA03 直线](/zh/alevel/a2-mathematics/vectors/#straight-lines)，把公共表达式设为参数；若法向或垂直检查失败，回[叉积示范](/zh/alevel/a2-further-mathematics/vector-products-and-coplanarity/#example-cross-product)和[点积](/zh/alevel/a2-mathematics/vectors/#scalar-product)，再独立做[第 1 题](#practice-1)。
 
 ## 方向与直线方程 {#directions-and-lines}
 
@@ -61,19 +64,14 @@ $$\boxed{(\mathbf r-\mathbf a)\times\mathbf b=\mathbf0.}$$
 
 基点处位移为零，也包含在该方程中。只有方向非零时，此式才描述直线；方向为零会使任意位置都满足它。
 
+<section class="worked-example" markdown="1">
+
 ### 示例：方向分量为零 {#example-zero-component}
 
 > **Original example.** Write the line through $A=(1,2,3)$ with direction $(0,2,-1)$ in parametric, Cartesian and cross-product forms. Explain which coordinate stays fixed.
 
-<details markdown="1">
-<summary>提示</summary>
-
 方向中的零分量对应固定坐标，不能把零写成分母。
 
-</details>
-
-<details markdown="1">
-<summary>解答</summary>
 
 $$\begin{aligned}
 \mathbf r&=(1,2,3)+t(0,2,-1),\\
@@ -83,7 +81,7 @@ x&=1,\qquad \frac{y-2}{2}=\frac{z-3}{-1},\\
 
 第一坐标固定。展开最后一式，也能得到固定坐标条件及另两坐标之间的关系。若两个方向分量为零，应写出两个固定坐标，让第三个自由变化。
 
-</details>
+</section>
 
 ## 平面的两种形式 {#planes}
 
@@ -103,19 +101,14 @@ $$n_1x+n_2y+n_3z=d,\qquad \mathbf n=(n_1,n_2,n_3)\ne\mathbf0.$$
 
 法向量和**常数项**同时乘相同非零数，平面不变。除非法向量为单位向量并妥善处理正负号，否则常数本身不是原点到平面的距离。
 
+<section class="worked-example" markdown="1">
+
 ### 示例：连接不同表征 {#example-plane}
 
 > **Original example.** A plane passes through $A=(1,0,2)$ with directions $\mathbf b=(1,1,0)$ and $\mathbf c=(0,1,1)$. Obtain both vector forms and a Cartesian equation. Explain why the directions determine a plane.
 
-<details markdown="1">
-<summary>提示</summary>
-
 叉积给法向量，代入已知点确定常数。
 
-</details>
-
-<details markdown="1">
-<summary>解答</summary>
 
 $$\mathbf n=(1,1,0)\times(0,1,1)=(1,-1,1),\qquad d=(1,0,2)\cdot(1,-1,1)=3.$$
 
@@ -125,7 +118,7 @@ $$\boxed{\mathbf r=(1,0,2)+\lambda(1,1,0)+\mu(0,1,1),\qquad\mathbf r\cdot(1,-1,1
 
 代入一般参数点得到 $1+\lambda-(\lambda+\mu)+2+\mu=3$，证明整族参数点都在该平面内。
 
-</details>
+</section>
 
 ## 相交与特殊情形 {#intersections}
 
@@ -176,7 +169,10 @@ $$\boxed{\sin\theta=\frac{\lvert\mathbf b\cdot\mathbf n\rvert}{\lVert\mathbf b\r
 设点的位置为 $\mathbf p$，直线为 $\mathbf r=\mathbf a+t\mathbf b$。最近点 $H$ 满足垂直条件：
 
 $$\mathbf h=\mathbf a+t\mathbf b,\qquad (\mathbf p-\mathbf h)\cdot\mathbf b=0
-\quad\Longrightarrow\quad t=\frac{(\mathbf p-\mathbf a)\cdot\mathbf b}{\mathbf b\cdot\mathbf b}.$$
+\quad\Longrightarrow\quad (\mathbf p-\mathbf a)\cdot\mathbf b-t(\mathbf b\cdot\mathbf b)=0.$$
+
+$$t(\mathbf b\cdot\mathbf b)=(\mathbf p-\mathbf a)\cdot\mathbf b
+\quad\Longrightarrow\quad t=\frac{(\mathbf p-\mathbf a)\cdot\mathbf b}{\mathbf b\cdot\mathbf b},\qquad \mathbf b\cdot\mathbf b>0.$$
 
 距离就是点与垂足之间位移的模。也可构造以直线方向为底的平行四边形，其高度就是所求距离：
 
@@ -189,7 +185,11 @@ $$\boxed{D_{\mathrm{point,line}}=\lVert\mathbf p-\mathbf h\rVert=\frac{\lVert(\m
 对于平面 $\mathbf r\cdot\mathbf n=d$，从给定点沿法向到达垂足：
 
 $$\mathbf h=\mathbf p+s\mathbf n,\qquad
-(\mathbf p+s\mathbf n)\cdot\mathbf n=d\quad\Longrightarrow\quad s=\frac{d-\mathbf p\cdot\mathbf n}{\mathbf n\cdot\mathbf n}.$$
+(\mathbf p+s\mathbf n)\cdot\mathbf n=d.$$
+
+$$\mathbf p\cdot\mathbf n+s(\mathbf n\cdot\mathbf n)=d
+\quad\Longrightarrow\quad s(\mathbf n\cdot\mathbf n)=d-\mathbf p\cdot\mathbf n
+\quad\Longrightarrow\quad s=\frac{d-\mathbf p\cdot\mathbf n}{\mathbf n\cdot\mathbf n},\qquad\mathbf n\cdot\mathbf n>0.$$
 
 因此
 
@@ -200,6 +200,8 @@ $$\boxed{D_{\mathrm{point,plane}}=\lvert s\rvert\lVert\mathbf n\rVert=\frac{\lve
 $$\boxed{\mathbf q=2\mathbf h-\mathbf p=\mathbf p+2s\mathbf n.}$$
 
 检查中点是否在平面内，以及原像点到像点的位移是否沿法向。原本就在平面上的点保持不动。January 2025 Q11 使用了这种推理；它不改变 FP2.13 对指定反射矩阵的范围限制。
+
+<section class="lesson-check" markdown="1">
 
 ### 补步并检查投影 {#repair-projection}
 
@@ -225,7 +227,11 @@ $$\mathbf q=2\mathbf h-\mathbf p=\left(-\frac13,\frac{10}3,\frac53\right).$$
 
 </details>
 
-## 逐步撤去支架的官方题 {#official-problems}
+</section>
+
+## 官方题完整示范 {#official-problems}
+
+<section class="worked-example" markdown="1">
 
 ### June 2024：确定对象与作答形式 {#example-june-2024}
 
@@ -245,17 +251,10 @@ $$\mathbf q=2\mathbf h-\mathbf p=\left(-\frac13,\frac{10}3,\frac53\right).$$
 >
 > (c) The plane $\Pi_2$ has Cartesian equation $x-3y+2z=1$. Find a vector equation for the line of intersection of the planes $\Pi_1$ and $\Pi_2$. Give your answer in the form $(\mathbf r-\mathbf a)\times\mathbf b=\mathbf0$. **[5 marks]**
 
-先写方向与法向。不看方法标签尝试 (b)；(c) 先找方向，再补出所需的一个点。
-
-<details markdown="1">
-<summary>提示</summary>
+本示范先说明方向与法向的选择，再完成距离和交线的全部约束检查。
 
 将公共表达式设为参数，方向为 $(2,-1,4)$。(a) 要用余角。(c) 将两个法向量叉乘；找公共点时，可方便地令第二坐标为零。
 
-</details>
-
-<details markdown="1">
-<summary>解答</summary>
 
 直线基点为 $(7,1,3)$，方向为 $(2,-1,4)$；第一个平面的法向量为 $(1,1,3)$。因此
 
@@ -277,7 +276,9 @@ $$\boxed{\big(\mathbf r-(-1,0,1)\big)\times(11,1,-4)=\mathbf0.}$$
 
 检查点：$-1+0+3=2$，且 $-1-0+2=1$。检查方向：$11+1-12=0$，且 $11-3-8=0$。正确参数式虽然表示同一点集，但单独写它没有完成本题指定的最终形式。
 
-</details>
+</section>
+
+<section class="worked-example" markdown="1">
 
 ### January 2025：交点、平面与反射 {#example-january-2025}
 
@@ -303,15 +304,8 @@ $$\boxed{\big(\mathbf r-(-1,0,1)\big)\times(11,1,-4)=\mathbf0.}$$
 >
 > (ii) Find the exact distance of $P$ from $\Pi$. **[2 marks]**
 
-<details markdown="1">
-<summary>提示</summary>
-
 先把两条直线参数化；第一条直线的第一方向分量是二分之一，而不是 2。联立第一、第三坐标求参数，再用第二坐标。(c) 先到垂足，再沿同样方向走相同位移。
 
-</details>
-
-<details markdown="1">
-<summary>解答</summary>
 
 $$\mathbf r_1=(6,7,5)+\lambda(1/2,2,-1),\qquad\mathbf r_2=(8,w,6)+\mu(-3,2,1).$$
 
@@ -341,15 +335,19 @@ $$\boxed{\mathbf q=(5,-3,1)+\frac45(8,5,14)=\left(\frac{57}5,1,\frac{61}5\right)
 
 原像点与像点的中点就是垂足。将其中点代入平面，得到 $(328+462)/5-5=153$。原像点与像点代入平面方程后的有向残差分别为 −114 和 114，大小相同、正负相反。这些检验区分反射与投影。
 
-</details>
+</section>
 
 ## 混合独立练习 {#practice}
 
 以下均为**自拟题**，无官方分值。关闭例题后独立完成。写清向量代表哪些几何对象，并将最终结果代回原方程。
 
+<section class="lesson-check" markdown="1">
+
 ### 第 1 题：改变平面条件 {#practice-1}
 
 > A line is given by $\mathbf r=(0,1,2)+t(2,0,-1)$. Write its Cartesian and cross-product forms. Determine its relationship to each plane: $\Pi:x-y+z=4$ and $\Sigma:x+2z=5$. Find any intersection and the smaller angle with $\Pi$. Then find the distance of $P=(1,2,3)$ from $\Pi$ and the reflection of $P$ in $\Pi$.
+>
+> **Original extension / 自拟补问.** Then also classify the same line relative to $\Omega:x+2z=4$, justifying the result for every parameter.
 
 <details markdown="1">
 <summary>提示</summary>
@@ -375,11 +373,19 @@ $$\mathbf h=(1,2,3)+\frac23(1,-1,1)=\left(\frac53,\frac43,\frac{11}3\right),\qqu
 
 中点位于平面内：$5/3-4/3+11/3=4$。指向像点的位移与法向量平行。
 
+对补问，任意参数均有 $x+2z=4$，所以整条直线包含于 $\Omega$；交集是整条直线，不是单个点。
+
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### 第 2 题：两个平面与夹角 {#practice-2}
 
 > Let $\Pi_1:x+z=2$ and $\Pi_2:y+z=3$. Find their smaller dihedral angle and their intersection in cross-product form. Write a parametric form of $\Pi_1$ using two nonparallel directions. Explain why the planes $x+z=2$ and $2x+2z=5$ have no intersection.
+>
+> **Original extension / 自拟补问.** Compare also $x+z=2$ with $2x+2z=4$: identify their complete intersection set and explain why a zero normal cross product does not select a line.
 
 <details markdown="1">
 <summary>提示</summary>
@@ -401,7 +407,13 @@ $$\mathbf r=(2,0,0)+\lambda(0,1,0)+\mu(-1,0,1).$$
 
 两个方向不平行，所有点的第一与第三坐标之和都符合条件。最后一对平面不同且平行：第一个方程乘二得到 $2x+2z=4$，与另一个常数不一致。
 
+补问中的第二个完整方程恰为第一个的二倍，因此两面重合，交集是整个平面；零叉积本身不能区分重合与相异平行。
+
 </details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
 
 ### 第 3 题：伪交点与新的重试 {#practice-3}
 
@@ -431,6 +443,154 @@ $$D=\sqrt{2^2+1^2+(-1)^2}=\sqrt6.$$
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 第 4 题：方向与单位长度 {#practice-4}
+
+> **Original task / 自拟题.** For the oriented direction $\mathbf b=(1,-2,2)$, find the direction cosines and check their squared sum. Give the cosines for the reversed orientation. A student proposes $(2/3,-1/3,2/3)$ for the original direction because its squared sum is one. Decide whether that is sufficient.
+
+<details markdown="1">
+<summary>提示</summary>
+
+先求模，再保留各分量的正负；用倍数条件检查候选。
+
+</details>
+
+<details markdown="1">
+<summary>解答</summary>
+
+$$\lVert\mathbf b\rVert=\sqrt{1+4+4}=3,\qquad(l,m,n)=\left(\frac13,-\frac23,\frac23\right).$$
+
+$$\frac19+\frac49+\frac49=1,\qquad(-l,-m,-n)=\left(-\frac13,\frac23,-\frac23\right).$$
+
+候选的平方和虽为 1，但第一分量要求倍数为 2，第二分量却要求倍数为 $1/2$，所以不平行。单位长度只是必要条件；还须符合所给有向方向。若此处出错，关闭帮助做下一题。
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 方向重试 {#direction-retry}
+
+> **Original task / 自拟题.** The line is $(x-1)/2=(y+1)/3=(1-z)/6=t$. Find the direction cosines in the direction of increasing $t$. Explain the sign of the last one.
+
+<details markdown="1">
+<summary>提示</summary>
+
+先分别解出三个坐标，再读方向。
+
+</details>
+
+<details markdown="1">
+<summary>解答</summary>
+
+$$x=1+2t,\quad y=-1+3t,\quad z=1-6t,\quad\mathbf b=(2,3,-6),\quad\lVert\mathbf b\rVert=7.$$
+
+$$(l,m,n)=\left(\frac27,\frac37,-\frac67\right),\qquad\frac{4+9+36}{49}=1.$$
+
+参数增加时第三坐标减小，故与正第三轴夹角为钝角，余弦为负。
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 第 5 题：从约束重建公式 {#practice-5}
+
+> **Original task / 自拟题.** Without quoting a distance formula, derive the nearest-point parameter and squared distance from $\mathbf p$ to $\mathbf a+t\mathbf b$, where $\mathbf b\ne\mathbf0$. Explain why the foot is nearest. Separately derive the distance and reflection image for $\mathbf r\cdot\mathbf n=d$, where $\mathbf n\ne\mathbf0$. Explain why scaling a direction, or scaling both a plane normal and its constant, cannot change the geometric answers.
+
+<details markdown="1">
+<summary>提示</summary>
+
+线上垂足用“在直线上且位移垂直”；面上垂足用“沿法向且在平面内”；反射再用中点。
+
+</details>
+
+<details markdown="1">
+<summary>解答</summary>
+
+$$\mathbf w=\mathbf p-\mathbf a,\quad (\mathbf w-t\mathbf b)\cdot\mathbf b=0
+\iff t=\frac{\mathbf w\cdot\mathbf b}{\mathbf b\cdot\mathbf b}.$$
+
+$$\begin{aligned}
+D^2&=(\mathbf w-t\mathbf b)\cdot(\mathbf w-t\mathbf b)\\
+&=\mathbf w\cdot\mathbf w-2t(\mathbf w\cdot\mathbf b)+t^2(\mathbf b\cdot\mathbf b)\\
+&=\mathbf w\cdot\mathbf w-\frac{2(\mathbf w\cdot\mathbf b)^2}{\mathbf b\cdot\mathbf b}+\frac{(\mathbf w\cdot\mathbf b)^2}{\mathbf b\cdot\mathbf b}\\
+&=\mathbf w\cdot\mathbf w-\frac{(\mathbf w\cdot\mathbf b)^2}{\mathbf b\cdot\mathbf b}.
+\end{aligned}$$
+
+对任意另一线上点 $\mathbf h+u\mathbf b$，距离平方为 $D^2+u^2\lVert\mathbf b\rVert^2\ge D^2$，因为交叉项由垂直条件为零。这才证明所得垂足最近。对于平面：
+
+$$\mathbf h=\mathbf p+s\mathbf n,\quad \mathbf h\cdot\mathbf n=d
+\iff\mathbf p\cdot\mathbf n+s(\mathbf n\cdot\mathbf n)=d
+\iff s=\frac{d-\mathbf p\cdot\mathbf n}{\mathbf n\cdot\mathbf n}.$$
+
+$$D=\lvert s\rvert\lVert\mathbf n\rVert
+=\frac{\lvert d-\mathbf p\cdot\mathbf n\rvert}{\lVert\mathbf n\rVert},\qquad\mathbf q-\mathbf h=\mathbf h-\mathbf p
+\iff\mathbf q=\mathbf p+2s\mathbf n.$$
+
+平面内其他点与垂足的位移垂直于 $\mathbf p-\mathbf h$，同样由勾股关系证明最近。把方向乘非零数 $k$ 后，参数变为 $t/k$，垂足不变；法向与常数同时乘非零数 $m$ 后，参数变为 $s/m$，垂足、距离和像点也不变。
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 三坐标同目标重试 {#coordinate-retry}
+
+> **Original task / 自拟题.** Consider $L_1:\mathbf r=(1,0,2)+t(1,2,-1)$ and $L_2:\mathbf r=(0,1,c)+s(2,1,1)$. Find all $c$ for which they intersect and give the common point. Classify the lines when $c=1$. Show what each of the three coordinate equations contributes.
+
+<details markdown="1">
+<summary>提示</summary>
+
+两个参数独立。先解两个坐标，再用剩下的坐标筛选参数条件。
+
+</details>
+
+<details markdown="1">
+<summary>解答</summary>
+
+$$1+t=2s,\qquad2t=1+s\quad\Longrightarrow\quad t-2s=-1,\quad2t-s=1.$$
+
+$$t=2s-1\quad\Longrightarrow\quad4s-2-s=1\quad\Longrightarrow\quad s=1,\quad t=1.$$
+
+$$2-t=c+s\quad\Longrightarrow\quad1=c+1\quad\Longrightarrow\quad c=0.$$
+
+此时两边均给出 $(2,2,1)$。若 $c=1$，同一候选参数的第三坐标分别为 1、2，不相交；两个方向不成比例，故为异面直线。若仍漏第三坐标，回读第 3 题的反例后，遮住本解答重新写出三个方程。
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 包含与重合同目标重试 {#branch-retry}
+
+> **Original task / 自拟题.** For $L:\mathbf r=(1,0,1)+t(1,1,0)$ and $\Pi:x-y=1$, describe $L\cap\Pi$. Compare $\Pi$ with $2x-2y=2$ and with $2x-2y=3$, giving each intersection set. Do not divide by a zero coefficient.
+
+<details markdown="1">
+<summary>提示</summary>
+
+代入一般点；比较平面时常数也要按同一比例变化。
+
+</details>
+
+<details markdown="1">
+<summary>解答</summary>
+
+$$x-y=(1+t)-t=1,\qquad 2(x-y)=2.$$
+
+第一式对所有参数成立，故 $L\cap\Pi=L$。第二个完整平面方程是 $\Pi$ 的二倍，交集为整个平面；常数为 3 时与恒等式 $2(x-y)=2$ 冲突，两个平面相异平行，交集为空。
+
+</details>
+
+</section>
+
 ## 快速参考 {#quick-reference}
 
 | 任务 | 选择哪些向量 | 必要检查 |
@@ -458,11 +618,13 @@ $$D=\sqrt{2^2+1^2+(-1)^2}=\sqrt6.$$
 - 除以零点积：先判定直线被包含还是不相交。
 - 把垂足当反射像：使用中点条件，并重复到垂足的位移。
 
-**继续前：**用简短英文解释线面角为何用正弦，面面角为何用余弦。不看提示重做一道投影题，同时检查垂足的归属与位移的垂直性。即使计算器能核算数值，也需要这些书面证据。
+**学后下一步：**余弦错因接[方向重试](#direction-retry)；漏坐标接[三坐标重试](#coordinate-retry)；漏包含／重合接[分支重试](#branch-retry)；只会套距离公式则回推导后做[第 5 题](#practice-5)。各题都先关闭帮助。然后做课程[跨主题综合](/zh/alevel/a2-further-mathematics/#mixed-review)，隔开学习后做[延后任务](/zh/alevel/a2-further-mathematics/#later-review)，用法向说明反射平面。
 
 **学习路径：**[上一课：向量积与共面](/zh/alevel/a2-further-mathematics/vector-products-and-coplanarity/) · [下一课：矩阵代数](/zh/alevel/a2-further-mathematics/matrix-algebra/) · [高等纯数学](/zh/alevel/a2-further-mathematics/)。
 
 ## 来源与范围 {#sources}
+
+本轮于 **2026-10-23** 重读下列大纲及所列官方 QP／MS 原文。
 
 - OxfordAQA International A-level Further Mathematics **9665**，Unit FP2/FM03，大纲 **Version 5.2**，[FP2.12，PDF 第 19 页／印刷第 20 页](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf#page=19)：方向比及余弦、笛卡尔几何、两种平面式、叉积直线式、相交与夹角。
 - [June 2024 FM03 QP Q10，第 16–17 页](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-question-paper.pdf#page=16)与[配套 MS 第 14–15 页](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-mark-scheme.pdf#page=14)：线面角、精确点线距离、按指定叉积形式表示交线。
