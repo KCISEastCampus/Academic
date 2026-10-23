@@ -1,0 +1,347 @@
+{
+  "recorded_at": "2026-10-23T09:03:00.210159+08:00",
+  "source_files": [
+    {
+      "path": "_includes/mathjax.html",
+      "sha256": "2b4e755c8fa4f1365cf59bfd9916ea9c3ff7396bfc6725cff6a7960a980b0ac5",
+      "git_sha256": "344d23df6c5f072b90af21b312433ca6b46abc89e09904b5812f2f295cbec973"
+    },
+    {
+      "path": "alevel/as-further-mathematics/bayes.md",
+      "sha256": "45b54cf4255af7220614c8ebd5d690c50cb31487b4a4d82063c5794756e4ced9",
+      "git_sha256": "9b74ba9f60b666df1ce84cd37b65063de59c0b7f6a1463a6022508cc36782f60"
+    },
+    {
+      "path": "alevel/as-further-mathematics/complex-numbers-and-roots.md",
+      "sha256": "b24ac62f27f4c73dd9220fd783c6c76c2ff127f6c0effc7648356d732a718346",
+      "git_sha256": "b24ac62f27f4c73dd9220fd783c6c76c2ff127f6c0effc7648356d732a718346"
+    },
+    {
+      "path": "alevel/as-further-mathematics/conics-and-loci.md",
+      "sha256": "9b8ffdd79a632f38270343d3123521d867ada8839be65e1284c8b4c4cbcfa479",
+      "git_sha256": "f95f5de7b0d7d5139fa488adb58aa75becca8eb86478a050a2a071cf8c2d31da"
+    },
+    {
+      "path": "alevel/as-further-mathematics/diagrams/argand.svg",
+      "sha256": "7b83b2e43950ca6a4dc51cee11cdd73374fde6665c1c073eac3e41a85176bad1",
+      "git_sha256": "3ce8aa0129500dd3feee5299af3575e82dffb3c34b676693a0bb0750f1c34160"
+    },
+    {
+      "path": "alevel/as-further-mathematics/diagrams/bayes.svg",
+      "sha256": "1e8c0e680eff01bd3fb723fa8c67bc6c7ce9bc08fcb6bee3d9c99b581799a88a",
+      "git_sha256": "1e8c0e680eff01bd3fb723fa8c67bc6c7ce9bc08fcb6bee3d9c99b581799a88a"
+    },
+    {
+      "path": "alevel/as-further-mathematics/diagrams/collision-line.svg",
+      "sha256": "fbb1687b2be4399a9e658a8ef1b91f892116e1cf661048fb5ac7539f02eccf9e",
+      "git_sha256": "05319f28cff300947eb2f6474d2cacfa1cf709d935ecde8204e4967ff0c746b2"
+    },
+    {
+      "path": "alevel/as-further-mathematics/diagrams/conic-tangents.svg",
+      "sha256": "aa217741c21f550e185d3032828306a07850623a42af2e94f815a0aac47ddde2",
+      "git_sha256": "aa217741c21f550e185d3032828306a07850623a42af2e94f815a0aac47ddde2"
+    },
+    {
+      "path": "alevel/as-further-mathematics/diagrams/conics.svg",
+      "sha256": "1a29f19f6ce222abb462b689aea21ab896db670a689432729279ec82f86140e1",
+      "git_sha256": "1a29f19f6ce222abb462b689aea21ab896db670a689432729279ec82f86140e1"
+    },
+    {
+      "path": "alevel/as-further-mathematics/diagrams/euler.svg",
+      "sha256": "8bd6fc27d9f8dfc39367426a9f2806f43f9c61c525c8b713162eac875251d9c7",
+      "git_sha256": "8bd6fc27d9f8dfc39367426a9f2806f43f9c61c525c8b713162eac875251d9c7"
+    },
+    {
+      "path": "alevel/as-further-mathematics/diagrams/improper.svg",
+      "sha256": "e742fbfe1cbd1b89e98d40af3a32d2961a91c7bfc1fd8de1319bb2c8d4fa1fd5",
+      "git_sha256": "e742fbfe1cbd1b89e98d40af3a32d2961a91c7bfc1fd8de1319bb2c8d4fa1fd5"
+    },
+    {
+      "path": "alevel/as-further-mathematics/diagrams/impulse.svg",
+      "sha256": "7543e18ed23a6eff71aaeb9025a72008fd73ca9fac881b337f023c181548d143",
+      "git_sha256": "7543e18ed23a6eff71aaeb9025a72008fd73ca9fac881b337f023c181548d143"
+    },
+    {
+      "path": "alevel/as-further-mathematics/diagrams/linearisation.svg",
+      "sha256": "f98cf623969ce349191937a0bd351fb1f0c184f59961c1942e54114d9f1f89d6",
+      "git_sha256": "f98cf623969ce349191937a0bd351fb1f0c184f59961c1942e54114d9f1f89d6"
+    },
+    {
+      "path": "alevel/as-further-mathematics/diagrams/numerical.svg",
+      "sha256": "29fa64e64eff1c0ea73bbf9f8b2a07b1fac017ad4d1321bc64e867f682eb3a88",
+      "git_sha256": "29fa64e64eff1c0ea73bbf9f8b2a07b1fac017ad4d1321bc64e867f682eb3a88"
+    },
+    {
+      "path": "alevel/as-further-mathematics/diagrams/rational.svg",
+      "sha256": "ac1d19c79f0b92e5166f18e46a5db8a6dd1c0cd7e95bd1eceed355b561b23bdb",
+      "git_sha256": "ac1d19c79f0b92e5166f18e46a5db8a6dd1c0cd7e95bd1eceed355b561b23bdb"
+    },
+    {
+      "path": "alevel/as-further-mathematics/diagrams/relative.svg",
+      "sha256": "ca549f0315b15a80de51d317b4fff0b92c61d0b982e9f244db90b51ca4424270",
+      "git_sha256": "b1422268814e4624979618257c640f8c93446783b324be290f06d36927ae0a10"
+    },
+    {
+      "path": "alevel/as-further-mathematics/diagrams/secant.svg",
+      "sha256": "e085c77e9bd2d8596e750f1a6bc60c42fc53d238245c9ca9f0b7a34558cceab7",
+      "git_sha256": "e085c77e9bd2d8596e750f1a6bc60c42fc53d238245c9ca9f0b7a34558cceab7"
+    },
+    {
+      "path": "alevel/as-further-mathematics/diagrams/shear.svg",
+      "sha256": "4b2908bfc256b7073fda2a10d5afc7e26fc9bf533f78bb6a834a18bc0c990530",
+      "git_sha256": "4b2908bfc256b7073fda2a10d5afc7e26fc9bf533f78bb6a834a18bc0c990530"
+    },
+    {
+      "path": "alevel/as-further-mathematics/diagrams/signed-force.svg",
+      "sha256": "81a218843d7549e87b02eec4782cb29f24a6f083c24dfbda6c615c6c64a8f5ec",
+      "git_sha256": "ab427870984ff33584e3ded8eea46865e36d2974c36bc4da0baf8ac300f38eac"
+    },
+    {
+      "path": "alevel/as-further-mathematics/diagrams/trig.svg",
+      "sha256": "5e65bb1d619446db9a9d23e8562c60b3742e21afb91c06fe6420ce4bfa4ddd4b",
+      "git_sha256": "5e65bb1d619446db9a9d23e8562c60b3742e21afb91c06fe6420ce4bfa4ddd4b"
+    },
+    {
+      "path": "alevel/as-further-mathematics/diagrams/uniform.svg",
+      "sha256": "59b7b9c0d1949bccb15719f078c2265b8413068af040f6c36eea31101b228b37",
+      "git_sha256": "59b7b9c0d1949bccb15719f078c2265b8413068af040f6c36eea31101b228b37"
+    },
+    {
+      "path": "alevel/as-further-mathematics/dimensions.md",
+      "sha256": "d36e3fdadf425d26503ce1ac9e202cf4bafc1bb72e067183858dd04c20958fb1",
+      "git_sha256": "285e8a18df3528412432e16df1928bfdbe3879c18f3a2ec6757a2cb90cb4b14a"
+    },
+    {
+      "path": "alevel/as-further-mathematics/discrete-uniform.md",
+      "sha256": "c5d8e58aa55e17ccd447f761e8b704d23c83dfa9860c83c4f4debe6fa3c683fe",
+      "git_sha256": "e937c700e8326b71aeaabbe8d9be7562d88e1cff58cddb755173e6ad87a3e58c"
+    },
+    {
+      "path": "alevel/as-further-mathematics/euler-method.md",
+      "sha256": "faf9f1b3e04298e49b6d08b8c39886403067af35b3e0d8adee3641811ed223cd",
+      "git_sha256": "25170b6f0dd827d8a8bead4b1195df4fc851036577bf822feb1faa97eab7682d"
+    },
+    {
+      "path": "alevel/as-further-mathematics/generating-functions.md",
+      "sha256": "a9927e6d83dbb6bac1e7bc63c68220ff5aa1cc860c6872231d6d7d0c348e8449",
+      "git_sha256": "ca13faa84920b6012afef5ebabd4c29558fa4b9fc32ecb6076a1be61aa506c28"
+    },
+    {
+      "path": "alevel/as-further-mathematics/geometric-distribution.md",
+      "sha256": "95223c3651268752a06ca115aef568a0b986b59d8b2fec9939cd65a12d217f33",
+      "git_sha256": "d4e72b67273032d2d495644f9095ab0ce5cbb23bfbe4bbf3f4d552348b058696"
+    },
+    {
+      "path": "alevel/as-further-mathematics/improper-integrals.md",
+      "sha256": "ad7e33731c0394e544f2e1fc24ae8593e6742a951853c2710b692edc587fad5e",
+      "git_sha256": "ba5a3b0ab4dd1a54c61d5c6560cd37899fa2acd02bf883ffd8111cb48c859af5"
+    },
+    {
+      "path": "alevel/as-further-mathematics/impulse-and-collisions.md",
+      "sha256": "b6d19d0e5c403fb79521e01dec4c924509e548e59e0647ba56d6e12233d8fad2",
+      "git_sha256": "6bcc2995e98b03b1150f39c6171c4458caad5d16c035f97c79d52638c5ee7c24"
+    },
+    {
+      "path": "alevel/as-further-mathematics/index.md",
+      "sha256": "9d98991de03fb1073a2bdf41905d52e87ab89ed74cdba991bb34aa97b41ad6e3",
+      "git_sha256": "6d7aaa92516cf30cb20205ae667cddc49f6e4c9495cb9ba270b9932c6ceab6b4"
+    },
+    {
+      "path": "alevel/as-further-mathematics/linear-combinations.md",
+      "sha256": "9b58d0ed56773639f3895d62659300462c595bc8e35e7dac71f698fed3958203",
+      "git_sha256": "0d6222a5d337529ebcfdbf4c5894afe54926f1e4955156553829a5314bf1f807"
+    },
+    {
+      "path": "alevel/as-further-mathematics/linearisation.md",
+      "sha256": "bf77e2a95e21b610eafa5bf26ac0b6602a842aa235aafcac0d390c507dd736c5",
+      "git_sha256": "af72d64c9e1c28187aa17dceeb1c592d4532431bb15039e63e94e3a0ba814216"
+    },
+    {
+      "path": "alevel/as-further-mathematics/matrix-algebra.md",
+      "sha256": "f16cee9b6f02b6ec395258c0efc79698f7a1a240ddf03425b745d1490446a87a",
+      "git_sha256": "18ecde3ca724c56a11693882f6ea8b89352b8f5e992ce00b9330dd3f50e22be4"
+    },
+    {
+      "path": "alevel/as-further-mathematics/numerical-roots.md",
+      "sha256": "538ff874bb1111b4a9ac6ba01fb1aeb97aab9ce3b08b924027679c5db026d87b",
+      "git_sha256": "f44aeb956c992f10cf1980bf5b13e53ef52c4d0a8397fb8b93c559c82fe284c0"
+    },
+    {
+      "path": "alevel/as-further-mathematics/rates-and-approximations.md",
+      "sha256": "406b836fa451f87c5760cececabe6ef8faaa0a99c8e9c0a4d5b2c58682a95770",
+      "git_sha256": "6640beae9e501c8e9c7ea18e6f2706db1419131e8ec65d99a569b43a5e73359f"
+    },
+    {
+      "path": "alevel/as-further-mathematics/rational-functions.md",
+      "sha256": "8c9edb73daee541d429f6bd4af13ad9184f6d47b5c1510b49a81f0f1ddae9c54",
+      "git_sha256": "3e9b0986ab1346e65610fd731dfed7d089e4f9bfdc932b679507cbbc42cb68fd"
+    },
+    {
+      "path": "alevel/as-further-mathematics/relative-motion.md",
+      "sha256": "1d27d86d39a7e6e733c327ed15355e9700702154ca50dbc100cc903cfe827e8f",
+      "git_sha256": "1d27d86d39a7e6e733c327ed15355e9700702154ca50dbc100cc903cfe827e8f"
+    },
+    {
+      "path": "alevel/as-further-mathematics/series.md",
+      "sha256": "d819e2d926d669f3eaecfcdfa3cf34f03fe418a0bf791af80d5cb50a41211fa5",
+      "git_sha256": "b7878fdc607af1333c11901875bca8002a2fdcd29319f9828afd6174b7e1a0c6"
+    },
+    {
+      "path": "alevel/as-further-mathematics/transformations.md",
+      "sha256": "c85fe5fc0af6736935bff1d4f624888983e7cae22f01bc3b1ceaee3b843b1a2c",
+      "git_sha256": "992da79f6d7bc343755af5ec534b1f6480d0d3b4c4784ca854eb93bb5b5066a2"
+    },
+    {
+      "path": "alevel/as-further-mathematics/trigonometric-solutions.md",
+      "sha256": "cf27be1509c98db16594aff0f28e361c06b3c452b422a5f2f305263c7822e499",
+      "git_sha256": "1fbfc604cd3715cde016c8472257e2f95fc7091152c993d9ce20dfeebd859093"
+    },
+    {
+      "path": "scripts/test-as-further-calculations.js",
+      "sha256": "e3d1e9c13eeb2775bc6ba5a7621d4f0bd943408f6942d59c6946c56e7b4d5f8b",
+      "git_sha256": "e3d1e9c13eeb2775bc6ba5a7621d4f0bd943408f6942d59c6946c56e7b4d5f8b"
+    },
+    {
+      "path": "scripts/test-as-further-course.js",
+      "sha256": "421e63d28f5da5d36fc83dbdc705d7a16ba97f4a3d6a2ad43b1478b041c20a16",
+      "git_sha256": "68111b1fd88bb82991c2e48390eb7e36ede6003d9173d7c36c7865f9a999cd0f"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/bayes.md",
+      "sha256": "aabefdcb246df076e4ed085ccf5e1fca5a6a72a642e4da50326e8bc6e97c676a",
+      "git_sha256": "66c9d95afbcd8dee853c647e3bdf649ff5ef7013db12b28489230f8461a1f6c3"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/complex-numbers-and-roots.md",
+      "sha256": "ac0f5b3ff2ef352ee3992bbb6dd76246d5045ad5c3c6d71733b3facf6f7d0b4e",
+      "git_sha256": "ac0f5b3ff2ef352ee3992bbb6dd76246d5045ad5c3c6d71733b3facf6f7d0b4e"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/conics-and-loci.md",
+      "sha256": "585a09e736d29c2f67a9f73b28535358dfded1d3697fccb47a95850297de5e80",
+      "git_sha256": "dc6f314abb9427dccc4443af4eba0bf845a26d7a8bedc0679304eafb4af6706d"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/dimensions.md",
+      "sha256": "f072c76e9fffd11e8356f451ab20b5b161a448a8831afbd886c86f6b58dafa8b",
+      "git_sha256": "ba513986caabcfeba941596633eea92ed7fc4845ae9f162ae4434bdf5103f2b7"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/discrete-uniform.md",
+      "sha256": "393618c6502b5c2fc7e42dba3e16ad1c699676cf43404d4dbc470fa9a9d7d96b",
+      "git_sha256": "2764e9bf2b16c9d4d75daf5334e4b5646b4f29ecb2847cfcaeb51e6ad5f9d909"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/euler-method.md",
+      "sha256": "a7d7dec7821e27dbd12427373257cbafa977ad4d521433060e2caab62a6eba25",
+      "git_sha256": "65aa105cbc1bb99bf77fbad0db0e1f5250e7cbebc96480b0af6f5be830bb332a"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/generating-functions.md",
+      "sha256": "2fea67c513c663823affd2565941be47c48e45322eae7fb7b202037e164fd08b",
+      "git_sha256": "31d075be7f41f5206b59d903c8ecaea1bb0fc4ceff0f2d15403249ccb4e42f00"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/geometric-distribution.md",
+      "sha256": "4cece2fc3ff1e53333c695e974c4c66c49b537aa609caee7f455bb92c7cb1f44",
+      "git_sha256": "58f5bc15766334070d8ba0eb696596a2b22495318284d58dfd7a070dac1d5d2b"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/improper-integrals.md",
+      "sha256": "5f77909b49692338a4d9c1cf789d2efd7674774b640a8c76c03433ad3f338931",
+      "git_sha256": "5c266e0f0496028243e1f32362743d763b86c51197e1c50c7520f1ee3efb01e7"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/impulse-and-collisions.md",
+      "sha256": "191942297ff416529fbb6051de8c471f92355918a0d4f56932a55fd28bfe88a6",
+      "git_sha256": "ff8185acc3f01d1ece361efb8e3b8c476c6c9cce05157c65551605ef8d297214"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/index.md",
+      "sha256": "6c2f46f3e8c190a142d65066b6054c8585c5fee08eef36d315a3d47f302a8d26",
+      "git_sha256": "72d0588cb562c062166fff6a707c93a65b8763c425d6d202045a9e3034815072"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/linear-combinations.md",
+      "sha256": "30161f703459a5f889acf5e833d3aa9c91af9d1c98fdcbe13a4f8f2a106b771a",
+      "git_sha256": "d52dd557785be27268c2a01340f5b142f0c54193769ee450074791edd4c814fc"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/linearisation.md",
+      "sha256": "8afb7ed8b87ac5a5bb8f761e99ae5e5b4fa277ba9e41673bd95ed043d7171987",
+      "git_sha256": "0d46d6dd16c7b9a2b00c5815ffa0520af8ec44ed685be632e7a64cc27767436d"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/matrix-algebra.md",
+      "sha256": "a10ef961c42651f43d0048c5108df0fb9716c43d24de80ed433486564ffa13db",
+      "git_sha256": "797fe07f82a6a32ddb455b5decc8d99aeecc7e295637f2c99fb13a551bae7286"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/numerical-roots.md",
+      "sha256": "dcf9cfa310781e26e68c7e6b2d3e425f933c33db9ba1359ca3d7d3b26ade4f45",
+      "git_sha256": "87f8a0049eb9cd222cdf2b57b48d39e5c1e05c1f9cc98abbbd412b397e723cea"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/rates-and-approximations.md",
+      "sha256": "89916c1449cf82665388bca22299543668405bf12bcf89747b8a978e9733add9",
+      "git_sha256": "50abee997c1836f71e1924f99fa9680dfbf03e07c6a83126d20621ec7576726c"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/rational-functions.md",
+      "sha256": "402d0c3533af97d102b3075b599ecff5d7ad4ee5dbc1aeefc148ad8712071113",
+      "git_sha256": "4dff84ce88e3760600e9cf018b8628a59f2dd911ab3d583eac746dc75be48dc7"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/relative-motion.md",
+      "sha256": "59d43d1bdc0c223ac65fb1766dbef706e23117964d3b93612d796771dcc72988",
+      "git_sha256": "59d43d1bdc0c223ac65fb1766dbef706e23117964d3b93612d796771dcc72988"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/series.md",
+      "sha256": "8418d3cc0a4b903ac4d37952aad09425eb88f531fbf0de5e0c33fb990baf600e",
+      "git_sha256": "1acc2c3d551aaf61c03f35a71faf51ee98ae7559a0b638f39ea6a31370315a6e"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/transformations.md",
+      "sha256": "50e889b55a414bc63f5000b76c976d78b2c1c8dd641d3f4c4626ccee072c4964",
+      "git_sha256": "98c8902ec6a667e3c29a71fbe20ea116416ac6fc5469b366aaa385b841f6ecb0"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/trigonometric-solutions.md",
+      "sha256": "deda870a32cf34d7b831661f9fe4693d580390831e6d177d7cb9bb45fb31a58f",
+      "git_sha256": "dd0089b839a770550cd49469915164ade950e6a41382b6f9f689da9419bafc87"
+    }
+  ],
+  "preview_dependencies": [
+    {
+      "path": "assets/css/reading.css",
+      "sha256": "177c376f70a9685f629b177f24c7641cdd08449d49869a29785775126997f72a"
+    },
+    {
+      "path": "assets/css/subject.css",
+      "sha256": "c92ff3d33a2ae0263377b98e71cd39e23116c2c9e625454dec263c8681a27cf3"
+    },
+    {
+      "path": "_layouts/subjects.html",
+      "sha256": "293db2c33a7e9d0858caf551013030cb136af11b7aaf6f97397c90c0ad7d940e"
+    },
+    {
+      "path": "assets/js/toc_generator.js",
+      "sha256": "3a88e1d649c1ad09f59087021a0dc9bec426c3aeab3079407711688da11d32e5"
+    },
+    {
+      "path": "assets/js/image_lazy_load.js",
+      "sha256": "ee84497d9278670691f55c59b00247d73441330844ddefed99fc835f61ac345d"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "f35107a5e62cd5ab79ce0d2affa0e52a77a19a65e225e9b4279ae492d9650653"
+    },
+    {
+      "path": "docs/agents/course-content-standard.md",
+      "sha256": "76d7a62f176de360c777cd88961632523cfbadebfbf497fd0f248af4a0991d4a"
+    }
+  ],
+  "boundary": "Existing shared reading CSS, AGENTS and course standard changes remain outside this scoped commit. Browser evidence describes this workspace with these dependencies, not standalone publication readiness.",
+  "hash_convention": "sha256: raw workspace bytes used for preview; git_sha256: committed bytes after Git CRLF-to-LF normalisation. All differences verified to be line endings only."
+}

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 460" role="img" aria-labelledby="title desc">
+  <title id="title">Signed velocities before and after a two-particle impact</title>
+  <desc id="desc">Right is positive. Before impact A, of mass two kilograms, is left of B, of mass one kilogram. A has velocity plus three metres per second and B minus one. After impact their velocities are plus one and plus three respectively. Arrow lengths use a common velocity scale; the particle locations are schematic, not a position-time plot.</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#172b4d"/></marker></defs>
+  <style>text{font:26px sans-serif;fill:#172b4d}.velocity{stroke:#155e75;stroke-width:3;fill:none;marker-end:url(#arrow)}.particle{fill:#e0f2fe;stroke:#172b4d;stroke-width:2}</style>
+  <rect width="560" height="460" fill="white"/>
+  <text x="24" y="34">Before</text>
+  <path d="M310,26 H380" fill="none" stroke="#172b4d" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="394" y="35">positive</text>
+  <text x="95" y="77">uA = +3</text><text x="350" y="77">uB = −1</text>
+  <path class="velocity" d="M100,105 H250 M400,105 H350"/>
+  <circle class="particle" cx="100" cy="144" r="19"/><circle class="particle" cx="400" cy="144" r="19"/>
+  <text x="53" y="195">A: 2 kg</text><text x="353" y="195">B: 1 kg</text>
+  <path d="M24,215 H536" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="24" y="250">After</text>
+  <text x="95" y="286">vA = +1</text><text x="350" y="286">vB = +3</text>
+  <path class="velocity" d="M100,312 H150 M400,312 H550"/>
+  <circle class="particle" cx="100" cy="351" r="19"/><circle class="particle" cx="400" cy="351" r="19"/>
+  <text x="130" y="406">Velocities in m s⁻¹</text>
+  <text x="70" y="442">Particle positions schematic</text>
+</svg>

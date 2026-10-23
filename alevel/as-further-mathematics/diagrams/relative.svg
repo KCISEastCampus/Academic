@@ -1,1 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 655" role="img" aria-labelledby="title desc"><title id="title">Velocity addition and closest point</title><desc id="desc">A velocity triangle has component lengths four and three and resultant five. Relative path at height eight has closest point (0,8).</desc><style>text{font:18px sans-serif;fill:#172b4d}.axis{stroke:#344054;stroke-width:1.5}.curve{fill:none;stroke:#155e75;stroke-width:3}.guide{fill:none;stroke:#8a4711;stroke-width:2;stroke-dasharray:7 5}.other{fill:none;stroke:#7c3aed;stroke-width:2.5}.point{fill:#172b4d}.grid{stroke:#d0d5dd;stroke-width:1}</style><rect width="100%" height="100%" fill="white"/><text x="55" y="25">Velocity triangle: head-to-tail addition</text><path class="axis" d="M55,280 L450,280"/><path class="axis" d="M80,310 L80,45"/><text x="460" y="285">vₓ</text><text x="55" y="45">vᵧ</text><path class="guide" d="M80,280 L360,280"/><path class="guide" d="M360,280 L360,70"/><path class="curve" d="M80,280 L360,70"/><text x="190" y="305">(4,0)</text><text x="370" y="180">(0,3)</text><text x="120" y="145">(4,3), speed 5</text><text x="55" y="345">Relative path: (6−2t,8)</text><path class="axis" d="M73,610 L424,610"/><path class="axis" d="M100,610 L100,367"/><path class="curve" d="M73,394 L424,394"/><path class="other" d="M100,610 L100,394"/><circle class="point" cx="100" cy="394" r="4"/><circle class="point" cx="262" cy="394" r="4"/><text x="110" y="385">nearest (0,8), t=3</text><text x="270" y="425">initial (6,8)</text><text x="440" y="616">x (m)</text><text x="60" y="365">y (m)</text><text x="120" y="645">Same scales: the perpendicular gives 8 m.</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 690" role="img" aria-labelledby="title desc">
+  <title id="title">Velocity addition and an observed relative path</title>
+  <desc id="desc">Top: current velocity (4,0) followed head-to-tail by swimming velocity (0,3), with resultant (4,3) and speed 5, in metres per second. Bottom: on equally scaled metre axes, the relative point moves left from (6,8) at time zero, through the perpendicular foot (0,8) at three seconds, to (-4,8) at five seconds. The solid segment is the observed path; the dashed line is its extension.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#172b4d"/></marker>
+  </defs>
+  <style>
+    text{font:26px sans-serif;fill:#172b4d}
+    .axis{stroke:#667085;stroke-width:1.5;fill:none;marker-end:url(#arrow)}
+    .vector{fill:none;stroke:#155e75;stroke-width:3;marker-end:url(#arrow)}
+    .other{fill:none;stroke:#7c3aed;stroke-width:3;marker-end:url(#arrow)}
+    .extension{fill:none;stroke:#667085;stroke-width:2;stroke-dasharray:7 5}
+    .perpendicular{fill:none;stroke:#8a4711;stroke-width:2.5}
+    .point{fill:#172b4d}
+  </style>
+  <rect width="560" height="690" fill="white"/>
+  <text x="24" y="27">Velocity triangle: head-to-tail</text>
+  <path class="axis" d="M40,260 H490"/>
+  <path class="axis" d="M60,285 V43"/>
+  <text x="505" y="266">vₓ</text><text x="22" y="52">vᵧ</text>
+  <path class="vector" d="M60,260 H340"/>
+  <path class="other" d="M340,260 V50"/>
+  <path class="vector" d="M60,260 L340,50"/>
+  <text x="128" y="290">current (4,0)</text>
+  <text x="355" y="146">swimming</text><text x="355" y="172">(0,3)</text>
+  <text x="70" y="76">resultant (4,3)</text><text x="86" y="117">speed 5</text>
+  <text x="69" y="323">Velocity components (m s⁻¹)</text>
+  <text x="24" y="372">Relative position: (6−2t,8) m</text>
+  <path class="axis" d="M80,630 H495"/>
+  <path class="axis" d="M230,650 V388"/>
+  <text x="455" y="615">x (m)</text><text x="135" y="403">y (m)</text>
+  <path class="extension" d="M86,430 H492"/>
+  <path class="vector" d="M380,430 H130"/>
+  <path class="perpendicular" d="M230,630 V430 M230,445 H245 V430"/>
+  <circle class="point" cx="380" cy="430" r="4"/>
+  <circle class="point" cx="230" cy="430" r="4"/>
+  <circle class="point" cx="130" cy="430" r="4"/>
+  <text x="345" y="404">(6,8), t=0</text>
+  <text x="252" y="468">foot (0,8)</text><text x="252" y="493">t=3</text>
+  <text x="26" y="478">(-4,8)</text><text x="26" y="503">t=5</text>
+  <text x="252" y="558">distance 8 m</text>
+  <path d="M330,625 V635 M225,530 H235" stroke="#667085" stroke-width="1.5"/>
+  <text x="322" y="655">4</text><text x="201" y="537">4</text><text x="210" y="652">0</text>
+  <text x="35" y="680">Observed segment: 0 ≤ t ≤ 5 s</text>
+</svg>

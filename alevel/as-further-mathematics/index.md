@@ -1,6 +1,7 @@
 ---
 title: AS Further Mathematics
 layout: subjects
+reading_layout: true
 mathjax: true
 grade: as
 subject: as-further-mathematics
@@ -11,99 +12,347 @@ redirect_from:
   - /alevel/asfm/index.html
 ---
 
-> **Qualification**: OxfordAQA International AS Further Mathematics (9665) · Modular<br>
-> **Assessment**: Unit FP1 + Unit FPSM1 · 1h 30m each · 80 marks each · 50% of AS each
+## Start here {#learning-route}
 
+This course builds on ordinary AS Mathematics and covers OxfordAQA **9665 FM01 and FM02**. New to the course? Start with [rational functions](/alevel/as-further-mathematics/rational-functions/). If you have already studied part of it, choose a branch below.
 
-## Learning route: FM01 and FM02 {#learning-route}
+Each lesson builds the idea, shows complete reasoning, then gives you a turn. Hints and solutions open separately; record a hinted attempt as supported work. Use the feedback to repair an error, then attempt its matching retry.
 
-This is the learning route for OxfordAQA **9665 v5.2**, with 20 linked lesson groups covering all 18 AS topics. Start with explanation and demonstrations, complete the scaffold, then choose a method for the independent task before opening its separate hint and solution. Use the feedback to attempt the retry. The old long notes are archived in the closed panel at the end of this page.
+Use the [entry diagnosis](#entry-diagnosis) if unsure about prerequisites, and the [mixed and later review](#exit-check) after a branch. The [old reference notes](#reference-notes) remain at the end for lookup.
 
-**Prerequisites:** FM01 assumes the pure content of ordinary AS Mathematics; FM02 assumes ordinary AS Mathematics and FP1. Diagnose algebra, trigonometry and calculus before FP1, and probability, random variables, Newton's laws and momentum before the relevant FM02 branches. Two-dimensional vector notation is introduced in M1. No induction, De Moivre, 3×3 inverse or eigenvalue course is assumed.
+### FM01 · Pure mathematics {#route-a}
 
-Both units are 90-minute, 80-mark papers, each 50% of AS. FM02 is **40 pure / 20 statistics / 20 mechanics** within one paper. Paper-specific precision and command words control the required answer; “show” needs reasoning, “hence” connects an earlier result, and “sketch”/“plot” require appropriate graphical evidence. Calculators can check results but do not replace these steps; no new calculator, exam-mode or student trial is claimed.
+Follow the order below. Complex numbers use trigonometry and quadratics; series uses factorisation; calculus builds on AS differentiation and integration.
 
-### Entry diagnosis {#entry-diagnosis}
+- [Rational functions](/alevel/as-further-mathematics/rational-functions/) — Sketch, solve inequalities and justify a range.
+- [Conics and loci](/alevel/as-further-mathematics/conics-and-loci/) — Connect distance conditions, equations and tangency.
+- [Trigonometric equations](/alevel/as-further-mathematics/trigonometric-solutions/) — Give all solutions and explain their completeness.
+- [Complex numbers and roots](/alevel/as-further-mathematics/complex-numbers-and-roots/) — Connect arithmetic, Argand geometry and transformed roots.
+- [Series](/alevel/as-further-mathematics/series/) — Choose a summation method and test an infinite limit.
+- [Rates and approximations](/alevel/as-further-mathematics/rates-and-approximations/) — Build a derivative, connect rates and check a small-change estimate.
+- [Improper integrals](/alevel/as-further-mathematics/improper-integrals/) — Replace a singular endpoint by the correct limit.
 
-**Entry tasks (self-written):** (1) Factor $x^2-x-2$. (2) Solve $\sin\theta=1/2$ for $0\le\theta<2\pi$. (3) Differentiate $x^3$ and integrate $x^2$ from 0 to 2. (4) If $P(A)=0.4$ and $P(B\mid A)=0.2$, find $P(A\cap B)$. (5) A 2 kg particle changes velocity from −1 to 3 m s⁻¹; find its signed impulse.
+### FM02 · Pure mathematics {#route-b}
 
-<details markdown="1"><summary>Diagnosis check and repair route</summary>
+Study matrices before transformations. Linearisation needs logarithms. Study rates before numerical roots, then Euler.
 
-$$(x-2)(x+1);\quad \theta=\pi/6,5\pi/6;\quad 3x^2,8/3;\quad P(A\cap B)=0.08;\quad J=8\ \mathrm{N\,s}.$$
+- [Matrix algebra](/alevel/as-further-mathematics/matrix-algebra/) — Check dimensions, inverses and multiplication order.
+- [Plane transformations](/alevel/as-further-mathematics/transformations/) — Describe compositions, area and complete invariant lines.
+- [Linearisation](/alevel/as-further-mathematics/linearisation/) — Choose axes, plot transformed data and estimate constants.
+- [Numerical roots](/alevel/as-further-mathematics/numerical-roots/) — Trace each update and justify the precision claimed.
+- [Euler’s method](/alevel/as-further-mathematics/euler-method/) — Use the old-point gradient and interpret the approximation.
 
-If (1) fails, review factoring and quadratics in ordinary AS before A1. For (2), review the unit circle before A3. For (3), review powers in calculus before A6/A7. For (4), review conditional probability before S1. For (5), review signed momentum before M3. Retest the same skill with a changed example before proceeding.
+### FM02 · Statistics {#route-s}
 
-</details>
+Start with Bayes, then the two distributions. Derive their moments before PGFs, then study linear combinations.
 
-### FM01 · FP1 {#route-a}
+- [Bayes’ theorem](/alevel/as-further-mathematics/bayes/) — Build the tree and change the conditioning sample space.
+- [Discrete uniform distribution](/alevel/as-further-mathematics/discrete-uniform/) — Check equal probabilities and derive both moments.
+- [Geometric distribution](/alevel/as-further-mathematics/geometric-distribution/) — Define what is counted, calculate tails and derive moments.
+- [Probability generating functions](/alevel/as-further-mathematics/generating-functions/) — Derive PGFs, extract probabilities and combine independent variables.
+- [Linear combinations](/alevel/as-further-mathematics/linear-combinations/) — Handle negative coefficients, covariance and correlation.
 
-Follow A1 → A2, A3 → A4, and A5 → A6 → A7 as their prerequisites permit.
+### FM02 · Mechanics {#route-m}
 
-- **A1 · FP1.1:** [Rational functions: graphs and range](/alevel/as-further-mathematics/rational-functions/)
-- **A2 · FP1.1 FP1.2:** [Conics, loci and tangencies](/alevel/as-further-mathematics/conics-and-loci/)
-- **A3 · FP1.6:** [Complete trigonometric solutions](/alevel/as-further-mathematics/trigonometric-solutions/)
-- **A4 · FP1.3 FP1.4:** [Complex numbers, Argand diagrams and roots](/alevel/as-further-mathematics/complex-numbers-and-roots/)
-- **A5 · FP1.5:** [Finite sums and infinite-series limits](/alevel/as-further-mathematics/series/)
-- **A6 · FP1.7:** [From secants to rates and approximations](/alevel/as-further-mathematics/rates-and-approximations/)
-- **A7 · FP1.7:** [Improper integrals: convergence or divergence](/alevel/as-further-mathematics/improper-integrals/)
+Relative motion introduces two-dimensional vectors; dimensions checks equations; collisions also needs signed momentum from ordinary AS.
 
-### FM02 · pure mathematics {#route-b}
+- [Relative motion](/alevel/as-further-mathematics/relative-motion/) — Model interception and closest approach with vectors and geometry.
+- [Dimensional analysis](/alevel/as-further-mathematics/dimensions/) — Find units and exponents, then explain what dimensions cannot establish.
+- [Impulse and collisions](/alevel/as-further-mathematics/impulse-and-collisions/) — Choose the system and direction before applying impulse or collision laws.
 
-B1 → B2; A6 supports B4 → B5. B3 uses ordinary AS logarithms.
+### Entry diagnosis and recovery {#entry-diagnosis}
 
-- **B1 · FPP1.1:** [Matrix algebra and inverse order](/alevel/as-further-mathematics/matrix-algebra/)
-- **B2 · FPP1.1:** [Transformations and affine invariant lines](/alevel/as-further-mathematics/transformations/)
-- **B3 · FPP1.2:** [Linearisation, plotting and fitting](/alevel/as-further-mathematics/linearisation/)
-- **B4 · FPP1.3:** [Numerical roots with traceable updates](/alevel/as-further-mathematics/numerical-roots/)
-- **B5 · FPP1.3:** [Euler updates and their limits](/alevel/as-further-mathematics/euler-method/)
+Choose the parts relevant to your next branch. Show working before opening help; you do not need all five as a gate to starting a lesson.
 
-### FM02 · statistics {#route-s}
+<section class="lesson-check" markdown="1">
 
-S1 → S2/S3 → S4 → S5; return to the moment derivations when using PGFs.
+#### Prerequisite check
 
-- **S1 · FS1.1:** [Bayes: changing the sample space](/alevel/as-further-mathematics/bayes/)
-- **S2 · FS1.2:** [Discrete uniform probabilities and moments](/alevel/as-further-mathematics/discrete-uniform/)
-- **S3 · FS1.3:** [Geometric trials and moment derivations](/alevel/as-further-mathematics/geometric-distribution/)
-- **S4 · FS1.4:** [Probability generating functions](/alevel/as-further-mathematics/generating-functions/)
-- **S5 · FS1.5:** [Linear combinations and covariance](/alevel/as-further-mathematics/linear-combinations/)
+**Task (self-written):** (a) Factor $x^2-x-2$. (b) Solve $\sin\theta=1/2$ for $0\le\theta<2\pi$. (c) Differentiate $x^3$ and integrate $x^2$ from 0 to 2. (d) If $P(A)=0.4$ and $P(B\mid A)=0.2$, find $P(A\cap B)$. (e) A 2 kg particle changes velocity from −1 to 3 m s⁻¹; find its signed impulse.
 
-### FM02 · mechanics {#route-m}
+<details markdown="1"><summary>Hint</summary>
 
-M1 and M2 establish notation and checks for M3.
-
-- **M1 · FM1.1:** [Vectors, interception and closest approach](/alevel/as-further-mathematics/relative-motion/)
-- **M2 · FM1.2:** [Dimensions, units and model limits](/alevel/as-further-mathematics/dimensions/)
-- **M3 · FM1.3:** [Variable-force impulse and collisions](/alevel/as-further-mathematics/impulse-and-collisions/)
-
-### Mixed exit check {#exit-check}
-
-All exit tasks are self-written. Select a method without opening the lesson headings; give conditions and reasons, not just numbers. A wrong answer identifies a return route; it is not a claim about exam grades.
-
-**Mixed tasks (self-written):** (1) Give the complete real solution of $\cos(2x)=1/2$ and decide whether $\int_1^\infty x^{-2}\,dx$ is finite. (2) A transformation is $\operatorname{diag}(3,1)$. Find its invariant lines, including any that miss the origin. (3) Independent X,Y have PGFs $(1+t)/2$ and $(t+t^2)/2$. Find $P(X+Y=2)$ and the variance of their sum. (4) Two particles have relative position $(4-t,3)$ m for $t\ge0$ s. Find their closest distance and explain whether they collide.
-
-<details markdown="1"><summary>Exit hints</summary>
-
-(1) Separate the periodic equation and the endpoint limit. (2) Retain the line intercept and test vertical lines. (3) Match powers and retain independence. (4) Minimise a squared magnitude over the allowed times.
+Check product and sum, unit-circle quadrants, power rules, a joint probability and signed velocities.
 
 </details>
 
-<details markdown="1"><summary>Exit solutions and return routes</summary>
+<details markdown="1"><summary>Solution, checks and recovery</summary>
 
-$$x=\pm\pi/6+n\pi\ (n\in\mathbb Z);\qquad\int_1^\infty x^{-2}\,dx=\lim_{R\to\infty}(1-1/R)=1.$$
+$$\begin{aligned}
+    (a)&\quad(x-2)(x+1),\\
+    (b)&\quad\theta=\pi/6,\ 5\pi/6,\\
+    (c)&\quad3x^2,\quad[x^3/3]_0^2=8/3,\\
+    (d)&\quad P(A\cap B)=0.4(0.2)=0.08,\\
+    (e)&\quad J=2[3-(-1)]=8\ \mathrm{N\,s}.
+    \end{aligned}$$
 
-(1) Missing a sign or a cutoff: revisit A3/A7. (2) All $y=k$ and $x=0$ are invariant; only points on $x=0$ are fixed. Missing nonzero intercepts: revisit B2.
-
-$$G_{X+Y}(t)=(t+2t^2+t^3)/4;\quad P(X+Y=2)=1/2;\quad\operatorname{Var}(X+Y)=1/4+1/4=1/2.$$
-
-(3) A missing cross coefficient suggests S4; an incorrect variance suggests S5. (4) The nearest point occurs at $t=4$ s with distance 3 m; the second component never vanishes, so there is no collision. Wrong time or confusing path intersection with meeting: revisit M1.
+(a) [Quadratics](/alevel/as-mathematics/algebra/#l02); (b) [periodic interval solutions](/alevel/as-mathematics/trigonometry/#l16); (c) [derivatives](/alevel/as-mathematics/differentiation/#l06) and [definite integrals](/alevel/as-mathematics/integration/#l08); (d) [conditional probability](/alevel/as-mathematics/probability/#l18); (e) [signed momentum](/alevel/as-mathematics/momentum/). Expand the factors to check; use both sine quadrants; multiply probabilities along one path; subtract initial momentum from final momentum. After recovery, close this solution and attempt the matching part below.
 
 </details>
 
-### Source identity and reference notes {#course-sources}
+</section>
 
-Scope follows the [9665 specification v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf), §§3.1–3.2. The FM01 public specimen QP body says **Specimen 2018 Morning**; its filename contains 2019/v3 and footer versions vary. Its officially paired specimen MS has copyright 2017. It is not a formal 2019 sitting or a standardised final mark scheme from a live exam. FM02 evidence is **June 2024**, examined 16 May 2024, with Version 1.0 Final MS. Each lesson identifies the questions and QP/MS pages actually read in the research. All new tasks here are self-written, not official questions or marks.
+<section class="lesson-check" markdown="1">
 
-This authored route has not yet been trialled with students. Scope coverage, correct calculations and a passing build do not by themselves establish learning effectiveness.
+#### Retry after recovery
+
+**Task (self-written):** (a) Factor $x^2+2x-3$. (b) Solve $\cos\theta=-1/2$ for $0\le\theta<2\pi$. (c) Differentiate $x^4$ and integrate $x$ from 0 to 3. (d) If $P(C)=0.3$ and $P(D\mid C)=0.5$, find $P(C\cap D)$. (e) A 3 kg particle changes velocity from 2 to −1 m s⁻¹; find its signed impulse.
+
+<details markdown="1"><summary>Hint</summary>
+
+Use the repaired principle; independently check signs and the interval.
+
+</details>
+
+<details markdown="1"><summary>Solution, checks and recovery</summary>
+
+$$\begin{aligned}
+    (a)&\quad(x+3)(x-1),\\
+    (b)&\quad\theta=2\pi/3,\ 4\pi/3,\\
+    (c)&\quad4x^3,\quad[x^2/2]_0^3=9/2,\\
+    (d)&\quad P(C\cap D)=0.15,\\
+    (e)&\quad J=3(-1-2)=-9\ \mathrm{N\,s}.
+    \end{aligned}$$
+
+The negative impulse points opposite to the chosen positive direction. If an error remains, use the matching recovery link above, then the chosen lesson’s entry check.
+
+</details>
+
+</section>
+
+### Mixed and later review {#exit-check}
+
+After the relevant branches, close the lesson pages and select a method yourself. These tasks sample connections; use them alongside each lesson’s more detailed independent checks, not as a complete examination.
+
+<section class="lesson-check" markdown="1">
+
+#### Mixed task 1
+
+**Task (self-written):** Give the complete real solution of $\cos(2x)=1/2$ and decide whether $\int_1^\infty x^{-2}\,dx$ is finite. Explain both conclusions.
+
+<details markdown="1"><summary>Hint</summary>
+
+The periodic equation and infinite endpoint need different arguments.
+
+</details>
+
+<details markdown="1"><summary>Solution, checks and recovery</summary>
+
+$$x=\pm\pi/6+n\pi,\qquad n\in\mathbb Z.$$
+
+$$\int_1^\infty x^{-2}\,dx=\lim_{R\to\infty}(1-1/R)=1.$$
+
+
+Cosine gives two phases per turn; dividing by 2 changes the period to π. Infinity is not a substitution value. Return to trigonometric solutions for missing branches or improper integrals for a missing limit, then their retries.
+
+[Trigonometric equations](/alevel/as-further-mathematics/trigonometric-solutions/#model) · [Improper integrals](/alevel/as-further-mathematics/improper-integrals/#model)
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+#### Mixed task 2
+
+**Task (self-written):** A transformation is $\operatorname{diag}(3,1)$. Find all its invariant lines, including any that miss the origin, and all its fixed points.
+
+<details markdown="1"><summary>Hint</summary>
+
+Retain the intercept as well as slope, and check vertical lines separately.
+
+</details>
+
+<details markdown="1"><summary>Solution, checks and recovery</summary>
+
+For $y=mx+c$, the image point is $(3x,mx+c)$. Requiring $mx+c=3mx+c$ for every $x$ gives $m=0$. Thus all $y=c$ are invariant. A vertical line $x=k$ maps to $x=3k$, so only $x=0$ is invariant. Fixed points satisfy $3x=x$, hence every point on $x=0$ and no others.
+
+An invariant line allows points to move along it; a line of fixed points does not. If intercepts or verticals were missed, return to transformations and its retry.
+
+[Plane transformations](/alevel/as-further-mathematics/transformations/#invariant-lines)
+
+[Matching retry](/alevel/as-further-mathematics/transformations/#retry-lines)
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+#### Mixed task 3
+
+**Task (self-written):** Independent $X,Y$ have PGFs $(1+t)/2$ and $(t+t^2)/2$. Find $P(X+Y=2)$ and the variance of their sum, explaining where independence is used.
+
+<details markdown="1"><summary>Hint</summary>
+
+Use coefficients or enumerate outcomes for the probability, then independently check the variance.
+
+</details>
+
+<details markdown="1"><summary>Solution, checks and recovery</summary>
+
+$$\begin{aligned}G_{X+Y}(t)&=(t+2t^2+t^3)/4,\\P(X+Y=2)&=1/2,\\\operatorname{Var}(X+Y)&=1/4+1/4=1/2.\end{aligned}$$
+
+Independence allows joint probabilities and PGFs to multiply and makes covariance zero. X is equally likely 0 or 1, Y equally likely 1 or 2; two of four equally likely pairs sum to 2. Recover coefficients in PGFs or variance cross terms in linear combinations.
+
+[Probability generating functions](/alevel/as-further-mathematics/generating-functions/#model) · [Linear combinations](/alevel/as-further-mathematics/linear-combinations/#model)
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+#### Mixed task 4
+
+**Task (self-written):** Two particles have relative position $(4-t,3)$ m for $t\ge0$ s. Find their closest distance and explain whether they collide. Give a geometric check.
+
+<details markdown="1"><summary>Hint</summary>
+
+Check the permitted times and whether the relative path passes through the origin.
+
+</details>
+
+<details markdown="1"><summary>Solution, checks and recovery</summary>
+
+$$d^2=(t-4)^2+9.$$
+
+The minimum occurs at $t=4$ s, which is allowed, and $d=3$ m. The relative path is the horizontal line $y=3$; its perpendicular distance from the origin is 3 m. It never reaches the origin, so the particles do not collide.
+
+For confusion between intersecting paths and meeting, revisit common time and initial conditions in relative motion. Also return there if the time domain was not checked.
+
+[Common time and initial conditions](/alevel/as-further-mathematics/relative-motion/#relative-position) · [Allowed nearest point](/alevel/as-further-mathematics/relative-motion/#closest-approach) · [Matching retries](/alevel/as-further-mathematics/relative-motion/#retry)
+
+</details>
+
+</section>
+
+#### Return later
+
+After studying another topic, close the old solutions and attempt these tasks. Record your first working, help used, error and retry; choose the interval to suit your course.
+
+<section class="lesson-check" markdown="1">
+
+#### Later task 1
+
+**Task (self-written):** For integer $n\ge1$, let $X$ be uniform on $\{1,\ldots,n\}$ and let $Y=2X-1$. Derive $E(X)$ and $\operatorname{Var}(X)$ using finite sums, then find $E(Y)$ and $\operatorname{Var}(Y)$. Is $Y$ uniform on $\{1,2,\ldots,2n-1\}$? Explain.
+
+<details markdown="1"><summary>Hint</summary>
+
+Start with the probability of each value and calculate both moments; separately check the support.
+
+</details>
+
+<details markdown="1"><summary>Solution, checks and recovery</summary>
+
+$$\begin{aligned}
+    E(X)&=\frac1n\frac{n(n+1)}2=\frac{n+1}2,\\
+    E(X^2)&=\frac{(n+1)(2n+1)}6,\\
+    \operatorname{Var}(X)&=\frac{n^2-1}{12},\\
+    E(Y)&=2E(X)-1=n,\\
+    \operatorname{Var}(Y)&=4\operatorname{Var}(X)=\frac{n^2-1}3.
+    \end{aligned}$$
+
+Y takes only the odd integers 1,3,…,2n−1, each with probability 1/n. For n>1 it is not uniform on the full consecutive set stated; for n=1 both sets are {1}. Recover [squared coefficients](/alevel/as-further-mathematics/linear-combinations/#model) or [finite-sum moment derivations](/alevel/as-further-mathematics/discrete-uniform/#demonstration), close the old solution, then attempt [recovery retry 1](#later-retry-1) below.
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+#### Later task 2
+
+**Task (self-written):** A ball of mass $m>0$ hits a fixed smooth wall normally at speed $u>0$. Take the incoming direction as positive; its velocity after impact is $-eu$, where $0\le e\le1$ ($e=0$ means no immediate rebound). Find its impulse. Someone proposes that the contact duration is $km/u$, with dimensionless $k$. Assess this proposal, then check the dimensions of impulse.
+
+<details markdown="1"><summary>Hint</summary>
+
+Draw the signed velocities before and after; check system and units separately.
+
+</details>
+
+<details markdown="1"><summary>Solution, checks and recovery</summary>
+
+$$J=m(-eu-u)=-(1+e)mu.$$
+
+$$\begin{aligned}[km/u]&=MTL^{-1}\ne T,\\{}[J]&=MLT^{-1}.\end{aligned}$$
+
+The wall supplies an external impulse, so momentum of the ball alone is not conserved. The duration has wrong dimensions and must be rejected; even matching dimensions would not determine a contact model or dimensionless constant. Recover [impulse and system choice](/alevel/as-further-mathematics/impulse-and-collisions/#wall-model) and [dimensional model limits](/alevel/as-further-mathematics/dimensions/#model-limits), then close this solution and attempt [recovery retry 2](#later-retry-2).
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+#### Recovery retry 1 {#later-retry-1}
+
+**Task (self-written):** For integer $r\ge1$, $U$ is uniform on $\{0,\ldots,r-1\}$ and $V=3U+2$. Derive $E(U)$ and $\operatorname{Var}(U)$ from finite sums, then find $E(V)$ and $\operatorname{Var}(V)$. Is $V$ uniform on all integers from 2 to $3r-1$? Include the single-point case.
+
+<details markdown="1"><summary>Hint</summary>
+
+Write each probability, then weight values and squares separately.
+
+</details>
+
+<details markdown="1"><summary>Solution and check</summary>
+
+$$\begin{aligned}
+ E(U)&=\frac1r\sum_{j=0}^{r-1}j=\frac{r-1}2,\\
+ E(U^2)&=\frac1r\sum_{j=0}^{r-1}j^2\\
+ &=\frac{(r-1)(2r-1)}6,\\
+ \operatorname{Var}(U)&=E(U^2)-[E(U)]^2\\
+ &=\frac{r^2-1}{12},\\
+ E(V)&=3E(U)+2=\frac{3r+1}2,\\
+ \operatorname{Var}(V)&=9\operatorname{Var}(U)=\frac{3(r^2-1)}4.
+ \end{aligned}$$
+
+V has support 2,5,…,3r−1, with probability 1/r each. For r>1 there are gaps, so it is not uniform over the full consecutive set. At r=1 it is constant at 2, with variance zero. The finite-sum reasoning is required; quoting a distribution formula still leaves the derivation difficulty unrepaired.
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+#### Recovery retry 2 {#later-retry-2}
+
+**Task (self-written):** A 0.5 kg ball approaches a fixed wall at speed 4 m s⁻¹ and leaves at speed 1 m s⁻¹. Take the direction away from the wall as positive. Find the signed impulse on the ball, and explain whether its momentum is conserved. A student proposes $J=mv^2$ for impulse, with $v$ a speed. Check this dimensionally; would matching dimensions prove a collision law?
+
+<details markdown="1"><summary>Hint</summary>
+
+Assign both signed velocities first, then check the system boundary and MLT.
+
+</details>
+
+<details markdown="1"><summary>Solution and check</summary>
+
+$$\begin{aligned}
+ u&=-4\ \mathrm{m\,s^{-1}},\\
+ v&=1\ \mathrm{m\,s^{-1}},\\
+ J&=0.5[1-(-4)]\\
+ &=2.5\ \mathrm{N\,s},\\
+ [mv^2]&=ML^2T^{-2},\\
+ {}[J]&=MLT^{-1}.
+ \end{aligned}$$
+
+The positive impulse points away from the wall. The wall exerts an external impulse on the ball, whose momentum alone is not conserved. The proposed dimensions fail; even matching dimensions would only pass a necessary check, not prove a model or determine dimensionless constants. If speeds were used as signed velocities, draw the arrows first, then close this answer and reconstruct the momentum change.
+
+</details>
+
+</section>
+
+### Scope, assessment and sources {#course-sources}
+
+<details markdown="1"><summary>Course identity and reference material</summary>
+
+Scope follows the [9665 specification v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf), §§3.1–3.2: FM01 is FP1; FM02 comprises FPP1, FS1 and FM1. Each paper is 90 minutes, 80 marks, 50% of AS; FM02 has 40 pure, 20 statistics and 20 mechanics marks. FM01 assumes ordinary AS pure mathematics; FM02 assumes ordinary AS and FP1. The 20 lesson groups cover 18 official topics; induction, De Moivre, 3×3 inverses and eigenvalues are not prerequisites or required additions here.
+
+The public FM01 QP body says **Specimen 2018 Morning**; its 2019/v3 filename and the paired MS copyright 2017 do not identify a formal 2019 sitting. FM02 is **June 2024**, examined 16 May 2024, with Version 1.0 Final MS. Lessons identify the QP/MS questions and pages actually read. All new tasks are self-written; their checks are not official marks.
+
+Paper-specific precision and command words determine the evidence needed; calculators do not replace proofs, derivations or graphs. No new calculator hardware or exam-mode verification is claimed. Content and technical checks are recorded separately in the implementation documents; this course awaits student trial and makes no claim of verified learning effectiveness.
+
+</details>
 
 ## Archived reference {#reference-notes}
 

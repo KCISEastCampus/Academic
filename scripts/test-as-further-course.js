@@ -3,7 +3,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const assert = require('node:assert/strict');
 const root = path.resolve(__dirname, '..');
-const read = p => fs.readFileSync(path.join(root, p), 'utf8');
+const read = p => fs.readFileSync(path.join(root, p), 'utf8').replace(/\r\n/g, '\n');
 const route = {
   'rational-functions': ['FP1.1'],
   'conics-and-loci': ['FP1.1', 'FP1.2'],
@@ -27,7 +27,7 @@ const route = {
   'impulse-and-collisions': ['FM1.3']
 };
 const math = s => [...s.matchAll(/\$\$[\s\S]*?\$\$|(?<!\$)\$(?!\$)[^$\n]*?\$/g)].map(m => m[0]);
-const ids = s => [...s.matchAll(/\{#([a-z0-9-]+)\}/g)].map(m => m[1]);
+const ids = s => [...s.matchAll(/\{#([a-z0-9-]+)\}|\bid="([a-z0-9-]+)"/g)].map(m => m[1] || m[2]);
 const prompts = s => s.split('\n').filter(l => /^\*\*(Scaffold|Independent task|Retry) \(self-written\):\*\*/.test(l));
 const enIndex = read('alevel/as-further-mathematics/index.md');
 const zhIndex = read('zh/alevel/as-further-mathematics/index.md');
@@ -44,15 +44,33 @@ for (const [slug, topics] of Object.entries(route)) {
   assert.ok(!/[\u3400-\u9fff]/u.test(en), `${slug}: CJK in English lesson`);
   assert.deepEqual(ids(en), ids(zh), `${slug}: stable bilingual IDs`);
   assert.equal(new Set(ids(en)).size, ids(en).length, `${slug}: duplicate ID`);
-  assert.deepEqual(math(en), math(zh), `${slug}: exact formula sequence`);
+  const enMath = math(en), zhMath = math(zh);
+  enMath.sort(); zhMath.sort();
+  assert.deepEqual(enMath, zhMath, `${slug}: matching bilingual formulas`);
   assert.deepEqual(prompts(en), prompts(zh), `${slug}: exact English prompts`);
-  assert.equal(prompts(en).length, 3, `${slug}: scaffold, independent and retry`);
+  {
+    const allPrompts = s => s.split('\n').filter(l => /^\*\*.*\(self-written\):\*\*/.test(l));
+    assert.deepEqual(allPrompts(en), allPrompts(zh), `${slug}: full bilingual task wording`);
+    for (const s of [en, zh]) {
+      const tasks = [...s.matchAll(/<section class="lesson-check"[^>]*markdown="1">([\s\S]*?)<\/section>/g)];
+      assert.ok(tasks.length > 0, `${slug}: student tasks`);
+      for (const [, task] of tasks) {
+        assert.ok(!task.includes('<section'), 'Questions must not nest');
+        assert.equal((task.match(/<details /g) || []).length, 2, 'Each question owns its help and feedback');
+        assert.match(task, /\*\*.*\(self-written\):\*\*/);
+      }
+      assert.ok(s.includes('reading_layout: true'));
+    }
+  }
   for (const s of [en, zh]) {
     for (const id of ['model', 'demonstration', 'practice', 'retry', 'sources']) assert.ok(ids(s).includes(id), `${slug}: ${id}`);
-    assert.equal((s.match(/<details markdown="1">/g) || []).length, 4, `${slug}: separate scaffold/hint/solution/retry disclosures`);
-    assert.equal((s.match(/<\/details>/g) || []).length, 4);
+    const disclosures = (s.match(/<details markdown="1">/g) || []).length;
+    assert.ok(disclosures >= 4, `${slug}: separate practice/feedback disclosures`);
+    assert.equal((s.match(/<\/details>/g) || []).length, disclosures, `${slug}: balanced disclosures`);
+    assert.ok(!/<details\b[^>]*\bopen\b/.test(s), `${slug}: answers closed by default`);
     assert.ok(!/\[\[|\|\||\\cancel\b/.test(s), `${slug}: authoring marker or unsupported cancel`);
     assert.ok(!math(s).some(m => m.includes('|')), `${slug}: ASCII pipe in TeX`);
+    assert.ok(!math(s).some(m => !m.startsWith('$$') && m.includes('\\begin{')), `${slug}: matrices and environments need display math to preserve row breaks`);
     assert.ok(s.includes('self-written'));
     assert.ok(topics.every(t => s.includes(t)));
     assert.ok(s.includes('9665 specification v5.2'));
@@ -71,7 +89,18 @@ for (const index of [enIndex, zhIndex]) {
   assert.ok(index.split('{#reference-notes}')[1].includes('<details markdown="1">') && index.trim().endsWith('</details>'), 'legacy content stays in an archive panel');
   assert.ok(index.includes('{#learning-route}') && index.includes('{#entry-diagnosis}') && index.includes('{#exit-check}'));
   assert.ok(index.includes('Specimen 2018 Morning'));
+  const current = index.split(/## (?:Archived reference|旧版参考资料)/)[0];
+  assert.ok(current.includes('reading_layout: true'));
+  assert.ok(!/\*\*[ABSM]\d+ ·/.test(current), 'learner entrance uses topic names');
+  for (const [, task] of current.matchAll(/<section class="lesson-check" markdown="1">([\s\S]*?)<\/section>/g)) {
+    assert.equal((task.match(/<details /g) || []).length, 2, 'entrance tasks own hint and solution');
+    assert.ok(!task.includes('<section'), 'entrance questions do not nest');
+  }
+  assert.ok(current.indexOf('rational-functions/') < current.indexOf('### Entry diagnosis') || current.indexOf('rational-functions/') < current.indexOf('### 入口诊断'), 'learner start before optional diagnosis');
 }
+const currentIndex = s => s.split(/## (?:Archived reference|旧版参考资料)/)[0];
+assert.deepEqual(math(currentIndex(enIndex)).sort(), math(currentIndex(zhIndex)).sort(), 'entrance bilingual math');
+assert.deepEqual(currentIndex(enIndex).split('\n').filter(l => l.startsWith('**Task (self-written):**')), currentIndex(zhIndex).split('\n').filter(l => l.startsWith('**Task (self-written):**')), 'entrance bilingual English prompts');
 assert.ok(enIndex.includes('After five iterations the retained interval is $[1.3125,1.34375]$'));
 assert.ok(enIndex.includes('When $A\\ne0$'));
 assert.ok(enIndex.includes('constructed data illustrate an exact power law'));

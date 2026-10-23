@@ -1,0 +1,3205 @@
+{
+  "results": [
+    {
+      "slug": "index",
+      "lang": "en",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 10,
+        "examples": 0
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 843,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "index",
+      "lang": "en",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 10,
+        "examples": 0
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 843,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "index",
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 10,
+        "examples": 0
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 843,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "index",
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 10,
+        "examples": 0
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 843,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "index",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 10,
+        "examples": 0
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 86,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "index",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 10,
+        "examples": 0
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 86,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "index",
+      "lang": "zh",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 10,
+        "examples": 0
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 86,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "index",
+      "lang": "zh",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 10,
+        "examples": 0
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 86,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "bayes",
+      "lang": "en",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 13,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "bayes",
+      "lang": "en",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 13,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "bayes",
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 13,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "bayes",
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 13,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "bayes",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 13,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "bayes",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 13,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "bayes",
+      "lang": "zh",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 13,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "bayes",
+      "lang": "zh",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 13,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "complex-numbers-and-roots",
+      "lang": "en",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 14,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 181,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "complex-numbers-and-roots",
+      "lang": "en",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 14,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 181,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "complex-numbers-and-roots",
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 14,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 181,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "complex-numbers-and-roots",
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 14,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 181,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "complex-numbers-and-roots",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 14,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 181,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "complex-numbers-and-roots",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 14,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 181,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "complex-numbers-and-roots",
+      "lang": "zh",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 14,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 181,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "complex-numbers-and-roots",
+      "lang": "zh",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 14,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 181,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "conics-and-loci",
+      "lang": "en",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 12,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 152,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "conics-and-loci",
+      "lang": "en",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 12,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 152,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "conics-and-loci",
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 12,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 152,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "conics-and-loci",
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 12,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 152,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "conics-and-loci",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 12,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 152,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "conics-and-loci",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 12,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 152,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "conics-and-loci",
+      "lang": "zh",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 12,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 152,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "conics-and-loci",
+      "lang": "zh",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 12,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 152,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "dimensions",
+      "lang": "en",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 9,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 39,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "dimensions",
+      "lang": "en",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 9,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 39,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "dimensions",
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 9,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 39,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "dimensions",
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 9,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 39,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "dimensions",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 9,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 39,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "dimensions",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 9,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 39,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "dimensions",
+      "lang": "zh",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 9,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 39,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "dimensions",
+      "lang": "zh",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 9,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 39,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "discrete-uniform",
+      "lang": "en",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 23,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "discrete-uniform",
+      "lang": "en",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 23,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "discrete-uniform",
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 23,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "discrete-uniform",
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 23,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "discrete-uniform",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 23,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "discrete-uniform",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 23,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "discrete-uniform",
+      "lang": "zh",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 23,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "discrete-uniform",
+      "lang": "zh",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 23,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "euler-method",
+      "lang": "en",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 6,
+        "examples": 1
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 40,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "euler-method",
+      "lang": "en",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 6,
+        "examples": 1
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 40,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "euler-method",
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 6,
+        "examples": 1
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 40,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "euler-method",
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 6,
+        "examples": 1
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 40,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "euler-method",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 6,
+        "examples": 1
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 40,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "euler-method",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 6,
+        "examples": 1
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 40,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "euler-method",
+      "lang": "zh",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 6,
+        "examples": 1
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 40,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "euler-method",
+      "lang": "zh",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 6,
+        "examples": 1
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 40,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "generating-functions",
+      "lang": "en",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 14,
+        "examples": 4
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 34,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "generating-functions",
+      "lang": "en",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 14,
+        "examples": 4
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 34,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "generating-functions",
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 14,
+        "examples": 4
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 34,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "generating-functions",
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 14,
+        "examples": 4
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 34,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "generating-functions",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 14,
+        "examples": 4
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 34,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "generating-functions",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 14,
+        "examples": 4
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 34,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "generating-functions",
+      "lang": "zh",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 14,
+        "examples": 4
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 34,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "generating-functions",
+      "lang": "zh",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 14,
+        "examples": 4
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 34,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "geometric-distribution",
+      "lang": "en",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 9,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 206,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "geometric-distribution",
+      "lang": "en",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 9,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 206,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "geometric-distribution",
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 9,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 206,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "geometric-distribution",
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 9,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 206,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "geometric-distribution",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 9,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 206,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "geometric-distribution",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 9,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 206,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "geometric-distribution",
+      "lang": "zh",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 9,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 206,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "geometric-distribution",
+      "lang": "zh",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 9,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 206,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "improper-integrals",
+      "lang": "en",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 78,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "improper-integrals",
+      "lang": "en",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 78,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "improper-integrals",
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 78,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "improper-integrals",
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 78,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "improper-integrals",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 78,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "improper-integrals",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 78,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "improper-integrals",
+      "lang": "zh",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 78,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "improper-integrals",
+      "lang": "zh",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 78,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "impulse-and-collisions",
+      "lang": "en",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 10,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 53,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "impulse-and-collisions",
+      "lang": "en",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 10,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 53,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "impulse-and-collisions",
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 10,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 53,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "impulse-and-collisions",
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 10,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 53,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "impulse-and-collisions",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 10,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 53,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "impulse-and-collisions",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 10,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 53,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "impulse-and-collisions",
+      "lang": "zh",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 10,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 53,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "impulse-and-collisions",
+      "lang": "zh",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 10,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 53,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "linear-combinations",
+      "lang": "en",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 9,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 30,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "linear-combinations",
+      "lang": "en",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 9,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 30,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "linear-combinations",
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 9,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 30,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "linear-combinations",
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 9,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 30,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "linear-combinations",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 9,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 30,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "linear-combinations",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 9,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 30,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "linear-combinations",
+      "lang": "zh",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 9,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 30,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "linear-combinations",
+      "lang": "zh",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 9,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 30,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "linearisation",
+      "lang": "en",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 7,
+        "examples": 1
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 41,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "linearisation",
+      "lang": "en",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 7,
+        "examples": 1
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 41,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "linearisation",
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 7,
+        "examples": 1
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 41,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "linearisation",
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 7,
+        "examples": 1
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 41,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "linearisation",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 7,
+        "examples": 1
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 41,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "linearisation",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 7,
+        "examples": 1
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 41,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "linearisation",
+      "lang": "zh",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 7,
+        "examples": 1
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 41,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "linearisation",
+      "lang": "zh",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 7,
+        "examples": 1
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 41,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "matrix-algebra",
+      "lang": "en",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 6,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 64,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "matrix-algebra",
+      "lang": "en",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 6,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 64,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "matrix-algebra",
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 6,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 64,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "matrix-algebra",
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 6,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 64,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "matrix-algebra",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 6,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 64,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "matrix-algebra",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 6,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 64,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "matrix-algebra",
+      "lang": "zh",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 6,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 64,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "matrix-algebra",
+      "lang": "zh",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 6,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 64,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "numerical-roots",
+      "lang": "en",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 36,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "numerical-roots",
+      "lang": "en",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 36,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "numerical-roots",
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 36,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "numerical-roots",
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 36,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "numerical-roots",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 36,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "numerical-roots",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 36,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "numerical-roots",
+      "lang": "zh",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 36,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "numerical-roots",
+      "lang": "zh",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 36,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "rates-and-approximations",
+      "lang": "en",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 4
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 77,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "rates-and-approximations",
+      "lang": "en",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 4
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 77,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "rates-and-approximations",
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 4
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 77,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "rates-and-approximations",
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 4
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 77,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "rates-and-approximations",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 4
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 77,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "rates-and-approximations",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 4
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 77,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "rates-and-approximations",
+      "lang": "zh",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 4
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 77,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "rates-and-approximations",
+      "lang": "zh",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 4
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 77,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "rational-functions",
+      "lang": "en",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 9,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 107,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "rational-functions",
+      "lang": "en",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 9,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 107,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "rational-functions",
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 9,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 107,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "rational-functions",
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 9,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 107,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "rational-functions",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 9,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 107,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "rational-functions",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 9,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 107,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "rational-functions",
+      "lang": "zh",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 9,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 107,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "rational-functions",
+      "lang": "zh",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 9,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 107,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "relative-motion",
+      "lang": "en",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 10,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 132,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "relative-motion",
+      "lang": "en",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 10,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 132,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "relative-motion",
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 10,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 132,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "relative-motion",
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 10,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 132,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "relative-motion",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 10,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 132,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "relative-motion",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 10,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 132,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "relative-motion",
+      "lang": "zh",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 10,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 132,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "relative-motion",
+      "lang": "zh",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 10,
+        "examples": 3
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 132,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "series",
+      "lang": "en",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 179,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "series",
+      "lang": "en",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 179,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "series",
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 179,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "series",
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 179,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "series",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 179,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "series",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 179,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "series",
+      "lang": "zh",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 179,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "series",
+      "lang": "zh",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 179,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "transformations",
+      "lang": "en",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 7,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 51,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "transformations",
+      "lang": "en",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 7,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 51,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "transformations",
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 7,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 51,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "transformations",
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 7,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 51,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "transformations",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 7,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 51,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "transformations",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 7,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 51,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "transformations",
+      "lang": "zh",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 7,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 51,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "transformations",
+      "lang": "zh",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 7,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 51,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "trigonometric-solutions",
+      "lang": "en",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 68,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "trigonometric-solutions",
+      "lang": "en",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 68,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "trigonometric-solutions",
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 68,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "trigonometric-solutions",
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 68,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "trigonometric-solutions",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 68,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "trigonometric-solutions",
+      "lang": "zh",
+      "width": 1365,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 68,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "trigonometric-solutions",
+      "lang": "zh",
+      "width": 390,
+      "theme": "light",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 68,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    },
+    {
+      "slug": "trigonometric-solutions",
+      "lang": "zh",
+      "width": 390,
+      "theme": "dark",
+      "initial": {
+        "open": 0,
+        "tasks": 8,
+        "examples": 2
+      },
+      "overflow": false,
+      "mathErrors": 0,
+      "undefinedCommands": [],
+      "math": 68,
+      "longEquations": [],
+      "badImages": [],
+      "missingAlt": 0,
+      "pageErrors": []
+    }
+  ],
+  "failures": [],
+  "verification": {
+    "full_views": 168,
+    "final_recheck_views": 8,
+    "final_recheck_slugs": [
+      "matrix-algebra"
+    ],
+    "reason": "After full pass, final bilingual 1x1 matrix notation synchronisation; final Jekyll rebuild and Pagefind regeneration, affected pages repeated. Other course sources unchanged."
+  }
+}

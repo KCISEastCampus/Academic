@@ -1,6 +1,7 @@
 ---
 title: AS 高等数学
 layout: subjects
+reading_layout: true
 mathjax: true
 grade: as
 subject: as-further-mathematics
@@ -10,97 +11,347 @@ permalink: /zh/alevel/as-further-mathematics/
 toc_headings: "#learning-route, #entry-diagnosis, #route-a, #route-b, #route-s, #route-m, #exit-check, #course-sources, #reference-notes"
 ---
 
-## 学习路线：FM01 与 FM02 {#learning-route}
+## 从这里开始 {#learning-route}
 
-这里是 OxfordAQA **9665 v5.2** 的学习路线：20 组课页覆盖 18 个 AS 主题。先阅读解释与示范，完成补步骤，再独立选法；提示与完整解答分别展开。根据错误反馈重新尝试。旧长笔记及索引默认收起在页末，按需展开查阅。
+这门课衔接普通 AS 数学，学习 OxfordAQA **9665 的 FM01 与 FM02**。第一次学习，从[有理函数](/zh/alevel/as-further-mathematics/rational-functions/)开始；已经学过部分内容，可以直接选择下方分支。
 
-**先修：**FM01 假定普通 AS 数学的纯数内容；FM02 假定普通 AS 数学及 FP1。进入 FP1 前诊断代数、三角、微积分；进入 FM02 对应分支前诊断概率、随机变量、牛顿定律、动量。二维向量记号由 M1 直接教起，不预设已学归纳、De Moivre、三阶逆或特征值。
+每课先建立概念并看完整示范，再自己作答。提示和解答分别收起；用过提示就记作“借助提示完成”。出错后按反馈回补，再做对应重试。
 
-两单元均为 90 分钟、80 分，各占 AS 50%。FM02 在同一张试卷中分为**纯数 40／统计 20／力学 20**。精度及作答证据服从具体试卷和 command words；show 要论证，hence 要连接前问，sketch／plot 要相应图像证据。计算器可核对但不能代替这些步骤；本轮没有新增实机、考试模式或学生试用验证。
+先修不确定时用[入口诊断](#entry-diagnosis)定位回补。学完一个分支后做[综合与延后回顾](#exit-check)。旧笔记放在页末[参考区](#reference-notes)，无需先读。
 
-### 入口诊断 {#entry-diagnosis}
+### FM01 · 纯数 {#route-a}
 
-**Entry tasks (self-written):** (1) Factor $x^2-x-2$. (2) Solve $\sin\theta=1/2$ for $0\le\theta<2\pi$. (3) Differentiate $x^3$ and integrate $x^2$ from 0 to 2. (4) If $P(A)=0.4$ and $P(B\mid A)=0.2$, find $P(A\cap B)$. (5) A 2 kg particle changes velocity from −1 to 3 m s⁻¹; find its signed impulse.
+按下列顺序学习；复数调用三角与二次理论，级数调用因式分解，微积分部分调用普通 AS 导数与积分。
 
-<details markdown="1"><summary>诊断核对及修补路线</summary>
-
-$$(x-2)(x+1);\quad \theta=\pi/6,5\pi/6;\quad 3x^2,8/3;\quad P(A\cap B)=0.08;\quad J=8\ \mathrm{N\,s}.$$
-
-（1）错时先复习普通 AS 因式分解与二次理论再进 A1；（2）错先补单位圆再进 A3；（3）错先补幂函数微积分再进 A6/A7；（4）错先补条件概率再进 S1；（5）错先补带符号动量再进 M3。换一个例子重新检查后再推进。
-
-</details>
-
-### FM01 · FP1 {#route-a}
-
-按先修关系走 A1 → A2、A3 → A4 及 A5 → A6 → A7。
-
-- **A1 · FP1.1:** [有理函数：图像与值域](/zh/alevel/as-further-mathematics/rational-functions/)
-- **A2 · FP1.1 FP1.2:** [圆锥曲线、轨迹与相切](/zh/alevel/as-further-mathematics/conics-and-loci/)
-- **A3 · FP1.6:** [三角方程的完整通解](/zh/alevel/as-further-mathematics/trigonometric-solutions/)
-- **A4 · FP1.3 FP1.4:** [复数、Argand 图与二次根](/zh/alevel/as-further-mathematics/complex-numbers-and-roots/)
-- **A5 · FP1.5:** [有限和与无限级数极限](/zh/alevel/as-further-mathematics/series/)
-- **A6 · FP1.7:** [从弦到变化率及近似](/zh/alevel/as-further-mathematics/rates-and-approximations/)
-- **A7 · FP1.7:** [反常积分：收敛还是发散](/zh/alevel/as-further-mathematics/improper-integrals/)
+- [有理函数](/zh/alevel/as-further-mathematics/rational-functions/) — 画出草图、解不等式，并论证值域。
+- [圆锥曲线与轨迹](/zh/alevel/as-further-mathematics/conics-and-loci/) — 把距离条件、方程和相切联系起来。
+- [三角方程](/zh/alevel/as-further-mathematics/trigonometric-solutions/) — 给出全部解并说明没有遗漏。
+- [复数与二次根](/zh/alevel/as-further-mathematics/complex-numbers-and-roots/) — 联系复数运算、Argand 几何与根的变换。
+- [级数](/zh/alevel/as-further-mathematics/series/) — 选择求和方法并检查部分和极限。
+- [变化率与近似](/zh/alevel/as-further-mathematics/rates-and-approximations/) — 建立导数、连接变化率并检查微小变化估计。
+- [反常积分](/zh/alevel/as-further-mathematics/improper-integrals/) — 用正确极限处理无穷端点与奇点。
 
 ### FM02 · 纯数 {#route-b}
 
-B1 → B2；A6 支持 B4 → B5；B3 调用普通 AS 对数。
+先矩阵，再平面变换；线性化需要对数。变化率之后学习数值求根，再进 Euler。
 
-- **B1 · FPP1.1:** [矩阵运算与逆序](/zh/alevel/as-further-mathematics/matrix-algebra/)
-- **B2 · FPP1.1:** [平面变换与一般不变直线](/zh/alevel/as-further-mathematics/transformations/)
-- **B3 · FPP1.2:** [线性化、作图与拟合](/zh/alevel/as-further-mathematics/linearisation/)
-- **B4 · FPP1.3:** [可追溯的数值求根](/zh/alevel/as-further-mathematics/numerical-roots/)
-- **B5 · FPP1.3:** [Euler 更新及其局限](/zh/alevel/as-further-mathematics/euler-method/)
+- [矩阵运算](/zh/alevel/as-further-mathematics/matrix-algebra/) — 核对维数、逆与运算次序。
+- [平面变换](/zh/alevel/as-further-mathematics/transformations/) — 解释组合、面积及一般不变直线。
+- [线性化](/zh/alevel/as-further-mathematics/linearisation/) — 选择坐标、实际作图并估计常数。
+- [数值求根](/zh/alevel/as-further-mathematics/numerical-roots/) — 追踪更新过程，说明精度的依据。
+- [Euler 方法](/zh/alevel/as-further-mathematics/euler-method/) — 用旧点斜率更新并解释近似的局限。
 
 ### FM02 · 统计 {#route-s}
 
-S1 → S2/S3 → S4 → S5；用 PGF 时回看直接矩推导。
+先贝叶斯，再学习两个分布；推导过均值和方差后学习 PGF，最后做线性组合。
 
-- **S1 · FS1.1:** [贝叶斯：改变样本空间](/zh/alevel/as-further-mathematics/bayes/)
-- **S2 · FS1.2:** [离散均匀概率与矩](/zh/alevel/as-further-mathematics/discrete-uniform/)
-- **S3 · FS1.3:** [几何分布与矩的推导](/zh/alevel/as-further-mathematics/geometric-distribution/)
-- **S4 · FS1.4:** [概率生成函数](/zh/alevel/as-further-mathematics/generating-functions/)
-- **S5 · FS1.5:** [线性组合与协方差](/zh/alevel/as-further-mathematics/linear-combinations/)
+- [贝叶斯定理](/zh/alevel/as-further-mathematics/bayes/) — 构造概率树，改变条件样本空间。
+- [离散均匀分布](/zh/alevel/as-further-mathematics/discrete-uniform/) — 检查等可能条件并推导均值、方差。
+- [几何分布](/zh/alevel/as-further-mathematics/geometric-distribution/) — 定义计数对象，计算尾概率并推导两矩。
+- [概率生成函数](/zh/alevel/as-further-mathematics/generating-functions/) — 推导 PGF、提取概率并组合独立变量。
+- [随机变量线性组合](/zh/alevel/as-further-mathematics/linear-combinations/) — 处理负系数、协方差及相关的条件。
 
 ### FM02 · 力学 {#route-m}
 
-M1 与 M2 建立 M3 所需记号及核验习惯。
+相对运动建立二维向量记号；量纲帮助检查方程；碰撞还需要普通 AS 的带符号动量。
 
-- **M1 · FM1.1:** [向量、拦截与最近距离](/zh/alevel/as-further-mathematics/relative-motion/)
-- **M2 · FM1.2:** [量纲、单位与模型局限](/zh/alevel/as-further-mathematics/dimensions/)
-- **M3 · FM1.3:** [变力冲量与一维碰撞](/zh/alevel/as-further-mathematics/impulse-and-collisions/)
+- [相对运动](/zh/alevel/as-further-mathematics/relative-motion/) — 用向量和几何建立拦截与最近距离模型。
+- [量纲分析](/zh/alevel/as-further-mathematics/dimensions/) — 求单位与指数，解释量纲无法确定什么。
+- [冲量与碰撞](/zh/alevel/as-further-mathematics/impulse-and-collisions/) — 先选系统与方向，再使用冲量或碰撞规律。
 
-### 混合出口检查 {#exit-check}
+### 入口诊断与回补 {#entry-diagnosis}
 
-以下均为自拟题。先不打开课页标题，独立选法并写出条件与理由，不只报数值。错误用于定位回学路线，不据此声称考试等级。
+按准备学习的分支选择相关小问。写出过程，先不打开解答；不需要把五项全做完才允许开始。
 
-**Mixed tasks (self-written):** (1) Give the complete real solution of $\cos(2x)=1/2$ and decide whether $\int_1^\infty x^{-2}\,dx$ is finite. (2) A transformation is $\operatorname{diag}(3,1)$. Find its invariant lines, including any that miss the origin. (3) Independent X,Y have PGFs $(1+t)/2$ and $(t+t^2)/2$. Find $P(X+Y=2)$ and the variance of their sum. (4) Two particles have relative position $(4-t,3)$ m for $t\ge0$ s. Find their closest distance and explain whether they collide.
+<section class="lesson-check" markdown="1">
 
-<details markdown="1"><summary>出口提示</summary>
+#### 先修检查
 
-（1）分别处理周期方程和端点极限；（2）保留截距并检查竖线；（3）匹配幂次，保留独立条件；（4）在允许时间内最小化模平方。
+**Task (self-written):** (a) Factor $x^2-x-2$. (b) Solve $\sin\theta=1/2$ for $0\le\theta<2\pi$. (c) Differentiate $x^3$ and integrate $x^2$ from 0 to 2. (d) If $P(A)=0.4$ and $P(B\mid A)=0.2$, find $P(A\cap B)$. (e) A 2 kg particle changes velocity from −1 to 3 m s⁻¹; find its signed impulse.
 
-</details>
+<details markdown="1"><summary>提示</summary>
 
-<details markdown="1"><summary>出口解答与回学路线</summary>
-
-$$x=\pm\pi/6+n\pi\ (n\in\mathbb Z);\qquad\int_1^\infty x^{-2}\,dx=\lim_{R\to\infty}(1-1/R)=1.$$
-
-（1）漏符号或截断极限时回 A3/A7；（2）所有 $y=k$ 及 $x=0$ 不变，仅 $x=0$ 逐点不动。漏非零截距时回 B2。
-
-$$G_{X+Y}(t)=(t+2t^2+t^3)/4;\quad P(X+Y=2)=1/2;\quad\operatorname{Var}(X+Y)=1/4+1/4=1/2.$$
-
-（3）漏交叉系数回 S4，方差错回 S5；（4）最近点在 $t=4$ s、距离 3 m，第二分量从不为零，所以不碰撞。时间错误或混淆路线相交与相遇时回 M1。
+分别检查积与和、单位圆象限、幂法则、联合概率和带符号速度。
 
 </details>
 
-### 来源身份与参考笔记 {#course-sources}
+<details markdown="1"><summary>解答、检查与回补</summary>
 
-范围依据 [9665 specification v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf) §§3.1–3.2。FM01 公开样卷正文为 **Specimen 2018 Morning**，文件名含 2019/v3，页脚版本不统一；官网配套样卷 MS 版权为 2017。它不是 2019 正式考季，也不是实考标准化后的 Final MS。FM02 依据为 **June 2024**、实际考试日 2024 年 5 月 16 日及 Version 1.0 Final MS。每课列出研究中实际读过的题号及 QP/MS 页。本轮新题均为自拟题，没有官方分值。
+$$\begin{aligned}
+    (a)&\quad(x-2)(x+1),\\
+    (b)&\quad\theta=\pi/6,\ 5\pi/6,\\
+    (c)&\quad3x^2,\quad[x^3/3]_0^2=8/3,\\
+    (d)&\quad P(A\cap B)=0.4(0.2)=0.08,\\
+    (e)&\quad J=2[3-(-1)]=8\ \mathrm{N\,s}.
+    \end{aligned}$$
 
-本路线尚未经学生试用。范围覆盖、计算正确或构建通过本身不能证明学习效果。
+(a) [二次理论](/zh/alevel/as-mathematics/algebra/#l02)；(b) [周期与区间解](/zh/alevel/as-mathematics/trigonometry/#l16)；(c) [导数](/zh/alevel/as-mathematics/differentiation/#l06)与[定积分](/zh/alevel/as-mathematics/integration/#l08)；(d) [条件概率](/zh/alevel/as-mathematics/probability/#l18)；(e) [带符号动量](/zh/alevel/as-mathematics/momentum/)。因式分解可展开核对；三角须检查两个象限；沿同一条路径将概率相乘，得到联合概率；冲量是末动量减初动量。回补后关闭本解答，完成下面的对应小问。
 
-[英文长笔记（参考）](/alevel/as-further-mathematics/#reference-notes) · [A2 高数](/zh/alevel/a2-further-mathematics/)
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+#### 回补后的重试
+
+**Task (self-written):** (a) Factor $x^2+2x-3$. (b) Solve $\cos\theta=-1/2$ for $0\le\theta<2\pi$. (c) Differentiate $x^4$ and integrate $x$ from 0 to 3. (d) If $P(C)=0.3$ and $P(D\mid C)=0.5$, find $P(C\cap D)$. (e) A 3 kg particle changes velocity from 2 to −1 m s⁻¹; find its signed impulse.
+
+<details markdown="1"><summary>提示</summary>
+
+沿用刚修复的原理，独立检查符号和区间。
+
+</details>
+
+<details markdown="1"><summary>解答、检查与回补</summary>
+
+$$\begin{aligned}
+    (a)&\quad(x+3)(x-1),\\
+    (b)&\quad\theta=2\pi/3,\ 4\pi/3,\\
+    (c)&\quad4x^3,\quad[x^2/2]_0^3=9/2,\\
+    (d)&\quad P(C\cap D)=0.15,\\
+    (e)&\quad J=3(-1-2)=-9\ \mathrm{N\,s}.
+    \end{aligned}$$
+
+负冲量表示冲量沿所选正方向的反方向。若仍错，按上题对应链接重做该技能，再进入所选课页的入口检查。
+
+</details>
+
+</section>
+
+### 综合与延后回顾 {#exit-check}
+
+学完相关分支后关闭课页，先选方法再作答。以下是连接知识的抽查；各课的独立任务负责更细的目标检查，它们共同使用，不能把这几题当成整场考试。
+
+<section class="lesson-check" markdown="1">
+
+#### 综合题 1
+
+**Task (self-written):** Give the complete real solution of $\cos(2x)=1/2$ and decide whether $\int_1^\infty x^{-2}\,dx$ is finite. Explain both conclusions.
+
+<details markdown="1"><summary>提示</summary>
+
+周期方程与无穷端点需要不同的论证。
+
+</details>
+
+<details markdown="1"><summary>解答、检查与回补</summary>
+
+$$x=\pm\pi/6+n\pi,\qquad n\in\mathbb Z.$$
+
+$$\int_1^\infty x^{-2}\,dx=\lim_{R\to\infty}(1-1/R)=1.$$
+
+
+本题在一个完整周期内，cos θ=1/2 有两个解；将整个角2x除以2后，x的重复周期为π；积分不能直接代入“无穷”。漏解回到三角方程，极限不清回到反常积分，再做各页对应重试。
+
+[三角方程](/zh/alevel/as-further-mathematics/trigonometric-solutions/#model) · [反常积分](/zh/alevel/as-further-mathematics/improper-integrals/#model)
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+#### 综合题 2
+
+**Task (self-written):** A transformation is $\operatorname{diag}(3,1)$. Find all its invariant lines, including any that miss the origin, and all its fixed points.
+
+<details markdown="1"><summary>提示</summary>
+
+同时保留斜率和截距，另外检查竖线。
+
+</details>
+
+<details markdown="1"><summary>解答、检查与回补</summary>
+
+设 $y=mx+c$，像点为 $(3x,mx+c)$。对每个 $x$ 均需满足 $mx+c=3mx+c$，因此 $m=0$，所有 $y=c$ 不变。竖线 $x=k$ 映为 $x=3k$，只有 $x=0$ 不变。不变点满足 $3x=x$，所以恰是 $x=0$ 上所有点。
+
+不变直线允许点在线上移动；由不变点组成的直线要求每个点不动。缺截距或竖线回到平面变换并做对应重试。
+
+[平面变换](/zh/alevel/as-further-mathematics/transformations/#invariant-lines)
+
+[对应重试](/zh/alevel/as-further-mathematics/transformations/#retry-lines)
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+#### 综合题 3
+
+**Task (self-written):** Independent $X,Y$ have PGFs $(1+t)/2$ and $(t+t^2)/2$. Find $P(X+Y=2)$ and the variance of their sum, explaining where independence is used.
+
+<details markdown="1"><summary>提示</summary>
+
+可以用系数或列举结果检查概率，再独立核对方差。
+
+</details>
+
+<details markdown="1"><summary>解答、检查与回补</summary>
+
+$$\begin{aligned}G_{X+Y}(t)&=(t+2t^2+t^3)/4,\\P(X+Y=2)&=1/2,\\\operatorname{Var}(X+Y)&=1/4+1/4=1/2.\end{aligned}$$
+
+独立性使联合概率相乘、PGF相乘，也使协方差为0。X等可能取0、1，Y等可能取1、2；两种和为2的情况。系数错回PGF，方差交叉项错回线性组合。
+
+[概率生成函数](/zh/alevel/as-further-mathematics/generating-functions/#model) · [线性组合](/zh/alevel/as-further-mathematics/linear-combinations/#model)
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+#### 综合题 4
+
+**Task (self-written):** Two particles have relative position $(4-t,3)$ m for $t\ge0$ s. Find their closest distance and explain whether they collide. Give a geometric check.
+
+<details markdown="1"><summary>提示</summary>
+
+检查允许时间和相对轨迹是否经过原点。
+
+</details>
+
+<details markdown="1"><summary>解答、检查与回补</summary>
+
+$$d^2=(t-4)^2+9.$$
+
+最小值在允许的 $t=4$ s 处取得，$d=3$ m。相对轨迹是水平线 $y=3$，到原点垂距为3 m，且永不经过原点，因此不会碰撞。
+
+若把轨迹相交等同于同时相遇，回看相对运动中的共同时间与初值；若只最小化代数式而不查时间范围，也回到该页重试。
+
+[共同时间与初值](/zh/alevel/as-further-mathematics/relative-motion/#relative-position) · [允许的最近点](/zh/alevel/as-further-mathematics/relative-motion/#closest-approach) · [对应重试](/zh/alevel/as-further-mathematics/relative-motion/#retry)
+
+</details>
+
+</section>
+
+#### 过后再做
+
+继续学习别的主题后，合上旧解答再做下面两题。记录首次过程、用过的帮助、错误与重试；根据课程节奏安排，不规定统一天数。
+
+<section class="lesson-check" markdown="1">
+
+#### 回顾题 1
+
+**Task (self-written):** For integer $n\ge1$, let $X$ be uniform on $\{1,\ldots,n\}$ and let $Y=2X-1$. Derive $E(X)$ and $\operatorname{Var}(X)$ using finite sums, then find $E(Y)$ and $\operatorname{Var}(Y)$. Is $Y$ uniform on $\{1,2,\ldots,2n-1\}$? Explain.
+
+<details markdown="1"><summary>提示</summary>
+
+先定义每个取值的概率，再计算两个矩；另外检查支持集。
+
+</details>
+
+<details markdown="1"><summary>解答、检查与回补</summary>
+
+$$\begin{aligned}
+    E(X)&=\frac1n\frac{n(n+1)}2=\frac{n+1}2,\\
+    E(X^2)&=\frac{(n+1)(2n+1)}6,\\
+    \operatorname{Var}(X)&=\frac{n^2-1}{12},\\
+    E(Y)&=2E(X)-1=n,\\
+    \operatorname{Var}(Y)&=4\operatorname{Var}(X)=\frac{n^2-1}3.
+    \end{aligned}$$
+
+Y只取奇数1、3、…、2n−1，每个概率1/n。n>1时不是题述全体连续整数上的均匀分布；n=1时两集合都是{1}。若漏平方系数，回到[线性组合](/zh/alevel/as-further-mathematics/linear-combinations/#model)；若推导只列结果，回到[离散均匀的矩推导](/zh/alevel/as-further-mathematics/discrete-uniform/#demonstration)。关闭旧解答后做下方[回补重试1](#later-retry-1)。
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+#### 回顾题 2
+
+**Task (self-written):** A ball of mass $m>0$ hits a fixed smooth wall normally at speed $u>0$. Take the incoming direction as positive; its velocity after impact is $-eu$, where $0\le e\le1$ ($e=0$ means no immediate rebound). Find its impulse. Someone proposes that the contact duration is $km/u$, with dimensionless $k$. Assess this proposal, then check the dimensions of impulse.
+
+<details markdown="1"><summary>提示</summary>
+
+画出碰前后带方向速度，分开检查系统和单位。
+
+</details>
+
+<details markdown="1"><summary>解答、检查与回补</summary>
+
+$$J=m(-eu-u)=-(1+e)mu.$$
+
+$$\begin{aligned}[km/u]&=MTL^{-1}\ne T,\\{}[J]&=MLT^{-1}.\end{aligned}$$
+
+墙给球外冲量，不能对球单独用动量守恒。时间式量纲不符，必错；量纲即使相符也不能确定接触模型或无量纲常数。回看[冲量与系统](/zh/alevel/as-further-mathematics/impulse-and-collisions/#wall-model)及[量纲与模型限制](/zh/alevel/as-further-mathematics/dimensions/#model-limits)，然后关闭答案做下方[回补重试2](#later-retry-2)。
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+#### 回补重试1 {#later-retry-1}
+
+**Task (self-written):** For integer $r\ge1$, $U$ is uniform on $\{0,\ldots,r-1\}$ and $V=3U+2$. Derive $E(U)$ and $\operatorname{Var}(U)$ from finite sums, then find $E(V)$ and $\operatorname{Var}(V)$. Is $V$ uniform on all integers from 2 to $3r-1$? Include the single-point case.
+
+<details markdown="1"><summary>提示</summary>
+
+写出每个值的概率，再分别求一次方和平方的加权和。
+
+</details>
+
+<details markdown="1"><summary>解答与核对</summary>
+
+$$\begin{aligned}
+ E(U)&=\frac1r\sum_{j=0}^{r-1}j=\frac{r-1}2,\\
+ E(U^2)&=\frac1r\sum_{j=0}^{r-1}j^2\\
+ &=\frac{(r-1)(2r-1)}6,\\
+ \operatorname{Var}(U)&=E(U^2)-[E(U)]^2\\
+ &=\frac{r^2-1}{12},\\
+ E(V)&=3E(U)+2=\frac{3r+1}2,\\
+ \operatorname{Var}(V)&=9\operatorname{Var}(U)=\frac{3(r^2-1)}4.
+ \end{aligned}$$
+
+V的支持集是2、5、…、3r−1，每项概率1/r。r>1时有缺口，不是在全体连续整数上的均匀分布；r=1时只取2，方差0。必须给出求和到两矩的推理；只引用分布公式仍没有修复推导困难。
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+#### 回补重试2 {#later-retry-2}
+
+**Task (self-written):** A 0.5 kg ball approaches a fixed wall at speed 4 m s⁻¹ and leaves at speed 1 m s⁻¹. Take the direction away from the wall as positive. Find the signed impulse on the ball, and explain whether its momentum is conserved. A student proposes $J=mv^2$ for impulse, with $v$ a speed. Check this dimensionally; would matching dimensions prove a collision law?
+
+<details markdown="1"><summary>提示</summary>
+
+先用所选正方向写两个速度，再检查系统边界和MLT。
+
+</details>
+
+<details markdown="1"><summary>解答与核对</summary>
+
+$$\begin{aligned}
+ u&=-4\ \mathrm{m\,s^{-1}},\\
+ v&=1\ \mathrm{m\,s^{-1}},\\
+ J&=0.5[1-(-4)]\\
+ &=2.5\ \mathrm{N\,s},\\
+ [mv^2]&=ML^2T^{-2},\\
+ {}[J]&=MLT^{-1}.
+ \end{aligned}$$
+
+正冲量沿离墙方向，球受到墙的外冲量，球单独的动量不守恒。提议式量纲不符；相符也只通过必要检查，不能证明模型或求出无量纲常数。若把速率直接当带符号速度，先画方向箭头，再关闭解答重新建立动量变化。
+
+</details>
+
+</section>
+
+### 范围、考试与来源 {#course-sources}
+
+<details markdown="1"><summary>查看课程身份与参考材料</summary>
+
+依据 [9665 specification v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf) §§3.1–3.2；FM01为FP1，FM02含FPP1、FS1、FM1。两单元各90分钟、80分、各占AS50%；FM02分纯数40、统计20、力学20分。FM01假定普通AS纯数；FM02假定普通AS及FP1。20组学习页覆盖18个官方主题；归纳、De Moivre、三阶逆和特征值不作为本AS路线必修。
+
+公开FM01样卷正文为 **Specimen 2018 Morning**；文件名2019/v3与配套MS版权2017不等于正式2019考季。FM02为 **June 2024**（考试16 May 2024），MS为Version 1.0 Final。每课记录实际读过的QP／MS题号和页码。新题均为self-written，自拟核对点不是官方分值。
+
+精度与作答证据服从具体试卷及command words；计算器核对不能替代证明、推导或图。未新增计算器实机／考试模式验证。内容与技术检查记录在制作文档中；课程尚待真实学生试用，不宣称学习效果已验证。
+
+</details>
 
 ## 旧版参考资料 {#reference-notes}
 

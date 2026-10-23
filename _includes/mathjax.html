@@ -21,6 +21,17 @@
             }
           });
           document.dispatchEvent(new Event('mathjaxLoaded'));
+          window.addEventListener('hashchange', () => {
+            let id = window.location.hash.slice(1);
+            try { id = decodeURIComponent(id); } catch (_) {}
+            const target = document.getElementById(id);
+            // Native smooth scrolling can retain the position before an archive opens.
+            if (target?.closest('details')) {
+              requestAnimationFrame(() => requestAnimationFrame(() => {
+                target.scrollIntoView({behavior: 'instant', block: 'start'});
+              }));
+            }
+          });
           // Typesetting changes page height after the browser's initial hash jump.
           if (window.location.hash) {
             if (document.readyState !== 'complete') {

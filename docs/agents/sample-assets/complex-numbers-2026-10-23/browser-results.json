@@ -1,0 +1,146 @@
+[
+  {
+    "lang": "en",
+    "width": 1365,
+    "initial": {
+      "overflow": false,
+      "errors": 0,
+      "math": 181,
+      "brokenImages": 0
+    },
+    "themes": [
+      {
+        "theme": "light",
+        "expanded": {
+          "overflow": false,
+          "errors": 0,
+          "math": 181,
+          "brokenImages": 0
+        }
+      },
+      {
+        "theme": "dark",
+        "expanded": {
+          "overflow": false,
+          "errors": 0,
+          "math": 181,
+          "brokenImages": 0
+        }
+      }
+    ],
+    "keyboardDisclosure": true,
+    "stableAnchors": true,
+    "localLinks": true,
+    "tocJump": true,
+    "languageAnchor": true,
+    "taskBoundaries": 14
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "initial": {
+      "overflow": false,
+      "errors": 0,
+      "math": 181,
+      "brokenImages": 0
+    },
+    "themes": [
+      {
+        "theme": "light",
+        "expanded": {
+          "overflow": false,
+          "errors": 0,
+          "math": 181,
+          "brokenImages": 0
+        }
+      },
+      {
+        "theme": "dark",
+        "expanded": {
+          "overflow": false,
+          "errors": 0,
+          "math": 181,
+          "brokenImages": 0
+        }
+      }
+    ],
+    "keyboardDisclosure": true,
+    "stableAnchors": true,
+    "localLinks": true,
+    "tocJump": true,
+    "languageAnchor": true,
+    "taskBoundaries": 14
+  },
+  {
+    "lang": "zh",
+    "width": 1365,
+    "initial": {
+      "overflow": false,
+      "errors": 0,
+      "math": 181,
+      "brokenImages": 0
+    },
+    "themes": [
+      {
+        "theme": "light",
+        "expanded": {
+          "overflow": false,
+          "errors": 0,
+          "math": 181,
+          "brokenImages": 0
+        }
+      },
+      {
+        "theme": "dark",
+        "expanded": {
+          "overflow": false,
+          "errors": 0,
+          "math": 181,
+          "brokenImages": 0
+        }
+      }
+    ],
+    "keyboardDisclosure": true,
+    "stableAnchors": true,
+    "localLinks": true,
+    "tocJump": true,
+    "languageAnchor": true,
+    "taskBoundaries": 14
+  },
+  {
+    "lang": "zh",
+    "width": 390,
+    "initial": {
+      "overflow": false,
+      "errors": 0,
+      "math": 181,
+      "brokenImages": 0
+    },
+    "themes": [
+      {
+        "theme": "light",
+        "expanded": {
+          "overflow": false,
+          "errors": 0,
+          "math": 181,
+          "brokenImages": 0
+        }
+      },
+      {
+        "theme": "dark",
+        "expanded": {
+          "overflow": false,
+          "errors": 0,
+          "math": 181,
+          "brokenImages": 0
+        }
+      }
+    ],
+    "keyboardDisclosure": true,
+    "stableAnchors": true,
+    "localLinks": true,
+    "tocJump": true,
+    "languageAnchor": true,
+    "taskBoundaries": 14
+  }
+]
