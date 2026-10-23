@@ -66,7 +66,7 @@ for (const subject of subjectIndexes) {
   assert(zh.includes('aria-label="阅读此页英文版"'), `${subject}: Chinese switch label`);
   const translated = translatedNotes.includes(subject);
   const learningCourse = subject === 'alevel/as-mathematics';
-  const scope = learningCourse ? '双语学习路线与英文速查提纲' : translated ? '本页为中文复习笔记' : '本页提供中文主题目录';
+  const scope = learningCourse ? '中文页保留英文练习题，也可切换至英文课程。' : translated ? '本页为中文复习笔记' : '本页提供中文主题目录';
   assert(zhBody.includes(scope), `${subject}: translation scope`);
   if (translated) {
     const math = source => source.match(/\$\$[\s\S]*?\$\$|(?<!\$)\$(?!\$)[^\n$]+\$(?!\$)/g) || [];
