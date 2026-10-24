@@ -7,7 +7,7 @@ subject: a2-further-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-further-mathematics/de-moivres-theorem/
 permalink: /zh/alevel/a2-further-mathematics/de-moivres-theorem/
-toc_headings: "#method, #powers-and-proof, #complex-roots, #roots-of-unity, #trigonometric-identities, #integration, #practice, #diagnose-and-retry, #later-review, #quick-reference"
+toc_headings: "#powers-and-proof, #complex-roots, #roots-of-unity, #trigonometric-identities, #integration, #practice, #diagnose-and-retry, #later-review, #method, #quick-reference"
 study_page: true
 reading_layout: true
 ---
@@ -16,7 +16,7 @@ reading_layout: true
 
 本课学习求复数（complex number）的幂与根，并用同一定理证明三角恒等式（trigonometric identity）及计算积分。
 
-- **学习：**从[方法](#method)开始，再依次学习例题。
+- **学习：**从[一次具体的平方](#first-square)开始，再读[一般规律与证明](#powers-and-proof)。
 - **作业帮助：**查看[幂与证明](#powers-and-proof)、[复数的根](#complex-roots)、[单位根](#roots-of-unity)、[三角恒等式](#trigonometric-identities)或[积分](#integration)。
 - **复习：**先尝试[练习](#practice)，再展开解答，最后核对[快速参考](#quick-reference)。
 
@@ -26,18 +26,33 @@ reading_layout: true
 
 **题目身份：**除明确标出官方原题或教学改编的题目外，本课例题与练习均为自拟教学题，不分配官方分值。
 
-## 方法 {#method}
-
 **学习目标：**用棣莫弗定理（De Moivre's theorem）计算整数次幂，找出全部复数根，解释它们在阿尔冈图（Argand diagram，又称复平面图）上的位置，并用复数推导三角函数的结果。
 
-- **求幂或倒数（reciprocal）：**先将复数写成 $r(\cos\theta+i\sin\theta)$。模取相应次幂，辐角乘以指数。
-- **求解方程 $z^n=w$：**先求 $w$ 的模与辐角。先写出全部可能的辐角 $\theta+2k\pi$，再除以指数 $n$。
-- **用幂次表示倍角（multiple angle）：**展开 $(\cos\theta+i\sin\theta)^n$，再取实部（real part）或虚部（imaginary part）。
-- **用倍角表示 $\sin^5\theta$ 这样的幂：**使用 $z=\cos\theta+i\sin\theta$，以及含 $z$ 与 $\frac1z$ 的恒等式。
-
-**展开前先确定方向：**$\sin5\theta$ 与 $\sin^5\theta$ 是不同的表达式。前者是 $5\theta$ 的正弦，后者是 $\sin\theta$ 的五次幂。
-
 ## 幂与证明 {#powers-and-proof}
+
+<section class="worked-example" markdown="1">
+
+### 先算一次平方 {#first-square}
+
+**Self-written illustration; no official marks.** Calculate $(1+i)^2$ and describe its position on an Argand diagram.
+
+先用普通乘法：
+
+$$(1+i)^2=1+2i+i^2=2i.$$
+
+$1+i$ 到原点的距离是 $\sqrt2$，与正实轴的夹角是 $\pi/4$；$2i$ 在虚轴正半轴上，距离是 $2$，夹角是 $\pi/2$。因此，这次平方使距离变为原距离的平方，角度变为原角度的两倍。“模”（modulus）就是这个距离，“辐角”（argument）就是这个角度。
+
+</section>
+
+这个变化怎样从乘法得到？先让模等于 $1$，展开平方并使用二倍角公式：
+
+$$\begin{aligned}
+&(\cos\theta+i\sin\theta)^2\\
+&=\cos^2\theta-\sin^2\theta+2i\sin\theta\cos\theta\\
+&=\cos2\theta+i\sin2\theta.
+\end{aligned}$$
+
+若原来的模为 $r$，平方时外面的 $r$ 也变成 $r^2$。平方给出了一个具体情形；要说明所有整数次幂都成立，还需要下面的证明。
 
 对于每个整数 $n$，
 
@@ -1164,6 +1179,15 @@ A&=\frac12\int_0^{2\pi/3}2^2\,\mathrm d\theta
 </details>
 
 </section>
+
+## 复习时选择方法 {#method}
+
+- **求幂或倒数（reciprocal）：**先将复数写成 $r(\cos\theta+i\sin\theta)$。模取相应次幂，辐角乘以指数。
+- **求解方程 $z^n=w$：**先求 $w$ 的模与辐角。先写出全部可能的辐角 $\theta+2k\pi$，再除以指数 $n$。
+- **用幂次表示倍角（multiple angle）：**展开 $(\cos\theta+i\sin\theta)^n$，再取实部（real part）或虚部（imaginary part）。
+- **用倍角表示 $\sin^5\theta$ 这样的幂：**使用 $z=\cos\theta+i\sin\theta$，以及含 $z$ 与 $\frac1z$ 的恒等式。
+
+**展开前先确定方向：**$\sin5\theta$ 与 $\sin^5\theta$ 是不同的表达式。前者是 $5\theta$ 的正弦，后者是 $\sin\theta$ 的五次幂。
 
 ## 快速参考 {#quick-reference}
 

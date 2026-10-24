@@ -60,6 +60,9 @@ for (const x of [.5, 1, 2]) {
   assert(factor(x) > 0);
   close(derivative(factor, x), (2 / x - 1) * factor(x));
 }
+// Normalising can exclude zero even when a differentiable solution satisfies the original equation there.
+for (const x of [-1, 0, 1])
+  close(x * derivative(t => t * t / 3, x) + x * x / 3, x * x);
 
 const math = source => source.match(/\$\$[\s\S]*?\$\$|\$[^$\r\n]+\$/g) || [];
 const ids = source => Array.from(source.matchAll(/\{#([^}]+)\}/g), match => match[1]);

@@ -7,7 +7,7 @@ subject: a2-further-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-further-mathematics/inverse-trigonometric-functions/
 permalink: /zh/alevel/a2-further-mathematics/inverse-trigonometric-functions/
-toc_headings: "#method, #values-and-graphs, #differentiation, #standard-integrals, #completing-the-square, #definite-integrals, #integration-by-parts, #practice, #diagnose-and-retry, #quick-reference, #sources"
+toc_headings: "#values-and-graphs, #differentiation, #standard-integrals, #completing-the-square, #definite-integrals, #integration-by-parts, #practice, #diagnose-and-retry, #method, #quick-reference, #sources"
 study_page: true
 reading_layout: true
 ---
@@ -16,7 +16,7 @@ reading_layout: true
 
 选取反三角函数的正确值，求相关函数的导数，并在变量缩放或配方后应用标准积分公式。
 
-- **学习：**从[方法](#method)开始，再逐一完成例题。
+- **学习：**先看[反三角函数返回哪个角](#values-and-graphs)，再学求导与积分。
 - **作业帮助：**按需要查看[函数值与图像](#values-and-graphs)、[求导](#differentiation)、[标准积分](#standard-integrals)、[配方](#completing-the-square)、[定积分](#definite-integrals)或[分部积分](#integration-by-parts)。
 - **复习：**先独立完成[练习](#practice)，再展开解答，最后查看[快速参考](#quick-reference)。
 
@@ -26,24 +26,24 @@ reading_layout: true
 
 **题目身份：**除明确标出官方原题或教学改编的题目外，本课例题与练习均为自拟教学题，不分配官方分值。
 
-## 方法 {#method}
-
 **学习目标：**说明定义域（domain）与值域（range），绘制反三角函数图像，求复合函数（composite function）的导数，并用反正弦（inverse sine）或反正切（inverse tangent）求积分的精确值。
-
-- **求反函数的值：**根据指定的值域选择一个角度。计算器给出主值（principal value），并非三角方程的全部解。
-- **求导：**识别内层函数 $u$，使用反函数的求导公式，再乘以 $\frac{\mathrm du}{\mathrm dx}$。
-- **二次式的倒数：**检查分母是否有实根。若有两个不同的实根，使用部分分式（partial fractions）；若配方后得到平方和，使用反正切。
-- **分母含平方根：**先配方，再寻找 $\sqrt{a^2-u^2}$ 的形式。保留积分外的全部系数，并检查平方根为正的范围。
-- **计算定积分：**换元时同时改变上下限，或先换回 $x$，再使用原来的上下限。若被积函数在端点处无定义，应写出极限。
-- **被积函数本身是反函数：**尝试分部积分，令 $u$ 等于该函数，并取 $\mathrm dv=\mathrm dx$。
-
-**检查解题过程：**写出配方、换元及其导数、标准积分公式，以及代入上下限的步骤。对于“show that”题，应从计算过程推导出题目给定的结果。不定积分（indefinite integral）中保留 $+C$。
 
 ## 函数值与图像 {#values-and-graphs}
 
-这里的 $\sin^{-1}x$、$\cos^{-1}x$ 和 $\tan^{-1}x$ 表示**反函数（inverse functions）**，也分别记作 $\operatorname{arcsin}x$、$\operatorname{arccos}x$ 和 $\operatorname{arctan}x$。
+正弦把一个角度变成一个数；现在反过来，给出这个数，要找回一个角度。但相同的正弦值可以来自不同的角，所以必须先约定返回哪一个。
 
-例如，$y=\sin^{-1}x$ 表示 $\sin y=x$，且 $-\frac\pi2\le y\le\frac\pi2$。它**不是** $\frac1{\sin x}$；这个倒数应写作 $\operatorname{cosec}x$。
+看一个自拟示例（无官方分值）：
+
+$$\sin\frac\pi3=\frac{\sqrt3}{2},
+\qquad \sin\frac{2\pi}{3}=\frac{\sqrt3}{2}.$$
+
+若只问“哪个角的正弦是 $\frac{\sqrt3}{2}$”，上面两个都符合。**反正弦（inverse sine）**则只返回 $[-\pi/2,\pi/2]$ 中的角，这个角叫**主值（principal value）**。所以
+
+$$\sin^{-1}\left(\frac{\sqrt3}{2}\right)=\frac\pi3.$$
+
+这里输入的是正弦值，输出的是角度（弧度）。记号 $y=\sin^{-1}x$ 表示 $\sin y=x$，并且 $-\frac\pi2\le y\le\frac\pi2$；它不是倒数 $\frac1{\sin x}$，后者写作 $\operatorname{cosec}x$。
+
+$\cos^{-1}x$ 和 $\tan^{-1}x$ 同样各返回规定范围内的一个角，但范围不同。这三个反函数也分别记作 $\operatorname{arcsin}x$、$\operatorname{arccos}x$ 和 $\operatorname{arctan}x$：
 
 | 函数 | 定义域：允许的 $x$ | 值域：返回的角度 $y$ |
 |---|---|---|
@@ -92,6 +92,8 @@ $$\boxed{\cos^{-1}x=\frac\pi2-\frac{2\pi}{5}=\frac\pi{10}.}$$
 </section>
 
 ## 求导 {#differentiation}
+
+现在把返回的角度记作 $y$，输入值记作 $x$。求导问的是：当输入稍微变化时，这个角度怎样变化？反正弦和反正切的图像上升，反余弦的图像下降；这与下面导数的正负号一致。
 
 标准求导公式为
 
@@ -881,6 +883,17 @@ y(0)&=\tan^{-1}0+C=\pi/6\quad\Longrightarrow\quad C=\pi/6.
 </section>
 
 **学后下一步：**先关闭本章答案，去课程入口完成[跨主题综合](/zh/alevel/a2-further-mathematics/#mixed-review)；完成后续学习，再做[延后任务](/zh/alevel/a2-further-mathematics/#later-review)。记录首次是否独立、使用了什么提示、错误原因及重试结果；若方法或条件出错，按本章“练习后”返回对应示范，再关闭解答重试。
+
+## 复习时选择方法 {#method}
+
+- **求反函数的值：**根据指定的值域选择一个角度。计算器给出主值（principal value），并非三角方程的全部解。
+- **求导：**识别内层函数 $u$，使用反函数的求导公式，再乘以 $\frac{\mathrm du}{\mathrm dx}$。
+- **二次式的倒数：**检查分母是否有实根。若有两个不同的实根，使用部分分式（partial fractions）；若配方后得到平方和，使用反正切。
+- **分母含平方根：**先配方，再寻找 $\sqrt{a^2-u^2}$ 的形式。保留积分外的全部系数，并检查平方根为正的范围。
+- **计算定积分：**换元时同时改变上下限，或先换回 $x$，再使用原来的上下限。若被积函数在端点处无定义，应写出极限。
+- **被积函数本身是反函数：**尝试分部积分，令 $u$ 等于该函数，并取 $\mathrm dv=\mathrm dx$。
+
+**检查解题过程：**写出配方、换元及其导数、标准积分公式，以及代入上下限的步骤。对于“show that”题，应从计算过程推导出题目给定的结果。不定积分（indefinite integral）中保留 $+C$。
 
 ## 快速参考 {#quick-reference}
 

@@ -26,25 +26,11 @@ Find a sum without adding every term separately. Use partial fractions and the m
 
 **Learning goal:** choose a method for a finite sum, show how the terms cancel and give a formula with the correct lower and upper limits.
 
-A **finite series** is the sum of a finite number of terms. In
+The notation below means: start with the term whose index is $a$, add the next term, and stop at index $b$:
 
 $$\sum_{r=a}^{b}u_r=u_a+u_{a+1}+\cdots+u_b,$$
 
-$r$ is the summation index. If $a$ and $b$ are integers with $a\le b$, there are $b-a+1$ terms.
-
-### Choose a method {#choose-a-method}
-
-| Form of the terms | First step |
-|---|---|
-| An arithmetic or geometric series | Use the corresponding AS sum formula |
-| A polynomial in $r$ | Split the sum into sums of powers of $r$ |
-| A fraction with factorised denominator | Try partial fractions |
-| A difference such as $v_r-v_{r+1}$ | Write out the first few and last few terms |
-| A formula is given and you must prove it by induction | Check the initial case, then use $S_{k+1}=S_k+u_{k+1}$ |
-
-For a rational term that splits into shifted pieces, rewrite it and then use differences; for a polynomial, consider sums of powers first. After the rewrite, write enough terms to see what cancels. Do not reduce each fraction to a single number before showing the cancellation.
-
-**Common mistake:** using the formula for a sum from $r=1$ when the question starts at another value. Either write the actual first term or subtract an earlier sum.
+$r$ labels the term being added; it is the **summation index**. If $a$ and $b$ are integers with $a\le b$, there are $b-a+1$ terms. Adding this finite number of terms gives a **finite series**. The first example rewrites each term so that a negative fraction cancels a positive fraction from the next term.
 
 ## Partial Fractions {#partial-fractions}
 
@@ -114,6 +100,20 @@ This also holds at $n=1$: the expression gives $\frac12(1-\frac13)=\frac13$, as 
 **Common mistake:** keeping only the first and last terms. The shift is two, so keep **two terms at each end**. For short sums, check the formula directly when the displayed cancellation pattern overlaps.
 
 </section>
+
+### Choose a method {#choose-a-method}
+
+| Form of the terms | First step |
+|---|---|
+| An arithmetic or geometric series | Use the corresponding AS sum formula |
+| A polynomial in $r$ | Split the sum into sums of powers of $r$ |
+| A fraction with factorised denominator | Try partial fractions |
+| A difference such as $v_r-v_{r+1}$ | Write out the first few and last few terms |
+| A formula is given and you must prove it by induction | Check the initial case, then use $S_{k+1}=S_k+u_{k+1}$ |
+
+For a rational term that splits into shifted pieces, rewrite it and then use differences; for a polynomial, consider sums of powers first. After the rewrite, write enough terms to see what cancels. Do not reduce each fraction to a single number before showing the cancellation.
+
+**Common mistake:** using the formula for a sum from $r=1$ when the question starts at another value. Either write the actual first term or subtract an earlier sum.
 
 ## Differencing {#differencing}
 

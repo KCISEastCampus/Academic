@@ -28,31 +28,15 @@ If a symmetric equation does not yield a direction, recover [MA03 straight lines
 
 ## Directions and Line Equations {#directions-and-lines}
 
-### Direction ratios and direction cosines {#direction-cosines}
-
-A nonzero vector $\mathbf b=(b_1,b_2,b_3)$ gives **direction ratios** $b_1:b_2:b_3$. Any nonzero scalar multiple describes the same unoriented line. The **direction cosines** are the cosines of the angles of an oriented direction with the positive coordinate axes:
-
-$$l=\frac{b_1}{\lVert\mathbf b\rVert},\qquad m=\frac{b_2}{\lVert\mathbf b\rVert},\qquad n=\frac{b_3}{\lVert\mathbf b\rVert}.$$
-
-They are the components of a unit vector, so
-
-$$\boxed{l^2+m^2+n^2=\frac{b_1^2+b_2^2+b_3^2}{\lVert\mathbf b\rVert^2}=1.}$$
-
-For $\mathbf b=(2,-1,2)$ the magnitude is 3 and the direction cosines are $(2/3,-1/3,2/3)$. The negative second component gives an obtuse angle with the positive second axis. Reversing orientation negates all three cosines; negating just one usually changes the line's direction.
-
-In two dimensions the same reasoning uses two components: a direction $(3,4)$ has direction cosines $(3/5,4/5)$. For example, the line through $(1,2)$ in that direction is
-
-$$\mathbf r=(1,2)+t(3,4),\qquad 4(x-1)-3(y-2)=0.$$
-
-The coordinate equation eliminates the parameter; its normal is perpendicular to the direction. The same connection extends to three dimensions, where a single linear coordinate equation describes a plane.
-
 ### Three forms of a spatial line {#line-forms}
 
-Let $\mathbf a=(a_1,a_2,a_3)$ be the position of one point and let $\mathbf b\ne\mathbf0$ be a direction. A line has vector/parametric form
+A point tells us where a line is; a nonzero direction tells us which way it runs. Start at the point with position $\mathbf a=(a_1,a_2,a_3)$ and move by multiples of a fixed direction $\mathbf b\ne\mathbf0$. This gives the vector/parametric form
 
 $$\boxed{\mathbf r=\mathbf a+t\mathbf b,\qquad t\in\mathbb R.}$$
 
-Eliminating the parameter gives its Cartesian symmetric form, when all denominators are nonzero:
+Here $\mathbf r$ is the position of a general point on the line. At $t=0$ it is the starting point; at $t=1$ we have moved by $\mathbf b$; negative values move the other way. The **parameter** $t$ is a number selecting a point, not automatically a time or a distance.
+
+All three coordinates use the same $t$. Solving each coordinate equation for that number gives the Cartesian symmetric form, when all denominators are nonzero:
 
 $$\boxed{\frac{x-a_1}{b_1}=\frac{y-a_2}{b_2}=\frac{z-a_3}{b_3}.}$$
 
@@ -60,7 +44,7 @@ Alternatively, displacement along the line is parallel to its direction, so
 
 $$\boxed{(\mathbf r-\mathbf a)\times\mathbf b=\mathbf0.}$$
 
-This last equation also includes the base point, where displacement is zero. It represents a line only when the direction is nonzero; a zero direction would make it true for every position.
+This last equation says that the displacement from the fixed point has no component away from the line's direction. It also includes the base point, where displacement is zero. It represents a line only when the direction is nonzero; a zero direction would make it true for every position.
 
 <section class="worked-example" markdown="1">
 
@@ -81,15 +65,35 @@ The first coordinate is fixed. Expanding the last form also gives that fixed-coo
 
 </section>
 
+### Direction ratios and direction cosines {#direction-cosines}
+
+For $\mathbf b=(2,-1,2)$ the magnitude is 3. Dividing all three components by 3 gives $(2/3,-1/3,2/3)$: an arrow in the same direction but with unit length. This separates which way the arrow points from how long it is.
+
+In general, a nonzero vector $\mathbf b=(b_1,b_2,b_3)$ gives **direction ratios** $b_1:b_2:b_3$. Any nonzero scalar multiple describes the same unoriented line. Each component of its unit vector is the cosine of the angle with the corresponding positive coordinate axis. These three numbers are the **direction cosines**:
+
+$$l=\frac{b_1}{\lVert\mathbf b\rVert},\qquad m=\frac{b_2}{\lVert\mathbf b\rVert},\qquad n=\frac{b_3}{\lVert\mathbf b\rVert}.$$
+
+They are the components of a unit vector, so
+
+$$\boxed{l^2+m^2+n^2=\frac{b_1^2+b_2^2+b_3^2}{\lVert\mathbf b\rVert^2}=1.}$$
+
+In the example, the negative second component gives an obtuse angle with the positive second axis. Reversing orientation negates all three cosines; negating just one usually changes the line's direction.
+
+In two dimensions the same reasoning uses two components: a direction $(3,4)$ has direction cosines $(3/5,4/5)$. For example, the line through $(1,2)$ in that direction is
+
+$$\mathbf r=(1,2)+t(3,4),\qquad 4(x-1)-3(y-2)=0.$$
+
+The coordinate equation eliminates the parameter; its normal is perpendicular to the direction. The same connection extends to three dimensions, where a single linear coordinate equation describes a plane.
+
 ## Two Forms of a Plane {#planes}
 
-A point $\mathbf a$ and two **nonparallel** directions $\mathbf b,\mathbf c$ determine a plane:
+Starting from one point, movement along one direction reaches a line. To reach a whole plane, allow movement along a second, **nonparallel** direction as well. With starting position $\mathbf a$ and directions $\mathbf b,\mathbf c$, this gives
 
 $$\boxed{\mathbf r=\mathbf a+\lambda\mathbf b+\mu\mathbf c,\qquad \lambda,\mu\in\mathbb R,\qquad \mathbf b\times\mathbf c\ne\mathbf0.}$$
 
-The two parameters are independent. Parallel directions would describe only a line (or a point if both vanish), not a plane.
+The parameters $\lambda$ and $\mu$ independently choose how much to move along each direction. Parallel directions would describe only a line (or a point if both vanish), not a plane.
 
-A nonzero normal is $\mathbf n=\mathbf b\times\mathbf c$. Every in-plane displacement is perpendicular to it, so the other vector form is
+We can describe the same plane by what its points have in common: the displacement from the fixed point never goes out of the plane. A nonzero normal is $\mathbf n=\mathbf b\times\mathbf c$. Every in-plane displacement is perpendicular to it, so its scalar product with the normal is zero. The other vector form is
 
 $$\boxed{(\mathbf r-\mathbf a)\cdot\mathbf n=0\quad\Longleftrightarrow\quad\mathbf r\cdot\mathbf n=d,\qquad d=\mathbf a\cdot\mathbf n.}$$
 
@@ -120,7 +124,7 @@ Substitution of a general parametric point gives $1+\lambda-(\lambda+\mu)+2+\mu=
 
 ## Intersections and Exceptional Cases {#intersections}
 
-For a line and a plane, substitute the general line point into the plane:
+An intersection point must be on the line and in the plane. The line equation already describes every point on the line, so substitute that general point into the plane to find which parameter values also satisfy the plane condition:
 
 $$\mathbf r=\mathbf a+t\mathbf b,\quad\mathbf r\cdot\mathbf n=d
 \quad\Longrightarrow\quad t(\mathbf b\cdot\mathbf n)=d-\mathbf a\cdot\mathbf n.$$

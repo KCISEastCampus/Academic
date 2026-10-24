@@ -10,37 +10,46 @@ study_page: true
 reading_layout: true
 ---
 
-[Further Pure Mathematics](/alevel/a2-further-mathematics/) · FP2.11 Second-order differential equations
+[Further Pure Mathematics](/alevel/a2-further-mathematics/) · FP2.11
 
-Solve second-order linear differential equations with constant coefficients. Build the complementary function from an auxiliary equation, find a particular integral by substitution, then apply the conditions to the complete solution.
+A first-order equation relates a function to its rate of change. This chapter adds how that rate itself changes: the second derivative. We still want a function that makes the two sides of the equation equal.
 
-- **Learning:** start with [the auxiliary equation](#auxiliary-equation), then learn [CF plus PI](#cf-and-pi) and [choosing a trial](#pi-trials).
-- **Homework help:** compare [distinct roots](#example-1-distinct-roots), [repeated roots](#example-2-repeated-roots), [complex roots](#example-3-complex-roots), [trigonometric forcing](#example-5-trigonometric-pi) and [resonance](#example-6-repeated-resonance).
-- **Revision:** attempt the [practice questions](#practice) with solutions closed, then check the [quick reference](#quick-reference) and [common pitfalls](#common-pitfalls).
+Start with [what the equation says](#equation-and-conditions), follow a complete solution in [Example 1](#example-1-distinct-roots), then compare the other root types. When the right side is nonzero, learn to [build the answer in two parts](#cf-and-pi). For revision, go straight to [practice](#practice).
 
-Textbook: Chapter 25.2, printed pp. 308–317, with review on printed p. 319, in *International A Level Further Mathematics*.
-
-**Before you start:** repair the [product rule](/alevel/a2-mathematics/differentiation/#products-and-quotients), [complex quadratic roots](/alevel/as-further-mathematics/complex-numbers-and-roots/#conjugate) and [first-order CF and PI](/alevel/a2-further-mathematics/first-order-differential-equations/#cf-and-pi). Read through the completing-the-square example and the negative-discriminant explanation in the complex-roots section. Return to Example 2 to expand both product derivatives, or Example 3 to explain the real part and frequency by completing the square. Repeated-zero-root integration also needs [power integrals](/alevel/a2-mathematics/integration/#power-integrals).
-
-**Independent outputs:** in Q1–3 construct the CF from the roots and use the conditions; in Q4–7 choose and verify the PI; in Example 7 combine polynomial and exponential terms and justify an asymptotic condition. Check each original equation and all conditions using the total solution.
+**Before you start:** differentiate exponentials and trigonometric functions, and use the [product rule](/alevel/a2-mathematics/differentiation/#products-and-quotients). If a quadratic has a negative discriminant, revisit the completing-the-square example in [complex quadratic roots](/alevel/as-further-mathematics/complex-numbers-and-roots/#conjugate). The second half builds on [first-order CF and PI](/alevel/a2-further-mathematics/first-order-differential-equations/#cf-and-pi); the direct-integration example also uses [power integrals](/alevel/a2-mathematics/integration/#power-integrals).
 
 ## The Equation and Its Conditions {#equation-and-conditions}
 
-The equations in this lesson have the form
+Call the unknown function $y$. Its first derivative $y^{\prime}$ is its rate of change. Differentiating that rate gives $y^{\prime\prime}$, so the second derivative tells us how the rate itself changes.
+
+In this lesson, fixed coefficients multiply those three quantities:
 
 $$\boxed{ay^{\prime\prime}+by^{\prime}+cy=f(x),\qquad a\ne0,}$$
 
 where $a,b,c$ are integer constants and $y^{\prime}=\frac{\mathrm dy}{\mathrm dx}$, $y^{\prime\prime}=\frac{\mathrm d^2y}{\mathrm dx^2}$. The highest derivative is second order. The equation is linear: $y$, $y^{\prime}$ and $y^{\prime\prime}$ occur to the first power, without products of them.
 
-The equation is **homogeneous** when $f(x)=0$ and **nonhomogeneous** otherwise. The allowed forcing functions here are exponentials, sine or cosine, polynomials of degree at most 4, and linear combinations of these.
+If $f(x)=0$, the right side is zero and the equation is called **homogeneous**. Otherwise it is **nonhomogeneous**. In this chapter the right side can be an exponential, sine or cosine, a polynomial of degree at most 4, or a sum of constant multiples of these (a linear combination).
 
-A **general solution** contains two arbitrary constants. **Initial conditions**, such as $y(0)=1$ and $y^{\prime}(0)=2$, specify values at one point. **Boundary conditions**, such as $y(0)=1$ and $y(1)=3$, specify values at different points. A condition on behaviour as $x\to\infty$ can also determine a constant. Apply every condition to the total solution, including its PI.
+A **general solution** contains two arbitrary constants. Given conditions help us find their values. **Initial conditions**, such as $y(0)=1$ and $y^{\prime}(0)=2$, tell us the function's value and slope at one point. **Boundary conditions**, such as $y(0)=1$ and $y(1)=3$, give values at different points.
 
-Two suitable independent conditions can determine the constants. Boundary conditions are not automatically sufficient: for example, $y^{\prime\prime}+y=0$ with $y(0)=y(\pi)=0$ leaves $y=B\sin x$. Always solve the equations for the constants rather than assuming uniqueness.
+A condition can also tell us what happens as $x\to\infty$. Apply every condition to the whole answer; later examples show why leaving out a part gives the wrong constants.
+
+Conditions must give enough independent information to determine the constants. Write and solve the equations for those constants to check this.
+
+<details markdown="1">
+<summary>Do two conditions always give one solution?</summary>
+
+No: they must give enough independent information. For example, $y^{\prime\prime}+y=0$ with $y(0)=y(\pi)=0$ leaves $y=B\sin x$. Every value of the constant meets both boundary conditions. Solve the equations for the constants; counting the conditions is not enough.
+
+</details>
 
 ## The Auxiliary Equation and Complementary Function {#auxiliary-equation}
 
-For the homogeneous equation $ay^{\prime\prime}+by^{\prime}+cy=0$, try $y=e^{mx}$. Substitution gives
+First take a zero right side. Why try an exponential? Differentiating it keeps the same exponential and only changes its coefficient. Try $y=e^{mx}$, where $m$ is a constant we have yet to find:
+
+$$\begin{aligned}y&=e^{mx},\\y^{\prime}&=me^{mx},\\y^{\prime\prime}&=m^2e^{mx}.\end{aligned}$$
+
+Substitute these three lines into $ay^{\prime\prime}+by^{\prime}+cy=0$. Every term has the same exponential factor, giving
 
 $$e^{mx}(am^2+bm+c)=0.$$
 
@@ -48,15 +57,7 @@ Since $e^{mx}\ne0$, the **auxiliary equation** is
 
 $$\boxed{am^2+bm+c=0.}$$
 
-Its roots determine the **complementary function (CF)**, the general solution of the homogeneous equation.
-
-| Auxiliary roots | Complementary function |
-|---|---|
-| Distinct real roots $m_1,m_2$ | $y_c=Ae^{m_1x}+Be^{m_2x}$ |
-| Repeated real root $m$ | $y_c=(A+Bx)e^{mx}$ |
-| Complex roots $\alpha\pm i\beta$, $\beta>0$ | $y_c=e^{\alpha x}(A\cos\beta x+B\sin\beta x)$ |
-
-In the repeated-root case, writing two copies of $e^{mx}$ gives only one independent function. The second function is $xe^{mx}$. For complex roots, the real sine–cosine form supplies two real independent functions. A zero root is allowed: $e^{0x}=1$; a repeated zero root gives $A+Bx$.
+We have turned “find a function” into “solve a quadratic for the constant in its exponent”. Follow one example first.
 
 <section class="worked-example" markdown="1">
 
@@ -64,9 +65,9 @@ In the repeated-root case, writing two copies of $e^{mx}$ gives only one indepen
 
 > **Original example.** Solve $2y^{\prime\prime}-2y^{\prime}-4y=0$, given $y(0)=3$ and $y^{\prime}(0)=0$.
 
-**Complete demonstration:** follow the choice of method, substitution and check before attempting the later tasks independently.
+This is a self-written demonstration. The right side is zero: use the auxiliary equation to find the exponentials, then use both conditions to determine their constants.
 
-The auxiliary equation is $2(m-2)(m+1)=0$, with roots $2,-1$. Therefore
+Use the original three coefficients to write $2m^2-2m-4=0$, or $2(m-2)(m+1)=0$, with roots $2,-1$. Each exponential solves the equation. Because the equation is linear, adding constant multiples of them also gives a solution:
 
 $$y=Ae^{2x}+Be^{-x},\qquad y^{\prime}=2Ae^{2x}-Be^{-x}.$$
 
@@ -78,15 +79,27 @@ Each exponential satisfies the homogeneous equation. The displayed solution has 
 
 </section>
 
+### Compare the three root types {#root-types}
+
+The auxiliary equation's roots determine the **complementary function (CF)**: the general solution when the right side is zero. The first row summarises the example just completed. The next two examples show what changes in the other rows.
+
+| Auxiliary roots | Complementary function |
+|---|---|
+| Distinct real roots $m_1,m_2$ | $y_c=Ae^{m_1x}+Be^{m_2x}$ |
+| Repeated real root $m$ | $y_c=(A+Bx)e^{mx}$ |
+| Complex roots $\alpha\pm i\beta$, $\beta>0$ | $y_c=e^{\alpha x}(A\cos\beta x+B\sin\beta x)$ |
+
+In the repeated-root case, writing two copies of $e^{mx}$ gives only one independent function. The second function is $xe^{mx}$. For complex roots, the real sine–cosine form supplies two real independent functions. A zero root is allowed: $e^{0x}=1$; a repeated zero root gives $A+Bx$.
+
 <section class="worked-example" markdown="1">
 
 ### Example 2: a repeated real root {#example-2-repeated-roots}
 
 > **Original example.** Solve $y^{\prime\prime}+4y^{\prime}+4y=0$, given $y(0)=1$ and $y^{\prime}(0)=0$.
 
-**Complete demonstration:** follow the choice of method, substitution and check before attempting the later tasks independently.
+This is a self-written demonstration. A repeated root cannot give two copies of the same function: $Ae^{mx}+Be^{mx}=(A+B)e^{mx}$ still has only one adjustable coefficient. The second function needs an extra factor of the independent variable.
 
-Since $(m+2)^2=0$, the general solution is $y=(A+Bx)e^{-2x}$. Then
+Since $(m+2)^2=0$, the general solution is $y=(A+Bx)e^{-2x}$. Use the product rule: differentiate each factor in turn while leaving the other unchanged:
 
 $$y^{\prime}=[B-2(A+Bx)]e^{-2x}.$$
 
@@ -104,7 +117,7 @@ Here $y^{\prime}=-4xe^{-2x}$ and $y^{\prime\prime}=(-4+8x)e^{-2x}$. Thus $y^{\pr
 
 > **Original example.** Solve $y^{\prime\prime}+2y^{\prime}+5y=0$, given $y(0)=2$ and $y^{\prime}(0)=0$.
 
-**Complete demonstration:** follow the choice of method, substitution and check before attempting the later tasks independently.
+This is a self-written demonstration. Complex roots still give a real-valued answer. The real part sets the exponential factor; the size of the imaginary part sets how quickly the sine and cosine vary.
 
 The auxiliary equation is $(m+1)^2+4=0$, giving $m=-1\pm2i$. Hence
 
@@ -124,11 +137,11 @@ To check the equation, write $y=e^{-x}v$. Then $y^{\prime\prime}+2y^{\prime}+5y=
 
 ## Complementary Function Plus Particular Integral {#cf-and-pi}
 
-A **particular integral (PI)** is one function $y_p$ satisfying the complete equation:
+When the right side is nonzero, the CF alone is not enough: it gives zero on the left. Find one more function that gives the required right side when substituted. This is a **particular integral (PI)**, written $y_p$:
 
 $$ay_p^{\prime\prime}+by_p^{\prime}+cy_p=f(x).$$
 
-By linearity, adding the CF gives the general solution:
+Add the two parts. Linearity means that their contributions to the left side add too: zero plus the required right side is still the required right side. The general solution is
 
 $$\boxed{y=y_c+y_p.}$$
 
@@ -138,7 +151,7 @@ The CF contributes zero to the left side and the PI contributes $f(x)$. Converse
 
 ## Choosing and Checking a PI Trial {#pi-trials}
 
-Use **undetermined coefficients**: choose a suitable trial, differentiate it, substitute it into the original equation, and compare coefficients.
+Look at the function on the right and choose a form whose derivatives can combine to produce it. Leave its coefficients as letters, then find them by differentiating, substituting and matching coefficients. This is **undetermined coefficients**. The table suggests a starting form; substitution checks whether it works.
 
 | Forcing function | First trial before checking overlap with the CF |
 |---|---|
@@ -155,7 +168,7 @@ Use both sine and cosine in a trigonometric trial, even if only one appears on t
 
 > **Self-written example.** Find the general solution of $y^{\prime\prime}+y=x^2+1$.
 
-**Complete demonstration (self-written, no official marks).** Zero is not an auxiliary root, so include every power up to degree 2 in the trial. The constant term must be found after differentiating the quadratic.
+This is a self-written demonstration with no official marks. Start with a full quadratic. Keep every lower power: differentiating the quadratic twice produces a constant, which affects the constant comparison. Zero is not an auxiliary root here, so the trial needs no extra factor of the independent variable.
 
 $$\begin{aligned}
 m^2+1&=0\quad\Longrightarrow\quad y_c=A\cos x+B\sin x,\\
@@ -175,7 +188,7 @@ Check: the PI contributes $2+(x^2-1)=x^2+1$; the CF contributes zero. In practic
 
 > **Self-written example.** Find the general solution of $y^{\prime\prime}=2x$.
 
-**Complete demonstration (self-written, no official marks).** The auxiliary polynomial is $m^2$, giving CF $A+Bx$. Integrate the forcing twice and retain a new constant at each stage.
+This is a self-written demonstration with no official marks. Only the second derivative appears, so integrate twice: first recover the first derivative, then the function. Each integration introduces one constant. The auxiliary polynomial is $m^2$, whose CF is $A+Bx$.
 
 $$\begin{aligned}
 y^{\prime}&=\int2x\,\mathrm dx=2\frac{x^2}{2}+B=x^2+B,\\
@@ -188,7 +201,7 @@ The PI $x^3/3$ has second derivative $2x$. Its degree is 3 although the forcing 
 
 ### Resonance: when a trial duplicates the CF {#resonance}
 
-If a trial is already a homogeneous solution, substitution produces zero. This overlap is called **resonance**. Multiply the entire overlapping trial by the smallest power of $x$ that removes the overlap:
+A trial already in the CF cancels to zero on the left. No choice of its coefficient can make a nonzero right side. This overlap is called **resonance**. Change the form by multiplying the whole overlapping part by $x$; if it still cancels, multiply once more. The rules below are checked in the examples that follow:
 
 - For $e^{kx}$, use $xCe^{kx}$ when $k$ is a simple auxiliary root, or $x^2Ce^{kx}$ when it is a repeated root.
 - For pure sine–cosine forcing, if the auxiliary roots are $\pm i\omega$, use $x(C\cos\omega x+D\sin\omega x)$.
@@ -202,7 +215,7 @@ For example, if $c=0$ but $b\ne0$, a constant forcing needs a linear PI. If $b=c
 
 > **Original example.** Find the general solution of $y^{\prime\prime}-y=6e^{2x}$.
 
-**Complete demonstration:** follow the choice of method, substitution and check before attempting the later tasks independently.
+This is a self-written demonstration. First find the CF by setting the right side to zero. For the PI, start with the exponential on the right because differentiation keeps its form.
 
 The CF is $y_c=Ae^x+Be^{-x}$. For $y_p=Ce^{2x}$, substitution gives
 
@@ -225,7 +238,7 @@ The CF contributes zero and $2e^{2x}$ contributes $6e^{2x}$ to $y^{\prime\prime}
 
 > **Original example.** Find the general solution of $y^{\prime\prime}+y^{\prime}+2y=3\cos x$.
 
-**Complete demonstration:** follow the choice of method, substitution and check before attempting the later tasks independently.
+This is a self-written demonstration. The right side contains only cosine, but differentiating once introduces sine. Keep both terms in the PI trial and let substitution determine their coefficients.
 
 The auxiliary roots are $(-1\pm i\sqrt7)/2$, giving
 
@@ -272,7 +285,7 @@ The PI contributes exactly $4e^x$. One factor of $x$ suffices here because 1 is 
 
 > **Original example.** Find the general solution of $y^{\prime\prime}-4y^{\prime}+4y=8e^{2x}$. Explain why neither $Ce^{2x}$ nor $Cxe^{2x}$ is a suitable PI.
 
-**Complete demonstration:** follow the choice of method, substitution and check before attempting the later tasks independently.
+This is a self-written demonstration. Check why both suggested trials fail before choosing a form that the left side will not cancel.
 
 The auxiliary equation is $(m-2)^2=0$, so $y_c=(A+Bx)e^{2x}$. Both proposed trials contribute zero to the differential equation.
 
@@ -327,7 +340,7 @@ The PI contributes $2\cos x$ after cancellation of the terms containing $x$. In 
 
 ### Example 7: mixed forcing and an asymptotic condition {#example-7-mixed-forcing}
 
-**Now attempt independently:** combine the polynomial and simple-resonance methods. Write the CF, each PI contribution and coefficient comparison before applying the asymptotic condition to the total solution. Keep both controls closed.
+Keep the help closed and try this yourself. It brings together methods already shown. After finding the general solution, use both conditions, including what happens to the derivative as the variable grows without bound.
 
 > **Adapted example.** For $x\ge0$, solve $y^{\prime\prime}+y^{\prime}-2y=4x-6e^{-2x}$, given $y(0)=2$ and $y^{\prime}\to-2$ as $x\to\infty$.
 
@@ -696,6 +709,8 @@ Substitution gives $6e^{-x}$ on the left, and the two initial conditions have be
 **Learning path:** [Previous lesson: first-order differential equations](/alevel/a2-further-mathematics/first-order-differential-equations/) · [Next lesson: vector products and coplanarity](/alevel/a2-further-mathematics/vector-products-and-coplanarity/) · [Further Pure Mathematics](/alevel/a2-further-mathematics/).
 
 ## Sources {#sources}
+
+Textbook: *International A Level Further Mathematics*, Chapter 25.2, printed pp.308–317; review on p.319.
 
 Scope check on 2026-10-23: the current 9665 qualification page led to specification v5.2; the relevant FP2 section was checked without migrating to 9765. For the papers and schemes below, only the identified questions and matching marking sections were reread as PDF text; visual verification of the original PDF pages was not completed. Official identities and marks are retained; adaptations and self-written tasks are labelled separately.
 

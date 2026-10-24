@@ -14,7 +14,7 @@ reading_layout: true
 
 [高等纯数学](/zh/alevel/a2-further-mathematics/) · FP2.13 矩阵代数
 
-一个矩阵怎样同时表示坐标运算和可以逆转的空间变换？本课把三维变换的计算、几何解释与信息是否丢失联系起来。
+矩阵可以通过改变坐标来移动点。本课先讲怎样算，再看图形发生了什么变化，以及这个变化能不能还原。
 
 - **学习：**回顾[维数](#dimensions-and-order)，连接[行列式与体积](#determinants-and-volume)，再构造[逆矩阵](#cofactors-and-inverses)。
 - **作业帮助：**比较[旋转](#rotations)、[反射](#reflections)、[组合](#compositions)和[不变点与不变直线](#invariant-points-and-lines)。
@@ -28,13 +28,50 @@ reading_layout: true
 
 ## 维数与乘法次序 {#dimensions-and-order}
 
-矩阵的阶数（order）先写行数，再写列数。乘积的每个元素来自第一个矩阵的一行与第二个矩阵的一列的点积：
+矩阵就是按行、列排好的一组数。它的**阶数（order）**先说有几行，再说有几列。两个矩阵相乘时，从前一个取一行、后一个取一列：对应位置相乘，再把乘积加起来。
+
+<section class="worked-example" markdown="1">
+
+### 先算一行与一列 {#row-column-start}
+
+**Self-written illustration.** Calculate the product of
+
+**自拟示范：**计算下面两个矩阵的乘积。
+
+$$K_0=\begin{pmatrix}1&2\\0&1\end{pmatrix},\qquad
+L_0=\begin{pmatrix}2&0\\1&3\end{pmatrix}.$$
+
+答案的左上角，用第一行配第一列。算右上角时，第一行不动，改配第二列：
+
+$$\begin{aligned}
+(K_0L_0)_{11}&=1(2)+2(1)=4,\\
+(K_0L_0)_{12}&=1(0)+2(3)=6.
+\end{aligned}$$
+
+第二行也这样算：
+
+$$\begin{aligned}
+(K_0L_0)_{21}&=0(2)+1(1)=1,\\
+(K_0L_0)_{22}&=0(0)+1(3)=3.
+\end{aligned}$$
+
+下标的第一个数是行号，第二个数是列号，把结果放回相应位置：
+
+$$K_0L_0=\begin{pmatrix}4&6\\1&3\end{pmatrix}.$$
+
+这里每行有两个数，配的每列也有两个数，所以能一一对应相乘。这就是乘法对行、列数的要求。
+
+</section>
+
+更大的矩阵也遵守同一条规则。下面中间的两个数必须相同，外面的两个数决定答案有几行、几列：
 
 $$A\text{ is }m\times n,\quad B\text{ is }n\times p
 \quad\Longrightarrow\quad AB\text{ is }m\times p,\qquad
 (AB)_{ij}=\sum_{k=1}^{n}a_{ik}b_{kj}.$$
 
-乘法要求中间维数相同。加法要求两个矩阵同型；数乘则对每个元素乘同一个数。转置交换行与列，一般并不等于求逆。
+求和式中，i 选 A 的行，j 选 B 的列，k 依次走过对应的数。它只是把刚才“相乘再相加”的过程缩写了。
+
+矩阵加法是对应位置相加，所以行数、列数都要相同。数乘是每个数都乘同一个数。**转置（transpose）**把行变成列；**逆矩阵（inverse）**则用来还原变换，这两件事不同。
 
 $$ (A+B)_{ij}=a_{ij}+b_{ij},\qquad (qA)_{ij}=qa_{ij},\qquad
 (A^{\mathsf T})_{ij}=a_{ji},\qquad
@@ -132,7 +169,7 @@ $$\det((2I)FN)=8(-1)(5)=-40,\qquad
 
 ## 余子式与逆矩阵 {#cofactors-and-inverses}
 
-一个元素的**子式（minor）**是删去其所在行、列后留下的行列式；**代数余子式（cofactor）**还要乘上下列符号：
+求逆矩阵时，我们会先用较小的行列式组成一个新矩阵。对每个元素，划掉它所在的行和列，剩下方阵的行列式就是它的**子式（minor）**。再按下面的位置加上正号或负号，就得到**代数余子式（cofactor）**：
 
 $$C_{ij}=(-1)^{i+j}\det A_{(i\mid j)},\qquad
 \text{signs}=\begin{pmatrix}+&-&+\\-&+&-\\+&-&+\end{pmatrix}.$$
@@ -236,13 +273,13 @@ $$N_t\begin{pmatrix}1&-2&2\\t&1&-1\\-t&2t&1\end{pmatrix}=(1+2t)I.$$
 
 ## 从基向量的像构造矩阵 {#basis-images}
 
-把三个标准基向量记为
+沿 x、y、z 三个轴分别移动，可以到达空间中的任意一点。沿每个轴的正方向走 1 个单位，就得到三个**标准基向量**：
 
 $$\mathbf e_x=\begin{pmatrix}1\\0\\0\end{pmatrix},\quad
 \mathbf e_y=\begin{pmatrix}0\\1\\0\end{pmatrix},\quad
 \mathbf e_z=\begin{pmatrix}0\\0\\1\end{pmatrix}.$$
 
-线性意味着对基向量组合进行变换，等于分别变换后再按原系数组合：
+坐标 x、y、z 告诉我们三种步子各走多少。对于线性变换，可以先分别变换这三部分，再把结果相加：
 
 $$A(x\mathbf e_x+y\mathbf e_y+z\mathbf e_z)
 =xA\mathbf e_x+yA\mathbf e_y+zA\mathbf e_z,\qquad

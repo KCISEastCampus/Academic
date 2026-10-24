@@ -7,7 +7,7 @@ subject: a2-further-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-further-mathematics/roots-and-polynomials/
 permalink: /zh/alevel/a2-further-mathematics/roots-and-polynomials/
-toc_headings: "#method, #roots-and-coefficients, #complex-roots, #real-roots, #practice, #diagnose-and-retry, #later-review, #quick-reference"
+toc_headings: "#what-is-a-root, #roots-and-coefficients, #complex-roots, #real-roots, #practice, #diagnose-and-retry, #later-review, #method, #quick-reference"
 study_page: true
 reading_layout: true
 ---
@@ -16,7 +16,7 @@ reading_layout: true
 
 利用多项式（polynomial）的系数了解它的根（roots），求出其余的根，包括非实数根（non-real roots），并检验答案。
 
-- **学习：**从[方法](#method)开始，再逐一完成例题。
+- **学习：**先看[什么样的数是根](#what-is-a-root)，再看[展开怎样联系根与系数](#roots-and-coefficients)。
 - **作业帮助：**选择有关[根与系数](#roots-and-coefficients)、[复数根](#complex-roots)或[实数根](#real-roots)的例题。
 - **复习：**先尝试[练习](#practice)，再查看[快速参考](#quick-reference)。
 
@@ -26,20 +26,13 @@ reading_layout: true
 
 **题目身份：**除明确标出官方原题或教学改编的题目外，本课例题与练习均为自拟教学题，不分配官方分值。
 
-## 方法 {#method}
+## 什么样的数是根？ {#what-is-a-root}
 
 **学习目标：**运用根与系数的关系，建立具有指定根的方程，并在已知一个复数根时求出所有根。
 
 方程 $f(x)=0$ 的根是一个 $x$ 值，代入后使 $f(x)$ 等于零。根据因式定理，若 $f(\alpha)=0$，则 $x-\alpha$ 是一个因式。
 
 一个 $n$ 次多项式有 $n$ 个复数根，**重根按重数计算（counting repeated roots）**。其中部分或全部根可以是实数。例如，$(x-1)^2(x+2)=0$ 的根为 $1,1,-2$；根 $1$ 出现两次。
-
-**先选择解题方法：**
-
-- **要求根的和或积？**将方程按降幂排列，再比较系数。通常不需要先解出所有根。
-- **要求建立具有新根的方程？**求出新根的和、各对根的乘积之和及所有根的乘积，或用新变量表示原变量后代入原方程。
-- **已知一个非实数根？**使用它的共轭复数前，先确认所有系数都是实数。
-- **要求判断实数根的个数？**求导，并检查驻点处的函数值。仅凭变号，只能说明某个区间内至少有一个实数根。
 
 ## 根与系数（roots and coefficients） {#roots-and-coefficients}
 
@@ -48,6 +41,17 @@ reading_layout: true
 设 $ax^3+bx^2+cx+d=0$，其中 $a\ne0$，根为 $\alpha,\beta,\gamma$。于是
 
 $$ax^3+bx^2+cx+d=a(x-\alpha)(x-\beta)(x-\gamma).$$
+
+先看一个自拟展开示例（无官方分值）：
+
+$$\begin{aligned}
+(x-2)(x-5)&=x^2-5x-2x+10\\
+&=x^2-7x+10.
+\end{aligned}$$
+
+$x$ 项来自“一个因式选 $x$，另一个选常数”，所以系数是 $-5-2$；常数项来自两个因式都选常数，得到 $(-2)(-5)=10$。系数把这些选择产生的项收集在一起。
+
+三次式也是如此：每个因式都选一项相乘。要得到 $x^2$，就从一个因式选负的根，其余两个选 $x$，得到 $-\alpha x^2-\beta x^2-\gamma x^2$。要得到 $x$，就从两个因式选负的根，得到 $\alpha\beta x+\beta\gamma x+\gamma\alpha x$；每一对只取一次。三个因式都选常数，就得到 $-\alpha\beta\gamma$。最后每一项都乘以领先系数 $a$：
 
 展开这些因式：
 
@@ -79,7 +83,7 @@ $$\boxed{\begin{aligned}
 \text{product of roots}&=(-1)^n\frac{a_0}{a_n}.
 \end{aligned}}$$
 
-当 $n\ge2$ 时，各对根的乘积之和为 $\frac{a_{n-2}}{a_n}$。依次取一个、两个、三个、四个根相乘时，系数关系中的符号交替变化。所有根的乘积等于 $\frac{a_0}{a_n}$（$n$ 为偶数时），或 $-\frac{a_0}{a_n}$（$n$ 为奇数时）。
+当 $n\ge2$ 时，各对根的乘积之和为 $\frac{a_{n-2}}{a_n}$。每次多从一个因式选常数，就少留下一个 $x$，并多乘一个负号；所以依次取一个、两个、三个、四个根相乘时，系数关系中的符号交替变化。所有根的乘积等于 $\frac{a_0}{a_n}$（$n$ 为偶数时），或 $-\frac{a_0}{a_n}$（$n$ 为奇数时）。
 
 **注意缺项：**在 $2x^4-3x+5=0$ 中，$x^3$ 和 $x^2$ 的系数都是零。因此，根的和以及各对根的乘积之和均为零；四个根的乘积为 $\frac{5}{2}$。
 
@@ -598,6 +602,15 @@ $$\begin{aligned}
 </details>
 
 </section>
+
+## 复习时选择方法 {#method}
+
+**先选择解题方法：**
+
+- **要求根的和或积？**将方程按降幂排列，再比较系数。通常不需要先解出所有根。
+- **要求建立具有新根的方程？**求出新根的和、各对根的乘积之和及所有根的乘积，或用新变量表示原变量后代入原方程。
+- **已知一个非实数根？**使用它的共轭复数前，先确认所有系数都是实数。
+- **要求判断实数根的个数？**求导，并检查驻点处的函数值。仅凭变号，只能说明某个区间内至少有一个实数根。
 
 ## 快速参考 {#quick-reference}
 

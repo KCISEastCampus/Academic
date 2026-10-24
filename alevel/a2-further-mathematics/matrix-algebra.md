@@ -12,7 +12,7 @@ reading_layout: true
 
 [Further Pure Mathematics](/alevel/a2-further-mathematics/) · FP2.13 Matrix algebra
 
-How can one matrix describe both an operation on coordinates and a reversible transformation of space? Learn to calculate a three-dimensional transformation, explain its geometry and check whether it loses information.
+A matrix can move points by changing their coordinates. This lesson starts with how to do the calculation, then asks what happens to shapes and whether the move can be undone.
 
 - **Learning:** revisit [dimensions](#dimensions-and-order), connect [determinants and volume](#determinants-and-volume), then construct an [inverse](#cofactors-and-inverses).
 - **Homework help:** compare [rotations](#rotations), [reflections](#reflections), [compositions](#compositions) and [invariant points and lines](#invariant-points-and-lines).
@@ -26,13 +26,48 @@ Recover the exact prerequisite: [row–column multiplication](/alevel/as-further
 
 ## Dimensions and order {#dimensions-and-order}
 
-An order describes rows first, columns second. An entry in a product is the dot product of a row of the first matrix with a column of the second:
+A matrix is a rectangular arrangement of numbers. Its **order** tells you how many rows and columns it has, in that order. To multiply two matrices, take a row from the first and a column from the second: multiply matching entries, then add.
+
+<section class="worked-example" markdown="1">
+
+### One row and one column {#row-column-start}
+
+**Self-written illustration.** Calculate the product of
+
+$$K_0=\begin{pmatrix}1&2\\0&1\end{pmatrix},\qquad
+L_0=\begin{pmatrix}2&0\\1&3\end{pmatrix}.$$
+
+For the top-left answer, use the top row and the left column. For the top-right answer, keep the row and move to the right column:
+
+$$\begin{aligned}
+(K_0L_0)_{11}&=1(2)+2(1)=4,\\
+(K_0L_0)_{12}&=1(0)+2(3)=6.
+\end{aligned}$$
+
+Do the same with the second row:
+
+$$\begin{aligned}
+(K_0L_0)_{21}&=0(2)+1(1)=1,\\
+(K_0L_0)_{22}&=0(0)+1(3)=3.
+\end{aligned}$$
+
+Put each result in the position named by its subscripts:
+
+$$K_0L_0=\begin{pmatrix}4&6\\1&3\end{pmatrix}.$$
+
+Each row here has two entries, and so does each column it is paired with. That matching length is what makes the multiplication possible.
+
+</section>
+
+The same rule works for larger rectangles. In the notation below, the inside sizes match; the outside sizes give the size of the answer:
 
 $$A\text{ is }m\times n,\quad B\text{ is }n\times p
 \quad\Longrightarrow\quad AB\text{ is }m\times p,\qquad
 (AB)_{ij}=\sum_{k=1}^{n}a_{ik}b_{kj}.$$
 
-The inner dimensions must agree. Addition requires the same dimensions, and scalar multiplication multiplies every entry. Transposition exchanges rows and columns; it does not invert a general matrix.
+In the sum, i chooses the row of A, j chooses the column of B, and k runs through their matching entries. The sum is a short way of writing the multiply-and-add calculation above.
+
+Addition works position by position, so the matrices must have the same size. Multiplying a matrix by a number multiplies every entry. A **transpose** turns rows into columns; an **inverse** undoes a transformation. They are different operations.
 
 $$ (A+B)_{ij}=a_{ij}+b_{ij},\qquad (qA)_{ij}=qa_{ij},\qquad
 (A^{\mathsf T})_{ij}=a_{ji},\qquad
@@ -122,7 +157,7 @@ The sign distinguishes orientation; the volume multiplier is nonnegative.
 
 ## Cofactors and inverses {#cofactors-and-inverses}
 
-The **minor** of an entry is the determinant left after deleting its row and column. The **cofactor** includes the sign in the following pattern:
+To find an inverse, we will build a new matrix from smaller determinants. For each entry, cross out its row and column; the determinant of the remaining square is its **minor**. Apply the plus or minus sign below to get its **cofactor**:
 
 $$C_{ij}=(-1)^{i+j}\det A_{(i\mid j)},\qquad
 \text{signs}=\begin{pmatrix}+&-&+\\-&+&-\\+&-&+\end{pmatrix}.$$
@@ -222,13 +257,13 @@ At the excluded value this identity still holds, but division is impossible. A s
 
 ## Building a transformation from its columns {#basis-images}
 
-Write the standard basis vectors as
+Any point in space can be reached by moving along the x, y and z axes. A step of length 1 in each positive axis direction gives these **standard basis vectors**:
 
 $$\mathbf e_x=\begin{pmatrix}1\\0\\0\end{pmatrix},\quad
 \mathbf e_y=\begin{pmatrix}0\\1\\0\end{pmatrix},\quad
 \mathbf e_z=\begin{pmatrix}0\\0\\1\end{pmatrix}.$$
 
-Linearity means that transforming a combination of these vectors transforms each part:
+The coordinates x, y and z tell us how many of each step to take. For a linear transformation, we can transform each part separately, then add the results:
 
 $$A(x\mathbf e_x+y\mathbf e_y+z\mathbf e_z)
 =xA\mathbf e_x+yA\mathbf e_y+zA\mathbf e_z,\qquad

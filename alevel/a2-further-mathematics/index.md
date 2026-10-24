@@ -10,7 +10,7 @@ reading_layout: true
 study_page: true
 ---
 
-OxfordAQA 9665 · A2 Further Pure Mathematics · FP2 / FM03. Start with roots and polynomials, then follow the route below. If returning for revision, go directly to the [mixed tasks](#mixed-review).
+OxfordAQA 9665 · A2 Further Pure Mathematics · FP2 / FM03. Each lesson starts by explaining what the new idea means, then shows how to use it. Start with roots and polynomials, or return to the [mixed tasks](#mixed-review) if you have already studied the topics.
 
 ## Start Here
 
@@ -26,12 +26,14 @@ OxfordAQA 9665 · A2 Further Pure Mathematics · FP2 / FM03. Start with roots an
 10. **[First-order Differential Equations](/alevel/a2-further-mathematics/first-order-differential-equations/)** — Use an integrating factor or a complementary function and particular integral, then apply the given condition.
 11. **[Second-order Differential Equations](/alevel/a2-further-mathematics/second-order-differential-equations/)** — Use the auxiliary equation and a particular integral, then apply initial or boundary conditions.
 12. **[Vector Products and Coplanarity](/alevel/a2-further-mathematics/vector-products-and-coplanarity/)** — Connect perpendicular directions, areas, volumes and coplanarity.
-13. **[Lines and Planes](/alevel/a2-further-mathematics/lines-and-planes/)** — Change representations, find intersections and justify angles, distances and reflections.
-14. **[Matrix Algebra](/alevel/a2-further-mathematics/matrix-algebra/)** — Use three-dimensional transformations, determinants, inverses and invariant objects.
-15. **[Linear Equations and Three Planes](/alevel/a2-further-mathematics/linear-equations/)** — Classify all solutions, keep exceptional parameters and explain the common geometry.
-16. **[Eigenvalues and Eigenvectors](/alevel/a2-further-mathematics/eigenvalues-and-eigenvectors/)** — Derive characteristic equations, handle repeated real eigenvalues and verify nonzero eigenvectors.
+13. **[Lines and Planes](/alevel/a2-further-mathematics/lines-and-planes/)** — Write the same line or plane in different ways; find where objects meet, and calculate angles and distances.
+14. **[Matrix Algebra](/alevel/a2-further-mathematics/matrix-algebra/)** — Calculate how coordinates change, find when the change can be undone, and identify fixed points and lines mapped onto themselves.
+15. **[Linear Equations and Three Planes](/alevel/a2-further-mathematics/linear-equations/)** — Decide whether planes share one point, many points or none, including special parameter values.
+16. **[Eigenvalues and Eigenvectors](/alevel/a2-further-mathematics/eigenvalues-and-eigenvectors/)** — Find vectors that a matrix multiplies by a single number, and explain what that number tells you.
 
 Follow the lessons in order, or choose the topic you need. Together the lessons cover all fourteen syllabus topics FP2.1–FP2.14; some topics need more than one lesson.
+
+For a first reading, follow one explanation and its complete example, then try the next student task with help closed. If a step is unfamiliar, use that lesson's link back to the exact prerequisite. The quick-reference sections are for returning to ideas you have already learned.
 
 **Chinese explanations:** all sixteen lessons have [Chinese versions](/zh/alevel/a2-further-mathematics/), with English questions and formulas retained. Use the language switch to change languages at the same section.
 

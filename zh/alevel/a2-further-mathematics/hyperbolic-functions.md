@@ -14,31 +14,96 @@ reading_layout: true
 
 [高等纯数学](/zh/alevel/a2-further-mathematics/) · FP2.9 双曲函数
 
-本课按 FP2.9 学习双曲函数（hyperbolic functions）的定义、图像、恒等式、方程、反函数、导数与积分。例题示范如何选择方法并检查定义域（domain）。
+这一课先认识两个由指数式组成的新函数。看懂它们的名字后，再用它们解方程、读图像，以及求导和积分。
 
-- **学习：**从[定义](#definitions)开始，再学习[图像与恒等式](#graphs-and-identities)、[方程](#linear-combinations)、[反双曲函数](#inverse-hyperbolic-functions)、[求导](#differentiation)和[积分](#integration)。
-- **作业帮助：**可直接查看[求解方程](#example-2-solve-a-linear-combination)、[反函数的对数公式](#example-4-use-the-logarithmic-forms)、[复合反函数求导](#example-6-differentiate-a-composite-inverse-function)或[标准积分](#standard-integrals)。
-- **复习：**先独立完成[练习](#practice)，再查看解答，最后核对[快速参考](#quick-reference)。
+**从这里开始：**先[认识两个新函数](#definitions)。做作业时可直接看[解方程的示范](#example-2-solve-a-linear-combination)，或用目录找对应部分；复习时先做[练习](#practice)，再查[快速参考](#quick-reference)。
 
-教材目录对应第 24 章，印刷页码 288–305（本课内容按 FP2.9 官方范围编排）。
+**开始前：**记得负指数表示倒数。需要时先回顾[负指数](/zh/alevel/as-mathematics/algebra/#l01)。后面各部分会用到的知识列在[课前准备](#preparation-notes)中。
 
-**开始前：**用[指数与对数积分](/zh/alevel/a2-mathematics/integration/#exponential-logarithmic-integrals)回顾指数对数关系，用[反函数](/zh/alevel/a2-mathematics/functions/#inverse-functions)回补一一对应与分支，用[链式法则](/zh/alevel/a2-mathematics/differentiation/#composite-functions)、[隐式求导](/zh/alevel/a2-mathematics/differentiation/#implicit-functions)及[换元](/zh/alevel/a2-mathematics/integration/#substitution)准备微积分。回到例 2 写出指数正性，或回 inverse-cosh 段独立说明为何舍去另一根。
+## 认识两个新函数 {#definitions}
 
-**学习目标：**由指数定义证明恒等式，解释六个核心图像的特征，筛选方程中的正指数根，并在正确分支上推导和使用反函数、导数与积分。
+你已经会计算 $e^x$。另一个式子 $e^{-x}$ 就是它的倒数：
 
-**题目身份：**除明确标出官方原题或教学改编的题目外，本课例题与练习均为自拟教学题，不分配官方分值。
+$$e^{-x}=\frac1{e^x}.$$
 
-## 定义 {#definitions}
+把这两个数**相减，再除以 2**，得到的函数叫作双曲正弦（hyperbolic sine），写成 $\sinh x$：
 
-双曲正弦（**hyperbolic sine**）、双曲余弦（**hyperbolic cosine**）和双曲正切（**hyperbolic tangent**）由指数函数定义：
+$$\sinh x=\frac{e^x-e^{-x}}2.$$
 
-$$\sinh x=\frac{e^x-e^{-x}}2,\qquad \cosh x=\frac{e^x+e^{-x}}2,\qquad \tanh x=\frac{\sinh x}{\cosh x}=\frac{e^x-e^{-x}}{e^x+e^{-x}}.$$
+把同样的两个数**相加，再除以 2**，得到的函数叫作双曲余弦（hyperbolic cosine），写成 $\cosh x$：
 
-倒数型双曲函数（reciprocal hyperbolic functions）包括双曲余切（**hyperbolic cotangent**）、双曲正割（**hyperbolic secant**）和双曲余割（**hyperbolic cosecant**）：
+$$\cosh x=\frac{e^x+e^{-x}}2.$$
 
-$$\operatorname{coth}x=\frac{\cosh x}{\sinh x},\qquad \operatorname{sech}x=\frac1{\cosh x},\qquad \operatorname{cosech}x=\frac1{\sinh x}.$$
+名字虽然像正弦、余弦，但这是不同的函数。这里的 $x$ 可以是任意实数，我们用指数式来计算。$\sinh x$ 也不是 $\sin(hx)$ 的缩写。
 
-由定义可立即得到
+<section class="worked-example" markdown="1">
+
+### 先算一个简单值 {#zero-example}
+
+**Question:** Find $\sinh0$ and $\cosh0$ from their definitions.
+
+当 $x=0$ 时，两个指数式都等于 1。第一个函数用减法，第二个用加法：
+
+$$\begin{aligned}
+\sinh0&=\frac{1-1}{2}=0,\\
+\cosh0&=\frac{1+1}{2}=1.
+\end{aligned}$$
+
+这也给出了图像上的两个点：$\sinh x$ 经过 $(0,0)$，$\cosh x$ 经过 $(0,1)$。输入相同的数，不同函数算出的结果可以不同。
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 自己试一试 {#definition-check}
+
+**Question:** Given $e^a=2$, find $\sinh a$ and $\cosh a$ exactly. Which is larger? Explain why $\sinh a$ is positive.
+
+自拟题，无官方分值。已知指数式的值，求两个函数的精确值，比较大小，并解释双曲正弦的值为什么是正数。先自己做，再展开帮助。
+
+<details markdown="1">
+<summary>提示</summary>
+
+先求倒数 $e^{-a}$。再分别代入两个定义，注意哪个用减法、哪个用加法。
+
+</details>
+
+<details markdown="1">
+<summary>解答与反馈</summary>
+
+$$\begin{aligned}
+e^{-a}&=\frac12,\\
+\sinh a&=\frac{2-\frac12}{2}=\frac34,\\
+\cosh a&=\frac{2+\frac12}{2}=\frac54.
+\end{aligned}$$
+
+所以 $\cosh a$ 更大。计算 $\sinh a$ 时，因为 $2>\frac12$，相减得到正数，再除以 2 仍是正数。但这不表示每个输入的 $\sinh x$ 都是正数。
+
+如果把负指数算成了 $-2$，回看上面的倒数关系；如果交换了两个答案，回看两个定义。收起解答后，可以做一道[新题](#definition-retry)。
+
+</details>
+
+</section>
+
+### 把这两个函数组合起来 {#ratio-and-reciprocals}
+
+接下来的名字，表示对刚认识的两个函数做一些运算。双曲正切（hyperbolic tangent）就是它们的比值：
+
+$$\tanh x=\frac{\sinh x}{\cosh x}=\frac{e^x-e^{-x}}{e^x+e^{-x}}.$$
+
+两个指数式都为正，相加仍为正，所以 $\cosh x>0$。因此，对任意实数 $x$，这里都可以做除法。
+
+还有三个名字与倒数有关：双曲余切（hyperbolic cotangent）、双曲正割（hyperbolic secant）和双曲余割（hyperbolic cosecant）：
+
+$$\begin{aligned}
+\operatorname{coth}x&=\frac{\cosh x}{\sinh x},\\
+\operatorname{sech}x&=\frac1{\cosh x},\\
+\operatorname{cosech}x&=\frac1{\sinh x}.
+\end{aligned}$$
+
+第一个和第三个都要排除 $x=0$，因为这时 $\sinh x=0$，不能作分母。$\operatorname{sech}x$ 没有这个限制。
+
+把最初的两个定义相加，负指数项会相消；把它们相减，正指数项会相消。因此
 
 $$e^x=\cosh x+\sinh x,\qquad e^{-x}=\cosh x-\sinh x.$$
 
@@ -101,6 +166,7 @@ $$\begin{aligned}
 $$\begin{aligned}
 \cosh^2x-\sinh^2x
 &=\frac{(e^x+e^{-x})^2-(e^x-e^{-x})^2}{4}\\
+&=\frac{(e^{2x}+2+e^{-2x})-(e^{2x}-2+e^{-2x})}{4}\\
 &=\frac{4}{4}\\
 &=1.
 \end{aligned}$$
@@ -802,6 +868,52 @@ $$\begin{aligned}
 
 ## 纠错与独立重试 {#diagnose-and-retry}
 
+<section class="lesson-check" markdown="1">
+
+### 再用一次定义 {#definition-retry}
+
+**Question:** Given $\sinh b=-\frac34$, find $e^b$ and $\cosh b$ exactly. Is $b$ positive, zero or negative? Justify your answer.
+
+自拟题，无官方分值。这次已知一个函数值，要倒过来求指数式和另一个函数值，并判断输入的正负。先收起之前的解答，再做新题。这里还会用到 AS 的二次式因式分解。
+
+<details markdown="1">
+<summary>提示</summary>
+
+把正数 $e^b$ 暂时简写成 $t$，那么 $e^{-b}=1/t$。代入 $\sinh b$ 的定义，就能得到一个关于 $t$ 的方程。
+
+</details>
+
+<details markdown="1">
+<summary>解答与反馈</summary>
+
+令 $t=e^b>0$。把已知的函数值代入定义，得到关于这个数的方程：
+
+$$\begin{aligned}
+\frac{t-1/t}{2}&=-\frac34,\\
+2t^2+3t-2&=0,\\
+(2t-1)(t+2)&=0.
+\end{aligned}$$
+
+两个候选值是 $t=\frac12$ 和 $t=-2$。指数式的值为正，所以舍去第二个：
+
+$$\begin{aligned}
+e^b&=\frac12,\\
+e^{-b}&=2,\\
+\cosh b&=\frac{\frac12+2}{2}=\frac54.
+\end{aligned}$$
+
+因为 $e^0=1$，而指数函数递增，所以 $e^b<1$ 表示 $b<0$。再检查已知的函数值：
+
+$$\sinh b=\frac{\frac12-2}{2}=-\frac34.$$
+
+如果保留了负的候选值，回想为什么 $e^b>0$；如果算出负的 $\cosh b$，回看它的定义：两个正数相加，再除以 2，结果必为正。若卡在二次方程，先回补[因式分解](/zh/alevel/as-mathematics/algebra/#l02-worked)，再收起帮助重新计算。
+
+</details>
+
+</section>
+
+如果是第一次学习，做完这道重试后，返回[把两个函数组合起来](#ratio-and-reciprocals)，从那里继续学。下面的任务要等学完反函数和微积分部分后再做。
+
 以下任务均为自拟教学任务，无官方分值。先写下错误原因，再看反馈；随后关闭所有解答，独立完成新任务。需要提示的任务应在稍后重新独立尝试。
 
 <section class="lesson-check" markdown="1">
@@ -893,6 +1005,19 @@ y&=\pm\ln(2+\sqrt3),\\
 **学习路径：**[上一课：弧长与旋转曲面面积](/zh/alevel/a2-further-mathematics/arc-length-and-surface-area/) · [下一课：一阶微分方程](/zh/alevel/a2-further-mathematics/first-order-differential-equations/) · [高等纯数学](/zh/alevel/a2-further-mathematics/)。
 
 ## 资料来源 {#sources}
+
+<details id="preparation-notes" markdown="1">
+<summary>课前准备、范围与教材</summary>
+
+教材对应 *International A Level Further Mathematics* 第 24 章，印刷页码 288–305。
+
+进入反函数和微积分部分前，按需回补[反函数分支](/zh/alevel/a2-mathematics/functions/#inverse-functions)、[链式法则](/zh/alevel/a2-mathematics/differentiation/#composite-functions)、[隐式求导](/zh/alevel/a2-mathematics/differentiation/#implicit-functions)及[换元](/zh/alevel/a2-mathematics/integration/#substitution)。回到例 2 说明指数式为什么为正，或回到[反双曲余弦的分支](#inverse-cosh)说明为什么舍去另一根。
+
+整章包含由指数定义证明恒等式、六个核心图像、方程、反函数及其微积分。除明确标出官方题或改编题的内容外，例题与练习均为自拟教学题，不分配官方分值。
+
+本次入门讲解于 2026-10-24 对照 FP2.9 及 January 2025 FM03 第 2 题和配套官方评分标准核对：[试卷 p4](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-question-paper.pdf#page=4)、[评分标准 p5](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-mark-scheme.pdf#page=5)。它们用于来源核验，新增题目为自拟题。
+
+</details>
 
 本轮范围核对：2026-10-23，从当前 9665 资格页打开大纲，核对正文 v5.2 及本课条目；没有迁移至 9765。下列试卷／评分材料仅重新读取所注明题目与配套评分部分的 PDF 文本，未完成原卷图像的视觉核验。官方题身份与分值保留，改编与自拟任务不称官方题。
 
