@@ -5,7 +5,7 @@ mathjax: true
 grade: a2
 subject: a2-mathematics
 permalink: /alevel/a2-mathematics/integration/
-toc_headings: h2, h3, h4
+toc_headings: h2, h3
 study_page: true
 reading_layout: true
 ---
@@ -25,7 +25,9 @@ Choose a method, integrate, then check your answer by differentiation. The **int
 
 Textbook: Chapter 6, Sections 6.1–6.4 (pp. 82–95). We write the constant of integration as $C$.
 
-**Before you start:** you should know basic derivatives, the chain rule, how to rearrange expressions and standard integrals.
+**Before you start:** recover [power integrals and signed area](/alevel/as-mathematics/integration/#l08), the [chain rule](/alevel/a2-mathematics/differentiation/#composite-functions), [product rule](/alevel/a2-mathematics/differentiation/#products-and-quotients) or [partial-fraction setup](/alevel/a2-mathematics/partial-fractions/#method) as needed. The [standard forms](#standard-integrals) below are taught here.
+
+Examples 3–4 and the second integral in Q3 are specification examples. Later A is adapted from an examination question; the other examples and tasks are self-written. Solutions are written for this site.
 
 </div>
 
@@ -150,7 +152,7 @@ Choose a new variable that simplifies the integrand, find the differential relat
 
 **Question:** Find $\displaystyle\int x(x+2)^6\,dx$.
 
-**Source:** Illustrative example in [OxfordAQA Mathematics (9660) specification, P2.7, printed p. 23](https://www.oxfordaqa.com/wp-content/uploads/2023/10/oxfordaqa-a-level-mathematics-specification.pdf). The solution is written for this site.
+**Source:** Illustrative example in [OxfordAQA Mathematics (9660) specification, P2.7, printed p. 23](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf). The solution is written for this site.
 
 **Choice:** The derivative of $x+2$ is $1$, so the factor $x$ does not fit the standard form. Use the substitution $u=x+2$ to obtain a polynomial in $u$.
 
@@ -181,6 +183,8 @@ $$\int v\frac{du}{dx}\,dx=uv-\int u\frac{dv}{dx}\,dx.$$
 #### Example 4 — A product that becomes simpler
 
 **Question:** Find $\displaystyle\int xe^{2x}\,dx$.
+
+**Source:** Illustrative example in the 9660 specification v5.2, P2.7, printed p. 23; site-written solution.
 
 **Choice:** Use integration by parts: differentiating $x$ gives $1$, and $e^{2x}$ is easy to integrate.
 
@@ -250,13 +254,17 @@ You may either use the new variable with new limits, or substitute back and use 
 
 ## Practice
 
-**Independent practice · 20–25 minutes**
+**Independent practice**
 
 Write your method and a reason before you start. Check indefinite integrals by differentiation. Try each question before opening the hint or solution.
 
-These are self-written exercises, not official past-paper questions. The time is only a guide for practice. These questions have no official marks.
+These teaching exercises have no official marks. Q3 includes one specification example, identified here; the other practice questions are self-written.
 
-### Q1 — Simplify first
+*The second integral is an illustrative example in the 9660 specification v5.2, P2.7, printed p. 23; the solution is site-written.*
+
+<section class="lesson-check" markdown="1">
+
+### Q1 — Find an antiderivative {#q1--simplify-first}
 
 Find $\displaystyle\int\frac{x^2+4}{\sqrt{x}}\,dx$ for $x>0$.
 
@@ -278,7 +286,11 @@ Differentiation gives $x^{\frac32}+4x^{-\frac12}=\frac{x^2+4}{\sqrt{x}}$.
 
 </details>
 
-### Q2 — Use the chain rule in reverse {#q2--recognise-an-inner-derivative}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Q2 — Find and check {#q2--recognise-an-inner-derivative}
 
 Find $\displaystyle\int x\cos(x^2)\,dx$.
 
@@ -300,7 +312,11 @@ Differentiation gives $\frac12\cos(x^2)\cdot2x=x\cos(x^2)$.
 
 </details>
 
-### Q3 — Choose how to handle a product
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Q3 — Two integrals {#q3--choose-how-to-handle-a-product}
 
 Find $\displaystyle\int x\cos(2x)\,dx$.
 
@@ -342,7 +358,11 @@ Differentiation gives $x\ln x+\frac x2-\frac x2=x\ln x$.
 
 </details>
 
-### Q4 — A logarithm or partial fractions?
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Q4 — A rational integrand {#q4--a-logarithm-or-partial-fractions}
 
 Find $\displaystyle\int\frac{5}{(x+1)(x+2)}\,dx$.
 
@@ -364,27 +384,213 @@ Differentiation recovers the decomposition. Use the result on an interval that d
 
 </details>
 
-### Q5 — Keep the variable and limits consistent
+</section>
 
-Evaluate $\displaystyle\int_0^1\frac{2x}{x^2+1}\,dx$.
+<section class="lesson-check" markdown="1">
+
+### Q5 — An exact value {#q5--keep-the-variable-and-limits-consistent}
+
+Using $u=x^2+1$, rewrite $\displaystyle\int_0^1\frac{x^3}{x^2+1}\,dx$ entirely in the new variable, giving the differential and both new limits. Then evaluate it exactly.
 
 <details markdown="1">
 <summary>Hint</summary>
 
-Use $u=x^2+1$, with $u=1$ and $u=2$ at the limits, or use the logarithm form directly.
+Differentiate the substitution. Separate the numerator into the differential factor and a remaining factor, then express that remaining factor in the new variable.
 
 </details>
 
 <details markdown="1">
 <summary>Solution and check</summary>
 
-The integrand is continuous on $[0,1]$. Substitution gives
+The integrand is continuous on $[0,1]$. We have $du=2x\,dx$, $x\,dx=\frac12\,du$ and $x^2=u-1$. At $x=0$, $u=1$; at $x=1$, $u=2$. Thus
 
-$$\int_1^2\frac1u\,du=[\ln u]_1^2=\boxed{\ln2}.$$
+$$\begin{aligned}
+\int_0^1\frac{x^3}{x^2+1}\,dx
+&=\frac12\int_1^2\frac{u-1}{u}\,du\\
+&=\frac12[u-\ln u]_1^2\\
+&=\boxed{\frac{1-\ln2}{2}}.
+\end{aligned}$$
 
-Alternatively, $[\ln(x^2+1)]_0^1=\ln2$. The answer is positive, as expected because the integrand is non-negative.
+The remaining numerator factor must also change variable; leaving it in the transformed integral would mix variables. For a check, $\frac{x^3}{x^2+1}=x-\frac{x}{x^2+1}$, which gives the same value directly. The result is positive, as required by the integrand.
 
 </details>
+
+</section>
+
+## Diagnose and Try Again {#diagnose-and-retry}
+
+Use the first incorrect step, rather than the final answer alone, to choose a recovery. Then close the worked solution before trying the corresponding new task.
+
+| What went wrong? | Recover the decision | Check it independently |
+| --- | --- | --- |
+| Differentiation gives an extra inner-function factor | [Reverse the chain rule](#reverse-chain-rule): compare the actual inner derivative, not just the outside power | Retry A |
+| A product was integrated by multiplying antiderivatives | [Integration by parts](#integration-by-parts): reverse the product rule and retain the remaining integral | Later A |
+| A remaining factor or the original limits were left unchanged | [Substitution](#substitution) and [definite integrals](#definite-integrals): rewrite every factor and both endpoints | Retry C |
+| Every fraction was treated as a logarithm, or a pole was crossed | [Logarithmic form](#logarithmic-form) and [partial fractions](/alevel/a2-mathematics/partial-fractions/#method); check the interval before [using limits](#definite-integrals) | Retry B |
+{: .wide-table}
+
+<section class="lesson-check" markdown="1">
+
+### Retry A {#retry-a}
+
+**Question:** Find $\displaystyle\int 2x\cos(3x^2)\,dx$. Justify your coefficient by differentiation.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+The derivative of $3x^2$ is $6x$. Compare this with the factor actually present.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and feedback</summary>
+
+Let $u=3x^2$, so $du=6x\,dx$ and $2x\,dx=\frac13\,du$.
+
+$$\int2x\cos(3x^2)\,dx=\frac13\int\cos u\,du=\boxed{\frac13\sin(3x^2)+C}.$$
+
+Differentiating gives $\frac13\cos(3x^2)\cdot6x=2x\cos(3x^2)$. A coefficient of $1$ would give three times the integrand.
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Retry B {#retry-b}
+
+**Question:** Evaluate $\displaystyle\int_0^1\frac{3x+4}{(x+1)(x+2)}\,dx$ exactly. Would substituting $-3$ and $0$ into the same antiderivative correctly evaluate the integral over $[-3,0]$? Explain.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Compare $3x+4$ with the derivative of the expanded denominator. If necessary find the two partial-fraction coefficients. Check both intervals separately.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and feedback</summary>
+
+The numerator is not a constant multiple of $2x+3$. Instead,
+
+$$\frac{3x+4}{(x+1)(x+2)}=\frac1{x+1}+\frac2{x+2}.$$
+
+The integrand is continuous on $[0,1]$, so
+
+$$\begin{aligned}
+\int_0^1\frac{3x+4}{(x+1)(x+2)}\,dx
+&=[\ln(x+1)+2\ln(x+2)]_0^1\\
+&=\ln2+2\ln3-2\ln2\\
+&=\boxed{\ln(9/2)}.
+\end{aligned}$$
+
+Over $[-3,0]$ there are undefined points at $x=-2$ and $x=-1$. The ordinary continuous-interval rule cannot be applied across them. Subtracting endpoint values is not a valid evaluation. An antiderivative on each separate interval does not remove the original poles.
+
+If the coefficients are wrong, recombine the fractions before integrating. If only the second part is wrong, recover the interval check rather than repeating the algebra.
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Retry C {#retry-c}
+
+**Question:** Using $u=x^2+1$, rewrite $\displaystyle\int_0^{\sqrt3}\frac{2x^3}{(x^2+1)^2}\,dx$ entirely in terms of $u$, including the differential and both new limits. Then evaluate it exactly.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+After finding the differential, identify the remaining numerator factor. Transform both endpoints separately.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and feedback</summary>
+
+$$du=2x\,dx,\qquad x^2=u-1,\qquad x=0\Rightarrow u=1,\qquad x=\sqrt3\Rightarrow u=4.$$
+
+Therefore
+
+$$\begin{aligned}
+\int_0^{\sqrt3}\frac{2x^3}{(x^2+1)^2}\,dx
+&=\int_1^4\frac{u-1}{u^2}\,du\\
+&=\int_1^4(u^{-1}-u^{-2})\,du\\
+&=\left[\ln u+\frac1u\right]_1^4\\
+&=\boxed{\ln4-\frac34}.
+\end{aligned}$$
+
+The differential, every factor and both limits now use the same variable. A remaining numerator factor calls for [Example 3](#example-3--rewrite-everything-in-the-new-variable); old limits call for [Example 6](#example-6--change-the-limits-with-the-variable). Close the example before reconstructing this transformation.
+
+</details>
+
+</section>
+
+## Return to These Later {#later-review}
+
+After studying integration applications or differential equations, return with these solutions closed. Explain your method before calculating; these teaching tasks have no official marks. Use the course [mixed review](/alevel/a2-mathematics/#mixed-review) for choices across chapters.
+
+<section class="lesson-check" markdown="1">
+
+### Later A {#later-a}
+
+*Adapted from January 2025 MA03 Q8: the logarithm argument has been changed. No official marks are assigned to this adaptation.*
+
+**Question:** Find the exact value of $\displaystyle\int_0^1\ln(3x+1)\,dx$.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+You can change to the argument of the logarithm first, or apply integration by parts directly. Show how you deal with the remaining integral and the limits.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+The logarithm is defined throughout $[0,1]$. With $u=3x+1$, $dx=du/3$ and limits $1,4$,
+
+$$\begin{aligned}
+\int_0^1\ln(3x+1)\,dx
+&=\frac13\int_1^4\ln u\,du\\
+&=\frac13\left([u\ln u]_1^4-\int_1^4 1\,du\right)\\
+&=\frac13[u\ln u-u]_1^4\\
+&=\boxed{\frac{4\ln4-3}{3}}.
+\end{aligned}$$
+
+For integration by parts, the differentiated factor is $\ln u$ and the integrated factor is $1$. At the lower limit, $u\ln u-u$ contributes $-1$, not $0$. Differentiating $(3x+1)\ln(3x+1)/3-(3x+1)/3$ recovers the integrand. A correct direct-parts solution with consistent original limits is equally valid.
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Later B {#later-b}
+
+**Question:** Find $\displaystyle\int\frac{x^2}{\sqrt{x^3+1}}\,dx$ on $x>-1$. Explain why the power-rule exception for exponent $-1$ does not apply here.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Rewrite the denominator as a power. Can a new variable account for the factor $x^2\,dx$?
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+Let $u=x^3+1>0$, so $du=3x^2\,dx$:
+
+$$\int\frac{x^2}{\sqrt{x^3+1}}\,dx
+=\frac13\int u^{-1/2}\,du
+=\boxed{\frac23\sqrt{x^3+1}+C}.$$
+
+The exponent in the new variable is $-\frac12$, not $-1$, so the power rule applies. Differentiation gives $\frac23\cdot\frac12(x^3+1)^{-1/2}\cdot3x^2$, the required integrand. The substitution map is monotone; the zero derivative at $x=0$ does not invalidate this primitive, which the direct derivative check also confirms.
+
+</details>
+
+</section>
 
 ## Quick Reference
 
@@ -400,10 +606,20 @@ Alternatively, $[\ln(x^2+1)]_0^1=\ln2$. The answer is positive, as expected beca
 
 **If the derivative is wrong:** check the coefficient from the chain rule, the signs and any terms lost during substitution or algebraic division.
 
-**After practice:** note the step you found difficult. Try the question again without the solution, then try a similar question.
+**After practice:** use [diagnosis and retry](#diagnose-and-retry), then return to the [later tasks](#later-review) after studying another topic.
 
 **You should be able to:** choose a method and explain why, show your working, use the correct limits and check your answer.
 
 Continue with [Trigonometric Integrals and Applications](/alevel/a2-mathematics/integration-applications/) for identities, area and volume of revolution. Open [Partial Fractions](/alevel/a2-mathematics/partial-fractions/) for a full lesson on expressing fractions in partial fractions, or use the [Integration formula reference](/alevel/a2-mathematics/quick-reference/#p27-integration) for standard results and area and volume formulas.
+
+
+<details markdown="1">
+<summary>Sources and scope</summary>
+
+This lesson covers method choices in P2.7 of the [9660 specification v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf), printed p. 23. Trigonometric identities, areas and volumes continue in the next lesson.
+
+The January 2025 MA03 [question paper](https://aqamat.alevelclouds.com/25_01_QP_P2.pdf) Q8 and [mark scheme](https://aqamat.alevelclouds.com/25_01_MS_P2.pdf), p. 13, were consulted for integration-by-parts working, algebra and limits. These are official-authored papers hosted on a third-party mirror. Later A changes the logarithm argument and is labelled as an adapted teaching task. The original Q8 marks have not been assigned to this adaptation.
+
+</details>
 
 **Learning path:** [Previous: Parametric Equations](/alevel/a2-mathematics/parametric-equations/) · [Next: Integration — Trigonometric Integrals and Applications](/alevel/a2-mathematics/integration-applications/).

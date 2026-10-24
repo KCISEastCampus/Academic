@@ -7,23 +7,39 @@ subject: a2-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-mathematics/binomial-series/
 permalink: /zh/alevel/a2-mathematics/binomial-series/
-toc_headings: h2, h3, h4
+toc_headings: h2, h3
+reading_layout: true
 study_page: true
 ---
 
 [纯数学](/zh/alevel/a2-mathematics/) · P2.2 二项式级数
+{: .lesson-meta}
 
-按 $x$ 的升幂展开，写出适用范围（range of validity），并用级数求近似值。
+<div class="lesson-lead" markdown="1">
 
-- **学习：**从[二项式级数（binomial series）](#the-binomial-series)开始，再学习[部分分式与乘积](#partial-fractions-and-products)和[近似计算](#approximations)。
-- **作业帮助：**先找出幂次 $n$，以及公式中替代 $x$ 的整个表达式。检查常数因子和符号。
-- **复习：**先在不看解答的情况下尝试[练习](#practice)，然后使用[快速参考](#quick-reference)。
+不是多项式的函数，怎样用 $x$ 的幂表示？本课学习选择真正被展开的表达式，保留每项所需贡献，并判断展开在什么范围内可用。
 
-教材：第 2 章，第 2.1–2.2 节（印刷版第 24–30 页）。主要内容包括指数 $n$ 为任意有理数（rational number）时的二项式级数、有理函数（rational function）的级数展开和近似计算。
+</div>
 
-**开始前：**你应当掌握正整数幂的二项式展开（binomial expansion）、阶乘（factorial）、等比级数（geometric series）和[部分分式（partial fractions）](/zh/alevel/a2-mathematics/partial-fractions/)。
+1. [建立级数](#the-binomial-series)：辨认幂次、整个输入及外部因子。
+2. [组合展开](#partial-fractions-and-products)：保留所需幂次，并同时满足所有范围条件。
+3. [使用近似式](#approximations)，再做[独立练习](#practice)，稍后返回[回顾任务](#later-review)。
+{: .lesson-routes}
 
-下方例题和练习均为自拟题，并非官方真题。建议练习用时仅供参考，题目没有官方分值。
+<div class="lesson-notes" markdown="1">
+
+**开始前：**回补[指数与精确值](/zh/alevel/as-mathematics/algebra/#l01)、多项式乘法；有理函数还需要[部分分式](/zh/alevel/a2-mathematics/partial-fractions/#method)。下方补充整数展开与阶乘；开始学习时不要求你已经会无穷展开公式。
+
+<details id="prerequisite-repair" markdown="1">
+<summary>回补本课使用的代数</summary>
+
+三个因式相乘得到 $(1+t)^3=1+3t+3t^2+t^3$。阶乘满足 $2!=2\times1=2$、$3!=3\times2\times1=6$。取幂时也要处理外部常数：$(4+4t)^{1/2}=2(1+t)^{1/2}$。乘积的 $x^3$ 项可来自幂次配对 $0+3$、$1+2$、$2+1$ 或 $3+0$。
+
+</details>
+
+所有例题与任务均为自拟题，没有官方分值。提示与解答分别展开；记录自己是否用过帮助。课后可查[来源与范围](#lesson-sources)。
+
+</div>
 
 ## 二项式级数 {#the-binomial-series}
 
@@ -47,6 +63,8 @@ $$\begin{aligned}
 
 “展开到并包括 $x^3$ 项”表示保留常数项、$x$ 项、$x^2$ 项和 $x^3$ 项。有限项的结果是一个**近似值（approximation）**；如果要表示完整级数的等式，必须用 $+\cdots$ 表示剩余各项。
 
+<section class="worked-example" markdown="1">
+
 ### 例题 1 — 分数次幂 {#example-1--a-fractional-power}
 
 **Question:** Expand $(1+4x)^{\frac12}$ up to and including the term in $x^3$. State the range of validity.
@@ -64,9 +82,15 @@ $$\begin{aligned}
 
 **检查：**当 $x=0$ 时，原式和级数都等于 $1$。$x^2$ 项的系数为负，而 $x^3$ 项的系数为正；注意数清负因子的个数。
 
+</section>
+
+<section class="worked-example" markdown="1">
+
 ### 例题 2 — 先提出常数因子 {#example-2--take-out-the-constant-first}
 
 **Question:** Expand $(9-3x)^{-\frac12}$ up to and including the term in $x^3$. State the range of validity.
+
+公式括号内的常数项是 $1$，不是 $9$。先把底数提出因子，再取幂，才能同时确定外部常数和级数输入的大小。
 
 先写成
 
@@ -83,6 +107,40 @@ $$(9-3x)^{-\frac12}=\boxed{\frac13+\frac{x}{18}+\frac{x^2}{72}+\frac{5x^3}{1296}
 由于 $\left\lvert\frac{x}{3}\right\rvert<1$，适用范围为 $\boxed{-3<x<3}$。
 
 **常见错误：**提出 $9$，而不是 $9^{-\frac12}$。把 $x=0$ 代入原式，检查常数项是否正确。
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 暂停，补完一步 {#check-normalise}
+
+<!-- task:check-normalise -->
+
+For $(4-2x)^{-1/2}$, write the outside factor, $n$ and $u$. Complete the expansion through $x^2$ and state its range.
+
+<!-- /task:check-normalise -->
+
+<details markdown="1">
+<summary>提示</summary>
+
+提出 $4$ 后，还要对它取幂。代入整个 $-x/2$。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+外部因子为 $1/2$，$n=-1/2$，$u=-x/2$：
+
+$$(4-2x)^{-1/2}=\frac12+\frac{x}{8}+\frac{3x^2}{64}+\cdots,\qquad -2<x<2.$$
+
+常数项与原式在 $x=0$ 时的值一致。
+
+</details>
+
+</section>
+
+<section class="worked-example" markdown="1">
 
 ### 例题 3 — 负整数次幂 {#example-3--a-negative-integer-power}
 
@@ -101,6 +159,8 @@ $$\begin{aligned}
 
 **检查：**系数不会在某一项后停止。负整数次幂不会展开成有限多项式。
 
+</section>
+
 ## 部分分式与乘积 {#partial-fractions-and-products}
 
 常用的等比级数有
@@ -114,6 +174,8 @@ $$\frac1{1+u}=1-u+u^2-u^3+\cdots,$$
 展开有理函数时，先做部分分式分解，再分别展开。最终的适用范围必须同时满足**所有**级数的范围要求。
 
 两个级数相乘时，要逐项相乘，再合并同次幂。求 $x^3$ 的系数时，把所有幂次之和为 $3$ 的乘积都算进去。缺少 $x$ 项，不代表没有 $x^2$ 项。
+
+<section class="worked-example" markdown="1">
 
 ### 例题 4 — 展开有理函数 {#example-4--expand-a-rational-function}
 
@@ -136,6 +198,37 @@ $$\begin{aligned}
 
 **检查：**将 $3-3x+9x^2-15x^3$ 乘以 $(1-x)(1+2x)=1+x-2x^2$。常数项为 $3$，$x$、$x^2$ 和 $x^3$ 的系数都为零。由于展开只保留到 $x^3$，更高次幂的项仍然存在。
 
+</section>
+
+<section class="worked-example" markdown="1">
+
+### 例题 4b — 重复因子 {#example-repeated-factor}
+
+**Question:** Expand the following function through $x^3$ and state the range:
+
+$$F(x)=\frac{3-x}{(1-x)^2(1+x)}.$$
+
+重复因子在分解时需要保留两个幂次：
+
+$$F(x)=\frac{A}{1-x}+\frac{B}{(1-x)^2}+\frac{C}{1+x}.$$
+
+去分母得到 $3-x=A(1-x)(1+x)+B(1+x)+C(1-x)^2$。比较系数得 $A+B+C=3$、$B-2C=-1$、$-A+C=0$，所以 $A=B=C=1$。
+
+中间一项的幂次为 $-2$，因此系数与等比级数不同：
+
+$$\begin{aligned}
+F(x)&=(1+x+x^2+x^3+\cdots)\\
+&\quad+(1+2x+3x^2+4x^3+\cdots)\\
+&\quad+(1-x+x^2-x^3+\cdots)\\
+&=3+2x+5x^2+4x^3+\cdots,\qquad -1<x<1.
+\end{aligned}$$
+
+**检查：**乘以 $(1-x)^2(1+x)=1-x-x^2+x^3$，直到三次项得到 $3-x$。若分解省略平方分母，就不能表示原式在该处分母的二重零点所造成的发散。
+
+</section>
+
+<section class="worked-example" markdown="1">
+
 ### 例题 5 — 相乘并合并同次幂 {#example-5--multiply-and-collect-powers}
 
 **Question:** Expand $(1+x)\sqrt{1-2x}$ up to and including the term in $x^3$.
@@ -157,6 +250,8 @@ $$\begin{aligned}
 
 **检查：**$x$ 项相互抵消。计算 $x^3$ 项时，要同时计入 $1\times(-\frac12x^3)$ 和 $x\times(-\frac12x^2)$。
 
+</section>
+
 ## 近似计算 {#approximations}
 
 **线性近似（linear approximation）**保留常数项和 $x$ 项；**二次近似（quadratic approximation）**还保留 $x^2$ 项。忽略更高次幂时，要使用 $\approx$。
@@ -164,6 +259,8 @@ $$\begin{aligned}
 选择一个接近零的 $u$。级数条件 $\lvert u\rvert<1$ 允许使用无穷展开，但**不保证**只取少数几项就能达到所需精度。
 
 例如，例题 1 中 $x=0.24$ 落在适用范围内，但三次近似的结果是 $1.420096$，而 $\sqrt{1.96}=1.4$。不能只凭“在适用范围内”就断定结果精确到小数点后好几位。
+
+<section class="worked-example" markdown="1">
 
 ### 例题 6 — 估算平方根 {#example-6--approximate-a-square-root}
 
@@ -183,13 +280,21 @@ $$\sqrt{4.08}\approx2(1+0.01-0.00005+0.0000005)=2.019901.$$
 
 **常见错误：**直接展开 $(1+3.08)^{\frac12}$。这样会用到 $u=3.08$，不满足 $\lvert u\rvert<1$。
 
+</section>
+
 ## 练习 {#practice}
 
 建议用时约 **25–35 分钟**。每次展开都要写出适用范围。先尝试题目，再打开解答。
 
-### 题目 1 — 倒数 {#question-1--reciprocal}
+<section class="lesson-check" markdown="1">
+
+### 题目 1 {#question-1--reciprocal}
+
+<!-- task:question-1--reciprocal -->
 
 Expand $\frac1{1-3x}$ up to and including the term in $x^3$.
+
+<!-- /task:question-1--reciprocal -->
 
 <details markdown="1">
 <summary>提示</summary>
@@ -207,9 +312,17 @@ $$\boxed{\frac1{1-3x}=1+3x+9x^2+27x^3+\cdots},\qquad \boxed{-\frac13<x<\frac13}.
 
 </details>
 
-### 题目 2 — 外部因子 {#question-2--outside-factor}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 题目 2 {#question-2--outside-factor}
+
+<!-- task:question-2--outside-factor -->
 
 Expand $\sqrt{4+x}$ up to and including the term in $x^3$.
+
+<!-- /task:question-2--outside-factor -->
 
 <details markdown="1">
 <summary>提示</summary>
@@ -227,9 +340,17 @@ $$\boxed{\sqrt{4+x}=2+\frac{x}{4}-\frac{x^2}{64}+\frac{x^3}{512}+\cdots}.$$
 
 </details>
 
-### 题目 3 — 符号 {#question-3--signs}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 题目 3 {#question-3--signs}
+
+<!-- task:question-3--signs -->
 
 Expand $(1+x)^{-2}$ up to and including the term in $x^3$. Explain why $1-2x+x^2$ is not the correct expansion.
+
+<!-- /task:question-3--signs -->
 
 <details markdown="1">
 <summary>提示</summary>
@@ -247,9 +368,17 @@ $x^2$ 项的系数为 $\frac{(-2)(-3)}2=3$，不是 $1$。该级数不会终止�
 
 </details>
 
-### 题目 4 — 两个适用范围 {#question-4--two-ranges}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 题目 4 {#question-4--two-ranges}
+
+<!-- task:question-4--two-ranges -->
 
 Express $\frac4{(1-2x)(1+x)}$ in partial fractions. Hence expand up to and including the term in $x^3$.
+
+<!-- /task:question-4--two-ranges -->
 
 <details markdown="1">
 <summary>提示</summary>
@@ -271,9 +400,17 @@ $$\boxed{\frac4{(1-2x)(1+x)}=4+4x+12x^2+20x^3+\cdots}.$$
 
 </details>
 
-### 题目 5 — 乘积 {#question-5--a-product}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 题目 5 {#question-5--a-product}
+
+<!-- task:question-5--a-product -->
 
 Expand $(1+2x)(1-x)^{-\frac12}$ up to and including the term in $x^3$.
+
+<!-- /task:question-5--a-product -->
 
 <details markdown="1">
 <summary>提示</summary>
@@ -295,9 +432,17 @@ $$\boxed{(1+2x)(1-x)^{-\frac12}=1+\frac52x+\frac{11}{8}x^2+\frac{17}{16}x^3+\cdo
 
 </details>
 
-### 题目 6 — 选择合适的展开形式 {#question-6--choose-a-useful-form}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 题目 6 {#question-6--choose-a-useful-form}
+
+<!-- task:question-6--choose-a-useful-form -->
 
 Use a binomial expansion to estimate $\sqrt{8.91}$ to five decimal places. Check with a calculator. Explain why using $(1+7.91)^{\frac12}$ is unsuitable.
+
+<!-- /task:question-6--choose-a-useful-form -->
 
 <details markdown="1">
 <summary>提示</summary>
@@ -319,6 +464,170 @@ $$\begin{aligned}
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 题目 7 {#question-7}
+
+<!-- task:question-7 -->
+
+Expand the following function through $x^3$ and state its range of validity. Show how you obtain the coefficients.
+
+$$G(x)=\frac{2+x}{(1-x)^2(1+x)}.$$
+
+<!-- /task:question-7 -->
+
+<details markdown="1">
+<summary>提示</summary>
+
+重复线性因子需要保留一次和二次分母。也可以把有效级数相乘，但必须包含每项贡献。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+一种分解为
+
+$$G(x)=\frac{1}{4(1-x)}+\frac{3}{2(1-x)^2}+\frac{1}{4(1+x)}.$$
+
+因此 $G(x)=2+3x+5x^2+6x^3+\cdots$，范围为 $-1<x<1$。乘以 $1-x-x^2+x^3$，直到三次项得到 $2+x$。正确的直接级数乘法同样有效。
+
+</details>
+
+</section>
+
+## 修复后再尝试 {#repair}
+
+按自己作答中的错误选择一行，回到对应讲解；收起原答案，再做新题。重试要补上原先遗漏的条件或选择依据。
+
+| 作答中的证据 | 回补位置 | 新尝试 |
+| --- | --- | --- |
+| 题目 1–3 的常数项、符号或输入范围错误 | [例题 2](#example-2--take-out-the-constant-first) | [重试 A](#retry-normalise) |
+| 题目 4–5、7 漏系数、分母幂次或范围交集 | [有理函数](#example-4--expand-a-rational-function)、[重复因子](#example-repeated-factor)、[乘积](#example-5--multiply-and-collect-powers) | [重试 B](#retry-combine) |
+| 题目 6 仅凭收敛条件声称精度 | [近似形式的选择与检查](#approximations) | [重试 C](#retry-approximation) |
+
+<section class="lesson-check" markdown="1">
+
+### 重试 A {#retry-normalise}
+
+<!-- task:retry-normalise -->
+
+Expand $(4-2x^2)^{-1/2}$ through $x^4$ and state the range in $x$.
+
+<!-- /task:retry-normalise -->
+
+<details markdown="1">
+<summary>提示</summary>
+
+范围条件作用于 $u=-x^2/2$，不能只看 $x$。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+$n=-1/2$，外部因子为 $1/2$，得到
+
+$$(4-2x^2)^{-1/2}=\frac12+\frac{x^2}{8}+\frac{3x^4}{64}+\cdots.$$
+
+由 $x^2/2<1$ 得 $-\sqrt2<x<\sqrt2$。每个输入因子都含 $x^2$，所以没有奇数次幂。
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 重试 B {#retry-combine}
+
+<!-- task:retry-combine -->
+
+Find the expansion through $x^3$ and range of (a) $(1+x)/(1-2x)$ , (b) $(1+2x)/(1-x)^2$ and (c) $(2-x)/((1-2x)(1+x))$. Explain how you check the coefficient of $x^3$ in each and combine the range conditions.
+
+<!-- /task:retry-combine -->
+
+<details markdown="1">
+<summary>提示</summary>
+
+每个乘积都要收齐幂次之和为 $3$ 的项；由分母选择所需无穷级数。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+(a) $1+3x+6x^2+12x^3+\cdots$，范围为 $-1/2<x<1/2$；三次项系数为 $8+4=12$。
+
+(b) $1+4x+7x^2+10x^3+\cdots$，范围为 $-1<x<1$；三次项系数为 $4+2(3)=10$。
+
+(c) 分解为 $1/(1-2x)+1/(1+x)$，得到 $2+x+5x^2+7x^3+\cdots$。必须同时满足 $\lvert2x\rvert<1$ 和 $\lvert x\rvert<1$，因此 $-1/2<x<1/2$；三次项系数为 $8-1=7$。
+
+分别乘以原分母，直到三次项都还原为分子。
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 重试 C {#retry-approximation}
+
+<!-- task:retry-approximation -->
+
+Estimate $\sqrt{15.84}$ using an expansion through the cubic term in a suitable small input. Give five decimal places and check with a calculator.
+
+<!-- /task:retry-approximation -->
+
+<details markdown="1">
+<summary>提示</summary>
+
+使用 $4\sqrt{1-0.01}$，区分截断近似值与完整无穷级数。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+三次近似为 $4(1-0.005-0.0000125-0.0000000625)=3.97994975$。它与计算器数值均舍入为五位小数 $3.97995$。这里通过数值比较核对所求舍入；只检查适用范围不能保证这一点。
+
+</details>
+
+</section>
+
+## 稍后返回 {#review}
+
+学完另一个主题后，不打开例题，返回这里作答。记录自己选择的方法、用过的帮助，以及是否改变过判断。
+
+<section class="lesson-check" markdown="1">
+
+### 回顾任务 {#later-review}
+
+<!-- task:later-review -->
+
+Let $H(x)=(1+x)/\sqrt{1-2x}$. Find its expansion through $x^3$ and the range. Use it to estimate $H(0.01)$ to four decimal places, checking the rounding. A student says that the same four-term expression must be accurate to four decimal places at $x=0.49$ because it is in range. Assess the claim.
+
+<!-- /task:later-review -->
+
+<details markdown="1">
+<summary>提示</summary>
+
+保留常数项以及每个幂次的全部乘积；判断精度时，把截断值与原函数比较。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+$H(x)=1+2x+\frac52x^2+4x^3+\cdots$，范围为 $-1/2<x<1/2$。在 $0.01$ 处的三次近似为 $1.020254$，原函数值约为 $1.0202540700$；两者均舍入为 $1.0203$。
+
+在 $0.49$ 处，三次式给出 $3.050846$，原函数值却约为 $10.536$。级数在此有效，但这四项不够。系数有误时回看[乘积](#example-5--multiply-and-collect-powers)；精度判断有误时回看[近似计算](#approximations)。
+
+</details>
+
+</section>
+
 ## 快速参考 {#quick-reference}
 
 | 任务 | 方法 | 检查 |
@@ -336,3 +645,14 @@ $$\begin{aligned}
 **你应当能够：**展开负整数次幂和分数次幂、组合多个级数、写出适用范围，并选择有效的近似形式。
 
 **学习路径：**[上一节：部分分式](/zh/alevel/a2-mathematics/partial-fractions/) · [下一节：三角函数与公式](/zh/alevel/a2-mathematics/trigonometric-functions-and-formulae/) · [返回纯数学主题目录](/zh/alevel/a2-mathematics/)。
+
+## 下一步 {#next-step}
+
+如果能独立选择输入、合并系数并说明范围，继续学习[三角函数与公式](/zh/alevel/a2-mathematics/trigonometric-functions-and-formulae/)。若某项检查失败，走[对应恢复路线](#repair)，隔一段时间后再返回[回顾任务](#later-review)。
+
+<details id="lesson-sources" markdown="1">
+<summary>来源与范围</summary>
+
+范围：OxfordAQA 9660 MA03，P2.2，[大纲 v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf)印刷 p21。制作时实读 January 2025 MA03 Q14(a)–(c) 的 [QP pp26–27](https://aqamat.alevelclouds.com/25_01_QP_P2.pdf) 与 [MS pp21–22](https://aqamat.alevelclouds.com/25_01_MS_P2.pdf)，核对归一化、展开和系数合并步骤。本页题目仍均为自拟题。原教材定位：第 2 章第 2.1–2.2 节、印刷 pp24–30；本轮未重查原书。端点收敛及严格余项界不在本课范围内。
+
+</details>

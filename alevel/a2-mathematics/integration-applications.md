@@ -5,7 +5,8 @@ mathjax: true
 grade: a2
 subject: a2-mathematics
 permalink: /alevel/a2-mathematics/integration-applications/
-toc_headings: h2, h3, h4
+toc_headings: h2, h3
+reading_layout: true
 study_page: true
 ---
 
@@ -18,12 +19,17 @@ Use a trigonometric identity to make an integral simpler. Then use definite inte
 - **Revision:** try [practice](#practice) with the solutions closed, then check the [quick reference](#quick-reference).
 
 Textbook: Chapter 6, Sections 6.5–6.6 (printed pp. 95–100). The area section revises earlier definite integration and prepares you for volume questions. We write the constant of integration as $C$.
+{: .lesson-meta}
 
-**Before you start:** you should know standard integrals, substitution and trigonometric identities. Review [Integration — Choosing a Method](/alevel/a2-mathematics/integration/) if needed.
+<div class="lesson-notes" markdown="1">
+
+**Starting point:** integrate powers term by term, substitute upper and lower limits, and find curve intersections; recover [AS quadratics and intersections](/alevel/as-mathematics/algebra/#l02) if needed. Trigonometric work also needs radians, double angles and the differential relation in substitution: recover [double angles](/alevel/a2-mathematics/trigonometric-functions-and-formulae/#double-angle-formulae), [standard integrals](/alevel/a2-mathematics/integration/#standard-integrals) and [substitution](/alevel/a2-mathematics/integration/#substitution). Your goal is to choose an identity, draw the region, and justify area signs or a rotating slice's radius. Revising? Start at [practice](#practice), use [repair tasks](#repair), then try [later review](#review-later) after the next lesson.
+
+</div>
 
 All worked examples and practice questions on this page are self-written, not official past-paper questions. No official marks are assigned.
 
-## Trigonometric Integrals
+## Trigonometric Integrals {#trigonometric-integrals}
 
 **Use radians throughout.** The standard derivatives and integrals of trigonometric functions use radians.
 
@@ -37,7 +43,11 @@ All worked examples and practice questions on this page are self-written, not of
 
 For an argument such as $2x$ or $3x$, use the same identities with that argument. Include the coefficient from the chain rule when integrating.
 
-### Example 1 — Keep one sine factor
+Choose a substitution by checking whether the remaining factor supplies its differential. With only even powers, double angles turn the expression into a sum of standard integrals. The power rule for $x^n$ does not directly integrate $\sin^n x$: differentiating a power of sine introduces a cosine factor. Check the identity before integrating.
+
+<section class="worked-example" markdown="1">
+
+### Example 1 — Keep one sine factor {#example-1--keep-one-sine-factor}
 
 **Question:** Find $\displaystyle\int\sin^3(2x)\,dx$.
 
@@ -55,7 +65,11 @@ $$\boxed{-\frac12\cos(2x)+\frac16\cos^3(2x)+C}.$$
 
 **Common mistake:** missing the minus sign or the factor $\frac12$ in $du$.
 
-### Example 2 — Use a double angle identity
+</section>
+
+<section class="worked-example" markdown="1">
+
+### Example 2 — Use a double angle identity {#example-2--use-a-double-angle-identity}
 
 **Question:** Find $\displaystyle\int\cos^2(3x)\,dx$.
 
@@ -69,7 +83,11 @@ $$\boxed{\frac{x}{2}+\frac{\sin(6x)}{12}+C}.$$
 
 **Common mistake:** replacing $\cos^2(3x)$ by $\frac{1+\cos(3x)}2$. The identity doubles the whole argument.
 
-### Example 3 — Reduce a fourth power
+</section>
+
+<section class="worked-example" markdown="1">
+
+### Example 3 — Reduce a fourth power {#example-3--reduce-a-fourth-power}
 
 **Question:** Find $\displaystyle\int\cos^4(2x)\,dx$.
 
@@ -87,7 +105,11 @@ $$\boxed{\frac{3x}{8}+\frac{\sin(4x)}8+\frac{\sin(8x)}{64}+C}.$$
 
 For a product of even powers, also look for $\sin(2x)=2\sin x\cos x$. For example, $\sin^2x\cos^2x=\frac18[1-\cos(4x)]$.
 
-### Example 4 — Reduce a tangent power
+</section>
+
+<section class="worked-example" markdown="1">
+
+### Example 4 — Reduce a tangent power {#example-4--reduce-a-tangent-power}
 
 **Question:** Find $\displaystyle\int\tan^3x\,dx$.
 
@@ -103,7 +125,9 @@ $$\boxed{\frac12\tan^2x+\ln\lvert\cos x\rvert+C}.$$
 
 Use this result on an interval where $\cos x\ne0$. Do not integrate across a point where $\tan x$ is undefined.
 
-## Area
+</section>
+
+## Area {#area}
 
 **A definite integral gives signed area.** Parts above the $x$-axis contribute positively; parts below it contribute negatively. The total area adds the sizes of all parts.
 
@@ -114,7 +138,9 @@ Use this result on an interval where $\cos x\ne0$. Do not integrate across a poi
 
 ![Example 5: the curve x squared minus one crosses the x-axis at minus one and one, with shaded areas above and below. Example 6: the shaded region lies between the line y equals two x and the curve y equals x squared, from zero to two.](/assets/img/integration-area.svg)
 
-### Example 5 — Split where the curve crosses the axis
+<section class="worked-example" markdown="1">
+
+### Example 5 — Split where the curve crosses the axis {#example-5--split-where-the-curve-crosses-the-axis}
 
 **Question:** Find the total area between $y=x^2-1$ and the $x$-axis for $-2\le x\le2$.
 
@@ -128,7 +154,11 @@ $$A=\frac43+\frac43+\frac43=\boxed{4\text{ square units}}.$$
 
 **Check:** $\int_{-2}^{2}(x^2-1)\,dx=\frac43$ is the signed area, not the total area. Taking the absolute value of that one answer would still be wrong.
 
-### Example 6 — Upper curve minus lower curve
+</section>
+
+<section class="worked-example" markdown="1">
+
+### Example 6 — Upper curve minus lower curve {#example-6--upper-curve-minus-lower-curve}
 
 **Question:** Find the area enclosed by $y=2x$ and $y=x^2$.
 
@@ -140,7 +170,9 @@ $$\boxed{\frac43\text{ square units}}.$$
 
 **Check:** The integrand is non-negative on $[0,2]$. If the upper and lower curves change places within a given interval, split the integral at the intersections.
 
-## Volume of Revolution
+</section>
+
+## Volume of Revolution {#volume-of-revolution}
 
 When a region rotates completely about an axis, it forms a **solid of revolution**. A slice perpendicular to the axis is a circle when the region extends from the axis to the curve. Its area is $\pi\times(\text{radius})^2$.
 
@@ -153,11 +185,13 @@ When a region rotates completely about an axis, it forms a **solid of revolution
 
 These formulas describe circular slices with no hole. If the stated region does not extend to the axis, first identify the outer and inner radii; do not use one curve's radius without checking the region.
 
-### Example 7 — Square the whole expression
+<section class="worked-example" markdown="1">
+
+### Example 7 — Square the whole expression {#example-7--square-the-whole-expression}
 
 **Question:** The region between $y=x+1$, the $x$-axis and the lines $x=0$ and $x=2$ is rotated completely about the $x$-axis. Find its volume.
 
-The radius is $y=x+1$. Its square is $(x+1)^2=x^2+2x+1$.
+Draw a vertical strip from the $x$-axis to the curve, of thickness $dx$; rotation gives a disc. Its radius is $y=x+1$, so its square is $(x+1)^2=x^2+2x+1$.
 
 $$V=\pi\int_0^2(x+1)^2\,dx.$$
 
@@ -167,11 +201,15 @@ $$=\pi\left[\frac{x^3}{3}+x^2+x\right]_0^2=\boxed{\frac{26\pi}{3}\text{ cubic un
 
 **Check:** The radius increases from $1$ to $3$ over a length of $2$. The volume must lie between the cylinder volumes $2\pi$ and $18\pi$.
 
-### Example 8 — Change the variable for the y-axis
+</section>
+
+<section class="worked-example" markdown="1">
+
+### Example 8 — Change the variable for the y-axis {#example-8--change-the-variable-for-the-y-axis}
 
 **Question:** The region in $x\ge0$ enclosed by $y=x^2+2$, the line $y=6$ and the $y$-axis is rotated completely about the $y$-axis. Find its volume.
 
-The $y$-limits are $2$ and $6$. Rearrange the curve to give $x^2=y-2$.
+Draw a horizontal strip from the $y$-axis to the curve, of thickness $dy$. Its rotating radius is $x$, not the height $y$. At $x=0$, the region starts at $y=2$ and ends at $y=6$: use these $y$-limits and rearrange to give $x^2=y-2$.
 
 $$V=\pi\int_2^6(y-2)\,dy=\pi\left[\frac{(y-2)^2}{2}\right]_2^6.$$
 
@@ -181,15 +219,21 @@ $$\boxed{8\pi\text{ cubic units}}.$$
 
 **Check:** The radius grows from $0$ to $2$. The solid fits inside a cylinder of radius $2$ and height $4$, whose volume is $16\pi$.
 
+</section>
+
 **Area and volume use different integrands.** For a region under $y=\sin x$ on $0\le x\le\frac\pi2$, area uses $\sin x$; rotation about the $x$-axis uses $\pi\sin^2x$. A volume question may therefore need a trigonometric identity first.
 
-## Practice
+## Practice {#practice}
 
 **Independent practice · 30–40 minutes**
 
 The time is a guide. For each trigonometric integral, write the identity you use. For each area or volume, sketch the region and write the integral before calculating. Open a hint only if you need it.
 
-### Q1 — An odd cosine power
+Draw each application region yourself before opening help. For a volume, label the axis, one slice and its radius. The teaching diagram belongs to the examples; construct your own practice diagrams. Record your first answer, help, error and retry.
+
+<section class="lesson-check" markdown="1">
+
+### Q1 {#q1--an-odd-cosine-power}
 
 Find $\displaystyle\int\cos^3x\,dx$.
 
@@ -215,7 +259,11 @@ Differentiation gives $(1-\sin^2x)\cos x=\cos^3x$.
 
 </details>
 
-### Q2 — A product of powers
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Q2 {#q2--a-product-of-powers}
 
 Find $\displaystyle\int\sin^2x\cos^3x\,dx$.
 
@@ -241,7 +289,11 @@ Differentiation gives $\sin^2x(1-\sin^2x)\cos x=\sin^2x\cos^3x$.
 
 </details>
 
-### Q3 — An even power with limits
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Q3 {#q3--an-even-power-with-limits}
 
 Evaluate $\displaystyle\int_0^{\frac\pi4}\sin^2(2x)\,dx$ exactly.
 
@@ -261,7 +313,11 @@ The integrand is between $0$ and $1$, so the answer must be between $0$ and $\fr
 
 </details>
 
-### Q4 — A tangent square
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Q4 {#q4--a-tangent-square}
 
 Find $\displaystyle\int\tan^2(2x)\,dx$ on an interval where $\cos(2x)\ne0$.
 
@@ -281,7 +337,11 @@ Differentiation gives $\sec^2(2x)-1=\tan^2(2x)$.
 
 </details>
 
-### Q5 — Area between two curves
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Q5 {#q5--area-between-two-curves}
 
 Find the area enclosed by $y=4x-x^2$ and $y=x$.
 
@@ -303,7 +363,11 @@ $$\boxed{\frac92\text{ square units}}.$$
 
 </details>
 
-### Q6 — Signed integral or total area?
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Q6 {#q6--signed-integral-or-total-area}
 
 For $y=x^2-4$ on $-3\le x\le3$, find **(a)** the definite integral and **(b)** the total area between the curve and the $x$-axis.
 
@@ -329,7 +393,11 @@ The signed integral is $\frac73-\frac{32}{3}+\frac73=-6$, which checks part (a).
 
 </details>
 
-### Q7 — Choose the axis and the variable
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Q7 {#q7--choose-the-axis-and-the-variable}
 
 **(a)** The region between $y=\cos(2x)$, the $x$-axis and the lines $x=0$ and $x=\frac\pi4$ is rotated completely about the $x$-axis. Find the volume exactly.
 
@@ -365,7 +433,125 @@ At $y=4$, the radius is $\sqrt3$. The solid fits inside a cylinder of height $3$
 
 </details>
 
-## Quick Reference
+</section>
+
+## Repair the cause {#repair}
+
+Close the original answer and attempt the matching fresh task.
+
+| Error | Cause and return point | Retry |
+| --- | --- | --- |
+| Wrong argument or coefficient | Check the identity, then the reverse chain rule; [trigonometric integrals](#trigonometric-integrals), Examples 1–4 | [A](#repair-trig) |
+| Absolute value of one signed integral used as total area | Cancellation cannot be repaired at the end; [area](#area), Examples 5–6 | [B](#repair-area) |
+| Radius, variable and limits disagree | Redraw the slice with radius and thickness; [volume](#volume-of-revolution), Examples 7–8 | [C](#repair-volume) |
+
+<section class="lesson-check" markdown="1">
+
+### Expression A {#repair-trig}
+
+Find $\displaystyle\int\sin^2x\cos^2x\,dx$. Explain your first rewrite.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Combine the two factors before treating the square.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+$$\sin^2x\cos^2x=\frac14\sin^2(2x)=\frac18[1-\cos(4x)],$$
+
+$$\int\sin^2x\cos^2x\,dx=\frac{x}{8}-\frac{\sin(4x)}{32}+C.$$
+
+Differentiate to recover the integrand and check the whole argument and coefficient.
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Region B {#repair-area}
+
+Sketch $y=x(x-1)$ for $0\le x\le2$. Find the definite integral and the total area with the $x$-axis.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Mark the zeros and check the sign on both parts.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+$$F(x)=\frac{x^3}{3}-\frac{x^2}{2},\qquad \int_0^2x(x-1)\,dx=\frac23.$$
+
+$$A=-\int_0^1x(x-1)\,dx+\int_1^2x(x-1)\,dx=\frac16+\frac56=1.$$
+
+The sketch is below the axis for $0<x<1$ and above it for $1<x\le2$; area is in square units.
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Solid C {#repair-volume}
+
+The region bounded by $x=y^2$, the $y$-axis and $y=2$, with $y\ge0$, is rotated completely about the $y$-axis. Draw a slice and find the volume.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+The radius is $x$, already expressed in terms of $y$.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+$$V=\pi\int_0^2(y^2)^2\,dy=\pi\left[\frac{y^5}{5}\right]_0^2=\frac{32\pi}{5}\text{ cubic units}.$$
+
+The maximum radius is $4$ and height is $2$; the result is below the enclosing cylinder volume $32\pi$.
+
+</details>
+
+</section>
+
+## Later review {#review-later}
+
+After studying differential equations, hide the method table and solutions and attempt this task. Record delayed method choice separately from your immediate retry.
+
+<section class="lesson-check" markdown="1">
+
+### A region revisited {#review-region}
+
+The region $R$ is bounded by $y=\sin x\cos x$, the $x$-axis, $x=0$ and $x=\frac\pi2$. Sketch $R$. Find (a) its area and (b) the volume when $R$ rotates completely about the $x$-axis. Explain why the two integrands differ.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Label the strip height, then identify the quantity being added.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+$$A=\int_0^{\pi/2}\sin x\cos x\,dx=\left[\frac12\sin^2x\right]_0^{\pi/2}=\frac12.$$
+
+$$V=\pi\int_0^{\pi/2}\sin^2x\cos^2x\,dx=\pi\left[\frac{x}{8}-\frac{\sin(4x)}{32}\right]_0^{\pi/2}=\frac{\pi^2}{16}.$$
+
+The curve is non-negative. Area uses height; volume uses $\pi$ times radius squared. Their units are square and cubic units: directly comparing their sizes does not check quantities of different dimensions.
+
+</details>
+
+</section>
+
+## Quick Reference {#quick-reference}
 
 | Task | Rule or first step | Check |
 |---|---|---|
@@ -380,8 +566,18 @@ At $y=4$, the radius is $\sqrt3$. The solid fits inside a cylinder of height $3$
 
 **If your answer looks wrong:** differentiate an indefinite result; check signs for area; check the radius, limits and units for volume. Keep exact values such as $\pi$ until the end.
 
-**After practice:** explain one identity choice and one area or volume setup without looking at the solutions. Reattempt any question where you chose the wrong method or limits.
+**Next step:** use [repair tasks](#repair), keep your first attempt, then study differential equations and return to [the review region](#review-region).
+{: #next-step}
 
 Return to [Integration — Choosing a Method](/alevel/a2-mathematics/integration/) or the [Integration formula reference](/alevel/a2-mathematics/quick-reference/#p27-integration).
 
 **Learning path:** [Previous: Integration — Choosing a Method](/alevel/a2-mathematics/integration/) · [Next: Differential Equations](/alevel/a2-mathematics/differential-equations/).
+
+<details markdown="1">
+<summary>Sources and verification scope</summary>
+
+Scope: 9660 MA03 P2.4 identities and P2.7 applications; area is prerequisite review. January 2025 MA03 Q5 (QP p11, MS p10) was read to check the sequence of squaring the full radius, rewriting, integrating and evaluating limits. This page uses self-written tasks, without official marks.
+
+[9660 specification v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf) · [January 2025 QP](https://aqamat.alevelclouds.com/25_01_QP_P2.pdf) / [MS](https://aqamat.alevelclouds.com/25_01_MS_P2.pdf)
+
+</details>

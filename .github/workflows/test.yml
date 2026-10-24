@@ -59,6 +59,20 @@ jobs:
             node "$check"
           done
 
+      - name: Test MA03 pure mathematics lessons
+        run: |
+          node scripts/test-numerical-methods.js
+          node scripts/test-binomial-series.js
+          node scripts/test-trigonometry.js
+          node scripts/test-exponential-logarithmic.js
+          node scripts/test-differentiation.js
+          node scripts/test-parametric-equations.js
+          node scripts/test-differential-equations.js
+          node scripts/test-integration-applications.js
+          node scripts/test-vectors.js
+          node scripts/test-pure-consistency.js
+          node scripts/test-a2-heading-hierarchy.js
+
   markdown-lint:
     name: Markdown Lint
     runs-on: ubuntu-latest

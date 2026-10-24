@@ -5,11 +5,13 @@ mathjax: true
 grade: a2
 subject: a2-mathematics
 permalink: /alevel/a2-mathematics/functions/
-toc_headings: h2, h3, h4
+toc_headings: h2, h3
+reading_layout: true
 study_page: true
 ---
 
 [Pure Mathematics](/alevel/a2-mathematics/) · P2.1 Algebra and Functions
+{: .lesson-meta}
 
 Learn to find a domain and range, form a composite function and find an inverse function. Check the allowed inputs at every step.
 
@@ -18,8 +20,13 @@ Textbook: Chapter 1, Sections 1.1–1.3 (pp. 2–8). The examples and practice q
 - **Learning:** start with [domain and range](#domain-and-range), then follow the worked examples.
 - **Homework help:** go to [composite functions](#composite-functions) or [inverse functions](#inverse-functions).
 - **Revision:** try the [practice questions](#practice) before opening the solutions. Use the [quick reference](#quick-reference) to check a method.
+{: .lesson-routes}
 
-**Before you start:** you should know how to substitute values, solve simple equations, complete the square and sketch basic graphs.
+<div class="lesson-notes" markdown="1">
+
+**Before you start:** substitute values and solve linear equations. For a quadratic range, complete the square and check its turning point and interval endpoints (recover [AS Algebra L02](/alevel/as-mathematics/algebra/#l02)). Start by fixing the allowed inputs, then find the outputs; composites and inverses will use those restrictions. If revising, go to [independent practice](#practice), then choose a new task from [repair and retry](#repair-and-retry). In a later lesson, use [the review task](#later-review) to check what you retain.
+
+</div>
 
 ## Domain and Range
 
@@ -41,6 +48,8 @@ You can write a function as $f(x)=x^2$ or $f:x\mapsto x^2$. State its domain too
 
 If a question asks for the largest possible real domain, use every real input for which the expression is defined. If it gives a smaller domain, use that domain.
 
+<section class="worked-example" markdown="1">
+
 ### Example 1 — A turning point can lie inside the domain
 
 **Question:** The function $f$ is defined by $f(x)=(x-1)^2+2$ for $-1\leq x\leq3$. Find its range.
@@ -61,6 +70,8 @@ $$\boxed{2\leq f(x)\leq6}.$$
 
 **Common mistake:** using only the outputs at the ends. Both are $6$, but the range is not just $\lbrace6\rbrace$.
 
+</section>
+
 ### One-to-one and many-to-one
 
 A **one-to-one function** gives different outputs for different inputs. A **many-to-one function** can give the same output for two or more different inputs.
@@ -68,6 +79,8 @@ A **one-to-one function** gives different outputs for different inputs. A **many
 In Example 1, $f(-1)=f(3)=6$, so $f$ is many-to-one. If its domain is restricted to $1\leq x\leq3$, the output increases as $x$ increases, so the function is one-to-one.
 
 On a graph, a horizontal line meets a one-to-one function at most once. This will help you decide whether an inverse function exists.
+
+<section class="worked-example" markdown="1">
 
 ### Example 2 — A piecewise function and a finite domain
 
@@ -87,6 +100,8 @@ For the finite domain, only three inputs are allowed, so the range is $\boxed{\l
 
 **Sketch check:** for the full real domain, draw $y=x^2$ only for $x\leq0$, with a filled point at $(0,0)$. Draw $y=2x+1$ only for $x>0$, with an open point at $(0,1)$. There is still only one output at $x=0$.
 
+</section>
+
 ## Composite Functions
 
 A **composite function** is a function of a function. The notation $fg(x)$ means $f(g(x))$: apply $g$ first, then $f$.
@@ -94,6 +109,8 @@ A **composite function** is a function of a function. The notation $fg(x)$ means
 $$x\xrightarrow{g}g(x)\xrightarrow{f}f(g(x)).$$
 
 **Check two things:** the input $x$ must be in the domain of $g$, and the output $g(x)$ must be in the domain of $f$.
+
+<section class="worked-example" markdown="1">
 
 ### Example 3 — Order changes the formula and the domain {#example-2--order-changes-the-formula-and-the-domain}
 
@@ -121,11 +138,24 @@ $$2x-3\geq0\quad\Rightarrow\quad x\geq\frac32.$$
 
 **Common mistake:** treating $fg(x)$ as the product $f(x)g(x)$. Here, that product would be $(2x-3)\sqrt{x}$, which is a different expression.
 
-### Spot the error — Which order needs the restriction?
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Check your reasoning {#spot-the-error--which-order-needs-the-restriction}
 
 Let $f(x)=\sqrt{x}$ for $x\geq0$ and $g(x)=x-2$ for $x\in\mathbb R$. A student writes:
 
 $$gf(x)=\sqrt{x}-2,\qquad x\geq2.$$
+
+Is the statement correct? Explain and give the correct domain.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Follow $x\to f(x)\to g(f(x))$ and check each input; do not impose an extra condition on the final output.
+
+</details>
 
 <details markdown="1">
 <summary>Show the correction</summary>
@@ -135,6 +165,8 @@ The formula is correct, but the domain is $x\geq0$. The function $g$ accepts neg
 The other order is $fg(x)=\sqrt{x-2}$, which does require $x\geq2$.
 
 </details>
+
+</section>
 
 ## Inverse Functions
 
@@ -158,6 +190,8 @@ The domain and range swap:
 |---|---|
 | Domain of $f$ | Range of $f^{-1}$ |
 | Range of $f$ | Domain of $f^{-1}$ |
+
+<section class="worked-example" markdown="1">
 
 ### Example 4 — Restrict the domain before choosing a square root {#example-3--restrict-the-domain-before-choosing-a-square-root}
 
@@ -185,6 +219,8 @@ The last step uses $x\geq1$. In general, $\sqrt{a^2}=\lvert a\rvert$, not always
 
 **Common mistake:** giving both square roots as the inverse. The inverse is a function, so each allowed input must give one output.
 
+</section>
+
 ### What happens to the graph?
 
 Reflect the graph of $y=f(x)$ in the line $y=x$ to obtain the graph of $y=f^{-1}(x)$. A point $(a,b)$ becomes $(b,a)$.
@@ -194,6 +230,8 @@ For Example 4, $(1,2)$ and $(2,3)$ on $f$ become $(2,1)$ and $(3,2)$ on $f^{-1}$
 ![Graphs of y equals x squared for non-negative x and its inverse y equals the square root of x, reflected in y equals x. The points (2,4) and (4,2) swap.](/assets/img/functions-inverse.svg)
 
 The diagram uses the simpler pair $f(x)=x^2$ for $x\geq0$ and $f^{-1}(x)=\sqrt{x}$. The same reflection rule applies to Example 4.
+
+<section class="worked-example" markdown="1">
 
 ### Example 5 — An excluded input becomes an excluded output {#example-4--an-excluded-input-becomes-an-excluded-output}
 
@@ -213,13 +251,17 @@ $$\boxed{h^{-1}(x)=2+\frac{1}{x-3}}.$$
 
 $$h(h^{-1}(x))=3+\frac{1}{\frac{1}{x-3}}=x,\qquad x\ne3.$$
 
+</section>
+
 ## Practice
 
 **Independent practice · 20–25 minutes**
 
 Try each question on paper before opening a hint or solution. Give the domain and range when asked, and explain any restriction. These are self-written exercises, with no official marks. The time is only a guide.
 
-### Q1 — Domain and range of a square root
+<section class="lesson-check" markdown="1">
+
+### Question 1 {#q1--domain-and-range-of-a-square-root}
 
 Find the largest possible real domain and the range of $f(x)=\sqrt{5-x}$.
 
@@ -239,7 +281,11 @@ For any output $y\geq0$, the input $x=5-y^2$ is allowed and gives $f(x)=y$. This
 
 </details>
 
-### Q2 — Range and invertibility {#q2--a-restricted-domain-does-not-always-give-an-inverse}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Question 2 {#q2--a-restricted-domain-does-not-always-give-an-inverse}
 
 Let $f(x)=x^2$ for $-2\leq x\leq1$. Find its range. Does it have an inverse function on this domain? Explain your answer.
 
@@ -259,7 +305,11 @@ There is **no inverse function** on the stated domain: $f(-1)=f(1)=1$, so $f$ is
 
 </details>
 
-### Q3 — Keep the stated domains when forming composites
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Question 3 {#q3--keep-the-stated-domains-when-forming-composites}
 
 Let $f(x)=3x+1$ for $x\in\mathbb R$ and $g(x)=x^2$ for $x\geq0$. Find $fg(x)$ and $gf(x)$, with their domains and ranges.
 
@@ -283,7 +333,11 @@ As a check on the order, $fg(1)=4$ and $gf(1)=16$.
 
 </details>
 
-### Q4 — Find the inverse of a rational function
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Question 4 {#q4--find-the-inverse-of-a-rational-function}
 
 Let $f(x)=\frac{2x+1}{x-3}$ for $x\ne3$. Find $f^{-1}$, and state its domain and range.
 
@@ -311,7 +365,11 @@ $$f(f^{-1}(x))=\frac{\frac{2(3x+1)}{x-2}+1}{\frac{3x+1}{x-2}-3}=\frac{\frac{7x}{
 
 </details>
 
-### Q5 — Find and check an inverse {#q5--choose-the-negative-square-root}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Question 5 {#q5--choose-the-negative-square-root}
 
 Let $f(x)=(x+2)^2-1$ for $x\leq-2$. Find $f^{-1}$, including its domain and range. Check $f^{-1}(f(x))$ on the original domain.
 
@@ -341,7 +399,11 @@ Check a pair: $f(-4)=3$ and $f^{-1}(3)=-4$.
 
 </details>
 
-### Q6 — Select the correct part of a function
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Question 6 {#q6--select-the-correct-part-of-a-function}
 
 Let $h(x)=x+2$ for $x<1$ and $h(x)=x^2$ for $x\geq1$. Find $h(-2)$ and $h(1)$, and state the range for all real inputs. Then state the range for the domain $\lbrace-2,0,1,2\rbrace$.
 
@@ -361,6 +423,166 @@ For the finite domain, the outputs are $0,2,1,4$, so the range is $\boxed{\lbrac
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Question 7 {#check-inverse-graph}
+
+<!-- task:check-inverse-graph -->
+Let $u(x)=(x+1)^2-2$ for $x\leq-1$. Sketch $y=u(x)$ and $y=u^{-1}(x)$ on the same axes. Label the endpoint of each curve, the point on $u$ with input $-3$ and its corresponding point on $u^{-1}$. Explain how the domains appear in your sketches.
+<!-- /task:check-inverse-graph -->
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Check that the restricted function is one-to-one. Swap each point’s coordinates, including the endpoint.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+The original graph is the left branch of the parabola, with included endpoint $(-1,-2)$. Since $u(-3)=2$, it contains $(-3,2)$. Reflection in $y=x$ gives the inverse endpoint $(-2,-1)$ and point $(2,-3)$.
+
+$$u^{-1}(x)=-1-\sqrt{x+2},\qquad x\geq-2,\qquad u^{-1}(x)\leq-1.$$
+
+Draw the curves with these filled endpoints: the original only uses $x\leq-1$, and the inverse only uses $x\geq-2$. Saying “reflection” alone does not show the restrictions on the sketches. If you drew the right branch, return to [the restricted-domain demonstration](#example-3--restrict-the-domain-before-choosing-a-square-root).
+
+</details>
+
+</section>
+
+## Repair and try again {#repair-and-retry}
+
+Close the old solution. Use the error you made to choose a short review, then attempt a new task. Record any hint you use.
+
+| Error | Recovery action | New attempt |
+| --- | --- | --- |
+| Only checked endpoints, or chose the wrong inverse branch | Return to [the range example](#example-1--a-turning-point-can-lie-inside-the-domain); locate the turning point and repeated outputs on the original domain | [R1](#retry-range) |
+| Final formula hid a composite restriction | Review [composition](#composite-functions) and list the two input checks | [R2](#retry-composite) |
+| Wrong piecewise boundary or finite range | Review [the piecewise demonstration](#example-2--a-piecewise-function-and-a-finite-domain); list the allowed inputs | [R3](#retry-piecewise) |
+
+<section class="lesson-check" markdown="1">
+
+### R1 {#retry-range}
+
+<span id="retry-inverse"></span>
+
+<!-- task:retry-range -->
+Let $v(x)=(x+1)^2-2$ for $-3\leq x\leq0$. Find its range and decide whether it has an inverse. Now restrict its domain to $-3\leq x\leq-1$. Find the inverse, including its domain and range.
+<!-- /task:retry-range -->
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Check the minimum and endpoints, then keep the inverse outputs in the newly restricted original domain.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+$$-2\leq v(x)\leq2,\qquad v(-2)=v(0)=-1.$$
+
+On the first domain the repeated output prevents an inverse. On the restricted domain the function is strictly decreasing, with the same range $[-2,2]$, giving
+
+$$v^{-1}(x)=-1-\sqrt{x+2},\qquad -2\leq x\leq2,\qquad -3\leq v^{-1}(x)\leq-1.$$
+
+Check the swapped endpoints: $v(-3)=2$ and $v(-1)=-2$. The negative square root keeps the inverse output in $[-3,-1]$.
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### R2 {#retry-composite}
+
+<!-- task:retry-composite -->
+Let $f(x)=\sqrt{x}$ for $x\geq0$ and $g(x)=x^2$ for $x\geq2$. Find $fg$ and $gf$, including domains and ranges. Are they the same function?
+<!-- /task:retry-composite -->
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Even if the expressions simplify alike, check the inner domain and the outer allowed inputs.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+$$fg(x)=\sqrt{x^2}=x,\qquad x\geq2,\qquad fg(x)\geq2.$$
+
+$$gf(x)=(\sqrt{x})^2=x,\qquad x\geq4,\qquad gf(x)\geq4.$$
+
+For $gf$, require $\sqrt{x}\geq2$, so $x\geq4$. For $fg$, $g$ already requires $x\geq2$. They have the same formula but different domains, so they are different functions.
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### R3 {#retry-piecewise}
+
+<!-- task:retry-piecewise -->
+For real $x$, let
+
+$$w(x)=\begin{cases}x+1,&x<0,\\(x-1)^2,&x\geq0.\end{cases}$$
+
+Find $w(0)$ and the range. Then find the range on the finite domain $\lbrace-1,0,2\rbrace$.
+<!-- /task:retry-piecewise -->
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Which part contains $0$? Find each part’s outputs before taking their union.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+$w(0)=1$. The first part gives $(-\infty,1)$; the second reaches $0$ at $x=1$ and covers $[0,\infty)$. Their union is $\mathbb R$. The finite domain gives outputs $0,1,1$, so its range is $\lbrace0,1\rbrace$; do not repeat $1$.
+
+</details>
+
+</section>
+
+## Return later {#review}
+
+After studying another topic, attempt this without rereading the examples. Record the first attempt, help, error and later result; an immediate correction is not yet retention evidence.
+
+<section class="lesson-check" markdown="1">
+
+### Review task {#later-review}
+
+<!-- task:later-review -->
+Let $f(x)=(x-2)^2+1$ for $x\leq2$ and $g(x)=x+1$ for all real $x$. Define $h=fg$. Find the domain and range of $h$, find $h^{-1}$ and sketch both graphs with endpoints and one other corresponding pair of points.
+<!-- /task:later-review -->
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Start with the inputs permitted by the composite. How do points on the inverse correspond to the original graph?
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+$$h(x)=(x-1)^2+1,\qquad x\leq1,\qquad h(x)\geq1.$$
+
+$$h^{-1}(x)=1-\sqrt{x-1},\qquad x\geq1,\qquad h^{-1}(x)\leq1.$$
+
+The original is the left branch ending at $(1,1)$ and passing through $(0,2)$. The inverse ends at $(1,1)$ and passes through $(2,0)$. Draw decreasing curves reflected in $y=x$. Giving $x\leq2$ for $h$ ignores that the input to $f$ is $g(x)=x+1$; choosing the positive root puts inverse outputs outside the original domain. Review R2 or R1 if needed, close the solution, then recheck.
+
+</details>
+
+</section>
+
 ## Quick Reference
 
 | Task | Method | Check |
@@ -372,10 +594,21 @@ For the finite domain, the outputs are $0,2,1,4$, so the range is $\boxed{\lbrac
 | Check an inverse | Simplify $f(f^{-1}(x))$ and $f^{-1}(f(x))$ | Each equals $x$ on its own allowed domain |
 | Sketch an inverse | Reflect in $y=x$ | $(a,b)$ becomes $(b,a)$ |
 
-**After practice:** note whether the error was in the formula, the order, the domain, the range or the square-root sign. Review that worked example, then try the question again without the solution.
+**After practice:** note whether the error was in the formula, the order, the domain, the range or the square-root sign. Use [repair and retry](#repair-and-retry) for a new question on that error, then [return later](#later-review).
 
 **You should be able to:** state a domain and range, form both orders of a composite function, explain whether an inverse exists and find it with the correct restrictions.
 
 Return to the [Pure topic index](/alevel/a2-mathematics/) or use the [Functions formula reference](/alevel/a2-mathematics/quick-reference/#functions).
+
+<details markdown="1">
+<summary>Scope and sources</summary>
+
+[OxfordAQA 9660 specification v5.2, P2.1](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf).
+
+Official questions and paired marking material consulted (mirrors of the published papers): January 2025 Q6(a)–(b), QP p12 / MS p11. [January 2025 QP](https://aqamat.alevelclouds.com/25_01_QP_P2.pdf) · [MS](https://aqamat.alevelclouds.com/25_01_MS_P2.pdf).
+
+The classroom examples, practice, retries and review are self-written teaching material, with no official marks.
+
+</details>
 
 **Learning path:** [Topic index](/alevel/a2-mathematics/) · [Next: Modulus Functions and Transformations](/alevel/a2-mathematics/modulus-and-transformations/).

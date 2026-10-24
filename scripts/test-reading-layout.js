@@ -36,3 +36,35 @@ const tmua = read('_site/admissions/tmua-esat/index.html');
 assert(tmua.indexOf('<header class="subject-header">') < tmua.indexOf('<div id="main-container"'),
   'Keep the specialized TMUA controls in their existing shell');
 console.log('Reading sample passed: bilingual examples, stable anchors, closed practice solutions and scoped layout.');
+
+
+// The approved reading approach now reaches each MA03 lesson and the course entrance.
+const lessons = fs.readdirSync(path.join(root, 'alevel/a2-mathematics'))
+  .filter(name => name.endsWith('.md') && !['quick-reference.md', 'mechanics.md', 'statistics.md'].includes(name));
+for (const prefix of ['', 'zh/']) for (const filename of lessons) {
+  const slug = filename.slice(0, -3), label = prefix + slug;
+  const source = read(prefix + 'alevel/a2-mathematics/' + filename);
+  const html = read('_site/' + prefix + 'alevel/a2-mathematics/' + (slug === 'index' ? '' : slug + '/') + 'index.html');
+  const content = html.split('id="content-container"')[1].split('<div id="toc"')[0];
+  assert.match(source, /^reading_layout: true$/m, label + ': reading layout enabled');
+  for (const role of ['worked-example', 'lesson-check']) {
+    assert.equal((content.match(new RegExp('<section class="' + role + '"', 'g')) || []).length,
+      (source.match(new RegExp('<section class="' + role + '"', 'g')) || []).length,
+      label + ': source sections survive Markdown rendering');
+  }
+  assert.match(content, /<section class="lesson-check">/, label + ': a student task is available');
+  const stack = [];
+  for (const [tag, attributes] of content.matchAll(/<section\b([^>]*)>|<\/section>/g)) {
+    if (tag.startsWith('</')) {
+      assert(stack.length, label + ': unmatched section ending');
+      stack.pop();
+    } else {
+      const role = /class="(?:worked-example|lesson-check)"/.test(attributes);
+      assert(!(role && stack.some(Boolean)), label + ': learning roles must not nest');
+      stack.push(role);
+    }
+  }
+  assert.equal(stack.length, 0, label + ': close every section');
+  assert(!/<details\b[^>]*\bopen\b/.test(content), label + ': help defaults closed');
+}
+console.log('MA03 reading roles passed for ' + lessons.length * 2 + ' bilingual course pages.');

@@ -7,11 +7,13 @@ subject: a2-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-mathematics/functions/
 permalink: /zh/alevel/a2-mathematics/functions/
-toc_headings: h2, h3, h4
+toc_headings: h2, h3
+reading_layout: true
 study_page: true
 ---
 
 [纯数学](/zh/alevel/a2-mathematics/) · P2.1 代数与函数
+{: .lesson-meta}
 
 学习如何求定义域（domain）和值域（range）、构造复合函数（composite function）以及求反函数（inverse function）。每一步都要检查输入值是否符合条件。
 
@@ -20,8 +22,13 @@ study_page: true
 - **学习：**从[定义域和值域](#domain-and-range)开始，再学习例题。
 - **作业帮助：**查看[复合函数](#composite-functions)或[反函数](#inverse-functions)。
 - **复习：**先尝试[练习题](#practice)，再打开解答。可用[快速参考](#quick-reference)核对方法。
+{: .lesson-routes}
 
-**开始前：**你应当会代入数值、解简单方程、配方和描绘基本图像。
+<div class="lesson-notes" markdown="1">
+
+**开始前：**会代入并解线性方程；求二次函数范围时要会配方、检查转折点和区间端点（回补 [AS 代数 L02](/zh/alevel/as-mathematics/algebra/#l02)）。下面先确定允许的输入，再求输出；复合与反函数的条件沿用这一步。若已学过，可直接到[独立练习](#practice)，作答后按[错误恢复](#repair-and-retry)选新题；稍后的课从[回顾任务](#later-review)检查保留情况。
+
+</div>
 
 ## 定义域和值域 {#domain-and-range}
 
@@ -43,6 +50,8 @@ study_page: true
 
 如果题目要求最大的实数定义域，就取表达式有定义的所有实数输入值。如果题目给了较小的定义域，就按题目指定的定义域处理。
 
+<section class="worked-example" markdown="1">
+
 ### 例题 1 — 转折点（turning point）可能位于定义域内部 {#example-1--a-turning-point-can-lie-inside-the-domain}
 
 **Question:** The function $f$ is defined by $f(x)=(x-1)^2+2$ for $-1\leq x\leq3$. Find its range.
@@ -63,6 +72,8 @@ $$\boxed{2\leq f(x)\leq6}.$$
 
 **常见错误：**只看区间端点的函数值。两个端点处的值都是 $6$，但值域并不只是 $\lbrace6\rbrace$。
 
+</section>
+
 ### 一一函数与多对一函数 {#one-to-one-and-many-to-one}
 
 **一一函数（one-to-one function）**会把不同输入映射为不同输出。**多对一函数（many-to-one function）**可能把两个或更多不同输入映射为同一个输出。
@@ -70,6 +81,8 @@ $$\boxed{2\leq f(x)\leq6}.$$
 在例题 1 中，$f(-1)=f(3)=6$，所以 $f$ 是多对一函数。如果把定义域限制为 $1\leq x\leq3$，输出就会随着 $x$ 增大而增大，因此函数是一一函数。
 
 在图像上，水平线检验（horizontal line test）可以这样理解：水平线与一一函数的图像至多相交一次。这有助于判断反函数是否存在。
+
+<section class="worked-example" markdown="1">
 
 ### 例题 2 — 分段函数与有限定义域 {#example-2--a-piecewise-function-and-a-finite-domain}
 
@@ -89,6 +102,8 @@ Find $p(-2)$, $p(0)$ and $p(2)$, and state the range. Then find the range when t
 
 **草图检查：**对于整个实数定义域，画出 $y=x^2$，只保留 $x\leq0$ 的部分，并在 $(0,0)$ 处画实心点；再画 $y=2x+1$，只保留 $x>0$ 的部分，并在 $(0,1)$ 处画空心点。$x=0$ 仍然只有一个输出值。
 
+</section>
+
 ## 复合函数 {#composite-functions}
 
 **复合函数（composite function）**是一个函数作用在另一个函数的输出上。记号 $fg(x)$ 表示 $f(g(x))$：先应用 $g$，再应用 $f$。
@@ -96,6 +111,8 @@ Find $p(-2)$, $p(0)$ and $p(2)$, and state the range. Then find the range when t
 $$x\xrightarrow{g}g(x)\xrightarrow{f}f(g(x)).$$
 
 **要检查两点：**输入 $x$ 必须属于 $g$ 的定义域；$g(x)$ 的输出也必须属于 $f$ 的定义域。
+
+<section class="worked-example" markdown="1">
 
 ### 例题 3 — 顺序会改变表达式与定义域 {#example-2--order-changes-the-formula-and-the-domain}
 
@@ -123,11 +140,24 @@ $$2x-3\geq0\quad\Rightarrow\quad x\geq\frac32.$$
 
 **常见错误：**把 $fg(x)$ 当成乘积 $f(x)g(x)$。这里的乘积会是 $(2x-3)\sqrt{x}$，这是另一个表达式。
 
-### 找出错误 — 哪种顺序需要加限制？ {#spot-the-error--which-order-needs-the-restriction}
+</section>
 
-设 $f(x)=\sqrt{x}$，其中 $x\geq0$；$g(x)=x-2$，其中 $x\in\mathbb R$。一位学生写道：
+<section class="lesson-check" markdown="1">
+
+### 检查推理 {#spot-the-error--which-order-needs-the-restriction}
+
+Let $f(x)=\sqrt{x}$ for $x\geq0$ and $g(x)=x-2$ for $x\in\mathbb R$. A student writes:
 
 $$gf(x)=\sqrt{x}-2,\qquad x\geq2.$$
+
+Is the statement correct? Explain and give the correct domain.
+
+<details markdown="1">
+<summary>提示</summary>
+
+沿 $x\to f(x)\to g(f(x))$ 检查每一步的输入；不要额外限制最终输出。
+
+</details>
 
 <details markdown="1">
 <summary>显示修正</summary>
@@ -137,6 +167,8 @@ $$gf(x)=\sqrt{x}-2,\qquad x\geq2.$$
 另一种顺序是 $fg(x)=\sqrt{x-2}$，它确实要求 $x\geq2$。
 
 </details>
+
+</section>
 
 ## 反函数 {#inverse-functions}
 
@@ -160,6 +192,8 @@ $$gf(x)=\sqrt{x}-2,\qquad x\geq2.$$
 |---|---|
 | $f$ 的定义域 | $f^{-1}$ 的值域 |
 | $f$ 的值域 | $f^{-1}$ 的定义域 |
+
+<section class="worked-example" markdown="1">
 
 ### 例题 4 — 先限制定义域，再选择平方根 {#example-3--restrict-the-domain-before-choosing-a-square-root}
 
@@ -187,6 +221,8 @@ $$f^{-1}(f(x))=1+\sqrt{(x-1)^2}=1+\lvert x-1\rvert=x,\qquad x\geq1.$$
 
 **常见错误：**把两个平方根都作为反函数。反函数本身也是函数，所以每个允许的输入只能有一个输出。
 
+</section>
+
 ### 图像会发生什么变化？ {#what-happens-to-the-graph}
 
 把 $y=f(x)$ 的图像沿直线 $y=x$ 反射，就得到 $y=f^{-1}(x)$ 的图像。点 $(a,b)$ 会变成 $(b,a)$。
@@ -196,6 +232,8 @@ $$f^{-1}(f(x))=1+\sqrt{(x-1)^2}=1+\lvert x-1\rvert=x,\qquad x\geq1.$$
 ![非负 x 上 y 等于 x 平方的图像及其反函数 y 等于 x 平方根关于 y 等于 x 对称。点 (2,4) 与 (4,2) 互换。](/assets/img/functions-inverse.svg)
 
 图中使用了更简单的一组函数：$f(x)=x^2$（$x\geq0$）和 $f^{-1}(x)=\sqrt{x}$。例题 4 也遵循同样的反射规律。
+
+<section class="worked-example" markdown="1">
 
 ### 例题 5 — 排除的输入会成为排除的输出 {#example-4--an-excluded-input-becomes-an-excluded-output}
 
@@ -215,13 +253,17 @@ $$\boxed{h^{-1}(x)=2+\frac{1}{x-3}}.$$
 
 $$h(h^{-1}(x))=3+\frac{1}{\frac{1}{x-3}}=x,\qquad x\ne3.$$
 
+</section>
+
 ## 练习 {#practice}
 
 **独立练习 · 20–25 分钟**
 
 请先在纸上完成每道题，再打开提示或解答。题目要求定义域和值域时都要写明，并解释任何限制。以下均为自拟练习题，没有官方分值。练习用时仅供参考。
 
-### Q1 — 平方根函数的定义域和值域 {#q1--domain-and-range-of-a-square-root}
+<section class="lesson-check" markdown="1">
+
+### 题目 1 {#q1--domain-and-range-of-a-square-root}
 
 Find the largest possible real domain and the range of $f(x)=\sqrt{5-x}$.
 
@@ -241,7 +283,11 @@ $5-x\geq0$，所以**定义域**为 $x\leq5$。输出非负且没有上界，因
 
 </details>
 
-### Q2 — 值域与反函数是否存在 {#q2--a-restricted-domain-does-not-always-give-an-inverse}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 题目 2 {#q2--a-restricted-domain-does-not-always-give-an-inverse}
 
 Let $f(x)=x^2$ for $-2\leq x\leq1$. Find its range. Does it have an inverse function on this domain? Explain your answer.
 
@@ -261,7 +307,11 @@ Let $f(x)=x^2$ for $-2\leq x\leq1$. Find its range. Does it have an inverse func
 
 </details>
 
-### Q3 — 构造复合函数时保留给定定义域 {#q3--keep-the-stated-domains-when-forming-composites}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 题目 3 {#q3--keep-the-stated-domains-when-forming-composites}
 
 Let $f(x)=3x+1$ for $x\in\mathbb R$ and $g(x)=x^2$ for $x\geq0$. Find $fg(x)$ and $gf(x)$, with their domains and ranges.
 
@@ -285,7 +335,11 @@ $$gf(x)=(3x+1)^2,\qquad x\geq-\frac13,\qquad gf(x)\geq0.$$
 
 </details>
 
-### Q4 — 求有理函数的反函数 {#q4--find-the-inverse-of-a-rational-function}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 题目 4 {#q4--find-the-inverse-of-a-rational-function}
 
 Let $f(x)=\frac{2x+1}{x-3}$ for $x\ne3$. Find $f^{-1}$, and state its domain and range.
 
@@ -313,7 +367,11 @@ $$f(f^{-1}(x))=\frac{\frac{2(3x+1)}{x-2}+1}{\frac{3x+1}{x-2}-3}=\frac{\frac{7x}{
 
 </details>
 
-### Q5 — 求反函数并检查 {#q5--choose-the-negative-square-root}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 题目 5 {#q5--choose-the-negative-square-root}
 
 Let $f(x)=(x+2)^2-1$ for $x\leq-2$. Find $f^{-1}$, including its domain and range. Check $f^{-1}(f(x))$ on the original domain.
 
@@ -343,7 +401,11 @@ $$f^{-1}(f(x))=-2-\sqrt{(x+2)^2}=-2-\lvert x+2\rvert.$$
 
 </details>
 
-### Q6 — 选择函数的正确分段 {#q6--select-the-correct-part-of-a-function}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 题目 6 {#q6--select-the-correct-part-of-a-function}
 
 Let $h(x)=x+2$ for $x<1$ and $h(x)=x^2$ for $x\geq1$. Find $h(-2)$ and $h(1)$, and state the range for all real inputs. Then state the range for the domain $\lbrace-2,0,1,2\rbrace$.
 
@@ -363,6 +425,166 @@ $h(-2)=0$ 且 $h(1)=1$。第一段的输出都小于 $3$；第二段的输出都
 
 </details>
 
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 题目 7 {#check-inverse-graph}
+
+<!-- task:check-inverse-graph -->
+Let $u(x)=(x+1)^2-2$ for $x\leq-1$. Sketch $y=u(x)$ and $y=u^{-1}(x)$ on the same axes. Label the endpoint of each curve, the point on $u$ with input $-3$ and its corresponding point on $u^{-1}$. Explain how the domains appear in your sketches.
+<!-- /task:check-inverse-graph -->
+
+<details markdown="1">
+<summary>提示</summary>
+
+先检查原函数在限制后的定义域上是否一一；交换点的坐标，并把端点也映过去。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+原图像是抛物线的左支，端点 $(-1,-2)$ 为实心点。$u(-3)=2$，所以点为 $(-3,2)$。反函数图像是关于 $y=x$ 的反射：端点 $(-2,-1)$，另一个点 $(2,-3)$。
+
+$$u^{-1}(x)=-1-\sqrt{x+2},\qquad x\geq-2,\qquad u^{-1}(x)\leq-1.$$
+
+原图像只允许 $x\leq-1$，反函数只允许 $x\geq-2$。必须画出相应曲线和这些实心端点，只写“反射”不能展示定义域如何限制图像。若画了抛物线右支，回看[限制定义域的示范](#example-3--restrict-the-domain-before-choosing-a-square-root)。
+
+</details>
+
+</section>
+
+## 纠错后再试 {#repair-and-retry}
+
+收起原解答。根据实际错误回看一段，再做对应的新题；若打开提示，记录为借助帮助完成。
+
+| 错误 | 恢复动作 | 新尝试 |
+| --- | --- | --- |
+| 只算端点，或反函数选错分支 | 回看[范围例题](#example-1--a-turning-point-can-lie-inside-the-domain)，在原域上找转折点、重复输出 | [R1](#retry-range) |
+| 最终公式掩盖复合限制 | 回看[复合顺序](#composite-functions)，列两次输入检查 | [R2](#retry-composite) |
+| 分段边界或有限值域出错 | 回看[分段示范](#example-2--a-piecewise-function-and-a-finite-domain)，逐个列允许输入 | [R3](#retry-piecewise) |
+
+<section class="lesson-check" markdown="1">
+
+### R1 {#retry-range}
+
+<span id="retry-inverse"></span>
+
+<!-- task:retry-range -->
+Let $v(x)=(x+1)^2-2$ for $-3\leq x\leq0$. Find its range and decide whether it has an inverse. Now restrict its domain to $-3\leq x\leq-1$. Find the inverse, including its domain and range.
+<!-- /task:retry-range -->
+
+<details markdown="1">
+<summary>提示</summary>
+
+找最低点及端点，再把反函数的输出限制为新的原定义域。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+$$-2\leq v(x)\leq2,\qquad v(-2)=v(0)=-1.$$
+
+原定义域上多对一，没有反函数。限制后函数严格递减，范围仍是 $[-2,2]$，因此
+
+$$v^{-1}(x)=-1-\sqrt{x+2},\qquad -2\leq x\leq2,\qquad -3\leq v^{-1}(x)\leq-1.$$
+
+检查两个端点互换：$v(-3)=2$、$v(-1)=-2$。负平方根使反函数输出落在 $[-3,-1]$。
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### R2 {#retry-composite}
+
+<!-- task:retry-composite -->
+Let $f(x)=\sqrt{x}$ for $x\geq0$ and $g(x)=x^2$ for $x\geq2$. Find $fg$ and $gf$, including domains and ranges. Are they the same function?
+<!-- /task:retry-composite -->
+
+<details markdown="1">
+<summary>提示</summary>
+
+即使两个表达式化简相同，也先检查内层定义域和外层允许输入。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+$$fg(x)=\sqrt{x^2}=x,\qquad x\geq2,\qquad fg(x)\geq2.$$
+
+$$gf(x)=(\sqrt{x})^2=x,\qquad x\geq4,\qquad gf(x)\geq4.$$
+
+对 $gf$，必须有 $\sqrt{x}\geq2$，所以 $x\geq4$；对 $fg$，$g$ 原本只接受 $x\geq2$。公式相同而定义域不同，因而不是同一个函数。
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### R3 {#retry-piecewise}
+
+<!-- task:retry-piecewise -->
+For real $x$, let
+
+$$w(x)=\begin{cases}x+1,&x<0,\\(x-1)^2,&x\geq0.\end{cases}$$
+
+Find $w(0)$ and the range. Then find the range on the finite domain $\lbrace-1,0,2\rbrace$.
+<!-- /task:retry-piecewise -->
+
+<details markdown="1">
+<summary>提示</summary>
+
+$0$ 属于哪一段？先求各段能达到的输出，再求并集。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+$w(0)=1$. 第一段的输出为 $(-\infty,1)$；第二段达到 $0$（在 $x=1$），并取遍 $[0,\infty)$。并集是 $\mathbb R$。有限域三个输出为 $0,1,1$，因此值域为 $\lbrace0,1\rbrace$，不重复列 $1$。
+
+</details>
+
+</section>
+
+## 稍后回顾 {#review}
+
+在学习下一主题后，不看本页例题完成。记录首次作答、帮助、错误与复查结果；能即时订正不等于已经保留。
+
+<section class="lesson-check" markdown="1">
+
+### 回顾任务 {#later-review}
+
+<!-- task:later-review -->
+Let $f(x)=(x-2)^2+1$ for $x\leq2$ and $g(x)=x+1$ for all real $x$. Define $h=fg$. Find the domain and range of $h$, find $h^{-1}$ and sketch both graphs with endpoints and one other corresponding pair of points.
+<!-- /task:later-review -->
+
+<details markdown="1">
+<summary>提示</summary>
+
+由复合的输入条件开始。反函数图像与原图像上的点如何对应？
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+$$h(x)=(x-1)^2+1,\qquad x\leq1,\qquad h(x)\geq1.$$
+
+$$h^{-1}(x)=1-\sqrt{x-1},\qquad x\geq1,\qquad h^{-1}(x)\leq1.$$
+
+原图像的左支端点为 $(1,1)$，另有 $(0,2)$；反函数端点仍为 $(1,1)$，对应点为 $(2,0)$。画两条递减曲线，关于 $y=x$ 对称。若写 $x\leq2$ 为 $h$ 的域，忽略了送进 $f$ 的是 $g(x)=x+1$；若选正根，反函数会离开原域。回看 R2 或 R1 后收起解答重新检查。
+
+</details>
+
+</section>
+
 ## 快速参考 {#quick-reference}
 
 | 任务 | 方法 | 检查 |
@@ -379,5 +601,16 @@ $h(-2)=0$ 且 $h(1)=1$。第一段的输出都小于 $3$；第二段的输出都
 **你应当能够：**写出定义域和值域，构造两个顺序的复合函数，说明反函数是否存在，并在限制条件正确的情况下求出反函数。
 
 返回[纯数学主题目录](/zh/alevel/a2-mathematics/)或查看[函数公式参考](/zh/alevel/a2-mathematics/quick-reference/#functions)。
+
+<details markdown="1">
+<summary>范围与来源</summary>
+
+[OxfordAQA 9660 大纲 v5.2，P2.1](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf)。
+
+参考的官方题与配套评分材料（官方出版物镜像）：January 2025 Q6(a)–(b), QP p12 / MS p11. [January 2025 QP](https://aqamat.alevelclouds.com/25_01_QP_P2.pdf) · [MS](https://aqamat.alevelclouds.com/25_01_MS_P2.pdf).
+
+本页课堂例题、练习、重试与回顾为自拟教学材料，没有官方分值。
+
+</details>
 
 **学习路径：**[主题目录](/zh/alevel/a2-mathematics/) · [下一节：绝对值函数与变换](/zh/alevel/a2-mathematics/modulus-and-transformations/)。

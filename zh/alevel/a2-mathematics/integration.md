@@ -7,7 +7,7 @@ subject: a2-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-mathematics/integration/
 permalink: /zh/alevel/a2-mathematics/integration/
-toc_headings: h2, h3, h4
+toc_headings: h2, h3
 study_page: true
 reading_layout: true
 ---
@@ -27,7 +27,9 @@ reading_layout: true
 
 教材：第 6 章，第 6.1–6.4 节（第 82–95 页）。不定积分（indefinite integral）的积分常数（constant of integration）记作 $C$。
 
-**开始前：**你应当掌握基本求导、链式法则（chain rule）、表达式变形和标准积分。
+**开始前：**按需要回补[幂函数积分与有向面积](/zh/alevel/as-mathematics/integration/#l08)、[链式法则](/zh/alevel/a2-mathematics/differentiation/#composite-functions)、[乘积求导](/zh/alevel/a2-mathematics/differentiation/#products-and-quotients)或[部分分式列式](/zh/alevel/a2-mathematics/partial-fractions/#method)。下方[标准形式](#standard-integrals)会在本页讲解。
+
+例 3–4 及 Q3 第二个积分为课程大纲示例；稍后 A 为真题改编，其余例题与任务为自拟；解答均由本站编写。
 
 </div>
 
@@ -152,7 +154,7 @@ $$\int6x(x^2+1)^2\,dx=\boxed{(x^2+1)^3+C}.$$
 
 **Question:** Find $\displaystyle\int x(x+2)^6\,dx$.
 
-**来源：**[OxfordAQA Mathematics (9660) 课程大纲，P2.7，印刷第 23 页](https://www.oxfordaqa.com/wp-content/uploads/2023/10/oxfordaqa-a-level-mathematics-specification.pdf)的示例；解答由本站编写。
+**来源：**[OxfordAQA Mathematics (9660) 课程大纲，P2.7，印刷第 23 页](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf)的示例；解答由本站编写。
 
 **选择：**$x+2$ 的导数是 $1$，因此因子 $x$ 不符合标准形式。令 $u=x+2$，把积分改写成 $u$ 的多项式。
 
@@ -183,6 +185,8 @@ $$\int v\frac{du}{dx}\,dx=uv-\int u\frac{dv}{dx}\,dx.$$
 #### 例题 4 — 适合分部积分的乘积 {#example-4--a-product-that-becomes-simpler}
 
 **Question:** Find $\displaystyle\int xe^{2x}\,dx$.
+
+**来源：**9660 大纲 v5.2、P2.7、印刷第 23 页的示例，解答由本站编写。
 
 **选择：**使用分部积分法：对 $x$ 求导得到 $1$，而 $e^{2x}$ 容易积分。
 
@@ -252,13 +256,17 @@ $$\int_0^1 2x(x^2+1)^3\,dx=\int_1^2 u^3\,du=\left[\frac{u^4}{4}\right]_1^2=\boxe
 
 ## 练习 {#practice}
 
-**独立练习 · 20–25 分钟**
+**独立练习**
 
 开始计算前，先写出方法和理由。用求导检查不定积分。每道题都先自己尝试，再打开提示或解答。
 
-以下题目为自拟练习题，并非官方真题。时间仅供练习参考。这些题目没有官方分值。
+以下教学题没有官方分值。Q3 包含这里注明的一个课程大纲示例，其余练习为自拟。
 
-### Q1 — 先化简 {#q1--simplify-first}
+*第二个积分为 9660 大纲 v5.2、P2.7、印刷第 23 页的示例，解答由本站编写。*
+
+<section class="lesson-check" markdown="1">
+
+### Q1 — 求原函数 {#q1--simplify-first}
 
 Find $\displaystyle\int\frac{x^2+4}{\sqrt{x}}\,dx$ for $x>0$.
 
@@ -280,7 +288,11 @@ $$\boxed{\frac25x^{\frac52}+8\sqrt{x}+C}.$$
 
 </details>
 
-### Q2 — 逆用链式法则 {#q2--recognise-an-inner-derivative}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Q2 — 求解并检查 {#q2--recognise-an-inner-derivative}
 
 Find $\displaystyle\int x\cos(x^2)\,dx$.
 
@@ -302,7 +314,11 @@ $$\boxed{\frac12\sin(x^2)+C}.$$
 
 </details>
 
-### Q3 — 选择处理乘积的方法 {#q3--choose-how-to-handle-a-product}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Q3 — 两个积分 {#q3--choose-how-to-handle-a-product}
 
 Find $\displaystyle\int x\cos(2x)\,dx$.
 
@@ -344,7 +360,11 @@ $$\begin{aligned}
 
 </details>
 
-### Q4 — 对数形式还是部分分式？ {#q4--a-logarithm-or-partial-fractions}
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Q4 — 有理式积分 {#q4--a-logarithm-or-partial-fractions}
 
 Find $\displaystyle\int\frac{5}{(x+1)(x+2)}\,dx$.
 
@@ -366,27 +386,213 @@ $$\boxed{5\ln\lvert x+1\rvert-5\ln\lvert x+2\rvert+C}.$$
 
 </details>
 
-### Q5 — 保持变量与积分限一致 {#q5--keep-the-variable-and-limits-consistent}
+</section>
 
-Evaluate $\displaystyle\int_0^1\frac{2x}{x^2+1}\,dx$.
+<section class="lesson-check" markdown="1">
+
+### Q5 — 精确值 {#q5--keep-the-variable-and-limits-consistent}
+
+Using $u=x^2+1$, rewrite $\displaystyle\int_0^1\frac{x^3}{x^2+1}\,dx$ entirely in the new variable, giving the differential and both new limits. Then evaluate it exactly.
 
 <details markdown="1">
 <summary>提示</summary>
 
-令 $u=x^2+1$，相应的积分限为 $u=1$ 和 $u=2$；也可以直接使用对数形式。
+先对换元关系求导。把分子拆成微分所需因子与剩余因子，再把剩余因子也改写成新变量。
 
 </details>
 
 <details markdown="1">
 <summary>解答与检查</summary>
 
-被积函数在 $[0,1]$ 上连续。换元得到
+被积函数在 $[0,1]$ 上连续。由 $du=2x\,dx$ 得 $x\,dx=\frac12\,du$，剩余因子为 $x^2=u-1$。当 $x=0$ 时 $u=1$；当 $x=1$ 时 $u=2$。所以
 
-$$\int_1^2\frac1u\,du=[\ln u]_1^2=\boxed{\ln2}.$$
+$$\begin{aligned}
+\int_0^1\frac{x^3}{x^2+1}\,dx
+&=\frac12\int_1^2\frac{u-1}{u}\,du\\
+&=\frac12[u-\ln u]_1^2\\
+&=\boxed{\frac{1-\ln2}{2}}.
+\end{aligned}$$
 
-也可以直接算 $[\ln(x^2+1)]_0^1=\ln2$。被积函数非负，因此答案为正，符合预期。
+分子中剩余的因子也必须换元，不能在新积分中混用变量。另用 $\frac{x^3}{x^2+1}=x-\frac{x}{x^2+1}$ 直接积分，可检查得到相同数值。结果为正，与被积函数一致。
 
 </details>
+
+</section>
+
+## 诊断与重试 {#diagnose-and-retry}
+
+从第一处错误选择回补，不只比较最终答案。读懂修复后收起原解答，再完成相应的新题。
+
+| 哪里出了问题？ | 回补哪个判断？ | 怎样重新独立检查？ |
+| --- | --- | --- |
+| 求导后多出内层函数的因子 | [逆用链式法则](#reverse-chain-rule)：比较真正的内层导数，不能只看外层幂 | 重试 A |
+| 把乘积的积分写成两个原函数相乘 | [分部积分](#integration-by-parts)：逆用乘积法则，保留余下的积分 | 稍后 A |
+| 漏换剩余因子，或保留了原上下限 | [换元](#substitution)与[定积分](#definite-integrals)：全部因子及两个端点都要改写 | 重试 C |
+| 把所有分式都当对数，或跨过无定义点 | [对数形式](#logarithmic-form)与[部分分式](/zh/alevel/a2-mathematics/partial-fractions/#method)；[代入上下限](#definite-integrals)之前先检查整个区间 | 重试 B |
+{: .wide-table}
+
+<section class="lesson-check" markdown="1">
+
+### 重试 A {#retry-a}
+
+**Question:** Find $\displaystyle\int 2x\cos(3x^2)\,dx$. Justify your coefficient by differentiation.
+
+<details markdown="1">
+<summary>提示</summary>
+
+$3x^2$ 的导数是 $6x$。和题目实际给出的因子比较。
+
+</details>
+
+<details markdown="1">
+<summary>解答与反馈</summary>
+
+令 $u=3x^2$，则 $du=6x\,dx$，所以 $2x\,dx=\frac13\,du$。
+
+$$\int2x\cos(3x^2)\,dx=\frac13\int\cos u\,du=\boxed{\frac13\sin(3x^2)+C}.$$
+
+求导得到 $\frac13\cos(3x^2)\cdot6x=2x\cos(3x^2)$。若系数写成 $1$，求导后就是原被积函数的三倍。
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 重试 B {#retry-b}
+
+**Question:** Evaluate $\displaystyle\int_0^1\frac{3x+4}{(x+1)(x+2)}\,dx$ exactly. Would substituting $-3$ and $0$ into the same antiderivative correctly evaluate the integral over $[-3,0]$? Explain.
+
+<details markdown="1">
+<summary>提示</summary>
+
+将 $3x+4$ 与展开后的分母导数比较。必要时求部分分式的两个系数；两个区间分别检查。
+
+</details>
+
+<details markdown="1">
+<summary>解答与反馈</summary>
+
+分子不是 $2x+3$ 的常数倍。分解为
+
+$$\frac{3x+4}{(x+1)(x+2)}=\frac1{x+1}+\frac2{x+2}.$$
+
+被积函数在 $[0,1]$ 上连续，所以
+
+$$\begin{aligned}
+\int_0^1\frac{3x+4}{(x+1)(x+2)}\,dx
+&=[\ln(x+1)+2\ln(x+2)]_0^1\\
+&=\ln2+2\ln3-2\ln2\\
+&=\boxed{\ln(9/2)}.
+\end{aligned}$$
+
+但 $[-3,0]$ 包含无定义点 $x=-2$ 和 $x=-1$，不能跨过它们直接使用连续区间上的定积分法则。端点原函数值相减不能作为合法求值；分别在各区间存在原函数，也不会消除原来的极点。
+
+若分解系数错误，积分前先通分检查。若只错在第二问，应回补区间条件，而不是重复已经掌握的代数。
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 重试 C {#retry-c}
+
+**Question:** Using $u=x^2+1$, rewrite $\displaystyle\int_0^{\sqrt3}\frac{2x^3}{(x^2+1)^2}\,dx$ entirely in terms of $u$, including the differential and both new limits. Then evaluate it exactly.
+
+<details markdown="1">
+<summary>提示</summary>
+
+得到微分后，找出分子中还剩下哪个因子；另把两个原端点分别换成新变量。
+
+</details>
+
+<details markdown="1">
+<summary>解答与反馈</summary>
+
+$$du=2x\,dx,\qquad x^2=u-1,\qquad x=0\Rightarrow u=1,\qquad x=\sqrt3\Rightarrow u=4.$$
+
+所以
+
+$$\begin{aligned}
+\int_0^{\sqrt3}\frac{2x^3}{(x^2+1)^2}\,dx
+&=\int_1^4\frac{u-1}{u^2}\,du\\
+&=\int_1^4(u^{-1}-u^{-2})\,du\\
+&=\left[\ln u+\frac1u\right]_1^4\\
+&=\boxed{\ln4-\frac34}.
+\end{aligned}$$
+
+现在微分、每个因子与两个上下限全部使用同一变量。若漏换分子中的剩余因子，回看[例 3](#example-3--rewrite-everything-in-the-new-variable)；若保留原上下限，回看[例 6](#example-6--change-the-limits-with-the-variable)。收起例题后，再独立重建本题换元。
+
+</details>
+
+</section>
+
+## 稍后再做 {#later-review}
+
+学过积分应用或微分方程后，收起解答回来完成。计算前先说明选法；以下教学题没有官方分值。再通过课程[综合回顾](/zh/alevel/a2-mathematics/#mixed-review)练习跨章节选法。
+
+<section class="lesson-check" markdown="1">
+
+### 稍后 A {#later-a}
+
+*改编自 January 2025 MA03 Q8：已改变对数的真数；本改编题不使用官方分值。*
+
+**Question:** Find the exact value of $\displaystyle\int_0^1\ln(3x+1)\,dx$.
+
+<details markdown="1">
+<summary>提示</summary>
+
+可以先以对数的真数换元，也可以直接分部积分。写明怎样处理余下的积分和上下限。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+对数在整个 $[0,1]$ 上有定义。令 $u=3x+1$，则 $dx=du/3$，新上下限是 $1,4$：
+
+$$\begin{aligned}
+\int_0^1\ln(3x+1)\,dx
+&=\frac13\int_1^4\ln u\,du\\
+&=\frac13\left([u\ln u]_1^4-\int_1^4 1\,du\right)\\
+&=\frac13[u\ln u-u]_1^4\\
+&=\boxed{\frac{4\ln4-3}{3}}.
+\end{aligned}$$
+
+分部积分时，对 $\ln u$ 求导，对 $1$ 积分。下限代入 $u\ln u-u$ 得到 $-1$，不是 $0$。对 $(3x+1)\ln(3x+1)/3-(3x+1)/3$ 求导可还原被积函数。直接分部、始终使用原上下限的正确解法同样成立。
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 稍后 B {#later-b}
+
+**Question:** Find $\displaystyle\int\frac{x^2}{\sqrt{x^3+1}}\,dx$ on $x>-1$. Explain why the power-rule exception for exponent $-1$ does not apply here.
+
+<details markdown="1">
+<summary>提示</summary>
+
+把分母改写成幂。能否用一个新变量同时处理 $x^2\,dx$？
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+令 $u=x^3+1>0$，所以 $du=3x^2\,dx$：
+
+$$\int\frac{x^2}{\sqrt{x^3+1}}\,dx
+=\frac13\int u^{-1/2}\,du
+=\boxed{\frac23\sqrt{x^3+1}+C}.$$
+
+新变量的幂是 $-\frac12$，不是 $-1$，所以可以用幂函数积分法则。求导得到 $\frac23\cdot\frac12(x^3+1)^{-1/2}\cdot3x^2$，正好还原被积函数。换元映射单调；$x=0$ 处导数为零并不使这个原函数失效，直接求导也已验证这一点。
+
+</details>
+
+</section>
 
 ## 快速参考 {#quick-reference}
 
@@ -402,10 +608,20 @@ $$\int_1^2\frac1u\,du=[\ln u]_1^2=\boxed{\ln2}.$$
 
 **如果求导结果不对：**检查链式法则带来的系数、符号，以及换元或多项式除法中是否漏项。
 
-**练习后：**记下觉得困难的步骤。不看解答再做一次，然后再尝试一道类似题。
+**练习后：**根据[诊断与重试](#diagnose-and-retry)修复具体错误；学完其他主题后再回到[稍后任务](#later-review)。
 
 **你应当能够：**选择一种方法并说明理由，写出过程，使用正确的积分限并检查答案。
 
 继续学习[三角积分与应用](/zh/alevel/a2-mathematics/integration-applications/)，了解恒等式、面积和旋转体体积。打开[部分分式](/zh/alevel/a2-mathematics/partial-fractions/)学习分式分解的完整课程，或使用[积分公式参考](/zh/alevel/a2-mathematics/quick-reference/#p27-integration)查阅标准结果、面积和体积公式。
+
+
+<details markdown="1">
+<summary>来源与范围</summary>
+
+本页覆盖 [9660 大纲 v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf)印刷第 23 页 P2.7 的方法选择；三角恒等式、面积与旋转体体积在下一课继续。
+
+制作时参考了 January 2025 MA03 [试卷](https://aqamat.alevelclouds.com/25_01_QP_P2.pdf) Q8 与[评分标准](https://aqamat.alevelclouds.com/25_01_MS_P2.pdf)第 13 页的分部积分、代数和上下限步骤。这是第三方镜像承载的官方命题材料。稍后 A 改变了对数的真数，已标为改编教学题，不将原 Q8 的分值用于本改编题。
+
+</details>
 
 **学习路径：**[上一节：参数方程](/zh/alevel/a2-mathematics/parametric-equations/) · [下一节：积分：三角积分与应用](/zh/alevel/a2-mathematics/integration-applications/)。

@@ -5,27 +5,57 @@ mathjax: true
 grade: a2
 subject: a2-mathematics
 permalink: /alevel/a2-mathematics/vectors/
-toc_headings: h2, h3, h4
+toc_headings: h2, h3
+reading_layout: true
 study_page: true
 ---
 
 [Pure Mathematics](/alevel/a2-mathematics/) · P2.10 Vectors
 
-Use vectors to describe points and lines in three dimensions. Check intersections, find angles and calculate perpendicular distances.
+Use vectors to describe points and lines in two and three dimensions. Connect arrows, coordinates and geometric constraints before finding intersections, angles and perpendicular distances.
 
 - **Learning:** start with [vectors and position vectors](#vectors-and-position-vectors), then study [straight lines](#straight-lines), [pairs of lines](#pairs-of-lines) and the [scalar product](#scalar-product).
 - **Homework help:** choose the required vector carefully. A position vector, a direction vector and a vector joining two points have different roles.
 - **Revision:** try [practice](#practice) before opening the hints and solutions.
 
 Textbook: Chapter 9, Sections 9.1–9.9 (printed pp. 124–147). This lesson covers the chapter's point and line methods. Plane equations are outside this chapter.
+{: .lesson-meta}
 
-**Before you start:** you should know coordinate geometry, simultaneous equations, Pythagoras' theorem and cosine. For answers in degrees, use degree mode when finding an inverse cosine.
+<div class="lesson-notes" markdown="1">
+
+**Starting point:** subtract coordinates to find a change, use Pythagoras for length, solve two linear equations and use cosine for an angle; recover [AS coordinate geometry](/alevel/as-mathematics/coordinate-geometry/#l04) and [algebra](/alevel/as-mathematics/algebra/#l02) if needed. Start with plane arrows, then add a third component. Use degree mode for inverse cosine answers in degrees. Your goal is to choose vectors, satisfy every required component and justify the geometric constraint. Revising? Try [practice](#practice), [repair](#repair), then [later review](#review-later).
+
+</div>
 
 All worked examples and practice questions are self-written, not official past-paper questions. The suggested practice time is a guide; no official marks are assigned.
 
-## Vectors and Position Vectors
+## Vectors and Position Vectors {#vectors-and-position-vectors}
 
 A **vector** has magnitude and direction. A **scalar** has magnitude only. The **position vector** of $A$ is $\overrightarrow{OA}$, where $O$ is the origin.
+
+### Start with arrows in a plane {#plane-vectors}
+
+A two-dimensional vector has only $x,y$ components. In the same plane coordinate system,
+
+$$\begin{pmatrix}a_1\\a_2\end{pmatrix}+\begin{pmatrix}b_1\\b_2\end{pmatrix}=\begin{pmatrix}a_1+b_1\\a_2+b_2\end{pmatrix},\qquad \lvert\mathbf a\rvert=\sqrt{a_1^2+a_2^2}.$$
+
+Respect brackets before scalar multiplication: $2(\mathbf a-\mathbf b)=2\mathbf a-2\mathbf b$. Add vectors of the same dimension in the same coordinate system. To embed a plane diagram in the three-dimensional $xy$-plane, explicitly add $z=0$; do not silently discard a third component. Multiplication by zero gives a vector with no direction. Non-zero parallel vectors are non-zero scalar multiples.
+
+<section class="worked-example" markdown="1">
+
+#### A plane-arrow demonstration {#plane-worked}
+
+**Question:** For $A=(1,1)$ and $B=(4,5)$, draw $\overrightarrow{OA}$, $\overrightarrow{AB}$ and $\overrightarrow{OB}$; find $AB$.
+
+Mark all three points on paper and follow the arrows head to tail, $O\to A\to B$. From $A$ to $B$ the horizontal change is $3$ and vertical change is $4$, so
+
+$$\overrightarrow{AB}=\begin{pmatrix}3\\4\end{pmatrix},\qquad \overrightarrow{OA}+\overrightarrow{AB}=\begin{pmatrix}1\\1\end{pmatrix}+\begin{pmatrix}3\\4\end{pmatrix}=\begin{pmatrix}4\\5\end{pmatrix}=\overrightarrow{OB}.$$
+
+Pythagoras gives $AB=5$. Translating the arrow $\overrightarrow{AB}$ to the origin does not change the vector; it does not become the position vector $\overrightarrow{OB}$. Reversing the $AB$ arrow in your diagram gives $(-3,-4)$.
+
+</section>
+
+### Add a third component {#three-dimensional-vectors}
 
 The Cartesian unit vectors $\mathbf i$, $\mathbf j$ and $\mathbf k$ point along the positive $x$-, $y$- and $z$-axes. For example,
 
@@ -43,7 +73,11 @@ $$\overrightarrow{AB}=\mathbf b-\mathbf a,\qquad \overrightarrow{OM}=\frac{\math
 
 where $M$ is the midpoint of $AB$. The triangle law gives $\overrightarrow{AB}+\overrightarrow{BC}=\overrightarrow{AC}$.
 
-### Example 1 — Join two points and find their midpoint
+
+
+<section class="worked-example" markdown="1">
+
+#### Example 1 — Join two points and find their midpoint {#example-1--join-two-points-and-find-their-midpoint}
 
 **Question:** $A=(1,-2,3)$ and $B=(5,0,4)$. Find $\overrightarrow{AB}$, the length $AB$, a unit vector in its direction and the midpoint $M$.
 
@@ -65,7 +99,9 @@ $$\boxed{M=\left(3,-1,\frac72\right)}.$$
 
 **Common mistake:** using $\mathbf a-\mathbf b$ for $\overrightarrow{AB}$. That gives $\overrightarrow{BA}$, the opposite direction.
 
-## Straight Lines
+</section>
+
+## Straight Lines {#straight-lines}
 
 A line is described by a fixed point with position vector $\mathbf a$ and a non-zero **direction vector** $\mathbf b$:
 
@@ -75,7 +111,9 @@ $\mathbf r$ is the position vector of a general point on the line. For the line 
 
 The equation is not unique: a different point on the line or a non-zero scalar multiple of the direction vector describes the same line after changing the parameter.
 
-### Example 2 — Find an equation and check a point
+<section class="worked-example" markdown="1">
+
+### Example 2 — Find an equation and check a point {#example-2--find-an-equation-and-check-a-point}
 
 **Question:** Find a vector equation of the line through $A=(1,2,-1)$ and $B=(3,1,3)$. Check whether $P=(5,0,7)$ lies on it, and find where it meets the $xy$-plane.
 
@@ -95,7 +133,35 @@ $$\boxed{\left(\frac32,\frac74,0\right)}.$$
 
 **Common mistake:** using a different parameter value for each coordinate. A point on the line must satisfy all three equations with one value.
 
-## Pairs of Lines
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### A plane configuration {#check-plane}
+
+$A=(-1,2)$ and $B=(3,0)$. Draw $\overrightarrow{OA}$, $\overrightarrow{OB}$ and $\overrightarrow{AB}$. Find $\overrightarrow{AB}$, its magnitude and a unit vector in its direction. Find the intersection of the line through $A,B$ with $\mathbf r=(1,-3)+s(0,1)$.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Write the line through A and B, then equate both components using separate parameters.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+$$\overrightarrow{AB}=(4,-2),\qquad AB=2\sqrt5,\qquad\text{unit vector}=\frac1{\sqrt5}(2,-1).$$
+
+$$\mathbf r=(-1,2)+t(4,-2),\quad -1+4t=1,\quad2-2t=-3+s.$$
+
+Thus $t=\frac12$, $s=4$, and the intersection is $(1,1)$. Substitute each parameter into its own line; your arrows should satisfy $\overrightarrow{OA}+\overrightarrow{AB}=\overrightarrow{OB}$.
+
+</details>
+
+</section>
+
+## Pairs of Lines {#pairs-of-lines}
 
 For $\mathbf r=\mathbf a+\lambda\mathbf b$ and $\mathbf r=\mathbf c+\mu\mathbf d$, first compare $\mathbf b$ and $\mathbf d$.
 
@@ -105,9 +171,13 @@ For $\mathbf r=\mathbf a+\lambda\mathbf b$ and $\mathbf r=\mathbf c+\mu\mathbf d
 | Not scalar multiples | Can one pair $(\lambda,\mu)$ satisfy all three component equations? | Intersecting if yes; skew if no |
 {: .wide-table}
 
+The skew branch in the table applies in three dimensions. In one two-dimensional plane, non-parallel lines must intersect: solve both components. In three dimensions, check the third component too; a projected sketch is not evidence of intersection.
+
 **Skew lines** are lines in three dimensions which are neither parallel nor intersecting. Use separate parameters for the two lines: they need not have the same value at an intersection.
 
-### Example 3 — Check the third coordinate
+<section class="worked-example" markdown="1">
+
+### Example 3 — Check the third coordinate {#example-3--check-the-third-coordinate}
 
 **Question:** Find the intersection of
 
@@ -123,7 +193,11 @@ $$\boxed{(3,4,0)}.$$
 
 **Check:** Substituting $\lambda=2$ into $L$ and $\mu=1$ into $M$ gives the same three coordinates.
 
-### Example 4 — Similar equations, different relationships
+</section>
+
+<section class="worked-example" markdown="1">
+
+### Example 4 — Similar equations, different relationships {#example-4--similar-equations-different-relationships}
 
 Keep line $L$ from Example 3. Compare it with each line below.
 
@@ -143,11 +217,15 @@ Its direction is twice the direction of $L$. Its starting point is on $L$ at $\l
 
 **Common mistake:** concluding that directions which are scalar multiples always give distinct parallel lines. Check for the same line too.
 
-## Scalar Product
+</section>
+
+## Scalar Product {#scalar-product}
 
 The **scalar product** is a number:
 
 $$\mathbf a\cdot\mathbf b=a_1b_1+a_2b_2+a_3b_3.$$
+
+In two dimensions, use only the two matching products: $\mathbf a\cdot\mathbf b=a_1b_1+a_2b_2$. First subtract to form the required directions, then take their scalar product. The result is a scalar, not a new direction vector.
 
 For non-zero vectors, it also equals $\lvert\mathbf a\rvert\lvert\mathbf b\rvert\cos\theta$, where $0\le\theta\le180^\circ$ is the angle between their directions. Hence
 
@@ -157,7 +235,9 @@ Non-zero vectors are perpendicular when their scalar product is zero. A zero vec
 
 **For an angle in a triangle:** use two vectors starting at the vertex. To find angle $ABC$, use $\overrightarrow{BA}$ and $\overrightarrow{BC}$. Using $\overrightarrow{AB}$ instead reverses one direction and gives the supplementary angle.
 
-### Example 5 — Angle between two vectors
+<section class="worked-example" markdown="1">
+
+### Example 5 — Angle between two vectors {#example-5--angle-between-two-vectors}
 
 **Question:** Find the angle between $\mathbf a=(1,2,2)$ and $\mathbf b=(2,-1,2)$, to $1$ decimal place.
 
@@ -167,7 +247,11 @@ $$\cos\theta=\frac49,\qquad \boxed{\theta\approx63.6^\circ}.$$
 
 **Check:** The scalar product is positive, so the vector angle is acute. Use inverse cosine in degree mode; do not round $\frac49$ before calculating.
 
-### Example 6 — Acute angle between lines
+</section>
+
+<section class="worked-example" markdown="1">
+
+### Example 6 — Acute angle between lines {#example-6--acute-angle-between-lines}
 
 **Question:** Two lines have direction vectors $\mathbf b=(1,1,1)$ and $\mathbf d=(1,-1,-1)$. Find the acute angle between the lines.
 
@@ -181,7 +265,23 @@ $$\boxed{\phi\approx70.5^\circ}.$$
 
 **Check:** Reversing either direction vector gives the same acute line angle. Do not use the modulus automatically when a question asks for the angle between two directed vectors.
 
-## Foot of the Perpendicular and Distance
+</section>
+
+<section class="worked-example" markdown="1">
+
+### Start at the angle's vertex {#vertex-angle}
+
+**Question:** $A=(0,0)$, $B=(2,0)$ and $C=(3,1)$. Find angle $ABC$.
+
+Draw the triangle and mark the angle at $B$. Its two rays are $BA$ and $BC$, so
+
+$$\overrightarrow{BA}=(-2,0),\qquad\overrightarrow{BC}=(1,1),\qquad\cos\angle ABC=\frac{-2}{2\sqrt2}=-\frac1{\sqrt2}.$$
+
+Thus $\angle ABC=135^\circ$. Your sketch should show an obtuse angle. Using $AB$ would give $45^\circ$: this is a supplementary angle caused by reversing one direction, not a rounding error.
+
+</section>
+
+## Foot of the Perpendicular and Distance {#foot-of-the-perpendicular-and-distance}
 
 The **foot of the perpendicular** from $P$ to a line is the point $H$ on the line where $PH$ meets the line at a right angle. The length $PH$ is the perpendicular distance from the point to the line.
 
@@ -190,9 +290,13 @@ The **foot of the perpendicular** from $P$ to a line is the point $H$ on the lin
 3. Use $\overrightarrow{PH}\cdot\mathbf b=0$ to find $\lambda$.
 4. Find the coordinates of $H$, then calculate $\lvert\overrightarrow{PH}\rvert$.
 
+Why is this distance shortest? For any other point $X$ on the line, $HX$ follows its direction and $PH\perp HX$. Pythagoras gives $PX^2=PH^2+HX^2\ge PH^2$. For a triangle with base $AB$, the corresponding height is the third vertex's distance to the line $AB$, so area is $\frac12 AB\times PH$, even when the foot lies on the extended base.
+
 ![Schematic: A and H lie on a straight line. The segment from P to H meets the line at a right angle, showing the perpendicular distance.](/assets/img/vectors-perpendicular.svg)
 
-### Example 7 — Find the foot, then the distance
+<section class="worked-example" markdown="1">
+
+### Example 7 — Find the foot, then the distance {#example-7--find-the-foot-then-the-distance}
 
 **Question:** Find the foot of the perpendicular from $P=(5,3,5)$ to the line
 
@@ -216,13 +320,17 @@ $$\overrightarrow{PH}=\begin{pmatrix}-2\\1\\0\end{pmatrix},\qquad \boxed{PH=\sqr
 
 **Common mistake:** calculating the distance from $P$ to the starting point of the line. That is not usually the shortest distance.
 
-## Practice
+</section>
+
+## Practice {#practice}
 
 **Independent practice · 30–40 minutes**
 
-Show the vector you use, not just the numerical result. For intersections, check all three coordinates. For distance, check both that the foot lies on the line and that the joining vector is perpendicular.
+Show the vector you use, not just the numerical result. For intersections, check every component. For distance, check both that the foot lies on the line and that the joining vector is perpendicular.
 
-### Q1 — Position, direction and midpoint
+<section class="lesson-check" markdown="1">
+
+### Q1 {#q1--position-direction-and-midpoint}
 
 $A=(2,-1,0)$ and $B=(-2,3,4)$. Find $\overrightarrow{AB}$, $AB$, a unit vector in the direction $AB$, and the midpoint of $AB$.
 
@@ -244,7 +352,11 @@ The unit vector has squared magnitude $\frac13(1+1+1)=1$. The midpoint is $A+\fr
 
 </details>
 
-### Q2 — A line through two points
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Q2 {#q2--a-line-through-two-points}
 
 Find an equation of the line through $A=(0,1,2)$ and $B=(2,2,-2)$. Does $P=(4,3,-6)$ lie on it? Where does it meet the $xy$-plane?
 
@@ -266,7 +378,11 @@ Check all three coordinates with the same value of $\lambda$.
 
 </details>
 
-### Q3 — Intersecting or skew?
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Q3 {#q3--intersecting-or-skew}
 
 Investigate the lines
 
@@ -292,7 +408,11 @@ With the changed starting point, the same parameter values give $z=3$ on $L$ and
 
 </details>
 
-### Q4 — Parallel or the same line?
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Q4 {#q4--parallel-or-the-same-line}
 
 The line $L$ is $\mathbf r=(1,2,3)+\lambda(2,-1,1)$. Compare it with **(a)** $\mathbf r=(3,1,4)+s(4,-2,2)$ and **(b)** $\mathbf r=(3,1,5)+s(4,-2,2)$.
 
@@ -312,7 +432,11 @@ Both direction vectors are twice that of $L$. Test each starting point on $L$.
 
 </details>
 
-### Q5 — Perpendicularity and angles
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Q5 {#q5--perpendicularity-and-angles}
 
 **(a)** Find $k$ if $(2,k,1)$ is perpendicular to $(1,-1,3)$.
 
@@ -340,7 +464,11 @@ The negative scalar product agrees with an obtuse vector angle. Reversing one di
 
 </details>
 
-### Q6 — A perpendicular distance
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Q6 {#q6--a-perpendicular-distance}
 
 Find the foot of the perpendicular from $P=(3,2,0)$ to $\mathbf r=(1,0,0)+\lambda(1,1,0)$. Hence find the distance from $P$ to the line.
 
@@ -360,7 +488,11 @@ Thus $\boxed{PH=0}$. The point already lies on the line. A point-to-line distanc
 
 </details>
 
-### Q7 — Find the foot before measuring
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Q7 {#q7--find-the-foot-before-measuring}
 
 Find the foot of the perpendicular from $P=(4,0,2)$ to $\mathbf r=(0,1,0)+\lambda(1,0,1)$, and find the perpendicular distance.
 
@@ -382,7 +514,174 @@ The point $H$ lies on the line, and $(-1)(1)+(1)(0)+(1)(1)=0$. The distance to t
 
 </details>
 
-## Quick Reference
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### A triangle {#mixed-geometry}
+
+$A=(0,0)$, $B=(4,2)$ and $C=(0,5)$. Draw triangle $ABC$. Find angle $BAC$ to $1$ decimal place, the distance from $C$ to the line $AB$, and the area of the triangle. Show your geometric choices.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Choose vectors from the angle vertex, then select a base and find its corresponding height.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+$$\cos\angle BAC=\frac{(4,2)\cdot(0,5)}{\sqrt{20}\times5}=\frac1{\sqrt5},\qquad\angle BAC\approx63.4^\circ.$$
+
+$$H=(4t,2t),\quad\overrightarrow{CH}=(4t,2t-5),\quad\overrightarrow{CH}\cdot(4,2)=20t-10=0.$$
+
+$$t=\frac12,\quad H=(2,1),\quad CH=\sqrt{2^2+(-4)^2}=2\sqrt5.$$
+
+$$\text{Area}=\frac12(2\sqrt5)(2\sqrt5)=10\text{ square units}.$$
+
+Add $CH$ and the right-angle mark to your drawing. Independent check: base $AC=5$ and the distance from $B$ to the $y$-axis is $4$, again giving area $10$.
+
+</details>
+
+</section>
+
+## Repair the cause {#repair}
+
+Close the original answer, revisit the indicated explanation, then do its fresh task.
+
+| Error | Recovery action | Retry |
+| --- | --- | --- |
+| AB reversed or a component lost | Mark start and finish; revisit [plane vectors](#plane-vectors) | [Direction](#repair-direction) |
+| Only two coordinates checked or parameters shared | Use separate parameters and every component; revisit [pairs of lines](#pairs-of-lines) | [Lines](#repair-lines) |
+| Triangle angle replaced by its supplement | Redraw both arrows from the vertex; revisit [vertex angle](#vertex-angle) | [Angle](#repair-angle) |
+| Distance measured to an arbitrary point | Require both membership and perpendicularity; revisit [the foot](#foot-of-the-perpendicular-and-distance) | [Distance](#repair-foot) |
+
+<section class="lesson-check" markdown="1">
+
+### Direction {#repair-direction}
+
+$P=(2,-1)$ and $Q=(-1,3)$. Draw $\overrightarrow{PQ}$ and $-2\overrightarrow{PQ}$. Find a unit vector in the direction $PQ$ and the magnitude of $-2\overrightarrow{PQ}$.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+A negative scalar reverses direction; magnitude scales by its absolute value.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+$$\overrightarrow{PQ}=(-3,4),\quad\text{unit vector}=(-3/5,4/5),\quad-2\overrightarrow{PQ}=(6,-8),\quad\lvert-2\overrightarrow{PQ}\rvert=10.$$
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Two lines {#repair-lines}
+
+Determine the relationship between $L:\mathbf r=(0,1,2)+t(1,2,1)$ and $M:\mathbf r=(2,0,2)+s(0,1,1)$. Justify your answer.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Compare directions, then check every coordinate.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+$$t=2,\qquad1+2t=s\Rightarrow s=5.$$
+
+Then $L$ has $z=4$ and $M$ has $z=7$, so they do not meet. The directions are not multiples, so the lines are skew. Two coordinates give a candidate pair; the third rejects it.
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### An angle {#repair-angle}
+
+$A=(0,0)$, $B=(1,0)$, $C=(2,1)$. Find angle $ABC$ and the acute angle between the lines $AB$ and $BC$.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+The triangle angle has a specified vertex; an acute line angle allows a direction to reverse.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+$$\overrightarrow{BA}=(-1,0),\quad\overrightarrow{BC}=(1,1),\quad\angle ABC=135^\circ,\quad\text{acute line angle}=45^\circ.$$
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### A distance {#repair-foot}
+
+Find the distance from $P=(1,3)$ to $\mathbf r=t(1,1)$. Give and check the nearest point.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Use a general point on the line and impose perpendicularity.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+$$H=(t,t),\quad\overrightarrow{PH}=(t-1,t-3),\quad2t-4=0.$$
+
+$$H=(2,2),\quad PH=\sqrt2,\quad(1,-1)\cdot(1,1)=0.$$
+
+H satisfies the line equation and the joining vector is perpendicular; both conditions hold.
+
+</details>
+
+</section>
+
+## Later review {#review-later}
+
+After studying proof, attempt this without this page's method table and compare it with your first attempt.
+
+<section class="lesson-check" markdown="1">
+
+### A moving point {#review-point}
+
+$A=(1,0,2)$ and $B=(3,2,0)$. Show that $P=(1+4u,4u,2-4u)$ lies on the line $AB$ for every real $u$. Find the value of $u$ for which $OP$ is perpendicular to $AB$.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+For every u, give one parameter relation valid in every component. Impose perpendicularity separately.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+$$\overrightarrow{AB}=(2,2,-2),\qquad P=A+(2u)\overrightarrow{AB}.$$
+
+$$\overrightarrow{OP}\cdot\overrightarrow{AB}=2(1+4u)+8u-2(2-4u)=24u-2=0,\quad u=\frac1{12}.$$
+
+The parameter relation $t=2u$ works for every real u; checking a few u values would not prove the claim.
+
+</details>
+
+</section>
+
+## Quick Reference {#quick-reference}
 
 | Task | Method | Check |
 |---|---|---|
@@ -390,8 +689,8 @@ The point $H$ lies on the line, and $(-1)(1)+(1)(0)+(1)(1)=0$. The distance to t
 | Length or unit vector | $\lvert\mathbf v\rvert$ or $\frac{\mathbf v}{\lvert\mathbf v\rvert}$ | A unit direction requires $\mathbf v\ne\mathbf0$ |
 | Midpoint | $\frac12(\mathbf a+\mathbf b)$ | Average each coordinate |
 | Line | $\mathbf r=\mathbf a+\lambda\mathbf b$ | Use a point on the line and a non-zero direction |
-| Point on a line | Substitute into the component equations | One parameter value must satisfy all three |
-| Two lines | Compare directions, then solve components | Check the third coordinate and distinguish the same line |
+| Point on a line | Substitute into the component equations | One parameter value must satisfy every component |
+| Two lines | Compare directions, then solve components | Check every component and distinguish the same line |
 | Vector angle | $\frac{\mathbf a\cdot\mathbf b}{\lvert\mathbf a\rvert\lvert\mathbf b\rvert}$ gives its cosine | Keep the sign; neither vector can be zero |
 | Acute line angle | Use the modulus of the scalar product | Use direction vectors, not position vectors |
 | Perpendicular distance | Find $H$ on the line with $\overrightarrow{PH}\cdot\mathbf b=0$ | Check the line equation and take $\lvert\overrightarrow{PH}\rvert$ |
@@ -402,3 +701,15 @@ The point $H$ lies on the line, and $(-1)(1)+(1)(0)+(1)(1)=0$. The distance to t
 **You should be able to:** describe a line, check how two lines meet, calculate angles, and find a perpendicular distance with a justified foot.
 
 **Learning path:** [Previous: Numerical Methods](/alevel/a2-mathematics/numerical-methods/) · [Next: Mathematical Proof](/alevel/a2-mathematics/mathematical-proof/) · [Return to the Pure Mathematics topic index](/alevel/a2-mathematics/).
+
+**Next step:** connect the general argument in [the moving-point task](#review-point) to [mathematical proof](/alevel/a2-mathematics/mathematical-proof/), then return to check it.
+{: #next-step}
+
+<details markdown="1">
+<summary>Sources and verification scope</summary>
+
+Scope: 9660 MA03 P2.10. January 2025 MA03 Q4 (QP pp8–9, MS pp8–9) was read for direction, magnitude, angles and consistent parameters. January 2024 Q12 (QP pp26–27, MS pp21–22) was read for a general parameter, perpendicular foot, base-height area and angle. All tasks here remain self-written.
+
+[9660 specification v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf) · [January 2024 QP](https://aqamat.alevelclouds.com/24_01_QP_P2.pdf) / [MS](https://aqamat.alevelclouds.com/24_01_MS_P2.pdf) · [January 2025 QP](https://aqamat.alevelclouds.com/25_01_QP_P2.pdf) / [MS](https://aqamat.alevelclouds.com/25_01_MS_P2.pdf)
+
+</details>

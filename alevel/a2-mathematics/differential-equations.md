@@ -5,25 +5,34 @@ mathjax: true
 grade: a2
 subject: a2-mathematics
 permalink: /alevel/a2-mathematics/differential-equations/
-toc_headings: h2, h3, h4
+toc_headings: h2, h3
+reading_layout: true
 study_page: true
 ---
 
 [Pure Mathematics](/alevel/a2-mathematics/) · P2.8 Differential Equations
 
+<div class="lesson-lead" markdown="1">
+
 A differential equation relates a quantity to its rate of change. Solving it gives a relationship without a derivative.
+
+</div>
 
 - **Learning:** start with [separable variables](#separable-variables), then use [given conditions](#using-a-given-condition) and form [models](#forming-a-model).
 - **Homework help:** check which variable changes, what the rate is proportional to, and whether the quantity increases or decreases.
 - **Revision:** try [practice](#practice) before opening the hints and solutions.
 
+<div class="lesson-notes" markdown="1">
+
 Textbook: Chapter 7, Sections 7.1–7.2 (printed pp. 104–112). We use $C$ for the constant of integration, also called an **arbitrary constant**. After rearranging, we may use $A$ for a new arbitrary constant.
 
-**Before you start:** you should know [integration methods](/alevel/a2-mathematics/integration/), logarithms and exponentials. Example 3 also uses [partial fractions](/alevel/a2-mathematics/partial-fractions/).
+**Start here:** separate the two variables into two integrals, then use a condition to select a solution; model-building starts from the meaning of the rate. Recover [power integrals](/alevel/a2-mathematics/integration/#power-integrals), [exponential and logarithmic integrals](/alevel/a2-mathematics/integration/#exponential-logarithmic-integrals) and [checking by the chain rule](/alevel/a2-mathematics/differentiation/#composite-functions) if needed. Example 3 also needs [partial-fraction decomposition](/alevel/a2-mathematics/partial-fractions/#method). For revision start at [practice](#practice); return to [later review](#later-review) after numerical methods, recording any help used.
 
-All worked examples and practice questions on this page are self-written, not official past-paper questions. The practice time is a guide; no official marks are assigned.
+All examples, data scenarios and tasks are self-written, not official questions or measured data; no official marks are assigned. Hints and solutions open separately.
 
-## Separable Variables
+</div>
+
+## Separable Variables {#separable-variables}
 
 A **first order differential equation** contains a first derivative, such as $\frac{dy}{dx}$, but no higher derivatives. The equations in this lesson have **separable variables**: they can be written in the form
 
@@ -32,6 +41,12 @@ $$\frac{dy}{dx}=f(x)g(y).$$
 Collect the $y$ terms with the integral in $y$ and the $x$ terms with the integral in $x$. Where $g(y)\ne0$, write
 
 $$\int\frac{1}{g(y)}\,dy=\int f(x)\,dx.$$
+
+The chain rule explains this step: if $G^{\prime}(y)=1/g(y)$, then along a solution
+
+$$\frac{d}{dx}G(y(x))=\frac1{g(y)}\frac{dy}{dx}=f(x).$$
+
+Integrating with respect to $x$ gives the two stated integrals, up to a constant. This requires $g(y)\ne0$ on the interval considered, which is why divided-out constant solutions are checked first.
 
 This is the integral form used in the textbook. Then integrate both sides. **One constant of integration is enough:** constants on both sides can be combined into one $C$.
 
@@ -43,7 +58,9 @@ This is the integral form used in the textbook. Then integrate both sides. **One
 
 **General solution:** a family of solutions containing an arbitrary constant. **Particular solution:** a solution found using extra information, such as a point on the curve. An **initial condition** gives a starting value, often at time $t=0$.
 
-### Example 1 — A general solution with a logarithm
+<section class="worked-example" markdown="1">
+
+### Example 1 — A general solution with a logarithm {#example-1--a-general-solution-with-a-logarithm}
 
 **Question:** Solve $\displaystyle\frac{dy}{dx}=2xy$.
 
@@ -63,11 +80,15 @@ For the solutions found by division, $A\ne0$. Check $y=0$ separately in the orig
 
 **Common mistake:** writing $y=e^{x^2}+C$. A constant added inside a logarithm becomes a multiplicative constant after exponentiating.
 
-## Using a Given Condition
+</section>
+
+## Using a Given Condition {#using-a-given-condition}
 
 Substitute both coordinates into the integrated result to find $C$. If rearranging gives two branches, use the condition to select the correct one. Work on an interval where the original equation is defined.
 
-### Example 2 — Choose the correct square root
+<section class="worked-example" markdown="1">
+
+### Example 2 — Choose the correct square root {#example-2--choose-the-correct-square-root}
 
 **Question:** Solve $\displaystyle\frac{dy}{dx}=\frac{x}{y}$, given $y=2$ when $x=0$.
 
@@ -85,7 +106,11 @@ $$\boxed{y=\sqrt{x^2+4}}.$$
 
 **Common mistake:** giving both signs after the condition has selected one branch.
 
-### Example 3 — Check constant solutions before dividing
+</section>
+
+<section class="worked-example" markdown="1">
+
+### Example 3 — Check constant solutions before dividing {#example-3--check-constant-solutions-before-dividing}
 
 **Question:** Solve $\displaystyle\frac{dy}{dx}=y(y-2)$, given $y=1$ when $x=0$.
 
@@ -117,7 +142,9 @@ The condition gives $y(0)=1$. For every real $x$, $0<y<2$, so neither divided fa
 
 **Common mistake:** treating $e^{2x}$ as the ratio without checking its sign. Taking $e$ to the power of each side gives the absolute value of the ratio.
 
-## Forming a Model
+</section>
+
+## Forming a Model {#forming-a-model}
 
 Identify the dependent quantity, the variable it changes with, and the sign of the rate. A **constant of proportion** belongs to the model; an **arbitrary constant** appears when you integrate. They have different roles.
 
@@ -132,9 +159,13 @@ In the table below, $Q>0$ and $k>0$. The sign is written explicitly.
 
 The independent variable need not be time. For example, a length $l$ changing with temperature $\theta$ uses $\frac{dl}{d\theta}$.
 
+Proportionality can concern a difference from equilibrium. If the rate is proportional to $Q-Q_e$, set $U=Q-Q_e$ with constant $Q_e$, so $dU/dt=dQ/dt$; the same separation method applies to $U$. Choose the sign by checking whether $Q$ moves towards or away from equilibrium; do not automatically use $Q$ itself.
+
 **Use the information in order.** A rate measured at a known value can determine $k$ directly. A starting value determines an integration constant. A later value may then determine $k$.
 
-### Example 4 — Inverse proportion
+<section class="worked-example" markdown="1">
+
+### Example 4 — Inverse proportion {#example-4--inverse-proportion}
 
 **Question:** The depth $h$ metres of water increases at a rate inversely proportional to $h$. At time $t=0$, $h=1$. After $3$ minutes, $h=2$. Form and solve a differential equation for $h$.
 
@@ -152,7 +183,33 @@ $$\boxed{h=\sqrt{t+1}\text{ metres},\quad t\ge0}.$$
 
 The depth increases, but its rate of increase becomes smaller as $h$ grows. Do not assume an increasing quantity has a constant rate.
 
-## Natural Growth and Decay
+Here $k$ has units $\mathrm{m^2\,min^{-1}}$. The mathematical future interval is $t\ge0$; physical predictions additionally require positive depth, the same filling rule and no overflow. No rim height is given, so the model cannot be asserted to describe a real tank indefinitely.
+
+</section>
+
+<section class="worked-example" markdown="1">
+
+### Determine the constant from one rate {#example-rate}
+
+**Question:** A controlled drain removes water from a tank with no inflow. The rate of decrease of the positive volume $V$ litres is proportional to $V^2$. When $V=3$, the outflow is $3$ litres per minute. Initially $V=6$. Form and solve a model for $t\ge0$, where $t$ is in minutes. Explain whether the model reaches zero in finite time.
+
+“Decrease” determines the minus sign. The outflow is positive $3$, but the volume derivative is $-3$:
+
+$$\frac{dV}{dt}=-kV^2,\qquad k>0,\qquad -3=-k(3)^2\ \Longrightarrow\ k=\frac13.$$
+
+The constant has units $\mathrm{L^{-1}\,min^{-1}}$. The initial volume is not a rate, so $V(0)=6$ cannot be used as $k$. First integrate:
+
+$$\int V^{-2}\,dV=\int-\frac13\,dt,\qquad -\frac1V=-\frac t3+C.$$
+
+The initial condition gives $C=-1/6$, hence
+
+$$\frac1V=\frac t3+\frac16,\qquad V=\frac6{2t+1}\ \mathrm{litres},\quad t\ge0.$$
+
+Differentiation gives $V^{\prime}=-12/(2t+1)^2=-V^2/3$. When $V=3$, $t=1/2$ and the rate is indeed $-3$; also $V(0)=6$. For $t\ge0$, $0<V\le6$ and the volume decreases, so quantity and direction are feasible; the model applies only while the controlled draining rule holds. It approaches zero without reaching it in finite time. The equilibrium $V=0$ also satisfies the original model but not the given initial condition.
+
+</section>
+
+## Natural Growth and Decay {#natural-growth-and-decay}
 
 For a positive quantity with starting value $Q_0$, proportional growth gives
 
@@ -164,7 +221,9 @@ $$\frac{dQ}{dt}=-kQ\quad\Longrightarrow\quad Q=Q_0e^{-kt},\quad k>0.$$
 
 To obtain either result, separate the variables and integrate $\frac1Q$ to get $\ln Q$. Here $Q$ is positive, so the logarithm needs no absolute value signs.
 
-### Example 5 — Find the growth constant from a later value
+<section class="worked-example" markdown="1">
+
+### Example 5 — Find the growth constant from a later value {#example-5--find-the-growth-constant-from-a-later-value}
 
 **Question:** A culture initially contains $400$ cells. Its rate of increase is proportional to the number $N$ present. The number doubles in $3$ hours. Find $N$ at time $t$ hours, and find when it first reaches $1200$.
 
@@ -184,9 +243,13 @@ $$\boxed{t=\frac{3\ln3}{\ln2}\approx4.75\text{ hours}}.$$
 
 **Check:** The number is $800$ after $3$ hours and $1600$ after $6$ hours. Reaching $1200$ between these times makes sense.
 
-This model assumes the same proportional growth rule continues. It does not account for a shortage of nutrients or space.
+This model assumes the same proportional growth rule continues. It does not account for a shortage of nutrients or space; $t\ge0$ and $k$ has units $\mathrm{h^{-1}}$. The continuous model approximates a large cell population rather than describing individual discrete divisions.
 
-### Example 6 — Half-life and mass remaining
+</section>
+
+<section class="worked-example" markdown="1">
+
+### Example 6 — Half-life and mass remaining {#example-6--half-life-and-mass-remaining}
 
 **Question:** A sample has mass $80$ g initially and decays at a rate proportional to its remaining mass $m$. Its half-life is $6$ hours. Find $m$ at time $t$ hours and the mass remaining after $18$ hours.
 
@@ -204,7 +267,7 @@ After $18$ hours, three half-lives have passed:
 
 $$m(18)=80\left(\frac12\right)^3=\boxed{10\text{ g}}.$$
 
-**Check:** $\frac{dm}{dt}=-km<0$ for $m>0$. The mass halves over each $6$-hour interval.
+**Check:** $\frac{dm}{dt}=-km<0$ for $m>0$. The mass halves over each $6$-hour interval. Here $t\ge0$, $m>0$ and $k$ has units $\mathrm{h^{-1}}$; the model assumes the same decay rule continues.
 
 For exponential decay $Q=Q_0e^{-kt}$ with $k>0$, the **half-life** is
 
@@ -212,13 +275,17 @@ $$\boxed{T=\frac{\ln2}{k}}.$$
 
 **Common mistake:** confusing the mass remaining with the mass lost. Here the mass lost after $18$ hours is $80-10=70$ g.
 
-## Practice
+</section>
+
+## Practice {#practice}
 
 **Independent practice · 25–35 minutes**
 
 Show the separated integrals, keep an arbitrary constant until you use the condition, and check your final answer in the original equation. For models, state the meaning of each variable and use consistent units.
 
-### Q1 — General and particular solutions
+<section class="lesson-check" markdown="1">
+
+### Question 1 {#q1--general-and-particular-solutions}
 
 Solve $\displaystyle\frac{dy}{dx}=3x^2(y+2)$, then find the solution satisfying $y=1$ when $x=0$. Check any constant solution lost by division.
 
@@ -248,7 +315,11 @@ Its derivative is $9x^2e^{x^3}=3x^2(y+2)$, and $y(0)=1$.
 
 </details>
 
-### Q2 — Choose the branch
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Question 2 {#q2--choose-the-branch}
 
 Solve $\displaystyle\frac{dy}{dx}=\frac{\sin x}{y}$, given $y=-2$ when $x=0$.
 
@@ -272,7 +343,11 @@ The expression inside the square root is at least $4$, so $y$ never reaches zero
 
 </details>
 
-### Q3 — Form equations from words
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Question 3 {#q3--form-equations-from-words}
 
 Form, but do not solve, a differential equation for each statement. Use a positive constant $k$ and assume the quantities are positive.
 
@@ -302,9 +377,13 @@ The signs match the changes. Each part uses its own constant of proportion; the 
 
 </details>
 
-### Q4 — A rate determines the model constant
+</section>
 
-The positive height $h$ metres of a pile increases at a rate inversely proportional to $h^3$. When $h=2$, the rate is $\frac14$ metres per minute. Initially $h=1$. Find $h$ at time $t$ minutes and when it reaches $3$ metres.
+<section class="lesson-check" markdown="1">
+
+### Question 4 {#q4--a-rate-determines-the-model-constant}
+
+The positive height $h$ metres of a pile increases at a rate inversely proportional to $h^3$. When $h=2$, the rate is $\frac14$ metres per minute. Initially $h=1$. Find $h$ at time $t$ minutes and when it reaches $3$ metres. State the units of the model constant and explain one limitation on extrapolating the model.
 
 <details markdown="1">
 <summary>Hint</summary>
@@ -316,7 +395,7 @@ First use $\frac14=\frac{k}{2^3}$ to find $k$. Then integrate $h^3$ and use the 
 <details markdown="1">
 <summary>Solution and check</summary>
 
-The model is $\frac{dh}{dt}=\frac{k}{h^3}$, and the measured rate gives $k=2$.
+The model is $\frac{dh}{dt}=\frac{k}{h^3}$, and the given rate gives $k=2$.
 
 $$\int h^3\,dh=\int2\,dt,\qquad \frac{h^4}{4}=2t+C.$$
 
@@ -328,9 +407,15 @@ At $h=3$, $81=8t+1$, so $\boxed{t=10\text{ minutes}}$.
 
 Differentiation gives $2(8t+1)^{-3/4}=\frac{2}{h^3}$. The solution also gives $h(0)=1$ and the stated rate when $h=2$.
 
+The units of $k$ are $\mathrm{m^4\,min^{-1}}$. For $t\ge0$, height is positive and increasing while the rate decreases; extrapolation also requires the supply and pile geometry to preserve the assumed proportional law.
+
 </details>
 
-### Q5 — Percentage growth
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Question 5 {#q5--percentage-growth}
 
 A culture grows at a rate proportional to the number $N$ present. Initially $N=500$. After $4$ hours, the number has increased by $20\%$. Find $N$ at time $t$ hours and the doubling time.
 
@@ -356,7 +441,11 @@ Substitution gives $N(4)=600$. Since a $20\%$ increase takes $4$ hours, the doub
 
 </details>
 
-### Q6 — Decay, half-life and the amount lost
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Question 6 {#q6--decay-half-life-and-the-amount-lost}
 
 A substance decays at a rate proportional to its remaining mass. Initially the mass is $60$ g. After $5$ hours, $45$ g remains. Find **(a)** a model for the remaining mass, **(b)** its half-life and **(c)** the mass lost after $10$ hours.
 
@@ -386,7 +475,115 @@ The model gives $m(0)=60$ and $m(5)=45$. Since more than half remains after $5$ 
 
 </details>
 
-## Quick Reference
+</section>
+
+## Repair and retry {#repair-and-retry}
+
+Revisit the reasoning for your error, close the old solution and answer the new question here. Keep separate notes on the first attempt, hints used and retry result.
+
+**If division lost a constant solution, or you retained both signs after applying a condition:** revisit [separation](#separable-variables) and [branch selection](#using-a-given-condition). Squaring cannot restore a point where the original equation is undefined.
+
+<section class="lesson-check" markdown="1">
+
+### Select a solution again {#retry-solution}
+
+<!-- task:retry-solution -->
+
+**(a)** Solve $dy/dx=-x/y$ with $y(0)=-3$. State the largest interval containing $0$ on which your solution satisfies the original equation.
+
+**(b)** Find the solution of $dy/dx=x(y-1)$ satisfying $y(0)=1$. Explain any division you choose to use.
+
+<!-- /task:retry-solution -->
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Check the original equation’s domain, then select a sign after integrating. In (b), test the constant function suggested by the condition before dividing by $y-1$.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+**(a)** Separation gives $\int y\,dy=\int-x\,dx$, hence $y^2=9-x^2$. The negative initial value selects
+
+$$y=-\sqrt{9-x^2},\qquad -3<x<3.$$
+
+Here $y^{\prime}=x/\sqrt{9-x^2}=-x/y$, and $y(0)=-3$. At $x=\pm3$, $y=0$ makes the original equation undefined, so exclude both endpoints; beyond them the root is not real.
+
+**(b)** The constant $y=1$ has derivative zero, makes the right side zero and satisfies the initial condition. For $y\ne1$, separation gives $y=1+Ae^{x^2/2}$ with $A\ne0$, none of which satisfies this condition. Allowing $A=0$ extends the family after checking the constant solution separately; it does not legitimise division by zero.
+
+</details>
+
+</section>
+
+**If you confused a rate with an initial value, the model constant with an integration constant, or missed the decay sign:** revisit the [rate-based demonstration](#example-rate). The exponential model $Q^{\prime}=-kQ$ has a constant half-life; do not assume that result for a different rate law.
+
+<section class="lesson-check" markdown="1">
+
+### Read new conditions {#retry-model}
+
+<!-- task:retry-model -->
+
+A positive mass $m$ grams decreases at a rate proportional to $m^2$. Initially $m=18$. When $m=6$, its rate of change is $-2$ grams per hour. Form and solve the model for $t\ge0$, state the units of its constant and determine the times when $m=9$ and $m=4.5$. Does it have a constant half-life?
+
+<!-- /task:retry-model -->
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Use the rate at its specified mass to find the proportionality constant. Apply the initial value to the integration constant, then compare successive halving intervals.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+The model is $m^{\prime}=-km^2$, $k>0$. From $-2=-36k$, obtain $k=1/18$, with units $\mathrm{g^{-1}\,h^{-1}}$. Separating and integrating gives
+
+$$-\frac1m=-\frac t{18}+C,\qquad C=-\frac1{18},\qquad m=\frac{18}{t+1}\ \mathrm{g},\quad t\ge0.$$
+
+When $m=9$, $t=1$; when $m=4.5$, $t=3$. Successive halving intervals are $1$ hour and $2$ hours, so there is no constant half-life. Differentiation gives $m^{\prime}=-18/(t+1)^2=-m^2/18$; at $m=6$, $t=2$ and the rate is $-2$. Mass remains positive and tends to zero; model validity is limited to the period in which the stated rate law holds.
+
+</details>
+
+</section>
+
+## Later review {#later-review-section}
+
+After numerical methods, attempt this away from the solutions; use your checks to decide whether to revisit the solution or model retry.
+
+<section class="lesson-check" markdown="1">
+
+### Form and assess a model {#later-review}
+
+<!-- task:later-review -->
+
+An object cools in a room held at $20^\circ\mathrm C$. While its temperature $T$ exceeds room temperature, its rate of decrease is proportional to the temperature excess above the room. Initially $T=80$; after $2$ minutes $T=50$. Find $T$ at time $t\ge0$, determine when $T=35$, and assess a prediction that it reaches $10^\circ\mathrm C$. State one physical assumption.
+
+<!-- /task:later-review -->
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Identify the quantity proportional to the rate and its sign. Setting $U=T-20$ lets you use the two temperature conditions. Check whether the requested temperatures lie in the solution’s range.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+The model is $T^{\prime}=-k(T-20)$, $k>0$. With $U=T-20>0$, separation gives $\ln U=-kt+C$. The initial value gives $U=60e^{-kt}$; $T(2)=50$ gives $30=60e^{-2k}$, hence $k=\ln2/2$ in $\mathrm{min^{-1}}$.
+
+$$T=20+60e^{-(\ln2)t/2}.$$
+
+At $T=35$, the exponential factor is $1/4$, so $t=4$ minutes. For all $t\ge0$, $20<T\le80$ and temperature decreases, making $T=10$ impossible; the solution approaches $20$ without crossing it. Check $T^{\prime}=-k(T-20)$, $T(0)=80$ and $T(2)=50$. Physical assumptions include constant room temperature, approximately uniform temperature within the object and the same heat-transfer rule across the temperatures considered. If you used $-kT$, revisit [forming a model](#forming-a-model); for constant or interval errors use the [solution retry](#retry-solution) or [model retry](#retry-model).
+
+</details>
+
+</section>
+
+## Quick Reference {#quick-reference}
 
 | Step | What to do | Check |
 |---|---|---|
@@ -404,3 +601,6 @@ The model gives $m(0)=60$ and $m(5)=45$. Since more than half remains after $5$ 
 **You should be able to:** separate variables, find a particular solution, check constant solutions, form a model and explain its result in context.
 
 **Learning path:** [Previous: Integration — Trigonometric Integrals and Applications](/alevel/a2-mathematics/integration-applications/) · [Next: Numerical Methods](/alevel/a2-mathematics/numerical-methods/).
+
+
+**Next step:** when you can form an equation from words, solve using conditions and check the range independently, continue to [numerical methods](/alevel/a2-mathematics/numerical-methods/), comparing analytical results with approximations supported by accuracy evidence. Then return to [this review](#later-review). Scope: [9660 specification v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf), P2.8 (and P2.5 growth/decay); January 2025 MA03 [QP](https://aqamat.alevelclouds.com/25_01_QP_P2.pdf) Q12(b) and the matching [MS](https://aqamat.alevelclouds.com/25_01_MS_P2.pdf) were read for separation, both integrals, conditions and isolating the variable. All scenarios and tasks here are self-written.
