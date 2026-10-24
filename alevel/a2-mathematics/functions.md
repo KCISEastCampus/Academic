@@ -13,7 +13,7 @@ study_page: true
 [Pure Mathematics](/alevel/a2-mathematics/) · P2.1 Algebra and Functions
 {: .lesson-meta}
 
-Learn to find a domain and range, form a composite function and find an inverse function. Check the allowed inputs at every step.
+What numbers can you put into a rule, and what numbers can come out? Start with these questions, then put two rules together and find when a rule can be undone.
 
 Textbook: Chapter 1, Sections 1.1–1.3 (pp. 2–8). The examples and practice questions below are self-written teaching exercises.
 
@@ -30,12 +30,12 @@ Textbook: Chapter 1, Sections 1.1–1.3 (pp. 2–8). The examples and practice q
 
 ## Domain and Range
 
-A **function** gives exactly one output for each input in its domain. For example, $f(x)=x^2$ is a function: $f(-2)=4$ is one answer. The expression $\pm\sqrt{x}$ gives two answers when $x>0$, so it does not define a function of $x$.
+Think of a rule that takes a number in and gives a number back. It is a **function** if every allowed input gives exactly one output. For example, $f(x)=x^2$ tells us to square the input: $f(-2)=4$ is one answer. The expression $\pm\sqrt{x}$ gives two answers when $x>0$, so it does not define a function of $x$.
 
-- The **domain** is the set of allowed input values.
-- The **range** is the set of output values for that domain.
+- Collect all the numbers you are allowed to put in: this is the **domain**.
+- Collect all the numbers you actually get out from those inputs: this is the **range**. It includes every possible output, not just a few that you have tried.
 
-You can write a function as $f(x)=x^2$ or $f:x\mapsto x^2$. State its domain too. Changing the domain may change the range.
+You can write this rule as $f(x)=x^2$ or $f:x\mapsto x^2$. Both mean “square the input”; the arrow shows input becoming output. State the allowed inputs too. If you allow fewer inputs, some outputs may no longer be possible.
 
 ### Find the allowed inputs first
 
@@ -54,15 +54,15 @@ If a question asks for the largest possible real domain, use every real input fo
 
 **Question:** The function $f$ is defined by $f(x)=(x-1)^2+2$ for $-1\leq x\leq3$. Find its range.
 
-**Method:** Check the turning point as well as the ends of the interval.
+**Method:** We need the smallest and largest outputs, and must explain what happens between them. A square is smallest when the expression being squared is zero, so check that input before checking the two ends of the allowed interval.
 
-The graph is a parabola with minimum point $(1,2)$. Since $x=1$ is in the domain, the minimum output is $2$.
+The squared term cannot be negative. The graph is a parabola with minimum point $(1,2)$: here the square is zero. Since $x=1$ is an allowed input, the minimum output is $2$.
 
-At the two ends,
+The inputs furthest horizontally from the lowest point are the two ends. They give the largest square on this interval:
 
 $$f(-1)=6,\qquad f(3)=6.$$
 
-The graph is continuous and reaches every value between its minimum and maximum. Therefore,
+The curve has no gaps as the input runs through the interval, so it reaches every height between this minimum and maximum. Therefore,
 
 $$\boxed{2\leq f(x)\leq6}.$$
 
@@ -74,7 +74,7 @@ $$\boxed{2\leq f(x)\leq6}.$$
 
 ### One-to-one and many-to-one
 
-A **one-to-one function** gives different outputs for different inputs. A **many-to-one function** can give the same output for two or more different inputs.
+Could you recover the input if you were told only the output? You can if different inputs always give different outputs: this is a **one-to-one function**. If two or more different inputs can give the same output, the function is **many-to-one**; the output alone does not tell you which input was used.
 
 In Example 1, $f(-1)=f(3)=6$, so $f$ is many-to-one. If its domain is restricted to $1\leq x\leq3$, the output increases as $x$ increases, so the function is one-to-one.
 
@@ -84,7 +84,7 @@ On a graph, a horizontal line meets a one-to-one function at most once. This wil
 
 ### Example 2 — A piecewise function and a finite domain
 
-A **piecewise function** uses different formulae for different parts of its domain. Choose the correct part before substituting.
+A rule can tell you to do different calculations for different inputs. This is a **piecewise function**. First read which condition your input satisfies; then use the formula next to that condition. At a boundary, check which condition includes equality.
 
 **Question:** For real $x$, let
 
@@ -104,11 +104,11 @@ For the finite domain, only three inputs are allowed, so the range is $\boxed{\l
 
 ## Composite Functions
 
-A **composite function** is a function of a function. The notation $fg(x)$ means $f(g(x))$: apply $g$ first, then $f$.
+A **composite function** uses the output of one rule as the input to another. The notation $fg(x)$ means $f(g(x))$: apply $g$ first, then feed its answer into $f$.
 
 $$x\xrightarrow{g}g(x)\xrightarrow{f}f(g(x)).$$
 
-**Check two things:** the input $x$ must be in the domain of $g$, and the output $g(x)$ must be in the domain of $f$.
+**Check both stages:** start with the input $x$: can the first rule, $g$, accept it? Next take its output $g(x)$: can the second rule, $f$, accept that number? Both answers must be yes. Checking only whether the final formula can be calculated may miss a restriction from one of the original rules.
 
 <section class="worked-example" markdown="1">
 
@@ -116,7 +116,7 @@ $$x\xrightarrow{g}g(x)\xrightarrow{f}f(g(x)).$$
 
 **Question:** Let $f(x)=2x-3$ for $x\in\mathbb R$, and $g(x)=\sqrt{x}$ for $x\geq0$. Find $fg(x)$ and $gf(x)$, with their domains and ranges.
 
-**Find $fg(x)$.** Apply $g$ first:
+**Find $fg(x)$.** Apply $g$ first. Its answer becomes the input to the next rule: double that answer, then subtract three.
 
 $$fg(x)=f(\sqrt{x})=\boxed{2\sqrt{x}-3}.$$
 
@@ -124,11 +124,11 @@ The input must satisfy $x\geq0$. The output of $g$ is allowed by $f$, since $f$ 
 
 **Domain:** $x\geq0$. **Range:** $fg(x)\geq-3$.
 
-**Find $gf(x)$.** Apply $f$ first:
+**Find $gf(x)$.** Now apply $f$ first. Feed its whole answer into the square-root rule, so the whole expression goes under the square root:
 
 $$gf(x)=g(2x-3)=\boxed{\sqrt{2x-3}}.$$
 
-The output $2x-3$ must be in the domain of $g$, so
+The number $2x-3$ now goes under a square root. It must be non-negative for $g$ to accept it, so
 
 $$2x-3\geq0\quad\Rightarrow\quad x\geq\frac32.$$
 
@@ -170,7 +170,7 @@ The other order is $fg(x)=\sqrt{x-2}$, which does require $x\geq2$.
 
 ## Inverse Functions
 
-An **inverse function** undoes a function. It maps the range of $f$ back to the domain of $f$, and is written $f^{-1}$.
+An **inverse function** takes an output of the original rule and returns the input that produced it. It sends the range of $f$ back to the domain of $f$, and is written $f^{-1}$.
 
 **The notation $f^{-1}(x)$ does not mean $\frac{1}{f(x)}$.**
 
@@ -180,8 +180,8 @@ A function has an inverse only if it is one-to-one on its stated domain. If two 
 
 1. Check whether the function is one-to-one. Use the stated domain.
 2. Write $y=f(x)$.
-3. Interchange $x$ and $y$.
-4. Rearrange to make $y$ the subject. Use the domain to choose a sign if needed.
+3. Interchange $x$ and $y$: the old output is now the input, and the old input is what you want back.
+4. Rearrange to leave $y$ alone. If taking a square root gives a choice of signs, keep the one that returns an allowed original input.
 5. State the domain and range of $f^{-1}$.
 
 The domain and range swap:
@@ -199,11 +199,11 @@ The domain and range swap:
 
 **Check:** This is the increasing part of the parabola, so $f$ is one-to-one. Its range is $f(x)\geq2$.
 
-Write $y=(x-1)^2+2$, then interchange $x$ and $y$:
+Write $y=(x-1)^2+2$. To undo this rule, we need to recover the number that went in. Interchange $x$ and $y$, subtract two, then take square roots:
 
 $$x=(y-1)^2+2\quad\Rightarrow\quad y-1=\pm\sqrt{x-2}.$$
 
-The inverse must give values in the original domain, so $y\geq1$. Choose the positive square root:
+The inverse must return an allowed original input, so $y\geq1$. Subtracting one leaves a non-negative number. Choose the positive square root; the negative choice would also return numbers below the allowed starting point:
 
 $$\boxed{f^{-1}(x)=1+\sqrt{x-2}}.$$
 
@@ -237,7 +237,7 @@ The diagram uses the simpler pair $f(x)=x^2$ for $x\geq0$ and $f^{-1}(x)=\sqrt{x
 
 **Question:** Let $h(x)=3+\frac{1}{x-2}$ for $x\ne2$. Find $h^{-1}$, including its domain and range.
 
-The fraction can never be zero, so $h(x)\ne3$. Each output other than $3$ comes from exactly one input, so $h$ is one-to-one.
+The fraction has numerator one, so it can never be zero: $h(x)\ne3$. To see whether every output other than $3$ comes from just one input, rearrange the equation backwards. The calculation below gives one allowed original input for each such output, so $h$ is one-to-one.
 
 Interchange $x$ and $y$ in $y=3+\frac{1}{x-2}$:
 
@@ -443,11 +443,11 @@ Check that the restricted function is one-to-one. Swap each point’s coordinate
 <details markdown="1">
 <summary>Solution and check</summary>
 
-The original graph is the left branch of the parabola, with included endpoint $(-1,-2)$. Since $u(-3)=2$, it contains $(-3,2)$. Reflection in $y=x$ gives the inverse endpoint $(-2,-1)$ and point $(2,-3)$.
+The original graph is the part of the parabola to the left of its lowest point, with included endpoint $(-1,-2)$. Since $u(-3)=2$, it contains $(-3,2)$. Reflection in $y=x$ gives the inverse endpoint $(-2,-1)$ and point $(2,-3)$.
 
 $$u^{-1}(x)=-1-\sqrt{x+2},\qquad x\geq-2,\qquad u^{-1}(x)\leq-1.$$
 
-Draw the curves with these filled endpoints: the original only uses $x\leq-1$, and the inverse only uses $x\geq-2$. Saying “reflection” alone does not show the restrictions on the sketches. If you drew the right branch, return to [the restricted-domain demonstration](#example-3--restrict-the-domain-before-choosing-a-square-root).
+Draw the curves with these filled endpoints: the original only uses $x\leq-1$, and the inverse only uses $x\geq-2$. Saying “reflection” alone does not show the restrictions on the sketches. If you drew the part to the right of the lowest point, return to [the restricted-domain demonstration](#example-3--restrict-the-domain-before-choosing-a-square-root).
 
 </details>
 
@@ -459,7 +459,7 @@ Close the old solution. Use the error you made to choose a short review, then at
 
 | Error | Recovery action | New attempt |
 | --- | --- | --- |
-| Only checked endpoints, or chose the wrong inverse branch | Return to [the range example](#example-1--a-turning-point-can-lie-inside-the-domain); locate the turning point and repeated outputs on the original domain | [R1](#retry-range) |
+| Only checked endpoints, or chose the wrong square-root sign for the inverse | Return to [the range example](#example-1--a-turning-point-can-lie-inside-the-domain); find the lowest point and check whether two allowed inputs give the same output | [R1](#retry-range) |
 | Final formula hid a composite restriction | Review [composition](#composite-functions) and list the two input checks | [R2](#retry-composite) |
 | Wrong piecewise boundary or finite range | Review [the piecewise demonstration](#example-2--a-piecewise-function-and-a-finite-domain); list the allowed inputs | [R3](#retry-piecewise) |
 
@@ -506,7 +506,7 @@ Let $f(x)=\sqrt{x}$ for $x\geq0$ and $g(x)=x^2$ for $x\geq2$. Find $fg$ and $gf$
 <details markdown="1">
 <summary>Hint</summary>
 
-Even if the expressions simplify alike, check the inner domain and the outer allowed inputs.
+Even if the expressions simplify alike, check what the first rule accepts, then whether its answer is allowed by the second rule.
 
 </details>
 
@@ -538,14 +538,14 @@ Find $w(0)$ and the range. Then find the range on the finite domain $\lbrace-1,0
 <details markdown="1">
 <summary>Hint</summary>
 
-Which part contains $0$? Find each part’s outputs before taking their union.
+Which condition includes $0$? Find the outputs from each part, then put those sets together, listing a repeated output only once.
 
 </details>
 
 <details markdown="1">
 <summary>Solution and check</summary>
 
-$w(0)=1$. The first part gives $(-\infty,1)$; the second reaches $0$ at $x=1$ and covers $[0,\infty)$. Their union is $\mathbb R$. The finite domain gives outputs $0,1,1$, so its range is $\lbrace0,1\rbrace$; do not repeat $1$.
+$w(0)=1$. The first part gives $(-\infty,1)$; the second reaches $0$ at $x=1$ and covers $[0,\infty)$. Together, these outputs give $\mathbb R$. The finite domain gives outputs $0,1,1$, so its range is $\lbrace0,1\rbrace$; do not repeat $1$.
 
 </details>
 
@@ -577,7 +577,7 @@ $$h(x)=(x-1)^2+1,\qquad x\leq1,\qquad h(x)\geq1.$$
 
 $$h^{-1}(x)=1-\sqrt{x-1},\qquad x\geq1,\qquad h^{-1}(x)\leq1.$$
 
-The original is the left branch ending at $(1,1)$ and passing through $(0,2)$. The inverse ends at $(1,1)$ and passes through $(2,0)$. Draw decreasing curves reflected in $y=x$. Giving $x\leq2$ for $h$ ignores that the input to $f$ is $g(x)=x+1$; choosing the positive root puts inverse outputs outside the original domain. Review R2 or R1 if needed, close the solution, then recheck.
+The original is the part to the left of the lowest point, ending at $(1,1)$ and passing through $(0,2)$. The inverse ends at $(1,1)$ and passes through $(2,0)$. Draw decreasing curves reflected in $y=x$. Giving $x\leq2$ for $h$ ignores that the input to $f$ is $g(x)=x+1$; choosing the positive root puts inverse outputs outside the original domain. Review R2 or R1 if needed, close the solution, then recheck.
 
 </details>
 

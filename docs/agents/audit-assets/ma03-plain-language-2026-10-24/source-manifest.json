@@ -1,0 +1,193 @@
+{
+  "baseline": "19db6ca1640fb47fd541b3f8fb3d45d510d41b09",
+  "pages": 34,
+  "preservedHeadingIDs": 1106,
+  "preservedEnglishPrompts": 216,
+  "pairedMathExpressions": 5338,
+  "sources": [
+    {
+      "path": "alevel/a2-mathematics/algebraic-fractions-and-division.md",
+      "sourceSHA256": "a1d4db9aeb6e6a436c9eebe031bc56a0859f1573874c26601f77732067960dfb",
+      "htmlSHA256": "690bb6277ed6fbef03b41f31a8d238ef65baed2f3353cb928197289e01af7915"
+    },
+    {
+      "path": "alevel/a2-mathematics/binomial-series.md",
+      "sourceSHA256": "00981b91432b7ceaa69e1a5c0173b67cc88707509151d6a31aa32c91fb004a4a",
+      "htmlSHA256": "34e2bdb51a5e3e27ba85ed566ca3ed2f85d360f824a2114bdfd9dd2db7f1b04e"
+    },
+    {
+      "path": "alevel/a2-mathematics/differential-equations.md",
+      "sourceSHA256": "7726d42b92f9675177a1267755dd79d0f26ddaf9c06252266c97bbfe6e7a2cfd",
+      "htmlSHA256": "7322a574df14e0c2b9b9df5d3e190351c1b02742a44816400223b680640088eb"
+    },
+    {
+      "path": "alevel/a2-mathematics/differentiation.md",
+      "sourceSHA256": "538d5c6b3d4a59b80a7b396d8710c4676e727fb5876bc0d2fb3e7ab459f9dd77",
+      "htmlSHA256": "9783f16c28f96c74ccb952cd15127892e0eb200f71ace870bee5235a9419072f"
+    },
+    {
+      "path": "alevel/a2-mathematics/exponential-and-logarithmic-functions.md",
+      "sourceSHA256": "fd195e63312de9d79f2cc2510e3b6e6929ac7c4ebc0686b89704cb52817dd4b4",
+      "htmlSHA256": "67e0608d85a0cda5e4edf77c41deff97e16e8362747d20063abc6a10e4772fe1"
+    },
+    {
+      "path": "alevel/a2-mathematics/functions.md",
+      "sourceSHA256": "02ac180e72c5a331dea8a433774e1c3daff7978fb5c1b1d2c2ed6764340138b3",
+      "htmlSHA256": "1ee16facbad0e2b697099e40021b444d689c9a3e72864a229d6e398ec2c6fbbf"
+    },
+    {
+      "path": "alevel/a2-mathematics/index.md",
+      "sourceSHA256": "ced750a088e7ebf6c728a39d0995e32046c4f212f95df3514794e582448c109f",
+      "htmlSHA256": "aa1b6eb640688470f83bf16fa568a20ad1fb0e303af92a35515629fea28bdb38"
+    },
+    {
+      "path": "alevel/a2-mathematics/integration-applications.md",
+      "sourceSHA256": "1fb5c82373a35e3b4fd40e9a93d518d14ec8cbf5a630a2ba6858b18e9c8f9159",
+      "htmlSHA256": "d7751c280e2e9e70f96d25fabd22f066d43df4a489cabb967ae4f73b71e0ae5c"
+    },
+    {
+      "path": "alevel/a2-mathematics/integration.md",
+      "sourceSHA256": "7d730a1a935aa44fffb6d25b9d30c579dd543d312aba11fd0f67be2df876e5e6",
+      "htmlSHA256": "a4535c8945aefe7ef5e65d816b6cee3921f889aff3d80781255f53476adc50b8"
+    },
+    {
+      "path": "alevel/a2-mathematics/mathematical-proof.md",
+      "sourceSHA256": "c109780273303c84c28d3f5b37b1cdae00cfa5645d8327c153fde6353d99f9f1",
+      "htmlSHA256": "56d9ee9370624e55aa4f272ddd92ed13da9e4fb475b295dd8d118bedcd74a90b"
+    },
+    {
+      "path": "alevel/a2-mathematics/modulus-and-transformations.md",
+      "sourceSHA256": "1dc841c7778ebdea0f7dd37e321bdfc6878afaddb2a4f3c6dbf7222136c6dc01",
+      "htmlSHA256": "322e239f09255ce0bdbf5ea2ef4c6d5fb84e95976a5b2b269e33d0983ddedc7a"
+    },
+    {
+      "path": "alevel/a2-mathematics/numerical-methods.md",
+      "sourceSHA256": "a82494e27462efc09f204c3e0bbc04842d707a6b18a155c456bed019d3c6a3eb",
+      "htmlSHA256": "a6d2d03b5fd5eeb8eafcaae51f0b2bc2a1b760cff667289a121fe43c339877cd"
+    },
+    {
+      "path": "alevel/a2-mathematics/parametric-equations.md",
+      "sourceSHA256": "7199774a73ef015cca1474eafa9616f41bc1359d55ee8cd1a3f3d2fcaf06cbd0",
+      "htmlSHA256": "a7a7ded9683824ba3abb431205f38f969db6fddc3823fd58a91dd9692c692df7"
+    },
+    {
+      "path": "alevel/a2-mathematics/partial-fractions.md",
+      "sourceSHA256": "528952e2584336bdffdc41828bae8acfa07c6894c874580daa3ede098b818029",
+      "htmlSHA256": "4441338a07696c584958c33c51e110b010bcc2b9f6dc13c9161472a9fa7dbbca"
+    },
+    {
+      "path": "alevel/a2-mathematics/quick-reference.md",
+      "sourceSHA256": "d94f9b71f3ec5d490b7b9ebd16ce954c1282a7159b99cdf7194350ad74cd654b",
+      "htmlSHA256": "89351fd22d58a131638b262d416ec55bdb9db552183f659c98e7074949b12e3f"
+    },
+    {
+      "path": "alevel/a2-mathematics/trigonometric-functions-and-formulae.md",
+      "sourceSHA256": "e955f94eb779b6340d37a325f98b9e7060ae87e30b80b5e7c0a2c0067625f6c8",
+      "htmlSHA256": "2d942de98a5df63cace2139feb773699a1c3ff3013a1a14c745e8ec2d8c73919"
+    },
+    {
+      "path": "alevel/a2-mathematics/vectors.md",
+      "sourceSHA256": "0e594f3fa04fd3bad75e8d1dc1af9058ac1b331f163c28757251855d4e943685",
+      "htmlSHA256": "882dc04cbd440de721d791d55d77b5890ced14613005ad6701f0926defb2883d"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/algebraic-fractions-and-division.md",
+      "sourceSHA256": "da95cfe1c282f3640b9f880f9ef50222a957e3261349c39454193d0e61c9165b",
+      "htmlSHA256": "975c45ef5fd1fcd94fa5f94c4d89af01812f3ed4d195e9a2baffcc45cb2f6609"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/binomial-series.md",
+      "sourceSHA256": "a9abafc44a4e2a5133359536fc9855d77f1ed8f0f4496904ac33d1a8d75811d8",
+      "htmlSHA256": "011ccfe79e6688c7a99163330b84f8713257ee9bd4ebba2a2dcbb9419a284580"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/differential-equations.md",
+      "sourceSHA256": "2ae86967ac0e0f3cd7e7c2cf3478e053bb1ece851be1af06866333f4e20cbe60",
+      "htmlSHA256": "95aeed972c8a6b7694672b53dc4ff16c45756b3f9c4a6c8633a3da67b549e90e"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/differentiation.md",
+      "sourceSHA256": "49af1c5e1b01389623b4ce1767709755bb115d221a3fb5453fde27810b3d9d27",
+      "htmlSHA256": "4a80a04b8c6b22a447a180a087c97c62d6bc254b878d7803ec34de59b5028e9c"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/exponential-and-logarithmic-functions.md",
+      "sourceSHA256": "333736bbb6f26351f47d6690a678d5557df0197d1a7b78f48db9dc31c9d67767",
+      "htmlSHA256": "21a49a116f6160215d5e25bde8e66f3e243167310d9f61a45453727372dee677"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/functions.md",
+      "sourceSHA256": "dd23542a5ab216bc175463efffe8852c39762c30106ff05f81443b25571025cf",
+      "htmlSHA256": "615802fdedccbe0aebbe6df49736614ec8c053ee7501a0cb85bfa5a46ee1c797"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/index.md",
+      "sourceSHA256": "5a175d97c5023b8525a18887728abc1f5dd854e1c45341d5be468eb59484770b",
+      "htmlSHA256": "ba074a98bc95ac74a6a0e518f8ae863694b9ec2d031598c97e37498b330a6dae"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/integration-applications.md",
+      "sourceSHA256": "5cd28a9dd821aefe4ca54b63d9c089e393e2ea2bd0c831dfef0cbe2b0336b1f4",
+      "htmlSHA256": "757462ae3d964c293c12caf42fad1427d0e38fd0261bd30e4f3938c6cc9825b4"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/integration.md",
+      "sourceSHA256": "d7cc14573b3c07f170f432bbc9501ac8e978190dfd3adcae917475bd6c4672e0",
+      "htmlSHA256": "932c0686ce0e558636ace003377109e8c806e6becbfc94390b063b9975f22c33"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/mathematical-proof.md",
+      "sourceSHA256": "c6d28c98060f1c4ba874bb2615429fa9e8504a294acb13b8e1e04015580c1eb8",
+      "htmlSHA256": "a6c0617c21c7b5a722aae818790f2eea24ef28561bdc2766ffee2000e151e2bd"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/modulus-and-transformations.md",
+      "sourceSHA256": "376e723ca5eceba0437557885d012fe051ce269090f465075533d42d4fbb6319",
+      "htmlSHA256": "8bb85f5e4e778272681141d7af3d568170409817e2226fabd7e7e8012d9c719a"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/numerical-methods.md",
+      "sourceSHA256": "c31b994547f00c570d206f5d028212dbb487efebd15ecbab8ba2b5464521d6ad",
+      "htmlSHA256": "bd44ac3305e463c0484ac1623104d980e8dce32b7137d885bf81267aaed7212b"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/parametric-equations.md",
+      "sourceSHA256": "2a749021c617d0053898cc138b5bc1692f40af12024222c1f056ca02d65e670c",
+      "htmlSHA256": "23dab1447611c731314e43bb9453e2e9fd5491356de6a4eb045089e344fb6cac"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/partial-fractions.md",
+      "sourceSHA256": "868679593dee21ac5eb074937545b3066a1f61e85375d094b08fba2f7eed269c",
+      "htmlSHA256": "fa214105a23086542f1a22afff1227c46320f405e6d773ba3a8ec0d2d710b272"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/quick-reference.md",
+      "sourceSHA256": "4311523b8f3fedce8699b056bc911e4b1c790bb03102bd407088bf1c03123d28",
+      "htmlSHA256": "4764466d57ae471e5460b9dececcec121c3902aefa0f9d345d369432f431c5ef"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/trigonometric-functions-and-formulae.md",
+      "sourceSHA256": "9e6f081360591328c472433df604e7edeccb7c236ccb22096c33aafc1a6230c6",
+      "htmlSHA256": "06961d8ec152e4f5331ef5985baf9b5107265e5693d6b41a25d147435f5a8d93"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/vectors.md",
+      "sourceSHA256": "07c7b144710a79d3bd993fa8fcb53af6cca7c6f5ac180fa393bebc62cfa5c1f4",
+      "htmlSHA256": "4ee31b11581d87eba462501989494b15c1b10057d72d1138b8d96fd857ad96ee"
+    }
+  ],
+  "sharedStyles": [
+    {
+      "path": "assets/css/reading.css",
+      "sha256": "177c376f70a9685f629b177f24c7641cdd08449d49869a29785775126997f72a"
+    },
+    {
+      "path": "assets/css/home.css",
+      "sha256": "cffd04e3d4fee69faa20a2414bcf2f54880c13f9eee1a63e570c745726a95748"
+    },
+    {
+      "path": "_layouts/subjects.html",
+      "sha256": "293db2c33a7e9d0858caf551013030cb136af11b7aaf6f97397c90c0ad7d940e"
+    }
+  ]
+}

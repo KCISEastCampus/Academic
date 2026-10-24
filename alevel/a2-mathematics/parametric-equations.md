@@ -14,7 +14,7 @@ study_page: true
 
 <div class="lesson-lead" markdown="1">
 
-Describe a curve using a parameter, find its Cartesian equation and use parametric differentiation to find gradients.
+Choose one number and use two rules to calculate the horizontal and vertical coordinates of one point. Learn how to turn these rules into an equation using only the coordinates, sketch the part they reach, and find tangent gradients.
 
 </div>
 
@@ -34,9 +34,9 @@ All examples, data scenarios and tasks are self-written, not official questions 
 
 ## Cartesian Equations {#cartesian-equations}
 
-In $x=f(t)$ and $y=g(t)$, the variable $t$ is the **parameter**. Each allowed value of $t$ gives a point $(x,y)$ on the curve.
+Choose a number, then use two rules to calculate the two coordinates of one point. In $x=f(t)$ and $y=g(t)$, the shared number $t$ is the **parameter**. Each allowed value of $t$ gives a point $(x,y)$ on the curve. Use the same value for both coordinates. The parameter may represent time, but it can simply be a number used to describe the curve.
 
-To find a **Cartesian equation**, eliminate the parameter. Keep any restrictions on the coordinates: the equation alone may describe more of the curve than the given parameter range.
+To make a relation containing only the coordinates, **eliminate the parameter**. The result is a **Cartesian equation**. Often you can solve one rule for the parameter and substitute into the other. Translate the allowed parameter range into coordinate restrictions too, or the new equation may include points the original rules cannot reach. The part reached as the parameter varies is called the **trace**.
 
 <section class="worked-example" markdown="1">
 
@@ -44,11 +44,11 @@ To find a **Cartesian equation**, eliminate the parameter. Keep any restrictions
 
 **Question:** Find the Cartesian equation for $x=t^2$, $y=2t+1$, where $t\geq0$.
 
-From $y=2t+1$, $t=\frac{y-1}{2}$. Hence
+From $y=2t+1$, subtract one and divide by two to obtain $t=\frac{y-1}{2}$. Choose this rule because it has no square, so no square-root sign choice is needed. Substitute into the horizontal-coordinate rule and translate “parameter at least zero” into “vertical coordinate at least one”:
 
 $$\boxed{x=\frac{(y-1)^2}{4},\qquad y\geq1.}$$
 
-Also $x\geq0$. The restriction $y\geq1$ selects the upper branch of the sideways parabola.
+Also $x\geq0$. The restriction $y\geq1$ selects the vertex and the half above it, called the upper branch of the sideways parabola. Conversely, for any point satisfying the two boxed conditions, subtract one from its vertical coordinate and divide by two. This gives a non-negative parameter that reproduces both coordinates. Thus the description neither adds nor misses points.
 
 **Check:** $t=2$ gives $(4,5)$ and $(5-1)^2=4(4)$. The point $(4,-3)$ satisfies the equation but is excluded by the parameter range.
 
@@ -60,11 +60,11 @@ Also $x\geq0$. The restriction $y\geq1$ selects the upper branch of the sideways
 
 **Question:** Eliminate $\theta$ from $x=3\cos\theta$, $y=2\sin\theta$, where $0\leq\theta\leq\pi$.
 
-Use $\cos^2\theta+\sin^2\theta=1$:
+Divide the horizontal coordinate by 3 to obtain cosine and the vertical coordinate by 2 to obtain sine. There is no need to find the angle: square and add these two numbers, using $\cos^2\theta+\sin^2\theta=1$:
 
 $$\boxed{\frac{x^2}{9}+\frac{y^2}{4}=1,\qquad y\geq0.}$$
 
-This is the upper half of an ellipse. As $\theta$ increases, it runs from $(3,0)$ through $(0,2)$ to $(-3,0)$.
+This is the upper half of an ellipse. As $\theta$ increases, it runs from $(3,0)$ through $(0,2)$ to $(-3,0)$. Cosine decreases continuously from 1 to −1 while sine stays non-negative, so every point on the upper half is reached.
 
 **Check:** the endpoints are included. The lower half is excluded because $\sin\theta\geq0$ on this interval.
 
@@ -78,11 +78,11 @@ This is the upper half of an ellipse. As $\theta$ increases, it runs from $(3,0)
 
 $$x=\frac{t}{1-t},\qquad y=\frac{t^2}{1-t},\qquad t\ne1.$$
 
-Rearrange $x(1-t)=t$ to get $t=\frac{x}{1+x}$. The value $x=-1$ is impossible in the original equation. Since $y=tx$,
+Multiply by the denominator to obtain $x(1-t)=t$. Expand, collect the two terms containing the parameter, then factor it out to get $t=\frac{x}{1+x}$. The value $x=-1$ is impossible in the original equation: substituting and cross-multiplying would give −1=0. Comparing the original fractions shows that the vertical coordinate is the parameter times the horizontal coordinate: $y=tx$. No division by the horizontal coordinate is needed, so the origin is retained:
 
 $$\boxed{y=\frac{x^2}{1+x},\qquad x\ne-1.}$$
 
-Every real $x\ne-1$ gives an allowed $t=\frac{x}{1+x}$.
+Every real $x\ne-1$ gives an allowed $t=\frac{x}{1+x}$. This fraction cannot equal 1: equating numerator and denominator would require 0=1. It therefore avoids the forbidden original parameter value. Substitution into both rules reproduces every allowed point, not only the point checked below.
 
 **Check:** $t=2$ gives $(-2,-4)$, which satisfies the Cartesian equation.
 
@@ -90,13 +90,13 @@ Every real $x\ne-1$ gives an allowed $t=\frac{x}{1+x}$.
 
 ### From Cartesian to parametric form {#from-cartesian-to-parametric-form}
 
-You can often choose one coordinate as the parameter. For $y=x^2-1$ with $x\geq0$, use $x=t$, $y=t^2-1$, where $t\geq0$. Eliminating $t$ checks the result and its domain.
+To go the other way, you can use one coordinate's value as the parameter. For $y=x^2-1$ with $x\geq0$, use $x=t$, $y=t^2-1$, where $t\geq0$. This means choosing any non-negative horizontal coordinate and calculating the vertical coordinate by the original rule. Eliminating $t$ restores both the original equation and its horizontal-coordinate restriction, so exactly the required part is covered.
 
 Another useful choice is $x=a\cos\theta$, $y=b\sin\theta$ for $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$, with $a,b>0$. The interval $0\leq\theta<2\pi$ covers the whole ellipse once. Restrict the parameter if the Cartesian curve includes only part of the ellipse.
 
 ## Sketching a Curve {#sketching-a-curve}
 
-Make a table of parameter values. Plot the corresponding points, find intercepts and restrictions, and show the direction as the parameter increases. A few points alone do not prove the full shape.
+List some parameter values in increasing order and use each value to calculate both coordinates. Plot the points, then use the Cartesian equation to justify the shape between them. Check axis crossings and restrictions. Arrows show the order as the parameter increases. A few points locate parts of the curve; they do not prove its full shape.
 
 <section class="worked-example" markdown="1">
 
@@ -109,9 +109,9 @@ Make a table of parameter values. Plot the corresponding points, find intercepts
 | $x$ | $4$ | $1$ | $0$ | $1$ | $4$ |
 | $y$ | $-4$ | $-3$ | $-2$ | $-1$ | $0$ |
 
-Eliminating $t$ gives $x=(y+2)^2$. This is a sideways parabola with vertex $(0,-2)$, opening to the right. It meets the $x$-axis at $(4,0)$.
+Each column uses one parameter value for both coordinates; do not mix coordinates from different columns. Read the vertical rule backwards: the parameter is the vertical coordinate plus two. Substituting into the square rule eliminates $t$ and gives $x=(y+2)^2$. The square makes the horizontal coordinate non-negative and becomes zero at vertical coordinate −2, so the vertex is $(0,-2)$ and the parabola opens right. It meets the $x$-axis at $(4,0)$.
 
-As $t$ increases from negative values to zero, the point moves along the lower branch towards the vertex. For $t>0$, it moves away along the upper branch. Both branches are included, and $x\geq0$.
+As $t$ increases from negative values to zero, the vertical coordinate rises towards −2 and the square decreases. The point moves from the lower right towards the vertex along the lower branch. For $t>0$, it continues upwards and moves right, away from the vertex, along the upper branch. Both parts are included, and $x\geq0$.
 
 ![A sideways parabola with arrows showing increasing parameter values](/assets/img/parametric-parabola.svg)
 
@@ -143,7 +143,7 @@ A curve is given by $x=(t-1)^2$, $y=t+1$, with $-1\le t\le2$.
 <details markdown="1">
 <summary>Hint</summary>
 
-Follow adjacent points in parameter order; use an eliminated relation to justify the shape between them. For (b), choose a coordinate as a new parameter and obtain the other coordinate from the equation.
+Follow adjacent points in parameter order; use an equation in the coordinates to justify how the curve bends between them. For (b), use one coordinate's value as a new parameter, then calculate the other coordinate.
 
 </details>
 
@@ -160,12 +160,12 @@ Follow adjacent points in parameter order; use an eliminated relation to justify
 
 ## Parametric Differentiation {#parametric-differentiation}
 
-Differentiate $x$ and $y$ separately with respect to the parameter. By the chain rule,
+Differentiate $x$ and $y$ separately with respect to the parameter. These give horizontal change and vertical change per unit of parameter. A gradient measures vertical change per unit of horizontal change, so divide the two rates. The chain rule writes this relationship as
 
 $$\frac{dy}{dt}=\frac{dy}{dx}\frac{dx}{dt},\qquad
 \boxed{\frac{dy}{dx}=\frac{\frac{dy}{dt}}{\frac{dx}{dt}}},\qquad \frac{dx}{dt}\ne0.$$
 
-Do not confuse $dy/dt$ with the gradient $dy/dx$.
+The rate $dy/dt$ describes vertical change relative to the parameter. The gradient $dy/dx$ must also account for horizontal change. Check the denominator before dividing:
 
 - If $dy/dt=0$ and $dx/dt\ne0$, the tangent is horizontal: this is a stationary point.
 - If $dx/dt=0$ and $dy/dt\ne0$, the tangent is vertical; the gradient is not finite.
@@ -179,9 +179,9 @@ Do not confuse $dy/dt$ with the gradient $dy/dx$.
 
 $$\frac{dx}{dt}=2t,\qquad \frac{dy}{dt}=1,\qquad \frac{dy}{dx}=\frac1{2t}\quad(t\ne0).$$
 
-At $t=1$, the point is $(1,-1)$ and the gradient is $\boxed{\frac12}$.
+The horizontal coordinate is the parameter squared, so its derivative is twice the parameter. The vertical coordinate is the parameter minus two, so its derivative is 1. Dividing vertical rate by horizontal rate gives the expression above. At $t=1$, use that same value in both coordinate rules: the point is $(1,-1)$ and the gradient is $\boxed{\frac12}$.
 
-For gradient $2$, $\frac1{2t}=2$ gives $t=\frac14$, so the point is $\boxed{\left(\frac1{16},-\frac74\right)}$.
+For gradient $2$, first set the derivative equal to that number: $\frac1{2t}=2$ gives $t=\frac14$. This is a parameter value, not a point; substitute it into both coordinate rules to obtain $\boxed{\left(\frac1{16},-\frac74\right)}$.
 
 There are no stationary points: $\frac1{2t}$ is never zero. At $t=0$, the vertex $(0,-2)$ has vertical tangent $\boxed{x=0}$ and horizontal normal $\boxed{y=-2}$.
 
@@ -203,11 +203,11 @@ For a finite non-zero tangent gradient, the normal gradient is $-\frac1m$. A hor
 
 **Question:** Find the normal to $x=t^2$, $y=2t$ at $t=1$, then find where it meets the curve again.
 
-The point is $(1,2)$ and $\frac{dy}{dx}=\frac{2}{2t}=\frac1t$. At $t=1$, the tangent gradient is $1$, so the normal is
+Using the same parameter value gives the point $(1,2)$. The horizontal and vertical derivatives are twice the parameter and 2, so $\frac{dy}{dx}=\frac{2}{2t}=\frac1t$. At $t=1$, the tangent gradient is $1$. The perpendicular normal has negative reciprocal gradient −1; use the point already found to write its equation:
 
 $$y-2=-(x-1),\qquad \boxed{y=3-x}.$$
 
-At intersections with the curve, substitute the parametric coordinates into this line:
+The second intersection must lie on both the line and the curve. Substitute both coordinate rules into the line to turn this condition into an equation containing only the parameter. Rearrange and factorise:
 
 $$2t=3-t^2\quad\Rightarrow\quad(t-1)(t+3)=0.$$
 
@@ -223,7 +223,7 @@ The root $t=1$ is the original point. The other root is $t=-3$, giving $\boxed{(
 
 **Question:** Find the tangent to $x=3\cos\theta$, $y=2\sin\theta$ at $\theta=\alpha$.
 
-For $\sin\alpha\ne0$,
+Here α stands for a chosen angle whose numerical value has not been specified. Use it in both coordinate rules for the point. The horizontal derivative is negative three times sine, and the vertical derivative is twice cosine. Divide vertical rate by horizontal rate for the gradient, then use the point–gradient form. For $\sin\alpha\ne0$,
 
 $$\frac{dy}{dx}=-\frac{2\cos\theta}{3\sin\theta},\qquad
 y-2\sin\alpha=-\frac{2\cos\alpha}{3\sin\alpha}(x-3\cos\alpha).$$
@@ -246,7 +246,7 @@ The boxed form also covers $\sin\alpha=0$: at $\alpha=0$ the tangent is $x=3$, a
 
 ## Stationary Points {#stationary-points}
 
-Solve $dy/dt=0$, check $dx/dt\ne0$, and substitute into both coordinates. To classify a point, examine $dy/dx$ on each side **as $x$ increases**. A change from negative to positive gives a local minimum; positive to negative gives a local maximum.
+A stationary point has a horizontal tangent. Where $dx/dt\ne0$, we can use the derivative ratio: solve $dy/dt=0$, check $dx/dt\ne0$, then substitute into both coordinate rules. If both parameter derivatives are zero, this ratio cannot decide the tangent; check the curve by eliminating the parameter or taking a suitable limit. To classify the point, read the signs of $dy/dx$ **as $x$ increases**, moving left to right on the graph. Increasing the parameter need not move right; if the horizontal coordinate decreases, reverse the order of the signs. Negative to positive means falling then rising, a local minimum; positive to negative means rising then falling, a local maximum.
 
 The OxfordAQA MA03 specification does not require second derivatives of parametric or implicit curves. Use the gradient's sign change here.
 
@@ -258,7 +258,7 @@ The OxfordAQA MA03 specification does not require second derivatives of parametr
 
 $$\frac{dy}{dx}=\frac{2(t+2)}{3t^2}\quad(t\ne0).$$
 
-The gradient is zero at $t=-2$, where $dx/dt=12\ne0$. The point is $\boxed{(-8,0)}$.
+With a non-zero denominator, a quotient is zero only when its numerator is zero. The numerator contains the parameter plus two, so only $t=-2$ gives zero gradient. Here $dx/dt=12\ne0$, so the ratio applies. Substitute into both coordinate rules to obtain $\boxed{(-8,0)}$.
 
 Near $t=-2$, $x=t^3$ increases as $t$ increases. The denominator $3t^2$ is positive, so the gradient is negative for $t<-2$ and positive for $t>-2$. This is a **local minimum**. At $t=0$, $(0,4)$ has a vertical tangent, not a stationary point.
 
@@ -358,7 +358,7 @@ Find $dy/dx$ and check its sign on each side of each stationary point. Give coor
 <details markdown="1">
 <summary>Solution and check</summary>
 
-$\frac{dy}{dx}=3t^2-3=0$ gives $t=\pm1$. Since $x=t$, increasing $t$ increases $x$, and both points are valid stationary points.
+$\frac{dy}{dx}=3t^2-3=0$ gives $t=\pm1$. Since $x=t$, the horizontal derivative is always 1, so both zeros give horizontal tangents. Increasing $t$ increases $x$, so read the gradient signs in increasing parameter order.
 
 $\boxed{(-1,2)}$ is a local maximum; $\boxed{(1,-2)}$ is a local minimum. The gradient changes from positive to negative at $x=-1$ and from negative to positive at $x=1$.
 
@@ -552,7 +552,7 @@ $dx/dt=2t$ and $dy/dt=3t^2-3$. Horizontal tangents occur at $t=\pm1$, giving $(1
 |---|---|---|---|---|---|
 | $(x,y)$ | $(4,-2)$ | $(1,2)$ | $(0,0)$ | $(1,-2)$ | $(4,2)$ |
 
-Follow the table order for arrows rather than always moving right. The relation $y^2=x(x-3)^2$, $0\le x\le4$, also checks the shape; two parameter values pass through $(3,0)$ along different branches. The table supports the route; straight segments between its points do not represent the smooth curve. If an error returns, use the [trace retry](#retry-trace) or [point retry](#retry-tangent).
+Follow the table order for arrows rather than always moving right. The relation $y^2=x(x-3)^2$, $0\le x\le4$, also checks the shape. Two parameter values pass through $(3,0)$ in different directions: two parts of the curve, called branches, cross there. The table supports the route; straight segments between its points do not represent the smooth curve. If an error returns, use the [trace retry](#retry-trace) or [point retry](#retry-tangent).
 
 </details>
 

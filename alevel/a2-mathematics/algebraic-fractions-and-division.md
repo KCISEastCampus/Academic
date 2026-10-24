@@ -13,7 +13,7 @@ study_page: true
 [Pure Mathematics](/alevel/a2-mathematics/) · P2.1 Algebra and Functions
 {: .lesson-meta}
 
-Learn to simplify algebraic fractions, use the four operations and express an improper fraction as a polynomial plus a proper fraction. Keep the restrictions from the original expression.
+How can you rewrite a fraction without changing its value? Start with cancelling and the four operations, then use division to separate a whole polynomial part from a fraction that remains. Keep track of which inputs the original calculation allows.
 
 Textbook: Chapter 1, Sections 1.6–1.7 (pp. 13–16). The four operations are included as prerequisite revision. The examples and practice questions below are self-written teaching exercises.
 
@@ -24,13 +24,13 @@ Textbook: Chapter 1, Sections 1.6–1.7 (pp. 13–16). The four operations are i
 
 <div class="lesson-notes" markdown="1">
 
-**Before you start:** expand and collect terms, factorise quadratics ([AS Algebra L02](/alevel/as-mathematics/algebra/#l02)) and substitute into polynomials ([L03](/alevel/as-mathematics/algebra/#l03)). The parameter question below shows how to eliminate an unknown from two linear equations. Recover [domains](/alevel/a2-mathematics/functions/#domain-and-range), then ask: which inputs remain unavailable after a rewrite? Begin with restrictions, then study division and remainders. Use [independent practice](#practice), [new retries](#repair-and-retry) and [later review](#later-review) when revising.
+**Before you start:** expand and collect terms, factorise quadratics ([AS Algebra L02](/alevel/as-mathematics/algebra/#l02)) and substitute into polynomials ([L03](/alevel/as-mathematics/algebra/#l03)). One question asks you to find two unknown coefficients; its solution shows how to subtract two equations to remove one unknown. Recover [allowed inputs](/alevel/a2-mathematics/functions/#domain-and-range), then ask: which inputs remain unavailable after a rewrite? Begin with restrictions, then study division and remainders. Use [independent practice](#practice), [new retries](#repair-and-retry) and [later review](#later-review) when revising.
 
 </div>
 
 ## Simplification
 
-A **rational function** is a fraction whose numerator and denominator are polynomials. For example,
+A fraction can contain expressions with powers of x, rather than just numbers. If both its numerator and denominator are polynomials, it defines a **rational function** wherever its denominator is not zero. For example,
 
 $$f(x)=\frac{x^2-9}{x^2+x-6}.$$
 
@@ -43,7 +43,7 @@ The denominator cannot be zero. Find these restrictions before cancelling any fa
 3. Cancel any common factors.
 4. Keep the original restrictions with the simplified answer.
 
-You can cancel a **factor** multiplying the whole numerator and denominator. You cannot cancel a term from a sum. For example,
+A **factor** is something multiplied by the rest of an expression; a **term** is one of the pieces added or subtracted. Cancelling means dividing the whole numerator and denominator by the same non-zero factor. It cannot remove just one term from a sum. For example,
 
 $$\frac{x(x+2)}{x(x+5)}=\frac{x+2}{x+5},\qquad x\ne0,-5,$$
 
@@ -55,7 +55,7 @@ but $\frac{x+2}{x+5}$ cannot be simplified by cancelling the two occurrences of 
 
 **Question:** Simplify $\displaystyle\frac{x^2-9}{x^2+x-6}$ and state its domain.
 
-Factorise both polynomials:
+We want to see whole factors that can be divided out. The numerator is a difference of two squares; in the denominator, look for two numbers whose product is minus six and whose sum is one. Factorising gives:
 
 $$\frac{x^2-9}{x^2+x-6}=\frac{(x-3)(x+3)}{(x+3)(x-2)}.$$
 
@@ -97,11 +97,11 @@ The product $bd$ is a common denominator. If $b$ and $d$ share a factor, you can
 
 **Question:** Express $\displaystyle\frac{2}{x-1}-\frac{x}{x+2}$ as a single fraction.
 
-The common denominator is $(x-1)(x+2)$, with $x\ne1,-2$.
+To subtract fractions, first give them the same denominator. Use $(x-1)(x+2)$, with $x\ne1,-2$. Multiply the first numerator and denominator by the second factor, and the second numerator and denominator by the first factor. Each fraction keeps its value:
 
 $$\frac{2}{x-1}-\frac{x}{x+2}=\frac{2(x+2)-x(x-1)}{(x-1)(x+2)}.$$
 
-Expand the numerator carefully:
+The minus sign applies to the whole second numerator. Keep brackets until you have expanded it:
 
 $$2x+4-(x^2-x)=-x^2+3x+4.$$
 
@@ -142,6 +142,12 @@ $$\boxed{\frac{x+3}{x-1},\qquad x\ne-1,1,3}.$$
 
 ## Algebraic Division
 
+Think first of dividing whole numbers. Seventeen contains three groups of five, with two left over:
+
+$$17=5\times3+2,\qquad \frac{17}{5}=3+\frac25.$$
+
+Polynomial division uses the same “divisor times quotient, plus what is left” structure. There is one important difference: we stop when nothing is left, or when the remaining polynomial has a lower highest power than the divisor, rather than comparing their numerical sizes.
+
 The **degree** of a non-zero polynomial is its highest power of $x$. For example, $3x^2-7$ has degree $2$.
 
 | Type of fraction | Degrees | First step |
@@ -151,7 +157,7 @@ The **degree** of a non-zero polynomial is its highest power of $x$. For example
 
 For example, $\frac{x+1}{x^2+2}$ is proper, while $\frac{x^2+1}{x^2+2}$ is improper. Equal degrees still require division.
 
-Division gives a **quotient** $Q(x)$ and a **remainder** $R(x)$:
+The **quotient** $Q(x)$ tells us what to multiply the divisor by. The **remainder** $R(x)$ is what we must still add to recover the original polynomial. If F is the original polynomial and G is the divisor, then
 
 $$F(x)=G(x)Q(x)+R(x).$$
 
@@ -167,7 +173,7 @@ If the remainder is non-zero, its degree must be less than the degree of $G$. A 
 
 **Question:** Express $\displaystyle\frac{3x+5}{x-2}$ as a constant plus a proper fraction.
 
-Write the numerator as a multiple of the denominator plus a remainder:
+How many copies of the denominator account for the x term in the numerator? Three copies do, but their constant term is minus six. The numerator needs plus five, so add eleven to make up the difference:
 
 $$3x+5=3(x-2)+11.$$
 
@@ -183,7 +189,7 @@ $$\boxed{\frac{3x+5}{x-2}=3+\frac{11}{x-2},\qquad x\ne2}.$$
 
 $$F(x)\equiv(ax+b)Q(x)+R.$$
 
-Set $x=-b/a$: the factor multiplying $Q(x)$ vanishes, leaving $R=F(-b/a)$. Substitute into the polynomial identity, not the original fraction. With two unknown coefficients and two remainder conditions, substitute the roots of the two divisors to obtain two equations, then solve them.
+Choose $x=-b/a$ because it makes the divisor zero. The whole term containing $Q(x)$ then becomes zero, leaving $R=F(-b/a)$. We can use this input in the polynomial identity, which has no division; the original fraction is still undefined there. If two coefficients are unknown and two remainders are given, make each divisor zero in turn. This gives two equations to solve for the unknown numbers.
 
 <section class="worked-example" markdown="1">
 
@@ -197,11 +203,11 @@ Here $x+2=x-(-2)$, so the remainder is
 
 $$F(-2)=2(-2)^3+3(-2)^2-5(-2)+4=10.$$
 
-The quotient is quadratic. Write the polynomial identity
+The numerator's highest power is three and the divisor's is one. The quotient must therefore have highest power two, so that multiplying back produces a cubic. Use three unknown coefficients to describe it and write the polynomial identity:
 
 $$2x^3+3x^2-5x+4\equiv(x+2)(Ax^2+Bx+C)+10.$$
 
-Expand the right-hand side and compare coefficients:
+Expand the right-hand side. The two polynomials must be equal for every input, so the numbers multiplying each power must match. This is **comparison of coefficients**:
 
 $$2x^3+3x^2-5x+4\equiv Ax^3+(2A+B)x^2+(2B+C)x+2C+10.$$
 
@@ -221,7 +227,7 @@ Substituting $-2$ into the **polynomial** is allowed. The original fraction is u
 
 Long division gives the same quotient and remainder. Write the powers in descending order and include a zero coefficient for any missing power.
 
-At each step, divide the leading term of the current remainder by the leading term of the divisor. Multiply the divisor by that result, then subtract.
+At each step, deal with the term containing the highest power first (the **leading term**). To remove twice x cubed using a divisor beginning with x, choose twice x squared for the quotient. Multiply the whole divisor by that choice, then subtract the whole product. Repeat with what is left, as the rows below show:
 
 | Current expression | Next quotient term | Subtract | New remainder |
 |---|---|---|---|
@@ -230,7 +236,7 @@ At each step, divide the leading term of the current remainder by the leading te
 | $-3x+4$ | $-3$ | $-3(x+2)$ | $10$ |
 {: .wide-table}
 
-Stop because the constant remainder has lower degree than the linear divisor. The quotient is $2x^2-x-3$.
+Stop because only a constant is left, while the divisor still contains x. That remainder has lower degree than the divisor. Collect the three quotient terms to obtain $2x^2-x-3$.
 
 **Check either method:** Expand $(x+2)(2x^2-x-3)+10$. It gives $2x^3+3x^2-5x+4$.
 
@@ -240,7 +246,7 @@ Stop because the constant remainder has lower degree than the linear divisor. Th
 
 ### Factor theorem
 
-The **factor theorem** says that $ax+b$ is a factor of the polynomial $F(x)$ if and only if $F(-\frac ba)=0$, where $a\ne0$. This is the remainder theorem with a zero remainder.
+If nothing is left over in a division, the divisor is a factor: multiplying it by the quotient gives the whole original polynomial. The **factor theorem** states this as follows: $ax+b$ is a factor of $F(x)$ if and only if $F(-\frac ba)=0$, where $a\ne0$. This is the remainder theorem with a zero remainder.
 
 For example, for $F(x)=2x^3+x^2-8x-4$, the divisor $2x+1$ is zero at $x=-\frac12$. Since
 
@@ -260,7 +266,7 @@ Expanding checks the factorisation.
 
 **Question:** Express $\displaystyle\frac{x^2+6x-1}{(x-1)(x+2)}$ as a polynomial plus a proper fraction.
 
-The denominator is $x^2+x-2$. Its degree equals the numerator degree, so the fraction is improper.
+The denominator is $x^2+x-2$. Both highest powers are two, so this is an improper fraction and needs division before partial fractions. One copy of the denominator accounts for the numerator's highest-power term.
 
 Subtract one copy of the denominator from the numerator:
 
@@ -498,7 +504,7 @@ Close the old answer and choose a new task for your error. Check the identity an
 | --- | --- | --- |
 | Cancelled terms or lost an excluded input | Review [factor cancellation](#factorise-first); list original denominator zeros | [R1](#retry-domain) |
 | Treated multiplication and division restrictions alike | Review [division](#example-3--division-adds-a-restriction); also check whether the divisor is zero | [R2](#retry-operations) |
-| Wrong input for a non-monic divisor | Review [the remainder demonstration](#example-5--remainder-theorem-and-comparison-of-coefficients); solve divisor equals zero first | [R3](#retry-remainder) |
+| Used the wrong input when the divisor's x coefficient was not one | Review [the remainder demonstration](#example-5--remainder-theorem-and-comparison-of-coefficients); solve divisor equals zero first | [R3](#retry-remainder) |
 | Lost quotient or wrong remainder degree | Review [the division identity](#algebraic-division); expand GQ+R | [R4](#retry-division) |
 
 <section class="lesson-check" markdown="1">
@@ -594,7 +600,7 @@ Express $\displaystyle\frac{2x^3+x^2+1}{x^2-1}$ as a polynomial plus a proper fr
 <details markdown="1">
 <summary>Hint</summary>
 
-Divide leading terms at each step. The remainder may be linear; keep the original domain if you simplify the remainder fraction.
+At each step, divide the terms with the highest powers. The remainder may be linear; keep excluding the original forbidden inputs if you simplify the remaining fraction.
 
 </details>
 

@@ -14,12 +14,12 @@ study_page: true
 
 <div class="lesson-lead" markdown="1">
 
-Choose a differentiation rule, find gradients and use them for tangents, normals and stationary points.
+How steep is a curve at one point? How does its output change when its input changes a little? A derivative describes this rate of change. Learn how to choose a rule, then use the gradient to find tangents, perpendicular normals and points with horizontal tangents.
 
 </div>
 
 - **Learning:** start with [standard derivatives](#standard-derivatives), then study [products and quotients](#products-and-quotients), [composite functions](#composite-functions) and [implicit functions](#implicit-functions).
-- **Homework help:** identify the outer operation before choosing a rule. Keep the original domain and use radians for trigonometric derivatives.
+- **Homework help:** ask whether the final step adds, multiplies, divides, or feeds one result into another function. Keep the inputs allowed by the original function and use radians for trigonometric derivatives.
 - **Revision:** try [practice](#practice) with solutions closed, then check the [quick reference](#quick-reference).
 
 <div class="lesson-notes" markdown="1">
@@ -34,7 +34,9 @@ All examples, data scenarios and tasks are self-written, not official questions 
 
 ## Standard Derivatives {#standard-derivatives}
 
-Use **radians** for the trigonometric formulae below. Each derivative applies where the original function is defined and differentiable.
+The slope between two points gives an average rate of change. The tangent's slope at one point gives the rate there: the **derivative**. It measures output change per unit of input near that point, rather than the height of the point. A positive derivative means the curve rises as the input increases; a negative derivative means it falls.
+
+Use **radians** for the trigonometric formulae below. Check that the original function accepts the input and has a finite derivative there; this is what **differentiable** means. The domain column states the allowed inputs for these formulae.
 
 | $y$ | $\frac{dy}{dx}$ | Domain restriction |
 |---|---|---|
@@ -47,7 +49,7 @@ Use **radians** for the trigonometric formulae below. Each derivative applies wh
 | $\cosec x$ | $-\cosec x\cot x$ | $\sin x\ne0$ |
 | $\cot x$ | $-\cosec^2 x$ | $\sin x\ne0$ |
 
-Differentiate sums term by term. Constants have derivative zero; constant multiples stay outside the derivative.
+When quantities are added, their rates of change add, so differentiate a sum term by term. A constant does not change, so its derivative is zero. Multiplying a quantity by a fixed number multiplies its rate by that same number.
 
 The derivative of $e^x$ is itself. Since $y=\ln x$ means $x=e^y$, we have $\frac{dx}{dy}=e^y=x$, giving $\frac{dy}{dx}=\frac1x$ for $x>0$.
 
@@ -59,7 +61,7 @@ The derivative of $e^x$ is itself. Since $y=\ln x$ means $x=e^y$, we have $\frac
 
 $$\frac{dy}{dx}=2e^x+\frac1x+3\sin x.$$
 
-Substitute into the **derivative**, not the original function:
+The three terms are added, so differentiate them separately. Keep the constant multipliers 2 and −3; the minus sign from differentiating cosine turns −3 into +3. To find the gradient, substitute the given input into the **derivative**. Substitution into the original function would give the point's height:
 
 $$\boxed{m=2e+1+3\sin1=8.9610\ldots}.$$
 
@@ -69,13 +71,13 @@ $$\boxed{m=2e+1+3\sin1=8.9610\ldots}.$$
 
 ## Products and Quotients {#products-and-quotients}
 
-For $y=uv$, where both $u$ and $v$ are functions of $x$,
+In a product, changing either factor affects the result. The instantaneous rate has two contributions: keep one factor's value and multiply by the other's rate, then swap their roles and add. For $y=uv$, where both $u$ and $v$ depend on $x$,
 
 $$\frac{dy}{dx}=u\frac{dv}{dx}+v\frac{du}{dx}.$$
 
 The derivative of a product is **not** the product of the two derivatives.
 
-For $y=\frac uv$, with $v\ne0$,
+In a quotient, changes in either the numerator or denominator affect the result. An increasing denominator, for example, can make the quotient smaller. For $y=\frac uv$, with $v\ne0$, the **quotient rule** combines these effects:
 
 $$\frac{dy}{dx}=\frac{v\frac{du}{dx}-u\frac{dv}{dx}}{v^2}.$$
 
@@ -87,7 +89,7 @@ Keep the numerator order: denominator times derivative of numerator, minus numer
 
 **Question:** Use the quotient rule to differentiate $\tan x$.
 
-Write $\tan x=\frac{\sin x}{\cos x}$. Then
+Use the known sine and cosine functions to write a quotient: $\tan x=\frac{\sin x}{\cos x}$. The numerator differentiates to cosine, and the denominator to negative sine. Put these into the quotient rule in order:
 
 $$\begin{aligned}
 \frac{d}{dx}(\tan x)
@@ -105,11 +107,11 @@ This holds for $\cos x\ne0$. The same quotient rule or chain rule can derive the
 
 **Question:** Differentiate $y=x^2e^{3x}$.
 
-The outer operation multiplies two changing factors, so differentiating only the exponential is insufficient. First write $v=e^w$, $w=3x$. The chain rule says “rate with respect to $x$ = rate with respect to $w$ × rate of $w$ with respect to $x$”:
+Calculate the square and the exponential, then multiply them. Both factors change with the input, so use the product rule. The exponential itself takes two steps: multiply the input by 3, then raise e to that power. Write $v=e^w$, $w=3x$. The middle quantity changes at rate 3, so multiply the exponential's rate with respect to that quantity by 3. This is the **chain rule**: the rate with respect to $x$ equals the rate with respect to $w$ times the rate of $w$ with respect to $x$.
 
 $$\frac{dv}{dx}=\frac{dv}{dw}\frac{dw}{dx}=e^w\times3=3e^{3x}.$$
 
-Now set $u=x^2$, so $u^{\prime}=2x$. Put both derivatives into the product rule, keeping both terms:
+Now set $u=x^2$, so $u^{\prime}=2x$. The first term comes from the square changing, with the exponential kept; the second comes from the exponential changing, with the square kept. Add, then factorise:
 
 $$\boxed{\frac{dy}{dx}=2xe^{3x}+3x^2e^{3x}=xe^{3x}(2+3x)}.$$
 
@@ -123,7 +125,7 @@ $$\boxed{\frac{dy}{dx}=2xe^{3x}+3x^2e^{3x}=xe^{3x}(2+3x)}.$$
 
 **Question:** Differentiate $y=\frac{\ln x}{x}$.
 
-The domain is $x>0$. With $u=\ln x$, $v=x$,
+The logarithm accepts only positive inputs, so the domain is $x>0$. Two changing quantities are divided, so choose the quotient rule. With $u=\ln x$, $v=x$, the numerator's derivative is the reciprocal of its input, and the denominator's derivative is 1. Start with denominator times numerator's derivative, then subtract the other term:
 
 $$\frac{dy}{dx}=\frac{x(\frac1x)-\ln x(1)}{x^2}=\boxed{\frac{1-\ln x}{x^2}}.$$
 
@@ -135,11 +137,11 @@ $$\frac{dy}{dx}=\frac{x(\frac1x)-\ln x(1)}{x^2}=\boxed{\frac{1-\ln x}{x^2}}.$$
 
 ## Composite Functions {#composite-functions}
 
-For $y=f(u)$ and $u=g(x)$, the **chain rule** gives
+Some calculations first produce a result, then feed it into another function: square and add one, for example, then take a logarithm. This makes a **composite function**. The first calculation is called the inner function; the function receiving its result is the outer function. For $y=f(u)$ and $u=g(x)$, the **chain rule** gives
 
 $$\frac{dy}{dx}=\frac{dy}{du}\frac{du}{dx}.$$
 
-Differentiate the outer function, keep its input unchanged, then multiply by the derivative of the inner function.
+Multiply the output's rate with respect to the middle quantity by the middle quantity's rate with respect to the original input. In practice, differentiate the function receiving the result while keeping its whole input in place, then multiply by that input's derivative. Missing this factor treats the middle quantity as if it always changed at rate one.
 
 Useful forms are
 
@@ -157,13 +159,13 @@ where the original power and the derivative are defined. For trigonometric funct
 
 **Question:** Differentiate (a) $\ln(1+x^2)$ and (b) $\cos^3(2x)$.
 
-**(a)** The outer function is a logarithm and the inner function is $1+x^2$:
+**(a)** First calculate $1+x^2$, then take the natural logarithm of that result. The logarithm's derivative is the reciprocal of its input. Multiply by the input's derivative, 2x:
 
 $$\boxed{\frac{d}{dx}\ln(1+x^2)=\frac{2x}{1+x^2}}.$$
 
 The logarithm is defined for every real $x$ because $1+x^2>0$.
 
-**(b)** Write $\cos^3(2x)=[\cos(2x)]^3$:
+**(b)** Write $\cos^3(2x)=[\cos(2x)]^3$. The calculation is: double the input → take cosine → cube. Differentiate in reverse order: cubing gives 3 times the cosine squared, cosine gives negative sine, and doubling the input gives the factor 2:
 
 $$\begin{aligned}
 \frac{d}{dx}[\cos(2x)]^3
@@ -181,11 +183,11 @@ $$\begin{aligned}
 
 **Question:** Given $x=y^3+y$, find $\frac{dy}{dx}$ at $y=1$.
 
-Differentiate with respect to $y$:
+The equation directly gives the horizontal coordinate from the vertical one, so first differentiate with respect to $y$. This measures horizontal change per unit of vertical change:
 
 $$\frac{dx}{dy}=3y^2+1.$$
 
-Since this is non-zero,
+The required gradient is vertical change divided by horizontal change, the reverse of the rate just found. Since that rate is non-zero, take its reciprocal:
 
 $$\frac{dy}{dx}=\frac1{3y^2+1},\qquad \boxed{\left.\frac{dy}{dx}\right\vert _{y=1}=\frac14}.$$
 
@@ -195,13 +197,13 @@ $$\frac{dy}{dx}=\frac1{3y^2+1},\qquad \boxed{\left.\frac{dy}{dx}\right\vert _{y=
 
 ## Tangents, Normals and Stationary Points {#tangents-normals-and-stationary-points}
 
-At a regular point $(a,b)$ with finite tangent gradient $m$, the tangent is
+First consider a smooth part of a curve with one tangent direction at the point; corners and crossings need separate checks. At $(a,b)$, if the tangent gradient $m$ is finite, the point–gradient form gives
 
 $$y-b=m(x-a).$$
 
-For $m\ne0$, the normal has gradient $-\frac1m$. If the tangent is horizontal ($m=0$), the normal is the vertical line $x=a$. At a regular point with a vertical tangent, the normal is horizontal.
+For $m\ne0$, the normal has gradient $-\frac1m$. If the tangent is horizontal ($m=0$), the normal is the vertical line $x=a$. On a smooth curve, a vertical tangent has a horizontal normal.
 
-A **stationary point** has $\frac{dy}{dx}=0$. Find its coordinates, not just its $x$ value. Use a sign change in $\frac{dy}{dx}$ or the second derivative to classify it:
+A **stationary point** has a horizontal tangent, so $\frac{dy}{dx}=0$. Find both coordinates, not just its $x$ value. Moving left to right, a positive derivative means rising and a negative derivative means falling. Changes in the sign of $\frac{dy}{dx}$ therefore identify a peak or a trough. Alternatively, use the **second derivative**, which measures how the gradient changes:
 
 - Positive to negative: local maximum.
 - Negative to positive: local minimum.
@@ -214,7 +216,7 @@ A **stationary point** has $\frac{dy}{dx}=0$. Find its coordinates, not just its
 
 **Question:** For $y=xe^{-x}$, find the tangent and normal at $x=0$, then find and classify its stationary point.
 
-The product and chain rules give
+The two factors are multiplied, so use the product rule. The first factor has derivative 1; the exponential first negates the input, so its derivative is the same exponential times −1. Combine the two terms for the first derivative. Differentiate again: apply the product rule to the exponential times one minus the input. Both factors now have negative derivatives; collect the terms for the second derivative:
 
 $$y^{\prime}=e^{-x}(1-x),\qquad y^{\prime\prime}=e^{-x}(x-2).$$
 
@@ -228,11 +230,11 @@ Since $e^{-x}>0$, $y^{\prime}=0$ only at $x=1$. The stationary point is $\boxed{
 
 ## Implicit Functions {#implicit-functions}
 
-An equation may relate $x$ and $y$ without giving $y$ explicitly in terms of $x$. Treat $y$ as a function of $x$ when differentiating locally:
+Sometimes an equation mixes the horizontal coordinate $x$ and vertical coordinate $y$ without giving $y$ directly in terms of $x$. This is an **implicit relation**. As the horizontal coordinate changes along the curve, the vertical coordinate usually changes too. Wherever $y$ can locally be treated as a differentiable function of $x$, its rate must be included:
 
 $$\frac{d}{dx}(y^2)=2y\frac{dy}{dx},\qquad\frac{d}{dx}(e^y)=e^y\frac{dy}{dx}.$$
 
-For a mixed product, use the product rule. For example,
+After differentiating the square or exponential with respect to the vertical coordinate, multiply by that coordinate's rate of change: the chain rule. When the coordinates are multiplied, both change, so use the product rule. For example,
 
 $$\frac{d}{dx}(xy)=y+x\frac{dy}{dx}.$$
 
@@ -244,7 +246,7 @@ Differentiate both sides, collect every $\frac{dy}{dx}$ term, then solve for the
 
 **Question:** For $x^2+xy+y^2=7$, find $\frac{dy}{dx}$ and the tangent and normal at $(1,2)$.
 
-Differentiate term by term:
+Differentiate both sides term by term. Use the power rule for the horizontal coordinate squared, keep both product-rule terms for the mixed product, and multiply the derivative of the vertical coordinate squared by that coordinate's derivative. The constant on the right has derivative zero:
 
 $$2x+y+x\frac{dy}{dx}+2y\frac{dy}{dx}=0.$$
 
@@ -280,7 +282,7 @@ Write $\sin y=x$ and differentiate implicitly:
 
 $$\cos y\frac{dy}{dx}=1.$$
 
-Because the inverse range is $-\frac\pi2\le y\le\frac\pi2$, cosine is positive in the interior. Thus
+Inverse sine returns an angle in the chosen range $-\frac\pi2\le y\le\frac\pi2$. Away from its endpoints, cosine is positive. Therefore take the positive square root when recovering cosine from its square:
 
 $$\cos y=\sqrt{1-\sin^2 y}=\sqrt{1-x^2},$$
 
@@ -313,7 +315,7 @@ Differentiate $3e^x-2\ln x+4\sin x$. Also differentiate $\sec(3x)$ and $\cot(2x)
 <details markdown="1">
 <summary>Hint</summary>
 
-Differentiate the sum term by term. The reciprocal functions need an inner-angle factor.
+Differentiate the sum term by term. The other functions first multiply the input, then apply a trigonometric function; include the rate at which the angle changes.
 
 </details>
 
@@ -326,7 +328,7 @@ $$\boxed{\frac{d}{dx}\sec(3x)=3\sec(3x)\tan(3x)},\qquad\cos(3x)\ne0,$$
 
 $$\boxed{\frac{d}{dx}\cot(2x)=-2\cosec^2(2x)},\qquad\sin(2x)\ne0.$$
 
-The factors $3$ and $2$ come from the inner angles. Differentiating $1/\cos(3x)$ and $\cos(2x)/\sin(2x)$ provides independent checks.
+The factors $3$ and $2$ are the rates at which the angles change. Differentiating $1/\cos(3x)$ and $\cos(2x)/\sin(2x)$ provides independent checks.
 
 </details>
 
@@ -389,7 +391,7 @@ Differentiate $e^{\sin x}$, $\ln(4-x^2)$ and $\sin^2(3x)$. State the logarithm's
 <details markdown="1">
 <summary>Hint</summary>
 
-Identify each outer function. For the last expression, the square is outside the sine.
+Read each expression in calculation order, then differentiate starting with its last step. The last expression takes the sine of a triple angle, then squares the result.
 
 </details>
 
@@ -527,7 +529,7 @@ $$f(x)=\frac{e^{x^2}}{x}.$$
 <details markdown="1">
 <summary>Hint</summary>
 
-Identify the outer operation in (a), then differentiate its inner input. In (b), keep the differentiated linear relation before dividing by a coefficient that might be zero.
+In (a), look at how the final step combines the numerator and denominator; the numerator itself takes more than one step. In (b), collect the derivative terms before dividing by a number that might be zero.
 
 </details>
 
@@ -571,7 +573,7 @@ Differentiate $x^2\sin(1/x)$ and $(\ln x)/x^2$. State the original domains and s
 <details markdown="1">
 <summary>Hint</summary>
 
-Both have more than one changing factor. The first has inner input $1/x$; the second can be rewritten as a product or differentiated as a quotient.
+Both contain more than one changing quantity. The first calculates $1/x$ before taking sine; the second can be rewritten as a product or differentiated as a quotient.
 
 </details>
 
@@ -609,7 +611,7 @@ The quotient rule checks the second result. Simplification cannot enlarge the or
 <details markdown="1">
 <summary>Hint</summary>
 
-In (a), use circle geometry or regard $x$ locally as a function of $y$; a formula assuming finite $dy/dx$ cannot be substituted at a vertical tangent. In (b), compare first-derivative signs and check concavity.
+In (a), use circle geometry or regard $x$ locally as a function of $y$; a formula assuming finite $dy/dx$ cannot be substituted at a vertical tangent. In (b), compare first-derivative signs on either side, then check whether the gradient switches between increasing and decreasing: a change in concavity.
 
 </details>
 
@@ -643,7 +645,7 @@ Let $y=\cos^{-1}(2x-1)$. Derive $dy/dx$ from an implicit relation and state both
 <details markdown="1">
 <summary>Hint</summary>
 
-Write $\cos y=2x-1$. Use the principal range to choose the sign of $\sin y$, then use the Pythagorean identity.
+Write $\cos y=2x-1$. Inverse cosine returns an angle from 0 to π; use this range to choose the sign of $\sin y$, then use the Pythagorean identity.
 
 </details>
 
@@ -679,7 +681,7 @@ After parametric equations, attempt this away from the demonstrations; compare y
 <details markdown="1">
 <summary>Hint</summary>
 
-Identify each outer operation yourself. First-derivative signs classify (a); in (b), first check which inputs the original functions accept.
+Decide for yourself which calculation comes last in each expression. First-derivative signs classify (a); in (b), first check which inputs the original functions accept.
 
 </details>
 
@@ -707,13 +709,13 @@ The latter function itself has domain $-2\le x\le2$. If an error returns, use th
 | Sum or constant multiple | Differentiate each term | Constants have derivative zero |
 | Product | $u v^{\prime}+v u^{\prime}$ | Keep both terms |
 | Quotient | $\frac{v u^{\prime}-u v^{\prime}}{v^2}$ | Keep numerator order and square the denominator |
-| Composite function | Outer derivative times inner derivative | Keep the input unchanged in the outer derivative |
+| Composite function | Differentiate the receiving function, then multiply by its input's derivative | Keep the whole input in place in the first step |
 | $x$ given in terms of $y$ | Find $dx/dy$, then take its reciprocal | $dx/dy$ must be non-zero for a finite result |
 | Implicit function | Differentiate every term, then collect $dy/dx$ | $y$ terms need the chain rule; $xy$ needs the product rule |
 | Tangent or normal | Find the point and gradient first | Treat horizontal and vertical lines separately |
 | Stationary point | Solve $y^{\prime}=0$ and classify | Give both coordinates; $y^{\prime\prime}=0$ is inconclusive |
 
-**If your answer looks wrong:** check the outer operation, inner derivative, signs, radians, original domain and point coordinates. A numerical difference check can reveal an error, but it does not replace a derivation.
+**If your answer looks wrong:** check the calculation order and whether you included each intermediate input's derivative, then check signs, radians, allowed inputs and point coordinates. A numerical difference check can reveal an error, but it does not replace a derivation.
 
 **You should be able to:** select and combine differentiation rules, find line equations, classify stationary points and differentiate implicit and inverse functions.
 

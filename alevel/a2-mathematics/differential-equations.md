@@ -14,11 +14,11 @@ study_page: true
 
 <div class="lesson-lead" markdown="1">
 
-A differential equation relates a quantity to its rate of change. Solving it gives a relationship without a derivative.
+Knowing how quickly water depth changes does not yet tell us its depth at a later time. A differential equation gives the rule for the rate. We solve it to find the quantity itself as a function, then use known values to choose the function that fits.
 
 </div>
 
-- **Learning:** start with [separable variables](#separable-variables), then use [given conditions](#using-a-given-condition) and form [models](#forming-a-model).
+- **Learning:** start with [finding a function from its rate](#separable-variables), then use [given conditions](#using-a-given-condition) and form [models](#forming-a-model).
 - **Homework help:** check which variable changes, what the rate is proportional to, and whether the quantity increases or decreases.
 - **Revision:** try [practice](#practice) before opening the hints and solutions.
 
@@ -32,23 +32,13 @@ All examples, data scenarios and tasks are self-written, not official questions 
 
 </div>
 
-## Separable Variables {#separable-variables}
+## Find a Function from Its Rate {#separable-variables}
 
-A **first order differential equation** contains a first derivative, such as $\frac{dy}{dx}$, but no higher derivatives. The equations in this lesson have **separable variables**: they can be written in the form
+The value of $y$ tells us how much there is; $\frac{dy}{dx}$ tells us how quickly it changes as $x$ changes. An equation linking these is a **differential equation**. Here it contains a first derivative but no second or higher derivative, so it is called **first order**.
 
-$$\frac{dy}{dx}=f(x)g(y).$$
+Start with the equation in Example 1: the rate is $2xy$. The right side is a part involving $x$ multiplied by $y$. Dividing by $y$ lets us collect the two variables separately before integrating. This is called **separation of variables**. We can divide only when $y\ne0$, so we must also check whether $y=0$ is a solution of the original equation.
 
-Collect the $y$ terms with the integral in $y$ and the $x$ terms with the integral in $x$. Where $g(y)\ne0$, write
-
-$$\int\frac{1}{g(y)}\,dy=\int f(x)\,dx.$$
-
-The chain rule explains this step: if $G^{\prime}(y)=1/g(y)$, then along a solution
-
-$$\frac{d}{dx}G(y(x))=\frac1{g(y)}\frac{dy}{dx}=f(x).$$
-
-Integrating with respect to $x$ gives the two stated integrals, up to a constant. This requires $g(y)\ne0$ on the interval considered, which is why divided-out constant solutions are checked first.
-
-This is the integral form used in the textbook. Then integrate both sides. **One constant of integration is enough:** constants on both sides can be combined into one $C$.
+Now find both integrals. **One constant of integration is enough:** if each side has a constant, subtract one from the other and call the result $C$.
 
 1. Check whether the variables can be separated.
 2. Before dividing by a function of $y$, check whether making that function zero gives a constant solution.
@@ -56,7 +46,7 @@ This is the integral form used in the textbook. Then integrate both sides. **One
 4. Use any given condition to find the constant.
 5. Check the result in the original differential equation and check the condition.
 
-**General solution:** a family of solutions containing an arbitrary constant. **Particular solution:** a solution found using extra information, such as a point on the curve. An **initial condition** gives a starting value, often at time $t=0$.
+Before we know a value on the curve, the constant can take different values and give different solutions. Together these form the **general solution**. A known point lets us find the constant and select a **particular solution**. When the information gives a starting value, often at time $t=0$, it is called an **initial condition**.
 
 <section class="worked-example" markdown="1">
 
@@ -64,13 +54,17 @@ This is the integral form used in the textbook. Then integrate both sides. **One
 
 **Question:** Solve $\displaystyle\frac{dy}{dx}=2xy$.
 
-For $y\ne0$, separate and integrate:
+The right side multiplies a part involving $x$ by $y$. To collect the $y$ part on the left, divide by $y$. This excludes zero, which we must check separately. For $y\ne0$:
+
+$$\frac1y\frac{dy}{dx}=2x.$$
+
+Why can we integrate the left side with respect to $y$? Recall substitution: the factor $\frac{dy}{dx}$ accounts for how $y$ changes with $x$. Equivalently, the chain rule tells us that the left side is the derivative of $\ln\lvert y\rvert$ with respect to $x$. Integrating both sides can therefore be written as
 
 $$\int\frac1y\,dy=\int2x\,dx.$$
 
 $$\ln\lvert y\rvert=x^2+C.$$
 
-Taking $e$ to the power of each side gives $\lvert y\rvert=e^Ce^{x^2}$. Allowing either sign, write
+The left integral is a logarithm and the right is a power integral. To recover $y$, take $e$ to the power of each side: $\lvert y\rvert=e^Ce^{x^2}$. The sum in the exponent becomes a product. The constant $e^C$ is positive; allow either sign for $y$ and combine its sign and size into a new constant $A$:
 
 $$\boxed{y=Ae^{x^2}}.$$
 
@@ -82,9 +76,25 @@ For the solutions found by division, $A\ne0$. Check $y=0$ separately in the orig
 
 </section>
 
+### The same method in general {#separation-why-it-works}
+
+Now connect the example to other equations. If the right side is a product $f(x)g(y)$, the first factor depends only on $x$ and the second only on $y$:
+
+$$\frac{dy}{dx}=f(x)g(y).$$
+
+Where $g(y)\ne0$, divide by it and separate the integrals:
+
+$$\int\frac{1}{g(y)}\,dy=\int f(x)\,dx.$$
+
+This uses the same reverse chain rule as Example 1. Call an antiderivative of $1/g(y)$ by the name $G(y)$, so $G^{\prime}(y)=1/g(y)$. Since $y$ changes with $x$, the chain rule gives
+
+$$\frac{d}{dx}G(y(x))=\frac1{g(y)}\frac{dy}{dx}=f(x).$$
+
+Integrating with respect to $x$ gives the separated integrals and one constant. In Example 1, $g(y)=y$ and $G(y)=\ln\lvert y\rvert$. Before dividing, always check values that make $g(y)$ zero in the original equation: they may give constant solutions that the division would lose.
+
 ## Using a Given Condition {#using-a-given-condition}
 
-Substitute both coordinates into the integrated result to find $C$. If rearranging gives two branches, use the condition to select the correct one. Work on an interval where the original equation is defined.
+A known point gives both an $x$ value and a $y$ value. Substitute both into the integrated equation to find $C$. If solving for $y$ gives a positive and a negative choice, use the given $y$ value to choose. Also check where the original equation allows the solution: a denominator cannot be zero and a real logarithm needs a positive input.
 
 <section class="worked-example" markdown="1">
 
@@ -92,19 +102,19 @@ Substitute both coordinates into the integrated result to find $C$. If rearrangi
 
 **Question:** Solve $\displaystyle\frac{dy}{dx}=\frac{x}{y}$, given $y=2$ when $x=0$.
 
-The original equation requires $y\ne0$. Separating gives
+Here $y$ is in the denominator, so it cannot be zero. Multiply by $y$ to collect the $y$ part in the left integral and leave the $x$ part on the right:
 
 $$\int y\,dy=\int x\,dx,$$
 
 $$\frac{y^2}{2}=\frac{x^2}{2}+C.$$
 
-Use $(0,2)$: $2=C$. Hence $y^2=x^2+4$. The starting value is positive, so choose the positive branch:
+Use both coordinates of $(0,2)$: the left side is $2$ and the $x$ term is zero, so $2=C$. Hence $y^2=x^2+4$. At the starting point $y$ is positive, so choose the positive square root. A solution cannot switch to the negative root without passing through zero, which the original equation forbids for $y$:
 
 $$\boxed{y=\sqrt{x^2+4}}.$$
 
 **Check:** $\frac{dy}{dx}=\frac{x}{\sqrt{x^2+4}}=\frac{x}{y}$, and $y(0)=2$. This solution never reaches zero and is defined for all real $x$.
 
-**Common mistake:** giving both signs after the condition has selected one branch.
+**Common mistake:** keeping both signs. Substitute the starting value into each choice: only the positive one gives the required value.
 
 </section>
 
@@ -114,13 +124,13 @@ $$\boxed{y=\sqrt{x^2+4}}.$$
 
 **Question:** Solve $\displaystyle\frac{dy}{dx}=y(y-2)$, given $y=1$ when $x=0$.
 
-First check $y=0$ and $y=2$. Both give $\frac{dy}{dx}=0$ and satisfy the differential equation, but neither satisfies the given condition.
+Before dividing by $y(y-2)$, ask which values would make this divisor zero. If $y$ stays at zero or at two, its derivative is zero and the right side is also zero. Both are solutions of the differential equation, but neither passes through the given point.
 
 For the required non-constant solution,
 
 $$\int\frac{1}{y(y-2)}\,dy=\int1\,dx.$$
 
-Use partial fractions:
+The denominator is a product, so the integral is not yet a single logarithm. Split it into two simpler fractions that we can integrate:
 
 $$\frac{1}{y(y-2)}=-\frac{1}{2y}+\frac{1}{2(y-2)}.$$
 
@@ -130,7 +140,7 @@ At $(0,1)$, both logarithms are zero, so $C=0$. Therefore
 
 $$\ln\left\lvert\frac{y-2}{y}\right\rvert=2x.$$
 
-The ratio is negative at the starting point. On the solution interval, take
+Taking the exponential gives the size of the ratio, but not its sign. At the starting point the ratio is negative. It keeps this sign on the interval containing that point: it cannot cross zero or become undefined while the separated equation applies. Thus take
 
 $$\frac{y-2}{y}=-e^{2x},\qquad \boxed{y=\frac{2}{1+e^{2x}}}.$$
 
@@ -146,7 +156,9 @@ The condition gives $y(0)=1$. For every real $x$, $0<y<2$, so neither divided fa
 
 ## Forming a Model {#forming-a-model}
 
-Identify the dependent quantity, the variable it changes with, and the sign of the rate. A **constant of proportion** belongs to the model; an **arbitrary constant** appears when you integrate. They have different roles.
+First ask: what quantity changes, what does it change with, and does it increase or decrease? The changing quantity is the **dependent variable**; the variable used to track the change is the **independent variable**.
+
+“Rate proportional to a quantity” means dividing the rate by that quantity gives a fixed number. That number is the **constant of proportion**. The constant that appears later when integrating has a different job: it lets the solution fit a known value.
 
 In the table below, $Q>0$ and $k>0$. The sign is written explicitly.
 
@@ -157,9 +169,9 @@ In the table below, $Q>0$ and $k>0$. The sign is written explicitly.
 | $Q$ increases at a rate inversely proportional to $Q$ | $\displaystyle\frac{dQ}{dt}=\frac{k}{Q}$ |
 | $Q$ decreases at a rate proportional to $Q^2$ | $\displaystyle\frac{dQ}{dt}=-kQ^2$ |
 
-The independent variable need not be time. For example, a length $l$ changing with temperature $\theta$ uses $\frac{dl}{d\theta}$.
+The variable used to track change need not be time. For example, a length $l$ changing with temperature $\theta$ uses $\frac{dl}{d\theta}$.
 
-Proportionality can concern a difference from equilibrium. If the rate is proportional to $Q-Q_e$, set $U=Q-Q_e$ with constant $Q_e$, so $dU/dt=dQ/dt$; the same separation method applies to $U$. Choose the sign by checking whether $Q$ moves towards or away from equilibrium; do not automatically use $Q$ itself.
+Sometimes the rate depends on how far a quantity is from a fixed level, rather than on the quantity itself. A level at which the rate is zero is an **equilibrium**. If the rate is proportional to $Q-Q_e$, set $U=Q-Q_e$ with constant $Q_e$, so $dU/dt=dQ/dt$; we can separate and integrate using $U$. Choose the sign by asking whether $Q$ moves towards or away from the fixed level.
 
 **Use the information in order.** A rate measured at a known value can determine $k$ directly. A starting value determines an integration constant. A later value may then determine $k$.
 
@@ -169,17 +181,17 @@ Proportionality can concern a difference from equilibrium. If the rate is propor
 
 **Question:** The depth $h$ metres of water increases at a rate inversely proportional to $h$. At time $t=0$, $h=1$. After $3$ minutes, $h=2$. Form and solve a differential equation for $h$.
 
-Since the depth increases, use $k>0$:
+“Inversely proportional to the depth” puts $h$ in the denominator: a greater depth means a smaller rate. The depth increases, so the rate is positive and we use $k>0$. Multiply by $h$ to separate the variables, then integrate:
 
 $$\frac{dh}{dt}=\frac{k}{h},\qquad \int h\,dh=\int k\,dt.$$
 
 $$\frac{h^2}{2}=kt+C.$$
 
-Initially, $C=\frac12$. At $t=3$, $h=2$ gives $2=3k+\frac12$, so $k=\frac12$.
+The starting depth fixes the integration constant: at $t=0$, $h=1$, so $C=\frac12$. The later depth then fixes the rate constant: at $t=3$, $h=2$ gives $2=3k+\frac12$, so $k=\frac12$.
 
 $$\boxed{h=\sqrt{t+1}\text{ metres},\quad t\ge0}.$$
 
-**Check:** $\frac{dh}{dt}=\frac{1}{2\sqrt{t+1}}=\frac{k}{h}$, $h(0)=1$ and $h(3)=2$. The positive branch fits the physical depth.
+**Check:** $\frac{dh}{dt}=\frac{1}{2\sqrt{t+1}}=\frac{k}{h}$, $h(0)=1$ and $h(3)=2$. Choose the positive square root because depth is positive.
 
 The depth increases, but its rate of increase becomes smaller as $h$ grows. Do not assume an increasing quantity has a constant rate.
 
@@ -219,7 +231,7 @@ Proportional decay gives
 
 $$\frac{dQ}{dt}=-kQ\quad\Longrightarrow\quad Q=Q_0e^{-kt},\quad k>0.$$
 
-To obtain either result, separate the variables and integrate $\frac1Q$ to get $\ln Q$. Here $Q$ is positive, so the logarithm needs no absolute value signs.
+These formulas follow the same steps as Example 1: separate the variables and integrate $\frac1Q$ to get $\ln Q$. Here $Q$ is positive, so the logarithm needs no absolute value signs. The starting value fixes the multiplier; the sign in the exponent determines growth or decay.
 
 <section class="worked-example" markdown="1">
 
@@ -227,7 +239,7 @@ To obtain either result, separate the variables and integrate $\frac1Q$ to get $
 
 **Question:** A culture initially contains $400$ cells. Its rate of increase is proportional to the number $N$ present. The number doubles in $3$ hours. Find $N$ at time $t$ hours, and find when it first reaches $1200$.
 
-The model is $\frac{dN}{dt}=kN$, with $k>0$. Separating and integrating gives
+The rate depends on how many cells are present now, so use $N$ on the right. Growth gives a positive rate: $\frac{dN}{dt}=kN$, with $k>0$. Divide by $N$ to separate the variables, then integrate:
 
 $$\int\frac1N\,dN=\int k\,dt,\qquad \ln N=kt+C.$$
 
@@ -253,7 +265,7 @@ This model assumes the same proportional growth rule continues. It does not acco
 
 **Question:** A sample has mass $80$ g initially and decays at a rate proportional to its remaining mass $m$. Its half-life is $6$ hours. Find $m$ at time $t$ hours and the mass remaining after $18$ hours.
 
-The model is $\frac{dm}{dt}=-km$, where $k>0$. Separate and integrate:
+The rate depends on the mass still present, rather than the mass already lost. Since that mass decreases, the derivative is negative: $\frac{dm}{dt}=-km$, where $k>0$. Divide by $m$ to separate the variables, then integrate:
 
 $$\int\frac1m\,dm=\int-k\,dt,\qquad \ln m=-kt+C.$$
 
@@ -481,7 +493,7 @@ The model gives $m(0)=60$ and $m(5)=45$. Since more than half remains after $5$ 
 
 Revisit the reasoning for your error, close the old solution and answer the new question here. Keep separate notes on the first attempt, hints used and retry result.
 
-**If division lost a constant solution, or you retained both signs after applying a condition:** revisit [separation](#separable-variables) and [branch selection](#using-a-given-condition). Squaring cannot restore a point where the original equation is undefined.
+**If division lost an unchanging solution, or you kept both signs after using a known value:** revisit [separation](#separable-variables) and [choosing a sign](#using-a-given-condition). An equation obtained by squaring may allow zero even when the original denominator forbids it. Always return to the original equation.
 
 <section class="lesson-check" markdown="1">
 
@@ -498,7 +510,7 @@ Revisit the reasoning for your error, close the old solution and answer the new 
 <details markdown="1">
 <summary>Hint</summary>
 
-Check the original equation’s domain, then select a sign after integrating. In (b), test the constant function suggested by the condition before dividing by $y-1$.
+Check which values the original equation allows, then select a sign after integrating. In (b), test the constant function suggested by the condition before dividing by $y-1$.
 
 </details>
 
@@ -511,7 +523,7 @@ $$y=-\sqrt{9-x^2},\qquad -3<x<3.$$
 
 Here $y^{\prime}=x/\sqrt{9-x^2}=-x/y$, and $y(0)=-3$. At $x=\pm3$, $y=0$ makes the original equation undefined, so exclude both endpoints; beyond them the root is not real.
 
-**(b)** The constant $y=1$ has derivative zero, makes the right side zero and satisfies the initial condition. For $y\ne1$, separation gives $y=1+Ae^{x^2/2}$ with $A\ne0$, none of which satisfies this condition. Allowing $A=0$ extends the family after checking the constant solution separately; it does not legitimise division by zero.
+**(b)** The constant $y=1$ has derivative zero, makes the right side zero and satisfies the initial condition. For $y\ne1$, separation gives $y=1+Ae^{x^2/2}$ with $A\ne0$, none of which satisfies this condition. Allowing $A=0$ extends the family after checking the constant solution separately; it does not make division by zero valid.
 
 </details>
 
@@ -573,7 +585,7 @@ Identify the quantity proportional to the rate and its sign. Setting $U=T-20$ le
 <details markdown="1">
 <summary>Solution and check</summary>
 
-The model is $T^{\prime}=-k(T-20)$, $k>0$. With $U=T-20>0$, separation gives $\ln U=-kt+C$. The initial value gives $U=60e^{-kt}$; $T(2)=50$ gives $30=60e^{-2k}$, hence $k=\ln2/2$ in $\mathrm{min^{-1}}$.
+The excess above room temperature determines the cooling rate. The minus sign makes temperature decrease while this excess is positive: $T^{\prime}=-k(T-20)$, $k>0$. Write the excess as $U=T-20>0$; separation gives $\ln U=-kt+C$. The initial value gives $U=60e^{-kt}$; $T(2)=50$ gives $30=60e^{-2k}$, hence $k=\ln2/2$ in $\mathrm{min^{-1}}$.
 
 $$T=20+60e^{-(\ln2)t/2}.$$
 
@@ -589,7 +601,7 @@ At $T=35$, the exponential factor is $1/4$, so $t=4$ minutes. For all $t\ge0$, $
 |---|---|---|
 | Separate variables | $\displaystyle\int\frac{1}{g(y)}\,dy=\int f(x)\,dx$ | Check constant solutions before dividing by $g(y)$ |
 | Integrate | Add $+C$ on one side | Keep logarithm absolute values unless positivity is known |
-| Apply a condition | Substitute the given values | Choose the branch that satisfies the condition |
+| Apply a condition | Substitute the given values | Choose the positive or negative answer that fits the known value |
 | Form a model | Translate the rate and the proportionality | Use the correct independent variable and sign |
 | Find constants | Distinguish the model constant $k$ from an arbitrary constant | Use all the given information and consistent units |
 | Growth or decay | $Q_0e^{kt}$ or $Q_0e^{-kt}$, with $k>0$ | Keep exact logarithms until the final calculation |

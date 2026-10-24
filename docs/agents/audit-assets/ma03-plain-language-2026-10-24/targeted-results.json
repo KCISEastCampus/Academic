@@ -1,0 +1,210 @@
+[
+  {
+    "type": "keyboard-scroll",
+    "topic": "functions",
+    "focused": true,
+    "moved": 40,
+    "maximum": 81
+  },
+  {
+    "type": "keyboard-scroll",
+    "topic": "functions",
+    "focused": true,
+    "moved": 40,
+    "maximum": 96
+  },
+  {
+    "type": "continuous-example-and-task",
+    "topic": "functions",
+    "keyboard": true,
+    "images": [
+      {
+        "src": "/assets/img/functions-inverse.svg",
+        "width": 313,
+        "height": 298,
+        "alt": "非负 x 上 y 等于 x 平方的图像及其反函数 y 等于 x 平方根关于 y 等于 x 对称。点 (2,4) 与 (4,2) 互换。"
+      }
+    ]
+  },
+  {
+    "type": "keyboard-scroll",
+    "topic": "binomial-series",
+    "focused": true,
+    "moved": 40,
+    "maximum": 87
+  },
+  {
+    "type": "keyboard-scroll",
+    "topic": "binomial-series",
+    "focused": true,
+    "moved": 20,
+    "maximum": 20
+  },
+  {
+    "type": "continuous-example-and-task",
+    "topic": "binomial-series",
+    "keyboard": true,
+    "images": []
+  },
+  {
+    "type": "keyboard-scroll",
+    "topic": "trigonometric-functions-and-formulae",
+    "focused": true,
+    "moved": 40,
+    "maximum": 358
+  },
+  {
+    "type": "keyboard-scroll",
+    "topic": "trigonometric-functions-and-formulae",
+    "focused": true,
+    "moved": 40,
+    "maximum": 52
+  },
+  {
+    "type": "continuous-example-and-task",
+    "topic": "trigonometric-functions-and-formulae",
+    "keyboard": true,
+    "images": [
+      {
+        "src": "/assets/img/trigonometric-reciprocals.svg",
+        "width": 313,
+        "height": 522,
+        "alt": "余割、正割和余切在零到 2π 区间内的图像，虚线表示竖直渐近线。"
+      }
+    ]
+  },
+  {
+    "type": "keyboard-scroll",
+    "topic": "integration",
+    "focused": true,
+    "moved": 40,
+    "maximum": 324
+  },
+  {
+    "type": "keyboard-scroll",
+    "topic": "integration",
+    "focused": true,
+    "moved": 40,
+    "maximum": 45
+  },
+  {
+    "type": "continuous-example-and-task",
+    "topic": "integration",
+    "keyboard": true,
+    "images": []
+  },
+  {
+    "type": "keyboard-scroll",
+    "topic": "integration-applications",
+    "focused": true,
+    "moved": 40,
+    "maximum": 324
+  },
+  {
+    "type": "keyboard-scroll",
+    "topic": "integration-applications",
+    "focused": true,
+    "moved": 20,
+    "maximum": 20
+  },
+  {
+    "type": "continuous-example-and-task",
+    "topic": "integration-applications",
+    "keyboard": true,
+    "images": [
+      {
+        "src": "/assets/img/integration-area.svg",
+        "width": 313,
+        "height": 355,
+        "alt": "Example 5: the curve x squared minus one crosses the x-axis at minus one and one, with shaded areas above and below. Example 6: the shaded region lies between the line y equals two x and the curve y equals x squared, from zero to two."
+      }
+    ]
+  },
+  {
+    "type": "keyboard-scroll",
+    "topic": "parametric-equations",
+    "focused": true,
+    "moved": 40,
+    "maximum": 81
+  },
+  {
+    "type": "keyboard-scroll",
+    "topic": "parametric-equations",
+    "focused": true,
+    "moved": 40,
+    "maximum": 81
+  },
+  {
+    "type": "continuous-example-and-task",
+    "topic": "parametric-equations",
+    "keyboard": true,
+    "images": [
+      {
+        "src": "/assets/img/parametric-parabola.svg",
+        "width": 282,
+        "height": 273,
+        "alt": "A sideways parabola with arrows showing increasing parameter values"
+      }
+    ]
+  },
+  {
+    "type": "keyboard-scroll",
+    "topic": "vectors",
+    "focused": true,
+    "moved": 40,
+    "maximum": 79
+  },
+  {
+    "type": "keyboard-scroll",
+    "topic": "vectors",
+    "focused": true,
+    "moved": 40,
+    "maximum": 150
+  },
+  {
+    "type": "continuous-example-and-task",
+    "topic": "vectors",
+    "keyboard": true,
+    "images": [
+      {
+        "src": "/assets/img/vectors-perpendicular.svg",
+        "width": 313,
+        "height": 187,
+        "alt": "示意图：A 和 H 位于一条直线上。线段 PH 与直线垂直，表示垂直距离。"
+      }
+    ]
+  },
+  {
+    "type": "keyboard-scroll",
+    "topic": "mathematical-proof",
+    "focused": true,
+    "moved": 40,
+    "maximum": 324
+  },
+  {
+    "type": "keyboard-scroll",
+    "topic": "mathematical-proof",
+    "focused": true,
+    "moved": 40,
+    "maximum": 67
+  },
+  {
+    "type": "continuous-example-and-task",
+    "topic": "mathematical-proof",
+    "keyboard": true,
+    "images": []
+  },
+  {
+    "type": "entry-to-student-attempt",
+    "url": "http://127.0.0.1:8835/zh/alevel/a2-mathematics/functions/",
+    "fragment": "practice"
+  },
+  {
+    "type": "precise-prerequisite",
+    "url": "http://127.0.0.1:8835/zh/alevel/a2-mathematics/differentiation/#composite-functions"
+  },
+  {
+    "type": "named-next-lesson",
+    "url": "http://127.0.0.1:8835/zh/alevel/a2-mathematics/integration-applications/"
+  }
+]

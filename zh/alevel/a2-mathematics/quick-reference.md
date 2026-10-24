@@ -13,7 +13,7 @@ study_page: true
 
 [返回主题目录](/zh/alevel/a2-mathematics/)
 
-用本页核对公式和方法。需要完整例题与练习时，请从[纯数学主题目录](/zh/alevel/a2-mathematics/#study-a-topic)选择相应课程。
+本页供学完后快速找公式，不需要从头背下来。第一次学或看不懂公式时，请从[纯数学主题目录](/zh/alevel/a2-mathematics/#study-a-topic)进入相应课程，那里先讲意思，再给完整例子和练习。
 
 P2 编号依据 OxfordAQA 课程大纲的主题分类，部分标题作了简化，并非教材章号。[主题目录](/zh/alevel/a2-mathematics/#quick-reference)列出了对应教材章节与课程大纲补充内容。
 

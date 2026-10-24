@@ -12,7 +12,7 @@ study_page: true
 
 [Pure Mathematics](/alevel/a2-mathematics/) · Mathematical arguments for MA03
 
-Explain why a statement is true, or give a counter-example to show that it is false.
+The square of three is odd, but that one example tells us nothing about every other odd integer. A proof explains why a claim must hold for every value it covers. If the claim says “every” and even one allowed value fails, that single failure is enough to disprove it.
 
 - **Learning:** start with [statements and symbols](#statements-and-symbols), then compare the three methods.
 - **Homework help:** state the assumptions, justify each step and finish with the statement you have proved.
@@ -29,7 +29,7 @@ Scope: [OxfordAQA 9660 specification v5.2, Unit P2 introduction, printed p19](ht
 
 ## Statements and Symbols {#statements-and-symbols}
 
-Numerical examples here use real numbers unless an integer domain is stated. A statement must say which values it covers. For example, “$n^2$ is even” is not true for every integer $n$.
+First read which numbers are allowed: all real numbers, only integers, or a smaller set? This set is called the **domain**. Here we use real numbers unless an integer restriction is stated. A **statement** is a claim that can be true or false. For example, “$n^2$ is even” is not true for every integer $n$. The allowed values matter when we decide what must be proved.
 
 | Language or symbol | Meaning | Example |
 |---|---|---|
@@ -40,15 +40,19 @@ Numerical examples here use real numbers unless an integer domain is stated. A s
 | $P\Leftrightarrow Q$, if and only if | Both directions hold | $x^2=4\Leftrightarrow x=2\text{ or }x=-2$ |
 {: .wide-table}
 
-In $P\Rightarrow Q$, $P$ is **sufficient** for $Q$, and $Q$ is **necessary** for $P$. For example, $x=2$ is sufficient for $x^2=4$. It is not necessary, since $x=-2$ also works. The condition $x^2=4$ is necessary for $x=2$, but is not sufficient.
+In $P\Rightarrow Q$, knowing $P$ is enough to guarantee $Q$: it is a **sufficient condition**. Also, $Q$ must hold whenever $P$ holds: it is a **necessary condition**. “Necessary” does not mean “enough on its own”. For example, $x=2$ is enough to guarantee $x^2=4$. It is not the only possible input, since $x=-2$ also works. The condition $x^2=4$ must hold if $x=2$, but it cannot by itself tell us which sign the input has.
 
 Use words such as **because**, **therefore** and **hence** to explain how one step follows from another. The symbol $\therefore$ means “therefore”.
 
 ### Read the scope before choosing an argument {#choose-an-argument}
 
-A claim about **every** allowed value needs an argument covering all of them; an existence claim needs just one valid example. The negation of “every allowed value satisfies $P$” is “at least one allowed value does not satisfy $P$”, not “every value fails $P$”. For “if $P$, then $Q$”, contradiction keeps assumption $P$ and supposes conclusion $Q$ fails. A counter-example likewise must satisfy $P$ and fail $Q$.
+The word **every** asks for an argument covering all allowed values. The word **exists** asks for just one example that works. To deny “every allowed value satisfies $P$”, we need “at least one allowed value does not satisfy $P$”; we do not need “every value fails $P$”.
 
-Read the domain and assumptions, then consider whether the claim holds or has a failing case. Use direct algebra or exhaustive cases when they lead to the conclusion; use contradiction when assuming the opposite conflicts with a known fact. Trials can find a counter-example or suggest a conjecture; failure to find a counter-example is not a proof. Follow a specified proof method when required; a “hence” task should actually use the preceding result.
+For “if $P$, then $Q$”, keep the given starting condition $P$ and suppose the claimed result $Q$ fails when proving by contradiction. To disprove it, a counter-example must likewise satisfy $P$ and fail $Q$. An example where the starting condition is false does not test the promise.
+
+Read the allowed values and given conditions first. Can you find a case where the claim fails? If it seems true, can algebra reach the result from the conditions? Sometimes splitting into cases works, but those cases must cover every possibility. If assuming the opposite produces two facts that cannot both hold, use contradiction.
+
+Trials may find a counter-example or suggest a possible general rule. Finding no failure in a search does not prove that none exists. Follow a specified proof method when required; a “hence” task should actually use the preceding result.
 
 <section class="lesson-check" markdown="1">
 
@@ -80,7 +84,7 @@ Division by x requires x to be non-zero; the original equation has no such restr
 
 ## Direct Proof {#direct-proof}
 
-Start with the given assumptions and use valid steps to reach the conclusion. Use algebra to cover every allowed value, rather than checking a few examples.
+Start from what is given and work towards what must be shown. Definitions often tell us what form to aim for: for example, to show an integer is odd, rewrite it as twice an integer plus one. Use letters to keep the input general, so the reasoning covers every allowed value.
 
 <section class="worked-example" markdown="1">
 
@@ -88,11 +92,11 @@ Start with the given assumptions and use valid steps to reach the conclusion. Us
 
 **Question:** Prove that the square of every odd integer is odd.
 
-Let $n=2k+1$, where $k$ is an integer. Then
+Let $n=2k+1$, where $k$ is any integer. This represents every odd integer, including negative ones; we have not chosen a single numerical example. Square it and aim to rewrite the result as twice an integer plus one:
 
 $$n^2=(2k+1)^2=4k^2+4k+1=2(2k^2+2k)+1.$$
 
-Since $2k^2+2k$ is an integer, this has the form $2m+1$ for an integer $m$. Therefore $n^2$ is odd.
+Since $2k^2+2k$ is an integer, the final expression has the form $2m+1$ for an integer $m$. This is exactly the definition of an odd integer. Therefore $n^2$ is odd.
 
 **Check the argument:** it covers every odd integer, including negative ones. Calculating $3^2=9$ alone would not prove the statement.
 
@@ -100,7 +104,7 @@ Since $2k^2+2k$ is an integer, this has the form $2m+1$ for an integer $m$. Ther
 
 ## Proof by Contradiction {#proof-by-contradiction}
 
-Assume the opposite of the statement you want to prove. Show that this assumption leads to a **contradiction**: two facts which cannot both be true. State why the original statement must therefore be true.
+Keep the given conditions, but temporarily suppose the result you want is false. Follow the consequences until you reach two facts that cannot both be true. This conflict is a **contradiction**. Explain the conflict explicitly: it rules out the temporary supposition, so the original result must hold. Do not use the desired conclusion as one of your reasons.
 
 <section class="worked-example" markdown="1">
 
@@ -112,9 +116,9 @@ Assume that $\sqrt3$ is rational. Then
 
 $$\sqrt3=\frac pq,$$
 
-where $p$ and $q$ are integers with no common factor greater than $1$, and $q\ne0$. Squaring gives $p^2=3q^2$, so $p^2$ is divisible by $3$.
+where $p$ and $q$ are integers with no common factor greater than $1$, and $q\ne0$. We can choose this because any rational fraction can be reduced to lowest terms. That choice matters: finding a common factor later would be impossible. Squaring gives $p^2=3q^2$, so $p^2$ is divisible by $3$.
 
-Justify why divisibility of the square forces divisibility of the integer. Every integer is of the form $3k$, $3k+1$ or $3k-1$. In the last two cases,
+We still need to explain why the original integer must also be divisible by three. When an integer is divided by three, it is either a multiple of three, one above a multiple, or one below a multiple. Thus every integer has the form $3k$, $3k+1$ or $3k-1$. Square the last two possibilities:
 
 $$(3k\pm1)^2=3(3k^2\pm2k)+1,$$
 
@@ -130,7 +134,7 @@ Thus $p$ and $q$ have a common factor $3$, contradicting our choice of a fractio
 
 ## Disproof by Counter-example {#disproof-by-counter-example}
 
-A **counter-example** is one allowed value for which a statement fails. One counter-example disproves a statement about **all** allowed values.
+A statement about **all** allowed values promises that none will fail. One allowed case that fails breaks that promise; it is called a **counter-example**. This disproves the “all” statement. It does not mean the statement fails for every value.
 
 <section class="worked-example" markdown="1">
 
@@ -138,7 +142,7 @@ A **counter-example** is one allowed value for which a statement fails. One coun
 
 **Question:** Disprove: “For all real $a$ and $b$, if $ab>0$, then $a>0$ and $b>0$.”
 
-Take $a=-2$ and $b=-3$. Then $ab=6>0$, but both numbers are negative. These allowed values make the assumption true and the conclusion false, so they disprove the statement.
+We need a positive product without both factors being positive. Two negative numbers provide that possibility. Take $a=-2$ and $b=-3$. Both are allowed real numbers. Then $ab=6>0$, but both numbers are negative. The starting condition is satisfied and the claimed result fails, so this disproves the statement.
 
 **Common mistake:** using a value outside the stated domain, or one that does not satisfy the assumption. Positive values which work do not prove the statement for all real values.
 
@@ -231,7 +235,7 @@ For each statement, decide whether it is true and justify your decision. Choose 
 <details markdown="1">
 <summary>Hint</summary>
 
-State domain, assumptions and conclusion for each claim; the three need not use the same method.
+For each claim, write which values are allowed, what is given, and what is claimed. The three need not use the same method.
 
 </details>
 
@@ -254,10 +258,10 @@ Identify the first invalid step and revisit its explanation. Close the original 
 
 | Error | Recovery action | Fresh task |
 | --- | --- | --- |
-| One implication called an equivalence, or division by zero | Check reverse direction and domain; [statements and symbols](#statements-and-symbols) | [Conditions](#repair-logic) |
-| Only a few positive integers checked | Represent an arbitrary integer or exhaust the cases; [direct proof](#direct-proof) | [Integers](#repair-direct) |
+| One implication called an equivalence, or division by zero | Check the reverse direction and which values are allowed; [statements and symbols](#statements-and-symbols) | [Conditions](#repair-logic) |
+| Only a few positive integers checked | Use a letter for any integer, or cover all possible cases; [direct proof](#direct-proof) | [Integers](#repair-direct) |
 | Contradiction has no named conflict | State the opposite assumption and incompatible known fact; [contradiction](#proof-by-contradiction) | [Reciprocal](#repair-contradiction) |
-| Counter-example fails the assumption | Check domain, premise and conclusion separately; [counter-examples](#disproof-by-counter-example) | [Equality](#repair-counterexample) |
+| Counter-example fails the assumption | Check allowed values, the starting condition and the claimed result separately; [counter-examples](#disproof-by-counter-example) | [Equality](#repair-counterexample) |
 
 <section class="lesson-check" markdown="1">
 
@@ -292,7 +296,7 @@ Prove that $n(n+1)$ is even for every integer $n$.
 <details markdown="1">
 <summary>Hint</summary>
 
-Split by the parity of n; ensure the cases include negatives and zero.
+Split into n even and n odd; ensure the cases include negatives and zero.
 
 </details>
 
@@ -343,7 +347,7 @@ Find two distinct allowed numbers and verify equality of their squares.
 <details markdown="1">
 <summary>Solution and check</summary>
 
-Take $a=1$, $b=-1$. Both are real and $a^2=b^2=1$, but $a\ne b$. The premise is true and conclusion false, so this is a valid counter-example to the universal claim.
+Take $a=1$, $b=-1$. Both are real and $a^2=b^2=1$, but $a\ne b$. The given condition holds but the claimed result fails, so this is a valid counter-example to the claim about all real pairs.
 
 </details>
 
@@ -371,7 +375,7 @@ If starting from a non-negative expression, check what division does to the ineq
 
 $$(x-1)^2\ge0\Rightarrow x^2+1\ge2x.$$
 
-**(a)** As $x>0$, division by $x$ preserves the inequality, giving $x+1/x\ge2$, with equality exactly when $x=1$. This covers every positive real. **(b)** False: $x=-1\ne0$ gives $-2<2$. The division-sign condition in the first argument does not hold throughout the enlarged domain.
+**(a)** As $x>0$, division by $x$ preserves the inequality, giving $x+1/x\ge2$, with equality exactly when $x=1$. This covers every positive real. **(b)** False: $x=-1\ne0$ gives $-2<2$. The first proof divided by a positive number. With negative inputs now allowed, that step no longer preserves the inequality for every input.
 
 </details>
 

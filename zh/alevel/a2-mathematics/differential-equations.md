@@ -16,11 +16,11 @@ study_page: true
 
 <div class="lesson-lead" markdown="1">
 
-微分方程描述某个量与其变化率（rate of change）之间的关系。解出方程后，就能得到不含导数的关系式。本页例题与练习的题干保留英文，讲解、提示与解答使用中文。
+知道水深增加得多快，还不能直接知道过一段时间后的水深。微分方程给出变化快慢的规律；我们要从这个规律求出描述水深等量的函数，再用已知数值选出符合题意的函数。本页保留英文题干，用中文解释推理。
 
 </div>
 
-- **学习：**先学习[分离变量](#separable-variables)，再学习[利用已知条件](#using-a-given-condition)和[建立模型](#forming-a-model)。
+- **学习：**先学习[从变化规律求函数](#separable-variables)，再学习[利用已知条件](#using-a-given-condition)和[建立模型](#forming-a-model)。
 - **作业帮助：**确认哪个变量在变化、变化率与什么成正比，以及该量是在增加还是减少。
 - **复习：**先尝试[练习](#practice)，再打开提示和解答。
 
@@ -34,23 +34,13 @@ study_page: true
 
 </div>
 
-## 分离变量法（separation of variables） {#separable-variables}
+## 从变化规律求函数 {#separable-variables}
 
-一阶微分方程（first order differential equation）含有一阶导数，例如 $\frac{dy}{dx}$，但不含更高阶导数。本课中的方程都可以分离变量，也就是可以写成
+$y$ 表示某个量有多少，$\frac{dy}{dx}$ 表示它随 $x$ 变化得多快。把两者联系起来的方程叫微分方程（differential equation）。本页只出现一阶导数，没有二阶或更高阶导数，因此称为一阶（first order）。
 
-$$\frac{dy}{dx}=f(x)g(y).$$
+先看例题 1：变化率是 $2xy$。右边是含 $x$ 的部分乘以 $y$。除以 $y$ 后，就能把两个变量分别整理到两边，再积分。这种做法叫分离变量（separation of variables）。只有 $y\ne0$ 才能这样除，因此还要单独检查 $y=0$ 是否是原方程的解。
 
-把含 $y$ 的项移到关于 $y$ 的积分一侧，把含 $x$ 的项移到关于 $x$ 的积分一侧。当 $g(y)\ne0$ 时，可写为
-
-$$\int\frac{1}{g(y)}\,dy=\int f(x)\,dx.$$
-
-这里的依据是链式法则：若 $G^{\prime}(y)=1/g(y)$，则沿解曲线有
-
-$$\frac{d}{dx}G(y(x))=\frac1{g(y)}\frac{dy}{dx}=f(x).$$
-
-两边对 $x$ 积分，就得到上述两个积分相等（相差一个常数）。这要求在所讨论区间中 $g(y)\ne0$；因此先检查被除掉的常数解。
-
-这是教材采用的积分形式。然后对等式两边积分。**只需要一个积分常数：**等式两边的常数可以合并成一个 $C$。
+接着求两个积分。**只需要一个积分常数：**即使两边各有一个常数，也可以相减后统一记作 $C$。
 
 1. 检查能否分离变量。
 2. 除以关于 $y$ 的函数之前，先检查令该函数为零是否会得到常数解（constant solution）。
@@ -58,7 +48,7 @@ $$\frac{d}{dx}G(y(x))=\frac1{g(y)}\frac{dy}{dx}=f(x).$$
 4. 使用题目给出的条件求出常数。
 5. 把结果代回原微分方程，并检查给定条件。
 
-**通解（general solution）：**包含任意常数的一族解。**特解（particular solution）：**利用额外信息（如曲线上的一个点）求得的解。初始条件（initial condition）给出起始值，常见情形是在时间 $t=0$ 时给定数值。
+还不知道曲线上某个点时，常数可以取不同数值，得到不同的解；这些解合起来叫通解（general solution）。知道一个点后，就可以求出常数，选出特解（particular solution）。如果给的是起始数值，常常是时间 $t=0$ 时的数值，就称为初始条件（initial condition）。
 
 <section class="worked-example" markdown="1">
 
@@ -66,13 +56,17 @@ $$\frac{d}{dx}G(y(x))=\frac1{g(y)}\frac{dy}{dx}=f(x).$$
 
 **Question:** Solve $\displaystyle\frac{dy}{dx}=2xy$.
 
-当 $y\ne0$ 时，分离变量并积分：
+右边是含 $x$ 的部分乘以 $y$。要把含 $y$ 的部分放在左边，先除以 $y$；这样暂时排除了零，稍后必须单独检查。当 $y\ne0$ 时：
+
+$$\frac1y\frac{dy}{dx}=2x.$$
+
+为什么左边可以改成对 $y$ 积分？回想换元积分：$\frac{dy}{dx}$ 这个因子说明 $y$ 怎样随 $x$ 变化。也可以用链式法则检查：左边正是 $\ln\lvert y\rvert$ 对 $x$ 的导数。因此，两边积分可以写成
 
 $$\int\frac1y\,dy=\int2x\,dx.$$
 
 $$\ln\lvert y\rvert=x^2+C.$$
 
-两边取以 $e$ 为底的指数，得到 $\lvert y\rvert=e^Ce^{x^2}$。允许正、负两种取值，可写成
+左边积分得到对数，右边用幂函数积分。要还原 $y$，两边取以 $e$ 为底的指数，得到 $\lvert y\rvert=e^Ce^{x^2}$。指数中的加法变成了乘法。常数 $e^C$ 为正，再允许 $y$ 取正或负，把符号和大小合并记作新的常数 $A$：
 
 $$\boxed{y=Ae^{x^2}}.$$
 
@@ -84,9 +78,25 @@ $$\boxed{y=Ae^{x^2}}.$$
 
 </section>
 
+### 把同一方法用于其他方程 {#separation-why-it-works}
+
+看懂例题后，再把方法写成一般形式。如果右边是 $f(x)g(y)$，前一个因子只随 $x$ 变化，后一个只随 $y$ 变化：
+
+$$\frac{dy}{dx}=f(x)g(y).$$
+
+当 $g(y)\ne0$ 时，除以它，再把两个积分分开：
+
+$$\int\frac{1}{g(y)}\,dy=\int f(x)\,dx.$$
+
+依据仍是例题 1 中倒过来使用的链式法则。把 $1/g(y)$ 的一个原函数叫作 $G(y)$，也就是说 $G^{\prime}(y)=1/g(y)$。由于 $y$ 随 $x$ 变化，链式法则给出
+
+$$\frac{d}{dx}G(y(x))=\frac1{g(y)}\frac{dy}{dx}=f(x).$$
+
+两边对 $x$ 积分，就得到分开的两个积分和一个常数。在例题 1 中，$g(y)=y$，而 $G(y)=\ln\lvert y\rvert$。除法前，始终要把令 $g(y)$ 为零的数值代回原方程检查：它们可能给出常数解，直接除掉会漏解。
+
 ## 利用已知条件 {#using-a-given-condition}
 
-将两个坐标代入积分后的结果，求出 $C$。若整理后出现两个分支，就用给定条件选出正确的分支。解应取在原方程有定义的区间内。
+已知一个点，就同时知道一个 $x$ 值和一个 $y$ 值。把两个数都代入积分后的等式，求出 $C$。如果解出 $y$ 时有正、负两种选择，就用已知的 $y$ 值判断。还要检查原方程允许哪些取值：分母不能为零，实数对数里的数必须为正。
 
 <section class="worked-example" markdown="1">
 
@@ -94,19 +104,19 @@ $$\boxed{y=Ae^{x^2}}.$$
 
 **Question:** Solve $\displaystyle\frac{dy}{dx}=\frac{x}{y}$, given $y=2$ when $x=0$.
 
-原方程要求 $y\ne0$。分离变量得
+这里 $y$ 在分母上，所以不能为零。两边乘以 $y$，使左边积分只含 $y$，右边只含 $x$：
 
 $$\int y\,dy=\int x\,dx,$$
 
 $$\frac{y^2}{2}=\frac{x^2}{2}+C.$$
 
-代入 $(0,2)$：得到 $2=C$。因此 $y^2=x^2+4$。起始值为正，所以选正分支：
+把 $(0,2)$ 的两个坐标都代入：左边为 $2$，含 $x$ 的项为零，所以 $2=C$。因此 $y^2=x^2+4$。起始时 $y$ 为正，选正平方根。解不能中途改选负平方根，因为那需要先经过零，而原方程不允许 $y$ 为零：
 
 $$\boxed{y=\sqrt{x^2+4}}.$$
 
 **检查：**$\frac{dy}{dx}=\frac{x}{\sqrt{x^2+4}}=\frac{x}{y}$，且 $y(0)=2$。此解永远不会取到零，对所有实数 $x$ 都有定义。
 
-**常见错误：**给定条件已经选定一个分支，却仍把正、负两个分支都写出来。
+**常见错误：**仍然保留正、负两种答案。把起始值分别代入检查，只有正平方根符合题意。
 
 </section>
 
@@ -116,13 +126,13 @@ $$\boxed{y=\sqrt{x^2+4}}.$$
 
 **Question:** Solve $\displaystyle\frac{dy}{dx}=y(y-2)$, given $y=1$ when $x=0$.
 
-先检查 $y=0$ 和 $y=2$。两者都使 $\frac{dy}{dx}=0$，并且都满足微分方程，但都不满足给定条件。
+除以 $y(y-2)$ 前，先问哪些数会使这个除数为零。若 $y$ 始终为零或始终为二，导数为零，右边也为零，所以两者都是原微分方程的解；但它们都不经过题目给定的点。
 
 对所需的非恒定解，
 
 $$\int\frac{1}{y(y-2)}\,dy=\int1\,dx.$$
 
-使用部分分式：
+分母是两个因子的乘积，不能直接当成一个对数积分。先拆成两个较简单、可以积分的分式：
 
 $$\frac{1}{y(y-2)}=-\frac{1}{2y}+\frac{1}{2(y-2)}.$$
 
@@ -132,7 +142,7 @@ $$-\frac12\ln\lvert y\rvert+\frac12\ln\lvert y-2\rvert=x+C.$$
 
 $$\ln\left\lvert\frac{y-2}{y}\right\rvert=2x.$$
 
-在起始点处，该比值为负。在解所在的区间内取
+取指数后只知道这个比值的大小，还需要判断正负。起始点处比值为负；在包含该点、且分离后的等式成立的一段范围内，比值不能经过零，也不能出现分母为零，所以保持负号。于是取
 
 $$\frac{y-2}{y}=-e^{2x},\qquad \boxed{y=\frac{2}{1+e^{2x}}}.$$
 
@@ -148,7 +158,9 @@ $$y(y-2)=\frac{2}{1+E}\left(\frac{2}{1+E}-2\right)=-\frac{4E}{(1+E)^2}.$$
 
 ## 建立模型 {#forming-a-model}
 
-先确定因变量、它随哪个变量变化，以及变化率的正负。比例常数（constant of proportion）属于模型；积分时出现的任意常数则属于积分结果。这两种常数的作用不同。
+先问三个问题：什么量在变？它随什么变化？它在增加还是减少？正在变化的量叫因变量，用来追踪变化的变量叫自变量。
+
+“变化率与某个量成正比”是说，变化率除以那个量，得到一个固定的数；它叫比例常数（constant of proportion）。后来积分时出现的常数有另一个作用：让求出的函数符合已知数值。
 
 下表中 $Q>0$ 且 $k>0$。符号已明确写出。
 
@@ -161,7 +173,7 @@ $$y(y-2)=\frac{2}{1+E}\left(\frac{2}{1+E}-2\right)=-\frac{4E}{(1+E)^2}.$$
 
 自变量不一定是时间。例如，长度 $l$ 随温度 $\theta$ 变化时，使用 $\frac{dl}{d\theta}$。
 
-比例关系也可能针对与平衡值的差。例如“变化率与 $Q-Q_e$ 成正比”时，先设 $U=Q-Q_e$（$Q_e$ 为常数），于是 $dU/dt=dQ/dt$，可对 $U$ 使用同样的分离方法。选择正负号时检查 $Q$ 是向平衡值靠近，还是远离它；不默认与 $Q$ 自身成正比。
+有时变化快慢取决于这个量离某个固定数值还有多远，而不是这个量本身。使变化率为零的数值叫平衡值（equilibrium）。若变化率与 $Q-Q_e$ 成正比，设 $U=Q-Q_e$（$Q_e$ 为常数），于是 $dU/dt=dQ/dt$，便可对 $U$ 分离变量并积分。选择正负号时，问 $Q$ 是靠近这个固定数值，还是远离它。
 
 **按顺序使用给定信息。**已知某一数值处的变化率，可以直接求出 $k$。起始值用于求积分常数。之后再用另一个时刻的数值求 $k$。
 
@@ -171,17 +183,17 @@ $$y(y-2)=\frac{2}{1+E}\left(\frac{2}{1+E}-2\right)=-\frac{4E}{(1+E)^2}.$$
 
 **Question:** The depth $h$ metres of water increases at a rate inversely proportional to $h$. At time $t=0$, $h=1$. After $3$ minutes, $h=2$. Form and solve a differential equation for $h$.
 
-由于水深增加，取 $k>0$：
+“与水深成反比”表示把 $h$ 放在分母：水越深，增加得越慢。水深在增加，变化率为正，因此取 $k>0$。两边乘以 $h$，分开变量再积分：
 
 $$\frac{dh}{dt}=\frac{k}{h},\qquad \int h\,dh=\int k\,dt.$$
 
 $$\frac{h^2}{2}=kt+C.$$
 
-初始条件给出 $C=\frac12$。当 $t=3$、$h=2$ 时，得到 $2=3k+\frac12$，因此 $k=\frac12$。
+起始水深先确定积分常数：$t=0$、$h=1$ 给出 $C=\frac12$。再用后来的水深确定速率中的常数：$t=3$、$h=2$ 给出 $2=3k+\frac12$，因此 $k=\frac12$。
 
 $$\boxed{h=\sqrt{t+1}\text{ metres},\quad t\ge0}.$$
 
-**检查：**$\frac{dh}{dt}=\frac{1}{2\sqrt{t+1}}=\frac{k}{h}$，并且 $h(0)=1$、$h(3)=2$。正平方根分支符合水深的实际意义。
+**检查：**$\frac{dh}{dt}=\frac{1}{2\sqrt{t+1}}=\frac{k}{h}$，并且 $h(0)=1$、$h(3)=2$。水深为正，因此选正平方根。
 
 水深在增加，但随着 $h$ 增大，增加速率会变小。不能因为某个量在增加，就认为它的变化率恒定。
 
@@ -221,7 +233,7 @@ $$\frac{dQ}{dt}=kQ\quad\Longrightarrow\quad Q=Q_0e^{kt},\quad k>0.$$
 
 $$\frac{dQ}{dt}=-kQ\quad\Longrightarrow\quad Q=Q_0e^{-kt},\quad k>0.$$
 
-要得到这两个结果，都要先分离变量并对 $\frac1Q$ 积分，得到 $\ln Q$。这里 $Q$ 为正，因此对数不需要绝对值符号。
+这两个公式都来自例题 1 的步骤：先分离变量，对 $\frac1Q$ 积分得到 $\ln Q$。这里 $Q$ 为正，因此对数不需要绝对值符号。起始值决定前面的乘数，指数中的正负决定增长还是衰减。
 
 <section class="worked-example" markdown="1">
 
@@ -229,7 +241,7 @@ $$\frac{dQ}{dt}=-kQ\quad\Longrightarrow\quad Q=Q_0e^{-kt},\quad k>0.$$
 
 **Question:** A culture initially contains $400$ cells. Its rate of increase is proportional to the number $N$ present. The number doubles in $3$ hours. Find $N$ at time $t$ hours, and find when it first reaches $1200$.
 
-模型为 $\frac{dN}{dt}=kN$，其中 $k>0$。分离变量并积分：
+变化率取决于现在有多少细胞，所以右边用 $N$。数量在增长，变化率为正：$\frac{dN}{dt}=kN$，其中 $k>0$。除以 $N$ 分开变量，再积分：
 
 $$\int\frac1N\,dN=\int k\,dt,\qquad \ln N=kt+C.$$
 
@@ -255,7 +267,7 @@ $$\boxed{t=\frac{3\ln3}{\ln2}\approx4.75\text{ hours}}.$$
 
 **Question:** A sample has mass $80$ g initially and decays at a rate proportional to its remaining mass $m$. Its half-life is $6$ hours. Find $m$ at time $t$ hours and the mass remaining after $18$ hours.
 
-模型为 $\frac{dm}{dt}=-km$，其中 $k>0$。分离变量并积分：
+变化率取决于还剩多少质量，不是已经减少了多少。剩余质量在减少，导数为负：$\frac{dm}{dt}=-km$，其中 $k>0$。除以 $m$ 分开变量，再积分：
 
 $$\int\frac1m\,dm=\int-k\,dt,\qquad \ln m=-kt+C.$$
 
@@ -483,7 +495,7 @@ $$\boxed{60-33.75=26.25\text{ g}}.$$
 
 先对照错误类型回看关键推理，再收起旧解答，完成这里的新问题。把首次作答、用过的提示与重试结果分别记下。
 
-**若除法丢失常数解，或初值后仍保留两个符号：**回看[分离变量](#separable-variables)与[初值选择分支](#using-a-given-condition)。原方程的未定义点不能靠平方运算补回。
+**若除法丢掉了始终不变的解，或用了起始值后仍保留正负两个答案：**回看[分离变量](#separable-variables)与[怎样选择正负](#using-a-given-condition)。平方后的等式可能允许零，但原方程的分母仍不能为零，必须回到原方程检查。
 
 <section class="lesson-check" markdown="1">
 
@@ -500,7 +512,7 @@ $$\boxed{60-33.75=26.25\text{ g}}.$$
 <details markdown="1">
 <summary>提示</summary>
 
-先看原方程的定义条件，积分后再用初值选符号。(b) 在除以 $y-1$ 前直接检查初值对应的常数函数。
+先看原方程允许哪些取值，积分后再用起始值选正负。(b) 在除以 $y-1$ 前直接检查初值对应的常数函数。
 
 </details>
 
@@ -513,7 +525,7 @@ $$y=-\sqrt{9-x^2},\qquad -3<x<3.$$
 
 该区间内 $y^{\prime}=x/\sqrt{9-x^2}=-x/y$，且 $y(0)=-3$。在 $x=\pm3$，$y=0$ 使原方程无定义，不能包含端点；区间外根号不是实数。
 
-**(b)** $y=1$ 的导数为零，右侧也为零，且满足初值，因此它就是所需解。对 $y\ne1$ 分离只能得到 $y=1+Ae^{x^2/2}$、$A\ne0$，这些解不满足初值。允许 $A=0$ 是单独核查常数解后的扩充，不是合法除法直接得到的结果。
+**(b)** $y=1$ 的导数为零，右侧也为零，且满足初值，因此它就是所需解。对 $y\ne1$ 分离只能得到 $y=1+Ae^{x^2/2}$、$A\ne0$，这些解不满足初值。单独检查常数解后，才知道可以把 $A=0$ 包括进来；这不能使除以零变成合法运算。
 
 </details>
 
@@ -575,7 +587,7 @@ An object cools in a room held at $20^\circ\mathrm C$. While its temperature $T$
 <details markdown="1">
 <summary>解答与检查</summary>
 
-模型为 $T^{\prime}=-k(T-20)$，$k>0$。令 $U=T-20>0$，分离积分得 $\ln U=-kt+C$。初值给出 $U=60e^{-kt}$；$T(2)=50$ 给出 $30=60e^{-2k}$，故 $k=\ln2/2$，单位 $\mathrm{min^{-1}}$。
+比室温高多少，决定了降温有多快。这个温差为正时，要用负号使温度下降：$T^{\prime}=-k(T-20)$，$k>0$。把温差记作 $U=T-20>0$，分离积分得 $\ln U=-kt+C$。初值给出 $U=60e^{-kt}$；$T(2)=50$ 给出 $30=60e^{-2k}$，故 $k=\ln2/2$，单位 $\mathrm{min^{-1}}$。
 
 $$T=20+60e^{-(\ln2)t/2}.$$
 
@@ -591,7 +603,7 @@ $T=35$ 时指数因子为 $1/4$，因此 $t=4$ 分钟。对所有 $t\ge0$，$20<
 |---|---|---|
 | 分离变量 | $\displaystyle\int\frac{1}{g(y)}\,dy=\int f(x)\,dx$ | 除以 $g(y)$ 前检查是否有常数解 |
 | 积分 | 在一侧加上 $+C$ | 除非已知函数为正，否则保留对数的绝对值 |
-| 使用已知条件 | 代入给定数值 | 选择符合条件的分支 |
+| 使用已知条件 | 代入给定数值 | 选择符合已知数值的正或负答案 |
 | 建立模型 | 把变化率和比例关系翻译为方程 | 使用正确的自变量和符号 |
 | 求常数 | 区分模型常数 $k$ 和任意常数 | 使用所有已知信息，并统一单位 |
 | 增长或衰减 | $Q_0e^{kt}$ 或 $Q_0e^{-kt}$，其中 $k>0$ | 最后计算时再把精确对数值换成近似值 |

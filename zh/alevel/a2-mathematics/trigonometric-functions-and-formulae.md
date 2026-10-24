@@ -17,11 +17,11 @@ study_page: true
 
 <div class="lesson-lead" markdown="1">
 
-反函数给出规定范围内的一个角，而方程可能需要多个角。本课学习选择有用的三角形式，同时保留所有允许的解，排除无定义的表达式。
+给一个角，正弦、余弦和正切就给出一个数，图像把这种对应画出来。本课先看怎样反过来找角、怎样对函数值取倒数，再用公式改写算式和解方程。每次都要说明哪些角能取、有没有漏解。
 
 </div>
 
-1. 利用定义域与图像，区分[反三角函数](#inverse-trigonometric-functions)与[倒数三角函数](#reciprocal-trigonometric-functions)。
+1. 看输入、输出和图像，区分[反三角函数](#inverse-trigonometric-functions)与[倒数三角函数](#reciprocal-trigonometric-functions)。
 2. [证明并连接不同形式](#trigonometric-identities)，再使用[和差角](#compound-angle-formulae)和[单一正弦或余弦形式](#sine-and-cosine-forms)。
 3. 学习[二倍角](#double-angle-formulae)，然后做[练习](#practice)；学完另一主题后返回[回顾任务](#later-review)。
 {: .lesson-routes}
@@ -56,7 +56,11 @@ study_page: true
 
 ## 反三角函数（inverse trigonometric functions） {#inverse-trigonometric-functions}
 
-求反函数之前，须先限制正弦、余弦、正切函数的定义域，使它们成为一一函数（one-to-one function）。
+正弦函数的输入是角，输出是图像的高度。反过来问“哪个角的正弦等于这个数”，答案可能不止一个：30° 和 150° 的正弦都是 1/2。图上同一条水平线就会遇到多个点。
+
+为了让反函数每次只给一个答案，先只选原图像中一段不重复高度的部分：正弦选从 −π/2 到 π/2，余弦选从 0 到 π，正切选从 −π/2 到 π/2 且不含端点。选好后，不同角不会给出相同的数，这叫一一函数（one-to-one function）。
+
+下面表中的“定义域（domain）”指允许输入的数；“值域（range）”指能输出的角。先认清谁是输入、谁是输出，再读范围。
 
 | 反函数 | 定义域（domain） | 反函数的值域（range） |
 |---|---|---|
@@ -68,7 +72,7 @@ study_page: true
 
 **注意：**$\sin^{-1}x$ 表示反函数，不是 $\frac1{\sin x}$。此外，$\sin^{-1}(\sin\theta)=\theta$ 只有在 $\theta$ 属于规定值域时才成立。例如，$\sin^{-1}\left(\sin\frac{5\pi}6\right)=\frac\pi6$。
 
-把限制定义域后的原函数图像关于 $y=x$ 翻折，就得到反函数图像。
+原来图上的一个点，横坐标是角、纵坐标是函数值；反过来找角时，这两个坐标交换。把选好的那段原图像关于 $y=x$ 翻折，就得到反函数图像。
 
 <section class="worked-example" markdown="1">
 
@@ -76,23 +80,25 @@ study_page: true
 
 **Question:** Find the domain and range of $y=\cos^{-1}(3x-2)$. Give three points for a sketch and solve $\cos^{-1}(3x-2)=\frac\pi3$.
 
-$\cos^{-1}$ 的输入必须介于 $-1$ 与 $1$ 之间：
+$\cos^{-1}$ 回答“哪个规定范围内的角，余弦等于输入的数”。余弦不会小于 $-1$ 或大于 $1$，所以先限制括号里整个数的大小。解下面的不等式时，三部分一起加 2，再一起除以正数 3：
 
 $$-1\le3x-2\le1\quad\Rightarrow\quad\boxed{\frac13\le x\le1}.$$
 
-值域为 $\boxed{0\le y\le\pi}$。函数递减，图像经过
+输出仍是反余弦规定的角，所以值域为 $\boxed{0\le y\le\pi}$。选括号里的数为 −1、0、1，就能使用熟悉的三个余弦值；分别反求横坐标，得到下列三点。输入增大时输出角减小，所以图像递减，经过
 
 $$\left(\frac13,\pi\right),\quad\left(\frac23,\frac\pi2\right),\quad(1,0).$$
 
-从 $y=\cos^{-1}x$ 的图像出发，作单向伸缩，伸缩因子为 $\frac13$，方向平行于 $x$ 轴；再平移 $\frac23$ 个单位，方向为 $x$ 轴正方向。
+也可以从 $y=\cos^{-1}x$ 的图像理解这三个点怎样移动：先把每个横坐标乘以 $\frac13$，也就是沿 $x$ 轴压缩；再把每个横坐标加上 $\frac23$，也就是沿 $x$ 轴向右平移。纵坐标不变。
 
-解方程时，得到 $3x-2=\cos\frac\pi3=\frac12$，所以 $\boxed{x=\frac56}$。
+最后解方程。已知输出的角，就用余弦找回输入，得到 $3x-2=\cos\frac\pi3=\frac12$；再加 2、除以 3，所以 $\boxed{x=\frac56}$。
 
 **检查：**$\frac56$ 属于定义域，$\frac\pi3$ 属于反函数的值域。若等号右边是 $\frac{4\pi}3$，方程就无解，因为这个值超出了值域。
 
 </section>
 
 ## 倒数三角函数（reciprocal trigonometric functions） {#reciprocal-trigonometric-functions}
+
+这里保持角不变，把函数值改成它的倒数：原高度是 1/2，新高度就是 2；原高度是 −1/2，新高度就是 −2。原高度为零时不能取倒数，因为不能除以零。余割、正割和余切的写法如下：
 
 $$\cosec\theta=\frac1{\sin\theta},\qquad \sec\theta=\frac1{\cos\theta},$$
 
@@ -104,7 +110,9 @@ $$\cot\theta=\frac{\cos\theta}{\sin\theta}.$$
 - **正割（secant）：**在 $\theta=\frac\pi2+k\pi$ 时无定义；周期为 $2\pi$；函数值满足 $y\le-1$ 或 $y\ge1$。
 - **余切（cotangent）：**在 $\theta=k\pi$ 时无定义；周期为 $\pi$；值域为所有实数，且在相邻渐近线之间递减。
 
-这里 $k$ 是任意整数。无定义的取值对应竖直渐近线（vertical asymptote）。余割和正割取的是原图像**纵坐标的倒数**，不是把正弦和余弦图像关于 $y=x$ 翻折。
+这里 $k$ 是任意整数，用来一次写出每次重复出现的位置。“周期”是图像重复一次所需的横向距离。在上面列出的无定义位置附近，分母越来越接近零，倒数的大小就越来越大；图像贴近的竖直虚线叫竖直渐近线（vertical asymptote），曲线不能穿过这条线连起来。
+
+读下图时，先找虚线，再找每段曲线的最高或最低位置。虚线分开的每一段常叫一条分支（branch）。余割和正割取的是原图像**纵坐标的倒数**，不是把正弦和余弦图像关于 $y=x$ 翻折。
 
 ![余割、正割和余切在零到 2π 区间内的图像，虚线表示竖直渐近线。](/assets/img/trigonometric-reciprocals.svg)
 
@@ -114,11 +122,11 @@ $$\cot\theta=\frac{\cos\theta}{\sin\theta}.$$
 
 **Question:** Solve $\sec\left(2\theta-\frac\pi3\right)=-2$ for $0\le\theta\le\pi$.
 
-令 $\phi=2\theta-\frac\pi3$，则 $-\frac\pi3\le\phi\le\frac{5\pi}3$。方程变为
+先把括号内整个角简记为 $\phi=2\theta-\frac\pi3$，这样可以先处理熟悉的余弦图像。原角从 0 走到 π，括号里的角也随之增大；将两个端点分别代入，得到 $-\frac\pi3\le\phi\le\frac{5\pi}3$。正割是余弦的倒数，倒数等于 −2 就表示余弦等于 −1/2，故方程变为
 
 $$\cos\phi=-\frac12.$$
 
-在转换后的区间内，$\phi=\frac{2\pi}3$ 或 $\frac{4\pi}3$，因此
+在余弦图像上找高度 −1/2 的点，只保留刚才那段角范围内的点，得到 $\phi=\frac{2\pi}3$ 或 $\frac{4\pi}3$。再把每个角加上 π/3、除以 2，找回原来的角，因此
 
 $$\boxed{\theta=\frac\pi2,\ \frac{5\pi}6}.$$
 
@@ -154,7 +162,7 @@ Let $\phi=2\theta-\pi/3$, with $0\le\theta\le\pi$. Write the interval for $\phi$
 
 ## 三角恒等式（trigonometric identities） {#trigonometric-identities}
 
-从 $\sin^2\theta+\cos^2\theta=1$ 出发，两边除以 $\cos^2\theta$ 或 $\sin^2\theta$，得到
+恒等式说的是：只要式子能计算，不管取哪个允许的角，两边都相等。它可以把同一个量换成更方便的写法。先从熟悉的 $\sin^2\theta+\cos^2\theta=1$ 出发。两边除以 $\cos^2\theta$，其中余弦平方除以自己变成 1，另两项按定义变成正切平方和正割平方；两边改除以 $\sin^2\theta$，就得到余切和余割的关系。结果是
 
 $$1+\tan^2\theta=\sec^2\theta,\qquad 1+\cot^2\theta=\cosec^2\theta.$$
 
@@ -166,7 +174,7 @@ $$1+\tan^2\theta=\sec^2\theta,\qquad 1+\cot^2\theta=\cosec^2\theta.$$
 
 **Question:** Prove $\sec\theta-\cos\theta=\sin\theta\tan\theta$ where both sides are defined.
 
-从左边出发：
+左边有正割，右边有正弦和正切。先把正割写成余弦的倒数，便能通分；接着用已知恒等式把分子中的“1 减余弦平方”换成正弦平方。最后把其中一个正弦与分母组成正切。从左边出发，逐步写成：
 
 $$\begin{aligned}
 \sec\theta-\cos\theta
@@ -188,7 +196,7 @@ $$\begin{aligned}
 
 **Question:** Given $x=3\sec\theta$ and $y=2\tan\theta$, eliminate $\theta$ and state the possible $x$ values.
 
-使用 $\sec^2\theta-\tan^2\theta=1$：
+这里同一个角同时给出横、纵坐标。题目要“消去参数”，意思是改写成只含坐标、不含这个角的关系。先把原来两式各自除以 3 和 2，就能用坐标表示正割和正切；再代入 $\sec^2\theta-\tan^2\theta=1$：
 
 $$\boxed{\frac{x^2}{9}-\frac{y^2}{4}=1}.$$
 
@@ -196,11 +204,13 @@ $$\boxed{\frac{x^2}{9}-\frac{y^2}{4}=1}.$$
 
 **检查：**当 $\theta=0$ 时，$(x,y)=(3,0)$ 同时满足原方程和消参后的方程。当 $\theta=\pi$ 时，对应点为 $(-3,0)$，因此不能舍去负数对应的分支。
 
-若参数的取值区间受到限制，也要在消参后的曲线上保留相应限制。
+若题目只准角在一段范围内变化，曲线也只能保留这段角能给出的点，不能把新方程表示的整条曲线都画上。
 
 </section>
 
 ## 和差角公式（compound angle formulae） {#compound-angle-formulae}
+
+已知两个角各自的正弦和余弦，怎样求它们加起来或相减后的函数值？不能把两个正弦值直接相加或相减；下面的公式说明该怎样组合已知值。每个括号都表示一个完整的角。
 
 $$\begin{aligned}
 \sin(A+B)&=\sin A\cos B+\cos A\sin B,\\
@@ -227,7 +237,7 @@ $$(\cos A-\cos B)^2+(\sin A-\sin B)^2.$$
 
 **Question:** Find $\sin15^\circ$ exactly. Simplify $\sin\theta\cos\frac\pi4-\cos\theta\sin\frac\pi4$ and find the smallest positive value of $\theta$ at which the maximum occurs.
 
-求精确值时，
+15° 不是常用的特殊角，但它等于 45° 减 30°，而这两个角的正弦、余弦都已知。所以选正弦差角公式，保留根式来求精确值：
 
 $$\begin{aligned}
 \sin15^\circ&=\sin(45^\circ-30^\circ)\\
@@ -243,7 +253,9 @@ $$\begin{aligned}
 
 ## 化为一个正弦或余弦函数 {#sine-and-cosine-forms}
 
-选择题目要求的正弦或余弦形式，**先展开，再比较系数**。例如，
+把两个三角项合成一个，可以直接利用单个正弦或余弦在 −1 到 1 之间变化的事实，求最大值、最小值或解方程。新写法里的一个数决定高度放大几倍，另一个角决定图像左右移动多少。
+
+怎样找到这两个数？选择题目要求的正弦或余弦形式，**先展开，再比较系数**。“比较系数”就是让新式中余弦前面的数等于原式中的数，正弦前面的数也分别相等。例如，
 
 $$r\cos(\theta-\alpha)=r\cos\alpha\cos\theta+r\sin\alpha\sin\theta.$$
 
@@ -261,7 +273,7 @@ $$r\cos\alpha=a,\qquad r\sin\alpha=b,\qquad r=\sqrt{a^2+b^2}.$$
 
 **Question:** Express $4\sin\theta-3\cos\theta$ as $r\sin(\theta-\alpha)$, with $r>0$ and $0<\alpha<90^\circ$. Find the maximum and minimum of $2+4\sin\theta-3\cos\theta$ and the angles at which they occur in $0\le\theta\le360^\circ$.
 
-展开并比较系数：
+题目指定正弦差角形式。按差角公式展开后，正弦项前面的数要等于 4，余弦项前面的负数要等于 −3，所以分别比较得到：
 
 $$r\cos\alpha=4,\qquad r\sin\alpha=3.$$
 
@@ -295,7 +307,7 @@ $$2\cos\left(\theta-\frac\pi3\right)=1.$$
 
 ## 二倍角公式（double angle formulae） {#double-angle-formulae}
 
-在和差角公式中令 $B=A$：
+二倍角就是原来的角乘以 2，不是函数值乘以 2。把和角公式中的两个角取成同一个，也就是令 $B=A$，便得到：
 
 $$\sin2A=2\sin A\cos A,$$
 
@@ -306,7 +318,7 @@ $$\begin{aligned}
 
 $$\tan2A=\frac{2\tan A}{1-\tan^2 A}.$$
 
-正切公式要求各项有定义且分母非零。选择余弦的二倍角形式时，尽量使方程只含**一种**三角函数。整理后还可得到
+正切公式要求各项有定义且分母非零。余弦有三种相等的写法，选哪种要看方程另一边：另一边有正弦，就选含正弦平方的；有余弦，就选含余弦平方的。这样方程只含**一种**三角函数，才容易像二次方程那样求解。整理后还可得到
 
 $$\sin^2 A=\frac{1-\cos2A}{2},\qquad\cos^2 A=\frac{1+\cos2A}{2}.$$
 
@@ -335,6 +347,8 @@ $$\boxed{x=0,\frac\pi3,\pi,\frac{5\pi}3,2\pi}.$$
 ### 例题 9 — 推导另一个恒等式 {#example-9--derive-a-further-identity}
 
 **Question:** Prove $\cos3A=4\cos^3 A-3\cos A$.
+
+三倍角可以看成二倍角加原角，因此先用余弦和角公式，再用二倍角公式。目标右边只含余弦，所以把正弦平方换成一减余弦平方；最后展开并合并同类项：
 
 $$\begin{aligned}
 \cos3A&=\cos(2A+A)\\
@@ -365,7 +379,7 @@ Find $\sin^{-1}(-\frac12)$ and $\tan^{-1}(-\sqrt3)$ exactly. Sketch $y=\sin^{-1}
 <details markdown="1">
 <summary>提示</summary>
 
-使用反函数规定的值域。解 $-1\le2x+1\le1$，确定图像的定义域。
+反过来找角时，答案要落在该反函数规定的角范围内。括号里的数必须是正弦能给出的值，因此解 $-1\le2x+1\le1$，找出允许输入的横坐标。
 
 </details>
 
@@ -602,7 +616,7 @@ Solve $2\tan^2(x-\pi/6)=\sec(x-\pi/6)+1$ for $0\le x<2\pi$. Give exact answers.
 <details markdown="1">
 <summary>提示</summary>
 
-化为只含一种三角函数的关系，并保留定义域和整个角的区间。
+想办法把正切平方与正割放到同一种函数中。先记下哪些输入会造成除以零，再算出括号里整个角能取的范围。
 
 </details>
 
@@ -617,7 +631,7 @@ $$2\sec^2\phi-\sec\phi-3=0\quad\Rightarrow\quad(2\sec\phi-3)(\sec\phi+1)=0.$$
 
 $$x=\frac\pi6+\beta,\quad\frac{7\pi}6,\quad\frac{13\pi}6-\beta.$$
 
-各值都属于原区间，且余弦非零。正割为 $3/2$ 时，两边都等于 $5/2$；正割为 $-1$ 时，两边均为零。枚举整个区间内的余弦分支说明没有漏解，单纯回代只能说明所列各值成立。
+各值都属于原区间，且余弦非零。正割为 $3/2$ 时，两边都等于 $5/2$；正割为 $-1$ 时，两边均为零。把整个角范围内所有符合余弦值的位置找全，才能说明没有漏解；单纯回代只能说明所列各值成立。
 
 </details>
 
@@ -647,7 +661,7 @@ Sketch $y=\cos^{-1}(1-2x)$ with its domain, range and three labelled points. Can
 <details markdown="1">
 <summary>提示</summary>
 
-先限制 $1-2x$ 的取值，再检查反余弦的主值范围。
+先让 $1-2x$ 落在 −1 到 1 之间，再检查输出角是否属于反余弦规定的 0 到 π。这个规定的输出角范围也叫主值范围。
 
 </details>
 

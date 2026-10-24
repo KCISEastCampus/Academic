@@ -11,7 +11,7 @@ study_page: true
 
 [Back to the topic index](/alevel/a2-mathematics/)
 
-Use these notes to check a formula or method. For worked examples and practice, choose a lesson from the [Pure Mathematics topic index](/alevel/a2-mathematics/#study-a-topic).
+Use this page to find a formula after studying it, not as a list to memorise from the start. If a formula is new or unclear, choose its lesson from the [Pure Mathematics topic index](/alevel/a2-mathematics/#study-a-topic). There you can read the meaning, follow an example and practise.
 
 The P2 labels follow the OxfordAQA syllabus topic groups, with some shortened titles. They are not the chapter numbers in the textbook. The [topic index](/alevel/a2-mathematics/#quick-reference) shows the matching textbook chapters and syllabus supplement.
 

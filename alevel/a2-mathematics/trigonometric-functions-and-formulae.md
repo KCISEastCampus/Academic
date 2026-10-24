@@ -15,11 +15,11 @@ study_page: true
 
 <div class="lesson-lead" markdown="1">
 
-An inverse gives one permitted angle; an equation may need several. Learn to choose a useful trigonometric form while keeping every allowed solution and excluding undefined expressions.
+Give sine, cosine or tangent an angle and it returns a number. Its graph shows this link. First learn how to work backwards to an angle and how to take reciprocals of function values. Then use formulae to rewrite expressions and solve equations, keeping every allowed angle.
 
 </div>
 
-1. [Distinguish inverses](#inverse-trigonometric-functions) from [reciprocals](#reciprocal-trigonometric-functions), using their domains and graphs.
+1. [Distinguish inverses](#inverse-trigonometric-functions) from [reciprocals](#reciprocal-trigonometric-functions), using their inputs, outputs and graphs.
 2. [Prove and connect forms](#trigonometric-identities), then use [compound angles](#compound-angle-formulae) and [single sine or cosine forms](#sine-and-cosine-forms).
 3. [Work with double angles](#double-angle-formulae), then attempt [practice](#practice). Return to [review](#later-review) after another topic.
 {: .lesson-routes}
@@ -54,7 +54,11 @@ Use degrees when a question gives degrees. Otherwise this lesson uses radians. K
 
 ## Inverse Trigonometric Functions {#inverse-trigonometric-functions}
 
-Sine, cosine and tangent must be restricted to give one-to-one functions before finding their inverses.
+Sine takes an angle as input and gives the height on its graph as output. Working backwards can give several angles: 30° and 150° both have sine 1/2. A horizontal line can meet the sine graph more than once.
+
+For an inverse to give just one answer, first choose a part of the original graph with no repeated heights. For sine choose −π/2 to π/2, for cosine choose 0 to π, and for tangent choose −π/2 to π/2 without the endpoints. Different angles in each chosen part give different numbers: this is what **one-to-one** means.
+
+In the table, the **domain** lists numbers you may put in; the **range** lists angles the inverse may give out. Notice that the input is now a number and the output is an angle.
 
 | Inverse function | Domain | Range of the inverse |
 |---|---|---|
@@ -66,7 +70,7 @@ For example, $\sin^{-1}\left(\frac12\right)=\frac\pi6$. It gives one angle in th
 
 **Important:** $\sin^{-1}x$ means the inverse function, not $\frac1{\sin x}$. Also, $\sin^{-1}(\sin\theta)=\theta$ only when $\theta$ is in the restricted range. For example, $\sin^{-1}\left(\sin\frac{5\pi}6\right)=\frac\pi6$.
 
-The inverse graph is the reflection of the restricted original graph in $y=x$.
+On the original graph, the horizontal coordinate is the angle and the vertical coordinate is its function value. Working backwards swaps these coordinates. The inverse graph is therefore the reflection of the chosen part of the original graph in $y=x$.
 
 <section class="worked-example" markdown="1">
 
@@ -74,23 +78,25 @@ The inverse graph is the reflection of the restricted original graph in $y=x$.
 
 **Question:** Find the domain and range of $y=\cos^{-1}(3x-2)$. Give three points for a sketch and solve $\cos^{-1}(3x-2)=\frac\pi3$.
 
-The input to $\cos^{-1}$ must be between $-1$ and $1$:
+$\cos^{-1}$ asks which angle in its chosen range has the given cosine. A cosine cannot be below $-1$ or above $1$, so first restrict the whole expression inside the brackets. In the inequality below, add 2 to all three parts, then divide them by positive 3:
 
 $$-1\le3x-2\le1\quad\Rightarrow\quad\boxed{\frac13\le x\le1}.$$
 
-The range is $\boxed{0\le y\le\pi}$. The curve decreases through
+The output is still an angle in the chosen inverse-cosine range, so the range is $\boxed{0\le y\le\pi}$. Choose −1, 0 and 1 as the values inside the brackets, then work backwards to each horizontal coordinate. As the input increases, the output angle decreases. The curve passes through
 
 $$\left(\frac13,\pi\right),\quad\left(\frac23,\frac\pi2\right),\quad(1,0).$$
 
-It is the graph of $y=\cos^{-1}x$ stretched by factor $\frac13$ parallel to the $x$-axis, then translated $\frac23$ in the positive $x$ direction.
+You can also track how points move from the graph of $y=\cos^{-1}x$: multiply each horizontal coordinate by $\frac13$, compressing along the $x$-axis, then add $\frac23$, moving it right along the $x$-axis. Heights stay the same.
 
-To solve the equation, $3x-2=\cos\frac\pi3=\frac12$, giving $\boxed{x=\frac56}$.
+Finally solve the equation. The output angle is known, so use cosine to recover the input: $3x-2=\cos\frac\pi3=\frac12$. Add 2 and divide by 3, giving $\boxed{x=\frac56}$.
 
 **Check:** $\frac56$ is in the domain, and $\frac\pi3$ is in the inverse range. If the right-hand side had been $\frac{4\pi}3$, there would be no solution: it is outside that range.
 
 </section>
 
 ## Reciprocal Trigonometric Functions {#reciprocal-trigonometric-functions}
+
+Keep the angle unchanged and take the reciprocal of the function value: a height of 1/2 becomes 2, and −1/2 becomes −2. A zero height has no reciprocal because division by zero is not allowed. The names and formulae are:
 
 $$\cosec\theta=\frac1{\sin\theta},\qquad \sec\theta=\frac1{\cos\theta},$$
 
@@ -102,7 +108,9 @@ Where $\tan\theta$ is defined and non-zero, $\cot\theta=\frac1{\tan\theta}$. Use
 - **Secant:** undefined at $\theta=\frac\pi2+k\pi$; period $2\pi$; values $y\le-1$ or $y\ge1$.
 - **Cotangent:** undefined at $\theta=k\pi$; period $\pi$; takes all real values and decreases between consecutive asymptotes.
 
-Here $k$ is any integer. The undefined values give vertical asymptotes. Cosecant and secant are reciprocals of the graph's **heights**, not reflections of sine and cosine in $y=x$.
+Here $k$ is any integer, allowing one expression to list all the repeating positions. A **period** is the horizontal distance for one repeat. Near the excluded positions above, the denominator approaches zero and the reciprocal grows without bound in size. The vertical dashed line it approaches is a **vertical asymptote**; do not join the curve across it.
+
+Read the graph below by finding its dashed lines, then the highest or lowest point of each separate part. Each part is often called a **branch**. Cosecant and secant are reciprocals of the graph's **heights**, not reflections of sine and cosine in $y=x$.
 
 ![Graphs of cosecant, secant and cotangent from zero to two pi, with dashed vertical asymptotes.](/assets/img/trigonometric-reciprocals.svg)
 
@@ -112,11 +120,11 @@ Here $k$ is any integer. The undefined values give vertical asymptotes. Cosecant
 
 **Question:** Solve $\sec\left(2\theta-\frac\pi3\right)=-2$ for $0\le\theta\le\pi$.
 
-Let $\phi=2\theta-\frac\pi3$. Then $-\frac\pi3\le\phi\le\frac{5\pi}3$. The equation becomes
+Give the whole angle in brackets the shorter name $\phi=2\theta-\frac\pi3$, so we can use a familiar cosine graph. As the original angle runs from 0 to π, this new angle also increases. Substituting the two endpoints gives $-\frac\pi3\le\phi\le\frac{5\pi}3$. Secant is the reciprocal of cosine, so a secant of −2 means a cosine of −1/2. The equation becomes
 
 $$\cos\phi=-\frac12.$$
 
-Within the transformed interval, $\phi=\frac{2\pi}3$ or $\frac{4\pi}3$. Thus
+Find every point of height −1/2 on the cosine graph within this new angle interval: $\phi=\frac{2\pi}3$ or $\frac{4\pi}3$. Add π/3 to each angle and divide by 2 to recover the original angle. Thus
 
 $$\boxed{\theta=\frac\pi2,\ \frac{5\pi}6}.$$
 
@@ -152,7 +160,7 @@ The interval is $-\pi/3\le\phi\le5\pi/3$. The equation is $\cos\phi=1/2$, with $
 
 ## Trigonometric Identities {#trigonometric-identities}
 
-Starting with $\sin^2\theta+\cos^2\theta=1$, divide by $\cos^2\theta$ or $\sin^2\theta$ to get
+An **identity** says that two expressions are equal for every angle at which they can be calculated. It lets us change an expression into a more useful form. Start with $\sin^2\theta+\cos^2\theta=1$. Divide by $\cos^2\theta$: cosine squared divided by itself becomes 1, and the other two terms become tangent squared and secant squared. Dividing instead by $\sin^2\theta$ gives the cotangent and cosecant relationship:
 
 $$1+\tan^2\theta=\sec^2\theta,\qquad 1+\cot^2\theta=\cosec^2\theta.$$
 
@@ -164,7 +172,7 @@ Each identity holds where its expressions are defined. For a proof, start with o
 
 **Question:** Prove $\sec\theta-\cos\theta=\sin\theta\tan\theta$ where both sides are defined.
 
-Start with the left-hand side:
+The left side contains secant; the right contains sine and tangent. First write secant as a reciprocal of cosine so you can use a common denominator. Then change one minus cosine squared into sine squared. Finally combine one sine with the denominator to make tangent. Starting on the left:
 
 $$\begin{aligned}
 \sec\theta-\cos\theta
@@ -186,7 +194,7 @@ This is the right-hand side. The restriction is $\cos\theta\ne0$.
 
 **Question:** Given $x=3\sec\theta$ and $y=2\tan\theta$, eliminate $\theta$ and state the possible $x$ values.
 
-Use $\sec^2\theta-\tan^2\theta=1$:
+The same angle supplies both coordinates. To **eliminate the parameter** means to obtain a relationship containing only the coordinates, without that angle. Divide the original equations by 3 and 2 to express secant and tangent using the coordinates. Substitute these into $\sec^2\theta-\tan^2\theta=1$:
 
 $$\boxed{\frac{x^2}{9}-\frac{y^2}{4}=1}.$$
 
@@ -194,11 +202,13 @@ Since $\sec\theta\le-1$ or $\sec\theta\ge1$, $\boxed{x\le-3\text{ or }x\ge3}$. T
 
 **Check:** at $\theta=0$, $(x,y)=(3,0)$ satisfies both the original equations and the new equation. At $\theta=\pi$, the point is $(-3,0)$; do not discard the negative branch.
 
-When the parameter has a restricted interval, keep any extra restrictions on the resulting curve.
+If the angle is allowed to vary over only part of a turn, keep only the points that those angles can reach. The new equation alone may describe too much of the curve.
 
 </section>
 
 ## Compound Angle Formulae {#compound-angle-formulae}
+
+If we know the sine and cosine of two separate angles, how can we find the value for their sum or difference? Adding or subtracting the sine values does not work. These formulae show how to combine the known values. Each bracket contains one complete angle.
 
 $$\begin{aligned}
 \sin(A+B)&=\sin A\cos B+\cos A\sin B,\\
@@ -225,7 +235,7 @@ Expanding and using $\sin^2 A+\cos^2 A=1$ gives $2-2(\cos A\cos B+\sin A\sin B)$
 
 **Question:** Find $\sin15^\circ$ exactly. Simplify $\sin\theta\cos\frac\pi4-\cos\theta\sin\frac\pi4$ and find the smallest positive value of $\theta$ at which the maximum occurs.
 
-For the exact value,
+15° is not a standard special angle, but it equals 45° minus 30°. We know the sine and cosine of both these angles, so choose the sine difference formula and keep the surds for an exact value:
 
 $$\begin{aligned}
 \sin15^\circ&=\sin(45^\circ-30^\circ)\\
@@ -241,7 +251,9 @@ The second expression is $\sin\left(\theta-\frac\pi4\right)$. Its maximum is $1$
 
 ## Sine and Cosine Forms {#sine-and-cosine-forms}
 
-Choose the requested sine or cosine form and expand it **before** comparing coefficients. For example,
+Combining two terms into one lets us use the fact that a single sine or cosine lies between −1 and 1 to find maximum and minimum values or solve equations. One new number sets the height scale; another angle sets the horizontal shift.
+
+To find them, choose the requested sine or cosine form and expand it **before** comparing coefficients. This means matching the numbers multiplying cosine in the two expressions, then matching the numbers multiplying sine. For example,
 
 $$r\cos(\theta-\alpha)=r\cos\alpha\cos\theta+r\sin\alpha\sin\theta.$$
 
@@ -259,7 +271,7 @@ For $r\sin(\theta+\alpha)$, instead compare $r\sin\alpha=a$ and $r\cos\alpha=b$.
 
 **Question:** Express $4\sin\theta-3\cos\theta$ as $r\sin(\theta-\alpha)$, with $r>0$ and $0<\alpha<90^\circ$. Find the maximum and minimum of $2+4\sin\theta-3\cos\theta$ and the angles at which they occur in $0\le\theta\le360^\circ$.
 
-Expand and compare:
+The question asks for a sine difference. Expand that form: its sine coefficient must be 4, and its negative cosine coefficient must be −3. Matching gives:
 
 $$r\cos\alpha=4,\qquad r\sin\alpha=3.$$
 
@@ -293,7 +305,7 @@ Therefore $\boxed{\theta=0,\frac{2\pi}3,2\pi}$.
 
 ## Double Angle Formulae {#double-angle-formulae}
 
-Put $B=A$ in the compound angle formulae:
+A double angle is twice the original angle; it does not mean twice the function value. Set the two angles in a sum formula equal by putting $B=A$:
 
 $$\sin2A=2\sin A\cos A,$$
 
@@ -304,7 +316,7 @@ $$\begin{aligned}
 
 $$\tan2A=\frac{2\tan A}{1-\tan^2 A}.$$
 
-The tangent formula needs all terms defined and a non-zero denominator. Choose the cosine form that leaves **one** trigonometric function in an equation. Rearranging also gives
+The tangent formula needs all terms defined and a non-zero denominator. Cosine has three equal forms. Look at the other side of your equation: if it contains sine, choose the sine-squared form; if it contains cosine, choose the cosine-squared form. This leaves **one** trigonometric function to solve for, much like an unknown in a quadratic. Rearranging also gives
 
 $$\sin^2 A=\frac{1-\cos2A}{2},\qquad\cos^2 A=\frac{1+\cos2A}{2}.$$
 
@@ -333,6 +345,8 @@ $$\boxed{x=0,\frac\pi3,\pi,\frac{5\pi}3,2\pi}.$$
 ### Example 9 — Derive a further identity {#example-9--derive-a-further-identity}
 
 **Question:** Prove $\cos3A=4\cos^3 A-3\cos A$.
+
+A triple angle is a double angle plus the original angle, so start with the cosine sum formula, then use double-angle formulae. The required expression contains only cosine: replace sine squared by one minus cosine squared. Finally expand and collect terms:
 
 $$\begin{aligned}
 \cos3A&=\cos(2A+A)\\
@@ -363,7 +377,7 @@ Find $\sin^{-1}(-\frac12)$ and $\tan^{-1}(-\sqrt3)$ exactly. Sketch $y=\sin^{-1}
 <details markdown="1">
 <summary>Hint</summary>
 
-Use the restricted inverse ranges. Solve $-1\le2x+1\le1$ for the graph domain.
+The output angle must lie in the range chosen for that inverse. The number in brackets must be a possible sine value, so solve $-1\le2x+1\le1$ for the allowed horizontal coordinates.
 
 </details>
 
@@ -600,7 +614,7 @@ Solve $2\tan^2(x-\pi/6)=\sec(x-\pi/6)+1$ for $0\le x<2\pi$. Give exact answers.
 <details markdown="1">
 <summary>Hint</summary>
 
-Work with one trigonometric quantity. Keep its domain restrictions and the interval for the whole angle.
+Look for a way to express tangent squared and secant using the same function. Record the inputs that would cause division by zero, then find the interval for the whole angle in brackets.
 
 </details>
 
@@ -615,7 +629,7 @@ Let $\beta=\cos^{-1}(2/3)$. The cosine cases are $2/3$ and $-1$. In this interva
 
 $$x=\frac\pi6+\beta,\quad\frac{7\pi}6,\quad\frac{13\pi}6-\beta.$$
 
-Each is in the original interval and has non-zero cosine. For secant $3/2$, the two sides both equal $5/2$; for secant $-1$, both are zero. The cosine cases enumerate the whole interval, which supplies completeness beyond substitution alone.
+Each is in the original interval and has non-zero cosine. For secant $3/2$, the two sides both equal $5/2$; for secant $-1$, both are zero. Finding every matching cosine position over the whole angle interval shows that no solution is missing. Substitution alone only checks the listed solutions.
 
 </details>
 
@@ -645,7 +659,7 @@ Sketch $y=\cos^{-1}(1-2x)$ with its domain, range and three labelled points. Can
 <details markdown="1">
 <summary>Hint</summary>
 
-First constrain $1-2x$ to the cosine inverse domain. Then use the principal range.
+First keep $1-2x$ between −1 and 1. Then check whether the output angle lies between 0 and π, the chosen range for inverse cosine. This chosen output interval is also called its principal range.
 
 </details>
 

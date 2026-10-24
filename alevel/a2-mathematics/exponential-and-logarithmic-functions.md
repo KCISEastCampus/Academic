@@ -15,7 +15,7 @@ study_page: true
 
 <div class="lesson-lead" markdown="1">
 
-A fixed percentage multiplies the current amount. Connect that model to exponential graphs and their logarithmic inverses, then use positivity and the original domain to decide which answers are possible.
+Increasing by the same percentage each year means multiplying the current amount by the same factor each year. To ask how many repetitions reach a given amount, we need logarithms. Connect these ideas to graphs, equations and models, checking which inputs and answers make sense.
 
 </div>
 
@@ -34,7 +34,9 @@ All examples, tasks and data are self-written, with no official marks. Hints and
 
 ## Exponential Growth and Decay {#exponential-growth-and-decay}
 
-A quantity has exponential growth or decay when it changes by a **constant factor over equal time intervals**. If the initial quantity is $A>0$ and the factor per interval is $q>0$, then after $n$ intervals,
+Think first of repeated multiplication: doubling each time gives 2, 4, then 8 times the starting amount. Decreasing by the same percentage also means repeatedly multiplying by one factor.
+
+A quantity has exponential growth or decay when it changes by a **constant factor over equal time intervals**. Write $A>0$ for the starting amount and $q>0$ for the factor. After $n$ intervals, that many multiplications give
 
 $$N=Aq^n.$$
 
@@ -46,9 +48,9 @@ At $n=0$, $N=A$. The percentage applies to the **current** amount each interval.
 
 If you know two quantities separated by $m$ intervals, use $q^m=\frac{N_m}{N_0}$ to find the factor. Keep the time unit consistent: a monthly factor needs time measured in months.
 
-Here $\ln$ means logarithm to base $e$ (approximately $2.71828$); it obeys the same laws as the general-base logarithms in the AS prerequisite. Its inverse relationship is explained in [Natural Logarithms](#natural-logarithms).
+How do we work backwards to the number of multiplications? A logarithm asks what the exponent is. Here $\ln$ uses base $e$ (approximately $2.71828$), the fixed number being raised to a power. It follows the AS logarithm laws, which let us bring an exponent in front for calculation. [Natural Logarithms](#natural-logarithms) explains why this works.
 
-For a threshold, take logarithms and solve the inequality. Since $\ln q<0$ for decay, dividing by $\ln q$ **reverses the inequality sign**. If the question asks for whole intervals, check the first integer that satisfies the original strict inequality; do not round to the nearest integer.
+A **threshold** is the boundary amount a question asks you to exceed or fall below. The unknown time is in the exponent; taking logarithms brings it in front to give an ordinary inequality. Since $\ln q<0$ for decay, dividing by $\ln q$ **reverses the inequality sign**. For a whole year, choose the first integer that really satisfies the original inequality. Exceeding excludes equality; do not round to the nearest integer.
 
 <section class="worked-example" markdown="1">
 
@@ -56,13 +58,13 @@ For a threshold, take logarithms and solve the inequality. Since $\ln q<0$ for d
 
 **Question:** A model starts at $2000$ units and increases by $6\%$ each year. Find the first whole year when the quantity exceeds $3000$.
 
-The model is $N=2000(1.06)^n$. Thus
+A 6% increase keeps the current 100% and adds 6%, so each year multiplies by 1.06. The model is $N=2000(1.06)^n$. Use a greater-than sign for “exceeds”. First divide by 2000: we need a power of 1.06 greater than 1.5. Take logarithms to bring the number of repetitions in front:
 
 $$2000(1.06)^n>3000\quad\Rightarrow\quad n\ln1.06>\ln1.5,$$
 
 $$n>\frac{\ln1.5}{\ln1.06}=6.9585\ldots.$$
 
-The first whole year is $\boxed{n=7}$.
+The time must be greater than the calculated value. The first integer that works is 7, so the first whole year is $\boxed{n=7}$.
 
 **Check:** $N_6=2837.04\ldots<3000$, while $N_7=3007.26\ldots>3000$. The strict inequality and these two neighbouring years confirm the answer.
 
@@ -74,11 +76,11 @@ The first whole year is $\boxed{n=7}$.
 
 **Question:** A model starts at $5000$ units and decreases by $15\%$ each year. Find the first whole year when the quantity is below $2000$.
 
-The factor is $0.85$, so
+A 15% decrease leaves 85%, so the factor for each year is $0.85$. Write the below-2000 inequality, divide by the positive starting amount, then take logarithms:
 
 $$5000(0.85)^n<2000\quad\Rightarrow\quad n\ln0.85<\ln0.4.$$
 
-Since $\ln0.85<0$, division gives
+Why is this logarithm negative? A base greater than 1 needs a negative exponent to give a number below 1. Since $\ln0.85<0$, dividing by it reverses the comparison:
 
 $$n>\frac{\ln0.4}{\ln0.85}=5.6381\ldots.$$
 
@@ -126,15 +128,15 @@ Real data may have only approximately constant ratios. State the assumptions: th
 
 ## The Exponential Function {#the-exponential-function}
 
-The number $e$ is irrational, with $e\approx2.71828$. One definition is
+The factor above could be 1.06, 0.85 or another positive number. We now choose a fixed base often used in mathematics, called $e$. It is irrational, with $e\approx2.71828$: its decimal neither ends nor repeats. One definition is
 
 $$e=1+\frac1{1!}+\frac1{2!}+\frac1{3!}+\cdots.$$
 
-The **exponential function** is $f(x)=e^x$.
+The factorials above mean multiplying the integers from 1 up to the stated integer; the sum defines this fixed number. Using it as a base gives the **exponential function** $f(x)=e^x$: the input is the exponent and the output is the resulting power.
 
-- Domain: all real $x$; range: $y>0$.
+- The **domain**, or allowed inputs, is all real $x$; the **range**, or possible outputs, is $y>0$, because a positive number raised to a real power stays positive.
 - It is increasing and passes through $(0,1)$.
-- It has no $x$-intercept and has horizontal asymptote $y=0$.
+- It never reaches the $x$-axis, so it has no intercept there. To the left, its height gets closer to zero while staying positive: its horizontal asymptote is $y=0$.
 - $e^{a+b}=e^ae^b$ and $e^{-a}=\frac1{e^a}$.
 
 For a base $a>0$, $a\ne1$, the function $a^x$ is an exponential function. The base $e$ will be especially useful in [differentiation](/alevel/a2-mathematics/differentiation/).
@@ -159,23 +161,23 @@ $$e^{-x}=2\quad\Rightarrow\quad\boxed{x=-\ln2}.$$
 
 ## Natural Logarithms {#natural-logarithms}
 
-The logarithm to base $e$ is the **natural logarithm**, written $\ln x$. The basic relationship is
+A logarithm works backwards to an exponent. For example, what power of 2 gives 8? The answer is 3. Using base $e$ asks the same kind of question: what exponent gives the input number? This is the **natural logarithm**, written $\ln x$. The relationship below writes the same fact in two ways:
 
 $$\ln a=b\quad\Longleftrightarrow\quad a=e^b,\qquad a>0.$$
 
-In particular, $\ln1=0$, $\ln e=1$, $\ln(e^x)=x$ for real $x$, and $e^{\ln x}=x$ for $x>0$.
+In particular, $\ln1=0$ because a non-zero number to power zero is 1, and $\ln e=1$ because power one gives the base itself. Taking a power and then asking for its exponent returns that exponent: $\ln(e^x)=x$ for real $x$. Working in the other order gives $e^{\ln x}=x$ for $x>0$. The restriction comes from the fact that a positive base cannot give zero or a negative result.
 
 The textbook uses $\log x$ for the common logarithm, to base $10$. Either common or natural logarithms can solve an exponential equation, provided you use the same base consistently.
 
 ### Laws of logarithms {#laws-of-logarithms}
 
-For $a>0$, $b>0$ and real $k$,
+These laws come from index laws. Multiplying powers adds their exponents, so the logarithm of a product is a sum. Division gives a difference; raising a power to another power multiplies exponents. For $a>0$, $b>0$ and real $k$,
 
 $$\ln(ab)=\ln a+\ln b,$$
 
 $$\ln\left(\frac ab\right)=\ln a-\ln b,\qquad\ln(a^k)=k\ln a.$$
 
-**Check each original logarithm's argument before using a law.** A combined expression can be defined at values excluded by the original expression. For example, $\ln(x^2)$ is defined for $x\ne0$, but $2\ln x$ requires $x>0$. For $x\ne0$, the form covering both signs is $\ln(x^2)=2\ln\lvert x\rvert$.
+**First check that the whole input to each logarithm is positive.** This input is called its **argument**, such as the whole expression in its brackets. A combined expression can be defined at values excluded by the original expression. For example, $\ln(x^2)$ is defined for $x\ne0$, but $2\ln x$ requires $x>0$. For $x\ne0$, the form covering both signs is $\ln(x^2)=2\ln\lvert x\rvert$.
 
 There is no law $\ln(a+b)=\ln a+\ln b$.
 
@@ -185,7 +187,7 @@ There is no law $\ln(a+b)=\ln a+\ln b$.
 
 **Question:** Express $2\ln(x-1)-\ln(x+2)$ as a single logarithm and state its domain.
 
-The original arguments require $x-1>0$ and $x+2>0$. Together these give $x>1$.
+First check that both original logarithms can be calculated: they require $x-1>0$ and $x+2>0$, so together $x>1$. To combine them, use the power law to move the 2 into a square on the first bracket. Subtracting logarithms then becomes division of their arguments by the quotient law. This gives
 
 $$\boxed{2\ln(x-1)-\ln(x+2)=\ln\left(\frac{(x-1)^2}{x+2}\right)},\qquad x>1.$$
 
@@ -195,10 +197,10 @@ $$\boxed{2\ln(x-1)-\ln(x+2)=\ln\left(\frac{(x-1)^2}{x+2}\right)},\qquad x>1.$$
 
 ## Solving Equations {#solving-equations}
 
-1. State any logarithm domain restrictions.
-2. Isolate the exponential or logarithmic expression.
-3. Use logarithm laws, exponentiate, or substitute $u=e^x$ for a quadratic.
-4. Check candidates in the original equation. In a substitution $u=e^x$, remember $u>0$.
+1. Check which inputs each original logarithm allows: these are the domain restrictions.
+2. If the unknown is an exponent, isolate the power and take logarithms to recover that exponent. If one side is a single logarithm, rewrite it as a power relationship.
+3. If the same exponential expression and its square appear, give that repeated expression a short name, such as $u=e^x$, to get a quadratic.
+4. Check each candidate in the original equation. In a substitution $u=e^x$, keep $u>0$: the exponential expression cannot be zero or negative.
 
 <section class="worked-example" markdown="1">
 
@@ -206,7 +208,7 @@ $$\boxed{2\ln(x-1)-\ln(x+2)=\ln\left(\frac{(x-1)^2}{x+2}\right)},\qquad x>1.$$
 
 **Question:** Solve $\ln(x-1)+\ln(x+1)=\ln8$.
 
-The domain is $x>1$. Combine the logarithms:
+Both logarithm inputs must be positive, so the domain is $x>1$. The two logarithms are added, so combine them using the product law. Equal logarithms to the same base ask for the same exponent and therefore have the same positive input. Thus
 
 $$\ln\big((x-1)(x+1)\big)=\ln8\quad\Rightarrow\quad x^2-1=8.$$
 
@@ -222,7 +224,7 @@ Thus $x=3$ or $-3$. Only $\boxed{x=3}$ is in the original domain.
 
 **Question:** Solve $e^{2x}-3e^x-4=0$ exactly.
 
-Let $u=e^x>0$. Since $e^{2x}=(e^x)^2$,
+No single exponential expression is isolated yet, but the first term is the square of the exponential expression in the second term. Give the repeated part a short name: let $u=e^x>0$. Since $e^{2x}=(e^x)^2$, the equation becomes an ordinary quadratic:
 
 $$u^2-3u-4=0\quad\Rightarrow\quad(u-4)(u+1)=0.$$
 
@@ -236,7 +238,7 @@ For an equation such as $e^{3x-1}=5$, taking logarithms gives $3x-1=\ln5$, so $x
 
 ## The Logarithmic Function {#the-logarithmic-function}
 
-The function $y=\ln x$ is the inverse of $y=e^x$. Its graph is the reflection of the exponential curve in $y=x$.
+The function $y=\ln x$ sends a power back to its exponent, so it is the inverse of $y=e^x$. Points swap horizontal and vertical coordinates: (0,1) on the exponential graph becomes (1,0) on the logarithm graph. This is a reflection in $y=x$.
 
 - Domain: $x>0$; range: all real $y$.
 - It is increasing and passes through $(1,0)$.
@@ -251,11 +253,11 @@ The function $y=\ln x$ is the inverse of $y=e^x$. Its graph is the reflection of
 
 **Question:** Sketch $y=\ln(2x-4)$ and state its domain, range, intercepts and asymptote.
 
-The argument must be positive: $2x-4>0$, so $\boxed{x>2}$. The range is all real $y$, and the vertical asymptote is $\boxed{x=2}$.
+First check the whole logarithm input: $2x-4>0$, so $\boxed{x>2}$. This input can take every positive value, so the output can take all real $y$. As the horizontal coordinate approaches 2 from the right, the input approaches zero and the logarithm decreases without bound. The vertical asymptote is $\boxed{x=2}$.
 
 At $y=0$, $2x-4=e^0=1$, giving the $x$-intercept $\boxed{(\frac52,0)}$. There is no $y$-intercept because $x=0$ is outside the domain.
 
-The curve is increasing. It is $y=\ln x$ stretched by factor $\frac12$ parallel to the $x$-axis, then translated by $2$ in the positive $x$ direction.
+The curve is increasing. Start with $y=\ln x$ and multiply each horizontal coordinate by $\frac12$, compressing along the $x$-axis. Then add $2$ to each horizontal coordinate, moving right along the $x$-axis. Heights stay the same.
 
 **Check:** $x=3$ gives $y=\ln2$. As $x$ approaches $2$ from above, the argument tends to zero from above, so $y$ decreases without bound.
 
@@ -267,9 +269,9 @@ The curve is increasing. It is $y=\ln x$ stretched by factor $\frac12$ parallel 
 
 **Question:** Let $f(x)=3-e^{2x}$ for real $x$. Find its range and inverse. Solve $f^{-1}(x)=0$.
 
-Since $e^{2x}>0$, the range of $f$ is $\boxed{y<3}$. It is strictly decreasing, so it has an inverse.
+Since $e^{2x}>0$, the range of $f$ is $\boxed{y<3}$. It is strictly decreasing: each output comes from only one input, so we can work backwards to that input using an inverse.
 
-From $y=3-e^{2x}$,
+To recover the input from $y=3-e^{2x}$, first isolate the exponential, then take logarithms to find its exponent and divide by 2:
 
 $$e^{2x}=3-y\quad\Rightarrow\quad x=\frac12\ln(3-y).$$
 
@@ -599,7 +601,7 @@ Express $2\ln(x-2)-\ln x$ as one logarithm, retaining the original domain. Is $x
 <details markdown="1">
 <summary>Hint</summary>
 
-Check the two original arguments before applying the power and quotient laws.
+Check that the numbers inside both original logarithms are positive before applying the power and quotient laws.
 
 </details>
 
@@ -629,7 +631,7 @@ Solve (a) $\ln(x-3)+\ln(x+1)=\ln5$ and (b) $e^{2x}+e^x-6=0$ exactly. Explain eve
 <details markdown="1">
 <summary>Hint</summary>
 
-In (a) retain the original log domain; in (b) retain the positivity of the substitution.
+In (a), first state the inputs allowed by both original logarithms. In (b), remember that the short name for an exponential expression must represent a positive number.
 
 </details>
 
@@ -691,7 +693,7 @@ Find the real intersection of $y=\ln(5-e^x)$ and $y=x$. State the domain of the 
 <details markdown="1">
 <summary>Hint</summary>
 
-Use the inverse relationship only after finding where the logarithm exists. Monotonicity can establish uniqueness without differentiation.
+First find which inputs allow the logarithm, then rewrite the logarithmic relationship as a power. To show there is only one intersection, compare a falling curve with a rising line.
 
 </details>
 
@@ -702,7 +704,7 @@ The domain is $x<\ln5$. Exponentiating the equation gives $5-e^x=e^x$, so the in
 
 $$(x,y)=\big(\ln(5/2),\ln(5/2)\big).$$
 
-It is in the domain and makes the argument $5/2>0$. On this domain the logarithmic curve decreases while the line increases, so they can meet at most once; the value found proves existence. Alternatively the injectivity of $e^x$ and $2e^x=5$ establish uniqueness. If positivity was missed, return to [original arguments](#natural-logarithms).
+It is in the domain and makes the argument $5/2>0$. On this domain the logarithmic curve decreases while the line increases, so they can meet at most once; the value found proves existence. Alternatively, $e^x$ strictly increases and never repeats an output, so $2e^x=5$ has only one solution. If positivity was missed, return to [original arguments](#natural-logarithms).
 
 </details>
 

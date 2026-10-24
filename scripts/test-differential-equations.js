@@ -83,6 +83,12 @@ const prompt = block => block.split('<details')[0].replace(/^###.*$/gm, '').repl
 assert(!/[\u3400-\u9fff]/u.test(sources[0]), 'English source contains Chinese text');
 assert.deepEqual(anchors(sources[0]), anchors(sources[1]), 'Bilingual anchors differ');
 const formulae = source => source.match(/\$\$[\s\S]*?\$\$|(?<!\$)\$[^$\n]+\$(?!\$)/g) || [];
+const smartPrime = text => [...formulae(text), ...(text.match(/\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\)/g) || [])].some(tex => /y[\u2018\u2019\u201c\u201d]/u.test(tex));
+assert(!smartPrime('A quantity\u2019s rate. $y^{\\prime}=2x$'));
+assert(smartPrime('$y\u2019=2x$'));
+assert(smartPrime('\\[y\u2019=2x\\]'));
+assert(smartPrime('\\(y\u2019=2x\\)'));
+assert(!smartPrime('A quantity\u2019s rate. \\[y^{\\prime}=2x\\]'));
 assert.deepEqual(formulae(sources[0]), formulae(sources[1]), 'Bilingual formula sequence differs');
 const checks = sources.map(text => blocks(text, 'lesson-check'));
 assert(checks[0].length > 0);
@@ -117,7 +123,7 @@ for (const [i, source] of sources.entries()) {
     for (const id of anchors(source)) assert(html.includes(`id="${id}"`), `Missing rendered anchor ${id}`);
     assert(!/<details\b[^>]*\bopen\b/.test(html));
     assert(!html.includes('<p>$$'));
-    assert(!/y[\u2018\u2019\u201c\u201d]/u.test(html), 'Smart punctuation changed a derivative prime');
+    assert(!smartPrime(html), 'Smart punctuation changed a derivative prime');
   }
 }
 console.log(`${slug}: mathematics and bilingual source checks passed (${checks[0].length} tasks each); ${sourceOnly ? 'generated HTML not checked' : 'generated HTML checked'}.`);

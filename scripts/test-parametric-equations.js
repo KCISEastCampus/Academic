@@ -58,6 +58,13 @@ for (const [x,left,right] of [[-1,-1,1],[1,1,-1]]) {
   close(3-3*x*x,0);assert.equal(Math.sign(3-3*(x-.1)**2),left);assert.equal(Math.sign(3-3*(x+.1)**2),right);
 }
 for (const t of [-.1,0,.1]) close(2*t**3,2*(t**3)); // zero parameter derivatives still give y=2x
+// Both parameter rates can vanish at a horizontal tangent: x=t^3, y=t^6 gives y=x^2.
+for (const t of [-1,-.1,0,.1,1]) {
+  const x=t**3, y=t**6, dx=3*t*t, dy=6*t**5;
+  close(y,x*x);
+  if (t===0) {close(dx,0);close(dy,0);assert(Number.isNaN(dy/dx));}
+  else close(dy/dx,2*x);
+}
 for (const [t,x,y] of [[-2,4,-2],[-1,1,2],[0,0,0],[1,1,-2],[2,4,2]]) {
   close(t*t,x);close(t**3-3*t,y);close(y*y,x*(x-3)**2);
   if (t===0) {close(2*t,0);assert(3*t*t-3!==0);}
@@ -77,6 +84,12 @@ const prompt = block => block.split('<details')[0].replace(/^###.*$/gm, '').repl
 assert(!/[\u3400-\u9fff]/u.test(sources[0]), 'English source contains Chinese text');
 assert.deepEqual(anchors(sources[0]), anchors(sources[1]), 'Bilingual anchors differ');
 const formulae = source => source.match(/\$\$[\s\S]*?\$\$|(?<!\$)\$[^$\n]+\$(?!\$)/g) || [];
+const smartPrime = text => [...formulae(text), ...(text.match(/\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\)/g) || [])].some(tex => /y[\u2018\u2019\u201c\u201d]/u.test(tex));
+assert(!smartPrime('A quantity\u2019s rate. $y^{\\prime}=2x$'));
+assert(smartPrime('$y\u2019=2x$'));
+assert(smartPrime('\\[y\u2019=2x\\]'));
+assert(smartPrime('\\(y\u2019=2x\\)'));
+assert(!smartPrime('A quantity\u2019s rate. \\[y^{\\prime}=2x\\]'));
 assert.deepEqual(formulae(sources[0]), formulae(sources[1]), 'Bilingual formula sequence differs');
 const checks = sources.map(text => blocks(text, 'lesson-check'));
 assert(checks[0].length > 0);
@@ -111,7 +124,7 @@ for (const [i, source] of sources.entries()) {
     for (const id of anchors(source)) assert(html.includes(`id="${id}"`), `Missing rendered anchor ${id}`);
     assert(!/<details\b[^>]*\bopen\b/.test(html));
     assert(!html.includes('<p>$$'));
-    assert(!/y[\u2018\u2019\u201c\u201d]/u.test(html), 'Smart punctuation changed a derivative prime');
+    assert(!smartPrime(html), 'Smart punctuation changed a derivative prime');
   }
 }
 console.log(`${slug}: mathematics and bilingual source checks passed (${checks[0].length} tasks each); ${sourceOnly ? 'generated HTML not checked' : 'generated HTML checked'}.`);

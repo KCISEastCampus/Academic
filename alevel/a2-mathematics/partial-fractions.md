@@ -13,7 +13,7 @@ study_page: true
 [Pure Mathematics](/alevel/a2-mathematics/) · P2.1 Algebra and P2.7 Integration
 {: .lesson-meta}
 
-Learn to express algebraic fractions in partial fractions, integrate each term and check your answer.
+Learn why splitting one algebraic fraction into simpler fractions can make it easier to work with. Find the numbers that make the split correct, then use it to integrate and check the result.
 
 - **Learning:** start with the [method](#method), then work through the examples.
 - **Homework help:** review [worked examples](#worked-examples) or [integration](#integration).
@@ -32,7 +32,9 @@ Textbook: Sections 1.7–1.8 (pp. 14–19) and 6.4 (pp. 91–95). We write the c
 
 **Learning goal:** Decide whether an algebraic fraction needs division. Write its partial fractions, find the constants and check their signs.
 
-Partial fractions reverse the process of adding fractions: find simpler terms whose combined numerator is exactly the original numerator. This is an identity, not an equality at only one input.
+Adding fractions turns several terms into one. Here we work backwards: split one fraction into simpler fractions that add back to it. The simpler pieces are often easier to expand as series or to integrate separately. This way of writing the same expression is called **partial fractions**.
+
+The equality must hold for every input allowed in the original fraction. Such an equality is an **identity**. Finding a match at just one input does not establish it. The letters A and B below stand for fixed numbers we must find, not numbers we can choose differently at each input.
 
 Use the degree comparison you already know to choose a starting point; the decomposition forms are taught below.
 
@@ -75,7 +77,7 @@ The first is proper. The second has equal degrees, so divide first and keep the 
 
 This unit’s denominator scope extends to repeated linear factors; decomposition forms for irreducible quadratics are not required.
 
-**Cancel common factors first.** Keep the restrictions on the original domain: values that make the original denominator zero are still excluded.
+**Cancel common factors first.** Keep a note of inputs that make the original denominator zero. They remain excluded even if a factor later cancels.
 
 
 <section class="lesson-check" markdown="1">
@@ -116,21 +118,21 @@ For a quick check, substitute $x=0$: the original expression gives $-\frac{5}{2}
 
 Express $\displaystyle\frac{5x+1}{(x-1)(x+2)}$ in partial fractions.
 
-**1. Choose the form.** The numerator has a lower degree and the two factors are distinct, so
+**1. Choose the form.** The numerator has a lower degree, so no division is needed. There are two different linear factors in the denominator. Use one fraction for each, with a number to find on top:
 
 $$\frac{5x+1}{(x-1)(x+2)}=\frac{A}{x-1}+\frac{B}{x+2},\qquad x\ne1,-2.$$
 
-**2. Multiply by the denominator.** The resulting polynomial identity is true for all $x$:
+**2. Multiply both sides by the original denominator.** In each smaller fraction, its own denominator cancels, leaving the other factor multiplying its numerator. We require the resulting polynomial identity to hold for all $x$:
 
 $$5x+1\equiv A(x+2)+B(x-1).$$
 
-**3. Choose values that make one term zero.** Setting $x=1$ gives $6=3A$, so $A=2$. Setting $x=-2$ gives $-9=-3B$, so $B=3$.
+**3. Choose values that leave only one unknown number.** Setting $x=1$ makes the factor multiplying B zero. This gives $6=3A$, so $A=2$. Setting $x=-2$ makes the factor multiplying A zero, giving $-9=-3B$, so $B=3$.
 
-Use these values in the polynomial identity. The original fraction is undefined at $x=1$ and $x=-2$.
+These substitutions are made in the polynomial identity, where there is no division. They do not make the original fraction usable at $x=1$ or $x=-2$.
 
 $$\boxed{\frac{5x+1}{(x-1)(x+2)}=\frac{2}{x-1}+\frac{3}{x+2}}$$
 
-**4. Add the fractions to check.** $2(x+2)+3(x-1)=5x+1$, giving the original numerator.
+**4. Add the fractions to check.** $2(x+2)+3(x-1)=5x+1$, giving the original numerator for every input. With the same denominator and the original exclusions, this checks the whole identity.
 
 </section>
 
@@ -138,7 +140,7 @@ $$\boxed{\frac{5x+1}{(x-1)(x+2)}=\frac{2}{x-1}+\frac{3}{x+2}}$$
 
 For $(x-a)^2$, using only $\frac{B}{(x-a)^2}$ does not give the full form: include the term with denominator $x-a$ too. A coefficient may turn out to be zero, but do not omit its term before calculating it.
 
-Why both terms? A constant over the squared denominator alone reconstructs only a constant numerator after clearing that denominator. Including the first-power term also allows a general linear numerator.
+Why both terms? Consider the part with this repeated factor. Multiplying by its squared denominator would turn a single squared-denominator term into just a constant. A first-power term leaves a linear factor as well. Together they can reproduce a linear numerator; the squared-denominator term alone cannot do that. Multiplying to remove the denominators is often called **clearing the denominators**.
 
 
 
@@ -148,6 +150,8 @@ Why both terms? A constant over the squared denominator alone reconstructs only 
 
 Express $\displaystyle\frac{2x^2+2x-18}{x(x-3)^2}$ in partial fractions.
 
+No division is needed because the numerator has lower degree. The factor x occurs once, while the other factor occurs twice. Include a term for each power of that repeated factor, so there are three numbers to find:
+
 $$\frac{2x^2+2x-18}{x(x-3)^2}=\frac{A}{x}+\frac{B}{x-3}+\frac{C}{(x-3)^2},\qquad x\ne0,3.$$
 
 Multiply by the denominator:
@@ -156,7 +160,7 @@ $$2x^2+2x-18\equiv A(x-3)^2+Bx(x-3)+Cx.$$
 
 - Set $x=0$: $-18=9A$, so $A=-2$.
 - Set $x=3$: $6=3C$, so $C=2$.
-- The two roots determine only two constants. Compare coefficients of $x^2$: $2=A+B$, so $B=4$.
+- Those two substitutions have found A and C, but B is still unknown. Compare coefficients of $x^2$: the first two terms on the right supply this power and the last supplies none. Thus $2=A+B$, so $B=4$.
 
 $$\boxed{\frac{2x^2+2x-18}{x(x-3)^2}=-\frac{2}{x}+\frac{4}{x-3}+\frac{2}{(x-3)^2}}$$
 
@@ -172,13 +176,13 @@ Next, apply these decompositions in [integration](#integration), then try [pract
 
 Unsure which method fits your integral? Start with [Integration — Choosing a Method](/alevel/a2-mathematics/integration/#choose-a-method).
 
-**Choose the method first:** Try partial fractions when the integrand is an algebraic fraction with linear factors in the denominator. First check whether the numerator is a constant multiple of the derivative of the denominator. If it is, use the standard form $\int \frac{f'(x)}{f(x)}\,dx$. For example, $\int\frac{2x+2}{x^2+2x-15}\,dx=\ln\lvert x^2+2x-15\rvert+C$.
+**Choose the method first:** Before splitting the fraction, differentiate its denominator and compare the result with the numerator. If they differ only by a constant multiplier, the logarithmic form $\int \frac{f'(x)}{f(x)}\,dx$ gives a direct route. For example, $\int\frac{2x+2}{x^2+2x-15}\,dx=\ln\lvert x^2+2x-15\rvert+C$. Otherwise, linear factors in the denominator suggest splitting into partial fractions, so that each term has a familiar integral.
 
 Why divide by the linear coefficient? The chain rule gives
 
 $$\frac{d}{dx}\ln\lvert ax+b\rvert=\frac{a}{ax+b},\qquad \frac{d}{dx}(ax+b)^{-1}=-a(ax+b)^{-2}.$$
 
-Integration therefore needs the factors $1/a$ and $-1/a$, respectively. The squared-denominator term has exponent $-2$ and uses the power rule, not a logarithm.
+The first derivative has an extra multiplier a; the second has an extra multiplier −a. To undo those multipliers, integration needs the factors $1/a$ and $-1/a$, respectively. The squared-denominator term has exponent $-2$: increasing that power by one gives the reciprocal of a linear expression. It uses the power rule, not a logarithm.
 
 **Integrate the separate terms**
 
@@ -189,7 +193,7 @@ Integration therefore needs the factors $1/a$ and $-1/a$, respectively. The squa
 | Polynomial quotient | Integrate term by term | Include the quotient from division |
 {: .wide-table}
 
-Here $a\ne0$. Add $C$ for an indefinite integral. Use each result on an interval where the denominator is never zero.
+Here $a\ne0$. Add $C$ for an indefinite integral. Use each result on a stretch of the number line where the denominator is never zero. A definite integral using these rules must not pass through a zero of the denominator; checking only its two ends is insufficient.
 
 <section class="worked-example" markdown="1">
 
@@ -197,18 +201,18 @@ Here $a\ne0$. Add $C$ for an indefinite integral. Use each result on an interval
 
 Find $\displaystyle\int\frac{x^2}{(x+5)(x-3)}\,dx$.
 
-**1. Why divide first?** Both numerator and denominator are quadratic, so use algebraic division and keep the quotient $1$:
+**1. Why divide first?** Both numerator and denominator are quadratic. Their highest-power terms have the same coefficient, giving the quotient $1$. Subtract the expanded denominator from the numerator: the quadratic terms cancel, leaving a linear remainder. Keep both the quotient and this remaining fraction:
 
 $$\frac{x^2}{(x+5)(x-3)}=1+\frac{-2x+15}{(x+5)(x-3)}.$$
 
-**2. Express the proper fraction in partial fractions.** Write $-2x+15\equiv A(x-3)+B(x+5)$.
+**2. Split only the remaining fraction.** Its two different linear factors each need a constant numerator. Multiplying by their common denominator gives $-2x+15\equiv A(x-3)+B(x+5)$.
 
 - $x=-5$: $25=-8A$, so $A=-\frac{25}{8}$.
 - $x=3$: $9=8B$, so $B=\frac{9}{8}$.
 
 $$\frac{x^2}{(x+5)(x-3)}=1-\frac{25}{8(x+5)}+\frac{9}{8(x-3)}.$$
 
-**3. Integrate term by term.**
+**3. Integrate term by term.** The constant integrates to x. Each remaining denominator is linear with derivative one, so each fraction gives a logarithm with its coefficient unchanged. Keep the modulus signs and add the constant of integration:
 
 $$\boxed{\int\frac{x^2}{(x+5)(x-3)}\,dx=x-\frac{25}{8}\ln\lvert x+5\rvert+\frac{9}{8}\ln\lvert x-3\rvert+C}$$
 
@@ -356,7 +360,7 @@ Express $\displaystyle\frac{5x^2+7x}{(x-1)(x+1)(2x+1)}$ in partial fractions, st
 <details markdown="1">
 <summary>Hint</summary>
 
-Use a constant numerator for each distinct linear factor. After clearing the denominator, the three zeros can determine the constants.
+Use a constant numerator for each distinct linear factor. Multiply both sides by the original denominator, then choose inputs that make two of the three terms zero.
 
 </details>
 
@@ -431,7 +435,7 @@ Express $\displaystyle\frac{6x+1}{(2x-1)^2}$ in partial fractions. Hence find an
 <details markdown="1">
 <summary>Hint</summary>
 
-Include both the first and second powers; clear the denominator to find their constants.
+Include terms with both the first and second powers in the denominator. Multiply by the original denominator, then compare coefficients to find the two numbers on top.
 
 </details>
 

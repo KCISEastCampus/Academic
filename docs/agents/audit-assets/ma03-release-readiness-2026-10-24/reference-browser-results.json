@@ -1,0 +1,74 @@
+[
+  {
+    "lang": "en",
+    "width": 1365,
+    "theme": "light",
+    "status": 200,
+    "overflow": false,
+    "mathErrors": 0,
+    "title": "Pure Mathematics — Quick Reference | A-level Homepage"
+  },
+  {
+    "lang": "en",
+    "width": 1365,
+    "theme": "dark",
+    "status": 200,
+    "overflow": false,
+    "mathErrors": 0,
+    "title": "Pure Mathematics — Quick Reference | A-level Homepage"
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "theme": "light",
+    "status": 200,
+    "overflow": false,
+    "mathErrors": 0,
+    "title": "Pure Mathematics — Quick Reference | A-level Homepage"
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "theme": "dark",
+    "status": 200,
+    "overflow": false,
+    "mathErrors": 0,
+    "title": "Pure Mathematics — Quick Reference | A-level Homepage"
+  },
+  {
+    "lang": "zh",
+    "width": 1365,
+    "theme": "light",
+    "status": 200,
+    "overflow": false,
+    "mathErrors": 0,
+    "title": "纯数学：快速参考 | A-level Homepage"
+  },
+  {
+    "lang": "zh",
+    "width": 1365,
+    "theme": "dark",
+    "status": 200,
+    "overflow": false,
+    "mathErrors": 0,
+    "title": "纯数学：快速参考 | A-level Homepage"
+  },
+  {
+    "lang": "zh",
+    "width": 390,
+    "theme": "light",
+    "status": 200,
+    "overflow": false,
+    "mathErrors": 0,
+    "title": "纯数学：快速参考 | A-level Homepage"
+  },
+  {
+    "lang": "zh",
+    "width": 390,
+    "theme": "dark",
+    "status": 200,
+    "overflow": false,
+    "mathErrors": 0,
+    "title": "纯数学：快速参考 | A-level Homepage"
+  }
+]
