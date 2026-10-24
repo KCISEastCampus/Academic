@@ -1,0 +1,5 @@
+{
+  "checked": 459,
+  "linkErrors": [],
+  "boundary": "All unique same-origin links inside the 34 generated FM03 course bodies, resolved against the isolated main plus FM03 build. Void and self-closing HTML tags do not end the course body. PDF page fragments are not HTML anchors."
+}

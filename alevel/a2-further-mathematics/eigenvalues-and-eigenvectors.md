@@ -12,7 +12,7 @@ reading_layout: true
 
 [Further Pure Mathematics](/alevel/a2-further-mathematics/) · FP2.13 Eigenvalues and eigenvectors
 
-Which nonzero vectors are transformed into real multiples of themselves? Learn to turn that geometric question into a characteristic equation, solve the associated equations and check every proposed eigenvector.
+A matrix usually changes a vector's length and direction. Some vectors are only stretched, shortened or reversed along their original line. How can we find these special vectors?
 
 - **Learning:** start with the [definition](#definition), derive the [characteristic equation](#characteristic-equation), then compare [second-order](#two-by-two) and [third-order](#three-by-three) examples.
 - **Homework help:** see [a parameter and roots](#parameter-example), [repeated eigenvalues](#repeated-eigenvalues) and [the link to invariant lines](#invariant-directions).
@@ -28,11 +28,44 @@ If matrix–vector multiplication is insecure, recover [row–column multiplicat
 
 ## Definition and first checks {#definition}
 
-For a real square matrix A, an **eigenvector** is a nonzero vector whose image is a scalar multiple of itself. Its associated scalar is the **eigenvalue**:
+Start by comparing two vectors under the same transformation. The **image** of a vector means its output after multiplication by the matrix.
+
+<section class="worked-example" markdown="1">
+
+### Compare two outputs {#direction-start}
+
+**Self-written illustration.** Compare the images of the two vectors under
+
+$$D_0=\begin{pmatrix}2&0\\0&3\end{pmatrix}.$$
+
+$$\mathbf p=\begin{pmatrix}1\\0\end{pmatrix},\qquad
+\mathbf q=\begin{pmatrix}1\\1\end{pmatrix}.$$
+
+Multiply one row at a time:
+
+$$\begin{aligned}
+D_0\mathbf p&=\begin{pmatrix}2(1)+0(0)\\0(1)+3(0)\end{pmatrix}\\
+&=\begin{pmatrix}2\\0\end{pmatrix}=2\mathbf p.
+\end{aligned}$$
+
+The first vector stays on the horizontal axis and becomes twice as long.
+
+$$\begin{aligned}
+D_0\mathbf q&=\begin{pmatrix}2(1)+0(1)\\0(1)+3(1)\end{pmatrix}\\
+&=\begin{pmatrix}2\\3\end{pmatrix}.
+\end{aligned}$$
+
+The second vector starts with equal components, but its output has unequal components. No single number multiplies both input components to give that output. Its direction has changed.
+
+</section>
+
+The first vector is called an **eigenvector**, and its multiplier 2 is the corresponding **eigenvalue**. More generally, for a real square matrix A:
 
 $$\boxed{A\mathbf v=\lambda\mathbf v,\qquad\mathbf v\ne\mathbf0.}$$
 
-The zero vector must be excluded: it satisfies the equation for every scalar and therefore identifies no particular eigenvalue or direction. A zero **eigenvalue**, however, is allowed: a nonzero vector may be sent to zero by a singular matrix.
+Read this as “multiplying the vector by A gives the same result as multiplying it by the number lambda”. That number is also called a scalar.
+
+The vector itself must not be zero: the zero vector satisfies the equation for every number, so it tells us no special direction. The **eigenvalue** may be zero: a nonzero vector can be sent to zero. Such a matrix cannot undo the transformation and is called singular.
 
 - A positive eigenvalue scales along the same ray.
 - A negative eigenvalue reverses the ray but retains its supporting line through the origin.
@@ -63,12 +96,12 @@ The first vector is an eigenvector with eigenvalue 3. The second image is not a 
 
 ## Deriving the characteristic equation {#characteristic-equation}
 
-Rearrange the definition into a homogeneous system:
+Checking a given vector is straightforward. To find all possible eigenvalues, we need an equation for the unknown multiplier. Move everything to the left; I is the identity matrix, so multiplying by it leaves a vector unchanged:
 
 $$A\mathbf v=\lambda\mathbf v
 \quad\Longleftrightarrow\quad(A-\lambda I)\mathbf v=\mathbf0.$$
 
-If the coefficient matrix were invertible, multiplying by its inverse would force the vector to be zero. To obtain a **nonzero** solution the coefficient matrix must be singular. Conversely, a singular square homogeneous system has a nonzero solution. Thus the **characteristic equation** is
+This is a set of simultaneous equations with zero on the right, called a **homogeneous system**. If its coefficient matrix had an inverse, multiplying by that inverse would give only the zero vector. We need a **nonzero** vector, so the coefficient matrix must have no inverse: its determinant must be zero. Conversely, a square matrix with determinant zero does give a nonzero solution to this homogeneous system. This gives the **characteristic equation**:
 
 $$\boxed{\det(A-\lambda I)=0.}$$
 

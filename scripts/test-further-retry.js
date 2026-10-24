@@ -187,7 +187,20 @@ check('arc-length-and-surface-area', ['(0,1)', '(3,5)', 'L=5', '30\\pi'], () => 
   eq(mul(q(2), integral01(scale(X, q(3)))), q(3), 'diagnostic area / (pi sqrt(10))');
 });
 
-check('hyperbolic-functions', ['\\sinh^{-1}(kx)', 'k>0', 'k=2', 'x=2/3'], () => {
+check('hyperbolic-functions', ['\\sinh^{-1}(kx)', 'k>0', 'k=2', 'x=2/3',
+  '{#definition-retry}', '(2t-1)(t+2)'], () => {
+  const sinh = scale(poly({ 1: 1, '-1': -1 }), q(1, 2));
+  const cosh = scale(poly({ 1: 1, '-1': 1 }), q(1, 2));
+  peq(plus(times(cosh, cosh), scale(times(sinh, sinh), q(-1))), C(1),
+    'the identity holds as a Laurent polynomial in the nonzero exponential');
+  for (const [exponential, s, c] of [[ONE, ZERO, ONE],
+    [q(2), q(3, 4), q(5, 4)], [q(1, 2), q(-3, 4), q(5, 4)]]) {
+    eq(value(sinh, exponential), s); eq(value(cosh, exponential), c);
+  }
+  const retryEquation = poly({ 2: 2, 1: 3, 0: -2 });
+  peq(times(poly({ 1: 2, 0: -1 }), poly({ 1: 1, 0: 2 })), retryEquation);
+  eq(value(retryEquation, q(1, 2)), ZERO); eq(value(retryEquation, q(-2)), ZERO);
+  assert(q(-2)[0] < 0n, 'the second candidate cannot equal a real exponential');
   // sinh(y)=kx: implicit differentiation gives y'=k/cosh(y), hence y'(0)=k.
   eq(div(q(2), ONE), q(2));
   const expY = q(3), expMinusY = div(ONE, expY);

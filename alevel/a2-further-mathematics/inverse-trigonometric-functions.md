@@ -5,7 +5,7 @@ mathjax: true
 grade: a2
 subject: a2-further-mathematics
 permalink: /alevel/a2-further-mathematics/inverse-trigonometric-functions/
-toc_headings: "#method, #values-and-graphs, #differentiation, #standard-integrals, #completing-the-square, #definite-integrals, #integration-by-parts, #practice, #diagnose-and-retry, #quick-reference, #sources"
+toc_headings: "#values-and-graphs, #differentiation, #standard-integrals, #completing-the-square, #definite-integrals, #integration-by-parts, #practice, #diagnose-and-retry, #method, #quick-reference, #sources"
 study_page: true
 reading_layout: true
 ---
@@ -14,7 +14,7 @@ reading_layout: true
 
 Choose the correct value of an inverse trigonometric function. Differentiate related functions and use standard integrals after scaling or completing the square.
 
-- **Learning:** start with the [method](#method), then work through the examples.
+- **Learning:** start with [which angle an inverse function returns](#values-and-graphs), then move to derivatives and integrals.
 - **Homework help:** choose [values and graphs](#values-and-graphs), [differentiation](#differentiation), [standard integrals](#standard-integrals), [completing the square](#completing-the-square), [definite integrals](#definite-integrals) or [integration by parts](#integration-by-parts).
 - **Revision:** try [practice](#practice) before opening the solutions, then use the [quick reference](#quick-reference).
 
@@ -24,24 +24,24 @@ Textbook: Chapter 22, Sections 22.1–22.2, printed pp. 270–279; review and pr
 
 **Task status:** Unless an official question or teaching adaptation is explicitly identified, the worked examples and exercises are self-written teaching tasks with no official marks.
 
-## Method {#method}
-
 **Learning goal:** state domains and ranges, sketch inverse trigonometric graphs, differentiate composite functions and find exact integrals using inverse sine or inverse tangent.
-
-- **An inverse function value?** Use the stated range to choose one angle. A calculator gives the principal value, not every solution of a trigonometric equation.
-- **A derivative?** Identify the inner function $u$, use the inverse-function derivative and multiply by $\frac{\mathrm du}{\mathrm dx}$.
-- **A reciprocal quadratic?** Check whether the denominator has real roots. Use partial fractions for distinct real roots; use inverse tangent when completing the square gives a sum of squares.
-- **A square root in the denominator?** Complete the square, then look for $\sqrt{a^2-u^2}$. Keep all factors outside the integral and check where the square root is positive.
-- **A definite integral?** Change the limits when you substitute, or return to $x$ before using the original limits. Show a limit if the integrand is undefined at an endpoint.
-- **The inverse function itself?** Try integration by parts with $u$ equal to that function and $\mathrm dv=\mathrm dx$.
-
-**Check your working:** show the completed square, the substitution and its derivative, the standard integral, and the substitution of limits. For a “show that” question, obtain the stated result from your working. Keep $+C$ in an indefinite integral.
 
 ## Values and Graphs {#values-and-graphs}
 
-Here $\sin^{-1}x$, $\cos^{-1}x$ and $\tan^{-1}x$ mean **inverse functions**. They are also written $\operatorname{arcsin}x$, $\operatorname{arccos}x$ and $\operatorname{arctan}x$.
+Sine takes an angle and returns a number. Now reverse the question: given that number, which angle should be returned? Different angles can have the same sine, so we must first agree which one to choose.
 
-For example, $y=\sin^{-1}x$ means $\sin y=x$, with $-\frac\pi2\le y\le\frac\pi2$. It does **not** mean $\frac1{\sin x}$; that reciprocal is $\operatorname{cosec}x$.
+Consider a self-written illustration (no official marks):
+
+$$\sin\frac\pi3=\frac{\sqrt3}{2},
+\qquad \sin\frac{2\pi}{3}=\frac{\sqrt3}{2}.$$
+
+Both angles answer “which angle has sine $\frac{\sqrt3}{2}$?” The **inverse sine** function returns only the angle in $[-\pi/2,\pi/2]$, called the **principal value**. Thus
+
+$$\sin^{-1}\left(\frac{\sqrt3}{2}\right)=\frac\pi3.$$
+
+The input here is a sine value; the output is an angle in radians. The notation $y=\sin^{-1}x$ means $\sin y=x$, with $-\frac\pi2\le y\le\frac\pi2$. It does not mean the reciprocal $\frac1{\sin x}$, which is $\operatorname{cosec}x$.
+
+Similarly, $\cos^{-1}x$ and $\tan^{-1}x$ each return one angle in a specified range, but their ranges differ. The three inverse functions are also written $\operatorname{arcsin}x$, $\operatorname{arccos}x$ and $\operatorname{arctan}x$:
 
 | Function | Domain: allowed $x$ | Range: returned angle $y$ |
 |---|---|---|
@@ -90,6 +90,8 @@ $$\boxed{\cos^{-1}x=\frac\pi2-\frac{2\pi}{5}=\frac\pi{10}.}$$
 </section>
 
 ## Differentiation {#differentiation}
+
+Now write $y$ for the returned angle and $x$ for the input value. Differentiation asks how quickly that angle changes as the input changes. The inverse sine and inverse tangent graphs rise, while inverse cosine falls, matching the signs of their derivatives below.
 
 The standard derivatives are
 
@@ -879,6 +881,17 @@ Thus $y=\tan^{-1}(3x)+\pi/6$. Its range is $(-\pi/3,2\pi/3)$, so it need not lie
 </section>
 
 **Next after practice:** close this chapter and attempt the course [mixed review](/alevel/a2-further-mathematics/#mixed-review). After subsequent learning, attempt the [later retrieval tasks](/alevel/a2-further-mathematics/#later-review). Record whether the first attempt was independent, any hint used, the error and the retry result. If a method or condition was wrong, use this chapter’s after-practice route to repair that skill, then retry with solutions closed.
+
+## Method for revision {#method}
+
+- **An inverse function value?** Use the stated range to choose one angle. A calculator gives the principal value, not every solution of a trigonometric equation.
+- **A derivative?** Identify the inner function $u$, use the inverse-function derivative and multiply by $\frac{\mathrm du}{\mathrm dx}$.
+- **A reciprocal quadratic?** Check whether the denominator has real roots. Use partial fractions for distinct real roots; use inverse tangent when completing the square gives a sum of squares.
+- **A square root in the denominator?** Complete the square, then look for $\sqrt{a^2-u^2}$. Keep all factors outside the integral and check where the square root is positive.
+- **A definite integral?** Change the limits when you substitute, or return to $x$ before using the original limits. Show a limit if the integrand is undefined at an endpoint.
+- **The inverse function itself?** Try integration by parts with $u$ equal to that function and $\mathrm dv=\mathrm dx$.
+
+**Check your working:** show the completed square, the substitution and its derivative, the standard integral, and the substitution of limits. For a “show that” question, obtain the stated result from your working. Keep $+C$ in an indefinite integral.
 
 ## Quick Reference {#quick-reference}
 

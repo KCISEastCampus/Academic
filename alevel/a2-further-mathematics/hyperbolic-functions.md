@@ -12,31 +12,96 @@ reading_layout: true
 
 [Further Pure Mathematics](/alevel/a2-further-mathematics/) · FP2.9 Hyperbolic functions
 
-Learn the definitions, graphs, identities, equations, inverse functions, derivatives and integrals of hyperbolic functions. The worked examples show how to choose a method and check its domain.
+Start with two new functions made from exponentials. Once their names make sense, use them to solve equations and work with graphs, derivatives and integrals.
 
-- **Learning:** start with [definitions](#definitions), then follow the [graphs and identities](#graphs-and-identities), [equations](#linear-combinations), [inverse functions](#inverse-hyperbolic-functions), [differentiation](#differentiation) and [integration](#integration).
-- **Homework help:** go straight to [solving an equation](#example-2-solve-a-linear-combination), [inverse-function formulae](#example-4-use-the-logarithmic-forms), [chain-rule derivatives](#example-6-differentiate-a-composite-inverse-function) or [standard integrals](#standard-integrals).
-- **Revision:** attempt the [practice questions](#practice) before opening their solutions, then check the [quick reference](#quick-reference).
+**Start here:** [meet the two functions](#definitions). For homework, go to [an equation example](#example-2-solve-a-linear-combination) or use the contents. For revision, try the [practice questions](#practice), then check the [quick reference](#quick-reference).
 
-Textbook: Chapter 24, printed pp. 288–305, in *International A Level Further Mathematics*.
+**Before you start:** recall that a negative exponent gives a reciprocal. If needed, review [negative powers](/alevel/as-mathematics/algebra/#l01). Other prerequisites are listed in [the preparation notes](#preparation-notes).
 
-**Before you start:** review exponential/logarithmic relationships in [exponential and logarithmic integration](/alevel/a2-mathematics/integration/#exponential-logarithmic-integrals), and repair [inverse-function branches](/alevel/a2-mathematics/functions/#inverse-functions), the [chain rule](/alevel/a2-mathematics/differentiation/#composite-functions), [implicit differentiation](/alevel/a2-mathematics/differentiation/#implicit-functions) and [substitution](/alevel/a2-mathematics/integration/#substitution). Return to Example 2 to state exponential positivity, or to inverse-cosh to justify rejecting the other branch.
+## Meet two new functions {#definitions}
 
-**Learning goal:** prove identities from exponentials, explain the features of the six core graphs, select valid exponential roots, and derive and use inverse functions, derivatives and integrals on the correct branches.
+You already know how to calculate $e^x$. The expression $e^{-x}$ is its reciprocal:
 
-**Task status:** Unless an official question or teaching adaptation is explicitly identified, the worked examples and exercises are self-written teaching tasks with no official marks.
+$$e^{-x}=\frac1{e^x}.$$
 
-## Definitions {#definitions}
+Take these two numbers, subtract one from the other, then divide by two. This defines **hyperbolic sine**, written $\sinh x$:
 
-The **hyperbolic sine**, **hyperbolic cosine** and **hyperbolic tangent** are defined by exponentials:
+$$\sinh x=\frac{e^x-e^{-x}}2.$$
 
-$$\sinh x=\frac{e^x-e^{-x}}2,\qquad \cosh x=\frac{e^x+e^{-x}}2,\qquad \tanh x=\frac{\sinh x}{\cosh x}=\frac{e^x-e^{-x}}{e^x+e^{-x}}.$$
+Add the same two numbers instead, then divide by two. This defines **hyperbolic cosine**, written $\cosh x$:
 
-The reciprocal functions are the **hyperbolic cotangent**, **hyperbolic secant** and **hyperbolic cosecant**:
+$$\cosh x=\frac{e^x+e^{-x}}2.$$
 
-$$\operatorname{coth}x=\frac{\cosh x}{\sinh x},\qquad \operatorname{sech}x=\frac1{\cosh x},\qquad \operatorname{cosech}x=\frac1{\sinh x}.$$
+The names resemble sine and cosine, but these are different functions. Here $x$ can be any real number; you are calculating with exponentials. The name $\sinh x$ does not mean $\sin(hx)$.
 
-The definitions immediately give
+<section class="worked-example" markdown="1">
+
+### A first calculation {#zero-example}
+
+**Question:** Find $\sinh0$ and $\cosh0$ from their definitions.
+
+At $x=0$, both exponentials equal one. Use subtraction for the first function and addition for the second:
+
+$$\begin{aligned}
+\sinh0&=\frac{1-1}{2}=0,\\
+\cosh0&=\frac{1+1}{2}=1.
+\end{aligned}$$
+
+The graph of $\sinh x$ passes through $(0,0)$, and the graph of $\cosh x$ passes through $(0,1)$. The same input need not give the same output for different functions.
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Your turn {#definition-check}
+
+**Question:** Given $e^a=2$, find $\sinh a$ and $\cosh a$ exactly. Which is larger? Explain why $\sinh a$ is positive.
+
+This is a self-written task, with no official marks. Try it before opening the help.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+First find the reciprocal $e^{-a}$. Then use the two definitions, keeping subtraction and addition separate.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and feedback</summary>
+
+$$\begin{aligned}
+e^{-a}&=\frac12,\\
+\sinh a&=\frac{2-\frac12}{2}=\frac34,\\
+\cosh a&=\frac{2+\frac12}{2}=\frac54.
+\end{aligned}$$
+
+So $\cosh a$ is larger. The subtraction in $\sinh a$ gives a positive number because $2>\frac12$; dividing by two keeps it positive. This does not mean that $\sinh x$ is positive for every input.
+
+If you used $-2$ for the negative exponent, return to the reciprocal above. If you swapped the answers, return to the two definitions. Close this solution and try the [new question](#definition-retry).
+
+</details>
+
+</section>
+
+### Combine the two functions {#ratio-and-reciprocals}
+
+The next names describe operations on the two functions you have just met. **Hyperbolic tangent** is their ratio:
+
+$$\tanh x=\frac{\sinh x}{\cosh x}=\frac{e^x-e^{-x}}{e^x+e^{-x}}.$$
+
+Both exponentials are positive, so their sum is positive. Thus $\cosh x>0$ and this division is allowed for every real $x$.
+
+Three more names describe reciprocals: **hyperbolic cotangent**, **hyperbolic secant** and **hyperbolic cosecant**:
+
+$$\begin{aligned}
+\operatorname{coth}x&=\frac{\cosh x}{\sinh x},\\
+\operatorname{sech}x&=\frac1{\cosh x},\\
+\operatorname{cosech}x&=\frac1{\sinh x}.
+\end{aligned}$$
+
+For the first and third, exclude $x=0$: that is where $\sinh x=0$. There is no such restriction for $\operatorname{sech}x$.
+
+Adding the original two definitions cancels the negative-exponent terms; subtracting the definitions cancels the positive-exponent terms. Hence
 
 $$e^x=\cosh x+\sinh x,\qquad e^{-x}=\cosh x-\sinh x.$$
 
@@ -99,6 +164,7 @@ Expanding the squares from the definitions gives
 $$\begin{aligned}
 \cosh^2x-\sinh^2x
 &=\frac{(e^x+e^{-x})^2-(e^x-e^{-x})^2}{4}\\
+&=\frac{(e^{2x}+2+e^{-2x})-(e^{2x}-2+e^{-2x})}{4}\\
 &=\frac{4}{4}\\
 &=1.
 \end{aligned}$$
@@ -800,6 +866,52 @@ The original integrand is real for $\lvert x\rvert>\frac32$. This exercise asks 
 
 ## Diagnose and Retry {#diagnose-and-retry}
 
+<section class="lesson-check" markdown="1">
+
+### Try the definitions again {#definition-retry}
+
+**Question:** Given $\sinh b=-\frac34$, find $e^b$ and $\cosh b$ exactly. Is $b$ positive, zero or negative? Justify your answer.
+
+Self-written task, with no official marks. Close the earlier solution before trying this new question. You will also use AS quadratic factorisation.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Call the positive number $e^b$ by a shorter name $t$. Then $e^{-b}=1/t$. Substitute into the definition of $\sinh b$ and solve for $t$.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and feedback</summary>
+
+Let $t=e^b>0$. The given function value gives an equation for this number:
+
+$$\begin{aligned}
+\frac{t-1/t}{2}&=-\frac34,\\
+2t^2+3t-2&=0,\\
+(2t-1)(t+2)&=0.
+\end{aligned}$$
+
+The candidates are $t=\frac12$ and $t=-2$. An exponential is positive, so reject the second:
+
+$$\begin{aligned}
+e^b&=\frac12,\\
+e^{-b}&=2,\\
+\cosh b&=\frac{\frac12+2}{2}=\frac54.
+\end{aligned}$$
+
+Since $e^0=1$ and the exponential function is increasing, $e^b<1$ means $b<0$. Check the given value:
+
+$$\sinh b=\frac{\frac12-2}{2}=-\frac34.$$
+
+If you kept the negative candidate, revisit why $e^b>0$. If you obtained a negative $\cosh b$, return to its definition: it adds two positive numbers. If the quadratic is the difficulty, review [factorisation](/alevel/as-mathematics/algebra/#l02-worked), then close the help and reconstruct the calculation.
+
+</details>
+
+</section>
+
+If this is your first reading, return to [combining the two functions](#ratio-and-reciprocals) and follow the lesson from there. The tasks below are for after you have studied the inverse-function and calculus sections.
+
 These tasks are self-written and have no official marks. Explain the error before opening feedback; then close every solution and attempt the new task independently. If you need a hint, return later for another independent attempt.
 
 <section class="lesson-check" markdown="1">
@@ -891,6 +1003,19 @@ The derivative is $k/\sqrt{1+k^2x^2}$, so at zero $k=2$. The value condition bec
 **Learning path:** [Previous lesson: arc length and surface area](/alevel/a2-further-mathematics/arc-length-and-surface-area/) · [Next lesson: first-order differential equations](/alevel/a2-further-mathematics/first-order-differential-equations/) · [Further Pure Mathematics](/alevel/a2-further-mathematics/).
 
 ## Sources {#sources}
+
+<details id="preparation-notes" markdown="1">
+<summary>Preparation, scope and textbook</summary>
+
+Textbook: Chapter 24, printed pp. 288–305, in *International A Level Further Mathematics*.
+
+Before working with inverse functions and calculus, review [inverse-function branches](/alevel/a2-mathematics/functions/#inverse-functions), the [chain rule](/alevel/a2-mathematics/differentiation/#composite-functions), [implicit differentiation](/alevel/a2-mathematics/differentiation/#implicit-functions) and [substitution](/alevel/a2-mathematics/integration/#substitution). Return to Example 2 to state why an exponential is positive, or to [the inverse-cosh branch](#inverse-cosh) to justify rejecting the other branch.
+
+The whole lesson covers proofs from exponential definitions, the six core graphs, equations, inverse functions and their calculus. Unless an official question or adaptation is explicitly identified, its worked examples and exercises are self-written teaching tasks with no official marks.
+
+This introductory revision was checked on 2026-10-24 against FP2.9 and January 2025 FM03 Question 2 with its matching official mark scheme: [question paper, p. 4](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-question-paper.pdf#page=4) and [mark scheme, p. 5](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-mark-scheme.pdf#page=5). These were source checks; the new tasks are self-written.
+
+</details>
 
 Scope check on 2026-10-23: the current 9665 qualification page led to specification v5.2; the relevant FP2 section was checked without migrating to 9765. For the papers and schemes below, only the identified questions and matching marking sections were reread as PDF text; visual verification of the original PDF pages was not completed. Official identities and marks are retained; adaptations and self-written tasks are labelled separately.
 

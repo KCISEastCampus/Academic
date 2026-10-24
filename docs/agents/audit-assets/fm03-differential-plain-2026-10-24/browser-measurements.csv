@@ -1,0 +1,17 @@
+﻿order,lang,width,theme,status,reading,initiallyOpen,nestedTasks,overflow,preservedIds
+first,en,390,light,200,True,0,0,False,30
+first,en,390,dark,200,True,0,0,False,30
+first,en,1365,light,200,True,0,0,False,30
+first,en,1365,dark,200,True,0,0,False,30
+first,zh,390,light,200,True,0,0,False,30
+first,zh,390,dark,200,True,0,0,False,30
+first,zh,1365,light,200,True,0,0,False,30
+first,zh,1365,dark,200,True,0,0,False,30
+second,en,390,light,200,True,0,0,False,30
+second,en,390,dark,200,True,0,0,False,30
+second,en,1365,light,200,True,0,0,False,30
+second,en,1365,dark,200,True,0,0,False,30
+second,zh,390,light,200,True,0,0,False,30
+second,zh,390,dark,200,True,0,0,False,30
+second,zh,1365,light,200,True,0,0,False,30
+second,zh,1365,dark,200,True,0,0,False,30

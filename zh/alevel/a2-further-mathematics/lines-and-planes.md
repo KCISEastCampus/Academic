@@ -30,31 +30,15 @@ reading_layout: true
 
 ## 方向与直线方程 {#directions-and-lines}
 
-### 方向比与方向余弦 {#direction-cosines}
-
-非零向量 $\mathbf b=(b_1,b_2,b_3)$ 给出**方向比（direction ratios）**$b_1:b_2:b_3$。任意非零倍数描述同一条无向直线。**方向余弦（direction cosines）**是有向方向与各正坐标轴夹角的余弦：
-
-$$l=\frac{b_1}{\lVert\mathbf b\rVert},\qquad m=\frac{b_2}{\lVert\mathbf b\rVert},\qquad n=\frac{b_3}{\lVert\mathbf b\rVert}.$$
-
-它们就是单位方向向量的分量，因此
-
-$$\boxed{l^2+m^2+n^2=\frac{b_1^2+b_2^2+b_3^2}{\lVert\mathbf b\rVert^2}=1.}$$
-
-例如 $\mathbf b=(2,-1,2)$ 的模为 3，方向余弦为 $(2/3,-1/3,2/3)$。第二分量为负，表示与第二条正坐标轴夹角为钝角。整体反向使三个余弦全部变号；只改变其中一个的正负通常会改变直线方向。
-
-二维也同理：方向 $(3,4)$ 的方向余弦是 $(3/5,4/5)$。例如经过 $(1,2)$、沿此方向的直线为
-
-$$\mathbf r=(1,2)+t(3,4),\qquad 4(x-1)-3(y-2)=0.$$
-
-坐标方程消去了参数，法向量与直线方向垂直。三维中也有同样的连接，不过一个线性坐标方程描述的是平面。
-
 ### 空间直线的三种形式 {#line-forms}
 
-设 $\mathbf a=(a_1,a_2,a_3)$ 是直线上一点的位置，$\mathbf b\ne\mathbf0$ 为方向。向量／参数形式为
+一个点告诉我们直线在哪里，一个非零方向告诉我们它往哪边延伸。从位置为 $\mathbf a=(a_1,a_2,a_3)$ 的点出发，沿固定方向 $\mathbf b\ne\mathbf0$ 移动不同倍数，就得到向量／参数形式：
 
 $$\boxed{\mathbf r=\mathbf a+t\mathbf b,\qquad t\in\mathbb R.}$$
 
-所有分母都非零时，消去参数可得笛卡尔对称式：
+这里 $\mathbf r$ 表示直线上一般点的位置。$t=0$ 时还在起点，$t=1$ 时移动了一个 $\mathbf b$，负值则向相反方向移动。**参数（parameter）**$t$ 是用来选定点的数，并不自动表示时间或距离。
+
+三个坐标使用同一个 $t$。分别从各坐标方程中解出这个数，在所有分母都非零时，就得到笛卡尔对称式：
 
 $$\boxed{\frac{x-a_1}{b_1}=\frac{y-a_2}{b_2}=\frac{z-a_3}{b_3}.}$$
 
@@ -62,7 +46,7 @@ $$\boxed{\frac{x-a_1}{b_1}=\frac{y-a_2}{b_2}=\frac{z-a_3}{b_3}.}$$
 
 $$\boxed{(\mathbf r-\mathbf a)\times\mathbf b=\mathbf0.}$$
 
-基点处位移为零，也包含在该方程中。只有方向非零时，此式才描述直线；方向为零会使任意位置都满足它。
+最后一式要求从固定点出发的位移不偏离直线方向。基点处位移为零，也包含在该方程中。只有方向非零时，此式才描述直线；方向为零会使任意位置都满足它。
 
 <section class="worked-example" markdown="1">
 
@@ -83,15 +67,35 @@ x&=1,\qquad \frac{y-2}{2}=\frac{z-3}{-1},\\
 
 </section>
 
+### 方向比与方向余弦 {#direction-cosines}
+
+例如 $\mathbf b=(2,-1,2)$ 的模为 3。把三个分量都除以 3，得到 $(2/3,-1/3,2/3)$：方向相同，但长度变为 1。这样就把“往哪边指”与“有多长”分开了。
+
+一般地，非零向量 $\mathbf b=(b_1,b_2,b_3)$ 给出**方向比（direction ratios）**$b_1:b_2:b_3$。任意非零倍数描述同一条无向直线。单位方向向量的每个分量，等于它与相应正坐标轴夹角的余弦；这三个数就称为**方向余弦（direction cosines）**：
+
+$$l=\frac{b_1}{\lVert\mathbf b\rVert},\qquad m=\frac{b_2}{\lVert\mathbf b\rVert},\qquad n=\frac{b_3}{\lVert\mathbf b\rVert}.$$
+
+它们就是单位方向向量的分量，因此
+
+$$\boxed{l^2+m^2+n^2=\frac{b_1^2+b_2^2+b_3^2}{\lVert\mathbf b\rVert^2}=1.}$$
+
+上例第二分量为负，表示与第二条正坐标轴夹角为钝角。整体反向使三个余弦全部变号；只改变其中一个的正负通常会改变直线方向。
+
+二维也同理：方向 $(3,4)$ 的方向余弦是 $(3/5,4/5)$。例如经过 $(1,2)$、沿此方向的直线为
+
+$$\mathbf r=(1,2)+t(3,4),\qquad 4(x-1)-3(y-2)=0.$$
+
+坐标方程消去了参数，法向量与直线方向垂直。三维中也有同样的连接，不过一个线性坐标方程描述的是平面。
+
 ## 平面的两种形式 {#planes}
 
-一个点 $\mathbf a$ 和两个**不平行**的方向 $\mathbf b,\mathbf c$ 确定平面：
+从一个固定点出发，沿一个方向移动，只能到达一条直线。再允许沿第二个**不平行**的方向移动，就能到达整个平面。起点位置为 $\mathbf a$、两个方向为 $\mathbf b,\mathbf c$ 时，得到
 
 $$\boxed{\mathbf r=\mathbf a+\lambda\mathbf b+\mu\mathbf c,\qquad \lambda,\mu\in\mathbb R,\qquad \mathbf b\times\mathbf c\ne\mathbf0.}$$
 
-两个参数独立变化。平行方向只能描述一条直线；两个方向均为零时只描述一点，不能称为平面。
+参数 $\lambda$ 和 $\mu$ 分别选择沿两个方向移动的倍数，二者独立变化。平行方向只能描述一条直线；两个方向均为零时只描述一点，不能称为平面。
 
-可取非零法向量 $\mathbf n=\mathbf b\times\mathbf c$。面内的任何位移均与它垂直，因此另一种向量形式为
+也可以用这些点共同满足的条件描述同一个平面：从固定点到它们的位移都不离开这个平面。取非零法向量 $\mathbf n=\mathbf b\times\mathbf c$，面内位移都与它垂直，与它的点积便为零。因此另一种向量形式为
 
 $$\boxed{(\mathbf r-\mathbf a)\cdot\mathbf n=0\quad\Longleftrightarrow\quad\mathbf r\cdot\mathbf n=d,\qquad d=\mathbf a\cdot\mathbf n.}$$
 
@@ -122,7 +126,7 @@ $$\boxed{\mathbf r=(1,0,2)+\lambda(1,1,0)+\mu(0,1,1),\qquad\mathbf r\cdot(1,-1,1
 
 ## 相交与特殊情形 {#intersections}
 
-求直线与平面相交时，把直线的一般点代入平面：
+交点必须既在直线上，又在平面内。直线方程已经描述了直线上的全部点；把一般点代入平面，就是寻找哪些参数值还满足平面条件：
 
 $$\mathbf r=\mathbf a+t\mathbf b,\quad\mathbf r\cdot\mathbf n=d
 \quad\Longrightarrow\quad t(\mathbf b\cdot\mathbf n)=d-\mathbf a\cdot\mathbf n.$$

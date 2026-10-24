@@ -12,37 +12,46 @@ study_page: true
 reading_layout: true
 ---
 
-[高等纯数学](/zh/alevel/a2-further-mathematics/) · FP2.11 二阶微分方程
+[高等纯数学](/zh/alevel/a2-further-mathematics/) · FP2.11
 
-本课学习求解常系数二阶线性微分方程（second-order linear differential equation with constant coefficients）：先通过辅助方程（auxiliary equation）求齐次通解（complementary function，CF），再通过代入确定一个特解（particular integral，PI），最后对完整的解使用给定条件。
+一阶方程把函数和它的变化率联系起来。这一章再加上“变化率怎样变化”，也就是二阶导数。我们仍然要找一个函数，使它代入方程后，两边相等。
 
-- **学习：**从[辅助方程](#auxiliary-equation)开始，再学习[齐次通解加上一个特解](#cf-and-pi)和[如何设特解](#pi-trials)。
-- **作业帮助：**比较[两个不同实根](#example-1-distinct-roots)、[实重根](#example-2-repeated-roots)、[共轭复根](#example-3-complex-roots)、[三角函数非齐次项](#example-5-trigonometric-pi)和[共振](#example-6-repeated-resonance)的例题。
-- **复习：**先独立完成[练习](#practice)，再展开解答，最后核对[快速参考](#quick-reference)与[常见错误](#common-pitfalls)。
+先读[方程在说什么](#equation-and-conditions)，跟着[例 1](#example-1-distinct-roots)求出一个完整答案，再比较其他根型。右边不为零时，再学习[把解分成两部分](#cf-and-pi)。复习时可直接做[练习](#practice)。
 
-教材：*International A Level Further Mathematics*，第 25.2 节，印刷页码 308–317；复习内容见印刷页码 319。
-
-**开始前：**回补[乘积求导](/zh/alevel/a2-mathematics/differentiation/#products-and-quotients)、[复二次根](/zh/alevel/as-further-mathematics/complex-numbers-and-roots/#conjugate)和[一阶 CF 与 PI](/zh/alevel/a2-further-mathematics/first-order-differential-equations/#cf-and-pi)。在复数回补段读到二次式配方示范与负判别式说明。回例 2 展开两个乘积导数，回例 3 用配方解释实部与频率。重复零根的积分还需[幂函数积分](/zh/alevel/a2-mathematics/integration/#power-integrals)。
-
-**本课独立产出：**Q1–3 根据根型构造 CF 并使用条件；Q4–7 自选并验证 PI；例 7 组合多项式与指数项，解释无穷远条件。每题都要用完整解核对原方程与给定条件。
+**开始前：**会对指数和三角函数求导，会用[乘积法则](/zh/alevel/a2-mathematics/differentiation/#products-and-quotients)。解二次方程出现负判别式时，可回看[复二次根](/zh/alevel/as-further-mathematics/complex-numbers-and-roots/#conjugate)里的配方示范。后半章接着[一阶 CF 与 PI](/zh/alevel/a2-further-mathematics/first-order-differential-equations/#cf-and-pi)学习；直接积分的例子会用到[幂函数积分](/zh/alevel/a2-mathematics/integration/#power-integrals)。
 
 ## 方程形式与给定条件 {#equation-and-conditions}
 
-本课的方程具有以下形式：
+未知函数仍记作 $y$。$y^{\prime}$ 是它的变化率；再对变化率求导，得到 $y^{\prime\prime}$。因此，二阶导数告诉我们变化率本身怎样改变。
+
+本课把这三个量按固定系数相加：
 
 $$\boxed{ay^{\prime\prime}+by^{\prime}+cy=f(x),\qquad a\ne0,}$$
 
 其中 $a,b,c$ 为整数常数，$y^{\prime}=\frac{\mathrm dy}{\mathrm dx}$，$y^{\prime\prime}=\frac{\mathrm d^2y}{\mathrm dx^2}$。最高阶导数为二阶。方程是线性的（linear）：$y$、$y^{\prime}$ 和 $y^{\prime\prime}$ 都只以一次幂出现，彼此之间没有乘积项。
 
-当 $f(x)=0$ 时，方程称为**齐次（homogeneous）**方程；否则称为**非齐次（nonhomogeneous）**方程。本课的非齐次项（forcing function）可以是指数函数、正弦或余弦函数、次数不超过 4 的多项式，以及这些函数的线性组合（linear combination）。
+如果 $f(x)=0$，也就是右边为零，方程叫作**齐次（homogeneous）**方程；否则叫作**非齐次（nonhomogeneous）**方程。本课的右边可以是指数函数、正弦或余弦函数、次数不超过 4 的多项式。也可以把这些函数各乘一个常数再相加，这叫线性组合（linear combination）。
 
-**通解（general solution）**含有两个任意常数（arbitrary constants）。**初始条件（initial conditions）**，如 $y(0)=1$ 和 $y^{\prime}(0)=2$，规定同一点处的函数值或导数值。**边界条件（boundary conditions）**，如 $y(0)=1$ 和 $y(1)=3$，规定不同点处的值。关于 $x\to\infty$ 时函数或导数行为的条件，也可以用来确定常数。使用每一个条件时，都必须代入完整的解，包括其中的 PI。
+**通解（general solution）**含有两个任意常数（arbitrary constants）。给定条件帮助我们确定它们。**初始条件（initial conditions）**，如 $y(0)=1$ 和 $y^{\prime}(0)=2$，告诉我们同一点处的函数值和斜率。**边界条件（boundary conditions）**，如 $y(0)=1$ 和 $y(1)=3$，告诉我们不同点处的值。
 
-两个合适且相互独立的条件可以确定常数。但边界条件未必足以确定唯一解：例如，$y^{\prime\prime}+y=0$ 配上 $y(0)=y(\pi)=0$ 后，仍得到 $y=B\sin x$。因此，应实际求解关于常数的方程，不能直接假定解唯一。
+条件还可以说明 $x\to\infty$ 时函数或导数的变化。每次都要把条件代入完整答案；后面的例子会说明，漏掉其中一部分就会算错常数。
+
+条件要提供足够且不重复的信息，才能确定常数。是否足够，要把关于常数的方程列出来，实际解一次。
+
+<details markdown="1">
+<summary>两个条件一定能选出唯一解吗？</summary>
+
+不一定。条件必须提供足够且互不重复的信息。例如，$y^{\prime\prime}+y=0$ 配上 $y(0)=y(\pi)=0$ 后，仍得到 $y=B\sin x$。任意常数都能满足这两个边界条件。所以要实际列出并解关于常数的方程，不能只数条件的个数。
+
+</details>
 
 ## 辅助方程与齐次通解 {#auxiliary-equation}
 
-对于齐次方程 $ay^{\prime\prime}+by^{\prime}+cy=0$，设 $y=e^{mx}$。代入得
+先处理右边为零的情况。为什么会想到指数函数？因为它求导后，仍是原来的指数函数，只多一个系数。试设 $y=e^{mx}$，其中 $m$ 是暂时不知道的常数：
+
+$$\begin{aligned}y&=e^{mx},\\y^{\prime}&=me^{mx},\\y^{\prime\prime}&=m^2e^{mx}.\end{aligned}$$
+
+把这三行代入 $ay^{\prime\prime}+by^{\prime}+cy=0$。每一项都有相同的指数因子，提出来便得到
 
 $$e^{mx}(am^2+bm+c)=0.$$
 
@@ -50,15 +59,7 @@ $$e^{mx}(am^2+bm+c)=0.$$
 
 $$\boxed{am^2+bm+c=0.}$$
 
-辅助方程的根决定**齐次通解（CF）**，即对应齐次方程的通解。
-
-| 辅助方程的根 | 齐次通解 |
-|---|---|
-| 两个不同实根 $m_1,m_2$ | $y_c=Ae^{m_1x}+Be^{m_2x}$ |
-| 实重根（repeated real root）$m$ | $y_c=(A+Bx)e^{mx}$ |
-| 共轭复根（complex conjugate roots）$\alpha\pm i\beta$，$\beta>0$ | $y_c=e^{\alpha x}(A\cos\beta x+B\sin\beta x)$ |
-
-出现重根时，写出两个 $e^{mx}$ 只能提供一个独立的函数，无法得到两个线性无关函数（linearly independent functions）；第二个应取 $xe^{mx}$。出现共轭复根时，用实数形式的正弦与余弦组合，可以得到两个线性无关的实函数。根也可以为零：$e^{0x}=1$；若零是重根，齐次通解为 $A+Bx$。
+这样就把“找函数”变成了“解一个关于指数中常数的二次方程”。先看一道具体题。
 
 <section class="worked-example" markdown="1">
 
@@ -66,11 +67,9 @@ $$\boxed{am^2+bm+c=0.}$$
 
 > **Original example.** Solve $2y^{\prime\prime}-2y^{\prime}-4y=0$, given $y(0)=3$ and $y^{\prime}(0)=0$.
 
-本题为自拟例题。
+本题为自拟示范。方程右边是零，先用辅助方程找出指数函数，再用两个条件确定它们前面的常数。
 
-**完整示范：**下列过程建立本方法。先跟随选法、代入与检验，再独立完成后面的尝试。
-
-辅助方程为 $2(m-2)(m+1)=0$，根为 $2,-1$。因此
+将原方程的三个系数原样放进二次式，得 $2m^2-2m-4=0$，即 $2(m-2)(m+1)=0$，根为 $2,-1$。两个指数函数各自都满足方程。方程是线性的，所以它们的任意常数倍相加后仍满足方程：
 
 $$y=Ae^{2x}+Be^{-x},\qquad y^{\prime}=2Ae^{2x}-Be^{-x}.$$
 
@@ -82,17 +81,27 @@ $$\boxed{y=e^{2x}+2e^{-x}}.$$
 
 </section>
 
+### 再比较三种根型 {#root-types}
+
+辅助方程的根决定**齐次通解（complementary function，CF）**，也就是右边为零时的通解。表的第一行概括刚才的例题，接下来两例说明另外两种情况。
+
+| 辅助方程的根 | 齐次通解 |
+|---|---|
+| 两个不同实根 $m_1,m_2$ | $y_c=Ae^{m_1x}+Be^{m_2x}$ |
+| 实重根（repeated real root）$m$ | $y_c=(A+Bx)e^{mx}$ |
+| 共轭复根（complex conjugate roots）$\alpha\pm i\beta$，$\beta>0$ | $y_c=e^{\alpha x}(A\cos\beta x+B\sin\beta x)$ |
+
+出现重根时，写出两个 $e^{mx}$ 只能提供一个独立的函数，无法得到两个线性无关函数（linearly independent functions）；第二个应取 $xe^{mx}$。出现共轭复根时，用实数形式的正弦与余弦组合，可以得到两个线性无关的实函数。根也可以为零：$e^{0x}=1$；若零是重根，齐次通解为 $A+Bx$。
+
 <section class="worked-example" markdown="1">
 
 ### 例题 2：实重根 {#example-2-repeated-roots}
 
 > **Original example.** Solve $y^{\prime\prime}+4y^{\prime}+4y=0$, given $y(0)=1$ and $y^{\prime}(0)=0$.
 
-本题为自拟例题。
+本题为自拟示范。根重复时，不能把同一个函数写两遍：$Ae^{mx}+Be^{mx}=(A+B)e^{mx}$，仍然只有一个可调的系数。第二个函数要换成多乘一个自变量的形式。
 
-**完整示范：**下列过程建立本方法。先跟随选法、代入与检验，再独立完成后面的尝试。
-
-由于 $(m+2)^2=0$，通解为 $y=(A+Bx)e^{-2x}$。求导得
+由于 $(m+2)^2=0$，通解为 $y=(A+Bx)e^{-2x}$。这是两个函数相乘；求导时，两边的函数都要轮流求导，另一边保持不变：
 
 $$y^{\prime}=[B-2(A+Bx)]e^{-2x}.$$
 
@@ -110,9 +119,7 @@ $$\boxed{y=(1+2x)e^{-2x}}.$$
 
 > **Original example.** Solve $y^{\prime\prime}+2y^{\prime}+5y=0$, given $y(0)=2$ and $y^{\prime}(0)=0$.
 
-本题为自拟例题。
-
-**完整示范：**下列过程建立本方法。先跟随选法、代入与检验，再独立完成后面的尝试。
+本题为自拟示范。辅助方程出现复根时，最后的函数仍可写成实数形式：实部决定外面的指数因子，虚部的大小决定里面正弦、余弦变化的快慢。
 
 辅助方程为 $(m+1)^2+4=0$，得 $m=-1\pm2i$。因此
 
@@ -132,11 +139,11 @@ $$\boxed{y=e^{-x}(2\cos2x+\sin2x)}.$$
 
 ## 齐次通解加上一个特解 {#cf-and-pi}
 
-**一个特解（PI）**是满足完整方程的某个函数 $y_p$：
+右边不为零时，CF 还不够：它代入左边只能给出零。我们再找一个函数，让它代入左边后，正好得到所需的右边。这个函数叫**一个特解（particular integral，PI）**，记作 $y_p$：
 
 $$ay_p^{\prime\prime}+by_p^{\prime}+cy_p=f(x).$$
 
-由方程的线性性质，加上齐次通解便得到原方程的通解：
+把两部分相加。由于方程是线性的，代入后得到的结果也相加：零加上题目右边，正好还是题目右边。因此通解为
 
 $$\boxed{y=y_c+y_p.}$$
 
@@ -146,7 +153,7 @@ $$\boxed{y=y_c+y_p.}$$
 
 ## 如何设特解并检验 {#pi-trials}
 
-使用**待定系数法（undetermined coefficients）**：先根据非齐次项设合适的特解形式，再求导、代入原方程，最后比较系数。
+先看右边是什么函数，选一种求导后能配出它的形式。系数先留作字母，再通过求导、代入和比较系数把它们算出来。这叫**待定系数法（undetermined coefficients）**。下面的表是选形式的起点；代入后能否得到右边，才是检验。
 
 | 非齐次项 | 尚未检查与 CF 是否重复时，先设的特解形式 |
 |---|---|
@@ -163,7 +170,7 @@ $$\boxed{y=y_c+y_p.}$$
 
 > **Self-written example.** Find the general solution of $y^{\prime\prime}+y=x^2+1$.
 
-**完整示范（自拟，无官方分值）。** 零不是辅助方程的根，故试探式包含到二次的所有幂。常数项要在对二次项求导后再确定。
+这是自拟示范，无官方分值。右边有二次项，就先试完整的二次式。不要只写右边已有的项：二次项求两次导数会变成常数，会影响常数项的比较。这里零不是辅助方程的根，不需要额外乘自变量。
 
 $$\begin{aligned}
 m^2+1&=0\quad\Longrightarrow\quad y_c=A\cos x+B\sin x,\\
@@ -183,7 +190,7 @@ y&=\boxed{A\cos x+B\sin x+x^2-1}.
 
 > **Self-written example.** Find the general solution of $y^{\prime\prime}=2x$.
 
-**完整示范（自拟，无官方分值）。** 辅助多项式为 $m^2$，CF 是 $A+Bx$。右边逐次积分，每次引入一个常数。
+这是自拟示范，无官方分值。这里只有二阶导数，直接积分两次最方便：第一次找出一阶导数，第二次找出函数。每次积分各带来一个常数。辅助多项式是 $m^2$，对应的 CF 正是 $A+Bx$。
 
 $$\begin{aligned}
 y^{\prime}&=\int2x\,\mathrm dx=2\frac{x^2}{2}+B=x^2+B,\\
@@ -196,7 +203,7 @@ PI $x^3/3$ 的二阶导数为 $2x$。非齐次项一次，PI 却三次；把一�
 
 ### 共振：所设形式与齐次通解重复 {#resonance}
 
-如果所设的函数本身就是齐次方程的解，代入方程左边只会得到零。这种重复称为**共振（resonance）**。将整个重复的部分乘以 $x$ 的幂，并选择能消除重复的最低次幂：
+如果试设形式已经在 CF 里，代入左边就会互相抵消，只剩零。无论怎样调系数，都配不出非零的右边。这种重复叫**共振（resonance）**。要换一种形式：给重复的整部分多乘一个 $x$；如果仍然抵消，再乘一个。具体规则如下，后面的例子会实际检验：
 
 - 对于 $e^{kx}$，应取 $xCe^{kx}$ 来处理辅助方程中 $k$ 为单根（simple root）的情况；若是重根，则取 $x^2Ce^{kx}$。
 - 对于只有正弦或余弦函数的非齐次项，若辅助方程的根为 $\pm i\omega$，则取 $x(C\cos\omega x+D\sin\omega x)$。
@@ -210,9 +217,7 @@ PI $x^3/3$ 的二阶导数为 $2x$。非齐次项一次，PI 却三次；把一�
 
 > **Original example.** Find the general solution of $y^{\prime\prime}-y=6e^{2x}$.
 
-本题为自拟例题。
-
-**完整示范：**下列过程建立本方法。先跟随选法、代入与检验，再独立完成后面的尝试。
+本题为自拟示范。先求右边为零时的 CF。再看题目的右边：指数函数求导后形式不变，因此可以从相同的指数形式开始试 PI。
 
 齐次通解为 $y_c=Ae^x+Be^{-x}$。设 $y_p=Ce^{2x}$，代入得
 
@@ -235,9 +240,7 @@ CF 代入方程左边得零；将 $2e^{2x}$ 代入，得到 $6e^{2x}$，因此 $
 
 > **Original example.** Find the general solution of $y^{\prime\prime}+y^{\prime}+2y=3\cos x$.
 
-本题为自拟例题。
-
-**完整示范：**下列过程建立本方法。先跟随选法、代入与检验，再独立完成后面的尝试。
+本题为自拟示范。右边虽然只有余弦，求一次导数却会出现正弦。因此 PI 先同时保留这两项，再由代入结果决定各自的系数。
 
 辅助方程的根为 $(-1\pm i\sqrt7)/2$，因此
 
@@ -284,9 +287,7 @@ PI 恰好贡献 $4e^x$。这里只需一个 $x$，因为 1 为单根；接下来
 
 > **Original example.** Find the general solution of $y^{\prime\prime}-4y^{\prime}+4y=8e^{2x}$. Explain why neither $Ce^{2x}$ nor $Cxe^{2x}$ is a suitable PI.
 
-本题为自拟例题。
-
-**完整示范：**下列过程建立本方法。先跟随选法、代入与检验，再独立完成后面的尝试。
+本题为自拟示范。先检查题目提出的两种形式为什么都失败，再寻找不会被左边抵消的形式。
 
 辅助方程为 $(m-2)^2=0$，所以 $y_c=(A+Bx)e^{2x}$。题目提出的两种形式代入微分方程左边，都只能得到零。
 
@@ -341,7 +342,7 @@ PI 贡献 $2\cos x$，因为含 $x$ 的项已相消。Q6 改变频率与非齐�
 
 ### 例题 7：混合非齐次项与无穷远处的条件 {#example-7-mixed-forcing}
 
-**现在独立尝试：**把上述多项式与单根共振方法组合。先写 CF、各部分的 PI 和系数比较，再对完整解使用无穷远条件；提示与答案先保持关闭。
+这题把前面学过的方法放在一起，请先独立尝试。求出通解后，再使用两个条件；其中一个条件告诉你，自变量不断增大时，导数要趋近什么值。先不展开帮助。
 
 > **Adapted example.** For $x\ge0$, solve $y^{\prime\prime}+y^{\prime}-2y=4x-6e^{-2x}$, given $y(0)=2$ and $y^{\prime}\to-2$ as $x\to\infty$.
 
@@ -712,6 +713,8 @@ y&=\boxed{(1+x+3x^2)e^{-x}}.
 **学习路径：**[上一课：一阶微分方程](/zh/alevel/a2-further-mathematics/first-order-differential-equations/) · [下一课：向量积与共面](/zh/alevel/a2-further-mathematics/vector-products-and-coplanarity/) · [高等纯数学](/zh/alevel/a2-further-mathematics/)。
 
 ## 资料来源 {#sources}
+
+教材：*International A Level Further Mathematics*，第 25.2 节，印刷页码 308–317；复习见 p.319。
 
 本轮范围核对：2026-10-23，从当前 9665 资格页打开大纲，核对正文 v5.2 及本课条目；没有迁移至 9765。下列试卷／评分材料仅重新读取所注明题目与配套评分部分的 PDF 文本，未完成原卷图像的视觉核验。官方题身份与分值保留，改编与自拟任务不称官方题。
 

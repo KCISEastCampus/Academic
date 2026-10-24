@@ -1,0 +1,300 @@
+{
+  "recordedAt": "2026-10-24T21:28:28+08:00",
+  "baseCommit": "19db6ca1640fb47fd541b3f8fb3d45d510d41b09",
+  "scope": "13 remaining FM03 lessons and index, bilingual; approved three sample pairs preserved; local draft only",
+  "pages": {
+    "alevel/a2-further-mathematics/arc-length-and-surface-area.md": {
+      "sourceSha256": "427d5dc457ff4d08f87de82adbce17a349e120af15fdc1c959c886b75718c4f7",
+      "htmlPath": "_site/alevel/a2-further-mathematics/arc-length-and-surface-area/index.html",
+      "htmlSha256": "e3bfb0e4ef43dc16851ca11ce420e45f3422c243a72d25c8b232e80a1cf5a69b",
+      "role": "changed this task"
+    },
+    "alevel/a2-further-mathematics/de-moivres-theorem.md": {
+      "sourceSha256": "dfa02feba4106ba6c71904abe00f134e7e65ff155e96b9959538db39a611cec5",
+      "htmlPath": "_site/alevel/a2-further-mathematics/de-moivres-theorem/index.html",
+      "htmlSha256": "cb786569d60d7095c819967629c2ecf56058eb969bec56676ca5ea163d42a07f",
+      "role": "changed this task"
+    },
+    "alevel/a2-further-mathematics/eigenvalues-and-eigenvectors.md": {
+      "sourceSha256": "b922a49b41f1350189949d4ff38799ad9a1b6a4296d22b63378c6337dc32aed0",
+      "htmlPath": "_site/alevel/a2-further-mathematics/eigenvalues-and-eigenvectors/index.html",
+      "htmlSha256": "e50bbcc001dcc59e975cc88f0df91627276c456b2902784648201835b3620576",
+      "role": "changed this task"
+    },
+    "alevel/a2-further-mathematics/finite-series.md": {
+      "sourceSha256": "8cef631e9a4cc8a6cd70e0fcf909ff626a9f7fd8b1c495c4e94c5dca2eb5ba19",
+      "htmlPath": "_site/alevel/a2-further-mathematics/finite-series/index.html",
+      "htmlSha256": "c6418ff96d3f459924f4aa8aba63b426c21f78252892c50ac753e5ccb97bbb62",
+      "role": "changed this task"
+    },
+    "alevel/a2-further-mathematics/first-order-differential-equations.md": {
+      "sourceSha256": "94fe683c82619befbe016c7b1b0d473b3118a32e376cdd090d55d14644f50a10",
+      "htmlPath": "_site/alevel/a2-further-mathematics/first-order-differential-equations/index.html",
+      "htmlSha256": "eaeff2281d47c4fc11696e2d26daf3d4899653bab19fe10296b4f9b18d2a1775",
+      "role": "approved earlier sample"
+    },
+    "alevel/a2-further-mathematics/hyperbolic-functions.md": {
+      "sourceSha256": "123a3fbbfcca38b6a42f6c53e8d9620791394886c80b2a49e5a3253f386410f6",
+      "htmlPath": "_site/alevel/a2-further-mathematics/hyperbolic-functions/index.html",
+      "htmlSha256": "8f27cf7ce7d307543cf598f6d91d09fa18d704ed571f903f7f0e599dcbfbf84e",
+      "role": "approved earlier sample"
+    },
+    "alevel/a2-further-mathematics/index.md": {
+      "sourceSha256": "6030e7b3a078ad869e81ef14ee5bec7c05fa89568a85f6161e15b96de515521c",
+      "htmlPath": "_site/alevel/a2-further-mathematics/index.html",
+      "htmlSha256": "bd95adf6349e98f8443ccc0f6cb632599cfee1af9c19b0cb26b96f4239e79c60",
+      "role": "changed this task"
+    },
+    "alevel/a2-further-mathematics/inverse-trigonometric-functions.md": {
+      "sourceSha256": "7777493e7f9b92cad11a3a2b41ea1df3eb7c081f3967b0a59a33a8ab62bd9669",
+      "htmlPath": "_site/alevel/a2-further-mathematics/inverse-trigonometric-functions/index.html",
+      "htmlSha256": "067a775e7be9c8f5f7ccbdb66b575cb7830da824f8719f94bb073f37b68e0ae6",
+      "role": "changed this task"
+    },
+    "alevel/a2-further-mathematics/linear-equations.md": {
+      "sourceSha256": "85c6cfb0b3bd118bdd2397a070677f72bac145d3704bcd26755a7add366fab93",
+      "htmlPath": "_site/alevel/a2-further-mathematics/linear-equations/index.html",
+      "htmlSha256": "07b7474629391a9a7145015889bafa51bb91049223e4ace717704b6c3ffde027",
+      "role": "changed this task"
+    },
+    "alevel/a2-further-mathematics/lines-and-planes.md": {
+      "sourceSha256": "42a32a4c9cbd2397423b54bc0aabbed5de876dd137382d20a083d4cc712f1894",
+      "htmlPath": "_site/alevel/a2-further-mathematics/lines-and-planes/index.html",
+      "htmlSha256": "4793119d84176651c15780ad50ed1af880d527f16a5281ce343a004741c776aa",
+      "role": "changed this task"
+    },
+    "alevel/a2-further-mathematics/matrix-algebra.md": {
+      "sourceSha256": "331f725bae2107371cb33fa91fcaaa4a26796a977214f120d863d1c72236e572",
+      "htmlPath": "_site/alevel/a2-further-mathematics/matrix-algebra/index.html",
+      "htmlSha256": "0f0232dd1e8143708903df43825396bc9370d11bf7d4fa85bc987a42ab5483a5",
+      "role": "changed this task"
+    },
+    "alevel/a2-further-mathematics/polar-coordinates.md": {
+      "sourceSha256": "a4b6ac93e2c58353e1ec0abbef5d0fa7d6743a5e0908e2255b9cfc0f7968f08d",
+      "htmlPath": "_site/alevel/a2-further-mathematics/polar-coordinates/index.html",
+      "htmlSha256": "04eb6773e8e0ce974078a9b6fcf37942c6dc760b4cf177f99fce1fae85806a16",
+      "role": "changed this task"
+    },
+    "alevel/a2-further-mathematics/proof-by-induction.md": {
+      "sourceSha256": "540ada6f1bf1e4a76fefaa12c1fa48e258388f8de7fd881c6978579f027bb816",
+      "htmlPath": "_site/alevel/a2-further-mathematics/proof-by-induction/index.html",
+      "htmlSha256": "1802aabd2b6da7e47f34b41c6ab6076bc3d5163c223c032b02516b17d3f47be0",
+      "role": "changed this task"
+    },
+    "alevel/a2-further-mathematics/roots-and-polynomials.md": {
+      "sourceSha256": "af86af09b365357d07d65cb7ce26fbe63b4523d714b1632047e8587d40598f70",
+      "htmlPath": "_site/alevel/a2-further-mathematics/roots-and-polynomials/index.html",
+      "htmlSha256": "976a571ec061e8ecd2748a9718b0ff14d33981d8789f5fe7782cb96b494ec412",
+      "role": "changed this task"
+    },
+    "alevel/a2-further-mathematics/second-order-differential-equations.md": {
+      "sourceSha256": "9196b660a1d8b03b503cbc85f95f73581d7cbfab245877c6ac466f71dec4d985",
+      "htmlPath": "_site/alevel/a2-further-mathematics/second-order-differential-equations/index.html",
+      "htmlSha256": "e4eb2d72bfeed6bc4cf1d37fbed50c21b98470bcb8e999d101af647c7dbbee4b",
+      "role": "approved earlier sample"
+    },
+    "alevel/a2-further-mathematics/series-and-limits.md": {
+      "sourceSha256": "74363074ac7d4dbbaf6e5d60d80da1cba9bd76473ac4d2ad61146b85023a5999",
+      "htmlPath": "_site/alevel/a2-further-mathematics/series-and-limits/index.html",
+      "htmlSha256": "637bfb8ef87c1be029b49dc5641056b5daa2d3582187062d6e62543e64e6ec2b",
+      "role": "changed this task"
+    },
+    "alevel/a2-further-mathematics/vector-products-and-coplanarity.md": {
+      "sourceSha256": "61d4861de974a4c0623b460b8948893dcebfebbe2f3b657ae9a6f8cf66002db7",
+      "htmlPath": "_site/alevel/a2-further-mathematics/vector-products-and-coplanarity/index.html",
+      "htmlSha256": "b107ff3d9d87a7412d419db2805bf40b4267c049cf0039ef6d102c44a5c4a466",
+      "role": "changed this task"
+    },
+    "zh/alevel/a2-further-mathematics/arc-length-and-surface-area.md": {
+      "sourceSha256": "db3b34aa928ad50259d6f5f117d84241a6e675f7f5c466e45a6e73fc379e4a64",
+      "htmlPath": "_site/zh/alevel/a2-further-mathematics/arc-length-and-surface-area/index.html",
+      "htmlSha256": "7107d076f976daa3f52f4f941ab15c13436565e4e636b26ab3040882c9e6d003",
+      "role": "changed this task"
+    },
+    "zh/alevel/a2-further-mathematics/de-moivres-theorem.md": {
+      "sourceSha256": "6e7602e7989456317f97e1922863866a131c71b5606e66b5a039582e33b01767",
+      "htmlPath": "_site/zh/alevel/a2-further-mathematics/de-moivres-theorem/index.html",
+      "htmlSha256": "1b872888da0597860bc2854c2c731c356da8b96bc786d2ba45d508993060b246",
+      "role": "changed this task"
+    },
+    "zh/alevel/a2-further-mathematics/eigenvalues-and-eigenvectors.md": {
+      "sourceSha256": "2388afa4d728f04d5d078478181c1c8665809b4fc2b505aa236688d67187c827",
+      "htmlPath": "_site/zh/alevel/a2-further-mathematics/eigenvalues-and-eigenvectors/index.html",
+      "htmlSha256": "877dece0f25d7eda2f327c6e30e868979b0a3fc8d19fc55100c2e688cf80536a",
+      "role": "changed this task"
+    },
+    "zh/alevel/a2-further-mathematics/finite-series.md": {
+      "sourceSha256": "34387a7c24e0c09522f215ee7b3655700a8d7e168f19f5ef248fceba72cf65eb",
+      "htmlPath": "_site/zh/alevel/a2-further-mathematics/finite-series/index.html",
+      "htmlSha256": "25119001dd226c3511c639e294afed959af858b7f00b5a6005758fcbe2067e90",
+      "role": "changed this task"
+    },
+    "zh/alevel/a2-further-mathematics/first-order-differential-equations.md": {
+      "sourceSha256": "85be1d8f5b607ea90014b222c3e7d8a65bbff6c0738868131e3e637a7e6989d4",
+      "htmlPath": "_site/zh/alevel/a2-further-mathematics/first-order-differential-equations/index.html",
+      "htmlSha256": "6b5fcf83f595ad13c17fe02b961249efd00d19c49f6a1d4c1d4e8cacb570ef5a",
+      "role": "approved earlier sample"
+    },
+    "zh/alevel/a2-further-mathematics/hyperbolic-functions.md": {
+      "sourceSha256": "e5af82205d81291a8680ea8ad362621f8cd4e9f930b5f1bebbd0f2ff0525c149",
+      "htmlPath": "_site/zh/alevel/a2-further-mathematics/hyperbolic-functions/index.html",
+      "htmlSha256": "bcd15df4853bb0115f0b7fdf6b585d735b7016cc42d71d178b5ed77a76467828",
+      "role": "approved earlier sample"
+    },
+    "zh/alevel/a2-further-mathematics/index.md": {
+      "sourceSha256": "a2fbcd85e628a5b91a61fb27b2ef01ba933b05abc576dd7044719f1dddae5b9f",
+      "htmlPath": "_site/zh/alevel/a2-further-mathematics/index.html",
+      "htmlSha256": "7947bdaa794dc11522018418915512837c9767a31bf20d1886728aa33182ba10",
+      "role": "changed this task"
+    },
+    "zh/alevel/a2-further-mathematics/inverse-trigonometric-functions.md": {
+      "sourceSha256": "01fecb8e18759f0930b11af206eb6b042de3cc791dbe50ce9e9ee2239f23ab48",
+      "htmlPath": "_site/zh/alevel/a2-further-mathematics/inverse-trigonometric-functions/index.html",
+      "htmlSha256": "4f19832b44ce56292f089d085026a46d59ab9a70d3be77d3ac0e452dd1bee4a4",
+      "role": "changed this task"
+    },
+    "zh/alevel/a2-further-mathematics/linear-equations.md": {
+      "sourceSha256": "d6f4100ccb2f27d886e4990bd90582544fa2f3daff063a750f1f8f28daae944d",
+      "htmlPath": "_site/zh/alevel/a2-further-mathematics/linear-equations/index.html",
+      "htmlSha256": "20ab54ece649388a827a1d748468075f21bd5418c9be3abef16699a773d6b2f2",
+      "role": "changed this task"
+    },
+    "zh/alevel/a2-further-mathematics/lines-and-planes.md": {
+      "sourceSha256": "7fa111bc4f2c95e15ca0a7410680ecf357accb2681735128051a71cc56c395ec",
+      "htmlPath": "_site/zh/alevel/a2-further-mathematics/lines-and-planes/index.html",
+      "htmlSha256": "cf1e8f8624815ec1f413c9cddecc0d58a36602fa7b4ab054e0a793e361268810",
+      "role": "changed this task"
+    },
+    "zh/alevel/a2-further-mathematics/matrix-algebra.md": {
+      "sourceSha256": "763774c8dacda8d752fa4e2828c66c8cfac95e8d8aba25bf104c6d09d3231b65",
+      "htmlPath": "_site/zh/alevel/a2-further-mathematics/matrix-algebra/index.html",
+      "htmlSha256": "42ed9e72484a9eafabddc7e4fc6e4b9534d209b6a2440f2058c49f96a2b9bfcd",
+      "role": "changed this task"
+    },
+    "zh/alevel/a2-further-mathematics/polar-coordinates.md": {
+      "sourceSha256": "7405b879a8a3edee48d91b18c4ccc8d63e43ccd54d3df9bd523621e3fac7f367",
+      "htmlPath": "_site/zh/alevel/a2-further-mathematics/polar-coordinates/index.html",
+      "htmlSha256": "eb4deb2a86f2fd7c2c6b091684618dfbecda3e59c3f76bd49542372185f6fc91",
+      "role": "changed this task"
+    },
+    "zh/alevel/a2-further-mathematics/proof-by-induction.md": {
+      "sourceSha256": "215ae1f4b76bb1e4fdda00be1e2ef331849ef1e37b71fd65588e15be5a83a5e8",
+      "htmlPath": "_site/zh/alevel/a2-further-mathematics/proof-by-induction/index.html",
+      "htmlSha256": "322a8630301155ae5e42b44385d9395cf0862ce102724d52baa83e5982efba4f",
+      "role": "changed this task"
+    },
+    "zh/alevel/a2-further-mathematics/roots-and-polynomials.md": {
+      "sourceSha256": "d0a632d368f98753caa2587e66065b92e02646f9fc27509910a3ff54f34822ce",
+      "htmlPath": "_site/zh/alevel/a2-further-mathematics/roots-and-polynomials/index.html",
+      "htmlSha256": "6f50bedbf1a89938917fb6d76b8e32fb05f66d2574449f43a4bd0f7e2fe5e48c",
+      "role": "changed this task"
+    },
+    "zh/alevel/a2-further-mathematics/second-order-differential-equations.md": {
+      "sourceSha256": "f41149906bc08d5dc43910fd6bbe4cba042d50ac6b356fddc546d9d29f9d98b7",
+      "htmlPath": "_site/zh/alevel/a2-further-mathematics/second-order-differential-equations/index.html",
+      "htmlSha256": "ce0029b4107e42a0333f323e72823523fcdcd6191f8b2d6cdf09085b51d87c6b",
+      "role": "approved earlier sample"
+    },
+    "zh/alevel/a2-further-mathematics/series-and-limits.md": {
+      "sourceSha256": "caea1bbec4576b09e725015d104f5f2c42ecdf8965b33cccbb44d5f1eff7779b",
+      "htmlPath": "_site/zh/alevel/a2-further-mathematics/series-and-limits/index.html",
+      "htmlSha256": "807ab6db810f414fd31ba72687c7a0959aaad45cf939132ad34b02c1dfeaf4de",
+      "role": "changed this task"
+    },
+    "zh/alevel/a2-further-mathematics/vector-products-and-coplanarity.md": {
+      "sourceSha256": "6b9ed2dc922f107b22f5f364894e6e6111ee0a16e4a075659485796f254008c6",
+      "htmlPath": "_site/zh/alevel/a2-further-mathematics/vector-products-and-coplanarity/index.html",
+      "htmlSha256": "ee4800d46656da366b902e0ef376d36fb69c5f37206bdb0b20f5fa4c90a91633",
+      "role": "changed this task"
+    }
+  },
+  "preservedBeforeTask": {
+    "alevel/a2-further-mathematics/hyperbolic-functions.md": "123a3fbbfcca38b6a42f6c53e8d9620791394886c80b2a49e5a3253f386410f6",
+    "alevel/a2-further-mathematics/first-order-differential-equations.md": "94fe683c82619befbe016c7b1b0d473b3118a32e376cdd090d55d14644f50a10",
+    "alevel/a2-further-mathematics/second-order-differential-equations.md": "9196b660a1d8b03b503cbc85f95f73581d7cbfab245877c6ac466f71dec4d985",
+    "zh/alevel/a2-further-mathematics/hyperbolic-functions.md": "e5af82205d81291a8680ea8ad362621f8cd4e9f930b5f1bebbd0f2ff0525c149",
+    "zh/alevel/a2-further-mathematics/first-order-differential-equations.md": "85be1d8f5b607ea90014b222c3e7d8a65bbff6c0738868131e3e637a7e6989d4",
+    "zh/alevel/a2-further-mathematics/second-order-differential-equations.md": "f41149906bc08d5dc43910fd6bbe4cba042d50ac6b356fddc546d9d29f9d98b7",
+    "assets/css/reading.css": "177c376f70a9685f629b177f24c7641cdd08449d49869a29785775126997f72a",
+    "assets/css/home.css": "cffd04e3d4fee69faa20a2414bcf2f54880c13f9eee1a63e570c745726a95748",
+    "_layouts/subjects.html": "293db2c33a7e9d0858caf551013030cb136af11b7aaf6f97397c90c0ad7d940e"
+  },
+  "tests": {
+    "scripts/test-further-bilingual.js": "2dd2f2a21a5a9f59efe8885d358a32e5281648064fe4b368ac92b3e17fb696dd",
+    "scripts/test-further-de-moivre.js": "efb90113be2a663fbb53d9f2deb2fcd8782c7627d15dc0856963e37f367176a0",
+    "scripts/test-further-first-order.js": "0499aa41473968c5b3352938d1dab9c57dd825e9ec915ff05559eebdb1074fe4",
+    "scripts/test-further-induction-series.js": "5d618d6177d1f261358893d5e8ac5d7910f4ecfd36faf73128a8c097e2ac5102",
+    "scripts/test-further-inverse-trig.js": "bd2249f2e9d1048366774ebb539a98905c5fe4d7d11f05748a9698bcd88c385e",
+    "scripts/test-further-linear-equations.js": "3cf802c6600500cf3d56c7a920f1a80b79df994e516dd537361fdf53a164dd0c",
+    "scripts/test-further-matrices.js": "509238a9ab38c644ee69c04cf52c69522f5d63b87a03bdffba61a4490543b9d7",
+    "scripts/test-further-polar.js": "186553ba8ba152b804cab622b1a86fc470313a9f0fa169bba140809135ed45c3",
+    "scripts/test-further-retry.js": "5822c1ebe741b1449943664422b6c2e57c4f6f35a107f1d02419e2a14c1ba1ec",
+    "scripts/test-further-roots.js": "7d809d8274823c2c4d7527610e40a3fe60d786b9999fd7def17baf0957123dd8",
+    "scripts/test-further-second-order.js": "192eb059dc0f9d411990c6232a838f2b66ba5de85015f7689088bef1ab031660",
+    "scripts/test-further-series-limits.js": "7b931124eaf6bc028b7a68dafcde4ae5142ebd8b55427a90055e30185177ce16",
+    "scripts/test-further-vectors.js": "69ca2d78ff4fb97d600d1970491e9c82f5a79cc2accfd55a5155aba0be6f83eb"
+  },
+  "records": {
+    "docs/agents/implementation-fm03-plain-complex-polar-2026-10-24.md": "b1320bff9cd30cd183169ba26ff742beda7b854c14475edaa66e754032b2b1cd",
+    "docs/agents/implementation-fm03-plain-geometry-2026-10-24.md": "49a99f6d686cf45c7d71c8dd5b498d1c38d7a168a22b84d7976f809eb36abf89",
+    "docs/agents/implementation-fm03-plain-rollout-2026-10-24.md": "4d44890a38af6321cec5348b779b05cab84935717cc3a72d1b3b4de88ff4fca2",
+    "docs/agents/implementation-fm03-plain-series-2026-10-24.md": "f1fc4133c055f676b2eb6fc87c2d4421430c6b4a3e77dc76ccc0a4b759e1cd38",
+    "docs/agents/review-fm03-plain-rollout-spec-2026-10-24.md": "882502f7d99718f96727445848d2f60a88567fe28f34b0bd639848b4281669b9",
+    "docs/agents/review-fm03-plain-rollout-standards-2026-10-24.md": "d7aae557747d1654fa14a7aa1517fb36a4e10b6086477b0a024557a0193f562a"
+  },
+  "screenshots": {
+    "arc-length-and-surface-area-390-continuous.png": "db4bbd3263fe5a7d566664b17767f7c04df67930702c9979f677b24fdabbd6cf",
+    "de-moivres-theorem-390-continuous.png": "e078388cd259066b18ca840cadda4736841982dac2f162afdea45ea24331b279",
+    "eigenvalues-and-eigenvectors-390-continuous.png": "b11e2f6f4c9e960c24a100021c46ae19b84739a042721c180a3eebdfc6bdaf21",
+    "finite-series-390-continuous.png": "4f539c853e28e76ddb4f83a8c5a92fe4c04d1e072c5f8886673cd15eca640dd7",
+    "index-1365-initial.png": "526fb05a38d3e4e501b7f9a773b426fafae7be4b1086607fe3bc5da3eb072549",
+    "index-390-initial.png": "d871eba9fde16830acc7cb092a57644ba8b9775e696bfac0da7346526aa84b7b",
+    "inverse-trigonometric-functions-390-continuous.png": "a4ec77c2cf3d3ee9a043a36ebf56c991e230b796057ad2317ec85b7c2ea58e65",
+    "linear-equations-390-continuous.png": "7b8b222e4df9d7888c483a16196526e74d82ee23d12a5598c85334f88255e829",
+    "lines-and-planes-390-continuous.png": "54c1140ad32748c3229bd34cd36babf8d274844645a7a1255814498f4bdfbc79",
+    "matrix-algebra-1365-light-concept.png": "6b19b5e2e919944b450086750f1f9d31fc5c20ae0fa9b79856a3a106d59c5e47",
+    "matrix-algebra-390-continuous.png": "8fea16a732b2936b9df79e0d1084d4d975eb0d89e74ee05b443ab8e54f67af25",
+    "matrix-algebra-390-dark-expanded.png": "38c4fc1854f64fd0ee70c02fad17d2f2aac5c5bde7753bb35504a16907c99005",
+    "polar-coordinates-390-continuous.png": "6fc4de05a5f42050376f1e8c12735c5b3707da2c5f66828a6ea743df5cef48fc",
+    "proof-by-induction-390-continuous.png": "80ebbd33bb6fa418780fda829d2be6e0996deee227a4e7bf9bca6674c412dc23",
+    "roots-and-polynomials-390-continuous.png": "80e35dd58f18685e08e5e17396f6a976d064376469c7d64f32fd40843a5c3a33",
+    "roots-and-polynomials-390-dark-expanded.png": "9069764910057172b25ce1cd43555b8409e02a6523596c9b047de81517f696cf",
+    "series-and-limits-390-continuous.png": "dbbd35b73ce16fbbbd1987a96fe5a2e0b9260b5a74b4ef3d78f1bf058e147961",
+    "series-and-limits-390-dark-concept.png": "2bdebf9577ae99c9f4330f3f2d698f712ae79363b7b29b5528abde7323435981",
+    "vector-products-and-coplanarity-390-continuous.png": "bb9f09acb9556c57b1f041881235990de6437a60fc467182a36095e714953f0d"
+  },
+  "acceptance": {
+    "finalBuildSeconds": 20.126,
+    "topicChecksPassed": 13,
+    "finalAffectedChecksRerun": 4,
+    "browserViews": 136,
+    "browserFailures": 0,
+    "localLinks": 459,
+    "linkErrors": 0,
+    "oldExplicitIds": 653,
+    "oldGeneratedHeadingIds": 926,
+    "retainedPromptLines": 318,
+    "mobileContinuousReadings": 13,
+    "keyboardScrolls": 6,
+    "actualJourneys": 3,
+    "finalReportMarkdownlint": "six reports passed"
+  },
+  "incrementalHtmlRecheck": {
+    "changedPages": [
+      "alevel/a2-further-mathematics/de-moivres-theorem.md",
+      "alevel/a2-further-mathematics/matrix-algebra.md",
+      "alevel/a2-further-mathematics/roots-and-polynomials.md",
+      "zh/alevel/a2-further-mathematics/de-moivres-theorem.md",
+      "zh/alevel/a2-further-mathematics/matrix-algebra.md",
+      "zh/alevel/a2-further-mathematics/roots-and-polynomials.md"
+    ],
+    "retainedViews": 112,
+    "recheckedViews": 24
+  },
+  "limits": [
+    "Preview includes earlier local AS, MA03 and FM03 sample drafts.",
+    "Source/HTML hashes bind the reviewed course snapshot; docs-only updates do not trigger a rebuild.",
+    "No push, PR, merge, publication, full historical paper re-audit or whole-course student trial.",
+    "Browser checks do not establish complete WCAG compliance, physical-device behavior or learning effectiveness."
+  ]
+}

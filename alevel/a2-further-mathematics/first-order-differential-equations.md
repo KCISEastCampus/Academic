@@ -10,27 +10,25 @@ study_page: true
 reading_layout: true
 ---
 
-[Further Pure Mathematics](/alevel/a2-further-mathematics/) · FP2.10 First-order differential equations
+[Further Pure Mathematics](/alevel/a2-further-mathematics/) · FP2.10
 
-How can multiplying a differential equation turn its left side into a single derivative? Build that connection with the product rule, then use a condition to select one solution from the general family.
+This time the answer is a function. The equation tells us how the function's value and its derivative must be related. We want to find that function, then use the given condition to find its constant.
 
-- **Learning:** start with [standard form](#standard-form), read the [complete demonstration](#example-1-normalise-and-solve), then [complete the next example](#example-2-variable-coefficient). Afterwards compare [complementary functions and particular integrals](#cf-and-pi).
-- **Homework help:** use [normalising the equation](#example-1-normalise-and-solve), [variable coefficients](#example-2-variable-coefficient), [trigonometric coefficients](#example-3-trigonometric-coefficient) or [a repeated exponential](#example-6-repeated-exponential).
-- **Revision:** attempt the [practice questions](#practice) with solutions closed, then check the [quick reference](#quick-reference) and [common pitfalls](#common-pitfalls).
+Start with [what the equation says](#standard-form), follow [Example 1](#example-1-normalise-and-solve), then try [Example 2](#example-2-variable-coefficient) yourself. If you have studied the method before, go straight to [practice](#practice).
 
-By the end of the integrating-factor section, you should be able to identify the normalised coefficients and interval, explain the product derivative, and solve and check a new initial-value problem. Try [Questions 1–3](#practice) before opening their hints; use [diagnosis and retry](#diagnose-and-retry) to repair an error.
-
-**Before you start:** Question 3 also needs the [chain rule](/alevel/a2-mathematics/differentiation/#composite-functions) and [reverse-chain integration](/alevel/a2-mathematics/integration/#reverse-chain-rule). For the method itself, you need the [product rule](/alevel/a2-mathematics/differentiation/#products-and-quotients), [exponential and logarithmic integration](/alevel/a2-mathematics/integration/#exponential-logarithmic-integrals), and [P2.8 differential equations](/alevel/a2-mathematics/differential-equations/). If expanding a product derivative or integrating an exponential is unfamiliar, revisit that skill, then return to the [derivation](#derive-integrating-factor). P2.8 covers separable equations; a linear equation need not separate directly.
+**Before you start:** use the [product rule](/alevel/a2-mathematics/differentiation/#products-and-quotients) to differentiate two functions multiplied together, and review [exponential and logarithmic integrals](/alevel/a2-mathematics/integration/#exponential-logarithmic-integrals) if needed. This lesson follows [P2.8 separable equations](/alevel/a2-mathematics/differential-equations/); the variables here cannot always be separated directly.
 
 ## Standard Form and Solution Families {#standard-form}
 
-A **first-order** equation has unknown function $y$ and highest derivative $y^{\prime}=\frac{\mathrm dy}{\mathrm dx}$. It is **linear** when $y$ and $y^{\prime}$ appear to the first power, without products such as $yy^{\prime}$ or nonlinear terms such as $y^2$ or $\sin y$.
+Call the unknown function $y$. Its derivative $y^{\prime}=\frac{\mathrm dy}{\mathrm dx}$ is its rate of change, or the slope of its graph. The highest derivative in the equation is the first derivative, so the equation is **first-order**.
+
+We study **linear** equations: $y$ and $y^{\prime}$ appear only to the first power, with no products such as $yy^{\prime}$ and no terms such as $y^2$ or $\sin y$. Their coefficients may depend on the independent variable.
 
 The standard linear form is
 
 $$\boxed{y^{\prime}+P(x)y=Q(x).}$$
 
-The coefficients $P$ and $Q$ can depend on $x$. Before choosing an integrating factor, divide the whole equation by the coefficient of $y^{\prime}$. For
+Here $P$ is the function multiplying $y$, and $Q$ is the function on the right. First make the coefficient of $y^{\prime}$ equal to 1 so that the product rule will fit. For
 
 $$a(x)y^{\prime}+b(x)y=c(x),$$
 
@@ -38,17 +36,29 @@ the standard form has $P=b/a$ and $Q=c/a$, on an interval where $a(x)\ne0$.
 
 A **general solution** contains one arbitrary constant. An **initial condition**, such as $y(0)=2$, fixes the value at a starting point. A **boundary condition**, such as $y(2)=5$, fixes the value at a stated boundary. Either can determine the constant and hence a **particular solution** of a first-order equation.
 
-Work on a connected interval on which the standard-form coefficients are continuous. If a coefficient is undefined at $x=0$, solve separately on $x>0$ or $x<0$; do not use one integration constant to join solutions across the singular point. A formula that happens to have a value at that point does not make the original equation defined there.
+**Check where the method can be used.** Work on an interval where the standard-form coefficients are continuous. If standard form fails at $x=0$, first solve separately on $x>0$ or $x<0$. Do not assume the constants on the two sides are the same.
+
+Can a solution also include zero? Check the original equation separately. If it contains $1/x$, it is undefined there. But if only the coefficient of the derivative becomes zero, the original equation may still be defined. Any proposed extension must be differentiable there and satisfy the original equation. A point where standard form fails is called a singular point of that form.
 
 ## The Integrating Factor {#integrating-factor}
 
 ### Why the method works {#derive-integrating-factor}
 
+We want to write the left side as the derivative of one product. Then integration will undo the derivative.
+
+First look at a specific product. Differentiate an exponential multiplied by the unknown function:
+
+$$(e^{2x}y)^{\prime}=e^{2x}y^{\prime}+2e^{2x}y=e^{2x}(y^{\prime}+2y).$$
+
+So, if the left side has the form in brackets, multiplying by this exponential turns it into one derivative. An **integrating factor** is a multiplier chosen for this purpose. We call it $\mu$ (mu). Now find a rule for choosing it.
+
 Multiply the standard form by a function $\mu(x)$:
 
 $$\mu y^{\prime}+\mu P y=\mu Q.$$
 
-The product rule gives $(\mu y)^{\prime}=\mu y^{\prime}+\mu^{\prime} y$. The left side becomes this derivative if $\mu^{\prime}=P\mu$. For $P$, choose an antiderivative $F$, so $F^{\prime}=P$. Construct $\mu=e^F$ and differentiate to check:
+The product rule gives $(\mu y)^{\prime}=\mu y^{\prime}+\mu^{\prime} y$. Compare its two terms with the multiplied equation: they match if $\mu^{\prime}=P\mu$.
+
+To find such a factor, first integrate $P$. Call the resulting antiderivative $F$, so $F^{\prime}=P$. Choose $\mu=e^F$: the chain rule makes its derivative equal to the exponent's derivative multiplied by the same exponential. Check:
 
 $$\mu^{\prime}=F^{\prime}e^F=P\mu.$$
 
@@ -58,7 +68,7 @@ $$\boxed{\mu=e^{\int P(x)\,\mathrm dx}.}$$
 
 We omit the arbitrary constant in the integral: multiplying an integrating factor by a nonzero constant gives the same method. On the chosen interval, $\mu$ is nonzero, so division by $\mu$ is valid.
 
-We can now integrate:
+The left side is now one derivative. Integrate it, then divide by the factor to recover the unknown function. The formula below shows those steps; you do not need to memorise it before following Example 1:
 
 $$\begin{aligned}
 (\mu y)^{\prime}&=\mu Q,\\
@@ -74,7 +84,7 @@ y&=\boxed{\frac1\mu\left(\int\mu Q\,\mathrm dx+C\right)}.
 4. Integrate, include $C$, and divide by $\mu$.
 5. Apply the stated condition and check the answer in the original equation.
 
-For $P=1/x$, $\int P\,\mathrm dx=\ln\lvert x\rvert $, so the formula gives $\mu=\lvert x\rvert $. On either interval $x>0$ or $x<0$, we may use $\mu=x$, because the two choices differ by a nonzero constant factor on that interval. The point $x=0$ remains excluded.
+For $P=1/x$, $\int P\,\mathrm dx=\ln\lvert x\rvert $, so the formula gives $\mu=\lvert x\rvert $. On either interval $x>0$ or $x<0$, we may use $\mu=x$, because the two choices differ by a nonzero constant factor on that interval. This calculation excludes $x=0$; any extension needs a separate check in the original equation.
 
 <section class="worked-example" markdown="1">
 
@@ -120,7 +130,7 @@ Check the original equation as well as the condition: $y^{\prime}=e^{-2x}$, so $
 
 > **Original example.** For $x>0$, solve $y^{\prime}+\frac{2}{x}y=x$, given $y(1)=2$.
 
-Pause before opening either control. This time complete the working yourself: identify $P$ and $Q$, integrate $P$, and choose a nonzero factor. Write the multiplied equation and expand your proposed product derivative to check it. Then integrate, use the condition and check the original equation. The factor now varies with a logarithmic integral; it is not obtained by copying the previous exponential.
+Now try it with the help closed. Find $P$ and $Q$, calculate the factor, and check that the multiplied left side is a product derivative. Then integrate, use the condition and check your answer.
 
 <details markdown="1">
 <summary>Hint</summary>
@@ -177,9 +187,7 @@ The numerator $\sec^2x$ is the derivative of $\tan x$. Then use $\tan^2x=\sec^2x
 <details markdown="1">
 <summary>Solution</summary>
 
-On the stated interval, $\tan x>0$, so
-
-Use $u=\tan x$, so $\mathrm du=\sec^2x\,\mathrm dx$:
+On the stated interval $\tan x>0$. To evaluate the integral below, use $u=\tan x$, so $\mathrm du=\sec^2x\,\mathrm dx$:
 
 $$\int\frac{\sec^2x}{\tan x}\,\mathrm dx=\int\frac1u\,\mathrm du=\ln\lvert u\rvert=\ln(\tan x),\qquad \mu=\tan x.$$
 
@@ -205,6 +213,8 @@ To check the differential equation, differentiate $y\tan x$: its derivative is $
 ## Complementary Functions and Particular Integrals {#cf-and-pi}
 
 ### Split the solution into two parts {#general-cf-pi}
+
+Sometimes it is quicker to build the answer in two parts. One part gives zero when substituted into the left side. The other gives the required right side. Adding them still solves the equation. Here are the names for those parts.
 
 For $y^{\prime}+Py=Q$, the associated **homogeneous equation** is $y^{\prime}+Py=0$. Its general solution is the **complementary function (CF)**:
 
@@ -232,7 +242,7 @@ where we choose one antiderivative without an arbitrary constant. The constant b
 
 ### Simple trials for a constant coefficient {#simple-pi-trials}
 
-For $y^{\prime}+ay=Q(x)$ with constant $a$, substitution can find a PI quickly.
+For $y^{\prime}+ay=Q(x)$ with constant $a$, choose a function whose derivative can combine with it to give the right side. Leave its coefficients unknown, then substitute to find them. This is called **undetermined coefficients**. The trial must be checked in the equation.
 
 | Right side | Useful first trial | Check before using it |
 |---|---|---|
@@ -251,11 +261,11 @@ When $a=0$, the equation is simply $y^{\prime}=Q$ and direct integration works. 
 
 For the homogeneous part, $\int2\,\mathrm dx=2x$. Thus $(e^{2x}y_c)^{\prime}=0$; integration gives $e^{2x}y_c=\int0\,\mathrm dx=C$ and the CF is $Ce^{-2x}$.
 
-The homogeneous equation gives $y_c=Ce^{-2x}$. For $y_p=Ax+B$, substitution gives
+The right side is linear, so try $y_p=Ax+B$. Keep the constant term because differentiating a linear term produces a constant. Substitution gives
 
 $$A+2(Ax+B)=4x+3.$$
 
-Comparing coefficients: $2A=4$ and $A+2B=3$, so $A=2$ and $B=1/2$. Therefore
+The two sides must agree for every value of the variable. Match the coefficients of the linear terms and then the constants: $2A=4$ and $A+2B=3$, so $A=2$ and $B=1/2$. Add the CF and PI:
 
 $$\boxed{y=Ce^{-2x}+2x+\frac12}.$$
 
@@ -285,7 +295,7 @@ The CF is $Ce^{3x}$. Try $y_p=Ae^x$.
 
 For the homogeneous part, $\int(-3)\,\mathrm dx=-3x$. Thus $(e^{-3x}y_c)^{\prime}=0$; integration gives $e^{-3x}y_c=\int0\,\mathrm dx=C$ and the CF is $Ce^{3x}$.
 
-The homogeneous equation gives $y_c=Ce^{3x}$. Substituting $y_p=Ae^x$ gives
+The right side is an exponential. Try $y_p=Ae^x$ because its derivative keeps the same exponential factor. Substitution gives
 
 $$Ae^x-3Ae^x=2e^x,$$
 
@@ -307,7 +317,7 @@ Check: $y^{\prime}-3y=(15e^{3x}-e^x)-(15e^{3x}-3e^x)=2e^x$, and $y(0)=4$.
 
 For the homogeneous part, $\int2\,\mathrm dx=2x$. Thus $(e^{2x}y_c)^{\prime}=0$; integration gives $e^{2x}y_c=\int0\,\mathrm dx=C$ and the CF is $Ce^{-2x}$.
 
-The CF is $Ce^{-2x}$. The trial $Ae^{-2x}$ gives $y_p^{\prime}+2y_p=0$ for every $A$, so it cannot produce the nonzero right side.
+The first trial $Ae^{-2x}$ gives $y_p^{\prime}+2y_p=0$ for every $A$. Changing the coefficient cannot help: the two terms always cancel, but the required right side is nonzero.
 
 Try $y_p=Axe^{-2x}$. By the product rule,
 
@@ -435,7 +445,7 @@ Try $y_p=Ax^2+Bx+D$. Include the linear and constant terms.
 
 For the homogeneous part, $\int1\,\mathrm dx=x$. Thus $(e^xy_c)^{\prime}=0$; integration gives $e^xy_c=\int0\,\mathrm dx=C$ and the CF is $Ce^{-x}$.
 
-The CF is $Ce^{-x}$. The trial gives
+Now try a quadratic PI. Substitution gives
 
 $$y_p^{\prime}+y_p=Ax^2+(2A+B)x+(B+D).$$
 
@@ -548,7 +558,7 @@ Integrating the normalised coefficient gives
 
 $$\int\left(\frac2x-1\right)\,\mathrm dx=2\int\frac1x\,\mathrm dx-\int1\,\mathrm dx=2\ln x-x,\qquad \mu=e^{2\ln x-x}=x^2e^{-x}.$$
 
-Its logarithmic derivative is the required coefficient:
+Differentiate the factor to check that it has the required relation:
 
 $$\mu^{\prime}=(2x-x^2)e^{-x}=\left(\frac2x-1\right)\mu.$$
 
@@ -664,7 +674,7 @@ Differentiating gives $y^{\prime}=(2x+x^{-2})/3$; substitution yields $xy^{\prim
 | Particular integral | Any one $y_p$ satisfying $y_p^{\prime}+Py_p=Q$ | Do not add a second arbitrary constant |
 | CF + PI | $y=y_c+y_p$ | Apply the condition after adding the two parts |
 | Exponential trial | For $y^{\prime}+ay=be^{kx}$, $y_p=\frac b{k+a}e^{kx}$ if $k+a\ne0$ | If $k=-a$, use $y_p=bxe^{-ax}$ |
-| Conditions and interval | Substitute the given $(x,y)$ to find $C$ | Keep singular points excluded |
+| Conditions and interval | Substitute the given $(x,y)$ to find $C$ | Use a valid interval; check points excluded by normalisation separately in the original equation |
 {: .wide-table}
 
 ## Common Pitfalls {#common-pitfalls}
@@ -675,7 +685,7 @@ Differentiating gives $y^{\prime}=(2x+x^{-2})/3$; substitution yields $xy^{\prim
 - Forgetting $C$, or dividing only one term by $\mu$ at the end.
 - Treating a PI as the final solution satisfying the condition.
 - Trying an exponential PI that is already in the CF; multiply the trial by $x$ in the repeated case above.
-- Dropping the absolute value in $\ln\lvert x\rvert $ without specifying a sign interval, or allowing a solution interval to cross a singular point.
+- Dropping the absolute value in $\ln\lvert x\rvert $ without specifying a sign interval, or applying the standard-form method across a singular point without a separate check.
 
 **After practice:** redo any question for which you needed a hint. Show the standard form, integrating factor and product derivative, or explicitly identify the CF and PI. Finish by checking both the equation and its condition.
 

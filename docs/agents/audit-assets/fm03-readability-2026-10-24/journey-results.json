@@ -1,0 +1,26 @@
+{
+  "viewport": {
+    "width": 390,
+    "height": 900
+  },
+  "steps": [
+    {
+      "action": "course-entry-to-hyperbolic",
+      "url": "http://127.0.0.1:8835/zh/alevel/a2-further-mathematics/hyperbolic-functions/"
+    },
+    {
+      "action": "precise-prerequisite",
+      "url": "http://127.0.0.1:8835/zh/alevel/a2-mathematics/functions/#inverse-functions",
+      "targetPresent": true
+    },
+    {
+      "action": "return-to-definitions",
+      "url": "http://127.0.0.1:8835/zh/alevel/a2-further-mathematics/hyperbolic-functions/#definitions"
+    },
+    {
+      "action": "practice-help-keyboard-open-close",
+      "url": "http://127.0.0.1:8835/zh/alevel/a2-further-mathematics/hyperbolic-functions/#practice",
+      "passed": true
+    }
+  ]
+}

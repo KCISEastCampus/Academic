@@ -33,19 +33,13 @@ A factorial multiplies successive positive integers; $0!=1$ and $3!=3\cdot2\cdot
 
 **Learning goal:** find and use a Maclaurin expansion, state its range of validity, find a limit after cancellation and show whether an improper integral has a finite value.
 
-Choose your first step:
-
-- **An infinite sum:** examine its partial sums. For convergence, the terms must tend to zero, but this condition alone is not enough.
-- **An expansion:** use a standard series or calculate derivatives at $x=0$. Substitute the whole expression that replaces $x$.
-- **A product or a function inside another function:** work out which terms can contribute to the requested power.
-- **A limit giving $\frac00$ on substitution:** expand far enough to find the first terms that do not cancel, then divide by a common power of $x$.
-- **An improper integral:** replace the problematic bound by a finite bound, integrate, then take a limit.
-
-**Keep the notation clear:** $=\cdots+\cdots$ denotes a full series with further terms. Use $\approx$ when using a finite number of terms to estimate a value. A valid infinite expansion does not mean that a short approximation is accurate far from $x=0$.
+Adding more and more terms raises one question: do the running totals approach a finite number? Approximating a function near zero raises another: which polynomial matches its value and derivatives there? These are the starting points below; the [quick reference](#quick-reference) collects the methods for revision.
 
 ## Convergence {#convergence}
 
-For an infinite series $\sum_{r=1}^{\infty}u_r$, define the **partial sum**
+In $1+\frac12+\frac14+\cdots$, the running totals are $1$, $\frac32$, $\frac74$, and so on. These totals approach $2$ as we include more terms. Each total is a **partial sum**: it adds only a finite number of terms.
+
+For an infinite series $\sum_{r=1}^{\infty}u_r$, write
 
 $$S_n=\sum_{r=1}^{n}u_r.$$
 
@@ -116,7 +110,21 @@ The series therefore converges. For the harmonic series the ratio tends to $1$, 
 
 ## Maclaurin Series {#maclaurin-series}
 
-A **power series** is a series in ascending non-negative integer powers of $x$. A **Maclaurin series** is a power series about $x=0$.
+Start with a quadratic polynomial $P(x)=a+bx+cx^2$. We want it to have the same value, first derivative and second derivative as $f$ at zero. Differentiating shows what each coefficient controls:
+
+$$\begin{aligned}
+P(x)&=a+bx+cx^2,& P(0)&=a,\\
+P^{\prime}(x)&=b+2cx,& P^{\prime}(0)&=b,\\
+P^{(2)}(x)&=2c,& P^{(2)}(0)&=2c.
+\end{aligned}$$
+
+So matching the value, slope and rate of change of slope at zero requires
+
+$$a=f(0),\qquad b=f^{\prime}(0),\qquad c=\frac{f^{(2)}(0)}{2}.$$
+
+The division by $2$ comes from differentiating $cx^2$ twice to get $2c$. More generally, differentiating $x^r$ exactly $r$ times gives $r!$; lower powers have vanished, and higher powers still contain $x$ and vanish at zero. For a function represented by a power series near zero, this gives the coefficient $f^{(r)}(0)/r!$ for $x^r$.
+
+A **power series** continues the polynomial pattern in ascending non-negative integer powers of $x$. The series formed for $f$ from its derivatives at $x=0$ is its **Maclaurin series**.
 
 For functions that can be represented this way, Maclaurin's theorem gives
 
@@ -125,7 +133,9 @@ f(x)={}&f(0)+xf^{\prime}(0)+\frac{x^2}{2!}f^{(2)}(0)\\
 &+\frac{x^3}{3!}f^{(3)}(0)+\cdots.
 \end{aligned}$$
 
-Here $f^{(r)}(0)$ is the $r$th derivative evaluated at zero, so the coefficient of $x^r$ is $\frac{f^{(r)}(0)}{r!}$. The derivative values must exist and be finite. Use the expansion only in its range of validity.
+Here $f^{(r)}(0)$ is the $r$th derivative evaluated at zero. These values must exist and be finite. Having derivatives of every order does not by itself guarantee that a function equals its Maclaurin series. Use the equality only where the series represents the function, within its range of validity.
+
+**Keep the notation clear:** $=\cdots+\cdots$ denotes a full series with further terms. Use $\approx$ when using a finite number of terms to estimate a value. A valid infinite expansion does not mean that a short approximation is accurate far from $x=0$.
 
 **Common mistake:** using $f^{(r)}(0)$ as the coefficient without dividing by $r!$.
 

@@ -32,7 +32,11 @@ Prove that a statement is true for every integer in a given range. Learn how to 
 
 **Learning goal:** write a complete proof by induction for a series, a recurrence relation, a divisibility statement or another formula involving a positive integer.
 
-Checking a few values can help you find an error. It does **not** prove a statement for every integer.
+Suppose the first allowed case is $n=1$. Two things together would establish every case: the statement is true at $1$, and whenever it is true at an allowed integer, it must also be true at the next one. The first fact lets us start; the second takes us from $1$ to $2$, then from $2$ to $3$, and onwards. Any chosen positive integer is reached after finitely many such steps.
+
+This is **mathematical induction**. In the step from $k$ to $k+1$, $k$ stands for any allowed integer. We temporarily assume the statement at $k$ and use it to prove the next case. This **induction hypothesis** is part of an if–then argument; it does not assume the statement for all $n$. Without a proved first case, the if–then link has nowhere to start.
+
+Checking a few values can help you find an error. It does **not** establish this link for every integer.
 
 A proof by induction has four parts:
 
@@ -40,22 +44,6 @@ A proof by induction has four parts:
 2. **Assumption:** assume that the statement is true for $n=k$, where $k$ is any integer in the stated range. Write the statement for $n=k$.
 3. **Inductive step:** use this assumption to prove that the statement is true for $n=k+1$.
 4. **Conclusion:** state that the initial case is true and that, if the statement is true for $n=k$, it is true for $n=k+1$. Then conclude that it is true for all integers in the stated range by mathematical induction.
-
-The assumption for $n=k$ is the **induction hypothesis**. You are proving: *if the statement is true at $k$, then it is true at $k+1$*. You are not assuming that it is already true for all $n$.
-
-### Choose the next step {#choose-the-next-step}
-
-| Type of statement | Start the inductive step with | What to show |
-|---|---|---|
-| Sum of a series | $S_{k+1}=S_k+u_{k+1}$ | Add the next term, then obtain the formula with $k+1$ in place of $n$ |
-| Recurrence relation | The rule defining $u_{k+1}$ | Substitute the assumed expression for $u_k$ |
-| Divisibility | The expression at $k+1$ | Write it as an integer multiple of the expression at $k$, plus a multiple of the divisor |
-| A power | $A^{k+1}=A^kA$, or $z^{k+1}=z^kz$ | Multiply once more and simplify |
-| An $n$th derivative | Differentiate the assumed $k$th derivative | Obtain the formula for derivative $k+1$ |
-
-**Before simplifying:** write down the formula you need at $k+1$. Replace **every** occurrence of $n$, including those inside brackets and powers.
-
-**Common mistake:** starting with the formula you want at $k+1$ and treating it as true. Start with an expression you know, then use the induction hypothesis.
 
 Use complete sentences in the proof. In the conclusion, include the initial case and the link from $k$ to $k+1$; do not write only “proved by induction”. If the question starts at $n=2$, check $n=2$ and conclude for all integers $n\ge2$.
 
@@ -652,6 +640,20 @@ The fourth derivative is $-4$; the coefficient is $-\frac16$. If you missed the 
 | Inductive step | Use that assumption to obtain exactly the statement for $k+1$ |
 | Conclusion | State the initial case, the link to the next case and the full range of $n$ |
 | Two-term recurrence | Check two initial cases; assume two consecutive cases and prove the next |
+
+### Choose the next step {#choose-the-next-step}
+
+| Type of statement | Start the inductive step with | What to show |
+|---|---|---|
+| Sum of a series | $S_{k+1}=S_k+u_{k+1}$ | Add the next term, then obtain the formula with $k+1$ in place of $n$ |
+| Recurrence relation | The rule defining $u_{k+1}$ | Substitute the assumed expression for $u_k$ |
+| Divisibility | The expression at $k+1$ | Write it as an integer multiple of the expression at $k$, plus a multiple of the divisor |
+| A power | $A^{k+1}=A^kA$, or $z^{k+1}=z^kz$ | Multiply once more and simplify |
+| An $n$th derivative | Differentiate the assumed $k$th derivative | Obtain the formula for derivative $k+1$ |
+
+**Before simplifying:** write down the formula you need at $k+1$. Replace **every** occurrence of $n$, including those inside brackets and powers.
+
+**Common mistake:** starting with the formula you want at $k+1$ and treating it as true. Start with an expression you know, then use the induction hypothesis.
 
 **After practice:** if you added the wrong term, repeat Question 1. If you used only one initial case in a two-term recurrence, repeat Question 2. If the powers did not simplify, compare Example 3 and Question 3. If your proof started at the wrong integer, repeat Question 6.
 

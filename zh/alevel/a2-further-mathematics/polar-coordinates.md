@@ -7,7 +7,7 @@ subject: a2-further-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-further-mathematics/polar-coordinates/
 permalink: /zh/alevel/a2-further-mathematics/polar-coordinates/
-toc_headings: "#method, #coordinates, #equations, #sketching, #intersections, #areas, #practice, #diagnose-and-retry, #later-review, #quick-reference"
+toc_headings: "#coordinates, #equations, #sketching, #intersections, #areas, #practice, #diagnose-and-retry, #later-review, #method, #quick-reference"
 study_page: true
 reading_layout: true
 ---
@@ -16,7 +16,7 @@ reading_layout: true
 
 用距离和角度描述一个点的位置。本课学习转换方程、绘制极坐标曲线的草图，并选用正确的角度上下限计算面积。
 
-- **学习：**从[方法](#method)开始，再逐一完成例题。
+- **学习：**先用[距离和角度定位一个点](#coordinates)，再学坐标转换、曲线与面积。
 - **作业帮助：**按需要查看[坐标](#coordinates)、[方程](#equations)、[绘图](#sketching)、[交点](#intersections)或[面积](#areas)。
 - **复习：**先独立完成[练习](#practice)，再展开解答，最后查看[快速参考](#quick-reference)。
 
@@ -26,27 +26,20 @@ reading_layout: true
 
 **题目身份：**除明确标出官方原题或教学改编的题目外，本课例题与练习均为自拟教学题，不分配官方分值。
 
-## 方法 {#method}
-
 **学习目标：**在极坐标与直角坐标（Cartesian coordinates）之间转换，用正半径绘制曲线草图，求交点并计算指定区域的面积。
-
-- **转换一个点的坐标：**使用 $x=r\cos\theta$ 和 $y=r\sin\theta$；反向转换时，先求 $r=\sqrt{x^2+y^2}$，再根据象限确定 $\theta$。
-- **转换方程：**将 $r^2$ 换成 $x^2+y^2$，将 $r\cos\theta$ 换成 $x$，将 $r\sin\theta$ 换成 $y$。先将方程乘以 $r$ 往往有助于转换。
-- **绘制草图：**检查角度的定义域（domain）、对称性、$r$ 的零点，以及几个容易计算的点。只画出 $r>0$ 的部分。
-- **计算面积：**先画出所求区域，确定边界对应的角度，再使用 $\frac12\int r^2\,\mathrm d\theta$。若作为边界的曲线发生变化，应分段积分。
-
-**课程约定：**极点以外的点采用 $r>0$。$r=0$ 表示极点，可作为边界点或曲线经过的点。不要把 $r$ 的负值画成额外的环瓣（loop）。
 
 ## 坐标 {#coordinates}
 
-**极点（pole）**是固定点 $O$。**极轴（initial line）**是量取角度的起始射线，通常取 $x$ 轴的正半轴。
+描述一个点，可以说“从原点向右多少，再向上多少”，也可以说“朝哪个方向，离原点多远”。极坐标采用后一种说法。例如，$(4,\frac\pi6)$ 表示一个离原点 $4$ 的点，方向角为 $\pi/6$，从正 $x$ 轴开始量。下面的例 1 会把它换成向右和向上的距离。
+
+这个固定起点 $O$ 叫**极点（pole）**；量角度的起始射线叫**极轴（initial line）**，通常取正 $x$ 轴。
 
 一个点的极坐标记作 $(r,\theta)$：
 
 - $r$ 是该点到极点的距离。
 - $\theta$ 是从极轴沿逆时针方向量取的角度；负角沿顺时针方向量取。
 
-两种坐标之间的关系为
+从 $O$ 到该点的线段长为 $r$，水平和竖直分量分别是 $r\cos\theta$ 与 $r\sin\theta$；它们的正负号表示向左/右、向下/上。由三角比与勾股定理得到两种坐标的关系：
 
 $$\boxed{\begin{aligned}
 x&=r\cos\theta,\qquad y=r\sin\theta,\\
@@ -56,6 +49,8 @@ r^2&=x^2+y^2.
 对于原点以外的点，$r=\sqrt{x^2+y^2}>0$。若 $x\ne0$，则 $\tan\theta=\frac yx$，但仅用反正切（inverse tangent）求出的角度可能落在错误的象限。对于 $y$ 轴上的点，直接取 $\theta=\frac\pi2$ 或 $-\frac\pi2$。
 
 相差 $2\pi$ 整数倍的角度表示同一个点。题目要求主值（principal value）时，使用 $-\pi<\theta\le\pi$。在极点处，角度不唯一。
+
+**课程约定：**极点以外的点采用 $r>0$。$r=0$ 表示极点，可作为边界点或曲线经过的点。不要把 $r$ 的负值画成额外的环瓣（loop）。
 
 <section class="worked-example" markdown="1">
 
@@ -258,11 +253,15 @@ $$\boxed{AB=2\sqrt3.}$$
 
 ## 面积 {#areas}
 
-若 $r=f(\theta)$ 围成的区域由射线从 $\theta=\alpha$ 扫过至 $\theta=\beta$，则该区域的面积为
+现在让定位点的射线转过一段角度，考察它扫出的区域。若半径固定，区域就是圆扇形：转过 $\phi$ 弧度，占整周的 $\phi/(2\pi)$，所以面积为
+
+$$A=\frac{\phi}{2\pi}\,\pi r^2=\frac12r^2\phi.$$
+
+若半径随角度变化，整块区域就不再是一个固定半径的扇形。把它切成很窄的角片，每片内半径变化很小，面积近似为 $\frac12r^2\Delta\theta$。把小片相加，再让角片宽度趋于零，就得到从 $\theta=\alpha$ 扫到 $\theta=\beta$ 的面积：
 
 $$\boxed{A=\frac12\int_\alpha^\beta r^2\,\mathrm d\theta.}$$
 
-一个很窄的角度小片近似为扇形，其面积为 $\frac12r^2\,\mathrm d\theta$。将这些小片的面积相加，就得到上述积分。
+这里累加的是面积，所以出现 $r^2$；上下限是射线的角度，而不是点的 $x$ 坐标。
 
 所选区间必须使曲线的半径非负，并且所求区域恰好被扫过**一次**。对于完整的环瓣，应找出它在极点处的两个端点。即使将 $r$ 平方，也不能使负半径区间符合课程约定。
 
@@ -852,6 +851,13 @@ A&=A_R+A_L=\boxed{3\pi}.
 </details>
 
 </section>
+
+## 复习时选择方法 {#method}
+
+- **转换一个点的坐标：**使用 $x=r\cos\theta$ 和 $y=r\sin\theta$；反向转换时，先求 $r=\sqrt{x^2+y^2}$，再根据象限确定 $\theta$。
+- **转换方程：**将 $r^2$ 换成 $x^2+y^2$，将 $r\cos\theta$ 换成 $x$，将 $r\sin\theta$ 换成 $y$。先将方程乘以 $r$ 往往有助于转换。
+- **绘制草图：**检查角度的定义域（domain）、对称性、$r$ 的零点，以及几个容易计算的点。只画出 $r>0$ 的部分。
+- **计算面积：**先画出所求区域，确定边界对应的角度，再使用 $\frac12\int r^2\,\mathrm d\theta$。若作为边界的曲线发生变化，应分段积分。
 
 ## 快速参考 {#quick-reference}
 

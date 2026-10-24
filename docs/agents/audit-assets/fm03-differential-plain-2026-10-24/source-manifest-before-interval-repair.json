@@ -1,0 +1,47 @@
+{
+  "baseline": "19db6ca1640fb47fd541b3f8fb3d45d510d41b09",
+  "pages": [
+    {
+      "source": "alevel/a2-further-mathematics/first-order-differential-equations.md",
+      "sha256": "2ea56e4aa143e182005a32021300af1f50146f93e407bb3f57bf5c8a453ecb54",
+      "html_sha256": "2f49c1f3ccc81f1c5880488bc4ba52e0753cafa4812159f009a5c4ad847ab706",
+      "unchanged_quoted_prompts": 14,
+      "first_order_integral_occurrences_preserved": 39
+    },
+    {
+      "source": "alevel/a2-further-mathematics/second-order-differential-equations.md",
+      "sha256": "1c6e0a2d75b62ebf61ed772fbe5f4d7a073e257571150af5b28ba692ea833859",
+      "html_sha256": "bf1d2804d0652c679f83b2281146783c552e8daf8f1262118b48f5355a3a6e7e",
+      "unchanged_quoted_prompts": 18,
+      "first_order_integral_occurrences_preserved": null
+    },
+    {
+      "source": "zh/alevel/a2-further-mathematics/first-order-differential-equations.md",
+      "sha256": "d815d3bab45d584eecd8dfd1c30a0b508972b7d9903d673138beeb8d1c5cc818",
+      "html_sha256": "c81db7a7d51953ade5f772d8acd2398e7947f35864f34d27de524ca5fdd19bd9",
+      "unchanged_quoted_prompts": 14,
+      "first_order_integral_occurrences_preserved": 39
+    },
+    {
+      "source": "zh/alevel/a2-further-mathematics/second-order-differential-equations.md",
+      "sha256": "a58d9e2fff38c29967f4ce8174f4da5633b432bb1da3ea3078805cb6be2b4a86",
+      "html_sha256": "616a10e24b3e14ebc00e42b57d9fc38d6ec8d80e1b897f1c6f9f1159c5f33105",
+      "unchanged_quoted_prompts": 18,
+      "first_order_integral_occurrences_preserved": null
+    }
+  ],
+  "styles_and_layout": {
+    "assets/css/reading.css": "177c376f70a9685f629b177f24c7641cdd08449d49869a29785775126997f72a",
+    "assets/css/subject.css": "c92ff3d33a2ae0263377b98e71cd39e23116c2c9e625454dec263c8681a27cf3",
+    "assets/css/style.css": "419bb0e640a1dfd67a2a69a5a63179cd1be51db88401f5b40c38f9345127a57b",
+    "_layouts/subjects.html": "293db2c33a7e9d0858caf551013030cb136af11b7aaf6f97397c90c0ad7d940e"
+  },
+  "tests": {
+    "test-further-first-order.js": "793dcb69c9972dd1367dee6790c8e7c8042beb0c1ea2d3697e5aa863b660d53d",
+    "test-further-second-order.js": "192eb059dc0f9d411990c6232a838f2b66ba5de85015f7689088bef1ab031660",
+    "test-further-bilingual.js": "2dd2f2a21a5a9f59efe8885d358a32e5281648064fe4b368ac92b3e17fb696dd",
+    "test-further-retry.js": "5822c1ebe741b1449943664422b6c2e57c4f6f35a107f1d02419e2a14c1ba1ec",
+    "test-frontend-ux.js": "6eef0cca55a0f995199a871f7aeaf25cc46cf8d922efca19ae6202cf963342d7"
+  },
+  "note": "Local working-copy build includes existing AS/MA03/hyperbolic drafts; not a clean release or student trial."
+}

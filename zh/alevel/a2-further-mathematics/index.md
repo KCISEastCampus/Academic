@@ -12,7 +12,7 @@ reading_layout: true
 study_page: true
 ---
 
-OxfordAQA 9665 · A2 高等纯数学 · FP2 / FM03。从根与多项式开始，按下方路线学习；已学过的同学可直接进入[跨章综合](#mixed-review)。
+OxfordAQA 9665 · A2 高等纯数学 · FP2 / FM03。每课先解释新概念是什么意思，再示范怎样使用。从根与多项式开始；已学过的同学可直接进入[跨章综合](#mixed-review)。
 
 ## 从这里开始 {#start-here}
 
@@ -28,12 +28,14 @@ OxfordAQA 9665 · A2 高等纯数学 · FP2 / FM03。从根与多项式开始，
 10. **[一阶微分方程](/zh/alevel/a2-further-mathematics/first-order-differential-equations/)** — 使用积分因子法，或将齐次通解与一个特解相加，再代入题目给定的条件。
 11. **[二阶微分方程](/zh/alevel/a2-further-mathematics/second-order-differential-equations/)** — 利用辅助方程求齐次通解，选取合适的特解，再代入初始条件或边界条件。
 12. **[向量积与共面](/zh/alevel/a2-further-mathematics/vector-products-and-coplanarity/)** — 连接垂直方向、面积、体积与共面条件。
-13. **[直线与平面](/zh/alevel/a2-further-mathematics/lines-and-planes/)** — 转换表征，求交点与交线，解释夹角、距离和反射。
-14. **[矩阵代数](/zh/alevel/a2-further-mathematics/matrix-algebra/)** — 运用三维变换、行列式、逆矩阵及不变几何对象。
-15. **[线性方程组与三个平面](/zh/alevel/a2-further-mathematics/linear-equations/)** — 讨论全部解，保留例外参数，并解释公共交集。
-16. **[特征值与特征向量](/zh/alevel/a2-further-mathematics/eigenvalues-and-eigenvectors/)** — 推导特征方程，处理重复实特征值，核验非零特征向量。
+13. **[直线与平面](/zh/alevel/a2-further-mathematics/lines-and-planes/)** — 用不同方式写同一直线或平面，求它们在哪里相交，再算夹角和距离。
+14. **[矩阵代数](/zh/alevel/a2-further-mathematics/matrix-algebra/)** — 计算坐标怎样变化，判断能不能还原，找出保持原位的点或整条映回自身的直线。
+15. **[线性方程组与三个平面](/zh/alevel/a2-further-mathematics/linear-equations/)** — 判断平面共有一个点、许多点，还是没有公共点，包括参数取特殊值的情形。
+16. **[特征值与特征向量](/zh/alevel/a2-further-mathematics/eigenvalues-and-eigenvectors/)** — 找出变换后只是乘了某个倍数的向量，并解释这个倍数告诉我们什么。
 
 可以按顺序学习，也可以选择当前需要的主题。课程合起来覆盖 FP2.1–FP2.14 全部十四个大纲主题；部分主题分成两节讲解。
+
+第一次学时，先读懂一段解释和一个完整示范，再收起帮助做后面的学生题。某一步不熟，就用该页链接回补具体先修。速查区留给已经学过、需要回看的时候使用。
 
 **中文讲解：**十六节课程均提供中英文版本。题干与公式保留英文原文，专业术语附英文原词，方便对应英文考试用语。下方链接打开中文课程；可用页面顶部的语言切换继续阅读同一小节的英文版。
 

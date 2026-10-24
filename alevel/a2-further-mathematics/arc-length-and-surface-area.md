@@ -32,16 +32,6 @@ The small length of a curve is written as $\mathrm ds$. Add these small lengths 
 
 Build the Cartesian and parametric length elements below, then use circumference times the length element for a surface of revolution.
 
-**Check the limits and absolute values.**
-
-- Use increasing x-limits in a Cartesian integral. For a parametric curve, use increasing t-limits. The square-root factor is a speed, so these choices make the length non-negative.
-- If the curve crosses the x-axis, the radius is still $\lvert y\rvert$. Split the integral at a crossing if that makes the absolute value easier to evaluate.
-- If a square root simplifies to $\sqrt{g^2}$, write $\lvert g\rvert$ first. Remove the absolute value only after checking the interval.
-- The parameter interval must trace the requested arc once. If the parameter retraces part of the curve, the integral counts that part again.
-- For surface area, also check whether different parts of the generating curve sweep over the same surface patch. Count each patch once. For example, the upper and lower semicircles both sweep out the same sphere when revolved about their diameter.
-
-The formula gives the curved surface only. It does not add circular end caps; include caps only if a question asks for the area of a solid's complete boundary.
-
 ## Cartesian Arc Length {#cartesian-arc-length}
 
 For $y=f(x)$, with $a\le x\le b$, differentiate with respect to x, square the gradient, add 1, and integrate the positive square root between the stated x-coordinates.
@@ -90,7 +80,9 @@ Do not use only $\frac{\mathrm dx}{\mathrm dt}$ or only $\frac{\mathrm dy}{\math
 
 ## Surface Area About the x-axis {#surface-area-about-the-x-axis}
 
-At each point of the curve, the rotation radius is its distance from the x-axis, $\lvert y\rvert$. Multiply the circumference $2\pi\lvert y\rvert$ by the curve length element $\mathrm ds$.
+Approximate a short piece of the curve by a straight segment. Rotating it once about the x-axis sweeps out a narrow band. The width along that band is the segment's length, not its horizontal width. For a sufficiently short piece, the radius changes very little, so the band's area is approximately its circumference times that length. Refining the pieces and adding their areas gives the surface-area integral.
+
+At each point the rotation radius is the distance from the x-axis, $\lvert y\rvert$. Thus the circumference is $2\pi\lvert y\rvert$, and the length element to multiply it by is the same $\mathrm ds$ used for arc length:
 
 $$r=\lvert y\rvert,\qquad S=\int 2\pi r\,\mathrm ds.$$
 
@@ -102,9 +94,17 @@ $$S=2\pi\int_a^b\lvert y\rvert\sqrt{1+\left(\frac{\mathrm dy}{\mathrm dx}\right)
 
 $$S=2\pi\int_\alpha^\beta\lvert y(t)\rvert\frac{\mathrm ds}{\mathrm dt}\,\mathrm dt.$$
 
-In Cartesian coordinates, substitute the Cartesian length element. In parametric coordinates, substitute the parametric length element. Make sure the limits describe just the generating arc required.
+These formulas describe a complete turn about the x-axis, for a smooth arc or smooth pieces treated separately. In Cartesian coordinates, substitute the Cartesian length element; in parametric coordinates, substitute the parametric length element.
 
-**Do not confuse two kinds of repetition.** If a parameter traces the same arc more than once, the arc-length integral counts each traversal. Separately, a single arc can generate the same surface patch more than once under rotation; then the surface-area integral also counts that patch more than once. In either case, choose limits that cover the required geometric object once.
+**Check the limits and absolute values after setting up the integral.**
+
+- Use increasing x-limits in a Cartesian integral. For a parametric curve, use increasing t-limits. The square-root factor is a speed, so these choices make the length non-negative.
+- If the curve crosses the x-axis, the radius is still $\lvert y\rvert$. Split the integral at a crossing if that makes the absolute value easier to evaluate.
+- If a square root simplifies to $\sqrt{g^2}$, write $\lvert g\rvert$ first. Remove the absolute value only after checking the interval.
+- The parameter interval must trace the requested arc once. If the parameter retraces part of the curve, the integral counts that part again.
+- For surface area, also check whether different parts of the generating curve sweep over the same surface patch. Count each patch once. For example, the upper and lower semicircles both sweep out the same sphere when revolved about their diameter. This is a separate issue from tracing the same arc twice.
+
+The formula gives the curved surface only. It does not add circular end caps; include caps only if a question asks for the area of a solid's complete boundary.
 
 ## Worked Examples {#worked-examples}
 

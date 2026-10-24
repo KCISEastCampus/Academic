@@ -74,6 +74,11 @@ const characteristic = a => polynomialDeterminant(a.map((row, i) => row.map((x, 
 equal(characteristic([[2, 1], [1, 2]]), [3, -4, 1], 'Polynomial helper self-check');
 assert.equal(rank([[1, 2], [2, 4]]), 1, 'Rank helper self-check');
 const I = eye(3), ex = [1, 0, 0], ey = [0, 1, 0], ez = [0, 0, 1];
+const K0 = matrix(matrixText, 'K_0='), L0 = matrix(matrixText, 'L_0=');
+equal(multiply(K0, L0), matrix(matrixText, 'K_0L_0='), 'Introductory row-column example');
+const introD = matrix(eigenText, 'D_0=');
+equal(multiply(introD, column([1, 0])), column([2, 0]), 'First introductory vector is scaled by 2');
+equal(multiply(introD, column([1, 1])), column([2, 3]), 'Second introductory vector changes direction');
 const N = matrix(matrixText, 'N='), P = matrix(matrixText, 'P='), Q = matrix(matrixText, 'Q=');
 equal(multiply(P, Q), matrix(matrixText, 'PQ='));
 equal(multiply(Q, P), matrix(matrixText, 'QP='));

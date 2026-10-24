@@ -5,7 +5,7 @@ mathjax: true
 grade: a2
 subject: a2-further-mathematics
 permalink: /alevel/a2-further-mathematics/de-moivres-theorem/
-toc_headings: "#method, #powers-and-proof, #complex-roots, #roots-of-unity, #trigonometric-identities, #integration, #practice, #diagnose-and-retry, #later-review, #quick-reference"
+toc_headings: "#powers-and-proof, #complex-roots, #roots-of-unity, #trigonometric-identities, #integration, #practice, #diagnose-and-retry, #later-review, #method, #quick-reference"
 study_page: true
 reading_layout: true
 ---
@@ -14,7 +14,7 @@ reading_layout: true
 
 Find powers and roots of complex numbers. Use the same theorem to prove trigonometric identities and evaluate integrals.
 
-- **Learning:** start with the [method](#method), then work through the examples.
+- **Learning:** start with [one concrete square](#first-square), then read [the general result and proof](#powers-and-proof).
 - **Homework help:** choose [powers and proof](#powers-and-proof), [complex roots](#complex-roots), [roots of unity](#roots-of-unity), [trigonometric identities](#trigonometric-identities) or [integration](#integration).
 - **Revision:** try [practice](#practice) before opening the solutions, then use the [quick reference](#quick-reference).
 
@@ -24,18 +24,33 @@ Textbook: Chapter 20, Sections 20.1–20.3, printed pp. 234–252; review and pr
 
 **Task status:** Unless an official question or teaching adaptation is explicitly identified, the worked examples and exercises are self-written teaching tasks with no official marks.
 
-## Method
-
 **Learning goal:** use De Moivre's theorem for integer powers, find every complex root, explain their positions on an Argand diagram and use complex numbers to obtain trigonometric results.
 
-- **A power or a reciprocal?** Write the number as $r(\cos\theta+i\sin\theta)$ first. Raise the modulus to the power and multiply the argument by the power.
-- **An equation $z^n=w$?** Find the modulus and argument of $w$. Include $\theta+2k\pi$ before dividing the argument by $n$.
-- **A multiple angle in terms of powers?** Expand $(\cos\theta+i\sin\theta)^n$, then take the real or imaginary part.
-- **A power such as $\sin^5\theta$ in terms of multiple angles?** Use $z=\cos\theta+i\sin\theta$ and the identities involving $z$ and $\frac1z$.
-
-**Choose the direction before expanding:** $\sin5\theta$ and $\sin^5\theta$ are different expressions. The first is the sine of $5\theta$; the second is the fifth power of $\sin\theta$.
-
 ## Powers and Proof
+
+<section class="worked-example" markdown="1">
+
+### Start by squaring {#first-square}
+
+**Self-written illustration; no official marks.** Calculate $(1+i)^2$ and describe its position on an Argand diagram.
+
+Use ordinary multiplication first:
+
+$$(1+i)^2=1+2i+i^2=2i.$$
+
+The number $1+i$ is a distance $\sqrt2$ from the origin, at an angle $\pi/4$ from the positive real axis. The number $2i$ lies on the positive imaginary axis, at distance $2$ and angle $\pi/2$. In this square, the distance has been squared and the angle has doubled. These distances are the **moduli** and these angles are the **arguments**.
+
+</section>
+
+How does multiplication produce this change? First use modulus $1$, expand the square and apply the double-angle formulae:
+
+$$\begin{aligned}
+&(\cos\theta+i\sin\theta)^2\\
+&=\cos^2\theta-\sin^2\theta+2i\sin\theta\cos\theta\\
+&=\cos2\theta+i\sin2\theta.
+\end{aligned}$$
+
+If the original modulus is $r$, the outside factor $r$ is also squared to $r^2$. Squaring gives one case; the proof below establishes the result for all integer powers.
 
 For every integer $n$,
 
@@ -1162,6 +1177,15 @@ The region is a circular sector. The zero root sum agrees with the missing quadr
 </details>
 
 </section>
+
+## Method for revision {#method}
+
+- **A power or a reciprocal?** Write the number as $r(\cos\theta+i\sin\theta)$ first. Raise the modulus to the power and multiply the argument by the power.
+- **An equation $z^n=w$?** Find the modulus and argument of $w$. Include $\theta+2k\pi$ before dividing the argument by $n$.
+- **A multiple angle in terms of powers?** Expand $(\cos\theta+i\sin\theta)^n$, then take the real or imaginary part.
+- **A power such as $\sin^5\theta$ in terms of multiple angles?** Use $z=\cos\theta+i\sin\theta$ and the identities involving $z$ and $\frac1z$.
+
+**Choose the direction before expanding:** $\sin5\theta$ and $\sin^5\theta$ are different expressions. The first is the sine of $5\theta$; the second is the fifth power of $\sin\theta$.
 
 ## Quick Reference
 

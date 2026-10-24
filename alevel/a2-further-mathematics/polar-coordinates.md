@@ -5,7 +5,7 @@ mathjax: true
 grade: a2
 subject: a2-further-mathematics
 permalink: /alevel/a2-further-mathematics/polar-coordinates/
-toc_headings: "#method, #coordinates, #equations, #sketching, #intersections, #areas, #practice, #diagnose-and-retry, #later-review, #quick-reference"
+toc_headings: "#coordinates, #equations, #sketching, #intersections, #areas, #practice, #diagnose-and-retry, #later-review, #method, #quick-reference"
 study_page: true
 reading_layout: true
 ---
@@ -14,7 +14,7 @@ reading_layout: true
 
 Describe a point using a distance and an angle. Convert equations, sketch polar curves and find areas using the correct angular limits.
 
-- **Learning:** start with the [method](#method), then work through the examples.
+- **Learning:** start by [locating a point with a distance and an angle](#coordinates), then move to conversion, curves and areas.
 - **Homework help:** choose [coordinates](#coordinates), [equations](#equations), [sketching](#sketching), [intersections](#intersections) or [areas](#areas).
 - **Revision:** try [practice](#practice) before opening the solutions, then use the [quick reference](#quick-reference).
 
@@ -24,27 +24,20 @@ Textbook: Chapter 21, Sections 21.1–21.3, printed pp. 256–266; review and pr
 
 **Task status:** Unless an official question or teaching adaptation is explicitly identified, the worked examples and exercises are self-written teaching tasks with no official marks.
 
-## Method
-
 **Learning goal:** move between polar and Cartesian coordinates, sketch curves using positive radii, find intersections and calculate the area of a specified region.
-
-- **A point?** Use $x=r\cos\theta$ and $y=r\sin\theta$, or find $r=\sqrt{x^2+y^2}$ and check the quadrant for $\theta$.
-- **An equation?** Replace $r^2$ by $x^2+y^2$, $r\cos\theta$ by $x$ and $r\sin\theta$ by $y$. Multiplying by $r$ often helps.
-- **A sketch?** Check the angular domain, symmetry, zeros of $r$ and some simple points. Draw only the parts with $r>0$.
-- **An area?** Sketch the region first. Find the angles that bound it, then use $\frac12\int r^2\,\mathrm d\theta$. Split the integral if the bounding curve changes.
-
-**Course convention:** $r>0$ for points away from the pole. A value $r=0$ locates the pole as a boundary point or a point where the curve meets it. Do not plot negative values of $r$ as an extra loop.
 
 ## Coordinates
 
-The **pole** is the fixed point $O$. The **initial line** is the fixed ray from which angles are measured, usually the positive $x$-axis.
+You can locate a point by saying how far right and how far up it is, or by giving its direction and distance from the origin. Polar coordinates use the second description. For example, $(4,\frac\pi6)$ means the point at distance $4$ in the direction $\pi/6$ from the positive $x$-axis; Example 1 below converts this into horizontal and vertical distances.
+
+The fixed starting point $O$ is called the **pole**. The ray from which the angle is measured is the **initial line**, usually the positive $x$-axis.
 
 A point has polar coordinates $(r,\theta)$:
 
 - $r$ is its distance from the pole.
 - $\theta$ is the angle measured anticlockwise from the initial line. A negative angle is measured clockwise.
 
-The relations are
+The segment from $O$ to the point has length $r$. Its horizontal and vertical components are $r\cos\theta$ and $r\sin\theta$; their signs show left or right and down or up. The trigonometric ratios and Pythagoras give
 
 $$\boxed{\begin{aligned}
 x&=r\cos\theta,\qquad y=r\sin\theta,\\
@@ -54,6 +47,8 @@ r^2&=x^2+y^2.
 For a non-zero point, $r=\sqrt{x^2+y^2}>0$. If $x\ne0$, $\tan\theta=\frac yx$, but the inverse tangent alone may give the wrong quadrant. On the $y$-axis, use $\theta=\frac\pi2$ or $-\frac\pi2$ directly.
 
 Angles that differ by an integer multiple of $2\pi$ locate the same point. When a principal value is requested, use $-\pi<\theta\le\pi$. At the pole, the angle is not unique.
+
+**Course convention:** $r>0$ for points away from the pole. A value $r=0$ locates the pole as a boundary point or a point where the curve meets it. Do not plot negative values of $r$ as an extra loop.
 
 <section class="worked-example" markdown="1">
 
@@ -256,11 +251,15 @@ $$\boxed{AB=2\sqrt3.}$$
 
 ## Areas
 
-If $r=f(\theta)$ bounds a region swept from $\theta=\alpha$ to $\theta=\beta$, its area is
+Now let the ray that locates a point turn through an angle and consider the region it sweeps out. With a fixed radius, this is a circular sector. An angle $\phi$ radians is the fraction $\phi/(2\pi)$ of a full turn, so
+
+$$A=\frac{\phi}{2\pi}\,\pi r^2=\frac12r^2\phi.$$
+
+When the radius changes with angle, the whole region is no longer one fixed-radius sector. Divide it into narrow angular slices. The radius varies little within each slice, so its area is approximately $\frac12r^2\Delta\theta$. Add the slices and let their widths tend to zero to obtain the area swept from $\theta=\alpha$ to $\theta=\beta$:
 
 $$\boxed{A=\frac12\int_\alpha^\beta r^2\,\mathrm d\theta.}$$
 
-A small angular slice is approximately a circular sector of area $\frac12r^2\,\mathrm d\theta$. Adding the slices gives the integral.
+We are adding areas, so the integral uses $r^2$. The limits are angles of the ray, not $x$-coordinates.
 
 Use an interval on which the curve has non-negative radius and the required region is swept **once**. For a full loop, find its two ends at the pole. Squaring $r$ does not make a negative-radius interval valid.
 
@@ -850,6 +849,13 @@ Check using the difference of the two circle areas. Squaring and subtracting the
 </details>
 
 </section>
+
+## Method for revision {#method}
+
+- **A point?** Use $x=r\cos\theta$ and $y=r\sin\theta$, or find $r=\sqrt{x^2+y^2}$ and check the quadrant for $\theta$.
+- **An equation?** Replace $r^2$ by $x^2+y^2$, $r\cos\theta$ by $x$ and $r\sin\theta$ by $y$. Multiplying by $r$ often helps.
+- **A sketch?** Check the angular domain, symmetry, zeros of $r$ and some simple points. Draw only the parts with $r>0$.
+- **An area?** Sketch the region first. Find the angles that bound it, then use $\frac12\int r^2\,\mathrm d\theta$. Split the integral if the bounding curve changes.
 
 ## Quick Reference
 

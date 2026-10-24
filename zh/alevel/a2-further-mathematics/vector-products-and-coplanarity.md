@@ -45,7 +45,9 @@ $$\overrightarrow{AB}=(2,2,1)-(1,0,1)=(1,2,0),\qquad (1,2,0)\cdot(2,-1,3)=0.$$
 
 ## 叉积 {#cross-product}
 
-对于两个非零且不平行的向量，$\mathbf a\times\mathbf b$ 同时垂直于二者。若夹角为 $\theta$，它的模为
+把两个非零且不平行的向量移到同一个起点，它们就确定了一个平面。垂直伸出这个平面的向量，同时垂直于这两个向量，称为**法向量（normal）**。这样的方向有相反的两种，需要一条规则选定其中一种。
+
+**向量积／叉积（vector product / cross product）**$\mathbf a\times\mathbf b$ 把这个垂直方向与一个大小合在一起：它的模等于这两个向量围成的平行四边形面积。若夹角为 $\theta$，由底乘垂直高度得到
 
 $$\boxed{\lVert\mathbf a\times\mathbf b\rVert=\lVert\mathbf a\rVert\lVert\mathbf b\rVert\sin\theta},\qquad 0\leq\theta\leq\pi.$$
 
@@ -145,7 +147,9 @@ $$A_{\mathrm{triangle}}=\frac12\sqrt{4^2+(-2)^2+1^2}=\frac{\sqrt{21}}2.$$
 
 ## 标量三重积与体积 {#triple-product}
 
-取从平行六面体同一顶点出发的三条边 $\mathbf u,\mathbf v,\mathbf w$。底面不退化时，$\mathbf u\times\mathbf v$ 的方向是底面法向，模等于底面积。将第三条边投影到单位法向上，得到**有向高度**：
+取从平行六面体同一顶点出发的三条边 $\mathbf u,\mathbf v,\mathbf w$，以前两条边围成的面为底面。体积等于底面积乘垂直高度。第三条边可能倾斜；只有它离开底面的那一部分决定高度，沿底面移动的部分不增加高度。
+
+底面不退化时，$\mathbf u\times\mathbf v$ 垂直于底面，模等于底面积。将它除以自身的模，就得到单位法向量；再与第三条边作点积，测出的就是**有向高度（signed height）**：朝选定法向的一侧为正，另一侧为负。
 
 $$h_{\mathrm{signed}}=\frac{\mathbf w\cdot(\mathbf u\times\mathbf v)}{\lVert\mathbf u\times\mathbf v\rVert}.$$
 
@@ -163,7 +167,7 @@ $$\mathbf u\cdot(\mathbf v\times\mathbf w)=-\mathbf u\cdot(\mathbf w\times\mathb
 
 ### 为什么零值表示共面 {#coplanarity}
 
-前两个向量独立时，叉积给出非零法向。第三个向量沿此法向的分量为零，当且仅当它位于前两个向量张成的平面内。前两个向量相关时，三个向量本来也至多张成一个平面。因此，包括退化情形在内，
+如果第三条边始终留在底面内，垂直高度就是零，立体便压平了。当前两个底边向量独立时，它们的非零法向给出准确判据：第三个向量与此法向的点积为零，当且仅当它位于这两个向量张成的平面内。前两个向量相关时，三个向量本来也至多张成一个平面。因此，包括退化情形在内，
 
 $$\boxed{\mathbf u,\mathbf v,\mathbf w\text{ are coplanar}\iff\mathbf u\cdot(\mathbf v\times\mathbf w)=0.}$$
 

@@ -26,6 +26,8 @@ If two-variable elimination is insecure, begin with the [starting check](#starti
 
 ## Constraints and Elimination {#constraints-and-elimination}
 
+A solution is one choice of the unknowns that makes every equation true at the same time. Each equation allows a set of points; solving the system means finding the points shared by all those sets. Start with two familiar equations before moving to three coordinates.
+
 <section class="lesson-check" markdown="1">
 
 ### Start with what a solution means {#starting-check}
@@ -53,7 +55,9 @@ For a system $A\mathbf x=\mathbf b$, each row of $A$ contains the coefficients f
 
 ### Why elimination preserves solutions {#equivalent-equations}
 
-You may interchange equations, multiply an equation by a **nonzero** number, or replace one equation by itself plus a multiple of another. These operations are reversible, so they preserve the simultaneous solution set. Apply the operation to the right-hand side as well as the coefficients.
+Elimination combines equations so that an unknown cancels. It does not mean setting that unknown to zero. For example, keep equation (1) and replace equation (2) by equation (2) minus twice equation (1). Every old solution satisfies the new equation. Conversely, adding twice the retained equation (1) recovers the old equation (2), so every new solution also satisfies the original system. No solutions have been lost or added.
+
+That ability to undo the change is what **reversible** means. You may interchange equations, multiply an equation by a **nonzero** number, or replace one equation by itself plus a multiple of another that is retained. Apply the operation to the right-hand side as well as the coefficients.
 
 Multiplying a row by zero erases a condition. Dividing by an expression containing a parameter is valid only after excluding its zeros and retaining them for separate analysis.
 
@@ -69,7 +73,7 @@ x+y+z&=6 &&(1)\\
 x+2y-z&=2 &&(3)
 \end{aligned}$$
 
-Subtract twice (1) from (2), and subtract (1) from (3):
+The x-coefficients are 1, 2 and 1. Keeping (1), subtract twice (1) from (2), and subtract (1) from (3), so x cancels from the last two equations:
 
 $$-3y-z=-9,\qquad y-2z=-4.$$
 

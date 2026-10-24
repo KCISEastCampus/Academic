@@ -12,27 +12,25 @@ study_page: true
 reading_layout: true
 ---
 
-[高等纯数学](/zh/alevel/a2-further-mathematics/) · FP2.10 一阶微分方程
+[高等纯数学](/zh/alevel/a2-further-mathematics/) · FP2.10
 
-为什么把微分方程乘上一个函数，就能把左边变成一个乘积的导数？先用乘积法则建立这个联系，再利用给定条件，从通解所表示的一族解中确定一个解。
+这次要求的答案是一个函数。题目告诉我们：函数的值和它的导数必须满足某个关系。我们要找出这个函数，再用给定条件确定其中的常数。
 
-- **学习：**从[标准形式](#standard-form)开始，连续读完[完整示范](#example-1-normalise-and-solve)，再[补全下一例的步骤](#example-2-variable-coefficient)。之后比较[齐次通解与一个特解](#cf-and-pi)。
-- **作业帮助：**查看[化为标准形式](#example-1-normalise-and-solve)、[变系数](#example-2-variable-coefficient)、[三角函数系数](#example-3-trigonometric-coefficient)或[指数项与齐次通解重复](#example-6-repeated-exponential)的例题。
-- **复习：**先独立完成[练习](#practice)，再展开解答，最后核对[快速参考](#quick-reference)与[常见错误](#common-pitfalls)。
+先读[方程在说什么](#standard-form)，再跟着[例 1](#example-1-normalise-and-solve)做一遍，然后自己尝试[例 2](#example-2-variable-coefficient)。已经学过的同学可以直接做[练习](#practice)。
 
-完成积分因子这一段后，你应能辨认标准形式中的系数与适用区间，解释乘积导数，并独立求解、检验一个新的初值问题（initial-value problem）。先尝试[第 1–3 题](#practice)，再按需要展开提示；出错时进入[纠错与重试](#diagnose-and-retry)。
-
-**开始前：**第 3 题还需要[链式法则](/zh/alevel/a2-mathematics/differentiation/#composite-functions)和[逆链式积分](/zh/alevel/a2-mathematics/integration/#reverse-chain-rule)。学习本方法前，你需要[乘积法则（product rule）](/zh/alevel/a2-mathematics/differentiation/#products-and-quotients)、[指数与对数积分](/zh/alevel/a2-mathematics/integration/#exponential-logarithmic-integrals)，以及 [P2.8 微分方程](/zh/alevel/a2-mathematics/differential-equations/)。如果还不会展开乘积的导数或对指数函数积分，先回补对应小段，再返回[方法推导](#derive-integrating-factor)。P2.8 介绍可分离变量方程；线性方程未必能直接分离变量。
+**开始前：**会用[乘积法则](/zh/alevel/a2-mathematics/differentiation/#products-and-quotients)展开两个函数相乘后的导数，会算[指数与对数积分](/zh/alevel/a2-mathematics/integration/#exponential-logarithmic-integrals)。不熟时先回看对应示范，再回来。本课接着 [P2.8 可分离变量方程](/zh/alevel/a2-mathematics/differential-equations/)学习；这里的方程不一定能把变量直接分开。
 
 ## 标准形式与一族解 {#standard-form}
 
-**一阶**方程的未知函数记作 $y$，最高阶导数为 $y^{\prime}=\frac{\mathrm dy}{\mathrm dx}$。当 $y$ 和 $y^{\prime}$ 都只以一次幂出现，既没有 $yy^{\prime}$ 这样的乘积，也没有 $y^2$ 或 $\sin y$ 这样的非线性项时，方程就是**线性的（linear）**。
+把未知函数记作 $y$。$y^{\prime}=\frac{\mathrm dy}{\mathrm dx}$ 表示它的变化率，也就是图像在该点的斜率。方程里最高只出现一阶导数，所以称为**一阶（first-order）**。
+
+本课只处理**线性（linear）**方程：$y$ 和 $y^{\prime}$ 都只出现一次幂，没有 $yy^{\prime}$ 这样的相乘，也没有 $y^2$ 或 $\sin y$。它们的系数可以随自变量变化。
 
 一阶线性方程的标准形式为
 
 $$\boxed{y^{\prime}+P(x)y=Q(x).}$$
 
-系数 $P$ 和 $Q$ 可以随 $x$ 变化。选取积分因子前，先将整个方程除以 $y^{\prime}$ 的系数。对于
+这里 $P$ 是乘在 $y$ 前面的函数，$Q$ 是右边的函数。先让 $y^{\prime}$ 前面的系数变成 1，这样后面的乘积法则才能对上。对于
 
 $$a(x)y^{\prime}+b(x)y=c(x),$$
 
@@ -40,17 +38,29 @@ $$a(x)y^{\prime}+b(x)y=c(x),$$
 
 **通解（general solution）**含有一个任意常数（arbitrary constant）。**初始条件**（如 $y(0)=2$）规定起点处的函数值；**边界条件**（如 $y(2)=5$）规定某个边界处的函数值。两类条件都可以用来确定常数，从而得到**满足给定条件的解（particular solution）**。
 
-求解时应选取一个区间，使标准形式中的系数在整个区间上连续。如果某个系数在 $x=0$ 处无定义，应分别在 $x>0$ 或 $x<0$ 上求解，不能用同一个积分常数把奇点（singular point）两侧的解连接起来。即使解的表达式在该点有值，也不代表原方程在该点有定义。
+**先看方法在哪一段能用。**在所选区间内，标准形式的系数都应连续。如果在 $x=0$ 处不能化为标准形式，先分别在 $x>0$ 或 $x<0$ 求解，不要直接把两边的常数当成同一个。
+
+解能不能再包含零？要回到原方程另查。如果原式含有 $1/x$，零处无定义；但如果只是导数前面的系数变为零，原方程仍可能有定义。想把解延伸到该点，就要检查函数在那里可微，并满足原式。标准形式在某点失效时，该点称为这个标准形式的奇点（singular point）。
 
 ## 积分因子 {#integrating-factor}
 
 ### 方法为什么成立 {#derive-integrating-factor}
 
+我们希望左边能写成“某个乘积的导数”。这样只要积分，就能去掉导数。
+
+先看一个具体的乘积。对指数函数和未知函数的乘积求导：
+
+$$(e^{2x}y)^{\prime}=e^{2x}y^{\prime}+2e^{2x}y=e^{2x}(y^{\prime}+2y).$$
+
+这说明：如果方程左边正好是括号中的形式，乘上这个指数函数后，就能合成一个导数。**积分因子（integrating factor）**就是为此选择的乘数，记作 $\mu$（读作 mu）。下面找一般的选法。
+
 将标准形式的每一项乘以函数 $\mu(x)$：
 
 $$\mu y^{\prime}+\mu P y=\mu Q.$$
 
-由乘积法则，$(\mu y)^{\prime}=\mu y^{\prime}+\mu^{\prime} y$。若 $\mu^{\prime}=P\mu$，方程左边就等于这个乘积的导数。选取 $P$ 的一个原函数 $F$，使 $F^{\prime}=P$，构造 $\mu=e^F$，再求导核验：
+乘积法则给出 $(\mu y)^{\prime}=\mu y^{\prime}+\mu^{\prime} y$。和相乘后的方程逐项比较：只要 $\mu^{\prime}=P\mu$，两项就能对上。
+
+怎样找到这样的因子？先对 $P$ 积分，把所得的原函数叫作 $F$，所以 $F^{\prime}=P$。再选 $\mu=e^F$：按链式法则求导时，会得到“指数的导数乘原来的指数函数”。检验如下：
 
 $$\mu^{\prime}=F^{\prime}e^F=P\mu.$$
 
@@ -60,7 +70,7 @@ $$\boxed{\mu=e^{\int P(x)\,\mathrm dx}.}$$
 
 这里不写积分中的任意常数，因为积分因子乘以任意非零常数，仍可用于同样的求解步骤。在所选区间上，$\mu$ 不为零，因此可以除以 $\mu$。
 
-现在可以积分：
+左边已经合成一个导数。先积分，再除以刚才乘上的因子，就能得到未知函数。下面的通式用于看清这三步，不必先背；例 1 会把每一步算出来：
 
 $$\begin{aligned}
 (\mu y)^{\prime}&=\mu Q,\\
@@ -76,7 +86,7 @@ y&=\boxed{\frac1\mu\left(\int\mu Q\,\mathrm dx+C\right)}.
 4. 积分时写上 $C$，再将每一项除以 $\mu$。
 5. 代入给定条件，并将答案代回原方程检验。
 
-当 $P=1/x$ 时，$\int P\,\mathrm dx=\ln\lvert x\rvert $，所以公式给出 $\mu=\lvert x\rvert $。无论选择 $x>0$ 还是 $x<0$ 这一侧的区间，都可以使用 $\mu=x$，因为在各自的区间上，两种积分因子只相差一个非零常数倍。仍然必须排除 $x=0$。
+当 $P=1/x$ 时，$\int P\,\mathrm dx=\ln\lvert x\rvert $，所以公式给出 $\mu=\lvert x\rvert $。无论选择 $x>0$ 还是 $x<0$ 这一侧的区间，都可以使用 $\mu=x$，因为在各自的区间上，两种积分因子只相差一个非零常数倍。这次计算不含 $x=0$；能否延伸到零，须另查原方程。
 
 <section class="worked-example" markdown="1">
 
@@ -122,7 +132,7 @@ $$\boxed{y=\frac32-\frac12e^{-2x}},\qquad x\in\mathbb R.$$
 
 > **Original example.** For $x>0$, solve $y^{\prime}+\frac{2}{x}y=x$, given $y(1)=2$.
 
-先停下来，暂不展开提示和解答。这次由你补出关键步骤：辨认 $P$ 和 $Q$，对 $P$ 积分，选出非零积分因子；写出相乘后的方程，并展开你选定的乘积导数检查是否匹配。之后积分、使用条件并检验原方程。这里会用到对数积分，不能直接照抄上一例的指数。
+这次由你来做，先不看提示。找出 $P$ 和 $Q$，算出积分因子，再检查相乘后的左边能否合成乘积的导数。之后积分、代入条件，最后检验答案。
 
 <details markdown="1">
 <summary>提示</summary>
@@ -179,9 +189,7 @@ $$\boxed{y=\frac{x^2}{4}+\frac{7}{4x^2}},\qquad x>0.$$
 <details markdown="1">
 <summary>解答</summary>
 
-在给定区间上，$\tan x>0$，所以
-
-令 $u=\tan x$，则 $\mathrm du=\sec^2x\,\mathrm dx$：
+在给定区间上，$\tan x>0$。为计算下面的积分，令 $u=\tan x$，则 $\mathrm du=\sec^2x\,\mathrm dx$：
 
 $$\int\frac{\sec^2x}{\tan x}\,\mathrm dx=\int\frac1u\,\mathrm du=\ln\lvert u\rvert=\ln(\tan x),\qquad \mu=\tan x.$$
 
@@ -207,6 +215,8 @@ $$\boxed{y=\frac{2\tan x-2x+\pi/2-1}{\tan x}},\qquad 0<x<\frac\pi2.$$
 ## 齐次通解与一个特解 {#cf-and-pi}
 
 ### 将解分成两部分 {#general-cf-pi}
+
+有时把解分成两部分，会比直接积分更快。第一部分代入方程左边，结果是零；第二部分代入后，恰好得到题目的右边。把它们相加，仍然满足原方程。下面分别给它们命名。
 
 对于 $y^{\prime}+Py=Q$，对应的**齐次方程（homogeneous equation）**为 $y^{\prime}+Py=0$。它的通解称为**齐次通解（CF）**：
 
@@ -234,7 +244,7 @@ $$y_p=\frac1\mu\int\mu Q\,\mathrm dx,$$
 
 ### 常系数（constant coefficient）方程中如何试设 PI {#simple-pi-trials}
 
-对于 $y^{\prime}+ay=Q(x)$，若 $a$ 为常数，可以用待定系数法（undetermined coefficients）：先试设 PI 的形式，再代入方程确定系数。
+对于 $y^{\prime}+ay=Q(x)$，若 $a$ 为常数，可以先选一种求导后仍容易配出右边的函数形式，暂时把系数留空。再代入方程，算出这些系数。这叫**待定系数法（undetermined coefficients）**。它不是随意猜答案：选定的函数必须经得起代入检验。
 
 | 方程右边 | 可先尝试的形式 | 使用时要检查 |
 |---|---|---|
@@ -253,11 +263,11 @@ $$y_p=\frac1\mu\int\mu Q\,\mathrm dx,$$
 
 先计算齐次部分：$\int2\,\mathrm dx=2x$。于是 $(e^{2x}y_c)^{\prime}=0$；两边积分得 $e^{2x}y_c=\int0\,\mathrm dx=C$，因此 CF 为 $Ce^{-2x}$。
 
-由齐次方程得 $y_c=Ce^{-2x}$。试设 $y_p=Ax+B$，代入得
+右边是一次式，所以试设 $y_p=Ax+B$。一次项求导会得到常数，因此常数项也要先保留。代入得
 
 $$A+2(Ax+B)=4x+3.$$
 
-比较系数（comparing coefficients）：$2A=4$，且 $A+2B=3$，所以 $A=2$，$B=1/2$。因此
+这个等式要对每个自变量值都成立，所以一次项的系数要相同，常数项也要相同。这叫比较系数（comparing coefficients）：$2A=4$，且 $A+2B=3$，所以 $A=2$，$B=1/2$。把 CF 和 PI 相加：
 
 $$\boxed{y=Ce^{-2x}+2x+\frac12}.$$
 
@@ -287,7 +297,7 @@ CF 为 $Ce^{3x}$。试设 $y_p=Ae^x$。
 
 先计算齐次部分：$\int(-3)\,\mathrm dx=-3x$。于是 $(e^{-3x}y_c)^{\prime}=0$；两边积分得 $e^{-3x}y_c=\int0\,\mathrm dx=C$，因此 CF 为 $Ce^{3x}$。
 
-由齐次方程得 $y_c=Ce^{3x}$。代入 $y_p=Ae^x$，得
+右边是指数函数，所以试设 $y_p=Ae^x$：它求导后仍含同样的指数函数，便于配出右边。代入得
 
 $$Ae^x-3Ae^x=2e^x,$$
 
@@ -309,7 +319,7 @@ $$\boxed{y=5e^{3x}-e^x},\qquad x\in\mathbb R.$$
 
 先计算齐次部分：$\int2\,\mathrm dx=2x$。于是 $(e^{2x}y_c)^{\prime}=0$；两边积分得 $e^{2x}y_c=\int0\,\mathrm dx=C$，因此 CF 为 $Ce^{-2x}$。
 
-CF 为 $Ce^{-2x}$。试设 $Ae^{-2x}$ 时，代入后总有 $y_p^{\prime}+2y_p=0$；这个结果与 $A$ 的取值无关，因此无法得到方程右边的非零项。
+先试 $Ae^{-2x}$，代入后总有 $y_p^{\prime}+2y_p=0$，无论 $A$ 取多少都一样。问题不是系数没选对，而是两项总会抵消，无法配出右边的非零项。
 
 改为试设 $y_p=Axe^{-2x}$。由乘积法则，
 
@@ -437,7 +447,7 @@ $$\boxed{y=1+2e^{-x^2}},\qquad x\in\mathbb R.$$
 
 先计算齐次部分：$\int1\,\mathrm dx=x$。于是 $(e^xy_c)^{\prime}=0$；两边积分得 $e^xy_c=\int0\,\mathrm dx=C$，因此 CF 为 $Ce^{-x}$。
 
-CF 为 $Ce^{-x}$。代入试设形式，得
+接着试一个二次式作为 PI。代入得
 
 $$y_p^{\prime}+y_p=Ax^2+(2A+B)x+(B+D).$$
 
@@ -550,7 +560,7 @@ $$y^{\prime}+\left(\frac2x-1\right)y=xe^x,\qquad P=\frac2x-1,\quad Q=xe^x.$$
 
 $$\int\left(\frac2x-1\right)\,\mathrm dx=2\int\frac1x\,\mathrm dx-\int1\,\mathrm dx=2\ln x-x,\qquad \mu=e^{2\ln x-x}=x^2e^{-x}.$$
 
-求导后确实得到所需的系数关系：
+对这个因子求导，检查它是否满足所需关系：
 
 $$\mu^{\prime}=(2x-x^2)e^{-x}=\left(\frac2x-1\right)\mu.$$
 
@@ -666,7 +676,7 @@ $$y=\frac{x^2-x^{-1}}3,\qquad x>0.$$
 | 一个特解 | 任意一个 $y_p$，满足 $y_p^{\prime}+Py_p=Q$ | 不再添加第二个任意常数 |
 | CF + PI | $y=y_c+y_p$ | 两部分相加后，再代入条件 |
 | 指数形式的试设 | 对于 $y^{\prime}+ay=be^{kx}$，可取 $y_p=\frac b{k+a}e^{kx}$，条件是 $k+a\ne0$ | 若 $k=-a$，使用 $y_p=bxe^{-ax}$ |
-| 条件与区间 | 代入给定的 $(x,y)$，求出 $C$ | 区间仍须排除奇点 |
+| 条件与区间 | 代入给定的 $(x,y)$，求出 $C$ | 在允许区间使用方法；标准化排除的点须另查原式 |
 {: .wide-table}
 
 ## 常见错误 {#common-pitfalls}
@@ -677,7 +687,7 @@ $$y=\frac{x^2-x^{-1}}3,\qquad x>0.$$
 - 忘记 $C$，或最后只将某一项除以 $\mu$。
 - 将 PI 当作满足给定条件的最终解。
 - 试设的指数 PI 已包含在 CF 中；遇到上文这种重复情形，应将试设形式乘以 $x$。
-- 未说明区间上的正负号就去掉 $\ln\lvert x\rvert $ 中的绝对值，或让解的区间跨越奇点。
+- 未说明区间上的正负号就去掉 $\ln\lvert x\rvert $ 中的绝对值，或未经另行检查，就把标准形式的方法跨越奇点使用。
 
 **练习后：**重新独立完成曾需要提示的题目。写出标准形式、积分因子与乘积的导数，或明确写出 CF 与 PI。最后同时检验方程及其给定条件。
 

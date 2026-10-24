@@ -43,7 +43,9 @@ Both vectors are nonzero, so the zero scalar product proves perpendicularity. A 
 
 ## The Cross Product {#cross-product}
 
-For two nonzero, nonparallel vectors, $\mathbf a\times\mathbf b$ is perpendicular to both. If their angle is $\theta$, its magnitude is
+Place two nonzero, nonparallel vectors at the same starting point. They determine a plane. A vector sticking straight out of that plane is perpendicular to both; it is called a **normal**. There are two opposite normal directions, so we need a rule to choose one.
+
+The **vector product**, or **cross product**, $\mathbf a\times\mathbf b$ combines that normal direction with a size: its magnitude is the area of the parallelogram spanned by the two vectors. Base times perpendicular height gives, for their angle $\theta$,
 
 $$\boxed{\lVert\mathbf a\times\mathbf b\rVert=\lVert\mathbf a\rVert\lVert\mathbf b\rVert\sin\theta},\qquad 0\leq\theta\leq\pi.$$
 
@@ -143,7 +145,9 @@ The first expression measures the parallelogram. A zero cross product means the 
 
 ## Scalar Triple Product and Volume {#triple-product}
 
-Take three edges $\mathbf u,\mathbf v,\mathbf w$ from one vertex of a parallelepiped. For a nondegenerate base, $\mathbf u\times\mathbf v$ is a normal with magnitude equal to the base area. Projecting the third edge onto the unit normal gives a **signed height**:
+Take three edges $\mathbf u,\mathbf v,\mathbf w$ from one vertex of a parallelepiped, using the first two for the base. Volume is base area times perpendicular height. The third edge may slope: only the part of it that moves away from the base contributes to that height; motion along the base does not.
+
+For a nondegenerate base, $\mathbf u\times\mathbf v$ points perpendicular to it and has magnitude equal to its area. Dividing by that magnitude gives a unit normal. Taking its scalar product with the third edge measures the **signed height**, positive on the chosen normal's side and negative on the other:
 
 $$h_{\mathrm{signed}}=\frac{\mathbf w\cdot(\mathbf u\times\mathbf v)}{\lVert\mathbf u\times\mathbf v\rVert}.$$
 
@@ -161,7 +165,7 @@ The sign describes orientation; it is not a negative physical volume. If the bas
 
 ### When does zero mean coplanar? {#coplanarity}
 
-If the first two vectors are independent, their cross product is a nonzero normal. The third vector lies in their plane precisely when its component along that normal is zero. If the first two are dependent, three vectors span at most a plane anyway. Thus, including degenerate cases,
+If the third edge stays in the base plane, the perpendicular height is zero: the solid has flattened into a plane. For two independent base vectors, their nonzero normal therefore gives a precise test: the third vector lies in their plane exactly when its scalar product with that normal is zero. If the first two vectors are dependent, three vectors span at most a plane anyway. Thus, including degenerate cases,
 
 $$\boxed{\mathbf u,\mathbf v,\mathbf w\text{ are coplanar}\iff\mathbf u\cdot(\mathbf v\times\mathbf w)=0.}$$
 

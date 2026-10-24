@@ -14,7 +14,7 @@ reading_layout: true
 
 [高等纯数学](/zh/alevel/a2-further-mathematics/) · FP2.13 特征值与特征向量
 
-哪些非零向量变换后仍为自身的实数倍？本课把几何问题转成特征方程，解出对应方程组，并逐个检验候选特征向量。
+矩阵通常会改变向量的长度和方向。但有些向量只沿原来的直线伸长、缩短或反向。怎样找到这些特别的向量？
 
 - **学习：**从[定义](#definition)出发，推导[特征方程](#characteristic-equation)，再比较[二阶](#two-by-two)与[三阶](#three-by-three)示范。
 - **作业帮助：**查看[参数与根](#parameter-example)、[重复特征值](#repeated-eigenvalues)及[不变直线的联系](#invariant-directions)。
@@ -30,11 +30,46 @@ reading_layout: true
 
 ## 定义与初步判断 {#definition}
 
-对实方阵 A，**特征向量（eigenvector）**是一个非零向量，其像为自身的某个标量倍数；这个标量称为对应的**特征值（eigenvalue）**：
+先看两个向量经过同一个变换后有什么不同。向量乘上矩阵后得到的结果，称为它的**像（image）**。
+
+<section class="worked-example" markdown="1">
+
+### 比较两个变换结果 {#direction-start}
+
+**Self-written illustration.** Compare the images of the two vectors under
+
+**自拟示范：**比较两个向量经过下面矩阵变换后的结果。
+
+$$D_0=\begin{pmatrix}2&0\\0&3\end{pmatrix}.$$
+
+$$\mathbf p=\begin{pmatrix}1\\0\end{pmatrix},\qquad
+\mathbf q=\begin{pmatrix}1\\1\end{pmatrix}.$$
+
+按行相乘相加：
+
+$$\begin{aligned}
+D_0\mathbf p&=\begin{pmatrix}2(1)+0(0)\\0(1)+3(0)\end{pmatrix}\\
+&=\begin{pmatrix}2\\0\end{pmatrix}=2\mathbf p.
+\end{aligned}$$
+
+第一个向量仍在水平轴上，长度变成原来的两倍。
+
+$$\begin{aligned}
+D_0\mathbf q&=\begin{pmatrix}2(1)+0(1)\\0(1)+3(1)\end{pmatrix}\\
+&=\begin{pmatrix}2\\3\end{pmatrix}.
+\end{aligned}$$
+
+第二个向量原来的两个分量相等，变换后却不相等。找不到同一个数，让原来的两个分量都乘上它后得到这个结果，所以方向改变了。
+
+</section>
+
+第一个向量就叫**特征向量（eigenvector）**，它对应的倍数 2 叫**特征值（eigenvalue）**。一般地，对实方阵 A，用下面的式子表示：
 
 $$\boxed{A\mathbf v=\lambda\mathbf v,\qquad\mathbf v\ne\mathbf0.}$$
 
-必须排除零向量：无论标量取什么值，它都满足该等式，因此不能确定特定特征值或方向。但零**特征值**允许存在，因为奇异矩阵可能把一个非零向量送到零向量。
+这句话的意思是：“用 A 变换这个向量”，结果与“把它乘上一个数 lambda”相同。这个普通的数也叫标量（scalar）。
+
+向量本身不能为零：零向量不管乘什么数都满足等式，不能告诉我们哪个方向特别。但**特征值**可以为零，表示一个非零向量变换后变成零。这样的矩阵无法还原变换，称为奇异矩阵（singular matrix）。
 
 - 正特征值表示沿同一射线伸缩。
 - 负特征值反转射线方向，但仍在同一条过原点的直线上。
@@ -67,12 +102,12 @@ A\mathbf w=\begin{pmatrix}2\\1\end{pmatrix}.$$
 
 ## 推导特征方程 {#characteristic-equation}
 
-把定义整理为齐次方程组：
+给定一个向量，我们可以直接乘回去检查。要找出所有可能的特征值，就需要建立关于那个倍数的方程。先把等式右边移到左边；I 是单位矩阵，乘它不会改变向量：
 
 $$A\mathbf v=\lambda\mathbf v
 \quad\Longleftrightarrow\quad(A-\lambda I)\mathbf v=\mathbf0.$$
 
-若系数矩阵可逆，乘其逆矩阵会迫使解向量为零。要有**非零解**，系数矩阵必须奇异。反过来，奇异方阵对应的齐次方程组确有非零解。因此**特征方程（characteristic equation）**为
+这是一组右边全是零的联立方程，叫**齐次方程组（homogeneous system）**。如果系数矩阵有逆，左乘这个逆就只能得到零向量。我们需要**非零**向量，所以系数矩阵必须没有逆，也就是行列式等于零。反过来，行列式为零的方阵确实能让这组齐次方程有非零解。因此得到**特征方程（characteristic equation）**：
 
 $$\boxed{\det(A-\lambda I)=0.}$$
 

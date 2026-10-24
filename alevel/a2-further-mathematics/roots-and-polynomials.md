@@ -5,7 +5,7 @@ mathjax: true
 grade: a2
 subject: a2-further-mathematics
 permalink: /alevel/a2-further-mathematics/roots-and-polynomials/
-toc_headings: "#method, #roots-and-coefficients, #complex-roots, #real-roots, #practice, #diagnose-and-retry, #later-review, #quick-reference"
+toc_headings: "#what-is-a-root, #roots-and-coefficients, #complex-roots, #real-roots, #practice, #diagnose-and-retry, #later-review, #method, #quick-reference"
 study_page: true
 reading_layout: true
 ---
@@ -14,7 +14,7 @@ reading_layout: true
 
 Use the coefficients of a polynomial to find information about its roots. Find missing roots, including non-real roots, and check your answers.
 
-- **Learning:** start with the [method](#method), then work through the examples.
+- **Learning:** start with [what a root means](#what-is-a-root), then see [how expansion connects roots and coefficients](#roots-and-coefficients).
 - **Homework help:** choose an example on [roots and coefficients](#roots-and-coefficients), [complex roots](#complex-roots) or [real roots](#real-roots).
 - **Revision:** try [practice](#practice) first, then use the [quick reference](#quick-reference).
 
@@ -24,20 +24,13 @@ Textbook: Chapter 17, Sections 17.1–17.2, printed pp. 198–206, in *Internati
 
 **Task status:** Unless an official question or teaching adaptation is explicitly identified, the worked examples and exercises are self-written teaching tasks with no official marks.
 
-## Method
+## What makes a number a root? {#what-is-a-root}
 
 **Learning goal:** use the relations between roots and coefficients, form an equation with given roots and find all roots when one complex root is given.
 
 A root of $f(x)=0$ is a value of $x$ that makes $f(x)$ zero. By the factor theorem, if $f(\alpha)=0$, then $x-\alpha$ is a factor.
 
 A polynomial of degree $n$ has $n$ complex roots **counting repeated roots**. Some or all of these roots may be real. For example, $(x-1)^2(x+2)=0$ has roots $1,1,-2$; the root $1$ occurs twice.
-
-**Choose your first step:**
-
-- **Asked for a sum or product of roots?** Write the equation in descending powers and compare coefficients. You usually do not need to solve it.
-- **Asked for an equation with new roots?** Find their sum and products, or express the old variable in terms of the new one and substitute.
-- **Given a non-real root?** Check whether every coefficient is real before using its complex conjugate.
-- **Asked how many roots are real?** Use differentiation and the values at stationary points. A change of sign on its own only shows that there is at least one real root in an interval.
 
 ## Roots and Coefficients
 
@@ -46,6 +39,17 @@ A polynomial of degree $n$ has $n$ complex roots **counting repeated roots**. So
 Suppose $ax^3+bx^2+cx+d=0$, where $a\ne0$, has roots $\alpha,\beta,\gamma$. Then
 
 $$ax^3+bx^2+cx+d=a(x-\alpha)(x-\beta)(x-\gamma).$$
+
+Start with a self-written expansion (no official marks):
+
+$$\begin{aligned}
+(x-2)(x-5)&=x^2-5x-2x+10\\
+&=x^2-7x+10.
+\end{aligned}$$
+
+The $x$ terms come from choosing $x$ from one bracket and the constant from the other, so their coefficient is $-5-2$. Choosing both constants gives $(-2)(-5)=10$. Each coefficient collects the terms made by these choices.
+
+The cubic works in the same way: choose one term from each bracket. To make $x^2$, choose a negative root from one bracket and $x$ from the other two, giving $-\alpha x^2-\beta x^2-\gamma x^2$. To make $x$, choose negative roots from two brackets, giving $\alpha\beta x+\beta\gamma x+\gamma\alpha x$; each pair occurs once. Choosing all three constants gives $-\alpha\beta\gamma$. Finally multiply every term by the leading coefficient $a$.
 
 Expand the factors:
 
@@ -77,7 +81,7 @@ $$\boxed{\begin{aligned}
 \text{product of roots}&=(-1)^n\frac{a_0}{a_n}.
 \end{aligned}}$$
 
-For $n\ge2$, the sum of the products of all pairs of roots is $\frac{a_{n-2}}{a_n}$. The signs alternate as you take roots one, two, three, then four at a time. The product of all roots is $\frac{a_0}{a_n}$ for even $n$ and $-\frac{a_0}{a_n}$ for odd $n$.
+For $n\ge2$, the sum of the products of all pairs of roots is $\frac{a_{n-2}}{a_n}$. Each extra constant chosen leaves one fewer factor of $x$ and introduces another minus sign. This is why the signs alternate as you take roots one, two, three, then four at a time. The product of all roots is $\frac{a_0}{a_n}$ for even $n$ and $-\frac{a_0}{a_n}$ for odd $n$.
 
 **Check the missing terms:** in $2x^4-3x+5=0$, the coefficients of $x^3$ and $x^2$ are zero. The sum of the roots and the sum of their pairwise products are both zero; the product of all four roots is $\frac{5}{2}$.
 
@@ -594,6 +598,15 @@ The other roots have sum $4$ and product $5$, so satisfy $z^2-4z+5=0$. Since $(z
 </details>
 
 </section>
+
+## Method for revision {#method}
+
+**Choose your first step:**
+
+- **Asked for a sum or product of roots?** Write the equation in descending powers and compare coefficients. You usually do not need to solve it.
+- **Asked for an equation with new roots?** Find their sum and products, or express the old variable in terms of the new one and substitute.
+- **Given a non-real root?** Check whether every coefficient is real before using its complex conjugate.
+- **Asked how many roots are real?** Use differentiation and the values at stationary points. A change of sign on its own only shows that there is at least one real root in an interval.
 
 ## Quick Reference
 

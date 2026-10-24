@@ -1,0 +1,944 @@
+{
+  "recordedDate": "2026-10-24",
+  "remoteMainVerifiedVia": "GitHub connector main commit metadata; native Git network transport failed",
+  "baseCommit": "19db6ca1640fb47fd541b3f8fb3d45d510d41b09",
+  "branch": "codex/fm03-plain-language",
+  "courseCommit": "908b33a305b4ab7f03cb19b67f81fcc71015d0d5",
+  "includedPaths": [
+    "alevel/a2-further-mathematics/arc-length-and-surface-area.md",
+    "alevel/a2-further-mathematics/de-moivres-theorem.md",
+    "alevel/a2-further-mathematics/eigenvalues-and-eigenvectors.md",
+    "alevel/a2-further-mathematics/finite-series.md",
+    "alevel/a2-further-mathematics/first-order-differential-equations.md",
+    "alevel/a2-further-mathematics/hyperbolic-functions.md",
+    "alevel/a2-further-mathematics/index.md",
+    "alevel/a2-further-mathematics/inverse-trigonometric-functions.md",
+    "alevel/a2-further-mathematics/linear-equations.md",
+    "alevel/a2-further-mathematics/lines-and-planes.md",
+    "alevel/a2-further-mathematics/matrix-algebra.md",
+    "alevel/a2-further-mathematics/polar-coordinates.md",
+    "alevel/a2-further-mathematics/proof-by-induction.md",
+    "alevel/a2-further-mathematics/roots-and-polynomials.md",
+    "alevel/a2-further-mathematics/second-order-differential-equations.md",
+    "alevel/a2-further-mathematics/series-and-limits.md",
+    "alevel/a2-further-mathematics/vector-products-and-coplanarity.md",
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/browser-before-interval-repair.json",
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/browser-check.cjs",
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/browser-measurements.csv",
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/browser-results.json",
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/first-concept-1365-dark.png",
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/first-concept-1365-light.png",
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/first-concept-390-dark.png",
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/first-concept-390-light.png",
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/first-conditions-390-final.png",
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/first-example-1365.png",
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/first-example-390.png",
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/first-task-390-expanded.png",
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/local-links.json",
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/second-concept-1365-dark.png",
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/second-concept-1365-light.png",
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/second-concept-390-dark.png",
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/second-concept-390-light.png",
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/second-conditions-390-final.png",
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/second-example-1365.png",
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/second-example-390.png",
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/second-task-390-expanded.png",
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/source-manifest-before-interval-repair.json",
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/source-manifest.json",
+    "docs/agents/audit-assets/fm03-hyperbolic-plain-2026-10-24/browser-check.cjs",
+    "docs/agents/audit-assets/fm03-hyperbolic-plain-2026-10-24/browser-measurements.csv",
+    "docs/agents/audit-assets/fm03-hyperbolic-plain-2026-10-24/browser-results.json",
+    "docs/agents/audit-assets/fm03-hyperbolic-plain-2026-10-24/continuous-1365-light.png",
+    "docs/agents/audit-assets/fm03-hyperbolic-plain-2026-10-24/continuous-390-light.png",
+    "docs/agents/audit-assets/fm03-hyperbolic-plain-2026-10-24/intro-1365-dark.png",
+    "docs/agents/audit-assets/fm03-hyperbolic-plain-2026-10-24/intro-1365-light.png",
+    "docs/agents/audit-assets/fm03-hyperbolic-plain-2026-10-24/intro-390-dark.png",
+    "docs/agents/audit-assets/fm03-hyperbolic-plain-2026-10-24/intro-390-light.png",
+    "docs/agents/audit-assets/fm03-hyperbolic-plain-2026-10-24/keyboard-scroll-results.json",
+    "docs/agents/audit-assets/fm03-hyperbolic-plain-2026-10-24/keyboard-scroll.cjs",
+    "docs/agents/audit-assets/fm03-hyperbolic-plain-2026-10-24/local-links.json",
+    "docs/agents/audit-assets/fm03-hyperbolic-plain-2026-10-24/retry-390-expanded.png",
+    "docs/agents/audit-assets/fm03-hyperbolic-plain-2026-10-24/source-manifest.json",
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/browser-check.cjs",
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/arc-length-and-surface-area-390-continuous.png",
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/browser-before-line-wrap.json",
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/browser-measurements.csv",
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/browser-results.json",
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/build-snapshot-01.json",
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/build-snapshot-02.json",
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/de-moivres-theorem-390-continuous.png",
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/eigenvalues-and-eigenvectors-390-continuous.png",
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/finite-series-390-continuous.png",
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/index-1365-initial.png",
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/index-390-initial.png",
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/inverse-trigonometric-functions-390-continuous.png",
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/linear-equations-390-continuous.png",
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/lines-and-planes-390-continuous.png",
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/local-links.json",
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/matrix-algebra-1365-light-concept.png",
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/matrix-algebra-390-continuous.png",
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/matrix-algebra-390-dark-expanded.png",
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/polar-coordinates-390-continuous.png",
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/proof-by-induction-390-continuous.png",
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/roots-and-polynomials-390-continuous.png",
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/roots-and-polynomials-390-dark-expanded.png",
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/series-and-limits-390-continuous.png",
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/series-and-limits-390-dark-concept.png",
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/source-check-results.json",
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/source-manifest.json",
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/targeted-results.json",
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/test-results.json",
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/vector-products-and-coplanarity-390-continuous.png",
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/initial-findings.json",
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/preserved-source-hashes.json",
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/previous-heading-anchors.json",
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/source-check.py",
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/targeted-check.cjs",
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/browser-audit.cjs",
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/browser-results.json",
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/de-moivres-theorem-390-concept.png",
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/de-moivres-theorem-390-entry.png",
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/eigenvalues-and-eigenvectors-1365-concept.png",
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/eigenvalues-and-eigenvectors-390-concept.png",
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/eigenvalues-and-eigenvectors-390-entry.png",
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/finite-series-390-concept.png",
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/finite-series-390-entry.png",
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/hyperbolic-functions-1365-concept.png",
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/hyperbolic-functions-390-concept.png",
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/hyperbolic-functions-390-entry.png",
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/index-390-concept.png",
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/index-390-entry.png",
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/journey-results.json",
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/local-links.json",
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/matrix-algebra-390-concept.png",
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/matrix-algebra-390-entry.png",
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/second-order-differential-equations-390-concept.png",
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/second-order-differential-equations-390-entry.png",
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/source-manifest.json",
+    "docs/agents/audit-assets/fm03-release-readiness-2026-10-24/candidate-comparison.json",
+    "docs/agents/audit-assets/fm03-release-readiness-2026-10-24/candidate-input.json",
+    "docs/agents/audit-assets/fm03-release-readiness-2026-10-24/candidate-manifest.json",
+    "docs/agents/audit-assets/fm03-release-readiness-2026-10-24/included-files.csv",
+    "docs/agents/audit-assets/fm03-release-readiness-2026-10-24/local-links.json",
+    "docs/agents/audit-assets/fm03-release-readiness-2026-10-24/test-results-windows-eol.json",
+    "docs/agents/audit-assets/fm03-release-readiness-2026-10-24/test-results.json",
+    "docs/agents/audit-fm03-readability-2026-10-24.md",
+    "docs/agents/implementation-fm03-differential-plain-2026-10-24.md",
+    "docs/agents/implementation-fm03-hyperbolic-plain-2026-10-24.md",
+    "docs/agents/implementation-fm03-plain-complex-polar-2026-10-24.md",
+    "docs/agents/implementation-fm03-plain-geometry-2026-10-24.md",
+    "docs/agents/implementation-fm03-plain-rollout-2026-10-24.md",
+    "docs/agents/implementation-fm03-plain-series-2026-10-24.md",
+    "docs/agents/release-fm03-plain-language-2026-10-24.md",
+    "docs/agents/review-fm03-differential-plain-spec-2026-10-24.md",
+    "docs/agents/review-fm03-differential-plain-standards-2026-10-24.md",
+    "docs/agents/review-fm03-hyperbolic-plain-spec-2026-10-24.md",
+    "docs/agents/review-fm03-hyperbolic-plain-standards-2026-10-24.md",
+    "docs/agents/review-fm03-plain-rollout-spec-2026-10-24.md",
+    "docs/agents/review-fm03-plain-rollout-standards-2026-10-24.md",
+    "scripts/test-further-first-order.js",
+    "scripts/test-further-matrices.js",
+    "scripts/test-further-retry.js",
+    "zh/alevel/a2-further-mathematics/arc-length-and-surface-area.md",
+    "zh/alevel/a2-further-mathematics/de-moivres-theorem.md",
+    "zh/alevel/a2-further-mathematics/eigenvalues-and-eigenvectors.md",
+    "zh/alevel/a2-further-mathematics/finite-series.md",
+    "zh/alevel/a2-further-mathematics/first-order-differential-equations.md",
+    "zh/alevel/a2-further-mathematics/hyperbolic-functions.md",
+    "zh/alevel/a2-further-mathematics/index.md",
+    "zh/alevel/a2-further-mathematics/inverse-trigonometric-functions.md",
+    "zh/alevel/a2-further-mathematics/linear-equations.md",
+    "zh/alevel/a2-further-mathematics/lines-and-planes.md",
+    "zh/alevel/a2-further-mathematics/matrix-algebra.md",
+    "zh/alevel/a2-further-mathematics/polar-coordinates.md",
+    "zh/alevel/a2-further-mathematics/proof-by-induction.md",
+    "zh/alevel/a2-further-mathematics/roots-and-polynomials.md",
+    "zh/alevel/a2-further-mathematics/second-order-differential-equations.md",
+    "zh/alevel/a2-further-mathematics/series-and-limits.md",
+    "zh/alevel/a2-further-mathematics/vector-products-and-coplanarity.md"
+  ],
+  "fileCounts": {
+    "courseAndTests": 37,
+    "records": 14,
+    "priorAcceptanceEvidence": 93,
+    "releaseReadinessEvidence": 7,
+    "total": 151
+  },
+  "entries": {
+    "alevel/a2-further-mathematics/arc-length-and-surface-area.md": {
+      "workingSha256": "427d5dc457ff4d08f87de82adbce17a349e120af15fdc1c959c886b75718c4f7",
+      "gitCanonicalSha256": "ade254ba9332ac8f051d81d49ed51dc6a26cd0b9c88444a9b54e4737a5266f37",
+      "expectedGitBlob": "cc1e3b10fb6f3a391c27c74c9df34dd86797dd7e"
+    },
+    "alevel/a2-further-mathematics/de-moivres-theorem.md": {
+      "workingSha256": "dfa02feba4106ba6c71904abe00f134e7e65ff155e96b9959538db39a611cec5",
+      "gitCanonicalSha256": "aff9680fe9f49ae330bd13e3065d7570c748331cf73106cfa287530aa759ef7a",
+      "expectedGitBlob": "d05bd4b4bbc8a3c4f9d37c215677bf1ac1247951"
+    },
+    "alevel/a2-further-mathematics/eigenvalues-and-eigenvectors.md": {
+      "workingSha256": "b922a49b41f1350189949d4ff38799ad9a1b6a4296d22b63378c6337dc32aed0",
+      "gitCanonicalSha256": "98169698d50ba04caab57365fa47e3277860fcad7694575f5679a169cef0db10",
+      "expectedGitBlob": "ccc7ebfc79a2790a6a5a4625659f84f332e61c65"
+    },
+    "alevel/a2-further-mathematics/finite-series.md": {
+      "workingSha256": "8cef631e9a4cc8a6cd70e0fcf909ff626a9f7fd8b1c495c4e94c5dca2eb5ba19",
+      "gitCanonicalSha256": "63f31af852dabb283824d7c998edc54104a28dbf3b12a4c185dbdca350472985",
+      "expectedGitBlob": "15c283d23b9929da95dfe5455d6f408173aed62b"
+    },
+    "alevel/a2-further-mathematics/first-order-differential-equations.md": {
+      "workingSha256": "94fe683c82619befbe016c7b1b0d473b3118a32e376cdd090d55d14644f50a10",
+      "gitCanonicalSha256": "94fe683c82619befbe016c7b1b0d473b3118a32e376cdd090d55d14644f50a10",
+      "expectedGitBlob": "23c9afdc1144538f506f450a986289ffe80d6905"
+    },
+    "alevel/a2-further-mathematics/hyperbolic-functions.md": {
+      "workingSha256": "123a3fbbfcca38b6a42f6c53e8d9620791394886c80b2a49e5a3253f386410f6",
+      "gitCanonicalSha256": "09bbf2dcc7fc7a638e2fb901ca74eb12d62b921c1287b368359e27ceb5b44122",
+      "expectedGitBlob": "456e2e8c0bfaf5ae5e214f62d38b6dfff4db3adc"
+    },
+    "alevel/a2-further-mathematics/index.md": {
+      "workingSha256": "6030e7b3a078ad869e81ef14ee5bec7c05fa89568a85f6161e15b96de515521c",
+      "gitCanonicalSha256": "b6db96a6d1f247ab9176d710e58ab3bccd9adf3d67df43cd2a1b378b99cce8b9",
+      "expectedGitBlob": "56f3b230a872c6b341ee1e40b76782b57f6426c5"
+    },
+    "alevel/a2-further-mathematics/inverse-trigonometric-functions.md": {
+      "workingSha256": "7777493e7f9b92cad11a3a2b41ea1df3eb7c081f3967b0a59a33a8ab62bd9669",
+      "gitCanonicalSha256": "3757b7c5d48084e56170d3b8f89b95bc9c8513764c6842ee01709a7162c35014",
+      "expectedGitBlob": "033221e6a00ba2944a0ebd89ba5dc6a29e07c94d"
+    },
+    "alevel/a2-further-mathematics/linear-equations.md": {
+      "workingSha256": "85c6cfb0b3bd118bdd2397a070677f72bac145d3704bcd26755a7add366fab93",
+      "gitCanonicalSha256": "1f8e918f059df4de5d4fef80ec0368a0de3d27bbf7f4eb83ceab4f74497e2e4a",
+      "expectedGitBlob": "450650aa51ab5e5d93e8019ecc2772c2177c8c67"
+    },
+    "alevel/a2-further-mathematics/lines-and-planes.md": {
+      "workingSha256": "42a32a4c9cbd2397423b54bc0aabbed5de876dd137382d20a083d4cc712f1894",
+      "gitCanonicalSha256": "18c4c7d9ac0b97ddc23dfe9bda713aa73eea095114eb107bcc54b1e03c56f2e2",
+      "expectedGitBlob": "ca4dd3282c26f60def07dd5529f150e2d9367547"
+    },
+    "alevel/a2-further-mathematics/matrix-algebra.md": {
+      "workingSha256": "331f725bae2107371cb33fa91fcaaa4a26796a977214f120d863d1c72236e572",
+      "gitCanonicalSha256": "b1092e1027d49bb01382bb5b8309f40179b0382ea01b04c72cf9014d79662ef8",
+      "expectedGitBlob": "457cf42ae8b7fe48334e6b1fcb57072e52cf77e2"
+    },
+    "alevel/a2-further-mathematics/polar-coordinates.md": {
+      "workingSha256": "a4b6ac93e2c58353e1ec0abbef5d0fa7d6743a5e0908e2255b9cfc0f7968f08d",
+      "gitCanonicalSha256": "70e3a92121087c8b5ba696e32447f99986579a9d85c40e48c24b5872dceb4638",
+      "expectedGitBlob": "e1c1408bbcdc8b9daad61f25ef974455cc803d8b"
+    },
+    "alevel/a2-further-mathematics/proof-by-induction.md": {
+      "workingSha256": "540ada6f1bf1e4a76fefaa12c1fa48e258388f8de7fd881c6978579f027bb816",
+      "gitCanonicalSha256": "4e4767fc17da711872fc2bb2cb07813bda997692b1a87b44b453e034341f3d8b",
+      "expectedGitBlob": "8742a518a7a25fdcb33f404fe28df76e042a03d9"
+    },
+    "alevel/a2-further-mathematics/roots-and-polynomials.md": {
+      "workingSha256": "af86af09b365357d07d65cb7ce26fbe63b4523d714b1632047e8587d40598f70",
+      "gitCanonicalSha256": "9929ed2067c5d3bb766ab7cfae02276fbfc9921a76734cb1583c1c7b4e6e4403",
+      "expectedGitBlob": "8393317fcc1bdbd080b6db5ad1586c876b6a5aec"
+    },
+    "alevel/a2-further-mathematics/second-order-differential-equations.md": {
+      "workingSha256": "9196b660a1d8b03b503cbc85f95f73581d7cbfab245877c6ac466f71dec4d985",
+      "gitCanonicalSha256": "9196b660a1d8b03b503cbc85f95f73581d7cbfab245877c6ac466f71dec4d985",
+      "expectedGitBlob": "fa05ea776aa87a466c4b03ecd8fc9a679220ee05"
+    },
+    "alevel/a2-further-mathematics/series-and-limits.md": {
+      "workingSha256": "74363074ac7d4dbbaf6e5d60d80da1cba9bd76473ac4d2ad61146b85023a5999",
+      "gitCanonicalSha256": "5b6c05e5bd0ec71228797835c51777523bbf079f73407a854b991ecfa96253f8",
+      "expectedGitBlob": "d94b7f0f0393e6ab0cd4ce94ce475c1e4f17c308"
+    },
+    "alevel/a2-further-mathematics/vector-products-and-coplanarity.md": {
+      "workingSha256": "61d4861de974a4c0623b460b8948893dcebfebbe2f3b657ae9a6f8cf66002db7",
+      "gitCanonicalSha256": "c36790c9170da4de011d460d89912c4cba53a6d8614e981bc433637fa5b686ec",
+      "expectedGitBlob": "6aa550917b8d0086c98860b8fded92196e0c0180"
+    },
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/browser-before-interval-repair.json": {
+      "workingSha256": "2aca193f92979b13e9fbf95f8973231202d3020b71fa73aeadefaf1933bcdd76",
+      "gitCanonicalSha256": "2aca193f92979b13e9fbf95f8973231202d3020b71fa73aeadefaf1933bcdd76",
+      "expectedGitBlob": "fb2e03f633b0fe770f25ebcbaab4ab538e779fca"
+    },
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/browser-check.cjs": {
+      "workingSha256": "ea8686ee4195492ba932859fdd51cd64626a0796af695ca0453a6b81ebcfe47e",
+      "gitCanonicalSha256": "ea8686ee4195492ba932859fdd51cd64626a0796af695ca0453a6b81ebcfe47e",
+      "expectedGitBlob": "d085d509820cd54e25cf7722fda53f5b13b70624"
+    },
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/browser-measurements.csv": {
+      "workingSha256": "a1e478fc43b7b8d32d27632f45e1215a2b487c2d505f2b35044190d903394a92",
+      "gitCanonicalSha256": "c34bc9d8a119183119a4afa161435721fb72eaaf24314e1f9c15aad720fffce3",
+      "expectedGitBlob": "f2ab9b679ca30fb535ec7dd353f18702ac802cd7"
+    },
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/browser-results.json": {
+      "workingSha256": "2aca193f92979b13e9fbf95f8973231202d3020b71fa73aeadefaf1933bcdd76",
+      "gitCanonicalSha256": "2aca193f92979b13e9fbf95f8973231202d3020b71fa73aeadefaf1933bcdd76",
+      "expectedGitBlob": "fb2e03f633b0fe770f25ebcbaab4ab538e779fca"
+    },
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/first-concept-1365-dark.png": {
+      "workingSha256": "457b455ebea15d1c30249aff5bbfc65367a973ce9250b7e57ad14ee0fb469d9b",
+      "gitCanonicalSha256": "457b455ebea15d1c30249aff5bbfc65367a973ce9250b7e57ad14ee0fb469d9b",
+      "expectedGitBlob": "69c31a7ec0ec5c797c6e4cdc10eacdb23f4d607f"
+    },
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/first-concept-1365-light.png": {
+      "workingSha256": "8bf8f83630901bcdf729cc229b7cef4911d0c571edbd4873b8ebc53ce3ca912d",
+      "gitCanonicalSha256": "8bf8f83630901bcdf729cc229b7cef4911d0c571edbd4873b8ebc53ce3ca912d",
+      "expectedGitBlob": "3f016a3f014ff2760d94a0d087876c3bd3df89dc"
+    },
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/first-concept-390-dark.png": {
+      "workingSha256": "817850b0b20bf108ae5b747ca3ea39f914be831030e729924f13c74b85448422",
+      "gitCanonicalSha256": "817850b0b20bf108ae5b747ca3ea39f914be831030e729924f13c74b85448422",
+      "expectedGitBlob": "839df48414abe8d4cff68ef493062bd6a2733a2c"
+    },
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/first-concept-390-light.png": {
+      "workingSha256": "a5431ab2f2805deb7ef2747b737db6da7907fb217225f0284fe837ad7864a6b7",
+      "gitCanonicalSha256": "a5431ab2f2805deb7ef2747b737db6da7907fb217225f0284fe837ad7864a6b7",
+      "expectedGitBlob": "bfc343908203baf60b7d8db5bec3f5251e459fe5"
+    },
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/first-conditions-390-final.png": {
+      "workingSha256": "dd15d4bf0c1825a83d997fa3bac806b105de688165c1260691f983835d66abbc",
+      "gitCanonicalSha256": "dd15d4bf0c1825a83d997fa3bac806b105de688165c1260691f983835d66abbc",
+      "expectedGitBlob": "93f2b58711ed7dc47564e51565d9801697b8f78e"
+    },
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/first-example-1365.png": {
+      "workingSha256": "cc7b70c4dc16b5721df0dc63b9d2079175d1b3d27489f6c81e40ebbe97550443",
+      "gitCanonicalSha256": "cc7b70c4dc16b5721df0dc63b9d2079175d1b3d27489f6c81e40ebbe97550443",
+      "expectedGitBlob": "50e7f50f2c0f8121df601eb2d973800bb48ec6b6"
+    },
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/first-example-390.png": {
+      "workingSha256": "0bd890eedbcec8ac113cc56b98386e2f97a1294cfad23cd51bb5d49fe9c8c4c9",
+      "gitCanonicalSha256": "0bd890eedbcec8ac113cc56b98386e2f97a1294cfad23cd51bb5d49fe9c8c4c9",
+      "expectedGitBlob": "4d6b2bb0490abbda4dbf686eecee2954cfefa553"
+    },
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/first-task-390-expanded.png": {
+      "workingSha256": "16e841a54dfaae014d7644c176968c988e79b4ef43343e8c6d7e62201548c0a4",
+      "gitCanonicalSha256": "16e841a54dfaae014d7644c176968c988e79b4ef43343e8c6d7e62201548c0a4",
+      "expectedGitBlob": "226b0ae3c12655ec85ce1448dd5334980ed98a6f"
+    },
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/local-links.json": {
+      "workingSha256": "c45b9e61eeccbab3c71003e2af43b50a82539683b1b52732ccf28d48c628cea4",
+      "gitCanonicalSha256": "c45b9e61eeccbab3c71003e2af43b50a82539683b1b52732ccf28d48c628cea4",
+      "expectedGitBlob": "0383510ff8ef2498eef3d01f9f245d09349d6477"
+    },
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/second-concept-1365-dark.png": {
+      "workingSha256": "ce0160df9ff0f5fa39b8ec89c3bd292e0ae5c6bfa4f6a43481cb4d03138502c9",
+      "gitCanonicalSha256": "ce0160df9ff0f5fa39b8ec89c3bd292e0ae5c6bfa4f6a43481cb4d03138502c9",
+      "expectedGitBlob": "9756781a1c245947b6a2d9fffe331af86cf1d5f3"
+    },
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/second-concept-1365-light.png": {
+      "workingSha256": "5beba74942cb2de22ecb8fee135040509cb0a8c14a7a641935c84f67c9f94721",
+      "gitCanonicalSha256": "5beba74942cb2de22ecb8fee135040509cb0a8c14a7a641935c84f67c9f94721",
+      "expectedGitBlob": "49294b1c03fe27930eeed4aa08b0e1d0a57b3338"
+    },
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/second-concept-390-dark.png": {
+      "workingSha256": "49e6011e1156abf37d5b1c12261027732991c90517a530ee6cc386ac46aeac99",
+      "gitCanonicalSha256": "49e6011e1156abf37d5b1c12261027732991c90517a530ee6cc386ac46aeac99",
+      "expectedGitBlob": "f76e42b9a403530a0703ab00545cb8aa4fa2f31a"
+    },
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/second-concept-390-light.png": {
+      "workingSha256": "8b3a329792eaf1c184f5e16c02e940cc16653b4a4be020acec54372a13387671",
+      "gitCanonicalSha256": "8b3a329792eaf1c184f5e16c02e940cc16653b4a4be020acec54372a13387671",
+      "expectedGitBlob": "c8694e289c988683da6b56541972924b9aa5ec46"
+    },
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/second-conditions-390-final.png": {
+      "workingSha256": "652af11e4d966008b70ae032a3d3ecd2fd43b2a4901aed560218274923867c11",
+      "gitCanonicalSha256": "652af11e4d966008b70ae032a3d3ecd2fd43b2a4901aed560218274923867c11",
+      "expectedGitBlob": "c3ecf25bbf2cdfd57ae0a7f15702a581fb23871a"
+    },
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/second-example-1365.png": {
+      "workingSha256": "13e600e84f68f7dcee961da11c4d7d29a00019cb71e67f8da791e8c1575d0a5c",
+      "gitCanonicalSha256": "13e600e84f68f7dcee961da11c4d7d29a00019cb71e67f8da791e8c1575d0a5c",
+      "expectedGitBlob": "83240067562cd9749b7d0b4d1373bf1cf6fd6bf9"
+    },
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/second-example-390.png": {
+      "workingSha256": "f8bc9ad97b106ad617d2a990d3182717c8483bbd9bed1ae9a9d217d0fa5f3d45",
+      "gitCanonicalSha256": "f8bc9ad97b106ad617d2a990d3182717c8483bbd9bed1ae9a9d217d0fa5f3d45",
+      "expectedGitBlob": "9a10cadb9c606036767b9d86f90510cf42d377f8"
+    },
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/second-task-390-expanded.png": {
+      "workingSha256": "1a9c8c3d811ad51ac96a427dfd7bc44b6b46bcd2603d4790255f1d2355706698",
+      "gitCanonicalSha256": "1a9c8c3d811ad51ac96a427dfd7bc44b6b46bcd2603d4790255f1d2355706698",
+      "expectedGitBlob": "a9681950f1e0655871c5b9f5d829e514e64df0d1"
+    },
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/source-manifest-before-interval-repair.json": {
+      "workingSha256": "691c3d319babb1c744dd9fb23b559a865be8d40bb66af3f0220fdbcf0ae53f35",
+      "gitCanonicalSha256": "380ab3a39d359eebb20109594b2c039fe2fbd987676310197484ff92eb6a4d90",
+      "expectedGitBlob": "68021912027ab974cf4dbab421d88496a6335fe5"
+    },
+    "docs/agents/audit-assets/fm03-differential-plain-2026-10-24/source-manifest.json": {
+      "workingSha256": "b5886b92030dcbcd8c72135977381bce4e5ba44d910220dad68254ca939f6ea0",
+      "gitCanonicalSha256": "8c50aa2874942bc9c10dce92bad1d21355b24aa3fee73dfded6c11b3f12ab2be",
+      "expectedGitBlob": "37b6ba31cace2ec0c4e1bb283b656cabb1f36f35"
+    },
+    "docs/agents/audit-assets/fm03-hyperbolic-plain-2026-10-24/browser-check.cjs": {
+      "workingSha256": "a882f231fbcfe77654cfe0abc4034c9cc9d87d8edeb5f8bc67ed1c508323f4f6",
+      "gitCanonicalSha256": "a882f231fbcfe77654cfe0abc4034c9cc9d87d8edeb5f8bc67ed1c508323f4f6",
+      "expectedGitBlob": "0e83c0fb07ac551d2e7668f50078ba728f9d6202"
+    },
+    "docs/agents/audit-assets/fm03-hyperbolic-plain-2026-10-24/browser-measurements.csv": {
+      "workingSha256": "8dc8ff13bc5d52f47dd74653a562f1731be3dda042ff1005c25eb00f4b314f30",
+      "gitCanonicalSha256": "83f223188d45e900e01f54809482ef78bafb8da543a9022e60162e3a8e094540",
+      "expectedGitBlob": "03a0b1ebf04c26b36334cc4d8653300c0429ea0d"
+    },
+    "docs/agents/audit-assets/fm03-hyperbolic-plain-2026-10-24/browser-results.json": {
+      "workingSha256": "c0aa8e75487131c33d9146aeb9179ff41a977d72a601c9ce2bffc3454df7d25e",
+      "gitCanonicalSha256": "c0aa8e75487131c33d9146aeb9179ff41a977d72a601c9ce2bffc3454df7d25e",
+      "expectedGitBlob": "8b36c98ab8917cccc94fc876f746a510e330cca2"
+    },
+    "docs/agents/audit-assets/fm03-hyperbolic-plain-2026-10-24/continuous-1365-light.png": {
+      "workingSha256": "445e2e861236824b7b243d1a4847fecc56a78e0fc4af3d5fb881766a1ccc62c1",
+      "gitCanonicalSha256": "445e2e861236824b7b243d1a4847fecc56a78e0fc4af3d5fb881766a1ccc62c1",
+      "expectedGitBlob": "ab179cf8aa092e496f88210b24da1723ae0da716"
+    },
+    "docs/agents/audit-assets/fm03-hyperbolic-plain-2026-10-24/continuous-390-light.png": {
+      "workingSha256": "50a644fbbf63744bfd911d476be0cd66a4d4824958458e6c6489c052c007ae33",
+      "gitCanonicalSha256": "50a644fbbf63744bfd911d476be0cd66a4d4824958458e6c6489c052c007ae33",
+      "expectedGitBlob": "884ce48d3382a5155253744d1e5c9372b23f6a68"
+    },
+    "docs/agents/audit-assets/fm03-hyperbolic-plain-2026-10-24/intro-1365-dark.png": {
+      "workingSha256": "1ccb90f2996e42b1a74fb257626b21afc3da18cc02664ed814be4799e94896b9",
+      "gitCanonicalSha256": "1ccb90f2996e42b1a74fb257626b21afc3da18cc02664ed814be4799e94896b9",
+      "expectedGitBlob": "3c7760d2cf2a6f36f73bb9243ecb73c139a3f4f1"
+    },
+    "docs/agents/audit-assets/fm03-hyperbolic-plain-2026-10-24/intro-1365-light.png": {
+      "workingSha256": "b84e307933c2d22ad84689a2e928a6e81eaf7863b663bbf95c052d620c4a1d5b",
+      "gitCanonicalSha256": "b84e307933c2d22ad84689a2e928a6e81eaf7863b663bbf95c052d620c4a1d5b",
+      "expectedGitBlob": "16b83e0ddf792ac04ae3d4a42a83591e52b0a558"
+    },
+    "docs/agents/audit-assets/fm03-hyperbolic-plain-2026-10-24/intro-390-dark.png": {
+      "workingSha256": "7a24d7021e2e02ec4e6f7dd299aa3c12b596f4527118d2ba8d3b8c8e973d1f9f",
+      "gitCanonicalSha256": "7a24d7021e2e02ec4e6f7dd299aa3c12b596f4527118d2ba8d3b8c8e973d1f9f",
+      "expectedGitBlob": "fdba88eb73fa26f0e1b8b3d32e2d9c22bacf0f39"
+    },
+    "docs/agents/audit-assets/fm03-hyperbolic-plain-2026-10-24/intro-390-light.png": {
+      "workingSha256": "3d7e9674e9f02ae76ee8d31c9d78eceff661c24217638041f89c5d4a1eb073ed",
+      "gitCanonicalSha256": "3d7e9674e9f02ae76ee8d31c9d78eceff661c24217638041f89c5d4a1eb073ed",
+      "expectedGitBlob": "fbb88d22161f947a5ebd2d0f24eabc4789938127"
+    },
+    "docs/agents/audit-assets/fm03-hyperbolic-plain-2026-10-24/keyboard-scroll-results.json": {
+      "workingSha256": "329f8b25d4f5f9a0f74436cb1641e4ee55cd8815adc8a863bab0dfb822363b41",
+      "gitCanonicalSha256": "329f8b25d4f5f9a0f74436cb1641e4ee55cd8815adc8a863bab0dfb822363b41",
+      "expectedGitBlob": "acd4ee3e6c8f58ae62de2649623a92706df2201e"
+    },
+    "docs/agents/audit-assets/fm03-hyperbolic-plain-2026-10-24/keyboard-scroll.cjs": {
+      "workingSha256": "16b82c0accecd474d75841f7013b8d039af01e2a7853f7ddd8b73b09d03c67c3",
+      "gitCanonicalSha256": "16b82c0accecd474d75841f7013b8d039af01e2a7853f7ddd8b73b09d03c67c3",
+      "expectedGitBlob": "17cab0d0f5189a35a605bb4843fb1ec4ee29682c"
+    },
+    "docs/agents/audit-assets/fm03-hyperbolic-plain-2026-10-24/local-links.json": {
+      "workingSha256": "5b18f495b12b3fdb2e3d471768c08ae79a25c6777051a206ce3508d095ec70f3",
+      "gitCanonicalSha256": "5b18f495b12b3fdb2e3d471768c08ae79a25c6777051a206ce3508d095ec70f3",
+      "expectedGitBlob": "3c47038938b0afa21f6c3eb5dafd9df9b9bc90eb"
+    },
+    "docs/agents/audit-assets/fm03-hyperbolic-plain-2026-10-24/retry-390-expanded.png": {
+      "workingSha256": "c270acc7cdf3cff60198ee7c2c7854df828be97419d40e8ed88263e1274249a4",
+      "gitCanonicalSha256": "c270acc7cdf3cff60198ee7c2c7854df828be97419d40e8ed88263e1274249a4",
+      "expectedGitBlob": "dbc97b322bbc696c9969da73987b9fc02980dd40"
+    },
+    "docs/agents/audit-assets/fm03-hyperbolic-plain-2026-10-24/source-manifest.json": {
+      "workingSha256": "35e54990bd8f795891da6d11ad7896bf469984ea6faff707a18a1c43a87699a6",
+      "gitCanonicalSha256": "9722def2fc389212d52451edb271d42170e789eb3537c198ba0194513814eedb",
+      "expectedGitBlob": "c7379e49a81a81c7c44b1a532900828531c7efd2"
+    },
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/browser-check.cjs": {
+      "workingSha256": "2d5068641fc16adc9972e455e8ad955e2db5f083ecad7738e197f93c5e73da67",
+      "gitCanonicalSha256": "fedbbdb351fea9c25cc815575e8e11e5f2f684d8b3c0de69b0e8491169d6d85b",
+      "expectedGitBlob": "7b390f6b70699abec35deebdaff848aebfa81e84"
+    },
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/arc-length-and-surface-area-390-continuous.png": {
+      "workingSha256": "db4bbd3263fe5a7d566664b17767f7c04df67930702c9979f677b24fdabbd6cf",
+      "gitCanonicalSha256": "db4bbd3263fe5a7d566664b17767f7c04df67930702c9979f677b24fdabbd6cf",
+      "expectedGitBlob": "414fe70ce2db838add8966d0c20be248a892a30e"
+    },
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/browser-before-line-wrap.json": {
+      "workingSha256": "c217afa438ea1bed8ed2790811cd548673d8bf6244e4501151cbf041ae3e1c18",
+      "gitCanonicalSha256": "49885430797de42eaa134eb0698f6373a69232e0d4607ac3b5c4e21ad84fe616",
+      "expectedGitBlob": "196c6a7072b66921b17d31a8de9ef65799ebbf81"
+    },
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/browser-measurements.csv": {
+      "workingSha256": "08509c0daf59afe8653264c5b62d809960b8e191b9b0a4df2a9122e5c3a8e429",
+      "gitCanonicalSha256": "f119a01ce3eb23572e265a3b6ae956f8fa8d6f93a959c72cc701dce0c8bcbe11",
+      "expectedGitBlob": "b320d75e7dbf9ee9d2971b3562ffbaeffab251b7"
+    },
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/browser-results.json": {
+      "workingSha256": "437b2149099fdac08886778ab610f6ede592f3abc28be289310e34564a62945b",
+      "gitCanonicalSha256": "a8ef4b0509c85e8558f0e72603e821ea332c307d1eac1dcc6da8a1e58437d469",
+      "expectedGitBlob": "9715471d1fdf13cf031bbba8f8697810780effc7"
+    },
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/build-snapshot-01.json": {
+      "workingSha256": "231c7d5b9ee7a510b8be025cfbb44acb8418b8320f1e2fe1f01d8a3d1c0452cd",
+      "gitCanonicalSha256": "f41094c2f42593f5ac1a40a3b6f5a0ba2bed4862dc52a639118e62e26e812c07",
+      "expectedGitBlob": "a2c535a6d334bf915f1965e2cab84cdf1516124c"
+    },
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/build-snapshot-02.json": {
+      "workingSha256": "ac82d678b8a28bf033d9df34e429a0cd3daba775585b05b3dbbcfd030f58cead",
+      "gitCanonicalSha256": "86865bd57942173a2a97265f4d60348f06584ec8218c2cc1fffc5761f2b75d37",
+      "expectedGitBlob": "f2c8bdda35d9a13d1f7c750a7e6c3c63782e74d5"
+    },
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/de-moivres-theorem-390-continuous.png": {
+      "workingSha256": "e078388cd259066b18ca840cadda4736841982dac2f162afdea45ea24331b279",
+      "gitCanonicalSha256": "e078388cd259066b18ca840cadda4736841982dac2f162afdea45ea24331b279",
+      "expectedGitBlob": "41a072f9db899950aec8ea2ccfa3c1508230ef98"
+    },
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/eigenvalues-and-eigenvectors-390-continuous.png": {
+      "workingSha256": "b11e2f6f4c9e960c24a100021c46ae19b84739a042721c180a3eebdfc6bdaf21",
+      "gitCanonicalSha256": "b11e2f6f4c9e960c24a100021c46ae19b84739a042721c180a3eebdfc6bdaf21",
+      "expectedGitBlob": "b433a931e2158b00066d27f1a460eb508ec7727b"
+    },
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/finite-series-390-continuous.png": {
+      "workingSha256": "4f539c853e28e76ddb4f83a8c5a92fe4c04d1e072c5f8886673cd15eca640dd7",
+      "gitCanonicalSha256": "4f539c853e28e76ddb4f83a8c5a92fe4c04d1e072c5f8886673cd15eca640dd7",
+      "expectedGitBlob": "c9f107fe3606cbfef5788a66a59596ccddaf4b36"
+    },
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/index-1365-initial.png": {
+      "workingSha256": "526fb05a38d3e4e501b7f9a773b426fafae7be4b1086607fe3bc5da3eb072549",
+      "gitCanonicalSha256": "526fb05a38d3e4e501b7f9a773b426fafae7be4b1086607fe3bc5da3eb072549",
+      "expectedGitBlob": "82f542e4bbab08cfb140ae970331e2a34369a82c"
+    },
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/index-390-initial.png": {
+      "workingSha256": "d871eba9fde16830acc7cb092a57644ba8b9775e696bfac0da7346526aa84b7b",
+      "gitCanonicalSha256": "d871eba9fde16830acc7cb092a57644ba8b9775e696bfac0da7346526aa84b7b",
+      "expectedGitBlob": "c7fd19a8a7be5911c7155817782f5c53545ead99"
+    },
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/inverse-trigonometric-functions-390-continuous.png": {
+      "workingSha256": "a4ec77c2cf3d3ee9a043a36ebf56c991e230b796057ad2317ec85b7c2ea58e65",
+      "gitCanonicalSha256": "a4ec77c2cf3d3ee9a043a36ebf56c991e230b796057ad2317ec85b7c2ea58e65",
+      "expectedGitBlob": "f23b374ea05561e16e36236dc297b6f5acaac92d"
+    },
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/linear-equations-390-continuous.png": {
+      "workingSha256": "7b8b222e4df9d7888c483a16196526e74d82ee23d12a5598c85334f88255e829",
+      "gitCanonicalSha256": "7b8b222e4df9d7888c483a16196526e74d82ee23d12a5598c85334f88255e829",
+      "expectedGitBlob": "949895a8480fc0c7e0bafa8c6dfd36d217fed778"
+    },
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/lines-and-planes-390-continuous.png": {
+      "workingSha256": "54c1140ad32748c3229bd34cd36babf8d274844645a7a1255814498f4bdfbc79",
+      "gitCanonicalSha256": "54c1140ad32748c3229bd34cd36babf8d274844645a7a1255814498f4bdfbc79",
+      "expectedGitBlob": "f94b72baa5d76786210099aa0e74b30593de2123"
+    },
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/local-links.json": {
+      "workingSha256": "f919f1fc246b6be7b8bd9d524d6fd85226a8de9eb0bcff28031cbfc06d6ae656",
+      "gitCanonicalSha256": "f919f1fc246b6be7b8bd9d524d6fd85226a8de9eb0bcff28031cbfc06d6ae656",
+      "expectedGitBlob": "877ece0e6be2a44208c09a9bf438cf01c9fd1c59"
+    },
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/matrix-algebra-1365-light-concept.png": {
+      "workingSha256": "6b19b5e2e919944b450086750f1f9d31fc5c20ae0fa9b79856a3a106d59c5e47",
+      "gitCanonicalSha256": "6b19b5e2e919944b450086750f1f9d31fc5c20ae0fa9b79856a3a106d59c5e47",
+      "expectedGitBlob": "fe16c28cb8c4ff92b3830854c0c94503f3b30d28"
+    },
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/matrix-algebra-390-continuous.png": {
+      "workingSha256": "8fea16a732b2936b9df79e0d1084d4d975eb0d89e74ee05b443ab8e54f67af25",
+      "gitCanonicalSha256": "8fea16a732b2936b9df79e0d1084d4d975eb0d89e74ee05b443ab8e54f67af25",
+      "expectedGitBlob": "88d8a91e82489126c7ba844dcd2ba7804cf3fdbe"
+    },
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/matrix-algebra-390-dark-expanded.png": {
+      "workingSha256": "38c4fc1854f64fd0ee70c02fad17d2f2aac5c5bde7753bb35504a16907c99005",
+      "gitCanonicalSha256": "38c4fc1854f64fd0ee70c02fad17d2f2aac5c5bde7753bb35504a16907c99005",
+      "expectedGitBlob": "5d18dc5591be21220285a541cf62fb9dc90eade2"
+    },
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/polar-coordinates-390-continuous.png": {
+      "workingSha256": "6fc4de05a5f42050376f1e8c12735c5b3707da2c5f66828a6ea743df5cef48fc",
+      "gitCanonicalSha256": "6fc4de05a5f42050376f1e8c12735c5b3707da2c5f66828a6ea743df5cef48fc",
+      "expectedGitBlob": "242fff9d6d785495f2656257f82aa38a99df2258"
+    },
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/proof-by-induction-390-continuous.png": {
+      "workingSha256": "80ebbd33bb6fa418780fda829d2be6e0996deee227a4e7bf9bca6674c412dc23",
+      "gitCanonicalSha256": "80ebbd33bb6fa418780fda829d2be6e0996deee227a4e7bf9bca6674c412dc23",
+      "expectedGitBlob": "a7504250eb6b306f34a8e392d29935c3d21287b2"
+    },
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/roots-and-polynomials-390-continuous.png": {
+      "workingSha256": "80e35dd58f18685e08e5e17396f6a976d064376469c7d64f32fd40843a5c3a33",
+      "gitCanonicalSha256": "80e35dd58f18685e08e5e17396f6a976d064376469c7d64f32fd40843a5c3a33",
+      "expectedGitBlob": "3f13352b573e0beec9d32c5e5dbf50f621f6e3c7"
+    },
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/roots-and-polynomials-390-dark-expanded.png": {
+      "workingSha256": "9069764910057172b25ce1cd43555b8409e02a6523596c9b047de81517f696cf",
+      "gitCanonicalSha256": "9069764910057172b25ce1cd43555b8409e02a6523596c9b047de81517f696cf",
+      "expectedGitBlob": "b901c3b07044cdfe22f509cc9cb240d97c2550cd"
+    },
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/series-and-limits-390-continuous.png": {
+      "workingSha256": "dbbd35b73ce16fbbbd1987a96fe5a2e0b9260b5a74b4ef3d78f1bf058e147961",
+      "gitCanonicalSha256": "dbbd35b73ce16fbbbd1987a96fe5a2e0b9260b5a74b4ef3d78f1bf058e147961",
+      "expectedGitBlob": "e84343e635e6370e3cd27b749fae7ff30bf2b306"
+    },
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/series-and-limits-390-dark-concept.png": {
+      "workingSha256": "2bdebf9577ae99c9f4330f3f2d698f712ae79363b7b29b5528abde7323435981",
+      "gitCanonicalSha256": "2bdebf9577ae99c9f4330f3f2d698f712ae79363b7b29b5528abde7323435981",
+      "expectedGitBlob": "3d3768ebd7f45f434dd59769c9422c1e405a1aad"
+    },
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/source-check-results.json": {
+      "workingSha256": "c03b1c69036ec4bdce0a46594bb5710d2e57fbfbf4efddd1d837f97b79103e42",
+      "gitCanonicalSha256": "58c6dd0497d5ed756dacfa30787c146659c216c2fd15770ad77eb9e1dca54d37",
+      "expectedGitBlob": "a9560b0d585baab05c9a0c25ee80f7038c3ae2a3"
+    },
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/source-manifest.json": {
+      "workingSha256": "0b21ab3a8d7d43c67303bc9c641836e22cf25f98fdd4c636847a3ce75d1431f9",
+      "gitCanonicalSha256": "0d86fe56c819ba6423b92871c9d12ef981da1b4abef27bd09145976613670d80",
+      "expectedGitBlob": "9e45d69dd303304d33a4caa29d6da818b9064788"
+    },
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/targeted-results.json": {
+      "workingSha256": "92bee2570dd348dda6cbb2872f17bdc56cc31ed493ec5311dec71a578c0634cc",
+      "gitCanonicalSha256": "92bee2570dd348dda6cbb2872f17bdc56cc31ed493ec5311dec71a578c0634cc",
+      "expectedGitBlob": "53feaf800118292effcf47effc8a95c29054f22c"
+    },
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/test-results.json": {
+      "workingSha256": "59750b061f6eb7b8ce9916fc9d2c9ae3b2c5926dcc6a4f34b896ef5f90b5d63f",
+      "gitCanonicalSha256": "2a4a09c8ec37c85228a60f993905300306355ccbbda2692e72e097afb16948d3",
+      "expectedGitBlob": "91a7d58dad1c4149b40f7b15ae59622ec42b4a73"
+    },
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/final/vector-products-and-coplanarity-390-continuous.png": {
+      "workingSha256": "bb9f09acb9556c57b1f041881235990de6437a60fc467182a36095e714953f0d",
+      "gitCanonicalSha256": "bb9f09acb9556c57b1f041881235990de6437a60fc467182a36095e714953f0d",
+      "expectedGitBlob": "1be8e98261f2418bf9ec3d0ae6ab6b7fbf785aef"
+    },
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/initial-findings.json": {
+      "workingSha256": "2ae06f8d2aef8ae78140d2d9945b1326847ecc42389d0a8e9c7157170f85c756",
+      "gitCanonicalSha256": "5406895fce17b7e383e60226ec32703bc48b0461ca1bfb41373a23a5ffaeebee",
+      "expectedGitBlob": "6eb75e2fd4a1224db6f7a05525a70d02977b39f5"
+    },
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/preserved-source-hashes.json": {
+      "workingSha256": "6a9c9ae669fb86047e5a4038e93d1d35e57b4e906230f44ff8f86390695553a6",
+      "gitCanonicalSha256": "79773590e6c9dab1c1e18953f4cf89b6beccc985c96b4b1a52443b6a2e54e031",
+      "expectedGitBlob": "0e1db274db69a1a0e1ac3c0444d3fb493aa924d2"
+    },
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/previous-heading-anchors.json": {
+      "workingSha256": "92200e5f1894ea44b4c6953799cee78df7fd8b317bdfa831f306ce75f034e8f9",
+      "gitCanonicalSha256": "bafa98935beeed8d5d125bdd64323165f7cbae3d098a41eee984fa4267356623",
+      "expectedGitBlob": "7f31cbf32046542182798a8ed6edf7a3aaa7331a"
+    },
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/source-check.py": {
+      "workingSha256": "ee97fcd9f041e6a1e822a24f822e8709e5ebec52396a57d2469539e311fef4f3",
+      "gitCanonicalSha256": "2f39a038ef1ea5bae58e51b33c891573950040a6f8799e2052e5d87251ba9b06",
+      "expectedGitBlob": "814895a51030016c4a0710bf826ff440dc04d34a"
+    },
+    "docs/agents/audit-assets/fm03-plain-rollout-2026-10-24/targeted-check.cjs": {
+      "workingSha256": "1950bf40454a05629ac1c901ee8ada9416265ea466f260873d97ea02ecdf6920",
+      "gitCanonicalSha256": "61ada4e919a150da1d6a04d5f2eba2be09d8c927fee295ae8eb15153e97f55ea",
+      "expectedGitBlob": "71c92863721999187e87317b1a0d6803ae7076a8"
+    },
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/browser-audit.cjs": {
+      "workingSha256": "421ad709edbbd92fb8850c3d298e73fa78bf3194259d17ab224d2d1c552c14ed",
+      "gitCanonicalSha256": "421ad709edbbd92fb8850c3d298e73fa78bf3194259d17ab224d2d1c552c14ed",
+      "expectedGitBlob": "d826eeee86990d7f09ad25cc61f9b6589a1f0482"
+    },
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/browser-results.json": {
+      "workingSha256": "94997322b26aa625971b3f32ec4745b2bb558c98b9569742159872d8654565fa",
+      "gitCanonicalSha256": "94997322b26aa625971b3f32ec4745b2bb558c98b9569742159872d8654565fa",
+      "expectedGitBlob": "df327bc0db34cc988ff5107dd6199e6289e641f6"
+    },
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/de-moivres-theorem-390-concept.png": {
+      "workingSha256": "8d3b05eac6be9989b272f0caa556124d71c27c287e717dd31c4b53e8ca41600d",
+      "gitCanonicalSha256": "8d3b05eac6be9989b272f0caa556124d71c27c287e717dd31c4b53e8ca41600d",
+      "expectedGitBlob": "e5dd36d8978604e66bebc108624d2777711e59e2"
+    },
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/de-moivres-theorem-390-entry.png": {
+      "workingSha256": "f7a3187d563b97816a3e56d47f442766dd7ed3a3f3bbf9c435181f0f6bd80a46",
+      "gitCanonicalSha256": "f7a3187d563b97816a3e56d47f442766dd7ed3a3f3bbf9c435181f0f6bd80a46",
+      "expectedGitBlob": "d5d9c65d3dd2c10d4ccbb8fa280920a176129240"
+    },
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/eigenvalues-and-eigenvectors-1365-concept.png": {
+      "workingSha256": "b7231838400750ca781098a21822922cd3993e081cdde0f343b04962b45b3b51",
+      "gitCanonicalSha256": "b7231838400750ca781098a21822922cd3993e081cdde0f343b04962b45b3b51",
+      "expectedGitBlob": "5f012a7b4fd63a96eb98e409b0133a525d93734f"
+    },
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/eigenvalues-and-eigenvectors-390-concept.png": {
+      "workingSha256": "bb81fdc73f35e879afef7154459ca5ff7393eb9bffecacd77fb14b3cd8fc9a37",
+      "gitCanonicalSha256": "bb81fdc73f35e879afef7154459ca5ff7393eb9bffecacd77fb14b3cd8fc9a37",
+      "expectedGitBlob": "95c9495928fd97d93b69f57399542d3e97532c63"
+    },
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/eigenvalues-and-eigenvectors-390-entry.png": {
+      "workingSha256": "f2f0eba5e32583762b04bf3197cb2c2b6c4d3a8b7afb6f6e8983b7753a301ccd",
+      "gitCanonicalSha256": "f2f0eba5e32583762b04bf3197cb2c2b6c4d3a8b7afb6f6e8983b7753a301ccd",
+      "expectedGitBlob": "838ce0372c1f7c5afccacd73a3b026008f5aacc9"
+    },
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/finite-series-390-concept.png": {
+      "workingSha256": "c521526183451e2069824a3911016dd1844c472d0ee0301aa79f2d09377804c1",
+      "gitCanonicalSha256": "c521526183451e2069824a3911016dd1844c472d0ee0301aa79f2d09377804c1",
+      "expectedGitBlob": "ed0c52f91696de8a36c28b3736954d30e9b1ceeb"
+    },
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/finite-series-390-entry.png": {
+      "workingSha256": "a9076520aec9318b5888b99d469b2784e84b536f210ff87e500d4da8247d38ee",
+      "gitCanonicalSha256": "a9076520aec9318b5888b99d469b2784e84b536f210ff87e500d4da8247d38ee",
+      "expectedGitBlob": "abef87bf18308e026bed3b2eaa3a524e8a694ee9"
+    },
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/hyperbolic-functions-1365-concept.png": {
+      "workingSha256": "d14b8435032b52d9822216a7c5f64fafb4f9134b3cf89187585df0e0b7af4d9b",
+      "gitCanonicalSha256": "d14b8435032b52d9822216a7c5f64fafb4f9134b3cf89187585df0e0b7af4d9b",
+      "expectedGitBlob": "47d319c7030dc0b1f16140b62f6242365e33e511"
+    },
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/hyperbolic-functions-390-concept.png": {
+      "workingSha256": "2519bfba73236e61603dd14b28a4fd7509705725711ff111c7247db8fb189069",
+      "gitCanonicalSha256": "2519bfba73236e61603dd14b28a4fd7509705725711ff111c7247db8fb189069",
+      "expectedGitBlob": "de9054cbaf58799ab24773ca46889573d44f4094"
+    },
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/hyperbolic-functions-390-entry.png": {
+      "workingSha256": "9cb20acb0176095693a7066d39252f2421d83e8dedc9c2b911c188d21ba9a961",
+      "gitCanonicalSha256": "9cb20acb0176095693a7066d39252f2421d83e8dedc9c2b911c188d21ba9a961",
+      "expectedGitBlob": "9df41c3104886aa289ead9f1581f8c4a4d4acde4"
+    },
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/index-390-concept.png": {
+      "workingSha256": "d362e911df2712bc873629bca589693b5ead6cba3c5b734ef6ca48074648b729",
+      "gitCanonicalSha256": "d362e911df2712bc873629bca589693b5ead6cba3c5b734ef6ca48074648b729",
+      "expectedGitBlob": "fcf957f318578ca47329f70ad18b22d3bd4a1824"
+    },
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/index-390-entry.png": {
+      "workingSha256": "1794ec5f60a8f042ea1a9c62db92988cfe80f2d9691ef67b3fa168e20c4c7cd3",
+      "gitCanonicalSha256": "1794ec5f60a8f042ea1a9c62db92988cfe80f2d9691ef67b3fa168e20c4c7cd3",
+      "expectedGitBlob": "29c9a3f2c45badf1d5e85151750bfdd1fadc1f88"
+    },
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/journey-results.json": {
+      "workingSha256": "5d09e3be86957660883a68cd9c424768c57798dc9eee9095e22a83879dff65f6",
+      "gitCanonicalSha256": "5d09e3be86957660883a68cd9c424768c57798dc9eee9095e22a83879dff65f6",
+      "expectedGitBlob": "5d463246566f21673e1c942f3d9563f9cae791fc"
+    },
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/local-links.json": {
+      "workingSha256": "4bf2470443e90c45c64051b11f50870cb70819edc07fdd9ce828a0c4145751d9",
+      "gitCanonicalSha256": "4bf2470443e90c45c64051b11f50870cb70819edc07fdd9ce828a0c4145751d9",
+      "expectedGitBlob": "6bff26e130e4dab40ad3cfaad2892985a73c01cb"
+    },
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/matrix-algebra-390-concept.png": {
+      "workingSha256": "5576407ddd4633a01a93d118a96118747a5e826eff0d4ee517396da106976482",
+      "gitCanonicalSha256": "5576407ddd4633a01a93d118a96118747a5e826eff0d4ee517396da106976482",
+      "expectedGitBlob": "89b966b4448e3debd3ca8c6ea96e87098baab614"
+    },
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/matrix-algebra-390-entry.png": {
+      "workingSha256": "2d9b812fca54dcfe687f83cc524a076fc232fa02684829bbb708dafb6a321867",
+      "gitCanonicalSha256": "2d9b812fca54dcfe687f83cc524a076fc232fa02684829bbb708dafb6a321867",
+      "expectedGitBlob": "7d83db5f9007c5fe8e0e4fe0a7f4edae5ff4be93"
+    },
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/second-order-differential-equations-390-concept.png": {
+      "workingSha256": "f5b20979278d0a9bbbea63c0388e5130abacc85432ff084f6e00eea840f517e8",
+      "gitCanonicalSha256": "f5b20979278d0a9bbbea63c0388e5130abacc85432ff084f6e00eea840f517e8",
+      "expectedGitBlob": "2fa74d2d9a65639ae9864910225606a740220530"
+    },
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/second-order-differential-equations-390-entry.png": {
+      "workingSha256": "f41743944e7fc4ad4b8f39e5bbd9b5c2031fc0121bd1a7ec17f95df4bb90e16a",
+      "gitCanonicalSha256": "f41743944e7fc4ad4b8f39e5bbd9b5c2031fc0121bd1a7ec17f95df4bb90e16a",
+      "expectedGitBlob": "d3fc225550174b360223f9d9a81aee7d2c4968d7"
+    },
+    "docs/agents/audit-assets/fm03-readability-2026-10-24/source-manifest.json": {
+      "workingSha256": "d33dfd1881063a33ba947b7df7a28ff173a59aec8eb8ba76cf02b667cee82fd5",
+      "gitCanonicalSha256": "e06e356592da8f5eb48184d6d78029c6613279765b75274955eea2f93c38f136",
+      "expectedGitBlob": "d0c1c1fb598032c576869330961fd417919dc1fe"
+    },
+    "docs/agents/audit-assets/fm03-release-readiness-2026-10-24/candidate-comparison.json": {
+      "workingSha256": "d11ee969262eb694ddd4cf7bcd9a09f7b9e243623725221f2f4b9176e9096414",
+      "gitCanonicalSha256": "7db0af03958fa1174b7eb7356cac710362d56b1d8c32c6ea79807d24c33b762f",
+      "expectedGitBlob": "a5829d331e4b981edeceafad37a9b368375e9e64"
+    },
+    "docs/agents/audit-assets/fm03-release-readiness-2026-10-24/candidate-input.json": {
+      "workingSha256": "36cdaeffb646d7461beab14249989cf52f8adc7ff83e2e06a155dbd4e2d103ea",
+      "gitCanonicalSha256": "811123b6f4572fa391b44875ca880c90345ea6fcfbad3cfe909e8e11e1d6db1c",
+      "expectedGitBlob": "f7165e7ccc161bfebb5b4506d28cf4493bf21b0c"
+    },
+    "docs/agents/audit-assets/fm03-release-readiness-2026-10-24/included-files.csv": {
+      "workingSha256": "a1f43a09d11099f5b16677fd6613c93e7faeb034bea036a9de323abd44a684e6",
+      "gitCanonicalSha256": "e43709481668d004757f4770f4e2d5b3062f91b9fbdba04ada67172f1bca3d91",
+      "expectedGitBlob": "72130f1f9ce3b7bf3d968f7b0b4be22db42306c6"
+    },
+    "docs/agents/audit-assets/fm03-release-readiness-2026-10-24/local-links.json": {
+      "workingSha256": "e1be1396286817273d3745e119e3a25bebe342bc22790ceb057a2e68979324b5",
+      "gitCanonicalSha256": "be38186a8522221d4b848e760f573a469675a3ae321d0e24a1d7d056617e1e8e",
+      "expectedGitBlob": "7a246988e9a02207d7f2f375b57b379ddd4bfa76"
+    },
+    "docs/agents/audit-assets/fm03-release-readiness-2026-10-24/test-results-windows-eol.json": {
+      "workingSha256": "640add6814831dc0b5d9f10983d8d6f96cf27721edb8c940218537095c26f44a",
+      "gitCanonicalSha256": "8de4708f29fd2a9048891049b0b6b5596cbf3cd7eb1fd3802bd6d26f08c36dd6",
+      "expectedGitBlob": "bc0d99ceb8d92c49b7fc144df2badbe54e2514b6"
+    },
+    "docs/agents/audit-assets/fm03-release-readiness-2026-10-24/test-results.json": {
+      "workingSha256": "58a45bf05035cec6a5f050eb231bfc3578886b7d4dc6a327a25f0dc75a65c3fb",
+      "gitCanonicalSha256": "58a45bf05035cec6a5f050eb231bfc3578886b7d4dc6a327a25f0dc75a65c3fb",
+      "expectedGitBlob": "a0e68395d7528cbf1f456fc1e75ba95ac2c7e2e1"
+    },
+    "docs/agents/audit-fm03-readability-2026-10-24.md": {
+      "workingSha256": "bc300869902274577c29c4209608724a2592da6247ab076a4751e7d7f578fdba",
+      "gitCanonicalSha256": "bc300869902274577c29c4209608724a2592da6247ab076a4751e7d7f578fdba",
+      "expectedGitBlob": "3cefb6ddf14e2df9e1f908d0074ba9f9f079a9e5"
+    },
+    "docs/agents/implementation-fm03-differential-plain-2026-10-24.md": {
+      "workingSha256": "e43692879306a0412ad87808ad37bb181035f3eb7836a9ac79aafa539b08964e",
+      "gitCanonicalSha256": "e43692879306a0412ad87808ad37bb181035f3eb7836a9ac79aafa539b08964e",
+      "expectedGitBlob": "e666c205878dd9a86ee9c3620f14dcbd8a9faa14"
+    },
+    "docs/agents/implementation-fm03-hyperbolic-plain-2026-10-24.md": {
+      "workingSha256": "4f7df9b065784110f94e2db9507d4cb6078f7a75e763102a80ed8ee19d258d72",
+      "gitCanonicalSha256": "4f7df9b065784110f94e2db9507d4cb6078f7a75e763102a80ed8ee19d258d72",
+      "expectedGitBlob": "4665e88cbec8e7cffe6fb9f9e2331b2249b5c23d"
+    },
+    "docs/agents/implementation-fm03-plain-complex-polar-2026-10-24.md": {
+      "workingSha256": "b1320bff9cd30cd183169ba26ff742beda7b854c14475edaa66e754032b2b1cd",
+      "gitCanonicalSha256": "763a15af259506856fd61cd34bd2d4f13eeb625501fab0d8bcc90b4668e3ceac",
+      "expectedGitBlob": "3ee30cfa708612c43e2cbb765360425e80590d97"
+    },
+    "docs/agents/implementation-fm03-plain-geometry-2026-10-24.md": {
+      "workingSha256": "49a99f6d686cf45c7d71c8dd5b498d1c38d7a168a22b84d7976f809eb36abf89",
+      "gitCanonicalSha256": "49a99f6d686cf45c7d71c8dd5b498d1c38d7a168a22b84d7976f809eb36abf89",
+      "expectedGitBlob": "7d31ae983ee92ea0bf50493f33962668fbcf08c6"
+    },
+    "docs/agents/implementation-fm03-plain-rollout-2026-10-24.md": {
+      "workingSha256": "4d44890a38af6321cec5348b779b05cab84935717cc3a72d1b3b4de88ff4fca2",
+      "gitCanonicalSha256": "4d44890a38af6321cec5348b779b05cab84935717cc3a72d1b3b4de88ff4fca2",
+      "expectedGitBlob": "e372fa69af167ac67e477424a8391221d68bf8b2"
+    },
+    "docs/agents/implementation-fm03-plain-series-2026-10-24.md": {
+      "workingSha256": "f1fc4133c055f676b2eb6fc87c2d4421430c6b4a3e77dc76ccc0a4b759e1cd38",
+      "gitCanonicalSha256": "f1fc4133c055f676b2eb6fc87c2d4421430c6b4a3e77dc76ccc0a4b759e1cd38",
+      "expectedGitBlob": "91879d57868bccd7bd4f97e3676d43b1b594f018"
+    },
+    "docs/agents/release-fm03-plain-language-2026-10-24.md": {
+      "workingSha256": "2535f0e6bc932791e18ab39df3fd2c0246d07419102ebb4f080fa9f3b6a11686",
+      "gitCanonicalSha256": "2535f0e6bc932791e18ab39df3fd2c0246d07419102ebb4f080fa9f3b6a11686",
+      "expectedGitBlob": "cc681e385e59cd497800fb39736c40bc525bb97d"
+    },
+    "docs/agents/review-fm03-differential-plain-spec-2026-10-24.md": {
+      "workingSha256": "586013d8ce6df8ef59720a2d54ca11497fda03b5a9fc646de828fee830ff34cc",
+      "gitCanonicalSha256": "586013d8ce6df8ef59720a2d54ca11497fda03b5a9fc646de828fee830ff34cc",
+      "expectedGitBlob": "a03bebf3620d8fcbb73497ae2ce1060407c7e803"
+    },
+    "docs/agents/review-fm03-differential-plain-standards-2026-10-24.md": {
+      "workingSha256": "1a1855d532baf2fa5795ca3eef0e81263440db8cfe5c8a030a6777377aa8a255",
+      "gitCanonicalSha256": "1a1855d532baf2fa5795ca3eef0e81263440db8cfe5c8a030a6777377aa8a255",
+      "expectedGitBlob": "81ffd55ca1b3ffa5e6144403da5a62921e01f552"
+    },
+    "docs/agents/review-fm03-hyperbolic-plain-spec-2026-10-24.md": {
+      "workingSha256": "04f2e65c876f9373b86db0693884f5936d5816060b8465d4a2cf99f05729760c",
+      "gitCanonicalSha256": "04f2e65c876f9373b86db0693884f5936d5816060b8465d4a2cf99f05729760c",
+      "expectedGitBlob": "171004e00e81ea42097a052f761ea10b105ff9ac"
+    },
+    "docs/agents/review-fm03-hyperbolic-plain-standards-2026-10-24.md": {
+      "workingSha256": "2db58a274402ceab1bf20a77178184b91999137d93372bd7d835034f8f682e4b",
+      "gitCanonicalSha256": "2db58a274402ceab1bf20a77178184b91999137d93372bd7d835034f8f682e4b",
+      "expectedGitBlob": "32a8b737e24d397f8564d621a193a1885368dffc"
+    },
+    "docs/agents/review-fm03-plain-rollout-spec-2026-10-24.md": {
+      "workingSha256": "882502f7d99718f96727445848d2f60a88567fe28f34b0bd639848b4281669b9",
+      "gitCanonicalSha256": "882502f7d99718f96727445848d2f60a88567fe28f34b0bd639848b4281669b9",
+      "expectedGitBlob": "ff45ec30242126c07f172dee0f228a5e9b8e7895"
+    },
+    "docs/agents/review-fm03-plain-rollout-standards-2026-10-24.md": {
+      "workingSha256": "d7aae557747d1654fa14a7aa1517fb36a4e10b6086477b0a024557a0193f562a",
+      "gitCanonicalSha256": "d7aae557747d1654fa14a7aa1517fb36a4e10b6086477b0a024557a0193f562a",
+      "expectedGitBlob": "ed444b321dbff1020cf1fdb5054a6edd71da339e"
+    },
+    "scripts/test-further-first-order.js": {
+      "workingSha256": "0499aa41473968c5b3352938d1dab9c57dd825e9ec915ff05559eebdb1074fe4",
+      "gitCanonicalSha256": "fdbe8a0924504478f2d235fafce408886dcb39acc4eb6d41f224dce3acec3233",
+      "expectedGitBlob": "e42d26ead9efcb9da2055c6b1a91191191d27399"
+    },
+    "scripts/test-further-matrices.js": {
+      "workingSha256": "509238a9ab38c644ee69c04cf52c69522f5d63b87a03bdffba61a4490543b9d7",
+      "gitCanonicalSha256": "4c3a3b3b863e6e2f30af34380a394cb0c0e24d2062139e497c2d73d863e73b8b",
+      "expectedGitBlob": "c8beb93fc7845cc889c02585f6a2f96745738ca6"
+    },
+    "scripts/test-further-retry.js": {
+      "workingSha256": "5822c1ebe741b1449943664422b6c2e57c4f6f35a107f1d02419e2a14c1ba1ec",
+      "gitCanonicalSha256": "a351c5a99d235578061ea9c4b2967a5f6237bdaf00f919a757d1b5512ad41564",
+      "expectedGitBlob": "1fe9fe4e75d11b766d02b7986bea8dfc6e82f461"
+    },
+    "zh/alevel/a2-further-mathematics/arc-length-and-surface-area.md": {
+      "workingSha256": "db3b34aa928ad50259d6f5f117d84241a6e675f7f5c466e45a6e73fc379e4a64",
+      "gitCanonicalSha256": "1cab04ed7af05eed217d5b172ef8b8a86589a2ce1c4cc8c56a1c2a6bd2883732",
+      "expectedGitBlob": "64745b0f0946642d7c86606e13599f51d25077c1"
+    },
+    "zh/alevel/a2-further-mathematics/de-moivres-theorem.md": {
+      "workingSha256": "6e7602e7989456317f97e1922863866a131c71b5606e66b5a039582e33b01767",
+      "gitCanonicalSha256": "d2eb054f1274879b289aa8a6eca4fbd37813f60abeb953cdd9d9bf5f8225a2e2",
+      "expectedGitBlob": "5fef4037fa4db2354bfe761f77110ed1b9e5783d"
+    },
+    "zh/alevel/a2-further-mathematics/eigenvalues-and-eigenvectors.md": {
+      "workingSha256": "2388afa4d728f04d5d078478181c1c8665809b4fc2b505aa236688d67187c827",
+      "gitCanonicalSha256": "935b492b918152e479c05885f8f3d7783f39a51292f8c0d99c511183d48e5b2f",
+      "expectedGitBlob": "8b8f8bfe78482a944be7aca96e8877d200a0d773"
+    },
+    "zh/alevel/a2-further-mathematics/finite-series.md": {
+      "workingSha256": "34387a7c24e0c09522f215ee7b3655700a8d7e168f19f5ef248fceba72cf65eb",
+      "gitCanonicalSha256": "5534711ff9b6098fbf2ed84d8baa3fdf2dc13d3b018511a108d7c26b11b67a83",
+      "expectedGitBlob": "5c2a86aed258652d35d2436990b4c5f2e2b6f560"
+    },
+    "zh/alevel/a2-further-mathematics/first-order-differential-equations.md": {
+      "workingSha256": "85be1d8f5b607ea90014b222c3e7d8a65bbff6c0738868131e3e637a7e6989d4",
+      "gitCanonicalSha256": "85be1d8f5b607ea90014b222c3e7d8a65bbff6c0738868131e3e637a7e6989d4",
+      "expectedGitBlob": "8bb894d3db4c9b630bb6ee05abab366d5d6e56a2"
+    },
+    "zh/alevel/a2-further-mathematics/hyperbolic-functions.md": {
+      "workingSha256": "e5af82205d81291a8680ea8ad362621f8cd4e9f930b5f1bebbd0f2ff0525c149",
+      "gitCanonicalSha256": "873f09e3bda21e1a069c1387a0a383b79fcfb961abf9f4963bf8abde8ed7b070",
+      "expectedGitBlob": "38a4fcf0e4c2c70d86060344b2eb61c95d1ffb19"
+    },
+    "zh/alevel/a2-further-mathematics/index.md": {
+      "workingSha256": "a2fbcd85e628a5b91a61fb27b2ef01ba933b05abc576dd7044719f1dddae5b9f",
+      "gitCanonicalSha256": "f341341ced39bf249ef3f9b27f451987ad8a93b2a3bbfd8bf2aae05c28f8e932",
+      "expectedGitBlob": "6e648e3e08e41c9d1043f97dc0961b2227cc1a48"
+    },
+    "zh/alevel/a2-further-mathematics/inverse-trigonometric-functions.md": {
+      "workingSha256": "01fecb8e18759f0930b11af206eb6b042de3cc791dbe50ce9e9ee2239f23ab48",
+      "gitCanonicalSha256": "def2d26f85681c9243b7a3dd1669318d748d6e06339b35b78956af6e868e4832",
+      "expectedGitBlob": "b61d89675ef9a556c90b990662a0c7214fe46a8a"
+    },
+    "zh/alevel/a2-further-mathematics/linear-equations.md": {
+      "workingSha256": "d6f4100ccb2f27d886e4990bd90582544fa2f3daff063a750f1f8f28daae944d",
+      "gitCanonicalSha256": "4b5b5ab477c66ba992cbf19ddb22673e7d546c09e2c484030bb49ec7898e022c",
+      "expectedGitBlob": "c3a31c70dbe31f22a01e78a62906536b0bfbd88d"
+    },
+    "zh/alevel/a2-further-mathematics/lines-and-planes.md": {
+      "workingSha256": "7fa111bc4f2c95e15ca0a7410680ecf357accb2681735128051a71cc56c395ec",
+      "gitCanonicalSha256": "7cccc4c1cf4d66ae9b2fbd75e77edbb4a658cb3cbb9c6cd9adee3c6a48ee8069",
+      "expectedGitBlob": "4abd7ee0a34c722850aca601793866f6c3263806"
+    },
+    "zh/alevel/a2-further-mathematics/matrix-algebra.md": {
+      "workingSha256": "763774c8dacda8d752fa4e2828c66c8cfac95e8d8aba25bf104c6d09d3231b65",
+      "gitCanonicalSha256": "71ecd5ee5b148ef32aa0963bcfda3d38b452a47723d5016c945c9fe0ba996bf9",
+      "expectedGitBlob": "d0da62b15c2a8e95237954c890418ba81e692953"
+    },
+    "zh/alevel/a2-further-mathematics/polar-coordinates.md": {
+      "workingSha256": "7405b879a8a3edee48d91b18c4ccc8d63e43ccd54d3df9bd523621e3fac7f367",
+      "gitCanonicalSha256": "935f78b43c51285c88193ac12069eef0a13796291301a6e1cba75fe7ec03dc20",
+      "expectedGitBlob": "41d83cd6a2f6fadc78ca4299a9219deda627fcab"
+    },
+    "zh/alevel/a2-further-mathematics/proof-by-induction.md": {
+      "workingSha256": "215ae1f4b76bb1e4fdda00be1e2ef331849ef1e37b71fd65588e15be5a83a5e8",
+      "gitCanonicalSha256": "5ff14622110630b08e7ee29ee41fcc68d1b8af18418a71e38ac9d06adcd2e4c2",
+      "expectedGitBlob": "c0a44a945b4ad103f09a17373c3ad1084d47ccf8"
+    },
+    "zh/alevel/a2-further-mathematics/roots-and-polynomials.md": {
+      "workingSha256": "d0a632d368f98753caa2587e66065b92e02646f9fc27509910a3ff54f34822ce",
+      "gitCanonicalSha256": "2cd2d0d6d22e0113b4f7553755a5de1c33c1c653665489ccd1dbac7101536f28",
+      "expectedGitBlob": "4eab8acdede6111c075f1c198804f9dfa6d5aed5"
+    },
+    "zh/alevel/a2-further-mathematics/second-order-differential-equations.md": {
+      "workingSha256": "f41149906bc08d5dc43910fd6bbe4cba042d50ac6b356fddc546d9d29f9d98b7",
+      "gitCanonicalSha256": "f41149906bc08d5dc43910fd6bbe4cba042d50ac6b356fddc546d9d29f9d98b7",
+      "expectedGitBlob": "9e1296208120eac2249c356d5f66a393ccd7904a"
+    },
+    "zh/alevel/a2-further-mathematics/series-and-limits.md": {
+      "workingSha256": "caea1bbec4576b09e725015d104f5f2c42ecdf8965b33cccbb44d5f1eff7779b",
+      "gitCanonicalSha256": "8e1c1f9a27060460fbae592fbef892365e2cc259c01fc18c0f8d4e87448cef87",
+      "expectedGitBlob": "7132d6fd3bf84295ba372b81dfc27ace9e8b415f"
+    },
+    "zh/alevel/a2-further-mathematics/vector-products-and-coplanarity.md": {
+      "workingSha256": "6b9ed2dc922f107b22f5f364894e6e6111ee0a16e4a075659485796f254008c6",
+      "gitCanonicalSha256": "b2abf3a4b9ec133436e2d5b11d0dcecf2427540491d3b86a1ece5e6f95a42bee",
+      "expectedGitBlob": "c4bdcd8769f1ca489fcfcda56d660799dd81bdf5"
+    }
+  },
+  "independentCandidate": {
+    "courseAndTestsOnlyOverMain": 37,
+    "untouchedMainFilesVerified": 1743,
+    "finalBuildSeconds": 16.118,
+    "localWorkflowNodeChecksPassed": 70,
+    "localWorkflowNodeChecksFailed": 0,
+    "courseLocalLinksChecked": 459,
+    "courseHtmlIdenticalToReviewedPreview": 34,
+    "referencedStaticAssetsCompared": 27,
+    "otherDraftFilesUnchanged": 166
+  },
+  "lineEndingBoundary": "Working checksums bind reviewed Windows source bytes. Canonical checksums and expected Git blob IDs bind the LF form staged by Git. Candidate courses/tests match the actual course commit; its 1743 other tracked files match main.",
+  "publication": {
+    "pushed": false,
+    "pullRequestCreated": false,
+    "merged": false,
+    "deployed": false
+  },
+  "limits": [
+    "70 checks are local, not remote CI.",
+    "Prior 136 browser views were inherited because the 34 HTML outputs are byte-identical and referenced resources are identical or have only line-ending changes; the browser suite was not rerun in this preparation step.",
+    "Whole-course student work, real phone and full screen-reader/WCAG acceptance remain unverified."
+  ],
+  "selfHashBoundary": "The manifest lists its own path but omits its own checksum; the scope CSV is hashed.",
+  "documentationFormatting": "Three review records had trailing empty lines removed to pass git diff --check; their reviewed source fingerprints and substantive conclusions are unchanged. Dependent record checksums were refreshed."
+}
