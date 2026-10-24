@@ -1,0 +1,34 @@
+[
+  {
+    "lang": "en",
+    "kind": "table",
+    "focused": true,
+    "clientWidth": 348,
+    "scrollWidth": 672,
+    "scrollLeft": 80
+  },
+  {
+    "lang": "en",
+    "kind": "formula",
+    "focused": true,
+    "clientWidth": 350,
+    "scrollWidth": 388,
+    "scrollLeft": 38
+  },
+  {
+    "lang": "zh",
+    "kind": "table",
+    "focused": true,
+    "clientWidth": 348,
+    "scrollWidth": 672,
+    "scrollLeft": 80
+  },
+  {
+    "lang": "zh",
+    "kind": "formula",
+    "focused": true,
+    "clientWidth": 350,
+    "scrollWidth": 388,
+    "scrollLeft": 38
+  }
+]

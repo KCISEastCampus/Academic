@@ -1,0 +1,214 @@
+{
+  "baseCommit": "19db6ca1640fb47fd541b3f8fb3d45d510d41b09",
+  "finalBuildSeconds": 16.118,
+  "pagesCompared": 34,
+  "identicalGeneratedHtml": 34,
+  "htmlSha256": {
+    "alevel/a2-further-mathematics/arc-length-and-surface-area.md": "e3bfb0e4ef43dc16851ca11ce420e45f3422c243a72d25c8b232e80a1cf5a69b",
+    "alevel/a2-further-mathematics/de-moivres-theorem.md": "cb786569d60d7095c819967629c2ecf56058eb969bec56676ca5ea163d42a07f",
+    "alevel/a2-further-mathematics/eigenvalues-and-eigenvectors.md": "e50bbcc001dcc59e975cc88f0df91627276c456b2902784648201835b3620576",
+    "alevel/a2-further-mathematics/finite-series.md": "c6418ff96d3f459924f4aa8aba63b426c21f78252892c50ac753e5ccb97bbb62",
+    "alevel/a2-further-mathematics/first-order-differential-equations.md": "eaeff2281d47c4fc11696e2d26daf3d4899653bab19fe10296b4f9b18d2a1775",
+    "alevel/a2-further-mathematics/hyperbolic-functions.md": "8f27cf7ce7d307543cf598f6d91d09fa18d704ed571f903f7f0e599dcbfbf84e",
+    "alevel/a2-further-mathematics/index.md": "bd95adf6349e98f8443ccc0f6cb632599cfee1af9c19b0cb26b96f4239e79c60",
+    "alevel/a2-further-mathematics/inverse-trigonometric-functions.md": "067a775e7be9c8f5f7ccbdb66b575cb7830da824f8719f94bb073f37b68e0ae6",
+    "alevel/a2-further-mathematics/linear-equations.md": "07b7474629391a9a7145015889bafa51bb91049223e4ace717704b6c3ffde027",
+    "alevel/a2-further-mathematics/lines-and-planes.md": "4793119d84176651c15780ad50ed1af880d527f16a5281ce343a004741c776aa",
+    "alevel/a2-further-mathematics/matrix-algebra.md": "0f0232dd1e8143708903df43825396bc9370d11bf7d4fa85bc987a42ab5483a5",
+    "alevel/a2-further-mathematics/polar-coordinates.md": "04eb6773e8e0ce974078a9b6fcf37942c6dc760b4cf177f99fce1fae85806a16",
+    "alevel/a2-further-mathematics/proof-by-induction.md": "1802aabd2b6da7e47f34b41c6ab6076bc3d5163c223c032b02516b17d3f47be0",
+    "alevel/a2-further-mathematics/roots-and-polynomials.md": "976a571ec061e8ecd2748a9718b0ff14d33981d8789f5fe7782cb96b494ec412",
+    "alevel/a2-further-mathematics/second-order-differential-equations.md": "e4eb2d72bfeed6bc4cf1d37fbed50c21b98470bcb8e999d101af647c7dbbee4b",
+    "alevel/a2-further-mathematics/series-and-limits.md": "637bfb8ef87c1be029b49dc5641056b5daa2d3582187062d6e62543e64e6ec2b",
+    "alevel/a2-further-mathematics/vector-products-and-coplanarity.md": "b107ff3d9d87a7412d419db2805bf40b4267c049cf0039ef6d102c44a5c4a466",
+    "zh/alevel/a2-further-mathematics/arc-length-and-surface-area.md": "7107d076f976daa3f52f4f941ab15c13436565e4e636b26ab3040882c9e6d003",
+    "zh/alevel/a2-further-mathematics/de-moivres-theorem.md": "1b872888da0597860bc2854c2c731c356da8b96bc786d2ba45d508993060b246",
+    "zh/alevel/a2-further-mathematics/eigenvalues-and-eigenvectors.md": "877dece0f25d7eda2f327c6e30e868979b0a3fc8d19fc55100c2e688cf80536a",
+    "zh/alevel/a2-further-mathematics/finite-series.md": "25119001dd226c3511c639e294afed959af858b7f00b5a6005758fcbe2067e90",
+    "zh/alevel/a2-further-mathematics/first-order-differential-equations.md": "6b5fcf83f595ad13c17fe02b961249efd00d19c49f6a1d4c1d4e8cacb570ef5a",
+    "zh/alevel/a2-further-mathematics/hyperbolic-functions.md": "bcd15df4853bb0115f0b7fdf6b585d735b7016cc42d71d178b5ed77a76467828",
+    "zh/alevel/a2-further-mathematics/index.md": "7947bdaa794dc11522018418915512837c9767a31bf20d1886728aa33182ba10",
+    "zh/alevel/a2-further-mathematics/inverse-trigonometric-functions.md": "4f19832b44ce56292f089d085026a46d59ab9a70d3be77d3ac0e452dd1bee4a4",
+    "zh/alevel/a2-further-mathematics/linear-equations.md": "20ab54ece649388a827a1d748468075f21bd5418c9be3abef16699a773d6b2f2",
+    "zh/alevel/a2-further-mathematics/lines-and-planes.md": "cf1e8f8624815ec1f413c9cddecc0d58a36602fa7b4ab054e0a793e361268810",
+    "zh/alevel/a2-further-mathematics/matrix-algebra.md": "42ed9e72484a9eafabddc7e4fc6e4b9534d209b6a2440f2058c49f96a2b9bfcd",
+    "zh/alevel/a2-further-mathematics/polar-coordinates.md": "eb4deb2a86f2fd7c2c6b091684618dfbecda3e59c3f76bd49542372185f6fc91",
+    "zh/alevel/a2-further-mathematics/proof-by-induction.md": "322a8630301155ae5e42b44385d9395cf0862ce102724d52baa83e5982efba4f",
+    "zh/alevel/a2-further-mathematics/roots-and-polynomials.md": "6f50bedbf1a89938917fb6d76b8e32fb05f66d2574449f43a4bd0f7e2fe5e48c",
+    "zh/alevel/a2-further-mathematics/second-order-differential-equations.md": "ce0029b4107e42a0333f323e72823523fcdcd6191f8b2d6cdf09085b51d87c6b",
+    "zh/alevel/a2-further-mathematics/series-and-limits.md": "807ab6db810f414fd31ba72687c7a0959aaad45cf939132ad34b02c1dfeaf4de",
+    "zh/alevel/a2-further-mathematics/vector-products-and-coplanarity.md": "ee4800d46656da366b902e0ef376d36fb69c5f37206bdb0b20f5fa4c90a91633"
+  },
+  "referencedAssets": [
+    {
+      "path": "assets/css/fonts/chinese.css",
+      "sameBytes": false,
+      "sameCanonicalBytes": true,
+      "candidateSha256": "2b9d616d1b825d2e0633d9b04fcf18eee3c4c36a225746cd47b743ac3aaa416e"
+    },
+    {
+      "path": "assets/css/fonts/maplemono.css",
+      "sameBytes": false,
+      "sameCanonicalBytes": true,
+      "candidateSha256": "857a8c97619bdcd895cf4f459ccc6b0c33d277b7ba4be99ef1e2daa9fa5e305b"
+    },
+    {
+      "path": "assets/css/gruvbox_dark_rouge.css",
+      "sameBytes": false,
+      "sameCanonicalBytes": true,
+      "candidateSha256": "2f4aa8be146a7384f789132e981a484b656c13feb9ccbbc18db8b22c446c9d15"
+    },
+    {
+      "path": "assets/css/reading.css",
+      "sameBytes": false,
+      "sameCanonicalBytes": true,
+      "candidateSha256": "71c3c526914dfa2676479c8a8579e323a2731f3f62cbb339117e8d1e83e20b08"
+    },
+    {
+      "path": "assets/css/rouge_light.css",
+      "sameBytes": true,
+      "sameCanonicalBytes": true,
+      "candidateSha256": "940878d292238a27c3bad32ce5362535e3ee530991903cc7b41c8468b32fe9e0"
+    },
+    {
+      "path": "assets/css/style.css",
+      "sameBytes": false,
+      "sameCanonicalBytes": true,
+      "candidateSha256": "85a6fca50b15f25cf620e1c01c56e3f8c6e5b8bb2de9536f6634a810fa8008aa"
+    },
+    {
+      "path": "assets/css/subject.css",
+      "sameBytes": false,
+      "sameCanonicalBytes": true,
+      "candidateSha256": "7c5d0eb6eca98defd3c8960ec9d6d4acf74e7d9aa91e5d3929387018f0d6b822"
+    },
+    {
+      "path": "assets/css/variables.css",
+      "sameBytes": false,
+      "sameCanonicalBytes": true,
+      "candidateSha256": "7427cf82bef232333eecdf19821c3996c49a0b978924a585fd036e5925f50a77"
+    },
+    {
+      "path": "assets/img/further-complex-roots.svg",
+      "sameBytes": false,
+      "sameCanonicalBytes": true,
+      "candidateSha256": "868bab47d6d27bec50aec15d6c6c5e2f9b89917ea0e37c7459ce50777e7d6db0"
+    },
+    {
+      "path": "assets/img/further-hyperbolic-graphs.svg",
+      "sameBytes": false,
+      "sameCanonicalBytes": true,
+      "candidateSha256": "162b238ad239198b0f82ee555563da0d580b0f67b35b3b8460d44af21a0ff8b9"
+    },
+    {
+      "path": "assets/img/further-inverse-trig-graphs.svg",
+      "sameBytes": false,
+      "sameCanonicalBytes": true,
+      "candidateSha256": "eec2cecb840197af78e2dc58cfca47e15b402dfaa5f621af32bb9fb17d819a37"
+    },
+    {
+      "path": "assets/img/further-linear-equations.svg",
+      "sameBytes": false,
+      "sameCanonicalBytes": true,
+      "candidateSha256": "7f4d9338b0e315b28ccd66b414d70b4a9fb994bd8e3aff35cb5228dacdfa85ea"
+    },
+    {
+      "path": "assets/img/further-lines-planes.svg",
+      "sameBytes": false,
+      "sameCanonicalBytes": true,
+      "candidateSha256": "efe7ddcd3582be4054a1775901d3ffcb4ec836cdce47873c64ee215193f3c884"
+    },
+    {
+      "path": "assets/img/further-matrix-transformations.svg",
+      "sameBytes": false,
+      "sameCanonicalBytes": true,
+      "candidateSha256": "42fefa88c56fa585a809aef561ed2b3eae4656c9f92499f23e28f5dd2a1f6e05"
+    },
+    {
+      "path": "assets/img/further-polar-curves.svg",
+      "sameBytes": false,
+      "sameCanonicalBytes": true,
+      "candidateSha256": "0a8680c08b8775a038a0cba834078388d1b095d90616dbe2d8f3c7f908e5f219"
+    },
+    {
+      "path": "assets/img/further-polar-overlap.svg",
+      "sameBytes": false,
+      "sameCanonicalBytes": true,
+      "candidateSha256": "ceb483e3a2354993a7768e6ebf26d875b912a3a6223b7a38c55e88a70a506f3e"
+    },
+    {
+      "path": "assets/img/further-polar-practice-loop.svg",
+      "sameBytes": false,
+      "sameCanonicalBytes": true,
+      "candidateSha256": "7ec256500d26e30b0472e0ef2400b24c031b1f004b5a8fc9ca4033647a8d6656"
+    },
+    {
+      "path": "assets/img/further-vector-products.svg",
+      "sameBytes": false,
+      "sameCanonicalBytes": true,
+      "candidateSha256": "2fb3eee022f59d43d3982da0713016e815001674b9322ca07b48939aacbf245e"
+    },
+    {
+      "path": "assets/js/image_lazy_load.js",
+      "sameBytes": false,
+      "sameCanonicalBytes": true,
+      "candidateSha256": "17dd44e999889e9050bb209ff447ec1ed22315c1a49a1743e6fc3cff09942c72"
+    },
+    {
+      "path": "assets/js/image_modal.js",
+      "sameBytes": false,
+      "sameCanonicalBytes": true,
+      "candidateSha256": "73b98c68258dc46e223cf428d4c7268daaa42bbf6d1db99171584c8071c490d5"
+    },
+    {
+      "path": "assets/js/interactive_effects.js",
+      "sameBytes": false,
+      "sameCanonicalBytes": true,
+      "candidateSha256": "5de988eff7eac59e6154fb804e14944bff94cbd95592b23539b35f6fd640f08a"
+    },
+    {
+      "path": "assets/js/search.js",
+      "sameBytes": false,
+      "sameCanonicalBytes": true,
+      "candidateSha256": "8f31139f9e6f9bf5c2315b4eb3a95e5e015bc680811e7812909a0a3d08ddd9d4"
+    },
+    {
+      "path": "assets/js/site-language.js",
+      "sameBytes": false,
+      "sameCanonicalBytes": true,
+      "candidateSha256": "d5f2c2965c60ffd2b6d19a6506cc710d87c83b93362a1e1c98ec3a2cdcbbcde1"
+    },
+    {
+      "path": "assets/js/table_wrapper.js",
+      "sameBytes": false,
+      "sameCanonicalBytes": true,
+      "candidateSha256": "52694d7a677b0804fbf1e689b92dac8fa304a01a4e285a211384edae1053f615"
+    },
+    {
+      "path": "assets/js/toc_generator.js",
+      "sameBytes": false,
+      "sameCanonicalBytes": true,
+      "candidateSha256": "baf46dac252c6310e342644af490e2028f6128a182637524c4397af3bcd2fb63"
+    },
+    {
+      "path": "assets/vendor/bootstrap-icons/font/bootstrap-icons.min.css",
+      "sameBytes": false,
+      "sameCanonicalBytes": true,
+      "candidateSha256": "91036de7f47a2b39039ba1c1889524b9aadcfff70eb01b99eb03983f4de2dac0"
+    },
+    {
+      "path": "assets/vendor/bootstrap/5.3.3/css/bootstrap.min.css",
+      "sameBytes": false,
+      "sameCanonicalBytes": true,
+      "candidateSha256": "3c8f27e6009ccfd710a905e6dcf12d0ee3c6f2ac7da05b0572d3e0d12e736fc8"
+    }
+  ],
+  "inheritanceBoundary": "All reviewed FM03 HTML bytes are identical. Referenced static resources are identical or differ only by CRLF/LF conversion. Prior browser evidence is inherited within this boundary; local course targets were checked separately against the isolated build.",
+  "pagefind": {
+    "version": "1.5.2",
+    "pages": 296,
+    "languages": 2,
+    "words": 45228,
+    "boundary": "generation only"
+  }
+}

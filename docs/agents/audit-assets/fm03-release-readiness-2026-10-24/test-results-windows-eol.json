@@ -1,0 +1,18 @@
+{
+  "scope": "All Node commands and test globs in current test.yml; local execution, not remote CI",
+  "total": 70,
+  "passed": 68,
+  "failures": [
+    {
+      "script": "scripts/test-integration-applications.js",
+      "exitCode": 1,
+      "finding": "CRLF prevented the existing heading-removal regex from excluding translated headings. Only line endings were changed in the isolated copy; LF prompts match."
+    },
+    {
+      "script": "scripts/test-vectors.js",
+      "exitCode": 1,
+      "finding": "CRLF prevented the existing heading-removal regex from excluding translated headings. Only line endings were changed in the isolated copy; LF prompts match."
+    }
+  ],
+  "boundary": "Initial local Windows-format attempt. Final LF candidate results are recorded separately in test-results.json. No repository course or test code was changed for this issue."
+}

@@ -1,0 +1,25 @@
+[
+  {
+    "check": "test-further-bilingual.js",
+    "finding": "Polar introductory inline formula order differed between natural Chinese and English; mathematical data were equal.",
+    "repair": "Rephrased the Chinese introductory sentence to keep the same formula order and clearer distance then angle explanation.",
+    "pages": [
+      "zh/alevel/a2-further-mathematics/polar-coordinates.md"
+    ]
+  },
+  {
+    "check": "mobile continuous reading",
+    "finding": "New row-column, quadratic expansion and unit-circle square bridges contained long lines requiring local scrolling.",
+    "repair": "Split the new equations across aligned rows; values and reasoning unchanged.",
+    "pages": [
+      "matrix-algebra",
+      "roots-and-polynomials",
+      "de-moivres-theorem"
+    ]
+  },
+  {
+    "check": "screenshot capture",
+    "finding": "Offscreen lazy images were not forced to load before initial continuous captures.",
+    "repair": "Targeted capture now scrolls all content images into view and waits for completed loading before taking the continuous screenshot."
+  }
+]

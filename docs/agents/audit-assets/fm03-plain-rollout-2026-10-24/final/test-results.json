@@ -1,0 +1,77 @@
+{
+  "results": [
+    {
+      "script": "test-further-bilingual.js",
+      "exitCode": 0
+    },
+    {
+      "script": "test-further-de-moivre.js",
+      "exitCode": 0
+    },
+    {
+      "script": "test-further-first-order.js",
+      "exitCode": 0
+    },
+    {
+      "script": "test-further-induction-series.js",
+      "exitCode": 0
+    },
+    {
+      "script": "test-further-inverse-trig.js",
+      "exitCode": 0
+    },
+    {
+      "script": "test-further-linear-equations.js",
+      "exitCode": 0
+    },
+    {
+      "script": "test-further-matrices.js",
+      "exitCode": 0
+    },
+    {
+      "script": "test-further-polar.js",
+      "exitCode": 0
+    },
+    {
+      "script": "test-further-retry.js",
+      "exitCode": 0
+    },
+    {
+      "script": "test-further-roots.js",
+      "exitCode": 0
+    },
+    {
+      "script": "test-further-second-order.js",
+      "exitCode": 0
+    },
+    {
+      "script": "test-further-series-limits.js",
+      "exitCode": 0
+    },
+    {
+      "script": "test-further-vectors.js",
+      "exitCode": 0
+    }
+  ],
+  "boundary": "All 13 checks passed across the initial build and the polar sentence repair. After the final six-page equation wrapping, matrix, roots, de-moivre and bilingual checks were rerun and passed (2864 unique TeX); the entire 13-check suite was not rerun at that point.",
+  "frontendUx": 0,
+  "markdownlint": "34 course pages and four author records passed; final six formatted pages were rechecked and passed. Final report lint is recorded in the main implementation report.",
+  "finalAffectedReruns": [
+    {
+      "script": "test-further-matrices.js",
+      "exitCode": 0
+    },
+    {
+      "script": "test-further-roots.js",
+      "exitCode": 0
+    },
+    {
+      "script": "test-further-de-moivre.js",
+      "exitCode": 0
+    },
+    {
+      "script": "test-further-bilingual.js",
+      "exitCode": 0
+    }
+  ]
+}

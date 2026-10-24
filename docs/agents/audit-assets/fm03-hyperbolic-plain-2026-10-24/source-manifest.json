@@ -1,0 +1,26 @@
+{
+  "checked_at": "2026-10-24T19:36:03.607139+08:00",
+  "base_commit": "19db6ca1640fb47fd541b3f8fb3d45d510d41b09",
+  "note": "Working-copy sample; existing AS/MA03 changes are also present in the local build. Review reports identify final course hashes; subsequent author-record technical additions are separate. No publication.",
+  "source_explicit_ids_retained": {
+    "alevel/a2-further-mathematics/hyperbolic-functions.md": 39,
+    "zh/alevel/a2-further-mathematics/hyperbolic-functions.md": 39
+  },
+  "browser_views": 8,
+  "journeys": 2,
+  "local_links": 40,
+  "keyboard_scroll_checks": 4,
+  "sha256": {
+    "alevel/a2-further-mathematics/hyperbolic-functions.md": "123a3fbbfcca38b6a42f6c53e8d9620791394886c80b2a49e5a3253f386410f6",
+    "zh/alevel/a2-further-mathematics/hyperbolic-functions.md": "e5af82205d81291a8680ea8ad362621f8cd4e9f930b5f1bebbd0f2ff0525c149",
+    "_site/alevel/a2-further-mathematics/hyperbolic-functions/index.html": "8f27cf7ce7d307543cf598f6d91d09fa18d704ed571f903f7f0e599dcbfbf84e",
+    "_site/zh/alevel/a2-further-mathematics/hyperbolic-functions/index.html": "bcd15df4853bb0115f0b7fdf6b585d735b7016cc42d71d178b5ed77a76467828",
+    "scripts/test-further-retry.js": "5822c1ebe741b1449943664422b6c2e57c4f6f35a107f1d02419e2a14c1ba1ec",
+    "scripts/test-further-bilingual.js": "2dd2f2a21a5a9f59efe8885d358a32e5281648064fe4b368ac92b3e17fb696dd",
+    "scripts/test-further-first-order.js": "793dcb69c9972dd1367dee6790c8e7c8042beb0c1ea2d3697e5aa863b660d53d",
+    "scripts/test-frontend-ux.js": "6eef0cca55a0f995199a871f7aeaf25cc46cf8d922efca19ae6202cf963342d7",
+    "assets/css/reading.css": "177c376f70a9685f629b177f24c7641cdd08449d49869a29785775126997f72a",
+    "assets/css/subject.css": "c92ff3d33a2ae0263377b98e71cd39e23116c2c9e625454dec263c8681a27cf3",
+    "_layouts/subjects.html": "293db2c33a7e9d0858caf551013030cb136af11b7aaf6f97397c90c0ad7d940e"
+  }
+}

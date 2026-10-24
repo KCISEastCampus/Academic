@@ -1,0 +1,182 @@
+{
+  "rows": [
+    {
+      "slug": "roots-and-polynomials",
+      "id": "roots-and-coefficients",
+      "x": 15,
+      "y": 1374.5,
+      "width": 360,
+      "height": 1900,
+      "allHelpClosed": true
+    },
+    {
+      "slug": "de-moivres-theorem",
+      "id": "powers-and-proof",
+      "x": 15,
+      "y": 1180.859375,
+      "width": 360,
+      "height": 1900,
+      "allHelpClosed": true
+    },
+    {
+      "slug": "polar-coordinates",
+      "id": "coordinates",
+      "x": 15,
+      "y": 1150.265625,
+      "width": 360,
+      "height": 1900,
+      "allHelpClosed": true
+    },
+    {
+      "slug": "inverse-trigonometric-functions",
+      "id": "values-and-graphs",
+      "x": 15,
+      "y": 1179.15625,
+      "width": 360,
+      "height": 1900,
+      "allHelpClosed": true
+    },
+    {
+      "slug": "proof-by-induction",
+      "id": "method",
+      "x": 15,
+      "y": 1067.0625,
+      "width": 360,
+      "height": 1373.96875,
+      "allHelpClosed": true
+    },
+    {
+      "slug": "finite-series",
+      "id": "partial-fractions",
+      "x": 15,
+      "y": 1323.921875,
+      "width": 360,
+      "height": 1900,
+      "allHelpClosed": true
+    },
+    {
+      "slug": "series-and-limits",
+      "id": "maclaurin-series",
+      "x": 15,
+      "y": 4021.046875,
+      "width": 360,
+      "height": 1900,
+      "allHelpClosed": true
+    },
+    {
+      "slug": "arc-length-and-surface-area",
+      "id": "surface-area-about-the-x-axis",
+      "x": 15,
+      "y": 3017.703125,
+      "width": 360,
+      "height": 1614.4375,
+      "allHelpClosed": true
+    },
+    {
+      "slug": "vector-products-and-coplanarity",
+      "id": "cross-product",
+      "x": 15,
+      "y": 1397.09375,
+      "width": 360,
+      "height": 1900,
+      "allHelpClosed": true
+    },
+    {
+      "slug": "lines-and-planes",
+      "id": "directions-and-lines",
+      "x": 15,
+      "y": 1029.59375,
+      "width": 360,
+      "height": 1900,
+      "allHelpClosed": true
+    },
+    {
+      "slug": "linear-equations",
+      "id": "constraints-and-elimination",
+      "x": 15,
+      "y": 1013.390625,
+      "width": 360,
+      "height": 1900,
+      "allHelpClosed": true
+    },
+    {
+      "slug": "matrix-algebra",
+      "id": "dimensions-and-order",
+      "x": 15,
+      "y": 1015.09375,
+      "width": 360,
+      "height": 1900,
+      "allHelpClosed": true
+    },
+    {
+      "slug": "eigenvalues-and-eigenvectors",
+      "id": "definition",
+      "x": 15,
+      "y": 1089.078125,
+      "width": 360,
+      "height": 1900,
+      "allHelpClosed": true
+    }
+  ],
+  "scrolls": [
+    {
+      "slug": "finite-series",
+      "width": 316,
+      "scrollWidth": 320,
+      "scrollLeft": 4
+    },
+    {
+      "slug": "series-and-limits",
+      "width": 316,
+      "scrollWidth": 430,
+      "scrollLeft": 80
+    },
+    {
+      "slug": "lines-and-planes",
+      "width": 316,
+      "scrollWidth": 357,
+      "scrollLeft": 41
+    },
+    {
+      "slug": "linear-equations",
+      "width": 316,
+      "scrollWidth": 339,
+      "scrollLeft": 23
+    },
+    {
+      "slug": "matrix-algebra",
+      "width": 350,
+      "scrollWidth": 497,
+      "scrollLeft": 80
+    },
+    {
+      "slug": "eigenvalues-and-eigenvectors",
+      "width": 350,
+      "scrollWidth": 362,
+      "scrollLeft": 12
+    }
+  ],
+  "journeys": [
+    {
+      "slug": "series-and-limits",
+      "concept": "maclaurin-series",
+      "courseEntry": true,
+      "keyboardHelp": true,
+      "next": "de-moivres-theorem"
+    },
+    {
+      "slug": "matrix-algebra",
+      "concept": "row-column-start",
+      "courseEntry": true,
+      "keyboardHelp": true,
+      "next": "linear-equations"
+    },
+    {
+      "slug": "eigenvalues-and-eigenvectors",
+      "concept": "direction-start",
+      "courseEntry": true,
+      "keyboardHelp": true,
+      "next": "last lesson"
+    }
+  ]
+}
