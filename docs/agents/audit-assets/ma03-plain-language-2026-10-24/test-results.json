@@ -1,0 +1,138 @@
+[
+  {
+    "test": "numerical-methods",
+    "exit": 0,
+    "output": "Numerical methods passed: trial chains, iterations, integration comparisons, bilingual tasks/formulas, SVG geometry, legacy anchors, concept order, rendered tables and 34 closed disclosures per language."
+  },
+  {
+    "test": "binomial-series",
+    "exit": 0,
+    "output": "binomial-series: mathematics, bilingual tasks/formulas, source structure and legacy anchors passed; rendered HTML also passed."
+  },
+  {
+    "test": "trigonometry",
+    "exit": 0,
+    "output": "trigonometric-functions-and-formulae: mathematics, bilingual tasks/formulas, source structure and legacy anchors passed; rendered HTML also passed."
+  },
+  {
+    "test": "exponential-logarithmic",
+    "exit": 0,
+    "output": "exponential-and-logarithmic-functions: mathematics, bilingual tasks/formulas, source structure and legacy anchors passed; rendered HTML also passed.",
+    "finalReviewFixRecheck": true
+  },
+  {
+    "test": "differentiation",
+    "exit": 0,
+    "output": "differentiation: mathematics and bilingual source checks passed (13 tasks each); generated HTML checked.",
+    "finalReviewFixRecheck": true
+  },
+  {
+    "test": "parametric-equations",
+    "exit": 0,
+    "output": "parametric-equations: mathematics and bilingual source checks passed (11 tasks each); generated HTML checked.",
+    "finalReviewFixRecheck": true
+  },
+  {
+    "test": "differential-equations",
+    "exit": 0,
+    "output": "differential-equations: mathematics and bilingual source checks passed (9 tasks each); generated HTML checked.",
+    "finalReviewFixRecheck": true
+  },
+  {
+    "test": "integration-applications",
+    "exit": 0,
+    "output": "Integration applications maths/source passed: 8 derivatives, 16 definite results, bilingual task conditions and closed separate help.\nIntegration applications rendered HTML and course links passed."
+  },
+  {
+    "test": "vectors",
+    "exit": 0,
+    "output": "Vectors maths/source passed: original cases plus 2D operations, vertex angles, geometry, retries, and bilingual task conditions.\nVectors passed: lengths, unit vectors, midpoints, line membership, intersections, line equivalence, angles, perpendicular feet and distances.\nRendered column-vector row separators passed in Vectors, Quick Reference and Modulus."
+  },
+  {
+    "test": "pure-consistency",
+    "exit": 0,
+    "output": "Pure consistency passed: early algebra, domains, modulus inequalities, 12 antiderivatives, proof cases, iteration values, general tangents, English, course navigation, TeX row separators and legacy topic bookmarks.\nContent inventory: 15 lessons, 98 worked examples, 98 numbered practice questions; index and quick reference also checked.\nMathJax initial-anchor regression passed: page/font/frame timing, encoded IDs, malformed/missing hashes and pages without anchors."
+  },
+  {
+    "test": "bilingual",
+    "exit": 0,
+    "output": "Bilingual checks passed for 17 pages: paired switches, formulas, heading IDs, links, details and Chinese controls.\nBilingual subject index checks passed for 6 pages: front matter, switches, anchors, links and UI text.",
+    "finalReviewFixRecheck": true
+  },
+  {
+    "test": "reading-layout",
+    "exit": 0,
+    "output": "Reading sample passed: bilingual examples, stable anchors, closed practice solutions and scoped layout.\nMA03 reading roles passed for 32 bilingual course pages."
+  },
+  {
+    "test": "a2-heading-hierarchy",
+    "exit": 0,
+    "output": "A2 heading hierarchy passed: 114 pages, bilingual outlines, source/HTML levels, unique IDs, local fragments and 11 repaired lesson pairs.",
+    "finalReviewFixRecheck": true
+  },
+  {
+    "test": "accessibility",
+    "exit": 0,
+    "output": "Accessibility passed: TOC focus, visibility, Escape, refresh, resize, themes and native skip navigation."
+  },
+  {
+    "test": "site-language",
+    "exit": 0,
+    "output": "Site language passed: preferences, safe reversible links, explicit switching, document language, storage fallback and 151 built page pairs."
+  },
+  {
+    "test": "frontend-ux",
+    "exit": 0,
+    "output": "Frontend UX passed: shared search, landmarks/skip links, course discovery, bilingual card names and destinations, fallback language and link contrast."
+  },
+  {
+    "test": "subject-index-translations",
+    "exit": 0,
+    "output": "Bilingual subject index checks passed for 6 pages: front matter, switches, anchors, links and UI text.\nChinese homepage and course pages link to all six indexes."
+  },
+  {
+    "test": "search-language",
+    "exit": 0,
+    "output": "Search language passed: selected UI status, page-language fallback and matching indexed destinations."
+  },
+  {
+    "test": "search-excerpts",
+    "exit": 0,
+    "output": "Search excerpts passed: complete prose, formula sentence omission, course context and length limit in both engines."
+  },
+  {
+    "test": "search-interaction",
+    "exit": 0,
+    "output": "Search interaction passed: dialog focus, keyboard links, stale queries, close cancellation, fallback language and retry."
+  },
+  {
+    "test": "frontend-loading",
+    "exit": 0,
+    "output": "Frontend loading passed: conditional diagrams, reusable style preload and valid parent breadcrumbs."
+  },
+  {
+    "test": "theme-init",
+    "exit": 0,
+    "output": "Theme initialization passed: fresh visits, saved preferences, invalid values and blocked storage."
+  },
+  {
+    "test": "image-modal",
+    "exit": 0,
+    "output": "Image modal passed: named native dialog, original image, link preservation, focus restoration and scroll ownership. Browser checks cover native keyboard behaviour."
+  },
+  {
+    "test": "reading-progress",
+    "exit": 0,
+    "output": "Reading progress passed: document coordinates, cached scrolling, dynamic content, resize and observer fallback."
+  },
+  {
+    "test": "toc-refresh",
+    "exit": 0,
+    "output": "TOC passed: nested search, refresh cleanup, mobile backdrop, background focus exclusion and focus restoration."
+  },
+  {
+    "test": "back-to-top",
+    "exit": 0,
+    "output": "Back-to-top passed: nested footers, footer clearance, short viewports, missing footer and visibility."
+  }
+]

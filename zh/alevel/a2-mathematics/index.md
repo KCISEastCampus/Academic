@@ -12,12 +12,12 @@ study_page: true
 reading_layout: true
 ---
 
-纯数学 · MA03。练习说明选法、完成推理并检查条件。从下方主题开始；学过相关章节后，再用综合题连接知识。
+这是 A2 普通数学的纯数学单元 MA03。每课先说明问题是什么意思，再看一个完整例子，最后自己试。遇到不熟悉的词或步骤，先沿回补链接补上，再回来继续。
 {: .lesson-lead}
 
 ## 从这里开始 {#start-here}
 
-首次学习 A2 纯数学，从[函数](/zh/alevel/a2-mathematics/functions/)开始，按课程顺序前进。各页会链接到实际使用的先修技能。复习时先收起提示和解答完成本课练习；修复错误后做新的重试题，不只照抄原解答。
+第一次学，从[函数](/zh/alevel/a2-mathematics/functions/)开始，顺着下面的主题前进。你不必一开始就看懂目录里的所有术语，课文会逐步解释。如果看例题时有一步跟不上，先停下来，找这一页给出的回补链接。复习时先自己做题，做错后看解释，再收起答案做一道新的重试题。
 
 - **学习：**按下方四组主题前进。
 - **连接：**学过相关课程后，完成[综合任务](#mixed-review)。
@@ -32,34 +32,34 @@ reading_layout: true
 
 ## 代数与函数 {#algebra-and-functions}
 
-1. <span id="p21-algebra-and-functions"></span>**[函数](/zh/alevel/a2-mathematics/functions/)** — 确定定义域与值域，完成复合，并说明反函数分支。
-2. **[模函数与变换](/zh/alevel/a2-mathematics/modulus-and-transformations/)** — 连接变换图像与方程，求解含绝对值的条件。
-3. **[代数分式与代数除法](/zh/alevel/a2-mathematics/algebraic-fractions-and-division/)** — 化简时保留限制，运用商式和余式。
-4. **[部分分式](/zh/alevel/a2-mathematics/partial-fractions/)** — 列出完整分解形式，并用于积分。
-5. <span id="p22-sequences-and-series"></span>**[二项式级数](/zh/alevel/a2-mathematics/binomial-series/)** — 建立展开式，说明有效范围，判断近似。
+1. <span id="p21-algebra-and-functions"></span>**[函数](/zh/alevel/a2-mathematics/functions/)** — 看清允许输入哪些数、会输出哪些数，再学连续使用两个函数和把步骤倒过来。
+2. **[模函数与变换](/zh/alevel/a2-mathematics/modulus-and-transformations/)** — 从“离零多远”理解绝对值，看图像怎样移动，再解方程。
+3. **[代数分式与代数除法](/zh/alevel/a2-mathematics/algebraic-fractions-and-division/)** — 像计算普通分数一样处理含字母的分式，并弄懂多项式的除法和余数。
+4. **[部分分式](/zh/alevel/a2-mathematics/partial-fractions/)** — 把复杂分式拆成几个简单分式，方便继续计算或积分。
+5. <span id="p22-sequences-and-series"></span>**[二项式级数](/zh/alevel/a2-mathematics/binomial-series/)** — 把一个式子写成一串幂，弄清什么时候能用它估算。
 
 ## 三角函数、指数与对数 {#trigonometry-exponentials-and-logarithms}
 
 先调用 AS 三角图像与指数法则；各页提供回补链接。
 
-- <span id="p24-trigonometry"></span>**[三角函数与公式](/zh/alevel/a2-mathematics/trigonometric-functions-and-formulae/)** — 证明恒等式，并找全条件允许的方程解。
-- <span id="p25-exponentials-and-logarithms"></span>**[指数函数与对数函数](/zh/alevel/a2-mathematics/exponential-and-logarithmic-functions/)** — 解方程时检查定义域，解释增长或衰减参数。
+- <span id="p24-trigonometry"></span>**[三角函数与公式](/zh/alevel/a2-mathematics/trigonometric-functions-and-formulae/)** — 说明两个三角表达式为什么相等，并找全指定范围内的角。
+- <span id="p25-exponentials-and-logarithms"></span>**[指数函数与对数函数](/zh/alevel/a2-mathematics/exponential-and-logarithmic-functions/)** — 用对数找出未知指数，再解释公式中的数怎样影响增长或衰减。
 
 ## 微积分 {#calculus}
 
-微分支持参数曲线的斜率，也可检查原函数。学习微分方程之前先学积分。
+微分研究“变得多快”，积分把变化累积起来，也能倒过来找函数。先学求导，再学参数曲线和积分，最后用这些方法解微分方程。
 
-1. <span id="p26-differentiation"></span>**[微分](/zh/alevel/a2-mathematics/differentiation/)** — 选择并组合求导法则，解释切线与驻点。
-2. <span id="p23-coordinate-geometry"></span>**[参数方程](/zh/alevel/a2-mathematics/parametric-equations/)** — 消参时保留定义域，连接参数运动与斜率。
-3. <span id="p27-integration"></span>**[积分：方法选择](/zh/alevel/a2-mathematics/integration/)** — 说明选法，保持变量与上下限一致，用求导检查。
-4. **[积分：三角积分与应用](/zh/alevel/a2-mathematics/integration-applications/)** — 将恒等式和几何连接到有向积分、面积和体积。
-5. <span id="p28-differential-equations"></span>**[微分方程](/zh/alevel/a2-mathematics/differential-equations/)** — 建立并求解可分离模型，保留条件和平衡解。
+1. <span id="p26-differentiation"></span>**[微分](/zh/alevel/a2-mathematics/differentiation/)** — 根据函数的样子选择求导方法，再用斜率研究曲线。
+2. <span id="p23-coordinate-geometry"></span>**[参数方程](/zh/alevel/a2-mathematics/parametric-equations/)** — 用同一个数同时给出横、纵坐标，再把这两条规则连接成曲线。
+3. <span id="p27-integration"></span>**[积分：方法选择](/zh/alevel/a2-mathematics/integration/)** — 从求导倒过来找函数，学习怎样选择积分方法和检查答案。
+4. **[积分：三角积分与应用](/zh/alevel/a2-mathematics/integration-applications/)** — 先把三角表达式改成容易积分的样子，再用积分计算面积和旋转体体积。
+5. <span id="p28-differential-equations"></span>**[微分方程](/zh/alevel/a2-mathematics/differential-equations/)** — 从“怎样变化”写出方程，再找出符合起始条件的函数。
 
 ## 数值方法、向量与证明 {#numerical-methods-vectors-and-proof}
 
-- <span id="p29-numerical-methods"></span>**[数值方法](/zh/alevel/a2-mathematics/numerical-methods/)** — 论证根的区间和精度，判断迭代，建立数值积分。
-- <span id="p210-vectors"></span>**[向量](/zh/alevel/a2-mathematics/vectors/)** — 由几何条件判断相交、求夹角与距离。
-- **[数学证明](/zh/alevel/a2-mathematics/mathematical-proof/)** — 区分一般证明与举例，构造有效论证或反例。
+- <span id="p29-numerical-methods"></span>**[数值方法](/zh/alevel/a2-mathematics/numerical-methods/)** — 通过重复计算找近似值，并说明它有多可靠。
+- <span id="p210-vectors"></span>**[向量](/zh/alevel/a2-mathematics/vectors/)** — 用有方向的移动描述点和直线，计算交点、夹角和距离。
+- **[数学证明](/zh/alevel/a2-mathematics/mathematical-proof/)** — 解释为什么一个结论总成立，或用一个反例说明它并不总成立。
 
 ## 连接所学 {#mixed-review}
 

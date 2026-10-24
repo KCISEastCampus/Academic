@@ -1,0 +1,32 @@
+[
+  {
+    "topic": "functions",
+    "anchor": "domain-and-range",
+    "helpInitiallyClosed": true
+  },
+  {
+    "topic": "integration",
+    "anchor": "substitution",
+    "helpInitiallyClosed": true
+  },
+  {
+    "topic": "exponential-and-logarithmic-functions",
+    "anchor": "natural-logarithms",
+    "helpInitiallyClosed": true
+  },
+  {
+    "topic": "differential-equations",
+    "anchor": "separable-variables",
+    "helpInitiallyClosed": true
+  },
+  {
+    "topic": "numerical-methods",
+    "anchor": "iteration",
+    "helpInitiallyClosed": true
+  },
+  {
+    "topic": "vectors",
+    "anchor": "plane-vectors",
+    "helpInitiallyClosed": true
+  }
+]

@@ -12,7 +12,7 @@ study_page: true
 
 [Pure Mathematics](/alevel/a2-mathematics/) · P2.7 Integration
 
-Use a trigonometric identity to make an integral simpler. Then use definite integrals to find areas and volumes.
+The same curve can help you find the area of a flat region, or the volume made by turning that region around an axis. These questions add up different things, so look at the region and axis before writing an integral. You will also practise rewriting trigonometric functions into forms you can integrate.
 
 - **Learning:** start with [trigonometric integrals](#trigonometric-integrals), then study [area](#area) and [volume of revolution](#volume-of-revolution).
 - **Homework help:** compare your question with an example. Check the identity, the limits and the axis of rotation before calculating.
@@ -41,9 +41,9 @@ All worked examples and practice questions on this page are self-written, not of
 | A power of $\tan x$ | Use $\tan^2x=\sec^2x-1$ to reduce the power | Terms containing $\sec^2x$ may allow $u=\tan x$ |
 {: .wide-table}
 
-For an argument such as $2x$ or $3x$, use the same identities with that argument. Include the coefficient from the chain rule when integrating.
+If the angle inside the brackets is $2x$ or $3x$, put that whole angle into the identity. Also account for how quickly the angle changes: differentiating multiplies by that coefficient, so integrating in reverse divides by it.
 
-Choose a substitution by checking whether the remaining factor supplies its differential. With only even powers, double angles turn the expression into a sum of standard integrals. The power rule for $x^n$ does not directly integrate $\sin^n x$: differentiating a power of sine introduces a cosine factor. Check the identity before integrating.
+The aim of choosing an identity is to reach a form you already know how to integrate. To replace a sine or cosine by a new letter, check whether its derivative matches the factor left over; that is why the table keeps one factor aside. With only even powers, double angle identities remove squares and give a sum you can integrate term by term. The power rule for $x^n$ does not directly integrate $\sin^n x$: differentiating a power of sine introduces a cosine factor. Check that the rewrite is equal to the original before integrating.
 
 <section class="worked-example" markdown="1">
 
@@ -51,13 +51,15 @@ Choose a substitution by checking whether the remaining factor supplies its diff
 
 **Question:** Find $\displaystyle\int\sin^3(2x)\,dx$.
 
-**Choice:** The power is odd. Write
+**Choice:** There are three matching sine factors. Keep one aside and replace the square formed by the other two with one minus cosine squared. A new letter can then stand for the cosine, while the sine left over appears in its derivative:
 
 $$\sin^3(2x)=[1-\cos^2(2x)]\sin(2x).$$
 
-Let $u=\cos(2x)$. Then $du=-2\sin(2x)\,dx$, so
+Let $u=\cos(2x)$. Differentiating gives $du=-2\sin(2x)\,dx$. The sine factor and small change left in the original are therefore minus one half of this new differential, so
 
 $$\int\sin^3(2x)\,dx=-\frac12\int(1-u^2)\,du.$$
+
+The brackets now contain only the zeroth and second powers of the new letter. Integrate using the power rule, then replace the letter by the cosine again:
 
 $$\boxed{-\frac12\cos(2x)+\frac16\cos^3(2x)+C}.$$
 
@@ -73,7 +75,7 @@ $$\boxed{-\frac12\cos(2x)+\frac16\cos^3(2x)+C}.$$
 
 **Question:** Find $\displaystyle\int\cos^2(3x)\,dx$.
 
-Use $\cos^2\theta=\frac{1+\cos(2\theta)}2$ with $\theta=3x$:
+The square is not easy to integrate directly. A double angle identity turns it into a constant plus a cosine: use $\cos^2\theta=\frac{1+\cos(2\theta)}2$ with $\theta=3x$, doubling the whole angle:
 
 $$\int\cos^2(3x)\,dx=\frac12\int[1+\cos(6x)]\,dx.$$
 
@@ -91,7 +93,7 @@ $$\boxed{\frac{x}{2}+\frac{\sin(6x)}{12}+C}.$$
 
 **Question:** Find $\displaystyle\int\cos^4(2x)\,dx$.
 
-Use the double angle identity twice:
+The fourth power is a square squared. Apply a double angle identity once and expand; a cosine square remains, so apply the identity again:
 
 $$\cos^4(2x)=\frac14[1+2\cos(4x)+\cos^2(4x)]$$
 
@@ -113,7 +115,7 @@ For a product of even powers, also look for $\sin(2x)=2\sin x\cos x$. For exampl
 
 **Question:** Find $\displaystyle\int\tan^3x\,dx$.
 
-Use $\tan^2x=\sec^2x-1$:
+Keep one tangent factor and replace the square formed by the other two using $\tan^2x=\sec^2x-1$. The first term then contains the derivative of tangent, allowing a substitution:
 
 $$\int\tan^3x\,dx=\int\tan x\sec^2x\,dx-\int\tan x\,dx.$$
 
@@ -129,7 +131,9 @@ Use this result on an interval where $\cos x\ne0$. Do not integrate across a poi
 
 ## Area {#area}
 
-**A definite integral gives signed area.** Parts above the $x$-axis contribute positively; parts below it contribute negatively. The total area adds the sizes of all parts.
+Imagine cutting the region into many narrow vertical strips. A definite integral adds function value times small width. The function value is positive above the $x$-axis and negative below it, so contributions from opposite sides can cancel. This is **signed area**.
+
+To find how much space the region actually occupies on the page, count the part below the axis positively too. Separate the parts first, find the size of each, then add them. Taking an absolute value after cancellation cannot recover the lost area.
 
 1. Sketch the curve and mark the required interval.
 2. Find any crossings of the $x$-axis inside the interval.
@@ -144,11 +148,11 @@ Use this result on an interval where $\cos x\ne0$. Do not integrate across a poi
 
 **Question:** Find the total area between $y=x^2-1$ and the $x$-axis for $-2\le x\le2$.
 
-The crossings are $x=-1$ and $x=1$. The curve is below the axis between them and above it on the two outer intervals.
+Set the curve's height equal to zero to find $x=-1$ and $x=1$. Between them the square is less than one, so the curve is below the axis; on the two outer parts the square is greater than one, so the curve is above it. Split into three parts. The middle integral is negative, so the minus sign in front turns it into a positive area:
 
 $$\begin{aligned}A&=\int_{-2}^{-1}(x^2-1)\,dx\\&\quad-\int_{-1}^{1}(x^2-1)\,dx\\&\quad+\int_1^2(x^2-1)\,dx.\end{aligned}$$
 
-Using $F(x)=\frac{x^3}{3}-x$, the two outer integrals each give $\frac43$. The middle integral gives $-\frac43$.
+First find a function whose derivative is the original expression: $F(x)=\frac{x^3}{3}-x$. On each part, subtract its value at the left endpoint from its value at the right endpoint. The outer integrals each give $\frac43$ and the middle gives $-\frac43$. Our area expression reverses the middle sign, so all three areas are added:
 
 $$A=\frac43+\frac43+\frac43=\boxed{4\text{ square units}}.$$
 
@@ -162,26 +166,28 @@ $$A=\frac43+\frac43+\frac43=\boxed{4\text{ square units}}.$$
 
 **Question:** Find the area enclosed by $y=2x$ and $y=x^2$.
 
-Find the intersections: $2x=x^2$ gives $x=0$ and $x=2$. Between these values, $2x\ge x^2$.
+Find the left and right ends of the region, where the curves meet: $2x=x^2$ gives $x=0$ and $x=2$. Between these values, $2x\ge x^2$, because upper minus lower factors into two non-negative factors. Each vertical strip has height equal to the difference between the curves, so subtract the lower curve from the upper one:
 
 $$A=\int_0^2(2x-x^2)\,dx=\left[x^2-\frac{x^3}{3}\right]_0^2.$$
 
 $$\boxed{\frac43\text{ square units}}.$$
 
-**Check:** The integrand is non-negative on $[0,2]$. If the upper and lower curves change places within a given interval, split the integral at the intersections.
+**Check:** The strip height used inside the integral is non-negative on $[0,2]$. If the upper and lower curves change places within a given interval, split the integral at the intersections.
 
 </section>
 
 ## Volume of Revolution {#volume-of-revolution}
 
-When a region rotates completely about an axis, it forms a **solid of revolution**. A slice perpendicular to the axis is a circle when the region extends from the axis to the curve. Its area is $\pi\times(\text{radius})^2$.
+Turning a region fully around an axis makes a **solid of revolution**. Look at one narrow strip reaching from the axis to the curve: turning it sweeps out a thin disc. The strip's length becomes the radius. Cutting across the solid shows a circular cross-section, with area $\pi\times(\text{radius})^2$.
+
+A thin disc has volume approximately equal to its circular area times its thickness. Make the discs thinner and add their volumes to obtain the volume integral. About the horizontal axis, stack discs from left to right; about the vertical axis, stack them from bottom to top. This tells you which variable and limits to use.
 
 | Axis of rotation | Radius | Formula for a region between the axis and the curve |
 |---|---|---|
 | $x$-axis | Distance $\lvert y\rvert$ from the $x$-axis | $\displaystyle V=\pi\int_a^b y^2\,dx$ |
 | $y$-axis | Distance $\lvert x\rvert$ from the $y$-axis | $\displaystyle V=\pi\int_c^d x^2\,dy$ |
 
-**Before integrating:** identify the axis, square the radius, express it in the integration variable, and use limits for that variable. Give the result in cubic units.
+**Before integrating:** draw the axis and one strip, and identify the length that becomes a radius. Square the whole radius. Then use the direction in which the discs are stacked to choose the integration variable and its start and end values. Give the result in cubic units.
 
 These formulas describe circular slices with no hole. If the stated region does not extend to the axis, first identify the outer and inner radii; do not use one curve's radius without checking the region.
 
@@ -191,7 +197,7 @@ These formulas describe circular slices with no hole. If the stated region does 
 
 **Question:** The region between $y=x+1$, the $x$-axis and the lines $x=0$ and $x=2$ is rotated completely about the $x$-axis. Find its volume.
 
-Draw a vertical strip from the $x$-axis to the curve, of thickness $dx$; rotation gives a disc. Its radius is $y=x+1$, so its square is $(x+1)^2=x^2+2x+1$.
+The region turns about the horizontal axis, so use a vertical strip from the $x$-axis to the curve, of width $dx$. Turning it makes a thin disc; stack these from left to right. The whole strip length is the radius, $y=x+1$, so square the whole length: $(x+1)^2=x^2+2x+1$.
 
 $$V=\pi\int_0^2(x+1)^2\,dx.$$
 
@@ -209,7 +215,7 @@ $$=\pi\left[\frac{x^3}{3}+x^2+x\right]_0^2=\boxed{\frac{26\pi}{3}\text{ cubic un
 
 **Question:** The region in $x\ge0$ enclosed by $y=x^2+2$, the line $y=6$ and the $y$-axis is rotated completely about the $y$-axis. Find its volume.
 
-Draw a horizontal strip from the $y$-axis to the curve, of thickness $dy$. Its rotating radius is $x$, not the height $y$. At $x=0$, the region starts at $y=2$ and ends at $y=6$: use these $y$-limits and rearrange to give $x^2=y-2$.
+The region turns about the vertical axis, so use a horizontal strip from the $y$-axis to the curve, of thickness $dy$. The radius is the horizontal length $x$, not the vertical height $y$. Stack discs upwards: the bottom comes from $x=0$, giving $y=2$, and the top is $y=6$. Use these heights as the integration limits and rewrite the squared radius as $x^2=y-2$ to integrate with respect to height:
 
 $$V=\pi\int_2^6(y-2)\,dy=\pi\left[\frac{(y-2)^2}{2}\right]_2^6.$$
 
@@ -221,7 +227,7 @@ $$\boxed{8\pi\text{ cubic units}}.$$
 
 </section>
 
-**Area and volume use different integrands.** For a region under $y=\sin x$ on $0\le x\le\frac\pi2$, area uses $\sin x$; rotation about the $x$-axis uses $\pi\sin^2x$. A volume question may therefore need a trigonometric identity first.
+**Decide what you are adding before choosing the integrand, the expression after the integral sign.** For the region under $y=\sin x$ on $0\le x\le\frac\pi2$, area adds strip areas, so use the height $\sin x$; after rotation about the $x$-axis, volume adds thin discs, so use the circular area $\pi\sin^2x$. This explains the square and why a trigonometric identity may be needed first.
 
 ## Practice {#practice}
 
@@ -309,7 +315,7 @@ Use $\sin^2(2x)=\frac{1-\cos(4x)}2$. Keep the limits in radians.
 
 $$\left[\frac{x}{2}-\frac{\sin(4x)}8\right]_0^{\frac\pi4}=\boxed{\frac\pi8}.$$
 
-The integrand is between $0$ and $1$, so the answer must be between $0$ and $\frac\pi4$.
+The expression being integrated is between $0$ and $1$, so the answer must be between $0$ and $\frac\pi4$.
 
 </details>
 

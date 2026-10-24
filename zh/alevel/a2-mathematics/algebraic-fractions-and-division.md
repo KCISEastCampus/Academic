@@ -15,7 +15,7 @@ study_page: true
 [纯数学](/zh/alevel/a2-mathematics/) · P2.1 代数与函数
 {: .lesson-meta}
 
-学习化简代数分式（algebraic fraction），进行加减乘除，并把假分式（improper fraction）写成多项式与真分式（proper fraction）之和。原式中的限制条件要保留。
+怎样换一种写法，同时保持分式的值不变？先练约分和加减乘除，再用除法把整块的多项式与剩下的分式分开。全过程都要记住原来的计算允许哪些输入。
 
 教材：第 1 章，第 1.6–1.7 节（第 13–16 页）。四则运算作为前置内容复习。下方例题和练习均为自拟教学题。
 
@@ -26,13 +26,13 @@ study_page: true
 
 <div class="lesson-notes" markdown="1">
 
-**开始前：**会展开和合并同类项、分解二次式（[AS 代数 L02](/zh/alevel/as-mathematics/algebra/#l02)），并代入多项式（[L03](/zh/alevel/as-mathematics/algebra/#l03)）。下方参数题会示范怎样从两个一次方程消去一个未知数。先回补[定义域](/zh/alevel/a2-mathematics/functions/#domain-and-range)，再问“改写后哪些输入仍然不能用？”本页先练习保持限制，再学习除法与余数。复习入口为[独立练习](#practice)，错误后转[新重试](#repair-and-retry)，后续课程用[稍后回顾](#later-review)。
+**开始前：**会展开和合并同类项、分解二次式（[AS 代数 L02](/zh/alevel/as-mathematics/algebra/#l02)），并代入多项式（[L03](/zh/alevel/as-mathematics/algebra/#l03)）。有一道题要找两个未知系数，解答会说明怎样用两个方程相减，消去其中一个未知数。先回补[允许哪些输入](/zh/alevel/a2-mathematics/functions/#domain-and-range)，再问“改写后哪些输入仍然不能用？”本页先练习保持限制，再学习除法与余数。复习入口为[独立练习](#practice)，错误后转[新重试](#repair-and-retry)，后续课程用[稍后回顾](#later-review)。
 
 </div>
 
 ## 化简 {#simplification}
 
-**有理函数（rational function）**是分子和分母都是多项式的分式。例如，
+分数的分子、分母也可以放入含 x 的算式。两者都是多项式时，这个分式在分母非零处给出的规则，叫作**有理函数（rational function）**。例如，
 
 $$f(x)=\frac{x^2-9}{x^2+x-6}.$$
 
@@ -45,7 +45,7 @@ $$f(x)=\frac{x^2-9}{x^2+x-6}.$$
 3. 约去公因式。
 4. 化简后仍保留原来的限制条件。
 
-如果一个**因式（factor）**乘在整个分子和分母上，就可以约去；但不能约去和式中的某一项。例如，
+**因式（factor）**是与其余部分相乘的整块；**项（term）**则是相加或相减的一块。约分是把整个分子、分母同时除以同一个非零因式，不能只从和式里划掉某一项。例如，
 
 $$\frac{x(x+2)}{x(x+5)}=\frac{x+2}{x+5},\qquad x\ne0,-5,$$
 
@@ -57,7 +57,7 @@ $$\frac{x(x+2)}{x(x+5)}=\frac{x+2}{x+5},\qquad x\ne0,-5,$$
 
 **Question:** Simplify $\displaystyle\frac{x^2-9}{x^2+x-6}$ and state its domain.
 
-先分解两个多项式：
+要找出能整体约去的因式，先分解。分子是两个平方相减；分母则找两个乘积为负六、和为一的数。得到：
 
 $$\frac{x^2-9}{x^2+x-6}=\frac{(x-3)(x+3)}{(x+3)(x-2)}.$$
 
@@ -99,11 +99,11 @@ $$\frac{\frac12x+1}{\frac14x-2}=\frac{2x+4}{x-8},\qquad x\ne8.$$
 
 **Question:** Express $\displaystyle\frac{2}{x-1}-\frac{x}{x+2}$ as a single fraction.
 
-公分母是 $(x-1)(x+2)$，并且 $x\ne1,-2$。
+两个分式相减，要先把分母变成相同的。使用 $(x-1)(x+2)$，并且 $x\ne1,-2$。第一个分子、分母同乘第二个因式；第二个分子、分母同乘第一个因式。这样每个分式的值都没变：
 
 $$\frac{2}{x-1}-\frac{x}{x+2}=\frac{2(x+2)-x(x-1)}{(x-1)(x+2)}.$$
 
-仔细展开分子：
+减号要作用于第二个分子的全部内容，所以先保留括号，再展开：
 
 $$2x+4-(x^2-x)=-x^2+3x+4.$$
 
@@ -144,6 +144,12 @@ $$\boxed{\frac{x+3}{x-1},\qquad x\ne-1,1,3}.$$
 
 ## 多项式除法 {#algebraic-division}
 
+先回想整数除法：十七里面有三组五，还剩二。
+
+$$17=5\times3+2,\qquad \frac{17}{5}=3+\frac25.$$
+
+多项式除法沿用“除式乘商，再加剩下的部分”这个关系。但停止条件不同：整数比较余下的数与除数的大小；多项式比较最高次幂，没有余下部分，或余下部分的最高次幂比除式低时才停止。
+
 非零多项式的**次数（degree）**是其中变量 $x$ 的最高次幂。例如，$3x^2-7$ 的次数为 $2$。
 
 | 分式类型 | 次数关系 | 第一步 |
@@ -153,7 +159,7 @@ $$\boxed{\frac{x+3}{x-1},\qquad x\ne-1,1,3}.$$
 
 例如，$\frac{x+1}{x^2+2}$ 是真分式，而 $\frac{x^2+1}{x^2+2}$ 是假分式。次数相等时仍然需要做除法。
 
-除法会得到一个商（quotient）$Q(x)$ 和一个余数（remainder）$R(x)$：
+**商（quotient）** $Q(x)$ 告诉我们除式要乘以什么。乘回后还要加上的部分，叫作**余数（remainder）** $R(x)$，这样才能还原被除的多项式。若 F 是原多项式、G 是除式，就有
 
 $$F(x)=G(x)Q(x)+R(x).$$
 
@@ -169,7 +175,7 @@ $$\frac{F(x)}{G(x)}=Q(x)+\frac{R(x)}{G(x)}.$$
 
 **Question:** Express $\displaystyle\frac{3x+5}{x-2}$ as a constant plus a proper fraction.
 
-把分子写成分母的倍数再加上余数：
+分母的几倍能得到分子中的 x 项？取三倍就能做到，但三倍分母的常数项是负六，原分子需要的是正五，所以还得加十一来补足：
 
 $$3x+5=3(x-2)+11.$$
 
@@ -185,7 +191,7 @@ $$\boxed{\frac{3x+5}{x-2}=3+\frac{11}{x-2},\qquad x\ne2}.$$
 
 $$F(x)\equiv(ax+b)Q(x)+R.$$
 
-令 $x=-b/a$，乘着 $Q(x)$ 的因式为零，只剩下 $R=F(-b/a)$。这是把数代入多项式恒等式，不是代入原分式。若有两个未知系数和两个余数条件，就分别代入两个除式的根，得到两个方程后求解。
+选择 $x=-b/a$，是因为它能让除式变成零。乘着 $Q(x)$ 的整项就变成零，只剩下 $R=F(-b/a)$。这里代入的是没有除法的多项式恒等式；原分式在这个输入处仍然不能计算。若题目给两个未知系数和两个余数条件，就分别找出使两个除式为零的输入，得到两个方程，再求这两个未知数。
 
 <section class="worked-example" markdown="1">
 
@@ -199,11 +205,11 @@ $$F(x)\equiv(ax+b)Q(x)+R.$$
 
 $$F(-2)=2(-2)^3+3(-2)^2-5(-2)+4=10.$$
 
-商是二次多项式。写出多项式恒等式
+分子的最高次幂是三，除式的最高次幂是一。因此商的最高次幂必须是二，乘回去才会得到三次项。用三个未知系数表示这个商，写出多项式恒等式：
 
 $$2x^3+3x^2-5x+4\equiv(x+2)(Ax^2+Bx+C)+10.$$
 
-展开右侧并比较系数：
+展开右边。两边要对每个输入都相等，同次幂前面的数就必须分别相同。这就是**比较系数（comparison of coefficients）**：
 
 $$2x^3+3x^2-5x+4\equiv Ax^3+(2A+B)x^2+(2B+C)x+2C+10.$$
 
@@ -223,7 +229,7 @@ $$\boxed{\frac{2x^3+3x^2-5x+4}{x+2}=2x^2-x-3+\frac{10}{x+2},\qquad x\ne-2}.$$
 
 长除法会得到相同的商和余数。按降幂顺序写出各项；若缺少某次幂，也要写出系数为零的那一项。
 
-每一步都用当前余式的首项除以除式的首项。将除式乘以这个结果，再相减。
+每一步先处理最高次幂的那一项，叫作**首项（leading term）**。要用以 x 开头的除式消去二倍 x 的三次方，商就先选二倍 x 的平方。把整个除式乘回这个选择，再减去整个乘积。对余下部分重复这个动作，下表逐行展示：
 
 | 当前表达式 | 下一个商项 | 减去 | 新余式 |
 |---|---|---|---|
@@ -232,7 +238,7 @@ $$\boxed{\frac{2x^3+3x^2-5x+4}{x+2}=2x^2-x-3+\frac{10}{x+2},\qquad x\ne-2}.$$
 | $-3x+4$ | $-3$ | $-3(x+2)$ | $10$ |
 {: .wide-table}
 
-当常数余数的次数低于一次除式的次数时，停止计算。商为 $2x^2-x-3$。
+现在只剩常数，而除式还含 x；余数次数已经比除式低，可以停止。把三次选出的商项合起来，商为 $2x^2-x-3$。
 
 **任一方法都可这样检查：**展开 $(x+2)(2x^2-x-3)+10$，得到 $2x^3+3x^2-5x+4$。
 
@@ -242,7 +248,7 @@ $$\boxed{\frac{2x^3+3x^2-5x+4}{x+2}=2x^2-x-3+\frac{10}{x+2},\qquad x\ne-2}.$$
 
 ### 因式定理 {#factor-theorem}
 
-因式定理（factor theorem）指出，$ax+b$ 是多项式 $F(x)$ 的一个因式，当且仅当 $F(-\frac ba)=0$；其中 $a\ne0$。这就是余数为零时的余数定理。
+如果除完什么也没剩下，除式就是一个因式：它与商相乘，正好得到原多项式。**因式定理（factor theorem）**把这个意思写成：$ax+b$ 是 $F(x)$ 的一个因式，当且仅当 $F(-\frac ba)=0$；其中 $a\ne0$。这就是余数为零时的余数定理。
 
 例如，对于 $F(x)=2x^3+x^2-8x-4$，除式 $2x+1$ 在 $x=-\frac12$ 时为零。由于
 
@@ -262,7 +268,7 @@ $$\begin{aligned}F(x)&=(2x+1)(x^2-4)\\&=(2x+1)(x-2)(x+2).\end{aligned}$$
 
 **Question:** Express $\displaystyle\frac{x^2+6x-1}{(x-1)(x+2)}$ as a polynomial plus a proper fraction.
 
-分母是 $x^2+x-2$。它与分子的次数相同，因此这是一个假分式。
+分母是 $x^2+x-2$。分子、分母的最高次幂都是二，因此这是假分式，做部分分式前先除法。取一份分母，就能解释掉分子的最高次项。
 
 从分子中减去一个分母：
 
@@ -500,7 +506,7 @@ $$\boxed{b=3,\qquad c=4}.$$
 | --- | --- | --- |
 | 约去项，或丢掉不可用输入 | 回看[因式相消](#factorise-first)，先列原分母零点 | [R1](#retry-domain) |
 | 把乘除限制混为一谈 | 回看[除法例题](#example-3--division-adds-a-restriction)，另查除数是否为零 | [R2](#retry-operations) |
-| 非首一除式代错输入 | 回看[余数示范](#example-5--remainder-theorem-and-comparison-of-coefficients)，先解除式为零 | [R3](#retry-remainder) |
+| 除式中 x 前面的数不是一时，代错输入 | 回看[余数示范](#example-5--remainder-theorem-and-comparison-of-coefficients)，先求哪个输入使除式为零 | [R3](#retry-remainder) |
 | 漏商或余数次数不对 | 回看[除法恒等式](#algebraic-division)，展开 GQ+R | [R4](#retry-division) |
 
 <section class="lesson-check" markdown="1">
@@ -596,7 +602,7 @@ Express $\displaystyle\frac{2x^3+x^2+1}{x^2-1}$ as a polynomial plus a proper fr
 <details markdown="1">
 <summary>提示</summary>
 
-每一步用首项相除。余数可为一次式；化简余数分式时仍保留原域。
+每一步先用最高次项相除。余数可以是一次式；化简剩下的分式时，原来不能用的输入仍要排除。
 
 </details>
 

@@ -13,12 +13,12 @@ redirect_from:
   - /alevel/a2mathematics/index.html
 ---
 
-Pure Mathematics · MA03. Learn to justify a method, carry it out and check its conditions. Start with a topic below; use the mixed tasks once you have studied the connected lessons.
+This is MA03, the Pure Mathematics unit of A2 Mathematics. Each lesson explains the idea, shows a complete example, then lets you try. If a word or step is unfamiliar, follow its recovery link and return when you are ready.
 {: .lesson-lead}
 
 ## Start Here {#start-here}
 
-New to A2 Pure? Begin with [Functions](/alevel/a2-mathematics/functions/), then follow the lesson order. Each page links to the exact prior skill it uses. If you are revising, attempt that lesson's practice with hints and solutions closed; after repairing an error, do its new retry rather than copying the original solution.
+Start with [Functions](/alevel/a2-mathematics/functions/) and follow the topics below. You do not need to understand every term in the list yet: the lessons explain them as you go. If a step in an example is unclear, pause and use the recovery link on that page. When revising, try the questions first, read the explanation for any error, then close it and try a new retry question.
 
 - **Learn:** follow the four groups below.
 - **Connect:** attempt the [course tasks](#mixed-review) after the relevant lessons.
@@ -33,34 +33,34 @@ New to A2 Pure? Begin with [Functions](/alevel/a2-mathematics/functions/), then 
 
 ## Algebra and Functions
 
-1. <span id="p21-algebra-and-functions"></span>**[Functions](/alevel/a2-mathematics/functions/)** — Determine domains and ranges, compose functions and justify an inverse branch.
-2. **[Modulus Functions and Transformations](/alevel/a2-mathematics/modulus-and-transformations/)** — Connect a transformed graph to its equation and solve modulus conditions.
-3. **[Algebraic Fractions and Algebraic Division](/alevel/a2-mathematics/algebraic-fractions-and-division/)** — Simplify without losing restrictions; use quotients and remainders.
-4. **[Partial Fractions](/alevel/a2-mathematics/partial-fractions/)** — Choose the full decomposition and use it to integrate.
-5. <span id="p22-sequences-and-series"></span>**[Binomial Series](/alevel/a2-mathematics/binomial-series/)** — Build an expansion, state its valid range and judge an approximation.
+1. <span id="p21-algebra-and-functions"></span>**[Functions](/alevel/a2-mathematics/functions/)** — Find which inputs are allowed and which outputs they give; then use two functions in order and learn to undo them.
+2. **[Modulus Functions and Transformations](/alevel/a2-mathematics/modulus-and-transformations/)** — Understand absolute value as distance from zero, move graphs and solve equations.
+3. **[Algebraic Fractions and Algebraic Division](/alevel/a2-mathematics/algebraic-fractions-and-division/)** — Work with fractions containing letters, then understand division and remainders for polynomials.
+4. **[Partial Fractions](/alevel/a2-mathematics/partial-fractions/)** — Split a complicated fraction into simpler ones for calculation or integration.
+5. <span id="p22-sequences-and-series"></span>**[Binomial Series](/alevel/a2-mathematics/binomial-series/)** — Write an expression as a series of powers and decide when it gives a useful estimate.
 
 ## Trigonometry, Exponentials and Logarithms
 
 Use AS trigonometric graphs and exponential laws first; the pages provide recovery links.
 
-- <span id="p24-trigonometry"></span>**[Trigonometric Functions and Formulae](/alevel/a2-mathematics/trigonometric-functions-and-formulae/)** — Prove identities and find every permitted solution of an equation.
-- <span id="p25-exponentials-and-logarithms"></span>**[Exponential and Logarithmic Functions](/alevel/a2-mathematics/exponential-and-logarithmic-functions/)** — Solve with domain checks and explain growth or decay parameters.
+- <span id="p24-trigonometry"></span>**[Trigonometric Functions and Formulae](/alevel/a2-mathematics/trigonometric-functions-and-formulae/)** — Explain why two trigonometric expressions are equal, then find all angles in a given interval.
+- <span id="p25-exponentials-and-logarithms"></span>**[Exponential and Logarithmic Functions](/alevel/a2-mathematics/exponential-and-logarithmic-functions/)** — Use logarithms to find unknown exponents and explain how the numbers in a formula affect growth or decay.
 
 ## Calculus
 
-Differentiation supports parametric gradients and checks antiderivatives. Study integration before differential equations.
+Differentiation asks how fast something changes. Integration adds up changes and can work backwards to find a function. Learn differentiation first, then parametric curves and integration, before solving differential equations.
 
-1. <span id="p26-differentiation"></span>**[Differentiation](/alevel/a2-mathematics/differentiation/)** — Select and combine rules, then interpret tangents and stationary points.
-2. <span id="p23-coordinate-geometry"></span>**[Parametric Equations](/alevel/a2-mathematics/parametric-equations/)** — Eliminate a parameter with its domain and connect parameter motion to a gradient.
-3. <span id="p27-integration"></span>**[Integration — Choosing a Method](/alevel/a2-mathematics/integration/)** — Explain a method choice, integrate consistently and check by differentiation.
-4. **[Integration — Trigonometric Integrals and Applications](/alevel/a2-mathematics/integration-applications/)** — Connect identities and geometry to signed integrals, areas and volumes.
-5. <span id="p28-differential-equations"></span>**[Differential Equations](/alevel/a2-mathematics/differential-equations/)** — Form and solve separable models, retaining conditions and equilibrium solutions.
+1. <span id="p26-differentiation"></span>**[Differentiation](/alevel/a2-mathematics/differentiation/)** — Choose a rule by looking at the function, then use its slope to study a curve.
+2. <span id="p23-coordinate-geometry"></span>**[Parametric Equations](/alevel/a2-mathematics/parametric-equations/)** — Use one number to give both coordinates, then connect the two rules to describe a curve.
+3. <span id="p27-integration"></span>**[Integration — Choosing a Method](/alevel/a2-mathematics/integration/)** — Work backwards from differentiation, learn how to choose an integration method and check the answer.
+4. **[Integration — Trigonometric Integrals and Applications](/alevel/a2-mathematics/integration-applications/)** — Rewrite trigonometric expressions so they are easier to integrate, then calculate areas and volumes of rotation.
+5. <span id="p28-differential-equations"></span>**[Differential Equations](/alevel/a2-mathematics/differential-equations/)** — Turn a rule for change into an equation, then find a function that also fits the starting information.
 
 ## Numerical Methods, Vectors and Proof
 
-- <span id="p29-numerical-methods"></span>**[Numerical Methods](/alevel/a2-mathematics/numerical-methods/)** — Justify root brackets and precision, judge iteration and build a numerical integral.
-- <span id="p210-vectors"></span>**[Vectors](/alevel/a2-mathematics/vectors/)** — Use geometric conditions to test intersections, calculate angles and find distances.
-- **[Mathematical Proof](/alevel/a2-mathematics/mathematical-proof/)** — Distinguish a general proof from examples and construct valid arguments or counterexamples.
+- <span id="p29-numerical-methods"></span>**[Numerical Methods](/alevel/a2-mathematics/numerical-methods/)** — Use repeated calculations to find approximations and explain how reliable they are.
+- <span id="p210-vectors"></span>**[Vectors](/alevel/a2-mathematics/vectors/)** — Describe points and lines with directed movements, then find intersections, angles and distances.
+- **[Mathematical Proof](/alevel/a2-mathematics/mathematical-proof/)** — Explain why a statement always holds, or use a counterexample to show that it does not.
 
 ## Connect the Lessons {#mixed-review}
 

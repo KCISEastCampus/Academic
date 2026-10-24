@@ -13,7 +13,7 @@ reading_layout: true
 [Pure Mathematics](/alevel/a2-mathematics/) · P2.7 Integration
 {: .lesson-meta}
 
-Choose a method, integrate, then check your answer by differentiation. The **integrand** is the function inside the integral sign.
+Differentiation starts with a function and finds its rate of change. Here we work backwards: we know a derivative and want to recover a function. For example, differentiating $x^2$ gives $2x$, so one antiderivative of $2x$ is $x^2$. Finding such functions is indefinite integration. Start with familiar forms, then learn what to do when the expression is more complicated.
 {: .lesson-lead}
 
 - **Learning:** start with [choosing a method](#choose-a-method), then explain the choice in each [worked example](#worked-examples).
@@ -33,7 +33,9 @@ Examples 3–4 and the second integral in Q3 are specification examples. Later A
 
 ## Choose a Method
 
-**Simplify first.** Expand brackets, cancel common factors or write roots as powers. Then check whether you can use a standard integral. Keep any restrictions on the original domain.
+First read the notation: the **integrand** is the function inside the integral sign; $dx$ says that we integrate with respect to $x$. Add $C$ to an antiderivative because adding any constant gives the same derivative.
+
+**Look for a simpler way to write the expression.** Expanding brackets, cancelling factors or rewriting roots as powers may reveal an integral you already know. An input forbidden in the original expression stays forbidden after cancellation. Use the table as a guide; you do not need to memorise it before following the examples.
 
 | What you notice | Useful first move | Example |
 |---|---|---|
@@ -45,7 +47,7 @@ Examples 3–4 and the second integral in Q3 are specification examples. Later A
 | A rational function with a factorisable denominator | Check the logarithm form first. If needed, use algebraic division and partial fractions. | $\displaystyle \frac{5}{(x+1)(x+2)}$ |
 {: .wide-table}
 
-More than one method may work. Choose a method that makes the integral simpler. If the question gives a substitution, use it.
+You do not have to guess the method straight away. Try one and see whether the remaining integral is easier. Several methods may work. If the question specifies a substitution, use it.
 
 **Try choosing before calculating:** compare these three integrals.
 
@@ -64,11 +66,13 @@ A product does not always need integration by parts.
 
 ## Standard Integrals
 
-These are the standard forms from textbook Section 6.1. Use radians for trigonometric functions. Here $a\ne0$; each result applies on an interval where the integrand and answer are defined. Constants can differ on separate intervals.
+Check these formulas by differentiating the right-hand side: you should recover the function inside the integral sign on the left. First learn to recognise powers, exponentials, logarithms and trigonometric functions.
+
+Use radians for trigonometric functions. Here $a\ne0$. Use a result on a stretch where both the original expression and the answer are defined. Do not cross a break such as a zero denominator; separate stretches may have different constants $C$.
 
 ### Powers and linear arguments {#power-integrals}
 
-Both formulae require $n\ne-1$. With real powers, also check the original domain.
+Read the first rule as “add 1 to the power, then divide by that new power”. When $n=-1$, this would divide by zero: use the logarithm rule below instead. Roots and negative powers still carry their original input restrictions. Both formulas require $n\ne-1$.
 
 $$\int x^n\,dx=\frac{x^{n+1}}{n+1}+C.$$
 
@@ -96,7 +100,7 @@ $$\int\sec^2(ax+b)\,dx=\frac1a\tan(ax+b)+C.$$
 
 $$\int\sec^2(2x-1)\,dx=\frac12\tan(2x-1)+C.$$
 
-Differentiation multiplies by $2$, cancelling the factor $\frac12$. The same division by the inner coefficient is needed for the other linear arguments.
+Why the factor of one half? When we differentiate the right-hand side, the inside expression $2x-1$ contributes an extra factor of $2$. The factor $\frac12$ cancels it. Likewise, when the inside expression is $ax+b$, divide by $a$.
 
 ## Integration Methods and Examples {#worked-examples}
 
@@ -110,7 +114,7 @@ Expand or cancel first, then use standard integrals. Retain the domain restricti
 
 **Question:** Find $\displaystyle\int\frac{x^2+3x}{x}\,dx$ for $x\ne0$.
 
-**Choice:** Cancel the common factor, then integrate the polynomial.
+**Can we simplify first?** Both terms in the numerator contain $x$. Cancelling it leaves two terms we can integrate separately. The question gives $x\ne0$, so cancellation is allowed.
 
 $$\frac{x^2+3x}{x}=x+3,\qquad x\ne0.$$
 
@@ -122,7 +126,7 @@ $$\int(x+3)\,dx=\boxed{\frac{x^2}{2}+3x+C}.$$
 
 ### Reverse the chain rule {#reverse-chain-rule}
 
-Identify the inner function and its derivative. Try an antiderivative, then differentiate to determine the required coefficient.
+Reversing the chain rule means looking backwards through the differentiation of a function inside another function. Find the expression inside the brackets, then look nearby for its derivative. This suggests a possible antiderivative. Always differentiate your suggestion to check it; its appearance alone is not enough.
 
 <section class="worked-example" markdown="1">
 
@@ -130,7 +134,7 @@ Identify the inner function and its derivative. Try an antiderivative, then diff
 
 **Question:** Find $\displaystyle\int6x(x^2+1)^2\,dx$.
 
-**Choice:** Try $(x^2+1)^3$. Differentiate it to check the coefficient.
+**Why try this expression?** Differentiating the inside expression $x^2+1$ gives $2x$, and the question has a factor containing $x$. Raising the brackets to the third power would give a square after differentiation. Try $(x^2+1)^3$, then check whether the coefficient also matches.
 
 $$\frac{d}{dx}(x^2+1)^3=3(x^2+1)^2\cdot2x=6x(x^2+1)^2.$$
 
@@ -144,7 +148,7 @@ $$\int6x(x^2+1)^2\,dx=\boxed{(x^2+1)^3+C}.$$
 
 ### Integration by substitution {#substitution}
 
-Choose a new variable that simplifies the integrand, find the differential relation and rewrite every factor and the differential in that variable. For an indefinite integral, substitute back afterwards.
+Think of substitution as giving a complicated part a shorter name. But it is more than changing a label: every occurrence of $x$, and the instruction to integrate with respect to $x$ written as $dx$, must change together. After an indefinite integral, replace the short name with the original expression.
 
 <section class="worked-example" markdown="1">
 
@@ -154,13 +158,13 @@ Choose a new variable that simplifies the integrand, find the differential relat
 
 **Source:** Illustrative example in [OxfordAQA Mathematics (9660) specification, P2.7, printed p. 23](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf). The solution is written for this site.
 
-**Choice:** The derivative of $x+2$ is $1$, so the factor $x$ does not fit the standard form. Use the substitution $u=x+2$ to obtain a polynomial in $u$.
+**Why change the name?** Expanding the sixth power would be awkward. Calling $x+2$ by the name $u$ changes that block to $u^6$. The remaining $x$ becomes $u-2$, so the whole expression becomes easy to integrate. Differentiating the brackets gives only $1$, not the extra $x$, so we cannot simply copy the previous example.
 
 **Working:** $u=x+2$, so $x=u-2$ and $du=dx$.
 
 $$\int x(x+2)^6\,dx=\int(u-2)u^6\,du=\int(u^7-2u^6)\,du.$$
 
-Integrate, then substitute back:
+Only powers remain: add 1 to each power and divide by the new power. Finally replace $u$ with $x+2$:
 
 $$\boxed{\frac{(x+2)^8}{8}-\frac{2(x+2)^7}{7}+C}.$$
 
@@ -174,7 +178,9 @@ $$\begin{aligned}&(x+2)^7-2(x+2)^6\\&\qquad=(x+2)^6[(x+2)-2]\\&\qquad=x(x+2)^6.\
 
 ### Integration by parts {#integration-by-parts}
 
-Rearranging the product rule gives the formula below. Choose one factor that becomes simpler on differentiation and another that is easy to integrate; the remaining integral should be easier to handle.
+Integration by parts changes one integral into another, hopefully easier one. It comes from differentiating a product: that gives two terms. Moving one term to the other side and integrating gives the formula below.
+
+Choose one part to differentiate and the other to integrate. We want the first part to become simpler and the second to be easy to integrate. The letters $u,v$ are names for these parts, not extra data from the question.
 
 $$\int v\frac{du}{dx}\,dx=uv-\int u\frac{dv}{dx}\,dx.$$
 
@@ -186,11 +192,11 @@ $$\int v\frac{du}{dx}\,dx=uv-\int u\frac{dv}{dx}\,dx.$$
 
 **Source:** Illustrative example in the 9660 specification v5.2, P2.7, printed p. 23; site-written solution.
 
-**Choice:** Use integration by parts: differentiating $x$ gives $1$, and $e^{2x}$ is easy to integrate.
+**Why split it this way?** Differentiating $x$ turns it into $1$, while $e^{2x}$ is easy to integrate. The remaining integral will lose the awkward $x$ factor. Write all four quantities needed by the formula first:
 
 $$v=x,\qquad \frac{du}{dx}=e^{2x},\qquad \frac{dv}{dx}=1,\qquad u=\frac{e^{2x}}{2}.$$
 
-Substitute these expressions into the formula:
+On the right of the formula, first multiply $u$ by $v$, then subtract the remaining integral. Integrating the exponential a second time requires dividing by $2$ again:
 
 $$\int xe^{2x}\,dx=\frac{xe^{2x}}{2}-\frac12\int e^{2x}\,dx=\boxed{\frac{xe^{2x}}{2}-\frac{e^{2x}}{4}+C}.$$
 
@@ -212,7 +218,7 @@ Differentiation gives $\ln x+1-1=\ln x$.
 
 ### Recognise the logarithmic form {#logarithmic-form}
 
-Compare the numerator with the derivative of the denominator. A constant-multiple relationship allows the logarithmic form. Check that the denominator is non-zero and use the result on a valid interval.
+For a fraction, differentiate the denominator and compare it with the numerator. If they match, or differ by a constant factor, a logarithm may work. The denominator must still be non-zero. Use the answer on a stretch that does not cross any forbidden input.
 
 <section class="worked-example" markdown="1">
 
@@ -232,7 +238,9 @@ If the numerator does not have this structure, [partial fractions](/alevel/a2-ma
 
 ## Definite Integrals
 
-**Check the interval first.** Before using $F(b)-F(a)$, check that the integrand is continuous from $a$ to $b$. In particular, check that the denominator is never zero.
+An indefinite integral finds a function. A definite integral finds a single accumulated value between two endpoints. Find an antiderivative $F$, then subtract its value at the left endpoint from its value at the right: $F(b)-F(a)$.
+
+**First check the whole stretch.** The function must be continuous from $a$ to $b$: there must be no jump or undefined point on the way. Watch especially for a zero denominator. If there is such a break, simply substituting both endpoints is not valid.
 
 <section class="worked-example" markdown="1">
 
@@ -240,7 +248,7 @@ If the numerator does not have this structure, [partial fractions](/alevel/a2-ma
 
 **Question:** Evaluate $\displaystyle\int_0^1 2x(x^2+1)^3\,dx$.
 
-**Choice:** Let $u=x^2+1$, so $du=2x\,dx$. Change the limits too: $x=0$ gives $u=1$, and $x=1$ gives $u=2$.
+**Change the function and both endpoints.** Let $u=x^2+1$, so $du=2x\,dx$, matching the factor in the question. The limits tell us where to start and stop. Originally $x$ goes from 0 to 1. Now $u$ goes from 1 to 2, because $x=0$ gives $u=1$, and $x=1$ gives $u=2$.
 
 $$\int_0^1 2x(x^2+1)^3\,dx=\int_1^2 u^3\,du=\left[\frac{u^4}{4}\right]_1^2=\boxed{\frac{15}{4}}.$$
 
@@ -484,7 +492,7 @@ $$\begin{aligned}
 &=\boxed{\ln(9/2)}.
 \end{aligned}$$
 
-Over $[-3,0]$ there are undefined points at $x=-2$ and $x=-1$. The ordinary continuous-interval rule cannot be applied across them. Subtracting endpoint values is not a valid evaluation. An antiderivative on each separate interval does not remove the original poles.
+Over $[-3,0]$, the denominator is zero at $x=-2$ and $x=-1$. We therefore cannot evaluate this integral just by subtracting the antiderivative at the two endpoints. Finding antiderivatives on separate parts does not remove those two undefined points.
 
 If the coefficients are wrong, recombine the fractions before integrating. If only the second part is wrong, recover the interval check rather than repeating the algebra.
 
@@ -586,7 +594,7 @@ $$\int\frac{x^2}{\sqrt{x^3+1}}\,dx
 =\frac13\int u^{-1/2}\,du
 =\boxed{\frac23\sqrt{x^3+1}+C}.$$
 
-The exponent in the new variable is $-\frac12$, not $-1$, so the power rule applies. Differentiation gives $\frac23\cdot\frac12(x^3+1)^{-1/2}\cdot3x^2$, the required integrand. The substitution map is monotone; the zero derivative at $x=0$ does not invalidate this primitive, which the direct derivative check also confirms.
+The exponent in the new variable is $-\frac12$, not $-1$, so the power rule applies. Differentiation gives $\frac23\cdot\frac12(x^3+1)^{-1/2}\cdot3x^2$, the required integrand. Here, as $x$ increases, $u$ keeps increasing too. Although at $x=0$ we have $du/dx=0$, we have not divided by it; direct differentiation confirms that the answer still works at that point.
 
 </details>
 

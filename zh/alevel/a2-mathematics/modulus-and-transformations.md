@@ -32,11 +32,13 @@ study_page: true
 
 ## 绝对值图像 {#modulus-graphs}
 
-实数的**绝对值（modulus）**表示它到零的距离，因此绝对值总是非负的：$\lvert-3\rvert=3$，且 $\lvert0\rvert=0$。
+在数轴上，一个数可以在零的左边或右边，但它到零的距离不会是负数。这个距离叫作**绝对值（modulus）**：$\lvert-3\rvert=3$，且 $\lvert0\rvert=0$。原来的数非负，就保留它；原来的数为负，就改变符号，得到正的距离。于是有下面两种写法：
 
 $$\lvert x\rvert=\begin{cases}x,&x\geq0,\\-x,&x<0.\end{cases}$$
 
 ### 判断绝对值符号里面是什么 {#decide-what-is-inside-the-modulus}
+
+这里有两种不同的计算顺序：可以先按函数规则算出结果，再取这个结果到零的距离；也可以先取输入到零的距离，再交给函数计算。先分清顺序，再判断图像该翻折哪一部分。
 
 | 图像 | 保留部分 | 需要翻折的部分 |
 |---|---|---|
@@ -44,7 +46,7 @@ $$\lvert x\rvert=\begin{cases}x,&x\geq0,\\-x,&x<0.\end{cases}$$
 | $y=f(\lvert x\rvert)$ | $x\geq0$ 的部分 | 将这部分关于 $y$ 轴翻折，得到 $x<0$ 的部分 |
 {: .wide-table}
 
-对于 $y=\lvert f(x)\rvert$，定义域不变。对于 $y=f(\lvert x\rvert)$，输入 $x$ 只有在 $\lvert x\rvert$ 属于 $f$ 的定义域时才允许。表中的图像规则只适用于允许的非负输入值。
+对于 $y=\lvert f(x)\rvert$，原函数收到的输入没有变，所以允许输入哪些数也不变。对于 $y=f(\lvert x\rvert)$，先取输入 $x$ 到零的距离。真正送进原规则的是这个距离 $\lvert x\rvert$，这个距离必须是 $f$ 允许的输入。按表中规则翻折时，只使用原规则允许的非负输入部分。
 
 <section class="worked-example" markdown="1">
 
@@ -54,13 +56,13 @@ $$\lvert x\rvert=\begin{cases}x,&x\geq0,\\-x,&x<0.\end{cases}$$
 
 ![比较 y 等于 x 减一的绝对值与 x 的绝对值减一这两个图像。虚线表示原图像 y 等于 x 减一。](/assets/img/modulus-graphs.svg)
 
-**绝对值在函数外：**$y=\lvert x-1\rvert$。原图像在 $x$ 轴下方的部分对应 $x<1$；将这部分关于 $x$ 轴翻折。
+**先计算，再取绝对值：**$y=\lvert x-1\rvert$。先减一，再取结果到零的距离。原图像在 $x$ 轴下方的条件是 $x<1$，所以把这一部分关于 $x$ 轴翻折，让负的高度变成正的高度。两种情况分别写成：
 
 $$y=\begin{cases}x-1,&x\geq1,\\1-x,&x<1.\end{cases}$$
 
 最低点是 $(1,0)$，值域为 $y\geq0$。
 
-**绝对值在函数内：**$y=\lvert x\rvert-1$。保留原图像中 $x\geq0$ 的部分，再将它关于 $y$ 轴翻折。
+**先取绝对值，再计算：**$y=\lvert x\rvert-1$。先取输入到零的距离，再减一。保留原图像中 $x\geq0$ 的部分。负输入现在会使用与其正数搭档相同的距离，所以把这部分关于 $y$ 轴翻折，就得到负输入一侧的图像：
 
 $$y=\begin{cases}x-1,&x\geq0,\\-x-1,&x<0.\end{cases}$$
 
@@ -90,7 +92,7 @@ $$y=\begin{cases}x^2-4,&x\leq-2\text{ or }x\geq2,\\4-x^2,&-2<x<2.\end{cases}$$
 
 ## 组合函数图像变换 {#combinations-of-transformations}
 
-从 $y=f(x)$ 开始。描述每次变换时，说明变换所沿的坐标轴、方向，以及伸缩因子（scale factor）或平移向量（translation vector）。
+从 $y=f(x)$ 开始。图像变换就是改变图上各点的位置。沿一个方向把距离乘同一个倍数，叫伸缩，这个倍数叫**伸缩因子（scale factor）**；把所有点移动同样的距离，叫平移。描述时要说明坐标轴、方向和倍数，或写出平移向量（translation vector）：上面的数记横向移动，下面的数记纵向移动。
 
 | 新图像 | 变换 | 点 $(p,q)$ 移至 |
 |---|---|---|
@@ -101,9 +103,9 @@ $$y=\begin{cases}x^2-4,&x\leq-2\text{ or }x\geq2,\\4-x^2,&-2<x<2.\end{cases}$$
 | $y=f(-x)$ | 关于 $y$ 轴翻折 | $(-p,q)$ |
 {: .wide-table}
 
-**函数内部的变化：**改变输入坐标。**函数外部的变化：**改变输出坐标。伸缩因子介于 $0$ 与 $1$ 之间时，图像沿所述方向变窄或变矮。
+改变送进函数的数，会改变点的横坐标；改变函数算出的答案，会改变点的纵坐标。伸缩因子介于 $0$ 与 $1$ 之间时，图像沿所述方向变窄或变矮。
 
-输入伸缩的因子为什么要取倒数？若原点为 $(p,q)$，新函数 $f(ax)$ 必须仍把 $p$ 送进 $f$，所以先解 $ax=p$，得到 $x=p/a$；纵坐标仍为 $q$。对更一般的 $Af(Bx+C)+D$（$B\ne0$），先解输入匹配，再处理输出：
+水平伸缩为什么取倒数？原图像上的点 $(p,q)$ 表示：输入 p，得到 q。要让 $f(ax)$ 得到同一个原输出，必须仍把 $p$ 送进原规则 $f$。先解 $ax=p$，得到 $x=p/a$；纵坐标仍为 $q$。对更一般的 $Af(Bx+C)+D$（$B\ne0$），大写字母代表描述这些变化的固定数。先让送进旧规则的数等于旧输入，再改变旧输出：
 
 $$Bx+C=p,\qquad x=\frac{p-C}{B},\qquad y=Aq+D.$$
 
@@ -115,7 +117,7 @@ $$Bx+C=p,\qquad x=\frac{p-C}{B},\qquad y=Aq+D.$$
 
 **Question:** Describe a sequence of transformations from $y=f(x)$ to $y=2f(2x-4)-1$.
 
-先写成 $2x-4=2(x-2)$。一种正确的变换顺序如下：
+先写成 $2x-4=2(x-2)$。这样便于看出水平的两步：先把横坐标缩为一半，再把得到的图像右移二。随后把高度变成两倍，再下移一。下表逐步保留完整算式，方便检查顺序：
 
 | 步骤 | 变换 | 变换后的图像 |
 |---|---|---|
@@ -180,8 +182,8 @@ $$3x=6\Rightarrow x=2,\qquad y=-2(-2)+1=5.$$
 
 ### 分类讨论求解绝对值方程 {#solve-a-modulus-equation-in-cases}
 
-1. 找出绝对值符号内表达式等于零的位置，以此划分不同情况。
-2. 为每种情况写出相应的方程和适用条件。
+1. 找出绝对值里面的算式何时等于零，从这些位置检查它何时为负、何时非负。
+2. 每种情况分别判断：保留这个算式，还是改变它的符号？写出相应方程，并把本情况的条件写在旁边。
 3. 分别求解，并检查解是否满足对应条件。
 4. 将每个符合条件的答案代回原方程。
 
@@ -193,11 +195,11 @@ $$3x=6\Rightarrow x=2,\qquad y=-2(-2)+1=5.$$
 
 **Question:** Solve $\lvert2x-3\rvert=x+1$.
 
-表达式 $2x-3$ 在 $x=\frac32$ 时为零。
+不能对所有输入都用同一个算式去掉绝对值，要先判断里面的数是否为负。表达式 $2x-3$ 在 $x=\frac32$ 时为零，这里把两种情况分开。
 
-**情况 1：$x\geq\frac32$。**此时 $2x-3=x+1$，得到 $x=4$，满足本情况的条件。
+**情况 1：$x\geq\frac32$。**绝对值里面的数非负，保留符号。于是 $2x-3=x+1$，得到 $x=4$。它满足写出这个方程时所用的条件。
 
-**情况 2：$x<\frac32$。**此时 $3-2x=x+1$，得到 $x=\frac23$，同样满足本情况的条件。
+**情况 2：$x<\frac32$。**绝对值里面的数为负，要改变符号才得到它到零的距离。于是 $3-2x=x+1$，得到 $x=\frac23$，同样满足本情况的条件。两种情况已经包括全部实数输入，没有漏掉另一种情况。
 
 $$\boxed{x=\frac23\text{ or }x=4}.$$
 
@@ -237,7 +239,7 @@ $$\lvert u\rvert>a\iff u<-a\text{ or }u>a.$$
 
 **来源：**[OxfordAQA Mathematics (9660) 课程大纲，P2.1，印刷第 21 页](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf)的示例；解答由本站编写。
 
-先找出图像 $y=\lvert x+2\rvert$ 和 $y=3\lvert x\rvert$ 的交点。两边都非负，因此两边同时平方不会改变等式的解：
+我们要找第一个图像低于第二个图像的位置。先找图像 $y=\lvert x+2\rvert$ 和 $y=3\lvert x\rvert$ 的交点，用这些输入把要比较的范围分开。两边都非负，因此同时平方不会改变等式的解：
 
 $$(x+2)^2=9x^2\quad\Rightarrow\quad(2x+1)(x-1)=0.$$
 
@@ -253,7 +255,7 @@ $$(x+2)^2=9x^2\quad\Rightarrow\quad(2x+1)(x-1)=0.$$
 
 因此，$\boxed{x<-\frac12\text{ or }x>1}$。这是严格不等式，因此不包含边界值。
 
-**代数检查：**两边都非负，所以该不等式等价于 $(x+2)^2<9x^2$，也就是 $(2x+1)(x-1)>0$。解得相同的两个区间。
+**代数检查：**两边都非负，所以该不等式等价于 $(x+2)^2<9x^2$，也就是 $(2x+1)(x-1)>0$。两个因式同为负数或同为正数时，乘积为正；在两个根之间，它们一正一负。这就证明了上面的两个区间全部成立；只试几个输入本身不能证明整个区间。
 
 **常见错误：**套用 $\lvert u\rvert<a$ 的法则时，误把 $3\lvert x\rvert$ 当作固定常数。
 
@@ -433,7 +435,7 @@ Solve $\lvert x-1\rvert\leq2\lvert x\rvert$. Find the intersection points of the
 
 | 错误 | 恢复动作 | 新任务 |
 | --- | --- | --- |
-| 内外绝对值混淆或遗漏定义域 | 回看[两种图像](#example-1--the-two-modulus-graphs-are-different)，先写允许的输入 | [R1](#retry-graphs) |
+| 取绝对值的先后顺序弄错，或遗漏输入限制 | 回看[两种图像](#example-1--the-two-modulus-graphs-are-different)，说清先取距离还是先按函数计算，再写允许的输入 | [R1](#retry-graphs) |
 | 平移方向、伸缩因子或顺序不对 | 回看[组合变换](#combinations-of-transformations)，先解输入匹配方程 | [R2](#retry-transform) |
 | 分类答案不满足原条件 | 回看[分类步骤](#solve-a-modulus-equation-in-cases)，保留每种情况的区间 | [R3](#retry-equation) |
 | 不等式只保留交点，或区间方向错 | 回看[图像比较](#example-7--modulus-on-both-sides)，标交点后检验图像上下关系 | [稍后回顾](#later-review) |

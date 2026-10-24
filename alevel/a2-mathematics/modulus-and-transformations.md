@@ -30,11 +30,13 @@ Textbook: Chapter 1, Sections 1.4–1.5 (pp. 8–13). Example 7 uses an illustra
 
 ## Modulus Graphs
 
-The **modulus** of a real number is its distance from zero. It is always non-negative: $\lvert-3\rvert=3$ and $\lvert0\rvert=0$.
+On a number line, a number can be to the left or right of zero, but its distance from zero is never negative. This distance is its **modulus**: $\lvert-3\rvert=3$ and $\lvert0\rvert=0$. A non-negative number keeps its value; a negative number changes sign to give a positive distance. That gives the two cases below:
 
 $$\lvert x\rvert=\begin{cases}x,&x\geq0,\\-x,&x<0.\end{cases}$$
 
 ### Decide what is inside the modulus
+
+There are two different orders of calculation. You can apply the rule first and take the distance of its answer from zero, or take the input's distance from zero first and then apply the rule. Follow that order before deciding which part of a graph to reflect.
 
 | Graph | What to keep | What to reflect |
 |---|---|---|
@@ -42,7 +44,7 @@ $$\lvert x\rvert=\begin{cases}x,&x\geq0,\\-x,&x<0.\end{cases}$$
 | $y=f(\lvert x\rvert)$ | The part with $x\geq0$ | Reflect that part in the $y$-axis to form the part with $x<0$ |
 {: .wide-table}
 
-For $y=\lvert f(x)\rvert$, the domain stays the same. For $y=f(\lvert x\rvert)$, an input $x$ is allowed only when $\lvert x\rvert$ belongs to the domain of $f$. The graph rule in the table applies to the allowed non-negative inputs.
+For $y=\lvert f(x)\rvert$, the original rule still receives the same input, so the allowed inputs do not change. For $y=f(\lvert x\rvert)$, first take the distance of the input $x$ from zero. It is this distance $\lvert x\rvert$ that must be an allowed input of $f$. Use only the allowed non-negative inputs when reflecting the graph as shown in the table.
 
 <section class="worked-example" markdown="1">
 
@@ -52,13 +54,13 @@ For $y=\lvert f(x)\rvert$, the domain stays the same. For $y=f(\lvert x\rvert)$,
 
 ![Two graphs comparing y equals modulus of x minus one and y equals modulus of x, minus one. Dashed lines show the original graph y equals x minus one.](/assets/img/modulus-graphs.svg)
 
-**Modulus outside:** $y=\lvert x-1\rvert$. The original graph is below the $x$-axis when $x<1$, so reflect that part in the $x$-axis.
+**Calculate first, then take the modulus:** $y=\lvert x-1\rvert$. Subtract one before taking the distance from zero. The original graph is below the $x$-axis when $x<1$, so reflect that part in the $x$-axis: its negative height becomes positive. This gives the two formulae:
 
 $$y=\begin{cases}x-1,&x\geq1,\\1-x,&x<1.\end{cases}$$
 
 The minimum point is $(1,0)$ and the range is $y\geq0$.
 
-**Modulus inside:** $y=\lvert x\rvert-1$. Keep the original graph for $x\geq0$, then reflect it in the $y$-axis.
+**Take the modulus first, then calculate:** $y=\lvert x\rvert-1$. Take the input's distance from zero, then subtract one. Keep the original graph for $x\geq0$. A negative input now uses the same distance as its positive partner, so reflect this part in the $y$-axis to supply the negative inputs:
 
 $$y=\begin{cases}x-1,&x\geq0,\\-x-1,&x<0.\end{cases}$$
 
@@ -88,7 +90,7 @@ The new graph passes through $(-2,0)$, $(0,4)$ and $(2,0)$. It has range $y\geq0
 
 ## Combinations of Transformations
 
-Start from $y=f(x)$. Describe each transformation using the axis, direction and scale factor or translation vector.
+Start from $y=f(x)$. A transformation changes the positions of points on this graph. A stretch multiplies the distances in one direction by a **scale factor**; a translation moves every point by the same amount. State the axis, direction and scale factor, or give a translation vector (horizontal movement above vertical movement).
 
 | New graph | Transformation | A point $(p,q)$ moves to |
 |---|---|---|
@@ -99,9 +101,9 @@ Start from $y=f(x)$. Describe each transformation using the axis, direction and 
 | $y=f(-x)$ | Reflection in the $y$-axis | $(-p,q)$ |
 {: .wide-table}
 
-**Inside the function:** change the input coordinates. **Outside the function:** change the output coordinates. A scale factor between $0$ and $1$ makes the graph narrower or shorter in the stated direction.
+An operation on the number sent into the function changes the horizontal coordinates. An operation on its answer changes the vertical coordinates. A scale factor between $0$ and $1$ makes the graph narrower or shorter in the stated direction.
 
-Why is the horizontal scale factor reciprocal? For an original point $(p,q)$, $f(ax)$ must still receive input $p$ as the argument of $f$. Solve $ax=p$ to obtain $x=p/a$; the height stays $q$. For $Af(Bx+C)+D$, where $B\ne0$, match the input before changing the output:
+Why does a horizontal stretch use a reciprocal? An original point $(p,q)$ means that input p gives output q. To get that same output from $f(ax)$, we must still send $p$ into the original rule $f$. Solve $ax=p$ to obtain $x=p/a$; the height stays $q$. For $Af(Bx+C)+D$, where $B\ne0$, the capital letters are fixed numbers describing the changes. First make the number sent into the old rule equal its old input, then change the old output:
 
 $$Bx+C=p,\qquad x=\frac{p-C}{B},\qquad y=Aq+D.$$
 
@@ -113,7 +115,7 @@ This checks any proposed sequence of transformations directly.
 
 **Question:** Describe a sequence of transformations from $y=f(x)$ to $y=2f(2x-4)-1$.
 
-Write $2x-4=2(x-2)$. One correct sequence is:
+Write $2x-4=2(x-2)$. This makes the horizontal steps easier to see: first halve the horizontal coordinates, then shift the resulting graph right by two. Next double the heights and shift down by one. The table keeps track of the whole expression after each step:
 
 | Step | Transformation | Resulting graph |
 |---|---|---|
@@ -178,8 +180,8 @@ The new point is $(2,5)$. The answer $(18,5)$ multiplies the coordinate instead 
 
 ### Solve a modulus equation in cases
 
-1. Find where the expression inside the modulus is zero. This separates the cases.
-2. Write the equation for each case, together with its condition.
+1. Find where the expression inside the modulus is zero. This tells you where to check for a change between negative and non-negative values.
+2. For each case, decide whether to keep that expression or change its sign. Write the resulting equation together with the condition for that case.
 3. Solve each equation and check the condition.
 4. Substitute each accepted answer into the original equation.
 
@@ -191,11 +193,11 @@ A sketch helps you see how many intersections to expect. If the equation is $\lv
 
 **Question:** Solve $\lvert2x-3\rvert=x+1$.
 
-The expression $2x-3$ is zero at $x=\frac32$.
+We cannot remove the modulus with the same formula for every input: first decide whether the number inside it is negative. The expression $2x-3$ is zero at $x=\frac32$, which separates the two cases.
 
-**Case 1: $x\geq\frac32$.** Then $2x-3=x+1$, giving $x=4$. This satisfies the case condition.
+**Case 1: $x\geq\frac32$.** The number inside the modulus is non-negative, so keep its sign. Then $2x-3=x+1$, giving $x=4$. This satisfies the condition under which we wrote this equation.
 
-**Case 2: $x<\frac32$.** Then $3-2x=x+1$, giving $x=\frac23$. This also satisfies the case condition.
+**Case 2: $x<\frac32$.** The number inside is negative. Change its sign to obtain its distance from zero. Then $3-2x=x+1$, giving $x=\frac23$. This also satisfies its case condition. The two cases cover every real input, so no other case is missing.
 
 $$\boxed{x=\frac23\text{ or }x=4}.$$
 
@@ -235,7 +237,7 @@ Do not use these rules with a negative bound. A modulus is never negative, so $\
 
 **Source:** Illustrative example in [OxfordAQA Mathematics (9660) specification, P2.1, printed p. 21](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf). The solution is written for this site.
 
-First find where the graphs $y=\lvert x+2\rvert$ and $y=3\lvert x\rvert$ meet. Both sides are non-negative, so squaring preserves the equality:
+We want the first graph to be lower than the second. First find where the graphs $y=\lvert x+2\rvert$ and $y=3\lvert x\rvert$ meet: these inputs separate the parts we need to compare. Both sides are non-negative, so squaring preserves the equality:
 
 $$(x+2)^2=9x^2\quad\Rightarrow\quad(2x+1)(x-1)=0.$$
 
@@ -251,7 +253,7 @@ The boundary values are $x=-\frac12$ and $x=1$. The two V-shaped graphs change o
 
 Therefore $\boxed{x<-\frac12\text{ or }x>1}$. Exclude the boundary values because the inequality is strict.
 
-**Algebraic check:** since both sides are non-negative, the inequality is equivalent to $(x+2)^2<9x^2$, or $(2x+1)(x-1)>0$. This gives the same two intervals.
+**Algebraic check:** since both sides are non-negative, the inequality is equivalent to $(x+2)^2<9x^2$, or $(2x+1)(x-1)>0$. The product is positive when both factors are negative or both are positive. Between the two roots their signs differ. This proves the same two intervals; testing a few inputs alone would not prove every input in an interval works.
 
 **Common mistake:** using a rule for $\lvert u\rvert<a$ as if $3\lvert x\rvert$ were a fixed constant.
 
@@ -431,7 +433,7 @@ Choose the reasoning linked to your error, close the old solution, then attempt 
 
 | Error | Recovery action | New task |
 | --- | --- | --- |
-| Confused inside/outside modulus or lost a domain | Review [the two graphs](#example-1--the-two-modulus-graphs-are-different) and write the allowed inputs first | [R1](#retry-graphs) |
+| Took the modulus at the wrong stage, or lost an input restriction | Review [the two graphs](#example-1--the-two-modulus-graphs-are-different); say whether the distance is taken before or after the rule, then write the allowed inputs | [R1](#retry-graphs) |
 | Wrong translation, scale factor or order | Review [combined transformations](#combinations-of-transformations); solve the input-matching equation | [R2](#retry-transform) |
 | Accepted an answer from the wrong case | Review [the case steps](#solve-a-modulus-equation-in-cases) and keep each case interval | [R3](#retry-equation) |
 | Gave intersection inputs only, or chose wrong intervals | Review [graph comparison](#example-7--modulus-on-both-sides); test graph order between intersections | [Later review](#later-review) |

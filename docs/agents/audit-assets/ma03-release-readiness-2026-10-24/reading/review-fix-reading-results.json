@@ -1,0 +1,19 @@
+[
+  {
+    "topic": "differential-equations",
+    "specificExampleBeforeGeneralArgument": true,
+    "exampleVisible": true
+  },
+  {
+    "topic": "parametric-equations",
+    "helpInitiallyClosed": true,
+    "noPageOverflow": true,
+    "mathErrors": 0
+  },
+  {
+    "topic": "exponential-and-logarithmic-functions",
+    "helpInitiallyClosed": true,
+    "noPageOverflow": true,
+    "mathErrors": 0
+  }
+]

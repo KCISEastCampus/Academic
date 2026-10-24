@@ -1,0 +1,603 @@
+{
+  "baseCommit": "ab20c95c8ccb76d5dd30c899a130924af61273d3",
+  "scope": "34 bilingual MA03 pages, 3 directly affected tests and their records/evidence only; excludes AS drafts",
+  "files": [
+    {
+      "path": "alevel/a2-mathematics/algebraic-fractions-and-division.md",
+      "rawSHA256": "a1d4db9aeb6e6a436c9eebe031bc56a0859f1573874c26601f77732067960dfb",
+      "gitBlob": "bb455a9bb213656f74c6ce5e9f4ac70ca5b7964e"
+    },
+    {
+      "path": "alevel/a2-mathematics/binomial-series.md",
+      "rawSHA256": "00981b91432b7ceaa69e1a5c0173b67cc88707509151d6a31aa32c91fb004a4a",
+      "gitBlob": "e8fb68ffb9daa74772dd6eefddf4379cf8c84ce8"
+    },
+    {
+      "path": "alevel/a2-mathematics/differential-equations.md",
+      "rawSHA256": "7726d42b92f9675177a1267755dd79d0f26ddaf9c06252266c97bbfe6e7a2cfd",
+      "gitBlob": "2d514a0646244c34466a13332f8494e830799925"
+    },
+    {
+      "path": "alevel/a2-mathematics/differentiation.md",
+      "rawSHA256": "538d5c6b3d4a59b80a7b396d8710c4676e727fb5876bc0d2fb3e7ab459f9dd77",
+      "gitBlob": "2109de57e9e553c1b0c0c4ce19e04aebbb29a6a6"
+    },
+    {
+      "path": "alevel/a2-mathematics/exponential-and-logarithmic-functions.md",
+      "rawSHA256": "fd195e63312de9d79f2cc2510e3b6e6929ac7c4ebc0686b89704cb52817dd4b4",
+      "gitBlob": "89e2b57e4d200493bc8f4b65bbf5c60d739acf9d"
+    },
+    {
+      "path": "alevel/a2-mathematics/functions.md",
+      "rawSHA256": "02ac180e72c5a331dea8a433774e1c3daff7978fb5c1b1d2c2ed6764340138b3",
+      "gitBlob": "a44447450b156d3a8872d55e7bf6f00479679f17"
+    },
+    {
+      "path": "alevel/a2-mathematics/index.md",
+      "rawSHA256": "ced750a088e7ebf6c728a39d0995e32046c4f212f95df3514794e582448c109f",
+      "gitBlob": "473a749eec7dcac5aa28daab26c3c4abe5361a73"
+    },
+    {
+      "path": "alevel/a2-mathematics/integration-applications.md",
+      "rawSHA256": "1fb5c82373a35e3b4fd40e9a93d518d14ec8cbf5a630a2ba6858b18e9c8f9159",
+      "gitBlob": "a440f5ce0b01f21176bc5cba0ec4402dd34a7118"
+    },
+    {
+      "path": "alevel/a2-mathematics/integration.md",
+      "rawSHA256": "7d730a1a935aa44fffb6d25b9d30c579dd543d312aba11fd0f67be2df876e5e6",
+      "gitBlob": "d88c165f2f7480331efdd723ac6bca3ddd33882b"
+    },
+    {
+      "path": "alevel/a2-mathematics/mathematical-proof.md",
+      "rawSHA256": "c109780273303c84c28d3f5b37b1cdae00cfa5645d8327c153fde6353d99f9f1",
+      "gitBlob": "9043b9a3620f4728148ff44190de84d5aafe3dfb"
+    },
+    {
+      "path": "alevel/a2-mathematics/modulus-and-transformations.md",
+      "rawSHA256": "1dc841c7778ebdea0f7dd37e321bdfc6878afaddb2a4f3c6dbf7222136c6dc01",
+      "gitBlob": "a618e8e952f0e024e57ba05b500df7928ed59ea6"
+    },
+    {
+      "path": "alevel/a2-mathematics/numerical-methods.md",
+      "rawSHA256": "a82494e27462efc09f204c3e0bbc04842d707a6b18a155c456bed019d3c6a3eb",
+      "gitBlob": "eb8f8ffd14f4efc02e147204a680583aba516214"
+    },
+    {
+      "path": "alevel/a2-mathematics/parametric-equations.md",
+      "rawSHA256": "7199774a73ef015cca1474eafa9616f41bc1359d55ee8cd1a3f3d2fcaf06cbd0",
+      "gitBlob": "e874cf7f0a6442d5d100dfe6a888d3e545f620ae"
+    },
+    {
+      "path": "alevel/a2-mathematics/partial-fractions.md",
+      "rawSHA256": "528952e2584336bdffdc41828bae8acfa07c6894c874580daa3ede098b818029",
+      "gitBlob": "8c7f82b13a8ace3ff138e2c77086baa8832ff966"
+    },
+    {
+      "path": "alevel/a2-mathematics/quick-reference.md",
+      "rawSHA256": "d94f9b71f3ec5d490b7b9ebd16ce954c1282a7159b99cdf7194350ad74cd654b",
+      "gitBlob": "48d14f2c7bc835bf632ec2ad64514395e33b3748"
+    },
+    {
+      "path": "alevel/a2-mathematics/trigonometric-functions-and-formulae.md",
+      "rawSHA256": "e955f94eb779b6340d37a325f98b9e7060ae87e30b80b5e7c0a2c0067625f6c8",
+      "gitBlob": "1c40f4e5eac470525327fba0fec0016035be53ab"
+    },
+    {
+      "path": "alevel/a2-mathematics/vectors.md",
+      "rawSHA256": "0e594f3fa04fd3bad75e8d1dc1af9058ac1b331f163c28757251855d4e943685",
+      "gitBlob": "7cc23cb4dd1cd91ef737dccf7a657fb4b7652610"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/baseline-guards.json",
+      "rawSHA256": "b95eae7d600fb3ded09544d44571263c9d49e0150fd17b75c3470ffb38993535",
+      "gitBlob": "e5f9d262e6fc787d2bf0c4f4faa7c88fd7dadd26"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/browser-before-review-fixes.json",
+      "rawSHA256": "78d3dedf847bb7f0c92fcd3e8c76918fca7f1fe9c08d1f163e7b999d0fa58745",
+      "gitBlob": "bd0d6304245c133ee3d070400fb27ac69773993c"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/browser-measurements.csv",
+      "rawSHA256": "88eb227ef528a2996db30c33d2f55c997a32ca7ad2d97be268e610849669dd7d",
+      "gitBlob": "57340f324f83fe4d2ff308e8d65631c012f81dd1"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/browser-results.json",
+      "rawSHA256": "5b7e2485196ff1dd6785a5a7d079c216e7fe0bf695830d504462ef75bc6b2f20",
+      "gitBlob": "ca96b597aa406ddbbd0aadd29acddd7ef0c5f0f4"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/build-snapshot-before-review-fixes.json",
+      "rawSHA256": "e8d1de9fdb499cdbaeca61ab2aec5e40c9dff63d3844a75611f5daf772070cb8",
+      "gitBlob": "2cc3b998bff6e9c57fa413fd990b6aebe4e3e83d"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/check-review-fixes.cjs",
+      "rawSHA256": "59315d05a39dd24531a020ccde8bfbe1d5b9017122bb0cb54b0fb7f00ed1014b",
+      "gitBlob": "1ba7903983ac926d17e25ebac03d34ceb234d909"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/concept-reading-results.json",
+      "rawSHA256": "15a6424b4fed7722085d6f7185ddf68d9f60a486720f17de72011beada7411f6",
+      "gitBlob": "99a663e5525c5a9c1d4fb7d46681dafc45312e5e"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/differential-equations-390-concept-after.png",
+      "rawSHA256": "d7cf7bff2fce53c6d8678263b7d63148c8ee1e951e0bf8551449dd546fa8b51c",
+      "gitBlob": "4728d9d797a3d0b8dee38e3c50140f95b6d6c764"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/differential-equations-390-concept-final.png",
+      "rawSHA256": "400663b62375b8b82b8317531520741c2066bec2af48a6fbe75431eb8a7b8774",
+      "gitBlob": "81f7be1eb1784ed31d094a5f1cc8ece09d880181"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/differential-equations-390-example-final.png",
+      "rawSHA256": "879791d246cb5863283037d9b89a4f5982bee37cde97520e1f3242c63abf9f11",
+      "gitBlob": "9c2ad56e1735614bb62906f4a59237f9a817e1bd"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/differential-equations-390-general-final.png",
+      "rawSHA256": "d5c2a79c8b48b60b2f23b9b6d6e1589a94f0abff655abf6e78a37b640732a3a9",
+      "gitBlob": "05aea781dc0a78497a7fc66582e578f6d136541c"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/exponential-and-logarithmic-functions-390-concept-after.png",
+      "rawSHA256": "0617f5062fc0695f1d473974888ab9422f39ba5e847ec37246c5ce0229dcf053",
+      "gitBlob": "0a14d396cfafc664222f36ea845aefb459f1604b"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/exponential-and-logarithmic-functions-390-concept-final.png",
+      "rawSHA256": "76f38c262dff513eaae4ceaedd2707d84bedad857002142f49c85674c22818f1",
+      "gitBlob": "cf11f0e2c2a7bc10717c33a8282da8c7142b4a3c"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/final-recheck-scope.json",
+      "rawSHA256": "5edbe91254b47785c67664b4665197d3e733d62f3e5dd24ad4f3dd141539834c",
+      "gitBlob": "121fdaa5164576d7831d3aadb64cf259f5087be6"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/functions-1365-initial.png",
+      "rawSHA256": "79099c9ed4f543152d3575b8a01d635fbd0cb305ad1fa036a7cda8f50d3c5adb",
+      "gitBlob": "a7c539e294cdea8b6ae9a8b363e72e4a18b2d98e"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/functions-390-before.png",
+      "rawSHA256": "ed9c6a79d3642c701588b628e2d3f7a1c4713b7a13fc3855d13fd897e29424ef",
+      "gitBlob": "f4a38a86c4ba817758eb07e855ae879403c37206"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/functions-390-concept-after.png",
+      "rawSHA256": "2aa3198ad09644498e6689050844c1d32c9c9265626c1267ef5c239fc38abbdc",
+      "gitBlob": "eb32ea2b5d08275123c827f9aa132ba1d7f144a5"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/functions-390-initial.png",
+      "rawSHA256": "6105b747b5dbbf5bd01494443cb18e71aa28d0771cd0aa429027668b5e39fed8",
+      "gitBlob": "4418087b8a697f4bd75d62ea1a001100d36b0569"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/index-1365-initial.png",
+      "rawSHA256": "f995544eebdddfc7915379a6181eebc1b2d03ec04a6af658e02ba214a24649eb",
+      "gitBlob": "e7d727aa3069db74d59611fc66bbd4d6514dbaf6"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/index-390-initial.png",
+      "rawSHA256": "408c2a80b6494e3a64d8a135605034658279839bf186dbca18a18240aa5e9de4",
+      "gitBlob": "dfdc5779e5fcf58ead0379c2c8b5693ce264b702"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/integration-390-before.png",
+      "rawSHA256": "99fdbd49c3d39a5ae6bbdc3541ff022d92b6ca9903f4df8b71a31fc244ddd0c5",
+      "gitBlob": "3de78d4bbce2d9089dd7b9abd7e7be6b171f7d0d"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/integration-390-concept-after.png",
+      "rawSHA256": "13726364a9b600bd161978b296df40058c2add5983feda029921fc64ff81f24e",
+      "gitBlob": "02cf9c353d8abd641e1affd611b8fca4358f5c2b"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/integration-390-continuous-example.png",
+      "rawSHA256": "fa26cf472ea43bb621845d13fd2dffdfb3fbd7e48b5c5852cdc43e25bf78849a",
+      "gitBlob": "0e1e8c50de34d2d0e4a181122bfed11fea1e6559"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/integration-390-dark-expanded.png",
+      "rawSHA256": "3fe511680c648f8ca27b624e7a53f8920ffeef982ec542e0f0a57cb27478b71c",
+      "gitBlob": "6d420f77e5b20cbc2637b30799f6069d68badc45"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/integration-390-initial.png",
+      "rawSHA256": "286210e7535d62b2a89d2618941288631e9b58244ab73d2a83829edb76141c14",
+      "gitBlob": "1fc961ee8b56685b7c9aa24e169f016103f3a04a"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/integration-retry-b-390-expanded.png",
+      "rawSHA256": "54af628f58ba5a6a2e3149171dff252594b29a8aa20eeebf0afe69f28a4bdfa7",
+      "gitBlob": "da7b9e7411381d6bafba1113361a2918e7cdea0c"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/local-links.json",
+      "rawSHA256": "4e299228862162dbc493d93dde25db1f2f142f098cda60fa7e5b0499abcb6afe",
+      "gitBlob": "b389e389ef24a1ba16db711ab1557ae33b97825f"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/mathematical-proof-390-continuous-example.png",
+      "rawSHA256": "9471655225debba918ffa75d66ab70a516a75c6325be07f32676f03bf6e971a1",
+      "gitBlob": "325fb8d73db5ff75b807661d010f6a9f20ca5e9a"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/mathematical-proof-390-initial.png",
+      "rawSHA256": "f64d7b54bea4c385230661a29963061171cfd22ece66139f47aaf8ba89f89c73",
+      "gitBlob": "40320caf6b6a682774763be61306a865e6df51d5"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/ms-q2-05.png",
+      "rawSHA256": "6781192bd6348299a0c7b1de858dc27f85d3e3a69f1fd922776c28db0303d799",
+      "gitBlob": "f43cd33efd15e87ae5c79cef6fd24acf0f0c7f2c"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/ms-q2-06.png",
+      "rawSHA256": "83859073b9ec633203337a17f1895cc19898f08c8385ad920844a326cb42d3d1",
+      "gitBlob": "b286a4c042978443d2da925f3570d7ab25a0c01d"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/ms-q8.png",
+      "rawSHA256": "de68a30935de0e455f3a4aed85adf9d541607031f9aa6a0d4e41af29723e43f7",
+      "gitBlob": "68f76c9f2ac434f28f6dcdea5c36db011a019384"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/numerical-methods-390-concept-after.png",
+      "rawSHA256": "aa79c1e0f71aa27ab19e22fb444d0024c880bb2af5a537e5df64a14a78ef8f05",
+      "gitBlob": "b3df2245c25258d87f8446c2fa469aae6bda8710"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/parametric-equations-390-concept-final.png",
+      "rawSHA256": "880b4b82bdfdbc60d878e199cefd58af62882edb8a7e0ac836c89b111740349a",
+      "gitBlob": "8bc874df1a32520fb98a282741dde9f073507135"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/parametric-equations-390-continuous-example.png",
+      "rawSHA256": "7ae551fcbea561463a3e48cb35ced7e8b389860f5ca06fa741633987bcb1454c",
+      "gitBlob": "604ceddbaae8352b5752d98aa3a3553aed615f43"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/parametric-equations-390-initial.png",
+      "rawSHA256": "eeffc658d003d5025877849f59219529ae2bca859b6e5adfc266f99e5d13abcd",
+      "gitBlob": "1580c6ddfb58c4996f343b946c7a52f0c5c88f4d"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/qp-q8.png",
+      "rawSHA256": "6870482a1021cf6c6f4d5ab662d1daa31856332e453f06132c45f88fbaf3405b",
+      "gitBlob": "daa5ec4a0966552f75103bceaa6b5de818cd83fd"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/review-fix-reading-results.json",
+      "rawSHA256": "65fbbebc02147c7faee480c3ad4c95c2f93b1ade73242d2aa1a2a1fe7fcb3bbd",
+      "gitBlob": "ef40482d315cb285a68157dceca8b1c4aa018f09"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/source-manifest.json",
+      "rawSHA256": "571b8d5d5635a3f026487680266ccbcb3c0ffd5f327536748c1c74967dd72620",
+      "gitBlob": "6b47f6800e5c4252a3d995f70dbd2d08e96c2873"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/targeted-results.json",
+      "rawSHA256": "9b518e384351dd85159f27fcda973be123bff570c4b6f0068a7d9974d91c3571",
+      "gitBlob": "6aefb6294511e635806c310f47b64753a548be72"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/test-results.json",
+      "rawSHA256": "bda263b678b06b9f30861eb7cf74b28944ca2e1cc2b508c3f11c38f608da4375",
+      "gitBlob": "4ca483b8a54e21260873e0cd59c0cd746055a29b"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/vectors-390-concept-after.png",
+      "rawSHA256": "d9eb37485cc703b1cdde9daf2ee5c5dd13b7f72bfaca8d2bd649202a094cfb6f",
+      "gitBlob": "13b494ea371a090f4d4bbd98af9ab31919e7bb36"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/vectors-390-dark-expanded.png",
+      "rawSHA256": "60913a8adb837a5155a9ee26b0480bf3b9eb181526853138b7f80d59f5cbc414",
+      "gitBlob": "801b59442c4757157d5fccf400a986fd44b5d16b"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/vectors-390-initial.png",
+      "rawSHA256": "4b0b92bb6ebf82e65069942474b2c7261a69bae5671d1a7c192f32a3381bfca1",
+      "gitBlob": "4645655e77ce5a66f82042cb41916d9b4deb0558"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-plain-language-2026-10-24/verify-preservation.cjs",
+      "rawSHA256": "c9fa91a374a2aa39521fee0552d162f26d4843d555ec41441eb2bec200285ffc",
+      "gitBlob": "b4bd5f65ec66b309591307bd4bb4a48fa4281378"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-release-readiness-2026-10-24/browser-measurements.csv",
+      "rawSHA256": "e8de26da1e5a27e813bd2ee62bd771cf887bf9a72d0f8133d3d65f79cc2f133d",
+      "gitBlob": "b3663e35a2d3b457601b5169de2ee54e54c15122"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-release-readiness-2026-10-24/browser/browser-results.json",
+      "rawSHA256": "57fe07e681da83bc372d02881bc003e9548b76754bcde1133e3d08d8316364ca",
+      "gitBlob": "daf6874f12b84245f497e5d9272957d08f88a156"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-release-readiness-2026-10-24/browser/functions-1365-initial.png",
+      "rawSHA256": "72f3d592dce9369cc10e900b1c6c5538229c4b033986007b6dd5c6e82df2d425",
+      "gitBlob": "1ccc446156c5c2b1bf5ed87580614b7b65829c76"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-release-readiness-2026-10-24/browser/functions-390-initial.png",
+      "rawSHA256": "6105b747b5dbbf5bd01494443cb18e71aa28d0771cd0aa429027668b5e39fed8",
+      "gitBlob": "4418087b8a697f4bd75d62ea1a001100d36b0569"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-release-readiness-2026-10-24/browser/index-1365-initial.png",
+      "rawSHA256": "82745606b32f79bdbb6522f11798b20ac9ebc3118a4717abf1058a4fe5450292",
+      "gitBlob": "bb2fe485b34cb07034fba8842fb14bb31915cd77"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-release-readiness-2026-10-24/browser/index-390-initial.png",
+      "rawSHA256": "408c2a80b6494e3a64d8a135605034658279839bf186dbca18a18240aa5e9de4",
+      "gitBlob": "dfdc5779e5fcf58ead0379c2c8b5693ce264b702"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-release-readiness-2026-10-24/browser/integration-390-dark-expanded.png",
+      "rawSHA256": "3fe511680c648f8ca27b624e7a53f8920ffeef982ec542e0f0a57cb27478b71c",
+      "gitBlob": "6d420f77e5b20cbc2637b30799f6069d68badc45"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-release-readiness-2026-10-24/browser/integration-390-initial.png",
+      "rawSHA256": "286210e7535d62b2a89d2618941288631e9b58244ab73d2a83829edb76141c14",
+      "gitBlob": "1fc961ee8b56685b7c9aa24e169f016103f3a04a"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-release-readiness-2026-10-24/browser/local-links.json",
+      "rawSHA256": "4e299228862162dbc493d93dde25db1f2f142f098cda60fa7e5b0499abcb6afe",
+      "gitBlob": "b389e389ef24a1ba16db711ab1557ae33b97825f"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-release-readiness-2026-10-24/browser/mathematical-proof-390-initial.png",
+      "rawSHA256": "f64d7b54bea4c385230661a29963061171cfd22ece66139f47aaf8ba89f89c73",
+      "gitBlob": "40320caf6b6a682774763be61306a865e6df51d5"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-release-readiness-2026-10-24/browser/parametric-equations-390-initial.png",
+      "rawSHA256": "eeffc658d003d5025877849f59219529ae2bca859b6e5adfc266f99e5d13abcd",
+      "gitBlob": "1580c6ddfb58c4996f343b946c7a52f0c5c88f4d"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-release-readiness-2026-10-24/browser/vectors-390-dark-expanded.png",
+      "rawSHA256": "60913a8adb837a5155a9ee26b0480bf3b9eb181526853138b7f80d59f5cbc414",
+      "gitBlob": "801b59442c4757157d5fccf400a986fd44b5d16b"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-release-readiness-2026-10-24/browser/vectors-390-initial.png",
+      "rawSHA256": "4b0b92bb6ebf82e65069942474b2c7261a69bae5671d1a7c192f32a3381bfca1",
+      "gitBlob": "4645655e77ce5a66f82042cb41916d9b4deb0558"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-release-readiness-2026-10-24/candidate-comparison.json",
+      "rawSHA256": "32dc7dd05c1fcee1017c5663fb019827976d13b984ebdae9076413605e69b0d7",
+      "gitBlob": "2074aedda8317a347c1ac205f444b6899a30b58c"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-release-readiness-2026-10-24/candidate-input.json",
+      "rawSHA256": "a9ee844647e1f3dec79158d675055841bdbe0b8715842e03626e08577212b001",
+      "gitBlob": "a94b69d20ef081d672ee6c555e99fb52ddccac4a"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-release-readiness-2026-10-24/reading/differential-equations-390-concept-final.png",
+      "rawSHA256": "400663b62375b8b82b8317531520741c2066bec2af48a6fbe75431eb8a7b8774",
+      "gitBlob": "81f7be1eb1784ed31d094a5f1cc8ece09d880181"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-release-readiness-2026-10-24/reading/differential-equations-390-example-final.png",
+      "rawSHA256": "9fac7091b095ca5e14d53cbd75d4148e34b44b1f934d0ed7b9967da288540e93",
+      "gitBlob": "065992feb7ceeaedb48e9c7fcde82a12df87e6ed"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-release-readiness-2026-10-24/reading/differential-equations-390-general-final.png",
+      "rawSHA256": "d5c2a79c8b48b60b2f23b9b6d6e1589a94f0abff655abf6e78a37b640732a3a9",
+      "gitBlob": "05aea781dc0a78497a7fc66582e578f6d136541c"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-release-readiness-2026-10-24/reading/exponential-and-logarithmic-functions-390-concept-final.png",
+      "rawSHA256": "76f38c262dff513eaae4ceaedd2707d84bedad857002142f49c85674c22818f1",
+      "gitBlob": "cf11f0e2c2a7bc10717c33a8282da8c7142b4a3c"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-release-readiness-2026-10-24/reading/integration-390-continuous-example.png",
+      "rawSHA256": "fa26cf472ea43bb621845d13fd2dffdfb3fbd7e48b5c5852cdc43e25bf78849a",
+      "gitBlob": "0e1e8c50de34d2d0e4a181122bfed11fea1e6559"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-release-readiness-2026-10-24/reading/integration-retry-b-390-expanded.png",
+      "rawSHA256": "5e3ae7a2acffe3b750ee84de09d0f9778bd0bba4bb1cfcdd4012d9c75e4cbaee",
+      "gitBlob": "592409ebfa426a4518da2c229bbb30f7fdd1a3a9"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-release-readiness-2026-10-24/reading/mathematical-proof-390-continuous-example.png",
+      "rawSHA256": "9471655225debba918ffa75d66ab70a516a75c6325be07f32676f03bf6e971a1",
+      "gitBlob": "325fb8d73db5ff75b807661d010f6a9f20ca5e9a"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-release-readiness-2026-10-24/reading/parametric-equations-390-concept-final.png",
+      "rawSHA256": "880b4b82bdfdbc60d878e199cefd58af62882edb8a7e0ac836c89b111740349a",
+      "gitBlob": "8bc874df1a32520fb98a282741dde9f073507135"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-release-readiness-2026-10-24/reading/parametric-equations-390-continuous-example.png",
+      "rawSHA256": "7ae551fcbea561463a3e48cb35ced7e8b389860f5ca06fa741633987bcb1454c",
+      "gitBlob": "604ceddbaae8352b5752d98aa3a3553aed615f43"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-release-readiness-2026-10-24/reading/review-fix-reading-results.json",
+      "rawSHA256": "65fbbebc02147c7faee480c3ad4c95c2f93b1ade73242d2aa1a2a1fe7fcb3bbd",
+      "gitBlob": "ef40482d315cb285a68157dceca8b1c4aa018f09"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-release-readiness-2026-10-24/reading/targeted-results.json",
+      "rawSHA256": "bba700b280c08ea812be60eef9058047099f490cfe5e4c4bdfa06b735b608324",
+      "gitBlob": "de8bc676f42930a7f295e602e11e9ee977e9a07f"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-release-readiness-2026-10-24/reference-browser-results.json",
+      "rawSHA256": "c13ef0284e55b9e64bca79704089dd4c649ff76b4a18a82ba9a840dfc0164bbb",
+      "gitBlob": "206ec9c7ca04300304659f23b0f743bdba6f23cb"
+    },
+    {
+      "path": "docs/agents/audit-assets/ma03-release-readiness-2026-10-24/test-results.json",
+      "rawSHA256": "f5dfae479c997f5620e8fd9439e7c010ce127315317c70e17e077d6b8f767b37",
+      "gitBlob": "c4a61c3ad6fc1d09a402dcb6b3d9588a35485b03"
+    },
+    {
+      "path": "docs/agents/implementation-ma03-plain-algebra-2026-10-24.md",
+      "rawSHA256": "0ac7cf17de749dad050b30c91c2e36368638b7aa0f75b84b5152ce4da42b7bc9",
+      "gitBlob": "37321b7d744983626bbfc7ff61a9025414d4df98"
+    },
+    {
+      "path": "docs/agents/implementation-ma03-plain-applications-geometry-2026-10-24.md",
+      "rawSHA256": "c9c9d1f0f2350343e27d28334874a535d8ccf21ce4042fcd24f280a90d9cc7c2",
+      "gitBlob": "ba9e868a10f8ff93150b733c4fe342b2d698fe29"
+    },
+    {
+      "path": "docs/agents/implementation-ma03-plain-functions-calculus-2026-10-24.md",
+      "rawSHA256": "d06081ee2fc8774a88afd985c29a113169279c4b5954d3831432486b3538bb94",
+      "gitBlob": "dd2103cb5d73fba2fa76fc5a8f4a4dc27cdce6b5"
+    },
+    {
+      "path": "docs/agents/implementation-ma03-plain-language-2026-10-24.md",
+      "rawSHA256": "650f993debace174d050a9e2f01fc66bb5004a53541f80e0dc0ef1aa263c8852",
+      "gitBlob": "e69d811ca80a711f94b7774cc6491c423aa585d6"
+    },
+    {
+      "path": "docs/agents/release-ma03-plain-language-2026-10-24.md",
+      "rawSHA256": "6f8bd6c938fc47bea54418ec895bb66415275ed01279e42375937b3831eb5570",
+      "gitBlob": "bb1240b0a96b1281c7dd68de326a6c3f46d6a1b8"
+    },
+    {
+      "path": "docs/agents/review-ma03-plain-language-spec-2026-10-24.md",
+      "rawSHA256": "bd2271d90f81885cb0905343258b5674dbcb8066d17e4574a88efc140bc35769",
+      "gitBlob": "3f02fe0b79585bdce851e61d465295c7d9383d38"
+    },
+    {
+      "path": "docs/agents/review-ma03-plain-language-standards-2026-10-24.md",
+      "rawSHA256": "379d010dff64c09099f0ca77bb336e2992ea2d7572cb620208fe1fd681cefd99",
+      "gitBlob": "ea14301457ebb9e2743cb087cdeeb43f5a232265"
+    },
+    {
+      "path": "docs/agents/review-ma03-release-spec-2026-10-24.md",
+      "rawSHA256": "6f1541cd5207e222b8edd4c7b28819bcfdfb0937c9deaecdb5315b49cd9377e2",
+      "gitBlob": "558d32284f04400a448664a951b52b3def732385"
+    },
+    {
+      "path": "docs/agents/review-ma03-release-standards-2026-10-24.md",
+      "rawSHA256": "ea27d4a151f25d838a6dd0852d2990a22657e64c064c2c4606fb2e057c7d1ba9",
+      "gitBlob": "232868eadce3f8db56b4589603eae70b4e6e2365"
+    },
+    {
+      "path": "scripts/test-differential-equations.js",
+      "rawSHA256": "47c45b0180b91692d7c16bbf07f6336e22f9a9c74fca2604baa0bdd0cd6a8b2e",
+      "gitBlob": "52e31fd86718eb2d326bae6b0998accdd1fe999a"
+    },
+    {
+      "path": "scripts/test-differentiation.js",
+      "rawSHA256": "33ce94df463746ad179cc5abb061a555e386179aee9e7a5518dda9de555f851c",
+      "gitBlob": "daf2adc4c2f60d1aa1bc1fc159261e3c9aed7999"
+    },
+    {
+      "path": "scripts/test-parametric-equations.js",
+      "rawSHA256": "5d6fe66b6a4e838f6e62b1ec9bc6e956f7d9308bc2e8c173ebec81b626e8b0e8",
+      "gitBlob": "74506a0a0ab2d9cbba4bfdcd3668a2daeaaf243a"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/algebraic-fractions-and-division.md",
+      "rawSHA256": "da95cfe1c282f3640b9f880f9ef50222a957e3261349c39454193d0e61c9165b",
+      "gitBlob": "5ceb371d2d219521e1d2773d563b69867164a859"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/binomial-series.md",
+      "rawSHA256": "a9abafc44a4e2a5133359536fc9855d77f1ed8f0f4496904ac33d1a8d75811d8",
+      "gitBlob": "5178215e608e5943fc9bd54fb454f0262bbbee00"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/differential-equations.md",
+      "rawSHA256": "2ae86967ac0e0f3cd7e7c2cf3478e053bb1ece851be1af06866333f4e20cbe60",
+      "gitBlob": "213a86172e42e75bd8f6af1e6ec3b18682bc5eb2"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/differentiation.md",
+      "rawSHA256": "49af1c5e1b01389623b4ce1767709755bb115d221a3fb5453fde27810b3d9d27",
+      "gitBlob": "ad62e74337d4edddff778a23003157ff2394b12b"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/exponential-and-logarithmic-functions.md",
+      "rawSHA256": "333736bbb6f26351f47d6690a678d5557df0197d1a7b78f48db9dc31c9d67767",
+      "gitBlob": "0e6f9ee95e94d808dfde211cb5026063345a641a"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/functions.md",
+      "rawSHA256": "dd23542a5ab216bc175463efffe8852c39762c30106ff05f81443b25571025cf",
+      "gitBlob": "0f2b225d532186854807056ae10085ba904e6dd3"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/index.md",
+      "rawSHA256": "5a175d97c5023b8525a18887728abc1f5dd854e1c45341d5be468eb59484770b",
+      "gitBlob": "d6a5ea59d7a60d13e29c004c5a2ffa6906521ce5"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/integration-applications.md",
+      "rawSHA256": "5cd28a9dd821aefe4ca54b63d9c089e393e2ea2bd0c831dfef0cbe2b0336b1f4",
+      "gitBlob": "23e4b70c587f1645046e34338e16abd7433bb9e2"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/integration.md",
+      "rawSHA256": "d7cc14573b3c07f170f432bbc9501ac8e978190dfd3adcae917475bd6c4672e0",
+      "gitBlob": "bb68b80f2632a266ff0a2177a2d0f53d800e46d6"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/mathematical-proof.md",
+      "rawSHA256": "c6d28c98060f1c4ba874bb2615429fa9e8504a294acb13b8e1e04015580c1eb8",
+      "gitBlob": "3c3cc6e3d6db161dc624066932e1c62574403894"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/modulus-and-transformations.md",
+      "rawSHA256": "376e723ca5eceba0437557885d012fe051ce269090f465075533d42d4fbb6319",
+      "gitBlob": "d9f94216ccb034a30382894fb62c0395041c1512"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/numerical-methods.md",
+      "rawSHA256": "c31b994547f00c570d206f5d028212dbb487efebd15ecbab8ba2b5464521d6ad",
+      "gitBlob": "04eac2587385f1f84638c677cc19df66ed6860d9"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/parametric-equations.md",
+      "rawSHA256": "2a749021c617d0053898cc138b5bc1692f40af12024222c1f056ca02d65e670c",
+      "gitBlob": "09f144fc8025239d076695bf94222066a648153d"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/partial-fractions.md",
+      "rawSHA256": "868679593dee21ac5eb074937545b3066a1f61e85375d094b08fba2f7eed269c",
+      "gitBlob": "453af6eed5f46c6a9517213ca7f599f6ce218d21"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/quick-reference.md",
+      "rawSHA256": "4311523b8f3fedce8699b056bc911e4b1c790bb03102bd407088bf1c03123d28",
+      "gitBlob": "e2730fa37afa905961465f2677a4ee27067354dd"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/trigonometric-functions-and-formulae.md",
+      "rawSHA256": "9e6f081360591328c472433df604e7edeccb7c236ccb22096c33aafc1a6230c6",
+      "gitBlob": "452c82708a67cb1bd49a768d98a6fb8dff0ae368"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/vectors.md",
+      "rawSHA256": "07c7b144710a79d3bd993fa8fcb53af6cca7c6f5ac180fa393bebc62cfa5c1f4",
+      "gitBlob": "44d4d8c1fd1a1e3468038d15e00b64d76d0ca037"
+    }
+  ],
+  "ownPath": "docs/agents/audit-assets/ma03-release-readiness-2026-10-24/source-manifest.json",
+  "selfHashOmitted": true
+}

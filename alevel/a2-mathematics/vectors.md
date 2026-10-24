@@ -12,7 +12,7 @@ study_page: true
 
 [Pure Mathematics](/alevel/a2-mathematics/) · P2.10 Vectors
 
-Use vectors to describe points and lines in two and three dimensions. Connect arrows, coordinates and geometric constraints before finding intersections, angles and perpendicular distances.
+A move needs both a distance and a direction. Vectors record that move using arrows and coordinate changes. We then use them to describe points and lines, find where lines meet, and calculate angles and shortest distances.
 
 - **Learning:** start with [vectors and position vectors](#vectors-and-position-vectors), then study [straight lines](#straight-lines), [pairs of lines](#pairs-of-lines) and the [scalar product](#scalar-product).
 - **Homework help:** choose the required vector carefully. A position vector, a direction vector and a vector joining two points have different roles.
@@ -31,15 +31,15 @@ All worked examples and practice questions are self-written, not official past-p
 
 ## Vectors and Position Vectors {#vectors-and-position-vectors}
 
-A **vector** has magnitude and direction. A **scalar** has magnitude only. The **position vector** of $A$ is $\overrightarrow{OA}$, where $O$ is the origin.
+Moving five units to the right differs from moving five units upwards. A **vector** records both how far and in which direction; its length is called its **magnitude**. A **scalar** records size without direction. To locate a point $A$, start at the origin and draw $\overrightarrow{OA}$, where $O$ is the origin. This arrow is the point’s **position vector**.
 
 ### Start with arrows in a plane {#plane-vectors}
 
-A two-dimensional vector has only $x,y$ components. In the same plane coordinate system,
+In a plane, record the horizontal change first and the vertical change second. These are the $x,y$ **components** of a two-dimensional vector. A negative component means moving in the negative direction of that axis. Following one arrow and then another adds their changes; Pythagoras gives the length of the resulting arrow. In the same plane coordinate system,
 
 $$\begin{pmatrix}a_1\\a_2\end{pmatrix}+\begin{pmatrix}b_1\\b_2\end{pmatrix}=\begin{pmatrix}a_1+b_1\\a_2+b_2\end{pmatrix},\qquad \lvert\mathbf a\rvert=\sqrt{a_1^2+a_2^2}.$$
 
-Respect brackets before scalar multiplication: $2(\mathbf a-\mathbf b)=2\mathbf a-2\mathbf b$. Add vectors of the same dimension in the same coordinate system. To embed a plane diagram in the three-dimensional $xy$-plane, explicitly add $z=0$; do not silently discard a third component. Multiplication by zero gives a vector with no direction. Non-zero parallel vectors are non-zero scalar multiples.
+Multiplying a vector by a scalar stretches or reverses the arrow; apply the multiplier to every component. Respect brackets: $2(\mathbf a-\mathbf b)=2\mathbf a-2\mathbf b$. Add matching components using the same axes and the same number of coordinates. To place a plane diagram in the three-dimensional $xy$-plane, explicitly add $z=0$; a third component cannot simply be dropped. Multiplication by zero gives the zero vector, with no direction. Two non-zero vectors are parallel when one is a non-zero multiple of the other.
 
 <section class="worked-example" markdown="1">
 
@@ -47,7 +47,7 @@ Respect brackets before scalar multiplication: $2(\mathbf a-\mathbf b)=2\mathbf 
 
 **Question:** For $A=(1,1)$ and $B=(4,5)$, draw $\overrightarrow{OA}$, $\overrightarrow{AB}$ and $\overrightarrow{OB}$; find $AB$.
 
-Mark all three points on paper and follow the arrows head to tail, $O\to A\to B$. From $A$ to $B$ the horizontal change is $3$ and vertical change is $4$, so
+Mark all three points on paper. Follow the arrows head to tail, $O\to A\to B$: this reaches the same endpoint as the direct arrow. To find the move from $A$ to $B$, subtract each starting coordinate from its finishing coordinate. The horizontal change is $3$ and the vertical change is $4$, so
 
 $$\overrightarrow{AB}=\begin{pmatrix}3\\4\end{pmatrix},\qquad \overrightarrow{OA}+\overrightarrow{AB}=\begin{pmatrix}1\\1\end{pmatrix}+\begin{pmatrix}3\\4\end{pmatrix}=\begin{pmatrix}4\\5\end{pmatrix}=\overrightarrow{OB}.$$
 
@@ -57,7 +57,7 @@ Pythagoras gives $AB=5$. Translating the arrow $\overrightarrow{AB}$ to the orig
 
 ### Add a third component {#three-dimensional-vectors}
 
-The Cartesian unit vectors $\mathbf i$, $\mathbf j$ and $\mathbf k$ point along the positive $x$-, $y$- and $z$-axes. For example,
+In space, a third coordinate records the move along a third axis. The arrows $\mathbf i$, $\mathbf j$ and $\mathbf k$ each have length one and point along the positive $x$-, $y$- and $z$-axes. They are called **Cartesian unit vectors**. For example,
 
 $$\mathbf a=2\mathbf i-\mathbf j+3\mathbf k=\begin{pmatrix}2\\-1\\3\end{pmatrix}.$$
 
@@ -65,9 +65,9 @@ Add, subtract and multiply by a scalar component by component. A positive scalar
 
 $$\lvert\mathbf a\rvert=\sqrt{a_1^2+a_2^2+a_3^2}.$$
 
-For $\mathbf a\ne\mathbf0$, $\frac{\mathbf a}{\lvert\mathbf a\rvert}$ is a **unit vector** in the direction of $\mathbf a$: its magnitude is $1$.
+Sometimes we need the direction without the original length. For $\mathbf a\ne\mathbf0$, divide every component by the length: $\frac{\mathbf a}{\lvert\mathbf a\rvert}$. The result has the direction of $\mathbf a$ and length $1$, so it is a **unit vector**.
 
-If $A$ and $B$ have position vectors $\mathbf a$ and $\mathbf b$, then
+To find a move between points, subtract the starting location from the finishing location. To find the halfway location, average corresponding coordinates. If $A$ and $B$ have position vectors $\mathbf a$ and $\mathbf b$, then
 
 $$\overrightarrow{AB}=\mathbf b-\mathbf a,\qquad \overrightarrow{OM}=\frac{\mathbf a+\mathbf b}{2},$$
 
@@ -81,13 +81,13 @@ where $M$ is the midpoint of $AB$. The triangle law gives $\overrightarrow{AB}+\
 
 **Question:** $A=(1,-2,3)$ and $B=(5,0,4)$. Find $\overrightarrow{AB}$, the length $AB$, a unit vector in its direction and the midpoint $M$.
 
-Subtract the starting point from the finishing point:
+The question asks for the move from the first point to the second, so subtract starting coordinates from finishing coordinates. Do this separately for all three coordinates:
 
 $$\overrightarrow{AB}=\begin{pmatrix}5-1\\0-(-2)\\4-3\end{pmatrix}=\begin{pmatrix}4\\2\\1\end{pmatrix}.$$
 
 $$AB=\sqrt{4^2+2^2+1^2}=\boxed{\sqrt{21}}.$$
 
-The required unit vector is
+The length comes from Pythagoras in three dimensions. To keep this direction but make the length one, divide all three components by that length. The required unit vector is
 
 $$\boxed{\frac1{\sqrt{21}}\begin{pmatrix}4\\2\\1\end{pmatrix}}.$$
 
@@ -103,13 +103,13 @@ $$\boxed{M=\left(3,-1,\frac72\right)}.$$
 
 ## Straight Lines {#straight-lines}
 
-A line is described by a fixed point with position vector $\mathbf a$ and a non-zero **direction vector** $\mathbf b$:
+To reach points on a line, start at one fixed point and move forwards or backwards along the line. The starting location has position vector $\mathbf a$. A non-zero **direction vector** $\mathbf b$ gives one move along it:
 
 $$\boxed{\mathbf r=\mathbf a+\lambda\mathbf b,\quad\lambda\in\mathbb R}.$$
 
-$\mathbf r$ is the position vector of a general point on the line. For the line through distinct points $A$ and $B$, use $\mathbf b=\overrightarrow{AB}$.
+$\mathbf r$ records the location reached. The multiplier in the equation can be zero, negative or a fraction, as well as positive; allowing every real value covers the whole line. This changing multiplier is called a **parameter**. For the line through distinct points $A$ and $B$, use $\mathbf b=\overrightarrow{AB}$.
 
-The equation is not unique: a different point on the line or a non-zero scalar multiple of the direction vector describes the same line after changing the parameter.
+The same line can have different equations. Start from another point on it, or take a longer, shorter or reversed non-zero direction vector: the multiplier changes, but the set of points reached is the same.
 
 <section class="worked-example" markdown="1">
 
@@ -117,11 +117,11 @@ The equation is not unique: a different point on the line or a non-zero scalar m
 
 **Question:** Find a vector equation of the line through $A=(1,2,-1)$ and $B=(3,1,3)$. Check whether $P=(5,0,7)$ lies on it, and find where it meets the $xy$-plane.
 
-The direction vector is $\overrightarrow{AB}=(2,-1,4)$, so one equation is
+First subtract the coordinates to find a move along the line: $\overrightarrow{AB}=(2,-1,4)$. Choose the first given point as the starting location, so one equation is
 
 $$\boxed{\mathbf r=\begin{pmatrix}1\\2\\-1\end{pmatrix}+\lambda\begin{pmatrix}2\\-1\\4\end{pmatrix}}.$$
 
-Its component equations are $x=1+2\lambda$, $y=2-\lambda$, $z=-1+4\lambda$.
+Read the vector equation one coordinate at a time: $x=1+2\lambda$, $y=2-\lambda$, $z=-1+4\lambda$. The same multiplier controls the whole move, so all three coordinates must use one value.
 
 For $P$, the $x$ equation gives $\lambda=2$. This same value gives $y=0$ and $z=7$, so $P$ lies on the line.
 
@@ -171,7 +171,7 @@ For $\mathbf r=\mathbf a+\lambda\mathbf b$ and $\mathbf r=\mathbf c+\mu\mathbf d
 | Not scalar multiples | Can one pair $(\lambda,\mu)$ satisfy all three component equations? | Intersecting if yes; skew if no |
 {: .wide-table}
 
-The skew branch in the table applies in three dimensions. In one two-dimensional plane, non-parallel lines must intersect: solve both components. In three dimensions, check the third component too; a projected sketch is not evidence of intersection.
+The “skew” outcome in the table is possible only in three dimensions. In one plane, non-parallel lines must meet, so solve the two coordinate equations. In space, lines that appear to cross in a flat drawing may pass above or below each other: the third coordinates must agree too.
 
 **Skew lines** are lines in three dimensions which are neither parallel nor intersecting. Use separate parameters for the two lines: they need not have the same value at an intersection.
 
@@ -221,7 +221,7 @@ Its direction is twice the direction of $L$. Its starting point is on $L$ at $\l
 
 ## Scalar Product {#scalar-product}
 
-The **scalar product** is a number:
+To find an angle, we need a calculation that compares two directions. Multiply each component of one vector by the matching component of the other, then add. The resulting number is called the **scalar product**, also called the **dot product**:
 
 $$\mathbf a\cdot\mathbf b=a_1b_1+a_2b_2+a_3b_3.$$
 
@@ -231,9 +231,9 @@ For non-zero vectors, it also equals $\lvert\mathbf a\rvert\lvert\mathbf b\rvert
 
 $$\cos\theta=\frac{\mathbf a\cdot\mathbf b}{\lvert\mathbf a\rvert\lvert\mathbf b\rvert}.$$
 
-Non-zero vectors are perpendicular when their scalar product is zero. A zero vector has no direction, so the angle formula cannot be used with it.
+For non-zero vectors, a right angle makes the cosine zero, so their scalar product is zero. Conversely, a zero scalar product means a right angle. This gives us a test for perpendicular directions. A zero vector has no direction, so the angle formula cannot be used with it.
 
-**For an angle in a triangle:** use two vectors starting at the vertex. To find angle $ABC$, use $\overrightarrow{BA}$ and $\overrightarrow{BC}$. Using $\overrightarrow{AB}$ instead reverses one direction and gives the supplementary angle.
+**For an angle in a triangle:** use two vectors starting at the vertex. To find angle $ABC$, use $\overrightarrow{BA}$ and $\overrightarrow{BC}$. Using $\overrightarrow{AB}$ instead reverses one direction and gives the other angle that adds to it to make a straight angle, called the **supplementary angle**.
 
 <section class="worked-example" markdown="1">
 
@@ -241,7 +241,11 @@ Non-zero vectors are perpendicular when their scalar product is zero. A zero vec
 
 **Question:** Find the angle between $\mathbf a=(1,2,2)$ and $\mathbf b=(2,-1,2)$, to $1$ decimal place.
 
+The directions are already given, so no subtraction of points is needed. Find the scalar product by multiplying matching components and adding; find each length using Pythagoras:
+
 $$\mathbf a\cdot\mathbf b=2-2+4=4,\qquad \lvert\mathbf a\rvert=\lvert\mathbf b\rvert=3.$$
+
+Divide the scalar product by the product of the two lengths. This gives the cosine; inverse cosine gives the angle:
 
 $$\cos\theta=\frac49,\qquad \boxed{\theta\approx63.6^\circ}.$$
 
@@ -257,7 +261,7 @@ $$\cos\theta=\frac49,\qquad \boxed{\theta\approx63.6^\circ}.$$
 
 Their scalar product is $-1$ and both magnitudes are $\sqrt3$. The angle between the stated vectors has cosine $-\frac13$, so it is obtuse.
 
-A line can be described using either direction. For the acute angle $\phi$ between the lines, use the modulus of the scalar product:
+A line extends in both directions. Reversing one direction vector changes the sign of the cosine and selects the other angle. For the acute angle $\phi$ between the lines, use the positive size of the scalar product, written with modulus signs:
 
 $$\cos\phi=\frac{\lvert\mathbf b\cdot\mathbf d\rvert}{\lvert\mathbf b\rvert\lvert\mathbf d\rvert}=\frac13.$$
 
@@ -283,7 +287,7 @@ Thus $\angle ABC=135^\circ$. Your sketch should show an obtuse angle. Using $AB$
 
 ## Foot of the Perpendicular and Distance {#foot-of-the-perpendicular-and-distance}
 
-The **foot of the perpendicular** from $P$ to a line is the point $H$ on the line where $PH$ meets the line at a right angle. The length $PH$ is the perpendicular distance from the point to the line.
+Imagine joining $P$ to a point that can move along the line. We want the point $H$ where the joining segment $PH$ meets the line at a right angle. It is called the **foot of the perpendicular**. The length $PH$ is the perpendicular distance. We must satisfy two conditions together: the endpoint lies on the line, and the joining segment is perpendicular to its direction.
 
 1. Write a general point $H$ on the line: $\mathbf h=\mathbf a+\lambda\mathbf b$.
 2. Form $\overrightarrow{PH}=\mathbf h-\mathbf p$.
@@ -304,11 +308,11 @@ $$\mathbf r=\begin{pmatrix}1\\0\\1\end{pmatrix}+\lambda\begin{pmatrix}1\\2\\2\en
 
 and hence find the perpendicular distance.
 
-A general point is $H=(1+\lambda,2\lambda,1+2\lambda)$, so
+First let the candidate point move along the given line: $H=(1+\lambda,2\lambda,1+2\lambda)$. This ensures it is on the line. Subtract the coordinates of the given point to find the joining vector:
 
 $$\overrightarrow{PH}=\begin{pmatrix}\lambda-4\\2\lambda-3\\2\lambda-4\end{pmatrix}.$$
 
-For perpendicularity,
+Now choose the multiplier that makes this joining vector perpendicular to the line. Take its scalar product with the line’s direction vector and set the result to zero:
 
 $$\begin{aligned}0&=(\lambda-4)+2(2\lambda-3)\\&\quad+2(2\lambda-4)=9\lambda-18.\end{aligned}$$
 
@@ -555,7 +559,7 @@ Close the original answer, revisit the indicated explanation, then do its fresh 
 | AB reversed or a component lost | Mark start and finish; revisit [plane vectors](#plane-vectors) | [Direction](#repair-direction) |
 | Only two coordinates checked or parameters shared | Use separate parameters and every component; revisit [pairs of lines](#pairs-of-lines) | [Lines](#repair-lines) |
 | Triangle angle replaced by its supplement | Redraw both arrows from the vertex; revisit [vertex angle](#vertex-angle) | [Angle](#repair-angle) |
-| Distance measured to an arbitrary point | Require both membership and perpendicularity; revisit [the foot](#foot-of-the-perpendicular-and-distance) | [Distance](#repair-foot) |
+| Distance measured to an arbitrary point | Check both that the endpoint is on the line and that the joining segment is perpendicular; revisit [the foot](#foot-of-the-perpendicular-and-distance) | [Distance](#repair-foot) |
 
 <section class="lesson-check" markdown="1">
 
@@ -566,7 +570,7 @@ $P=(2,-1)$ and $Q=(-1,3)$. Draw $\overrightarrow{PQ}$ and $-2\overrightarrow{PQ}
 <details markdown="1">
 <summary>Hint</summary>
 
-A negative scalar reverses direction; magnitude scales by its absolute value.
+Multiplying by a negative number reverses the arrow. Multiply its length by the positive size of that number.
 
 </details>
 
@@ -634,7 +638,7 @@ Find the distance from $P=(1,3)$ to $\mathbf r=t(1,1)$. Give and check the neare
 <details markdown="1">
 <summary>Hint</summary>
 
-Use a general point on the line and impose perpendicularity.
+Let the endpoint move along the line, then find where the joining vector has zero scalar product with the line’s direction.
 
 </details>
 
@@ -664,7 +668,7 @@ $A=(1,0,2)$ and $B=(3,2,0)$. Show that $P=(1+4u,4u,2-4u)$ lies on the line $AB$ 
 <details markdown="1">
 <summary>Hint</summary>
 
-For every u, give one parameter relation valid in every component. Impose perpendicularity separately.
+Show how the multiplier on the line depends on u, using the same relation for every coordinate. Then write a separate condition for perpendicularity.
 
 </details>
 

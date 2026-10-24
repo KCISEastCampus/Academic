@@ -14,7 +14,7 @@ study_page: true
 
 [纯数学](/zh/alevel/a2-mathematics/) · P2.10 向量
 
-用向量描述二维平面和三维空间中的点与直线。把箭头、坐标和几何约束连起来，再求交点、角度与垂直距离。
+描述一次移动，既要知道走多远，也要知道朝哪个方向。向量用箭头和坐标的变化记录这次移动。接着用它描述点与直线，求两条直线在哪里相遇、夹角多大，以及点到直线的最短距离。
 
 - **学习：**从[向量与位置向量](#vectors-and-position-vectors)开始，然后学习[直线](#straight-lines)、[两条直线的位置关系](#pairs-of-lines)和[数量积](#scalar-product)。
 - **作业帮助：**仔细选择所需向量。位置向量（position vector）、方向向量（direction vector）以及连接两点的向量作用不同。
@@ -33,15 +33,15 @@ study_page: true
 
 ## 向量与位置向量 {#vectors-and-position-vectors}
 
-**向量**（vector）既有大小也有方向。**标量**（scalar）只有大小。点 $A$ 的**位置向量**是 $\overrightarrow{OA}$，其中 $O$ 为原点。
+向右走五个单位和向上走五个单位，是不同的移动。向量（vector）同时记录走多远、朝哪里；箭头的长度叫向量的大小或模（magnitude）。只记录大小、不带方向的量叫标量（scalar）。要表示点 $A$ 在哪里，可以从原点画箭头 $\overrightarrow{OA}$，其中 $O$ 为原点；这个箭头叫位置向量（position vector）。
 
 ### 先把箭头画出来 {#plane-vectors}
 
-二维向量只有 $x,y$ 两个分量；在同一平面坐标系中
+在平面上，先记录横向改变多少，再记录竖向改变多少，这就是二维向量的 $x,y$ 两个分量（components）。负数表示沿该坐标轴的负方向移动。先走一个箭头、再走另一个箭头，就是把对应的变化相加；箭头长度用勾股定理求。在同一平面坐标系中
 
 $$\begin{pmatrix}a_1\\a_2\end{pmatrix}+\begin{pmatrix}b_1\\b_2\end{pmatrix}=\begin{pmatrix}a_1+b_1\\a_2+b_2\end{pmatrix},\qquad \lvert\mathbf a\rvert=\sqrt{a_1^2+a_2^2}.$$
 
-先按括号运算，再乘标量，例如 $2(\mathbf a-\mathbf b)=2\mathbf a-2\mathbf b$。相加的向量必须同维、用同一坐标系；二维图嵌入三维 $xy$ 平面时，明确补 $z=0$，不能任意丢掉第三分量。乘零得到零向量，没有方向；非零平行向量互为非零标量倍数。
+向量乘一个数，表示拉长、缩短或反转箭头，每个分量都要乘。例如 $2(\mathbf a-\mathbf b)=2\mathbf a-2\mathbf b$，先尊重括号再分配乘数。相加时要使用相同坐标轴、相同数量的坐标，对应相加。把平面图放进三维的 $xy$ 平面时，明确补上 $z=0$；不能随意丢掉第三个分量。乘零得到没有方向的零向量。两个非零向量平行，就是其中一个等于另一个乘某个非零数。
 
 <section class="worked-example" markdown="1">
 
@@ -49,7 +49,7 @@ $$\begin{pmatrix}a_1\\a_2\end{pmatrix}+\begin{pmatrix}b_1\\b_2\end{pmatrix}=\beg
 
 **Question:** For $A=(1,1)$ and $B=(4,5)$, draw $\overrightarrow{OA}$, $\overrightarrow{AB}$ and $\overrightarrow{OB}$; find $AB$.
 
-在纸上标三点，箭头首尾相接走 $O\to A\to B$。从 $A$ 到 $B$ 横向增加 $3$、竖向增加 $4$，所以
+在纸上标三点，箭头首尾相接走 $O\to A\to B$，到达的位置与直接走到终点相同。要找从 $A$ 到 $B$ 的移动，每个坐标都用终点减起点。横向增加 $3$、竖向增加 $4$，所以
 
 $$\overrightarrow{AB}=\begin{pmatrix}3\\4\end{pmatrix},\qquad \overrightarrow{OA}+\overrightarrow{AB}=\begin{pmatrix}1\\1\end{pmatrix}+\begin{pmatrix}3\\4\end{pmatrix}=\begin{pmatrix}4\\5\end{pmatrix}=\overrightarrow{OB}.$$
 
@@ -59,7 +59,7 @@ $$\overrightarrow{AB}=\begin{pmatrix}3\\4\end{pmatrix},\qquad \overrightarrow{OA
 
 ### 加入第三个分量 {#three-dimensional-vectors}
 
-沿坐标轴正方向的单位向量（Cartesian unit vectors）$\mathbf i$、$\mathbf j$ 和 $\mathbf k$ 分别沿 $x$、$y$ 和 $z$ 轴的正方向。例如，
+在空间中，第三个坐标记录沿第三条轴移动多少。箭头 $\mathbf i$、$\mathbf j$ 和 $\mathbf k$ 的长度都为一，分别沿 $x$、$y$ 和 $z$ 轴的正方向，叫坐标轴单位向量（Cartesian unit vectors）。例如，
 
 $$\mathbf a=2\mathbf i-\mathbf j+3\mathbf k=\begin{pmatrix}2\\-1\\3\end{pmatrix}.$$
 
@@ -67,9 +67,9 @@ $$\mathbf a=2\mathbf i-\mathbf j+3\mathbf k=\begin{pmatrix}2\\-1\\3\end{pmatrix}
 
 $$\lvert\mathbf a\rvert=\sqrt{a_1^2+a_2^2+a_3^2}.$$
 
-若 $\mathbf a\ne\mathbf0$，则 $\frac{\mathbf a}{\lvert\mathbf a\rvert}$ 是沿 $\mathbf a$ 方向的**单位向量**（unit vector），其模为 $1$。
+有时只需要方向，不需要原来的长度。若 $\mathbf a\ne\mathbf0$，把每个分量都除以原长度，得到 $\frac{\mathbf a}{\lvert\mathbf a\rvert}$。它沿 $\mathbf a$ 的方向，长度为 $1$，叫单位向量（unit vector）。
 
-若 $A$ 和 $B$ 的位置向量分别为 $\mathbf a$ 和 $\mathbf b$，则
+求两点之间的移动，用终点位置减起点位置；求一半处的位置，就把对应坐标取平均。若 $A$ 和 $B$ 的位置向量分别为 $\mathbf a$ 和 $\mathbf b$，则
 
 $$\overrightarrow{AB}=\mathbf b-\mathbf a,\qquad \overrightarrow{OM}=\frac{\mathbf a+\mathbf b}{2},$$
 
@@ -83,13 +83,13 @@ $$\overrightarrow{AB}=\mathbf b-\mathbf a,\qquad \overrightarrow{OM}=\frac{\math
 
 **Question:** $A=(1,-2,3)$ and $B=(5,0,4)$. Find $\overrightarrow{AB}$, the length $AB$, a unit vector in its direction and the midpoint $M$.
 
-用终点的位置向量减去起点的位置向量：
+题目要的是从第一个点走到第二个点的移动，因此用终点坐标减起点坐标。三个坐标分别计算：
 
 $$\overrightarrow{AB}=\begin{pmatrix}5-1\\0-(-2)\\4-3\end{pmatrix}=\begin{pmatrix}4\\2\\1\end{pmatrix}.$$
 
 $$AB=\sqrt{4^2+2^2+1^2}=\boxed{\sqrt{21}}.$$
 
-所求单位向量为
+长度来自三维的勾股定理。要保持这个方向、把长度改为一，就把三个分量都除以刚才的长度。所求单位向量为
 
 $$\boxed{\frac1{\sqrt{21}}\begin{pmatrix}4\\2\\1\end{pmatrix}}.$$
 
@@ -105,13 +105,13 @@ $$\boxed{M=\left(3,-1,\frac72\right)}.$$
 
 ## 直线 {#straight-lines}
 
-一条直线可以用其上一点的位置向量 $\mathbf a$ 和一个非零的**方向向量** $\mathbf b$ 表示：
+要到达直线上的点，可以先到一个固定点，再沿直线向前或向后走。起始位置用位置向量 $\mathbf a$ 表示，沿线的一次移动用非零的方向向量（direction vector）$\mathbf b$ 表示：
 
 $$\boxed{\mathbf r=\mathbf a+\lambda\mathbf b,\quad\lambda\in\mathbb R}.$$
 
-$\mathbf r$ 表示直线上一般点的位置向量。若直线经过不同的两点 $A$ 和 $B$，可取 $\mathbf b=\overrightarrow{AB}$。
+$\mathbf r$ 记录最后到达的位置。式中乘在方向向量前面的数，可以取零、负数、分数或正数；让它取遍所有实数，就走遍整条直线。这个可变的乘数叫参数（parameter）。若直线经过不同的两点 $A$ 和 $B$，可取 $\mathbf b=\overrightarrow{AB}$。
 
-直线方程的形式并不唯一：用直线上另一个点，或用方向向量的任意非零倍数，在改变参数后都能表示同一条直线。
+同一条直线可以有不同方程。改从直线上的另一个点出发，或把方向箭头拉长、缩短、反转，只要不是零向量，改变乘数后仍能到达原来那些点。
 
 <section class="worked-example" markdown="1">
 
@@ -119,11 +119,11 @@ $\mathbf r$ 表示直线上一般点的位置向量。若直线经过不同的�
 
 **Question:** Find a vector equation of the line through $A=(1,2,-1)$ and $B=(3,1,3)$. Check whether $P=(5,0,7)$ lies on it, and find where it meets the $xy$-plane.
 
-方向向量为 $\overrightarrow{AB}=(2,-1,4)$，因此直线方程可以写成
+先用坐标相减找到沿直线的一次移动：$\overrightarrow{AB}=(2,-1,4)$。选择第一个已知点作为起始位置，方程可以写成
 
 $$\boxed{\mathbf r=\begin{pmatrix}1\\2\\-1\end{pmatrix}+\lambda\begin{pmatrix}2\\-1\\4\end{pmatrix}}.$$
 
-其分量方程为 $x=1+2\lambda$、$y=2-\lambda$、$z=-1+4\lambda$。
+逐个坐标读这个向量方程：$x=1+2\lambda$、$y=2-\lambda$、$z=-1+4\lambda$。一个乘数控制整次移动，所以三个坐标必须使用同一个值。
 
 对于点 $P$，从 $x$ 方程得到 $\lambda=2$。将同一数值代入另外两个方程，得到 $y=0$ 且 $z=7$，所以 $P$ 在该直线上。
 
@@ -173,7 +173,7 @@ $$\mathbf r=(-1,2)+t(4,-2),\quad -1+4t=1,\quad2-2t=-3+s.$$
 | 不互为标量倍数 | 是否存在一对 $(\lambda,\mu)$，能同时满足三个分量方程？ | 若是，则相交；若否，则为异面直线 |
 {: .wide-table}
 
-上表的异面分支适用于三维。二维平面内不平行的直线必相交；联立两个分量即可。三维还必须核第三分量，不能把平面图上看似相交当作证据。
+上表“不相交又不平行”的情况只可能出现在三维空间。同一平面内，两条不平行的直线一定相交，解两个坐标方程即可。在空间中，平面图上看似交叉的直线可能一上一下错开，因此第三个坐标也必须相同。
 
 **异面直线**（skew lines）是三维空间中既不平行也不相交的直线。两条直线要分别使用参数；它们相交时参数值不必相同。
 
@@ -223,7 +223,7 @@ $$\mathbf r=\begin{pmatrix}2\\2\\1\end{pmatrix}+s\begin{pmatrix}2\\4\\-2\end{pma
 
 ## 数量积 {#scalar-product}
 
-**数量积**（scalar product）是一个数：
+求夹角时，需要一种能比较两个方向的计算。把两个向量的对应分量相乘，再把乘积加起来，得到的数叫数量积（scalar product），也叫点积（dot product）：
 
 $$\mathbf a\cdot\mathbf b=a_1b_1+a_2b_2+a_3b_3.$$
 
@@ -233,9 +233,9 @@ $$\mathbf a\cdot\mathbf b=a_1b_1+a_2b_2+a_3b_3.$$
 
 $$\cos\theta=\frac{\mathbf a\cdot\mathbf b}{\lvert\mathbf a\rvert\lvert\mathbf b\rvert}.$$
 
-两个非零向量的数量积为零时，它们互相垂直。零向量没有方向，因此不能将它代入夹角公式。
+对于非零向量，夹角为直角时余弦为零，因此数量积为零；反过来，数量积为零也说明夹角是直角。这就给出了判断垂直的方法。零向量没有方向，不能代入夹角公式。
 
-**求三角形的角：**从该顶点出发使用两个向量。例如求角 $ABC$，应使用 $\overrightarrow{BA}$ 和 $\overrightarrow{BC}$。若改用 $\overrightarrow{AB}$，其中一个方向会相反，所得角就是**补角**（supplementary angle）。
+**求三角形的角：**从该顶点出发使用两个向量。例如求角 $ABC$，应使用 $\overrightarrow{BA}$ 和 $\overrightarrow{BC}$。若改用 $\overrightarrow{AB}$，其中一个方向就反过来了，所得角与原来的角加起来是一个平角，叫补角（supplementary angle）。
 
 <section class="worked-example" markdown="1">
 
@@ -243,7 +243,11 @@ $$\cos\theta=\frac{\mathbf a\cdot\mathbf b}{\lvert\mathbf a\rvert\lvert\mathbf b
 
 **Question:** Find the angle between $\mathbf a=(1,2,2)$ and $\mathbf b=(2,-1,2)$, to $1$ decimal place.
 
+题目已经给出方向，不需要先用点坐标相减。先把对应分量相乘再相加，求出数量积；再用勾股定理分别求长度：
+
 $$\mathbf a\cdot\mathbf b=2-2+4=4,\qquad \lvert\mathbf a\rvert=\lvert\mathbf b\rvert=3.$$
+
+数量积除以两个长度的乘积，得到余弦值；再用反余弦求角度：
 
 $$\cos\theta=\frac49,\qquad \boxed{\theta\approx63.6^\circ}.$$
 
@@ -259,7 +263,7 @@ $$\cos\theta=\frac49,\qquad \boxed{\theta\approx63.6^\circ}.$$
 
 它们的数量积为 $-1$，两个模都为 $\sqrt3$。按题目给定的向量方向计算，夹角的余弦为 $-\frac13$，所以夹角是钝角。
 
-直线可以用任意一个方向来描述。若要求两条直线之间的锐角 $\phi$，数量积要取绝对值：
+直线向两头延伸。把一个方向向量反过来，余弦就变号，选出的就是另一个角。若要求两条直线之间的锐角 $\phi$，就使用数量积的正的大小，用绝对值符号表示：
 
 $$\cos\phi=\frac{\lvert\mathbf b\cdot\mathbf d\rvert}{\lvert\mathbf b\rvert\lvert\mathbf d\rvert}=\frac13.$$
 
@@ -285,7 +289,7 @@ $$\overrightarrow{BA}=(-2,0),\qquad\overrightarrow{BC}=(1,1),\qquad\cos\angle AB
 
 ## 垂足与距离 {#foot-of-the-perpendicular-and-distance}
 
-从点 $P$ 向直线作垂线，垂线与直线垂直相交于垂足（foot of the perpendicular）$H$；此时 $PH$ 与直线成直角。线段 $PH$ 的长度就是点到直线的垂直距离。
+想象把点 $P$ 连到直线上一个可以移动的点。我们要找的位置是 $H$，使连线 $PH$ 与直线成直角，这个位置叫垂足（foot of the perpendicular）。线段 $PH$ 的长度就是垂直距离。两个条件要同时成立：终点在直线上，连线与直线方向垂直。
 
 1. 写出直线上一般点 $H$：$\mathbf h=\mathbf a+\lambda\mathbf b$。
 2. 写出 $\overrightarrow{PH}=\mathbf h-\mathbf p$。
@@ -306,11 +310,11 @@ $$\mathbf r=\begin{pmatrix}1\\0\\1\end{pmatrix}+\lambda\begin{pmatrix}1\\2\\2\en
 
 and hence find the perpendicular distance.
 
-直线上一般点为 $H=(1+\lambda,2\lambda,1+2\lambda)$，因此
+先让候选点沿已知直线移动：$H=(1+\lambda,2\lambda,1+2\lambda)$，这样保证它在直线上。再减去已知点的坐标，求出连接两点的向量：
 
 $$\overrightarrow{PH}=\begin{pmatrix}\lambda-4\\2\lambda-3\\2\lambda-4\end{pmatrix}.$$
 
-垂直条件为
+接着选出使连线垂直的乘数：把连接向量与直线的方向向量作数量积，并令结果为零：
 
 $$\begin{aligned}0&=(\lambda-4)+2(2\lambda-3)\\&\quad+2(2\lambda-4)=9\lambda-18.\end{aligned}$$
 
@@ -555,9 +559,9 @@ $$\text{Area}=\frac12(2\sqrt5)(2\sqrt5)=10\text{ square units}.$$
 | 错误 | 恢复动作 | 重试 |
 | --- | --- | --- |
 | AB 写反或丢掉分量 | 标箭头起终点，回看[平面向量](#plane-vectors) | [方向](#repair-direction) |
-| 只核两个坐标/共用参数 | 分别列参数、核全部分量，回看[两直线](#pairs-of-lines) | [直线](#repair-lines) |
+| 只核两个坐标/共用参数 | 每条线用自己的乘数，并检查所有坐标，回看[两直线](#pairs-of-lines) | [直线](#repair-lines) |
 | 顶点角变成补角 | 从同一顶点重画两箭头，回看[顶点角](#vertex-angle) | [角](#repair-angle) |
-| 量到任意起点 | 需同时满足在线与垂直，回看[垂足](#foot-of-the-perpendicular-and-distance) | [距离](#repair-foot) |
+| 量到任意起点 | 同时检查终点在线上、连线与直线垂直，回看[垂足](#foot-of-the-perpendicular-and-distance) | [距离](#repair-foot) |
 
 <section class="lesson-check" markdown="1">
 
@@ -568,7 +572,7 @@ $P=(2,-1)$ and $Q=(-1,3)$. Draw $\overrightarrow{PQ}$ and $-2\overrightarrow{PQ}
 <details markdown="1">
 <summary>提示</summary>
 
-负标量改变方向；模乘以标量的绝对值。
+乘负数会反转箭头；长度要乘这个数的正的大小。
 
 </details>
 
@@ -636,7 +640,7 @@ Find the distance from $P=(1,3)$ to $\mathbf r=t(1,1)$. Give and check the neare
 <details markdown="1">
 <summary>提示</summary>
 
-设直线上一般点，再使用垂直条件。
+先让终点沿直线移动，再找连接向量与直线方向的数量积为零的位置。
 
 </details>
 
@@ -666,7 +670,7 @@ $A=(1,0,2)$ and $B=(3,2,0)$. Show that $P=(1+4u,4u,2-4u)$ lies on the line $AB$ 
 <details markdown="1">
 <summary>提示</summary>
 
-“每个 u”需要统一的参数关系；垂直条件另列。
+说明直线中的乘数怎样随 u 变化，所有坐标都要用同一个关系；然后另列垂直条件。
 
 </details>
 

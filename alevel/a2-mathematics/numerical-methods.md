@@ -15,7 +15,7 @@ study_page: true
 
 <div class="lesson-lead" markdown="1">
 
-There are two goals: when finding a root, locate **the input that makes the function zero**; when estimating an integral, approximate **the signed area between a curve and the horizontal axis** with simple pieces. An approximation needs evidence, not just many calculator digits.
+Some equations are hard to solve directly, and some integrals are hard to evaluate. We can instead work towards a number close enough for the task. Here we learn to locate roots and to estimate integrals with simple pieces. The aim is to explain why an approximation is reliable, rather than just quote many calculator digits.
 
 </div>
 
@@ -36,9 +36,11 @@ Follow the route below. In each part, study the demonstration, then complete a s
 
 ## 1. Locate a root: narrow the bracket {#locating-roots}
 
-Picture the graph first. A root is an input where the function is zero: the curve meets the horizontal axis. A continuous curve cannot go from below the axis to above it without passing through zero. This is what a change of sign tells us: the root is between the endpoints, not yet its exact location.
+First, what is a root? It is an input that makes the equation true. After rearranging the equation so that the function equals zero, a root makes the output zero. On the graph, it is where the curve touches or crosses the horizontal axis.
 
-Write the equation as $f(x)=0$. If $f$ is **continuous** on $[a,b]$ and $f(a)$ and $f(b)$ have opposite signs, there is at least one root between $a$ and $b$.
+Imagine walking along an unbroken stretch of the curve. To go from below the axis to above it, you must pass through the axis. Below it the function is negative; above it the function is positive. That is why a change of sign can locate a root. It tells us which two numbers contain the root, not its exact value yet.
+
+In symbols, write the equation as $f(x)=0$. If $f$ is **continuous** on $[a,b]$, meaning this whole stretch has no break, and $f(a)$ and $f(b)$ have opposite signs (one positive and one negative), there is at least one root between $a$ and $b$.
 
 For an answer that shows a root exists, give the two function values, state continuity, and explain the change of sign. To show there is exactly one root, you need more information, such as the function being strictly increasing throughout the interval.
 
@@ -54,7 +56,7 @@ $$f(1)=-1,\qquad f(2)=5,$$
 
 the signs are opposite and there is a root in $(1,2)$.
 
-**How do we choose the next trial?** Here is one reproducible search: increase the last decimal place until the signs change. It does not require knowing $1.32$ and $1.33$ in advance, and it is not the only possible search method.
+**Which number should we try next?** Move from left to right in tenths until the sign changes. Then search that smaller stretch in hundredths. The tables show the actual trials, so you can continue the search yourself without guessing $1.32$ and $1.33$ first. This is one possible search method.
 
 **First pass:** the root is in $(1,2)$. Start at $1.1$ and increase by $0.1$ until opposite-sign endpoints are found:
 
@@ -122,7 +124,7 @@ The polynomial is continuous and strictly increasing on the original interval. O
 
 ## 2. Iterate: feed the output back in {#iteration}
 
-**Think of a calculation used repeatedly.** Give a rule an input, calculate its output, then feed that output into the same rule. If the values settle towards a number, input and output approach equality: a fixed point. To make that fixed point a root of the original equation, first rearrange the equation equivalently as “input = output of the rule”.
+**Iteration means using the same calculation rule repeatedly.** Put in a starting number, calculate the result, then put that result back into the rule. We want a number that the rule returns unchanged; such a number is a fixed point. Not every rule makes the results approach a fixed point, so we will check that later. To use it to solve the original equation, first rewrite the equation as “input = output of the rule”, keeping the same solutions.
 
 Rearrange $f(x)=0$ as $x=g(x)$. Starting from an approximation $x_0$, calculate
 
@@ -243,9 +245,9 @@ Here $g(x)=\frac2{x+1}$ with $x_0=0.4$ gives approximately $1.429$, $0.824$, $1.
 
 ### Convergence and divergence
 
-Iteration **converges** when the successive approximations approach the root. It **diverges** when they move away. Different rearrangements of the same equation can behave differently.
+Look at the numbers in order. If they get closer to the root, the iteration **converges**. If they move farther away, it **diverges**. Rewriting the same equation into a different calculation rule can change what happens.
 
-Read the steps first: converging steps gather towards the intersection; diverging steps move farther away. The derivative is the local slope: it helps judge whether a small input error is reduced or amplified. Its sign affects whether the next value switches to the other side.
+On the graph, first see whether the steps approach the intersection or move away. Why look at the derivative too? It gives the slope nearby. That helps judge whether a small difference in the input becomes smaller or larger at the next step. Its sign also affects whether the values switch sides of the root.
 
 Near a root $\alpha$, $\lvert g'(x)\rvert<1$ is a useful local convergence condition. Start sufficiently near the root and keep the iteration within a suitable domain. Checking the derivative at one unrelated point is not enough.
 
@@ -258,7 +260,7 @@ For Example 2,
 
 $$g'(x)=\frac{1}{3(x+1)^{2/3}}.$$
 
-On $[1,2]$, this derivative is positive and less than $1$, and $g$ maps that interval into itself. The starting value $1$ is therefore suitable.
+On $[1,2]$, this derivative is positive and less than $1$. Also, putting any number from this interval into $g$ gives another number in the same interval: the calculation cannot leave it. The starting value $1$ is therefore suitable.
 
 <details id="iteration-extension" markdown="1">
 <summary>Further comparison: slope, error and iteration speed</summary>
@@ -303,7 +305,9 @@ They move away from the required root. **Change the rearrangement**, rather than
 
 ## 3. Numerical integration: add simple pieces {#numerical-integration}
 
-Think “add simple pieces” before memorising a formula. When an integral is inconvenient to evaluate directly, split the interval into equal strips and approximate each part with a simpler shape. The mid-ordinate rule uses one central height for a rectangle. Simpson uses three boundary heights across two strips for a parabola. The distinction is **where we sample and which shape we use**.
+Think “add small pieces”. A curved shape may be hard to calculate directly. Split the horizontal stretch into small parts and replace each piece with a shape that is easy to calculate. Parts below the axis count negatively, so we are estimating a definite integral.
+
+We use two methods: the mid-ordinate rule uses a row of rectangles; Simpson’s rule uses pieces of parabolas to follow the curve. Look at each diagram before its formula, and notice where the heights are taken.
 
 Divide $[a,b]$ into $n$ equal **strips**, each of width
 
@@ -313,7 +317,7 @@ An **ordinate** is a vertical height $y=f(x)$. The two rules use heights at diff
 
 ### The mid-ordinate rule
 
-Each rectangle contributes “width × height”. Since the widths are equal, add all the heights and multiply by the width once. The half-indices in the formula simply mark strip centres.
+Each rectangle contributes “width × height”. All widths are equal, so add the heights and multiply by the width once. Take the height at the centre of each strip, rather than its left or right edge. A half in a subscript marks that halfway position; it does not mean halve the height.
 
 Use the height at the centre of each strip. If the strip boundaries are $x_i=a+ih$, the midpoint is $x_{i+1/2}=a+(i+\frac12)h$ and its height is $y_{i+1/2}=f(x_{i+1/2})$.
 
@@ -329,7 +333,7 @@ There are $n$ midpoint heights for $n$ strips. Add those heights, then multiply 
 
 **Question:** Estimate $\displaystyle\int_0^2x^2\,dx$ using the mid-ordinate rule with $4$ strips.
 
-The width is $h=\frac{2-0}{4}=0.5$. The midpoints are $0.25$, $0.75$, $1.25$ and $1.75$.
+**Locate the rectangles first.** A total width of 2 split into four parts gives width $h=\frac{2-0}{4}=0.5$. The first part goes from 0 to 0.5, so its centre is 0.25. Move right by 0.5 each time. The four midpoints are $0.25$, $0.75$, $1.25$ and $1.75$.
 
 | Midpoint $x$ | Height $y=x^2$ |
 |---|---|
