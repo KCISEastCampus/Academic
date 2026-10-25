@@ -1,0 +1,359 @@
+{
+  "recordedUTC": "2026-10-25T06:31:15.510799+00:00",
+  "baselineCommit": "d1e93ecac2b0ea1cb8b295b4f289a208fd250db8",
+  "mathReviewCommit": "3066e46e58050dd7f0e2eab4846657d1aa596701",
+  "finalCourseCommit": "c858455092ddddae6de808c944cb9357338fde4d",
+  "hashConvention": "sha256 is actual local file bytes; canonicalLF_SHA256 only changes CRLF to LF and is matched against independent review identities. Generated HTML is local build output. This manifest does not hash itself.",
+  "course": {
+    "alevel/a2-mathematics/mechanics.md": {
+      "sha256": "d663e50ca4dca90d382dbc562f4a5f8a1a43f1bc42edb6753c246cc1fe923e86",
+      "canonicalLF_SHA256": "d663e50ca4dca90d382dbc562f4a5f8a1a43f1bc42edb6753c246cc1fe923e86",
+      "generatedHTML": "_site/alevel/a2-mathematics/mechanics/index.html",
+      "generatedHTML_SHA256": "587476b551b7465718c7434d532a83b84c93bcc807511fe8f394b1bf394929f3"
+    },
+    "zh/alevel/a2-mathematics/mechanics.md": {
+      "sha256": "3071220f04234588752309790c1e50aeb8d01722e05e3b0afc2bdabb4c4d364b",
+      "canonicalLF_SHA256": "3071220f04234588752309790c1e50aeb8d01722e05e3b0afc2bdabb4c4d364b",
+      "generatedHTML": "_site/zh/alevel/a2-mathematics/mechanics/index.html",
+      "generatedHTML_SHA256": "c56a92b0c449fb13caae9dcb6e97e358f1edff872192679b2800a2e8328544a0"
+    },
+    "alevel/a2-mathematics/mechanics/centres-of-mass.md": {
+      "sha256": "4251558b8caddfa3c43bf8b2abc3d2608f76a9d742f7546c30e3f5b1f327f619",
+      "canonicalLF_SHA256": "4251558b8caddfa3c43bf8b2abc3d2608f76a9d742f7546c30e3f5b1f327f619",
+      "generatedHTML": "_site/alevel/a2-mathematics/mechanics/centres-of-mass/index.html",
+      "generatedHTML_SHA256": "74612509e0d20e083419890ff79b2eeadaca75ec02ec4d133981c190237d279b"
+    },
+    "alevel/a2-mathematics/mechanics/forces-equilibrium-and-friction.md": {
+      "sha256": "f77e4abcfbfdef62abffa7fe59c428250e294c117e13a40af1f0465c59e8e680",
+      "canonicalLF_SHA256": "f77e4abcfbfdef62abffa7fe59c428250e294c117e13a40af1f0465c59e8e680",
+      "generatedHTML": "_site/alevel/a2-mathematics/mechanics/forces-equilibrium-and-friction/index.html",
+      "generatedHTML_SHA256": "7714c2dab19120c4ec7151a2335ea212111a8c895a85a292dad93c279d75b0b9"
+    },
+    "alevel/a2-mathematics/mechanics/mathematical-modelling.md": {
+      "sha256": "64ef32fc17b971c8e0fba9eb0226c07ef7641c59308cc530945ce55b07abf473",
+      "canonicalLF_SHA256": "64ef32fc17b971c8e0fba9eb0226c07ef7641c59308cc530945ce55b07abf473",
+      "generatedHTML": "_site/alevel/a2-mathematics/mechanics/mathematical-modelling/index.html",
+      "generatedHTML_SHA256": "8605096f68d43325867d565f5e7fa2d49d9e7f844cf5462175e3eef07b7b0f3f"
+    },
+    "alevel/a2-mathematics/mechanics/moments-and-rigid-objects.md": {
+      "sha256": "6bb1ebddb8a27eab80ba814c868cba0c8ab6fc8f2aa9162c5f19b763e5f0f83a",
+      "canonicalLF_SHA256": "6bb1ebddb8a27eab80ba814c868cba0c8ab6fc8f2aa9162c5f19b763e5f0f83a",
+      "generatedHTML": "_site/alevel/a2-mathematics/mechanics/moments-and-rigid-objects/index.html",
+      "generatedHTML_SHA256": "31b5a8b969179f5d4eb80171513d853d53910467f4848787d53fdad5ce763c1f"
+    },
+    "alevel/a2-mathematics/mechanics/momentum-bridge.md": {
+      "sha256": "d404cd19edba00434f84464d1d336878801aa935bc1f422ce7b46a64059ef675",
+      "canonicalLF_SHA256": "d404cd19edba00434f84464d1d336878801aa935bc1f422ce7b46a64059ef675",
+      "generatedHTML": "_site/alevel/a2-mathematics/mechanics/momentum-bridge/index.html",
+      "generatedHTML_SHA256": "84cd65a9a5ab52bb48884baa85bfd36be176f75fd69c70431514057826d24420"
+    },
+    "alevel/a2-mathematics/mechanics/newtons-laws-of-motion.md": {
+      "sha256": "a1dcffce386ddb67a06bc21bc078b03162d3b82827c9b774824055234a6d1353",
+      "canonicalLF_SHA256": "a1dcffce386ddb67a06bc21bc078b03162d3b82827c9b774824055234a6d1353",
+      "generatedHTML": "_site/alevel/a2-mathematics/mechanics/newtons-laws-of-motion/index.html",
+      "generatedHTML_SHA256": "b7ce14bb2e059c25d6cee013b9025a2465c86c4d4bec1d7544c1aef8ef22965a"
+    },
+    "alevel/a2-mathematics/mechanics/projectiles.md": {
+      "sha256": "1ae919c172546288b0c5361155761ff62066af967eb2f56a6baab89a4c0a796c",
+      "canonicalLF_SHA256": "1ae919c172546288b0c5361155761ff62066af967eb2f56a6baab89a4c0a796c",
+      "generatedHTML": "_site/alevel/a2-mathematics/mechanics/projectiles/index.html",
+      "generatedHTML_SHA256": "53d1e3edcef1d2f48322cb8686cdd704c5c1e7c8992239eaa646885293cd35ed"
+    },
+    "alevel/a2-mathematics/mechanics/quick-reference.md": {
+      "sha256": "03270971d8b015525f9ec08ec3831a0294702649add5291dca0845f4bf4505bd",
+      "canonicalLF_SHA256": "6915934d768d5384b557e786bcd8f9567157068b46a9e20d0636803bf68c7d95",
+      "generatedHTML": "_site/alevel/a2-mathematics/mechanics/quick-reference/index.html",
+      "generatedHTML_SHA256": "fb2e050a8c1e5833bde99b4220de7f2e1950d9b043a98f57c1441288b39bd5c2"
+    },
+    "alevel/a2-mathematics/mechanics/uniform-circular-motion.md": {
+      "sha256": "e0b58bc82ad055bdace913c4de78fd921f4bcff58e39c2725f58c632ec5c5b43",
+      "canonicalLF_SHA256": "e0b58bc82ad055bdace913c4de78fd921f4bcff58e39c2725f58c632ec5c5b43",
+      "generatedHTML": "_site/alevel/a2-mathematics/mechanics/uniform-circular-motion/index.html",
+      "generatedHTML_SHA256": "72b8b800f66e1a375a9dfc91cd4a8db411190bd4ebdb1977ad06852cb0d5e0cd"
+    },
+    "alevel/a2-mathematics/mechanics/vectors-and-kinematics.md": {
+      "sha256": "e1e989f4a6582fcce0887e7dad35d50a492d4c1e3590242b6d6d0ef9cab02108",
+      "canonicalLF_SHA256": "e1e989f4a6582fcce0887e7dad35d50a492d4c1e3590242b6d6d0ef9cab02108",
+      "generatedHTML": "_site/alevel/a2-mathematics/mechanics/vectors-and-kinematics/index.html",
+      "generatedHTML_SHA256": "805b65216020f423553650da3c6900ff5429f8278aa9417bca25356f8024aaa1"
+    },
+    "alevel/a2-mathematics/mechanics/work-and-energy.md": {
+      "sha256": "aa87eb7551e12e0060e04f114585442ddd3e7483d9ccefdcea850abc83b847ea",
+      "canonicalLF_SHA256": "aa87eb7551e12e0060e04f114585442ddd3e7483d9ccefdcea850abc83b847ea",
+      "generatedHTML": "_site/alevel/a2-mathematics/mechanics/work-and-energy/index.html",
+      "generatedHTML_SHA256": "a70148433e31591d7cac0a9be3a2e808b8feb2ad5af8fcae027a15a1770f89d7"
+    },
+    "zh/alevel/a2-mathematics/mechanics/centres-of-mass.md": {
+      "sha256": "9f0461e0f10a304013f79a2c5a05b7087c64b5f0342668b1dfda40e2ef8fd4a4",
+      "canonicalLF_SHA256": "9f0461e0f10a304013f79a2c5a05b7087c64b5f0342668b1dfda40e2ef8fd4a4",
+      "generatedHTML": "_site/zh/alevel/a2-mathematics/mechanics/centres-of-mass/index.html",
+      "generatedHTML_SHA256": "27c64cfffb88e4a638bf929c92772a8a4e70a6523b5602db244820fd2bb3e64c"
+    },
+    "zh/alevel/a2-mathematics/mechanics/forces-equilibrium-and-friction.md": {
+      "sha256": "b021cc1c613ff871b57843b0da839470bca68e3d83bba8e6c481c9af438468a6",
+      "canonicalLF_SHA256": "b021cc1c613ff871b57843b0da839470bca68e3d83bba8e6c481c9af438468a6",
+      "generatedHTML": "_site/zh/alevel/a2-mathematics/mechanics/forces-equilibrium-and-friction/index.html",
+      "generatedHTML_SHA256": "5540fb69fb7be784c9a911419e9a3eaf0bccb45da624f503f52c5e189f15d526"
+    },
+    "zh/alevel/a2-mathematics/mechanics/mathematical-modelling.md": {
+      "sha256": "56dbdbfd7b4985f1c38384f5db3d612172e11a1a9a2a80b6189ab376bb9e9253",
+      "canonicalLF_SHA256": "56dbdbfd7b4985f1c38384f5db3d612172e11a1a9a2a80b6189ab376bb9e9253",
+      "generatedHTML": "_site/zh/alevel/a2-mathematics/mechanics/mathematical-modelling/index.html",
+      "generatedHTML_SHA256": "65a3c2001ed9e73c60290db0c59ce5602c222f856961f423ffb3dbf2c804bd3f"
+    },
+    "zh/alevel/a2-mathematics/mechanics/moments-and-rigid-objects.md": {
+      "sha256": "bf929cc8b6527517e3319a4f135bce05945905759a02243476e04211be6a4361",
+      "canonicalLF_SHA256": "bf929cc8b6527517e3319a4f135bce05945905759a02243476e04211be6a4361",
+      "generatedHTML": "_site/zh/alevel/a2-mathematics/mechanics/moments-and-rigid-objects/index.html",
+      "generatedHTML_SHA256": "b13c173d84add51001936acd7c9c2128c14841503b14118a27f4f941b33ddb0a"
+    },
+    "zh/alevel/a2-mathematics/mechanics/momentum-bridge.md": {
+      "sha256": "eaeb451eb1d646a58fff2e06ea23f8b3d9ef789e835f71cd763f5ef7f4144f55",
+      "canonicalLF_SHA256": "eaeb451eb1d646a58fff2e06ea23f8b3d9ef789e835f71cd763f5ef7f4144f55",
+      "generatedHTML": "_site/zh/alevel/a2-mathematics/mechanics/momentum-bridge/index.html",
+      "generatedHTML_SHA256": "ceed3c144bbf92f64b35cfd76e7ab7b2d7a15862720d8a53ae73fe6f8ba56d29"
+    },
+    "zh/alevel/a2-mathematics/mechanics/newtons-laws-of-motion.md": {
+      "sha256": "62c2692691ec86905dea51ae8d6b138f6627915385b45bd45a62808a5f2400e5",
+      "canonicalLF_SHA256": "62c2692691ec86905dea51ae8d6b138f6627915385b45bd45a62808a5f2400e5",
+      "generatedHTML": "_site/zh/alevel/a2-mathematics/mechanics/newtons-laws-of-motion/index.html",
+      "generatedHTML_SHA256": "dbc2f769ba6c5fb888df72acb7970ad2d0936aec57a9554866d7f32eecd44d5c"
+    },
+    "zh/alevel/a2-mathematics/mechanics/projectiles.md": {
+      "sha256": "c0245eb5031681dc604e2b30abe8aeff935f5785f89c66472a262b7947631a7b",
+      "canonicalLF_SHA256": "c0245eb5031681dc604e2b30abe8aeff935f5785f89c66472a262b7947631a7b",
+      "generatedHTML": "_site/zh/alevel/a2-mathematics/mechanics/projectiles/index.html",
+      "generatedHTML_SHA256": "2e611031711f372297e9a99965d6b8a47393c769ec7a6be2bc0499a549c2e3f5"
+    },
+    "zh/alevel/a2-mathematics/mechanics/quick-reference.md": {
+      "sha256": "d9107ed0ef81293616812cdb8048bd0d50d1f92b415c43f1c0b35108bdfae9b8",
+      "canonicalLF_SHA256": "d9107ed0ef81293616812cdb8048bd0d50d1f92b415c43f1c0b35108bdfae9b8",
+      "generatedHTML": "_site/zh/alevel/a2-mathematics/mechanics/quick-reference/index.html",
+      "generatedHTML_SHA256": "510f5d3533db3ec0c5841ed7b742fed347dbdf49e2f4481f4baa2e33a71c63f3"
+    },
+    "zh/alevel/a2-mathematics/mechanics/uniform-circular-motion.md": {
+      "sha256": "5ebcf512a384ca17b159758de39c6142f3edf760898c8732cb90fa21e877dcd9",
+      "canonicalLF_SHA256": "5ebcf512a384ca17b159758de39c6142f3edf760898c8732cb90fa21e877dcd9",
+      "generatedHTML": "_site/zh/alevel/a2-mathematics/mechanics/uniform-circular-motion/index.html",
+      "generatedHTML_SHA256": "4541fb076965ac1b8214e0618f7c762f2c5b1ef7bd881fd1a5bba5003c887c0a"
+    },
+    "zh/alevel/a2-mathematics/mechanics/vectors-and-kinematics.md": {
+      "sha256": "da8418182236a5505b092ef97e4b3e234a6caabfdfdf04053707775696761d9f",
+      "canonicalLF_SHA256": "da8418182236a5505b092ef97e4b3e234a6caabfdfdf04053707775696761d9f",
+      "generatedHTML": "_site/zh/alevel/a2-mathematics/mechanics/vectors-and-kinematics/index.html",
+      "generatedHTML_SHA256": "516990dba5454b9153657dbc36e56eee2d31a5d73d612e8f5ae03e4c77581365"
+    },
+    "zh/alevel/a2-mathematics/mechanics/work-and-energy.md": {
+      "sha256": "c59c0b0389e67e3936a105fec15f7dc210f1dfb6af13b32be890bf86b309da41",
+      "canonicalLF_SHA256": "c59c0b0389e67e3936a105fec15f7dc210f1dfb6af13b32be890bf86b309da41",
+      "generatedHTML": "_site/zh/alevel/a2-mathematics/mechanics/work-and-energy/index.html",
+      "generatedHTML_SHA256": "d3872a7a498943251e910e36d68820c814d4ea7a3e7896179df754215f6f6a1f"
+    }
+  },
+  "tests": {
+    "scripts/test-mechanics-bilingual.js": {
+      "sha256": "c9dbbc6906fe7459541a5edf1ca5b5672008927c31646068fe6a1354d7d5218a",
+      "canonicalLF_SHA256": "bd032e8e8f2006d13c3e425aa6441cab0364bb5ba799d70988eee6fc4e8fd859"
+    },
+    "scripts/test-mechanics-centres.js": {
+      "sha256": "58a85c6dbfa6527514c1077dee10c23e5b3e976fe1729cb0dc9cfb21a8b321a9",
+      "canonicalLF_SHA256": "58a85c6dbfa6527514c1077dee10c23e5b3e976fe1729cb0dc9cfb21a8b321a9"
+    },
+    "scripts/test-mechanics-chapter10.js": {
+      "sha256": "b3231511d3025d42bc3645bd4bc927eaf229c7e59294138cad873da83c7a3c9e",
+      "canonicalLF_SHA256": "9eb09b3dd80b26efe1e3a59f5bd504cc9dfb3d88baf4e8e111b3bc6842bebf1f"
+    },
+    "scripts/test-mechanics-circular.js": {
+      "sha256": "51b743bf77f5bac71a4b33b95769ee16cba8567922f86f18b4d5fdb0d4c36a7a",
+      "canonicalLF_SHA256": "51b743bf77f5bac71a4b33b95769ee16cba8567922f86f18b4d5fdb0d4c36a7a"
+    },
+    "scripts/test-mechanics-energy.js": {
+      "sha256": "789193886e01a44ce4900c967472d50844866b4f17929429aac9c20823d9d366",
+      "canonicalLF_SHA256": "789193886e01a44ce4900c967472d50844866b4f17929429aac9c20823d9d366"
+    },
+    "scripts/test-mechanics-forces.js": {
+      "sha256": "3a589c0d27449d8eabed329e0cd47c908f9673a5a019a6681aaeb756218df3ce",
+      "canonicalLF_SHA256": "2f586f39b47a9591a2fba1c95c63fb609fdf9f023e8ba5fada3a535b35be97a9"
+    },
+    "scripts/test-mechanics-moments.js": {
+      "sha256": "e53aef2cd785879eb49ff9da38c8e77e827ef51f2593296d8afa5779a27bc439",
+      "canonicalLF_SHA256": "e53aef2cd785879eb49ff9da38c8e77e827ef51f2593296d8afa5779a27bc439"
+    },
+    "scripts/test-mechanics-momentum.js": {
+      "sha256": "e6f53c256e2d9cbe5a7024eda2ed875e721e61c65fd74072bb7c24690ce18abd",
+      "canonicalLF_SHA256": "90240e39317a4eb33b15799c7afd25fd9606cfb852a934091b94cd50f7b38d06"
+    },
+    "scripts/test-mechanics-newton.js": {
+      "sha256": "b739a08e3d63deffa71fc182a389167428f14a5cc9a156b853acc02bdf477513",
+      "canonicalLF_SHA256": "b739a08e3d63deffa71fc182a389167428f14a5cc9a156b853acc02bdf477513"
+    },
+    "scripts/test-mechanics-projectiles.js": {
+      "sha256": "0fb4f5a103a4fe0ec35b61a3d81670987bd154efee1818bdeca4096a7c613080",
+      "canonicalLF_SHA256": "0fb4f5a103a4fe0ec35b61a3d81670987bd154efee1818bdeca4096a7c613080"
+    },
+    "scripts/test-mechanics-transfer-foundations.js": {
+      "sha256": "956618c001b163bd2b62284ba2c7e7f347beb70ba082f40ebe28c45f27cde5c3",
+      "canonicalLF_SHA256": "126f35628ec3ea039a915e821c544a863fee539c9bef0cb3480c8efdfd76005a"
+    },
+    "scripts/test-mechanics-transfer-motion.js": {
+      "sha256": "9d3a246ec8f1d91f54b5ae91865543ad8747ba8bfc008269903a25b2a237f430",
+      "canonicalLF_SHA256": "a95e521e87e8db867e7e0c033885dc4f14936b86983f6f32d91d01fbc1ce9cd3"
+    },
+    "scripts/test-mechanics-transfer-statics.js": {
+      "sha256": "3d40ce097322fa180a1fd6b9b131485ebe63520d73b1bf3d19c010cb15922a05",
+      "canonicalLF_SHA256": "772eac707dcfc4d895f9af5c25de25e2459dea86147facc68a7b2639c9c83967"
+    },
+    "scripts/test-frontend-ux.js": {
+      "sha256": "6eef0cca55a0f995199a871f7aeaf25cc46cf8d922efca19ae6202cf963342d7",
+      "canonicalLF_SHA256": "c86c698434accb99cf6df130c31a6bc521af7eb2102cb0642708ff162ef2d732"
+    },
+    "scripts/test-a2-heading-hierarchy.js": {
+      "sha256": "6d085e889dd764e4fccb455552a74670aebb810479b20f948c2d0910ca7023d8",
+      "canonicalLF_SHA256": "af6a514446275f54be70403e3f1992547a797d078a7db33fb1254130a0848793"
+    }
+  },
+  "protected": {
+    "alevel/a2-mathematics/mechanics/forces-equilibrium-and-friction.md": {
+      "sha256": "f77e4abcfbfdef62abffa7fe59c428250e294c117e13a40af1f0465c59e8e680",
+      "canonicalLF_SHA256": "f77e4abcfbfdef62abffa7fe59c428250e294c117e13a40af1f0465c59e8e680"
+    },
+    "zh/alevel/a2-mathematics/mechanics/forces-equilibrium-and-friction.md": {
+      "sha256": "b021cc1c613ff871b57843b0da839470bca68e3d83bba8e6c481c9af438468a6",
+      "canonicalLF_SHA256": "b021cc1c613ff871b57843b0da839470bca68e3d83bba8e6c481c9af438468a6"
+    },
+    "assets/img/a2-math-mech/force-components-sample.svg": {
+      "sha256": "6eac7323645b49d5567668016d6b699f8a27d42867b837110d794dc2a9c94080",
+      "canonicalLF_SHA256": "6eac7323645b49d5567668016d6b699f8a27d42867b837110d794dc2a9c94080"
+    },
+    "assets/img/a2-math-mech/wall-friction-feedback.svg": {
+      "sha256": "47ca0485a3dc87d7d8322c88386a0480667749ba0a35e70d99abcd3e882ee100",
+      "canonicalLF_SHA256": "47ca0485a3dc87d7d8322c88386a0480667749ba0a35e70d99abcd3e882ee100"
+    },
+    "scripts/test-mechanics-forces.js": {
+      "sha256": "3a589c0d27449d8eabed329e0cd47c908f9673a5a019a6681aaeb756218df3ce",
+      "canonicalLF_SHA256": "2f586f39b47a9591a2fba1c95c63fb609fdf9f023e8ba5fada3a535b35be97a9"
+    },
+    "assets/css/reading.css": {
+      "sha256": "177c376f70a9685f629b177f24c7641cdd08449d49869a29785775126997f72a",
+      "canonicalLF_SHA256": "71c3c526914dfa2676479c8a8579e323a2731f3f62cbb339117e8d1e83e20b08"
+    },
+    "assets/css/home.css": {
+      "sha256": "cffd04e3d4fee69faa20a2414bcf2f54880c13f9eee1a63e570c745726a95748",
+      "canonicalLF_SHA256": "81c09234ab53bb04c8d99b25c5665633f5e24330153c0d960289d11428ed9904"
+    },
+    "_layouts/subjects.html": {
+      "sha256": "293db2c33a7e9d0858caf551013030cb136af11b7aaf6f97397c90c0ad7d940e",
+      "canonicalLF_SHA256": "4c88ebadb6bfe3f2099664ea7f4d84217731db69c59543f768358510a0112258"
+    },
+    "package.json": {
+      "sha256": "a98e852cb45c86a75c3d8d7d37491bb9161ad19f22394e6b7e266975949dd0b9",
+      "canonicalLF_SHA256": "a98e852cb45c86a75c3d8d7d37491bb9161ad19f22394e6b7e266975949dd0b9"
+    }
+  },
+  "authorRecords": {
+    "docs/agents/implementation-ma05-dynamics-upgrade-2026-10-25.md": {
+      "sha256": "28113022b573497e9cce0882168f9845e6024a7f97702671a62f1097662ae46e",
+      "canonicalLF_SHA256": "28113022b573497e9cce0882168f9845e6024a7f97702671a62f1097662ae46e"
+    },
+    "docs/agents/implementation-ma05-energy-circular-upgrade-2026-10-25.md": {
+      "sha256": "3f20847dddd47f35c1424b1b18427308e6714c308c3a39f26e05da012aa2aba9",
+      "canonicalLF_SHA256": "3f20847dddd47f35c1424b1b18427308e6714c308c3a39f26e05da012aa2aba9"
+    },
+    "docs/agents/implementation-ma05-foundations-upgrade-2026-10-25.md": {
+      "sha256": "267bc1a8286f004f04cde2c4f8cec3ff90f01d14fbe1e75cb6ce744b5bd48a81",
+      "canonicalLF_SHA256": "267bc1a8286f004f04cde2c4f8cec3ff90f01d14fbe1e75cb6ce744b5bd48a81"
+    },
+    "docs/agents/implementation-ma05-full-upgrade-2026-10-25.md": {
+      "sha256": "3e373acd80c9826b48e6a498853479f94378ed8450a734245459f01bb6d6bdb2",
+      "canonicalLF_SHA256": "3e373acd80c9826b48e6a498853479f94378ed8450a734245459f01bb6d6bdb2"
+    },
+    "docs/agents/implementation-ma05-reference-upgrade-2026-10-25.md": {
+      "sha256": "aa3466e4d12d30012b968aa008d422f79382356b4fe5a996bb2624b197e9fb80",
+      "canonicalLF_SHA256": "aa3466e4d12d30012b968aa008d422f79382356b4fe5a996bb2624b197e9fb80"
+    },
+    "docs/agents/implementation-ma05-statics-upgrade-2026-10-25.md": {
+      "sha256": "a7145767180a7c13084d418dbf8b8d28700ddde40c38f2f5725ee04a8cfab091",
+      "canonicalLF_SHA256": "a7145767180a7c13084d418dbf8b8d28700ddde40c38f2f5725ee04a8cfab091"
+    }
+  },
+  "independentReviews": {
+    "docs/agents/review-ma05-full-upgrade-standards-2026-10-25.md": {
+      "sha256": "2c70ac1dac8ecc3ac36272614701b508c991e5a3db00250096e52af53bbf736f",
+      "canonicalLF_SHA256": "2c70ac1dac8ecc3ac36272614701b508c991e5a3db00250096e52af53bbf736f",
+      "finalCourseCanonicalHashesLocated": 24
+    },
+    "docs/agents/review-ma05-full-upgrade-spec-2026-10-25.md": {
+      "sha256": "fbf290fdfecf126564292e79d024bbc5e3aa2eaa46cd5df2f5c052c610ebf104",
+      "canonicalLF_SHA256": "fbf290fdfecf126564292e79d024bbc5e3aa2eaa46cd5df2f5c052c610ebf104",
+      "finalCourseCanonicalHashesLocated": 24
+    }
+  },
+  "standardBasis": {
+    "AGENTS.md": {
+      "sha256": "f35107a5e62cd5ab79ce0d2affa0e52a77a19a65e225e9b4279ae492d9650653",
+      "canonicalLF_SHA256": "3cb5d9a986d113397e3287c862a2a2060b5d522ffc5a67790edf52527daa371b"
+    },
+    "docs/agents/course-content-standard.md": {
+      "sha256": "887c470bccb0dc7789688557b69667d0955923cc619a5133a6deab34351b5ec7",
+      "canonicalLF_SHA256": "76d7a62f176de360c777cd88961632523cfbadebfbf497fd0f248af4a0991d4a"
+    },
+    "docs/MATH_FORMULA_GUIDELINES.md": {
+      "sha256": "d83bbd9523b70d833dfbe511e0be966baca36b0ee4bdd04040222620bc7843d1",
+      "canonicalLF_SHA256": "486f4eda710dab155d11a507b9da3b0feb93506ef26354e06b9668463872479a"
+    },
+    "docs/agents/codex-collaboration.md": {
+      "sha256": "4d5a996e2566b83aa465c97f1c7aa445554cd11dbafd104bb45a785ba0a3678c",
+      "canonicalLF_SHA256": "a380c1035eda752560af44409188c43b8311132507a00d49def2c853d741be43"
+    }
+  },
+  "inspectedScreenshots": {
+    "centres-of-mass-390-continuous.png": "3173de21366e112d98d7cff2c7ae2e7ec5e210fc76d953deacb752e369aca12c",
+    "circular-help-390-dark.png": "746c09be924e4753c5dd56dca8a0190542b45ae91046fc7eae70f0e370513fd8",
+    "entry-1365.png": "282fa85627774f88b20c7df9189a24305a997999224d065514b64f8ff957a17c",
+    "entry-390.png": "4e6025ab3cb17f66f0b03c022d81118f1cf2819ace77b159f74e99fceb61cca6",
+    "mathematical-modelling-390-continuous.png": "4b14ecefd30a84cef366047c1bb4e9773398e9d39ff9eb8cf4a9f8708f8253bc",
+    "moments-and-rigid-objects-390-continuous.png": "2903cb36f2660e050c2620b5f7f3c6d828d3e70d1fd300064bee4f1f7e9ad275",
+    "momentum-bridge-390-continuous.png": "fef3d0db1d0052c398ced2c61b9586579981c9100d3c70b3988c47c453dc37b1",
+    "newtons-laws-of-motion-390-continuous.png": "29f2945c33c0f38cb710a6bf9653321abfea837d468e5046719a9da0015ed009",
+    "projectiles-390-continuous.png": "3b406db0c5a2cdcaba7957aa38bb20171a99d3068ef80a32adafe0bf90713454",
+    "quick-reference-390-continuous.png": "db445fec28cab0277e36f81f256f959c608ca8dd0d0d1009f5a6e2502693a26f",
+    "uniform-circular-motion-390-continuous.png": "e628e054aa460a954b9694f46a97e0dadc0998e7249a6042bbe4b7086c651815",
+    "vectors-and-kinematics-390-continuous.png": "bfb526eec8bed954c38dff382fbe27fb87280a70fc9164f87b4c4af0715631b1",
+    "work-and-energy-390-continuous.png": "4b1a8d7fa067f65f5d4d069ab3f2c219b4fa958abb0f6a0cc56b493eca632b08"
+  },
+  "acceptance": {
+    "applicableTestCommands": 15,
+    "bilingualPairs": 12,
+    "uniqueTeX": 2216,
+    "baselineBrowserViews": 96,
+    "finalEntryRecheckedViews": 8,
+    "otherMA05_HTMLByteIdentical": 22,
+    "oldContentIDs": 592,
+    "oldPages": 23,
+    "finalLocalTargets": 389,
+    "longEquationKeyboardScrolls": 24,
+    "journeys": 2,
+    "continuousMobileReadings": 10,
+    "additionalRecoveryClicks": 5,
+    "wideTableKeyboardChecks": 1,
+    "inspectedScreenshots": 13,
+    "buildSeconds": 24.67,
+    "pagefind": {
+      "version": "1.5.2",
+      "pages": 297,
+      "languages": 2,
+      "words": 46589,
+      "generationOnly": true
+    }
+  },
+  "inheritance": "The 96-view broad run predates the final href-only change to 2 entry pages. 22 other course HTML files are byte identical; 8 affected entry views and all 389 local link/anchor targets were rechecked. Content math did not change. See feedback-route-comparison.json and entry-recheck-results.json.",
+  "historicEvidence": "Initial full-page ID baseline and precheck failures are retained as historical checker/test diagnostics; they are not final acceptance. Correct old-content baseline has 592 IDs. Author/reviewer design-record hashes identify their actual earlier snapshots, before this final technical summary.",
+  "limitations": [
+    "Local only; not pushed, opened as a PR, or published.",
+    "User readability approval covers the forces sample, not full-course independent mastery, retries, or later retention.",
+    "No physical-phone or full screen-reader/WCAG audit, calculator hardware checks, or exhaustive historical question provenance re-audit.",
+    "Four retained reference problems have unverified original provenance, explicitly labeled.",
+    "P3 duplicated test-panel logic is a nonblocking deferred maintenance suggestion."
+  ],
+  "preservation": "Accepted forces sample, shared CSS/layout, and pre-existing package.json hashes match baseline. Unrelated node_modules remains outside the task and staging."
+}

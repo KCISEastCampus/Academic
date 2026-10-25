@@ -1,0 +1,39 @@
+{
+  "captures": [
+    {
+      "file": "first-concept-to-attempt-390.png",
+      "clip": {
+        "x": 20,
+        "y": 668,
+        "width": 350,
+        "height": 1947
+      },
+      "pngHeight": 1947
+    },
+    {
+      "file": "slope-to-example-390.png",
+      "clip": {
+        "x": 20,
+        "y": 7947,
+        "width": 350,
+        "height": 1537
+      },
+      "pngHeight": 1537
+    }
+  ],
+  "recovery": [
+    {
+      "target": "#slope-components",
+      "actualClick": true
+    },
+    {
+      "target": "#example-7--an-angled-pull-reduces-the-reaction",
+      "actualClick": true
+    },
+    {
+      "target": "#q7--compare-an-angled-pull-and-an-angled-push",
+      "actualClick": true
+    }
+  ],
+  "passed": true
+}

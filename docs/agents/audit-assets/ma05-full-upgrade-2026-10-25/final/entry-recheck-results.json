@@ -1,0 +1,78 @@
+{
+  "rows": [
+    {
+      "lang": "en",
+      "width": 1365,
+      "theme": "light",
+      "status": 200,
+      "task": "mixed-a",
+      "actualRecoveryClick": "centres-of-mass/#a-system-of-particles",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1365,
+      "theme": "dark",
+      "status": 200,
+      "task": "mixed-a",
+      "actualRecoveryClick": "centres-of-mass/#a-system-of-particles",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "status": 200,
+      "task": "mixed-b",
+      "actualRecoveryClick": "projectiles/#projection-from-a-height",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "status": 200,
+      "task": "mixed-b",
+      "actualRecoveryClick": "projectiles/#projection-from-a-height",
+      "passed": true
+    },
+    {
+      "lang": "/zh",
+      "width": 1365,
+      "theme": "light",
+      "status": 200,
+      "task": "mixed-a",
+      "actualRecoveryClick": "centres-of-mass/#a-system-of-particles",
+      "passed": true
+    },
+    {
+      "lang": "/zh",
+      "width": 1365,
+      "theme": "dark",
+      "status": 200,
+      "task": "mixed-a",
+      "actualRecoveryClick": "centres-of-mass/#a-system-of-particles",
+      "passed": true
+    },
+    {
+      "lang": "/zh",
+      "width": 390,
+      "theme": "light",
+      "status": 200,
+      "task": "mixed-b",
+      "actualRecoveryClick": "projectiles/#projection-from-a-height",
+      "passed": true
+    },
+    {
+      "lang": "/zh",
+      "width": 390,
+      "theme": "dark",
+      "status": 200,
+      "task": "mixed-b",
+      "actualRecoveryClick": "projectiles/#projection-from-a-height",
+      "passed": true
+    }
+  ],
+  "unchangedMathAndLayout": "See feedback-route-comparison.json",
+  "passed": true
+}

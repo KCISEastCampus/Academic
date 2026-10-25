@@ -1,4 +1,4 @@
-// Run after bundle exec jekyll build. Check motion derivatives, actual forces and limits.
+// Run directly with node; source and mathematics checks only. Check motion derivatives, actual forces and limits.
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const path=require('node:path');
@@ -78,14 +78,94 @@ close(Rb*Math.cos(bank),900*g);close(Rb*Math.sin(bank),900*14**2/80);round(Rb/10
 const rOrbit=(6400+200)*1000,vOrbit=Math.sqrt(9*rOrbit),wOrbit=vOrbit/rOrbit,tOrbit=2*Math.PI/wOrbit;
 close(400*vOrbit*vOrbit/rOrbit,3600,1e-6);close(rOrbit*wOrbit*wOrbit,9);close(vOrbit*tOrbit,2*Math.PI*rOrbit,1e-6);
 assert(rOrbit>6400*1000);round(vOrbit,'7.71e+3');round(wOrbit,'0.00117');round(tOrbit,'5.38e+3');
-const root=path.join(__dirname,'..');
-const source=fs.readFileSync(path.join(root,'alevel/a2-mathematics/mechanics/uniform-circular-motion.md'),'utf8').replace(/\r\n?/g,'\n');
-const html=fs.readFileSync(path.join(root,'_site/alevel/a2-mathematics/mechanics/uniform-circular-motion/index.html'),'utf8').replace(/\r\n?/g,'\n');
-assert.equal((source.match(/^### Example \d+/gm)||[]).length,9);
-assert.equal((source.match(/^### Q\d+/gm)||[]).length,11);
-assert.equal((html.match(/<table\b/g)||[]).length,0);
-for(const [,formula] of source.matchAll(/\$\$([\s\S]*?)\$\$/g))assert(html.includes(formula.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;')),`Damaged formula: ${formula}`);
-for(const name of ['circular-velocity-acceleration','conical-pendulum-forces','circular-motion-bowl','circular-motion-contact','circular-motion-cone']){
- const svg=fs.readFileSync(path.join(root,'assets/img/a2-math-mech',name+'.svg'),'utf8');assert(svg.includes('<title')&&svg.includes('<desc'));
+
+// New independent tasks and matched retries, including both sides of each feasibility limit.
+close(.2*2**2/.5,1.6);close(2*Math.PI/.8,2.5*Math.PI);close(60/.8,75);
+close((.3*2.5*Math.PI)*.8,2*Math.PI*.3);close((.6*2.5*Math.PI)*.8,2*Math.PI*.6);
+close((.6*(2.5*Math.PI)**2)/(.3*(2.5*Math.PI)**2),2);
+for(const t of [0,.2,.8,1.5]){
+ const h=1e-5,pos=t=>[2+.5*Math.cos(4*t),-1+.5*Math.sin(4*t)];
+ const v=[-2*Math.sin(4*t),2*Math.cos(4*t)],a=[-8*Math.cos(4*t),-8*Math.sin(4*t)],r=pos(t);
+ for(let i=0;i<2;i++){close((pos(t+h)[i]-pos(t-h)[i])/(2*h),v[i],1e-7);close(a[i],-16*(r[i]-[2,-1][i]));}
+ close(Math.hypot(r[0]-2,r[1]+1),.5);close(Math.hypot(...v),2);close(Math.hypot(...a),8);close(.4*Math.hypot(...a),3.2);close(v[0]*a[0]+v[1]*a[1],0);
 }
-console.log('Uniform Circular Motion passed: 9 examples, 11 practice answers, derivatives, displaced centres, force components, friction/breaking/contact limits, pendulum feasibility, bowl/cone geometry and orbital radius.');
+close(.3*3.2**2/.6,5.12);assert(5.12>4.5);close(.3*3**2/.6,4.5);
+const maxRadius=.25*g/16;close(maxRadius,.153125);
+for(const r of [maxRadius-.001,maxRadius+.001])assert.equal(.2*r*16<=.25*.2*g,r<maxRadius);
+close(.2*.12*16,.384);close(.2*.2*16,.64);assert(.384<.49&&.64>.49);
+const depth=g/(49/3),pendT=.2*.8*(49/3);close(depth,.6);close(pendT*(depth/.8),.2*g);
+assert(.8>depth&&.5<depth);close(.8**2-depth**2,.28);round(Math.sqrt(.28),'0.529');
+const coneR=.2*g/Math.sin(Math.PI/3),coneW2=coneR*Math.cos(Math.PI/3)/(.2*.4);
+close(coneR,3.92/Math.sqrt(3));close(coneW2,24.5/Math.sqrt(3));round(Math.sqrt(coneW2),'3.76');
+close(.4/Math.tan(Math.PI/3),.4/Math.sqrt(3));round(.4/Math.sqrt(3),'0.231');
+close(2*g*(.3/.6),g);assert(2*g*Math.sin(Math.PI/4)>g);close(.6**2-.3**2,.27);
+const reverseOrbitRadius=6000**2/4;close(reverseOrbitRadius,9e6);close(reverseOrbitRadius-6e6,3e6);
+close(reverseOrbitRadius*(1/1500)**2,4);close(2*Math.PI*reverseOrbitRadius/6000,3000*Math.PI);
+// January 2025 Q3: friction capacity, vector acceleration and its actual force.
+const officialLimit=Math.sqrt(.45*g/.3);assert(Math.abs(officialLimit-3.834057903)<1e-8);
+for(const w of [officialLimit-.01,officialLimit+.01])assert.equal(20*.3*w*w<=.45*20*g,w<officialLimit);
+for(const t of [0,.2,.7]){
+ const a=[-2.7*Math.cos(3*t),-2.7*Math.sin(3*t)],force=a.map(x=>20*x);
+ close(Math.hypot(...a),2.7);close(Math.hypot(...force),54);assert(Math.hypot(...force)<88.2);
+}
+
+// Source-only checks: this authoring group does not build or consume stale _site HTML.
+const root=path.join(__dirname,'..');
+const course='alevel/a2-mathematics/mechanics';
+const topic="uniform-circular-motion";
+const read=file=>fs.readFileSync(path.join(root,file),'utf8').replace(/\r\n?/g,'\n');
+const english=read(`${course}/${topic}.md`),chinese=read(`zh/${course}/${topic}.md`);
+const math=text=>text.match(/\$\$[\s\S]*?\$\$|\$[^$\r\n]+\$/g)||[];
+const legacyAnchors=["sources-and-scope", "angular-speed-and-angular-velocity", "radial-acceleration", "example-1-revolutions-speed-and-acceleration", "example-2-showing-a-path-is-a-circle", "forces-in-a-horizontal-circle", "example-3-tension-and-a-breaking-limit", "friction-and-road-bends", "example-4-a-block-on-a-rotating-disc", "connected-particles-and-different-radii", "example-5-a-string-through-a-hole", "the-conical-pendulum", "example-6-angle-given-from-the-vertical", "motion-inside-a-smooth-bowl", "example-7-radius-of-the-bowl-and-radius-of-the-circle", "contact-and-lifting-off-a-plane", "example-8-a-raised-attachment-point", "motion-inside-a-smooth-cone", "example-9-the-normal-reaction-on-a-cone", "circular-orbits", "practice", "q1-clockwise-rotation", "q2-integrating-to-find-a-circle", "q3-a-smooth-vertical-rim", "q4-a-phone-on-a-train-table", "q5-a-hanging-particle-in-equilibrium", "q6-is-a-conical-pendulum-possible", "q7-a-horizontal-circle-in-a-bowl", "q8-check-the-contact-model", "q9-two-particles-at-different-radii", "q10-a-smooth-banked-road", "q11-a-satellites-orbital-radius", "independent-method-choice", "retry-change-the-structure", "method-summary"];
+const recoveryAnchors=["turning-check", "rotation-retry", "vector-retry", "radial-retry", "friction-retry", "pendulum-retry", "cone-check", "surface-retry", "orbit-retry", "contact-retry", "later-check"];
+assert.deepEqual(math(chinese),math(english),'English and Chinese TeX sequences, including help, must match');
+assert(chinese.includes(`lang: zh-CN\ntranslation_of: /${course}/${topic}/\npermalink: /zh/${course}/${topic}/`));
+for(const prompt of english.match(/^\*\*Question:\*\*.*$/gm)||[])assert(chinese.includes(prompt),`English question changed: ${prompt}`);
+for(const q of (english.split('## Practice')[1]||'').split(/^### Q[^\n]*\n\n/m).slice(1))assert(chinese.includes(q.split('<details')[0].trim()),'Full practice prompt retained');
+for(const q of english.matchAll(/\*\*Question:\*\*[^\n]*(?:position|velocity)\n\n\$\$[\s\S]*?\$\$\n\n([^\n]+)/g))assert(chinese.includes(q[1]),'Multipart English instruction retained');
+const images=text=>[...text.matchAll(/!\[[^\]]*\]\(([^)]+)\)/g)].map(m=>m[1]);
+assert.deepEqual(images(chinese),images(english),'Equivalent image data in both languages');
+for(const source of [english,chinese]){
+ assert(source.includes('reading_layout: true'));
+ assert(!/<details[^>]*\bopen\b/.test(source),'Hints and solutions start closed');
+ const ids=[...source.matchAll(/\{#([^}]+)\}|\bid="([^"]+)"/g)].map(m=>m[1]||m[2]);
+ assert.equal(new Set(ids).size,ids.length,'Unique explicit anchors');
+ for(const id of [...legacyAnchors,...recoveryAnchors])assert(ids.includes(id),`Missing retained or recovery anchor: ${id}`);
+ for(const [,id] of source.matchAll(/\]\(#([^)]+)\)/g))assert(ids.includes(id),`Missing local recovery destination: ${id}`);
+ const checks=[...source.matchAll(/<div class="lesson-check" markdown="1">([\s\S]*?)<\/div>/g)].map(m=>m[1]);
+ const examples=[...source.matchAll(/<div class="worked-example" markdown="1">([\s\S]*?)<\/div>/g)].map(m=>m[1]);
+ assert.equal(examples.length,9,'Keep every original worked example');
+ assert.equal(checks.length,(source.match(/class="lesson-check"/g)||[]).length,'Every task has a complete boundary');
+ for(const example of examples){
+  assert(example.includes('**Question:**')&&example.includes('$$'),'Public complete worked example');
+  assert(!example.includes('<details')&&!example.includes('<div'),'No hidden or nested worked solutions');
+ }
+ for(const check of checks){
+  assert(!check.includes('<div'),'Tasks cannot contain the next task');
+  assert(check.indexOf('**Question:**')>=0&&check.indexOf('**Question:**')<check.indexOf('<details'),'Question before help');
+  const panels=[...check.matchAll(/<details markdown="1">\s*<summary>([^<]+)<\/summary>([\s\S]*?)<\/details>/g)];
+  assert.equal(panels.length,2,'Separate complete hint and solution for each task');
+  assert(/^(Hint|提示)$/.test(panels[0][1]));assert(/^(Solution and check|解答与检查)$/.test(panels[1][1]));
+  assert(panels.every(p=>p[2].trim().length>0),'Help panels contain feedback');
+  assert(!panels.some(p=>p[2].includes('<details')),'No nested disclosures');
+ }
+ assert.equal((source.match(/<details\b/g)||[]).length,2*checks.length,'Every disclosure belongs to its own task');
+ assert.equal((source.match(/^### Q\d+\b/gm)||[]).length,11,'Original practice questions retained');
+ assert(source.includes('/mechanics/#mixed-problems')&&source.includes('/mechanics/#later-review'),'Concrete mixed and delayed route');
+ assert(source.includes('Version 1.0 Final')&&source.includes('9660')&&source.includes('#page='),'Traceable official scope and paired paper references');
+ for(const [,formula] of source.matchAll(/\$\$([\s\S]*?)\$\$/g))assert(!formula.includes('|'),'Use TeX delimiters, not Markdown table pipes');
+ for(const asset of images(source))assert(fs.existsSync(path.join(root,asset)),'Retained teaching image exists');
+}
+for(const name of ["circular-velocity-acceleration", "conical-pendulum-forces", "circular-motion-bowl", "circular-motion-contact", "circular-motion-cone"]){
+ const svg=read(`assets/img/a2-math-mech/${name}.svg`);assert(svg.includes('<title')&&svg.includes('<desc'),'Accessible teaching diagrams retained');
+}
+const {init}=require('../assets/vendor/mathjax/3.2.2/es5/node-main.js');
+init({loader:{load:['input/tex','output/svg']},tex:{packages:['base','ams']}}).then(mj=>{
+ const formulas=new Set(math(english));
+ for(const formula of formulas){
+  const display=formula.startsWith('$$'),n=display?2:1;
+  const svg=mj.startup.adaptor.outerHTML(mj.tex2svg(formula.slice(n,-n),{display}));
+  assert(!svg.includes('data-mml-node="merror"')&&!svg.includes('data-mjx-error'),`Invalid TeX: ${formula}`);
+ }
+ console.log(`${topic}: original and new numerical/model checks; bilingual ${math(english).length} TeX fragments, ${formulas.size} unique TeX renders, retained anchors, 22 task boundaries and source-only structure passed. No build/browser claim.`);
+}).catch(error=>{console.error(error);process.exitCode=1;});

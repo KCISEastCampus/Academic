@@ -1,0 +1,8 @@
+{
+  "views": 96,
+  "failures": 92,
+  "cause": "Checker used whole-page IDs as course-body IDs; site-language-data belongs to global navigation. Corrected slicing at content-container and toc. These were checker failures, not removed course anchors.",
+  "errors": [
+    "AssertionError [ERR_ASSERTION]: Lost old ID site-language-data"
+  ]
+}

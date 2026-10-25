@@ -1,0 +1,24 @@
+{
+  "baseCommit": "ef301793a3aa4457b36f5b7939aed4930200677a",
+  "sourceHashes": {
+    "alevel/a2-mathematics/mechanics/forces-equilibrium-and-friction.md": "f77e4abcfbfdef62abffa7fe59c428250e294c117e13a40af1f0465c59e8e680",
+    "zh/alevel/a2-mathematics/mechanics/forces-equilibrium-and-friction.md": "b021cc1c613ff871b57843b0da839470bca68e3d83bba8e6c481c9af438468a6",
+    "assets/img/a2-math-mech/force-components-sample.svg": "6eac7323645b49d5567668016d6b699f8a27d42867b837110d794dc2a9c94080",
+    "assets/img/a2-math-mech/wall-friction-feedback.svg": "47ca0485a3dc87d7d8322c88386a0480667749ba0a35e70d99abcd3e882ee100",
+    "scripts/test-mechanics-forces.js": "3a589c0d27449d8eabed329e0cd47c908f9673a5a019a6681aaeb756218df3ce"
+  },
+  "sharedHashes": {
+    "assets/css/reading.css": "177c376f70a9685f629b177f24c7641cdd08449d49869a29785775126997f72a",
+    "assets/css/home.css": "cffd04e3d4fee69faa20a2414bcf2f54880c13f9eee1a63e570c745726a95748",
+    "_layouts/subjects.html": "293db2c33a7e9d0858caf551013030cb136af11b7aaf6f97397c90c0ad7d940e"
+  },
+  "limits": "Browser checks are local, not student mastery or physical-device/WCAG certification.",
+  "generatedHTMLHashes": {
+    "_site/alevel/a2-mathematics/mechanics/forces-equilibrium-and-friction/index.html": "5654f45b9a3d56da1e688cb485991b1a3908d84b2c5d69babce5320c4033ecd7",
+    "_site/zh/alevel/a2-mathematics/mechanics/forces-equilibrium-and-friction/index.html": "ebfd7da60a278e4dba4628188c8f4ff9cc736ee056fe532d7bcbd1bcd257e29d"
+  },
+  "reviewHashes": {
+    "docs/agents/review-ma05-forces-sample-standards-2026-10-25.md": "e8938a87b450a75110192d2855b9318a789517bf675a328814029009e99b5bf4",
+    "docs/agents/review-ma05-forces-sample-spec-2026-10-25.md": "cb83ea1ec67852fbdbffff86c307b4a25b2d95b2b70cb8d10aad3165c9cb73c9"
+  }
+}

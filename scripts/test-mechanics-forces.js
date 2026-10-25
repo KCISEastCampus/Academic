@@ -65,13 +65,45 @@ close(100*.6-.8*60,12); close(100*.6-.8*100,-20);
 close((80+.6*60)/4,29); close((80+.6*100)/4,35);
 close(25*.8,20); close(25*.6,15); close(15/20,.75);
 
+// New retries and the wall transfer: check original force balances and both signs.
+assert.deepEqual(sum([[2,5],[-6,-2]]),[-4,3]);
+equilibrium([[2,5],[-6,-2],[4,-3]]);
+close(Math.hypot(-4,3),5);
+close(Math.atan2(3,-4)*180/Math.PI,143.13010235415598);
+const retryReaction=80+.6*60, retryFriction=60-.8*60;
+close(retryReaction,116); close(retryFriction,12);
+assert(retryFriction<retryReaction/8);
+const oldEndpoint=800/19, oldReaction=80+.6*oldEndpoint;
+close(60-.8*oldEndpoint,oldReaction/4);
+assert(60-.8*oldEndpoint>oldReaction/8);
+for(const [P,U,f] of [[100,0,40],[100,60,-20],[50,60,-20],[100,40,0]]) {
+  equilibrium([[P,0],[-P,0],[0,-40],[0,U],[0,f]]);
+  assert(P>0 && Math.abs(f)<=.5*P);
+}
+assert(40>.5*50, 'The smaller press cannot support the original no-lift case');
+
 const root=path.join(__dirname,'..');
 const source=fs.readFileSync(path.join(root,'alevel/a2-mathematics/mechanics/forces-equilibrium-and-friction.md'),'utf8');
 const html=fs.readFileSync(path.join(root,'_site/alevel/a2-mathematics/mechanics/forces-equilibrium-and-friction/index.html'),'utf8');
 assert.equal((source.match(/^### Example \d/gm)||[]).length,8);
 assert.equal((source.match(/^### Q\d/gm)||[]).length,8);
-assert.equal((html.match(/<summary>Hint<\/summary>/g)||[]).length,8);
-assert.equal((html.match(/<summary>Solution and check<\/summary>/g)||[]).length,8);
+for(const label of ['Hint','Solution and check'])
+  assert.equal((html.match(new RegExp('<summary>'+label+'</summary>','g'))||[]).length,
+    source.split('<summary>'+label+'</summary>').length-1, 'All authored help survives rendering');
+assert(source.includes('reading_layout: true'));
+assert.equal((html.match(/class="worked-example"/g)||[]).length,8);
+const tasks=[...source.matchAll(/<div class="lesson-check" markdown="1">([\s\S]*?)<\/div>/g)].map(m=>m[1]);
+assert(tasks.length>8, 'Original practice plus targeted checks and retries');
+for(const task of tasks) {
+  assert.equal((task.match(/<details\b/g)||[]).length,2, 'Each task has separate hint and solution');
+  assert(!/<details[^>]*\bopen\b/.test(task));
+  assert(!task.includes('class="lesson-check"'), 'No nested tasks');
+}
+for(const id of ['first-check','components-retry','friction-retry','zero-friction-check','later-check','wall-check'])
+  assert(html.includes('id="'+id+'"'), 'Task and recovery target: '+id);
+const wallTask=tasks.find(t=>t.includes('{#wall-check}'));
+assert(wallTask.indexOf('wall-friction-feedback.svg')>wallTask.indexOf('<summary>Solution and check</summary>'),
+  'The graphical answer stays in the wall task solution');
 assert(source.includes('self-written'));
 // Literal absolute-value bars can turn a Markdown maths paragraph into a table.
 assert.equal((html.match(/<table\b/g)||[]).length,3,'Unexpected table: check absolute-value notation');

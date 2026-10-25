@@ -7,41 +7,37 @@ subject: m2
 permalink: /alevel/a2-mathematics/mechanics/work-and-energy/
 toc_headings: h2
 study_page: true
+reading_layout: true
 ---
 
-[A2 Mechanics](/alevel/a2-mathematics/mechanics/) · M2.6 Work and Energy
+[A2 Mechanics](/alevel/a2-mathematics/mechanics/) · MA05 · M2.6
+{:.lesson-meta}
 
-**Collision prerequisite:** try the [AS Momentum Bridge](/alevel/a2-mathematics/mechanics/momentum-bridge/) before comparing kinetic energies after impact. Check the system's external impulse and all direction branches before using momentum conservation.
+A car can burn fuel while keeping the same speed, and a falling object can speed up without an engine. **Where does the energy come from, and where does it go?** Work gives us an account of energy transferred by forces; power tells us how quickly it happens.
 
-Find work done by a force, use power to solve vehicle problems, and compare kinetic and potential energy to find speeds and distances.
+Learn to choose a force's component along a displacement, compare kinetic and potential energy, and decide whether a proposed speed or distance is possible. Start with [work](#work-done-by-a-force), then [power](#power) and [the energy account](#the-work-energy-principle). Revising? Try [practice](#practice) and [the independent task](#independent-method-choice) before opening either help panel.
 
-- **Learning:** start with [work](#work-done-by-a-force), then study [power](#power) and [the work-energy principle](#the-work-energy-principle).
-- **Homework help:** name the force doing the work. Choose a fixed zero level for potential energy and check whether resistance is present.
-- **Revision:** try [practice](#practice) with the solutions closed. Check signs, units and whether mechanical energy is conserved.
+You need simple equations, right-triangle ratios, vector speed and $F=ma$. Review [force components](/alevel/a2-mathematics/mechanics/forces-equilibrium-and-friction/#the-resultant-of-coplanar-forces), [friction](/alevel/a2-mathematics/mechanics/forces-equilibrium-and-friction/#friction-and-limiting-equilibrium) or [vectors and kinematics](/alevel/a2-mathematics/mechanics/vectors-and-kinematics/) if needed. Bodies are particles and $g=9.8\,\mathrm{m\,s^{-2}}$ unless stated otherwise.
+{:.lesson-meta}
 
-Textbook: Chapter 14, *Work, Power and Energy*, Sections 14.1–14.3 (printed pp. 220–237). This lesson uses the textbook terms *work done*, *driving force*, *power*, *kinetic energy*, *potential energy*, *work-energy principle* and *conservation of mechanical energy*.
+All examples and tasks are **Self-written**, with no official marks. Keep exact values until the end; give numerical answers to three significant figures and angles to one decimal place unless specified. Diagrams are not to scale. See [sources and scope](#sources-and-scope).
+{:.lesson-meta}
 
-**Before you start:** review [Newton's Laws of Motion](/alevel/a2-mathematics/mechanics/newtons-laws-of-motion/) and [Forces, Equilibrium and Friction](/alevel/a2-mathematics/mechanics/forces-equilibrium-and-friction/). Use $g=9.8\,\mathrm{m\,s^{-2}}$ unless stated otherwise. Keep exact values until the final answer; give numerical answers to three significant figures, or one decimal place for angles, unless asked otherwise.
+## Work Done by a Force {#work-done-by-a-force}
 
-Model bodies as particles unless stated otherwise. All worked examples and practice questions are self-written, not official past-paper questions. No official marks are assigned. Diagrams show the model and are not drawn to scale.
-
-<!-- motion-sources:start -->
-## Sources and Scope
-
-**Scope and assessment:** [OxfordAQA 9660 specification v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf), M2.6; method references: MA05 January 2025 Q1, Q7(a) and Q8, read with the paired [question paper](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-question-paper.pdf) and [mark scheme, Version 1.0 Final](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-mark-scheme.pdf). The tasks remain self-written with no official marks. Their precision convention is stated above; authentic questions follow the paper and question. The threaded-wire examples use energy and a permanent constraint; they do not introduce FM05 non-uniform vertical-circle force equations.
-<!-- motion-sources:end -->
-
-## Work Done by a Force
+Imagine pulling a box across a floor. A stronger forward pull transfers more energy over the same distance; pulling it farther transfers more energy with the same force. A vertical pull has no displacement along its own direction while the box stays on the floor. This is why work uses **both force and displacement**, rather than force alone.
 
 For a **constant force** and straight-line motion, work done is the force component in the direction of motion multiplied by the distance moved:
 
 $$\boxed{W=Fs\cos\theta}.$$
 
-Here $F$ is the force magnitude, $s$ is the distance and $\theta$ is the angle between the force and the direction of motion. In vector form, for a constant force over displacement $\mathbf d$:
+Here $F$ is the force magnitude, $s$ is the distance and $\theta$ is the angle **between that force and the displacement**, drawn tail to tail. It is not automatically the slope angle or the angle to the vertical. For a displacement to the left, measure from the leftward direction even if the force points right. The adjacent side of the force triangle is $F\cos\theta$, so multiplying that component by $s$ gives the formula. In vector form, for a constant force over displacement $\mathbf d$:
 
 $$W=\mathbf F\cdot\mathbf d.$$
 
-Work is a scalar measured in **joules (J)**. One joule is one newton metre. For a force that changes, do not multiply one force value by the whole distance. Add the work over the motion; along a straight line this can be written as the integral of the force component with respect to displacement.
+Work is a scalar measured in **joules (J)**. One joule is one newton metre. Work by each force can be positive, negative or zero. Only their **total** tells you whether kinetic energy increases. A zero-work force can still change direction or change the reaction and hence the friction.
+
+For a changing force, do not multiply one force value by the whole distance. The constant-force rule is the M2.6 requirement; an integral of the component along the path is the general extension. If resistance is specified as a function of speed but the speed stays constant during an interval, resistance is constant during that interval and its work can still be found by force times distance.
 
 | Force direction | Work done by the force |
 |---|---|
@@ -55,7 +51,9 @@ For motion on a fixed plane, the normal reaction is perpendicular to motion and 
 
 ![A block moving to the right with an angled pulling force and opposing friction; work uses the horizontal force component and the distance moved](/assets/img/a2-math-mech/work-force-components.svg)
 
-### Example 1: which forces do work?
+<div class="worked-example" markdown="1">
+
+### Example 1: which forces do work? {#example-1-which-forces-do-work}
 
 **Question:** a block moves $3\,\mathrm m$ to the right on a fixed horizontal plane. A constant force of $40\,\mathrm N$ pulls at $60^\circ$ above horizontal. Friction is $12\,\mathrm N$. Find the work done by each force and the total work.
 
@@ -73,7 +71,9 @@ The work done **against** friction is $36\,\mathrm J$.
 
 **Check:** the horizontal resultant is $20-12=8\,\mathrm N$. Its work is $8(3)=24\,\mathrm J$. Using $40(3)$ would count the vertical component as doing work.
 
-## Work Against Gravity
+</div>
+
+## Work Against Gravity {#work-against-gravity}
 
 Near the Earth's surface, take weight $mg$ as constant. For a vertical rise of $h$, work done **by weight** is $-mgh$, and work done **against gravity** is $mgh$.
 
@@ -81,9 +81,13 @@ On a slope, use the **vertical height change**, not the distance along the slope
 
 $$h=s\sin\alpha,\qquad W_{\text{weight}}=-mgs\sin\alpha.$$
 
+The same result follows by taking the weight component $mg\sin\alpha$ down the slope and multiplying by the uphill distance with a minus sign. The reaction has no along-slope component on a fixed smooth plane. [The slope axes](../forces-equilibrium-and-friction/#slope-components) explain this component triangle.
+
 For a descent, weight does positive work. A body can also gain kinetic energy during a lift, so the work done by the lifting force is not always just $mgh$.
 
-### Example 2: lifting at constant speed
+<div class="worked-example" markdown="1">
+
+### Example 2: lifting at constant speed {#example-2-lifting-at-constant-speed}
 
 **Question:** a load of mass $20\,\mathrm{kg}$ is lifted vertically through $2\,\mathrm m$ at constant speed in $4\,\mathrm s$. Ignore resistance. Find the work done by the lifting force and by weight, then find the average power of the lifting force.
 
@@ -99,9 +103,13 @@ $$\boxed{P_{\text{average}}=\frac{392}{4}=98\,\mathrm W}.$$
 
 $$v=\frac24=0.5\,\mathrm{m\,s^{-1}},\qquad P=196(0.5)=98\,\mathrm W.$$
 
-## Power
+</div>
+
+## Power {#power}
 
 **Power** is the rate at which work is done. It is measured in **watts (W)**, where one watt is one joule per second.
+
+Two motors can do the same work, but the one completing it in less time supplies greater average power. The letter $W$ can mean work in a formula; upright $\mathrm W$ after a number is the unit watt.
 
 $$\boxed{P_{\text{average}}=\frac{\text{work done}}{\text{time taken}}}.$$
 
@@ -113,6 +121,8 @@ For a force component $F_{\parallel}$ in the direction of motion and speed $v$:
 
 $$\boxed{P=F_{\parallel}v}.$$
 
+During a short interval, the work is approximately $F_{\parallel}\Delta s$. Dividing by $\Delta t$ and taking the instantaneous rate gives $P=F_{\parallel}v$. Use the force and speed **at the same instant**. If they vary, one instant's product need not equal the average over the whole trip.
+
 For a vehicle whose driving force $D$ acts in the direction of motion, the useful mechanical power supplied by the engine is $P=Dv$. This is the power of the **driving force**, not of the resultant force. Resistance removes energy at rate $fv$.
 
 Use metres per second and watts:
@@ -121,7 +131,9 @@ $$1\,\mathrm{kW}=1000\,\mathrm W,\qquad 1\,\mathrm{km\,h^{-1}}=\frac5{18}\,\math
 
 Average power and power at an instant need not be equal. If power is constant and $v>0$, then $D=P/v$ changes as speed changes. This formula cannot be used at $v=0$. A finite force does zero mechanical work per second at that instant; an engine can still use fuel while stationary.
 
-### Example 3: work and power of a vehicle
+<div class="worked-example" markdown="1">
+
+### Example 3: work and power of a vehicle {#example-3-work-and-power-of-a-vehicle}
 
 **Question:** a vehicle travels at a steady $54\,\mathrm{km\,h^{-1}}$ on a level road. The constant resistance is $2400\,\mathrm N$. Find the engine's mechanical power and the work done by its driving force in $40\,\mathrm s$.
 
@@ -135,7 +147,9 @@ $$\boxed{W=P(40)=1.44\times10^6\,\mathrm J=1.44\,\mathrm{MJ}}.$$
 
 **Check:** distance travelled is $15(40)=600\,\mathrm m$, and $D(600)$ gives the same work. The resultant force and change in kinetic energy are zero, although the engine does positive work.
 
-## Vehicles on Inclined Roads
+</div>
+
+## Vehicles on Inclined Roads {#vehicles-on-inclined-roads}
 
 Let a vehicle move uphill, with driving force $D$ up the slope and constant resistance $f$ down the slope. Taking uphill as positive:
 
@@ -153,9 +167,13 @@ For downhill motion, taking downhill as positive gives:
 
 $$\frac Pv+mg\sin\alpha-f=ma.$$
 
+If resistance is instead $f(v)$, put its value at the current speed into the same force equation. On a level road at maximum available power $P_{\max}$, a steady speed satisfies $P_{\max}/v=f(v)$. For resistance that increases with speed, increasing $v$ reduces the available driving force and increases resistance, so the positive balance gives the limiting steady speed. Do not treat the constant-resistance formula as universal.
+
 A positive steady speed in this powered downhill model requires $f>mg\sin\alpha$. If weight already exceeds resistance, a forward driving force cannot produce steady speed; braking or a different resistance model is needed.
 
-### Example 4: steady speed and acceleration uphill
+<div class="worked-example" markdown="1">
+
+### Example 4: steady speed and acceleration uphill {#example-4-steady-speed-and-acceleration-uphill}
 
 **Question:** a car of mass $1000\,\mathrm{kg}$ has mechanical power $29.4\,\mathrm{kW}$. Constant resistance is $980\,\mathrm N$. The uphill road angle satisfies:
 
@@ -181,7 +199,9 @@ $$\frac{29400}{v}+490-980=0,\qquad \boxed{v=60\,\mathrm{m\,s^{-1}}}.$$
 
 **Check:** downhill $f-mg\sin\alpha=490>0$, so a positive steady speed exists in this model. These results assume resistance stays constant; real resistance often increases with speed.
 
-## Kinetic and Potential Energy
+</div>
+
+## Kinetic and Potential Energy {#kinetic-and-potential-energy}
 
 **Kinetic energy (KE)** is energy due to motion:
 
@@ -197,11 +217,15 @@ $$Fs=mas=\frac12mv^2.$$
 
 $$\boxed{PE=mgh}.$$
 
+This energy belongs to the **body–Earth system**: lifting changes their gravitational arrangement. We commonly say “the body's PE” while treating the Earth and its nearly uniform gravitational field as fixed. It is not a new force acting on the body.
+
 Choose a **fixed zero level** and measure $h$ vertically upwards from it. Potential energy can be negative below that level. Changing the zero level changes the values of PE, but not the change in PE between two positions.
 
 The **mechanical energy (ME)** of a particle in this model is $KE+PE$. Work and both forms of energy are measured in joules.
 
-### Example 5: vector velocity and a zero level
+<div class="worked-example" markdown="1">
+
+### Example 5: vector velocity and a zero level {#example-5-vector-velocity-and-a-zero-level}
 
 **Question:** a particle of mass $2\,\mathrm{kg}$ has velocity
 
@@ -223,7 +247,46 @@ $$\boxed{PE=-9.8\,\mathrm J},\qquad \boxed{ME=15.2\,\mathrm J}.$$
 
 **Check:** kinetic energy is unchanged. Every PE value for this particle is reduced by $2g(3)=58.8\,\mathrm J$, so energy differences between positions stay the same. Do not add the velocity components to find speed.
 
-## The Work-Energy Principle
+</div>
+
+
+<div class="lesson-check" markdown="1">
+
+### Two descriptions of the same states {#energy-level-check}
+
+**Self-written.**
+
+**Question:** A particle of mass $2\,\mathrm{kg}$ has velocity $(-3\mathbf i+4\mathbf j)\,\mathrm{m\,s^{-1}}$ at $A$, $1\,\mathrm m$ above the ground, and velocity $(3\mathbf i-4\mathbf j)\,\mathrm{m\,s^{-1}}$ at $B$, $3\,\mathrm m$ above the ground. Find its KE at each point and the change in PE and ME from $A$ to $B$. Recalculate the two ME values with a fixed zero level $5\,\mathrm m$ above the ground. Assess the claims that reversing velocity makes KE negative and that a negative ME means the motion is impossible.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Find the magnitude of each velocity. Move the zero level for both positions, not just one.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+Both speeds are $5\,\mathrm{m\,s^{-1}}$, so both kinetic energies are $25\,\mathrm J$. With the ground as zero:
+
+$$ME_A=25+2g(1)=44.6\,\mathrm J,\qquad ME_B=25+2g(3)=83.8\,\mathrm J.$$
+
+$$\Delta PE=\Delta ME=2g(3-1)=39.2\,\mathrm J.$$
+
+With the new zero, the heights are $-4$ and $-2$ metres:
+
+$$ME_A=25+2g(-4)=-53.4\,\mathrm J,\qquad ME_B=25+2g(-2)=-14.2\,\mathrm J.$$
+
+The difference remains $39.2\,\mathrm J$. Neither claim is valid: reversing a velocity does not change its squared magnitude; ME can be negative because PE has an arbitrary zero. The observation describes energy input of $39.2\,\mathrm J$ by non-gravitational forces, not mechanical-energy conservation. If you changed only one reference height or used signed velocity as KE, return to [KE and the fixed zero](#kinetic-and-potential-energy), then close this answer and do [the next account](#energy-level-retry).
+
+</details>
+
+</div>
+
+## The Work-Energy Principle {#the-work-energy-principle}
+
+An energy account compares a start and an end; it need not track every second in between. First name the body, the two positions, the forces that do work and any change of surface or applied force. If time or velocity direction is requested, energy alone will usually need another method alongside it.
 
 The textbook uses the **work-energy principle** to compare the work done by forces other than weight with the change in mechanical energy. Weight is already accounted for through potential energy.
 
@@ -234,6 +297,8 @@ Here $\Delta$ means final value minus initial value. Include work by the driving
 An equivalent form counts the work of **all forces, including weight**, and compares it with the change in kinetic energy alone:
 
 $$\boxed{W_{\text{all forces}}=\Delta KE}.$$
+
+For constant resultant $F$ along a straight path, $Fs=mas$ and $v^2-u^2=2as$, giving $Fs=\tfrac12m(v^2-u^2)$. This explains the link between resultant work and change of KE. With gravity, move its work $-\Delta PE$ to the other side to obtain the mechanical-energy account above. The two accounts describe the same transfer.
 
 Choose one form and keep it throughout the calculation. **Do not count weight as work and also include the same change in PE.** For a rise of $h$, the link between the forms is $W_{\text{weight}}=-\Delta PE=-mgh$.
 
@@ -247,7 +312,11 @@ $$\text{mechanical energy lost}=fs.$$
 
 Energy has been transferred out of the mechanical energy of the body, for example as heating. It has not disappeared.
 
-### Example 6: driving, friction and stopping
+With an angled pull on a rough surface, find the normal reaction **before** using sliding friction $f=\mu R$. The upward force component can do zero work while reducing $R$ and the frictional loss. When a force is removed or a surface changes, start a new account for the next stage; do not carry an old force into it.
+
+<div class="worked-example" markdown="1">
+
+### Example 6: driving, friction and stopping {#example-6-driving-friction-and-stopping}
 
 **Question:** a block of mass $4\,\mathrm{kg}$ moves at $8\,\mathrm{m\,s^{-1}}$ on a fixed rough horizontal plane. The coefficient of friction is $0.2$. A horizontal force of $12\,\mathrm N$ acts forwards for $5\,\mathrm m$ and is then removed. Find the speed after the first $5\,\mathrm m$ and the further distance before the block stops.
 
@@ -263,7 +332,11 @@ $$7.84s=148.8,\qquad \boxed{s\approx19.0\,\mathrm m}.$$
 
 **Check:** during the pull, $a=(12-7.84)/4=1.04\,\mathrm{m\,s^{-2}}$. Then $v^2=8^2+2(1.04)(5)=74.4$. Split the motion where the force is removed; do not keep the $12\,\mathrm N$ force in the stopping stage.
 
-### Example 7: work up a rough plane
+</div>
+
+<div class="worked-example" markdown="1">
+
+### Example 7: work up a rough plane {#example-7-work-up-a-rough-plane}
 
 **Question:** a block of mass $5\,\mathrm{kg}$ is pulled $4\,\mathrm m$ up a fixed plane inclined at $30^\circ$ to horizontal. Its speed rises from $2$ to $6\,\mathrm{m\,s^{-1}}$. The pulling force is constant and parallel to the plane. Friction is $8\,\mathrm N$. Find the work done by the pulling force and its magnitude.
 
@@ -283,7 +356,9 @@ $$\boxed{W_D=210\,\mathrm J},\qquad \boxed{D=52.5\,\mathrm N}.$$
 
 **Check:** using all forces gives $210-32-98=80\,\mathrm J=\Delta KE$. Also, $a=(6^2-2^2)/(2\cdot4)=4$, and $52.5-8-5g\sin30^\circ=5(4)$.
 
-## Conservation of Mechanical Energy
+</div>
+
+## Conservation of Mechanical Energy {#conservation-of-mechanical-energy}
 
 When forces other than weight do no net work, mechanical energy is conserved:
 
@@ -297,7 +372,13 @@ $$\frac12mu^2=\frac12mv^2+mgh,\qquad v^2=u^2-2gh.$$
 
 For a vertical drop of $h$, the last term changes sign and $v^2=u^2+2gh$. The mass cancels. Energy gives **speed**, not direction or travel time. For a projectile, the speed at the highest point need not be zero: its horizontal component remains.
 
-### Example 8: a bead on a fixed smooth wire
+“Smooth” removes friction, but the constraint must also be fixed for its normal reaction to do no work in this model. A moving support can transfer energy. A bead **threaded on a wire** remains constrained; an open track can only push, and a string can only pull. Energy alone does not prove that such a contact or a taut-string assumption remains possible. The [next lesson](../uniform-circular-motion/#contact-and-lifting-off-a-plane) checks forces and contact for horizontal circles.
+
+For a collision, first revisit the [AS Momentum Bridge](../momentum-bridge/). Negligible external impulse can conserve the system's momentum while some KE becomes internal energy. Find each body's KE before and after; do not assume that momentum conservation proves mechanical-energy conservation.
+
+<div class="worked-example" markdown="1">
+
+### Example 8: a bead on a fixed smooth wire {#example-8-a-bead-on-a-fixed-smooth-wire}
 
 **Question:** a bead is threaded on a smooth circular wire of radius $1\,\mathrm m$, fixed in a vertical plane. It is projected from the lowest point $A$ at $4.9\,\mathrm{m\,s^{-1}}$. Ignore air resistance. Find the height above $A$ where it first comes to rest and its height relative to the centre $O$.
 
@@ -315,13 +396,19 @@ $$\boxed{1.225-1=0.225\,\mathrm m\text{ above }O}.$$
 
 **Check:** $0<h<2$, the wire's full vertical height, so the turning point lies on the wire. The bead is threaded on it, which keeps it constrained to the circular path. A body merely resting on a track can lose contact; energy alone would not check that condition.
 
-## Practice
+</div>
+
+## Practice {#practice}
 
 Try each question before opening the hint. State the model and the force doing work, then check your answer using force balance, units or an energy comparison.
 
-### Q1: signed work
+<div class="lesson-check" markdown="1">
 
-A block moves $4\,\mathrm m$ to the right on a fixed horizontal plane. A constant force of $30\,\mathrm N$ pulls at $60^\circ$ above horizontal. Friction is $10\,\mathrm N$. Find the work done by the pull, the work done by friction, the work done against friction and the total work.
+### Q1 — A moving block {#q1-signed-work}
+
+**Self-written.**
+
+**Question:** A block moves $4\,\mathrm m$ to the right on a fixed horizontal plane. A constant force of $30\,\mathrm N$ pulls at $60^\circ$ above horizontal. Friction is $10\,\mathrm N$. Find the work done by the pull, the work done by friction, the work done against friction and the total work.
 
 <details markdown="1">
 <summary>Hint</summary>
@@ -341,11 +428,19 @@ $$\boxed{W_{\text{total}}=20\,\mathrm J}.$$
 
 **Check:** the horizontal resultant is $30\cos60^\circ-10=5\,\mathrm N$. Its work is $5(4)=20\,\mathrm J$.
 
+If this check failed, revisit [force and displacement](#work-done-by-a-force), close the worked answer and attempt [the return journey](#work-retry) without help.
+
 </details>
 
-### Q2: a lift that speeds up
+</div>
 
-A constant vertical force lifts a particle of mass $10\,\mathrm{kg}$ from rest through $3\,\mathrm m$. Its final speed is $4\,\mathrm{m\,s^{-1}}$. Ignore resistance. Find the work done by the lifting force and the magnitude of the force.
+<div class="lesson-check" markdown="1">
+
+### Q2 — A rising load {#q2-a-lift-that-speeds-up}
+
+**Self-written.**
+
+**Question:** A constant vertical force lifts a particle of mass $10\,\mathrm{kg}$ from rest through $3\,\mathrm m$. Its final speed is $4\,\mathrm{m\,s^{-1}}$. Ignore resistance. Find the work done by the lifting force and the magnitude of the force.
 
 <details markdown="1">
 <summary>Hint</summary>
@@ -367,11 +462,19 @@ $$a=\frac{4^2}{2\cdot3}=\frac83,\qquad F=10g+10\left(\frac83\right)=\frac{374}{3
 
 Using $mgh$ alone would miss the gain in KE.
 
+If this check failed, revisit [the energy account](#the-work-energy-principle), close the worked answer and attempt [the second journey](#stage-retry) without help.
+
 </details>
 
-### Q3: an angled pull on a rough plane
+</div>
 
-A block of mass $5\,\mathrm{kg}$ is pulled from rest through $5\,\mathrm m$ on a fixed rough horizontal plane. The constant pulling force is $25\,\mathrm N$ at an acute angle $\theta$ above horizontal, where $\cos\theta=4/5$. The coefficient of friction is $0.2$. Find the normal reaction, the work done by the pulling force and the final speed. Assume the block remains in contact with the plane and slides forwards.
+<div class="lesson-check" markdown="1">
+
+### Q3 — A pulled block {#q3-an-angled-pull-on-a-rough-plane}
+
+**Self-written.**
+
+**Question:** A block of mass $5\,\mathrm{kg}$ is pulled from rest through $5\,\mathrm m$ on a fixed rough horizontal plane. The constant pulling force is $25\,\mathrm N$ at an acute angle $\theta$ above horizontal, where $\cos\theta=4/5$. The coefficient of friction is $0.2$. Find the normal reaction, the work done by the pulling force and the final speed. Assume the block remains in contact with the plane and slides forwards.
 
 <details markdown="1">
 <summary>Hint</summary>
@@ -395,11 +498,19 @@ $$100-6.8(5)=\frac12(5)v^2,\qquad \boxed{v=\sqrt{26.4}\approx5.14\,\mathrm{m\,s^
 
 **Check:** $R>0$ and the forward force component $20\,\mathrm N$ exceeds friction. Also $a=(20-6.8)/5=2.64$, giving $v^2=2(2.64)(5)=26.4$.
 
+If this check failed, revisit [the reaction and friction](#the-work-energy-principle), close the worked answer and attempt [the second journey](#stage-retry) without help.
+
 </details>
 
-### Q4: engine power at an instant
+</div>
 
-A car of mass $800\,\mathrm{kg}$ moves on a level road against constant resistance $400\,\mathrm N$. Its acceleration is $0.5\,\mathrm{m\,s^{-2}}$ when its speed is $72\,\mathrm{km\,h^{-1}}$. Find the engine's mechanical power at that instant. If the engine can supply $24\,\mathrm{kW}$, find its maximum steady speed in this model.
+<div class="lesson-check" markdown="1">
+
+### Q4 — A moving car {#q4-engine-power-at-an-instant}
+
+**Self-written.**
+
+**Question:** A car of mass $800\,\mathrm{kg}$ moves on a level road against constant resistance $400\,\mathrm N$. Its acceleration is $0.5\,\mathrm{m\,s^{-2}}$ when its speed is $72\,\mathrm{km\,h^{-1}}$. Find the engine's mechanical power at that instant. If the engine can supply $24\,\mathrm{kW}$, find its maximum steady speed in this model. At that steady speed, find the work done by the engine in $5\,\mathrm s$ and its average power over the interval.
 
 <details markdown="1">
 <summary>Hint</summary>
@@ -423,11 +534,21 @@ $$\boxed{v=\frac{24000}{400}=60\,\mathrm{m\,s^{-1}}}.$$
 
 **Check:** at the first instant, resistance removes $400(20)=8\,\mathrm{kW}$. The other $8\,\mathrm{kW}$ increases KE, since $mav=800(0.5)(20)=8000\,\mathrm W$.
 
+At the steady speed, $W=24000(5)=120000\,\mathrm J$ and $P_{\text{average}}=W/5=24000\,\mathrm W$. The work balances the resistance loss; KE remains constant.
+
+If this check failed, revisit [power of the driving force](#power), close the worked answer and attempt [the vehicle task](#power-retry) without help.
+
 </details>
 
-### Q5: falling with resistance
+</div>
 
-A particle of mass $3\,\mathrm{kg}$ falls vertically through a liquid of depth $4\,\mathrm m$. Its speed increases from $2$ to $5\,\mathrm{m\,s^{-1}}$. The liquid exerts a constant upward resistance $f$. Find $f$, the work done by weight and the work done by resistance.
+<div class="lesson-check" markdown="1">
+
+### Q5 — A particle in a liquid {#q5-falling-with-resistance}
+
+**Self-written.**
+
+**Question:** A particle of mass $3\,\mathrm{kg}$ falls vertically through a liquid of depth $4\,\mathrm m$. Its speed increases from $2$ to $5\,\mathrm{m\,s^{-1}}$. The liquid exerts a constant upward resistance $f$. Find $f$, the work done by weight and the work done by resistance.
 
 <details markdown="1">
 <summary>Hint</summary>
@@ -449,11 +570,19 @@ $$\boxed{W_{\text{weight}}=117.6\,\mathrm J},\qquad \boxed{W_{\text{resistance}}
 
 **Check:** total work $117.6-86.1=31.5\,\mathrm J=\Delta KE$. The resistance is smaller than the weight $29.4\,\mathrm N$, matching the increase in downward speed. Use the unrounded $f=21.525\,\mathrm N$ in checks.
 
+If this check failed, revisit [the two equivalent accounts](#the-work-energy-principle), close the worked answer and attempt [the second journey](#stage-retry) without help.
+
 </details>
 
-### Q6: sliding down a rough plane
+</div>
 
-A block of mass $2\,\mathrm{kg}$ is released from rest on a fixed inclined plane where $\sin\alpha=1/4$. A constant frictional force of $2\,\mathrm N$ opposes its downward motion. Find its speed after moving $4\,\mathrm m$ down the plane, and the distance down the plane when its speed reaches $5\,\mathrm{m\,s^{-1}}$.
+<div class="lesson-check" markdown="1">
+
+### Q6 — A block on a slope {#q6-sliding-down-a-rough-plane}
+
+**Self-written.**
+
+**Question:** A block of mass $2\,\mathrm{kg}$ is released from rest on a fixed inclined plane where $\sin\alpha=1/4$. A constant frictional force of $2\,\mathrm N$ opposes its downward motion. Find its speed after moving $4\,\mathrm m$ down the plane, and the distance down the plane when its speed reaches $5\,\mathrm{m\,s^{-1}}$.
 
 <details markdown="1">
 <summary>Hint</summary>
@@ -477,11 +606,19 @@ $$25=2.9s,\qquad \boxed{s\approx8.62\,\mathrm m}.$$
 
 **Check:** the downhill resultant is $2g/4-2=2.9\,\mathrm N$, so $a=1.45\,\mathrm{m\,s^{-2}}$. Then $v^2=2as=2.9s$. Mechanical energy is not conserved here.
 
+If this check failed, revisit [height and energy transfer](#the-work-energy-principle), close the worked answer and attempt [the second journey](#stage-retry) without help.
+
 </details>
 
-### Q7: vertical projection from above the ground
+</div>
 
-A ball is projected vertically upwards at $14.7\,\mathrm{m\,s^{-1}}$ from a point $1\,\mathrm m$ above the ground. Ignore air resistance. Find its greatest height above the ground and its speed just before hitting the ground.
+<div class="lesson-check" markdown="1">
+
+### Q7 — A projected ball {#q7-vertical-projection-from-above-the-ground}
+
+**Self-written.**
+
+**Question:** A ball is projected vertically upwards at $14.7\,\mathrm{m\,s^{-1}}$ from a point $1\,\mathrm m$ above the ground. Ignore air resistance. Find its greatest height above the ground and its speed just before hitting the ground.
 
 <details markdown="1">
 <summary>Hint</summary>
@@ -507,11 +644,19 @@ $$\boxed{v=\sqrt{235.69}\approx15.4\,\mathrm{m\,s^{-1}}}.$$
 
 **Check:** the impact speed exceeds the launch speed because the ground is below the launch point. The ball's velocity at impact is downwards; energy alone gives only its speed.
 
+If this check failed, revisit [conservation and its limits](#conservation-of-mechanical-energy), close the worked answer and attempt [the flight task](#conservation-retry) without help.
+
 </details>
 
-### Q8: two motions on a smooth wire
+</div>
 
-A bead is threaded on a smooth circular wire of radius $0.8\,\mathrm m$, fixed in a vertical plane. Ignore air resistance. (a) It is released from rest at a point level with the centre. Find its speed at the lowest point. (b) What initial speed at the lowest point gives just enough energy to rise through the full vertical height of the wire?
+<div class="lesson-check" markdown="1">
+
+### Q8 — A bead on a wire {#q8-two-motions-on-a-smooth-wire}
+
+**Self-written.**
+
+**Question:** A bead is threaded on a smooth circular wire of radius $0.8\,\mathrm m$, fixed in a vertical plane. Ignore air resistance. (a) It is released from rest at a point level with the centre. Find its speed at the lowest point. (b) What initial speed at the lowest point gives just enough energy to rise through the full vertical height of the wire?
 
 <details markdown="1">
 <summary>Hint</summary>
@@ -535,24 +680,30 @@ $$\boxed{u=\sqrt{31.36}=5.6\,\mathrm{m\,s^{-1}}}.$$
 
 Part (b) gives the **limiting speed** for passing over the top. In this ideal model, the bead approaches the highest point with speed tending to zero at the threshold. A greater initial speed is needed to pass over it.
 
+If this check failed, revisit [constraint conditions](#conservation-of-mechanical-energy), close the worked answer and attempt [the flight task](#conservation-retry) without help.
+
 </details>
 
+</div>
+
 <!-- motion-transfer:start -->
-## Independent Method Choice
+## Independent Method Choice {#independent-method-choice}
 
 **Self-written diagnostic task.** Select a method without a method label in the question. Keep the reasoning hint and feedback closed until you have made an attempt.
+
+<div class="lesson-check" markdown="1">
 
 **Question:** A $2\,\mathrm{kg}$ block is projected at $6\,\mathrm{m\,s^{-1}}$ up a fixed straight rough slope with $\sin\alpha=1/4$. While it slides upwards, a constant frictional force of $1\,\mathrm N$ opposes motion. There is no driving force and air resistance is ignored. Find its speed after $5\,\mathrm m$ and decide whether it can first reach a marker $8\,\mathrm m$ up the slope before stopping. A student writes $36+2g(s/4)-s=v^2$. Explain the error and find where the upward motion ends. Do not model the subsequent motion.
 
 <details markdown="1">
-<summary>Reasoning hint</summary>
+<summary>Hint</summary>
 
 Time is not requested. Name the energy supplied initially and the two uses of it during upward motion. Check reachability before taking a square root.
 
 </details>
 
 <details markdown="1">
-<summary>Feedback and independent check</summary>
+<summary>Solution and check</summary>
 
 The work-energy principle avoids finding time. With launch level as the fixed zero of PE, gravity is counted through the increase in PE:
 
@@ -568,19 +719,25 @@ Independently, resolve uphill: $2a=-2g/4-1=-5.9$, so $a=-2.95\,\mathrm{m\,s^{-2}
 
 </details>
 
-### Retry: change the structure
+</div>
+
+<div class="lesson-check" markdown="1">
+
+<span id="stage-retry"></span>
+
+### A second journey {#retry-change-the-structure}
 
 **Question:** A $2\,\mathrm{kg}$ block starts from rest and slides $4\,\mathrm m$ down a fixed slope with $\sin\alpha=1/4$, against constant friction $1\,\mathrm N$. It then enters a fixed smooth horizontal track through a smooth join of negligible height change; assume no energy is lost at the join. Find its speed on entering the horizontal track and after travelling a further $3\,\mathrm m$ along it. Explain whether friction from the slope belongs in the second stage. Ignore air resistance.
 
 <details markdown="1">
-<summary>Retry hint</summary>
+<summary>Hint</summary>
 
 Split the energy account where the surface changes. Decide afresh which forces do work on the horizontal track.
 
 </details>
 
 <details markdown="1">
-<summary>Retry feedback and check</summary>
+<summary>Solution and check</summary>
 
 On the slope, the vertical drop is $1\,\mathrm m$:
 
@@ -591,9 +748,154 @@ $$\boxed{v_{\text{entry}}=\sqrt{15.6}\approx3.95\,\mathrm{m\,s^{-1}}},\qquad \bo
 On the smooth horizontal stage, weight and reaction do no work and there is no friction. The speed stays constant. Do not carry the old $1\,\mathrm N$ force into the second stage. Independently, the slope gives $a=(2g/4-1)/2=1.95\,\mathrm{m\,s^{-2}}$ and $v^2=2(1.95)(4)=15.6$; the horizontal resultant is zero. The smooth, loss-free join assumption is needed to keep this speed through the change of direction.
 
 </details>
+
+</div>
 <!-- motion-transfer:end -->
 
-## Method Summary
+
+## Repair and Try Again {#repair-and-retry}
+
+Close the earlier answer after fixing the reason for the error. Choose the matching task below; a different answer obtained with help is not yet independent evidence.
+
+<div class="lesson-check" markdown="1">
+
+### A return journey {#work-retry}
+
+**Self-written.**
+
+**Question:** A $2\,\mathrm{kg}$ block is sliding $2\,\mathrm m$ to the left on a fixed horizontal floor. A constant force of $15\,\mathrm N$ acts $30^\circ$ above the rightward horizontal. A friction force of $4\,\mathrm N$ opposes the sliding. Find the work by each force, the work against friction and the total work during this interval. Explain why using $30^\circ$ as the force–displacement angle would be wrong. Assume contact is maintained.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Draw the leftward displacement from the same point as the applied-force arrow. Friction opposes the given sliding, even on the return journey.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+The angle between the applied force and displacement is $150^\circ$:
+
+$$W_{\text{pull}}=15(2)\cos150^\circ=-15\sqrt3\,\mathrm J\approx-26.0\,\mathrm J.$$
+
+$$W_{\text{friction}}=-8\,\mathrm J,\quad W_{\text{against friction}}=8\,\mathrm J,\quad W_{\text{total}}=-15\sqrt3-8\approx-34.0\,\mathrm J.$$
+
+Weight and reaction each do zero work. The total is negative: the block slows during this interval. Check horizontally with the leftward axis positive: the resultant is $-15\cos30^\circ-4$, whose work over $2$ metres is the same total. Vertically $R=2g-15\sin30^\circ=12.1\,\mathrm N>0$. For angle/sign errors, return to [force and displacement](#work-done-by-a-force); the displayed $30^\circ$ is measured from the opposite horizontal direction.
+
+</details>
+
+</div>
+
+<div class="lesson-check" markdown="1">
+
+### A second energy account {#energy-level-retry}
+
+**Self-written.**
+
+**Question:** A particle of mass $1\,\mathrm{kg}$ has velocity $(6\mathbf i-8\mathbf j)\,\mathrm{m\,s^{-1}}$ at $A$, $2\,\mathrm m$ above the ground. At a later point $B$ at ground level its speed is $10\,\mathrm{m\,s^{-1}}$. Find the change in ME, using a fixed zero level $4\,\mathrm m$ above the ground. Would the change differ using the ground as zero? Could these observations describe motion on a fixed smooth track with only weight and the normal reaction acting?
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Compare both kinetic energies before considering height. Distinguish a negative energy value from a loss of energy.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+At both points $KE=\tfrac12(1)(6^2+8^2)=50\,\mathrm J$. The two heights relative to the chosen zero are $-2$ and $-4$ metres:
+
+$$ME_A=50-19.6=30.4\,\mathrm J,\quad ME_B=50-39.2=10.8\,\mathrm J,\quad\Delta ME=-19.6\,\mathrm J.$$
+
+Using ground level adds $39.2\,\mathrm J$ to each total, so the difference is unchanged. On a fixed smooth track, normal reaction does no work and weight is accounted for by PE; ME would be conserved. The observations need another energy transfer and cannot fit that proposed model. Check directly: equal KE and a $2$ metre drop give $\Delta ME=mg(-2)=-19.6\,\mathrm J$. Repair a reference-level error at [the fixed zero](#kinetic-and-potential-energy).
+
+</details>
+
+</div>
+
+<div class="lesson-check" markdown="1">
+
+### A vehicle with different resistance {#power-retry}
+
+**Self-written.**
+
+**Question:** A vehicle of mass $400\,\mathrm{kg}$ has maximum mechanical power $16\,\mathrm{kW}$. On a level road resistance has magnitude $kv^2$ newtons at speed $v\,\mathrm{m\,s^{-1}}$. At full power its acceleration at $10\,\mathrm{m\,s^{-1}}$ is $1\,\mathrm{m\,s^{-2}}$. Find $k$ and the maximum steady speed. The driver later adjusts the power to travel steadily at $8\,\mathrm{m\,s^{-1}}$ for $20\,\mathrm s$. Find the work against resistance and the average engine power during that interval.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+First use the driving force at the given instant. At steady speed the resultant is zero, but the resistance is not its earlier value.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+At the first instant $D=16000/10=1600\,\mathrm N$. Newton's law gives
+
+$$1600-100k=400(1),\qquad k=12.$$
+
+At maximum steady speed, full power balances resistance:
+
+$$\frac{16000}{v}=12v^2,\qquad v^3=\frac{4000}{3},\qquad v\approx11.0\,\mathrm{m\,s^{-1}}.$$
+
+At $8\,\mathrm{m\,s^{-1}}$, resistance is $12(8^2)=768\,\mathrm N$ and distance is $8(20)=160\,\mathrm m$:
+
+$$W_{\text{against resistance}}=768(160)=122880\,\mathrm J\approx1.23\times10^5\,\mathrm J.$$
+
+$$P_{\text{average}}=\frac{122880}{20}=6144\,\mathrm W\approx6.14\,\mathrm{kW}.$$
+
+Check $Dv=768(8)=6144\,\mathrm W$. This is below the maximum, so the reduced-power steady interval is consistent. If you used $mav$ for engine power, return to [power of a particular force](#power). If you kept resistance constant across speeds, return to [the vehicle model](#vehicles-on-inclined-roads).
+
+</details>
+
+</div>
+
+<div class="lesson-check" markdown="1">
+
+### A flight above level ground {#conservation-retry}
+
+**Self-written.**
+
+**Question:** A ball is projected from ground level with velocity $(5\mathbf i+12\mathbf j)\,\mathrm{m\,s^{-1}}$, where $\mathbf j$ points vertically upwards. Only its weight acts during flight. Find its greatest height and speed there, and its speed on returning to ground level. Explain which facts about velocity require more than an energy equation.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+There is no horizontal force. Decide what speed remains at the top before writing the energy account.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+Horizontal velocity stays $5\,\mathrm{m\,s^{-1}}$; at the top the vertical component is zero. Initial speed is $13\,\mathrm{m\,s^{-1}}$, not $17$. Thus
+
+$$\frac12m(13^2)=\frac12m(5^2)+mgH,\qquad H=\frac{72}{g}=\frac{360}{49}\approx7.35\,\mathrm m.$$
+
+The speed at the top is $5\,\mathrm{m\,s^{-1}}$. At the original height, conservation gives speed $13\,\mathrm{m\,s^{-1}}$ again. Energy alone does not give flight time or velocity direction; the downward return component comes from the motion, not from taking a negative square root of KE. Independently $0=12^2-2gH$. If you set all velocity to zero at the top, revisit [conservation and its limits](#conservation-of-mechanical-energy) and [projectile components](../projectiles/).
+
+</details>
+
+</div>
+
+## Return Later {#later-check}
+
+After [Uniform Circular Motion](../uniform-circular-motion/), return with the examples closed: explain how a nonzero force can do zero work, then solve [the flight task](#conservation-retry) without a model answer. Use the [mixed problems](/alevel/a2-mathematics/mechanics/#mixed-problems) to choose among methods and the [later review](/alevel/a2-mathematics/mechanics/#later-review) at your next revision session. Record first attempt, help used, the error repaired and the later result.
+
+<!-- motion-sources:start -->
+## Sources and Scope {#sources-and-scope}
+
+[OxfordAQA 9660 specification v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf), M2.6: printed 29 / PDF 28 (1-based); the whole M2 section is printed 27–30 / PDF 26–29. This is the 9660 course. The constant-force work, KE, gravitational PE, work-energy, conservation and power requirements determine the scope.
+
+Read MA05 January 2025 [Q1, QP pp.2–3](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-question-paper.pdf#page=2) with [MS pp.4–5](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-mark-scheme.pdf#page=4), [Q7, QP pp.14–15](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-question-paper.pdf#page=14) with [MS pp.13–14](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-mark-scheme.pdf#page=13), and [Q8, QP pp.16–17](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-question-paper.pdf#page=16) with [MS pp.15–16](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-mark-scheme.pdf#page=15), Version 1.0 Final. These establish the importance of driving force in power, vertical drop in an energy method, and separate KE calculations after a momentum calculation. The tasks on this page remain **Self-written**, without official marks.
+
+The January 2025 paper defaults to two significant figures for calculator answers, with question-specific exceptions. Our self-written tasks use the convention stated at the start. Textbook correspondence: Chapter 14, Sections 14.1–14.3, printed pp.220–237. The threaded vertical wire is an energy application with a permanent constraint; it does not make non-uniform vertical-circle force equations an MA05 requirement.
+<!-- motion-sources:end -->
+
+## Method Summary {#method-summary}
 
 - **Work:** name the force and use its component in the direction of motion. Distinguish work *by* resistance from work *against* resistance.
 - **Power:** use $W/t$ for an average and $Dv$ for the driving force at an instant. Convert kW to W and km/h to m/s.

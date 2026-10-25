@@ -1,8 +1,9 @@
-// Run after bundle exec jekyll build. Check the Chapter 10 answers and rendered pages.
+// Use --source-only for the assigned foundation pages without a Jekyll build.
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const root = path.join(__dirname, '..');
+const sourceOnly = process.argv.includes('--source-only');
 const close = (a, b) => assert(Math.abs(a - b) < 1e-5, `${a} != ${b}`);
 const vectorClose = (a, b) => { assert.equal(a.length,b.length); a.forEach((v, i) => close(v, b[i])); };
 const derivative = (f, t) => f(t + 1e-5).map((v, i) => (v - f(t - 1e-5)[i]) / 2e-5);
@@ -45,6 +46,53 @@ for (const t of [0,.5,1,2,3]) {
 }
 close(Math.abs(-1-3)+Math.abs(0-(-1)),5);
 
+// New tasks: derive motion from force, recover both initial conditions, and
+// distinguish radial rate, distance travelled and a common-time meeting.
+const recovered = {
+  r:t=>[t**3/3,(1-Math.cos(2*t))/2,t+Math.exp(-t)-1],
+  v:t=>[t*t,Math.sin(2*t),1-Math.exp(-t)],
+  a:t=>[2*t,2*Math.cos(2*t),Math.exp(-t)],
+};
+for (const t of [0,.25,1,2]) {
+  vectorClose(derivative(recovered.r,t),recovered.v(t));
+  vectorClose(derivative(recovered.v,t),recovered.a(t));
+  vectorClose(recovered.a(t).map(x=>2*x),[4*t,4*Math.cos(2*t),2*Math.exp(-t)]);
+}
+vectorClose(recovered.r(0),[0,0,0]); vectorClose(recovered.v(0),[0,0,0]);
+assert.equal(magnitude(recovered.r(1)).toPrecision(3),'0.865');
+close(Math.hypot(-1,4),Math.sqrt(17));
+close(Math.atan2(4,-1)*180/Math.PI,104.03624346792648);
+close((Math.atan2(-4,-3)*180/Math.PI+360)%360,233.13010235415598);
+const journey=t=>t*t-2*t+3;
+close(journey(3),6); close(journey(3)-journey(0),3);
+close(Math.abs(journey(1)-journey(0))+Math.abs(journey(3)-journey(1)),5);
+const radial=t=>Math.hypot(3+t,4), step=1e-5;
+close((radial(step)-radial(-step))/(2*step),3/5);
+assert.notEqual(3/5,Math.hypot(1,0));
+const movingA=t=>[t,t*t], movingB=t=>[2-t,1];
+vectorClose(movingA(1),movingB(1)); close([1,2].reduce((sum,x,i)=>sum+x*[0,2][i],0),4);
+assert.notDeepEqual(movingA(1.5),[3-1.5,1]); // retained non-meeting task
+vectorClose([1-1,1**2-1],[0,0]);
+for(const t of [0,.5,1,2]) assert(magnitude([t-1,t*t-1])>=0);
+
+// Jan 2025 Q3(b)(i–ii) and Q9: independent calculus/conditions checks.
+const officialMotion={
+  r:t=>[t**4-t**3,-2*Math.cos(t)+2*Math.sin(2*t)-4*t+2,3*t+9*Math.exp(-t/3)-9],
+  v:t=>[4*t**3-3*t*t,2*Math.sin(t)+4*Math.cos(2*t)-4,3-3*Math.exp(-t/3)],
+  a:t=>[12*t*t-6*t,2*Math.cos(t)-8*Math.sin(2*t),Math.exp(-t/3)],
+};
+for(const t of [0,.5,1,2]) {
+  vectorClose(derivative(officialMotion.r,t),officialMotion.v(t));
+  vectorClose(derivative(officialMotion.v,t),officialMotion.a(t));
+  const circle=t=>[.3*Math.cos(3*t),.3*Math.sin(3*t)];
+  const velocity=t=>[-.9*Math.sin(3*t),.9*Math.cos(3*t)];
+  vectorClose(derivative(circle,t),velocity(t));
+  vectorClose(derivative(velocity,t),[-2.7*Math.cos(3*t),-2.7*Math.sin(3*t)]);
+  close(magnitude([-54*Math.cos(3*t),-54*Math.sin(3*t)]),54);
+}
+vectorClose(officialMotion.r(0),[0,0,0]); vectorClose(officialMotion.v(0),[0,0,0]);
+close(magnitude(officialMotion.r(2)),10.54830625);
+
 // Modelling: check each body's equation, not just the combined result.
 const g=9.8;
 close(3000-1000,1000*2); close(1000,500*2);
@@ -53,6 +101,10 @@ close(4508,460*g); close(588,60*g);
 close(5*g-36.75,5*g/4); close(36.75-3*g,3*g/4);
 close(2400-180-600,900*1.8); close(600-60,300*1.8);
 close(5130-570*g,-570*.8); close(630-70*g,-70*.8);
+close(-850-100-50,(800+200)*(-1));
+close(-150-50,200*(-1)); close(150-100-850,800*(-1));
+assert(-150<0,'Trailer requires compression in this arrangement');
+close(540-50*g,50*1); assert(1*(-1)<0,'Upward acceleration slows downward motion');
 
 // Corrected retained reference: component projectile equations and toppling geometry.
 const flight=10/4.9; close(10*flight-4.9*flight*flight,0);
@@ -94,7 +146,32 @@ for(const [H,D,angle] of [[10,25,.3],[4,20,.6],[18,12,1]]) {
 const massRatio=6/7, xL=(144*0-36*3)/(144-36), xG=(xL+12*massRatio)/(1+massRatio);
 close(xG,5); close(xG*12/13-12*5/13,0); close(xG*5/13+12*12/13,13);
 
-const pages=['','mathematical-modelling','vectors-and-kinematics','forces-equilibrium-and-friction','moments-and-rigid-objects','centres-of-mass','newtons-laws-of-motion','projectiles','work-and-energy','uniform-circular-motion','quick-reference'];
+const math = text => text.match(/\$\$[\s\S]*?\$\$|\$[^$\r\n]+\$/g) || [];
+const sourceFormulas = new Set();
+for (const name of ['mathematical-modelling','vectors-and-kinematics']) {
+  const base=`alevel/a2-mathematics/mechanics/${name}.md`;
+  const en=fs.readFileSync(path.join(root,base),'utf8'), zh=fs.readFileSync(path.join(root,'zh',base),'utf8');
+  assert.deepEqual(math(en),math(zh),`${name}: identical bilingual TeX sequence`);
+  assert(!/[\u3400-\u9fff]/u.test(en),`${name}: English page`);
+  for(const prompt of en.match(/^(?:\*\*Question:\*\*|\*\*Self-written task\.\*\*).*$/gm)||[]) assert(zh.includes(prompt),`${name}: English Question preserved`);
+  for (const [source,lang] of [[en,'en'],[zh,'zh']]) {
+    assert(source.includes('reading_layout: true'));
+    assert(!/<details[^>]*\bopen\b/.test(source));
+    assert(source.includes('/mechanics/#mixed-problems') && source.includes('/mechanics/#later-review'));
+    const tasks=[...source.matchAll(/<div class="lesson-check" markdown="1">([\s\S]*?)<\/div>/g)];
+    assert(tasks.length>0);
+    for (const [,task] of tasks) {
+      assert.equal((task.match(/^### /gm)||[]).length,1,`${name}/${lang}: one task boundary`);
+      assert.equal((task.match(/<details\b/g)||[]).length,2,`${name}/${lang}: separate hint and solution`);
+      assert(!/<details[\s\S]*<details[\s\S]*<\/details>[\s\S]*<\/details>/.test(task),`${name}: no nested answers`);
+    }
+    assert.equal((source.match(/<div\b/g)||[]).length,(source.match(/<\/div>/g)||[]).length);
+    for(const formula of math(source)) sourceFormulas.add(formula);
+  }
+  for(const anchor of (name==='mathematical-modelling'?['modelling-assumptions','connected-bodies','a-lift-and-its-passenger','a-fixed-pulley','model-retry','constraint-retry','system-retry','lift-retry']:['position-and-displacement','velocity-and-acceleration','integrating-with-given-conditions','the-path-of-a-particle','meeting-retry','conditions-retry','direction-retry','distance-retry','radial-retry'])) assert(zh.includes(`#${anchor}`),`${name}: retained topic and recovery ${anchor}`);
+}
+
+const pages=sourceOnly?[]:['','mathematical-modelling','vectors-and-kinematics','forces-equilibrium-and-friction','moments-and-rigid-objects','centres-of-mass','newtons-laws-of-motion','projectiles','work-and-energy','uniform-circular-motion','quick-reference'];
 for (const name of pages) {
   const source=fs.readFileSync(path.join(root,'alevel/a2-mathematics',name?'mechanics/'+name+'.md':'mechanics.md'),'utf8');
   const html=fs.readFileSync(path.join(root,'_site/alevel/a2-mathematics/mechanics',name,'index.html'),'utf8');
@@ -106,11 +183,14 @@ for (const name of pages) {
   assert(!breadcrumb.includes('A2 Pure Mathematics'),`${name}: Mechanics is not a Pure subtopic`);
   if(name) assert(breadcrumb.includes('>A2 Mechanics</a>'),`${name}: missing course breadcrumb`);
   if(['mathematical-modelling','vectors-and-kinematics','forces-equilibrium-and-friction','moments-and-rigid-objects','centres-of-mass','newtons-laws-of-motion','projectiles','work-and-energy','uniform-circular-motion'].includes(name)) {
-    assert(source.includes('self-written'));
+    assert(/self-written/i.test(source));
     const expected={'mathematical-modelling':5,'vectors-and-kinematics':7,'forces-equilibrium-and-friction':8,'moments-and-rigid-objects':8,'centres-of-mass':8,'newtons-laws-of-motion':8,'projectiles':8,'work-and-energy':8,'uniform-circular-motion':11}[name];
-    assert.equal((source.match(/^### Q\d+/gm)||[]).length,expected);
-    assert.equal((html.match(/<summary>Hint<\/summary>/g)||[]).length,expected);
-    assert.equal((html.match(/<summary>Solution and check<\/summary>/g)||[]).length,expected);
+    for(let q=1;q<=expected;q++) assert(new RegExp(`^### Q${q}\\b`,'m').test(source),`${name}: retained Q${q}`);
+    for(const label of ['Hint','Solution and check']) {
+      const pattern=new RegExp(`<summary>${label}</summary>`,'g');
+      assert.equal((html.match(pattern)||[]).length,(source.match(pattern)||[]).length,`${name}: source/rendered ${label} roles agree`);
+    }
+    assert.equal((html.match(/class="lesson-check"/g)||[]).length,(source.match(/class="lesson-check"/g)||[]).length,`${name}: source/rendered task boundaries agree`);
   }
   for (const [,url] of html.matchAll(/(?:href|src|data-src)="([/#][^" ]*)"/g)) {
     if(url.startsWith('//')) continue;
@@ -127,10 +207,17 @@ for (const name of pages) {
   }
 }
 // A marker at the end of a compound path only gives the final force its arrowhead.
-for(const name of fs.readdirSync(path.join(root,'assets/img/a2-math-mech')).filter(n=>n.endsWith('.svg'))) {
+for(const name of sourceOnly?[]:fs.readdirSync(path.join(root,'assets/img/a2-math-mech')).filter(n=>n.endsWith('.svg'))) {
   const svg=fs.readFileSync(path.join(root,'assets/img/a2-math-mech',name),'utf8');
   for(const [,group] of svg.matchAll(/<g\b[^>]*marker-end="[^"]+"[^>]*>([\s\S]*?)<\/g>/g)) {
     for(const [,d] of group.matchAll(/<path\b[^>]*\bd="([^"]+)"/g)) assert((d.match(/[Mm]/g)||[]).length<=1,`${name}: missing force arrowheads`);
   }
 }
-console.log('Mechanics course checks passed: Chapter 10 and retained-question calculations, links, image paths, unique anchors, bookmarks, breadcrumbs, SVG arrowheads and 71 practice questions with hints and solutions.');
+require('../assets/vendor/mathjax/3.2.2/es5/node-main.js').init({loader:{load:['input/tex','output/svg']},tex:{packages:['base','ams']}}).then(mj=>{
+  for(const formula of sourceFormulas) {
+    const display=formula.startsWith('$$'), n=display?2:1;
+    const svg=mj.startup.adaptor.outerHTML(mj.tex2svg(formula.slice(n,-n),{display}));
+    assert(!svg.includes('data-mml-node="merror"')&&!svg.includes('data-mjx-error'),formula);
+  }
+  console.log(`Chapter 10: retained and new calculations, assigned bilingual sources and ${sourceFormulas.size} TeX fragments passed${sourceOnly?'; rendered checks not run':'; rendered roles, links, anchors, breadcrumbs and SVG checks passed'}.`);
+}).catch(error=>{console.error(error);process.exitCode=1;});

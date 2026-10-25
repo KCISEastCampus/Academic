@@ -1,8 +1,8 @@
-// Run after bundle exec jekyll build. Check motion, level crossings and boundaries.
+// Source and mathematical checks; no Jekyll build required. Check motion, level crossings and boundaries.
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const path=require('node:path');
-const close=(a,b)=>assert(Math.abs(a-b)<1e-8,`${a} != ${b}`);
+const close=(a,b,tol=1e-8)=>assert(Math.abs(a-b)<tol,`${a} != ${b}`);
 const motion=(ux,uy,g=9.8)=>({r:t=>[ux*t,uy*t-g*t*t/2],v:t=>[ux,uy-g*t]});
 const round=(a,d)=>assert.equal(a.toPrecision(3),d);
 const cases=[[20,15,9.8],[14,9.8,9.8],[10,9.8,9.8],[20,0,10],[10*Math.sqrt(3),-10,10],[15,19.6,9.8],[12,16,9.8],[12,14.7,9.8],[8,14.7,9.8],[6,0,10],[8,-6,10],[10,14.7,9.8]];
@@ -52,13 +52,71 @@ for(const [V,g,ceiling,R] of [[14,9.8,2.5,10*Math.sqrt(3)],[20,10,5,20*Math.sqrt
   assert.equal(peak<ceiling,theta<angle);
  }
 }
+
+// Shared-time releases, inverse flight, unreachable target and distinct obstacles.
+for(const ux of [9,18]){const q=motion(ux,0);close(q.r(2)[1],-19.6);close(q.r(2)[0],2*ux);}
+const inverse=motion(8,19.6);close(inverse.r(4)[0],32);close(inverse.r(4)[1],0);close(inverse.r(2)[1],19.6);
+assert(16-20<0);for(const q of [.1,1,2,3,10])close(10*q-2.5*(1+q*q),7.5-2.5*(q-2)**2);
+const structures=motion(8,9.8);close(structures.r(1)[1],4.9);close(structures.r(1.5)[1],3.675);assert(4.9<5&&3.675<4);
+const roof=motion(5*Math.sqrt(3),-5,10);close(roof.r(1)[1],-10);close(roof.r(1)[0],5*Math.sqrt(3));
+close(Math.hypot(...roof.v(1)),10*Math.sqrt(3));close(Math.atan((5*Math.sqrt(3))/15)*180/Math.PI,30);
+for(const t of [0,.1,.5,.9]){assert(roof.r(t)[1]>-10);assert(roof.v(t)[1]<0);}
+close(10*10,2*10*Math.sin(Math.PI/6)*10);close(Math.hypot(...roof.v(1))**2,2*10*(10*Math.sin(Math.PI/6)+10));
+const beforeContact=(3+Math.sqrt(13))/2;close(motion(8,14.7).r(beforeContact)[1],-4.9);assert(beforeContact>2);
+// Personally read official Q4 and Q7, independently reconstructed from components.
+const officialUy=15*Math.sin(Math.PI/3),disc=officialUy**2-4*4.9*7;
+const crossings=[(officialUy-Math.sqrt(disc))/9.8,(officialUy+Math.sqrt(disc))/9.8];
+close(crossings[1]-crossings[0],1.1463,1e-4);
+crossings.forEach(t=>close(motion(7.5,officialUy).r(t)[1],7));
+const roofU=Math.sqrt(2*9.8*2.5*Math.sin(40*Math.PI/180)),roofUx=roofU*Math.cos(40*Math.PI/180),roofUy=-roofU*Math.sin(40*Math.PI/180);
+const groundT=(roofUy+Math.sqrt(roofUy**2+2*9.8*6))/9.8,officialRoof=motion(roofUx,roofUy);
+close(officialRoof.r(groundT)[1],-6);assert.equal(Math.hypot(...officialRoof.v(groundT)).toPrecision(3),'12.2');
+assert.equal((Math.atan(roofUx/-officialRoof.v(groundT)[1])*180/Math.PI).toPrecision(3),'20.6');
+
 const root=path.join(__dirname,'..');
-const source=fs.readFileSync(path.join(root,'alevel/a2-mathematics/mechanics/projectiles.md'),'utf8').replace(/\r\n?/g,'\n');
-const html=fs.readFileSync(path.join(root,'_site/alevel/a2-mathematics/mechanics/projectiles/index.html'),'utf8').replace(/\r\n?/g,'\n');
-assert.equal((source.match(/^### Example \d+/gm)||[]).length,8);
-assert.equal((html.match(/<table\b/g)||[]).length,1);
-for(const [,formula] of source.matchAll(/\$\$([\s\S]*?)\$\$/g))assert(html.includes(formula.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;')),`Damaged formula: ${formula}`);
-for(const name of ['projectile-components','projectile-raised-launch','projectile-two-paths']){
- const svg=fs.readFileSync(path.join(root,'assets/img/a2-math-mech',name+'.svg'),'utf8');assert(svg.includes('<title')&&svg.includes('<desc'));
+const slug='projectiles';
+const read=prefix=>fs.readFileSync(path.join(root,prefix+'alevel/a2-mathematics/mechanics/'+slug+'.md'),'utf8').replace(/\r\n?/g,'\n');
+const en=read(''),zh=read('zh/');
+const math=s=>s.match(/\$\$[\s\S]*?\$\$|\$[^$\r\n]+\$/g)||[];
+assert.deepEqual(math(en),math(zh),'Bilingual TeX must match in exact sequence');
+const headings=s=>[...s.matchAll(/^#{2,3} .*?\{#([^}]+)\}/gm)].map(m=>m[1]);
+assert.deepEqual(headings(en),headings(zh),'Bilingual learning/legacy anchors must match');
+const prompts=s=>[...s.matchAll(/Question:\*\* ([^\n]+)/g)].map(m=>m[1]);
+assert.deepEqual(prompts(en),prompts(zh),'English questions and conditions must match');
+for(const source of [en,zh]){
+ assert(source.includes('reading_layout: true'));
+ assert(!/[\t\x00-\x08\x0b\x0c\x0e-\x1f]/.test(source),'No control characters in TeX or prose');
+ assert(!/<details[^>]*\bopen\b/.test(source),'Help must start closed');
+ const blocks=[...source.matchAll(/<div class="(worked-example|lesson-check)" markdown="1">([\s\S]*?)\n<\/div>/g)];
+ assert.equal(blocks.length,(source.match(/<div class=/g)||[]).length,'All learning blocks have separate boundaries');
+ assert.equal(blocks.length,(source.match(/<\/div>/g)||[]).length,'No unmatched learning boundary');
+ for(const [,kind,body] of blocks){
+  assert(!body.includes('<div'),'Learning blocks cannot be nested');
+  assert(body.includes('Question:**'),'Each block retains its question');
+  const disclosures=[...body.matchAll(/<details markdown="1">([\s\S]*?)<\/details>/g)];
+  assert.equal(disclosures.length,kind==='lesson-check'?2:0,'Two separate help panels per task; public worked solutions');
+  assert.equal((body.match(/<details/g)||[]).length,disclosures.length,'Help panels cannot be nested or unclosed');
+  if(kind==='lesson-check'){
+   assert(/<summary>(Hint|Reasoning hint|Retry hint|提示|推理提示|再尝试提示)<\/summary>/.test(disclosures[0][1]));
+   assert(/<summary>[^<]*(Solution|Feedback|check|解答|反馈|核对|检查)/.test(disclosures[1][1]));
+   assert(/\]\(#[^)]+\)/.test(disclosures[1][1]),'Each answer has a concrete repair or retry link');
+  }
+ }
+ for(const match of source.matchAll(/^### (?:Example \d+|例(?:题)? \d+).*$/gm)){
+  assert(blocks.some(([,kind,body])=>kind==='worked-example'&&body.includes(match[0])),'Every worked example is public and bounded');
+ }
+ const ids=headings(source);assert.equal(new Set(ids).size,ids.length,'Unique source anchors');
+ for(const [,id] of source.matchAll(/\]\(#([^)]*)\)/g))assert(ids.includes(id)||source.includes('id="'+id+'"'),'Missing local recovery anchor '+id);
+ for(const id of ['the-projectile-model', 'position-speed-and-direction', 'greatest-height-and-range', 'projection-from-a-height', 'passing-through-a-given-height', 'the-equation-of-the-path', 'finding-an-unknown-projection-angle', 'height-restrictions', 'independent-method-choice', 'retry-change-the-structure', 'release-check', 'leaving-a-surface', 'flight-retry', 'target-retry', 'obstacle-retry', 'later-projectile-check'])assert(ids.includes(id),'Legacy or learning anchor missing: '+id);
+ assert(source.includes('/mechanics/#mixed-problems')&&source.includes('/mechanics/#later-review'));
+ for(const formula of math(source))assert(!formula.includes('|'),'Use TeX delimiters rather than ASCII table pipes');
 }
-console.log('Projectiles passed: 8 examples, 8 practice answers, derivatives, energy checks, landing roots, height intervals, targets, wall collision, ceiling boundaries and formula preservation.');
+const {init}=require('../assets/vendor/mathjax/3.2.2/es5/node-main.js');
+init({loader:{load:['input/tex','output/svg']},tex:{packages:['base','ams']}}).then(mj=>{
+ for(const formula of new Set(math(en))){
+  const n=formula.startsWith('$$')?2:1;
+  const svg=mj.startup.adaptor.outerHTML(mj.tex2svg(formula.slice(n,-n),{display:n===2}));
+  assert(!svg.includes('data-mml-node="merror"')&&!svg.includes('data-mjx-error'),'Invalid TeX: '+formula);
+ }
+ console.log('Projectiles: original trajectory/energy/root/boundary protections, new inverse/roof/obstacle checks, exact bilingual TeX, questions, legacy anchors and per-task help passed.');
+}).catch(error=>{console.error(error);process.exitCode=1;});

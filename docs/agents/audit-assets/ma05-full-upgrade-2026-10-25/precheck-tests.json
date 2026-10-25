@@ -1,0 +1,71 @@
+{
+  "checkedUTC": "2026-10-25T06:03:50.920Z",
+  "provisional": true,
+  "results": [
+    {
+      "file": "test-mechanics-bilingual.js",
+      "exitCode": 1,
+      "output": "node:internal/assert/utils:77\r\n    throw err;\r\n    ^\r\n\r\nAssertionError [ERR_ASSERTION]: centres-of-mass: intact display formula  (m_1+m_2)\\bar x=m_1x_1+m_2x_2. \r\n    at Object.<anonymous> (D:\\GitHub\\Academic\\scripts\\test-mechanics-bilingual.js:49:7)\r\n    at Module._compile (node:internal/modules/cjs/loader:1706:14)\r\n    at Object..js (node:internal/modules/cjs/loader:1839:10)\r\n    at Module.load (node:internal/modules/cjs/loader:1441:32)\r\n    at Function._load (node:internal/modules/cjs/loader:1263:12)\r\n    at TracingChannel.traceSync (node:diagnostics_channel:328:14)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)\r\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\r\n    at node:internal/main/run_main_module:36:49 {\r\n  generatedMessage: false,\r\n  code: 'ERR_ASSERTION',\r\n  actual: false,\r\n  expected: true,\r\n  operator: '==',\r\n  diff: 'simple'\r\n}\r\n\r\nNode.js v22.21.0\r\n"
+    },
+    {
+      "file": "test-mechanics-centres.js",
+      "exitCode": 1,
+      "output": "node:internal/assert/utils:77\r\n    throw err;\r\n    ^\r\n\r\nAssertionError [ERR_ASSERTION]: A display formula was damaged during Markdown rendering\r\n    at D:\\GitHub\\Academic\\scripts\\test-mechanics-centres.js:110:36\r\n    at Array.map (<anonymous>)\r\n    at Object.<anonymous> (D:\\GitHub\\Academic\\scripts\\test-mechanics-centres.js:77:24)\r\n    at Module._compile (node:internal/modules/cjs/loader:1706:14)\r\n    at Object..js (node:internal/modules/cjs/loader:1839:10)\r\n    at Module.load (node:internal/modules/cjs/loader:1441:32)\r\n    at Function._load (node:internal/modules/cjs/loader:1263:12)\r\n    at TracingChannel.traceSync (node:diagnostics_channel:328:14)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)\r\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5) {\r\n  generatedMessage: false,\r\n  code: 'ERR_ASSERTION',\r\n  actual: false,\r\n  expected: true,\r\n  operator: '==',\r\n  diff: 'simple'\r\n}\r\n\r\nNode.js v22.21.0\r\n"
+    },
+    {
+      "file": "test-mechanics-chapter10.js",
+      "exitCode": 1,
+      "output": "node:assert:150\r\n  throw new AssertionError(obj);\r\n  ^\r\n\r\nAssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\r\n\r\n9 !== 5\r\n\r\n    at Object.<anonymous> (D:\\GitHub\\Academic\\scripts\\test-mechanics-chapter10.js:112:12)\r\n    at Module._compile (node:internal/modules/cjs/loader:1706:14)\r\n    at Object..js (node:internal/modules/cjs/loader:1839:10)\r\n    at Module.load (node:internal/modules/cjs/loader:1441:32)\r\n    at Function._load (node:internal/modules/cjs/loader:1263:12)\r\n    at TracingChannel.traceSync (node:diagnostics_channel:328:14)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)\r\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\r\n    at node:internal/main/run_main_module:36:49 {\r\n  generatedMessage: true,\r\n  code: 'ERR_ASSERTION',\r\n  actual: 9,\r\n  expected: 5,\r\n  operator: 'strictEqual',\r\n  diff: 'simple'\r\n}\r\n\r\nNode.js v22.21.0\r\n"
+    },
+    {
+      "file": "test-mechanics-circular.js",
+      "exitCode": 0,
+      "output": "uniform-circular-motion: original and new numerical/model checks; bilingual 495 TeX fragments, 363 unique TeX renders, retained anchors, 22 task boundaries and source-only structure passed. No build/browser claim.\n"
+    },
+    {
+      "file": "test-mechanics-energy.js",
+      "exitCode": 0,
+      "output": "work-and-energy: original and new numerical/model checks; bilingual 380 TeX fragments, 290 unique TeX renders, retained anchors, 15 task boundaries and source-only structure passed. No build/browser claim.\n"
+    },
+    {
+      "file": "test-mechanics-forces.js",
+      "exitCode": 0,
+      "output": "Forces lesson passed: resultants, string geometry, world-coordinate force balance, contact, both friction limits and 8 practice solutions.\n"
+    },
+    {
+      "file": "test-mechanics-moments.js",
+      "exitCode": 0,
+      "output": "Moments passed: original and new forces/moments, contact/tipping limits, official Q5 reconstruction, bilingual source structure and rendered formulas/help.\n"
+    },
+    {
+      "file": "test-mechanics-momentum.js",
+      "exitCode": 0,
+      "output": "Momentum bridge: impulses, work-energy, both direction branches, passive-model rejection, wall impulse and five-step bisection verified.\n"
+    },
+    {
+      "file": "test-mechanics-newton.js",
+      "exitCode": 0,
+      "output": "Newton: original force/derivative protections, new stage/3D/condition checks, exact bilingual TeX, questions, legacy anchors, public examples and per-task help passed.\n"
+    },
+    {
+      "file": "test-mechanics-projectiles.js",
+      "exitCode": 0,
+      "output": "Projectiles: original trajectory/energy/root/boundary protections, new inverse/roof/obstacle checks, exact bilingual TeX, questions, legacy anchors and per-task help passed.\n"
+    },
+    {
+      "file": "test-mechanics-transfer-foundations.js",
+      "exitCode": 0,
+      "output": "Foundation transfer checks passed: path intersection at different times, no collision, constant radius/nonzero speed and tow-system force balance.\nMA05 entrance checks passed: support loss, stagewise work and flight, radial friction bounds, taut-string interval, collision energy and conical forces.\n"
+    },
+    {
+      "file": "test-mechanics-transfer-motion.js",
+      "exitCode": 1,
+      "output": "node:internal/assert/utils:77\r\n    throw err;\r\n    ^\r\n\r\nAssertionError [ERR_ASSERTION]: projectiles: retain original practice\r\n    at Object.<anonymous> (D:\\GitHub\\Academic\\scripts\\test-mechanics-transfer-motion.js:28:3)\r\n    at Module._compile (node:internal/modules/cjs/loader:1706:14)\r\n    at Object..js (node:internal/modules/cjs/loader:1839:10)\r\n    at Module.load (node:internal/modules/cjs/loader:1441:32)\r\n    at Function._load (node:internal/modules/cjs/loader:1263:12)\r\n    at TracingChannel.traceSync (node:diagnostics_channel:328:14)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)\r\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\r\n    at node:internal/main/run_main_module:36:49 {\r\n  generatedMessage: false,\r\n  code: 'ERR_ASSERTION',\r\n  actual: false,\r\n  expected: true,\r\n  operator: '==',\r\n  diff: 'simple'\r\n}\r\n\r\nNode.js v22.21.0\r\n"
+    },
+    {
+      "file": "test-mechanics-transfer-statics.js",
+      "exitCode": 1,
+      "output": "node:internal/assert/utils:77\r\n    throw err;\r\n    ^\r\n\r\nAssertionError [ERR_ASSERTION]: newtons-laws-of-motion: original English prompt missing\r\n    at Object.<anonymous> (D:\\GitHub\\Academic\\scripts\\test-mechanics-transfer-statics.js:98:37)\r\n    at Module._compile (node:internal/modules/cjs/loader:1706:14)\r\n    at Object..js (node:internal/modules/cjs/loader:1839:10)\r\n    at Module.load (node:internal/modules/cjs/loader:1441:32)\r\n    at Function._load (node:internal/modules/cjs/loader:1263:12)\r\n    at TracingChannel.traceSync (node:diagnostics_channel:328:14)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)\r\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\r\n    at node:internal/main/run_main_module:36:49 {\r\n  generatedMessage: false,\r\n  code: 'ERR_ASSERTION',\r\n  actual: false,\r\n  expected: true,\r\n  operator: '==',\r\n  diff: 'simple'\r\n}\r\n\r\nNode.js v22.21.0\r\n"
+    }
+  ]
+}

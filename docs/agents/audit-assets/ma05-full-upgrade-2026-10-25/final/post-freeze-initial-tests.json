@@ -1,0 +1,80 @@
+{
+  "commit": "3066e46",
+  "results": [
+    {
+      "file": "test-mechanics-bilingual.js",
+      "exitCode": 1,
+      "output": "node:internal/assert/utils:77\r\n    throw err;\r\n    ^\r\n\r\nAssertionError [ERR_ASSERTION]: momentum-bridge: intact display formula  (v_A,v_B)=(2,2)\\quad\\text{or}\\quad(10,-2)\\quad\\mathrm{m\\,s^{-1}}.\r\n    at Object.<anonymous> (D:\\GitHub\\Academic\\scripts\\test-mechanics-bilingual.js:51:7)\r\n    at Module._compile (node:internal/modules/cjs/loader:1706:14)\r\n    at Object..js (node:internal/modules/cjs/loader:1839:10)\r\n    at Module.load (node:internal/modules/cjs/loader:1441:32)\r\n    at Function._load (node:internal/modules/cjs/loader:1263:12)\r\n    at TracingChannel.traceSync (node:diagnostics_channel:328:14)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)\r\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\r\n    at node:internal/main/run_main_module:36:49 {\r\n  generatedMessage: false,\r\n  code: 'ERR_ASSERTION',\r\n  actual: false,\r\n  expected: true,\r\n  operator: '==',\r\n  diff: 'simple'\r\n}\r\n\r\nNode.js v22.21.0\r\n"
+    },
+    {
+      "file": "test-mechanics-centres.js",
+      "exitCode": 0,
+      "output": "Centres passed: original/new polygon geometry and mass moments, suspension/support checks, official Q6 reconstruction, bilingual source structure and rendered formulas/help.\n"
+    },
+    {
+      "file": "test-mechanics-chapter10.js",
+      "exitCode": 1,
+      "output": "node:internal/assert/utils:77\r\n    throw err;\r\n    ^\r\n\r\nAssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\r\n\r\n  assert(source.includes('self-written'))\r\n\r\n    at Object.<anonymous> (D:\\GitHub\\Academic\\scripts\\test-mechanics-chapter10.js:186:5)\r\n    at Module._compile (node:internal/modules/cjs/loader:1706:14)\r\n    at Object..js (node:internal/modules/cjs/loader:1839:10)\r\n    at Module.load (node:internal/modules/cjs/loader:1441:32)\r\n    at Function._load (node:internal/modules/cjs/loader:1263:12)\r\n    at TracingChannel.traceSync (node:diagnostics_channel:328:14)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)\r\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\r\n    at node:internal/main/run_main_module:36:49 {\r\n  generatedMessage: true,\r\n  code: 'ERR_ASSERTION',\r\n  actual: false,\r\n  expected: true,\r\n  operator: '==',\r\n  diff: 'simple'\r\n}\r\n\r\nNode.js v22.21.0\r\n"
+    },
+    {
+      "file": "test-mechanics-circular.js",
+      "exitCode": 0,
+      "output": "uniform-circular-motion: original and new numerical/model checks; bilingual 495 TeX fragments, 363 unique TeX renders, retained anchors, 22 task boundaries and source-only structure passed. No build/browser claim.\n"
+    },
+    {
+      "file": "test-mechanics-energy.js",
+      "exitCode": 0,
+      "output": "work-and-energy: original and new numerical/model checks; bilingual 380 TeX fragments, 290 unique TeX renders, retained anchors, 15 task boundaries and source-only structure passed. No build/browser claim.\n"
+    },
+    {
+      "file": "test-mechanics-forces.js",
+      "exitCode": 0,
+      "output": "Forces lesson passed: resultants, string geometry, world-coordinate force balance, contact, both friction limits and 8 practice solutions.\n"
+    },
+    {
+      "file": "test-mechanics-moments.js",
+      "exitCode": 0,
+      "output": "Moments passed: original and new forces/moments, contact/tipping limits, official Q5 reconstruction, bilingual source structure and rendered formulas/help.\n"
+    },
+    {
+      "file": "test-mechanics-momentum.js",
+      "exitCode": 0,
+      "output": "Momentum: retained/new impulse-work calculations, signed branches, external impulse, spring release, Jan 2025 Q8, bilingual sources, closed task roles, TeX and retained bisection passed.\n"
+    },
+    {
+      "file": "test-mechanics-newton.js",
+      "exitCode": 0,
+      "output": "Newton: original force/derivative protections, new stage/3D/condition checks, exact bilingual TeX, questions, legacy anchors, public examples and per-task help passed.\n"
+    },
+    {
+      "file": "test-mechanics-projectiles.js",
+      "exitCode": 0,
+      "output": "Projectiles: original trajectory/energy/root/boundary protections, new inverse/roof/obstacle checks, exact bilingual TeX, questions, legacy anchors and per-task help passed.\n"
+    },
+    {
+      "file": "test-mechanics-transfer-foundations.js",
+      "exitCode": 0,
+      "output": "Foundation transfer checks passed: path intersection at different times, no collision, constant radius/nonzero speed and tow-system force balance.\nMA05 entrance checks passed: support loss, stagewise work and flight, radial friction bounds, taut-string interval, collision energy and conical forces.\n"
+    },
+    {
+      "file": "test-mechanics-transfer-motion.js",
+      "exitCode": 0,
+      "output": "Motion transfer passed: 3 bilingual pairs, 25 original examples, 27 original exercises, exact formula order, prompts, anchors, 11 diagrams, closed disclosures, and 6 independently checked diagnostic/retry problems.\n"
+    },
+    {
+      "file": "test-mechanics-transfer-statics.js",
+      "exitCode": 0,
+      "output": "MA05 statics transfer checks passed: contact limits, mass moments, stable suspension, force signs, integration conditions, and three complete bilingual source pairs.\n"
+    },
+    {
+      "file": "test-frontend-ux.js",
+      "exitCode": 0,
+      "output": "Frontend UX passed: shared search, landmarks/skip links, course discovery, bilingual card names and destinations, fallback language and link contrast.\n"
+    },
+    {
+      "file": "test-a2-heading-hierarchy.js",
+      "exitCode": 0,
+      "output": "A2 heading hierarchy passed: 114 pages, bilingual outlines, source/HTML levels, unique IDs, local fragments and 11 repaired lesson pairs.\n"
+    }
+  ]
+}

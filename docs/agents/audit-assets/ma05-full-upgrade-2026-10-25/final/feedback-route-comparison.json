@@ -1,0 +1,25 @@
+{
+  "changedHTMLPages": [
+    "_site/alevel/a2-mathematics/mechanics/index.html",
+    "_site/zh/alevel/a2-mathematics/mechanics/index.html"
+  ],
+  "entryChecks": [
+    {
+      "url": "/alevel/a2-mathematics/mechanics/",
+      "onlyHrefAttributesChanged": true,
+      "beforeSHA256": "a042a7722e4af260f3919f04e7a25f821d6c4be5f909e3408725e7dad6eb8a0f",
+      "afterSHA256": "587476b551b7465718c7434d532a83b84c93bcc807511fe8f394b1bf394929f3"
+    },
+    {
+      "url": "/zh/alevel/a2-mathematics/mechanics/",
+      "onlyHrefAttributesChanged": true,
+      "beforeSHA256": "b3aae8c935ec2474e8e89c08ceffb0e8eeebcad904b0ef59afe068f32c0bddc3",
+      "afterSHA256": "c56a92b0c449fb13caae9dcb6e97e358f1edff872192679b2800a2e8328544a0"
+    }
+  ],
+  "unchangedMA05Pages": 22,
+  "otherUnchangedPages": [
+    "_site/alevel/fx-cg50/advanced/mechanics/index.html"
+  ],
+  "unchangedHTMLPagesInSnapshot": 23
+}

@@ -1,0 +1,28 @@
+{
+  "sources": {
+    "alevel/a2-mathematics/mechanics.md": "8679a0c35b161fe22c900158c62c204beaaa1f78f927df2806a2eb5b8348555a",
+    "zh/alevel/a2-mathematics/mechanics.md": "60a0a2571d22f0c8ea13aa48ec60fdfb214438d3257eb097485889db6335d169",
+    "alevel/a2-mathematics/mechanics/centres-of-mass.md": "4251558b8caddfa3c43bf8b2abc3d2608f76a9d742f7546c30e3f5b1f327f619",
+    "alevel/a2-mathematics/mechanics/forces-equilibrium-and-friction.md": "f77e4abcfbfdef62abffa7fe59c428250e294c117e13a40af1f0465c59e8e680",
+    "alevel/a2-mathematics/mechanics/mathematical-modelling.md": "64ef32fc17b971c8e0fba9eb0226c07ef7641c59308cc530945ce55b07abf473",
+    "alevel/a2-mathematics/mechanics/moments-and-rigid-objects.md": "6bb1ebddb8a27eab80ba814c868cba0c8ab6fc8f2aa9162c5f19b763e5f0f83a",
+    "alevel/a2-mathematics/mechanics/momentum-bridge.md": "d404cd19edba00434f84464d1d336878801aa935bc1f422ce7b46a64059ef675",
+    "alevel/a2-mathematics/mechanics/newtons-laws-of-motion.md": "a1dcffce386ddb67a06bc21bc078b03162d3b82827c9b774824055234a6d1353",
+    "alevel/a2-mathematics/mechanics/projectiles.md": "1ae919c172546288b0c5361155761ff62066af967eb2f56a6baab89a4c0a796c",
+    "alevel/a2-mathematics/mechanics/quick-reference.md": "03270971d8b015525f9ec08ec3831a0294702649add5291dca0845f4bf4505bd",
+    "alevel/a2-mathematics/mechanics/uniform-circular-motion.md": "e0b58bc82ad055bdace913c4de78fd921f4bcff58e39c2725f58c632ec5c5b43",
+    "alevel/a2-mathematics/mechanics/vectors-and-kinematics.md": "e1e989f4a6582fcce0887e7dad35d50a492d4c1e3590242b6d6d0ef9cab02108",
+    "alevel/a2-mathematics/mechanics/work-and-energy.md": "aa87eb7551e12e0060e04f114585442ddd3e7483d9ccefdcea850abc83b847ea",
+    "zh/alevel/a2-mathematics/mechanics/centres-of-mass.md": "9f0461e0f10a304013f79a2c5a05b7087c64b5f0342668b1dfda40e2ef8fd4a4",
+    "zh/alevel/a2-mathematics/mechanics/forces-equilibrium-and-friction.md": "b021cc1c613ff871b57843b0da839470bca68e3d83bba8e6c481c9af438468a6",
+    "zh/alevel/a2-mathematics/mechanics/mathematical-modelling.md": "56dbdbfd7b4985f1c38384f5db3d612172e11a1a9a2a80b6189ab376bb9e9253",
+    "zh/alevel/a2-mathematics/mechanics/moments-and-rigid-objects.md": "bf929cc8b6527517e3319a4f135bce05945905759a02243476e04211be6a4361",
+    "zh/alevel/a2-mathematics/mechanics/momentum-bridge.md": "eaeb451eb1d646a58fff2e06ea23f8b3d9ef789e835f71cd763f5ef7f4144f55",
+    "zh/alevel/a2-mathematics/mechanics/newtons-laws-of-motion.md": "62c2692691ec86905dea51ae8d6b138f6627915385b45bd45a62808a5f2400e5",
+    "zh/alevel/a2-mathematics/mechanics/projectiles.md": "c0245eb5031681dc604e2b30abe8aeff935f5785f89c66472a262b7947631a7b",
+    "zh/alevel/a2-mathematics/mechanics/quick-reference.md": "d9107ed0ef81293616812cdb8048bd0d50d1f92b415c43f1c0b35108bdfae9b8",
+    "zh/alevel/a2-mathematics/mechanics/uniform-circular-motion.md": "5ebcf512a384ca17b159758de39c6142f3edf760898c8732cb90fa21e877dcd9",
+    "zh/alevel/a2-mathematics/mechanics/vectors-and-kinematics.md": "da8418182236a5505b092ef97e4b3e234a6caabfdfdf04053707775696761d9f",
+    "zh/alevel/a2-mathematics/mechanics/work-and-energy.md": "c59c0b0389e67e3936a105fec15f7dc210f1dfb6af13b32be890bf86b309da41"
+  }
+}

@@ -9,29 +9,25 @@ translation_of: /alevel/a2-mathematics/mechanics/uniform-circular-motion/
 permalink: /zh/alevel/a2-mathematics/mechanics/uniform-circular-motion/
 toc_headings: h2
 study_page: true
+reading_layout: true
 ---
 
-[A2 力学](/zh/alevel/a2-mathematics/mechanics/) · M2.7 匀速圆周运动
+[A2 力学](/zh/alevel/a2-mathematics/mechanics/) · MA05 · M2.7
+{:.lesson-meta}
 
-连接角速率与线速率，求指向圆心的加速度，并用真实受力解决水平圆周运动问题。
+汽车沿弯道转弯，速度表的读数可以保持不变。速率没有增大，运动方向却在改变。**是什么力使它不断转向？如果能提供的力不够，会怎样？**
 
-- **学习：**从[角速率](#angular-speed-and-angular-velocity)开始，再学习[径向加速度](#radial-acceleration)与[受力方程](#forces-in-a-horizontal-circle)。
-- **作业帮助：**标出圆心与水平半径，先沿竖直方向和向心方向分解力，再代数值。
-- **复习：**关闭解答尝试[练习](#practice)，除受力方程外，还要检查摩擦、张力及接触条件。
+先理解[半径转过角度的快慢](#angular-speed-and-angular-velocity)，再看[速度为什么改变](#radial-acceleration)与[真实受力](#forces-in-a-horizontal-circle)。绳、摩擦与接触面的应用都沿用这个原理。先学[圆锥摆](#the-conical-pendulum)，再按需要练习不同接触面；[圆形轨道](#circular-orbits)要重新辨认力的方向。复习时关闭两种帮助，先做[练习](#practice)与[独立任务](#independent-method-choice)。
 
-教材：第 15 章 *Uniform Circular Motion*，15.1–15.3 节（印刷 pp.240–251）。本课术语为角速率（angular speed）、角速度（angular velocity）、径向加速度（radial acceleration）、水平圆周（horizontal circle）和圆锥摆（conical pendulum）。光滑圆锥应用也见于该章测评；倾斜弯道练习使用相同的受力方法。
+需要直角三角形、力分解、$F=ma$、静摩擦上限及分量微积分。可回补[力的方向](/zh/alevel/a2-mathematics/mechanics/forces-equilibrium-and-friction/#force-diagrams)、[摩擦上限](/zh/alevel/a2-mathematics/mechanics/forces-equilibrium-and-friction/#friction-and-limiting-equilibrium)或[向量与运动学](/zh/alevel/a2-mathematics/mechanics/vectors-and-kinematics/)。回想[能量课](../work-and-energy/#the-work-energy-principle)：动能不变表示**速率**不变。
+{:.lesson-meta}
 
-**开始前：**复习[向量和运动学](/zh/alevel/a2-mathematics/mechanics/vectors-and-kinematics/)、[力、平衡和摩擦](/zh/alevel/a2-mathematics/mechanics/forces-equilibrium-and-friction/)及[牛顿运动定律](/zh/alevel/a2-mathematics/mechanics/newtons-laws-of-motion/)。未另行给定时取 $g=9.8\,\mathrm{m\,s^{-2}}$。计算中保留精确值；本课自拟题最终数值默认三位有效数字、角度一位小数，另有要求时依题意。
-
-未另作说明时，把物体看作质点。全部例题和练习都是自拟题，不是官方真题，不设官方分值。图示用于表达模型，未按比例绘制。
-
-<!-- motion-sources:start -->
-## 来源与范围 {#sources-and-scope}
-
-**范围与评价参照：**[OxfordAQA 9660 大纲 v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf) M2.7；方法参照为 MA05 January 2025 Q3，已配对阅读[题卷](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-question-paper.pdf)与[评分标准 Version 1.0 Final](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-mark-scheme.pdf)。题目仍为自拟题，不设官方分值，默认精度按上文；真题按其精度指示。本课处理水平匀速圆周与中心力圆轨道，不引入 FM05 竖直非匀速圆周。
-<!-- motion-sources:end -->
+全部示范与任务均为 **Self-written / 自拟题**，无官方分值。采用质点模型，适用时取 $g=9.8\,\mathrm{m\,s^{-2}}$。计算中保留精确值，最终默认三位有效数字、角度一位小数，题内另有要求时依题意。图未按比例绘制。[来源与范围](#sources-and-scope)放在页末。
+{:.lesson-meta}
 
 ## 角速率与角速度 {#angular-speed-and-angular-velocity}
+
+从圆心向质点画一条半径。质点移动时，这条线也在转动。角速率描述半径转过角度的快慢；线速率描述沿圆周走过距离的快慢。同一转盘上的点转一周用时相同，外侧的点却要走更远。
 
 **角速率（angular speed）**表示质点绕圆心转过角度的快慢，记作 $\omega$，单位是**弧度每秒**。完整一周为 $2\pi$ 弧度。
 
@@ -57,6 +53,8 @@ $$\boxed{\tau=\frac{2\pi}{\omega}=\frac{2\pi r}{v}}.$$
 
 ## 径向加速度 {#radial-acceleration}
 
+速度回答两个问题：“多快？”和“朝哪里？”逆时针运动时，最右侧点的速度向上，最高点的速度向左。速度表读数相同，并不表示两个速度向量相同。加速度描述**速度的改变**，方向的变化也算在内。
+
 **匀速圆周运动（uniform circular motion）**的速率恒定，但速度方向不断改变，因此仍有加速度。速度沿圆的切线；**径向加速度（radial acceleration）**又称向心加速度，指向圆心。
 
 $$\boxed{a=\frac{v^2}{r}=r\omega^2}.$$
@@ -70,6 +68,8 @@ $$\boxed{a=\frac{v^2}{r}=r\omega^2}.$$
 $$\lvert\Delta\mathbf v\rvert=2v\sin\left(\frac{\Delta\theta}{2}\right)\approx v\Delta\theta.$$
 
 时间间隔趋于零时，除以 $\Delta t$ 得到 $a=v\omega$。再代入 $v=r\omega$ 得到上面的两个形式。这里使用了 $\sin x\approx x$（$x$ 为很小的弧度角），与教材 15.1 节一致。
+
+<div class="worked-example" markdown="1">
 
 ### 例题 1：转数、速率与加速度 {#example-1-revolutions-speed-and-acceleration}
 
@@ -87,6 +87,10 @@ $$\boxed{a=0.4(3\pi)^2\approx35.5\,\mathrm{m\,s^{-2}}\text{ towards the centre}}
 
 **检查：**一分钟包含 $60/(2/3)=90$ 个周期。半径减半的点角速率相同，但线速率与加速度大小都减半。
 
+</div>
+
+<div class="worked-example" markdown="1">
+
 ### 例题 2：证明路径是圆 {#example-2-showing-a-path-is-a-circle}
 
 **Question:** a particle has velocity:
@@ -95,7 +99,7 @@ $$\mathbf v=(6\cos2t)\mathbf i-(6\sin2t)\mathbf j.$$
 
 At $t=0$, its position vector is $\mathbf r=\mathbf i+5\mathbf j$. Positions are in metres and time is in seconds. Find its position, show that it moves in a circle at constant speed, and find its acceleration.
 
-分别积分两个分量，并使用初始位置：
+圆心尚未给定，先从速度恢复位置。$\sin2t$ 的导数是 $2\cos2t$，所以先除以 $2$ 再对 $6\cos2t$ 积分；$-6\sin2t$ 的积分则是 $3\cos2t$。每个方向分别保留积分常数：
 
 $$x=3\sin2t+C_x,\qquad y=3\cos2t+C_y.$$
 
@@ -104,6 +108,8 @@ $$x=3\sin2t+C_x,\qquad y=3\cos2t+C_y.$$
 $$\boxed{\mathbf r=(1+3\sin2t)\mathbf i+(2+3\cos2t)\mathbf j}.$$
 
 $$\boxed{(x-1)^2+(y-2)^2=9}.$$
+
+减去固定点 $(1,2)$ 后，分量为 $3\sin2t$、$3\cos2t$。平方相加得到 $9(\sin^22t+\cos^22t)=9$，对任意 $t$ 都成立。到定点距离不变证明轨迹是圆；速率是否恒定还要另外验证。
 
 圆心为 $(1,2)$，半径为 $3\,\mathrm m$。速率为：
 
@@ -121,7 +127,11 @@ $$\mathbf a=-4(\mathbf r-\mathbf c).$$
 
 **检查：**$t=0$ 的位置为 $(1,5)$；$\mathbf a\cdot\mathbf v=0$ 也验证加速度垂直速度。圆心不在原点时，应使用**相对圆心**的位置向量。
 
+</div>
+
 ## 水平圆周的受力 {#forces-in-a-horizontal-circle}
+
+这里采用地面惯性参照系。质点相对转盘的位置不变，相对地面却在运动。“在转盘上静止”不能作为地面参照系中合力为零的依据。
 
 受力图只画**真实的力**，如重力、张力、法向反力和摩擦。**向心力（centripetal force）**描述这些力指向圆心的合力，不是需要另外加画的一种力。
 
@@ -132,6 +142,8 @@ $$\boxed{\text{resultant force towards the centre}=\frac{mv^2}{r}=mr\omega^2}.$$
 竖直方向无加速度，切线方向也无加速度，对应的合力分量均为零。各个切向力仍可能存在，只是彼此平衡。
 
 选择径向**朝圆心为正**，沿该方向分解力，即使速度指向别处也一样。不能因为速率恒定，就把所有方向的合力都设为零。
+
+<div class="worked-example" markdown="1">
 
 ### 例题 3：张力与断裂界限 {#example-3-tension-and-a-breaking-limit}
 
@@ -151,7 +163,11 @@ $$\boxed{\omega_{\text{max}}=\sqrt{40}\approx6.32\,\mathrm{rad\,s^{-1}}}.$$
 
 **检查：**对应的最大线速率为 $0.8\sqrt{40}\approx5.06\,\mathrm{m\,s^{-1}}$，所以 $4\,\mathrm{m\,s^{-1}}$ 的运动尚未达到断裂界限。只有绳水平且绷紧时，才能把绳长直接用作半径。
 
+径向合力与瞬时速度垂直，功率为零，因此可以只改变方向而不增加动能。联系[能量账本](../work-and-energy/#the-work-energy-principle)：总功为零，不代表合力为零。
+
 若绳断裂，质点最初沿切线运动，并非沿半径向外。在光滑水平桌面上，它将沿直线继续运动，直到其他力或边界改变运动。
+
+</div>
 
 ## 摩擦与道路弯道 {#friction-and-road-bends}
 
@@ -173,6 +189,8 @@ $$\boxed{\tan\alpha=\frac{v^2}{rg}}.$$
 
 这给出指定半径和倾角下能够维持稳定圆周运动的一个速率，不是粗糙弯道的最大速率公式。
 
+<div class="worked-example" markdown="1">
+
 ### 例题 4：转盘上的物块 {#example-4-a-block-on-a-rotating-disc}
 
 **Question:** a block of mass $0.5\,\mathrm{kg}$ stays at a fixed position $0.4\,\mathrm m$ from the axis of a horizontal disc rotating at $3\,\mathrm{rad\,s^{-1}}$. Find the frictional force and the least coefficient of friction. If the coefficient is $0.4$, find the greatest angular speed without slipping.
@@ -191,6 +209,8 @@ $$\boxed{\omega_{\text{max}}=\sqrt{\frac{0.4g}{0.4}}\approx3.13\,\mathrm{rad\,s^
 
 **检查：**在 $\omega=3$ 时，摩擦为 $1.8\,\mathrm N$，小于可提供的 $0.4(4.9)=1.96\,\mathrm N$。角速率界限中的质量约去。
 
+</div>
+
 ## 连接质点与不同半径 {#connected-particles-and-different-radii}
 
 轻绳穿过桌面的光滑孔时，孔两侧张力相同。分别为每个质点写受力方程。
@@ -198,6 +218,8 @@ $$\boxed{\omega_{\text{max}}=\sqrt{\frac{0.4g}{0.4}}\approx3.13\,\mathrm{rad\,s^
 若悬挂质点平衡，张力等于它的重力；桌面上的质点**并不平衡**，张力使其产生径向加速度。
 
 不同半径的质点以同一角速率转动时，分别用 $v=r\omega$。线速率和所需径向力不必相等；向外拉内侧质点的张力，在向心为正的方程中取负号。
+
+<div class="worked-example" markdown="1">
 
 ### 例题 5：穿过小孔的绳 {#example-5-a-string-through-a-hole}
 
@@ -217,7 +239,11 @@ $$\boxed{\omega=\frac{\sqrt{11.76}}{0.8}\approx4.29\,\mathrm{rad\,s^{-1}}}.$$
 
 **检查：**$0.6(0.8)\omega^2=8.82$，且 $Q$ 的合力为零。桌面对 $P$ 的法向反力为 $0.6g=5.88\,\mathrm N$。在这些假设下，同一半径上换成其他速率就不能保持 $Q$ 静止。
 
+</div>
+
 ## 圆锥摆 {#the-conical-pendulum}
+
+质点始终在同一高度，说明向上与向下的力分量平衡；它仍在水平转向，说明径向分量不平衡。同一个倾斜张力可以用竖直分量支承重力，用水平分量改变方向。
 
 **圆锥摆（conical pendulum）**用轻、不可伸长的绳把质点悬于固定点 $A$；质点在 $A$ 下方的水平圆周上匀速运动，绳扫出一个圆锥面。
 
@@ -235,11 +261,15 @@ $$\boxed{T\cos\theta=mg},\qquad \boxed{T\sin\theta=mr\omega^2}.$$
 
 $$\tan\theta=\frac{r\omega^2}{g}=\frac{v^2}{rg}.$$
 
+角度从竖直量起，张力的邻边分量是 $T\cos\theta$；水平半径在这个角的对边，所以为 $l\sin\theta$，不能用 $l$。水平方程成为 $T\sin\theta=ml\sin\theta\,\omega^2$；约去 $\sin\theta$ 之前，必须确认半径不为零。
+
 真正的圆周要求 $r>0$、$\sin\theta>0$。将 $r=l\sin\theta$ 代入水平方程得：
 
 $$\boxed{T=ml\omega^2},\qquad \boxed{\cos\theta=\frac{g}{l\omega^2}},\qquad \boxed{h=\frac{g}{\omega^2}}.$$
 
 因为 $0<\theta<90^\circ$，张力大于重力。非零半径圆锥摆要求 $l\omega^2>g$；等号对应 $\theta=0$、$r=0$，不是圆周轨道。角速率固定时，$h$ 与质量、绳长无关，但所选绳长必须大于 $h$。
+
+<div class="worked-example" markdown="1">
 
 ### 例题 6：已知与竖直方向的夹角 {#example-6-angle-given-from-the-vertical}
 
@@ -265,7 +295,11 @@ $$T\sin\theta=4.9\left(\frac35\right)=2.94=mr\omega^2.$$
 
 半径是 $0.75\,\mathrm m$，不是整条绳长。
 
+</div>
+
 ## 光滑碗内的运动 {#motion-inside-a-smooth-bowl}
+
+这次约束力来自表面垂直地推物体，而不是绳沿自身拉物体。球面的半径垂直于该处切面，所以先在竖直截面里画出连向球心的反力，再用三角形分解。水平轨道另有自己的圆心。
 
 质点可以在固定、光滑的半球形碗内做水平圆周运动。重力向下；法向反力指向**球心**，球心位于水平圆心上方。
 
@@ -285,6 +319,8 @@ $$\boxed{R=ma\omega^2},\qquad \boxed{d=\frac{g}{\omega^2}}.$$
 
 下半球内的非零水平圆要求 $0<d<a$。若 $d=a$，质点位于碗底且 $r=0$；若 $d>a$，所设圆周已不符合碗的几何约束。
 
+<div class="worked-example" markdown="1">
+
 ### 例题 7：碗半径与水平圆半径 {#example-7-radius-of-the-bowl-and-radius-of-the-circle}
 
 **Question:** a particle of mass $0.2\,\mathrm{kg}$ moves in a horizontal circle inside a fixed smooth hemispherical bowl of radius $0.5\,\mathrm m$. The circle's centre is $0.3\,\mathrm m$ below the bowl centre. Find the circle radius, normal reaction, angular speed and linear speed.
@@ -298,6 +334,8 @@ $$\boxed{\omega=\sqrt{\frac{g}{0.3}}\approx5.72\,\mathrm{rad\,s^{-1}}}.$$
 $$\boxed{v=0.4\sqrt{\frac{g}{0.3}}\approx2.29\,\mathrm{m\,s^{-1}}}.$$
 
 **检查：**$R$ 的向上分量为 $1.96\,\mathrm N=mg$，水平向心分量约 $2.61\,\mathrm N$，等于 $mr\omega^2$。法向反力并非水平，$a$ 也不是轨道半径。
+
+</div>
 
 ## 与平面的接触和离面 {#contact-and-lifting-off-a-plane}
 
@@ -323,6 +361,8 @@ $$\boxed{\omega^2=\frac gh},\qquad \boxed{v=r\sqrt{\frac gh}}.$$
 
 超过这个角速率，固定高度的接触模型会给出 $R<0$，因此失效；质点的运动和绳的角度必须改变。
 
+<div class="worked-example" markdown="1">
+
 ### 例题 8：高处的连接点 {#example-8-a-raised-attachment-point}
 
 **Question:** a particle of mass $0.5\,\mathrm{kg}$ moves in a horizontal circle on a smooth fixed plane. It is attached to a fixed point $0.6\,\mathrm m$ above the plane by a light inextensible string of length $1\,\mathrm m$. Find tension and normal reaction at angular speed $3\,\mathrm{rad\,s^{-1}}$. Find the angular and linear speeds at lifting off.
@@ -341,6 +381,8 @@ $$\boxed{v=0.8\sqrt{\frac{g}{0.6}}\approx3.23\,\mathrm{m\,s^{-1}}}.$$
 
 **检查：**在 $\omega=3$ 时，张力水平分量为 $4.5(0.8)=3.6\,\mathrm N=mr\omega^2$。在离面界限处，张力竖直分量等于重力，而张力本身仍为正。
 
+</div>
+
 ## 光滑圆锥内的运动 {#motion-inside-a-smooth-cone}
 
 圆锥的**半顶角（semi-vertical angle）**$\alpha$ 是侧面母线与竖直轴的夹角。内表面对质点的法向反力垂直侧面，斜向上且朝轴线。
@@ -354,6 +396,8 @@ $$R\sin\alpha=mg,\qquad R\cos\alpha=mr\omega^2.$$
 $$\boxed{r=\frac{g\cot\alpha}{\omega^2}}.$$
 
 不要未核对角度就套用圆锥摆的分量式。圆锥摆的力**沿绳**，这里的反力则**垂直圆锥侧面**。
+
+<div class="worked-example" markdown="1">
 
 ### 例题 9：圆锥上的法向反力 {#example-9-the-normal-reaction-on-a-cone}
 
@@ -369,6 +413,8 @@ $$\boxed{z=\frac{0.2\sqrt3}{\tan30^\circ}=0.6\,\mathrm m}.$$
 
 **检查：**$R\sin30^\circ=2.94\,\mathrm N=mg$；$R\cos30^\circ=0.3(0.2\sqrt3)(49)$，与所需向心力一致。
 
+</div>
+
 ## 圆形轨道 {#circular-orbits}
 
 相同径向受力方程也可描述卫星的圆形轨道。轨道半径是地球半径**加上**离地高度；重力提供向心合力，应使用该轨道处的重力加速度，不能自动用地表 $9.8$。轨道不一定是地表附近的水平圆，因此不要再加上桌面或圆锥摆所用的竖直平衡方程。
@@ -377,9 +423,13 @@ $$\boxed{z=\frac{0.2\sqrt3}{\tan30^\circ}=0.6\,\mathrm m}.$$
 
 先尝试，再展开提示。写出真实的力并标出半径；水平圆周分别列竖直与向心方向的方程。
 
-### Q1：顺时针转动 {#q1-clockwise-rotation}
+<div class="lesson-check" markdown="1">
 
-A point on a disc is $0.2\,\mathrm m$ from the axis and completes $60$ revolutions per minute clockwise. Find its angular speed, signed angular velocity, linear speed, period and acceleration. Take anticlockwise angular velocity as positive. State the directions of velocity and acceleration when the point is directly to the right of the centre.
+### Q1 — 转动中的点 {#q1-clockwise-rotation}
+
+**Self-written.**
+
+**Question:** A point on a disc is $0.2\,\mathrm m$ from the axis and completes $60$ revolutions per minute clockwise. Find its angular speed, signed angular velocity, linear speed, period and acceleration. Take anticlockwise angular velocity as positive. State the directions of velocity and acceleration when the point is directly to the right of the centre.
 
 <details markdown="1">
 <summary>提示</summary>
@@ -401,11 +451,19 @@ $$\boxed{a=0.8\pi^2\approx7.90\,\mathrm{m\,s^{-2}}}.$$
 
 **检查：**转盘每秒一周，与周期一致。顺时针运动不会使速率或加速度大小变成负数。
 
+若本题未通过，回看[角量与线量](#angular-speed-and-angular-velocity)，收起示范后，独立做[两个点的任务](#rotation-retry)。
+
 </details>
 
-### Q2：积分求圆周轨迹 {#q2-integrating-to-find-a-circle}
+</div>
 
-A particle has acceleration:
+<div class="lesson-check" markdown="1">
+
+### Q2 — 运动中的质点 {#q2-integrating-to-find-a-circle}
+
+**Self-written.**
+
+**Question:** A particle has acceleration:
 
 $$\mathbf a=-(8\cos2t)\mathbf i-(8\sin2t)\mathbf j.$$
 
@@ -439,11 +497,19 @@ $$\boxed{(x-1)^2+(y+1)^2=4}.$$
 
 **检查：**求导可恢复给定的加速度和初速度；同时 $v^2/r=16/2=8$。
 
+若本题未通过，回看[向量示范](#example-2-showing-a-path-is-a-circle)，收起示范后，独立做[被记录的质点](#vector-retry)。
+
 </details>
 
-### Q3：光滑竖直围缘 {#q3-a-smooth-vertical-rim}
+</div>
 
-A particle of mass $0.2\,\mathrm{kg}$ moves at $3\,\mathrm{m\,s^{-1}}$ around the inside of a smooth vertical rim on a smooth horizontal table. The circle radius is $0.4\,\mathrm m$. Find the acceleration, the force from the rim and the normal reaction from the table. Ignore air resistance.
+<div class="lesson-check" markdown="1">
+
+### Q3 — 围缘旁的质点 {#q3-a-smooth-vertical-rim}
+
+**Self-written.**
+
+**Question:** A particle of mass $0.2\,\mathrm{kg}$ moves at $3\,\mathrm{m\,s^{-1}}$ around the inside of a smooth vertical rim on a smooth horizontal table. The circle radius is $0.4\,\mathrm m$. Find the acceleration, the force from the rim and the normal reaction from the table. Ignore air resistance.
 
 <details markdown="1">
 <summary>提示</summary>
@@ -463,11 +529,19 @@ $$\boxed{R_{\text{table}}=0.2g=1.96\,\mathrm N}.$$
 
 **检查：**竖直力平衡，但水平合力非零。两个反力来自不同接触处，不应在受力图中合并成一个水平反力标签。
 
+若本题未通过，回看[真实受力](#forces-in-a-horizontal-circle)，收起示范后，独立做[拟议运动](#radial-retry)。
+
 </details>
 
-### Q4：列车桌面上的手机 {#q4-a-phone-on-a-train-table}
+</div>
 
-A train follows a horizontal circular bend at a steady $12\,\mathrm{m\,s^{-1}}$. A phone stays at rest relative to a rough horizontal table in the train. The coefficient of friction is $0.3$. Model the phone as a particle and find the least possible radius of its circular path without slipping.
+<div class="lesson-check" markdown="1">
+
+### Q4 — 列车中的手机 {#q4-a-phone-on-a-train-table}
+
+**Self-written.**
+
+**Question:** A train follows a horizontal circular bend at a steady $12\,\mathrm{m\,s^{-1}}$. A phone stays at rest relative to a rough horizontal table in the train. The coefficient of friction is $0.3$. Model the phone as a particle and find the least possible radius of its circular path without slipping.
 
 <details markdown="1">
 <summary>提示</summary>
@@ -485,11 +559,19 @@ $$r\geq\frac{144}{0.3g},\qquad \boxed{r_{\text{min}}\approx49.0\,\mathrm m}.$$
 
 **检查：**在最小半径处摩擦达到极限。同一速率下，更大半径只需更小摩擦；手机质量约去。圆周半径从弯道圆心量至手机。
 
+若本题未通过，回看[摩擦需要量与上限](#friction-and-road-bends)，收起示范后，独立做[转盘位置任务](#friction-retry)。
+
 </details>
 
-### Q5：悬挂质点保持平衡 {#q5-a-hanging-particle-in-equilibrium}
+</div>
 
-Particles $P$ and $Q$, of masses $0.4\,\mathrm{kg}$ and $0.8\,\mathrm{kg}$, are joined by a light inextensible string through a smooth hole in a smooth fixed horizontal table. $Q$ hangs at rest and $P$ moves in a horizontal circle of radius $0.5\,\mathrm m$ about the hole. Find the tension, speed and angular speed of $P$.
+<div class="lesson-check" markdown="1">
+
+### Q5 — 相连的两个质点 {#q5-a-hanging-particle-in-equilibrium}
+
+**Self-written.**
+
+**Question:** Particles $P$ and $Q$, of masses $0.4\,\mathrm{kg}$ and $0.8\,\mathrm{kg}$, are joined by a light inextensible string through a smooth hole in a smooth fixed horizontal table. $Q$ hangs at rest and $P$ moves in a horizontal circle of radius $0.5\,\mathrm m$ about the hole. Find the tension, speed and angular speed of $P$.
 
 <details markdown="1">
 <summary>提示</summary>
@@ -509,11 +591,19 @@ $$\boxed{\omega=\frac{\sqrt{9.8}}{0.5}\approx6.26\,\mathrm{rad\,s^{-1}}}.$$
 
 **检查：**$0.4(0.5)\omega^2=7.84$。$Q$ 所受各力平衡，$P$ 则有水平向心合力。
 
+若本题未通过，回看[分别研究两个物体](#connected-particles-and-different-radii)，收起示范后，独立做[拟议运动](#radial-retry)。
+
 </details>
 
-### Q6：圆锥摆是否可能 {#q6-is-a-conical-pendulum-possible}
+</div>
 
-A particle of mass $0.5\,\mathrm{kg}$ hangs from a light inextensible string of length $1\,\mathrm m$ with a fixed upper end. It forms a conical pendulum with angular speed $4\,\mathrm{rad\,s^{-1}}$. Find tension, angle to vertical, circle radius, linear speed and period. Explain why a non-zero-radius conical motion with angular speed $2\,\mathrm{rad\,s^{-1}}$ is impossible for the same string length.
+<div class="lesson-check" markdown="1">
+
+### Q6 — 悬挂的质点 {#q6-is-a-conical-pendulum-possible}
+
+**Self-written.**
+
+**Question:** A particle of mass $0.5\,\mathrm{kg}$ hangs from a light inextensible string of length $1\,\mathrm m$ with a fixed upper end. It forms a conical pendulum with angular speed $4\,\mathrm{rad\,s^{-1}}$. Find tension, angle to vertical, circle radius, linear speed and period. Explain why a non-zero-radius conical motion with angular speed $2\,\mathrm{rad\,s^{-1}}$ is impossible for the same string length.
 
 <details markdown="1">
 <summary>提示</summary>
@@ -541,11 +631,19 @@ $$\boxed{v=4r\approx3.16\,\mathrm{m\,s^{-1}}},\qquad \boxed{\tau=\frac{2\pi}{4}\
 
 **检查：**$8(0.6125)=4.9\,\mathrm N=mg$。计算线速率时使用未舍入的半径。
 
+若本题未通过，回看[圆锥摆几何](#the-conical-pendulum)，收起示范后，独立做[两根绳的任务](#pendulum-retry)。
+
 </details>
 
-### Q7：碗内的水平圆周 {#q7-a-horizontal-circle-in-a-bowl}
+</div>
 
-A particle of mass $0.3\,\mathrm{kg}$ moves in a horizontal circle inside a fixed smooth hemispherical bowl of radius $0.6\,\mathrm m$. The circle's centre is $0.36\,\mathrm m$ below the bowl centre. Find the circle radius, normal reaction, angular speed and linear speed.
+<div class="lesson-check" markdown="1">
+
+### Q7 — 碗内的质点 {#q7-a-horizontal-circle-in-a-bowl}
+
+**Self-written.**
+
+**Question:** A particle of mass $0.3\,\mathrm{kg}$ moves in a horizontal circle inside a fixed smooth hemispherical bowl of radius $0.6\,\mathrm m$. The circle's centre is $0.36\,\mathrm m$ below the bowl centre. Find the circle radius, normal reaction, angular speed and linear speed.
 
 <details markdown="1">
 <summary>提示</summary>
@@ -567,11 +665,19 @@ $$\boxed{v=0.48\sqrt{\frac{g}{0.36}}\approx2.50\,\mathrm{m\,s^{-1}}}.$$
 
 **检查：**向上分量为 $4.9(0.6)=2.94\,\mathrm N=mg$，向心分量为 $4.9(0.8)=3.92\,\mathrm N=mr\omega^2$。两者都来自同一个法向反力。
 
+若本题未通过，回看[球碗几何](#motion-inside-a-smooth-bowl)，收起示范后，独立做[报告中的测量](#surface-retry)。
+
 </details>
 
-### Q8：核查接触模型 {#q8-check-the-contact-model}
+</div>
 
-A particle of mass $0.4\,\mathrm{kg}$ moves on a smooth fixed horizontal plane. A light inextensible string of length $1.25\,\mathrm m$ connects it to a fixed point $0.75\,\mathrm m$ above the plane. The string is taut. Find tension and normal reaction at angular speed $3\,\mathrm{rad\,s^{-1}}$, and find the angular speed at lifting off. Can the same contact model describe motion at $4\,\mathrm{rad\,s^{-1}}$?
+<div class="lesson-check" markdown="1">
+
+### Q8 — 平面上的质点 {#q8-check-the-contact-model}
+
+**Self-written.**
+
+**Question:** A particle of mass $0.4\,\mathrm{kg}$ moves on a smooth fixed horizontal plane. A light inextensible string of length $1.25\,\mathrm m$ connects it to a fixed point $0.75\,\mathrm m$ above the plane. The string is taut. Find tension and normal reaction at angular speed $3\,\mathrm{rad\,s^{-1}}$, and find the angular speed at lifting off. Can the same contact model describe motion at $4\,\mathrm{rad\,s^{-1}}$?
 
 <details markdown="1">
 <summary>提示</summary>
@@ -599,11 +705,19 @@ $$\boxed{\omega=\sqrt{\frac{g}{0.75}}\approx3.61\,\mathrm{rad\,s^{-1}}}.$$
 
 **检查：**在 $\omega=3$ 时，向心力为 $4.5(1/1.25)=3.6\,\mathrm N=mr\omega^2$。离面临界处的张力竖直分量恰好等于重力。
 
+若本题未通过，回看[接触条件](#contact-and-lifting-off-a-plane)，收起示范后，独立做[测得反力的任务](#contact-retry)。
+
 </details>
 
-### Q9：不同半径的两个质点 {#q9-two-particles-at-different-radii}
+</div>
 
-Particles $P$ and $Q$ of masses $0.3\,\mathrm{kg}$ and $0.2\,\mathrm{kg}$ rotate together on a smooth fixed horizontal table at $4\,\mathrm{rad\,s^{-1}}$. They lie on one radius in the order $O,P,Q$, with $O$ fixed. Light inextensible strings $OP$ and $PQ$ each have length $0.5\,\mathrm m$ and remain taut. Find both linear speeds and both tensions.
+<div class="lesson-check" markdown="1">
+
+### Q9 — 转动的两个质点 {#q9-two-particles-at-different-radii}
+
+**Self-written.**
+
+**Question:** Particles $P$ and $Q$ of masses $0.3\,\mathrm{kg}$ and $0.2\,\mathrm{kg}$ rotate together on a smooth fixed horizontal table at $4\,\mathrm{rad\,s^{-1}}$. They lie on one radius in the order $O,P,Q$, with $O$ fixed. Light inextensible strings $OP$ and $PQ$ each have length $0.5\,\mathrm m$ and remain taut. Find both linear speeds and both tensions.
 
 <details markdown="1">
 <summary>提示</summary>
@@ -629,11 +743,19 @@ $$T_{OP}-3.2=0.3(0.5)(4^2),\qquad \boxed{T_{OP}=5.6\,\mathrm N}.$$
 
 **检查：**$T_{OP}-T_{PQ}=2.4\,\mathrm N$，等于 $P$ 所需径向合力。相同角速率不代表相同线速率，也不代表两段绳张力相同。
 
+若本题未通过，回看[不同半径与研究对象](#connected-particles-and-different-radii)，收起示范后，独立做[拟议运动](#radial-retry)。
+
 </details>
 
-### Q10：光滑倾斜弯道 {#q10-a-smooth-banked-road}
+</div>
 
-A car of mass $900\,\mathrm{kg}$ follows a horizontal circle of radius $80\,\mathrm m$ on a smooth banked road. The outer edge is raised, and the acute bank angle $\alpha$ satisfies $\tan\alpha=1/4$. Ignore air resistance and model the car as a particle. Find the speed for steady circular motion and the normal reaction. Explain why this speed is not a maximum-speed result for a rough road.
+<div class="lesson-check" markdown="1">
+
+### Q10 — 弯道上的汽车 {#q10-a-smooth-banked-road}
+
+**Self-written.**
+
+**Question:** A car of mass $900\,\mathrm{kg}$ follows a horizontal circle of radius $80\,\mathrm m$ on a smooth banked road. The outer edge is raised, and the acute bank angle $\alpha$ satisfies $\tan\alpha=1/4$. Ignore air resistance and model the car as a particle. Find the speed for steady circular motion and the normal reaction. Explain why this speed is not a maximum-speed result for a rough road.
 
 <details markdown="1">
 <summary>提示</summary>
@@ -655,11 +777,19 @@ $$\boxed{R=\frac{900g\sqrt{17}}4\approx9.09\,\mathrm{kN}}.$$
 
 **检查：**向上分量为 $900g=8820\,\mathrm N$，向心分量是其四分之一，即 $2205\,\mathrm N$，等于 $900(14^2)/80$。
 
+若本题未通过，回看[反力分量](#friction-and-road-bends)，收起示范后，独立做[报告中的测量](#surface-retry)。
+
 </details>
 
-### Q11：卫星的轨道半径 {#q11-a-satellites-orbital-radius}
+</div>
 
-Model the Earth as a sphere of radius $6400\,\mathrm{km}$. A satellite of mass $400\,\mathrm{kg}$ moves at constant speed in a circular orbit $200\,\mathrm{km}$ above the surface. Gravitational acceleration at this height is $9\,\mathrm{m\,s^{-2}}$. Assume gravity is the only force on the satellite. Find the inward force, orbital speed, angular speed and orbital period.
+<div class="lesson-check" markdown="1">
+
+### Q11 — 一颗卫星 {#q11-a-satellites-orbital-radius}
+
+**Self-written.**
+
+**Question:** Model the Earth as a sphere of radius $6400\,\mathrm{km}$. A satellite of mass $400\,\mathrm{kg}$ moves at constant speed in a circular orbit $200\,\mathrm{km}$ above the surface. Gravitational acceleration at this height is $9\,\mathrm{m\,s^{-2}}$. Assume gravity is the only force on the satellite. Find the inward force, orbital speed, angular speed and orbital period.
 
 <details markdown="1">
 <summary>提示</summary>
@@ -683,24 +813,30 @@ $$\boxed{\tau=\frac{2\pi}{\omega}\approx5.38\times10^3\,\mathrm s}.$$
 
 **检查：**用未舍入值可得 $r\omega^2=9\,\mathrm{m\,s^{-2}}$ 和 $v\tau=2\pi r$。除重力外，不要额外加入支承反力或张力。
 
+若本题未通过，回看[轨道半径](#circular-orbits)，收起示范后，独立做[测得轨道的任务](#orbit-retry)。
+
 </details>
+
+</div>
 
 <!-- motion-transfer:start -->
 ## 独立选择方法 {#independent-method-choice}
 
 **自拟诊断任务。**自行选择受力方程及运动可行的判据。首次尝试时，保持推理提示和反馈折叠。
 
+<div class="lesson-check" markdown="1">
+
 **Question:** Two small blocks are to rotate without slipping on a rough horizontal turntable. Block $P$ has mass $0.2\,\mathrm{kg}$, radius $0.25\,\mathrm m$ and coefficient of friction $0.2$; block $Q$ has mass $0.8\,\mathrm{kg}$, radius $0.75\,\mathrm m$ and coefficient of friction $0.3$. At a constant angular speed $2\,\mathrm{rad\,s^{-1}}$, test the proposed motion for each block. Find the greatest common angular speed at which both can remain fixed relative to the disc. A student says the heavier block must be safer because its limiting friction is larger. Assess that reasoning. Ignore air resistance and model the blocks as particles.
 
 <details markdown="1">
-<summary>推理提示</summary>
+<summary>提示</summary>
 
 既求所需径向力，也求可提供的极限摩擦。分别检验每个物块的不等式，不要假定所有速率下摩擦都已达到极限。
 
 </details>
 
 <details markdown="1">
-<summary>反馈与独立核验</summary>
+<summary>解答与检查</summary>
 
 竖直方向 $R=mg$。静摩擦是唯一的水平力；不滑动时必须提供朝圆心的 $f=mr\omega^2$，并满足 $f\leq\mu mg$。
 
@@ -718,19 +854,25 @@ $$\boxed{\omega_{\text{max}}=\sqrt{3.92}\approx1.98\,\mathrm{rad\,s^{-1}}}.$$
 
 </details>
 
-### 再尝试：改变问题结构 {#retry-change-the-structure}
+</div>
+
+<div class="lesson-check" markdown="1">
+
+<span id="contact-retry"></span>
+
+### 测得的反力 {#retry-change-the-structure}
 
 **Question:** A $0.5\,\mathrm{kg}$ particle moves in a horizontal circle on a fixed smooth horizontal plane. A light inextensible string of length $1\,\mathrm m$ joins it to a fixed point $0.6\,\mathrm m$ above the plane. The string is taut, and the normal reaction is measured as half the particle's weight. Find the angular speed, tension and linear speed. Check that the assumed contact is possible. Ignore air resistance.
 
 <details markdown="1">
-<summary>再尝试提示</summary>
+<summary>提示</summary>
 
 将测得的反力用于竖直平衡，求张力竖直分量，再用张力水平分量提供径向合力。
 
 </details>
 
 <details markdown="1">
-<summary>再尝试反馈与检查</summary>
+<summary>解答与检查</summary>
 
 半径为 $\sqrt{1^2-0.6^2}=0.8\,\mathrm m$，反力为 $R=0.5mg=2.45\,\mathrm N$。因此：
 
@@ -743,7 +885,300 @@ $$\boxed{v=0.8\sqrt{\frac{49}{6}}\approx2.29\,\mathrm{m\,s^{-1}}}.$$
 这里 $R>0$、$T>0$，且 $0.6\omega^2=4.9<g$，接触模型成立。独立用 $R=m(g-h\omega^2)$ 可恢复 $2.45\,\mathrm N$。光滑面上无摩擦；测得反力帮助确定张力，并不是另一个向心力。
 
 </details>
+
+</div>
 <!-- motion-transfer:end -->
+
+
+## 修复后重新尝试 {#repair-and-retry}
+
+找到并修复错误原因后，收起之前的解答，再做对应的新任务。借助帮助完成，要记录为有帮助完成，之后再检验独立表现。
+
+<div class="lesson-check" markdown="1">
+
+### 关于运动质点的一个说法 {#turning-check}
+
+**Self-written.**
+
+**Question:** A $0.2\,\mathrm{kg}$ particle moves at constant speed $2\,\mathrm{m\,s^{-1}}$ on a smooth fixed horizontal table, tied by a taut horizontal string to the circle centre. The radius is $0.5\,\mathrm m$. A student says that unchanged KE means no resultant force, then draws both tension and an extra inward force called centripetal force. Assess both ideas, find the tension and state its work over one revolution.
+
+<details markdown="1">
+<summary>提示</summary>
+
+区分速度大小与方向。每一股真实的力都要说清由谁施加。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+两个想法都不成立。速度不断转向，需要指向圆心的加速度；“向心力”是在描述真实力的合力。桌面反力竖直平衡重力，张力是唯一的水平力：
+
+$$T=\frac{0.2(2^2)}{0.5}=1.6\,\mathrm N.$$
+
+各处张力都垂直于切向速度，功率始终为零，因此一周做功为 $0\,\mathrm J$。动能不变与总功为零、径向合力非零可以同时成立。回看[径向加速度](#radial-acceleration)与[真实受力](#forces-in-a-horizontal-circle)，再试[被记录的质点](#vector-retry)。
+
+</details>
+
+</div>
+
+<div class="lesson-check" markdown="1">
+
+### 同一转盘上的两个点 {#rotation-retry}
+
+**Self-written.**
+
+**Question:** A disc turns anticlockwise with period $0.8\,\mathrm s$. Points $P$ and $Q$ are $0.3\,\mathrm m$ and $0.6\,\mathrm m$ from its axis. Find the angular speed and revolutions per minute, and each linear speed. Compare the acceleration magnitudes. State the directions of velocity and acceleration when $Q$ is directly to the left of the centre.
+
+<details markdown="1">
+<summary>提示</summary>
+
+一个周期对应完整转角，也对应各点各自的一圈路程。画出最左侧的切线。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+共同角速率与每分钟转数为
+
+$$\omega=\frac{2\pi}{0.8}=2.5\pi\,\mathrm{rad\,s^{-1}},\qquad n=\frac{60}{0.8}=75\,\mathrm{rpm}.$$
+
+$$v_P=0.75\pi\approx2.36\,\mathrm{m\,s^{-1}},\qquad v_Q=1.5\pi\approx4.71\,\mathrm{m\,s^{-1}}.$$
+
+同一角速率下 $a=r\omega^2$，所以 $Q$ 的加速度大小是 $P$ 的两倍。最左侧点的速度向下，加速度向右。核对 $v_P(0.8)=2\pi(0.3)$，$Q$ 同理。转一圈用时相同，不代表线速率相同。回补[角量与线量](#angular-speed-and-angular-velocity)。
+
+</details>
+
+</div>
+
+<div class="lesson-check" markdown="1">
+
+### 被记录的质点 {#vector-retry}
+
+**Self-written.**
+
+**Question:** A particle of mass $0.4\,\mathrm{kg}$ has position vector $\mathbf r=(2+0.5\cos4t)\mathbf i+(-1+0.5\sin4t)\mathbf j$ metres, with $t$ in seconds. Show that its path is a circle and its speed is constant. Find its velocity, acceleration and resultant force as vectors. Assess the claim that the acceleration vector is constant because its magnitude is constant.
+
+<details markdown="1">
+<summary>提示</summary>
+
+先找固定圆心，再比较加速度与位置。两个分量都要用链式法则求导。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+圆心为 $(2,-1)$，因为
+
+$$(x-2)^2+(y+1)^2=0.25(\cos^24t+\sin^24t)=0.25.$$
+
+$$\mathbf v=-2\sin4t\,\mathbf i+2\cos4t\,\mathbf j,\qquad \lvert\mathbf v\rvert=2\,\mathrm{m\,s^{-1}}.$$
+
+$$\mathbf a=-8\cos4t\,\mathbf i-8\sin4t\,\mathbf j,\qquad \mathbf F=-3.2\cos4t\,\mathbf i-3.2\sin4t\,\mathbf j.$$
+
+设 $\mathbf c=2\mathbf i-\mathbf j$，则 $\mathbf a=-16(\mathbf r-\mathbf c)$，指向圆心。大小 $8$ 与 $v^2/r=4/0.5$ 相同，但方向随时间改变，因此说法不成立。核对 $\mathbf a\cdot\mathbf v=0$：速率不增大，也完全可以有非零加速度。若漏了内层导数 $4$，回看[例题 2](#example-2-showing-a-path-is-a-circle)；圆心错时，先减固定偏移，再检验半径。
+
+</details>
+
+</div>
+
+<div class="lesson-check" markdown="1">
+
+### 一个拟议的运动 {#radial-retry}
+
+**Self-written.**
+
+**Question:** A $0.3\,\mathrm{kg}$ particle is tied to a fixed point on a smooth horizontal table by a taut light string of length $0.6\,\mathrm m$. The string breaks if tension exceeds $4.5\,\mathrm N$. Test a proposed uniform circular speed of $3.2\,\mathrm{m\,s^{-1}}$, find the greatest allowed linear speed, and find the table reaction. Describe the initial path if the string breaks.
+
+<details markdown="1">
+<summary>提示</summary>
+
+需要的张力与允许的张力要分别算。竖直方向没有加速度。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+拟议运动需要
+
+$$T=\frac{0.3(3.2^2)}{0.6}=5.12\,\mathrm N>4.5\,\mathrm N,$$
+
+因此绳不能维持该运动。允许边界上
+
+$$\frac{0.3v^2}{0.6}=4.5,\qquad v_{\max}=3\,\mathrm{m\,s^{-1}}.$$
+
+桌面反力为 $0.3g=2.94\,\mathrm N$。绳水平拉，不承担重力。断绳瞬间速度沿切线；光滑桌面上随后沿直线运动，直到其他边界或力介入。若另加了一股向心力，或让水平张力平衡重力，回补[真实受力](#forces-in-a-horizontal-circle)。
+
+</details>
+
+</div>
+
+<div class="lesson-check" markdown="1">
+
+### 选择转盘上的位置 {#friction-retry}
+
+**Self-written.**
+
+**Question:** A $0.2\,\mathrm{kg}$ block is to stay fixed relative to a horizontal disc rotating at $4\,\mathrm{rad\,s^{-1}}$. The coefficient of friction is $0.25$. Find the greatest allowed distance from the axis, and test distances $0.12\,\mathrm m$ and $0.20\,\mathrm m$. At the first distance, would doubling the coefficient double the actual friction? Do not model motion after slipping starts.
+
+<details markdown="1">
+<summary>提示</summary>
+
+先求拟议圆周需要多少力，再与摩擦上限比较。这次未知的是半径。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+这里 $R=0.2g=1.96\,\mathrm N$，摩擦上限为 $0.49\,\mathrm N$。不滑动要求
+
+$$0.2r(4^2)\leq0.49,\qquad r\leq0.153125\,\mathrm m.$$
+
+允许的最大半径为 $0.153\,\mathrm m$。在 $0.12\,\mathrm m$ 处，需要向心摩擦 $0.384\,\mathrm N$，未达上限；在 $0.20\,\mathrm m$ 处则需要 $0.64\,\mathrm N$，静摩擦模型无法提供。系数加倍提高的是上限；同一运动中，$0.12\,\mathrm m$ 处实际摩擦仍为 $0.384\,\mathrm N$。用 $r\omega^2=\mu g$ 核对边界。回补[需要量与摩擦极限](#friction-and-road-bends)。
+
+</details>
+
+</div>
+
+<div class="lesson-check" markdown="1">
+
+### 两根备选的绳 {#pendulum-retry}
+
+**Self-written.**
+
+**Question:** A particle of mass $0.2\,\mathrm{kg}$ is to form a conical pendulum at angular speed $\sqrt{49/3}\,\mathrm{rad\,s^{-1}}$. Two light inextensible strings, of lengths $0.8\,\mathrm m$ and $0.5\,\mathrm m$, are available. Decide which can form a nonzero horizontal circle with a fixed upper end. For each possible case find the radius and tension.
+
+<details markdown="1">
+<summary>提示</summary>
+
+比较角速率要求的竖直深度与各绳长。零半径或虚数半径都不是所要求的圆周。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+竖直与径向方程要求
+
+$$h=\frac{g}{\omega^2}=\frac{9.8}{49/3}=0.6\,\mathrm m.$$
+
+$0.8$ 米的绳能达到这个深度，并留出正的水平半径：
+
+$$r=\sqrt{0.8^2-0.6^2}=\sqrt{0.28}\approx0.529\,\mathrm m,\qquad T=0.2(0.8)\frac{49}{3}\approx2.61\,\mathrm N.$$
+
+用未舍入张力核对 $T(h/0.8)=mg$。$0.5$ 米的绳太短，会要求 $\cos\theta=0.6/0.5=1.2$。增大质量也修复不了几何矛盾。若接受了短绳，或把整条绳长当半径，回看[夹角与非零半径条件](#the-conical-pendulum)。
+
+</details>
+
+</div>
+
+<div class="lesson-check" markdown="1">
+
+### 倾斜表面旁的质点 {#cone-check}
+
+**Self-written.**
+
+**Question:** A $0.2\,\mathrm{kg}$ particle moves uniformly in a horizontal circle of radius $0.4\,\mathrm m$ inside a fixed smooth cone whose semi-vertical angle is $60^\circ$. Only weight and the normal reaction act. Draw their directions and find the normal reaction, angular speed and height above the vertex. A student uses $R\cos60^\circ=mg$. Assess this equation.
+
+<details markdown="1">
+<summary>提示</summary>
+
+题目给的是侧面母线的角度，不是法向反力的角度。先在竖直截面里定位。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+反力垂直侧面，斜向上且朝内，与竖直方向成 $30^\circ$。因此
+
+$$R\sin60^\circ=0.2g,\qquad R=\frac{3.92}{\sqrt3}\approx2.26\,\mathrm N.$$
+
+$$R\cos60^\circ=0.2(0.4)\omega^2,\qquad\omega^2=\frac{24.5}{\sqrt3},\qquad\omega\approx3.76\,\mathrm{rad\,s^{-1}}.$$
+
+$$z=\frac{0.4}{\tan60^\circ}\approx0.231\,\mathrm m.$$
+
+学生把母线角误当成了反力角。检查真正向上的分量是否等于 $mg$，以及 $R>0$。回看[垂直圆锥侧面的反力](#motion-inside-a-smooth-cone)，再做[报告中的测量](#surface-retry)。
+
+</details>
+
+</div>
+
+<div class="lesson-check" markdown="1">
+
+### 报告中的一个测量值 {#surface-retry}
+
+**Self-written.**
+
+**Question:** A report claims that the normal reaction on a particle of mass $m$ moving in a horizontal circle is $2mg$. Test that claim in each proposed model: (a) inside a fixed smooth bowl of radius $0.6\,\mathrm m$, with the circle centre $0.3\,\mathrm m$ below the sphere centre; (b) inside a fixed smooth cone of semi-vertical angle $45^\circ$. Only weight and the normal reaction act. If a model is possible, find its circle radius and angular speed.
+
+<details markdown="1">
+<summary>提示</summary>
+
+先检查竖直平衡，再解径向方程。几何给定后，增大角速率不能补救错误的竖直分量。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+碗内向上分量为 $(2mg)(0.3/0.6)=mg$，竖直平衡可以成立：
+
+$$r=\sqrt{0.6^2-0.3^2}=\sqrt{0.27}\approx0.520\,\mathrm m,\qquad\omega=\sqrt{\frac{g}{0.3}}\approx5.72\,\mathrm{rad\,s^{-1}}.$$
+
+再核对 $R(r/0.6)=mr\omega^2$ 和 $0<0.3<0.6$。圆锥内，所报反力的向上分量为 $2mg\sin45^\circ=\sqrt2mg>mg$，会产生向上加速度；任何角速率都不能让它符合这个水平圆周模型。两种表面的法向不同。回补[球碗几何](#motion-inside-a-smooth-bowl)或[圆锥几何](#motion-inside-a-smooth-cone)；反力为正只是必要条件，不足以保证整个模型成立。
+
+</details>
+
+</div>
+
+<div class="lesson-check" markdown="1">
+
+### 测得的轨道速率 {#orbit-retry}
+
+**Self-written.**
+
+**Question:** A spherical planet has radius $6.0\times10^6\,\mathrm m$. A satellite has circular orbital speed $6000\,\mathrm{m\,s^{-1}}$ and gravitational acceleration $4\,\mathrm{m\,s^{-2}}$ at the orbit. Gravity is its only force. Find the orbital radius, height above the surface, angular speed and period. Explain why no supporting force is needed.
+
+<details markdown="1">
+<summary>提示</summary>
+
+观测到的加速度指向行星中心。先由加速度求轨道半径，再减去行星半径。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+引力就是全部径向合力：
+
+$$\frac{6000^2}{r}=4,\qquad r=9.0\times10^6\,\mathrm m,\qquad h=r-6.0\times10^6=3.0\times10^6\,\mathrm m.$$
+
+$$\omega=\frac{6000}{9.0\times10^6}=\frac1{1500}\,\mathrm{rad\,s^{-1}},\qquad\tau=3000\pi\,\mathrm s\approx9.42\times10^3\,\mathrm s.$$
+
+核对 $r\omega^2=4$。卫星在引力下加速，并不是静止在桌面上方，所以没有理由再加支持力或额外的“向心力”。若把 $v^2/g$ 得到的量当成了离地高度，回看[中心与表面](#circular-orbits)。
+
+</details>
+
+</div>
+
+## 稍后回来提取 {#later-check}
+
+下一步做入口[混合题](/zh/alevel/a2-mathematics/mechanics/#mixed-problems)。下一次学习先不看示范，完成[被记录的质点](#vector-retry)与[报告中的测量](#surface-retry)，再做[稍后回顾](/zh/alevel/a2-mathematics/mechanics/#later-review)。用英文解释为什么径向合力非零时动能仍可不变，以及为什么法向反力不一定等于重力。解释有误回看[真实受力](#forces-in-a-horizontal-circle)，力方向错误回看[表面几何](#motion-inside-a-smooth-cone)，并记录使用过的帮助。
+
+<!-- motion-sources:start -->
+## 来源与范围 {#sources-and-scope}
+
+[OxfordAQA 9660 大纲 v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf)，M2.7：printed 30 / PDF 29（1-based）；整个 M2 范围为 printed 27–30 / PDF 26–29。范围包括匀速圆周、水平圆周或引力朝圆心的圆轨道、角速率换算、位置／速度／加速度向量及圆锥摆。
+
+本次配对阅读 MA05 January 2025 [Q3(a)–(b)，QP pp.6–7](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-question-paper.pdf#page=6)与 [MS pp.7–8，Version 1.0 Final](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-mark-scheme.pdf#page=7)。先检查摩擦是否足够，再接受不滑动模型；只有极限才取等号。位置的两个分量都要求导，再乘质量得到实际摩擦向量。show 题应在给出的舍入结果之前保留足够的未舍入证据。
+
+全部题目均为 **Self-written / 自拟题**，无官方分值。January 2025 卷默认两位有效数字，题内另有要求时依题意；本页自拟题依开头约定。教材对应第 15 章 15.1–15.3 节，印刷 pp.240–251。球碗、圆锥、弯道与接触题用于迁移同一受力方法；本课不把非匀速竖直圆周作为 MA05 必考内容。
+<!-- motion-sources:end -->
 
 ## 方法小结 {#method-summary}
 

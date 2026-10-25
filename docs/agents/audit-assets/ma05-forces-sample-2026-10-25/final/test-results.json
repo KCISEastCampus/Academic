@@ -1,0 +1,38 @@
+{
+  "commands": [
+    {
+      "command": "node scripts/test-mechanics-forces.js",
+      "exitCode": 0,
+      "finalAffectedRerun": true
+    },
+    {
+      "command": "node scripts/test-mechanics-bilingual.js",
+      "exitCode": 0,
+      "finalAffectedRerun": true,
+      "coursePairs": 10,
+      "uniqueTeXFragments": 1646
+    },
+    {
+      "command": "node scripts/test-mechanics-transfer-foundations.js",
+      "exitCode": 0
+    },
+    {
+      "command": "node scripts/test-frontend-ux.js",
+      "exitCode": 0
+    }
+  ],
+  "jekyllBuildSeconds": 21.764,
+  "pagefind": {
+    "version": "1.5.2",
+    "pages": 296,
+    "languages": 2,
+    "words": 45745,
+    "note": "Index generation; search UI was not separately exercised."
+  },
+  "markdownlint": {
+    "coursePages": 2,
+    "passed": true,
+    "records": 4
+  },
+  "limits": "Source/math/build checks are distinct from independent review, actual browser verification and student trial."
+}

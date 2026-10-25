@@ -7,59 +7,106 @@ subject: m2
 permalink: /alevel/a2-mathematics/mechanics/forces-equilibrium-and-friction/
 toc_headings: h2
 study_page: true
+reading_layout: true
 ---
 
-[A2 Mechanics](/alevel/a2-mathematics/mechanics/) · M2.3 Statics and forces
+[A2 Mechanics](/alevel/a2-mathematics/mechanics/) · MA05 · M2.3
+{:.lesson-meta}
 
-Draw the forces acting on one body, resolve them in two perpendicular directions and use the conditions for equilibrium. Decide whether friction is at its limiting value before using $F=\mu R$.
+A book can stay on a table even though gravity pulls it down. The table pushes it up, so the two forces balance. This lesson starts with that idea: **which forces act on the object, and do they balance?**
 
-- **Learning:** start with [force diagrams](#force-diagrams), then study [resultants](#the-resultant-of-coplanar-forces), [equilibrium](#concurrent-forces-in-equilibrium) and [friction](#friction-and-limiting-equilibrium).
-- **Homework help:** for an inclined plane, try axes parallel and perpendicular to the plane. Mark the positive directions.
-- **Revision:** try [practice](#practice) with the solutions closed. Check the friction direction and whether contact is possible.
+You will learn to draw the forces, deal with forces at angles, and decide whether friction can keep an object at rest.
 
-Textbook: Chapter 11, Sections 11.1–11.3 (printed pp. 158–170, up to the start of Section 11.4). Moments and rigid objects in equilibrium are covered separately.
+Start with [one object's forces](#force-diagrams), then [components](#the-resultant-of-coplanar-forces), [equilibrium](#concurrent-forces-in-equilibrium) and [friction](#friction-and-limiting-equilibrium). If you are revising, go to [practice](#practice).
 
-**Before you start:** know weight, tension, normal reaction, basic trigonometry and vector components. Review [Mathematical Modelling](/alevel/a2-mathematics/mechanics/mathematical-modelling/) if needed. Use $g=9.8\,\mathrm{m\,s^{-2}}$ unless another value is given. Keep exact values during calculations; round final numerical answers to three significant figures, or one decimal place for angles, unless asked otherwise.
+You need simple equations and right-angled triangles. Need a reminder? Review [AS force diagrams](/alevel/as-mathematics/forces/#l24-concept) or the [right-triangle ratios below](#triangle-reminder).
+{:.lesson-meta}
 
-All worked examples and practice questions are self-written, not official past-paper questions. No official marks are assigned.
+All examples and tasks below are self-written. The [source notes](#sources-and-scope) explain their scope and rounding convention.
+{:.lesson-meta}
 
 ## Force Diagrams
 
-Name the body first. Draw only forces **acting on that body**. A force it exerts on another body belongs on the other body's diagram.
+Choose the object before drawing anything. For a book on a table, we are drawing **forces on the book**:
 
-| Force | Direction and point of action |
-|---|---|
-| Weight | Vertically downwards, through the centre of mass |
-| Normal reaction | Perpendicular to the surface, pushing the body away from it |
+- The Earth pulls the book down. This is its **weight**.
+- The table pushes the book away from its surface. This is the **normal reaction**.
+
+The word *normal* means perpendicular. On a horizontal table the reaction is upwards; on a vertical wall it is horizontal. It does not always point upwards.
+
+The book also pushes down on the table, but that force acts on the table. Leave it off the book's diagram. The book's weight and the table's reaction can balance, but they are not a Newton's-third-law pair.
+
+For a small object whose turning does not matter, use the **particle model**: draw the forces through one point. For a rod or ladder, keep the actual points where forces act; their turning effect matters in the [next lesson](/alevel/a2-mathematics/mechanics/moments-and-rigid-objects/).
+
+| Force | How to choose its direction |
+| --- | --- |
+| Weight | Vertically downwards |
+| Normal reaction | Perpendicular to the contact, pushing away from the surface |
 | Tension | Along a taut string, pulling towards its other end |
-| Thrust | Along a rod which is pushing the body |
-| Friction | Along the contact surface, opposing relative sliding or the tendency to slide |
-| Applied force | In the direction stated in the question |
-| Hinge force | Usually unknown; use two perpendicular components |
+| Thrust | Along a rod which is pushing the object |
+| Friction | Along the contact, opposing sliding or the tendency to slide |
+| Applied force | Follow the direction given in the question |
+| Hinge force | Use two perpendicular components if its direction is unknown |
 
-A smooth contact has no friction. A rough contact **may** have friction: rough does not mean that friction must be non-zero or limiting.
+A **smooth** contact supplies no friction. A **rough** contact can supply friction, but the actual friction may be zero. We will work out its size [later](#friction-and-limiting-equilibrium).
 
-The diagrams show force directions; arrow lengths are not drawn to a common force scale.
+The **resultant** is the single force with the same combined effect as the forces on a particle. Do not add it to the diagram as one more force. Velocity and acceleration are not forces either.
 
-For a particle, draw the forces through one point. For a rod or ladder, keep the points of action: moving a force to another point may change its turning effect. A uniform rod's weight acts at its midpoint.
+The diagrams below show directions; arrow lengths are not to a common force scale.
 
-**Do not add the resultant as an extra force.** It replaces the original forces when describing their combined effect on a particle. Do not draw velocity or acceleration as forces either.
+<div class="lesson-check" markdown="1">
+
+### Try one object {#first-check}
+
+**Question:** A book is at rest on a rough horizontal table. There is no horizontal applied force. Draw the forces acting on the book. A student adds a downward arrow labelled "the book pushes on the table" and says there must be nonzero friction because the table is rough. Assess both suggestions.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+For each arrow, ask who applies the force and which object receives it. Is any horizontal force needed to balance another?
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+Draw weight downwards and the normal reaction upwards, with equal magnitudes. The force exerted by the book on the table belongs on the table's diagram. No horizontal force is needed here, so friction is zero even though the contact is rough.
+
+If you included a force on the table, return to the first two paragraphs above and label each force “force **on the book** by …”.
+
+</details>
+
+</div>
 
 ## The Resultant of Coplanar Forces
 
-**Coplanar forces** lie in one plane. Resolve all forces in the same two perpendicular directions, then add their signed components.
+Suppose you pull a handle diagonally. The pull has a rightwards effect and an upwards effect. We describe those two effects using **components**. We have not added two new physical forces: the components are another way to represent the same pull.
 
-With $\mathbf i$ to the right and $\mathbf j$ upwards, write the resultant as
+In the diagram, the force has magnitude $P$ and makes angle $\theta$ with the positive horizontal direction. Its two components make a right-angled triangle.
 
-$$\mathbf S=X\mathbf i+Y\mathbf j,\qquad \lvert\mathbf S\rvert=\sqrt{X^2+Y^2}.$$
+![A diagonal force P at angle theta above the horizontal, with a right-angled triangle showing horizontal component P cos theta and vertical component P sin theta. Dashed lines are projections.](/assets/img/a2-math-mech/force-components-sample.svg)
 
-For a force $P$ at angle $\theta$ measured anticlockwise from the positive horizontal direction:
+<span id="triangle-reminder"></span>
+
+In a right-angled triangle, cosine is the adjacent side divided by the hypotenuse; sine is the opposite side divided by the hypotenuse. Here the hypotenuse is $P$, so
+
+$$\cos\theta=\frac{F_x}{P},\qquad\sin\theta=\frac{F_y}{P}.$$
+
+Multiplying by the hypotenuse gives the components:
 
 $$F_x=P\cos\theta,\qquad F_y=P\sin\theta.$$
 
-If the angle is given from the vertical, the vertical component uses cosine. Sketch the direction instead of memorising which component uses sine.
+If the angle is measured from the vertical instead, the vertical component is beside the angle and uses cosine. Locate the angle on a sketch before choosing a formula.
 
-For direction, first check the signs of $X$ and $Y$. Find a reference angle from the component magnitudes, then state the correct quadrant. If $X=0$, the resultant is vertical; if both components are zero, it has no direction.
+**Coplanar** means the forces lie in one plane. Choose the same two perpendicular directions for all of them. Here take right and up as positive; a leftwards or downwards component is negative.
+
+Add the horizontal components to get $X$, and the vertical components to get $Y$. With unit vectors $\mathbf i$ to the right and $\mathbf j$ upwards, the resultant is
+
+$$\mathbf S=X\mathbf i+Y\mathbf j,\qquad \lvert\mathbf S\rvert=\sqrt{X^2+Y^2}.$$
+
+The square root comes from Pythagoras. For the direction, sketch the signs first, then find the acute reference angle from the component magnitudes. This avoids choosing the wrong quadrant. If $X=0$, the nonzero resultant is vertical; if both components are zero, the resultant has no direction.
+
+<div class="worked-example" markdown="1">
 
 ### Example 1 — Add components and check the quadrant
 
@@ -82,6 +129,10 @@ $$\boxed{\mathbf P=(6\mathbf i-8\mathbf j)\,\mathrm N}.$$
 **Check:** $\mathbf S+\mathbf P=\mathbf0$. The extra force has the same magnitude and the opposite direction.
 
 **Common mistake:** reporting a negative angle from $\tan^{-1}(Y/X)$ without checking the quadrant.
+
+</div>
+
+<div class="worked-example" markdown="1">
 
 ### Example 2 — Resolve forces given by angles
 
@@ -107,15 +158,25 @@ above the positive horizontal direction, to the nearest tenth of a degree.
 
 **Check:** the second force points left, so its horizontal component must be negative. Adding $10+8+4$ would ignore all directions.
 
+</div>
+
+Try [Q2 and Q3](#q2--a-resultant-below-the-negative-horizontal-direction) with their help closed, then return to [equilibrium](#concurrent-forces-in-equilibrium).
+
 ## Concurrent Forces in Equilibrium
 
-**Concurrent forces** have lines of action passing through one point. For a particle in equilibrium, acceleration is zero, so
+Forces balance when they have no combined accelerating effect. In equilibrium the acceleration is zero, so the total force is zero in **each** direction:
 
 $$\sum F_x=0,\qquad\sum F_y=0.$$
 
-Equilibrium can mean rest or constant velocity. **Constant speed alone is not enough:** a changing direction means changing velocity.
+The symbol $\sum$ means “add all of these”. After choosing right as positive, for example, add rightwards components and subtract leftwards ones. “Total equals zero” is the same statement as “rightwards total equals leftwards total”.
 
-For a rigid body, zero resultant force alone does not ensure equilibrium. Forces acting along different lines can cause turning. The next lesson adds the condition on moments.
+Equilibrium can mean rest or motion at a constant velocity. Constant speed alone is not enough: travelling round a circle changes the direction of velocity and requires a resultant force.
+
+**Concurrent forces** have lines of action passing through one point. The examples here concern particles. For an extended rigid body, balanced forces can still cause turning; the next lesson checks moments as well.
+
+With a taut light string, tension pulls along the string; it cannot push. A negative calculated tension would tell you that the assumed arrangement is not possible.
+
+<div class="worked-example" markdown="1">
 
 ### Example 3 — A load supported by two strings
 
@@ -143,6 +204,10 @@ $$\boxed{T_A=30\,\mathrm N},\qquad\boxed{T_B=30\sqrt3\,\mathrm N\approx52.0\,\ma
 
 **Common mistake:** setting $T_A+T_B=60$. It is their vertical components that balance the weight.
 
+</div>
+
+<div class="worked-example" markdown="1">
+
 ### Example 4 — Find the angle from the geometry
 
 **Question:** A particle $B$ of weight $20\,\mathrm N$ hangs from a fixed point $A$ on a vertical wall by a light taut string of length $1\,\mathrm m$. A horizontal force pulls $B$ away from the wall and holds it at rest $0.6\,\mathrm m$ from the wall, below $A$. Find the tension and horizontal force.
@@ -158,6 +223,18 @@ $$0.8T=20\quad\Rightarrow\quad\boxed{T=25\,\mathrm N},$$
 $$P=0.6T\quad\Rightarrow\quad\boxed{P=15\,\mathrm N}.$$
 
 **Check:** the horizontal distance is not the string length. The component fractions satisfy $0.6^2+0.8^2=1$.
+
+</div>
+
+### Choosing axes on a slope {#slope-components}
+
+On a slope, use one axis along the surface and the other perpendicular to it. This puts the reaction entirely on the perpendicular axis, so it disappears from the equation along the slope.
+
+For a slope at angle $\alpha$ to the horizontal, with $0<\alpha<90^\circ$, its perpendicular is tilted by the same angle from the vertical. The angle between the downward weight and the direction into the plane is therefore $\alpha$.
+
+In a right-angled triangle with weight $W$ as the hypotenuse, the component into the plane is beside that angle, so it is $W\cos\alpha$. The component down the slope is opposite the angle, so it is $W\sin\alpha$. The weight itself still points vertically down; these are its two components in the chosen axes.
+
+<div class="worked-example" markdown="1">
 
 ### Example 5 — A string inclined to a smooth plane
 
@@ -183,26 +260,38 @@ $$\boxed{R=20\sqrt3\,\mathrm N\approx34.6\,\mathrm N}.$$
 
 **Common mistake:** using $R=60\cos30^\circ$. This misses the string's normal component. A negative $R$ would mean that this contact model is impossible: the plane cannot pull the particle towards it.
 
+</div>
+
+Try [Q4](#q4--two-strings-with-given-lengths) and [Q5](#q5--contact-with-a-smooth-plane), then return to [friction](#friction-and-limiting-equilibrium).
+
 ## Friction and Limiting Equilibrium
 
-For a rough contact, $\mu$ is the **coefficient of friction**, and $R$ is the normal reaction. While the body remains at rest, the friction magnitude satisfies
+Think of gently pushing a box that stays at rest. Friction balances your push. Push a little harder, and friction can become larger too. It does not automatically start at its largest value.
+
+Call the **magnitude** of friction $F$, and the normal reaction $R$. The **coefficient of friction** $\mu$ tells us the limit in this contact model:
 
 $$0\leq F\leq\mu R.$$
 
-Friction takes the value needed for equilibrium, up to its maximum $\mu R$. It can be zero. At **limiting equilibrium**, the body is just about to slide:
+Read this as “the friction needed must be between zero and the maximum available”. The coefficient has no units. A rougher contact may allow a larger maximum without needing a larger actual friction.
+
+At **limiting equilibrium**, the object is still at rest but is on the point of slipping. Only at this boundary do we set
 
 $$F=\mu R.$$
 
-First decide which way the body would tend to slide. Friction acts in the opposite direction. If an applied force changes, the tendency to slide may reverse.
+To solve a rest problem, first find the reaction from the forces perpendicular to the surface. Then find the friction needed along it. Finally compare the needed friction with the maximum. If the need exceeds the maximum, the assumed rest is impossible.
 
-| Wording in the question | What to do |
-|---|---|
-| At rest or in equilibrium | Find the required friction, then check $F\leq\mu R$ |
-| Just about to move or on the point of slipping | Use $F=\mu R$ in the direction opposing the stated tendency |
-| Find the least coefficient for equilibrium | Find $F$ and $R$, then use $\mu_{\min}=\frac{F}{R}$ when $R>0$ |
-| Find a range of applied forces | Check both possible slipping directions |
+Which way does friction act? Imagine the contact supplying no friction while the other forces stay the same. Which way would they tend to make the object slide? Friction acts the other way. Changing an applied force can reverse that tendency.
 
-The usual sliding-friction model also uses $F=\mu R$ during sliding, with friction opposing the relative motion. The problems below concern equilibrium and the point at which sliding starts.
+| Wording in the question | What it tells you |
+| --- | --- |
+| At rest or in equilibrium | Find the required friction and test $F\leq\mu R$ |
+| Just about to move or on the point of slipping | The needed friction has reached $F=\mu R$ |
+| Least coefficient for equilibrium | If $R>0$, the threshold is $\mu_{\min}=\frac{F}{R}$ |
+| Range of applied forces | Too little and too much force may cause slipping in different directions; check both |
+
+For an object already sliding, the usual sliding-friction model also uses $F=\mu R$, opposite the relative motion. The rest problems below ask whether sliding can start.
+
+<div class="worked-example" markdown="1">
 
 ### Example 6 — Friction need not be limiting
 
@@ -215,6 +304,10 @@ $$\mu R=0.4(50)=20\,\mathrm N.$$
 Since $12<20$, equilibrium is possible and friction is **not** limiting. If the applied force rises gradually, limiting equilibrium occurs at $20\,\mathrm N$.
 
 **Check:** with no horizontal applied force, no friction would be needed. The same rough surface does not produce $20\,\mathrm N$ of friction in every case.
+
+</div>
+
+<div class="worked-example" markdown="1">
 
 ### Example 7 — An angled pull reduces the reaction
 
@@ -235,6 +328,10 @@ $$\boxed{\mu=\frac{F}{R}=\frac{\sqrt3}{4}\approx0.433}.$$
 **Check:** $80+20=100$ balances the vertical forces. Using $R=100$ would give the wrong coefficient.
 
 If a force pushes down at an angle instead, its downward component **increases** $R$. Always use the actual vertical equation.
+
+</div>
+
+<div class="worked-example" markdown="1">
 
 ### Example 8 — A horizontal push on an inclined plane
 
@@ -266,7 +363,15 @@ $$\frac45P-30=\frac12\left(40+\frac35P\right),$$
 
 $$P=100\,\mathrm N.$$
 
-Both inequalities hold between these endpoints, giving
+To check the whole interval, use both sides of the friction inequality:
+
+$$30-\frac45P\leq\frac12\left(40+\frac35P\right)
+\quad\Rightarrow\quad P\geq\frac{100}{11},$$
+
+$$30-\frac45P\geq-\frac12\left(40+\frac35P\right)
+\quad\Rightarrow\quad P\leq100.$$
+
+Both conditions must hold at once, so
 
 $$\boxed{\frac{100}{11}\leq P\leq100}.$$
 
@@ -276,9 +381,13 @@ Here $P$ is measured in newtons. Within the range, friction acts up the plane fo
 
 **Common mistake:** keeping friction up the plane for both endpoints, or using $R=50\cos\alpha$ and ignoring the push's normal component.
 
+</div>
+
 ## Practice
 
-Allow about 40–50 minutes. Draw a force diagram for each contact or string problem. Use a calculator in degree mode where angles are given in degrees.
+These are self-written tasks. Try them with both panels closed, and mark any hint you use. Draw a force diagram for each contact or string problem. Use degree mode where angles are in degrees. If a vector direction goes wrong, repair it with the [components retry](#components-retry). For the difference between actual and maximum friction, use the [friction retry](#friction-retry).
+
+<div class="lesson-check" markdown="1">
 
 ### Q1 — Draw forces on a rough plane
 
@@ -306,7 +415,11 @@ $$\boxed{\mu_{\min}=\frac{15}{20}=\frac34}.$$
 
 </details>
 
-### Q2 — A resultant below the negative horizontal direction
+</div>
+
+<div class="lesson-check" markdown="1">
+
+### Q2 — Three forces {#q2--a-resultant-below-the-negative-horizontal-direction}
 
 Forces $(3\mathbf i-2\mathbf j)\,\mathrm N$, $(-7\mathbf i+5\mathbf j)\,\mathrm N$ and $(\mathbf i-7\mathbf j)\,\mathrm N$ act on a particle. Find the resultant, its magnitude and its direction relative to the negative horizontal direction. Give the extra force needed for equilibrium.
 
@@ -334,6 +447,10 @@ $$\boxed{(3\mathbf i+4\mathbf j)\,\mathrm N}.$$
 
 </details>
 
+</div>
+
+<div class="lesson-check" markdown="1">
+
 ### Q3 — Unknown force components
 
 Forces $(P\mathbf i+2\mathbf j)\,\mathrm N$, $(-4\mathbf i+Q\mathbf j)\,\mathrm N$ and $(\mathbf i-7\mathbf j)\,\mathrm N$ act on a particle in equilibrium. Find $P$ and $Q$.
@@ -355,6 +472,10 @@ $$\boxed{P=3,\qquad Q=5}.$$
 **Check:** $(3,2)+(-4,5)+(1,-7)=(0,0)$. These are component coefficients, not the magnitudes of the original forces.
 
 </details>
+
+</div>
+
+<div class="lesson-check" markdown="1">
 
 ### Q4 — Two strings with given lengths
 
@@ -384,6 +505,10 @@ $$\boxed{T_A=30\,\mathrm N,\qquad T_C=40\,\mathrm N}.$$
 
 </details>
 
+</div>
+
+<div class="lesson-check" markdown="1">
+
 ### Q5 — Contact with a smooth plane
 
 A particle of weight $40\,\mathrm N$ is held in equilibrium on a smooth plane inclined at $30^\circ$ to the horizontal. A light taut string pulls up the slope at $45^\circ$ above the plane. Find the tension and normal reaction, and check that contact is possible.
@@ -410,6 +535,10 @@ $$\boxed{R=20(\sqrt3-1)\,\mathrm N\approx14.6\,\mathrm N}.$$
 
 </details>
 
+</div>
+
+<div class="lesson-check" markdown="1">
+
 ### Q6 — Test whether rest is possible
 
 A particle of weight $60\,\mathrm N$ lies on a rough horizontal plane with coefficient of friction $0.3$. A horizontal force of $12\,\mathrm N$ is applied. Find the friction if it stays at rest. Could it stay at rest if the force were increased to $24\,\mathrm N$? Explain.
@@ -433,6 +562,10 @@ With the $24\,\mathrm N$ force, equilibrium would require $24\,\mathrm N$ fricti
 **Check:** $18\,\mathrm N$ is the maximum friction, not the friction in the first case.
 
 </details>
+
+</div>
+
+<div class="lesson-check" markdown="1">
 
 ### Q7 — Compare an angled pull and an angled push
 
@@ -466,7 +599,11 @@ The downward push gives a larger normal reaction and a larger maximum friction, 
 
 </details>
 
-### Q8 — Find both limiting cases
+</div>
+
+<div class="lesson-check" markdown="1">
+
+### Q8 — A horizontal force on a slope {#q8--find-both-limiting-cases}
 
 A particle of weight $100\,\mathrm N$ rests on a rough plane rising to the right at angle $\alpha$, where $\tan\alpha=\frac34$. The coefficient of friction is $\frac14$. A horizontal force of magnitude $P\,\mathrm N$ acts to the right. Find the range of $P\geq0$ for equilibrium. State the friction direction at $P=60$ and $P=100$, and find the value of $P$ for which friction is zero.
 
@@ -504,36 +641,177 @@ At $P=60$, $f=12\,\mathrm N$, so friction acts up the plane. At $P=100$, $f=-20\
 
 </details>
 
-## Independent Check
+</div>
+
+## Independent Check {#independent-check}
+
+Choose a retry after you have repaired the reason for an error. Close earlier answers before starting. The claims below need an explanation, not just a number.
+
+If you missed a component in the reaction equation, revisit [the slope axes](#slope-components) and [the angled-pull equation](#example-7--an-angled-pull-reduces-the-reaction). Then close the examples and do [Q7(b)](#q7--compare-an-angled-pull-and-an-angled-push): the force now pushes into the surface. Check that your reaction changes in the right direction.
+
+<div class="lesson-check" markdown="1">
+
+### Components retry {#components-retry}
+
+**Question:** Forces $(2\mathbf i+5\mathbf j)\,\mathrm N$ and $(-6\mathbf i-2\mathbf j)\,\mathrm N$ act on a particle. Find the resultant, its magnitude and its direction anticlockwise from the positive horizontal direction. Find an additional force that would produce equilibrium.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Choose the signs of the two resultant components before using an inverse tangent.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+The components add to
+
+$$\mathbf S=(-4\mathbf i+3\mathbf j)\,\mathrm N,\qquad\lvert\mathbf S\rvert=5\,\mathrm N.$$
+
+It points left and up. The acute reference angle is
+
+$$\alpha=\tan^{-1}\left(\frac34\right)=36.9^\circ.$$
+
+Hence the requested direction is $180^\circ-\alpha=143.1^\circ$, and the extra force is $(4\mathbf i-3\mathbf j)\,\mathrm N$. Adding that force cancels both components. A negative inverse-tangent output alone is not a quadrant decision.
+
+If this was difficult, revisit the [component triangle and signs](#the-resultant-of-coplanar-forces), then try again without these panels.
+
+</details>
+
+</div>
+
+<div class="lesson-check" markdown="1">
+
+### A claim about friction {#friction-claim}
 
 **Self-written task.** In Q8 the coefficient of friction is increased, with all other conditions unchanged. A student claims that both endpoints of the equilibrium range must increase. Assess this claim without recalculating the endpoints. Explain what happens if the coefficient is reduced to zero instead.
 
 <details markdown="1">
-<summary>Reasoning hint</summary>
+<summary>Hint</summary>
 
-For each fixed value of $P$, the required signed friction and the reaction do not depend on $\mu$. Compare the old and new friction inequalities.
-
-</details>
-
-<details markdown="1">
-<summary>Feedback and retry</summary>
-
-Increasing the coefficient increases the available friction without changing the friction required at a fixed $P$. Every previously feasible value remains feasible; the lower boundary cannot rise. With zero coefficient the required friction must be zero, so Q8 gives $P=75\,\mathrm N$, with positive reaction. A larger maximum friction does not force the actual friction to become larger.
-
-**Retry, with this panel closed:** A particle rests on a rough surface with zero friction acting. Does this prove the surface is smooth? Explain using the distinction between an actual force and an upper bound.
+Fix one value of the applied force. Does changing the coefficient change the force needed for balance, or only the maximum available?
 
 </details>
 
 <details markdown="1">
-<summary>Retry check</summary>
+<summary>Solution and check</summary>
 
-No. A rough surface can have zero actual friction when no tangential force is required for equilibrium. Smooth means the model supplies no friction at that contact, including when a nonzero tangential force would be needed.
+For a fixed value of the applied force, the reaction and the friction needed for balance are unchanged. Increasing the coefficient raises the available maximum. Every previously possible value of the applied force is still possible, so the lower endpoint cannot rise. The claim that both endpoints must increase is false.
+
+With zero coefficient, the friction needed must be zero. In Q8 this gives $P=75\,\mathrm N$, with a positive reaction. Maximum available friction and actual friction are different quantities.
+
+If you changed the actual friction simply because the coefficient changed, return to the [box explanation](#friction-and-limiting-equilibrium), close this panel and do the next task.
 
 </details>
+
+</div>
+
+<div class="lesson-check" markdown="1">
+
+### Try a changed condition {#friction-retry}
+
+**Question:** Use the situation in Q8 with $P=60$. The coefficient of friction is now reduced from $\frac14$ to $\frac18$. Can the particle remain at rest? A student says that halving the coefficient must halve the actual friction. Assess this statement. Does your result prove that every value in the old equilibrium range is still possible?
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Redraw the same forces. Work out the required friction before calculating the new maximum.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+The applied forces and the assumed rest have not changed. Perpendicular and parallel balance give
+
+$$R=80+\frac35(60)=116\,\mathrm N,$$
+
+$$f=60-\frac45(60)=12\,\mathrm N.$$
+
+Here positive signed friction means up the plane. The new maximum is
+
+$$\mu R=\frac18(116)=14.5\,\mathrm N.$$
+
+The required friction is below that maximum, so rest is possible with the same actual friction, not half of it.
+
+This one successful value does not prove that the entire old range still works. At an old limiting endpoint, the required friction equalled the old maximum; halving the coefficient makes that same requirement too large. Recheck each condition rather than treating one successful case as a proof of the range.
+
+</details>
+
+</div>
+
+<div class="lesson-check" markdown="1">
+
+### A zero-friction check {#zero-friction-check}
+
+**Question:** A particle rests on a rough surface with zero friction acting. Does this prove the surface is smooth? Explain using the distinction between an actual force and an upper bound.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Could the other forces already balance without any force along the surface?
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+No. A rough surface can have zero actual friction when no tangential force is needed for equilibrium. Smooth means that the contact model cannot supply friction even when a nonzero tangential force would be needed.
+
+</details>
+
+</div>
+
+## Return after the next lesson {#later-check}
+
+After [Moments and Rigid Objects](/alevel/a2-mathematics/mechanics/moments-and-rigid-objects/), return for this self-written task without looking at the friction examples. The object is a particle, so no moment equation is needed.
+
+<div class="lesson-check" markdown="1">
+
+### A different contact surface {#wall-check}
+
+**Question:** A particle of weight $40\,\mathrm N$ is pressed against a rough vertical wall by a horizontal force of $100\,\mathrm N$. The coefficient of friction is $0.5$. (a) Draw the forces and decide whether it can remain at rest. (b) An additional force of $60\,\mathrm N$ now acts vertically upwards on the particle. Draw a new force diagram and decide whether rest is still possible. (c) In case (b), the horizontal pressing force is reduced to $50\,\mathrm N$. Recheck your conclusion. Explain the direction of friction in English.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+The wall pushes perpendicular to itself. Compare the weight with the additional upward force before choosing a friction direction.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+The wall is vertical, so its normal reaction is horizontal. Let the horizontal pressing force have magnitude $P$, and the extra upward force have magnitude $U$. Horizontal balance gives $R=P$.
+
+Let $f$ be signed friction, positive upwards. Vertical balance is
+
+$$U+f-40=0,\qquad f=40-U.$$
+
+In (a), the reaction is $100\,\mathrm N$, the required friction is $40\,\mathrm N$ upwards and the maximum is $0.5(100)=50\,\mathrm N$. Rest is possible.
+
+In (b), the reaction is unchanged, but $f=40-60=-20\,\mathrm N$: friction is $20\,\mathrm N$ downwards. It is still below the maximum, so rest is possible.
+
+![Feedback diagrams: without an extra upward force, a 100 N push and 100 N wall reaction balance horizontally, while 40 N upward friction balances 40 N weight. With an extra 60 N upward force, friction is 20 N downwards; the horizontal forces stay unchanged.](/assets/img/a2-math-mech/wall-friction-feedback.svg)
+
+In (c), the reaction becomes $50\,\mathrm N$ and the maximum is $0.5(50)=25\,\mathrm N$. The required downward friction is still $20\,\mathrm N$, so rest remains possible.
+
+An English explanation: **“Friction acts upwards in (a), opposing the tendency to slide down. In (b) and (c), it acts downwards because the other vertical forces would tend to move the particle upwards.”**
+
+The arrows are not to a force scale. If your reaction was vertical, revisit [normal reaction](#force-diagrams). If you used maximum friction automatically, revisit [actual and limiting friction](#friction-and-limiting-equilibrium).
+
+</details>
+
+</div>
 
 ## Sources and Scope
 
-Scope: [OxfordAQA 9660 specification v5.2, M2.3](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf). **MA05 January 2025 Q2 and Q3(a)** were read with the corresponding [question paper](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-question-paper.pdf) and [final mark scheme](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-mark-scheme.pdf) to check equilibrium, limiting friction and explanation requirements. The tasks here are self-written and have their own stated precision convention.
+All examples and tasks are **self-written**, not official past-paper questions, and have no official marks. This lesson covers particle forces, equilibrium and friction within [OxfordAQA 9660 specification v5.2, M2.3](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf). Moments and centres of mass are separate lessons; this page alone is not the whole of M2.3.
+
+MA05 January 2025 Q2(a)–(c) was reread with its [question paper](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-question-paper.pdf#page=4) and [Version 1.0 Final mark scheme](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-mark-scheme.pdf#page=6) to check perpendicular/parallel equilibrium, limiting friction and the required working. Q3(a) was also checked to distinguish circular motion, which needs a resultant force, from this lesson's equilibrium model.
+
+Textbook alignment: Chapter 11, Sections 11.1–11.3 (printed pp.158–170, before Section 11.4). In this lesson's self-written tasks use three significant figures for final numerical values and one decimal place for angles, unless asked otherwise. Keep exact values during working. Use $g=9.8\,\mathrm{m\,s^{-2}}$ if needed. Authentic papers follow their own cover and question instructions; the January 2025 paper normally asks for two significant figures for calculator answers.
 
 ## Quick Reference
 

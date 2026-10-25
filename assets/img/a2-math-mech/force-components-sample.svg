@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="360" viewBox="0 0 420 360" role="img" aria-labelledby="title desc">
+  <title id="title">One force represented by two components</title>
+  <desc id="desc">A force P points upwards and right at an acute angle theta to the horizontal. Its horizontal component is P cos theta and its vertical component is P sin theta. Dashed projections form a right-angled triangle; they are not additional forces.</desc>
+  <defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7Z" fill="#172033"/></marker></defs>
+  <rect width="420" height="360" rx="8" fill="white"/>
+  <g fill="none" stroke="#7b8794" stroke-width="2">
+    <path d="M65 270H335V90" stroke-dasharray="6 5"/>
+    <path d="M320 270V255H335"/>
+    <path d="M65 270H365M65 270V55" stroke="#b8c1ca"/>
+    <path d="M120 270A55 55 0 0 0 111 239"/>
+  </g>
+  <g fill="none" stroke="#172033" stroke-width="3" marker-end="url(#arrow)">
+    <path d="M65 270L335 90"/>
+  </g>
+  <g fill="#172033" font-family="Arial, sans-serif" font-size="23">
+    <text x="210" y="148">P</text>
+    <text x="127" y="250">θ</text>
+    <text x="150" y="311">P cos θ</text>
+    <text x="349" y="175" transform="rotate(-90 349 175)" text-anchor="middle">P sin θ</text>
+    <text x="370" y="279">x</text><text x="55" y="42">y</text>
+  </g>
+</svg>
