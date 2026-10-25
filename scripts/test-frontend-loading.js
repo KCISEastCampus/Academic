@@ -8,6 +8,15 @@ const home = read('index.html');
 const diagrams = read('tests/test.html');
 const mermaidScript = /<script\b[^>]*src="[^"]*mermaid\.min\.js"/;
 assert(!mermaidScript.test(home), 'Pages without diagrams do not download Mermaid');
+for (const file of ['index.html', 'zh/index.html']) {
+  const html = read(file);
+  const notice = html.match(/<script\b[^>]*src="[^"]*pop_ups\.js"[^>]*>/)?.[0];
+  assert(notice?.includes('async'), `${file}: optional notices do not block parsing or DOM readiness`);
+}
+for (const file of ['index.html', 'zh/index.html', 'zh/alevel/a2-mathematics/mechanics/index.html']) {
+  const badge = read(file).match(/<img\b[^>]*id="hitscounter-badge"[^>]*>/)?.[0];
+  assert(badge?.includes('loading="lazy"'), `${file}: offscreen third-party counter does not delay page load`);
+}
 assert(/class="language-mermaid"/.test(diagrams), 'The diagram fixture still contains Mermaid blocks');
 assert(mermaidScript.test(diagrams), 'Pages with diagrams retain the renderer');
 const preload = home.match(/<link\b(?=[^>]*rel="preload")(?=[^>]*href="[^"]*bootstrap\.min\.css")[^>]*>/)?.[0];
@@ -25,4 +34,4 @@ for (const [file, absent] of [
   assert(breadcrumb, `${file}: breadcrumb exists`);
   assert(!breadcrumb.includes(`href="${absent}"`), `${file}: nonexistent parent is not a link`);
 }
-console.log('Frontend loading passed: conditional diagrams, reusable style preload and valid parent breadcrumbs.');
+console.log('Frontend loading passed: nonblocking notices, lazy counters, conditional diagrams, reusable style preload and valid parent breadcrumbs.');

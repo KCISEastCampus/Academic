@@ -1,0 +1,12 @@
+[
+  {
+    "kind": "notice-script-stalls",
+    "passed": false,
+    "error": "locator.waitFor: Timeout 3000ms exceeded."
+  },
+  {
+    "kind": "counter-service-stalls",
+    "passed": false,
+    "error": "page.goto: Timeout 5000ms exceeded."
+  }
+]

@@ -20,11 +20,16 @@
   `;
 
   // Inject modal on load
-  document.addEventListener('DOMContentLoaded', function() {
+  function injectModal() {
     if (!document.getElementById('infoModal')) {
       document.body.insertAdjacentHTML('beforeend', modalHTML);
     }
-  });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', injectModal, { once: true });
+  } else {
+    injectModal();
+  }
 
   // Helper to show modal
   window.showInfoModal = function(message, title = "Notice") {

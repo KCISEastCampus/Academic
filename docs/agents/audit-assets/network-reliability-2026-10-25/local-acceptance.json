@@ -1,0 +1,14 @@
+{
+  "sourceSHA256": {
+    "_layouts/index.html": "12d0104a963115cdb4527ee32f9e8362d3e1fc3eab4d6ab215dc23fca6c998c1",
+    "_includes/footer.html": "80ae338b0e629c6aa66093884979c6ffe37dd42cd2926a4b030219d197577cf6",
+    "assets/js/pop_ups.js": "32b15ce4a0d85b342dd27e3d7047ff21da688b73ba216e06598edf08da7b4e4f",
+    "scripts/test-frontend-loading.js": "c17a2e7f800d4b874f85a328c1c29412a0fffe7d93774d6f5cc69b424d01f23a"
+  },
+  "buildSeconds": 30.869,
+  "applicableChecksPassed": 14,
+  "controlledFailureCasesPassed": 2,
+  "browserViewsPassed": 8,
+  "sourcePublished": false,
+  "liveCacheRuleId": "93a92e6e5ee64b8cb118b2a427783a8b"
+}

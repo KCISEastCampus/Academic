@@ -1,0 +1,101 @@
+[
+  {
+    "route": "/zh/",
+    "total": 38062,
+    "navigationError": "page.goto: Timeout 35000ms exceeded.",
+    "failed": [],
+    "readyState": "loading",
+    "navigation": [
+      {
+        "dns": 14.099999964237213,
+        "tls": 3729.600000023842,
+        "ttfb": 1675.2000000476837,
+        "response": 304,
+        "dcl": 0,
+        "load": 0,
+        "bytes": 14905
+      }
+    ],
+    "paints": [],
+    "resources": [
+      {
+        "url": "https://academic.kcisec.site/assets/vendor/bootstrap/5.3.3/css/bootstrap.min.css",
+        "time": 29679.100000023842,
+        "transfer": 32140,
+        "encoded": 31840,
+        "type": "link"
+      },
+      {
+        "url": "https://academic.kcisec.site/assets/js/pop_ups.js",
+        "time": 29676.599999964237,
+        "transfer": 1477,
+        "encoded": 1177,
+        "type": "script"
+      },
+      {
+        "url": "https://academic.kcisec.site/assets/css/fonts/maplemono.css",
+        "time": 29676.5,
+        "transfer": 544,
+        "encoded": 244,
+        "type": "link"
+      },
+      {
+        "url": "https://academic.kcisec.site/assets/css/variables.css",
+        "time": 29676,
+        "transfer": 1546,
+        "encoded": 1246,
+        "type": "link"
+      },
+      {
+        "url": "https://academic.kcisec.site/assets/css/style.css",
+        "time": 29675.200000047684,
+        "transfer": 8345,
+        "encoded": 8045,
+        "type": "link"
+      },
+      {
+        "url": "https://academic.kcisec.site/assets/js/site-language.js",
+        "time": 13745.800000011921,
+        "transfer": 1608,
+        "encoded": 1308,
+        "type": "script"
+      },
+      {
+        "url": "https://hitscounter.dev/api/hit?url=academic.kcisec.site&label=Academic&icon=brilliance&color=%23198754&message=&style=flat&tz=Asia/Hong_Kong",
+        "time": 1433.6000000238419,
+        "transfer": 0,
+        "encoded": 0,
+        "type": "img"
+      },
+      {
+        "url": "https://academic.kcisec.site/cdn-cgi/speculation",
+        "time": 882.8999999761581,
+        "transfer": 451,
+        "encoded": 151,
+        "type": "other"
+      },
+      {
+        "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+        "time": 879.1999999880791,
+        "transfer": 0,
+        "encoded": 0,
+        "type": "script"
+      }
+    ],
+    "fonts": "loaded",
+    "math": false,
+    "overflow": 0
+  },
+  {
+    "route": "/zh/alevel/a2-mathematics/mechanics/",
+    "total": 36512,
+    "navigationError": "page.goto: net::ERR_TIMED_OUT at https://academic.kcisec.site/zh/alevel/a2-mathematics/mechanics/",
+    "failed": [
+      {
+        "url": "https://academic.kcisec.site/zh/alevel/a2-mathematics/mechanics/",
+        "error": "net::ERR_TIMED_OUT"
+      }
+    ],
+    "error": "page.evaluate: Execution context was destroyed, most likely because of a navigation"
+  }
+]

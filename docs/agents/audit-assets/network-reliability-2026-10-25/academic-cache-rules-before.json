@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "result": {
+    "description": "",
+    "id": "af5dd64449c44e3c9fd3d7ca82d96573",
+    "kind": "zone",
+    "last_updated": "2025-10-14T10:39:43.478291Z",
+    "name": "default",
+    "phase": "http_request_cache_settings",
+    "rules": [
+      {
+        "action": "set_cache_settings",
+        "action_parameters": {
+          "cache": true
+        },
+        "description": "文件",
+        "enabled": true,
+        "expression": "(http.request.full_uri wildcard r\"https://academic.kcisec.site/assets/*\") or (http.request.uri.path.extension in {\"css\" \"js\" \"woff\"})",
+        "id": "5186617133b648c6ac0618dc2b97799a",
+        "last_updated": "2025-10-14T10:39:43.478291Z",
+        "ref": "5186617133b648c6ac0618dc2b97799a",
+        "version": "2"
+      },
+      {
+        "action": "set_cache_settings",
+        "action_parameters": {
+          "cache": true
+        },
+        "description": "all",
+        "enabled": false,
+        "expression": "true",
+        "id": "d363b638a00c4a1ba9fada04a1f0b943",
+        "last_updated": "2025-10-14T10:34:50.704574Z",
+        "ref": "d363b638a00c4a1ba9fada04a1f0b943",
+        "version": "2"
+      }
+    ],
+    "version": "4"
+  }
+}
