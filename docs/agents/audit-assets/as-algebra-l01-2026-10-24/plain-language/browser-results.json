@@ -1,0 +1,445 @@
+{
+  "base": "http://127.0.0.1:8835",
+  "results": [
+    {
+      "lang": "en",
+      "width": 1365,
+      "theme": "light",
+      "status": 200,
+      "initial": {
+        "open": 0,
+        "tasks": 6,
+        "examples": 2,
+        "nested": 0,
+        "hiddenExamples": false,
+        "reading": true,
+        "toc": 11
+      },
+      "missingOldIds": [],
+      "keyboardToggles": 12,
+      "overflow": false,
+      "mathErrors": [],
+      "badImages": [],
+      "taskRoles": [
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        }
+      ],
+      "pageErrors": []
+    },
+    {
+      "lang": "en",
+      "width": 1365,
+      "theme": "dark",
+      "status": 200,
+      "initial": {
+        "open": 0,
+        "tasks": 6,
+        "examples": 2,
+        "nested": 0,
+        "hiddenExamples": false,
+        "reading": true,
+        "toc": 11
+      },
+      "missingOldIds": [],
+      "keyboardToggles": 12,
+      "overflow": false,
+      "mathErrors": [],
+      "badImages": [],
+      "taskRoles": [
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        }
+      ],
+      "pageErrors": []
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "status": 200,
+      "initial": {
+        "open": 0,
+        "tasks": 6,
+        "examples": 2,
+        "nested": 0,
+        "hiddenExamples": false,
+        "reading": true,
+        "toc": 11
+      },
+      "missingOldIds": [],
+      "keyboardToggles": 12,
+      "overflow": false,
+      "mathErrors": [],
+      "badImages": [],
+      "taskRoles": [
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        }
+      ],
+      "pageErrors": []
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "status": 200,
+      "initial": {
+        "open": 0,
+        "tasks": 6,
+        "examples": 2,
+        "nested": 0,
+        "hiddenExamples": false,
+        "reading": true,
+        "toc": 11
+      },
+      "missingOldIds": [],
+      "keyboardToggles": 12,
+      "overflow": false,
+      "mathErrors": [],
+      "badImages": [],
+      "taskRoles": [
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        }
+      ],
+      "pageErrors": []
+    },
+    {
+      "lang": "zh",
+      "width": 1365,
+      "theme": "light",
+      "status": 200,
+      "initial": {
+        "open": 0,
+        "tasks": 6,
+        "examples": 2,
+        "nested": 0,
+        "hiddenExamples": false,
+        "reading": true,
+        "toc": 11
+      },
+      "missingOldIds": [],
+      "keyboardToggles": 12,
+      "overflow": false,
+      "mathErrors": [],
+      "badImages": [],
+      "taskRoles": [
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        }
+      ],
+      "pageErrors": []
+    },
+    {
+      "lang": "zh",
+      "width": 1365,
+      "theme": "dark",
+      "status": 200,
+      "initial": {
+        "open": 0,
+        "tasks": 6,
+        "examples": 2,
+        "nested": 0,
+        "hiddenExamples": false,
+        "reading": true,
+        "toc": 11
+      },
+      "missingOldIds": [],
+      "keyboardToggles": 12,
+      "overflow": false,
+      "mathErrors": [],
+      "badImages": [],
+      "taskRoles": [
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        }
+      ],
+      "pageErrors": []
+    },
+    {
+      "lang": "zh",
+      "width": 390,
+      "theme": "light",
+      "status": 200,
+      "initial": {
+        "open": 0,
+        "tasks": 6,
+        "examples": 2,
+        "nested": 0,
+        "hiddenExamples": false,
+        "reading": true,
+        "toc": 11
+      },
+      "missingOldIds": [],
+      "keyboardToggles": 12,
+      "overflow": false,
+      "mathErrors": [],
+      "badImages": [],
+      "taskRoles": [
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        }
+      ],
+      "pageErrors": []
+    },
+    {
+      "lang": "zh",
+      "width": 390,
+      "theme": "dark",
+      "status": 200,
+      "initial": {
+        "open": 0,
+        "tasks": 6,
+        "examples": 2,
+        "nested": 0,
+        "hiddenExamples": false,
+        "reading": true,
+        "toc": 11
+      },
+      "missingOldIds": [],
+      "keyboardToggles": 12,
+      "overflow": false,
+      "mathErrors": [],
+      "badImages": [],
+      "taskRoles": [
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        }
+      ],
+      "pageErrors": []
+    }
+  ],
+  "journeys": [
+    {
+      "type": "wide-math-keyboard",
+      "lang": "en",
+      "width": 1365,
+      "checked": 0
+    },
+    {
+      "type": "language-switch",
+      "lang": "en",
+      "width": 1365,
+      "to": "http://127.0.0.1:8835/zh/alevel/as-mathematics/algebra/#l01-independent-indices",
+      "passed": true
+    },
+    {
+      "type": "wide-math-keyboard",
+      "lang": "en",
+      "width": 390,
+      "checked": 2
+    },
+    {
+      "type": "language-switch",
+      "lang": "en",
+      "width": 390,
+      "to": "http://127.0.0.1:8835/zh/alevel/as-mathematics/algebra/#l01-independent-indices",
+      "passed": true
+    },
+    {
+      "type": "wide-math-keyboard",
+      "lang": "zh",
+      "width": 1365,
+      "checked": 0
+    },
+    {
+      "type": "language-switch",
+      "lang": "zh",
+      "width": 1365,
+      "to": "http://127.0.0.1:8835/alevel/as-mathematics/algebra/#l01-independent-indices",
+      "passed": true
+    },
+    {
+      "type": "wide-math-keyboard",
+      "lang": "zh",
+      "width": 390,
+      "checked": 2
+    },
+    {
+      "type": "entry-L01-quadratics-mixed-polynomials",
+      "passed": true
+    },
+    {
+      "type": "future-index-application",
+      "to": "http://127.0.0.1:8835/zh/alevel/as-mathematics/differentiation/#l06-scaffold",
+      "passed": true
+    },
+    {
+      "type": "language-switch",
+      "lang": "zh",
+      "width": 390,
+      "to": "http://127.0.0.1:8835/alevel/as-mathematics/algebra/#l01-independent-indices",
+      "passed": true
+    }
+  ],
+  "failures": []
+}

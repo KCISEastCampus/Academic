@@ -1,0 +1,9 @@
+{
+  "width": 390,
+  "task": "mixed-further",
+  "initiallyClosed": true,
+  "keyboardSolution": true,
+  "wideDisplays": [],
+  "captureOnlyHidden": "fixed overlays; normal viewport checks keep the UI",
+  "passed": true
+}

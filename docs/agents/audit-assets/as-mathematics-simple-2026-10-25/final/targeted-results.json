@@ -1,0 +1,254 @@
+[
+  {
+    "type": "continuous-reading",
+    "topic": "algebra",
+    "width": 390,
+    "file": "algebra-390-continuous.png",
+    "height": 1937.40625,
+    "captureOnlyHidden": "fixed navigation, back-to-top, reading progress; no source/CSS changes"
+  },
+  {
+    "type": "continuous-reading",
+    "topic": "integration",
+    "width": 390,
+    "file": "integration-390-continuous.png",
+    "height": 1900.890625,
+    "captureOnlyHidden": "fixed navigation, back-to-top, reading progress; no source/CSS changes"
+  },
+  {
+    "type": "continuous-reading",
+    "topic": "sequences",
+    "width": 390,
+    "file": "sequences-390-continuous.png",
+    "height": 1190.09375,
+    "captureOnlyHidden": "fixed navigation, back-to-top, reading progress; no source/CSS changes"
+  },
+  {
+    "type": "continuous-reading",
+    "topic": "circles",
+    "width": 390,
+    "file": "circles-390-continuous.png",
+    "height": 1982.734375,
+    "captureOnlyHidden": "fixed navigation, back-to-top, reading progress; no source/CSS changes"
+  },
+  {
+    "type": "continuous-reading",
+    "topic": "trigonometry",
+    "width": 390,
+    "file": "trigonometry-390-continuous.png",
+    "height": 1481.84375,
+    "captureOnlyHidden": "fixed navigation, back-to-top, reading progress; no source/CSS changes"
+  },
+  {
+    "type": "continuous-reading",
+    "topic": "exponentials-logarithms",
+    "width": 390,
+    "file": "exponentials-logarithms-390-continuous.png",
+    "height": 1385.265625,
+    "captureOnlyHidden": "fixed navigation, back-to-top, reading progress; no source/CSS changes"
+  },
+  {
+    "type": "continuous-reading",
+    "topic": "random-variables",
+    "width": 390,
+    "file": "random-variables-390-continuous.png",
+    "height": 1794.953125,
+    "captureOnlyHidden": "fixed navigation, back-to-top, reading progress; no source/CSS changes"
+  },
+  {
+    "type": "continuous-reading",
+    "topic": "binomial",
+    "width": 390,
+    "file": "binomial-390-continuous.png",
+    "height": 1788.15625,
+    "captureOnlyHidden": "fixed navigation, back-to-top, reading progress; no source/CSS changes"
+  },
+  {
+    "type": "continuous-reading",
+    "topic": "constant-acceleration",
+    "width": 390,
+    "file": "constant-acceleration-390-continuous.png",
+    "height": 1800.625,
+    "captureOnlyHidden": "fixed navigation, back-to-top, reading progress; no source/CSS changes"
+  },
+  {
+    "type": "continuous-reading",
+    "topic": "variable-acceleration",
+    "width": 390,
+    "file": "variable-acceleration-390-continuous.png",
+    "height": 1797.015625,
+    "captureOnlyHidden": "fixed navigation, back-to-top, reading progress; no source/CSS changes"
+  },
+  {
+    "type": "continuous-reading",
+    "topic": "forces",
+    "width": 390,
+    "file": "forces-390-continuous.png",
+    "height": 2146.78125,
+    "captureOnlyHidden": "fixed navigation, back-to-top, reading progress; no source/CSS changes"
+  },
+  {
+    "type": "continuous-reading",
+    "topic": "momentum",
+    "width": 390,
+    "file": "momentum-390-continuous.png",
+    "height": 1595.625,
+    "captureOnlyHidden": "fixed navigation, back-to-top, reading progress; no source/CSS changes"
+  },
+  {
+    "type": "closed-answer-graph",
+    "topic": "constant-acceleration",
+    "identity": "l22-independent",
+    "width": 245,
+    "naturalWidth": 195,
+    "alt": "核对图：三段速度线通过题目四点，在 9 秒穿过横轴；横轴下三角形对位移作负贡献，对路程作正贡献。"
+  },
+  {
+    "type": "closed-answer-graph",
+    "topic": "forces",
+    "identity": "l24-independent",
+    "width": 245,
+    "naturalWidth": 124,
+    "alt": "核对受力图：汽车驱动力向右、阻力和拖杆力向左；拖车杆力向右、阻力向左；每个物体重力向下、路面支持力向上。向前为正。"
+  },
+  {
+    "type": "keyboard-scroll",
+    "topic": "algebra",
+    "focused": true,
+    "moved": true,
+    "width": 274,
+    "content": 323.734375
+  },
+  {
+    "type": "keyboard-scroll",
+    "topic": "sequences",
+    "focused": true,
+    "moved": true,
+    "width": 350,
+    "content": 413.46875
+  },
+  {
+    "type": "keyboard-scroll",
+    "topic": "trigonometry",
+    "focused": true,
+    "moved": true,
+    "width": 316,
+    "content": 454.078125
+  },
+  {
+    "type": "keyboard-scroll",
+    "topic": "random-variables",
+    "focused": true,
+    "moved": true,
+    "width": 316,
+    "content": 327.140625
+  },
+  {
+    "type": "journey",
+    "name": "entry → derivative attempt → keyboard hint → precise power recovery",
+    "passed": true,
+    "end": "http://127.0.0.1:8837/zh/alevel/as-mathematics/algebra/#l01-indices"
+  },
+  {
+    "type": "journey",
+    "name": "mixed statistics → conditional denominator repair → new retry",
+    "passed": true,
+    "end": "http://127.0.0.1:8837/zh/alevel/as-mathematics/probability/#l18-retry-conditional"
+  },
+  {
+    "type": "journey",
+    "name": "velocity/position attempt → keyboard solution → next lesson → mixed mechanics",
+    "passed": true,
+    "end": "http://127.0.0.1:8837/zh/alevel/as-mathematics/#mixed-mechanics"
+  },
+  {
+    "type": "repaired-retry",
+    "topic": "algebra",
+    "id": "l03-retry-division",
+    "keyboardHelp": true,
+    "passed": true
+  },
+  {
+    "type": "repaired-retry",
+    "topic": "sequences",
+    "id": "l10-retry-threshold",
+    "keyboardHelp": true,
+    "passed": true
+  },
+  {
+    "type": "repaired-retry",
+    "topic": "trigonometry",
+    "id": "l15-retry-triangle",
+    "keyboardHelp": true,
+    "passed": true
+  },
+  {
+    "type": "repaired-retry",
+    "topic": "trigonometry",
+    "id": "l16-retry-restrictions",
+    "keyboardHelp": true,
+    "passed": true
+  },
+  {
+    "type": "repaired-retry",
+    "topic": "probability",
+    "id": "l18-retry-conditional",
+    "keyboardHelp": true,
+    "passed": true
+  },
+  {
+    "type": "repaired-retry",
+    "topic": "binomial",
+    "id": "l21-retry-model",
+    "keyboardHelp": true,
+    "passed": true
+  },
+  {
+    "type": "repaired-retry",
+    "topic": "momentum",
+    "id": "l25-retry-separation",
+    "keyboardHelp": true,
+    "passed": true
+  },
+  {
+    "type": "repaired-retry",
+    "topic": "forces",
+    "id": "l24-retry-friction",
+    "keyboardHelp": true,
+    "passed": true
+  },
+  {
+    "type": "repaired-task-reading",
+    "topic": "random-variables",
+    "id": "l19-retry",
+    "keyboardSolution": true
+  },
+  {
+    "type": "repaired-task-reading",
+    "topic": "forces",
+    "id": "l24-independent-friction",
+    "keyboardSolution": true
+  },
+  {
+    "type": "repaired-task-reading",
+    "topic": "index",
+    "id": "mixed-further",
+    "keyboardSolution": true
+  },
+  {
+    "type": "continuous-reading",
+    "topic": "circles",
+    "width": 1365,
+    "file": "circles-1365-continuous.png",
+    "height": 1846.90625,
+    "captureOnlyHidden": "fixed navigation, back-to-top, reading progress; no source/CSS changes"
+  },
+  {
+    "type": "continuous-reading",
+    "topic": "random-variables-dark",
+    "width": 390,
+    "file": "random-variables-dark-390-continuous.png",
+    "height": 1794.953125,
+    "captureOnlyHidden": "fixed navigation, back-to-top, reading progress; no source/CSS changes"
+  }
+]

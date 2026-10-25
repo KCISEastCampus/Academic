@@ -1,0 +1,332 @@
+[
+  {
+    "file": "scripts/test-site-language.js",
+    "exit": 0,
+    "output": "Site language passed: preferences, safe reversible links, explicit switching, document language, storage fallback and 151 built page pairs."
+  },
+  {
+    "file": "scripts/test-subject-index-translations.js",
+    "exit": 0,
+    "output": "Bilingual subject index checks passed for 6 pages: front matter, switches, anchors, links and UI text.\nChinese homepage and course pages link to all six indexes."
+  },
+  {
+    "file": "scripts/test-search-language.js",
+    "exit": 0,
+    "output": "Search language passed: selected UI status, page-language fallback and matching indexed destinations."
+  },
+  {
+    "file": "scripts/test-search-excerpts.js",
+    "exit": 0,
+    "output": "Search excerpts passed: complete prose, formula sentence omission, course context and length limit in both engines."
+  },
+  {
+    "file": "scripts/test-search-interaction.js",
+    "exit": 0,
+    "output": "Search interaction passed: dialog focus, keyboard links, stale queries, close cancellation, fallback language and retry."
+  },
+  {
+    "file": "scripts/test-frontend-loading.js",
+    "exit": 0,
+    "output": "Frontend loading passed: conditional diagrams, reusable style preload and valid parent breadcrumbs."
+  },
+  {
+    "file": "scripts/test-frontend-ux.js",
+    "exit": 0,
+    "output": "Frontend UX passed: shared search, landmarks/skip links, course discovery, bilingual card names and destinations, fallback language and link contrast."
+  },
+  {
+    "file": "scripts/test-reading-layout.js",
+    "exit": 0,
+    "output": "Reading sample passed: bilingual examples, stable anchors, closed practice solutions and scoped layout.\nMA03 reading roles passed for 32 bilingual course pages."
+  },
+  {
+    "file": "scripts/test-exam-timetable.js",
+    "exit": 0,
+    "output": "Timetable data passed: 41 unique papers, valid dates/cohorts/durations, CH02 regression and official PDF link.\nBilingual timetable and navigation passed on 151 Chinese pages: paired switches, hreflang, active links, shared data and existing destinations.\nTimetable interaction passed: responsive default, view switching and complete date labels."
+  },
+  {
+    "file": "scripts/test-theme-init.js",
+    "exit": 0,
+    "output": "Theme initialization passed: fresh visits, saved preferences, invalid values and blocked storage."
+  },
+  {
+    "file": "scripts/test-image-modal.js",
+    "exit": 0,
+    "output": "Image modal passed: named native dialog, original image, link preservation, focus restoration and scroll ownership. Browser checks cover native keyboard behaviour."
+  },
+  {
+    "file": "scripts/test-physics-learning-pilots.js",
+    "exit": 0,
+    "output": "PASS: IG/AS learning pilots, bilingual tasks, navigation, closed help, SVG geometry, numerical models and 89 legacy anchors"
+  },
+  {
+    "file": "scripts/test-physics-circular.js",
+    "exit": 0,
+    "output": "Physics circular motion passed: kinematics, force components, contact limits, OxfordAQA answers, English content and rendered links.\nPreserved 56 legacy physics bookmarks."
+  },
+  {
+    "file": "scripts/test-physics-shm.js",
+    "exit": 0,
+    "output": "Physics SHM passed: derivatives, initial conditions, energy, spring force balances, pendulum approximation, OxfordAQA models and rendered structure."
+  },
+  {
+    "file": "scripts/test-physics-gravity.js",
+    "exit": 0,
+    "output": "Physics gravity passed: field gradients, work integration, circular force balance, orbital energy, combined fields, OxfordAQA answers and rendered lesson."
+  },
+  {
+    "file": "scripts/test-physics-electric.js",
+    "exit": 0,
+    "output": "Physics electric fields passed: potential gradients, superposition, trajectory integration, work and energy, oil-drop balance, OxfordAQA answers and rendered lesson."
+  },
+  {
+    "file": "scripts/test-physics-capacitance.js",
+    "exit": 0,
+    "output": "Capacitance passed: charge transfer, energy integration, connection conditions, geometry, graph units, all numerical answers and rendered structure."
+  },
+  {
+    "file": "scripts/test-physics-charge-discharge.js",
+    "exit": 0,
+    "output": "Capacitor charge/discharge passed: numerical circuit integration, charge and energy conservation, graph units, log fitting, meter loading, adapted answers and lesson structure."
+  },
+  {
+    "file": "scripts/test-physics-radioactive.js",
+    "exit": 0,
+    "output": "PASS: radioactive decay; survivor model, paired graphs, signed rates, half-lives, mass/activity, raw-record fit, background bias, averaging and bilingual lesson entries"
+  },
+  {
+    "file": "scripts/test-physics-magnetic.js",
+    "exit": 0,
+    "output": "Physics magnetic fields passed: signed forces, integrated orbits, balance-record fit, selector, isotope separation, cyclotron work and timing, bilingual navigation."
+  },
+  {
+    "file": "scripts/test-physics-electromagnetism.js",
+    "exit": 0,
+    "output": "PH03 electromagnetism passed: Faraday differentiation/integration, rod energy, rms heating, SVG scope readings, RP7 raw data/uncertainty, transformer/line balances, course chain and closed solutions."
+  },
+  {
+    "file": "scripts/test-physics-thermal.js",
+    "exit": 0,
+    "output": "PASS: thermal calculations, raw-record fits and physical construction, uncertainty, energy balances, display equations, 8 examples and 10 practice questions"
+  },
+  {
+    "file": "scripts/test-physics-nuclear.js",
+    "exit": 0,
+    "output": "Physics nuclear passed: Coulomb bounds, diffraction, radius-record fit and bias, density, mass and electron accounts, reaction counts, SVG graph readout, escaped TeX and closed bilingual tasks."
+  },
+  {
+    "file": "scripts/test-physics-bilingual.js",
+    "exit": 0,
+    "output": "PASS: 16 physics page pairs; formulas, English prompts, anchors, disclosures, figures, local links and language navigation"
+  },
+  {
+    "file": "scripts/test-bilingual.js",
+    "exit": 0,
+    "output": "Bilingual checks passed for 17 pages: paired switches, formulas, heading IDs, links, details and Chinese controls.\nBilingual subject index checks passed for 6 pages: front matter, switches, anchors, links and UI text."
+  },
+  {
+    "file": "scripts/test-mechanics-bilingual.js",
+    "exit": 0,
+    "output": "Mechanics bilingual: 10 pairs; English prompts, formulas, anchors, images, switches, links and 1623 unique TeX fragments passed."
+  },
+  {
+    "file": "scripts/test-mechanics-centres.js",
+    "exit": 0,
+    "output": "Centres of Mass passed: 8 examples, 8 practice answers, polygon geometry, mass moments, stable suspension, support equilibrium and formula preservation."
+  },
+  {
+    "file": "scripts/test-mechanics-chapter10.js",
+    "exit": 0,
+    "output": "Mechanics course checks passed: Chapter 10 and retained-question calculations, links, image paths, unique anchors, bookmarks, breadcrumbs, SVG arrowheads and 71 practice questions with hints and solutions."
+  },
+  {
+    "file": "scripts/test-mechanics-circular.js",
+    "exit": 0,
+    "output": "Uniform Circular Motion passed: 9 examples, 11 practice answers, derivatives, displaced centres, force components, friction/breaking/contact limits, pendulum feasibility, bowl/cone geometry and orbital radius."
+  },
+  {
+    "file": "scripts/test-mechanics-energy.js",
+    "exit": 0,
+    "output": "Work and Energy passed: 8 examples, 8 practice answers, signed work, vehicle power, force/kinematics cross-checks, zero levels, friction, smooth-wire constraints and formula preservation."
+  },
+  {
+    "file": "scripts/test-mechanics-forces.js",
+    "exit": 0,
+    "output": "Forces lesson passed: resultants, string geometry, world-coordinate force balance, contact, both friction limits and 8 practice solutions."
+  },
+  {
+    "file": "scripts/test-mechanics-moments.js",
+    "exit": 0,
+    "output": "Moments lesson passed: force and moment balance about multiple points, tipping/contact limits, ladder friction, climber range, hinge directions and 8 practice solutions."
+  },
+  {
+    "file": "scripts/test-mechanics-momentum.js",
+    "exit": 0,
+    "output": "Momentum bridge: impulses, work-energy, both direction branches, passive-model rejection, wall impulse and five-step bisection verified."
+  },
+  {
+    "file": "scripts/test-mechanics-newton.js",
+    "exit": 0,
+    "output": "Newton lesson passed: world-coordinate force balance, 8 examples, 8 practice answers, friction reversal, pulley force, derivatives, conditions, paths and formula preservation."
+  },
+  {
+    "file": "scripts/test-mechanics-projectiles.js",
+    "exit": 0,
+    "output": "Projectiles passed: 8 examples, 8 practice answers, derivatives, energy checks, landing roots, height intervals, targets, wall collision, ceiling boundaries and formula preservation."
+  },
+  {
+    "file": "scripts/test-mechanics-transfer-foundations.js",
+    "exit": 0,
+    "output": "Foundation transfer checks passed: path intersection at different times, no collision, constant radius/nonzero speed and tow-system force balance."
+  },
+  {
+    "file": "scripts/test-mechanics-transfer-motion.js",
+    "exit": 0,
+    "output": "Motion transfer passed: 3 bilingual pairs, 25 original examples, 27 original exercises, exact formula order, prompts, anchors, 11 diagrams, closed disclosures, and 6 independently checked diagnostic/retry problems."
+  },
+  {
+    "file": "scripts/test-mechanics-transfer-statics.js",
+    "exit": 0,
+    "output": "MA05 statics transfer checks passed: contact limits, mass moments, stable suspension, force signs, integration conditions, and three complete bilingual source pairs."
+  },
+  {
+    "file": "scripts/test-as-mathematics-calculations.js",
+    "exit": 0,
+    "output": "AS calculation checks passed: 225 numerical comparisons plus algebraic, sign, model-boundary and coefficient assertions across L01–L25."
+  },
+  {
+    "file": "scripts/test-as-mathematics-content.js",
+    "exit": 0,
+    "output": "AS source checks passed: 15 topics, 25 groups, 121 matched prompts per language, 206 closed disclosures per language."
+  },
+  {
+    "file": "scripts/test-as-further-calculations.js",
+    "exit": 0,
+    "output": "PASS: 888 numerical/algebraic comparisons, plus matrix, probability, dimension and model assertions."
+  },
+  {
+    "file": "scripts/test-as-further-course.js",
+    "exit": 0,
+    "output": "PASS: 20 bilingual lesson pairs; 18 topics; exact IDs, math and prompts; sources, disclosures and diagrams.\nPASS: 112 original rendered heading IDs preserved by the Chinese reference directory."
+  },
+  {
+    "file": "scripts/test-further-bilingual.js",
+    "exit": 0,
+    "output": "Further bilingual passed: 16 paired lessons, English prompts/formulas, anchors, disclosures, links, syllabus, language persistence and 2864 unique TeX formulas."
+  },
+  {
+    "file": "scripts/test-further-de-moivre.js",
+    "exit": 0,
+    "output": "De Moivre passed: powers, all roots, geometry, surd value, identities, integral derivatives and AQA results."
+  },
+  {
+    "file": "scripts/test-further-first-order.js",
+    "exit": 0,
+    "output": "First-order equations passed: 15 solution families, 14 conditions, integrating factors, bilingual questions/formulas/anchors, visible demonstration, closed independent feedback, generated links and 270 TeX formulas."
+  },
+  {
+    "file": "scripts/test-further-induction-series.js",
+    "exit": 0,
+    "output": "Further induction and series passed: exact sums, recurrences, divisibility, matrix powers, derivative and complex-power checks."
+  },
+  {
+    "file": "scripts/test-further-inverse-trig.js",
+    "exit": 0,
+    "output": "Further inverse trig passed: principal ranges, chain rules, integral derivatives, completed squares, domains, quadrature and AQA results."
+  },
+  {
+    "file": "scripts/test-further-linear-equations.js",
+    "exit": 0,
+    "output": "Linear equations passed: original constraints, inverse, affine families, exceptional parameters, contradictory systems and bilingual pages."
+  },
+  {
+    "file": "scripts/test-further-matrices.js",
+    "exit": 0,
+    "output": "Further matrices passed: source matrices, exact products/inverses, restrictions, rotations/reflections, volume, invariant/fixed/collapsed sets, characteristic coefficients, nonzero eigenvectors and repeated-root dimensions."
+  },
+  {
+    "file": "scripts/test-further-polar.js",
+    "exit": 0,
+    "output": "Polar passed: coordinate conversions, domains, intersections, sector areas, overlap geometry and AQA results."
+  },
+  {
+    "file": "scripts/test-further-retry.js",
+    "exit": 0,
+    "output": "Retry maths passed: roots-and-polynomials\nRetry maths passed: proof-by-induction\nRetry maths passed: finite-series\nRetry maths passed: series-and-limits\nRetry maths passed: de-moivres-theorem\nRetry maths passed: polar-coordinates\nRetry maths passed: inverse-trigonometric-functions\nRetry maths passed: arc-length-and-surface-area\nRetry maths passed: hyperbolic-functions\nRetry maths passed: first-order-differential-equations\nRetry maths passed: second-order-differential-equations\nFurther retry passed: 11 bilingual diagnosis/retry pairs; exact coefficient, substitution, differentiation and integral checks; no new dependencies."
+  },
+  {
+    "file": "scripts/test-further-roots.js",
+    "exit": 0,
+    "output": "Further roots passed: coefficient relations, factors, conjugates, intervals and lesson structure."
+  },
+  {
+    "file": "scripts/test-further-second-order.js",
+    "exit": 0,
+    "output": "Second-order equations passed: 14 solution families, initial/boundary values and a large-x derivative check, bilingual questions/formulas/anchors, generated links/disclosures and 261 TeX formulas."
+  },
+  {
+    "file": "scripts/test-further-series-limits.js",
+    "exit": 0,
+    "output": "Further series and limits passed: coefficients, products, compositions, ranges, limit coefficients and integral values."
+  },
+  {
+    "file": "scripts/test-further-vectors.js",
+    "exit": 0,
+    "output": "Further vectors passed: products, areas, volume branches, coplanarity, line/plane conditions, all-coordinate intersections, angles, exact distances/reflections and both bilingual source pairs. No build required."
+  },
+  {
+    "file": "scripts/test-numerical-methods.js",
+    "exit": 0,
+    "output": "Numerical methods passed: trial chains, iterations, integration comparisons, bilingual tasks/formulas, SVG geometry, legacy anchors, concept order, rendered tables and 34 closed disclosures per language."
+  },
+  {
+    "file": "scripts/test-binomial-series.js",
+    "exit": 0,
+    "output": "binomial-series: mathematics, bilingual tasks/formulas, source structure and legacy anchors passed; rendered HTML also passed."
+  },
+  {
+    "file": "scripts/test-trigonometry.js",
+    "exit": 0,
+    "output": "trigonometric-functions-and-formulae: mathematics, bilingual tasks/formulas, source structure and legacy anchors passed; rendered HTML also passed."
+  },
+  {
+    "file": "scripts/test-exponential-logarithmic.js",
+    "exit": 0,
+    "output": "exponential-and-logarithmic-functions: mathematics, bilingual tasks/formulas, source structure and legacy anchors passed; rendered HTML also passed."
+  },
+  {
+    "file": "scripts/test-differentiation.js",
+    "exit": 0,
+    "output": "differentiation: mathematics and bilingual source checks passed (13 tasks each); generated HTML checked."
+  },
+  {
+    "file": "scripts/test-parametric-equations.js",
+    "exit": 0,
+    "output": "parametric-equations: mathematics and bilingual source checks passed (11 tasks each); generated HTML checked."
+  },
+  {
+    "file": "scripts/test-differential-equations.js",
+    "exit": 0,
+    "output": "differential-equations: mathematics and bilingual source checks passed (9 tasks each); generated HTML checked."
+  },
+  {
+    "file": "scripts/test-integration-applications.js",
+    "exit": 0,
+    "output": "Integration applications maths/source passed: 8 derivatives, 16 definite results, bilingual task conditions and closed separate help.\nIntegration applications rendered HTML and course links passed."
+  },
+  {
+    "file": "scripts/test-vectors.js",
+    "exit": 0,
+    "output": "Vectors maths/source passed: original cases plus 2D operations, vertex angles, geometry, retries, and bilingual task conditions.\nVectors passed: lengths, unit vectors, midpoints, line membership, intersections, line equivalence, angles, perpendicular feet and distances.\nRendered column-vector row separators passed in Vectors, Quick Reference and Modulus."
+  },
+  {
+    "file": "scripts/test-pure-consistency.js",
+    "exit": 0,
+    "output": "Pure consistency passed: early algebra, domains, modulus inequalities, 12 antiderivatives, proof cases, iteration values, general tangents, English, course navigation, TeX row separators and legacy topic bookmarks.\nContent inventory: 15 lessons, 98 worked examples, 98 numbered practice questions; index and quick reference also checked.\nMathJax initial-anchor regression passed: page/font/frame timing, encoded IDs, malformed/missing hashes and pages without anchors."
+  },
+  {
+    "file": "scripts/test-a2-heading-hierarchy.js",
+    "exit": 0,
+    "output": "A2 heading hierarchy passed: 114 pages, bilingual outlines, source/HTML levels, unique IDs, local fragments and 11 repaired lesson pairs."
+  }
+]

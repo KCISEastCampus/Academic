@@ -30,8 +30,22 @@ function power(a, n) {
 close(Math.sqrt(50) - Math.sqrt(8), 3 * Math.sqrt(2));
 close(3 / (Math.sqrt(5) + Math.sqrt(2)), Math.sqrt(5) - Math.sqrt(2));
 close(4 ** -1.5, 1 / 8);
-assert(1 / (Math.sqrt(3) - 1) > (Math.sqrt(3) + 1) / 3);
-close((Math.sqrt(7) + Math.sqrt(3)) / 2 * (Math.sqrt(7) - Math.sqrt(3)), 2);
+assert(1 / (Math.sqrt(12) - 2) < (Math.sqrt(3) + 1) / 3);
+close(2 / (Math.sqrt(28) - Math.sqrt(12)), (Math.sqrt(7) + Math.sqrt(3)) / 4);
+close((Math.sqrt(7) + Math.sqrt(3)) / 4 * (Math.sqrt(28) - Math.sqrt(12)), 2);
+assert(Math.sqrt(7 + 3) < Math.sqrt(7) + Math.sqrt(3));
+close((Math.sqrt(7) + Math.sqrt(3)) ** 2, 10 + 2 * Math.sqrt(21));
+// L01 pilot: compare the original root expressions with the claimed powers.
+for (const value of [1 / 64, 1 / 8, 1, 8, 9, 64, 729]) {
+  close(Math.cbrt(value ** 2) / value, value ** (-1 / 3));
+  close(value ** (5 / 6) / Math.cbrt(value ** 2), value ** (1 / 6));
+  close((value ** 3) ** (1 / 4) / value ** (5 / 4), 1 / Math.sqrt(value));
+}
+close(64 ** (5 / 6) / Math.cbrt(64 ** 2), 2);
+close((9 ** 3) ** (1 / 4) / 9 ** (5 / 4), 1 / 3);
+const mixedCandidates = [1, 4]; // roots of the squared equation
+assert.deepEqual(mixedCandidates.filter(x => x > 0 && x / Math.sqrt(x) === x - 2), [4]);
+close(((Math.sqrt(3) + 1) / 3 - 1 / (Math.sqrt(12) - 2)), (Math.sqrt(3) + 1) / 12);
 for (const x of [-4, -1, 0, 1, 2, 3, 4]) {
   assert.equal(x * x - 2 * x - 3 <= 0, x >= -1 && x <= 3);
   assert.equal(x * x < 4 * x - 3, x > 1 && x < 3);
@@ -195,4 +209,79 @@ for (const v of [-1, 0, 0.5, 1, 1.5, 2, 3, 6]) {
   if (v > 0 && v < 2) assert(6 - v > 4 && 6 - v < 6);
 }
 close(1 * 4, (1 + 3) * 1); close(1 * (1 - 4), -3);
+// New independent tasks and course reviews: numerical checks supplement the written proofs.
+close(Math.hypot(6, 4), 2 * Math.sqrt(13));
+close(Math.hypot(3, 6), 3 * Math.sqrt(5));
+close(3 * 1 + 2 * 3, 9); close(2 * 1.5 + 4 * 2, 11);
+const derivative = (f, x) => (f(x + 1e-5) - f(x - 1e-5)) / 2e-5;
+for (const x of [0.5, 1, 4, 9]) {
+  close(derivative(t => 6 / t + 3 * Math.sqrt(t), x), -6 / x ** 2 + 1.5 / Math.sqrt(x), 1e-7);
+  close(derivative(t => (2 * t * t + 3) / Math.sqrt(t), x), 3 * Math.sqrt(x) - 1.5 * x ** -1.5, 1e-7);
+  close(derivative(t => 2 * t ** 1.5 - 2 / t + 4, x), 3 * Math.sqrt(x) + 2 / x ** 2, 1e-7);
+  close(derivative(t => 4 * t ** 1.5 + 4 / t + 2, x), 6 * Math.sqrt(x) - 4 / x ** 2, 1e-7);
+}
+close(2 * 1 ** 1.5 - 2 + 4, 4); close(4 * 4 ** 1.5 + 4 / 4 + 2, 35);
+assert.deepEqual(power([1, -2], 4), [1, -8, 24, -32, 16]);
+close(0.98 ** 4 - 0.922368, 0.00000016);
+close((3 + 1) ** 2 + (5 - 2) ** 2, 25);
+close(3 * 3 - 4 * 5, -11); close(4 * 3 + 3 * 5, 27);
+close(4 * 5 - 3 * 3, 11); close(4 * 4 - 3 * 2, 10);
+assert.deepEqual([-2, 2].filter(x => x > 1 && Math.abs(Math.log(x + 1) / Math.log(3) + Math.log(x - 1) / Math.log(3) - 1) < 1e-10), [2]);
+const coinScores = [0, 1, 1, 2], coinProbabilities = [0.25, 0.25, 0.25, 0.25];
+close(moments(coinScores.map(x => 5 - 3 * x), coinProbabilities)[0], 2);
+close(moments(coinScores.map(x => 5 - 3 * x), coinProbabilities)[1], 9 / 2);
+const diePayments = [1, 1, 4, 4, 4, 4].map(x => 2 * x + 1);
+close(moments(diePayments, Array(6).fill(1 / 6))[0], 7);
+close(moments(diePayments, Array(6).fill(1 / 6))[1], 8);
+close(integral(t => 6 * t - 2, 1, 2) + 3, 10);
+close(integral(t => 3 * t * t - 2 * t + 2, 0, 2), 8, 1e-8);
+close(integral(t => 2 * t * t - 2, 0, 2) + 1, 7 / 3, 1e-8);
+close(integral(x => 3 * x * x - x ** 3, 0, 3), 27 / 4, 1e-8);
+close(integral(x => 4 * x - x * x, 0, 4), 32 / 3, 1e-8);
+const trigRoot = (Math.sqrt(17) - 1) / 4;
+assert((-Math.sqrt(17) - 1) / 4 < -1);
+for (const angle of [Math.acos(trigRoot), 2 * Math.PI - Math.acos(trigRoot)]) close(2 * Math.sin(angle) ** 2, Math.cos(angle));
+close(12 / 20, 3 / 5); assert.notEqual(12 / 20, 30 / 60);
+const reviewBinomial = bernoulliSequences(4, 1 / 3);
+close(sum(reviewBinomial.slice(1)), 65 / 81);
+close(moments([0, 1, 2, 3, 4], reviewBinomial)[0], 4 / 3);
+close(moments([0, 1, 2, 3, 4], reviewBinomial)[1], 8 / 9);
+const squaredValues = [0, 1, 9], squaredProbabilities = [1 / 2, 1 / 3, 1 / 6];
+close(moments(squaredValues, squaredProbabilities)[0], 11 / 6);
+close(moments(squaredValues, squaredProbabilities)[1], 377 / 36);
+const paymentTotals = [], paymentChances = [];
+for (let i = 0; i < 3; i++) for (let j = 0; j < 3; j++) {
+  paymentTotals.push(squaredValues[i] + squaredValues[j] - 1);
+  paymentChances.push(squaredProbabilities[i] * squaredProbabilities[j]);
+}
+close(moments(paymentTotals, paymentChances)[0], 8 / 3);
+close(moments(paymentTotals, paymentChances)[1], 377 / 18);
+close(integral(t => 2 + 4 * t, 0, 4), 40);
+close(2 * (18 - 2), (10 - 2) * 4);
+close(integral(t => 2 * t - t * t, 0, 3), 0, 1e-8);
+close(integral(t => Math.abs(2 * t - t * t), 0, 3), 8 / 3, 1e-8);
+close(integral(t => 1.5 * (2 - 2 * t), 0, 3), -4.5);
+// Review repairs: exact products, enumerated thresholds, restrictions and changed motion.
+assert.deepEqual(convolve([2, 1], [3, -4, 1]), [6, -5, -2, 1]);
+const newDeposits = seq(12, n => 12 + 4 * (n - 1));
+assert.equal(newDeposits.findIndex((_, i) => sum(newDeposits.slice(0, i + 1)) >= 250) + 1, 9);
+close(sum(newDeposits.slice(0, 8)), 208); close(sum(newDeposits.slice(0, 9)), 252);
+const firstAngle = Math.asin(6 * Math.sin(40 * Math.PI / 180) / 9) * 180 / Math.PI;
+close(firstAngle, 25.374, 1e-4);
+assert(firstAngle + 40 < 180 && (180 - firstAngle) + 40 > 180);
+assert.deepEqual([0, Math.PI, 2 * Math.PI].filter(t => Math.abs(Math.sin(t)) > 1e-12), []);
+close(8 / 20, 2 / 5); close(8 / 22, 4 / 11); assert.notEqual(8 / 20, 22 / 50);
+assert.notEqual(3 / 5, 2 / 4);
+close(bernoulliSequences(3, 3 / 5)[2], 54 / 125);
+for (const v of [-1, 0, 0.5, 2, 3.5, 4, 5, 6]) {
+  assert.equal(v > 0 && v < 12 - 2 * v, v > 0 && v < 4);
+  if (v > 0 && v < 4) assert(12 - 2 * v > 4 && 12 - 2 * v < 12);
+}
+close((-3 - 0.25 * 4 * 9.8) / 4, -3.2);
+close((8 + 0.2 * 5 * 9.8) / 5, 3.56);
+for (const [c, x, y] of [[10, -3, 4], [-10, 5, 0]]) {
+  close(y, 2 * x + c); close((x - 1) ** 2 + (y - 2) ** 2, 20);
+  close((4 * c - 10) ** 2 - 20 * ((c - 2) ** 2 - 19), 0);
+}
+for (const c of [-12, -10, 0, 10, 12]) close((4 * c - 10) ** 2 - 20 * ((c - 2) ** 2 - 19), 400 - 4 * c * c);
 console.log(`AS calculation checks passed: ${checks} numerical comparisons plus algebraic, sign, model-boundary and coefficient assertions across L01–L25.`);

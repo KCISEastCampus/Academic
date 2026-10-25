@@ -1,0 +1,108 @@
+[
+  {
+    "type": "entry-example-attempt",
+    "from": "/zh/alevel/as-mathematics/",
+    "to": "https://academic.kcisec.site/zh/alevel/as-mathematics/algebra/#l01-scaffold",
+    "passed": true
+  },
+  {
+    "type": "next-lesson",
+    "from": "algebra#next-step",
+    "to": "https://academic.kcisec.site/zh/alevel/as-mathematics/coordinate-geometry/",
+    "passed": true
+  },
+  {
+    "type": "continuous-reading-capture",
+    "slug": "algebra",
+    "width": 390,
+    "captureOnlyHidden": "fixed navigation, back-to-top and scroll progress",
+    "passed": true
+  },
+  {
+    "type": "continuous-reading-capture",
+    "slug": "variable-acceleration",
+    "width": 390,
+    "captureOnlyHidden": "fixed navigation, back-to-top and scroll progress",
+    "passed": true
+  },
+  {
+    "type": "wide-formula-keyboard",
+    "lang": "en",
+    "slug": "probability",
+    "before": {
+      "scroll": 0,
+      "width": 350,
+      "fullWidth": 528,
+      "focusStart": "P",
+      "previousText": "A sample space lists possible outcomes; events are subsets. For equally likely outcomes use favourab",
+      "focusedBefore": true
+    },
+    "focused": true,
+    "focusAfterTab": {
+      "tag": "MJX-CONTAINER",
+      "text": "P(A∪B)=P(A)+P(B)−P(A∩B),P(A∣B)=P(A∩B)P(B)(P(B)>0)."
+    },
+    "after": 40,
+    "passed": true
+  },
+  {
+    "type": "wide-formula-keyboard",
+    "lang": "en",
+    "slug": "variable-acceleration",
+    "before": {
+      "scroll": 0,
+      "width": 350,
+      "fullWidth": 358,
+      "focusStart": "P",
+      "previousText": "For position s, velocity v and acceleration a,",
+      "focusedBefore": true
+    },
+    "focused": true,
+    "focusAfterTab": {
+      "tag": "MJX-CONTAINER",
+      "text": "v=dsdt,a=dvdt,v=∫adt+C,s=∫vdt+D."
+    },
+    "after": 8,
+    "passed": true
+  },
+  {
+    "type": "wide-formula-keyboard",
+    "lang": "zh",
+    "slug": "probability",
+    "before": {
+      "scroll": 0,
+      "width": 350,
+      "fullWidth": 528,
+      "focusStart": "P",
+      "previousText": "样本空间（sample space）列出可能结果，事件是结果的子集。等可能时用有利结果数除以总数；观测的相对频率用于估计概率，不必恰等于理论概率。加法与条件概率法则为",
+      "focusedBefore": true
+    },
+    "focused": true,
+    "focusAfterTab": {
+      "tag": "MJX-CONTAINER",
+      "text": "P(A∪B)=P(A)+P(B)−P(A∩B),P(A∣B)=P(A∩B)P(B)(P(B)>0)."
+    },
+    "after": 40,
+    "passed": true
+  },
+  {
+    "type": "wide-formula-keyboard",
+    "lang": "zh",
+    "slug": "variable-acceleration",
+    "before": {
+      "scroll": 0,
+      "width": 350,
+      "fullWidth": 358,
+      "focusStart": "P",
+      "previousText": "位置 s、速度 v、加速度 a 满足",
+      "focusedBefore": true
+    },
+    "focused": true,
+    "focusAfterTab": {
+      "tag": "MJX-CONTAINER",
+      "text": "v=dsdt,a=dvdt,v=∫adt+C,s=∫vdt+D."
+    },
+    "after": 8,
+    "passed": true
+  }
+]

@@ -1,0 +1,2809 @@
+{
+  "baseline": "e9cd88a8730dda83bc6aaa855d1863c2d7837d1c",
+  "pages": [
+    {
+      "path": "alevel/as-mathematics/algebra.md",
+      "sha256": "33a4320373e3496f3c6f222731319eeb6c29a2efa1be04b33ee6b8e15bb3ef0f",
+      "sourceIDs": [
+        [
+          "l01",
+          ""
+        ],
+        [
+          "",
+          "l01-prerequisite"
+        ],
+        [
+          "l01-indices",
+          ""
+        ],
+        [
+          "l01-indices-example",
+          ""
+        ],
+        [
+          "l01-scaffold",
+          ""
+        ],
+        [
+          "l01-surds",
+          ""
+        ],
+        [
+          "l01-worked",
+          ""
+        ],
+        [
+          "l01-independent-start",
+          ""
+        ],
+        [
+          "l01-independent-indices",
+          ""
+        ],
+        [
+          "l01-independent",
+          ""
+        ],
+        [
+          "l01-diagnosis",
+          ""
+        ],
+        [
+          "l01-retry-indices",
+          ""
+        ],
+        [
+          "l01-retry",
+          ""
+        ],
+        [
+          "l02",
+          ""
+        ],
+        [
+          "l02-worked",
+          ""
+        ],
+        [
+          "l02-scaffold",
+          ""
+        ],
+        [
+          "l02-independent",
+          ""
+        ],
+        [
+          "l02-diagnosis",
+          ""
+        ],
+        [
+          "l02-retry",
+          ""
+        ],
+        [
+          "l03",
+          ""
+        ],
+        [
+          "l03-worked",
+          ""
+        ],
+        [
+          "l03-scaffold",
+          ""
+        ],
+        [
+          "l03-independent",
+          ""
+        ],
+        [
+          "l03-diagnosis",
+          ""
+        ],
+        [
+          "l03-retry",
+          ""
+        ],
+        [
+          "l05",
+          ""
+        ],
+        [
+          "l05-worked",
+          ""
+        ],
+        [
+          "l05-scaffold",
+          ""
+        ],
+        [
+          "l05-independent",
+          ""
+        ],
+        [
+          "l05-diagnosis",
+          ""
+        ],
+        [
+          "l05-retry",
+          ""
+        ],
+        [
+          "l01-later",
+          ""
+        ],
+        [
+          "l01-later-task",
+          ""
+        ],
+        [
+          "next-step",
+          ""
+        ],
+        [
+          "sources",
+          ""
+        ]
+      ],
+      "questions": [
+        "**Question:** For $a>0$, write $\\sqrt[3]{a^2}/a$ as a single power of $a$, then find its exact value when $a=8$.",
+        "**Question:** For $x>0$, rewrite $\\sqrt{x}/x^2$ as one power, then evaluate it at $x=4$.",
+        "**Question:** Simplify $\\sqrt{50}-\\sqrt8$ and rationalise $3/(\\sqrt5+\\sqrt2)$.",
+        "**Question:** For $x>0$, let $F(x)=x^{5/6}/\\sqrt[3]{x^2}$. Find a constant $k$ such that $F(x)=x^k$ for every allowed $x$. Then find $x$ when $F(x)=2$, explaining why your value works.",
+        "**Question:** Without decimal approximations, decide which is larger: $1/(\\sqrt{12}-2)$ or $(\\sqrt3+1)/3$. Justify your answer.",
+        "**Question:** For $t>0$, simplify $\\sqrt[4]{t^3}/t^{5/4}$ to one power. Find $t$ when the original expression equals $1/3$, and check your answer in that original expression.",
+        "**Question:** A student claims that $\\sqrt{7+3}=\\sqrt7+\\sqrt3$. Decide whether this is correct, giving an exact reason. Then find an exact simplified form of $2/(\\sqrt{28}-\\sqrt{12})$ and check it by multiplication.",
+        "**Question:** Solve $x^2-2x-3\\le0$. Find the intersections of $y=x^2$ and $y=2x+3$.",
+        "**Question:** Complete the square for $x^2+4x+7$ and state its minimum.",
+        "**Question:** The line $y=4x+k$ touches $y=x^2$. Find $k$ and the point of contact. Then solve $x^2<4x+k+1$.",
+        "**Question:** Solve $-x^2+5x-6>0$ and $5-3x\\ge11$.",
+        "**Question:** Factorise $f(x)=x^3-3x+2$ and describe its real intercepts and end behaviour.",
+        "**Question:** Divide $x^3+2x^2+x+5$ by $x+2$. State the quotient and remainder.",
+        "**Question:** The remainder when $x^3+kx+2$ is divided by $x+1$ is zero. Find $k$, factorise the cubic over the reals, and justify the number of real roots.",
+        "**Question:** Expand $(x-2)^2(x+1)$. State the remainder on division by $x-1$ and say which root is a touching point.",
+        "**Question:** The graph $y=f(x)$ contains $(2,3)$. Locate its corresponding point on $y=f(2x)$ and on $y=-2f(x)$, describing each transformation.",
+        "**Question:** Translate $y=x^2$ by vector $(3,-2)$. State the new equation and vertex.",
+        "**Question:** A horizontal stretch maps $(2,5)$ on $y=f(x)$ to $(6,5)$. Write the transformed equation using $f$ and determine where $( -1,4)$ moves.",
+        "**Question:** Describe $y=f(x+4)$ and give the image of $(1,-2)$.",
+        "**Question:** Solve $x/\\sqrt{x}=x-2$ over the real numbers. State the conditions on $x$ and explain why every retained answer satisfies the original equation."
+      ],
+      "headingIDs": [
+        "siteSearchTitle",
+        "l01",
+        "l01-indices",
+        "l01-indices-example",
+        "l01-scaffold",
+        "l01-surds",
+        "l01-worked",
+        "l01-independent-start",
+        "l01-independent-indices",
+        "l01-independent",
+        "l01-diagnosis",
+        "l01-retry-indices",
+        "l01-retry",
+        "l02",
+        "l02-worked",
+        "l02-scaffold",
+        "l02-independent",
+        "l02-diagnosis",
+        "l02-retry",
+        "l03",
+        "l03-worked",
+        "l03-scaffold",
+        "l03-independent",
+        "l03-diagnosis",
+        "l03-retry",
+        "l05",
+        "l05-worked",
+        "l05-scaffold",
+        "l05-independent",
+        "l05-diagnosis",
+        "l05-retry",
+        "l01-later",
+        "l01-later-task",
+        "next-step",
+        "sources",
+        "tocTitle"
+      ]
+    },
+    {
+      "path": "alevel/as-mathematics/binomial.md",
+      "sha256": "6dca705525bdc09dca1255cd5ed477a80f43c114c27006f15432e0efe244069f",
+      "sourceIDs": [
+        [
+          "l21",
+          ""
+        ],
+        [
+          "l21-worked",
+          ""
+        ],
+        [
+          "l21-scaffold",
+          ""
+        ],
+        [
+          "l21-independent",
+          ""
+        ],
+        [
+          "l21-diagnosis",
+          ""
+        ],
+        [
+          "l21-retry",
+          ""
+        ],
+        [
+          "next-step",
+          ""
+        ],
+        [
+          "sources",
+          ""
+        ]
+      ],
+      "questions": [
+        "**Question:** A constructed model has $X\\sim\\mathrm{Bin}(5,0.2)$. Find $P(X=2)$, $P(X>1)$, the mean and SD.",
+        "**Question:** For this X, find $P(1\\le X\\le3)$ using cumulative notation, and evaluate it.",
+        "**Question:** A binomial variable has mean 3 and variance 2.4. Find n and p, derive its variance from independent Bernoulli indicators, and find $P(X\\ge1)$. Would the same model automatically apply to 15 draws without replacement from 75 objects of which 15 are successes?",
+        "**Question:** For $Y\\sim\\mathrm{Bin}(4,1/2)$, find $P(Y\\ge3)$ and the variance. State the excluded integers in the complementary event."
+      ],
+      "headingIDs": [
+        "siteSearchTitle",
+        "l21",
+        "l21-worked",
+        "l21-scaffold",
+        "l21-independent",
+        "l21-diagnosis",
+        "l21-retry",
+        "next-step",
+        "sources",
+        "tocTitle"
+      ]
+    },
+    {
+      "path": "alevel/as-mathematics/circles.md",
+      "sha256": "6377fc60296ed71a5005c714e4c08559474cdbd0e21fae0045c7af6bb845ef29",
+      "sourceIDs": [
+        [
+          "l14",
+          ""
+        ],
+        [
+          "l14-worked",
+          ""
+        ],
+        [
+          "l14-scaffold",
+          ""
+        ],
+        [
+          "l14-independent",
+          ""
+        ],
+        [
+          "l14-diagnosis",
+          ""
+        ],
+        [
+          "l14-retry",
+          ""
+        ],
+        [
+          "next-step",
+          ""
+        ],
+        [
+          "sources",
+          ""
+        ]
+      ],
+      "questions": [
+        "**Question:** For $x^2+y^2-4x+2y-20=0$, find the centre, radius and tangent at $(5,3)$. Write the circle equation after translation by $(-3,2)$.",
+        "**Question:** A diameter has endpoints $(-1,0)$ and $(5,4)$. Find the circle equation. Explain why a third point on this circle makes a right angle with the endpoints.",
+        "**Question:** A circle has its centre on the x-axis and passes through $(0,1)$ and $(4,3)$. Find its equation, using a chord property. Then translate it by $(2,-1)$.",
+        "**Question:** Find the tangent to $(x+1)^2+(y-2)^2=9$ at $(2,2)$. Translate the circle so that its centre is the origin."
+      ],
+      "headingIDs": [
+        "siteSearchTitle",
+        "l14",
+        "l14-worked",
+        "l14-scaffold",
+        "l14-independent",
+        "l14-diagnosis",
+        "l14-retry",
+        "next-step",
+        "sources",
+        "tocTitle"
+      ]
+    },
+    {
+      "path": "alevel/as-mathematics/constant-acceleration.md",
+      "sha256": "0a40c8bbb225bb32cd48ce8753c13f79b741ff926750c39ea155bb06d3ee09a7",
+      "sourceIDs": [
+        [
+          "l22",
+          ""
+        ],
+        [
+          "l22-worked",
+          ""
+        ],
+        [
+          "l22-scaffold",
+          ""
+        ],
+        [
+          "l22-independent",
+          ""
+        ],
+        [
+          "l22-diagnosis",
+          ""
+        ],
+        [
+          "l22-retry",
+          ""
+        ],
+        [
+          "next-step",
+          ""
+        ],
+        [
+          "sources",
+          ""
+        ]
+      ],
+      "questions": [
+        "**Question:** A ball is projected vertically upwards at $14.7\\,\\mathrm{m\\,s^{-1}}$ and returns to the launch height. Neglect air resistance and take $g=9.8\\,\\mathrm{m\\,s^{-2}}$. Find the time to its highest point, maximum height, total flight time, distance and average speed.",
+        "**Question:** A particle has initial velocity $4\\,\\mathrm{m\\,s^{-1}}$ and constant acceleration $2\\,\\mathrm{m\\,s^{-2}}$. Find its velocity and displacement after 3 s and relate the displacement to its v–t graph.",
+        "**Question:** A continuous v–t graph consists of straight segments joining $(0,0),(4,8),(7,8),(10,-4)$, with time in seconds and velocity in metres per second. Sketch it, determine each acceleration, and find displacement, distance and average speed over 10 s.",
+        "**Question:** A particle starts with velocity $6\\,\\mathrm{m\\,s^{-1}}$ and acceleration $-2\\,\\mathrm{m\\,s^{-2}}$ for 5 s. Find its displacement and total distance."
+      ],
+      "headingIDs": [
+        "siteSearchTitle",
+        "l22",
+        "l22-worked",
+        "l22-scaffold",
+        "l22-independent",
+        "l22-diagnosis",
+        "l22-retry",
+        "next-step",
+        "sources",
+        "tocTitle"
+      ]
+    },
+    {
+      "path": "alevel/as-mathematics/coordinate-geometry.md",
+      "sha256": "961396cc6801bd28facc2eb28c612893e7dc2a66e60ac3e2185c5dfbf3176bbb",
+      "sourceIDs": [
+        [
+          "l04",
+          ""
+        ],
+        [
+          "l04-worked",
+          ""
+        ],
+        [
+          "l04-scaffold",
+          ""
+        ],
+        [
+          "l04-independent",
+          ""
+        ],
+        [
+          "l04-diagnosis",
+          ""
+        ],
+        [
+          "l04-retry",
+          ""
+        ],
+        [
+          "next-step",
+          ""
+        ],
+        [
+          "sources",
+          ""
+        ]
+      ],
+      "questions": [
+        "**Question:** Find the perpendicular bisector of the segment joining $A=(1,2)$ and $B=(5,4)$, and its intersection with $y=x$.",
+        "**Question:** Find the line through $(2,-1)$ parallel to $3x-y+4=0$.",
+        "**Question:** Find all values of $c$ for which $y=2x+c$ meets $y=x^2$ twice. Describe the case at the boundary of your answer.",
+        "**Question:** Find the perpendicular bisector of the segment from $(2,1)$ to $(2,7)$."
+      ],
+      "headingIDs": [
+        "siteSearchTitle",
+        "l04",
+        "l04-worked",
+        "l04-scaffold",
+        "l04-independent",
+        "l04-diagnosis",
+        "l04-retry",
+        "next-step",
+        "sources",
+        "tocTitle"
+      ]
+    },
+    {
+      "path": "alevel/as-mathematics/differentiation.md",
+      "sha256": "a55e4cc1b0ad518be0b0310ce5ea59333e7b801a8ba75e50f81fcc0de13b68d9",
+      "sourceIDs": [
+        [
+          "l06",
+          ""
+        ],
+        [
+          "l06-worked",
+          ""
+        ],
+        [
+          "l06-scaffold",
+          ""
+        ],
+        [
+          "l06-independent",
+          ""
+        ],
+        [
+          "l06-diagnosis",
+          ""
+        ],
+        [
+          "l06-retry",
+          ""
+        ],
+        [
+          "l07",
+          ""
+        ],
+        [
+          "l07-worked",
+          ""
+        ],
+        [
+          "l07-scaffold",
+          ""
+        ],
+        [
+          "l07-independent",
+          ""
+        ],
+        [
+          "l07-diagnosis",
+          ""
+        ],
+        [
+          "l07-retry",
+          ""
+        ],
+        [
+          "next-step",
+          ""
+        ],
+        [
+          "sources",
+          ""
+        ]
+      ],
+      "questions": [
+        "**Question:** For $f(x)=x^2+4\\sqrt x$, find the tangent and normal at $x=1$.",
+        "**Question:** Rewrite and differentiate $3/x^2-2\\sqrt x$ for $x>0$.",
+        "**Question:** A tangent to $y=x^2$ is parallel to $y=6x-1$. Find its point of contact and the normal there.",
+        "**Question:** Find the normal to $y=x^2-4x+1$ at its stationary point.",
+        "**Question:** A rectangle has perimeter 20 m. Find its greatest area, justifying the result.",
+        "**Question:** For $f(x)=x^3-3x$, find and classify the stationary points and give its increasing intervals.",
+        "**Question:** The same 20 m perimeter rectangle must have width $x\\le3$ m. Can an area of $24\\,\\mathrm{m^2}$ be attained? Give a reason without merely solving an unconstrained stationary-point equation.",
+        "**Question:** Find the least value of $x^2-6x+12$ on $0\\le x\\le2$, with a reason."
+      ],
+      "headingIDs": [
+        "siteSearchTitle",
+        "l06",
+        "l06-worked",
+        "l06-scaffold",
+        "l06-independent",
+        "l06-diagnosis",
+        "l06-retry",
+        "l07",
+        "l07-worked",
+        "l07-scaffold",
+        "l07-independent",
+        "l07-diagnosis",
+        "l07-retry",
+        "next-step",
+        "sources",
+        "tocTitle"
+      ]
+    },
+    {
+      "path": "alevel/as-mathematics/exponentials-logarithms.md",
+      "sha256": "f0c2882e2a892d67112072f1eb3ac10396b2662bab1c449e434a67b1a3e1721a",
+      "sourceIDs": [
+        [
+          "l17",
+          ""
+        ],
+        [
+          "l17-worked",
+          ""
+        ],
+        [
+          "l17-scaffold",
+          ""
+        ],
+        [
+          "l17-independent",
+          ""
+        ],
+        [
+          "l17-diagnosis",
+          ""
+        ],
+        [
+          "l17-retry",
+          ""
+        ],
+        [
+          "next-step",
+          ""
+        ],
+        [
+          "sources",
+          ""
+        ]
+      ],
+      "questions": [
+        "**Question:** Solve $3\\cdot2^t=15$ and give $t$ to 3 decimal places. Interpret the solution as a point on a graph.",
+        "**Question:** Solve $\\log_2(x-1)=3$ and explain the admissible values of $x$ before solving.",
+        "**Question:** Find all real solutions of $\\log_2(x-1)+\\log_2(x-3)=3$. Show why any rejected algebraic value is not a solution.",
+        "**Question:** A constructed decay model is $N=80(1/2)^t$. Find the time at which $N=10$ and describe the graph’s behaviour as $t$ increases."
+      ],
+      "headingIDs": [
+        "siteSearchTitle",
+        "l17",
+        "l17-worked",
+        "l17-scaffold",
+        "l17-independent",
+        "l17-diagnosis",
+        "l17-retry",
+        "next-step",
+        "sources",
+        "tocTitle"
+      ]
+    },
+    {
+      "path": "alevel/as-mathematics/forces.md",
+      "sha256": "16f43d42a15cfb0995445a4ff28c72095aad465fde5fff61277369a2fe14dceb",
+      "sourceIDs": [
+        [
+          "l24",
+          ""
+        ],
+        [
+          "l24-worked",
+          ""
+        ],
+        [
+          "l24-scaffold",
+          ""
+        ],
+        [
+          "l24-independent",
+          ""
+        ],
+        [
+          "l24-diagnosis",
+          ""
+        ],
+        [
+          "l24-retry",
+          ""
+        ],
+        [
+          "next-step",
+          ""
+        ],
+        [
+          "sources",
+          ""
+        ]
+      ],
+      "questions": [
+        "**Question:** Masses 3 kg and 2 kg hang on opposite sides of a smooth light pulley, joined by a light taut inextensible string. Starting from rest, find the acceleration and tension while both move freely. Use $g=9.8\\,\\mathrm{m\\,s^{-2}}$.",
+        "**Question:** A 2 kg block slides right on a horizontal surface. A horizontal 10 N force pulls right and $\\mu=0.2$. Find the reaction, dynamic friction and acceleration, using $g=9.8\\,\\mathrm{m\\,s^{-2}}$.",
+        "**Question:** A 600 kg car tows a 400 kg trailer along a horizontal road using a light rigid towbar. The engine drives forward with 1800 N; resistances are 400 N on the car and 200 N on the trailer. Draw separate force diagrams, find the acceleration and towbar force, and state whether the bar is in tension or thrust.",
+        "**Question:** A 500 kg trailer moving on a horizontal road is decelerated at $2\\,\\mathrm{m\\,s^{-2}}$. Its resistance is 300 N backwards. Find the towbar force on it and say whether the bar pushes or pulls the trailer."
+      ],
+      "headingIDs": [
+        "siteSearchTitle",
+        "l24",
+        "l24-worked",
+        "l24-scaffold",
+        "l24-independent",
+        "l24-diagnosis",
+        "l24-retry",
+        "next-step",
+        "sources",
+        "tocTitle"
+      ]
+    },
+    {
+      "path": "alevel/as-mathematics/index.md",
+      "sha256": "43be2955f67753b540233c4b62402952b44c5ab70567e127f8b5115cbdf8ea52",
+      "sourceIDs": [
+        [
+          "learning-route",
+          ""
+        ],
+        [
+          "pure-foundations",
+          ""
+        ],
+        [
+          "further-pure",
+          ""
+        ],
+        [
+          "statistics",
+          ""
+        ],
+        [
+          "mechanics",
+          ""
+        ],
+        [
+          "how-to-study",
+          ""
+        ],
+        [
+          "sources-and-scope",
+          ""
+        ],
+        [
+          "legacy-reference",
+          ""
+        ],
+        [
+          "",
+          "31-international-as-unit-p1-pure-maths"
+        ],
+        [
+          "",
+          "32-international-as-unit-psm1-pure-maths-statistics-and-mechanics"
+        ]
+      ],
+      "questions": [],
+      "headingIDs": [
+        "siteSearchTitle",
+        "learning-route",
+        "pure-foundations",
+        "further-pure",
+        "statistics",
+        "mechanics",
+        "how-to-study",
+        "sources-and-scope",
+        "legacy-reference",
+        "assessment-structure",
+        "31-international-as-unit-p1-pure-maths",
+        "p11-algebra",
+        "surds-and-indices",
+        "quadratic-functions",
+        "polynomials",
+        "inequalities-and-simultaneous-equations",
+        "functions-and-graphs",
+        "p12-coordinate-geometry",
+        "straight-lines",
+        "line-relationships",
+        "p13-differentiation",
+        "fundamental-concepts",
+        "applications",
+        "p14-integration",
+        "basic-integration",
+        "definite-integrals-and-applications",
+        "p15-sequences-and-series",
+        "sequences",
+        "series",
+        "32-international-as-unit-psm1-pure-maths-statistics-and-mechanics",
+        "pp11-circles",
+        "circle-geometry",
+        "pp12-trigonometry",
+        "trigonometric-fundamentals",
+        "trigonometric-functions-and-equations",
+        "pp13-exponentials-and-logarithms",
+        "exponential-functions",
+        "logarithmic-functions",
+        "s11-further-probability",
+        "probability-fundamentals",
+        "conditional-probability-and-independence",
+        "s12-discrete-random-variables",
+        "probability-distributions",
+        "expectation-and-variance",
+        "s13-bernoulli-and-binomial-distributions",
+        "bernoulli-distribution",
+        "binomial-distribution",
+        "m11-motion-in-a-straight-line-with-constant-acceleration",
+        "kinematics-fundamentals",
+        "constant-acceleration-equations",
+        "m12-motion-in-a-straight-line-with-variable-acceleration",
+        "calculus-in-kinematics",
+        "m13-forces-and-newtons-laws",
+        "forces-and-equilibrium",
+        "m14-momentum-and-impulse",
+        "momentum-principles",
+        "tocTitle"
+      ]
+    },
+    {
+      "path": "alevel/as-mathematics/integration.md",
+      "sha256": "488aad657ff5c6dc477779f18cb8aa4660de5afb4b01bb9dc8232e9227f4d31b",
+      "sourceIDs": [
+        [
+          "l08",
+          ""
+        ],
+        [
+          "l08-worked",
+          ""
+        ],
+        [
+          "l08-scaffold",
+          ""
+        ],
+        [
+          "l08-independent",
+          ""
+        ],
+        [
+          "l08-diagnosis",
+          ""
+        ],
+        [
+          "l08-retry",
+          ""
+        ],
+        [
+          "l09",
+          ""
+        ],
+        [
+          "l09-worked",
+          ""
+        ],
+        [
+          "l09-scaffold",
+          ""
+        ],
+        [
+          "l09-independent",
+          ""
+        ],
+        [
+          "l09-diagnosis",
+          ""
+        ],
+        [
+          "l09-retry",
+          ""
+        ],
+        [
+          "next-step",
+          ""
+        ],
+        [
+          "sources",
+          ""
+        ]
+      ],
+      "questions": [
+        "**Question:** Find the area enclosed by $y=2x$ and $y=x^2$.",
+        "**Question:** A curve has gradient $3x^2-2x+1$ and passes through $(0,4)$. Find its equation and its definite integral from 0 to 1.",
+        "**Question:** Find the area enclosed by $y=x+2$ and $y=x^2$. Include enough reasoning to identify the region.",
+        "**Question:** Find the area between $y=x^2-4$, the x-axis and the lines $x=0$, $x=2$.",
+        "**Question:** Use ordinates at $x=0,1,2$ for $y=x^2+1$ to estimate the area from 0 to 2. Explain the error direction.",
+        "**Question:** A table has $x=0,0.5,1,1.5$ and $y=2,3,4,6$. Form and evaluate a trapezium estimate.",
+        "**Question:** A nonnegative curve bends downward throughout $0\\le x\\le4$. At $x=0,2,4$ its heights are $0,3,4$. Estimate the area, state whether the estimate is high or low, and explain how extra readings could help.",
+        "**Question:** Estimate the area from a table with $x=1,2,3$ and heights $4,5,8$. Can the sign of the error be known from only these data?"
+      ],
+      "headingIDs": [
+        "siteSearchTitle",
+        "l08",
+        "l08-worked",
+        "l08-scaffold",
+        "l08-independent",
+        "l08-diagnosis",
+        "l08-retry",
+        "l09",
+        "l09-worked",
+        "l09-scaffold",
+        "l09-independent",
+        "l09-diagnosis",
+        "l09-retry",
+        "next-step",
+        "sources",
+        "tocTitle"
+      ]
+    },
+    {
+      "path": "alevel/as-mathematics/momentum.md",
+      "sha256": "e3a245e064b94724acf534a4c4081d356a8ad069f4dd513dbc8b84fda14cf4dd",
+      "sourceIDs": [
+        [
+          "l25",
+          ""
+        ],
+        [
+          "l25-worked",
+          ""
+        ],
+        [
+          "l25-scaffold",
+          ""
+        ],
+        [
+          "l25-independent",
+          ""
+        ],
+        [
+          "l25-diagnosis",
+          ""
+        ],
+        [
+          "l25-retry",
+          ""
+        ],
+        [
+          "next-step",
+          ""
+        ],
+        [
+          "sources",
+          ""
+        ]
+      ],
+      "questions": [
+        "**Question:** A 2 kg particle A moving right at $5\\,\\mathrm{m\\,s^{-1}}$ collides with a 3 kg particle B moving left at $1\\,\\mathrm{m\\,s^{-1}}$. Afterwards A moves right at $0.5\\,\\mathrm{m\\,s^{-1}}$. External impulse on the pair is negligible. Find B’s velocity and the impulse on A; check separation.",
+        "**Question:** A 0.4 kg ball hits a fixed smooth wall normally at $6\\,\\mathrm{m\\,s^{-1}}$ and rebounds at $4\\,\\mathrm{m\\,s^{-1}}$. Taking towards the wall positive, find its impulse and explain why its momentum is not conserved.",
+        "**Question:** A 1 kg particle A moving right at $6\\,\\mathrm{m\\,s^{-1}}$ catches a stationary 2 kg particle B. External impulse is negligible. After impact A continues right with speed v and the particles separate immediately. Determine the admissible range of v using momentum and separation, and find the range of impulse magnitudes on A.",
+        "**Question:** A 1 kg particle at $4\\,\\mathrm{m\\,s^{-1}}$ rightwards sticks to a stationary 3 kg particle after collision, with negligible external impulse. Find their common velocity and the impulse on the 1 kg particle. Is energy conservation needed?"
+      ],
+      "headingIDs": [
+        "siteSearchTitle",
+        "l25",
+        "l25-worked",
+        "l25-scaffold",
+        "l25-independent",
+        "l25-diagnosis",
+        "l25-retry",
+        "next-step",
+        "sources",
+        "tocTitle"
+      ]
+    },
+    {
+      "path": "alevel/as-mathematics/probability.md",
+      "sha256": "8257c7487802c4946153583ed07a61fa8b6d7634c0686f009ddafb4588f47491",
+      "sourceIDs": [
+        [
+          "l18",
+          ""
+        ],
+        [
+          "l18-worked",
+          ""
+        ],
+        [
+          "l18-scaffold",
+          ""
+        ],
+        [
+          "l18-independent",
+          ""
+        ],
+        [
+          "l18-diagnosis",
+          ""
+        ],
+        [
+          "l18-retry",
+          ""
+        ],
+        [
+          "next-step",
+          ""
+        ],
+        [
+          "sources",
+          ""
+        ]
+      ],
+      "questions": [
+        "**Question:** In a constructed group of 100 equally likely records, 20 belong to both A and B, 20 to A only, 30 to B only, and 30 to neither. Find $P(A\\mid B)$ and decide whether A and B are independent or mutually exclusive.",
+        "**Question:** Given $P(A)=0.3$, $P(B\\mid A)=0.6$ and $P(B)=0.4$, find the intersection and union probabilities.",
+        "**Question:** Suppose $P(A)=0.4$, $P(B)=0.7$, and $P(A\\mid B)=0.5$. Find the probability of neither event and decide whether the events are independent. A second report gives the same marginal probabilities but intersection 0.45. Can the second report describe a probability model?",
+        "**Question:** Events C and D are mutually exclusive with probabilities 0.2 and 0.3. Find $P(C\\mid D)$ and decide whether they are independent."
+      ],
+      "headingIDs": [
+        "siteSearchTitle",
+        "l18",
+        "l18-worked",
+        "l18-scaffold",
+        "l18-independent",
+        "l18-diagnosis",
+        "l18-retry",
+        "next-step",
+        "sources",
+        "tocTitle"
+      ]
+    },
+    {
+      "path": "alevel/as-mathematics/random-variables.md",
+      "sha256": "e7d490dfaa315fe32e9c97f26a76581ae180ef13d46954757c40d8c74bf6d89d",
+      "sourceIDs": [
+        [
+          "l19",
+          ""
+        ],
+        [
+          "l19-worked",
+          ""
+        ],
+        [
+          "l19-scaffold",
+          ""
+        ],
+        [
+          "l19-independent",
+          ""
+        ],
+        [
+          "l19-diagnosis",
+          ""
+        ],
+        [
+          "l19-retry",
+          ""
+        ],
+        [
+          "l20",
+          ""
+        ],
+        [
+          "l20-worked",
+          ""
+        ],
+        [
+          "l20-scaffold",
+          ""
+        ],
+        [
+          "l20-independent",
+          ""
+        ],
+        [
+          "l20-diagnosis",
+          ""
+        ],
+        [
+          "l20-retry",
+          ""
+        ],
+        [
+          "next-step",
+          ""
+        ],
+        [
+          "sources",
+          ""
+        ]
+      ],
+      "questions": [
+        "**Question:** Let $X$ take values $1,2,4$ with probabilities $k,2k,k$. Find $k$, its mean, variance and standard deviation.",
+        "**Question:** For this distribution, find the mean, variance and SD of $Y=3-2X$.",
+        "**Question:** A constructed payment in dollars is $C=X^2$, using the distribution above. Find its expected value, variance and standard deviation, and explain why squaring the mean of X is insufficient.",
+        "**Question:** For the same X, find the mean and variance of $Z=1/X$, explaining why the definition is valid.",
+        "**Question:** Independent daily counts $X_1,X_2$ each have mean 8 and variance 3. Compare the mean and variance of $X_1+X_2$ with those of $2X_1$.",
+        "**Question:** Independent X and Y have means 5 and 2, variances 4 and 1. Find the mean and variance of $X-Y$.",
+        "**Question:** Independent X, Y and Z have means 5, 2, 7 and variances 4, 1, 9 respectively. Find the mean and variance of $W=2X-Y+Z$. If independence is removed, which of your answers is still determined?",
+        "**Question:** Three independent copies of X each have variance 2. Compare the variance of their sum with the variance of $3X$."
+      ],
+      "headingIDs": [
+        "siteSearchTitle",
+        "l19",
+        "l19-worked",
+        "l19-scaffold",
+        "l19-independent",
+        "l19-diagnosis",
+        "l19-retry",
+        "l20",
+        "l20-worked",
+        "l20-scaffold",
+        "l20-independent",
+        "l20-diagnosis",
+        "l20-retry",
+        "next-step",
+        "sources",
+        "tocTitle"
+      ]
+    },
+    {
+      "path": "alevel/as-mathematics/sequences.md",
+      "sha256": "f961e43ed84afba58b7003c7ee426b06c0fbcd34c7bbebaa836cf14de7e0a28d",
+      "sourceIDs": [
+        [
+          "l10",
+          ""
+        ],
+        [
+          "l10-worked",
+          ""
+        ],
+        [
+          "l10-scaffold",
+          ""
+        ],
+        [
+          "l10-independent",
+          ""
+        ],
+        [
+          "l10-diagnosis",
+          ""
+        ],
+        [
+          "l10-retry",
+          ""
+        ],
+        [
+          "l11",
+          ""
+        ],
+        [
+          "l11-worked",
+          ""
+        ],
+        [
+          "l11-scaffold",
+          ""
+        ],
+        [
+          "l11-independent",
+          ""
+        ],
+        [
+          "l11-diagnosis",
+          ""
+        ],
+        [
+          "l11-retry",
+          ""
+        ],
+        [
+          "l12",
+          ""
+        ],
+        [
+          "l12-worked",
+          ""
+        ],
+        [
+          "l12-scaffold",
+          ""
+        ],
+        [
+          "l12-independent",
+          ""
+        ],
+        [
+          "l12-diagnosis",
+          ""
+        ],
+        [
+          "l12-retry",
+          ""
+        ],
+        [
+          "l13",
+          ""
+        ],
+        [
+          "l13-worked",
+          ""
+        ],
+        [
+          "l13-scaffold",
+          ""
+        ],
+        [
+          "l13-independent",
+          ""
+        ],
+        [
+          "l13-diagnosis",
+          ""
+        ],
+        [
+          "l13-retry",
+          ""
+        ],
+        [
+          "next-step",
+          ""
+        ],
+        [
+          "sources",
+          ""
+        ]
+      ],
+      "questions": [
+        "**Question:** A constructed savings plan deposits 20 dollars in month 1 and increases each deposit by 5 dollars. Find the month-6 deposit and total deposited in six months.",
+        "**Question:** Evaluate $\\sum_{r=1}^{10}(3r+2)$ using the natural-number sum.",
+        "**Question:** An arithmetic savings plan has $S_5=100$ and $S_{10}=325$ dollars. Find its first deposit and common difference. Find the first month at which its total reaches at least 200 dollars.",
+        "**Question:** Find $\\sum_{r=4}^{10}(2r-1)$ and state the number of terms.",
+        "**Question:** For $18,6,2,\\ldots$, find the sum of the first four terms and the sum to infinity.",
+        "**Question:** List four terms for $a=12,r=-1/2$ and evaluate their sum.",
+        "**Question:** A nonzero geometric series has second term $-6$ and sum to infinity $8$. Find its first term and ratio, justifying rejection of any other candidate. Express the sum of its first $2k$ terms.",
+        "**Question:** Find the sum of five terms with $a=7,r=1$. Does the corresponding infinite series converge?",
+        "**Question:** Starting with $x_0=0$, generate four further terms of $x_{n+1}=(x_n+6)/2$ and investigate the limit.",
+        "**Question:** For $u_1=2$ and $u_{n+1}=3u_n-1$, find $u_2,u_3,u_4$.",
+        "**Question:** For $x_{n+1}=x_n^2$, find the candidate finite limits. Compare the first three new terms from $x_0=1/2$ and from $x_0=2$. Explain why solving the fixed-point equation alone is insufficient.",
+        "**Question:** Starting with $x_0=2$, consider $x_{n+1}=-x_n$. Find the first four new terms and decide whether a limit exists.",
+        "**Question:** Expand $(1+2x)^4$. Hence estimate $(1.02)^4$ using terms up to $x^2$, and state the omitted contribution.",
+        "**Question:** Find the coefficient of $x^2$ in $(2-3x)^4$.",
+        "**Question:** In $(1+kx)^5$, the coefficient of $x^2$ is 90 and $k<0$. Find $k$ and the coefficient of $x^3$. Use the first three terms to estimate $0.97^5$, showing the substitution.",
+        "**Question:** Find the coefficient of $x^3$ in $(2+x)^5$ and explain the combinatorial factor."
+      ],
+      "headingIDs": [
+        "siteSearchTitle",
+        "l10",
+        "l10-worked",
+        "l10-scaffold",
+        "l10-independent",
+        "l10-diagnosis",
+        "l10-retry",
+        "l11",
+        "l11-worked",
+        "l11-scaffold",
+        "l11-independent",
+        "l11-diagnosis",
+        "l11-retry",
+        "l12",
+        "l12-worked",
+        "l12-scaffold",
+        "l12-independent",
+        "l12-diagnosis",
+        "l12-retry",
+        "l13",
+        "l13-worked",
+        "l13-scaffold",
+        "l13-independent",
+        "l13-diagnosis",
+        "l13-retry",
+        "next-step",
+        "sources",
+        "tocTitle"
+      ]
+    },
+    {
+      "path": "alevel/as-mathematics/trigonometry.md",
+      "sha256": "3f4593446bfe0585f238d9d47e1bdd8629fe91993f183101caac1441a870dbe8",
+      "sourceIDs": [
+        [
+          "l15",
+          ""
+        ],
+        [
+          "l15-worked",
+          ""
+        ],
+        [
+          "l15-scaffold",
+          ""
+        ],
+        [
+          "l15-independent",
+          ""
+        ],
+        [
+          "l15-diagnosis",
+          ""
+        ],
+        [
+          "l15-retry",
+          ""
+        ],
+        [
+          "l16",
+          ""
+        ],
+        [
+          "l16-worked",
+          ""
+        ],
+        [
+          "l16-scaffold",
+          ""
+        ],
+        [
+          "l16-independent",
+          ""
+        ],
+        [
+          "l16-diagnosis",
+          ""
+        ],
+        [
+          "l16-retry",
+          ""
+        ],
+        [
+          "next-step",
+          ""
+        ],
+        [
+          "sources",
+          ""
+        ]
+      ],
+      "questions": [
+        "**Question:** A sector has radius 6 cm and angle $\\pi/3$ radians. Find its arc length, sector area and minor-segment area.",
+        "**Question:** Two sides of a triangle are 5 cm and 7 cm with included angle $60^\\circ$. Find the third side and area exactly.",
+        "**Question:** In a triangle, $a=5$ cm, $b=8$ cm and $A=30^\\circ$. Determine all possible values of $B$ to 2 decimal places, justifying whether each can belong to a triangle.",
+        "**Question:** A sector has radius 4 cm and perimeter 14 cm. Find its angle in radians and area.",
+        "**Question:** Solve $2\\sin^2 x+3\\cos x=3$ for $0\\le x\\le2\\pi$.",
+        "**Question:** Sketch $y=\\cos x$ on $0\\le x\\le2\\pi$, labelling its zeros and maximum/minimum values. Solve $\\cos x=-1/2$ on the same interval.",
+        "**Question:** Show that $(1-\\sin^2 y)/\\cos y=\\cos y$ wherever the left side is defined. Hence solve $(1-\\sin^2 y)/\\cos y=1/2$ for $0\\le y<2\\pi$, stating the excluded values.",
+        "**Question:** Solve $\\sin(2x)=1/2$ for $0\\le x\\le\\pi$. State the period and two neighbouring asymptotes of $y=\\tan x$."
+      ],
+      "headingIDs": [
+        "siteSearchTitle",
+        "l15",
+        "l15-worked",
+        "l15-scaffold",
+        "l15-independent",
+        "l15-diagnosis",
+        "l15-retry",
+        "l16",
+        "l16-worked",
+        "l16-scaffold",
+        "l16-independent",
+        "l16-diagnosis",
+        "l16-retry",
+        "next-step",
+        "sources",
+        "tocTitle"
+      ]
+    },
+    {
+      "path": "alevel/as-mathematics/variable-acceleration.md",
+      "sha256": "a43496587c0b87e2345c4067514dfc81e098c5fa3c205e25e455778d58e6798f",
+      "sourceIDs": [
+        [
+          "l23",
+          ""
+        ],
+        [
+          "l23-worked",
+          ""
+        ],
+        [
+          "l23-scaffold",
+          ""
+        ],
+        [
+          "l23-independent",
+          ""
+        ],
+        [
+          "l23-diagnosis",
+          ""
+        ],
+        [
+          "l23-retry",
+          ""
+        ],
+        [
+          "next-step",
+          ""
+        ],
+        [
+          "sources",
+          ""
+        ]
+      ],
+      "questions": [
+        "**Question:** A particle has $a=2t-4\\,\\mathrm{m\\,s^{-2}}$, $v(0)=3\\,\\mathrm{m\\,s^{-1}}$ and $s(0)=0$. Find v and s, then displacement and distance from $t=0$ to $t=4$.",
+        "**Question:** A particle has $a=6t$, $v(0)=2$ and $s(0)=5$ in SI units. Find v and s and its displacement in the first 2 s.",
+        "**Question:** For $0\\le t\\le2$, a particle has velocity $v=3t^2$ in SI units. After 2 s it decelerates uniformly to rest at time T. Its total distance from 0 to T is 26 m. Find T, the later acceleration, and the time and value of the greatest speed.",
+        "**Question:** Position is $s=t^3-3t^2$ metres for $0\\le t\\le3$. Find acceleration at 1 s and total distance over the interval."
+      ],
+      "headingIDs": [
+        "siteSearchTitle",
+        "l23",
+        "l23-worked",
+        "l23-scaffold",
+        "l23-independent",
+        "l23-diagnosis",
+        "l23-retry",
+        "next-step",
+        "sources",
+        "tocTitle"
+      ]
+    },
+    {
+      "path": "zh/alevel/as-mathematics/algebra.md",
+      "sha256": "a075951b2af7eb328c57159f2fbf2a9f55f22cb01694f2a7972695e795feaaea",
+      "sourceIDs": [
+        [
+          "l01",
+          ""
+        ],
+        [
+          "",
+          "l01-prerequisite"
+        ],
+        [
+          "l01-indices",
+          ""
+        ],
+        [
+          "l01-indices-example",
+          ""
+        ],
+        [
+          "l01-scaffold",
+          ""
+        ],
+        [
+          "l01-surds",
+          ""
+        ],
+        [
+          "l01-worked",
+          ""
+        ],
+        [
+          "l01-independent-start",
+          ""
+        ],
+        [
+          "l01-independent-indices",
+          ""
+        ],
+        [
+          "l01-independent",
+          ""
+        ],
+        [
+          "l01-diagnosis",
+          ""
+        ],
+        [
+          "l01-retry-indices",
+          ""
+        ],
+        [
+          "l01-retry",
+          ""
+        ],
+        [
+          "l02",
+          ""
+        ],
+        [
+          "l02-worked",
+          ""
+        ],
+        [
+          "l02-scaffold",
+          ""
+        ],
+        [
+          "l02-independent",
+          ""
+        ],
+        [
+          "l02-diagnosis",
+          ""
+        ],
+        [
+          "l02-retry",
+          ""
+        ],
+        [
+          "l03",
+          ""
+        ],
+        [
+          "l03-worked",
+          ""
+        ],
+        [
+          "l03-scaffold",
+          ""
+        ],
+        [
+          "l03-independent",
+          ""
+        ],
+        [
+          "l03-diagnosis",
+          ""
+        ],
+        [
+          "l03-retry",
+          ""
+        ],
+        [
+          "l05",
+          ""
+        ],
+        [
+          "l05-worked",
+          ""
+        ],
+        [
+          "l05-scaffold",
+          ""
+        ],
+        [
+          "l05-independent",
+          ""
+        ],
+        [
+          "l05-diagnosis",
+          ""
+        ],
+        [
+          "l05-retry",
+          ""
+        ],
+        [
+          "l01-later",
+          ""
+        ],
+        [
+          "l01-later-task",
+          ""
+        ],
+        [
+          "next-step",
+          ""
+        ],
+        [
+          "sources",
+          ""
+        ]
+      ],
+      "questions": [
+        "**Question:** For $a>0$, write $\\sqrt[3]{a^2}/a$ as a single power of $a$, then find its exact value when $a=8$.",
+        "**Question:** For $x>0$, rewrite $\\sqrt{x}/x^2$ as one power, then evaluate it at $x=4$.",
+        "**Question:** Simplify $\\sqrt{50}-\\sqrt8$ and rationalise $3/(\\sqrt5+\\sqrt2)$.",
+        "**Question:** For $x>0$, let $F(x)=x^{5/6}/\\sqrt[3]{x^2}$. Find a constant $k$ such that $F(x)=x^k$ for every allowed $x$. Then find $x$ when $F(x)=2$, explaining why your value works.",
+        "**Question:** Without decimal approximations, decide which is larger: $1/(\\sqrt{12}-2)$ or $(\\sqrt3+1)/3$. Justify your answer.",
+        "**Question:** For $t>0$, simplify $\\sqrt[4]{t^3}/t^{5/4}$ to one power. Find $t$ when the original expression equals $1/3$, and check your answer in that original expression.",
+        "**Question:** A student claims that $\\sqrt{7+3}=\\sqrt7+\\sqrt3$. Decide whether this is correct, giving an exact reason. Then find an exact simplified form of $2/(\\sqrt{28}-\\sqrt{12})$ and check it by multiplication.",
+        "**Question:** Solve $x^2-2x-3\\le0$. Find the intersections of $y=x^2$ and $y=2x+3$.",
+        "**Question:** Complete the square for $x^2+4x+7$ and state its minimum.",
+        "**Question:** The line $y=4x+k$ touches $y=x^2$. Find $k$ and the point of contact. Then solve $x^2<4x+k+1$.",
+        "**Question:** Solve $-x^2+5x-6>0$ and $5-3x\\ge11$.",
+        "**Question:** Factorise $f(x)=x^3-3x+2$ and describe its real intercepts and end behaviour.",
+        "**Question:** Divide $x^3+2x^2+x+5$ by $x+2$. State the quotient and remainder.",
+        "**Question:** The remainder when $x^3+kx+2$ is divided by $x+1$ is zero. Find $k$, factorise the cubic over the reals, and justify the number of real roots.",
+        "**Question:** Expand $(x-2)^2(x+1)$. State the remainder on division by $x-1$ and say which root is a touching point.",
+        "**Question:** The graph $y=f(x)$ contains $(2,3)$. Locate its corresponding point on $y=f(2x)$ and on $y=-2f(x)$, describing each transformation.",
+        "**Question:** Translate $y=x^2$ by vector $(3,-2)$. State the new equation and vertex.",
+        "**Question:** A horizontal stretch maps $(2,5)$ on $y=f(x)$ to $(6,5)$. Write the transformed equation using $f$ and determine where $( -1,4)$ moves.",
+        "**Question:** Describe $y=f(x+4)$ and give the image of $(1,-2)$.",
+        "**Question:** Solve $x/\\sqrt{x}=x-2$ over the real numbers. State the conditions on $x$ and explain why every retained answer satisfies the original equation."
+      ],
+      "headingIDs": [
+        "siteSearchTitle",
+        "l01",
+        "l01-indices",
+        "l01-indices-example",
+        "l01-scaffold",
+        "l01-surds",
+        "l01-worked",
+        "l01-independent-start",
+        "l01-independent-indices",
+        "l01-independent",
+        "l01-diagnosis",
+        "l01-retry-indices",
+        "l01-retry",
+        "l02",
+        "l02-worked",
+        "l02-scaffold",
+        "l02-independent",
+        "l02-diagnosis",
+        "l02-retry",
+        "l03",
+        "l03-worked",
+        "l03-scaffold",
+        "l03-independent",
+        "l03-diagnosis",
+        "l03-retry",
+        "l05",
+        "l05-worked",
+        "l05-scaffold",
+        "l05-independent",
+        "l05-diagnosis",
+        "l05-retry",
+        "l01-later",
+        "l01-later-task",
+        "next-step",
+        "sources",
+        "tocTitle"
+      ]
+    },
+    {
+      "path": "zh/alevel/as-mathematics/binomial.md",
+      "sha256": "41f01347ce65419da0065d4b78f34fcd2a92729f1fa4ae7f56ded71e86163e7d",
+      "sourceIDs": [
+        [
+          "l21",
+          ""
+        ],
+        [
+          "l21-worked",
+          ""
+        ],
+        [
+          "l21-scaffold",
+          ""
+        ],
+        [
+          "l21-independent",
+          ""
+        ],
+        [
+          "l21-diagnosis",
+          ""
+        ],
+        [
+          "l21-retry",
+          ""
+        ],
+        [
+          "next-step",
+          ""
+        ],
+        [
+          "sources",
+          ""
+        ]
+      ],
+      "questions": [
+        "**Question:** A constructed model has $X\\sim\\mathrm{Bin}(5,0.2)$. Find $P(X=2)$, $P(X>1)$, the mean and SD.",
+        "**Question:** For this X, find $P(1\\le X\\le3)$ using cumulative notation, and evaluate it.",
+        "**Question:** A binomial variable has mean 3 and variance 2.4. Find n and p, derive its variance from independent Bernoulli indicators, and find $P(X\\ge1)$. Would the same model automatically apply to 15 draws without replacement from 75 objects of which 15 are successes?",
+        "**Question:** For $Y\\sim\\mathrm{Bin}(4,1/2)$, find $P(Y\\ge3)$ and the variance. State the excluded integers in the complementary event."
+      ],
+      "headingIDs": [
+        "siteSearchTitle",
+        "l21",
+        "l21-worked",
+        "l21-scaffold",
+        "l21-independent",
+        "l21-diagnosis",
+        "l21-retry",
+        "next-step",
+        "sources",
+        "tocTitle"
+      ]
+    },
+    {
+      "path": "zh/alevel/as-mathematics/circles.md",
+      "sha256": "42a058208bc55c93af2b6f1c1980d9a27ec72f8a791b976023462c8106e4feac",
+      "sourceIDs": [
+        [
+          "l14",
+          ""
+        ],
+        [
+          "l14-worked",
+          ""
+        ],
+        [
+          "l14-scaffold",
+          ""
+        ],
+        [
+          "l14-independent",
+          ""
+        ],
+        [
+          "l14-diagnosis",
+          ""
+        ],
+        [
+          "l14-retry",
+          ""
+        ],
+        [
+          "next-step",
+          ""
+        ],
+        [
+          "sources",
+          ""
+        ]
+      ],
+      "questions": [
+        "**Question:** For $x^2+y^2-4x+2y-20=0$, find the centre, radius and tangent at $(5,3)$. Write the circle equation after translation by $(-3,2)$.",
+        "**Question:** A diameter has endpoints $(-1,0)$ and $(5,4)$. Find the circle equation. Explain why a third point on this circle makes a right angle with the endpoints.",
+        "**Question:** A circle has its centre on the x-axis and passes through $(0,1)$ and $(4,3)$. Find its equation, using a chord property. Then translate it by $(2,-1)$.",
+        "**Question:** Find the tangent to $(x+1)^2+(y-2)^2=9$ at $(2,2)$. Translate the circle so that its centre is the origin."
+      ],
+      "headingIDs": [
+        "siteSearchTitle",
+        "l14",
+        "l14-worked",
+        "l14-scaffold",
+        "l14-independent",
+        "l14-diagnosis",
+        "l14-retry",
+        "next-step",
+        "sources",
+        "tocTitle"
+      ]
+    },
+    {
+      "path": "zh/alevel/as-mathematics/constant-acceleration.md",
+      "sha256": "815f3d51f2b9576553686c56b2bb710c5f0aff57e2d62db96caf2c75735ab451",
+      "sourceIDs": [
+        [
+          "l22",
+          ""
+        ],
+        [
+          "l22-worked",
+          ""
+        ],
+        [
+          "l22-scaffold",
+          ""
+        ],
+        [
+          "l22-independent",
+          ""
+        ],
+        [
+          "l22-diagnosis",
+          ""
+        ],
+        [
+          "l22-retry",
+          ""
+        ],
+        [
+          "next-step",
+          ""
+        ],
+        [
+          "sources",
+          ""
+        ]
+      ],
+      "questions": [
+        "**Question:** A ball is projected vertically upwards at $14.7\\,\\mathrm{m\\,s^{-1}}$ and returns to the launch height. Neglect air resistance and take $g=9.8\\,\\mathrm{m\\,s^{-2}}$. Find the time to its highest point, maximum height, total flight time, distance and average speed.",
+        "**Question:** A particle has initial velocity $4\\,\\mathrm{m\\,s^{-1}}$ and constant acceleration $2\\,\\mathrm{m\\,s^{-2}}$. Find its velocity and displacement after 3 s and relate the displacement to its v–t graph.",
+        "**Question:** A continuous v–t graph consists of straight segments joining $(0,0),(4,8),(7,8),(10,-4)$, with time in seconds and velocity in metres per second. Sketch it, determine each acceleration, and find displacement, distance and average speed over 10 s.",
+        "**Question:** A particle starts with velocity $6\\,\\mathrm{m\\,s^{-1}}$ and acceleration $-2\\,\\mathrm{m\\,s^{-2}}$ for 5 s. Find its displacement and total distance."
+      ],
+      "headingIDs": [
+        "siteSearchTitle",
+        "l22",
+        "l22-worked",
+        "l22-scaffold",
+        "l22-independent",
+        "l22-diagnosis",
+        "l22-retry",
+        "next-step",
+        "sources",
+        "tocTitle"
+      ]
+    },
+    {
+      "path": "zh/alevel/as-mathematics/coordinate-geometry.md",
+      "sha256": "b12725dbf14e0cbebf82949a7039519d1ddaa8371d2b5e19299dc2d467b22fcb",
+      "sourceIDs": [
+        [
+          "l04",
+          ""
+        ],
+        [
+          "l04-worked",
+          ""
+        ],
+        [
+          "l04-scaffold",
+          ""
+        ],
+        [
+          "l04-independent",
+          ""
+        ],
+        [
+          "l04-diagnosis",
+          ""
+        ],
+        [
+          "l04-retry",
+          ""
+        ],
+        [
+          "next-step",
+          ""
+        ],
+        [
+          "sources",
+          ""
+        ]
+      ],
+      "questions": [
+        "**Question:** Find the perpendicular bisector of the segment joining $A=(1,2)$ and $B=(5,4)$, and its intersection with $y=x$.",
+        "**Question:** Find the line through $(2,-1)$ parallel to $3x-y+4=0$.",
+        "**Question:** Find all values of $c$ for which $y=2x+c$ meets $y=x^2$ twice. Describe the case at the boundary of your answer.",
+        "**Question:** Find the perpendicular bisector of the segment from $(2,1)$ to $(2,7)$."
+      ],
+      "headingIDs": [
+        "siteSearchTitle",
+        "l04",
+        "l04-worked",
+        "l04-scaffold",
+        "l04-independent",
+        "l04-diagnosis",
+        "l04-retry",
+        "next-step",
+        "sources",
+        "tocTitle"
+      ]
+    },
+    {
+      "path": "zh/alevel/as-mathematics/differentiation.md",
+      "sha256": "8e821c009b3a6b382f77acdaa5b813d2b06a214b5194b84d78927675243bb6ab",
+      "sourceIDs": [
+        [
+          "l06",
+          ""
+        ],
+        [
+          "l06-worked",
+          ""
+        ],
+        [
+          "l06-scaffold",
+          ""
+        ],
+        [
+          "l06-independent",
+          ""
+        ],
+        [
+          "l06-diagnosis",
+          ""
+        ],
+        [
+          "l06-retry",
+          ""
+        ],
+        [
+          "l07",
+          ""
+        ],
+        [
+          "l07-worked",
+          ""
+        ],
+        [
+          "l07-scaffold",
+          ""
+        ],
+        [
+          "l07-independent",
+          ""
+        ],
+        [
+          "l07-diagnosis",
+          ""
+        ],
+        [
+          "l07-retry",
+          ""
+        ],
+        [
+          "next-step",
+          ""
+        ],
+        [
+          "sources",
+          ""
+        ]
+      ],
+      "questions": [
+        "**Question:** For $f(x)=x^2+4\\sqrt x$, find the tangent and normal at $x=1$.",
+        "**Question:** Rewrite and differentiate $3/x^2-2\\sqrt x$ for $x>0$.",
+        "**Question:** A tangent to $y=x^2$ is parallel to $y=6x-1$. Find its point of contact and the normal there.",
+        "**Question:** Find the normal to $y=x^2-4x+1$ at its stationary point.",
+        "**Question:** A rectangle has perimeter 20 m. Find its greatest area, justifying the result.",
+        "**Question:** For $f(x)=x^3-3x$, find and classify the stationary points and give its increasing intervals.",
+        "**Question:** The same 20 m perimeter rectangle must have width $x\\le3$ m. Can an area of $24\\,\\mathrm{m^2}$ be attained? Give a reason without merely solving an unconstrained stationary-point equation.",
+        "**Question:** Find the least value of $x^2-6x+12$ on $0\\le x\\le2$, with a reason."
+      ],
+      "headingIDs": [
+        "siteSearchTitle",
+        "l06",
+        "l06-worked",
+        "l06-scaffold",
+        "l06-independent",
+        "l06-diagnosis",
+        "l06-retry",
+        "l07",
+        "l07-worked",
+        "l07-scaffold",
+        "l07-independent",
+        "l07-diagnosis",
+        "l07-retry",
+        "next-step",
+        "sources",
+        "tocTitle"
+      ]
+    },
+    {
+      "path": "zh/alevel/as-mathematics/exponentials-logarithms.md",
+      "sha256": "10f175a85921022544b670cd61610e5cc2c0c21cfec2034b1bcf2eb4418d3779",
+      "sourceIDs": [
+        [
+          "l17",
+          ""
+        ],
+        [
+          "l17-worked",
+          ""
+        ],
+        [
+          "l17-scaffold",
+          ""
+        ],
+        [
+          "l17-independent",
+          ""
+        ],
+        [
+          "l17-diagnosis",
+          ""
+        ],
+        [
+          "l17-retry",
+          ""
+        ],
+        [
+          "next-step",
+          ""
+        ],
+        [
+          "sources",
+          ""
+        ]
+      ],
+      "questions": [
+        "**Question:** Solve $3\\cdot2^t=15$ and give $t$ to 3 decimal places. Interpret the solution as a point on a graph.",
+        "**Question:** Solve $\\log_2(x-1)=3$ and explain the admissible values of $x$ before solving.",
+        "**Question:** Find all real solutions of $\\log_2(x-1)+\\log_2(x-3)=3$. Show why any rejected algebraic value is not a solution.",
+        "**Question:** A constructed decay model is $N=80(1/2)^t$. Find the time at which $N=10$ and describe the graph’s behaviour as $t$ increases."
+      ],
+      "headingIDs": [
+        "siteSearchTitle",
+        "l17",
+        "l17-worked",
+        "l17-scaffold",
+        "l17-independent",
+        "l17-diagnosis",
+        "l17-retry",
+        "next-step",
+        "sources",
+        "tocTitle"
+      ]
+    },
+    {
+      "path": "zh/alevel/as-mathematics/forces.md",
+      "sha256": "bc04e90f9f87ef4699172584849c5869eb3d78a075d1a67ff469025a4f0106fd",
+      "sourceIDs": [
+        [
+          "l24",
+          ""
+        ],
+        [
+          "l24-worked",
+          ""
+        ],
+        [
+          "l24-scaffold",
+          ""
+        ],
+        [
+          "l24-independent",
+          ""
+        ],
+        [
+          "l24-diagnosis",
+          ""
+        ],
+        [
+          "l24-retry",
+          ""
+        ],
+        [
+          "next-step",
+          ""
+        ],
+        [
+          "sources",
+          ""
+        ]
+      ],
+      "questions": [
+        "**Question:** Masses 3 kg and 2 kg hang on opposite sides of a smooth light pulley, joined by a light taut inextensible string. Starting from rest, find the acceleration and tension while both move freely. Use $g=9.8\\,\\mathrm{m\\,s^{-2}}$.",
+        "**Question:** A 2 kg block slides right on a horizontal surface. A horizontal 10 N force pulls right and $\\mu=0.2$. Find the reaction, dynamic friction and acceleration, using $g=9.8\\,\\mathrm{m\\,s^{-2}}$.",
+        "**Question:** A 600 kg car tows a 400 kg trailer along a horizontal road using a light rigid towbar. The engine drives forward with 1800 N; resistances are 400 N on the car and 200 N on the trailer. Draw separate force diagrams, find the acceleration and towbar force, and state whether the bar is in tension or thrust.",
+        "**Question:** A 500 kg trailer moving on a horizontal road is decelerated at $2\\,\\mathrm{m\\,s^{-2}}$. Its resistance is 300 N backwards. Find the towbar force on it and say whether the bar pushes or pulls the trailer."
+      ],
+      "headingIDs": [
+        "siteSearchTitle",
+        "l24",
+        "l24-worked",
+        "l24-scaffold",
+        "l24-independent",
+        "l24-diagnosis",
+        "l24-retry",
+        "next-step",
+        "sources",
+        "tocTitle"
+      ]
+    },
+    {
+      "path": "zh/alevel/as-mathematics/index.md",
+      "sha256": "d1b96900169b4c4541549c8fdfe42e542ece19df4666d18f03b9c77c393d7785",
+      "sourceIDs": [
+        [
+          "learning-route",
+          ""
+        ],
+        [
+          "pure-foundations",
+          ""
+        ],
+        [
+          "further-pure",
+          ""
+        ],
+        [
+          "statistics",
+          ""
+        ],
+        [
+          "mechanics",
+          ""
+        ],
+        [
+          "how-to-study",
+          ""
+        ],
+        [
+          "sources-and-scope",
+          ""
+        ],
+        [
+          "legacy-reference",
+          ""
+        ],
+        [
+          "",
+          "assessment-structure"
+        ],
+        [
+          "",
+          "31-international-as-unit-p1-pure-maths"
+        ],
+        [
+          "",
+          "p11-algebra"
+        ],
+        [
+          "",
+          "surds-and-indices"
+        ],
+        [
+          "",
+          "quadratic-functions"
+        ],
+        [
+          "",
+          "polynomials"
+        ],
+        [
+          "",
+          "inequalities-and-simultaneous-equations"
+        ],
+        [
+          "",
+          "functions-and-graphs"
+        ],
+        [
+          "",
+          "p12-coordinate-geometry"
+        ],
+        [
+          "",
+          "straight-lines"
+        ],
+        [
+          "",
+          "line-relationships"
+        ],
+        [
+          "",
+          "p13-differentiation"
+        ],
+        [
+          "",
+          "fundamental-concepts"
+        ],
+        [
+          "",
+          "applications"
+        ],
+        [
+          "",
+          "p14-integration"
+        ],
+        [
+          "",
+          "basic-integration"
+        ],
+        [
+          "",
+          "definite-integrals-and-applications"
+        ],
+        [
+          "",
+          "p15-sequences-and-series"
+        ],
+        [
+          "",
+          "sequences"
+        ],
+        [
+          "",
+          "series"
+        ],
+        [
+          "",
+          "32-international-as-unit-psm1-pure-maths-statistics-and-mechanics"
+        ],
+        [
+          "",
+          "pp11-circles"
+        ],
+        [
+          "",
+          "circle-geometry"
+        ],
+        [
+          "",
+          "pp12-trigonometry"
+        ],
+        [
+          "",
+          "trigonometric-fundamentals"
+        ],
+        [
+          "",
+          "trigonometric-functions-and-equations"
+        ],
+        [
+          "",
+          "pp13-exponentials-and-logarithms"
+        ],
+        [
+          "",
+          "exponential-functions"
+        ],
+        [
+          "",
+          "logarithmic-functions"
+        ],
+        [
+          "",
+          "s11-further-probability"
+        ],
+        [
+          "",
+          "probability-fundamentals"
+        ],
+        [
+          "",
+          "conditional-probability-and-independence"
+        ],
+        [
+          "",
+          "s12-discrete-random-variables"
+        ],
+        [
+          "",
+          "probability-distributions"
+        ],
+        [
+          "",
+          "expectation-and-variance"
+        ],
+        [
+          "",
+          "s13-bernoulli-and-binomial-distributions"
+        ],
+        [
+          "",
+          "bernoulli-distribution"
+        ],
+        [
+          "",
+          "binomial-distribution"
+        ],
+        [
+          "",
+          "m11-motion-in-a-straight-line-with-constant-acceleration"
+        ],
+        [
+          "",
+          "kinematics-fundamentals"
+        ],
+        [
+          "",
+          "constant-acceleration-equations"
+        ],
+        [
+          "",
+          "m12-motion-in-a-straight-line-with-variable-acceleration"
+        ],
+        [
+          "",
+          "calculus-in-kinematics"
+        ],
+        [
+          "",
+          "m13-forces-and-newtons-laws"
+        ],
+        [
+          "",
+          "forces-and-equilibrium"
+        ],
+        [
+          "",
+          "m14-momentum-and-impulse"
+        ],
+        [
+          "",
+          "momentum-principles"
+        ]
+      ],
+      "questions": [],
+      "headingIDs": [
+        "siteSearchTitle",
+        "learning-route",
+        "pure-foundations",
+        "further-pure",
+        "statistics",
+        "mechanics",
+        "how-to-study",
+        "sources-and-scope",
+        "legacy-reference",
+        "assessment-structure",
+        "31-international-as-unit-p1-pure-maths",
+        "32-international-as-unit-psm1-pure-maths-statistics-and-mechanics",
+        "tocTitle"
+      ]
+    },
+    {
+      "path": "zh/alevel/as-mathematics/integration.md",
+      "sha256": "1da36973eca7376765944c2587a62a4fe894eb3f168f2034650f347f00ff8ca3",
+      "sourceIDs": [
+        [
+          "l08",
+          ""
+        ],
+        [
+          "l08-worked",
+          ""
+        ],
+        [
+          "l08-scaffold",
+          ""
+        ],
+        [
+          "l08-independent",
+          ""
+        ],
+        [
+          "l08-diagnosis",
+          ""
+        ],
+        [
+          "l08-retry",
+          ""
+        ],
+        [
+          "l09",
+          ""
+        ],
+        [
+          "l09-worked",
+          ""
+        ],
+        [
+          "l09-scaffold",
+          ""
+        ],
+        [
+          "l09-independent",
+          ""
+        ],
+        [
+          "l09-diagnosis",
+          ""
+        ],
+        [
+          "l09-retry",
+          ""
+        ],
+        [
+          "next-step",
+          ""
+        ],
+        [
+          "sources",
+          ""
+        ]
+      ],
+      "questions": [
+        "**Question:** Find the area enclosed by $y=2x$ and $y=x^2$.",
+        "**Question:** A curve has gradient $3x^2-2x+1$ and passes through $(0,4)$. Find its equation and its definite integral from 0 to 1.",
+        "**Question:** Find the area enclosed by $y=x+2$ and $y=x^2$. Include enough reasoning to identify the region.",
+        "**Question:** Find the area between $y=x^2-4$, the x-axis and the lines $x=0$, $x=2$.",
+        "**Question:** Use ordinates at $x=0,1,2$ for $y=x^2+1$ to estimate the area from 0 to 2. Explain the error direction.",
+        "**Question:** A table has $x=0,0.5,1,1.5$ and $y=2,3,4,6$. Form and evaluate a trapezium estimate.",
+        "**Question:** A nonnegative curve bends downward throughout $0\\le x\\le4$. At $x=0,2,4$ its heights are $0,3,4$. Estimate the area, state whether the estimate is high or low, and explain how extra readings could help.",
+        "**Question:** Estimate the area from a table with $x=1,2,3$ and heights $4,5,8$. Can the sign of the error be known from only these data?"
+      ],
+      "headingIDs": [
+        "siteSearchTitle",
+        "l08",
+        "l08-worked",
+        "l08-scaffold",
+        "l08-independent",
+        "l08-diagnosis",
+        "l08-retry",
+        "l09",
+        "l09-worked",
+        "l09-scaffold",
+        "l09-independent",
+        "l09-diagnosis",
+        "l09-retry",
+        "next-step",
+        "sources",
+        "tocTitle"
+      ]
+    },
+    {
+      "path": "zh/alevel/as-mathematics/momentum.md",
+      "sha256": "35a86e8acf391d4324435befc00bba77df0fcef0db12e595303594169cfe2953",
+      "sourceIDs": [
+        [
+          "l25",
+          ""
+        ],
+        [
+          "l25-worked",
+          ""
+        ],
+        [
+          "l25-scaffold",
+          ""
+        ],
+        [
+          "l25-independent",
+          ""
+        ],
+        [
+          "l25-diagnosis",
+          ""
+        ],
+        [
+          "l25-retry",
+          ""
+        ],
+        [
+          "next-step",
+          ""
+        ],
+        [
+          "sources",
+          ""
+        ]
+      ],
+      "questions": [
+        "**Question:** A 2 kg particle A moving right at $5\\,\\mathrm{m\\,s^{-1}}$ collides with a 3 kg particle B moving left at $1\\,\\mathrm{m\\,s^{-1}}$. Afterwards A moves right at $0.5\\,\\mathrm{m\\,s^{-1}}$. External impulse on the pair is negligible. Find B’s velocity and the impulse on A; check separation.",
+        "**Question:** A 0.4 kg ball hits a fixed smooth wall normally at $6\\,\\mathrm{m\\,s^{-1}}$ and rebounds at $4\\,\\mathrm{m\\,s^{-1}}$. Taking towards the wall positive, find its impulse and explain why its momentum is not conserved.",
+        "**Question:** A 1 kg particle A moving right at $6\\,\\mathrm{m\\,s^{-1}}$ catches a stationary 2 kg particle B. External impulse is negligible. After impact A continues right with speed v and the particles separate immediately. Determine the admissible range of v using momentum and separation, and find the range of impulse magnitudes on A.",
+        "**Question:** A 1 kg particle at $4\\,\\mathrm{m\\,s^{-1}}$ rightwards sticks to a stationary 3 kg particle after collision, with negligible external impulse. Find their common velocity and the impulse on the 1 kg particle. Is energy conservation needed?"
+      ],
+      "headingIDs": [
+        "siteSearchTitle",
+        "l25",
+        "l25-worked",
+        "l25-scaffold",
+        "l25-independent",
+        "l25-diagnosis",
+        "l25-retry",
+        "next-step",
+        "sources",
+        "tocTitle"
+      ]
+    },
+    {
+      "path": "zh/alevel/as-mathematics/probability.md",
+      "sha256": "e0c07f4676a0ceb9b04dd0f9e59417c09d19427e1777828d79281031cb5ed926",
+      "sourceIDs": [
+        [
+          "l18",
+          ""
+        ],
+        [
+          "l18-worked",
+          ""
+        ],
+        [
+          "l18-scaffold",
+          ""
+        ],
+        [
+          "l18-independent",
+          ""
+        ],
+        [
+          "l18-diagnosis",
+          ""
+        ],
+        [
+          "l18-retry",
+          ""
+        ],
+        [
+          "next-step",
+          ""
+        ],
+        [
+          "sources",
+          ""
+        ]
+      ],
+      "questions": [
+        "**Question:** In a constructed group of 100 equally likely records, 20 belong to both A and B, 20 to A only, 30 to B only, and 30 to neither. Find $P(A\\mid B)$ and decide whether A and B are independent or mutually exclusive.",
+        "**Question:** Given $P(A)=0.3$, $P(B\\mid A)=0.6$ and $P(B)=0.4$, find the intersection and union probabilities.",
+        "**Question:** Suppose $P(A)=0.4$, $P(B)=0.7$, and $P(A\\mid B)=0.5$. Find the probability of neither event and decide whether the events are independent. A second report gives the same marginal probabilities but intersection 0.45. Can the second report describe a probability model?",
+        "**Question:** Events C and D are mutually exclusive with probabilities 0.2 and 0.3. Find $P(C\\mid D)$ and decide whether they are independent."
+      ],
+      "headingIDs": [
+        "siteSearchTitle",
+        "l18",
+        "l18-worked",
+        "l18-scaffold",
+        "l18-independent",
+        "l18-diagnosis",
+        "l18-retry",
+        "next-step",
+        "sources",
+        "tocTitle"
+      ]
+    },
+    {
+      "path": "zh/alevel/as-mathematics/random-variables.md",
+      "sha256": "e94c92e70c6c37fa51a70d481ae005968551a0358be02cfd4aa71e0dfe6f5fe1",
+      "sourceIDs": [
+        [
+          "l19",
+          ""
+        ],
+        [
+          "l19-worked",
+          ""
+        ],
+        [
+          "l19-scaffold",
+          ""
+        ],
+        [
+          "l19-independent",
+          ""
+        ],
+        [
+          "l19-diagnosis",
+          ""
+        ],
+        [
+          "l19-retry",
+          ""
+        ],
+        [
+          "l20",
+          ""
+        ],
+        [
+          "l20-worked",
+          ""
+        ],
+        [
+          "l20-scaffold",
+          ""
+        ],
+        [
+          "l20-independent",
+          ""
+        ],
+        [
+          "l20-diagnosis",
+          ""
+        ],
+        [
+          "l20-retry",
+          ""
+        ],
+        [
+          "next-step",
+          ""
+        ],
+        [
+          "sources",
+          ""
+        ]
+      ],
+      "questions": [
+        "**Question:** Let $X$ take values $1,2,4$ with probabilities $k,2k,k$. Find $k$, its mean, variance and standard deviation.",
+        "**Question:** For this distribution, find the mean, variance and SD of $Y=3-2X$.",
+        "**Question:** A constructed payment in dollars is $C=X^2$, using the distribution above. Find its expected value, variance and standard deviation, and explain why squaring the mean of X is insufficient.",
+        "**Question:** For the same X, find the mean and variance of $Z=1/X$, explaining why the definition is valid.",
+        "**Question:** Independent daily counts $X_1,X_2$ each have mean 8 and variance 3. Compare the mean and variance of $X_1+X_2$ with those of $2X_1$.",
+        "**Question:** Independent X and Y have means 5 and 2, variances 4 and 1. Find the mean and variance of $X-Y$.",
+        "**Question:** Independent X, Y and Z have means 5, 2, 7 and variances 4, 1, 9 respectively. Find the mean and variance of $W=2X-Y+Z$. If independence is removed, which of your answers is still determined?",
+        "**Question:** Three independent copies of X each have variance 2. Compare the variance of their sum with the variance of $3X$."
+      ],
+      "headingIDs": [
+        "siteSearchTitle",
+        "l19",
+        "l19-worked",
+        "l19-scaffold",
+        "l19-independent",
+        "l19-diagnosis",
+        "l19-retry",
+        "l20",
+        "l20-worked",
+        "l20-scaffold",
+        "l20-independent",
+        "l20-diagnosis",
+        "l20-retry",
+        "next-step",
+        "sources",
+        "tocTitle"
+      ]
+    },
+    {
+      "path": "zh/alevel/as-mathematics/sequences.md",
+      "sha256": "0161e89ef0d5ca80fb504ac143029fb2c449d1079db9b4774f2537a8aca5c745",
+      "sourceIDs": [
+        [
+          "l10",
+          ""
+        ],
+        [
+          "l10-worked",
+          ""
+        ],
+        [
+          "l10-scaffold",
+          ""
+        ],
+        [
+          "l10-independent",
+          ""
+        ],
+        [
+          "l10-diagnosis",
+          ""
+        ],
+        [
+          "l10-retry",
+          ""
+        ],
+        [
+          "l11",
+          ""
+        ],
+        [
+          "l11-worked",
+          ""
+        ],
+        [
+          "l11-scaffold",
+          ""
+        ],
+        [
+          "l11-independent",
+          ""
+        ],
+        [
+          "l11-diagnosis",
+          ""
+        ],
+        [
+          "l11-retry",
+          ""
+        ],
+        [
+          "l12",
+          ""
+        ],
+        [
+          "l12-worked",
+          ""
+        ],
+        [
+          "l12-scaffold",
+          ""
+        ],
+        [
+          "l12-independent",
+          ""
+        ],
+        [
+          "l12-diagnosis",
+          ""
+        ],
+        [
+          "l12-retry",
+          ""
+        ],
+        [
+          "l13",
+          ""
+        ],
+        [
+          "l13-worked",
+          ""
+        ],
+        [
+          "l13-scaffold",
+          ""
+        ],
+        [
+          "l13-independent",
+          ""
+        ],
+        [
+          "l13-diagnosis",
+          ""
+        ],
+        [
+          "l13-retry",
+          ""
+        ],
+        [
+          "next-step",
+          ""
+        ],
+        [
+          "sources",
+          ""
+        ]
+      ],
+      "questions": [
+        "**Question:** A constructed savings plan deposits 20 dollars in month 1 and increases each deposit by 5 dollars. Find the month-6 deposit and total deposited in six months.",
+        "**Question:** Evaluate $\\sum_{r=1}^{10}(3r+2)$ using the natural-number sum.",
+        "**Question:** An arithmetic savings plan has $S_5=100$ and $S_{10}=325$ dollars. Find its first deposit and common difference. Find the first month at which its total reaches at least 200 dollars.",
+        "**Question:** Find $\\sum_{r=4}^{10}(2r-1)$ and state the number of terms.",
+        "**Question:** For $18,6,2,\\ldots$, find the sum of the first four terms and the sum to infinity.",
+        "**Question:** List four terms for $a=12,r=-1/2$ and evaluate their sum.",
+        "**Question:** A nonzero geometric series has second term $-6$ and sum to infinity $8$. Find its first term and ratio, justifying rejection of any other candidate. Express the sum of its first $2k$ terms.",
+        "**Question:** Find the sum of five terms with $a=7,r=1$. Does the corresponding infinite series converge?",
+        "**Question:** Starting with $x_0=0$, generate four further terms of $x_{n+1}=(x_n+6)/2$ and investigate the limit.",
+        "**Question:** For $u_1=2$ and $u_{n+1}=3u_n-1$, find $u_2,u_3,u_4$.",
+        "**Question:** For $x_{n+1}=x_n^2$, find the candidate finite limits. Compare the first three new terms from $x_0=1/2$ and from $x_0=2$. Explain why solving the fixed-point equation alone is insufficient.",
+        "**Question:** Starting with $x_0=2$, consider $x_{n+1}=-x_n$. Find the first four new terms and decide whether a limit exists.",
+        "**Question:** Expand $(1+2x)^4$. Hence estimate $(1.02)^4$ using terms up to $x^2$, and state the omitted contribution.",
+        "**Question:** Find the coefficient of $x^2$ in $(2-3x)^4$.",
+        "**Question:** In $(1+kx)^5$, the coefficient of $x^2$ is 90 and $k<0$. Find $k$ and the coefficient of $x^3$. Use the first three terms to estimate $0.97^5$, showing the substitution.",
+        "**Question:** Find the coefficient of $x^3$ in $(2+x)^5$ and explain the combinatorial factor."
+      ],
+      "headingIDs": [
+        "siteSearchTitle",
+        "l10",
+        "l10-worked",
+        "l10-scaffold",
+        "l10-independent",
+        "l10-diagnosis",
+        "l10-retry",
+        "l11",
+        "l11-worked",
+        "l11-scaffold",
+        "l11-independent",
+        "l11-diagnosis",
+        "l11-retry",
+        "l12",
+        "l12-worked",
+        "l12-scaffold",
+        "l12-independent",
+        "l12-diagnosis",
+        "l12-retry",
+        "l13",
+        "l13-worked",
+        "l13-scaffold",
+        "l13-independent",
+        "l13-diagnosis",
+        "l13-retry",
+        "next-step",
+        "sources",
+        "tocTitle"
+      ]
+    },
+    {
+      "path": "zh/alevel/as-mathematics/trigonometry.md",
+      "sha256": "b3cf91368cb6068fc425fa0f64f5cf690bb75a330bedbe4dfa2d3d2a299f6015",
+      "sourceIDs": [
+        [
+          "l15",
+          ""
+        ],
+        [
+          "l15-worked",
+          ""
+        ],
+        [
+          "l15-scaffold",
+          ""
+        ],
+        [
+          "l15-independent",
+          ""
+        ],
+        [
+          "l15-diagnosis",
+          ""
+        ],
+        [
+          "l15-retry",
+          ""
+        ],
+        [
+          "l16",
+          ""
+        ],
+        [
+          "l16-worked",
+          ""
+        ],
+        [
+          "l16-scaffold",
+          ""
+        ],
+        [
+          "l16-independent",
+          ""
+        ],
+        [
+          "l16-diagnosis",
+          ""
+        ],
+        [
+          "l16-retry",
+          ""
+        ],
+        [
+          "next-step",
+          ""
+        ],
+        [
+          "sources",
+          ""
+        ]
+      ],
+      "questions": [
+        "**Question:** A sector has radius 6 cm and angle $\\pi/3$ radians. Find its arc length, sector area and minor-segment area.",
+        "**Question:** Two sides of a triangle are 5 cm and 7 cm with included angle $60^\\circ$. Find the third side and area exactly.",
+        "**Question:** In a triangle, $a=5$ cm, $b=8$ cm and $A=30^\\circ$. Determine all possible values of $B$ to 2 decimal places, justifying whether each can belong to a triangle.",
+        "**Question:** A sector has radius 4 cm and perimeter 14 cm. Find its angle in radians and area.",
+        "**Question:** Solve $2\\sin^2 x+3\\cos x=3$ for $0\\le x\\le2\\pi$.",
+        "**Question:** Sketch $y=\\cos x$ on $0\\le x\\le2\\pi$, labelling its zeros and maximum/minimum values. Solve $\\cos x=-1/2$ on the same interval.",
+        "**Question:** Show that $(1-\\sin^2 y)/\\cos y=\\cos y$ wherever the left side is defined. Hence solve $(1-\\sin^2 y)/\\cos y=1/2$ for $0\\le y<2\\pi$, stating the excluded values.",
+        "**Question:** Solve $\\sin(2x)=1/2$ for $0\\le x\\le\\pi$. State the period and two neighbouring asymptotes of $y=\\tan x$."
+      ],
+      "headingIDs": [
+        "siteSearchTitle",
+        "l15",
+        "l15-worked",
+        "l15-scaffold",
+        "l15-independent",
+        "l15-diagnosis",
+        "l15-retry",
+        "l16",
+        "l16-worked",
+        "l16-scaffold",
+        "l16-independent",
+        "l16-diagnosis",
+        "l16-retry",
+        "next-step",
+        "sources",
+        "tocTitle"
+      ]
+    },
+    {
+      "path": "zh/alevel/as-mathematics/variable-acceleration.md",
+      "sha256": "b75e18e992b8656781f3b7298fe9265a06e5d04f0e6be2329a04c93b2120d57a",
+      "sourceIDs": [
+        [
+          "l23",
+          ""
+        ],
+        [
+          "l23-worked",
+          ""
+        ],
+        [
+          "l23-scaffold",
+          ""
+        ],
+        [
+          "l23-independent",
+          ""
+        ],
+        [
+          "l23-diagnosis",
+          ""
+        ],
+        [
+          "l23-retry",
+          ""
+        ],
+        [
+          "next-step",
+          ""
+        ],
+        [
+          "sources",
+          ""
+        ]
+      ],
+      "questions": [
+        "**Question:** A particle has $a=2t-4\\,\\mathrm{m\\,s^{-2}}$, $v(0)=3\\,\\mathrm{m\\,s^{-1}}$ and $s(0)=0$. Find v and s, then displacement and distance from $t=0$ to $t=4$.",
+        "**Question:** A particle has $a=6t$, $v(0)=2$ and $s(0)=5$ in SI units. Find v and s and its displacement in the first 2 s.",
+        "**Question:** For $0\\le t\\le2$, a particle has velocity $v=3t^2$ in SI units. After 2 s it decelerates uniformly to rest at time T. Its total distance from 0 to T is 26 m. Find T, the later acceleration, and the time and value of the greatest speed.",
+        "**Question:** Position is $s=t^3-3t^2$ metres for $0\\le t\\le3$. Find acceleration at 1 s and total distance over the interval."
+      ],
+      "headingIDs": [
+        "siteSearchTitle",
+        "l23",
+        "l23-worked",
+        "l23-scaffold",
+        "l23-independent",
+        "l23-diagnosis",
+        "l23-retry",
+        "next-step",
+        "sources",
+        "tocTitle"
+      ]
+    }
+  ]
+}

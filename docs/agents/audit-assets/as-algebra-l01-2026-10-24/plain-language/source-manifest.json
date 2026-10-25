@@ -1,0 +1,95 @@
+{
+  "baseline": "19db6ca1640fb47fd541b3f8fb3d45d510d41b09",
+  "sources": [
+    {
+      "file": "alevel/as-mathematics/algebra.md",
+      "sha256": "33a4320373e3496f3c6f222731319eeb6c29a2efa1be04b33ee6b8e15bb3ef0f",
+      "oldIds": [
+        "l01",
+        "l01-worked",
+        "l01-scaffold",
+        "l01-independent",
+        "l01-diagnosis",
+        "l01-retry",
+        "l02",
+        "l02-worked",
+        "l02-scaffold",
+        "l02-independent",
+        "l02-diagnosis",
+        "l02-retry",
+        "l03",
+        "l03-worked",
+        "l03-scaffold",
+        "l03-independent",
+        "l03-diagnosis",
+        "l03-retry",
+        "l05",
+        "l05-worked",
+        "l05-scaffold",
+        "l05-independent",
+        "l05-diagnosis",
+        "l05-retry",
+        "next-step",
+        "sources"
+      ]
+    },
+    {
+      "file": "zh/alevel/as-mathematics/algebra.md",
+      "sha256": "a075951b2af7eb328c57159f2fbf2a9f55f22cb01694f2a7972695e795feaaea",
+      "oldIds": [
+        "l01",
+        "l01-worked",
+        "l01-scaffold",
+        "l01-independent",
+        "l01-diagnosis",
+        "l01-retry",
+        "l02",
+        "l02-worked",
+        "l02-scaffold",
+        "l02-independent",
+        "l02-diagnosis",
+        "l02-retry",
+        "l03",
+        "l03-worked",
+        "l03-scaffold",
+        "l03-independent",
+        "l03-diagnosis",
+        "l03-retry",
+        "l05",
+        "l05-worked",
+        "l05-scaffold",
+        "l05-independent",
+        "l05-diagnosis",
+        "l05-retry",
+        "next-step",
+        "sources"
+      ]
+    }
+  ],
+  "files": [
+    {
+      "file": "alevel/as-mathematics/algebra.md",
+      "sha256": "33a4320373e3496f3c6f222731319eeb6c29a2efa1be04b33ee6b8e15bb3ef0f"
+    },
+    {
+      "file": "zh/alevel/as-mathematics/algebra.md",
+      "sha256": "a075951b2af7eb328c57159f2fbf2a9f55f22cb01694f2a7972695e795feaaea"
+    },
+    {
+      "file": "assets/css/reading.css",
+      "sha256": "177c376f70a9685f629b177f24c7641cdd08449d49869a29785775126997f72a"
+    },
+    {
+      "file": "assets/css/subject.css",
+      "sha256": "c92ff3d33a2ae0263377b98e71cd39e23116c2c9e625454dec263c8681a27cf3"
+    },
+    {
+      "file": "_site/alevel/as-mathematics/algebra/index.html",
+      "sha256": "122bba3d6b3c9df36577fed4c1bfe6e328929af941cea013373702bc746b1043"
+    },
+    {
+      "file": "_site/zh/alevel/as-mathematics/algebra/index.html",
+      "sha256": "d06c8bfd873c3bf9a56c9d879059e37ede3bfe7e7fffde1d6e49b7c0cd3f73df"
+    }
+  ]
+}

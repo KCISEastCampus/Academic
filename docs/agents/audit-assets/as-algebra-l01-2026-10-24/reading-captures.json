@@ -1,0 +1,42 @@
+{
+  "width": 390,
+  "continuousHeight": 1251.109375,
+  "captured": [
+    {
+      "id": "l01-indices-example",
+      "open": false,
+      "file": "l01-indices-example-390-dark.png"
+    },
+    {
+      "id": "l01-worked",
+      "open": false,
+      "file": "l01-worked-390-dark.png"
+    },
+    {
+      "id": "l01-independent-indices",
+      "open": false,
+      "file": "l01-independent-indices-390-dark-closed.png"
+    },
+    {
+      "id": "l01-independent",
+      "open": false,
+      "file": "l01-independent-390-dark-closed.png"
+    },
+    {
+      "id": "l01-independent",
+      "open": true,
+      "file": "l01-independent-390-dark-expanded.png"
+    },
+    {
+      "id": "l01-retry",
+      "open": true,
+      "file": "l01-retry-390-dark.png"
+    },
+    {
+      "id": "l01-later-task",
+      "open": true,
+      "file": "l01-later-task-390-dark.png"
+    }
+  ],
+  "captureOnlyHidden": "fixed navigation and its children, back-to-top and scroll progress; no source/style changes"
+}

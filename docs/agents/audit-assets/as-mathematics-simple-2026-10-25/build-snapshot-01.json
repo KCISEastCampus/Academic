@@ -1,0 +1,229 @@
+{
+  "note": "Historical first-build HTML and retention counts. Source hashes were captured after later edits and removed; use the final manifest for source-to-HTML identity.",
+  "pages": [
+    {
+      "path": "alevel/as-mathematics/algebra.md",
+      "oldSourceIDs": 35,
+      "oldRenderedIDs": 36,
+      "oldEnglishPrompts": 20,
+      "htmlSHA256": "968b101e9d2be0ee0300e3613f0f6be726c29abdb019ecbf8397a0088169dcdb"
+    },
+    {
+      "path": "alevel/as-mathematics/binomial.md",
+      "oldSourceIDs": 8,
+      "oldRenderedIDs": 10,
+      "oldEnglishPrompts": 4,
+      "htmlSHA256": "6679350a1be05997626755a8e6ecc06bb5df7073276c80c410a3cfb4896ee4fc"
+    },
+    {
+      "path": "alevel/as-mathematics/circles.md",
+      "oldSourceIDs": 8,
+      "oldRenderedIDs": 10,
+      "oldEnglishPrompts": 4,
+      "htmlSHA256": "5ad99d080bdf4a7146d98bebcdba8a2b40dddac572b5ad64e89b9000a15cbee7"
+    },
+    {
+      "path": "alevel/as-mathematics/constant-acceleration.md",
+      "oldSourceIDs": 8,
+      "oldRenderedIDs": 10,
+      "oldEnglishPrompts": 4,
+      "htmlSHA256": "2b8d99387c9fb46500eb288aae5d6b055ad7eae999359ffbe5db33c4894cb99c"
+    },
+    {
+      "path": "alevel/as-mathematics/coordinate-geometry.md",
+      "oldSourceIDs": 8,
+      "oldRenderedIDs": 10,
+      "oldEnglishPrompts": 4,
+      "htmlSHA256": "26583ef5d0544c72721c9d3716e88ce11360bcbebafcef7fff34292a460b0b22"
+    },
+    {
+      "path": "alevel/as-mathematics/differentiation.md",
+      "oldSourceIDs": 14,
+      "oldRenderedIDs": 16,
+      "oldEnglishPrompts": 8,
+      "htmlSHA256": "f4023cf17eb0285015c5c780f97e2caa87b8a36263549d38dc8fd0795f6c2c94"
+    },
+    {
+      "path": "alevel/as-mathematics/exponentials-logarithms.md",
+      "oldSourceIDs": 8,
+      "oldRenderedIDs": 10,
+      "oldEnglishPrompts": 4,
+      "htmlSHA256": "a496676c6a99d1f9e7e419bf3c89d77a93de2eb394551ce00f2cdc020956b9fe"
+    },
+    {
+      "path": "alevel/as-mathematics/forces.md",
+      "oldSourceIDs": 8,
+      "oldRenderedIDs": 10,
+      "oldEnglishPrompts": 4,
+      "htmlSHA256": "668f3e0fe764052a2518797c50efaa64a9aca059fd3f05f9fea4104924c54381"
+    },
+    {
+      "path": "alevel/as-mathematics/index.md",
+      "oldSourceIDs": 10,
+      "oldRenderedIDs": 57,
+      "oldEnglishPrompts": 0,
+      "htmlSHA256": "0b15966684140f8084e73f5fe23a9de69597488c730554f2c75b9b0325eb0830"
+    },
+    {
+      "path": "alevel/as-mathematics/integration.md",
+      "oldSourceIDs": 14,
+      "oldRenderedIDs": 16,
+      "oldEnglishPrompts": 8,
+      "htmlSHA256": "f9db9c0e39b0a77a1443c37723a3f7bda18cc7d0031917313be5ddd79429a717"
+    },
+    {
+      "path": "alevel/as-mathematics/momentum.md",
+      "oldSourceIDs": 8,
+      "oldRenderedIDs": 10,
+      "oldEnglishPrompts": 4,
+      "htmlSHA256": "ec687a18de4290a77148c5ae27643c63eed0b6c4c4195f96eb0b5e1b96633269"
+    },
+    {
+      "path": "alevel/as-mathematics/probability.md",
+      "oldSourceIDs": 8,
+      "oldRenderedIDs": 10,
+      "oldEnglishPrompts": 4,
+      "htmlSHA256": "81ef6230c3d2c9c979f3794ed0dd473262f015fb97c50fadbb05f20efbaf43f6"
+    },
+    {
+      "path": "alevel/as-mathematics/random-variables.md",
+      "oldSourceIDs": 14,
+      "oldRenderedIDs": 16,
+      "oldEnglishPrompts": 8,
+      "htmlSHA256": "6f2edcd98150a8e8b3cfbf805a87e1c1b92b82a575027df1b456a76b29874fbb"
+    },
+    {
+      "path": "alevel/as-mathematics/sequences.md",
+      "oldSourceIDs": 26,
+      "oldRenderedIDs": 28,
+      "oldEnglishPrompts": 16,
+      "htmlSHA256": "0497785d1167291d183b4aeff96f4b91aa5b3b9b951a23947e022b511313566d"
+    },
+    {
+      "path": "alevel/as-mathematics/trigonometry.md",
+      "oldSourceIDs": 14,
+      "oldRenderedIDs": 16,
+      "oldEnglishPrompts": 8,
+      "htmlSHA256": "f30dc3cc55cef835d122259a85364a91f9d939bda93261fc6ec90a03508e157b"
+    },
+    {
+      "path": "alevel/as-mathematics/variable-acceleration.md",
+      "oldSourceIDs": 8,
+      "oldRenderedIDs": 10,
+      "oldEnglishPrompts": 4,
+      "htmlSHA256": "1021bd556dcb3da84838e61b8f5fa2fa449af20659d9817a4127b2c1ab2e4026"
+    },
+    {
+      "path": "zh/alevel/as-mathematics/algebra.md",
+      "oldSourceIDs": 35,
+      "oldRenderedIDs": 36,
+      "oldEnglishPrompts": 20,
+      "htmlSHA256": "bbd3336db5dda351505347d5b702bf9a44ccf4533cd24ece48b05a30c24bdf42"
+    },
+    {
+      "path": "zh/alevel/as-mathematics/binomial.md",
+      "oldSourceIDs": 8,
+      "oldRenderedIDs": 10,
+      "oldEnglishPrompts": 4,
+      "htmlSHA256": "f8ea7f4d7606aa6bc94de3faf581395d02407775759475f159781a884815df3b"
+    },
+    {
+      "path": "zh/alevel/as-mathematics/circles.md",
+      "oldSourceIDs": 8,
+      "oldRenderedIDs": 10,
+      "oldEnglishPrompts": 4,
+      "htmlSHA256": "b510477cde39e7d32716da20094a56fff1900aaeec4b23aaaacde681c63cca2c"
+    },
+    {
+      "path": "zh/alevel/as-mathematics/constant-acceleration.md",
+      "oldSourceIDs": 8,
+      "oldRenderedIDs": 10,
+      "oldEnglishPrompts": 4,
+      "htmlSHA256": "c92cbf1e706a40a64b924614d73b799d15daae2bbce102cfa9292f49ca2ebff1"
+    },
+    {
+      "path": "zh/alevel/as-mathematics/coordinate-geometry.md",
+      "oldSourceIDs": 8,
+      "oldRenderedIDs": 10,
+      "oldEnglishPrompts": 4,
+      "htmlSHA256": "cc6bb474e40154b17d0a176af6677cf8360e5faf64a565752c1acc04a5a12696"
+    },
+    {
+      "path": "zh/alevel/as-mathematics/differentiation.md",
+      "oldSourceIDs": 14,
+      "oldRenderedIDs": 16,
+      "oldEnglishPrompts": 8,
+      "htmlSHA256": "4a248862c60ad28a9bcbec312a65c8f3f858ececdc48f606073b433c75576000"
+    },
+    {
+      "path": "zh/alevel/as-mathematics/exponentials-logarithms.md",
+      "oldSourceIDs": 8,
+      "oldRenderedIDs": 10,
+      "oldEnglishPrompts": 4,
+      "htmlSHA256": "672b57482715f6ac3e9250758c326afc2be0b47dd22426baf7cf8bddc3732c1e"
+    },
+    {
+      "path": "zh/alevel/as-mathematics/forces.md",
+      "oldSourceIDs": 8,
+      "oldRenderedIDs": 10,
+      "oldEnglishPrompts": 4,
+      "htmlSHA256": "1949a41a740705b855f18c55f9a2d1b8ef7704bbcb640ce4cc7b31b4d3843e61"
+    },
+    {
+      "path": "zh/alevel/as-mathematics/index.md",
+      "oldSourceIDs": 55,
+      "oldRenderedIDs": 13,
+      "oldEnglishPrompts": 0,
+      "htmlSHA256": "c9fc1d923cf04ae64dc57a42e1e79e319c16a7e09b51d1b0403b6996aac6fd09"
+    },
+    {
+      "path": "zh/alevel/as-mathematics/integration.md",
+      "oldSourceIDs": 14,
+      "oldRenderedIDs": 16,
+      "oldEnglishPrompts": 8,
+      "htmlSHA256": "3fc4c8dbfce0111d4df5acd3c1ae9f10d4a9b7c204b30ba96c2e5a3a5e2cb1cc"
+    },
+    {
+      "path": "zh/alevel/as-mathematics/momentum.md",
+      "oldSourceIDs": 8,
+      "oldRenderedIDs": 10,
+      "oldEnglishPrompts": 4,
+      "htmlSHA256": "9e8158b859f60db680f911f0463f29c40fc9697df76e4223dd9626569476c1cb"
+    },
+    {
+      "path": "zh/alevel/as-mathematics/probability.md",
+      "oldSourceIDs": 8,
+      "oldRenderedIDs": 10,
+      "oldEnglishPrompts": 4,
+      "htmlSHA256": "e97c9c990de388445970ca8fcebe3a30bbccaf1a1078145a4a690caf7d33fbe1"
+    },
+    {
+      "path": "zh/alevel/as-mathematics/random-variables.md",
+      "oldSourceIDs": 14,
+      "oldRenderedIDs": 16,
+      "oldEnglishPrompts": 8,
+      "htmlSHA256": "2b3c124958a3520b142af9195a30006668138a316904655d93c7fd831daf9112"
+    },
+    {
+      "path": "zh/alevel/as-mathematics/sequences.md",
+      "oldSourceIDs": 26,
+      "oldRenderedIDs": 28,
+      "oldEnglishPrompts": 16,
+      "htmlSHA256": "e1eca9d0a308b6c69d219b39dadcfb95e0d8c90d54a5305f734968e868dc3a3a"
+    },
+    {
+      "path": "zh/alevel/as-mathematics/trigonometry.md",
+      "oldSourceIDs": 14,
+      "oldRenderedIDs": 16,
+      "oldEnglishPrompts": 8,
+      "htmlSHA256": "b17bb217c2cce802ed490a2216ae463c26ff22f580d7e0cb518e02cf0f3ff5c9"
+    },
+    {
+      "path": "zh/alevel/as-mathematics/variable-acceleration.md",
+      "oldSourceIDs": 8,
+      "oldRenderedIDs": 10,
+      "oldEnglishPrompts": 4,
+      "htmlSHA256": "b566e778ec2b24f26796175bf5e5be74b15f7c65a8e6c46f3ff47b3fd0d1ce9c"
+    }
+  ]
+}

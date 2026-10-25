@@ -1,0 +1,431 @@
+{
+  "base": "http://127.0.0.1:8835",
+  "results": [
+    {
+      "lang": "en",
+      "width": 1365,
+      "theme": "light",
+      "status": 200,
+      "initial": {
+        "open": 0,
+        "tasks": 6,
+        "examples": 2,
+        "nested": 0,
+        "hiddenExamples": false,
+        "reading": true,
+        "toc": 11
+      },
+      "missingOldIds": [],
+      "keyboardToggles": 12,
+      "overflow": false,
+      "mathErrors": [],
+      "badImages": [],
+      "taskRoles": [
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        }
+      ],
+      "pageErrors": []
+    },
+    {
+      "lang": "en",
+      "width": 1365,
+      "theme": "dark",
+      "status": 200,
+      "initial": {
+        "open": 0,
+        "tasks": 6,
+        "examples": 2,
+        "nested": 0,
+        "hiddenExamples": false,
+        "reading": true,
+        "toc": 11
+      },
+      "missingOldIds": [],
+      "keyboardToggles": 12,
+      "overflow": false,
+      "mathErrors": [],
+      "badImages": [],
+      "taskRoles": [
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        }
+      ],
+      "pageErrors": []
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "status": 200,
+      "initial": {
+        "open": 0,
+        "tasks": 6,
+        "examples": 2,
+        "nested": 0,
+        "hiddenExamples": false,
+        "reading": true,
+        "toc": 11
+      },
+      "missingOldIds": [],
+      "keyboardToggles": 12,
+      "overflow": false,
+      "mathErrors": [],
+      "badImages": [],
+      "taskRoles": [
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        }
+      ],
+      "pageErrors": []
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "status": 200,
+      "initial": {
+        "open": 0,
+        "tasks": 6,
+        "examples": 2,
+        "nested": 0,
+        "hiddenExamples": false,
+        "reading": true,
+        "toc": 11
+      },
+      "missingOldIds": [],
+      "keyboardToggles": 12,
+      "overflow": false,
+      "mathErrors": [],
+      "badImages": [],
+      "taskRoles": [
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        }
+      ],
+      "pageErrors": []
+    },
+    {
+      "lang": "zh",
+      "width": 1365,
+      "theme": "light",
+      "status": 200,
+      "initial": {
+        "open": 0,
+        "tasks": 6,
+        "examples": 2,
+        "nested": 0,
+        "hiddenExamples": false,
+        "reading": true,
+        "toc": 11
+      },
+      "missingOldIds": [],
+      "keyboardToggles": 12,
+      "overflow": false,
+      "mathErrors": [],
+      "badImages": [],
+      "taskRoles": [
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        }
+      ],
+      "pageErrors": []
+    },
+    {
+      "lang": "zh",
+      "width": 1365,
+      "theme": "dark",
+      "status": 200,
+      "initial": {
+        "open": 0,
+        "tasks": 6,
+        "examples": 2,
+        "nested": 0,
+        "hiddenExamples": false,
+        "reading": true,
+        "toc": 11
+      },
+      "missingOldIds": [],
+      "keyboardToggles": 12,
+      "overflow": false,
+      "mathErrors": [],
+      "badImages": [],
+      "taskRoles": [
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        }
+      ],
+      "pageErrors": []
+    },
+    {
+      "lang": "zh",
+      "width": 390,
+      "theme": "light",
+      "status": 200,
+      "initial": {
+        "open": 0,
+        "tasks": 6,
+        "examples": 2,
+        "nested": 0,
+        "hiddenExamples": false,
+        "reading": true,
+        "toc": 11
+      },
+      "missingOldIds": [],
+      "keyboardToggles": 12,
+      "overflow": false,
+      "mathErrors": [],
+      "badImages": [],
+      "taskRoles": [
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        }
+      ],
+      "pageErrors": []
+    },
+    {
+      "lang": "zh",
+      "width": 390,
+      "theme": "dark",
+      "status": 200,
+      "initial": {
+        "open": 0,
+        "tasks": 6,
+        "examples": 2,
+        "nested": 0,
+        "hiddenExamples": false,
+        "reading": true,
+        "toc": 11
+      },
+      "missingOldIds": [],
+      "keyboardToggles": 12,
+      "overflow": false,
+      "mathErrors": [],
+      "badImages": [],
+      "taskRoles": [
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        },
+        {
+          "prompts": 1,
+          "help": 2
+        }
+      ],
+      "pageErrors": []
+    }
+  ],
+  "journeys": [
+    {
+      "type": "wide-math-keyboard",
+      "lang": "en",
+      "width": 1365,
+      "checked": 0
+    },
+    {
+      "type": "language-switch",
+      "lang": "en",
+      "width": 1365,
+      "to": "http://127.0.0.1:8835/zh/alevel/as-mathematics/algebra/#l01-independent-indices",
+      "passed": true
+    },
+    {
+      "type": "wide-math-keyboard",
+      "lang": "en",
+      "width": 390,
+      "checked": 4
+    },
+    {
+      "type": "language-switch",
+      "lang": "en",
+      "width": 390,
+      "to": "http://127.0.0.1:8835/zh/alevel/as-mathematics/algebra/#l01-independent-indices",
+      "passed": true
+    },
+    {
+      "type": "wide-math-keyboard",
+      "lang": "zh",
+      "width": 1365,
+      "checked": 0
+    },
+    {
+      "type": "language-switch",
+      "lang": "zh",
+      "width": 1365,
+      "to": "http://127.0.0.1:8835/alevel/as-mathematics/algebra/#l01-independent-indices",
+      "passed": true
+    },
+    {
+      "type": "wide-math-keyboard",
+      "lang": "zh",
+      "width": 390,
+      "checked": 4
+    }
+  ],
+  "failures": [
+    "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('a[href=\"#l01-later\"]').last()\u001b[22m\n\u001b[2m    - locator resolved to <a data-toc-link=\"\" href=\"#l01-later\" data-language-href=\"#l01-later\">学完二次式，再回来试</a>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - element is outside of the viewport\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - element is outside of the viewport\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    57 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - element is outside of the viewport\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at D:\\GitHub\\Academic\\docs\\agents\\audit-assets\\as-algebra-l01-2026-10-24\\browser-check.cjs:87:56"
+  ]
+}
