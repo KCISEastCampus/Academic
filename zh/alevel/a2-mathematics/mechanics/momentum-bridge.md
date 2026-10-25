@@ -9,6 +9,7 @@ translation_of: /alevel/a2-mathematics/mechanics/momentum-bridge/
 permalink: /zh/alevel/a2-mathematics/mechanics/momentum-bridge/
 toc_headings: h2
 study_page: true
+reading_layout: true
 ---
 
 [A2 力学](/zh/alevel/a2-mathematics/mechanics/) · MA05 所需的 MA02 M1.4 先修
@@ -17,22 +18,9 @@ study_page: true
 
 **开始前：**掌握一维带符号速度、牛顿第二定律、三角形面积和动能。在同一惯性参考系中分析。下列自拟题不设官方分值；能用精确值时保留精确值，否则保留三位有效数字。正式考试题按原卷和题目的精度要求作答。
 
-## 先修诊断 {#check-your-starting-point}
-
-**Self-written diagnostic.** (a) A particle of mass $2\,\mathrm{kg}$ has velocity $-3\,\mathrm{m\,s^{-1}}$. State its momentum, including direction. (b) Does constant nonzero velocity imply zero momentum? (c) Two particles have equal nonzero momentum magnitudes but different masses. Must their kinetic energies be equal?
-
-<details markdown="1">
-<summary>诊断反馈</summary>
-
-(a) $p=-6\,\mathrm{kg\,m\,s^{-1}}$，沿负方向。(b) 不代表动量为零，而是动量保持不变。(c) 不一定。将速率关系代入动能式，得到
-
-$$E_k=\frac{p^2}{2m}.$$
-
-在相同的非零动量大小下，质量较小者动能较大。如果 (a) 使用了速率而丢掉方向，先画正方向箭头再试；如果 (b) 答“是”，请区分一个量与它的变化率。
-
-</details>
-
 ## 从力到冲量 {#from-force-to-impulse}
+
+同样的速度下，两辆装载不同质量的小车要改变运动状态，所需的冲量并不相同。我们用质量乘速度来记录这种带方向的运动量。先固定一个正方向，所有初末速度都按这个方向取正负；负动量表示运动朝负向，不表示质量为负。
 
 一维动量（momentum）是带符号的量：
 
@@ -43,6 +31,14 @@ $$p=mv,\qquad [p]=\mathrm{kg\,m\,s^{-1}}.$$
 $$J=\Delta p=m(v-u)=\int_{t_0}^{t_1}F(t)\,dt.$$
 
 在力—时间图上，冲量是带符号面积：时间轴下方贡献负冲量。恒力的冲量等于力乘作用时间。牛顿秒与动量的单位等价。冲量不是功：功取决于位移，不是经过的时间。
+
+这里的力必须是研究物体所受的合力。质量恒定时，把牛顿第二定律在时间上累计，就有
+
+$$F=m\frac{\mathrm dv}{\mathrm dt},\qquad\int_{t_0}^{t_1}F\,\mathrm dt=m\int_u^v\mathrm dv=m(v-u).$$
+
+恒力乘时间和图下面积，都是这条关系的具体形式。
+
+<div class="worked-example" markdown="1">
 
 ### 例题 — 速度反向 {#example--a-velocity-reversal}
 
@@ -58,6 +54,8 @@ $$12=2(v-(-1))\quad\Rightarrow\quad v=5\,\mathrm{m\,s^{-1}}.$$
 
 **检查：**动量从负二变成正十千克米每秒，变化为正十二。把初速度换成速率会得到错误末速度。质点先减速、停止，再反向；力为正不要求初速度也为正。
 
+</div>
+
 ## 先选系统，再使用动量守恒 {#choose-the-system-before-conserving-momentum}
 
 以两个质点为系统，它们之间的碰撞力属于内力；这一对力的冲量在系统总和中抵消。只有碰撞期间的**合外冲量为零或可忽略**，总动量才守恒：
@@ -66,11 +64,25 @@ $$m_Au_A+m_Bu_B=m_Av_A+m_Bv_B.$$
 
 两个质点必须使用同一个正方向。光滑水平面去除了水平摩擦，但墙仍可对质点施加水平外冲量。质点撞墙反弹时，不能把单个质点的动量当作守恒量。
 
+碰撞时的内力可能很大，但在整体方程中互相抵消；不能因此说每个物体的合力为零。更一般地，总动量的变化满足
+
+$$p_{\mathrm{after}}-p_{\mathrm{before}}=J_{\mathrm{external}}.$$
+
 动能（kinetic energy）是标量：
 
 $$E_{\mathrm{before}}=\frac12m_Au_A^2+\frac12m_Bu_B^2,\qquad E_{\mathrm{after}}=\frac12m_Av_A^2+\frac12m_Bv_B^2.$$
 
 动量守恒本身不保证这两者相等。动能减少量等于初动能减末动能。在没有储能释放的被动碰撞模型中，减少量不能为负。其他碰撞模型若能释放能量，必须说明来源。
+
+动能只看速率的平方，两个相反速度可以有相同动能。动能减少，能量可以转移到形变、内能或声音；这不表示总能量消失。动量守恒来自外冲量条件，动能是否守恒则要另看碰撞模型，不能用其中一项代替另一项。
+
+若碰前 A 在左、B 在右，碰后间距的变化率为两速度之差：
+
+$$\frac{\mathrm d(\text{separation})}{\mathrm dt}=v_B-v_A.$$
+
+右边速度较大时两者分离；相等时可保持接触共同运动；右边速度较小时还在接近，不能当作接触碰撞已经结束后的速度。
+
+<div class="worked-example" markdown="1">
 
 ### 例题 — 大小可能隐藏两种方向 {#example--a-magnitude-can-hide-two-directions}
 
@@ -95,9 +107,41 @@ $$E_{\mathrm{after}}=\frac12(2)(1)^2+\frac12(3)\left(\frac83\right)^2=\frac{35}{
 
 两个分支均满足动量守恒、动能不增加；右边质点的速度也都大于左边质点，碰后间距增大。因此已知条件允许两种分支，不能直接假定 A 继续向右。如果再给出“动能没有损失”，才能选定第二个分支。
 
+</div>
+
+## 数量检查 {#quantity-check}
+
+<div class="lesson-check" markdown="1">
+
+### 这些量表示什么 {#check-your-starting-point}
+
+**Question:** (a) A particle of mass $2\,\mathrm{kg}$ has velocity $-3\,\mathrm{m\,s^{-1}}$. State its momentum, including direction. (b) Does constant nonzero velocity imply zero momentum? (c) Two particles have equal nonzero momentum magnitudes but different masses. Must their kinetic energies be equal?
+
+<details markdown="1">
+<summary>提示</summary>
+
+分清带方向的动量、动量的变化与速度平方所决定的动能。
+
+</details>
+
+<details markdown="1">
+<summary>解答与核对</summary>
+
+(a) $p=-6\,\mathrm{kg\,m\,s^{-1}}$，沿负方向。(b) 不代表动量为零，而是动量保持不变。(c) 不一定。将速率关系代入动能式，得到
+
+$$E_k=\frac{p^2}{2m}.$$
+
+在相同的非零动量大小下，质量较小者动能较大。如果 (a) 使用了速率而丢掉方向，先画正方向箭头再试；如果 (b) 答“是”，请区分一个量与它的变化率。
+
+</details>
+
+</div>
+
 ## 独立练习 {#independent-practice}
 
-### Q1 — 读取力—时间记录 {#q1--read-a-forcetime-record}
+<div class="lesson-check" markdown="1">
+
+### Q1 — 一份小车记录 {#q1--read-a-forcetime-record}
 
 **Self-written task.** A trolley of mass $0.5\,\mathrm{kg}$ has initial velocity $-4\,\mathrm{m\,s^{-1}}$. Its resultant force varies linearly from zero at time zero to $3\,\mathrm N$ at $t=1\,\mathrm s$, then linearly to zero at $t=2\,\mathrm s$. The force is nonnegative throughout. Find its final velocity and the change in kinetic energy. Explain why the sign of impulse alone does not determine the sign of the energy change.
 
@@ -121,7 +165,11 @@ $$\Delta E_k=\frac12(0.5)(2^2-(-4)^2)=-3\,\mathrm J.$$
 
 </details>
 
-### Q2 — 检验一个碰撞方案 {#q2--test-a-proposed-collision}
+</div>
+
+<div class="lesson-check" markdown="1">
+
+### Q2 — 两个运动质点 {#q2--test-a-proposed-collision}
 
 **Self-written task.** Two particles each have mass $1\,\mathrm{kg}$. Initially A is to the left of B, moving right at $3\,\mathrm{m\,s^{-1}}$, and B is at rest. They collide on a smooth horizontal line with negligible external impulse and no release of stored energy. The final momentum magnitude of A is $1\,\mathrm{kg\,m\,s^{-1}}$. Find all algebraic velocity branches and decide which fit this model. State the kinetic-energy decrease for every admissible branch. No method is specified.
 
@@ -143,12 +191,23 @@ $$v_A=\pm1,\qquad v_A+v_B=3.$$
 
 </details>
 
-### 再尝试 — 改变系统边界 {#retry--change-the-system-boundary}
+</div>
 
-**Self-written task.** A particle of mass $0.5\,\mathrm{kg}$ approaches a fixed wall with velocity $3\,\mathrm{m\,s^{-1}}$ and rebounds with velocity $-2\,\mathrm{m\,s^{-1}}$. A student says its momentum is conserved because the floor is smooth. Assess the statement and find the impulse exerted by the wall and the decrease in kinetic energy. Neglect other impulses during impact.
+<div class="lesson-check" markdown="1">
+
+### 靠近墙的质点 {#retry--change-the-system-boundary}
+
+**Question:** A particle of mass $0.5\,\mathrm{kg}$ approaches a fixed wall with velocity $3\,\mathrm{m\,s^{-1}}$ and rebounds with velocity $-2\,\mathrm{m\,s^{-1}}$. A student says its momentum is conserved because the floor is smooth. Assess the statement and find the impulse exerted by the wall and the decrease in kinetic energy. Neglect other impulses during impact.
 
 <details markdown="1">
-<summary>再尝试核对</summary>
+<summary>提示</summary>
+
+以质点为系统；墙在系统边界的哪一侧？
+
+</details>
+
+<details markdown="1">
+<summary>解答与核对</summary>
 
 墙在单质点系统之外，对它提供外冲量：
 
@@ -160,11 +219,125 @@ $$\frac12(0.5)(3^2-(-2)^2)=1.25\,\mathrm J.$$
 
 地面光滑不能去掉墙的力。先选系统，再辨认外冲量。
 
+若因地面光滑就判守恒，回看[系统与外冲量](#choose-the-system-before-conserving-momentum)，再做下方系统重试。
+
 </details>
+
+</div>
+
+<div class="lesson-check" markdown="1">
+
+### 选哪个系统 {#system-check}
+
+**Question:** Two trolleys collide on a smooth horizontal track. During impact a motor provides a non-negligible rightwards impulse to trolley A. For the system A alone and for the system A+B, identify external horizontal impulses. Is smoothness sufficient to conserve total horizontal momentum?
+
+<details markdown="1">
+<summary>提示</summary>
+
+碰撞力对单车是外力，对两车整体是内力；电动机是否属于系统？
+
+</details>
+
+<details markdown="1">
+<summary>解答与核对</summary>
+
+对 A 单独，B 的碰撞冲量和电动机冲量都来自外部。对 A+B，碰撞内冲量抵消，电动机冲量仍在；总动量增加，不能写初末总动量相等。光滑只去掉轨道的水平摩擦，不能去掉其他外冲量。回看[一般动量关系](#choose-the-system-before-conserving-momentum)，再尝试下一题。
+
+</details>
+
+</div>
+
+<div class="lesson-check" markdown="1">
+
+### 松开弹簧后 {#system-retry}
+
+**Question:** Trolleys A and B of masses $2\,\mathrm{kg}$ and $3\,\mathrm{kg}$ are initially at rest on a smooth horizontal track. A light compressed spring between them is released and drops clear without a horizontal impulse. Neglect external horizontal impulses. A moves with velocity $-3\,\mathrm{m\,s^{-1}}$. Find B's velocity and the increase in total kinetic energy. Explain momentum conservation for the pair and for A alone.
+
+<details markdown="1">
+<summary>提示</summary>
+
+储能释放是内过程；分别考虑两车整体和 A 单车。
+
+</details>
+
+<details markdown="1">
+<summary>解答与核对</summary>
+
+$$0=2(-3)+3v_B\quad\Rightarrow\quad v_B=2\,\mathrm{m\,s^{-1}}.$$
+
+$$E_{\mathrm{before}}=0,\qquad E_{\mathrm{after}}=\frac12(2)(3^2)+\frac12(3)(2^2)=15\,\mathrm J.$$
+
+两车总动量仍为零，但 A 的动量改变，因为 B/弹簧给 A 提供外冲量。动能的增加来自弹簧储能，所以不能强行使用无储能释放的碰撞限制；也不能把总动量为零当作总动能为零。
+
+</details>
+
+</div>
+
+<div class="lesson-check" markdown="1">
+
+### 另一份力的记录 {#impulse-retry}
+
+**Question:** A $2\,\mathrm{kg}$ particle initially has velocity $-1\,\mathrm{m\,s^{-1}}$. Its resultant force is $-2\,\mathrm N$ for the first second. Over the next two seconds the force increases linearly from zero to $3\,\mathrm N$. Find the final velocity and change in kinetic energy. Explain why a positive net impulse need not mean an energy gain.
+
+<details markdown="1">
+<summary>提示</summary>
+
+把时间轴下方的面积记为负；先求末速度，再算动能。
+
+</details>
+
+<details markdown="1">
+<summary>解答与核对</summary>
+
+$$J=-2(1)+\frac12(2)(3)=1\,\mathrm{N\,s}.$$
+
+$$1=2(v-(-1))\quad\Rightarrow\quad v=-0.5\,\mathrm{m\,s^{-1}}.$$
+
+$$\Delta E_k=\frac12(2)\bigl((-0.5)^2-(-1)^2\bigr)=-0.75\,\mathrm J.$$
+
+合冲量为正，但末速率较小，动能减少。若把面积或单位弄混，回看[冲量的定义与例题](#from-force-to-impulse)。
+
+</details>
+
+</div>
+
+<div class="lesson-check" markdown="1">
+
+### 另一份碰撞记录 {#collision-retry}
+
+**Question:** A of mass $1\,\mathrm{kg}$ is initially to the left of B of mass $2\,\mathrm{kg}$. They move right at $4\,\mathrm{m\,s^{-1}}$ and $1\,\mathrm{m\,s^{-1}}$ respectively. After collision, the magnitude of B's momentum is $4\,\mathrm{kg\,m\,s^{-1}}$. External horizontal impulse is negligible and no stored energy is released. Find all algebraic velocity branches and decide which can fit the model. Find the energy decrease and discuss their relative motion for an admissible branch.
+
+<details markdown="1">
+<summary>提示</summary>
+
+这次给的是右边物体的动量大小；仍保留两个符号，再检查能量与相对运动。
+
+</details>
+
+<details markdown="1">
+<summary>解答与核对</summary>
+
+$$p_{\mathrm{before}}=1(4)+2(1)=6,\qquad E_{\mathrm{before}}=\frac12(1)(4^2)+\frac12(2)(1^2)=9\,\mathrm J.$$
+
+$$v_B=\pm2,\qquad v_A+2v_B=6.$$
+
+$$ (v_A,v_B)=(2,2)\quad\text{or}\quad(10,-2)\quad\mathrm{m\,s^{-1}}.$$
+
+$$E_{\mathrm{after}}=6\,\mathrm J\quad\text{or}\quad54\,\mathrm J.$$
+
+第一组速度可行，动能减少 3 J；两车速度相同，可以保持接触共同运动，不要求必须分开。第二组动能增加，而且右边的 B 向左、左边的 A 向右，仍在接近，不能作为碰撞结束后的速度。若遗漏分支或仅因负号删分支，回看[大小的两个方向示范](#example--a-magnitude-can-hide-two-directions)。
+
+</details>
+
+</div>
+
+## 学完功与能后 {#later-check}
+
+学完[功与能](/zh/alevel/a2-mathematics/mechanics/work-and-energy/)后，收起答案，重做[弹簧记录](#system-retry)，解释动量与动能的结论为什么不同。再做入口[混合任务](/zh/alevel/a2-mathematics/mechanics/#mixed-problems)与[稍后回顾](/zh/alevel/a2-mathematics/mechanics/#later-review)，每次先写系统和外冲量条件。
 
 ## 真题连接与下一步 {#examination-connection-and-next-step}
 
-评分参照为 **OxfordAQA 9660/MA05，January 2025，Q8**，已配合该卷最终评分标准阅读：[试卷](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-question-paper.pdf) · [评分标准](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-mark-scheme.pdf)。它连接 AS 动量、方向分支和能量。本页题目均为自拟，没有转载成官方题或赋予官方分值。
+评分参照为 **OxfordAQA 9660/MA05，January 2025，Q8(a–c)**（QP pp16–17；Final v1.0 MS pp15–16），已配合该卷最终评分标准阅读：[试卷](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-question-paper.pdf) · [评分标准](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-mark-scheme.pdf)。它连接 AS 动量、方向分支和能量。本页题目均为自拟，没有转载成官方题或赋予官方分值。
 
 范围：[9660 specification v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf)，M1.4、M2.6 及 AS 先修。January 2025 卷默认计算器最终答案保留两位有效数字，题内要求可覆盖；这不替代本页开头为自拟题声明的精度约定。
 

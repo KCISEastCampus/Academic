@@ -7,29 +7,25 @@ subject: m2
 permalink: /alevel/a2-mathematics/mechanics/uniform-circular-motion/
 toc_headings: h2
 study_page: true
+reading_layout: true
 ---
 
-[A2 Mechanics](/alevel/a2-mathematics/mechanics/) · M2.7 Uniform Circular Motion
+[A2 Mechanics](/alevel/a2-mathematics/mechanics/) · MA05 · M2.7
+{:.lesson-meta}
 
-Connect angular speed to linear speed, find acceleration towards the centre, and use actual forces to solve motion in horizontal circles.
+A car turns a bend while its speedometer stays steady. Its speed has not increased, but its direction has changed. **Which force keeps it turning, and what happens if that force is insufficient?**
 
-- **Learning:** start with [angular speed](#angular-speed-and-angular-velocity), then study [radial acceleration](#radial-acceleration) and [force equations](#forces-in-a-horizontal-circle).
-- **Homework help:** mark the centre and the horizontal radius. Resolve forces vertically and towards the centre before substituting numbers.
-- **Revision:** try [practice](#practice) with the solutions closed. Check friction, tension and contact conditions as well as the force equation.
+Start with [how fast the radius turns](#angular-speed-and-angular-velocity), then [why velocity changes](#radial-acceleration) and [the actual forces](#forces-in-a-horizontal-circle). The string, friction and contact applications all use the same principle. Work through the [conical pendulum](#the-conical-pendulum) before choosing further surface examples; [circular orbits](#circular-orbits) use a different force geometry. Revising? Try [practice](#practice) and [the independent task](#independent-method-choice) with both help panels closed.
 
-Textbook: Chapter 15, *Uniform Circular Motion*, Sections 15.1–15.3 (printed pp. 240–251). This lesson uses the textbook terms *angular speed*, *angular velocity*, *radial acceleration*, *horizontal circle* and *conical pendulum*. The smooth cone application also appears in the chapter assessment; the banked-road practice question extends the same force method.
+You need right triangles, force components, $F=ma$, static friction and component differentiation/integration. Review [force directions](/alevel/a2-mathematics/mechanics/forces-equilibrium-and-friction/#force-diagrams), [friction limits](/alevel/a2-mathematics/mechanics/forces-equilibrium-and-friction/#friction-and-limiting-equilibrium) or [vectors and kinematics](/alevel/a2-mathematics/mechanics/vectors-and-kinematics/). Recall from [energy](../work-and-energy/#the-work-energy-principle) that constant kinetic energy means constant **speed**.
+{:.lesson-meta}
 
-**Before you start:** review [Vectors and Kinematics](/alevel/a2-mathematics/mechanics/vectors-and-kinematics/), [Forces, Equilibrium and Friction](/alevel/a2-mathematics/mechanics/forces-equilibrium-and-friction/) and [Newton's Laws of Motion](/alevel/a2-mathematics/mechanics/newtons-laws-of-motion/). Use $g=9.8\,\mathrm{m\,s^{-2}}$ unless stated otherwise. Keep exact values until the final answer; give numerical answers to three significant figures, or one decimal place for angles, unless asked otherwise.
+All examples and tasks are **Self-written**, with no official marks. Model bodies as particles, use $g=9.8\,\mathrm{m\,s^{-2}}$ where appropriate, retain exact values until the final answer, and give three significant figures or one decimal place for angles unless stated otherwise. Diagrams are not to scale. See [sources and scope](#sources-and-scope).
+{:.lesson-meta}
 
-Model bodies as particles unless stated otherwise. All worked examples and practice questions are self-written, not official past-paper questions. No official marks are assigned. Diagrams show the model and are not drawn to scale.
+## Angular Speed and Angular Velocity {#angular-speed-and-angular-velocity}
 
-<!-- motion-sources:start -->
-## Sources and Scope
-
-**Scope and assessment:** [OxfordAQA 9660 specification v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf), M2.7; method reference: MA05 January 2025 Q3, read with the paired [question paper](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-question-paper.pdf) and [mark scheme, Version 1.0 Final](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-mark-scheme.pdf). The tasks remain self-written without official marks. The convention above applies to these tasks; authentic questions follow their own precision instructions. This lesson treats uniform motion in horizontal circles and central-force circular orbits, not FM05 non-uniform vertical circles.
-<!-- motion-sources:end -->
-
-## Angular Speed and Angular Velocity
+Draw a line from the centre to the particle. As the particle moves, that radius turns. Angular speed describes the turning of this line; linear speed describes the distance travelled along the circumference. An outer point travels farther in the same turn, even when both points take the same time.
 
 **Angular speed** is the rate at which a particle turns about the centre of its circle. Write it as $\omega$ and measure it in **radians per second**. One complete revolution is $2\pi$ radians.
 
@@ -53,7 +49,9 @@ $$\boxed{\tau=\frac{2\pi}{\omega}=\frac{2\pi r}{v}}.$$
 
 Points on one rotating disc have the same angular speed, but a point farther from the axis has a greater linear speed. The radius is distance from the **axis of rotation**, not always the full radius of the object.
 
-## Radial Acceleration
+## Radial Acceleration {#radial-acceleration}
+
+Velocity answers two questions: “how fast?” and “which way?” At the rightmost point of an anticlockwise circle it points up; at the top it points left. Equal speedometer readings do not make those vectors equal. Acceleration measures this **change in velocity**, including a change of direction.
 
 In **uniform circular motion**, speed is constant but velocity changes direction. The particle therefore has acceleration. Its velocity is tangent to the circle; its **radial acceleration**, also called centripetal acceleration, points towards the centre.
 
@@ -69,7 +67,9 @@ $$\lvert\Delta\mathbf v\rvert=2v\sin\left(\frac{\Delta\theta}{2}\right)\approx v
 
 As the time interval tends to zero, divide by $\Delta t$ to obtain $a=v\omega$. Substituting $v=r\omega$ gives both formulae above. This uses $\sin x\approx x$ for small $x$ in radians, as in textbook Section 15.1.
 
-### Example 1: revolutions, speed and acceleration
+<div class="worked-example" markdown="1">
+
+### Example 1: revolutions, speed and acceleration {#example-1-revolutions-speed-and-acceleration}
 
 **Question:** a point on the rim of a disc of radius $0.4\,\mathrm m$ completes $90$ revolutions per minute anticlockwise. Find its angular velocity, linear speed, period and acceleration.
 
@@ -85,7 +85,11 @@ $$\boxed{a=0.4(3\pi)^2\approx35.5\,\mathrm{m\,s^{-2}}\text{ towards the centre}}
 
 **Check:** one minute contains $60/(2/3)=90$ periods. A point halfway from the centre has the same angular speed but half the linear speed and half the acceleration magnitude.
 
-### Example 2: showing a path is a circle
+</div>
+
+<div class="worked-example" markdown="1">
+
+### Example 2: showing a path is a circle {#example-2-showing-a-path-is-a-circle}
 
 **Question:** a particle has velocity:
 
@@ -93,7 +97,7 @@ $$\mathbf v=(6\cos2t)\mathbf i-(6\sin2t)\mathbf j.$$
 
 At $t=0$, its position vector is $\mathbf r=\mathbf i+5\mathbf j$. Positions are in metres and time is in seconds. Find its position, show that it moves in a circle at constant speed, and find its acceleration.
 
-Integrate each component and use the initial position:
+The centre has not been given, so first recover position from velocity. Differentiating $\sin2t$ gives $2\cos2t$, so divide by $2$ when integrating $6\cos2t$; the integral of $-6\sin2t$ is $3\cos2t$. Keep a separate constant for each direction:
 
 $$x=3\sin2t+C_x,\qquad y=3\cos2t+C_y.$$
 
@@ -102,6 +106,8 @@ At $t=0$, $C_x=1$ and $3+C_y=5$, so:
 $$\boxed{\mathbf r=(1+3\sin2t)\mathbf i+(2+3\cos2t)\mathbf j}.$$
 
 $$\boxed{(x-1)^2+(y-2)^2=9}.$$
+
+Subtracting the fixed point $(1,2)$ leaves $3\sin2t$ and $3\cos2t$. Squaring and adding gives $9(\sin^22t+\cos^22t)=9$ for every $t$. Constant distance proves a circular path; constant speed still needs a separate calculation.
 
 The circle has centre $(1,2)$ and radius $3\,\mathrm m$. Its speed is:
 
@@ -119,7 +125,11 @@ Thus acceleration points towards the centre. The angular speed is $v/r=2\,\mathr
 
 **Check:** the position at $t=0$ is $(1,5)$. Also $\mathbf a\cdot\mathbf v=0$, so acceleration is perpendicular to velocity. For a circle away from the origin, use position **relative to the centre**.
 
-## Forces in a Horizontal Circle
+</div>
+
+## Forces in a Horizontal Circle {#forces-in-a-horizontal-circle}
+
+Use the ground as the inertial reference frame. A particle fixed relative to a turning disc is moving relative to the ground. “At rest on the disc” does not justify setting its resultant force to zero in the ground frame.
 
 Draw only the **actual forces**: for example weight, tension, normal reaction and friction. The term **centripetal force** describes their resultant towards the centre. It is not an extra force to add to the diagram.
 
@@ -131,7 +141,9 @@ There is no vertical acceleration and no acceleration along the tangent. The cor
 
 Choose the radial direction **towards the centre as positive**. Resolve forces in that direction, even if the particle's velocity points in another direction. Do not set all forces to zero just because speed is constant.
 
-### Example 3: tension and a breaking limit
+<div class="worked-example" markdown="1">
+
+### Example 3: tension and a breaking limit {#example-3-tension-and-a-breaking-limit}
 
 **Question:** a particle of mass $0.25\,\mathrm{kg}$ moves in a horizontal circle on a smooth fixed table. It is attached to a fixed point on the table by a light inextensible string of length $0.8\,\mathrm m$. At speed $4\,\mathrm{m\,s^{-1}}$, find the tension and normal reaction. The string breaks if tension exceeds $8\,\mathrm N$; find the greatest angular speed before it breaks.
 
@@ -149,9 +161,13 @@ $$\boxed{\omega_{\text{max}}=\sqrt{40}\approx6.32\,\mathrm{rad\,s^{-1}}}.$$
 
 **Check:** this gives maximum linear speed $0.8\sqrt{40}\approx5.06\,\mathrm{m\,s^{-1}}$. The $4\,\mathrm{m\,s^{-1}}$ motion is below the breaking limit. Use the string length as radius only because the string is horizontal and taut.
 
+The inward resultant is perpendicular to the instantaneous velocity. Its power is zero, so it changes direction without increasing KE. From [the energy account](../work-and-energy/#the-work-energy-principle), zero resultant work does not imply zero resultant force.
+
 If the string breaks, the particle initially moves along the tangent, not outwards along the radius. On this smooth horizontal table it then continues in a straight line, until another force or boundary changes the motion.
 
-## Friction and Road Bends
+</div>
+
+## Friction and Road Bends {#friction-and-road-bends}
 
 A block rotating with a rough horizontal disc is at rest **relative to the disc**, but moves in a circle relative to the ground. Static friction acts towards the centre to provide the radial force.
 
@@ -171,7 +187,9 @@ $$\boxed{\tan\alpha=\frac{v^2}{rg}}.$$
 
 This gives one speed for steady motion at the stated radius and bank angle. It is not a maximum-speed formula for a rough road.
 
-### Example 4: a block on a rotating disc
+<div class="worked-example" markdown="1">
+
+### Example 4: a block on a rotating disc {#example-4-a-block-on-a-rotating-disc}
 
 **Question:** a block of mass $0.5\,\mathrm{kg}$ stays at a fixed position $0.4\,\mathrm m$ from the axis of a horizontal disc rotating at $3\,\mathrm{rad\,s^{-1}}$. Find the frictional force and the least coefficient of friction. If the coefficient is $0.4$, find the greatest angular speed without slipping.
 
@@ -189,7 +207,9 @@ $$\boxed{\omega_{\text{max}}=\sqrt{\frac{0.4g}{0.4}}\approx3.13\,\mathrm{rad\,s^
 
 **Check:** at $\omega=3$, friction is $1.8\,\mathrm N$, below the available $0.4(4.9)=1.96\,\mathrm N$. The mass cancels in the angular-speed limit.
 
-## Connected Particles and Different Radii
+</div>
+
+## Connected Particles and Different Radii {#connected-particles-and-different-radii}
 
 If a string passes through a smooth hole in a table, its tension is the same on both sides when the string is light. Write a separate force equation for each particle.
 
@@ -197,7 +217,9 @@ If the hanging particle is in equilibrium, its tension equals its weight. The pa
 
 For particles rotating with the same angular speed at different radii, use $v=r\omega$ for each particle. Their speeds and required radial forces need not be equal. A tension pulling an inner particle outwards enters its radial equation with a minus sign.
 
-### Example 5: a string through a hole
+<div class="worked-example" markdown="1">
+
+### Example 5: a string through a hole {#example-5-a-string-through-a-hole}
 
 **Question:** particles $P$ and $Q$, of masses $0.6\,\mathrm{kg}$ and $0.9\,\mathrm{kg}$, are connected by a light inextensible string passing through a smooth hole $O$ in a smooth horizontal table. $P$ moves in a horizontal circle of radius $0.8\,\mathrm m$ about $O$. $Q$ hangs at rest below the hole. Find the tension, speed and angular speed of $P$.
 
@@ -215,7 +237,11 @@ $$\boxed{\omega=\frac{\sqrt{11.76}}{0.8}\approx4.29\,\mathrm{rad\,s^{-1}}}.$$
 
 **Check:** $0.6(0.8)\omega^2=8.82$ and $Q$ has zero resultant force. The table's normal reaction on $P$ is $0.6g=5.88\,\mathrm N$. A different speed at this radius would not keep $Q$ at rest under these assumptions.
 
-## The Conical Pendulum
+</div>
+
+## The Conical Pendulum {#the-conical-pendulum}
+
+The particle stays at one height, so its upward and downward force components balance. It still turns horizontally, so the inward components do not balance. One tilted tension can meet both needs through its two components.
 
 A **conical pendulum** has a particle suspended by a light inextensible string from a fixed point $A$. The particle moves at constant speed in a horizontal circle below $A$. The string sweeps out a cone.
 
@@ -233,13 +259,17 @@ Dividing the two equations gives:
 
 $$\tan\theta=\frac{r\omega^2}{g}=\frac{v^2}{rg}.$$
 
+Because the angle is measured from the vertical, the adjacent component is $T\cos\theta$. The horizontal radius is opposite that angle, so it is $l\sin\theta$, not $l$. In the horizontal equation, $T\sin\theta=ml\sin\theta\,\omega^2$; cancelling $\sin\theta$ requires a nonzero radius.
+
 For a genuine circle, $r>0$ and $\sin\theta>0$. Substituting $r=l\sin\theta$ in the horizontal equation gives:
 
 $$\boxed{T=ml\omega^2},\qquad \boxed{\cos\theta=\frac{g}{l\omega^2}},\qquad \boxed{h=\frac{g}{\omega^2}}.$$
 
 The tension exceeds the weight, since $0<\theta<90^\circ$. A non-zero-radius conical motion is possible only when $l\omega^2>g$. Equality gives $\theta=0$ and $r=0$, so it is not a circular orbit. At a fixed angular speed, $h$ is independent of mass and string length, but the chosen length must exceed $h$.
 
-### Example 6: angle given from the vertical
+<div class="worked-example" markdown="1">
+
+### Example 6: angle given from the vertical {#example-6-angle-given-from-the-vertical}
 
 **Question:** a particle of mass $0.4\,\mathrm{kg}$ forms a conical pendulum with string length $1.25\,\mathrm m$. Its acute angle to vertical satisfies $\cos\theta=4/5$. Find the radius, tension, angular speed, linear speed and period.
 
@@ -263,7 +293,11 @@ $$T\sin\theta=4.9\left(\frac35\right)=2.94=mr\omega^2.$$
 
 The radius is $0.75\,\mathrm m$, not the full string length.
 
-## Motion Inside a Smooth Bowl
+</div>
+
+## Motion Inside a Smooth Bowl {#motion-inside-a-smooth-bowl}
+
+Here the constraint pushes perpendicular to the surface rather than pulling along a string. In a sphere, a radius is perpendicular to the tangent surface. Use the triangle in the vertical section to resolve that normal force; the horizontal orbit has its own centre.
 
 A particle moving on the inner surface of a fixed smooth hemispherical bowl can describe a horizontal circle. Weight acts downwards; the normal reaction points towards the **centre of the sphere**, above the centre of the horizontal circle.
 
@@ -283,7 +317,9 @@ $$\boxed{R=ma\omega^2},\qquad \boxed{d=\frac{g}{\omega^2}}.$$
 
 Require $0<d<a$ for a non-zero horizontal circle inside the lower hemisphere. If $d=a$, the particle is at the bottom and $r=0$; if $d>a$, the proposed circle is outside the bowl geometry.
 
-### Example 7: radius of the bowl and radius of the circle
+<div class="worked-example" markdown="1">
+
+### Example 7: radius of the bowl and radius of the circle {#example-7-radius-of-the-bowl-and-radius-of-the-circle}
 
 **Question:** a particle of mass $0.2\,\mathrm{kg}$ moves in a horizontal circle inside a fixed smooth hemispherical bowl of radius $0.5\,\mathrm m$. The circle's centre is $0.3\,\mathrm m$ below the bowl centre. Find the circle radius, normal reaction, angular speed and linear speed.
 
@@ -297,7 +333,9 @@ $$\boxed{v=0.4\sqrt{\frac{g}{0.3}}\approx2.29\,\mathrm{m\,s^{-1}}}.$$
 
 **Check:** the upward component of $R$ is $1.96\,\mathrm N=mg$. Its inward component is about $2.61\,\mathrm N$, equal to $mr\omega^2$. The normal reaction is not horizontal, and $a$ is not the orbit radius.
 
-## Contact and Lifting Off a Plane
+</div>
+
+## Contact and Lifting Off a Plane {#contact-and-lifting-off-a-plane}
 
 A particle can move on a smooth horizontal plane while attached to a string fixed **above** the plane. The upward tension component reduces the normal reaction.
 
@@ -321,7 +359,9 @@ $$\boxed{\omega^2=\frac gh},\qquad \boxed{v=r\sqrt{\frac gh}}.$$
 
 Above this angular-speed limit, the fixed-height contact model would give $R<0$ and is no longer valid. The particle's motion and string angle must change.
 
-### Example 8: a raised attachment point
+<div class="worked-example" markdown="1">
+
+### Example 8: a raised attachment point {#example-8-a-raised-attachment-point}
 
 **Question:** a particle of mass $0.5\,\mathrm{kg}$ moves in a horizontal circle on a smooth fixed plane. It is attached to a fixed point $0.6\,\mathrm m$ above the plane by a light inextensible string of length $1\,\mathrm m$. Find tension and normal reaction at angular speed $3\,\mathrm{rad\,s^{-1}}$. Find the angular and linear speeds at lifting off.
 
@@ -339,7 +379,9 @@ $$\boxed{v=0.8\sqrt{\frac{g}{0.6}}\approx3.23\,\mathrm{m\,s^{-1}}}.$$
 
 **Check:** at $\omega=3$, the horizontal tension component is $4.5(0.8)=3.6\,\mathrm N=mr\omega^2$. At lifting off, the vertical tension component equals weight while tension remains positive.
 
-## Motion Inside a Smooth Cone
+</div>
+
+## Motion Inside a Smooth Cone {#motion-inside-a-smooth-cone}
 
 The **semi-vertical angle** $\alpha$ of a cone is the angle between its side and the vertical axis. A particle on the inner surface has a normal reaction perpendicular to the side, directed upwards and towards the axis.
 
@@ -353,7 +395,9 @@ $$\boxed{r=\frac{g\cot\alpha}{\omega^2}}.$$
 
 Do not use the conical-pendulum components without checking the angle. There the force is **along the string**; here it is **perpendicular to the cone's side**.
 
-### Example 9: the normal reaction on a cone
+<div class="worked-example" markdown="1">
+
+### Example 9: the normal reaction on a cone {#example-9-the-normal-reaction-on-a-cone}
 
 **Question:** a particle of mass $0.3\,\mathrm{kg}$ moves at angular speed $7\,\mathrm{rad\,s^{-1}}$ in a horizontal circle inside a fixed smooth cone. Its axis is vertical and its semi-vertical angle is $30^\circ$. Find the normal reaction, circle radius and height above the vertex. Assume the cone is large enough for this circle.
 
@@ -367,17 +411,23 @@ $$\boxed{z=\frac{0.2\sqrt3}{\tan30^\circ}=0.6\,\mathrm m}.$$
 
 **Check:** $R\sin30^\circ=2.94\,\mathrm N=mg$. Also $R\cos30^\circ=0.3(0.2\sqrt3)(49)$, matching the required inward force.
 
-## Circular Orbits
+</div>
+
+## Circular Orbits {#circular-orbits}
 
 The same radial force equation can also model a satellite in a circular orbit. The orbital radius is the Earth's radius **plus** the height above its surface. Gravity provides the inward resultant; use the gravitational acceleration at that orbit, not automatically the surface value $9.8$. Such an orbit need not be a horizontal circle near the Earth's surface, so do not add the vertical equilibrium equation used for a table or pendulum.
 
-## Practice
+## Practice {#practice}
 
 Try each question before opening the hint. Name the actual forces and mark the radius. For horizontal circles, use separate equations vertically and towards the centre.
 
-### Q1: clockwise rotation
+<div class="lesson-check" markdown="1">
 
-A point on a disc is $0.2\,\mathrm m$ from the axis and completes $60$ revolutions per minute clockwise. Find its angular speed, signed angular velocity, linear speed, period and acceleration. Take anticlockwise angular velocity as positive. State the directions of velocity and acceleration when the point is directly to the right of the centre.
+### Q1 — A rotating point {#q1-clockwise-rotation}
+
+**Self-written.**
+
+**Question:** A point on a disc is $0.2\,\mathrm m$ from the axis and completes $60$ revolutions per minute clockwise. Find its angular speed, signed angular velocity, linear speed, period and acceleration. Take anticlockwise angular velocity as positive. State the directions of velocity and acceleration when the point is directly to the right of the centre.
 
 <details markdown="1">
 <summary>Hint</summary>
@@ -399,11 +449,19 @@ At the right-hand point, velocity points **downwards** along the tangent and acc
 
 **Check:** the disc makes one revolution per second, consistent with the period. Clockwise motion does not make speed or acceleration magnitude negative.
 
+If this check failed, revisit [angular and linear quantities](#angular-speed-and-angular-velocity), close the worked answer and attempt [the two points](#rotation-retry) without help.
+
 </details>
 
-### Q2: integrating to find a circle
+</div>
 
-A particle has acceleration:
+<div class="lesson-check" markdown="1">
+
+### Q2 — A moving particle {#q2-integrating-to-find-a-circle}
+
+**Self-written.**
+
+**Question:** A particle has acceleration:
 
 $$\mathbf a=-(8\cos2t)\mathbf i-(8\sin2t)\mathbf j.$$
 
@@ -437,11 +495,19 @@ The centre is $(1,-1)$, radius is $2\,\mathrm m$ and speed is $\boxed{4\,\mathrm
 
 **Check:** differentiation recovers both the given acceleration and the initial velocity. Also $v^2/r=16/2=8$.
 
+If this check failed, revisit [the vector demonstration](#example-2-showing-a-path-is-a-circle), close the worked answer and attempt [the tracked particle](#vector-retry) without help.
+
 </details>
 
-### Q3: a smooth vertical rim
+</div>
 
-A particle of mass $0.2\,\mathrm{kg}$ moves at $3\,\mathrm{m\,s^{-1}}$ around the inside of a smooth vertical rim on a smooth horizontal table. The circle radius is $0.4\,\mathrm m$. Find the acceleration, the force from the rim and the normal reaction from the table. Ignore air resistance.
+<div class="lesson-check" markdown="1">
+
+### Q3 — A particle beside a rim {#q3-a-smooth-vertical-rim}
+
+**Self-written.**
+
+**Question:** A particle of mass $0.2\,\mathrm{kg}$ moves at $3\,\mathrm{m\,s^{-1}}$ around the inside of a smooth vertical rim on a smooth horizontal table. The circle radius is $0.4\,\mathrm m$. Find the acceleration, the force from the rim and the normal reaction from the table. Ignore air resistance.
 
 <details markdown="1">
 <summary>Hint</summary>
@@ -461,11 +527,19 @@ $$\boxed{R_{\text{table}}=0.2g=1.96\,\mathrm N}.$$
 
 **Check:** the vertical forces balance, but the horizontal resultant is non-zero. The two reactions act at different contacts and should not be combined into a single horizontal force diagram label.
 
+If this check failed, revisit [actual forces](#forces-in-a-horizontal-circle), close the worked answer and attempt [the proposed motion](#radial-retry) without help.
+
 </details>
 
-### Q4: a phone on a train table
+</div>
 
-A train follows a horizontal circular bend at a steady $12\,\mathrm{m\,s^{-1}}$. A phone stays at rest relative to a rough horizontal table in the train. The coefficient of friction is $0.3$. Model the phone as a particle and find the least possible radius of its circular path without slipping.
+<div class="lesson-check" markdown="1">
+
+### Q4 — A phone in a train {#q4-a-phone-on-a-train-table}
+
+**Self-written.**
+
+**Question:** A train follows a horizontal circular bend at a steady $12\,\mathrm{m\,s^{-1}}$. A phone stays at rest relative to a rough horizontal table in the train. The coefficient of friction is $0.3$. Model the phone as a particle and find the least possible radius of its circular path without slipping.
 
 <details markdown="1">
 <summary>Hint</summary>
@@ -483,11 +557,19 @@ $$r\geq\frac{144}{0.3g},\qquad \boxed{r_{\text{min}}\approx49.0\,\mathrm m}.$$
 
 **Check:** at this radius, friction is limiting. A larger radius needs less friction for the same speed. The phone's mass cancels. Its circular-path radius is measured from the bend's centre to the phone.
 
+If this check failed, revisit [friction need and limit](#friction-and-road-bends), close the worked answer and attempt [the disc position](#friction-retry) without help.
+
 </details>
 
-### Q5: a hanging particle in equilibrium
+</div>
 
-Particles $P$ and $Q$, of masses $0.4\,\mathrm{kg}$ and $0.8\,\mathrm{kg}$, are joined by a light inextensible string through a smooth hole in a smooth fixed horizontal table. $Q$ hangs at rest and $P$ moves in a horizontal circle of radius $0.5\,\mathrm m$ about the hole. Find the tension, speed and angular speed of $P$.
+<div class="lesson-check" markdown="1">
+
+### Q5 — Two connected particles {#q5-a-hanging-particle-in-equilibrium}
+
+**Self-written.**
+
+**Question:** Particles $P$ and $Q$, of masses $0.4\,\mathrm{kg}$ and $0.8\,\mathrm{kg}$, are joined by a light inextensible string through a smooth hole in a smooth fixed horizontal table. $Q$ hangs at rest and $P$ moves in a horizontal circle of radius $0.5\,\mathrm m$ about the hole. Find the tension, speed and angular speed of $P$.
 
 <details markdown="1">
 <summary>Hint</summary>
@@ -507,11 +589,19 @@ $$\boxed{\omega=\frac{\sqrt{9.8}}{0.5}\approx6.26\,\mathrm{rad\,s^{-1}}}.$$
 
 **Check:** $0.4(0.5)\omega^2=7.84$. The forces on $Q$ balance; those on $P$ have an inward horizontal resultant.
 
+If this check failed, revisit [the separate bodies](#connected-particles-and-different-radii), close the worked answer and attempt [the proposed motion](#radial-retry) without help.
+
 </details>
 
-### Q6: is a conical pendulum possible?
+</div>
 
-A particle of mass $0.5\,\mathrm{kg}$ hangs from a light inextensible string of length $1\,\mathrm m$ with a fixed upper end. It forms a conical pendulum with angular speed $4\,\mathrm{rad\,s^{-1}}$. Find tension, angle to vertical, circle radius, linear speed and period. Explain why a non-zero-radius conical motion with angular speed $2\,\mathrm{rad\,s^{-1}}$ is impossible for the same string length.
+<div class="lesson-check" markdown="1">
+
+### Q6 — A suspended particle {#q6-is-a-conical-pendulum-possible}
+
+**Self-written.**
+
+**Question:** A particle of mass $0.5\,\mathrm{kg}$ hangs from a light inextensible string of length $1\,\mathrm m$ with a fixed upper end. It forms a conical pendulum with angular speed $4\,\mathrm{rad\,s^{-1}}$. Find tension, angle to vertical, circle radius, linear speed and period. Explain why a non-zero-radius conical motion with angular speed $2\,\mathrm{rad\,s^{-1}}$ is impossible for the same string length.
 
 <details markdown="1">
 <summary>Hint</summary>
@@ -539,11 +629,19 @@ At $\omega=2$, the same circular-motion equations would require $\cos\theta=9.8/
 
 **Check:** $8(0.6125)=4.9\,\mathrm N=mg$. Use the unrounded radius for the speed calculation.
 
+If this check failed, revisit [pendulum geometry](#the-conical-pendulum), close the worked answer and attempt [the two strings](#pendulum-retry) without help.
+
 </details>
 
-### Q7: a horizontal circle in a bowl
+</div>
 
-A particle of mass $0.3\,\mathrm{kg}$ moves in a horizontal circle inside a fixed smooth hemispherical bowl of radius $0.6\,\mathrm m$. The circle's centre is $0.36\,\mathrm m$ below the bowl centre. Find the circle radius, normal reaction, angular speed and linear speed.
+<div class="lesson-check" markdown="1">
+
+### Q7 — A particle in a bowl {#q7-a-horizontal-circle-in-a-bowl}
+
+**Self-written.**
+
+**Question:** A particle of mass $0.3\,\mathrm{kg}$ moves in a horizontal circle inside a fixed smooth hemispherical bowl of radius $0.6\,\mathrm m$. The circle's centre is $0.36\,\mathrm m$ below the bowl centre. Find the circle radius, normal reaction, angular speed and linear speed.
 
 <details markdown="1">
 <summary>Hint</summary>
@@ -565,11 +663,19 @@ $$\boxed{v=0.48\sqrt{\frac{g}{0.36}}\approx2.50\,\mathrm{m\,s^{-1}}}.$$
 
 **Check:** the upward force is $4.9(0.6)=2.94\,\mathrm N=mg$. The inward force is $4.9(0.8)=3.92\,\mathrm N=mr\omega^2$. Both use the same normal reaction.
 
+If this check failed, revisit [bowl geometry](#motion-inside-a-smooth-bowl), close the worked answer and attempt [the reported measurement](#surface-retry) without help.
+
 </details>
 
-### Q8: check the contact model
+</div>
 
-A particle of mass $0.4\,\mathrm{kg}$ moves on a smooth fixed horizontal plane. A light inextensible string of length $1.25\,\mathrm m$ connects it to a fixed point $0.75\,\mathrm m$ above the plane. The string is taut. Find tension and normal reaction at angular speed $3\,\mathrm{rad\,s^{-1}}$, and find the angular speed at lifting off. Can the same contact model describe motion at $4\,\mathrm{rad\,s^{-1}}$?
+<div class="lesson-check" markdown="1">
+
+### Q8 — A particle on a plane {#q8-check-the-contact-model}
+
+**Self-written.**
+
+**Question:** A particle of mass $0.4\,\mathrm{kg}$ moves on a smooth fixed horizontal plane. A light inextensible string of length $1.25\,\mathrm m$ connects it to a fixed point $0.75\,\mathrm m$ above the plane. The string is taut. Find tension and normal reaction at angular speed $3\,\mathrm{rad\,s^{-1}}$, and find the angular speed at lifting off. Can the same contact model describe motion at $4\,\mathrm{rad\,s^{-1}}$?
 
 <details markdown="1">
 <summary>Hint</summary>
@@ -597,11 +703,19 @@ At $\omega=4$, the fixed-height model gives $T=8\,\mathrm N$ and $R=3.92-8(0.6)=
 
 **Check:** at $\omega=3$, the inward force is $4.5(1/1.25)=3.6\,\mathrm N=mr\omega^2$. At the lifting threshold the vertical tension component equals the weight.
 
+If this check failed, revisit [the contact condition](#contact-and-lifting-off-a-plane), close the worked answer and attempt [the measured reaction](#contact-retry) without help.
+
 </details>
 
-### Q9: two particles at different radii
+</div>
 
-Particles $P$ and $Q$ of masses $0.3\,\mathrm{kg}$ and $0.2\,\mathrm{kg}$ rotate together on a smooth fixed horizontal table at $4\,\mathrm{rad\,s^{-1}}$. They lie on one radius in the order $O,P,Q$, with $O$ fixed. Light inextensible strings $OP$ and $PQ$ each have length $0.5\,\mathrm m$ and remain taut. Find both linear speeds and both tensions.
+<div class="lesson-check" markdown="1">
+
+### Q9 — Two rotating particles {#q9-two-particles-at-different-radii}
+
+**Self-written.**
+
+**Question:** Particles $P$ and $Q$ of masses $0.3\,\mathrm{kg}$ and $0.2\,\mathrm{kg}$ rotate together on a smooth fixed horizontal table at $4\,\mathrm{rad\,s^{-1}}$. They lie on one radius in the order $O,P,Q$, with $O$ fixed. Light inextensible strings $OP$ and $PQ$ each have length $0.5\,\mathrm m$ and remain taut. Find both linear speeds and both tensions.
 
 <details markdown="1">
 <summary>Hint</summary>
@@ -627,11 +741,19 @@ $$T_{OP}-3.2=0.3(0.5)(4^2),\qquad \boxed{T_{OP}=5.6\,\mathrm N}.$$
 
 **Check:** $T_{OP}-T_{PQ}=2.4\,\mathrm N$, the required radial force on $P$. Equal angular speeds do not imply equal linear speeds or equal string tensions.
 
+If this check failed, revisit [different radii and bodies](#connected-particles-and-different-radii), close the worked answer and attempt [the proposed motion](#radial-retry) without help.
+
 </details>
 
-### Q10: a smooth banked road
+</div>
 
-A car of mass $900\,\mathrm{kg}$ follows a horizontal circle of radius $80\,\mathrm m$ on a smooth banked road. The outer edge is raised, and the acute bank angle $\alpha$ satisfies $\tan\alpha=1/4$. Ignore air resistance and model the car as a particle. Find the speed for steady circular motion and the normal reaction. Explain why this speed is not a maximum-speed result for a rough road.
+<div class="lesson-check" markdown="1">
+
+### Q10 — A car on a bend {#q10-a-smooth-banked-road}
+
+**Self-written.**
+
+**Question:** A car of mass $900\,\mathrm{kg}$ follows a horizontal circle of radius $80\,\mathrm m$ on a smooth banked road. The outer edge is raised, and the acute bank angle $\alpha$ satisfies $\tan\alpha=1/4$. Ignore air resistance and model the car as a particle. Find the speed for steady circular motion and the normal reaction. Explain why this speed is not a maximum-speed result for a rough road.
 
 <details markdown="1">
 <summary>Hint</summary>
@@ -653,11 +775,19 @@ On a rough road, friction can also act along the surface. Its direction and limi
 
 **Check:** the upward component is $900g=8820\,\mathrm N$ and the inward component is one quarter of that, $2205\,\mathrm N$. This equals $900(14^2)/80$.
 
+If this check failed, revisit [normal-force components](#friction-and-road-bends), close the worked answer and attempt [the reported measurement](#surface-retry) without help.
+
 </details>
 
-### Q11: a satellite's orbital radius
+</div>
 
-Model the Earth as a sphere of radius $6400\,\mathrm{km}$. A satellite of mass $400\,\mathrm{kg}$ moves at constant speed in a circular orbit $200\,\mathrm{km}$ above the surface. Gravitational acceleration at this height is $9\,\mathrm{m\,s^{-2}}$. Assume gravity is the only force on the satellite. Find the inward force, orbital speed, angular speed and orbital period.
+<div class="lesson-check" markdown="1">
+
+### Q11 — A satellite {#q11-a-satellites-orbital-radius}
+
+**Self-written.**
+
+**Question:** Model the Earth as a sphere of radius $6400\,\mathrm{km}$. A satellite of mass $400\,\mathrm{kg}$ moves at constant speed in a circular orbit $200\,\mathrm{km}$ above the surface. Gravitational acceleration at this height is $9\,\mathrm{m\,s^{-2}}$. Assume gravity is the only force on the satellite. Find the inward force, orbital speed, angular speed and orbital period.
 
 <details markdown="1">
 <summary>Hint</summary>
@@ -681,24 +811,30 @@ $$\boxed{\tau=\frac{2\pi}{\omega}\approx5.38\times10^3\,\mathrm s}.$$
 
 **Check:** use unrounded values to find $r\omega^2=9\,\mathrm{m\,s^{-2}}$ and $v\tau=2\pi r$. There is no supporting reaction or tension to add to gravity.
 
+If this check failed, revisit [the orbital radius](#circular-orbits), close the worked answer and attempt [the measured orbit](#orbit-retry) without help.
+
 </details>
 
+</div>
+
 <!-- motion-transfer:start -->
-## Independent Method Choice
+## Independent Method Choice {#independent-method-choice}
 
 **Self-written diagnostic task.** Choose the force equations and a criterion for possible motion. Keep the reasoning hint and feedback closed on your first attempt.
+
+<div class="lesson-check" markdown="1">
 
 **Question:** Two small blocks are to rotate without slipping on a rough horizontal turntable. Block $P$ has mass $0.2\,\mathrm{kg}$, radius $0.25\,\mathrm m$ and coefficient of friction $0.2$; block $Q$ has mass $0.8\,\mathrm{kg}$, radius $0.75\,\mathrm m$ and coefficient of friction $0.3$. At a constant angular speed $2\,\mathrm{rad\,s^{-1}}$, test the proposed motion for each block. Find the greatest common angular speed at which both can remain fixed relative to the disc. A student says the heavier block must be safer because its limiting friction is larger. Assess that reasoning. Ignore air resistance and model the blocks as particles.
 
 <details markdown="1">
-<summary>Reasoning hint</summary>
+<summary>Hint</summary>
 
 Find the required radial force as well as the available limiting friction. Test an inequality for each block; do not assume friction is already limiting at every speed.
 
 </details>
 
 <details markdown="1">
-<summary>Feedback and independent check</summary>
+<summary>Solution and check</summary>
 
 Vertically $R=mg$. Static friction is the only horizontal force, so for no slip it must provide $f=mr\omega^2$ towards the centre, subject to $f\leq\mu mg$.
 
@@ -716,19 +852,25 @@ The mass cancels in each inequality: the required force also grows with mass. Co
 
 </details>
 
-### Retry: change the structure
+</div>
+
+<div class="lesson-check" markdown="1">
+
+<span id="contact-retry"></span>
+
+### A measured reaction {#retry-change-the-structure}
 
 **Question:** A $0.5\,\mathrm{kg}$ particle moves in a horizontal circle on a fixed smooth horizontal plane. A light inextensible string of length $1\,\mathrm m$ joins it to a fixed point $0.6\,\mathrm m$ above the plane. The string is taut, and the normal reaction is measured as half the particle's weight. Find the angular speed, tension and linear speed. Check that the assumed contact is possible. Ignore air resistance.
 
 <details markdown="1">
-<summary>Retry hint</summary>
+<summary>Hint</summary>
 
 Use the measured reaction in vertical balance to determine the vertical tension component. Then use the horizontal component for the radial resultant.
 
 </details>
 
 <details markdown="1">
-<summary>Retry feedback and check</summary>
+<summary>Solution and check</summary>
 
 The radius is $\sqrt{1^2-0.6^2}=0.8\,\mathrm m$ and $R=0.5mg=2.45\,\mathrm N$. Therefore:
 
@@ -741,9 +883,302 @@ $$\boxed{v=0.8\sqrt{\frac{49}{6}}\approx2.29\,\mathrm{m\,s^{-1}}}.$$
 Here $R>0$, $T>0$ and $0.6\omega^2=4.9<g$, so the contact model is consistent. Independently, $R=m(g-h\omega^2)$ recovers $2.45\,\mathrm N$. There is no friction on this smooth plane; the measured reaction supplies information about the tension, not an extra inward force.
 
 </details>
+
+</div>
 <!-- motion-transfer:end -->
 
-## Method Summary
+
+## Repair and Try Again {#repair-and-retry}
+
+Close the earlier answer after fixing the reason for the error. Choose the matching task below; a different answer obtained with help is not yet independent evidence.
+
+<div class="lesson-check" markdown="1">
+
+### A claim about a moving particle {#turning-check}
+
+**Self-written.**
+
+**Question:** A $0.2\,\mathrm{kg}$ particle moves at constant speed $2\,\mathrm{m\,s^{-1}}$ on a smooth fixed horizontal table, tied by a taut horizontal string to the circle centre. The radius is $0.5\,\mathrm m$. A student says that unchanged KE means no resultant force, then draws both tension and an extra inward force called centripetal force. Assess both ideas, find the tension and state its work over one revolution.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Distinguish the magnitude of velocity from its direction. List who applies each actual force.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+Both ideas are incorrect. The velocity changes direction, requiring an inward acceleration; “centripetal force” names the resultant of actual forces. The table balances weight vertically and tension is the only horizontal force:
+
+$$T=\frac{0.2(2^2)}{0.5}=1.6\,\mathrm N.$$
+
+Tension is perpendicular to the tangent at every point, so its power is zero everywhere and its work over the revolution is $0\,\mathrm J$. Unchanged KE is consistent with zero total work and a nonzero radial force. Repair this at [radial acceleration](#radial-acceleration) and [actual forces](#forces-in-a-horizontal-circle), then try [the tracked particle](#vector-retry).
+
+</details>
+
+</div>
+
+<div class="lesson-check" markdown="1">
+
+### Two points on one disc {#rotation-retry}
+
+**Self-written.**
+
+**Question:** A disc turns anticlockwise with period $0.8\,\mathrm s$. Points $P$ and $Q$ are $0.3\,\mathrm m$ and $0.6\,\mathrm m$ from its axis. Find the angular speed and revolutions per minute, and each linear speed. Compare the acceleration magnitudes. State the directions of velocity and acceleration when $Q$ is directly to the left of the centre.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+One period corresponds to one complete angle and one circumference for each point. Sketch the leftmost tangent.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+The common angular speed and turning rate are
+
+$$\omega=\frac{2\pi}{0.8}=2.5\pi\,\mathrm{rad\,s^{-1}},\qquad n=\frac{60}{0.8}=75\,\mathrm{rpm}.$$
+
+$$v_P=0.75\pi\approx2.36\,\mathrm{m\,s^{-1}},\qquad v_Q=1.5\pi\approx4.71\,\mathrm{m\,s^{-1}}.$$
+
+At fixed angular speed $a=r\omega^2$, so $Q$ has twice $P$'s acceleration magnitude. At the leftmost point velocity is downwards and acceleration is rightwards. Check $v_P(0.8)=2\pi(0.3)$ and similarly for $Q$. Equal turning time does not imply equal linear speed. Repair at [angular and linear quantities](#angular-speed-and-angular-velocity).
+
+</details>
+
+</div>
+
+<div class="lesson-check" markdown="1">
+
+### A tracked particle {#vector-retry}
+
+**Self-written.**
+
+**Question:** A particle of mass $0.4\,\mathrm{kg}$ has position vector $\mathbf r=(2+0.5\cos4t)\mathbf i+(-1+0.5\sin4t)\mathbf j$ metres, with $t$ in seconds. Show that its path is a circle and its speed is constant. Find its velocity, acceleration and resultant force as vectors. Assess the claim that the acceleration vector is constant because its magnitude is constant.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Locate the fixed centre before comparing acceleration with position. Differentiate both components using the chain rule.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+The centre is $(2,-1)$ because
+
+$$(x-2)^2+(y+1)^2=0.25(\cos^24t+\sin^24t)=0.25.$$
+
+$$\mathbf v=-2\sin4t\,\mathbf i+2\cos4t\,\mathbf j,\qquad \lvert\mathbf v\rvert=2\,\mathrm{m\,s^{-1}}.$$
+
+$$\mathbf a=-8\cos4t\,\mathbf i-8\sin4t\,\mathbf j,\qquad \mathbf F=-3.2\cos4t\,\mathbf i-3.2\sin4t\,\mathbf j.$$
+
+With $\mathbf c=2\mathbf i-\mathbf j$, $\mathbf a=-16(\mathbf r-\mathbf c)$, so it points inward. Its magnitude $8$ matches $v^2/r=4/0.5$, but its direction changes with time. The claim is false. Check $\mathbf a\cdot\mathbf v=0$: no increase in speed is needed for a nonzero acceleration. For a missing factor $4$ return to [Example 2](#example-2-showing-a-path-is-a-circle); for a wrong centre, subtract the fixed offset before checking the radius.
+
+</details>
+
+</div>
+
+<div class="lesson-check" markdown="1">
+
+### A proposed motion {#radial-retry}
+
+**Self-written.**
+
+**Question:** A $0.3\,\mathrm{kg}$ particle is tied to a fixed point on a smooth horizontal table by a taut light string of length $0.6\,\mathrm m$. The string breaks if tension exceeds $4.5\,\mathrm N$. Test a proposed uniform circular speed of $3.2\,\mathrm{m\,s^{-1}}$, find the greatest allowed linear speed, and find the table reaction. Describe the initial path if the string breaks.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+The required tension and the allowed tension are separate quantities. There is no vertical acceleration.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+The proposed motion would require
+
+$$T=\frac{0.3(3.2^2)}{0.6}=5.12\,\mathrm N>4.5\,\mathrm N,$$
+
+so the string cannot maintain it. At the allowed boundary,
+
+$$\frac{0.3v^2}{0.6}=4.5,\qquad v_{\max}=3\,\mathrm{m\,s^{-1}}.$$
+
+The table reaction is $0.3g=2.94\,\mathrm N$. The string pulls horizontally, so it does not support weight. After breaking, the velocity is initially tangent and, on this smooth table, the subsequent path is straight until another boundary or force intervenes. If you added a second inward force or used string tension to balance weight, repair at [actual forces](#forces-in-a-horizontal-circle).
+
+</details>
+
+</div>
+
+<div class="lesson-check" markdown="1">
+
+### Choose a position on the disc {#friction-retry}
+
+**Self-written.**
+
+**Question:** A $0.2\,\mathrm{kg}$ block is to stay fixed relative to a horizontal disc rotating at $4\,\mathrm{rad\,s^{-1}}$. The coefficient of friction is $0.25$. Find the greatest allowed distance from the axis, and test distances $0.12\,\mathrm m$ and $0.20\,\mathrm m$. At the first distance, would doubling the coefficient double the actual friction? Do not model motion after slipping starts.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Find the force demanded by the proposed circle, then compare it with the friction bound. The radius, rather than the speed, is now unknown.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+Here $R=0.2g=1.96\,\mathrm N$ and the friction limit is $0.49\,\mathrm N$. No slip requires
+
+$$0.2r(4^2)\leq0.49,\qquad r\leq0.153125\,\mathrm m.$$
+
+Thus the greatest allowed radius is $0.153\,\mathrm m$. At $0.12\,\mathrm m$, required friction is $0.384\,\mathrm N$ inward, below the limit. At $0.20\,\mathrm m$ it would be $0.64\,\mathrm N$, unavailable under this static model. Doubling the coefficient increases the available limit, but the actual friction at $0.12\,\mathrm m$ remains $0.384\,\mathrm N$ for the same motion. Check the boundary with $r\omega^2=\mu g$. Repair at [required and limiting friction](#friction-and-road-bends).
+
+</details>
+
+</div>
+
+<div class="lesson-check" markdown="1">
+
+### Two possible strings {#pendulum-retry}
+
+**Self-written.**
+
+**Question:** A particle of mass $0.2\,\mathrm{kg}$ is to form a conical pendulum at angular speed $\sqrt{49/3}\,\mathrm{rad\,s^{-1}}$. Two light inextensible strings, of lengths $0.8\,\mathrm m$ and $0.5\,\mathrm m$, are available. Decide which can form a nonzero horizontal circle with a fixed upper end. For each possible case find the radius and tension.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Compare the depth required by the angular speed with each length. A zero or imaginary radius is not a genuine circle.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+Vertical and radial equations require
+
+$$h=\frac{g}{\omega^2}=\frac{9.8}{49/3}=0.6\,\mathrm m.$$
+
+The $0.8$ metre string can reach the required depth with a positive radius:
+
+$$r=\sqrt{0.8^2-0.6^2}=\sqrt{0.28}\approx0.529\,\mathrm m,\qquad T=0.2(0.8)\frac{49}{3}\approx2.61\,\mathrm N.$$
+
+Check $T(h/0.8)=mg$ using unrounded tension. The $0.5$ metre string is too short: it would require $\cos\theta=0.6/0.5=1.2$. More mass would not repair that geometry. Return to [the angle and nonzero-radius condition](#the-conical-pendulum) if you accepted the shorter string or used full string length as the radius.
+
+</details>
+
+</div>
+
+<div class="lesson-check" markdown="1">
+
+### A particle beside a sloping surface {#cone-check}
+
+**Self-written.**
+
+**Question:** A $0.2\,\mathrm{kg}$ particle moves uniformly in a horizontal circle of radius $0.4\,\mathrm m$ inside a fixed smooth cone whose semi-vertical angle is $60^\circ$. Only weight and the normal reaction act. Draw their directions and find the normal reaction, angular speed and height above the vertex. A student uses $R\cos60^\circ=mg$. Assess this equation.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+The given angle belongs to the side, not to the normal reaction. Locate the angle in a vertical section.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+Reaction is perpendicular to the cone side, upwards and inwards, at $30^\circ$ to vertical. Hence
+
+$$R\sin60^\circ=0.2g,\qquad R=\frac{3.92}{\sqrt3}\approx2.26\,\mathrm N.$$
+
+$$R\cos60^\circ=0.2(0.4)\omega^2,\qquad\omega^2=\frac{24.5}{\sqrt3},\qquad\omega\approx3.76\,\mathrm{rad\,s^{-1}}.$$
+
+$$z=\frac{0.4}{\tan60^\circ}\approx0.231\,\mathrm m.$$
+
+The student's cosine uses the side angle for the wrong force direction. Check that the actual upward component is $mg$ and that $R>0$. Repair at [normal to the cone](#motion-inside-a-smooth-cone), then use [the reported measurement](#surface-retry).
+
+</details>
+
+</div>
+
+<div class="lesson-check" markdown="1">
+
+### A reported measurement {#surface-retry}
+
+**Self-written.**
+
+**Question:** A report claims that the normal reaction on a particle of mass $m$ moving in a horizontal circle is $2mg$. Test that claim in each proposed model: (a) inside a fixed smooth bowl of radius $0.6\,\mathrm m$, with the circle centre $0.3\,\mathrm m$ below the sphere centre; (b) inside a fixed smooth cone of semi-vertical angle $45^\circ$. Only weight and the normal reaction act. If a model is possible, find its circle radius and angular speed.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Test vertical balance before solving the radial equation. Increasing angular speed cannot fix a wrong vertical component at a fixed geometry.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+In the bowl the upward component is $(2mg)(0.3/0.6)=mg$, so vertical balance is possible:
+
+$$r=\sqrt{0.6^2-0.3^2}=\sqrt{0.27}\approx0.520\,\mathrm m,\qquad\omega=\sqrt{\frac{g}{0.3}}\approx5.72\,\mathrm{rad\,s^{-1}}.$$
+
+Check $R(r/0.6)=mr\omega^2$ and $0<0.3<0.6$. In the cone the upward component would be $2mg\sin45^\circ=\sqrt2mg>mg$, giving upward acceleration. No angular speed can make that reported reaction consistent with the proposed horizontal circle. The two surfaces have different normal directions. Repair at [bowl geometry](#motion-inside-a-smooth-bowl) or [cone geometry](#motion-inside-a-smooth-cone); a positive reaction alone is necessary but not sufficient.
+
+</details>
+
+</div>
+
+<div class="lesson-check" markdown="1">
+
+### A measured orbital speed {#orbit-retry}
+
+**Self-written.**
+
+**Question:** A spherical planet has radius $6.0\times10^6\,\mathrm m$. A satellite has circular orbital speed $6000\,\mathrm{m\,s^{-1}}$ and gravitational acceleration $4\,\mathrm{m\,s^{-2}}$ at the orbit. Gravity is its only force. Find the orbital radius, height above the surface, angular speed and period. Explain why no supporting force is needed.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+The observed acceleration is towards the planet centre. Find the radius from that acceleration before subtracting the planet radius.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+Gravity is the entire inward resultant:
+
+$$\frac{6000^2}{r}=4,\qquad r=9.0\times10^6\,\mathrm m,\qquad h=r-6.0\times10^6=3.0\times10^6\,\mathrm m.$$
+
+$$\omega=\frac{6000}{9.0\times10^6}=\frac1{1500}\,\mathrm{rad\,s^{-1}},\qquad\tau=3000\pi\,\mathrm s\approx9.42\times10^3\,\mathrm s.$$
+
+Check $r\omega^2=4$. The satellite is accelerating under gravity; it is not in equilibrium above a table, so there is no reason to add a supporting reaction or an extra “centripetal” force. If you obtained height instead of radius from $v^2/g$, return to [centre and surface](#circular-orbits).
+
+</details>
+
+</div>
+
+## Return Later {#later-check}
+
+Next, complete the [mixed problems](/alevel/a2-mathematics/mechanics/#mixed-problems). At your next study session, before reopening examples, do [the tracked particle](#vector-retry) and [the reported measurement](#surface-retry), then the [later review](/alevel/a2-mathematics/mechanics/#later-review). Explain in English why a nonzero radial force can coexist with unchanged KE, and why the normal reaction need not equal weight. Repair a failed explanation at [actual forces](#forces-in-a-horizontal-circle) and a failed force direction at [surface geometry](#motion-inside-a-smooth-cone). Record any help used.
+
+<!-- motion-sources:start -->
+## Sources and Scope {#sources-and-scope}
+
+[OxfordAQA 9660 specification v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf), M2.7: printed 30 / PDF 29 (1-based); the whole M2 section is printed 27–30 / PDF 26–29. The scope is uniform circular motion, horizontal circles or circular orbits with gravity towards the centre, angular-speed conversions, position/velocity/acceleration vectors and the conical pendulum.
+
+Read MA05 January 2025 [Q3(a)–(b), QP pp.6–7](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-question-paper.pdf#page=6) with [MS pp.7–8, Version 1.0 Final](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-mark-scheme.pdf#page=7). Check friction capacity before using the no-slip model; equality is the limiting case. Differentiate both position components, then use the mass to obtain the actual friction vector. In a show question, retain enough unrounded evidence before quoting a supplied rounded result.
+
+All page tasks are **Self-written**, without official marks. The January 2025 paper defaults to two significant figures unless a question specifies otherwise; our tasks follow the opening convention. Textbook correspondence: Chapter 15, Sections 15.1–15.3, printed pp.240–251. Bowl, cone, bank and contact cases practise the same force method; non-uniform vertical circles are outside this lesson and are not presented as MA05 requirements.
+<!-- motion-sources:end -->
+
+## Method Summary {#method-summary}
 
 - **Convert first:** use radians per second, metres and metres per second. Give the rotation direction when asked for angular velocity.
 - **Mark the radius:** measure horizontally to the circle's centre. String length, bowl radius and orbit radius can differ.

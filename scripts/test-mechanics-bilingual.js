@@ -14,14 +14,17 @@ const headings = html => [...html.matchAll(/<h[2-4]\b[^>]*id="([^"]+)"/g)].map(m
 const built = url => read(path.join('_site', decodeURI(url), url.endsWith('/') ? 'index.html' : ''));
 const formulas = new Set();
 
-for (const slug of slugs) {
-  const enUrl = `/${course}/${slug}/`, zhUrl = `/zh${enUrl}`;
-  const en = read(`${course}/${slug}.md`), zh = read(`zh/${course}/${slug}.md`);
+for (const slug of [...slugs, 'course-entry']) {
+  const source = slug === 'course-entry' ? course : `${course}/${slug}`;
+  const enUrl = `/${source}/`, zhUrl = `/zh${enUrl}`;
+  const en = read(`${source}.md`), zh = read(`zh/${source}.md`);
   assert.deepEqual(math(zh), math(en), `${slug}: identical formula sequence`);
   for (const formula of math(zh)) formulas.add(formula);
   assert(zh.includes(`lang: zh-CN\ntranslation_of: ${enUrl}\npermalink: ${zhUrl}`));
   for (const prompt of en.match(/^(?:\*\*Question:\*\*|\*\*Self-written (?:task|diagnostic)\.\*\*|\*\*Retry, with this panel closed:\*\*).*$/gm) || [])
     assert(zh.includes(prompt), `${slug}: preserve English question ${prompt.slice(0, 80)}`);
+  for (const [, prompt] of en.matchAll(/^\*\*[^*\n]*Question:\*\*\s*(.+)$/gm))
+    assert(zh.includes(prompt), `${slug}: preserve labelled English question ${prompt.slice(0, 80)}`);
   for (const q of (en.split('## Practice')[1] || '').split(/^### Q[^\n]*\n\n/m).slice(1))
     assert(zh.includes(q.split('<details')[0].trim()), `${slug}: preserve full Q prompt`);
   for (const q of en.matchAll(/\*\*Question:\*\*[^\n]*(?:position|velocity)\n\n\$\$[\s\S]*?\$\$\n\n([^\n]+)/g))
@@ -36,6 +39,11 @@ for (const slug of slugs) {
     assert(html.includes(`<html lang="${lang}">`));
     assert(html.match(/<a[^>]*id="languageSwitch"[^>]*>/)?.[0].includes(`href="${target}"`));
     const content = body(html);
+    assert((lang === 'en' ? en : zh).includes('reading_layout: true'), `${slug}: shared reading layout`);
+    const sourceDetails = ((lang === 'en' ? en : zh).match(/<details\b/g) || []).length;
+    assert.equal((content.match(/<details\b/g) || []).length, sourceDetails, `${slug}: disclosures survive rendering`);
+    assert.equal((content.match(/class="lesson-check"/g) || []).length,
+      ((lang === 'en' ? en : zh).match(/class="lesson-check"/g) || []).length, `${slug}: task boundaries survive rendering`);
     assert.equal(new Set(ids(content)).size, ids(content).length, 'Unique IDs');
     assert(!/<details[^>]*\bopen\b/.test(content), 'Answers start closed');
     const decoded = html.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
@@ -54,5 +62,5 @@ init({ loader: { load: ['input/tex', 'output/svg'] }, tex: { packages: ['base', 
     const svg = mj.startup.adaptor.outerHTML(mj.tex2svg(formula.slice(n, -n), { display }));
     assert(!svg.includes('data-mml-node="merror"') && !svg.includes('data-mjx-error'), formula);
   }
-  console.log(`Mechanics bilingual: ${slugs.length} pairs; English prompts, formulas, anchors, images, switches, links and ${formulas.size} unique TeX fragments passed.`);
+  console.log(`Mechanics bilingual: ${slugs.length + 1} pairs including reference and entry; English prompts, formulas, anchors, images, switches, links and ${formulas.size} unique TeX fragments passed.`);
 }).catch(e => { console.error(e); process.exitCode = 1; });
