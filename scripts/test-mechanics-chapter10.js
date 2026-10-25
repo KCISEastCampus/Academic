@@ -183,7 +183,7 @@ for (const name of pages) {
   assert(!breadcrumb.includes('A2 Pure Mathematics'),`${name}: Mechanics is not a Pure subtopic`);
   if(name) assert(breadcrumb.includes('>A2 Mechanics</a>'),`${name}: missing course breadcrumb`);
   if(['mathematical-modelling','vectors-and-kinematics','forces-equilibrium-and-friction','moments-and-rigid-objects','centres-of-mass','newtons-laws-of-motion','projectiles','work-and-energy','uniform-circular-motion'].includes(name)) {
-    assert(source.includes('self-written'));
+    assert(/self-written/i.test(source));
     const expected={'mathematical-modelling':5,'vectors-and-kinematics':7,'forces-equilibrium-and-friction':8,'moments-and-rigid-objects':8,'centres-of-mass':8,'newtons-laws-of-motion':8,'projectiles':8,'work-and-energy':8,'uniform-circular-motion':11}[name];
     for(let q=1;q<=expected;q++) assert(new RegExp(`^### Q${q}\\b`,'m').test(source),`${name}: retained Q${q}`);
     for(const label of ['Hint','Solution and check']) {

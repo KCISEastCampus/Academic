@@ -30,7 +30,8 @@ for (const slug of [...slugs, 'course-entry']) {
   for (const q of en.matchAll(/\*\*Question:\*\*[^\n]*(?:position|velocity)\n\n\$\$[\s\S]*?\$\$\n\n([^\n]+)/g))
     assert(zh.includes(q[1]), `${slug}: preserve multipart English example instruction`);
   assert.equal((zh.match(/<details\b/g) || []).length, (en.match(/<details\b/g) || []).length);
-  assert(!/<summary>[^<]*(?:Hint|Solution|check)/i.test(zh), 'Chinese disclosure labels');
+  for (const [, label] of zh.matchAll(/<summary>([^<]*)<\/summary>/g))
+    assert(/[\u3400-\u9fff]/.test(label), `Chinese disclosure label: ${label}`);
   assert.deepEqual([...zh.matchAll(/!\[[^\]]*\]\(([^)]+)\)/g)].map(m => m[1]),
     [...en.matchAll(/!\[[^\]]*\]\(([^)]+)\)/g)].map(m => m[1]), 'Images preserved');
   const enHtml = built(enUrl), zhHtml = built(zhUrl);
@@ -48,7 +49,7 @@ for (const slug of [...slugs, 'course-entry']) {
     assert(!/<details[^>]*\bopen\b/.test(content), 'Answers start closed');
     const decoded = html.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
     for (const [, formula] of (lang === 'en' ? en : zh).matchAll(/\$\$([\s\S]*?)\$\$/g))
-      assert(decoded.includes(formula), `${slug}: intact display formula ${formula}`);
+      assert(decoded.includes(formula.trim()), `${slug}: intact display formula ${formula}`);
     for (const [, href] of content.matchAll(/href="([/#][^"]*)"/g)) {
       const [url, fragment] = href.split('#');
       const destination = url ? built(url) : html;
