@@ -1,0 +1,10 @@
+[
+  {
+    "kind": "notice-script-stalls",
+    "passed": true
+  },
+  {
+    "kind": "counter-service-stalls",
+    "passed": true
+  }
+]

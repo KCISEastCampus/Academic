@@ -1,0 +1,42 @@
+{
+  "success": true,
+  "version": "5",
+  "rules": [
+    {
+      "id": "5186617133b648c6ac0618dc2b97799a",
+      "action": "set_cache_settings",
+      "description": "文件",
+      "enabled": true,
+      "expression": "(http.request.full_uri wildcard r\"https://academic.kcisec.site/assets/*\") or (http.request.uri.path.extension in {\"css\" \"js\" \"woff\"})",
+      "action_parameters": {
+        "cache": true
+      }
+    },
+    {
+      "id": "d363b638a00c4a1ba9fada04a1f0b943",
+      "action": "set_cache_settings",
+      "description": "all",
+      "enabled": false,
+      "expression": "true",
+      "action_parameters": {
+        "cache": true
+      }
+    },
+    {
+      "id": "93a92e6e5ee64b8cb118b2a427783a8b",
+      "action": "set_cache_settings",
+      "description": "Academic public HTML - respect origin freshness",
+      "enabled": true,
+      "expression": "(http.host eq \"academic.kcisec.site\" and http.request.method in {\"GET\" \"HEAD\"} and http.request.uri.query eq \"\" and (ends_with(http.request.uri.path, \"/\") or ends_with(http.request.uri.path, \".html\")) and not starts_with(http.request.uri.path, \"/admin/\") and not starts_with(http.request.uri.path, \"/cdn-cgi/\"))",
+      "action_parameters": {
+        "browser_ttl": {
+          "mode": "respect_origin"
+        },
+        "cache": true,
+        "edge_ttl": {
+          "mode": "respect_origin"
+        }
+      }
+    }
+  ]
+}
