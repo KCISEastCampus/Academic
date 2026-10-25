@@ -1,0 +1,142 @@
+{
+  "captures": [
+    {
+      "slug": "mathematical-modelling",
+      "file": "mathematical-modelling-390-continuous.png",
+      "rect": {
+        "x": 12,
+        "y": 762,
+        "width": 366,
+        "height": 2438
+      },
+      "exampleVisible": true
+    },
+    {
+      "slug": "vectors-and-kinematics",
+      "file": "vectors-and-kinematics-390-continuous.png",
+      "rect": {
+        "x": 12,
+        "y": 759,
+        "width": 366,
+        "height": 1333
+      },
+      "exampleVisible": true
+    },
+    {
+      "slug": "moments-and-rigid-objects",
+      "file": "moments-and-rigid-objects-390-continuous.png",
+      "rect": {
+        "x": 12,
+        "y": 1339,
+        "width": 366,
+        "height": 2321
+      },
+      "exampleVisible": true
+    },
+    {
+      "slug": "centres-of-mass",
+      "file": "centres-of-mass-390-continuous.png",
+      "rect": {
+        "x": 12,
+        "y": 1755,
+        "width": 366,
+        "height": 1807
+      },
+      "exampleVisible": true
+    },
+    {
+      "slug": "newtons-laws-of-motion",
+      "file": "newtons-laws-of-motion-390-continuous.png",
+      "rect": {
+        "x": 12,
+        "y": 2891,
+        "width": 366,
+        "height": 2062
+      },
+      "exampleVisible": true
+    },
+    {
+      "slug": "projectiles",
+      "file": "projectiles-390-continuous.png",
+      "rect": {
+        "x": 12,
+        "y": 3104,
+        "width": 366,
+        "height": 1259
+      },
+      "exampleVisible": true
+    },
+    {
+      "slug": "work-and-energy",
+      "file": "work-and-energy-390-continuous.png",
+      "rect": {
+        "x": 12,
+        "y": 719,
+        "width": 366,
+        "height": 2537
+      },
+      "exampleVisible": true
+    },
+    {
+      "slug": "uniform-circular-motion",
+      "file": "uniform-circular-motion-390-continuous.png",
+      "rect": {
+        "x": 12,
+        "y": 1956,
+        "width": 366,
+        "height": 1831
+      },
+      "exampleVisible": true
+    },
+    {
+      "slug": "momentum-bridge",
+      "file": "momentum-bridge-390-continuous.png",
+      "rect": {
+        "x": 12,
+        "y": 563,
+        "width": 366,
+        "height": 1584
+      },
+      "exampleVisible": true
+    },
+    {
+      "slug": "quick-reference",
+      "file": "quick-reference-390-continuous.png",
+      "rect": {
+        "x": 12,
+        "y": 5217,
+        "width": 366,
+        "height": 1517
+      },
+      "exampleVisible": true
+    }
+  ],
+  "recoveryClicks": [
+    {
+      "task": "mixed-a",
+      "destination": "centres-of-mass/",
+      "actualClick": true
+    },
+    {
+      "task": "mixed-b",
+      "destination": "projectiles/",
+      "actualClick": true
+    },
+    {
+      "task": "mixed-c",
+      "destination": "uniform-circular-motion/",
+      "actualClick": true
+    },
+    {
+      "task": "later-a",
+      "destination": "newtons-laws-of-motion/",
+      "actualClick": true
+    },
+    {
+      "task": "later-b",
+      "destination": "momentum-bridge/",
+      "actualClick": true
+    }
+  ],
+  "passed": true
+}

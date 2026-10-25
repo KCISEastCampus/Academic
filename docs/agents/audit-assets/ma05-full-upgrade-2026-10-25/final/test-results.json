@@ -1,0 +1,103 @@
+{
+  "commit": "3066e46",
+  "results": [
+    {
+      "file": "test-mechanics-bilingual.js",
+      "exitCode": 0,
+      "output": "Mechanics bilingual: 12 pairs including reference and entry; English prompts, formulas, anchors, images, switches, links and 2216 unique TeX fragments passed.\n",
+      "evidence": "Actual successful exec session 74226, after Chinese label and whitespace assertion repairs."
+    },
+    {
+      "file": "test-mechanics-centres.js",
+      "exitCode": 0,
+      "output": "Centres passed: original/new polygon geometry and mass moments, suspension/support checks, official Q6 reconstruction, bilingual source structure and rendered formulas/help.\n"
+    },
+    {
+      "file": "test-mechanics-chapter10.js",
+      "exitCode": 0,
+      "output": "Chapter 10: retained and new calculations, assigned bilingual sources and 305 TeX fragments passed; rendered roles, links, anchors, breadcrumbs and SVG checks passed.\n"
+    },
+    {
+      "file": "test-mechanics-circular.js",
+      "exitCode": 0,
+      "output": "uniform-circular-motion: original and new numerical/model checks; bilingual 495 TeX fragments, 363 unique TeX renders, retained anchors, 22 task boundaries and source-only structure passed. No build/browser claim.\n"
+    },
+    {
+      "file": "test-mechanics-energy.js",
+      "exitCode": 0,
+      "output": "work-and-energy: original and new numerical/model checks; bilingual 380 TeX fragments, 290 unique TeX renders, retained anchors, 15 task boundaries and source-only structure passed. No build/browser claim.\n"
+    },
+    {
+      "file": "test-mechanics-forces.js",
+      "exitCode": 0,
+      "output": "Forces lesson passed: resultants, string geometry, world-coordinate force balance, contact, both friction limits and 8 practice solutions.\n"
+    },
+    {
+      "file": "test-mechanics-moments.js",
+      "exitCode": 0,
+      "output": "Moments passed: original and new forces/moments, contact/tipping limits, official Q5 reconstruction, bilingual source structure and rendered formulas/help.\n"
+    },
+    {
+      "file": "test-mechanics-momentum.js",
+      "exitCode": 0,
+      "output": "Momentum: retained/new impulse-work calculations, signed branches, external impulse, spring release, Jan 2025 Q8, bilingual sources, closed task roles, TeX and retained bisection passed.\n"
+    },
+    {
+      "file": "test-mechanics-newton.js",
+      "exitCode": 0,
+      "output": "Newton: original force/derivative protections, new stage/3D/condition checks, exact bilingual TeX, questions, legacy anchors, public examples and per-task help passed.\n"
+    },
+    {
+      "file": "test-mechanics-projectiles.js",
+      "exitCode": 0,
+      "output": "Projectiles: original trajectory/energy/root/boundary protections, new inverse/roof/obstacle checks, exact bilingual TeX, questions, legacy anchors and per-task help passed.\n"
+    },
+    {
+      "file": "test-mechanics-transfer-foundations.js",
+      "exitCode": 0,
+      "output": "Foundation transfer checks passed: path intersection at different times, no collision, constant radius/nonzero speed and tow-system force balance.\nMA05 entrance checks passed: support loss, stagewise work and flight, radial friction bounds, taut-string interval, collision energy and conical forces.\n"
+    },
+    {
+      "file": "test-mechanics-transfer-motion.js",
+      "exitCode": 0,
+      "output": "Motion transfer passed: 3 bilingual pairs, 25 original examples, 27 original exercises, exact formula order, prompts, anchors, 11 diagrams, closed disclosures, and 6 independently checked diagnostic/retry problems.\n"
+    },
+    {
+      "file": "test-mechanics-transfer-statics.js",
+      "exitCode": 0,
+      "output": "MA05 statics transfer checks passed: contact limits, mass moments, stable suspension, force signs, integration conditions, and three complete bilingual source pairs.\n"
+    },
+    {
+      "file": "test-frontend-ux.js",
+      "exitCode": 0,
+      "output": "Frontend UX passed: shared search, landmarks/skip links, course discovery, bilingual card names and destinations, fallback language and link contrast.\n"
+    },
+    {
+      "file": "test-a2-heading-hierarchy.js",
+      "exitCode": 0,
+      "output": "A2 heading hierarchy passed: 114 pages, bilingual outlines, source/HTML levels, unique IDs, local fragments and 11 repaired lesson pairs.\n"
+    }
+  ],
+  "testOnlyRepairs": [
+    "Ignore display-math delimiter edge whitespace removed by Kramdown",
+    "Accept Self-written case without changing provenance requirement",
+    "Chinese help may include an English translation; require a Chinese label instead of forbidding any English."
+  ],
+  "finalTestHashes": {
+    "scripts/test-mechanics-bilingual.js": "c9dbbc6906fe7459541a5edf1ca5b5672008927c31646068fe6a1354d7d5218a",
+    "scripts/test-mechanics-centres.js": "58a85c6dbfa6527514c1077dee10c23e5b3e976fe1729cb0dc9cfb21a8b321a9",
+    "scripts/test-mechanics-chapter10.js": "b3231511d3025d42bc3645bd4bc927eaf229c7e59294138cad873da83c7a3c9e",
+    "scripts/test-mechanics-circular.js": "51b743bf77f5bac71a4b33b95769ee16cba8567922f86f18b4d5fdb0d4c36a7a",
+    "scripts/test-mechanics-energy.js": "789193886e01a44ce4900c967472d50844866b4f17929429aac9c20823d9d366",
+    "scripts/test-mechanics-forces.js": "3a589c0d27449d8eabed329e0cd47c908f9673a5a019a6681aaeb756218df3ce",
+    "scripts/test-mechanics-moments.js": "e53aef2cd785879eb49ff9da38c8e77e827ef51f2593296d8afa5779a27bc439",
+    "scripts/test-mechanics-momentum.js": "e6f53c256e2d9cbe5a7024eda2ed875e721e61c65fd74072bb7c24690ce18abd",
+    "scripts/test-mechanics-newton.js": "b739a08e3d63deffa71fc182a389167428f14a5cc9a156b853acc02bdf477513",
+    "scripts/test-mechanics-projectiles.js": "0fb4f5a103a4fe0ec35b61a3d81670987bd154efee1818bdeca4096a7c613080",
+    "scripts/test-mechanics-transfer-foundations.js": "956618c001b163bd2b62284ba2c7e7f347beb70ba082f40ebe28c45f27cde5c3",
+    "scripts/test-mechanics-transfer-motion.js": "9d3a246ec8f1d91f54b5ae91865543ad8747ba8bfc008269903a25b2a237f430",
+    "scripts/test-mechanics-transfer-statics.js": "3d40ce097322fa180a1fd6b9b131485ebe63520d73b1bf3d19c010cb15922a05",
+    "scripts/test-frontend-ux.js": "6eef0cca55a0f995199a871f7aeaf25cc46cf8d922efca19ae6202cf963342d7",
+    "scripts/test-a2-heading-hierarchy.js": "6d085e889dd764e4fccb455552a74670aebb810479b20f948c2d0910ca7023d8"
+  }
+}

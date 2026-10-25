@@ -1,0 +1,30 @@
+{
+  "tables": [
+    {
+      "lang": "en",
+      "slug": "mathematical-modelling",
+      "noWideTable": true
+    },
+    {
+      "lang": "en",
+      "slug": "quick-reference",
+      "noWideTable": true
+    },
+    {
+      "lang": "/zh",
+      "slug": "mathematical-modelling",
+      "tabThenArrowRight": true,
+      "moved": 13
+    },
+    {
+      "lang": "/zh",
+      "slug": "quick-reference",
+      "noWideTable": true
+    }
+  ],
+  "darkHelpCapture": {
+    "expandedByKeyboard": true,
+    "actualTaskElementCapture": true
+  },
+  "passed": true
+}
