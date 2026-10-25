@@ -88,7 +88,7 @@ $$S\geq0\quad\Longrightarrow\quad m\leq8\,\mathrm{kg}.$$
 
 极限时，总质心正好在离 A 3 m 的支架上方。再加重就需要 A 处向下拉梁；题目中的支架做不到。
 
-若转动平衡不清楚，回到[力矩课](/zh/alevel/a2-mathematics/mechanics/moments-and-rigid-objects/)；若质量加权的位置算错，回到[重心课](centres-of-mass/)。
+若转动平衡不清楚，回到[力矩课](/zh/alevel/a2-mathematics/mechanics/moments-and-rigid-objects/#equilibrium-under-parallel-forces)；若质量加权的位置算错，回到[重心课](centres-of-mass/#a-system-of-particles)。
 
 </details>
 
@@ -130,7 +130,7 @@ $$\mathbf a_{\mathrm{platform}}=4\mathbf i,\qquad \mathbf a_{\mathrm{flight}}=-9
 
 检查：碰地动能应等于平台上增加的 32 J，再加飞行中损失的重力势能。
 
-若重复计算重力，回到[功与能](work-and-energy/)；若混淆飞行方向或落地高度，回到[抛体](projectiles/)。
+若重复计算重力，回到[功与能](work-and-energy/#the-work-energy-principle)；若混淆飞行方向或落地高度，回到[抛体](projectiles/#projection-from-a-height)。
 
 </details>
 
@@ -176,7 +176,7 @@ $$F_{\mathrm{needed}}=0.5(0.8)(3^2)=3.6\,\mathrm N>1.96\,\mathrm N.$$
 
 $$0.5(0.8)\omega^2=1.96,\qquad \omega=\sqrt{4.9}\approx2.21\,\mathrm{rad\,s^{-1}}.$$
 
-求导不清楚时回到[向量与运动学](vectors-and-kinematics/)；向心方向或接触条件不清楚时回到[圆周运动](uniform-circular-motion/)。
+求导不清楚时回到[向量与运动学](vectors-and-kinematics/#velocity-and-acceleration)；向心方向或接触条件不清楚时回到[圆周运动](uniform-circular-motion/#forces-in-a-horizontal-circle)。
 
 </details>
 
@@ -216,7 +216,7 @@ $$2=\frac12\left(\frac g3\right)t^2,\qquad t=\sqrt{\frac{12}{g}}\approx1.11\,\ma
 
 将结果代回两个方程都成立，且张力为正。碰地时增加了地面的作用力，悬挂物不能继续按原加速度向下运动。后续还取决于碰撞及绳是否绷紧，必须重新建模，不能直接延长旧方程。
 
-若方程里的力不属于选定物体，回到[建模](mathematical-modelling/)和[牛顿定律](newtons-laws-of-motion/)。
+若方程里的力不属于选定物体，回到[建模](mathematical-modelling/#connected-bodies)和[牛顿定律](newtons-laws-of-motion/#connected-particles)。
 
 </details>
 
@@ -252,7 +252,7 @@ $$\text{kinetic energy lost}=18-6=12\,\mathrm J.$$
 
 $$6=3gh,\qquad h=\frac2g\approx0.204\,\mathrm m.$$
 
-若把最初的 18 J 全部拿来上坡，就把碰撞中已经转移的能量又用了一次。系统或方向不清楚时回到[动量回补](momentum-bridge/)；上坡关系不清楚时回到[功与能](work-and-energy/)。
+若把最初的 18 J 全部拿来上坡，就把碰撞中已经转移的能量又用了一次。系统或方向不清楚时回到[动量回补](momentum-bridge/#choose-the-system-before-conserving-momentum)；上坡关系不清楚时回到[功与能](work-and-energy/#the-work-energy-principle)。
 
 </details>
 
@@ -288,7 +288,7 @@ $$\tau=\frac{2\pi}{\omega}=\frac{2\pi}{\sqrt{9.8}}\approx2.01\,\mathrm s.$$
 
 只有竖直方向的力平衡。速率虽然不变，速度方向仍在改变，所以水平方向必须有向心合力。把张力分量代回，应分别得到重力与向心合力。
 
-若半径或力的方向错了，回到[圆锥摆](/zh/alevel/a2-mathematics/mechanics/uniform-circular-motion/)。
+若半径或力的方向错了，回到[圆锥摆](/zh/alevel/a2-mathematics/mechanics/uniform-circular-motion/#the-conical-pendulum)。
 
 </details>
 

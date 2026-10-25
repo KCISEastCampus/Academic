@@ -88,7 +88,7 @@ $$S\geq0\quad\Longrightarrow\quad m\leq8\,\mathrm{kg}.$$
 
 At the limit the combined centre of mass is over the support 3 m from A. A larger parcel would require a downward pull at A, which that support cannot provide.
 
-If the turning balance was difficult, return to [moments](/alevel/a2-mathematics/mechanics/moments-and-rigid-objects/). For weighted positions, return to [centres of mass](centres-of-mass/).
+If the turning balance was difficult, return to [moments](/alevel/a2-mathematics/mechanics/moments-and-rigid-objects/#equilibrium-under-parallel-forces). For weighted positions, return to [centres of mass](centres-of-mass/#a-system-of-particles).
 
 </details>
 
@@ -130,7 +130,7 @@ $$\mathbf a_{\mathrm{platform}}=4\mathbf i,\qquad \mathbf a_{\mathrm{flight}}=-9
 
 As a check, the kinetic energy at impact equals the 32 J gained on the platform plus the gravitational potential energy lost in flight.
 
-Return to [work and energy](work-and-energy/) if forces were counted twice, or [projectiles](projectiles/) if the flight directions or landing height were confused.
+Return to [work and energy](work-and-energy/#the-work-energy-principle) if forces were counted twice, or [projectiles](projectiles/#projection-from-a-height) if the flight directions or landing height were confused.
 
 </details>
 
@@ -176,7 +176,7 @@ The particle cannot keep that circular motion at this radius. The 3.6 N is a req
 
 $$0.5(0.8)\omega^2=1.96,\qquad \omega=\sqrt{4.9}\approx2.21\,\mathrm{rad\,s^{-1}}.$$
 
-Return to [vector motion](vectors-and-kinematics/) for differentiation, or [circular motion](uniform-circular-motion/) for the direction and contact check.
+Return to [vector motion](vectors-and-kinematics/#velocity-and-acceleration) for differentiation, or [circular motion](uniform-circular-motion/#forces-in-a-horizontal-circle) for the direction and contact check.
 
 </details>
 
@@ -216,7 +216,7 @@ $$2=\frac12\left(\frac g3\right)t^2,\qquad t=\sqrt{\frac{12}{g}}\approx1.11\,\ma
 
 Both answers satisfy the separate equations and the tension is positive. On first contact the floor supplies a new force and the hanging particle can no longer follow that downward acceleration. What happens next depends on the impact and whether the string stays taut; the old two-particle equations must be replaced.
 
-If the equations do not match the chosen body, revisit [modelling](mathematical-modelling/) and [Newton's laws](newtons-laws-of-motion/).
+If the equations do not match the chosen body, revisit [modelling](mathematical-modelling/#connected-bodies) and [Newton's laws](newtons-laws-of-motion/#connected-particles).
 
 </details>
 
@@ -252,7 +252,7 @@ For the smooth ramp stage, the normal reaction does no work. The remaining kinet
 
 $$6=3gh,\qquad h=\frac2g\approx0.204\,\mathrm m.$$
 
-Using the original 18 J here would wrongly recover the energy already transferred in the collision. Return to the [momentum bridge](momentum-bridge/) for the system and signs, or [work and energy](work-and-energy/) for the ramp.
+Using the original 18 J here would wrongly recover the energy already transferred in the collision. Return to the [momentum bridge](momentum-bridge/#choose-the-system-before-conserving-momentum) for the system and signs, or [work and energy](work-and-energy/#the-work-energy-principle) for the ramp.
 
 </details>
 
@@ -288,7 +288,7 @@ $$\tau=\frac{2\pi}{\omega}=\frac{2\pi}{\sqrt{9.8}}\approx2.01\,\mathrm s.$$
 
 Only the vertical forces balance. The inward horizontal resultant is non-zero because the velocity keeps changing direction even though speed is constant. Check that the tension components reproduce both the weight and the inward force.
 
-If the radius or force direction was wrong, return to [the conical pendulum](/alevel/a2-mathematics/mechanics/uniform-circular-motion/).
+If the radius or force direction was wrong, return to [the conical pendulum](/alevel/a2-mathematics/mechanics/uniform-circular-motion/#the-conical-pendulum).
 
 </details>
 
