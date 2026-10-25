@@ -1,0 +1,60 @@
+{
+  "workflowNodeChecks": {
+    "multilineCommandsBeforeReviewRepairs": 66,
+    "allPassed": true,
+    "inlineCommandsAlsoRunAndPassed": [
+      "test-reading-progress.js",
+      "test-accessibility.js",
+      "test-toc-refresh.js",
+      "test-back-to-top.js"
+    ],
+    "totalDistinctCommands": 70,
+    "affectedFinalRerunsPassed": [
+      "test-as-mathematics-content.js",
+      "test-as-mathematics-calculations.js",
+      "test-bilingual.js",
+      "test-frontend-ux.js",
+      "test-reading-layout.js"
+    ],
+    "afterLastIndexReflowPassed": [
+      "test-as-mathematics-content.js",
+      "test-as-mathematics-calculations.js"
+    ]
+  },
+  "finalBuildSeconds": 20.386,
+  "pagefind": {
+    "pages": 296,
+    "languages": 2,
+    "words": 45697,
+    "generationOnly": true
+  },
+  "sourceChecks": {
+    "pairedLessonPromptsPerLanguage": 130,
+    "closedDisclosuresPerLanguage": 224,
+    "calculationComparisons": 244
+  },
+  "browser": {
+    "views": 128,
+    "failures": 0,
+    "sameOriginLinks": 333,
+    "languageJourneys": 4,
+    "continuousReadings": 14,
+    "closedAnswerGraphs": 2,
+    "wideFormulaKeyboardChecks": 4,
+    "learningJourneys": 3,
+    "repairedRecoveryJourneys": 8,
+    "repairedTaskReadings": 3,
+    "finalIndexRecheck": "8 changed views; 120 views of 30 byte-identical pages retained"
+  },
+  "retained": {
+    "explicitSourceIDs": 443,
+    "renderedIDs": 506,
+    "EnglishPromptLines": 208
+  },
+  "limits": [
+    "local author and independent content review; no new student work, retention or mastery trial",
+    "headless Chromium emulates mobile width; no physical-phone or full screenreader/WCAG certification",
+    "official-source reading is bounded in the implementation and research records",
+    "not pushed or published"
+  ]
+}

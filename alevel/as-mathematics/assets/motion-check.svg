@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 370" role="img" aria-labelledby="title desc">
+  <title id="title">Velocity graph for the independent task</title>
+  <desc id="desc">Straight segments join time and velocity points (0,0), (4,8), (7,8) and (10,-4). The last segment crosses zero at 9 seconds. Positive signed areas are 16, 24 and 8 metres; the below-axis triangle has area magnitude 2 metres.</desc>
+  <rect width="480" height="370" fill="#fff"/>
+  <g fill="#dbeafe" stroke="none"><path d="M80 220L216 100L318 100L386 220Z"/></g>
+  <path d="M386 220L420 280L420 220Z" fill="#fee2e2"/>
+  <g stroke="#334155" stroke-width="2"><path d="M55 220H450M80 300V55" fill="none"/><path d="M444 215L450 220L444 225M75 61L80 55L85 61" fill="none"/></g>
+  <path d="M80 220L216 100L318 100L420 280" fill="none" stroke="#1d4ed8" stroke-width="4"/>
+  <g stroke="#64748b" stroke-width="1.5" stroke-dasharray="5 4"><path d="M216 100V220M318 100V220M420 220V280"/></g>
+  <g fill="#0f172a" font-family="Arial,sans-serif" font-size="26">
+    <text x="18" y="30">v (m s⁻¹)</text><text x="290" y="350">t (seconds)</text>
+    <text x="58" y="248">0</text><text x="205" y="248">4</text><text x="307" y="248">7</text><text x="374" y="248">9</text><text x="410" y="248">10</text>
+    <text x="177" y="80">(4,8)</text><text x="301" y="80">(7,8)</text><text x="342" y="316">(10,−4)</text>
+    <text x="141" y="197">16 m</text><text x="235" y="168">24 m</text><text x="324" y="197">8 m</text><text x="395" y="289">2 m</text>
+  </g>
+</svg>

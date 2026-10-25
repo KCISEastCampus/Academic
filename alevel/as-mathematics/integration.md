@@ -5,38 +5,62 @@ mathjax: true
 grade: as
 subject: as-mathematics
 permalink: /alevel/as-mathematics/integration/
-toc_headings: h2, h3
+toc_headings: h2
+reading_layout: true
 study_page: true
 ---
 
 [AS Mathematics learning route](/alevel/as-mathematics/#learning-route) · P1.4 · OxfordAQA 9660 v5.2
+{:.lesson-meta}
 
-Attempt each task on paper before opening its hint. Use the separate solution to check method, conditions and result. All questions are **self-written**, with no official marks. The paired Chinese page keeps the same English prompts, formulae and numerical answers.
+Read the explanation and complete example, then try the questions on paper. Hints and solutions open separately. All questions are **self-written**, with no official marks.
 
-- [L08 Antiderivatives and the region being measured](#l08)
-- [L09 Trapezia, ordinates and approximation](#l09)
+- [Recover a function and measure area](#l08)
+- [Estimate area with trapezia](#l09)
 
-## L08 · Antiderivatives and the region being measured {#l08}
+## Recover a function and measure area {#l08}
 
-Goal: reverse differentiation, fix constants and choose correct area bounds. Prerequisites: L02, L04 and L06.
+Goal: recover functions and constants, and identify the area being measured. Prerequisites: [powers](/alevel/as-mathematics/algebra/#l01-indices), [derivatives](/alevel/as-mathematics/differentiation/#l06) and intersections.
 
-An indefinite integral is a family of antiderivatives; the constant disappears on differentiation. For rational $n\ne-1$:
+### Find the function whose derivative you know {#l08-concept}
 
-$$\int ax^n\,dx=\frac{a}{n+1}x^{n+1}+C,\qquad \int_a^b f(x)\,dx=F(b)-F(a).$$
+Differentiation goes from a function to its gradient. Integration can go back. For example, both $x^2$ and $x^2+5$ differentiate to $2x$: the gradient alone cannot tell us the constant. We write $+C$ to include all these possibilities. A known point selects the value of $C$.
 
-For example, on $x>0$ an antiderivative of $6\sqrt x-4x^{-2}$ is $4x^{3/2}+4x^{-1}$. Differentiate to check. For area, identify the actual boundary and use upper curve minus lower curve. Entirely below the x-axis, geometric area is the negative of the integral. Core P1 regions here do not cross the x-axis. Splitting a crossing-axis region is a useful extension, not an added core demand; logarithmic integration is also outside this P1 group.
+To reverse a power derivative, increase the exponent by one and divide by that new exponent. For rational $n\ne-1$,
+
+$$\int ax^n\,dx=\frac{a}{n+1}x^{n+1}+C.$$
+
+Check by differentiating. On $x>0$, integrating $6\sqrt x-4x^{-2}$ gives $4x^{3/2}+4x^{-1}+C$. The restriction matters for roots and negative powers; the case with exponent −1 uses a later method, not this power rule.
+
+A definite integral uses two bounds. If $F$ is an antiderivative of $f$, then
+
+$$\int_a^b f(x)\,dx=F(b)-F(a).$$
+
+This is a signed accumulation. For area between curves, use upper height minus lower height and find the actual intersections. Below the x-axis, geometric area is the negative of the integral. Core P1 regions here do not cross that axis; splitting crossing regions and logarithmic integration are later extensions.
 
 ![The shaded region lies between y=2x above and y=x² below, from x=0 to x=2. Both curves are above the x-axis.](/alevel/as-mathematics/assets/area.svg)
 
-### Worked reasoning {#l08-worked}
+<div class="worked-example" markdown="1">
+
+### A complete example {#l08-worked}
 
 **Question:** Find the area enclosed by $y=2x$ and $y=x^2$.
 
-The intersections satisfy $x(x-2)=0$. Between 0 and 2 the line is above the parabola, both nonnegative. Thus
+First find the left and right edges of the enclosed region. At an intersection $2x=x^2$, giving $x(x-2)=0$, so the bounds are 0 and 2. Inside them, testing $x=1$ shows the line is above the parabola. Both curves are nonnegative here.
 
-$$A=\int_0^2(2x-x^2)\,dx=\left[x^2-\frac{x^3}3\right]_0^2=\frac43.$$
+Each thin vertical strip has height $2x-x^2$, so add those heights by integrating:
 
-The integrand vanishes at both boundaries and is positive inside; this checks that the region and sign agree.
+$$\begin{aligned}
+A&=\int_0^2(2x-x^2)\,dx\\
+&=\left[x^2-\frac{x^3}3\right]_0^2\\
+&=\left(4-\frac83\right)-0=\frac43.
+\end{aligned}$$
+
+The strip height is zero at both edges and positive between them, so the sign agrees with a positive area.
+
+</div>
+
+<div class="lesson-check" markdown="1">
 
 ### Complete a supported attempt {#l08-scaffold}
 
@@ -56,6 +80,10 @@ The curve is $y=x^3-x^2+x+4$. Its integral is $[x^4/4-x^3/3+x^2/2+4x]_0^1=53/12$
 
 </details>
 
+</div>
+
+<div class="lesson-check" markdown="1">
+
 ### Independent task {#l08-independent}
 
 **Question:** Find the area enclosed by $y=x+2$ and $y=x^2$. Include enough reasoning to identify the region.
@@ -74,9 +102,41 @@ $x^2=x+2$ gives $x=-1,2$. The line is upper between them. Hence $A=[x^2/2+2x-x^3
 
 </details>
 
+</div>
+
+<div class="lesson-check" markdown="1">
+
+### Another independent task {#l08-independent-function}
+
+**Question:** For $x>0$, a curve has gradient $3\sqrt x+2/x^2$ and passes through $(1,4)$. Find its equation. Check both the gradient and the given point.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+The gradient gives a family of curves; the point selects one member.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+Rewrite the gradient as $3x^{1/2}+2x^{-2}$. Integration gives
+
+$$y=\frac{3}{3/2}x^{3/2}+\frac{2}{-1}x^{-1}+C=2x^{3/2}-\frac2x+C.$$
+
+Use $(1,4)$: $4=2-2+C$, so $C=4$. Thus $y=2x^{3/2}-2/x+4$. Its derivative is the given gradient and its value at 1 is 4.
+
+</details>
+
+</div>
+
 ### Diagnose and repair {#l08-diagnosis}
 
 A numerical integral can be negative; geometric area cannot. Label the boundary points and test a height before integrating. Do not omit the constant when reconstructing a curve.
+
+For a missing constant or power error, return to [reversing a derivative](#l08-concept), then [recover a new curve](#l08-retry-function). For an area sign error, revisit [the labelled region](#l08-worked), then [the below-axis retry](#l08-retry).
+
+<div class="lesson-check" markdown="1">
 
 ### Try again {#l08-retry}
 
@@ -96,23 +156,59 @@ The integral is $[x^3/3-4x]_0^2=-16/3$, so the area is $16/3$.
 
 </details>
 
-## L09 · Trapezia, ordinates and approximation {#l09}
+</div>
 
-Goal: construct a trapezium estimate and explain its direction from a graph. Prerequisites: L08 and reading a table.
+<div class="lesson-check" markdown="1">
 
-An ordinate is a vertical height at a given x-value. With $n$ equal strips there are $n+1$ ordinates, spacing $h=(b-a)/n$. Adding the trapezia gives
+### Recover another curve {#l08-retry-function}
+
+**Question:** For $x>0$, a curve has gradient $6\sqrt x-4/x^2$ and passes through $(4,35)$. Find its equation and check your result.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Keep the unknown constant until you have used the point.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+Integrating $6x^{1/2}-4x^{-2}$ gives $y=4x^{3/2}+4x^{-1}+C$. The point gives $35=32+1+C$, hence $C=2$. So $y=4x^{3/2}+4/x+2$. Differentiation recovers the gradient, and substituting $x=4$ gives 35.
+
+</details>
+
+</div>
+
+## Estimate area with trapezia {#l09}
+
+Goal: build a trapezium estimate and explain what is known about its error. Prerequisites: [area integrals](#l08) and tables.
+
+### Replace a curved edge by short straight edges {#l09-concept}
+
+We may know heights at only a few positions. Join neighbouring tops with a straight line; the region beneath each join is a trapezium. Add its parallel heights and multiply by half the width. An ordinate is just one of these vertical heights.
+
+For $n$ equal strips there are $n+1$ heights and spacing $h=(b-a)/n$. Adding the strips gives
 
 $$T=\frac h2\left[y_0+y_n+2(y_1+\cdots+y_{n-1})\right].$$
 
-Interior heights belong to two strips, explaining their weight 2. Chords above a nonnegative curve produce an overestimate; chords below produce an underestimate. For a suitably smooth curve, narrower strips improve the approximation, but a data table alone does not establish curvature or a universal error bound. Nonuniform spacing needs separate trapezium widths. All tables here are constructed teaching data.
+Each inside height borders two strips, so it is counted twice. The two outside heights occur once. Draw the strips if you forget the weights.
+
+Straight joins above a nonnegative curve overestimate area; joins below it underestimate. A stated smooth shape can explain why narrower strips help. A short table alone does not tell us the shape between readings or guarantee an error bound. For unequal spacing, calculate each trapezium using its own width. All data here are constructed.
 
 ![Two equal-width trapezia approximate y=x²+1 on 0 to 2. Heights 1,2,5 are labelled, and the chords are above the curve.](/alevel/as-mathematics/assets/trapezia.svg)
 
-### Worked reasoning {#l09-worked}
+<div class="worked-example" markdown="1">
+
+### A complete example {#l09-worked}
 
 **Question:** Use ordinates at $x=0,1,2$ for $y=x^2+1$ to estimate the area from 0 to 2. Explain the error direction.
 
 The heights are $1,2,5$, with $h=1$. Thus $T=\frac12(1+5+2\times2)=5$. The chords lie above this upward-curving graph, so it overestimates. The exact integral is $[x^3/3+x]_0^2=14/3$, consistent with that prediction. Exact integration checks the estimate but does not replace the requested trapezium working.
+
+</div>
+
+<div class="lesson-check" markdown="1">
 
 ### Complete a supported attempt {#l09-scaffold}
 
@@ -132,6 +228,10 @@ Three strips have $h=0.5$. The estimate is $0.25[2+6+2(3+4)]=5.5$.
 
 </details>
 
+</div>
+
+<div class="lesson-check" markdown="1">
+
 ### Independent task {#l09-independent}
 
 **Question:** A nonnegative curve bends downward throughout $0\le x\le4$. At $x=0,2,4$ its heights are $0,3,4$. Estimate the area, state whether the estimate is high or low, and explain how extra readings could help.
@@ -150,9 +250,15 @@ $T=1[0+4+2(3)]=10$. The chords lie below a downward-bending curve, so it is an u
 
 </details>
 
+</div>
+
 ### Diagnose and repair {#l09-diagnosis}
 
 If every height received weight 2, draw the strips: outer edges occur only once. If you inferred error direction from a short table alone, separate the given shape assumption from the measurements.
+
+Rebuild [the strips and weights](#l09-concept), then use [the new table](#l09-retry) without the old solution open.
+
+<div class="lesson-check" markdown="1">
 
 ### Try again {#l09-retry}
 
@@ -172,13 +278,20 @@ The estimate is $\frac12(4+8+2\times5)=11$. Error direction is not determined by
 
 </details>
 
+</div>
+
 ## After this lesson {#next-step}
 
 Close the solutions and check that you can complete each group’s retry independently and explain the method and its conditions. Revisit the relevant example if needed, then continue to the next lesson.
 
 [Previous lesson: Differentiation](/alevel/as-mathematics/differentiation/) · [Course route](/alevel/as-mathematics/#learning-route) · [Next lesson: Sequences and series](/alevel/as-mathematics/sequences/)
 
+After completing this route, try [the mixed task](/alevel/as-mathematics/#mixed-foundations). In a later study session, return to [the recall task](/alevel/as-mathematics/#later-foundations) with solutions closed.
+
 ## Sources and scope {#sources}
+
+<details class="lesson-notes" markdown="1">
+<summary>View scope and marking sources</summary>
 
 Organised against the [current official 9660 specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf). Paired marking material informs the expected reasoning; every task here is separately self-written and is not an official question or official mark scheme.
 
@@ -187,3 +300,5 @@ Specification §3.1 P1.4; MA01 January 2025 Q8(d), QP p19 and MS p20.
 [MA01 January 2025 QP](/assets/pdf/fx-cg50/references/oxfordaqa-ma01-2025-january-question-paper.pdf) · [paired MS](/assets/pdf/fx-cg50/references/oxfordaqa-ma01-2025-january-mark-scheme.pdf) · [MA02 January 2025 QP](/assets/pdf/fx-cg50/references/oxfordaqa-ma02-2025-january-question-paper.pdf) · [paired MS](/assets/pdf/fx-cg50/references/oxfordaqa-ma02-2025-january-mark-scheme.pdf)
 
 Success means independently explaining the method and checking its conditions, not just reading a solution. Student learning outcomes have not been trialled.
+
+</details>

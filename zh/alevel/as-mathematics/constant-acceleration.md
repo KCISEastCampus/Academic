@@ -7,33 +7,52 @@ subject: as-mathematics
 lang: zh-CN
 translation_of: /alevel/as-mathematics/constant-acceleration/
 permalink: /zh/alevel/as-mathematics/constant-acceleration/
-toc_headings: h2, h3
+toc_headings: h2
+reading_layout: true
 study_page: true
 ---
 
 [AS 数学学习路线](/zh/alevel/as-mathematics/#learning-route) · M1.1 · OxfordAQA 9660 v5.2
+{:.lesson-meta}
 
-先用纸笔尝试题目，再按需打开提示；完成后用解答核对方法、条件与结果。所有题目均为**自拟题**，没有官方分值。英文题干、公式、数值与英文页一致；中文解释帮助你逐步独立用英文作答。
+先读懂解释和完整示范，再拿纸笔做题。提示与解答分别展开。所有题目均为**自拟题**，没有官方分值；保留英文题干，中文帮助你理解和逐步独立表达。
 
-- [L22 方向、图像与匀加速度](#l22)
+- [用图像描述运动](#l22)
 
-## L22 · 方向、图像与匀加速度 {#l22}
+## 用图像描述运动 {#l22}
 
-目标：把运动图像与有向量、总路程联系起来。先修：L02、L04 与单位。
+目标：连接带方向的运动量、图像与总路程。先修：[直线斜率](/zh/alevel/as-mathematics/coordinate-geometry/#l04)与单位。
 
-先选原点与正方向。位移是有正负的位置变化，路程是路径总长度；速度有正负，速率是其大小。s–t 图斜率为速度，v–t 图斜率为加速度；v–t 图的有向面积为位移，a–t 图的有向面积为速度变化。s–t 图弯曲不代表加速度一定变化。只有匀加速度时使用
+### 把方向放进计算里 {#l22-concept}
 
-$$v=u+at,\quad s=ut+\tfrac12at^2,\quad v^2=u^2+2as,\quad s=\tfrac12(u+v)t.$$
+先选原点，并说明哪边为正。位移描述终点相对起点的位置变化，要带正负号；路程把走过的整条路径加起来，不能为负。速度（velocity）带方向，速率（speed）是它的大小。
 
-忽略空气阻力、向上为正时，竖直运动加速度为 $-9.8\,\mathrm{m\,s^{-2}}$。最高点虽速度为零，加速度仍向下。平均速率用总路程除以总时间；平均速度使用位移。
+位置—时间图的斜率是速度，速度—时间图的斜率是加速度。速度—时间图下的有向面积给位移，加速度—时间图下的有向面积给速度变化。转向时速度经过零，求路程要在那里分段。位置—时间图是弯的，也可能仍然匀加速。
+
+只有加速度恒定时，速度变化才等于加速度乘时间；这时速度—时间图是直线，位移可用梯形面积求。这些联系给出：
+
+$$\begin{aligned}
+v&=u+at,\\
+s&=ut+\tfrac12at^2,\\
+v^2&=u^2+2as,\\
+s&=\tfrac12(u+v)t.
+\end{aligned}$$
+
+根据已知量选择公式；加速度变化时，不能跨整段直接使用匀加速公式。忽略空气阻力、向上为正时，$a=-9.8\,\mathrm{m\,s^{-2}}$；最高点即使速度为零，加速度仍向下。平均速率用总路程，平均速度用位移，最后都除以总时间。
 
 ![向上为正，速度从 t=0 的 14.7 线性下降，在 1.5 秒为零，3 秒为 −14.7；加速度恒为 −9.8。](/alevel/as-mathematics/assets/motion.svg)
 
-### 示范与推理 {#l22-worked}
+<div class="worked-example" markdown="1">
+
+### 完整示范 {#l22-worked}
 
 **Question:** A ball is projected vertically upwards at $14.7\,\mathrm{m\,s^{-1}}$ and returns to the launch height. Neglect air resistance and take $g=9.8\,\mathrm{m\,s^{-2}}$. Find the time to its highest point, maximum height, total flight time, distance and average speed.
 
 $v=14.7-9.8t=0$ 得 $t=1.5$ 秒。最大高度为 $14.7(1.5)-4.9(1.5)^2=11.025$ 米。令 $s=14.7t-4.9t^2=0$ 得 $t=0$ 或 $3$ 秒，后一次返回只取 3 秒。总路程 $22.05$ 米，故平均速率为 $7.35\,\mathrm{m\,s^{-1}}$。位移为零，因此平均速度为零。这些值按自拟数据保留，避免过早舍入。
+
+</div>
+
+<div class="lesson-check" markdown="1">
 
 ### 带支架尝试 {#l22-scaffold}
 
@@ -53,6 +72,10 @@ $v=10\,\mathrm{m\,s^{-1}}$、$s=21$ 米。梯形面积为 $(4+10)3/2=21$ 米，�
 
 </details>
 
+</div>
+
+<div class="lesson-check" markdown="1">
+
 ### 独立任务 {#l22-independent}
 
 **Question:** A continuous v–t graph consists of straight segments joining $(0,0),(4,8),(7,8),(10,-4)$, with time in seconds and velocity in metres per second. Sketch it, determine each acceleration, and find displacement, distance and average speed over 10 s.
@@ -69,11 +92,19 @@ $v=10\,\mathrm{m\,s^{-1}}$、$s=21$ 米。梯形面积为 $(4+10)3/2=21$ 米，�
 
 三个开时间区间内加速度分别为 $2,0,-4\,\mathrm{m\,s^{-2}}$。$t=9$ 秒速度再次为零。有向面积给位移 $16+24+8-2=46$ 米，路程为 $16+24+8+2=50$ 米，因此平均速率为 $5\,\mathrm{m\,s^{-1}}$。理想化接点处斜率突变，不指定唯一瞬时加速度。
 
+![核对图：三段速度线通过题目四点，在 9 秒穿过横轴；横轴下三角形对位移作负贡献，对路程作正贡献。](/alevel/as-mathematics/assets/motion-check.svg)
+
 </details>
+
+</div>
 
 ### 诊断与修正 {#l22-diagnosis}
 
 负速度表示沿所选正方向的反向运动，不是负路程。两端速率的算术平均不是通用平均速率公式，尤其不能跨折返或多阶段机械使用。
+
+回看[有向面积与方向](#l22-concept)，再[重试含转向的运动](#l22-retry)。
+
+<div class="lesson-check" markdown="1">
 
 ### 再尝试 {#l22-retry}
 
@@ -93,13 +124,20 @@ $v=10\,\mathrm{m\,s^{-1}}$、$s=21$ 米。梯形面积为 $(4+10)3/2=21$ 米，�
 
 </details>
 
+</div>
+
 ## 学完之后 {#next-step}
 
 收起解答，检查自己能否独立完成本课各组的再尝试，并解释方法与适用条件。仍有困难时回看对应示范；完成后继续下一课。
 
 [上一课：二项分布](/zh/alevel/as-mathematics/binomial/) · [课程目录](/zh/alevel/as-mathematics/#learning-route) · [下一课：变加速直线运动](/zh/alevel/as-mathematics/variable-acceleration/)
 
+学完这条路线后，做[综合题](/zh/alevel/as-mathematics/#mixed-mechanics)。在之后一次学习中，关掉解答完成[回顾题](/zh/alevel/as-mathematics/#later-mechanics)。
+
 ## 来源与范围 {#sources}
+
+<details class="lesson-notes" markdown="1">
+<summary>查看范围与评分材料</summary>
 
 按[当前 9660 官方大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf)组织。配套评分材料用于核对作答证据；本页题目全部另行自拟，不能称为官方原题或官方评分标准。
 
@@ -108,3 +146,5 @@ Specification §3.2 M1.1; MA02 January 2025 Q10 motion-graph evidence, MS pp17�
 [MA01 2025 年 1 月原卷](/assets/pdf/fx-cg50/references/oxfordaqa-ma01-2025-january-question-paper.pdf) · [配套 MS](/assets/pdf/fx-cg50/references/oxfordaqa-ma01-2025-january-mark-scheme.pdf) · [MA02 2025 年 1 月原卷](/assets/pdf/fx-cg50/references/oxfordaqa-ma02-2025-january-question-paper.pdf) · [配套 MS](/assets/pdf/fx-cg50/references/oxfordaqa-ma02-2025-january-mark-scheme.pdf)
 
 完成标准是能独立解释方法与检查条件，不是看完解答。未经过学生试用，不据此宣称学习效果已验证。
+
+</details>

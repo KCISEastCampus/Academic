@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 580" role="img" aria-labelledby="title desc">
+  <title id="title">Separate force diagrams for the car and trailer</title>
+  <desc id="desc">The car has 1800 newtons forward, 400 newtons resistance backwards and 680 newtons towbar force backwards. The trailer has 680 newtons towbar force forward and 200 newtons resistance backwards. Each has weight down and an equal road reaction up. Forward is right, and the acceleration is 1.2 metres per second squared.</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#334155"/></marker></defs>
+  <rect width="480" height="580" fill="#fff"/>
+  <g fill="#eff6ff" stroke="#334155" stroke-width="2"><rect x="160" y="100" width="155" height="70" rx="5"/><rect x="160" y="365" width="155" height="70" rx="5"/></g>
+  <g fill="none" stroke="#334155" stroke-width="2.5" marker-end="url(#arrow)">
+    <path d="M235 100V35"/><path d="M235 170V245"/><path d="M315 130H440"/><path d="M160 120H35"/><path d="M160 155H35"/>
+    <path d="M235 365V300"/><path d="M235 435V510"/><path d="M315 395H440"/><path d="M160 410H35"/><path d="M335 550H440"/>
+  </g>
+  <g fill="#0f172a" font-family="Arial,sans-serif" font-size="26">
+    <text x="210" y="128">Car</text><text x="190" y="157">600 kg</text><text x="252" y="60">R(car)</text><text x="252" y="222">600g N</text>
+    <text x="335" y="112">1800 N</text><text x="35" y="100">400 N</text><text x="35" y="188">680 N</text>
+    <text x="197" y="393">Trailer</text><text x="190" y="422">400 kg</text><text x="252" y="325">R(trailer)</text><text x="252" y="488">400g N</text>
+    <text x="335" y="377">680 N</text><text x="35" y="443">200 N</text><text x="22" y="555">Forward; a = 1.2 m s⁻²</text>
+  </g>
+</svg>
