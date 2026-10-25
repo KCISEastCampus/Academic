@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="680" viewBox="0 0 420 680" role="img" aria-labelledby="title desc">
+  <title id="title">Feedback: friction at a vertical wall</title>
+  <desc id="desc">Two separate particle force diagrams. In case a, the pressing force is 100 newtons to the right, wall reaction 100 newtons to the left, weight 40 newtons down, friction 40 newtons up. In case b, the horizontal forces remain the same, an extra 60 newtons acts up, and friction is 20 newtons down. Arrow lengths are not to scale.</desc>
+  <defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7Z" fill="#172033"/></marker></defs>
+  <rect width="420" height="680" rx="8" fill="white"/>
+  <g stroke="#8b98a6" fill="none" stroke-width="2">
+    <path d="M223 55V300M223 390V640"/>
+    <path d="M223 70l15-10M223 110l15-10M223 150l15-10M223 190l15-10M223 230l15-10M223 270l15-10M223 405l15-10M223 445l15-10M223 485l15-10M223 525l15-10M223 565l15-10M223 605l15-10"/>
+    <path d="M25 338H395" stroke="#d5dbe2"/>
+  </g>
+  <g fill="#d9eee5" stroke="#8b98a6"><circle cx="210" cy="180" r="13"/><circle cx="210" cy="510" r="13"/></g>
+  <g fill="none" stroke="#172033" stroke-width="2.5" marker-end="url(#arrow)">
+    <path d="M210 180H340"/><path d="M210 180H70"/>
+    <path d="M210 180V75"/><path d="M210 180V285"/>
+    <path d="M210 510H340"/><path d="M210 510H70"/>
+    <path d="M210 510V405"/><path d="M220 518V615"/><path d="M200 518V590"/>
+  </g>
+  <g fill="#172033" font-family="Arial, sans-serif" font-size="22">
+    <text x="25" y="35">(a)</text><text x="25" y="368">(b)</text>
+    <text x="57" y="165">R = 100 N</text><text x="268" y="210">P = 100 N</text>
+    <text x="63" y="85">F = 40 N</text><text x="60" y="285">W = 40 N</text>
+    <text x="57" y="495">R = 100 N</text><text x="268" y="540">P = 100 N</text>
+    <text x="65" y="415">U = 60 N</text><text x="42" y="580">F = 20 N</text><text x="60" y="635">W = 40 N</text>
+  </g>
+</svg>

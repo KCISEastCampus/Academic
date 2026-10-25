@@ -1,0 +1,9 @@
+language,width,theme,http_status,old_ids_preserved,examples,tasks,default_closed,keyboard_help,page_overflow_px,math_errors,script_errors
+en,1365,light,200,24,8,14,true,true,0,0,0
+en,1365,dark,200,24,8,14,true,true,0,0,0
+en,390,light,200,24,8,14,true,true,0,0,0
+en,390,dark,200,24,8,14,true,true,0,0,0
+zh,1365,light,200,24,8,14,true,true,0,0,0
+zh,1365,dark,200,24,8,14,true,true,0,0,0
+zh,390,light,200,24,8,14,true,true,0,0,0
+zh,390,dark,200,24,8,14,true,true,0,0,0
