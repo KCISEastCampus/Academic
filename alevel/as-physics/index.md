@@ -11,14 +11,40 @@ study_page: true
 
 <h2 id="start-learning">Start learning</h2>
 
-1. **[Measurements and Uncertainties](/alevel/as-physics/measurements-and-uncertainties/)** — Judge measurement quality, combine uncertainties and use error bars to constrain a line.
-2. **[Vectors and Moments](/alevel/as-physics/vectors-and-moments/)** — Resolve vectors, check force and moment equilibrium, distinguish couples and test support conditions.
-3. **[Straight-line Motion and Uniform Acceleration](/alevel/as-physics/straight-line-motion/)** — Connect motion graphs, choose constant-acceleration models and analyse freefall data for RP1.
-4. **[Projectile Motion](/alevel/as-physics/projectile-motion/)** — Connect two motion components through time, choose a target event and test the no-drag model.
+This route covers OxfordAQA 9630 AS Unit 1 (3.1–3.3) and Unit 2 (3.4–3.5), with 19 topics, two mixed reviews and RP1–5 preparation, decisions and data tasks. Follow prerequisite order; open hints and answers separately.
 
-Try a short task, then work through explanations and examples. Open hints and solutions separately; finish with independent practice, diagnosis and a retry.
+<h3 id="unit-1-learning">Unit 1 learning route</h3>
 
-Follow these four learning pages in order. Other topics remain reference notes below, rather than a complete guided course. For revision, start with [first-lesson practice](/alevel/as-physics/measurements-and-uncertainties/#independent-practice) or [second-lesson practice](/alevel/as-physics/vectors-and-moments/#independent-practice).
+1. **[Measurements and Uncertainties](/alevel/as-physics/measurements-and-uncertainties/)** — Judge units, scatter, bounds and estimates.
+2. **[Vectors and Moments](/alevel/as-physics/vectors-and-moments/)** — Resolve directions and test force/moment equilibrium.
+3. **[Straight-line Motion](/alevel/as-physics/straight-line-motion/)** — Connect graphs, signed motion and freefall RP1.
+4. **[Projectile Motion](/alevel/as-physics/projectile-motion/)** — Choose a target event and test force-model limits.
+5. **[Newton’s Laws](/alevel/as-physics/newtons-laws/)** — Choose an object and explain changing velocity.
+6. **[Momentum and Impulse](/alevel/as-physics/momentum-and-impulse/)** — Set a system boundary and read force–time evidence.
+7. **[Work, Energy and Power](/alevel/as-physics/work-energy-power/)** — Build signed energy budgets and efficiency checks.
+8. **[Materials and Young Modulus](/alevel/as-physics/materials-and-young-modulus/)** — Connect structure-independent material measures, curves and RP2.
+9. **[Atoms and Particles](/alevel/as-physics/atoms-and-particles/)** — Connect scattering, ions, specific charge and particle energy.
+10. **[Radiation and Safety](/alevel/as-physics/radiation-and-safety/)** — Correct backgrounds and compare decay/absorption evidence.
+11. **[Unit 1 Mixed Review](/alevel/as-physics/unit-1-review/)** — Select models later without method labels.
+
+<h3 id="unit-2-learning">Unit 2 learning route</h3>
+
+1. **[Charge, Current and Potential](/alevel/as-physics/charge-current-and-potential/)** — Separate charge flow from energy transfer.
+2. **[Resistance and Resistivity](/alevel/as-physics/resistance-and-resistivity/)** — Interpret characteristics, geometry and temperature.
+3. **[DC Circuits and Potential Dividers](/alevel/as-physics/dc-circuits-and-potential-dividers/)** — Analyse networks, sensors and loading.
+4. **[EMF and Internal Resistance](/alevel/as-physics/emf-and-internal-resistance/)** — Test energy per coulomb and RP3 graph models.
+5. **[Oscillations and Resonance](/alevel/as-physics/oscillations-and-resonance/)** — Use period/energy models and both RP4 apparatus.
+6. **[Progressive and Stationary Waves](/alevel/as-physics/progressive-and-stationary-waves/)** — Connect space/time records, harmonics and polarisation.
+7. **[Interference and Diffraction](/alevel/as-physics/interference-and-diffraction/)** — Select pattern models and both RP5 methods.
+8. **[Refraction and Optical Fibres](/alevel/as-physics/refraction-and-optical-fibres/)** — Test ray conditions and distinguish pulse limitations.
+9. **[Photons and Wave–Particle Duality](/alevel/as-physics/photons-and-wave-particle-duality/)** — Use levels, X rays, photoelectric data and diffraction.
+10. **[Unit 2 Mixed Review](/alevel/as-physics/unit-2-review/)** — Connect circuits, waves, quantum and experimental reasoning.
+
+<h3 id="required-practical-route">Required practical route and completion boundary</h3>
+
+[RP1 freefall](/alevel/as-physics/straight-line-motion/#raw-freefall) · [RP2 wire](/alevel/as-physics/materials-and-young-modulus/#wire-data) · [RP3 cell](/alevel/as-physics/emf-and-internal-resistance/#data-check) · [RP4 spring and pendulum](/alevel/as-physics/oscillations-and-resonance/#practical-check) · [RP5 double slit and grating](/alevel/as-physics/interference-and-diffraction/#practical-check)
+
+Web tasks do not certify apparatus work. Attempt independently, repair the specific error and retry changed conditions; use mixed reviews in a later session. English stems match across languages; Chinese explanations retain English output requirements. Older anchors below remain reference notes; use the route above for guided learning.
 
 <h2 id="reference-notes">Reference notes and resources</h2>
 

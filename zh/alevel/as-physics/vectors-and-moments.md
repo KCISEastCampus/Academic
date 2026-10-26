@@ -9,6 +9,7 @@ translation_of: /alevel/as-physics/vectors-and-moments/
 permalink: /zh/alevel/as-physics/vectors-and-moments/
 toc_headings: h2, h3
 study_page: true
+reading_layout: true
 ---
 
 <h2 id="start-here">合力为零，为什么仍可能转动？</h2>
@@ -50,6 +51,8 @@ Two equal parallel forces act in opposite directions on a rigid board, along dif
 
 <h2 id="components">先定义坐标轴和角度，再分解</h2>
 
+重力是有方向的力向量，质量是标量。
+
 标量只有大小，向量具有大小和方向。速率、路程、质量是标量；速度、位移、加速度、力是向量。分量只是同一个向量在选定轴上的表示，不是额外的相互作用力。
 
 取向东为x、向北为y。角θ从正x轴逆时针量起时：
@@ -57,6 +60,8 @@ Two equal parallel forces act in opposite directions on a rigid board, along dif
 $$F_x=F\cos\theta,\qquad F_y=F\sin\theta.$$
 
 与所标角相邻的分量用余弦。若角从竖直方向量起，就要重新判断邻边，不能死记“水平永远用余弦”。各象限还要带方向符号。
+
+<div class="worked-example" markdown="1">
 
 <img src="/assets/img/physics-as-components.svg" alt="东、北坐标轴上的向量示意：10 N箭头指向东偏北30度。虚线直角三角形标出向东分量Fx和向北分量Fy，没有给出分量数值；角从水平轴量起。" width="760" height="430">
 
@@ -71,6 +76,8 @@ $$F_x=10\cos30^\circ=8.66\,\mathrm{N},\qquad F_y=10\sin30^\circ=5.00\,\mathrm{N}
 $$R=\sqrt{R_x^2+R_y^2}.$$
 
 方向要结合图和分量正负判断；单用反正切计算器结果可能选错象限。合向量为零时，没有确定方向。
+
+</div>
 
 <h3 id="exam-components">改变角度的参照方向</h3>
 
@@ -108,11 +115,15 @@ $$\sum F_x=0,\qquad \sum F_y=0.$$
 
 二力须等大反向；三力不要求等大，也不要求两两120°，只要求向量和为零。静止和匀速直线运动都可满足平动平衡；扩展物体还须检查力矩。
 
+<div class="worked-example" markdown="1">
+
 **节点示范：**两条理想轻绳在静止小节点处支持向下40 N负载。一绳水平向左，另一绳向右上方、与水平成30°。对节点：
 
 $$T\sin30^\circ=40,\qquad H=T\cos30^\circ.$$
 
 所以 $T=80\,\mathrm{N}$、$H=69.3\,\mathrm{N}$。绳沿自身方向拉，不能提供压推力。与负载平衡的是斜绳的竖直分量，不是斜张力的全部大小。
+
+</div>
 
 <h3 id="complete-equilibrium">三个方向，不预设等大</h3>
 
@@ -150,6 +161,8 @@ $$d_{\perp}=r\sin\theta,\qquad M=Fr\sin\theta.$$
 
 <img src="/assets/img/physics-as-moment-arm.svg" alt="示意：水平杆从转轴O向右长0.40 m，右端20 N力与杆向上成30度。画出该力延长作用线及从O引出的垂线，垂直距离标为d，未给出数值。" width="760" height="430">
 
+<div class="worked-example" markdown="1">
+
 **几何示范：**施力点距O为0.40 m，力与杆成30°。
 
 $$d_{\perp}=0.40\sin30^\circ=0.20\,\mathrm{m},\qquad M=20\times0.20=4.0\,\mathrm{N\,m}.$$
@@ -157,6 +170,8 @@ $$d_{\perp}=0.40\sin30^\circ=0.20\,\mathrm{m},\qquad M=20\times0.20=4.0\,\mathrm
 方向为逆时针。也可以用垂直于杆的10 N分量乘0.40 m。只有力与杆垂直时，才可直接用完整力乘完整杆长。作用线经过O的力，不论多大，对O的力矩都为零。
 
 刚体平衡时，选择正负约定，同时要求合力矩及合力为零。对某个支点取矩，该支点未知力的力臂为零，可从这条力矩方程中消去。
+
+</div>
 
 <h2 id="couples">力偶：合力为零仍有转动效果</h2>
 
@@ -196,11 +211,15 @@ State the two conditions for a body to be in equilibrium.
 
 均匀、规则实体的质心在几何中心。非均匀物体不能直接取中点，须使用题给位置或质量模型。在均匀重力场中，本页的受力与力矩计算可把重力等效作用在质心。
 
+<div class="worked-example" markdown="1">
+
 **对称支承示范——改编自PH01 June 2024 Q06.2。** 质量4.8 kg的均匀滑板承载重力360 N的儿童，儿童质心在滑板中点正上方。两个支承点到中点等距，整体静止。
 
 $$R_A+R_B=360+4.8\times9.81=407.088\,\mathrm{N}.$$
 
 由对称距离、集中在中点的载荷及力矩平衡，得到两反力相等，每个为203.544 N，约204 N。重力计算保留到最后再取近似；已核对题源接受204 N，或取两位有效数字的200 N。反力相等来自几何与载荷条件，不能只用“加速度为零”推出。
+
+</div>
 
 <h2 id="independent-practice">同时使用力与力矩检查</h2>
 
@@ -336,6 +355,32 @@ A 20 N force acts at the end of a 0.40 m rod pivoted at its other end. Compare t
 
 </details>
 
+<h2 id="moment-transfer">比较相同力矩的不同效应</h2>
+
+<div class="lesson-check" markdown="1">
+<!-- task:moment-transfer-check -->
+A force of 18 N acts at the end of a 0.50 m rod at 30° to the rod. Take moments about the rod’s other end. Separately, two equal opposite parallel forces of 15 N act on a plate along lines 0.30 m apart. Compare their moment magnitudes. Which arrangement has zero resultant applied force? Explain why equal moments do not establish the same translational effect.
+<!-- /task:moment-transfer-check -->
+<details markdown="1"><summary>提示</summary>
+分别用垂直力臂和两平行作用线的垂直间距。
+</details>
+<details markdown="1"><summary>解答与修复</summary>
+单力矩 18(0.50)sin30° = 4.5 N m；力偶矩 15(0.30) = 4.5 N m。只有所列力偶合力为零；单力本身合力 18 N，若要分析整根杆还须另给支承力。相等力矩不意味着相同平动效应。
+</details>
+</div>
+
+<div class="lesson-check" markdown="1">
+<!-- task:retry-quadrant-contact -->
+Retry: a 10 N vector points 30° north of west. Find east/north components. A 40 N weight is supported at a joint by a cord 60° from the vertical and a horizontal cord: find both tensions. Finally, an ordinary unfastened support calculation gives a reaction of −8 N when upwards was positive. Can that contact state exist?
+<!-- /task:retry-quadrant-contact -->
+<details markdown="1"><summary>提示</summary>
+先画象限；斜绳角从竖直量。
+</details>
+<details markdown="1"><summary>解答与修复</summary>
+东分量 −10cos30° = −8.66 N，北分量 +5.00 N。斜绳 Tcos60° = 40，T = 80 N；水平绳 Tsin60° = 69.3 N。普通接触不能向下拉物体，−8 N 说明所假定接触平衡状态不成立，须改变约束／支承模型。质量是标量，重力是有方向的力向量。
+</details>
+</div>
+
 <h2 id="sources-and-next">范围与下一步</h2>
 
 范围：OxfordAQA International AS Physics 9630，PH01 3.2.1–3.2.2。官方Q06.1、改编Q08.1与对称支承示范参考PH01 June 2024，已核对配套评分标准。其他任务均为自拟，不赋官方分值；图示与数值是教学构造。
@@ -343,4 +388,3 @@ A 20 N force acts at the end of a 0.40 m rod pivoted at its other end. Compare t
 用[官方大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf)核对范围。完成这些任务不代表完成实体实验或整个力学单元。
 
 [上一课：测量与不确定度](/zh/alevel/as-physics/measurements-and-uncertainties/) · [返回AS物理](/zh/alevel/as-physics/) · [下一课：直线运动与匀加速](/zh/alevel/as-physics/straight-line-motion/)。抛体运动接续本路线后课。
-

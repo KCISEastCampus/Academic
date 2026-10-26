@@ -118,8 +118,8 @@ alevel:
     stage: AS
     name: AS Physics
     name_zh: AS 物理
-    description: Units 1–2 notes · English
-    description_zh: 中文目录 → Unit 1–2 英文笔记
+    description: Complete AS learning route · RP1–5 · mixed reviews
+    description_zh: AS 完整学习路线 · RP1–5 · 综合复习
     icon: "📗"
     path: /alevel/as-physics/
   - id: economics
