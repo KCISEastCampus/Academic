@@ -51,7 +51,7 @@ for (const prefix of ['', 'zh/']) {
   for (const entry of [prefix, prefix + 'alevel/']) {
     const html = read(entry);
     for (const [family,count] of [['mathematics',3],['further-mathematics',2]]) {
-      const section = html.match(new RegExp('<section aria-labelledby="' + family + '-units">([\\s\\S]*?)</section>'))[1];
+      const section = html.match(new RegExp('<section aria-labelledby="' + family + '-units"[^>]*>([\\s\\S]*?)</section>'))[1];
       assert.equal((section.match(/class="modern-subject-card"/g)||[]).length,count);
       const cardPaths = [...section.matchAll(/href="([^"]+)" class="modern-subject-card"/g)].map(m=>m[1].replace(/\/?$/, '/'));
       const familyRoot = '/' + prefix + 'alevel/a2-' + family + '/';
@@ -59,6 +59,7 @@ for (const prefix of ['', 'zh/']) {
       if (family === 'mathematics') expectedPaths.push(familyRoot + 'mechanics/');
       assert.deepEqual(cardPaths, expectedPaths, 'parallel units in course-code order');
       assert(section.includes('href="/' + prefix + 'alevel/a2-' + family + '-overview/"'));
+      assert(section.includes('class="course-family-link"'), 'separate subject heading and all-units action');
     }
   }
 }

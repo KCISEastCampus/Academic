@@ -1,8 +1,9 @@
 {% for family in site.data.math_families %}
-<section aria-labelledby="{{ family.id }}-units">
-  <{{ include.heading }} id="{{ family.id }}-units" class="course-group-title">
-    <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}{{ family.path }}">{% if page.lang == 'zh-CN' %}{{ family.name_zh }}{% else %}{{ family.name }}{% endif %}</a>
-  </{{ include.heading }}>
+<section aria-labelledby="{{ family.id }}-units" class="math-course-group">
+  <div class="course-family-header">
+    <{{ include.heading }} id="{{ family.id }}-units" class="course-group-title course-family-title">{% if page.lang == 'zh-CN' %}{{ family.name_zh }}{% else %}{{ family.name }}{% endif %}</{{ include.heading }}>
+    <a class="course-family-link" href="{% if page.lang == 'zh-CN' %}/zh{% endif %}{{ family.path }}" aria-label="{% if page.lang == 'zh-CN' %}{{ family.name_zh }}全部单元{% else %}All {{ family.name }} units{% endif %}">{% if page.lang == 'zh-CN' %}全部单元{% else %}All units{% endif %} <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+  </div>
   <div class="subjects-grid-modern">
     {% for subject in site.data.subjects.alevel %}
       {% if subject.math_family == family.id %}
@@ -12,4 +13,4 @@
   </div>
 </section>
 {% endfor %}
-<{{ include.heading }} class="course-group-title">{% if page.lang == 'zh-CN' %}其他 A2 学科{% else %}Other A2 subjects{% endif %}</{{ include.heading }}>
+<{{ include.heading }} class="course-group-title course-family-title">{% if page.lang == 'zh-CN' %}其他 A2 学科{% else %}Other A2 subjects{% endif %}</{{ include.heading }}>
