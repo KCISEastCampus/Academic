@@ -1,0 +1,10 @@
+- id: mathematics
+  name: A2 Mathematics
+  name_zh: A2 数学
+  path: /alevel/a2-mathematics-overview/
+  course_root: /alevel/a2-mathematics/
+- id: further-mathematics
+  name: A2 Further Mathematics
+  name_zh: A2 高等数学
+  path: /alevel/a2-further-mathematics-overview/
+  course_root: /alevel/a2-further-mathematics/

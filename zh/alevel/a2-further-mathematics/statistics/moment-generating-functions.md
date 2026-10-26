@@ -387,7 +387,7 @@ $$
 
 ## 下一步学什么？ {#next-step}
 
-返回 [FM04 学习路线](/zh/alevel/a2-further-mathematics/statistics/)。下一步计划推导连续变量，以及 Poisson、指数、正态分布的矩母函数，并解释各自的存在范围。这些课尚未制作。可以先回补[反常积分](/zh/alevel/as-further-mathematics/improper-integrals/#model)；它是先修回补，不能代替后续矩母函数课程。
+继续学习[连续与常用 MGF](/zh/alevel/a2-further-mathematics/statistics/standard-mgfs/)，从定义推导函数，并检查输入范围。若还不熟悉积到无穷时的极限，先回补[反常积分](/zh/alevel/as-further-mathematics/improper-integrals/#model)。也可以返回 [FM04 学习路线](/zh/alevel/a2-further-mathematics/statistics/)选择主题。
 
 <details markdown="1"><summary>来源与本页范围</summary>
 

@@ -49,7 +49,7 @@ $$
 M_X(t)=\int_{\text{support}}e^{tx}f_X(x)\,dx.
 $$
 
-We will derive continuous examples in a later lesson. Do not assume that every distribution has an MGF near zero.
+The [next lesson](/alevel/a2-further-mathematics/statistics/standard-mgfs/#continuous) derives continuous examples. Do not assume that every distribution has an MGF near zero.
 
 ## Why the derivatives give averages {#moments}
 
@@ -386,7 +386,7 @@ Both means are zero. The variances are $2$ for $P$ and $1$ for $Q$. Their possib
 
 ## What comes next? {#next-step}
 
-Return to the [FM04 route](/alevel/a2-further-mathematics/statistics/). The next planned step is deriving continuous MGFs and the Poisson, exponential and normal cases, with their existence ranges. Those lessons are not yet available. You can prepare by revisiting [improper integrals](/alevel/as-further-mathematics/improper-integrals/#model); this is prerequisite recovery, not a substitute for the future MGF lesson.
+Continue to [continuous and standard MGFs](/alevel/a2-further-mathematics/statistics/standard-mgfs/): derive the functions and check their existence ranges. If the infinite limit is unfamiliar, first revisit [improper integrals](/alevel/as-further-mathematics/improper-integrals/#model). Return to the [FM04 route](/alevel/a2-further-mathematics/statistics/) to choose another topic.
 
 <details markdown="1"><summary>Sources and scope</summary>
 

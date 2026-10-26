@@ -13,36 +13,59 @@ alevel:
     path: /alevel/fx-cg50/
   - id: a2mathematics
     stage: A2
+    math_family: mathematics
+    breadcrumb_name: A2 Pure Mathematics
+    breadcrumb_name_zh: A2 纯数学
     name: A2 Math - Pure
     name_zh: A2 数学 · 纯数学
     description: MA03 lessons and practice · English
     description_zh: MA03 学习页与练习 · 中文
     icon: "📕"
     path: /alevel/a2-mathematics/
-  - id: a2math_mechanics
-    stage: A2
-    name: A2 Math - Mechanics
-    name_zh: A2 数学 · 力学
-    description: MA05 lessons and practice · English
-    description_zh: MA05 学习页与练习 · 中文
-    icon: "📕"
-    path: /alevel/a2-mathematics/mechanics
   - id: a2math_statistics
     stage: A2
+    math_family: mathematics
+    breadcrumb_name: A2 Statistics
+    breadcrumb_name_zh: A2 统计学
     name: A2 Math - Statistics
     name_zh: A2 数学 · 统计学
     description: "MA04 statistics: seven bilingual lessons, practice and mixed review"
     description_zh: MA04 统计学 · 七课双语讲解、独立练习与综合回顾
     icon: "📕"
     path: /alevel/a2-mathematics/statistics
+  - id: a2math_mechanics
+    stage: A2
+    math_family: mathematics
+    breadcrumb_name: A2 Mechanics
+    breadcrumb_name_zh: A2 力学
+    name: A2 Math - Mechanics
+    name_zh: A2 数学 · 力学
+    description: MA05 lessons and practice · English
+    description_zh: MA05 学习页与练习 · 中文
+    icon: "📕"
+    path: /alevel/a2-mathematics/mechanics
   - id: a2furthermathematics
     stage: A2
+    math_family: further-mathematics
+    breadcrumb_name: A2 Further Pure Mathematics
+    breadcrumb_name_zh: A2 高等纯数学
     name: A2 Further Math - Pure
     name_zh: A2 高等数学 · 纯数学
     description: FP2 lessons and practice · English
     description_zh: FP2 学习页与练习 · 中文
     icon: "📕"
     path: /alevel/a2-further-mathematics/
+  - id: a2further_statistics
+    stage: A2
+    math_family: further-mathematics
+    breadcrumb_name: A2 Further Statistics
+    breadcrumb_name_zh: A2 高等统计
+    name: A2 Further Math - Statistics
+    name_zh: A2 高等数学 · 统计学
+    description: FM04 bilingual lessons, independent practice and mixed review
+    description_zh: FM04 双语学习、独立练习与综合回顾
+    icon: "📕"
+    path: /alevel/a2-further-mathematics/statistics/
   - id: a2physics
     stage: A2
     name: A2 Physics

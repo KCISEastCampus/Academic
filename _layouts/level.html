@@ -32,9 +32,11 @@ layout: none
     <section class="subjects-section">
       {% for group in course_groups %}
       <h2 id="{{ group | downcase }}-courses" class="course-group-title">{% if group == 'Tools' %}Casio fx-CG50{% else %}{{ group }}{% endif %}</h2>
+      {% if page.level == 'alevel' and group == 'A2' %}{% include math_course_groups.html heading='h3' %}{% endif %}
       <div class="subjects-grid-modern">
         {% for subject in site.data.subjects[page.level] %}
           {% if page.level == 'alevel' and subject.stage != group %}{% continue %}{% endif %}
+          {% if page.level == 'alevel' and group == 'A2' and subject.math_family %}{% continue %}{% endif %}
           {% include subject_card.html subject=subject accent=level_accent %}
         {% endfor %}
       </div>

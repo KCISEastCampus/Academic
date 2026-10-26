@@ -1,6 +1,6 @@
 {%- assign search_url = page.translation_of | default: page.url | append: '/' | replace: '//', '/' -%}
 {%- assign search_subjects = site.data.subjects.alevel | concat: site.data.subjects.igcse -%}
-{%- assign search_section = '' -%}
+{%- assign search_section = page.search_section | default: '' -%}
 {%- assign search_match_length = 0 -%}
 {%- for subject in search_subjects -%}
   {%- assign subject_path = subject.path | append: '/' | replace: '//', '/' -%}

@@ -12,6 +12,9 @@ lang: zh-CN
 translation_of: /alevel/a2-mathematics/statistics/
 ---
 
+[全部 A2 数学单元](/zh/alevel/a2-mathematics-overview/)
+{:.lesson-meta}
+
 ## 从这里开始 {#start-learning}
 
 一次发生几件事、下一次要等多久、样本能不能支持某个说法——这些问题需要不同的统计模型。本课程先解释问题中的量是什么，再用概率、估计与检验作判断。
