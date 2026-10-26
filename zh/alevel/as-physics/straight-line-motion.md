@@ -9,6 +9,7 @@ translation_of: /alevel/as-physics/straight-line-motion/
 permalink: /zh/alevel/as-physics/straight-line-motion/
 toc_headings: h2, h3
 study_page: true
+reading_layout: true
 ---
 
 <h2 id="start-here">同一段运动的三种描述</h2>
@@ -106,11 +107,15 @@ $$v^2=u^2+2as$$
 
 这些量必须对应同一时间段、同一正方向。平方会丢失 v 的符号，需要根据运动情境选取物理上适当的方向。对于一般曲线速度图，不能把两端速度的算术平均值当作平均速度。
 
+<div class="worked-example" markdown="1">
+
 **方法选择示范：**小车以 +4.0 m/s 运动，在 +12 m 的位移内保持 +2.0 m/s² 加速度。未给时间，可先消去它：
 
 $$v^2=4.0^2+2\times2.0\times12=64,\qquad v=+8.0\,\mathrm{m\,s^{-1}}$$
 
 取正号是因为加速度与初速度同向，过程中不会反向。核查可得经过 2.0 s，平均速度为 +6.0 m/s。
+
+</div>
 
 <h3 id="suvat-choice">选出可以使用恒加速度的区间</h3>
 
@@ -182,7 +187,7 @@ $$9.8=14.7t-4.9t^2,\qquad t^2-3t+2=0,\qquad t=1.0\,\mathrm{s}\ \text{or}\ 2.0\,\
 
 下图**改编自 OxfordAQA International AS Physics 9630，PH01 June 2024 Q04.1**，已核对原图与配套评分标准。重绘图改变了时间、速度和运动起始时刻，因此答案不沿用原卷数值，也不套用原题分值。
 
-<img src="/assets/img/physics-as-kinematics.svg" alt="Adapted idealised velocity–time graph. Time is in milliseconds and velocity in metres per second. Straight segments join (0,0), (4,3), (10,3), (12,0). The object moves in the positive direction from 0 to 12 ms." width="760" height="430">
+<img src="/assets/img/physics-as-kinematics.svg" alt="改编的理想速度—时间图：时间为毫秒，速度为 m/s；直线连接 (0,0)、(4,3)、(10,3)、(12,0)，0–12 ms 内物体沿正方向运动。" width="760" height="430">
 
 <h3 id="exam-average">使用整幅图，而非只看端点</h3>
 
@@ -236,7 +241,7 @@ $$s=\frac12gt^2$$
 
 <!-- /record:freefall-record -->
 
-<img src="/assets/img/physics-as-freefall.svg" alt="Constructed freefall graph with squared time in seconds squared horizontally and distance in metres vertically. Five supplied records are plotted with a straight model line; the gradient and value of g are left for the student to determine." width="760" height="430">
+<img src="/assets/img/physics-as-freefall.svg" alt="构造自由落体图：横轴时间平方 s²，纵轴距离 m；五组数据及直线模型已画出，斜率和 g 留待学生求出。" width="760" height="430">
 
 <h3 id="freefall-analysis">选择图像，诊断偏差</h3>
 
@@ -327,6 +332,71 @@ $$v=-6+2t,\qquad t_{\mathrm{turn}}=3.0\,\mathrm{s},\qquad s=-6\times5+\frac12\ti
 速度图连接 (0,−6) 与 (5,+4)，在 3 s 过零。先向西走 9 m，再向东走 4 m，路程 13 m、位移 −5.0 m。末速度为 +4.0 m/s，末速率为 4.0 m/s。正加速度先使速率减小，转向后又使速率增大。
 
 </details>
+
+<h2 id="curved-graphs">曲线、切线与接触时间</h2>
+
+图的斜率需要明确区间：割线给平均速度，某点切线给瞬时速度。曲线下面积可用窄梯形估计，但采样值不唯一决定中间曲线。
+
+![位移随时间的曲线 s=t²，标出给定点及 t=2 s 的切线；另一个独立速度记录有相同数值但不同单位。](/assets/images/physics-as-curved-motion.svg){: width="800" height="380" }
+
+<div class="lesson-check" markdown="1">
+<!-- task:curved-graph-check -->
+A curved displacement–time graph contains (0 s, 0 m), (1 s, 1 m), (2 s, 4 m), (3 s, 9 m). Its drawn tangent at 2 s passes through (1 s, 0 m) and (3 s, 8 m). Find average velocity over 0–3 s and instantaneous velocity at 2 s. Explain the different lines used. Separately, velocities at t = 0, 1, 2, 3 s are 0, 1, 4, 9 m/s, joined by a smooth curve. Estimate displacement using 1 s trapezia and explain the estimate's limitation.
+<!-- /task:curved-graph-check -->
+<details markdown="1"><summary>提示</summary>
+平均速度用首末位移差，瞬时速度用切线。
+</details>
+<details markdown="1"><summary>解答与修复</summary>
+平均速度 9/3 = 3.0 m/s；切线速度 (8−0)/(3−1) = 4.0 m/s。独立速度记录的梯形估计为 (0+1)/2 + (1+4)/2 + (4+9)/2 = 9.5 m。给定样本没有确定曲线的精确面积，需更多采样或模型。
+</details>
+</div>
+
+<div class="lesson-check" markdown="1">
+<!-- task:bounce-graph-check -->
+A ball reaches a floor at −4.0 m/s and leaves at +3.0 m/s after 0.020 s of contact. Upwards is positive. After separation take g = 10 m/s² with negligible air resistance. Sketch velocity against time over contact and the next 0.30 s. Find average contact acceleration, distinguish subsequent acceleration, and mark the next highest point. Is a straight contact segment established by these data?
+<!-- /task:bounce-graph-check -->
+<details markdown="1"><summary>提示</summary>
+接触与离开后是两个阶段。
+</details>
+<details markdown="1"><summary>解答与修复</summary>
+接触平均加速度 [3−(−4)]/0.020 = +350 m/s²；离开后加速度 −10 m/s²。离开 0.30 s 后 v=0，到最高点。接触图只知端点，直线必须标示意，不能断言接触加速度恒定。
+</details>
+</div>
+<h2 id="raw-freefall">RP1：先处理原始读数</h2>
+
+自由释放、初速可忽略时 s = ½gt²。可画 s 对 t²，斜率给 g/2。误差棒若两个轴都有，要检查线是否穿过每个允许矩形；不强迫过原点能暴露固定距离偏移。计时重复散布不包含所有校准误差。
+
+<div class="lesson-check" markdown="1">
+<!-- task:raw-freefall-check -->
+Constructed freefall raw records are:
+
+| Distance / m, each ±0.001 m | Repeated times / s |
+| --- | --- |
+| 0.196 | 0.198, 0.200, 0.202 |
+| 0.441 | 0.298, 0.300, 0.302 |
+| 0.784 | 0.398, 0.400, 0.402 |
+
+Choose graph axes, process the means, and estimate g. Adopt half the repeat range as the timing-spread contribution: calculate the first T² uncertainty and its single-height g uncertainty. Construct error bars, compare a free-intercept line with a forced-origin line, and explain why the single-height bound is not the uncertainty of the full fit. Name omitted calibration/timing effects.
+<!-- /task:raw-freefall-check -->
+<details markdown="1"><summary>提示</summary>
+先平均，再平方。平方量的相对不确定度近似加倍。
+</details>
+<details markdown="1"><summary>解答与修复</summary>
+均值 0.200、0.300、0.400 s，t² = 0.0400、0.0900、0.1600 s²，s 对 t² 斜率 4.90 m/s²，g = 9.80 m/s²，中心线截距为零。半极差 ±0.002 s，首个 Δ(t²) ≈ 2(0.200)(0.002) = 0.0008 s²。首高度的 Δg/g ≈ 0.001/0.196 + 2(0.002/0.200)，Δg ≈ 0.246 m/s²。它不是全图拟合误差。用首末矩形的极端角点估线：斜率约 4.787–5.017 m/s²，g 约 9.57–10.03 m/s²，两条也穿过中间矩形（采用上述一阶 t² 界限）；应逐点检查。计时零偏、释放触发和距离参照等尚须独立校验。
+</details>
+</div>
+
+<div class="lesson-check" markdown="1">
+<!-- task:retry-freefall-bias -->
+Retry: a distance scale overestimates every true fall distance by a fixed 0.020 m, while times are correct. Predict the effect on a free-intercept distance-versus-time-squared line, and explain the effect of using g = 2s/t² at one height or forcing the graph through zero. Suggest an independent check of the distance definition.
+<!-- /task:retry-freefall-bias -->
+<details markdown="1"><summary>提示</summary>
+写出 recorded s = true s + 0.020。
+</details>
+<details markdown="1"><summary>解答与修复</summary>
+自由截距图斜率不变，截距 +0.020 m。单高度 g = 2s/t² 偏高；强迫过原点会把偏移挤进斜率，通常使 g 偏高。独立检查释放点到探测点的实际参考位置，使用另一把经校准的尺或重定义标记后比较；只重复计时不修正距离。
+</details>
+</div>
 
 <h2 id="sources-and-next">范围与下一步</h2>
 

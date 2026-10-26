@@ -9,6 +9,7 @@ translation_of: /alevel/as-physics/projectile-motion/
 permalink: /zh/alevel/as-physics/projectile-motion/
 toc_headings: h2, h3
 study_page: true
+reading_layout: true
 ---
 
 <h2 id="start-here">两个方向，共用一个时间</h2>
@@ -68,11 +69,15 @@ $$v=\sqrt{v_x^2+v_y^2}$$
 
 最高点只有竖直速度为零。对水平速度非零的斜抛，球仍沿水平方向运动，并始终向下加速。轨迹切线沿速度方向，加速度通常不沿该切线。
 
+<div class="worked-example" markdown="1">
+
 **水平射出示范。**质点以 6.0 m/s 离开水平边缘，落地平面低于起点 4.905 m。取 g = 9.81 m/s²，忽略阻力。水平射出表示初始竖直速度为零，并非重力为零：
 
 $$-4.905=-\frac12\times9.81t^2,\qquad t=1.00\,\mathrm{s},\qquad x=6.0\times1.00=6.0\,\mathrm{m}$$
 
 飞行从释放时开始，因此舍去负时间根。落地时速度分量为 +6.0 m/s、−9.81 m/s。竖直分量来自下落，水平分量则不变。同一高度下增大水平发射速度，会增加 x，而不改变这一落地时间。
+
+</div>
 
 <h3 id="horizontal-transfer">改变给定量与求问方向</h3>
 
@@ -116,7 +121,7 @@ $$t=\sqrt{\frac{2\times19.62}{9.81}}=2.00\,\mathrm{s},\qquad u_x=\frac{16.0}{2.0
 
 <!-- /record:projectile-record -->
 
-<img src="/assets/img/physics-as-projectile-path.svg" alt="Constructed no-drag trajectory for initial components 8 m/s horizontally and 6 m/s upwards with g 10 m/s squared. Markers at 0, 0.3, 0.6, 0.9 and 1.2 seconds match the supplied x and y record. The horizontal launch plane is y zero; arrows for the requested velocity graphs are not supplied." width="760" height="430">
+<img src="/assets/img/physics-as-projectile-path.svg" alt="无阻力构造轨迹：初始水平分量 8 m/s、竖直向上 6 m/s，g = 10 m/s²；0、0.3、0.6、0.9、1.2 s 标记与给定 x、y 记录对应，发射平面为 y=0；未给出待作答速度图。" width="760" height="430">
 
 <h3 id="component-graphs">根据模型建立速度分量图</h3>
 
@@ -140,11 +145,16 @@ Using the constructed record, sketch v_x–time and v_y–time graphs for 0 to 1
 
 水平速度图为 +8.0 m/s 的水平直线；竖直速度图从 +6.0 m/s 线性降到 −6.0 m/s，在 0.6 s 过零。此时速度水平向右，为 +8.0 m/s，速率为 8.0 m/s；加速度仍向下。
 
-<img src="/assets/img/physics-as-projectile-components.svg" alt="Solution graphs for the constructed flight: horizontal velocity stays at positive 8 m/s; vertical velocity decreases linearly from positive 6 to negative 6 m/s over 1.2 s and is zero at 0.6 s. Solid labels distinguish the two components without relying on colour." width="760" height="430">
+<img src="/assets/img/physics-as-projectile-components.svg" alt="构造飞行的解答图：水平速度恒为 +8 m/s；竖直速度在 1.2 s 内从 +6 线性减至 −6 m/s，0.6 s 为零。文字标签区分两分量，不只靠颜色。" width="760" height="430">
 
 相同时间内水平距离相等，只说明水平速度恒定。竖直分量变化，因此总速率在接近最高点时减小、过最高点后增大。加速度分量图分别是零与 −10 m/s² 的水平线。速度图面积给出水平位移 +9.6 m，竖直净位移为零。
 
 </details>
+
+<h3 id="quadratic-recovery">代数先修：保留物理时间</h3>
+
+目标事件可能给出 at² + bt + c = 0。a ≠ 0 时 $t=(-b\pm\sqrt{b^2-4ac})/(2a)$；先检查实根存在，再用 t ≥ 0、上升／下降、着地前等条件选根。平方根里的判别式为负说明所给模型下达不到该事件。这里不需要微积分。
+
 
 <h2 id="exam-football">选择物理事件，而非只解二次方程</h2>
 
@@ -318,8 +328,33 @@ $$R_{30}=R_{60}=\frac{20^2\sin60^\circ}{10}=34.64\ldots\,\mathrm{m}$$
 
 </details>
 
+<h2 id="friction-and-lift-check">按相互作用选方向</h2>
+
+<div class="lesson-check" markdown="1">
+<!-- task:friction-lift-task -->
+A car moves right at steady speed on a level road in still air. Its powered wheels drive it forwards. Show road-friction direction on those driven wheels and air-drag direction on the car; name each interaction partner. A wing moves down and right through still air. Sketch a possible lift direction perpendicular to its relative motion with an upward component. Explain which weight-only projectile assumptions fail if this lift is appreciable.
+<!-- /task:friction-lift-task -->
+<details markdown="1"><summary>提示</summary>
+摩擦由轮与路接触决定；升力垂直于相对运动。
+</details>
+<details markdown="1"><summary>解答与修复</summary>
+驱动轮所受道路摩擦向前（右），空气阻力向后（左），相互作用对象分别为道路和空气。右下运动的翼，符合要求的升力指右上。显著升力改变合力，a_x = 0 和 a_y = −g 一般都不能保留。
+</details>
+</div>
+
+<div class="lesson-check" markdown="1">
+<!-- task:retry-friction-lift -->
+Retry: the car is braking while still moving right. Give the road-friction direction on its braking wheels. A wing now moves horizontally right through still air: give the lift direction with an upward component. Explain why neither friction nor lift should automatically be drawn opposite the object's full velocity.
+<!-- /task:retry-friction-lift -->
+<details markdown="1"><summary>提示</summary>
+仍向右运动不代表摩擦一定向右。
+</details>
+<details markdown="1"><summary>解答与修复</summary>
+制动轮所受道路摩擦向后（左）；水平右行翼的所述升力向上。摩擦的方向取决于接触相对滑动趋势，不由物体整体速度单独决定；升力垂直于相对空气运动，不与它反向。
+</details>
+</div>
 <h2 id="sources-and-next">范围与下一步</h2>
 
 范围：OxfordAQA International AS Physics 9630，PH01 的 3.2.4，包含匀强重力场中的独立分运动，以及摩擦、升力、阻力、终端速率和车辆极限速率的定性理解。足球任务改编自 PH01 June 2024 Q08.1–08.6，已核对配套评分标准。受力模型任务通过自拟情境扩展相关概念，其他任务与记录均为自拟，不套用虚构官方分值。范围依据[官方大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf)。
 
-[上一课：直线运动](/zh/alevel/as-physics/straight-line-motion/) · [返回 AS 物理](/zh/alevel/as-physics/) · [现有动力学与动量笔记](/zh/alevel/as-physics/#24-newtons-laws--momentum)。动力学、能量和材料等后续学习页仍待制作，不把四课称为完整 AS 课程。
+[上一课：直线运动](/zh/alevel/as-physics/straight-line-motion/) · [下一课：牛顿定律](/zh/alevel/as-physics/newtons-laws/) · [返回 AS 物理](/zh/alevel/as-physics/)。

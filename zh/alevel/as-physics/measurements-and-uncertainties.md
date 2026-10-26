@@ -9,6 +9,7 @@ translation_of: /alevel/as-physics/measurements-and-uncertainties/
 permalink: /zh/alevel/as-physics/measurements-and-uncertainties/
 toc_headings: h2, h3
 study_page: true
+reading_layout: true
 ---
 
 <h2 id="start-here">读数很集中，结果就准确吗？</h2>
@@ -83,6 +84,8 @@ $$1\,\mathrm{kWh}=1000\,\mathrm{W}\times3600\,\mathrm{s}=3.6\times10^6\,\mathrm{
 
 零点示值为正，表示仪器读得偏高，应减去测得的零点示值，不能靠改变不确定度的正负来修正。
 
+<div class="worked-example" markdown="1">
+
 **示范例题——构造读数。** 螺旋测微器示值为 $2.38\pm0.01\,\mathrm{mm}$，独立测得的零点示值为 $+0.04\pm0.01\,\mathrm{mm}$。把题给不确定度视为保守界限。
 
 $$d=2.38-0.04=2.34\,\mathrm{mm}$$
@@ -94,6 +97,8 @@ $$\Delta d=0.01+0.01=0.02\,\mathrm{mm}$$
 $$\text{fractional uncertainty}=\frac{0.02}{2.34}=0.00855,\qquad \text{percentage uncertainty}=0.855\%$$
 
 绝对、相对和百分比不确定度是描述同一结果的三种形式，不是三项独立来源。应说明界限包括哪些因素；增加物体读数次数不能平均掉共享的零点校准不确定度。
+
+</div>
 
 <h2 id="combining-uncertainties">根据测量模型选择合成规则</h2>
 
@@ -107,6 +112,8 @@ $$\text{fractional uncertainty}=\frac{0.02}{2.34}=0.00855,\qquad \text{percentag
 
 相对不确定度规则要求分母非零、乘方有定义；$\pi$ 等已知常数不产生测量不确定度。相对不确定度很大，或两个量的差接近零时，应进一步检查实际界限，不能把一阶百分比当成精确结果。
 
+<div class="worked-example" markdown="1">
+
 **示范选法：圆柱体积。** 半径为 $r=(1.50\pm0.02)\,\mathrm{mm}$，长度为 $L=(40.0\pm0.5)\,\mathrm{mm}$，模型为均匀圆柱：
 
 $$V=\pi r^2L=\pi(1.50)^2(40.0)=282.74\,\mathrm{mm^3}$$
@@ -116,6 +123,8 @@ $$\frac{\Delta V}{V}\times100\%\approx2\left(\frac{0.02}{1.50}\right)100\%+\left
 $$\Delta V\approx11.1\,\mathrm{mm^3},\qquad V=(283\pm11)\,\mathrm{mm^3}$$
 
 半径平方使其相对不确定度贡献乘以二；直接把以毫米为单位的绝对不确定度加到体积上，量纲就不成立。中间步骤保留计算位数，最终中心值的小数位与不确定度相配；这里保留两位不确定度有效数字，便于比较。
+
+</div>
 
 <h3 id="difference-and-correlation">两个读数与一个共享零点</h3>
 
@@ -215,6 +224,8 @@ $$\Delta m=0.10\,\mathrm{V\,N^{-1}},\qquad b_{\min}=0.30\,\mathrm{V},\qquad b_{\
 先关闭解答。说明模型，先换单位再计算，并辨认每个题给不确定度包括什么。
 
 <h3 id="practice-density">未标明方法的组合问题</h3>
+
+密度是单位体积质量，ρ = m/V。均匀圆柱体积 V = πr²L。合成不确定度前，先检查金属丝模型及半径／直径的意义。导出单位来自定义关系：1 N = 1 kg m s⁻²，1 J = 1 N m，1 W = 1 J/s，1 C = 1 A s。
 
 *自拟题。*
 
@@ -334,6 +345,34 @@ $$\Delta\theta=(25.0-0.5)-(15.0-0.5)=10.0\,^\circ\mathrm{C}.$$
 
 </details>
 
+<h2 id="scatter-to-bounds">从散布到有条件的界限</h2>
+
+无预画棒时先查重复、分辨率、校准证据。**构造示范**：F = 0、1、2、3 N 对应 U = 0.10、1.20、2.00、3.10 V。取 U = F + 0.10，残差 0、+0.10、−0.10、0 V。仅有这些点，可暂取 ±0.10 V 为包住残差的粗略散布带，必须声明是假设。它不含未知校准偏差，不是置信区间；取得仪器和重复证据后须修订，也不能把所选线称为唯一拟合。给定界限时，才可逐点画棒并找兼容所有区间的极端线。斜率和截距相关，各自边界不能任意组合。
+
+<div class="lesson-check" markdown="1">
+<!-- task:scatter-check -->
+Constructed records give F/N = 0, 1, 2, 3, 4 and U/V = 0.55, 1.45, 2.60, 3.40, 4.55. No error bars have been drawn. Each output has a stated independent bound of ±0.20 V; force uncertainty is negligible. Plot points and bars, choose a central straight-line fit, and find extreme gradients and intercepts compatible with every interval. Explain why checking only endpoints is insufficient. If a different graph gives scatter but no stated bounds, what evidence or assumption is needed before claiming numerical uncertainty limits?
+<!-- /task:scatter-check -->
+<details markdown="1"><summary>提示</summary>
+逐点检查 U−0.20 ≤ mF+b ≤ U+0.20。
+</details>
+<details markdown="1"><summary>解答与修复</summary>
+可选 U = F + 0.50 为中心线。最小斜率 0.900 V/N，U = 0.9F + 0.75；最大斜率 13/12 = 1.08333… V/N，U = (13/12)F + 0.35。两条极端线逐点穿过全部区间，截距范围 0.35–0.75 V。最大斜率受 F = 0、3 N 限制，不是最右端。相对中心线的界限不对称，若报保守对称界限需取较大偏离。只有散布时需重复／仪器资料，或明确采用粗略残差假设，不可声称唯一精确界限。
+</details>
+</div>
+
+<div class="lesson-check" markdown="1">
+<!-- task:retry-graph-and-powers -->
+Retry: F/N = 0, 2, 4 and U/V = 0.40, 2.50, 4.40, each output bounded by ±0.20 V. Find compatible extreme gradients/intercepts and test the middle interval. Separately, mass is 30.0 ± 0.3 g and volume 12.0 ± 0.6 cm³ with independent small bounds. Estimate density and its uncertainty; explain why adding 0.3 and 0.6 directly is wrong.
+<!-- /task:retry-graph-and-powers -->
+<details markdown="1"><summary>提示</summary>
+先找极端线，再检查中点。密度是质量除体积。
+</details>
+<details markdown="1"><summary>解答与修复</summary>
+极端线 U = 0.90F + 0.60 和 U = 1.10F + 0.20，中点均 2.40 V，在 2.30–2.70 V 内。截距范围 0.20–0.60 V。密度 2.50 g/cm³，相对界限 0.3/30 + 0.6/12 = 0.06，绝对界限 0.15 g/cm³。质量与体积维度不同，不能加绝对不确定度。
+</details>
+</div>
+
 <h2 id="sources-and-next">范围与下一步</h2>
 
 范围：OxfordAQA International AS Physics 9630，PH01，3.1.1–3.1.3。本样章发展部分测量能力；简短误差棒记录不能代替带实测散布的数据训练，也不证明已掌握全部实验技能。
@@ -341,4 +380,3 @@ $$\Delta\theta=(25.0-0.5)-(15.0-0.5)=10.0\,^\circ\mathrm{C}.$$
 范围以[官方大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf)为准。题目、数据和反馈为自拟，未赋予官方分值。不把三角／对数函数的不确定度合成或统计置信区间作为本课要求。
 
 [下一课：向量与力矩](/zh/alevel/as-physics/vectors-and-moments/) · [返回 AS 物理](/zh/alevel/as-physics/) · [现有力学笔记](/zh/alevel/as-physics/#2--mechanics-321--328) · [在 A2 电容记录中应用测量判断](/zh/alevel/a2-physics/capacitor-charge-and-discharge/#data-rc-records)。
-

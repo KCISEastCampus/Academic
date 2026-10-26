@@ -13,14 +13,40 @@ study_page: true
 
 <h2 id="start-learning">开始学习</h2>
 
-1. **[测量与不确定度](/zh/alevel/as-physics/measurements-and-uncertainties/)** — 判断测量质量，合成不确定度，并用误差棒约束图线。
-2. **[向量与力矩](/zh/alevel/as-physics/vectors-and-moments/)** — 分解向量，同时检验力与力矩平衡，区分力偶并检查支承条件。
-3. **[直线运动与匀加速](/zh/alevel/as-physics/straight-line-motion/)** — 联系运动图像，判断匀加速模型条件，并分析 RP1 自由落体数据。
-4. **[抛体运动](/zh/alevel/as-physics/projectile-motion/)** — 用共同时间连接分运动，选择目标事件，并检验无阻力模型。
+本路线覆盖 OxfordAQA 9630 AS 的 Unit 1（3.1–3.3）与 Unit 2（3.4–3.5），含 19 个主题、两次综合复习及 RP1–5 的准备、决策与数据任务。按先修顺序前进；提示与解答分别展开。
 
-先完成小任务，再阅读解释与示范；提示和完整解答分别展开，最后独立练习、诊断并重试。
+<h3 id="unit-1-learning">Unit 1 学习路线</h3>
 
-建议依次学习这四课；其他主题仍为下方复习笔记，尚未改写为完整学习课程。已有基础时，可直接进入[第一课练习](/zh/alevel/as-physics/measurements-and-uncertainties/#independent-practice)或[第二课练习](/zh/alevel/as-physics/vectors-and-moments/#independent-practice)。
+1. **[测量与不确定度](/zh/alevel/as-physics/measurements-and-uncertainties/)** — 判断单位、散布、界限与数量级。
+2. **[向量与力矩](/zh/alevel/as-physics/vectors-and-moments/)** — 分解方向并检验力与力矩平衡。
+3. **[直线运动](/zh/alevel/as-physics/straight-line-motion/)** — 联系图像、有符号运动与 RP1 自由落体。
+4. **[抛体运动](/zh/alevel/as-physics/projectile-motion/)** — 选择目标事件并检验受力模型。
+5. **[牛顿定律](/zh/alevel/as-physics/newtons-laws/)** — 选择对象并解释速度变化。
+6. **[动量与冲量](/zh/alevel/as-physics/momentum-and-impulse/)** — 确定系统边界并读力—时间证据。
+7. **[功、能与功率](/zh/alevel/as-physics/work-energy-power/)** — 建立有符号能量收支与效率检查。
+8. **[材料与杨氏模量](/zh/alevel/as-physics/materials-and-young-modulus/)** — 联系材料量、曲线与 RP2。
+9. **[原子与粒子](/zh/alevel/as-physics/atoms-and-particles/)** — 联系散射、离子、比荷与粒子能量。
+10. **[辐射与安全](/zh/alevel/as-physics/radiation-and-safety/)** — 扣背景并比较衰变、吸收证据。
+11. **[Unit 1 综合复习](/zh/alevel/as-physics/unit-1-review/)** — 隔次学习后不靠方法标签选模型。
+
+<h3 id="unit-2-learning">Unit 2 学习路线</h3>
+
+1. **[电荷、电流与电势差](/zh/alevel/as-physics/charge-current-and-potential/)** — 区分电荷流动与能量转移。
+2. **[电阻与电阻率](/zh/alevel/as-physics/resistance-and-resistivity/)** — 解释特性曲线、几何与温度影响。
+3. **[直流电路与分压器](/zh/alevel/as-physics/dc-circuits-and-potential-dividers/)** — 分析网络、传感器与负载。
+4. **[电动势与内阻](/zh/alevel/as-physics/emf-and-internal-resistance/)** — 检验每库仑能量与 RP3 图线模型。
+5. **[振动与共振](/zh/alevel/as-physics/oscillations-and-resonance/)** — 使用周期、能量模型与 RP4 两种装置。
+6. **[行波与驻波](/zh/alevel/as-physics/progressive-and-stationary-waves/)** — 联系时空记录、谐波与偏振。
+7. **[干涉与衍射](/zh/alevel/as-physics/interference-and-diffraction/)** — 选择图样模型与 RP5 两种方法。
+8. **[折射与光纤](/zh/alevel/as-physics/refraction-and-optical-fibres/)** — 检验光线条件并区分脉冲限制。
+9. **[光子与波粒二象性](/zh/alevel/as-physics/photons-and-wave-particle-duality/)** — 使用能级、X 射线、光电数据与衍射证据。
+10. **[Unit 2 综合复习](/zh/alevel/as-physics/unit-2-review/)** — 连接电路、波、量子及实验论证。
+
+<h3 id="required-practical-route">实验路线与完成边界</h3>
+
+[RP1 自由落体](/zh/alevel/as-physics/straight-line-motion/#raw-freefall) · [RP2 金属丝](/zh/alevel/as-physics/materials-and-young-modulus/#wire-data) · [RP3 电池](/zh/alevel/as-physics/emf-and-internal-resistance/#data-check) · [RP4 弹簧与单摆](/zh/alevel/as-physics/oscillations-and-resonance/#practical-check) · [RP5 双缝与光栅](/zh/alevel/as-physics/interference-and-diffraction/#practical-check)
+
+网页任务不代表实体实验已经完成。先独立作答，按反馈修复并换条件重试；综合题留到下次学习。英文题干在两种语言中一致，中文页解释概念并保留英文输出要求。下方旧锚点保留为速查参考，完整学习请使用上方路线。
 
 <h2 id="reference-notes">复习笔记与资料</h2>
 
