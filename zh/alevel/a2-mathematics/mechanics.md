@@ -12,6 +12,9 @@ study_page: true
 reading_layout: true
 ---
 
+[全部 A2 数学单元](/zh/alevel/a2-mathematics-overview/)
+{:.lesson-meta}
+
 力学研究两件常见的事：物体为什么保持平衡，又为什么改变运动？这套 MA05 课程从“先看哪个物体、有哪些力”开始，再一步步连接图、方向和方程。
 
 **第一次学：**从[数学建模](mathematical-modelling/)开始，按下面的顺序走。已有基础时，可以直接进入相应主题的练习，再按错误回看讲解。

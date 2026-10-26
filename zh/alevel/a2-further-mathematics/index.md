@@ -12,6 +12,9 @@ reading_layout: true
 study_page: true
 ---
 
+[全部 A2 高数单元](/zh/alevel/a2-further-mathematics-overview/)
+{:.lesson-meta}
+
 OxfordAQA 9665 · A2 高等纯数学 · FP2 / FM03。每课先解释新概念是什么意思，再示范怎样使用。从根与多项式开始；已学过的同学可直接进入[跨章综合](#mixed-review)。
 
 ## 从这里开始 {#start-here}

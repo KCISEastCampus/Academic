@@ -1,0 +1,13 @@
+{% for family in site.data.math_families %}
+<section aria-labelledby="{{ family.id }}-units" class="math-course-group">
+  <{{ include.heading }} id="{{ family.id }}-units" class="course-group-title course-family-title">{% if page.lang == 'zh-CN' %}{{ family.name_zh }}{% else %}{{ family.name }}{% endif %}</{{ include.heading }}>
+  <div class="subjects-grid-modern">
+    {% for subject in site.data.subjects.alevel %}
+      {% if subject.math_family == family.id %}
+        {% include subject_card.html subject=subject accent='al' %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+{% endfor %}
+<{{ include.heading }} class="course-group-title course-family-title">{% if page.lang == 'zh-CN' %}其他 A2 学科{% else %}Other A2 subjects{% endif %}</{{ include.heading }}>

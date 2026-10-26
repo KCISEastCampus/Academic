@@ -1,6 +1,16 @@
 <!-- _includes/breadcrumb.html -->
-<!-- Breadcrumb navigation - auto-generated from URL path -->
+<!-- A2 mathematics uses course relationships; other pages retain URL-based parents. -->
 {% assign ui = site.data.ui[page.lang] | default: site.data.ui.en %}
+{% assign canonical_path = page.translation_of | default: page.url %}
+{% assign math_family = nil %}
+{% assign language_prefix = '' %}
+{% if page.lang == 'zh-CN' %}{% assign language_prefix = '/zh' %}{% endif %}
+{% for family in site.data.math_families %}
+  {% assign family_prefix = canonical_path | slice: 0, family.course_root.size %}
+  {% if family_prefix == family.course_root or canonical_path == family.path %}
+    {% assign math_family = family %}
+  {% endif %}
+{% endfor %}
 <nav lang="{{ page.lang | default: 'en' }}" aria-label="{% if page.lang == 'zh-CN' %}页面路径{% else %}breadcrumb{% endif %}" class="site-breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item">
@@ -28,6 +38,27 @@
     {% if page.cg50_stage == 'advanced' and page.url != '/alevel/fx-cg50/advanced/' %}
     <li class="breadcrumb-item"><a href="{{ '/alevel/fx-cg50/advanced/' | relative_url }}">进阶</a></li>
     {% endif %}
+    <li class="breadcrumb-item active" aria-current="page" lang="{{ page.lang | default: 'en' }}">{{ page.title }}</li>
+    {% elsif math_family %}
+    <li class="breadcrumb-item"><a href="{{ language_prefix }}/alevel/">A-Level</a></li>
+    {% unless canonical_path == math_family.path %}
+    <li class="breadcrumb-item"><a href="{{ language_prefix }}{{ math_family.path }}">{% if page.lang == 'zh-CN' %}{{ math_family.name_zh }}{% else %}{{ math_family.name }}{% endif %}</a></li>
+    {% assign math_unit = nil %}
+    {% assign unit_match_length = 0 %}
+    {% for subject in site.data.subjects.alevel %}
+      {% unless subject.math_family == math_family.id %}{% continue %}{% endunless %}
+      {% assign unit_path = subject.path | append: '/' | replace: '//', '/' %}
+      {% assign unit_prefix = canonical_path | slice: 0, unit_path.size %}
+      {% if unit_prefix == unit_path and unit_path.size > unit_match_length %}
+        {% assign math_unit = subject %}
+        {% assign unit_match_length = unit_path.size %}
+        {% assign math_unit_path = unit_path %}
+      {% endif %}
+    {% endfor %}
+    {% if math_unit and canonical_path != math_unit_path %}
+    <li class="breadcrumb-item"><a href="{{ language_prefix }}{{ math_unit_path }}">{% if page.lang == 'zh-CN' %}{{ math_unit.breadcrumb_name_zh }}{% else %}{{ math_unit.breadcrumb_name }}{% endif %}</a></li>
+    {% endif %}
+    {% endunless %}
     <li class="breadcrumb-item active" aria-current="page" lang="{{ page.lang | default: 'en' }}">{{ page.title }}</li>
     {% else %}
     {% assign crumbs = page.translation_of | default: page.url | split: '/' %}

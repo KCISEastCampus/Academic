@@ -27,9 +27,10 @@ const homepageDestinations = [
   ['/alevel/as-economics/', null],
   ['/alevel/as-biology/', null],
   ['/alevel/a2-mathematics/', '/zh/alevel/a2-mathematics/'],
-  ['/alevel/a2-mathematics/mechanics', '/zh/alevel/a2-mathematics/mechanics/'],
   ['/alevel/a2-mathematics/statistics', '/zh/alevel/a2-mathematics/statistics/'],
+  ['/alevel/a2-mathematics/mechanics', '/zh/alevel/a2-mathematics/mechanics/'],
   ['/alevel/a2-further-mathematics/', '/zh/alevel/a2-further-mathematics/'],
+  ['/alevel/a2-further-mathematics/statistics/', '/zh/alevel/a2-further-mathematics/statistics/'],
   ['/alevel/a2-physics/', '/zh/alevel/a2-physics/'],
   ['/alevel/a2-chemistry/', '/zh/alevel/a2-chemistry/'],
   ['/alevel/a2-biology/', '/zh/alevel/a2-biology/'],
@@ -45,7 +46,7 @@ for (const file of ['index.html', 'zh/index.html', 'alevel/index.html', 'igcse/i
   const chinese = file.startsWith('zh/');
   const homepage = file === 'index.html' || file === 'zh/index.html';
   const cards = Array.from(html.matchAll(/<a\b([^>]*class="modern-subject-card"[^>]*)>([\s\S]*?)<\/a>/g));
-  assert.equal(cards.length, homepage ? 18 : file.includes('alevel/') ? 14 : 4, `${file}: preserve all subject/tool cards`);
+  assert.equal(cards.length, homepage ? 19 : file.includes('alevel/') ? 15 : 4, `${file}: preserve existing cards and expose FM04`);
   if (homepage) {
     for (const group of ['as', 'a2', 'igcse']) {
       assert(html.includes(`href="#${group}-courses"`));

@@ -1,0 +1,58 @@
+{
+  "sources": [
+    {
+      "source": "alevel/a2-further-mathematics/statistics/index.md",
+      "sha256": "4e839d36396842459e22347e6299cee620198859a42ea5dbf37aded397072363",
+      "generatedHTMLsha256": "a33c67b4afe791b74acf63aa8854803bda7086afb70c9ea8e0b1220218c79cc8",
+      "independentReviewsMatch": [
+        true,
+        true
+      ]
+    },
+    {
+      "source": "alevel/a2-further-mathematics/statistics/moment-generating-functions.md",
+      "sha256": "b4d155ffacd3d87609eee2a63cb41a8bc9f93b82e881e2fafe995836aaa96284",
+      "generatedHTMLsha256": "8f48ec8e82acf863668c100ca0c44bd7c1d1c45bbd4fee316840cab707c167d3",
+      "independentReviewsMatch": [
+        true,
+        true
+      ]
+    },
+    {
+      "source": "zh/alevel/a2-further-mathematics/statistics/index.md",
+      "sha256": "1a0ffd6e3cd05c23fdb48e7fdc312045c6918eb058260d7c5c8671165b87931f",
+      "generatedHTMLsha256": "6579d7c4c9e34833a3c691a3e92541e94e3ce8aff9489381b2f3da66c2af67f7",
+      "independentReviewsMatch": [
+        true,
+        true
+      ]
+    },
+    {
+      "source": "zh/alevel/a2-further-mathematics/statistics/moment-generating-functions.md",
+      "sha256": "67ce6cb6085f4f5bf976269738d1a840bf239cc8cad3db7aa66fb667072c6bc9",
+      "generatedHTMLsha256": "33386646c506be3ffc8803b445f414b61a947302200f08c488e6e9cff9758780",
+      "independentReviewsMatch": [
+        true,
+        true
+      ]
+    }
+  ],
+  "sharedAndTestSHA256": {
+    "assets/css/reading.css": "177c376f70a9685f629b177f24c7641cdd08449d49869a29785775126997f72a",
+    "assets/css/home.css": "cffd04e3d4fee69faa20a2414bcf2f54880c13f9eee1a63e570c745726a95748",
+    "_layouts/subjects.html": "293db2c33a7e9d0858caf551013030cb136af11b7aaf6f97397c90c0ad7d940e",
+    "scripts/test-fm04-sample.js": "aa38c08260fa495fa593729604308c9c4138856cc33e033349f2eda91ab05f82"
+  },
+  "buildSeconds": 25.304,
+  "nodeChecksPassed": [
+    "test-fm04-sample",
+    "test-frontend-ux",
+    "test-site-language",
+    "test-reading-layout",
+    "test-accessibility",
+    "test-subject-index-translations"
+  ],
+  "pagefindPages": 316,
+  "published": false,
+  "studentTrial": "not performed"
+}

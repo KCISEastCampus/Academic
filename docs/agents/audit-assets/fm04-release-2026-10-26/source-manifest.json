@@ -1,0 +1,210 @@
+{
+  "head": "3b83fe0077436f5f9b97b0fd9701a60524a418b0",
+  "base": "e5d23cef80ef701b6f95212bafa7efdcba72defc",
+  "candidate": "git archive HEAD; text normalized to Git LF",
+  "sourceFiles": [
+    {
+      "path": ".github/workflows/test.yml",
+      "sha256": "0af3ffab36bb2696facd30f3fc5024a8b94076a3517a2d6abc6db72a7ac9207c"
+    },
+    {
+      "path": "_data/math_families.yml",
+      "sha256": "34448de542e1cfabe52308de9381fea9521ec2294805d94681221770dd50d354"
+    },
+    {
+      "path": "_data/subjects.yml",
+      "sha256": "58ec1eff41fe43c01f8ef20a73ed55483630bcfa5add6fb5ea0aad9b35b9b5fd"
+    },
+    {
+      "path": "_includes/breadcrumb.html",
+      "sha256": "73d20ebb45ea0fdb17c0f9d5b621b3f3ee53e4af7518c7a345e92167359b975c"
+    },
+    {
+      "path": "_includes/math_course_groups.html",
+      "sha256": "55e2d40d069c164a06466fa3ff22804ae772369bf34f3f29ee01f2f9e5a627f1"
+    },
+    {
+      "path": "_includes/search_metadata.html",
+      "sha256": "e4f7eb9d6bc6d574be716e21287c922d0bb68551da56fa85d2bb35db060f5762"
+    },
+    {
+      "path": "_layouts/index.html",
+      "sha256": "8cd3e96040815c6f499aa7e6787bfcd3f2493c0e8b394dbb554b0c601b16f99e"
+    },
+    {
+      "path": "_layouts/level.html",
+      "sha256": "a2e4f76f9e13599ef1dceb920286738e8879ab5ee11686e97ac62f5ac0006d79"
+    },
+    {
+      "path": "alevel/a2-further-mathematics-overview.md",
+      "sha256": "03082a9db04291eb0a080c1c9f4afc01ff0fd98fc377454e09c038903181d2f5"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/index.md",
+      "sha256": "82792118e4b7f911caac2d1a3dc01d9b01f08aba24fb01c38b3b2cc3d7b2ea5b"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/association-tests.md",
+      "sha256": "789e2367f14387a53344b627dec386116654863e93e05d5070777650b4488a37"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/comparing-means.md",
+      "sha256": "0a283ba3b74b0642b694e0bd39cd42daaaa4086099a7d437348bc2bf97f26790"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/confidence-intervals.md",
+      "sha256": "30364616c18556b646e2b349367869ea2c88093a3de02ed59b69ebbc43476ebd"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/estimators.md",
+      "sha256": "5942d5a283f97c77a005d73fd3da19b9d3a4b38a34344c486f10879ffeba1910"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/goodness-of-fit.md",
+      "sha256": "ee56faa2938f262dcc35de02e60d306ffac56916a754eed994801904cbe8e90a"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/index.md",
+      "sha256": "df7905ee3bc2d94bc4adbf3afd50469e9587d30b0facb536e0cb7baf39a237e2"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/moment-generating-functions.md",
+      "sha256": "d0980ca099a2c124fd5a94263c6382659261b0dfa002370adbc50cc1eefc196b"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/paired-tests.md",
+      "sha256": "a63c8e4fdb55e2ba3c0284c5a965a774aeae543a19b6df0f75b02039e7bc6480"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/standard-mgfs.md",
+      "sha256": "5edf1373d8a38bc013c78bad84d18fa6dfdce2be4f7e000546def5af16789ff7"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/test-power.md",
+      "sha256": "2bb93866f75dd61d91beaf57f6dc61e7183036d510a5135d2419d67ed47111ec"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/variance-tests.md",
+      "sha256": "c8404b38512a10e53d745eb5b489b4c35e668acd5e9408aa865490ca6164061e"
+    },
+    {
+      "path": "alevel/a2-mathematics-overview.md",
+      "sha256": "6f83444057794ea520a1e2ddfb913b1fc19bd23d23f280341f28acce98389315"
+    },
+    {
+      "path": "alevel/a2-mathematics/index.md",
+      "sha256": "fa9766d154ae92e09c04e1c149850ccce4404672425bf1ef86ef7e05e2a734c9"
+    },
+    {
+      "path": "alevel/a2-mathematics/mechanics.md",
+      "sha256": "200a61d5ec43b211ec0e5b2e5db8ff2763e24b33c6e0b03f3ec1817a3f4ffa0d"
+    },
+    {
+      "path": "alevel/a2-mathematics/statistics.md",
+      "sha256": "ed976ed3bc8503c2165d4fa5c447f14792bdb353bc8e863e2a3dcd3aa472d235"
+    },
+    {
+      "path": "assets/css/home.css",
+      "sha256": "b3357c06367a5387d0a1a633a55d4302281f23e59ad3d004e13546462a249e52"
+    },
+    {
+      "path": "scripts/test-fm04-calculations.js",
+      "sha256": "f05df21ba7d248010c90ee0647e129be389efab77e4bad718b807ead22c9acd9"
+    },
+    {
+      "path": "scripts/test-fm04-content.js",
+      "sha256": "fcba53a4dee0a0b01e0e18c6d6b6d762eaade0bbaff8d3913958f6a07a82cc37"
+    },
+    {
+      "path": "scripts/test-fm04-sample.js",
+      "sha256": "aa38c08260fa495fa593729604308c9c4138856cc33e033349f2eda91ab05f82"
+    },
+    {
+      "path": "scripts/test-frontend-ux.js",
+      "sha256": "49312df4e3594ba1c3017a17dda0c93edab1feaab15cbfc22a83b76aea71fab7"
+    },
+    {
+      "path": "scripts/test-math-hierarchy.js",
+      "sha256": "5ffaf9d654f974ef9f5d4433a92ded6b220991e8de96878242cf42e971b2ccd2"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics-overview.md",
+      "sha256": "fb53f4c002344b3f81b3e0e09a4aa2980738e810d5784502815e682c92394333"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/index.md",
+      "sha256": "3c784dfa37b9aa723913f402a69a7e939b8c05a498e4e3c165fb96ceb27faa92"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/association-tests.md",
+      "sha256": "c4b35d4cb68abe337bcfb2ad5949f5f702cf0fc66c14fa544fb247c0372d4a31"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/comparing-means.md",
+      "sha256": "fd99165796f511792ac52e55646c1229619c4a1ab8463175bbef0d7a5234a8e7"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/confidence-intervals.md",
+      "sha256": "d3a34a0ce0297083a4d5ffa6423a224e2b96bdc156bc4dd404a1ae0bed61091d"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/estimators.md",
+      "sha256": "b6d123476530f4853d868f1ea397a65c4a378a36419eaadb03ed60479c33e842"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/goodness-of-fit.md",
+      "sha256": "4cc425c5b9210a43ea0a9e7c2b63967f536bb6de53913c8589ce1da7ee5d010a"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/index.md",
+      "sha256": "3efafd3eccbe4c8e88a2a310e2d6b3c8016f01722665229f33bb9a3bb24355d6"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/moment-generating-functions.md",
+      "sha256": "41bce9c63c1baf44bf8c27d302ffeef1db6312f36f7dac328e333a23b2b3783c"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/paired-tests.md",
+      "sha256": "55f696930edfdb09406174910ec30acb175c14795d3f7d169a01856a01b3186c"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/standard-mgfs.md",
+      "sha256": "1dd3977d245b7f66ae740a7fcfbfb866c97ff56b5f88c842e5b2c99d11dbbfc6"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/test-power.md",
+      "sha256": "63b45f006716d5d22fb30a4061d35d2d3d43d92e09eba4fbec7fe6967ef8b774"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/variance-tests.md",
+      "sha256": "35b521a0129b259e7348780b9f7ba0592251fa52f25aadcf7990b66946658b7f"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics-overview.md",
+      "sha256": "2c869cc8edfd37b239416f535c56255a904a85b8748ad42aee4dda76c7258e76"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/index.md",
+      "sha256": "e4be112f1e16cd222d43889ce42667332312edb04637c38333784b2d78c85179"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/mechanics.md",
+      "sha256": "5e9273c29cfe381b6a108cb50d0d0728eb2e79bfcb7ffb62ff7835a5fe4a84e9"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/statistics.md",
+      "sha256": "d5794b0bfc93fa8fa6345b2cc36339c74fb0254e0298aea72ae91a705c8051aa"
+    }
+  ],
+  "buildSeconds": 43.328,
+  "pagefind": {
+    "pages": 372,
+    "languages": 2,
+    "words": 51767
+  },
+  "limitations": [
+    "No student mastery trial",
+    "No physical phone or full screen-reader audit",
+    "Untracked drafts excluded"
+  ]
+}

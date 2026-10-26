@@ -1,0 +1,763 @@
+{
+  "exact_source_hash_matches": 20,
+  "format_only_changes": [
+    {
+      "path": "alevel/a2-further-mathematics/statistics/variance-tests.md",
+      "independent_review_sha256": "f0b1fa24a99f7b3764f24d4925afbc9bf8bab8b4217f474b8f5fd2066f3d0e32",
+      "final_sha256": "0ebb123d56172789ad7afc8143a05da711a36ffca5a3836a84fc9cf1a09d35a3",
+      "change": "Only cumulative quantile definition: same probability equation moved to display math, grouped subscripts, Chinese connective translated."
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/variance-tests.md",
+      "independent_review_sha256": "19cc6194e738c83292351e185f8edf754da0e660ccf7c0d18d314861e8392855",
+      "final_sha256": "c329743c24eb4fac1acc4eaf4168602db6887703967d409c59a5c91f1d443c0b",
+      "change": "Only cumulative quantile definition: same probability equation moved to display math, grouped subscripts, Chinese connective translated."
+    }
+  ],
+  "preserved_old_explicit_ids": [
+    {
+      "path": "alevel/a2-further-mathematics/index.md",
+      "id": "mixed-review"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/index.md",
+      "id": "mixed-a"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/index.md",
+      "id": "mixed-b"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/index.md",
+      "id": "mixed-c"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/index.md",
+      "id": "later-review"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/index.md",
+      "id": "later-a"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/index.md",
+      "id": "later-b"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/index.md",
+      "id": "later-c"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/index.md",
+      "id": "start"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/index.md",
+      "id": "route"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/index.md",
+      "id": "review"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/moment-generating-functions.md",
+      "id": "meaning"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/moment-generating-functions.md",
+      "id": "moments"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/moment-generating-functions.md",
+      "id": "example"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/moment-generating-functions.md",
+      "id": "transform"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/moment-generating-functions.md",
+      "id": "sums"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/moment-generating-functions.md",
+      "id": "practice"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/moment-generating-functions.md",
+      "id": "task-a"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/moment-generating-functions.md",
+      "id": "task-b"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/moment-generating-functions.md",
+      "id": "task-c"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/moment-generating-functions.md",
+      "id": "retry"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/moment-generating-functions.md",
+      "id": "retry-a"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/moment-generating-functions.md",
+      "id": "retry-b"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/moment-generating-functions.md",
+      "id": "retry-c"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/moment-generating-functions.md",
+      "id": "later-review"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/moment-generating-functions.md",
+      "id": "next-step"
+    },
+    {
+      "path": "alevel/a2-mathematics/index.md",
+      "id": "start-here"
+    },
+    {
+      "path": "alevel/a2-mathematics/index.md",
+      "id": "study-a-topic"
+    },
+    {
+      "path": "alevel/a2-mathematics/index.md",
+      "id": "partial-fractions"
+    },
+    {
+      "path": "alevel/a2-mathematics/index.md",
+      "id": "repeated-linear-factors"
+    },
+    {
+      "path": "alevel/a2-mathematics/index.md",
+      "id": "integration-using-partial-fractions"
+    },
+    {
+      "path": "alevel/a2-mathematics/index.md",
+      "id": "partial-fractions-practice"
+    },
+    {
+      "path": "alevel/a2-mathematics/index.md",
+      "id": "p21-algebra-and-functions"
+    },
+    {
+      "path": "alevel/a2-mathematics/index.md",
+      "id": "p22-sequences-and-series"
+    },
+    {
+      "path": "alevel/a2-mathematics/index.md",
+      "id": "p24-trigonometry"
+    },
+    {
+      "path": "alevel/a2-mathematics/index.md",
+      "id": "p25-exponentials-and-logarithms"
+    },
+    {
+      "path": "alevel/a2-mathematics/index.md",
+      "id": "p26-differentiation"
+    },
+    {
+      "path": "alevel/a2-mathematics/index.md",
+      "id": "p23-coordinate-geometry"
+    },
+    {
+      "path": "alevel/a2-mathematics/index.md",
+      "id": "p27-integration"
+    },
+    {
+      "path": "alevel/a2-mathematics/index.md",
+      "id": "p28-differential-equations"
+    },
+    {
+      "path": "alevel/a2-mathematics/index.md",
+      "id": "p29-numerical-methods"
+    },
+    {
+      "path": "alevel/a2-mathematics/index.md",
+      "id": "p210-vectors"
+    },
+    {
+      "path": "alevel/a2-mathematics/index.md",
+      "id": "mixed-review"
+    },
+    {
+      "path": "alevel/a2-mathematics/index.md",
+      "id": "mixed-a"
+    },
+    {
+      "path": "alevel/a2-mathematics/index.md",
+      "id": "mixed-b"
+    },
+    {
+      "path": "alevel/a2-mathematics/index.md",
+      "id": "mixed-c"
+    },
+    {
+      "path": "alevel/a2-mathematics/index.md",
+      "id": "later-review"
+    },
+    {
+      "path": "alevel/a2-mathematics/index.md",
+      "id": "later-a"
+    },
+    {
+      "path": "alevel/a2-mathematics/index.md",
+      "id": "later-b"
+    },
+    {
+      "path": "alevel/a2-mathematics/index.md",
+      "id": "later-c"
+    },
+    {
+      "path": "alevel/a2-mathematics/mechanics.md",
+      "id": "study-a-topic"
+    },
+    {
+      "path": "alevel/a2-mathematics/mechanics.md",
+      "id": "m21-mathematical-modelling"
+    },
+    {
+      "path": "alevel/a2-mathematics/mechanics.md",
+      "id": "mathematical-modelling"
+    },
+    {
+      "path": "alevel/a2-mathematics/mechanics.md",
+      "id": "m22-kinematics"
+    },
+    {
+      "path": "alevel/a2-mathematics/mechanics.md",
+      "id": "vectors-and-kinematics"
+    },
+    {
+      "path": "alevel/a2-mathematics/mechanics.md",
+      "id": "m23-statics-and-forces"
+    },
+    {
+      "path": "alevel/a2-mathematics/mechanics.md",
+      "id": "forces-equilibrium-and-friction"
+    },
+    {
+      "path": "alevel/a2-mathematics/mechanics.md",
+      "id": "moments-and-rigid-objects-in-equilibrium"
+    },
+    {
+      "path": "alevel/a2-mathematics/mechanics.md",
+      "id": "centres-of-mass"
+    },
+    {
+      "path": "alevel/a2-mathematics/mechanics.md",
+      "id": "m24-newtons-laws-of-motion"
+    },
+    {
+      "path": "alevel/a2-mathematics/mechanics.md",
+      "id": "newtons-laws-of-motion"
+    },
+    {
+      "path": "alevel/a2-mathematics/mechanics.md",
+      "id": "m25-projectiles"
+    },
+    {
+      "path": "alevel/a2-mathematics/mechanics.md",
+      "id": "projectiles"
+    },
+    {
+      "path": "alevel/a2-mathematics/mechanics.md",
+      "id": "m26-work-and-energy"
+    },
+    {
+      "path": "alevel/a2-mathematics/mechanics.md",
+      "id": "work-and-energy"
+    },
+    {
+      "path": "alevel/a2-mathematics/mechanics.md",
+      "id": "m27-uniform-circular-motion"
+    },
+    {
+      "path": "alevel/a2-mathematics/mechanics.md",
+      "id": "uniform-circular-motion"
+    },
+    {
+      "path": "alevel/a2-mathematics/mechanics.md",
+      "id": "mixed-problems"
+    },
+    {
+      "path": "alevel/a2-mathematics/mechanics.md",
+      "id": "mixed-a"
+    },
+    {
+      "path": "alevel/a2-mathematics/mechanics.md",
+      "id": "mixed-b"
+    },
+    {
+      "path": "alevel/a2-mathematics/mechanics.md",
+      "id": "mixed-c"
+    },
+    {
+      "path": "alevel/a2-mathematics/mechanics.md",
+      "id": "later-review"
+    },
+    {
+      "path": "alevel/a2-mathematics/mechanics.md",
+      "id": "later-a"
+    },
+    {
+      "path": "alevel/a2-mathematics/mechanics.md",
+      "id": "later-b"
+    },
+    {
+      "path": "alevel/a2-mathematics/mechanics.md",
+      "id": "later-c"
+    },
+    {
+      "path": "alevel/a2-mathematics/mechanics.md",
+      "id": "key-formulae-summary"
+    },
+    {
+      "path": "alevel/a2-mathematics/mechanics.md",
+      "id": "exam-style-question"
+    },
+    {
+      "path": "alevel/a2-mathematics/statistics.md",
+      "id": "start-learning"
+    },
+    {
+      "path": "alevel/a2-mathematics/statistics.md",
+      "id": "learning-route"
+    },
+    {
+      "path": "alevel/a2-mathematics/statistics.md",
+      "id": "mixed-review"
+    },
+    {
+      "path": "alevel/a2-mathematics/statistics.md",
+      "id": "mixed-a"
+    },
+    {
+      "path": "alevel/a2-mathematics/statistics.md",
+      "id": "mixed-b"
+    },
+    {
+      "path": "alevel/a2-mathematics/statistics.md",
+      "id": "mixed-c"
+    },
+    {
+      "path": "alevel/a2-mathematics/statistics.md",
+      "id": "later-review"
+    },
+    {
+      "path": "alevel/a2-mathematics/statistics.md",
+      "id": "later-a"
+    },
+    {
+      "path": "alevel/a2-mathematics/statistics.md",
+      "id": "later-b"
+    },
+    {
+      "path": "alevel/a2-mathematics/statistics.md",
+      "id": "reference-notes"
+    },
+    {
+      "path": "alevel/a2-mathematics/statistics.md",
+      "id": "legacy-reference"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/index.md",
+      "id": "start-here"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/index.md",
+      "id": "course-outline"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/index.md",
+      "id": "mixed-review"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/index.md",
+      "id": "mixed-a"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/index.md",
+      "id": "mixed-b"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/index.md",
+      "id": "mixed-c"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/index.md",
+      "id": "later-review"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/index.md",
+      "id": "later-a"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/index.md",
+      "id": "later-b"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/index.md",
+      "id": "later-c"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/index.md",
+      "id": "start"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/index.md",
+      "id": "route"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/index.md",
+      "id": "review"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/moment-generating-functions.md",
+      "id": "meaning"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/moment-generating-functions.md",
+      "id": "moments"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/moment-generating-functions.md",
+      "id": "example"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/moment-generating-functions.md",
+      "id": "transform"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/moment-generating-functions.md",
+      "id": "sums"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/moment-generating-functions.md",
+      "id": "practice"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/moment-generating-functions.md",
+      "id": "task-a"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/moment-generating-functions.md",
+      "id": "task-b"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/moment-generating-functions.md",
+      "id": "task-c"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/moment-generating-functions.md",
+      "id": "retry"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/moment-generating-functions.md",
+      "id": "retry-a"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/moment-generating-functions.md",
+      "id": "retry-b"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/moment-generating-functions.md",
+      "id": "retry-c"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/moment-generating-functions.md",
+      "id": "later-review"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/moment-generating-functions.md",
+      "id": "next-step"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/index.md",
+      "id": "start-here"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/index.md",
+      "id": "study-a-topic"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/index.md",
+      "id": "partial-fractions"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/index.md",
+      "id": "repeated-linear-factors"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/index.md",
+      "id": "integration-using-partial-fractions"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/index.md",
+      "id": "partial-fractions-practice"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/index.md",
+      "id": "algebra-and-functions"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/index.md",
+      "id": "p21-algebra-and-functions"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/index.md",
+      "id": "p22-sequences-and-series"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/index.md",
+      "id": "trigonometry-exponentials-and-logarithms"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/index.md",
+      "id": "p24-trigonometry"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/index.md",
+      "id": "p25-exponentials-and-logarithms"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/index.md",
+      "id": "calculus"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/index.md",
+      "id": "p26-differentiation"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/index.md",
+      "id": "p23-coordinate-geometry"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/index.md",
+      "id": "p27-integration"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/index.md",
+      "id": "p28-differential-equations"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/index.md",
+      "id": "numerical-methods-vectors-and-proof"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/index.md",
+      "id": "p29-numerical-methods"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/index.md",
+      "id": "p210-vectors"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/index.md",
+      "id": "mixed-review"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/index.md",
+      "id": "mixed-a"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/index.md",
+      "id": "mixed-b"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/index.md",
+      "id": "mixed-c"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/index.md",
+      "id": "later-review"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/index.md",
+      "id": "later-a"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/index.md",
+      "id": "later-b"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/index.md",
+      "id": "later-c"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/index.md",
+      "id": "quick-reference"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/mechanics.md",
+      "id": "study-a-topic"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/mechanics.md",
+      "id": "modelling-and-kinematics"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/mechanics.md",
+      "id": "m21-mathematical-modelling"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/mechanics.md",
+      "id": "mathematical-modelling"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/mechanics.md",
+      "id": "m22-kinematics"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/mechanics.md",
+      "id": "vectors-and-kinematics"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/mechanics.md",
+      "id": "forces-and-equilibrium"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/mechanics.md",
+      "id": "m23-statics-and-forces"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/mechanics.md",
+      "id": "forces-equilibrium-and-friction"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/mechanics.md",
+      "id": "moments-and-rigid-objects-in-equilibrium"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/mechanics.md",
+      "id": "centres-of-mass"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/mechanics.md",
+      "id": "motion-and-energy"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/mechanics.md",
+      "id": "m24-newtons-laws-of-motion"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/mechanics.md",
+      "id": "newtons-laws-of-motion"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/mechanics.md",
+      "id": "m25-projectiles"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/mechanics.md",
+      "id": "projectiles"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/mechanics.md",
+      "id": "m26-work-and-energy"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/mechanics.md",
+      "id": "work-and-energy"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/mechanics.md",
+      "id": "m27-uniform-circular-motion"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/mechanics.md",
+      "id": "uniform-circular-motion"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/mechanics.md",
+      "id": "mixed-problems"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/mechanics.md",
+      "id": "mixed-a"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/mechanics.md",
+      "id": "mixed-b"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/mechanics.md",
+      "id": "mixed-c"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/mechanics.md",
+      "id": "later-review"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/mechanics.md",
+      "id": "later-a"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/mechanics.md",
+      "id": "later-b"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/mechanics.md",
+      "id": "later-c"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/mechanics.md",
+      "id": "quick-reference"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/mechanics.md",
+      "id": "key-formulae-summary"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/mechanics.md",
+      "id": "exam-style-question"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/statistics.md",
+      "id": "start-learning"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/statistics.md",
+      "id": "learning-route"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/statistics.md",
+      "id": "mixed-review"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/statistics.md",
+      "id": "mixed-a"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/statistics.md",
+      "id": "mixed-b"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/statistics.md",
+      "id": "mixed-c"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/statistics.md",
+      "id": "later-review"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/statistics.md",
+      "id": "later-a"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/statistics.md",
+      "id": "later-b"
+    },
+    {
+      "path": "zh/alevel/a2-mathematics/statistics.md",
+      "id": "reference-notes"
+    }
+  ]
+}

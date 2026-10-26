@@ -44,9 +44,11 @@ layout: none
       {% for group in course_groups %}
       {% assign group_id = group | downcase | append: '-courses' %}
       <h3 id="{{ group_id }}" class="course-group-title">{% if group == 'Tools' %}Casio fx-CG50{% else %}{{ group }}{% endif %}</h3>
+      {% if group == 'A2' %}{% include math_course_groups.html heading='h4' %}{% endif %}
       <div class="subjects-grid-modern">
         {% for subject in site.data.subjects.alevel %}
           {% unless subject.stage == group %}{% continue %}{% endunless %}
+          {% if group == 'A2' and subject.math_family %}{% continue %}{% endif %}
           {% include subject_card.html subject=subject accent='al' %}
         {% endfor %}
       </div>

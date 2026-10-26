@@ -80,6 +80,13 @@ jobs:
           node scripts/test-ma04-content.js
           node scripts/test-ma04-calculations.js
 
+      - name: Test FM04 statistics course and mathematics navigation
+        run: |
+          node scripts/test-fm04-sample.js
+          node scripts/test-fm04-content.js
+          node scripts/test-fm04-calculations.js
+          node scripts/test-math-hierarchy.js
+
   markdown-lint:
     name: Markdown Lint
     runs-on: ubuntu-latest

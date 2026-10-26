@@ -1,0 +1,17 @@
+﻿url,width,theme,status,tasks,nested,examples,openHelp,mathErrors,overflow,brokenImages,keyboard,pass
+http://127.0.0.1:8840/alevel/a2-further-mathematics/statistics/,390,light,200,0,0,0,0,0,0,0,,True
+http://127.0.0.1:8840/alevel/a2-further-mathematics/statistics/,390,dark,200,0,0,0,0,0,0,0,,True
+http://127.0.0.1:8840/alevel/a2-further-mathematics/statistics/,1365,light,200,0,0,0,0,0,0,0,,True
+http://127.0.0.1:8840/alevel/a2-further-mathematics/statistics/,1365,dark,200,0,0,0,0,0,0,0,,True
+http://127.0.0.1:8840/alevel/a2-further-mathematics/statistics/moment-generating-functions/,390,light,200,7,0,1,0,0,0,0,True,True
+http://127.0.0.1:8840/alevel/a2-further-mathematics/statistics/moment-generating-functions/,390,dark,200,7,0,1,0,0,0,0,True,True
+http://127.0.0.1:8840/alevel/a2-further-mathematics/statistics/moment-generating-functions/,1365,light,200,7,0,1,0,0,0,0,True,True
+http://127.0.0.1:8840/alevel/a2-further-mathematics/statistics/moment-generating-functions/,1365,dark,200,7,0,1,0,0,0,0,True,True
+http://127.0.0.1:8840/zh/alevel/a2-further-mathematics/statistics/,390,light,200,0,0,0,0,0,0,0,,True
+http://127.0.0.1:8840/zh/alevel/a2-further-mathematics/statistics/,390,dark,200,0,0,0,0,0,0,0,,True
+http://127.0.0.1:8840/zh/alevel/a2-further-mathematics/statistics/,1365,light,200,0,0,0,0,0,0,0,,True
+http://127.0.0.1:8840/zh/alevel/a2-further-mathematics/statistics/,1365,dark,200,0,0,0,0,0,0,0,,True
+http://127.0.0.1:8840/zh/alevel/a2-further-mathematics/statistics/moment-generating-functions/,390,light,200,7,0,1,0,0,0,0,True,True
+http://127.0.0.1:8840/zh/alevel/a2-further-mathematics/statistics/moment-generating-functions/,390,dark,200,7,0,1,0,0,0,0,True,True
+http://127.0.0.1:8840/zh/alevel/a2-further-mathematics/statistics/moment-generating-functions/,1365,light,200,7,0,1,0,0,0,0,True,True
+http://127.0.0.1:8840/zh/alevel/a2-further-mathematics/statistics/moment-generating-functions/,1365,dark,200,7,0,1,0,0,0,0,True,True
