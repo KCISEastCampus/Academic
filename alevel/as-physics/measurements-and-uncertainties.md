@@ -7,6 +7,7 @@ subject: as-physics
 permalink: /alevel/as-physics/measurements-and-uncertainties/
 toc_headings: h2, h3
 study_page: true
+reading_layout: true
 ---
 
 <h2 id="start-here">Can a consistent reading still be wrong?</h2>
@@ -47,7 +48,7 @@ Close agreement supports precision and repeatability under these conditions, not
 
 <h2 id="units-and-estimates">Units and order of magnitude come first</h2>
 
-Use the SI base units relevant here: mass kg, length m, time s, electric current A, temperature K and amount of substance mol. Derived units include force N, energy J, power W and charge C.
+Use the SI base units relevant here: mass kg, length m, time s, electric current A, temperature K and amount of substance mol. Derived units follow defining relations: 1 N = 1 kg m s⁻²; 1 J = 1 N m; 1 W = 1 J/s; 1 C = 1 A s.
 
 | Prefix | T | G | M | k | c | m | $\mu$ | n | p | f |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -81,6 +82,8 @@ A repeat-data estimate such as half the observed range describes that small set'
 
 A positive zero indication means the instrument reads too high. Subtract the measured zero indication, rather than changing an uncertainty sign.
 
+<div class="worked-example" markdown="1">
+
 **Worked example — constructed reading.** A micrometer indication is $2.38\pm0.01\,\mathrm{mm}$ and an independently measured zero indication is $+0.04\pm0.01\,\mathrm{mm}$. Treat the quoted uncertainties as conservative bounds.
 
 $$d=2.38-0.04=2.34\,\mathrm{mm}$$
@@ -92,6 +95,8 @@ Report $d=(2.34\pm0.02)\,\mathrm{mm}$. The uncertainty is positive; it does not 
 $$\text{fractional uncertainty}=\frac{0.02}{2.34}=0.00855,\qquad \text{percentage uncertainty}=0.855\%$$
 
 These are three ways of describing the same result, not three independent uncertainty sources. State what the bound includes. More repeated object readings do not average away a shared zero-calibration uncertainty.
+
+</div>
 
 <h2 id="combining-uncertainties">Choose the rule from the measurement model</h2>
 
@@ -105,6 +110,8 @@ For small uncertainties, the following first-order rules give conservative estim
 
 Fractional rules require non-zero denominators and a defined power. A known constant such as $\pi$ adds no measurement uncertainty. Very large fractional uncertainty, or a difference close to zero, needs extra care with the actual bounds; a first-order percentage should not be treated as exact.
 
+<div class="worked-example" markdown="1">
+
 **Worked choice: cylinder volume.** A cylinder has $r=(1.50\pm0.02)\,\mathrm{mm}$ and $L=(40.0\pm0.5)\,\mathrm{mm}$. The model is a uniform circular cylinder:
 
 $$V=\pi r^2L=\pi(1.50)^2(40.0)=282.74\,\mathrm{mm^3}$$
@@ -114,6 +121,8 @@ $$\frac{\Delta V}{V}\times100\%\approx2\left(\frac{0.02}{1.50}\right)100\%+\left
 $$\Delta V\approx11.1\,\mathrm{mm^3},\qquad V=(283\pm11)\,\mathrm{mm^3}$$
 
 The squared radius doubles its fractional contribution; adding absolute millimetre uncertainties directly to a volume would be dimensionally wrong. Retain working digits and round the final central value to a decimal place consistent with its stated uncertainty. Here two significant digits in the uncertainty make the comparison visible.
+
+</div>
 
 <h3 id="difference-and-correlation">Two readings, one shared zero</h3>
 
@@ -213,6 +222,8 @@ The record establishes a non-zero baseline under the model. Check the sensor's s
 Keep the solutions closed. State the model, convert units before calculation and identify what each quoted uncertainty includes.
 
 <h3 id="practice-density">An unfamiliar combination</h3>
+
+Density is mass per unit volume, ρ = m/V. A uniform circular cylinder has V = πr²L. Check that the wire model and radius/diameter interpretation apply before propagating uncertainty.
 
 *Self-written task.*
 
@@ -332,6 +343,34 @@ $$\Delta\theta=(25.0-0.5)-(15.0-0.5)=10.0\,^\circ\mathrm{C}.$$
 
 </details>
 
+<h2 id="scatter-to-bounds">From scatter to conditional bounds</h2>
+
+Without bars, seek repeat, resolution and calibration evidence. **Constructed worked example:** F = 0, 1, 2, 3 N gives U = 0.10, 1.20, 2.00, 3.10 V. Choose U = F + 0.10: residuals are 0, +0.10, −0.10, 0 V. With only these points a provisional ±0.10 V scatter band encloses the residuals, but is an explicit rough assumption. It excludes unknown calibration bias and is not a confidence interval. Revise it when instrument/repeat evidence arrives; the chosen line is not unique. With stated bounds, draw bars and seek lines compatible with every interval. Gradient and intercept are correlated; their separate extrema cannot be combined arbitrarily.
+
+<div class="lesson-check" markdown="1">
+<!-- task:scatter-check -->
+Constructed records give F/N = 0, 1, 2, 3, 4 and U/V = 0.55, 1.45, 2.60, 3.40, 4.55. No error bars have been drawn. Each output has a stated independent bound of ±0.20 V; force uncertainty is negligible. Plot points and bars, choose a central straight-line fit, and find extreme gradients and intercepts compatible with every interval. Explain why checking only endpoints is insufficient. If a different graph gives scatter but no stated bounds, what evidence or assumption is needed before claiming numerical uncertainty limits?
+<!-- /task:scatter-check -->
+<details markdown="1"><summary>Hint</summary>
+Test U−0.20 ≤ mF+b ≤ U+0.20 at every point.
+</details>
+<details markdown="1"><summary>Solution and repair</summary>
+A central choice is U = F + 0.50. Minimum gradient 0.900 V/N is achieved by U = 0.9F + 0.75; maximum 13/12 = 1.08333… V/N by U = (13/12)F + 0.35. Both pass every interval; intercept bounds are 0.35–0.75 V. The maximum slope is constrained by F = 0 and 3 N, not the rightmost endpoint. Excursions from the central line are asymmetric; use the larger for a conservative symmetric bound. With scatter only, obtain repeat/instrument evidence or state a rough residual assumption; no unique exact bounds follow.
+</details>
+</div>
+
+<div class="lesson-check" markdown="1">
+<!-- task:retry-graph-and-powers -->
+Retry: F/N = 0, 2, 4 and U/V = 0.40, 2.50, 4.40, each output bounded by ±0.20 V. Find compatible extreme gradients/intercepts and test the middle interval. Separately, mass is 30.0 ± 0.3 g and volume 12.0 ± 0.6 cm³ with independent small bounds. Estimate density and its uncertainty; explain why adding 0.3 and 0.6 directly is wrong.
+<!-- /task:retry-graph-and-powers -->
+<details markdown="1"><summary>Hint</summary>
+Find extreme lines, then check the middle point. Density is mass divided by volume.
+</details>
+<details markdown="1"><summary>Solution and repair</summary>
+Extreme lines U = 0.90F + 0.60 and U = 1.10F + 0.20 both give 2.40 V at the middle input, inside 2.30–2.70 V. Intercepts span 0.20–0.60 V. Density = 2.50 g/cm³, fractional bound = 0.3/30 + 0.6/12 = 0.06, absolute bound = 0.15 g/cm³. Mass and volume have different dimensions; their absolute uncertainties cannot be added.
+</details>
+</div>
+
 <h2 id="sources-and-next">Scope and next step</h2>
 
 Scope: OxfordAQA International AS Physics 9630, PH01, Sections 3.1.1–3.1.3. This sample develops selected measurement skills; the short error-bar record does not replace practice with experimental scatter or certify all practical skills.
@@ -339,4 +378,3 @@ Scope: OxfordAQA International AS Physics 9630, PH01, Sections 3.1.1–3.1.3. Th
 See the [official specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf). Tasks, values and feedback are self-written, with no official marks. Trigonometric/logarithmic uncertainty combinations and statistical confidence intervals are not introduced as requirements.
 
 [Next: Vectors and Moments](/alevel/as-physics/vectors-and-moments/) · [Back to AS Physics](/alevel/as-physics/) · [Existing mechanics notes](/alevel/as-physics/#2--mechanics-321--328) · [Apply measurement judgement in A2 capacitor records](/alevel/a2-physics/capacitor-charge-and-discharge/#data-rc-records).
-

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="320" viewBox="0 0 480 320" role="img" aria-labelledby="title desc">
+  <title id="title">Constructed resultant force versus time</title>
+  <desc id="desc">Straight segments join time in milliseconds and force in newtons: (0,0), (20,12), (40,0), (60,-6), (80,0). Both axes have linear scales.</desc>
+  <rect width="480" height="320" rx="8" fill="#fff"/>
+  <g font-family="Arial, sans-serif" font-size="22" fill="#17334b">
+    <text x="18" y="25">Resultant force / N</text>
+    <g stroke="#d1dce3" stroke-width="1">
+      <path d="M70 60H430M70 105H430M70 195H430M70 240H430M160 50V250M250 50V250M340 50V250M430 50V250"/>
+    </g>
+    <g stroke="#17334b" stroke-width="2"><path d="M70 45V255M60 150H443"/></g>
+    <path d="M70 150L160 60L250 150L340 195L430 150" fill="none" stroke="#17334b" stroke-width="3"/>
+    <g text-anchor="end"><text x="55" y="66">12</text><text x="55" y="111">6</text><text x="55" y="156">0</text><text x="55" y="201">−6</text><text x="55" y="246">−12</text></g>
+    <g text-anchor="middle"><text x="70" y="278">0</text><text x="160" y="278">20</text><text x="250" y="278">40</text><text x="340" y="278">60</text><text x="430" y="278">80</text></g>
+    <text x="325" y="307">Time / ms</text>
+  </g>
+</svg>

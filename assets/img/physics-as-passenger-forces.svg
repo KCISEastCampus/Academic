@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="320" viewBox="0 0 480 320" role="img" aria-labelledby="title desc">
+  <title id="title">Forces on the passenger</title>
+  <desc id="desc">The passenger alone is the object. The upward normal force N is 720 newtons and the downward weight mg is 600 newtons. Arrow lengths are proportional to force magnitudes.</desc>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#17334b"/></marker></defs>
+  <rect width="480" height="320" rx="8" fill="#fff"/>
+  <g font-family="Arial, sans-serif" font-size="22" fill="#17334b">
+    <text x="24" y="30">Object: passenger only</text>
+    <circle cx="175" cy="174" r="19" fill="#dbeaf2" stroke="#17334b" stroke-width="2"/>
+    <g stroke="#17334b" stroke-width="3" marker-end="url(#arrow)">
+      <path d="M175 155V59"/>
+      <path d="M175 193V273"/>
+    </g>
+    <text x="204" y="75">N = 720 N</text>
+    <text x="204" y="101">floor on passenger</text>
+    <text x="204" y="248">mg = 600 N</text>
+    <text x="204" y="274">Earth on passenger</text>
+    <text x="24" y="309" font-size="20">Force arrows only; velocity is not a force.</text>
+  </g>
+</svg>

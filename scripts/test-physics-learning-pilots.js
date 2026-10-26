@@ -23,7 +23,7 @@ for (const [subject, slug, scheme, taskCount, label, helpCount, record, imageCou
   const en = read(`${subject}/${slug}.md`), zh = read(`zh/${subject}/${slug}.md`);
   assert(zh.includes(`translation_of: ${url}\n`));
   assert.deepEqual(math(zh), math(en), slug + ': bilingual formulas');
-  assert.equal(tasks(en).length, taskCount);
+  assert(tasks(en).length >= taskCount, 'Keep the original independent tasks when extending a lesson');
   assert.deepEqual(tasks(zh), tasks(en), slug + ': English tasks and supplied records');
   assert.deepEqual(ids(zh), ids(en), slug + ': stable language-switch anchors');
   for (const [source, prefix, language] of [[en, '', 'en'], [zh, '/zh', 'zh-CN']]) {
@@ -33,16 +33,17 @@ for (const [subject, slug, scheme, taskCount, label, helpCount, record, imageCou
     assert(html.includes(`<body class="${scheme} study-page">`));
     assert(html.match(/<a[^>]*id="languageSwitch"[^>]*>/)[0].includes(`href="${prefix ? '' : '/zh'}${url}"`));
     assert.equal(new Set(ids(body)).size, ids(body).length, 'unique content IDs');
-    assert.equal((body.match(/<details\b/g) || []).length, helpCount, 'separate hints and solutions');
+    assert((body.match(/<details\b/g) || []).length >= helpCount, 'retain separate hints and solutions');
+    assert.equal((body.match(/<details\b/g) || []).length, (source.match(/<details\b/g) || []).length, 'all authored help renders');
     assert(!/<details\b[^>]*\bopen(?:\s|=|>)/.test(body), 'answers initially closed');
     assert(!body.includes('markdown="1"') && !body.includes('$$'), 'Markdown and display equations rendered');
     assert(!/<h1\b/.test(body), 'single page title in header');
     assert(body.includes('<thead>') && body.includes('<th'), 'semantic record tables');
     if (record) assert(new RegExp(`<!-- (?:task|record):${record} -->\\s*<table[\\s\\S]*?</table>\\s*<!-- /(?:task|record):${record} -->`).test(body), 'raw records render as a table');
-    assert.equal((body.match(/<img\b/g) || []).length, imageCount);
+    assert((body.match(/<img\b/g) || []).length >= imageCount, 'keep the original evidence figures');
     for (const formula of math(source)) assert(!formula.includes('|'), 'TeX must not create Markdown cells');
     for (const [, tag, src, alt] of body.matchAll(/(<img\b[^>]*src="([^"]+)"[^>]*alt="([^"]*)"[^>]*>)/g)) {
-      assert(alt.length > 35 && tag.includes('width="760"') && tag.includes('height="430"'));
+      assert(alt.length > 35 && /width="[1-9]\d*"/.test(tag) && /height="[1-9]\d*"/.test(tag), 'figures have descriptions and stable dimensions');
       assert(built(src).includes('<svg'), 'plotted asset exists');
     }
     for (const [, href] of body.matchAll(/href="([/#][^"]*)"/g)) {

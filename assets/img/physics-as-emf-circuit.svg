@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="340" viewBox="0 0 560 340" role="img" aria-labelledby="title desc">
+<title id="title">RP3 equivalent circuit</title><desc id="desc">An ideal emf and internal resistance in series form the cell between terminals P and Q. A voltmeter is across P and Q. An ammeter and adjustable external resistance form a separate series branch across those same terminals.</desc>
+<rect width="560" height="340" fill="white"/>
+<g stroke="#17334b" stroke-width="2.5" fill="none">
+<rect x="110" y="46" width="290" height="105" stroke-dasharray="7 5"/>
+<path d="M70 100H150M190 100H300M360 100H450M450 100H500V145M500 175V270H390M330 270H220M180 270H70V100M70 100V195H260M300 195H450V100"/>
+<circle cx="500" cy="145" r="4"/><circle cx="500" cy="175" r="4"/><path d="M500 145V175"/>
+<circle cx="170" cy="100" r="20"/><rect x="300" y="87" width="60" height="26"/>
+<circle cx="280" cy="195" r="20"/><circle cx="200" cy="270" r="20"/>
+<rect x="330" y="257" width="60" height="26"/><path d="M320 296L402 244M392 245L402 244L398 254"/>
+</g>
+<g fill="#17334b" font-family="Arial,sans-serif" font-size="22" text-anchor="middle">
+<text x="170" y="107">ε</text><text x="330" y="77">r</text><text x="280" y="203">V</text><text x="200" y="278">A</text>
+<text x="526" y="167">S</text>
+<text x="360" y="325">adjustable load R</text><text x="255" y="30">model cell</text><text x="65" y="82">P +</text><text x="450" y="82">Q −</text>
+<circle cx="70" cy="100" r="4"/><circle cx="450" cy="100" r="4"/>
+</g></svg>

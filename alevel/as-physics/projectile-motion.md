@@ -7,6 +7,7 @@ subject: as-physics
 permalink: /alevel/as-physics/projectile-motion/
 toc_headings: h2, h3
 study_page: true
+reading_layout: true
 ---
 
 <h2 id="start-here">Two directions, one clock</h2>
@@ -66,11 +67,15 @@ $$v=\sqrt{v_x^2+v_y^2}$$
 
 At the highest point only the vertical component is zero. For an oblique launch with nonzero horizontal speed, the ball still moves horizontally and accelerates downwards. The trajectory tangent points along velocity; acceleration is not generally along that tangent.
 
+<div class="worked-example" markdown="1">
+
 **Worked horizontal launch.** A particle leaves a horizontal edge at 6.0 m/s; the landing plane is 4.905 m below it. Use g = 9.81 m/s² and neglect air resistance. Horizontal launch means the initial vertical velocity is zero, not that gravity is zero:
 
 $$-4.905=-\frac12\times9.81t^2,\qquad t=1.00\,\mathrm{s},\qquad x=6.0\times1.00=6.0\,\mathrm{m}$$
 
 Reject the negative time root because the flight begins at release. At landing the components are +6.0 m/s and −9.81 m/s. The downward component follows from the fall; the horizontal component is unchanged. A larger horizontal launch speed at the same height would increase x, not this fall time.
+
+</div>
 
 <h3 id="horizontal-transfer">Change what is measured</h3>
 
@@ -143,6 +148,11 @@ The horizontal graph is constant at +8.0 m/s; the vertical graph is a straight l
 Equal horizontal steps show constant horizontal velocity only. The vertical component changes, so total speed changes: it falls towards the apex and rises afterwards. The acceleration graphs are horizontal lines at zero horizontally and −10 m/s² vertically. Velocity–time areas give +9.6 m horizontally and zero net vertical displacement.
 
 </details>
+
+<h3 id="quadratic-recovery">Algebra recovery: retain physical times</h3>
+
+A target event can give at² + bt + c = 0. For a ≠ 0, $t=(-b\pm\sqrt{b^2-4ac})/(2a)$. Check real roots, then apply t ≥ 0 and rising/falling/before-ground conditions. A negative discriminant means the event is unreachable within the stated model. Calculus is not a prerequisite here.
+
 
 <h2 id="exam-football">Choose the event, not just a quadratic root</h2>
 
@@ -316,8 +326,33 @@ Flight times are 2.00 s and 3.464… s; maximum heights are 5.00 m and 15.0 m. T
 
 </details>
 
+<h2 id="friction-and-lift-check">Choose direction from the interaction</h2>
+
+<div class="lesson-check" markdown="1">
+<!-- task:friction-lift-task -->
+A car moves right at steady speed on a level road in still air. Its powered wheels drive it forwards. Show road-friction direction on those driven wheels and air-drag direction on the car; name each interaction partner. A wing moves down and right through still air. Sketch a possible lift direction perpendicular to its relative motion with an upward component. Explain which weight-only projectile assumptions fail if this lift is appreciable.
+<!-- /task:friction-lift-task -->
+<details markdown="1"><summary>Hint</summary>
+Wheel–road contact determines friction; lift is perpendicular to relative motion.
+</details>
+<details markdown="1"><summary>Solution and repair</summary>
+Driving road friction acts forward/right; air drag acts backward/left. Partners are road and air respectively. For a descending rightward wing the specified perpendicular lift points up and right. Appreciable lift changes the resultant, so neither a_x = 0 nor a_y = −g is generally retained.
+</details>
+</div>
+
+<div class="lesson-check" markdown="1">
+<!-- task:retry-friction-lift -->
+Retry: the car is braking while still moving right. Give the road-friction direction on its braking wheels. A wing now moves horizontally right through still air: give the lift direction with an upward component. Explain why neither friction nor lift should automatically be drawn opposite the object's full velocity.
+<!-- /task:retry-friction-lift -->
+<details markdown="1"><summary>Hint</summary>
+Still moving right does not require friction to point right.
+</details>
+<details markdown="1"><summary>Solution and repair</summary>
+Road friction on braking wheels acts backward/left. The specified lift on the level right-moving wing is upward. Friction depends on relative contact slipping/tendency, not solely overall object velocity; lift is perpendicular to relative air motion rather than opposite it.
+</details>
+</div>
 <h2 id="sources-and-next">Scope and next step</h2>
 
 Scope: OxfordAQA International AS Physics 9630, PH01 Section 3.2.4: independent components in a uniform gravitational field, with qualitative friction, lift, drag, terminal speed and limiting vehicle speed. The football sequence adapts PH01 June 2024 Q08.1–08.6 with the paired mark scheme checked. The force-model task extends the conceptual ideas using self-written contexts. Other tasks and records are self-written; none are assigned invented official marks. Scope follows the [official specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf).
 
-[Previous: Straight-line Motion](/alevel/as-physics/straight-line-motion/) · [Back to AS Physics](/alevel/as-physics/) · [Existing dynamics and momentum notes](/alevel/as-physics/#24-newtons-laws--momentum). Dynamics, energy and materials still need subsequent learning pages; four lessons are not the complete AS course.
+[Previous: Straight-line Motion](/alevel/as-physics/straight-line-motion/) · [Next: Newton’s Laws](/alevel/as-physics/newtons-laws/) · [Back to AS Physics](/alevel/as-physics/).

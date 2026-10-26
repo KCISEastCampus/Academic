@@ -7,6 +7,7 @@ subject: as-physics
 permalink: /alevel/as-physics/vectors-and-moments/
 toc_headings: h2, h3
 study_page: true
+reading_layout: true
 ---
 
 <h2 id="start-here">No resultant force, but still a turning effect?</h2>
@@ -48,6 +49,8 @@ The vector sum is zero, so there is no resultant force. However, their different
 
 <h2 id="components">Define axes and the angle before resolving</h2>
 
+Weight is a directed gravitational force; mass is scalar.
+
 Scalars have magnitude only; vectors have magnitude and direction. Speed, distance and mass are scalars; velocity, displacement, acceleration and force are vectors. Components describe the same vector along chosen perpendicular axes; they are not extra interactions.
 
 Choose east as x and north as y. If angle θ is measured anticlockwise from positive x:
@@ -56,6 +59,8 @@ $$F_x=F\cos\theta,\qquad F_y=F\sin\theta.$$
 
 The component adjacent to the marked angle uses cosine. If the angle is measured from the vertical, swap which component is adjacent; do not memorise “horizontal always means cosine”. Include signs for the quadrant.
 
+<div class="worked-example" markdown="1">
+
 <img src="/assets/img/physics-as-components.svg" alt="Vector schematic on east and north axes: a 10 N arrow is 30 degrees north of east. A dashed right triangle labels the east component Fx and north component Fy, without numerical component values. Angle is measured from the horizontal axis." width="760" height="430">
 
 **Worked resolution:** for the diagram,
@@ -63,6 +68,8 @@ The component adjacent to the marked angle uses cosine. If the angle is measured
 $$F_x=10\cos30^\circ=8.66\,\mathrm{N},\qquad F_y=10\sin30^\circ=5.00\,\mathrm{N}.$$
 
 Check $F_x^2+F_y^2=F^2$. Each component's magnitude must be no greater than the whole vector. Add all x components and all y components separately. A scale drawing gives the same resultant by joining vectors head to tail.
+
+</div>
 
 For perpendicular resultant components,
 
@@ -106,11 +113,15 @@ $$\sum F_x=0,\qquad \sum F_y=0.$$
 
 Two forces must be equal and opposite. Three forces need not be equal, nor 120° apart; their vector sum must vanish. Rest and constant-velocity motion are both compatible with translational equilibrium. Rotation of an extended body needs a separate moment check.
 
+<div class="worked-example" markdown="1">
+
 **Worked joint.** Two ideal light cords support a 40 N downward load at a small stationary joint. One cord is horizontal to the left; the other points 30° above the horizontal to the right. For the joint:
 
 $$T\sin30^\circ=40,\qquad H=T\cos30^\circ.$$
 
 Thus $T=80\,\mathrm{N}$ and $H=69.3\,\mathrm{N}$. A cord pulls along its length; it cannot supply a compressive push. Check the upward component, not the total inclined tension, against the load.
+
+</div>
 
 <h3 id="complete-equilibrium">Use three directions without assuming equal forces</h3>
 
@@ -148,6 +159,8 @@ $$d_{\perp}=r\sin\theta,\qquad M=Fr\sin\theta.$$
 
 <img src="/assets/img/physics-as-moment-arm.svg" alt="Schematic: a horizontal rod extends 0.40 m right from pivot O. A 20 N force at the right end points 30 degrees above the rod. Its extended line of action and the perpendicular from O are shown; the perpendicular distance is labelled d, not given numerically." width="760" height="430">
 
+<div class="worked-example" markdown="1">
+
 **Worked geometry:** the force is applied 0.40 m from O at 30° to the rod.
 
 $$d_{\perp}=0.40\sin30^\circ=0.20\,\mathrm{m},\qquad M=20\times0.20=4.0\,\mathrm{N\,m}.$$
@@ -155,6 +168,8 @@ $$d_{\perp}=0.40\sin30^\circ=0.20\,\mathrm{m},\qquad M=20\times0.20=4.0\,\mathrm
 It is anticlockwise. Alternatively, use the 10 N component perpendicular to the rod times 0.40 m. Do not use the full force and the full rod length together unless they are perpendicular. A force whose line passes through O has zero moment about O even if it is large.
 
 For equilibrium of a rigid body, choose a sign convention and require zero net moment as well as zero resultant force. Taking moments about a support removes its unknown force from that equation, because its moment arm is zero.
+
+</div>
 
 <h2 id="couples">A couple can turn without a resultant force</h2>
 
@@ -334,6 +349,32 @@ The magnitudes are 8.0 N m, 4.0 N m and zero. The perpendicular distances are 0.
 
 </details>
 
+<h2 id="moment-transfer">Compare equal moments with different effects</h2>
+
+<div class="lesson-check" markdown="1">
+<!-- task:moment-transfer-check -->
+A force of 18 N acts at the end of a 0.50 m rod at 30° to the rod. Take moments about the rod’s other end. Separately, two equal opposite parallel forces of 15 N act on a plate along lines 0.30 m apart. Compare their moment magnitudes. Which arrangement has zero resultant applied force? Explain why equal moments do not establish the same translational effect.
+<!-- /task:moment-transfer-check -->
+<details markdown="1"><summary>Hint</summary>
+Use the perpendicular lever arm for the rod and line separation for the couple.
+</details>
+<details markdown="1"><summary>Solution and repair</summary>
+Single-force moment = 18(0.50)sin30° = 4.5 N m; couple moment = 15(0.30) = 4.5 N m. Only the listed couple has zero resultant; the single applied force has resultant 18 N. Extra support forces must be specified before analysing the entire rod. Equal moments do not imply equal translational effects.
+</details>
+</div>
+
+<div class="lesson-check" markdown="1">
+<!-- task:retry-quadrant-contact -->
+Retry: a 10 N vector points 30° north of west. Find east/north components. A 40 N weight is supported at a joint by a cord 60° from the vertical and a horizontal cord: find both tensions. Finally, an ordinary unfastened support calculation gives a reaction of −8 N when upwards was positive. Can that contact state exist?
+<!-- /task:retry-quadrant-contact -->
+<details markdown="1"><summary>Hint</summary>
+Draw the quadrant; the cord angle is measured from the vertical.
+</details>
+<details markdown="1"><summary>Solution and repair</summary>
+East component = −10cos30° = −8.66 N, north = +5.00 N. Inclined cord Tcos60° = 40 gives T = 80 N; horizontal cord tension = Tsin60° = 69.3 N. An ordinary contact cannot pull the object down; −8 N invalidates that assumed contact equilibrium and requires a revised constraint/support model. Mass is scalar; weight is a directed gravitational force vector.
+</details>
+</div>
+
 <h2 id="sources-and-next">Scope and next step</h2>
 
 Scope: OxfordAQA International AS Physics 9630, PH01 Sections 3.2.1–3.2.2. The official Q06.1, adapted Q08.1 and symmetric-support example reference PH01 June 2024; the paired mark scheme has been checked. Other tasks are self-written, with no official marks assigned. Schematics and values are constructed teaching material.
@@ -341,4 +382,3 @@ Scope: OxfordAQA International AS Physics 9630, PH01 Sections 3.2.1–3.2.2. The
 Use the [official specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf) for scope. Solving these tasks does not certify physical practical skills or the whole mechanics unit.
 
 [Previous: Measurements and Uncertainties](/alevel/as-physics/measurements-and-uncertainties/) · [Back to AS Physics](/alevel/as-physics/) · [Next: Straight-line Motion and Uniform Acceleration](/alevel/as-physics/straight-line-motion/). Projectiles follow in the next stage of the route.
-
