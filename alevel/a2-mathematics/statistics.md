@@ -1,11 +1,216 @@
 ---
 layout: subjects
-title: A2 Math - Statistics
+title: "A2 Mathematics · Statistics"
 mathjax: true
 grade: a2
 subject: s2
 permalink: /alevel/a2-mathematics/statistics/
+reading_layout: true
+study_page: true
+toc_headings: "#start-learning, #learning-route, #mixed-review, #later-review, #reference-notes"
 ---
+
+## Start learning {#start-learning}
+
+How many events occur, how long must we wait, and what can a sample tell us? These questions call for different statistical models. We first identify the quantity, then use probability, estimation or testing to make a careful judgment.
+
+Start with [Poisson counts](/alevel/a2-mathematics/statistics/poisson-distribution/), or choose a topic below if you have the prerequisites. Attempt tasks before opening help; use the specific recovery links and try again. All course-review tasks below are self-written, with no official marks.
+
+Prerequisite recovery: [AS probability](/alevel/as-mathematics/probability/#l18-concept) · [random variables](/alevel/as-mathematics/random-variables/#l19-concept) · [binomial models](/alevel/as-mathematics/binomial/#l21-concept) · [integration](/alevel/a2-mathematics/integration/).
+
+## Learning route {#learning-route}
+
+1. **[Count events](/alevel/a2-mathematics/statistics/poisson-distribution/)** — Choose an interval, check the assumptions and handle counts or a justified approximation.
+2. **[Probability as area](/alevel/a2-mathematics/statistics/continuous-random-variables/)** — Read density and cumulative probability, then calculate averages, spread and transformed quantities.
+3. **[Waiting time](/alevel/a2-mathematics/statistics/exponential-distribution/)** — Connect no arrivals with waiting longer, and find intervals or time cut-offs.
+4. **[The normal model](/alevel/a2-mathematics/statistics/normal-distribution/)** — Use areas and standardisation, work backwards from probabilities and combine independent normal variables.
+5. **[Learn from a sample](/alevel/a2-mathematics/statistics/estimation/)** — Distinguish a measurement from a sample mean, estimate spread and choose exact or approximate sampling models.
+6. **[Test counts and proportions](/alevel/a2-mathematics/statistics/hypothesis-testing/)** — Set hypotheses, choose a tail and check integer critical boundaries before making a contextual decision.
+7. **[Test a population mean](/alevel/a2-mathematics/statistics/mean-tests/)** — Choose a mean test from the population, sample size and variance information, then explain its limits.
+
+## Put the ideas together {#mixed-review}
+
+These tasks are not labelled by method. Define the quantity, model and conditions before calculating. Record whether you needed a hint; completion with help is different from independent work.
+
+<details markdown="1">
+<summary>Statistical reference values: choose your method before consulting</summary>
+
+These quantiles cover two reference distributions; the table does not choose the appropriate model for you.
+
+| Reference distribution | Upper-tail area | Positive boundary |
+| --- | --- | --- |
+| Standard normal | 0.05 | 1.6449 |
+| Standard normal | 0.025 | 1.9600 |
+| Student t, df = 8 | 0.05 | 1.8595 |
+| Student t, df = 8 | 0.025 | 2.3060 |
+
+Both distributions are symmetric; a left-tail boundary is the negative of the corresponding positive value.
+
+</details>
+
+<section class="lesson-check" markdown="1">
+
+### Task 1 {#mixed-a}
+
+**Question:** A help desk receives messages according to a Poisson process at a mean rate of 2 per hour. Find (a) the probability of at least one message in 90 minutes and (b) the probability that the wait for the next message exceeds 45 minutes. Explain why the means or rates used in the two calculations differ.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Define the interval for the count; for waiting, describe the event that no message arrives.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and checks</summary>
+
+For the 90-minute count, $X\sim\operatorname{Po}(3)$, so $P(X\ge1)=1-e^{-3}\approx0.950$. For waiting, use the rate $r=2$ per hour and $t=0.75$ hours. Waiting beyond this point means zero events in 45 minutes, so $P(T>0.75)=e^{-1.5}\approx0.223$. The rate stays 2 per hour; the count mean depends on the interval.
+
+Repair the specific error, then close this solution and attempt the linked new retry:
+
+- Wrong count interval: [概念 / concept](/alevel/a2-mathematics/statistics/poisson-distribution/#interval) → [新重试 / new retry](/alevel/a2-mathematics/statistics/poisson-distribution/#retry-count).
+- Confusing waits and counts: [概念 / concept](/alevel/a2-mathematics/statistics/exponential-distribution/#zero-bridge) → [新重试 / new retry](/alevel/a2-mathematics/statistics/exponential-distribution/#retry-bridge).
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Task 2 {#mixed-b}
+
+**Question:** A continuous random variable has density $f(x)=2x/9$ for $0\le x\le3$ and zero elsewhere. Verify that it is a density and find its mean and variance. For $Y=4-2X$, find the mean and variance. Two independent variables $X_1,X_2$ each have this density; find the mean and variance of $X_1+X_2$.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Check non-negativity and total area first. For moments, integrate the value times its density. A scale factor is squared in a variance.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and checks</summary>
+
+The density is non-negative. Check total area, then the first and second moments:
+
+$$\begin{aligned}
+\int_0^3\frac{2x}{9}\,dx
+&=\left[\frac{x^2}{9}\right]_0^3=1,\\
+E(X)&=\int_0^3\frac{2x^2}{9}\,dx\\
+&=\left[\frac{2x^3}{27}\right]_0^3=2,\\
+E(X^2)&=\int_0^3\frac{2x^3}{9}\,dx\\
+&=\left[\frac{x^4}{18}\right]_0^3=\frac92,\\
+\operatorname{Var}(X)&=\frac92-2^2=\frac12.
+\end{aligned}$$
+
+$$\begin{aligned}
+E(Y)&=4-2(2)=0,\\
+\operatorname{Var}(Y)&=(-2)^2\left(\frac12\right)=2.
+\end{aligned}$$
+
+The independent sum has mean 4 and variance 1. Independence is needed for that variance addition, not for adding expectations.
+
+Repair the specific error, then close this solution and attempt the linked new retry:
+
+- Moment or scale-variance error: [概念 / concept](/alevel/a2-mathematics/statistics/continuous-random-variables/#moments) → [新重试 / new retry](/alevel/a2-mathematics/statistics/continuous-random-variables/#retry-moments).
+- Independence or sum-variance error: [概念 / concept](/alevel/a2-mathematics/statistics/continuous-random-variables/#combinations) → [新重试 / new retry](/alevel/a2-mathematics/statistics/continuous-random-variables/#retry-combinations).
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Task 3 {#mixed-c}
+
+**Question:** Packet masses are independent and normally distributed with unknown mean $\mu$ and known standard deviation 4 g. A random sample of 25 packets has mean 501.5 g. At the 5% level, test the claim that the population mean exceeds 500 g. Choose and justify a test before consulting the statistical reference values. Explain what a Type I error would mean here.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Write hypotheses about the population mean. Find the standard deviation of the sample mean, not of one packet.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and checks</summary>
+
+Use $H_0:\mu=500$ and $H_1:\mu>500$. Under $H_0$, $\bar X\sim N(500,16/25)$ exactly, so $SE=4/\sqrt{25}=0.8$ and $z=(501.5-500)/0.8=1.875$. Since $1.875>1.6449$, reject $H_0$. There is sufficient evidence at the 5% level that the population mean exceeds 500 g. A Type I error is rejecting $H_0$ when it is true: concluding there is evidence of a mean above 500 g when the true mean is 500 g. It is not a 5% probability that this particular conclusion is wrong.
+
+Repair the specific error, then close this solution and attempt the linked new retry:
+
+- Standard-error error: [概念 / concept](/alevel/a2-mathematics/statistics/mean-tests/#standard-error) → [新重试 / new retry](/alevel/a2-mathematics/statistics/mean-tests/#retry-se).
+- Mean-test choice error: [概念 / concept](/alevel/a2-mathematics/statistics/mean-tests/#known-normal) → [新重试 / new retry](/alevel/a2-mathematics/statistics/mean-tests/#retry-known).
+- Error-type confusion: [概念 / concept](/alevel/a2-mathematics/statistics/hypothesis-testing/#errors) → [新重试 / new retry](/alevel/a2-mathematics/statistics/hypothesis-testing/#retry-errors).
+
+</details>
+
+</section>
+
+## Return after further study {#later-review}
+
+After studying other topics, return to these tasks without the earlier solutions. Compare your model choices and reasons. If still unsure, repair the linked concept and then start a new attempt.
+
+<section class="lesson-check" markdown="1">
+
+### Task 4 {#later-a}
+
+**Question:** (a) Under a proposed exponential model with mean 5 minutes, find the median waiting time. (b) At a separate desk, independent waiting times have a mildly right-skewed population distribution with finite but unknown mean and variance. A random sample of 100 waits has mean 5.8 minutes and sample standard deviation 5 minutes. Test $H_0:\mu=5$ against $H_1:\mu\ne5$ at the 5% level. Choose and justify a method before consulting the statistical reference values, and explain whether its sampling model is exact or approximate.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+For the median, half the waits are longer. For the test, distinguish a waiting time from the average of 100 waits.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and checks</summary>
+
+The rate is $r=1/5$. The median satisfies $e^{-m/5}=1/2$, giving $m=5\ln2\approx3.47$ minutes. In (b), the separate desk has a mildly skewed, finite-variance population. Together with independence and the large sample, these conditions support a CLT approximation; the population itself is not normal. The estimated $SE=5/\sqrt{100}=0.5$, hence $z=(5.8-5)/0.5=1.6$. Since $-1.96<1.6<1.96$, do not reject $H_0$. There is insufficient evidence at the 5% level that the population mean differs from 5 minutes. This does not prove the mean equals 5. The normal approximation and estimated standard error make this an approximate test.
+
+Repair the specific error, then close this solution and attempt the linked new retry:
+
+- Median or tail error: [概念 / concept](/alevel/a2-mathematics/statistics/exponential-distribution/#quantiles) → [新重试 / new retry](/alevel/a2-mathematics/statistics/exponential-distribution/#retry-quantile).
+- Unknown variance or approximation-condition error: [概念 / concept](/alevel/a2-mathematics/statistics/mean-tests/#large-samples) → [新重试 / new retry](/alevel/a2-mathematics/statistics/mean-tests/#retry-large-unknown).
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Task 5 {#later-b}
+
+**Question:** In 20 independent trials with a common success probability $p$, 7 successes are observed. Test $H_0:p=0.2$ against $H_1:p>0.2$ at the 5% level. Find the smallest upper critical value, show the two neighbouring tail probabilities and state the actual significance level. Choose a probability model and justify whether any approximation is needed.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+The rejection region is an upper tail of whole-number counts. Check the first admissible boundary and its neighbour.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and checks</summary>
+
+Under $H_0$, $X\sim B(20,0.2)$. Exact binomial probabilities give $P(X\ge7)\approx0.08669$ and $P(X\ge8)\approx0.03214$. Thus the smallest upper critical value is 8 and the rejection region is $X\ge8$. Its actual significance level is about 3.21%, below the nominal 5% because counts are discrete. The observation 7 is outside this region, so do not reject $H_0$: there is insufficient evidence that the success probability exceeds 0.2. The exact binomial model is available; 20 and 0.2 do not give a compelling large-$n$, small-$p$ approximation case.
+
+Repair the specific error, then close this solution and attempt the linked new retry:
+
+- Model or integer-boundary error: [概念 / concept](/alevel/a2-mathematics/statistics/hypothesis-testing/#discrete-choice) → [新重试 / new retry](/alevel/a2-mathematics/statistics/hypothesis-testing/#retry-binomial).
+- Significance or conclusion error: [概念 / concept](/alevel/a2-mathematics/statistics/hypothesis-testing/#decision) → [新重试 / new retry](/alevel/a2-mathematics/statistics/hypothesis-testing/#retry-regions).
+
+</details>
+
+</section>
+
+## Scope and reference notes {#reference-notes}
+
+The seven lessons address S2.1–S2.6 of OxfordAQA 9660 v5.2, Unit S2 (MA04). Calculator button sequences are not claimed as hardware-verified here. [Official specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf).
+
+<details markdown="1" id="legacy-reference">
+<summary>Older English reference notes — retained for lookup</summary>
 
 # S2 (Statistics)
 
@@ -259,3 +464,6 @@ Since $-1.77 < -1.645$, reject $H_0$. There is evidence that the mean is less th
 | Standard error of mean | $\text{SE} = \frac{\sigma}{\sqrt{n}}$ |
 | $z$-test statistic | $z = \frac{\bar{x} - \mu_0}{\sigma / \sqrt{n}}$ |
 | $t$-test statistic | $t = \frac{\bar{x} - \mu_0}{s / \sqrt{n}}$ |
+
+
+</details>

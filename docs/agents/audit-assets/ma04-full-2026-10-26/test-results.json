@@ -1,0 +1,92 @@
+[
+  {
+    "name": "ma04-poisson",
+    "exitCode": 0,
+    "output": "MA04 Poisson: bilingual prompts/math, task boundaries, closed help, local destinations and independent probability/moment checks passed.\n"
+  },
+  {
+    "name": "ma04-content",
+    "exitCode": 0,
+    "output": "MA04: 7 bilingual lessons, 164 rendered tasks, 48 legacy headings and 255 local references checked.\n"
+  },
+  {
+    "name": "ma04-calculations",
+    "exitCode": 0,
+    "output": "MA04 independent checks passed: integrals, moments, normal areas, sample variance and discrete/mean-test decisions.\n"
+  },
+  {
+    "name": "frontend-ux",
+    "exitCode": 0,
+    "output": "Frontend UX passed: shared search, landmarks/skip links, course discovery, bilingual card names and destinations, fallback language and link contrast.\n"
+  },
+  {
+    "name": "site-language",
+    "exitCode": 0,
+    "output": "Site language passed: preferences, safe reversible links, explicit switching, document language, storage fallback and 160 built page pairs.\n"
+  },
+  {
+    "name": "subject-index-translations",
+    "exitCode": 0,
+    "output": "Bilingual subject index checks passed for 6 pages: front matter, switches, anchors, links and UI text.\nChinese homepage and course pages link to all six indexes.\n"
+  },
+  {
+    "name": "reading-layout",
+    "exitCode": 0,
+    "output": "Reading sample passed: bilingual examples, stable anchors, closed practice solutions and scoped layout.\nMA03 reading roles passed for 32 bilingual course pages.\n"
+  },
+  {
+    "name": "as-mathematics-content",
+    "exitCode": 0,
+    "output": "AS source checks passed: 15 topics, 25 groups, 130 matched prompts per language, 224 closed disclosures per language.\n"
+  },
+  {
+    "name": "as-mathematics-calculations",
+    "exitCode": 0,
+    "output": "AS calculation checks passed: 244 numerical comparisons plus algebraic, sign, model-boundary and coefficient assertions across L01–L25.\n"
+  },
+  {
+    "name": "search-language",
+    "exitCode": 0,
+    "output": "Search language passed: selected UI status, page-language fallback and matching indexed destinations.\n"
+  },
+  {
+    "name": "search-excerpts",
+    "exitCode": 0,
+    "output": "Search excerpts passed: complete prose, formula sentence omission, course context and length limit in both engines.\n"
+  },
+  {
+    "name": "search-interaction",
+    "exitCode": 0,
+    "output": "Search interaction passed: dialog focus, keyboard links, stale queries, close cancellation, fallback language and retry.\n"
+  },
+  {
+    "name": "frontend-loading",
+    "exitCode": 0,
+    "output": "Frontend loading passed: nonblocking notices, lazy counters, conditional diagrams, reusable style preload and valid parent breadcrumbs.\n"
+  },
+  {
+    "name": "pure-consistency",
+    "exitCode": 0,
+    "output": "Pure consistency passed: early algebra, domains, modulus inequalities, 12 antiderivatives, proof cases, iteration values, general tangents, English, course navigation, TeX row separators and legacy topic bookmarks.\nContent inventory: 15 lessons, 98 worked examples, 98 numbered practice questions; index and quick reference also checked.\nMathJax initial-anchor regression passed: page/font/frame timing, encoded IDs, malformed/missing hashes and pages without anchors.\n"
+  },
+  {
+    "name": "a2-heading-hierarchy",
+    "exitCode": 0,
+    "output": "A2 heading hierarchy passed: 114 pages, bilingual outlines, source/HTML levels, unique IDs, local fragments and 11 repaired lesson pairs.\n"
+  },
+  {
+    "name": "accessibility",
+    "exitCode": 0,
+    "output": "Accessibility passed: TOC focus, visibility, Escape, refresh, resize, themes and native skip navigation.\n"
+  },
+  {
+    "name": "theme-init",
+    "exitCode": 0,
+    "output": "Theme initialization passed: fresh visits, saved preferences, invalid values and blocked storage.\n"
+  },
+  {
+    "name": "image-modal",
+    "exitCode": 0,
+    "output": "Image modal passed: named native dialog, original image, link preservation, focus restoration and scroll ownership. Browser checks cover native keyboard behaviour.\n"
+  }
+]

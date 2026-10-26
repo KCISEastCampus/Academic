@@ -28,7 +28,7 @@ const homepageDestinations = [
   ['/alevel/as-biology/', null],
   ['/alevel/a2-mathematics/', '/zh/alevel/a2-mathematics/'],
   ['/alevel/a2-mathematics/mechanics', '/zh/alevel/a2-mathematics/mechanics/'],
-  ['/alevel/a2-mathematics/statistics', null],
+  ['/alevel/a2-mathematics/statistics', '/zh/alevel/a2-mathematics/statistics/'],
   ['/alevel/a2-further-mathematics/', '/zh/alevel/a2-further-mathematics/'],
   ['/alevel/a2-physics/', '/zh/alevel/a2-physics/'],
   ['/alevel/a2-chemistry/', '/zh/alevel/a2-chemistry/'],

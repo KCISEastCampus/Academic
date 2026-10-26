@@ -31,8 +31,8 @@ alevel:
     stage: A2
     name: A2 Math - Statistics
     name_zh: A2 数学 · 统计学
-    description: MA04 reference notes · English
-    description_zh: MA04 参考笔记 · 英文
+    description: "MA04 statistics: seven bilingual lessons, practice and mixed review"
+    description_zh: MA04 统计学 · 七课双语讲解、独立练习与综合回顾
     icon: "📕"
     path: /alevel/a2-mathematics/statistics
   - id: a2furthermathematics
