@@ -73,6 +73,12 @@ jobs:
           node scripts/test-pure-consistency.js
           node scripts/test-a2-heading-hierarchy.js
 
+      - name: Test MA04 statistics course
+        run: |
+          node scripts/test-ma04-poisson.js
+          node scripts/test-ma04-content.js
+          node scripts/test-ma04-calculations.js
+
   markdown-lint:
     name: Markdown Lint
     runs-on: ubuntu-latest

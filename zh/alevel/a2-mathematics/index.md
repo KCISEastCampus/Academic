@@ -290,4 +290,4 @@ P2 编号依据 [OxfordAQA 数学课程说明](https://www.oxfordaqa.com/wp-cont
 
 本路线覆盖 9660 MA03 的 P2 主题及数学论证，不迁移到修订后的 9760 资格。课程与检查支持学习，不等同于官方完整真题集。
 
-A2 数学的其他单元：[力学（MA05）](/zh/alevel/a2-mathematics/mechanics/) · [统计学（MA04，英文）](/alevel/a2-mathematics/statistics/)。
+A2 数学的其他单元：[力学（MA05）](/zh/alevel/a2-mathematics/mechanics/) · [统计学（MA04，双语课程）](/zh/alevel/a2-mathematics/statistics/)。

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 260" role="img" aria-labelledby="title desc">
+<title id="title">Density and probability area</title><desc id="desc">The density f(x)=x/2 rises from zero at x=0 to one at x=2. The area under the line between x=1 and x=2 is shaded. A density height is not a probability.</desc>
+<rect width="480" height="260" fill="#fff"/>
+<path d="M240 210 L240 130 L410 50 L410 210 Z" fill="#c5def7"/>
+<g stroke="#172b4d" stroke-width="2" fill="none"><path d="M70 25 V210 H445"/><path d="M70 210 L410 50"/><path d="M240 210 V130 M410 210 V50" stroke-dasharray="5 4"/></g>
+<g font-family="sans-serif" font-size="20" fill="#172b4d"><text x="20" y="30">f(x)</text><text x="450" y="218">x</text><text x="64" y="240">0</text><text x="234" y="240">1</text><text x="404" y="240">2</text><text x="25" y="58">1</text><text x="265" y="185">P(1 &lt; X &lt; 2)</text><text x="110" y="45">Density f(x) = x/2</text></g></svg>

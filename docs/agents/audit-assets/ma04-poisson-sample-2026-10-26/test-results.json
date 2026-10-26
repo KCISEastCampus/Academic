@@ -1,0 +1,52 @@
+[
+  {
+    "check": "test-ma04-poisson.js",
+    "output": "MA04 sample: bilingual prompts/math, task boundaries, closed help, local destinations and independent probability/moment checks passed.",
+    "exitCode": 0
+  },
+  {
+    "check": "test-frontend-ux.js",
+    "output": "Frontend UX passed: shared search, landmarks/skip links, course discovery, bilingual card names and destinations, fallback language and link contrast.",
+    "exitCode": 0
+  },
+  {
+    "check": "test-site-language.js",
+    "output": "Site language passed: preferences, safe reversible links, explicit switching, document language, storage fallback and 154 built page pairs.",
+    "exitCode": 0
+  },
+  {
+    "check": "test-subject-index-translations.js",
+    "output": "Bilingual subject index checks passed for 6 pages: front matter, switches, anchors, links and UI text.\nChinese homepage and course pages link to all six indexes.",
+    "exitCode": 0
+  },
+  {
+    "check": "test-reading-layout.js",
+    "output": "Reading sample passed: bilingual examples, stable anchors, closed practice solutions and scoped layout.\nMA03 reading roles passed for 32 bilingual course pages.",
+    "exitCode": 0
+  },
+  {
+    "check": "test-as-mathematics-content.js",
+    "output": "AS source checks passed: 15 topics, 25 groups, 130 matched prompts per language, 224 closed disclosures per language.",
+    "exitCode": 0
+  },
+  {
+    "check": "test-as-mathematics-calculations.js",
+    "output": "AS calculation checks passed: 244 numerical comparisons plus algebraic, sign, model-boundary and coefficient assertions across L01–L25.",
+    "exitCode": 0
+  },
+  {
+    "check": "test-search-language.js",
+    "output": "Search language passed: selected UI status, page-language fallback and matching indexed destinations.",
+    "exitCode": 0
+  },
+  {
+    "check": "test-search-excerpts.js",
+    "output": "Search excerpts passed: complete prose, formula sentence omission, course context and length limit in both engines.",
+    "exitCode": 0
+  },
+  {
+    "check": "test-frontend-loading.js",
+    "output": "Frontend loading passed: nonblocking notices, lazy counters, conditional diagrams, reusable style preload and valid parent breadcrumbs.",
+    "exitCode": 0
+  }
+]
