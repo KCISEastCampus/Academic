@@ -1,0 +1,24 @@
+{
+  "base": "da6a642cde2bdad985a2d4b950fa3c25ef35d4ef",
+  "sourceSha256": {
+    "alevel/a2-mathematics/statistics.md": "094091800b90001ef0cb5160de22e71a1e004317cd5898878de15ff2bf89015e",
+    "alevel/a2-mathematics/statistics/poisson-distribution.md": "c2904ab5eb4bbe2dbd952150673e0e7e8b8da9511e7be55624d7af8beecca26e",
+    "zh/alevel/a2-mathematics/statistics.md": "bc628b80d7a3a35a96e295e520a895d442ae3f0a378d13c94e7f65dcd3b0319d",
+    "zh/alevel/a2-mathematics/statistics/poisson-distribution.md": "efbf52c277f99384032e4d4af4e6600623ccc579050fddc9b14c8361b87d6c2a",
+    "_data/subjects.yml": "f1160fbdc4dc5323ea226b4d4a5ab95633586d96b6593f3884b3a8eed856a498",
+    "zh/alevel/a2-mathematics/index.md": "01adb5682b2e70ad69d90033e39496925518ab63d4f88d04335ba67947dac23b",
+    "scripts/test-ma04-poisson.js": "a3e775e32ca4dbb50c11d4aa724f2c741fc00caadbc006fc7a0716e50ad3dc20",
+    "scripts/test-frontend-ux.js": "48039593ece494e373956ec29bdba2202ea8ef1ccbe5a3e4194890feca3c9830",
+    ".github/workflows/test.yml": "fe1509929f6675e7cd062eb5ff9d342bc397e4e0f8d897dcaaed9d8d3bc6c453",
+    "assets/css/reading.css": "177c376f70a9685f629b177f24c7641cdd08449d49869a29785775126997f72a",
+    "_layouts/subjects.html": "293db2c33a7e9d0858caf551013030cb136af11b7aaf6f97397c90c0ad7d940e"
+  },
+  "legacyStatisticsBodyUnchanged": true,
+  "scope": "Poisson counting sample; not all S2.1 or MA04; no student trial",
+  "generatedSha256": {
+    "alevel/a2-mathematics/statistics": "971dca2432a85693f42bef66ff94d26bb2989b01d7f99ec253bb3bb7a40fc0db",
+    "zh/alevel/a2-mathematics/statistics": "5a062698695d0a126fc73a597c57f64939d0d8bbf15fefd9c9165c16386b5d87",
+    "alevel/a2-mathematics/statistics/poisson-distribution": "50333a88f3cd6893b5b975b8d2e742438db805949d1142d815c12b10171d92ad",
+    "zh/alevel/a2-mathematics/statistics/poisson-distribution": "f625bf1e34da775efb85201b3494444347994ba8529fa8bba8229e72cb71ad14"
+  }
+}

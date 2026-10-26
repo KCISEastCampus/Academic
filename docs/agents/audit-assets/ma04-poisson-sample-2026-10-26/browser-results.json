@@ -1,0 +1,182 @@
+{
+  "rows": [
+    {
+      "url": "http://127.0.0.1:8839/alevel/a2-mathematics/statistics/",
+      "width": 390,
+      "theme": "light",
+      "status": 200,
+      "mathErrors": 0,
+      "pageOverflow": false,
+      "pageErrors": []
+    },
+    {
+      "url": "http://127.0.0.1:8839/alevel/a2-mathematics/statistics/poisson-distribution/",
+      "width": 390,
+      "theme": "light",
+      "status": 200,
+      "expanded": true,
+      "mathErrors": 0,
+      "pageOverflow": false,
+      "locallyWideMath": 0,
+      "pageErrors": []
+    },
+    {
+      "url": "http://127.0.0.1:8839/alevel/a2-mathematics/statistics/",
+      "width": 390,
+      "theme": "dark",
+      "status": 200,
+      "mathErrors": 0,
+      "pageOverflow": false,
+      "pageErrors": []
+    },
+    {
+      "url": "http://127.0.0.1:8839/alevel/a2-mathematics/statistics/poisson-distribution/",
+      "width": 390,
+      "theme": "dark",
+      "status": 200,
+      "expanded": true,
+      "mathErrors": 0,
+      "pageOverflow": false,
+      "locallyWideMath": 0,
+      "pageErrors": []
+    },
+    {
+      "url": "http://127.0.0.1:8839/alevel/a2-mathematics/statistics/",
+      "width": 1365,
+      "theme": "light",
+      "status": 200,
+      "mathErrors": 0,
+      "pageOverflow": false,
+      "pageErrors": []
+    },
+    {
+      "url": "http://127.0.0.1:8839/alevel/a2-mathematics/statistics/poisson-distribution/",
+      "width": 1365,
+      "theme": "light",
+      "status": 200,
+      "expanded": true,
+      "mathErrors": 0,
+      "pageOverflow": false,
+      "locallyWideMath": 0,
+      "pageErrors": []
+    },
+    {
+      "url": "http://127.0.0.1:8839/alevel/a2-mathematics/statistics/",
+      "width": 1365,
+      "theme": "dark",
+      "status": 200,
+      "mathErrors": 0,
+      "pageOverflow": false,
+      "pageErrors": []
+    },
+    {
+      "url": "http://127.0.0.1:8839/alevel/a2-mathematics/statistics/poisson-distribution/",
+      "width": 1365,
+      "theme": "dark",
+      "status": 200,
+      "expanded": true,
+      "mathErrors": 0,
+      "pageOverflow": false,
+      "locallyWideMath": 0,
+      "pageErrors": []
+    },
+    {
+      "url": "http://127.0.0.1:8839/zh/alevel/a2-mathematics/statistics/",
+      "width": 390,
+      "theme": "light",
+      "status": 200,
+      "mathErrors": 0,
+      "pageOverflow": false,
+      "pageErrors": []
+    },
+    {
+      "url": "http://127.0.0.1:8839/zh/alevel/a2-mathematics/statistics/poisson-distribution/",
+      "width": 390,
+      "theme": "light",
+      "status": 200,
+      "expanded": true,
+      "mathErrors": 0,
+      "pageOverflow": false,
+      "locallyWideMath": 0,
+      "pageErrors": []
+    },
+    {
+      "url": "http://127.0.0.1:8839/zh/alevel/a2-mathematics/statistics/",
+      "width": 390,
+      "theme": "dark",
+      "status": 200,
+      "mathErrors": 0,
+      "pageOverflow": false,
+      "pageErrors": []
+    },
+    {
+      "url": "http://127.0.0.1:8839/zh/alevel/a2-mathematics/statistics/poisson-distribution/",
+      "width": 390,
+      "theme": "dark",
+      "status": 200,
+      "expanded": true,
+      "mathErrors": 0,
+      "pageOverflow": false,
+      "locallyWideMath": 0,
+      "pageErrors": []
+    },
+    {
+      "url": "http://127.0.0.1:8839/zh/alevel/a2-mathematics/statistics/",
+      "width": 1365,
+      "theme": "light",
+      "status": 200,
+      "mathErrors": 0,
+      "pageOverflow": false,
+      "pageErrors": []
+    },
+    {
+      "url": "http://127.0.0.1:8839/zh/alevel/a2-mathematics/statistics/poisson-distribution/",
+      "width": 1365,
+      "theme": "light",
+      "status": 200,
+      "expanded": true,
+      "mathErrors": 0,
+      "pageOverflow": false,
+      "locallyWideMath": 0,
+      "pageErrors": []
+    },
+    {
+      "url": "http://127.0.0.1:8839/zh/alevel/a2-mathematics/statistics/",
+      "width": 1365,
+      "theme": "dark",
+      "status": 200,
+      "mathErrors": 0,
+      "pageOverflow": false,
+      "pageErrors": []
+    },
+    {
+      "url": "http://127.0.0.1:8839/zh/alevel/a2-mathematics/statistics/poisson-distribution/",
+      "width": 1365,
+      "theme": "dark",
+      "status": 200,
+      "expanded": true,
+      "mathErrors": 0,
+      "pageOverflow": false,
+      "locallyWideMath": 0,
+      "pageErrors": []
+    }
+  ],
+  "journeys": [
+    {
+      "type": "home-to-entrance-to-sample",
+      "passed": true
+    },
+    {
+      "type": "language-switch-preserves-task",
+      "passed": true
+    },
+    {
+      "type": "feedback-to-new-retry",
+      "passed": true
+    },
+    {
+      "type": "retry-to-specific-recovery",
+      "passed": true
+    }
+  ]
+}

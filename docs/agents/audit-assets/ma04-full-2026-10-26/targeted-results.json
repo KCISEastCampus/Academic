@@ -1,0 +1,111 @@
+[
+  {
+    "type": "old-fragment-opens-reference",
+    "passed": true
+  },
+  {
+    "type": "legacy-local-formula-keyboard",
+    "index": 1,
+    "passed": true
+  },
+  {
+    "type": "legacy-local-formula-keyboard",
+    "index": 2,
+    "passed": true
+  },
+  {
+    "type": "legacy-local-formula-keyboard",
+    "index": 3,
+    "passed": true
+  },
+  {
+    "type": "legacy-local-formula-keyboard",
+    "index": 4,
+    "passed": true
+  },
+  {
+    "type": "legacy-local-formula-keyboard",
+    "index": 5,
+    "passed": true
+  },
+  {
+    "type": "legacy-local-formula-keyboard",
+    "index": 6,
+    "passed": true
+  },
+  {
+    "type": "repaired-task-reading",
+    "slug": "estimation",
+    "aid": "task-clt",
+    "passed": true
+  },
+  {
+    "type": "repaired-task-reading",
+    "slug": "exponential-distribution",
+    "aid": "retry-bridge",
+    "passed": true
+  },
+  {
+    "type": "repaired-task-reading",
+    "slug": "continuous-random-variables",
+    "aid": "retry-cdf",
+    "passed": true
+  },
+  {
+    "type": "continuous-example-reading",
+    "slug": "poisson-distribution",
+    "passed": true
+  },
+  {
+    "type": "continuous-example-reading",
+    "slug": "continuous-random-variables",
+    "passed": true
+  },
+  {
+    "type": "continuous-example-reading",
+    "slug": "exponential-distribution",
+    "passed": true
+  },
+  {
+    "type": "continuous-example-reading",
+    "slug": "normal-distribution",
+    "passed": true
+  },
+  {
+    "type": "continuous-example-reading",
+    "slug": "estimation",
+    "passed": true
+  },
+  {
+    "type": "continuous-example-reading",
+    "slug": "hypothesis-testing",
+    "passed": true
+  },
+  {
+    "type": "continuous-example-reading",
+    "slug": "mean-tests",
+    "passed": true
+  },
+  {
+    "type": "figure-reading",
+    "slug": "continuous-random-variables",
+    "renderedWidth": 314.984375,
+    "alt": "密度从(0,0)上升到(2,1)，曲线下1到2之间的面积有阴影；纵轴是密度。",
+    "complete": true
+  },
+  {
+    "type": "figure-reading",
+    "slug": "normal-distribution",
+    "renderedWidth": 315,
+    "alt": "以mu为中心的对称正态密度，mu减sigma到mu加sigma之间的面积有阴影，标为约0.683。",
+    "complete": true
+  },
+  {
+    "type": "CLT-feedback-new-retry",
+    "passed": true
+  },
+  {
+    "type": "model-retry-specific-recovery",
+    "passed": true
+  }
+]
