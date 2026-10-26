@@ -1,0 +1,239 @@
+{
+  "rows": [
+    {
+      "url": "http://127.0.0.1:8841/alevel/a2-further-mathematics/statistics/variance-tests/",
+      "width": 390,
+      "theme": "light",
+      "status": 200,
+      "open": 0,
+      "nested": 0,
+      "tasks": 10,
+      "examples": 2,
+      "mathErrors": 0,
+      "overflow": 0,
+      "rawMath": false,
+      "brokenImages": 0,
+      "quantileRendered": true,
+      "keyboard": true,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "http://127.0.0.1:8841/alevel/a2-further-mathematics/statistics/variance-tests/",
+      "width": 390,
+      "theme": "dark",
+      "status": 200,
+      "open": 0,
+      "nested": 0,
+      "tasks": 10,
+      "examples": 2,
+      "mathErrors": 0,
+      "overflow": 0,
+      "rawMath": false,
+      "brokenImages": 0,
+      "quantileRendered": true,
+      "keyboard": true,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "http://127.0.0.1:8841/alevel/a2-further-mathematics/statistics/variance-tests/",
+      "width": 1365,
+      "theme": "light",
+      "status": 200,
+      "open": 0,
+      "nested": 0,
+      "tasks": 10,
+      "examples": 2,
+      "mathErrors": 0,
+      "overflow": 0,
+      "rawMath": false,
+      "brokenImages": 0,
+      "quantileRendered": true,
+      "keyboard": true,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "http://127.0.0.1:8841/alevel/a2-further-mathematics/statistics/variance-tests/",
+      "width": 1365,
+      "theme": "dark",
+      "status": 200,
+      "open": 0,
+      "nested": 0,
+      "tasks": 10,
+      "examples": 2,
+      "mathErrors": 0,
+      "overflow": 0,
+      "rawMath": false,
+      "brokenImages": 0,
+      "quantileRendered": true,
+      "keyboard": true,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "http://127.0.0.1:8841/zh/alevel/a2-further-mathematics/statistics/variance-tests/",
+      "width": 390,
+      "theme": "light",
+      "status": 200,
+      "open": 0,
+      "nested": 0,
+      "tasks": 10,
+      "examples": 2,
+      "mathErrors": 0,
+      "overflow": 0,
+      "rawMath": false,
+      "brokenImages": 0,
+      "quantileRendered": true,
+      "keyboard": true,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "http://127.0.0.1:8841/zh/alevel/a2-further-mathematics/statistics/variance-tests/",
+      "width": 390,
+      "theme": "dark",
+      "status": 200,
+      "open": 0,
+      "nested": 0,
+      "tasks": 10,
+      "examples": 2,
+      "mathErrors": 0,
+      "overflow": 0,
+      "rawMath": false,
+      "brokenImages": 0,
+      "quantileRendered": true,
+      "keyboard": true,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "http://127.0.0.1:8841/zh/alevel/a2-further-mathematics/statistics/variance-tests/",
+      "width": 1365,
+      "theme": "light",
+      "status": 200,
+      "open": 0,
+      "nested": 0,
+      "tasks": 10,
+      "examples": 2,
+      "mathErrors": 0,
+      "overflow": 0,
+      "rawMath": false,
+      "brokenImages": 0,
+      "quantileRendered": true,
+      "keyboard": true,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "http://127.0.0.1:8841/zh/alevel/a2-further-mathematics/statistics/variance-tests/",
+      "width": 1365,
+      "theme": "dark",
+      "status": 200,
+      "open": 0,
+      "nested": 0,
+      "tasks": 10,
+      "examples": 2,
+      "mathErrors": 0,
+      "overflow": 0,
+      "rawMath": false,
+      "brokenImages": 0,
+      "quantileRendered": true,
+      "keyboard": true,
+      "errors": [],
+      "pass": true
+    }
+  ],
+  "rawMathScan": [
+    {
+      "url": "http://127.0.0.1:8841/alevel/a2-further-mathematics/statistics/",
+      "pass": true
+    },
+    {
+      "url": "http://127.0.0.1:8841/alevel/a2-further-mathematics/statistics/moment-generating-functions/",
+      "pass": true
+    },
+    {
+      "url": "http://127.0.0.1:8841/alevel/a2-further-mathematics/statistics/standard-mgfs/",
+      "pass": true
+    },
+    {
+      "url": "http://127.0.0.1:8841/alevel/a2-further-mathematics/statistics/estimators/",
+      "pass": true
+    },
+    {
+      "url": "http://127.0.0.1:8841/alevel/a2-further-mathematics/statistics/confidence-intervals/",
+      "pass": true
+    },
+    {
+      "url": "http://127.0.0.1:8841/alevel/a2-further-mathematics/statistics/test-power/",
+      "pass": true
+    },
+    {
+      "url": "http://127.0.0.1:8841/alevel/a2-further-mathematics/statistics/comparing-means/",
+      "pass": true
+    },
+    {
+      "url": "http://127.0.0.1:8841/alevel/a2-further-mathematics/statistics/paired-tests/",
+      "pass": true
+    },
+    {
+      "url": "http://127.0.0.1:8841/alevel/a2-further-mathematics/statistics/variance-tests/",
+      "pass": true
+    },
+    {
+      "url": "http://127.0.0.1:8841/alevel/a2-further-mathematics/statistics/goodness-of-fit/",
+      "pass": true
+    },
+    {
+      "url": "http://127.0.0.1:8841/alevel/a2-further-mathematics/statistics/association-tests/",
+      "pass": true
+    },
+    {
+      "url": "http://127.0.0.1:8841/zh/alevel/a2-further-mathematics/statistics/",
+      "pass": true
+    },
+    {
+      "url": "http://127.0.0.1:8841/zh/alevel/a2-further-mathematics/statistics/moment-generating-functions/",
+      "pass": true
+    },
+    {
+      "url": "http://127.0.0.1:8841/zh/alevel/a2-further-mathematics/statistics/standard-mgfs/",
+      "pass": true
+    },
+    {
+      "url": "http://127.0.0.1:8841/zh/alevel/a2-further-mathematics/statistics/estimators/",
+      "pass": true
+    },
+    {
+      "url": "http://127.0.0.1:8841/zh/alevel/a2-further-mathematics/statistics/confidence-intervals/",
+      "pass": true
+    },
+    {
+      "url": "http://127.0.0.1:8841/zh/alevel/a2-further-mathematics/statistics/test-power/",
+      "pass": true
+    },
+    {
+      "url": "http://127.0.0.1:8841/zh/alevel/a2-further-mathematics/statistics/comparing-means/",
+      "pass": true
+    },
+    {
+      "url": "http://127.0.0.1:8841/zh/alevel/a2-further-mathematics/statistics/paired-tests/",
+      "pass": true
+    },
+    {
+      "url": "http://127.0.0.1:8841/zh/alevel/a2-further-mathematics/statistics/variance-tests/",
+      "pass": true
+    },
+    {
+      "url": "http://127.0.0.1:8841/zh/alevel/a2-further-mathematics/statistics/goodness-of-fit/",
+      "pass": true
+    },
+    {
+      "url": "http://127.0.0.1:8841/zh/alevel/a2-further-mathematics/statistics/association-tests/",
+      "pass": true
+    }
+  ],
+  "inheritance": "80 unchanged content views retained; final 8 variance views replaced after formatting-only quantile repair."
+}
