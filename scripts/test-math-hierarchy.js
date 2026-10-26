@@ -58,8 +58,7 @@ for (const prefix of ['', 'zh/']) {
       const expectedPaths = [familyRoot, familyRoot + 'statistics/'];
       if (family === 'mathematics') expectedPaths.push(familyRoot + 'mechanics/');
       assert.deepEqual(cardPaths, expectedPaths, 'parallel units in course-code order');
-      assert(section.includes('href="/' + prefix + 'alevel/a2-' + family + '-overview/"'));
-      assert(section.includes('class="course-family-link"'), 'separate subject heading and all-units action');
+      assert(!section.includes('course-family-link'), 'no redundant all-units link beside the subject heading');
     }
   }
 }

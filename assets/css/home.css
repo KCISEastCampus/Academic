@@ -404,12 +404,8 @@
 /* Stage → subject → unit: keep group spacing larger than card spacing. */
 .home-page #a2-courses { font-size: 1.5rem; margin-bottom: var(--space-lg); }
 .home-page .math-course-group { margin-bottom: var(--space-xl); }
-.home-page .course-family-header { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-md); margin-bottom: var(--space-sm); }
 .home-page .course-family-title { color: var(--text); font-size: 1rem; }
-.home-page .course-family-header .course-family-title { margin: 0; }
-.home-page .course-family-link { flex-shrink: 0; font: 500 0.85rem var(--font-heading); text-decoration: none; }
-.home-page .course-family-link:hover { text-decoration: underline; }
-.home-page .course-family-link:focus-visible { outline: 2px solid var(--link-text); outline-offset: 3px; }
+.home-page .math-course-group .course-family-title { margin: 0 0 var(--space-sm); }
 .home-page .math-course-group .subjects-grid-modern { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin-bottom: 0; }
 .home-page .math-course-group .modern-subject-card { flex-direction: row; align-items: center; gap: var(--space-md); min-height: 96px; }
 .home-page .math-course-group .card-content { min-width: 0; }
