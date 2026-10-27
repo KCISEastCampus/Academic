@@ -110,8 +110,8 @@ alevel:
     stage: AS
     name: AS Chemistry
     name_zh: AS 化学
-    description: Unit 2 notes only · English
-    description_zh: 仅 Unit 2 参考笔记 · 英文
+    description: Complete AS learning route · RP1–5 · mixed review
+    description_zh: AS 完整学习路线 · RP1–5 · 综合复习
     icon: "📗"
     path: /alevel/as-chemistry/
   - id: physics

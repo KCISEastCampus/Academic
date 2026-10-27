@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
+<title id="title">Titration apparatus and meniscus reading</title>
+<desc id="desc">A clamped burette delivers solution to a conical flask on a white tile. A magnified scale increases downwards, and the eye is level with the bottom of the meniscus. A separate volumetric pipette has a filler. Schematic, not to scale.</desc>
+<rect width="720" height="420" rx="12" fill="#f8fafc"/>
+<g font-family="Arial,sans-serif" fill="#172b4d" font-size="17">
+<path d="M95 354V38M62 354H250" fill="none" stroke="#475569" stroke-width="7"/>
+<path d="M95 73H190" stroke="#475569" stroke-width="8"/>
+<path d="M169 28V213Q169 222 182 222Q195 222 195 213V28" fill="#dbeafe" stroke="#1e3a5f" stroke-width="3"/>
+<path d="M170 87Q182 97 194 87" fill="none" stroke="#2563eb" stroke-width="2"/>
+<path d="M182 222V246M170 232H201" stroke="#1e3a5f" stroke-width="3"/>
+<path d="M182 256V263" stroke="#2563eb" stroke-width="3" stroke-linecap="round"/>
+<path d="M159 274V291L126 344Q122 354 134 354H230Q242 354 238 344L205 291V274" fill="#fff7ed" stroke="#1e3a5f" stroke-width="3"/>
+<path d="M143 324H221L233 345H131Z" fill="#fed7aa"/>
+<rect x="110" y="359" width="145" height="14" fill="white" stroke="#64748b" stroke-width="2"/>
+<text x="211" y="48">Burette</text><text x="263" y="340">Conical flask</text><text x="134" y="400">White tile</text>
+<path d="M245 139H331" stroke="#64748b" stroke-dasharray="5 4"/>
+<rect x="338" y="39" width="173" height="235" rx="6" fill="white" stroke="#64748b"/>
+<text x="350" y="65">Magnified scale</text>
+<path d="M376 88V250M451 88V250" stroke="#1e3a5f" stroke-width="3"/>
+<path d="M378 142Q413 162 449 142V248H378Z" fill="#dbeafe"/>
+<path d="M378 142Q413 162 449 142" fill="none" stroke="#2563eb" stroke-width="3"/>
+<path d="M378 103H400M378 153H400M378 203H400" stroke="#1e3a5f" stroke-width="2"/>
+<text x="455" y="108">10</text><text x="455" y="158">11</text><text x="455" y="208">12</text>
+<path d="M400 153H623" stroke="#b45309" stroke-dasharray="6 4" stroke-width="2"/>
+<path d="M626 153Q641 138 656 153Q641 168 626 153Z" fill="white" stroke="#172b4d" stroke-width="2"/><circle cx="641" cy="153" r="5" fill="#172b4d"/>
+<text x="539" y="190">Eye level</text><text x="344" y="299">Read meniscus bottom</text>
+<path d="M581 307V329Q570 340 581 351V382M589 307V329Q600 340 589 351V382" fill="#dbeafe" stroke="#1e3a5f" stroke-width="2"/>
+<ellipse cx="585" cy="293" rx="16" ry="21" fill="#fca5a5" stroke="#1e3a5f" stroke-width="2"/>
+<text x="396" y="348">Pipette + filler</text><text x="404" y="400" font-size="14">Schematic • not to scale</text>
+</g></svg>

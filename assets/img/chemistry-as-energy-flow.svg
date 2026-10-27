@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="700" viewBox="0 0 600 700" role="img" aria-labelledby="title desc">
+<title id="title">Reaction energy transfer and enthalpy levels</title>
+<desc id="desc">Two conceptual accounts at the same reference temperature. Exothermic: heat leaves the reaction system for the liquid surroundings, which warm; products have lower enthalpy and delta H is negative. Endothermic: heat enters the system from liquid surroundings, which cool; products have higher enthalpy and delta H is positive. Boxes represent energy accounts, not separate physical vessels. Vertical axes show enthalpy H, not temperature. Not to scale.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#17466b"/></marker></defs>
+<rect width="600" height="700" rx="12" fill="#f8fafc"/>
+<g font-family="Arial,sans-serif" fill="#172b4d" font-size="22">
+<text x="24" y="36" font-weight="bold">Exothermic / ΔH &lt; 0</text>
+<rect x="24" y="56" width="194" height="80" rx="8" fill="#fff" stroke="#475569" stroke-width="2"/>
+<text x="43" y="89">Reaction</text><text x="43" y="117">system</text>
+<rect x="350" y="56" width="226" height="80" rx="8" fill="#dcebf6" stroke="#475569" stroke-width="2"/>
+<text x="367" y="89">Surroundings</text><text x="367" y="117">liquid warms</text>
+<path d="M230 105H336" fill="none" stroke="#17466b" stroke-width="3" marker-end="url(#arrow)"/><text x="258" y="83">heat</text>
+<path d="M66 300V160" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/><text x="25" y="181">H</text>
+<path d="M94 185H310M94 276H310" stroke="#17466b" stroke-width="3"/>
+<text x="328" y="192">Reactants</text><text x="328" y="283">Products</text>
+<path d="M190 195V264" stroke="#17466b" stroke-width="3" marker-end="url(#arrow)"/><text x="211" y="238">ΔH</text>
+<text x="94" y="325" font-size="20">Compare states at the same temperature.</text>
+<path d="M24 347H576" stroke="#b6c5d3"/>
+<text x="24" y="382" font-weight="bold">Endothermic / ΔH &gt; 0</text>
+<rect x="24" y="402" width="194" height="80" rx="8" fill="#fff" stroke="#475569" stroke-width="2"/>
+<text x="43" y="435">Reaction</text><text x="43" y="463">system</text>
+<rect x="350" y="402" width="226" height="80" rx="8" fill="#dcebf6" stroke="#475569" stroke-width="2"/>
+<text x="367" y="435">Surroundings</text><text x="367" y="463">liquid cools</text>
+<path d="M336 451H230" fill="none" stroke="#17466b" stroke-width="3" marker-end="url(#arrow)"/><text x="258" y="429">heat</text>
+<path d="M66 646V506" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/><text x="25" y="527">H</text>
+<path d="M94 531H310M94 622H310" stroke="#17466b" stroke-width="3"/>
+<text x="328" y="538">Products</text><text x="328" y="629">Reactants</text>
+<path d="M190 612V543" stroke="#17466b" stroke-width="3" marker-end="url(#arrow)"/><text x="211" y="584">ΔH</text>
+<text x="94" y="671" font-size="20">Energy accounts; not separate vessels.</text>
+</g>
+</svg>

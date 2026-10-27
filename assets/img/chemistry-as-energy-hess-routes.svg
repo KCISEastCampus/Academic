@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="660" viewBox="0 0 600 660" role="img" aria-labelledby="title desc">
+<title id="title">Two types of Hess cycle</title>
+<desc id="desc">Schematic, not enthalpy-level diagrams. In the formation cycle, common reference-state elements form reactants and products; the target goes from reactants to products. In the combustion cycle, reactants and products each burn to the same complete-oxidation products, with sufficient oxygen included. Formation arrows point away from common elements, whereas combustion arrows point towards common products. Each label sum includes the balanced coefficients; states and amounts must match.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#17466b"/></marker></defs>
+<rect width="600" height="660" rx="12" fill="#f8fafc"/>
+<g font-family="Arial,sans-serif" fill="#172b4d" font-size="21">
+<text x="24" y="36" font-size="24" font-weight="bold">Formation: from common elements</text>
+<text x="35" y="94">Reactants</text><text x="438" y="94">Products</text>
+<path d="M178 88H418" stroke="#17466b" stroke-width="2" marker-end="url(#a)"/>
+<text x="251" y="77">ΔH target</text>
+<rect x="146" y="236" width="310" height="46" fill="#dcebf6" rx="6"/>
+<text x="166" y="265">Same reference elements</text>
+<path d="M245 226L123 111" stroke="#17466b" stroke-width="2" marker-end="url(#a)"/>
+<path d="M357 226L480 111" stroke="#17466b" stroke-width="2" marker-end="url(#a)"/>
+<text x="35" y="183">ΣνΔfH</text><text x="449" y="183">ΣνΔfH</text>
+<text x="45" y="313">Target = product sum − reactant sum</text>
+<path d="M24 338H576" stroke="#b6c5d3"/>
+<text x="24" y="378" font-size="24" font-weight="bold">Combustion: to common products</text>
+<text x="35" y="431">Reactants</text><text x="438" y="431">Products</text>
+<text x="35" y="458" font-size="19">+ enough O2</text><text x="434" y="458" font-size="19">+ enough O2</text>
+<path d="M178 425H418" stroke="#17466b" stroke-width="2" marker-end="url(#a)"/>
+<text x="251" y="414">ΔH target</text>
+<path d="M124 475L241 554" stroke="#17466b" stroke-width="2" marker-end="url(#a)"/>
+<path d="M480 475L358 554" stroke="#17466b" stroke-width="2" marker-end="url(#a)"/>
+<text x="35" y="525">ΣνΔcH</text><text x="449" y="525">ΣνΔcH</text>
+<rect x="117" y="568" width="366" height="42" rx="6" fill="#dcebf6"/><text x="134" y="596">Same CO2 / H2O amounts + states</text>
+<text x="45" y="642">Target = reactant sum − product sum</text>
+</g>
+</svg>

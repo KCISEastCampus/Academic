@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="360" viewBox="0 0 680 360" role="img" aria-labelledby="title desc">
+  <title id="title">Constructed rounded Period 3 first-ionisation record</title>
+  <desc id="desc">Values in kilojoules per mole: Na 500, Mg 740, Al 580, Si 790, P 1010, S 1000, Cl 1250, Ar 1520. Discrete points rise overall, with falls at Mg to Al and P to S. Lines guide the eye, not fractional elements. These are constructed teaching records, not experimental measurements.</desc>
+  <rect width="680" height="360" rx="10" fill="#f8fafc"/>
+  <g font-family="Arial,sans-serif" fill="#173447">
+    <text x="340" y="26" text-anchor="middle" font-size="19" font-weight="bold">First ionisation: constructed rounded records</text>
+    <g stroke="#d5e0e8" stroke-width="1">
+      <path d="M70 300H650 M70 225H650 M70 150H650 M70 75H650"/>
+    </g>
+    <path d="M70 55V300H650" fill="none" stroke="#284a60" stroke-width="2"/>
+    <g text-anchor="end" font-size="14">
+      <text x="60" y="305">0</text><text x="60" y="230">500</text>
+      <text x="60" y="155">1000</text><text x="60" y="80">1500</text>
+    </g>
+    <text transform="translate(20 190) rotate(-90)" text-anchor="middle" font-size="14">Energy / kJ mol−1</text>
+    <polyline points="90,225 168,189 246,213 324,181.5 402,148.5 480,150 558,112.5 636,72" fill="none" stroke="#155d83" stroke-width="2.5"/>
+    <g fill="#155d83" stroke="#ffffff" stroke-width="1.5">
+      <circle cx="90" cy="225" r="5"/><circle cx="168" cy="189" r="5"/>
+      <circle cx="246" cy="213" r="5"/><circle cx="324" cy="181.5" r="5"/>
+      <circle cx="402" cy="148.5" r="5"/><circle cx="480" cy="150" r="5"/>
+      <circle cx="558" cy="112.5" r="5"/><circle cx="636" cy="72" r="5"/>
+    </g>
+    <g font-size="14" text-anchor="middle">
+      <text x="90" y="210">500</text><text x="168" y="174">740</text>
+      <text x="246" y="238">580</text><text x="324" y="166">790</text>
+      <text x="402" y="132">1010</text><text x="480" y="175">1000</text>
+      <text x="558" y="97">1250</text><text x="636" y="57">1520</text>
+      <text x="90" y="321">Na</text><text x="168" y="321">Mg</text>
+      <text x="246" y="321">Al</text><text x="324" y="321">Si</text>
+      <text x="402" y="321">P</text><text x="480" y="321">S</text>
+      <text x="558" y="321">Cl</text><text x="636" y="321">Ar</text>
+      <text x="350" y="346">Discrete elements; connecting lines only guide the eye.</text>
+    </g>
+  </g>
+</svg>

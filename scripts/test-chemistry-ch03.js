@@ -188,7 +188,9 @@ for (const slug of slugs) {
 }
 assert.equal(groups, 32);
 const subjects = read('_data/subjects.yml');
-assert(/id: a2chemistry\s+name: A2 Chemistry\s+name_zh: A2 化学\s+icon:/.test(subjects));
+const a2Chemistry = subjects.match(/- id: a2chemistry\r?\n([\s\S]*?)(?=\r?\n  - id:|$)/)?.[1];
+assert(a2Chemistry, 'A2 chemistry subject exists');
+for (const field of ['name: A2 Chemistry', 'name_zh: A2 化学', 'icon:']) assert(a2Chemistry.includes(field), 'A2 chemistry metadata: ' + field);
 for (const prefix of sourceOnly ? [] : ['', '/zh']) {
   const level = built(`${prefix}/alevel/`);
   assert(level.includes(`href="${prefix}/${course}/"`), 'Localized subject card');

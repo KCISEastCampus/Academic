@@ -39,6 +39,9 @@ jobs:
           node scripts/test-exam-timetable.js
           node scripts/test-theme-init.js
           node scripts/test-image-modal.js
+      - name: Test complete AS chemistry course
+        run: node scripts/test-chemistry-as-foundations.js
+
       - name: Test physics lessons and bilingual content
         run: |
           node scripts/test-physics-learning-pilots.js

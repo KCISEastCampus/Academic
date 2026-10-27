@@ -5,17 +5,82 @@ mathjax: true
 grade: as
 subject: as-chemistry
 permalink: /alevel/as-chemistry/
+toc_headings: h2, h3
+study_page: true
+reading_layout: true
 redirect_from:
   - /alevel/chemistry/
 ---
 
+OxfordAQA International AS Chemistry: specification 9620, AS award 9621; CH01/CH02 are each 90 minutes, 70 marks and 50% of AS.
 
-> **Qualification**: OxfordAQA International AS Chemistry (9620) · Modular<br>
-> **Assessment**: Unit 1 (Inorganic 1 and Physical 1) + Unit 2 (Organic 1 and Physical 1) · 1h 30m each · 70 marks each · 50% of AS each
+<h2 id="start-here">Turn observations into testable chemical explanations</h2>
 
-> 📌 This page covers **Unit 2** (Organic 1 and Physical 1). Unit 1 is not yet included.
+Why does a white solid not identify an ion by itself? Why can one molecule give different products under changed conditions? Follow observation → particle/structure model → representation/equation → prediction → evidence evaluation. The Chinese route retains the same English questions, data and task requirements.
 
-# 📗 Unit 2: Organic Chemistry
+The route covers AS physical, inorganic and organic chemistry, with paper preparation and data analysis for RP1–5. Start with amounts below; use each lesson’s prerequisite links for recovery, or attempt its independent check first when revising.
+
+<h2 id="learning-route">Start with amounts and measurements</h2>
+
+| Learning topic | What you will do independently |
+| --- | --- |
+| [Amount and equations](/alevel/as-chemistry/amount-and-equations/) | Choose entities, balance, find limiting amounts |
+| [Formulae and gas evidence](/alevel/as-chemistry/formulae-and-gases/) | Infer ratios and test gas-model assumptions |
+| [Solutions and titration](/alevel/as-chemistry/solutions-and-titration/) | Prepare, select apparatus, analyse raw titres — RP1 |
+| [Quantitative review](/alevel/as-chemistry/quantitative-review/) | Select quantitative methods without a named recipe |
+
+<h2 id="particles-and-energy">Connect particles, structure and energy</h2>
+
+| Learning topic | What you will do independently |
+| --- | --- |
+| [Atomic structure and evidence](/alevel/as-chemistry/atomic-structure/) | Read spectra, configurations and ionisation energies |
+| [Bonding, shape and polarity](/alevel/as-chemistry/bonding-and-shape/) | Represent pairs, build spatial shapes, test dipoles |
+| [Structure, forces and properties](/alevel/as-chemistry/structure-and-forces/) | Draw crystal fragments and explain material behaviour |
+| [Energetics and calorimetry](/alevel/as-chemistry/energetics-and-calorimetry/) | Choose a system, process temperature records — RP2 |
+| [Hess cycles and bond enthalpies](/alevel/as-chemistry/hess-and-bond-enthalpies/) | Build state-consistent cycles and assess estimates |
+| [Redox and balanced equations](/alevel/as-chemistry/redox-equations/) | Conserve atoms, charge and electrons |
+
+<h2 id="inorganic-and-physical">Compare evidence and changing conditions</h2>
+
+| Learning topic | What you will do independently |
+| --- | --- |
+| [Periodicity](/alevel/as-chemistry/periodicity/) | Explain trends using changing structure and electrons |
+| [Group 2](/alevel/as-chemistry/group-2/) | Distinguish reactivity, solubility and test evidence |
+| [Halogens](/alevel/as-chemistry/halogens/) | Connect redox, conditions and observations |
+| [Qualitative analysis](/alevel/as-chemistry/qualitative-analysis/) | Choose fresh portions, tests and controls — RP3 |
+| [Rates and energy distributions](/alevel/as-chemistry/kinetics/) | Read slopes and explain controlled comparisons |
+| [Dynamic equilibrium and Kc](/alevel/as-chemistry/equilibrium/) | Predict shifts, calculate equilibrium amounts and Kc |
+
+<h2 id="organic-and-review">Build organic explanations, then mix the methods</h2>
+
+| Learning topic | What you will do independently |
+| --- | --- |
+| [Organic structures and isomerism](/alevel/as-chemistry/organic-foundations/) | Translate structures, name compounds, use E/Z priorities |
+| [Alkanes, fuels and radicals](/alevel/as-chemistry/alkanes/) | Explain processing, pollution and radical stages |
+| [Halogenoalkanes](/alevel/as-chemistry/halogenoalkanes/) | Choose conditions and draw substitution/elimination |
+| [Alkenes and polymers](/alevel/as-chemistry/alkenes/) | Track electron pairs, products and repeat units |
+| [Epoxyethane](/alevel/as-chemistry/epoxyethane/) | Explain manufacture, ring opening and uses |
+| [Alcohols and preparation](/alevel/as-chemistry/alcohols/) | Choose oxidation/dehydration conditions and apparatus — RP4 |
+| [Organic analysis](/alevel/as-chemistry/organic-analysis/) | Combine chemical tests, exact mass and IR — RP5 |
+| [Mixed AS review](/alevel/as-chemistry/as-review/) | Choose models, evaluate evidence and return after a gap |
+
+<h2 id="course-scope">Use the route and check the boundaries</h2>
+
+Keep hints and answers closed for a first attempt. Record support used, repair the cause and retry with changed conditions. After another topic, attempt the new mixed-review tasks to check retention and transfer. Actually draw structures and write English explanations; reading a solution is not completing the task.
+
+CH01 covers 3.1.1–5 and 3.2.1–3; CH02 covers 3.1.6–7 and 3.3.1–6. Kc, epoxyethane and the specified mechanisms belong to AS. Kp, NMR, full acid–base equilibria and A2 transition-metal chemistry are outside this route.
+
+Scope follows the [official qualification page](https://www.oxfordaqa.com/qualification/international-as-and-a-level-chemistry-9620/) and its [specification 5.3](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-chemistry-specification.pdf). The supporting textbook is Lister/Renshaw, OUP 2016; its A2 content and chapter sequence do not determine AS scope. New tasks are labelled self-written; constructed data are distinguished from measurements.
+
+RP1–5 involve preparation/titration, calorimetry, inorganic tests, organic preparation and identification. The pages support prediction, method decisions, record analysis and evaluation; supervised apparatus work, safety and practical competence require separate completion. Student trials remain pending; a working website does not establish learning effectiveness.
+
+<h2 id="reference-notes">Existing organic reference notes</h2>
+
+The English notes below retain their original topic anchors for revision. They are being kept separately from the new learning route because reading a summary is different from practising and checking a new skill.
+
+<details markdown="1"><summary>Open the English organic chemistry reference</summary>
+
+<h2 id="-unit-2-organic-chemistry">Unit 2 organic chemistry reference</h2>
 
 
 ## Chapter 11: Introduction to Organic Chemistry
@@ -879,3 +944,5 @@ Both aldehydes and ketones contain the **carbonyl group** ($\mathrm{C=O}$).
 ![IMG](<../../assets/img/as-chem/C15-img (10).png>)
 
 > Note: Many aldehydes and ketones have characteristic pleasant smells.
+
+</details>
