@@ -22,7 +22,7 @@ for (const file of ['index.html', 'zh/index.html', 'alevel/index.html', 'igcse/i
 const homepageDestinations = [
   ['/alevel/as-mathematics/', '/zh/alevel/as-mathematics/'],
   ['/alevel/as-further-mathematics/', '/zh/alevel/as-further-mathematics/'],
-  ['/alevel/as-chemistry/', null],
+  ['/alevel/as-chemistry/', '/zh/alevel/as-chemistry/'],
   ['/alevel/as-physics/', '/zh/alevel/as-physics/'],
   ['/alevel/as-economics/', null],
   ['/alevel/as-biology/', null],
