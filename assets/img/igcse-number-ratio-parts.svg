@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 205" role="img" aria-labelledby="title desc">
+<title id="title">Three shares of juice to two shares of water</title><desc id="desc">Five equal rectangles, each representing the same volume. The first three are labelled J and grouped as juice; the last two are labelled W and grouped as water. All five together form the whole mixture.</desc>
+<rect width="600" height="205" rx="8" fill="#fff"/>
+<g stroke="#172b4d" stroke-width="2"><path d="M50 72H350V128H50Z" fill="#f8d179"/><path d="M350 72H550V128H350Z" fill="#b9dfeb"/><path d="M150 72V128M250 72V128M450 72V128"/><path d="M50 143V152H550V143" fill="none"/></g>
+<g font-family="Arial,sans-serif" font-size="22" fill="#172b4d" text-anchor="middle"><text x="200" y="47">Juice: 3 shares</text><text x="450" y="47">Water: 2 shares</text><text x="100" y="108">J</text><text x="200" y="108">J</text><text x="300" y="108">J</text><text x="400" y="108">W</text><text x="500" y="108">W</text><text x="300" y="188">Whole mixture: 5 equal shares</text></g>
+</svg>

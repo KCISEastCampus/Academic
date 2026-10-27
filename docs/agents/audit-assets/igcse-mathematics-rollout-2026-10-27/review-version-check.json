@@ -1,0 +1,27 @@
+[
+  {
+    "report": "review-igcse-number-2026-10-27.md",
+    "sourceHashes": 15,
+    "mismatches": []
+  },
+  {
+    "report": "review-igcse-algebra-2026-10-27.md",
+    "sourceHashes": 18,
+    "mismatches": []
+  },
+  {
+    "report": "review-igcse-geometry-reasoning-2026-10-27.md",
+    "sourceHashes": 16,
+    "mismatches": []
+  },
+  {
+    "report": "review-igcse-geometry-calculation-2026-10-27.md",
+    "sourceHashes": 14,
+    "mismatches": []
+  },
+  {
+    "report": "review-igcse-statistics-2026-10-27.md",
+    "sourceHashes": 29,
+    "mismatches": []
+  }
+]

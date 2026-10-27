@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 290" role="img" aria-labelledby="title desc">
+<title id="title">Return journey solution sketch</title>
+<desc id="desc">Start S is 4 kilometres west and 3 kilometres south of finish F. The outward route goes east from S then north to F. At F, theta is the angle from south towards the southwest return line FS. The return is 5 kilometres with bearing 180 degrees plus theta, or 233 degrees clockwise from north. Not to scale.</desc>
+<rect width="360" height="290" rx="10" fill="#fff"/>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#1e536e"/></marker></defs>
+<g stroke="#1e536e" stroke-width="2.5" fill="none">
+<path d="M55 225H280V75"/>
+<path d="M280 75 55 225" marker-end="url(#arrow)"/>
+<path d="M265 225V210H280"/>
+<path d="M280 75V22" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+<path d="M280 75V140" stroke-dasharray="4 4" marker-end="url(#arrow)"/>
+<path d="M280 113A38 38 0 0 1 248.38 96.08"/>
+</g>
+<g font-family="Arial,sans-serif" font-size="18" fill="#122c3d">
+<text x="35" y="248">S</text><text x="291" y="80">F</text>
+<text x="144" y="251">4 km east</text><text x="288" y="156">3 km</text>
+<text x="280" y="17">N</text><text x="100" y="130">5 km return</text>
+<text x="287" y="124">South</text><text x="256" y="119">θ</text>
+<text x="22" y="280">Not to scale · bearing at F: 233°</text>
+</g>
+</svg>

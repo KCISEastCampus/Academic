@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="140" viewBox="0 0 360 140" role="img" aria-labelledby="title desc">
+  <title id="title">Three of five equal parts</title>
+  <desc id="desc">One strip has five equally sized sections. The first three are filled blue and labelled Taken. The last two are white and labelled Left. Vertical lines show all five boundaries.</desc>
+  <rect x="15" y="20" width="330" height="100" rx="8" fill="#f1f5f9"/>
+  <path d="M30 45h180v40H30z" fill="#2563eb"/>
+  <path d="M210 45h120v40H210z" fill="#fff"/>
+  <path d="M30 45h300v40H30z M90 45v40 M150 45v40 M210 45v40 M270 45v40" fill="none" stroke="#0f172a" stroke-width="2"/>
+  <g fill="#0f172a" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">
+    <text x="120" y="108">Taken</text>
+    <text x="270" y="108">Left</text>
+  </g>
+</svg>

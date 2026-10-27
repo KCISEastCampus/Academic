@@ -77,7 +77,13 @@
               {% when "alevel" %}
                 <a href="/alevel/">A-Level</a>
               {% when "igcse" %}
-                <a href="/igcse/">IGCSE</a>
+                <a href="{{ language_prefix }}/igcse/">IGCSE</a>
+              {% when "mathematics" %}
+                {% if page.grade == 'igcse' %}
+                <a href="{{ language_prefix }}/igcse/mathematics/">{% if page.lang == 'zh-CN' %}IGCSE 数学{% else %}IGCSE Mathematics{% endif %}</a>
+                {% else %}
+                <span>{{ crumb | capitalize }}</span>
+                {% endif %}
               {% when "a2-mathematics" %}
                 <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/alevel/a2-mathematics/" data-ui="pure_mathematics">{{ ui.pure_mathematics }}</a>
               {% when "a2-further-mathematics" %}

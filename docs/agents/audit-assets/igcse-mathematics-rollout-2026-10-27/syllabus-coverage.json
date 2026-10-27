@@ -1,0 +1,1556 @@
+{
+  "qualification": "OxfordAQA 9260 Extension v5.1",
+  "status": "Extension single route, including required foundations. All 90 items semantically mapped; seven independent review records close identified findings. Technical acceptance and student trials are separate.",
+  "items": [
+    {
+      "item": "N1",
+      "capability": "正负整数、小数、分数排序和比较符号",
+      "evidence": [
+        {
+          "page": "number-operations",
+          "teaching": [
+            "place-value",
+            "signed-numbers"
+          ],
+          "independent": [
+            "practice-order"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "N2",
+      "capability": "位值与正负整数、小数、真假带分数的书面四则",
+      "evidence": [
+        {
+          "page": "number-operations",
+          "teaching": [
+            "written-methods",
+            "fraction-arithmetic"
+          ],
+          "independent": [
+            "practice-arithmetic",
+            "practice-fractions"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "N3",
+      "capability": "逆运算、括号、运算顺序、幂根和倒数",
+      "evidence": [
+        {
+          "page": "number-operations",
+          "teaching": [
+            "operation-order",
+            "written-methods"
+          ],
+          "independent": [
+            "practice-order-of-operations",
+            "practice-arithmetic"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "N4",
+      "capability": "奇偶质数、因数倍数、质因数、HCF/LCM选用",
+      "evidence": [
+        {
+          "page": "number-operations",
+          "teaching": [
+            "factors-multiples"
+          ],
+          "independent": [
+            "practice-factors"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "N5",
+      "capability": "正整次幂、实根及常见幂的识别",
+      "evidence": [
+        {
+          "page": "powers-roots-and-standard-form",
+          "teaching": [
+            "powers-and-roots"
+          ],
+          "independent": [
+            "practice-powers"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "N6",
+      "capability": "整数指数法则与 Extension 分数指数",
+      "evidence": [
+        {
+          "page": "powers-roots-and-standard-form",
+          "teaching": [
+            "index-laws",
+            "fractional-powers"
+          ],
+          "independent": [
+            "practice-indices",
+            "practice-fractional-powers"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "N7",
+      "capability": "精确分数运算与 Extension 根式、有理化",
+      "evidence": [
+        {
+          "page": "number-operations",
+          "teaching": [
+            "fraction-arithmetic"
+          ],
+          "independent": [
+            "practice-fractions"
+          ]
+        },
+        {
+          "page": "powers-roots-and-standard-form",
+          "teaching": [
+            "surds"
+          ],
+          "independent": [
+            "practice-surds"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "N8",
+      "capability": "标准形式计算、解释和数量级",
+      "evidence": [
+        {
+          "page": "powers-roots-and-standard-form",
+          "teaching": [
+            "standard-form"
+          ],
+          "independent": [
+            "practice-standard-form"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "N9",
+      "capability": "集合记号、成员、补交并和Venn",
+      "evidence": [
+        {
+          "page": "sets-and-probability",
+          "teaching": [
+            "sets",
+            "venn"
+          ],
+          "independent": [
+            "practice-sets",
+            "practice-venn"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "N10",
+      "capability": "科学计算器输入、合理性核验及度制三角",
+      "evidence": [
+        {
+          "page": "accuracy-and-bounds",
+          "teaching": [
+            "estimation"
+          ],
+          "independent": [
+            "practice-estimation"
+          ]
+        },
+        {
+          "page": "pythagoras-and-trigonometry",
+          "teaching": [
+            "ratios"
+          ],
+          "independent": [
+            "check-ratios"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "N11",
+      "capability": "舍入、估算、限与 Extension 复合上下界",
+      "evidence": [
+        {
+          "page": "accuracy-and-bounds",
+          "teaching": [
+            "rounding",
+            "estimation",
+            "limits",
+            "calculated-bounds"
+          ],
+          "independent": [
+            "practice-rounding",
+            "practice-estimation",
+            "practice-limits",
+            "practice-bounds"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "N12",
+      "capability": "等价分数、有限小数百分数与 Extension 循环转换",
+      "evidence": [
+        {
+          "page": "fractions-decimals-and-percentages",
+          "teaching": [
+            "change-form"
+          ],
+          "independent": [
+            "practice-forms",
+            "retry-forms"
+          ]
+        },
+        {
+          "page": "recurring-decimals",
+          "teaching": [
+            "remainders",
+            "align-tails"
+          ],
+          "independent": [
+            "practice-division",
+            "practice-conversion",
+            "practice-reasoning"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "N13",
+      "capability": "分数、小数和百分数作算子",
+      "evidence": [
+        {
+          "page": "fractions-decimals-and-percentages",
+          "teaching": [
+            "find-part"
+          ],
+          "independent": [
+            "practice-part",
+            "later-check"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "N14",
+      "capability": "选择比较整体，比例可超过一或百分之百",
+      "evidence": [
+        {
+          "page": "fractions-decimals-and-percentages",
+          "teaching": [
+            "find-share"
+          ],
+          "independent": [
+            "practice-share",
+            "retry-share"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "N15",
+      "capability": "百分变化、简单复利与 Extension 逆百分和公式",
+      "evidence": [
+        {
+          "page": "percentage-change",
+          "teaching": [
+            "multipliers",
+            "interest",
+            "reverse",
+            "formula-model"
+          ],
+          "independent": [
+            "practice-change",
+            "practice-interest",
+            "practice-reverse",
+            "practice-model"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "N16",
+      "capability": "比的记号、约简和分数联系",
+      "evidence": [
+        {
+          "page": "ratio-and-proportion",
+          "teaching": [
+            "ratio-parts"
+          ],
+          "independent": [
+            "practice-sharing"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "N17",
+      "capability": "按比分配整体",
+      "evidence": [
+        {
+          "page": "ratio-and-proportion",
+          "teaching": [
+            "ratio-parts"
+          ],
+          "independent": [
+            "practice-sharing"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "N18",
+      "capability": "在情境中应用比",
+      "evidence": [
+        {
+          "page": "ratio-and-proportion",
+          "teaching": [
+            "ratio-parts"
+          ],
+          "independent": [
+            "practice-sharing"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "N19",
+      "capability": "单位率、工资和最佳购买",
+      "evidence": [
+        {
+          "page": "ratio-and-proportion",
+          "teaching": [
+            "unit-rates"
+          ],
+          "independent": [
+            "practice-rates"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "N20",
+      "capability": "正反比例、重复比例变化与 Extension 指数增长衰减",
+      "evidence": [
+        {
+          "page": "ratio-and-proportion",
+          "teaching": [
+            "direct-inverse",
+            "exponential"
+          ],
+          "independent": [
+            "practice-models",
+            "practice-growth"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "A1",
+      "capability": "字母表示一般数和运算",
+      "evidence": [
+        {
+          "page": "expressions-and-formulae",
+          "teaching": [
+            "letters"
+          ],
+          "independent": [
+            "practice-language"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "A2",
+      "capability": "代入、简单及复杂公式重排与主项两次",
+      "evidence": [
+        {
+          "page": "expressions-and-formulae",
+          "teaching": [
+            "substitution",
+            "rearrange",
+            "twice"
+          ],
+          "independent": [
+            "practice-substitution",
+            "practice-rearrange",
+            "practice-twice"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "A3",
+      "capability": "式、方程、公式、恒等式、不等式、项因子",
+      "evidence": [
+        {
+          "page": "expressions-and-formulae",
+          "teaching": [
+            "language"
+          ],
+          "independent": [
+            "practice-language"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "A4",
+      "capability": "合并同类项、展开双括号及三二项式",
+      "evidence": [
+        {
+          "page": "expressions-and-formulae",
+          "teaching": [
+            "expansion",
+            "three-brackets"
+          ],
+          "independent": [
+            "practice-expansion",
+            "practice-three"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "A5",
+      "capability": "公因式、二次因式分解、平方差",
+      "evidence": [
+        {
+          "page": "expressions-and-formulae",
+          "teaching": [
+            "factorising"
+          ],
+          "independent": [
+            "practice-factors"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "A6",
+      "capability": "整数及分数指数法则",
+      "evidence": [
+        {
+          "page": "powers-roots-and-standard-form",
+          "teaching": [
+            "index-laws",
+            "fractional-powers"
+          ],
+          "independent": [
+            "practice-indices",
+            "practice-fractional-powers"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "A7",
+      "capability": "数字及代数分母的分式四则与限制",
+      "evidence": [
+        {
+          "page": "algebraic-fractions-and-proof",
+          "teaching": [
+            "numeric-denominators",
+            "conditions",
+            "operations"
+          ],
+          "independent": [
+            "practice-numeric",
+            "practice-fractions"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "A8",
+      "capability": "等价论证、反例与一般代数证明",
+      "evidence": [
+        {
+          "page": "algebraic-fractions-and-proof",
+          "teaching": [
+            "equivalence",
+            "proof"
+          ],
+          "independent": [
+            "practice-argument",
+            "practice-proof"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "A9",
+      "capability": "输入输出、定义域值域、复合和反函数",
+      "evidence": [
+        {
+          "page": "functions-and-graphs",
+          "teaching": [
+            "machines",
+            "domain",
+            "composite",
+            "inverse"
+          ],
+          "independent": [
+            "practice-machine",
+            "practice-domain",
+            "practice-composite",
+            "practice-inverse"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "A10",
+      "capability": "四象限坐标",
+      "evidence": [
+        {
+          "page": "coordinates-and-lines",
+          "teaching": [
+            "coordinates"
+          ],
+          "independent": [
+            "practice-points"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "A11",
+      "capability": "绘直线、斜率截距、平行及垂直、点斜式",
+      "evidence": [
+        {
+          "page": "coordinates-and-lines",
+          "teaching": [
+            "gradient",
+            "intercepts",
+            "through-points",
+            "perpendicular"
+          ],
+          "independent": [
+            "practice-lines",
+            "practice-equation",
+            "practice-perpendicular"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "A12",
+      "capability": "线性二次三次倒数、指数及任意角三角图像",
+      "evidence": [
+        {
+          "page": "functions-and-graphs",
+          "teaching": [
+            "families",
+            "exponential",
+            "trigonometric"
+          ],
+          "independent": [
+            "practice-families",
+            "practice-exponential",
+            "practice-trigonometric",
+            "practice-tangent-graph"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "A13",
+      "capability": "化简后非负整次多项式求导",
+      "evidence": [
+        {
+          "page": "differentiation-and-motion",
+          "teaching": [
+            "gradient-function"
+          ],
+          "independent": [
+            "practice-derivative"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "A14",
+      "capability": "切线斜率、切线方程",
+      "evidence": [
+        {
+          "page": "differentiation-and-motion",
+          "teaching": [
+            "tangent"
+          ],
+          "independent": [
+            "practice-tangent"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "A15",
+      "capability": "极大极小和驻点拐点、带驻点草图",
+      "evidence": [
+        {
+          "page": "differentiation-and-motion",
+          "teaching": [
+            "stationary"
+          ],
+          "independent": [
+            "practice-stationary"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "A16",
+      "capability": "二次根、截距、对称、顶点与配方",
+      "evidence": [
+        {
+          "page": "quadratics-and-simultaneous-equations",
+          "teaching": [
+            "roots",
+            "sketch",
+            "square"
+          ],
+          "independent": [
+            "practice-roots",
+            "practice-graph",
+            "practice-square"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "A17",
+      "capability": "情境非标准图与近似解",
+      "evidence": [
+        {
+          "page": "functions-and-graphs",
+          "teaching": [
+            "context-graphs"
+          ],
+          "independent": [
+            "practice-context"
+          ]
+        },
+        {
+          "page": "differentiation-and-motion",
+          "teaching": [
+            "motion",
+            "estimates"
+          ],
+          "independent": [
+            "practice-motion",
+            "practice-estimates"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "A18",
+      "capability": "正反变率代数模型",
+      "evidence": [
+        {
+          "page": "ratio-and-proportion",
+          "teaching": [
+            "variation"
+          ],
+          "independent": [
+            "practice-variation"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "A19",
+      "capability": "一次方程括号/两边未知及图解近似",
+      "evidence": [
+        {
+          "page": "equations-and-inequalities",
+          "teaching": [
+            "balance",
+            "graph-solutions"
+          ],
+          "independent": [
+            "practice-equations",
+            "practice-graph"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "A20",
+      "capability": "二次因式、图解、配方、公式",
+      "evidence": [
+        {
+          "page": "quadratics-and-simultaneous-equations",
+          "teaching": [
+            "roots",
+            "square",
+            "formula"
+          ],
+          "independent": [
+            "practice-roots",
+            "practice-graph",
+            "practice-square",
+            "practice-formula"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "A21",
+      "capability": "两一次或一次二次联立的代数和图解",
+      "evidence": [
+        {
+          "page": "quadratics-and-simultaneous-equations",
+          "teaching": [
+            "simultaneous",
+            "line-curve"
+          ],
+          "independent": [
+            "practice-simultaneous",
+            "practice-line-curve"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "A22",
+      "capability": "情境列式、列方程或联立并解释筛选解",
+      "evidence": [
+        {
+          "page": "equations-and-inequalities",
+          "teaching": [
+            "model"
+          ],
+          "independent": [
+            "practice-model"
+          ]
+        },
+        {
+          "page": "quadratics-and-simultaneous-equations",
+          "teaching": [
+            "modelling"
+          ],
+          "independent": [
+            "practice-model"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "A23",
+      "capability": "一/二维线性及一元二次不等式、数轴和区域",
+      "evidence": [
+        {
+          "page": "equations-and-inequalities",
+          "teaching": [
+            "inequalities",
+            "regions",
+            "quadratic-inequalities"
+          ],
+          "independent": [
+            "practice-inequality",
+            "practice-region",
+            "practice-quadratic"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "A24",
+      "capability": "递推及位置规则生成项",
+      "evidence": [
+        {
+          "page": "sequences",
+          "teaching": [
+            "rules"
+          ],
+          "independent": [
+            "practice-rules"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "A25",
+      "capability": "三角数平方立方、等差和二次数列",
+      "evidence": [
+        {
+          "page": "sequences",
+          "teaching": [
+            "families",
+            "quadratic"
+          ],
+          "independent": [
+            "practice-families",
+            "practice-quadratic"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "A26",
+      "capability": "线性及二次通项推断和检验",
+      "evidence": [
+        {
+          "page": "sequences",
+          "teaching": [
+            "linear",
+            "quadratic"
+          ],
+          "independent": [
+            "practice-linear",
+            "practice-quadratic"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "G1",
+      "capability": "点线角、平行垂直、图形及标准标记",
+      "evidence": [
+        {
+          "page": "angles-and-polygons",
+          "teaching": [
+            "notation"
+          ],
+          "independent": [
+            "practice-notation"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "G2",
+      "capability": "周角平角垂直及对顶角",
+      "evidence": [
+        {
+          "page": "angles-and-polygons",
+          "teaching": [
+            "angle-facts"
+          ],
+          "independent": [
+            "practice-angles"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "G3",
+      "capability": "平行线、三角形分类和角、四边形角",
+      "evidence": [
+        {
+          "page": "angles-and-polygons",
+          "teaching": [
+            "parallel",
+            "triangles",
+            "quadrilaterals"
+          ],
+          "independent": [
+            "practice-angles",
+            "practice-triangles",
+            "practice-quadrilaterals"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "G4",
+      "capability": "多边形内外角和及正多边形中心角",
+      "evidence": [
+        {
+          "page": "angles-and-polygons",
+          "teaching": [
+            "polygons"
+          ],
+          "independent": [
+            "practice-polygons"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "G5",
+      "capability": "特殊四边形定义与性质",
+      "evidence": [
+        {
+          "page": "angles-and-polygons",
+          "teaching": [
+            "quadrilaterals"
+          ],
+          "independent": [
+            "practice-shapes"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "G6",
+      "capability": "反射和旋转对称",
+      "evidence": [
+        {
+          "page": "angles-and-polygons",
+          "teaching": [
+            "symmetry"
+          ],
+          "independent": [
+            "practice-shapes"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "G7",
+      "capability": "全等相似、相似长度与全等条件",
+      "evidence": [
+        {
+          "page": "congruence-and-similarity",
+          "teaching": [
+            "matching",
+            "congruence"
+          ],
+          "independent": [
+            "practice-lengths",
+            "practice-proof",
+            "practice-conditions"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "G8",
+      "capability": "圆术语及全套圆定理的条件与应用",
+      "evidence": [
+        {
+          "page": "circles-and-proof",
+          "teaching": [
+            "circle-language",
+            "angle-theorems",
+            "tangents-chords"
+          ],
+          "independent": [
+            "practice-labels",
+            "practice-angles",
+            "practice-tangents",
+            "practice-chord",
+            "practice-alternate",
+            "practice-semicircle",
+            "retry-semicircle"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "G9",
+      "capability": "用几何定理形成完整理由链证明",
+      "evidence": [
+        {
+          "page": "circles-and-proof",
+          "teaching": [
+            "example-proof"
+          ],
+          "independent": [
+            "practice-proof"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "G10",
+      "capability": "立体面、棱、顶点、曲面及形状",
+      "evidence": [
+        {
+          "page": "units-area-and-volume",
+          "teaching": [
+            "solids"
+          ],
+          "independent": [
+            "check-solids"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "G11",
+      "capability": "构造和解释平面图及立面图",
+      "evidence": [
+        {
+          "page": "units-area-and-volume",
+          "teaching": [
+            "solids"
+          ],
+          "independent": [
+            "check-views"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "G12",
+      "capability": "测量、地图比例、八方和三位数方位角",
+      "evidence": [
+        {
+          "page": "constructions-loci-and-bearings",
+          "teaching": [
+            "scale-measure",
+            "bearings"
+          ],
+          "independent": [
+            "practice-map",
+            "practice-bearing"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "G13",
+      "capability": "尺规构造、轨迹、最短垂距",
+      "evidence": [
+        {
+          "page": "constructions-loci-and-bearings",
+          "teaching": [
+            "constructions",
+            "loci",
+            "shortest"
+          ],
+          "independent": [
+            "practice-tools",
+            "practice-locus"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "G14",
+      "capability": "标准和复合单位、长度面积体积容量时间货币速度密度",
+      "evidence": [
+        {
+          "page": "units-area-and-volume",
+          "teaching": [
+            "units",
+            "rates"
+          ],
+          "independent": [
+            "check-units",
+            "check-rates"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "G15",
+      "capability": "三角平行四边梯形面积及定截面体积",
+      "evidence": [
+        {
+          "page": "units-area-and-volume",
+          "teaching": [
+            "flat-shapes",
+            "prisms"
+          ],
+          "independent": [
+            "check-flat",
+            "check-prism"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "G16",
+      "capability": "圆和复合平面周长面积、曲面立体及锥台表面积体积",
+      "evidence": [
+        {
+          "page": "units-area-and-volume",
+          "teaching": [
+            "flat-shapes",
+            "solids-extension"
+          ],
+          "independent": [
+            "check-flat",
+            "check-composite",
+            "check-frustums"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "G17",
+      "capability": "相似长度面积体积比例",
+      "evidence": [
+        {
+          "page": "units-area-and-volume",
+          "teaching": [
+            "scaling"
+          ],
+          "independent": [
+            "check-scale"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "G18",
+      "capability": "弧长、圆心角和扇形面积",
+      "evidence": [
+        {
+          "page": "units-area-and-volume",
+          "teaching": [
+            "sectors"
+          ],
+          "independent": [
+            "check-sector"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "G19",
+      "capability": "二维及三维勾股和直角三角比",
+      "evidence": [
+        {
+          "page": "pythagoras-and-trigonometry",
+          "teaching": [
+            "right-triangles",
+            "ratios"
+          ],
+          "independent": [
+            "check-right",
+            "check-ratios",
+            "check-space"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "G20",
+      "capability": "非直角三角的正弦余弦定理和面积",
+      "evidence": [
+        {
+          "page": "pythagoras-and-trigonometry",
+          "teaching": [
+            "any-triangle"
+          ],
+          "independent": [
+            "check-any",
+            "check-area"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "G21",
+      "capability": "单/组合变换、保持性质、正负分数放大",
+      "evidence": [
+        {
+          "page": "transformations",
+          "teaching": [
+            "moves",
+            "enlargements"
+          ],
+          "independent": [
+            "check-single",
+            "check-description",
+            "check-enlarge",
+            "check-order"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "G22",
+      "capability": "向量和差数乘、图示及简单几何证明",
+      "evidence": [
+        {
+          "page": "vectors-and-matrices",
+          "teaching": [
+            "vectors",
+            "proof"
+          ],
+          "independent": [
+            "check-vectors",
+            "check-proof"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "G23",
+      "capability": "2x2与2x2/2x1及标量乘法",
+      "evidence": [
+        {
+          "page": "vectors-and-matrices",
+          "teaching": [
+            "matrix-products"
+          ],
+          "independent": [
+            "check-products"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "G24",
+      "capability": "2x2单位矩阵",
+      "evidence": [
+        {
+          "page": "vectors-and-matrices",
+          "teaching": [
+            "identity"
+          ],
+          "independent": [
+            "check-products"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "G25",
+      "capability": "允许的原点变换与单位方形矩阵",
+      "evidence": [
+        {
+          "page": "vectors-and-matrices",
+          "teaching": [
+            "unit-square"
+          ],
+          "independent": [
+            "check-square"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "G26",
+      "capability": "矩阵乘法与组合次序",
+      "evidence": [
+        {
+          "page": "vectors-and-matrices",
+          "teaching": [
+            "composition"
+          ],
+          "independent": [
+            "check-composition"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "S1",
+      "capability": "定性离散连续、分组未分组数据",
+      "evidence": [
+        {
+          "page": "data-and-averages",
+          "teaching": [
+            "data-types"
+          ],
+          "independent": [
+            "practice-data"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "S2",
+      "capability": "从表和清单提取数据",
+      "evidence": [
+        {
+          "page": "data-and-averages",
+          "teaching": [
+            "frequency"
+          ],
+          "independent": [
+            "practice-data"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "S3",
+      "capability": "设计和使用双向表",
+      "evidence": [
+        {
+          "page": "data-and-averages",
+          "teaching": [
+            "two-way"
+          ],
+          "independent": [
+            "practice-table"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "S4",
+      "capability": "全Core图表及Extension不等组距直方图/CF/箱线",
+      "evidence": [
+        {
+          "page": "statistical-diagrams",
+          "teaching": [
+            "recording",
+            "categories",
+            "time",
+            "grouped-graphs",
+            "unequal-histograms",
+            "cumulative",
+            "box-plots",
+            "scatter"
+          ],
+          "independent": [
+            "practice-recording",
+            "practice-categories",
+            "practice-time",
+            "practice-grouped",
+            "practice-density",
+            "practice-cumulative",
+            "practice-box",
+            "practice-scatter",
+            "retry-core"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "S5",
+      "capability": "均值中位数极差众数众数组、分位/IQR百分位",
+      "evidence": [
+        {
+          "page": "data-and-averages",
+          "teaching": [
+            "averages",
+            "grouped",
+            "quartiles"
+          ],
+          "independent": [
+            "practice-averages",
+            "practice-grouped",
+            "practice-quartiles"
+          ]
+        },
+        {
+          "page": "statistical-diagrams",
+          "teaching": [
+            "cumulative"
+          ],
+          "independent": [
+            "practice-cumulative"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "S6",
+      "capability": "解释图表并形成有依据结论",
+      "evidence": [
+        {
+          "page": "statistical-diagrams",
+          "teaching": [
+            "scatter",
+            "box-plots"
+          ],
+          "independent": [
+            "practice-scatter",
+            "practice-box"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "S7",
+      "capability": "比较分布与推断边界",
+      "evidence": [
+        {
+          "page": "data-and-averages",
+          "teaching": [
+            "averages",
+            "quartiles"
+          ],
+          "independent": [
+            "practice-averages",
+            "practice-quartiles"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "S8",
+      "capability": "相关强弱方向、最佳拟合线及局限",
+      "evidence": [
+        {
+          "page": "statistical-diagrams",
+          "teaching": [
+            "scatter"
+          ],
+          "independent": [
+            "practice-scatter",
+            "practice-patterns"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "S9",
+      "capability": "概率语言和概率尺度",
+      "evidence": [
+        {
+          "page": "sets-and-probability",
+          "teaching": [
+            "probability-scale"
+          ],
+          "independent": [
+            "practice-model"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "S10",
+      "capability": "等可能理论模型、相对频率、期望频数",
+      "evidence": [
+        {
+          "page": "sets-and-probability",
+          "teaching": [
+            "experiments"
+          ],
+          "independent": [
+            "practice-experiment"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "S11",
+      "capability": "实验数据与理论概率比较",
+      "evidence": [
+        {
+          "page": "sets-and-probability",
+          "teaching": [
+            "experiments"
+          ],
+          "independent": [
+            "practice-experiment"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "S12",
+      "capability": "重复试验的结果变异",
+      "evidence": [
+        {
+          "page": "sets-and-probability",
+          "teaching": [
+            "experiments"
+          ],
+          "independent": [
+            "practice-experiment"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "S13",
+      "capability": "样本量、概率和总体特征估计及偏差边界",
+      "evidence": [
+        {
+          "page": "sets-and-probability",
+          "teaching": [
+            "experiments"
+          ],
+          "independent": [
+            "practice-experiment"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "S14",
+      "capability": "单事件及两次事件样本空间",
+      "evidence": [
+        {
+          "page": "sets-and-probability",
+          "teaching": [
+            "sample-spaces"
+          ],
+          "independent": [
+            "practice-space"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "S15",
+      "capability": "互斥穷尽与概率总和、互斥加法",
+      "evidence": [
+        {
+          "page": "sets-and-probability",
+          "teaching": [
+            "events"
+          ],
+          "independent": [
+            "practice-events"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "S16",
+      "capability": "Venn求概率",
+      "evidence": [
+        {
+          "page": "sets-and-probability",
+          "teaching": [
+            "venn"
+          ],
+          "independent": [
+            "practice-venn"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "S17",
+      "capability": "独立事件联合概率、树与其他表征",
+      "evidence": [
+        {
+          "page": "combined-and-conditional-probability",
+          "teaching": [
+            "independence",
+            "tree"
+          ],
+          "independent": [
+            "practice-independent",
+            "practice-tree"
+          ]
+        }
+      ]
+    },
+    {
+      "item": "S18",
+      "capability": "条件概率、不放回、树表和更新分母",
+      "evidence": [
+        {
+          "page": "combined-and-conditional-probability",
+          "teaching": [
+            "without-replacement",
+            "conditional-table"
+          ],
+          "independent": [
+            "practice-dependent",
+            "practice-conditional"
+          ]
+        }
+      ]
+    }
+  ]
+}

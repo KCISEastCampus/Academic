@@ -1,0 +1,23 @@
+{
+  "assets/css/home.css": "5093b25192814630df184cb43f7d50819530c1edefcd20e266ac414e1c0daeaa",
+  "assets/css/reading.css": "177c376f70a9685f629b177f24c7641cdd08449d49869a29785775126997f72a",
+  "_layouts/subjects.html": "293db2c33a7e9d0858caf551013030cb136af11b7aaf6f97397c90c0ad7d940e",
+  "_layouts/index.html": "2213215774d298baa69882cef8df89c05d15de8e7526e1f55025b892fda7a0a0",
+  "igcse/mathematics/assets/angles.pdf": "ad5f8efa1f35b971d73cf0bbfd8801e8f1dd8861db9ce876914ad60eb76bbaec",
+  "igcse/mathematics/assets/caculations.pdf": "99916026c4398191b481f4395191f8cc4724d4fa4a4debd7884023319d8b3aa0",
+  "igcse/mathematics/assets/circles.pdf": "4c6cd5bbabcd2898607dea49fd4502da622d9c321becd8c6c4e8e01a4ada242a",
+  "igcse/mathematics/assets/differentiation.pdf": "2268c2108fb5679ee34213cfd905cc68142803715faa7733d23864a79d0aa6e4",
+  "igcse/mathematics/assets/HW_scanned.pdf": "91389078b01e186a830946c7fd27af67f57a041fcf3f38085bd6099959e15a6b",
+  "igcse/mathematics/assets/matrices.pdf": "625ffefca935893e154a28b47e32244e4b646f4823451bbf94795b5ec6b8c18b",
+  "igcse/mathematics/assets/measures_and_accuracy.pdf": "c49d18e366be5ac170d1483f6115349a1e457f4c6be0ff9b1112b04119e5b36b",
+  "igcse/mathematics/assets/revision_papers/19Nov1E/19Nov1E-Papers.pdf": "e3ef175e07f99888f4ca1af92fe82da0a64443a442601bb98590dc972140979e",
+  "igcse/mathematics/assets/revision_papers/19Nov2E/19Nov2E-Papers.pdf": "86ed317a035ed0ad0a2abcfca8b3ab005212a518eb2ca840cf74be96c76633cc",
+  "igcse/mathematics/assets/revision_papers/20Nov1E/20Nov1E.pdf": "a95fc03402a3984eb1595ccd1078b3fdae1356837240e0179839c1b374d35ab6",
+  "igcse/mathematics/assets/revision_papers/20Nov2E/20Nov2E.pdf": "a6c41118d423a7d925613a218c265520c19e745d14e51f6ff6e3bbb5ffa555c8",
+  "igcse/mathematics/assets/sequences.pdf": "ecc2520ea119b29d4522c4814f61f8e71673e07129946f6fcd0c4f3a1c93dba2",
+  "igcse/mathematics/assets/topic_test_1/IG_topic_test_1_scanned.pdf": "c404d97bee18883e844ef5bd734bb010943c3e42fc9525eef0c56d4b23da57d3",
+  "igcse/mathematics/assets/topic_test_1/topic_test_1_commentary.pdf": "c850490ab22e0c09f31348f901df034a0ee4362ff0102cea1885b2aaf18236bc",
+  "igcse/mathematics/assets/trigonometry_and_vectors.pdf": "691d3a867a209276dc1ca0df9e0fa68033eee92b687d5b5d16c12120dd53e49a",
+  "igcse/mathematics/assets/working_in_2D.pdf": "19f98c008b48c200162eebb1ef2ad0600452b0a6b502be02cbd1050e04a1474b",
+  "igcse/mathematics/assets/working_in_3D.pdf": "5fac25a152ace14a7ff43e1756861f2d2f6cdebe31a9387cf77788970da5cec9"
+}
