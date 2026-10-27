@@ -65,7 +65,7 @@ for (const subject of subjectIndexes) {
   assert(zh.includes('placeholder="搜索目录…"'), `${subject}: Chinese search`);
   assert(zh.includes('aria-label="阅读此页英文版"'), `${subject}: Chinese switch label`);
   const translated = translatedNotes.includes(subject);
-  const learningCourse = subject === 'alevel/as-mathematics';
+  const learningCourse = ['alevel/as-mathematics', 'igcse/mathematics'].includes(subject);
   const scope = learningCourse ? '中文页保留英文练习题，也可切换至英文课程。' : translated ? '本页为中文复习笔记' : '本页提供中文主题目录';
   assert(zhBody.includes(scope), `${subject}: translation scope`);
   if (translated) {
@@ -92,9 +92,10 @@ for (const subject of subjectIndexes) {
     assert.equal(new URL(link.href).pathname, enUrl, subject + ': English note destination after language initialization');
   }
   if (learningCourse) {
-    assert(runtime.links.some(link => new URL(link.href).pathname === zhUrl + 'algebra/'), 'AS mathematics: Chinese lesson destination');
+    const firstLesson = subject === 'alevel/as-mathematics' ? 'algebra/' : 'fractions-decimals-and-percentages/';
+    assert(runtime.links.some(link => new URL(link.href).pathname === zhUrl + firstLesson), subject + ': Chinese lesson destination');
     for (const link of runtime.links.filter(link => link.getAttribute('hreflang') === 'en')) {
-      assert.equal(new URL(link.href).pathname, enUrl, 'AS mathematics: explicit English outline destination');
+      assert.equal(new URL(link.href).pathname, enUrl, subject + ': explicit English outline destination');
     }
   }
   const headings = [...zhBody.matchAll(/<h2\b[^>]*id="([^"]+)"[^>]*>([\s\S]*?)<\/h2>/g)];

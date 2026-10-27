@@ -1,25 +1,84 @@
 ---
 layout: subjects
-title: IG Mathematics
+title: IGCSE Mathematics
 mathjax: true
 grade: igcse
 subject: igcse-mathematics
 permalink: /igcse/mathematics/
+reading_layout: true
+study_page: true
+toc_headings: h2
 ---
 
+## Start here {#learning-start}
 
-> **Exam info**: Linear qualification · Extension Tier (9260E): Papers 1E & 2E (100 marks each) → grades 4–9
->
-> **Topic weightings (Extension)**: Number 20–25% · Algebra 35–40% · Geometry & Measures 25–30% · Statistics & Probability 10–15%
+First ask what you know and what you need to find. Then choose a method. If you are new to the course, begin with number operations; if one topic feels shaky, go straight to it. Each lesson explains the meaning, shows a complete example and then gives you your own questions. Hints and solutions stay closed until you choose them.
 
-> 🎯 This guide covers the **Extension** content of the OxfordAQA International GCSE Mathematics (9260) specification.
+[Begin: number operations](/igcse/mathematics/number-operations/#start) · [Start with the fractions sample](/igcse/mathematics/fractions-decimals-and-percentages/) · [Mixed and later review](/igcse/mathematics/mixed-review/)
 
----
+## Number and proportion {#number-route}
 
-# 🔢 Number
+- [Number operations](/igcse/mathematics/number-operations/) — Order numbers and calculate with signs, fractions and place value.
+- [Fractions, decimals and percentages](/igcse/mathematics/fractions-decimals-and-percentages/) — Connect the three forms, find an amount and compare shares.
+- [Powers, roots and standard form](/igcse/mathematics/powers-roots-and-standard-form/) — Connect powers and roots, including fractional powers and exact surds.
+- [Accuracy and bounds](/igcse/mathematics/accuracy-and-bounds/) — Round and estimate; use limits to judge what a measurement can tell us.
+- [Recurring decimals](/igcse/mathematics/recurring-decimals/) — Explain how a repeating decimal becomes an exact fraction.
+- [Percentage change](/igcse/mathematics/percentage-change/) — Follow the reference amount through discounts, interest and reverse problems.
+- [Ratio and proportion](/igcse/mathematics/ratio-and-proportion/) — Share a total, compare rates and decide how two quantities vary.
+
+## Algebra and graphs {#algebra-route}
+
+- [Expressions and formulae](/igcse/mathematics/expressions-and-formulae/) — Translate words into symbols and change the subject without changing meaning.
+- [Algebraic fractions and proof](/igcse/mathematics/algebraic-fractions-and-proof/) — Simplify with conditions and justify claims for every allowed value.
+- [Equations and inequalities](/igcse/mathematics/equations-and-inequalities/) — Choose transformations and describe every permitted solution.
+- [Coordinates and straight lines](/igcse/mathematics/coordinates-and-lines/) — Connect points, gradients, intercepts and line equations.
+- [Quadratics and simultaneous equations](/igcse/mathematics/quadratics-and-simultaneous-equations/) — Connect factors, roots, turning points and intersections.
+- [Functions and graphs](/igcse/mathematics/functions-and-graphs/) — Connect inputs and outputs to composition, inverses and graphs.
+- [Sequences](/igcse/mathematics/sequences/) — Move between a pattern, a term rule and a position rule.
+- [Gradients, motion and differentiation](/igcse/mathematics/differentiation-and-motion/) — Interpret motion graphs and use derivatives for tangents and stationary points.
+
+## Shapes, reasoning and construction {#geometry-route}
+
+- [Angles and polygons](/igcse/mathematics/angles-and-polygons/) — Use marked facts to explain angle and symmetry conclusions.
+- [Congruence and similarity](/igcse/mathematics/congruence-and-similarity/) — Decide what stays equal and what changes in a scaled figure.
+- [Circles and proof](/igcse/mathematics/circles-and-proof/) — Connect circle parts and theorems into complete arguments.
+- [Constructions, loci and bearings](/igcse/mathematics/constructions-loci-and-bearings/) — Construct from conditions and read distances and directions on a plan.
+
+## Measurement and transformations {#measure-route}
+
+- [Units, area and volume](/igcse/mathematics/units-area-and-volume/) — Choose units, draw views and separate boundary, surface and volume.
+- [Pythagoras and trigonometry](/igcse/mathematics/pythagoras-and-trigonometry/) — Identify the triangle and choose a relationship that fits its information.
+- [Transformations](/igcse/mathematics/transformations/) — Describe a movement or scaling fully and check its effect on points.
+- [Vectors and matrices](/igcse/mathematics/vectors-and-matrices/) — Track displacements, multiply matrices and check transformation order.
+
+## Data and probability {#data-route}
+
+- [Data and averages](/igcse/mathematics/data-and-averages/) — Choose a useful summary and explain what it hides.
+- [Statistical diagrams](/igcse/mathematics/statistical-diagrams/) — Draw and read displays, then compare distributions with evidence.
+- [Sets and probability](/igcse/mathematics/sets-and-probability/) — Define the possible outcomes before counting favourable ones.
+- [Combined and conditional probability](/igcse/mathematics/combined-and-conditional-probability/) — Decide whether the second event changes what is possible.
+
+## Connect the ideas {#review-route}
+
+After a branch, try the unlabelled-method tasks in [mixed review](/igcse/mathematics/mixed-review/). Return to the later checks after studying something else. Record your first attempt, any hints and your retry result; reading a solution alone does not show what you can do independently.
+
+## Scope and tools {#course-scope}
+
+This route follows **OxfordAQA International GCSE Mathematics 9260, Version 5.1**, including N1–N20, A1–A26, G1–G26 and S1–S18. The Extension assessment has two papers, each 120 minutes and 100 marks. A suitable scientific calculator is required; graphing and symbolic algebra/calculus calculators are not permitted. A-level fx-CG50 instructions do not establish permission here.
+
+[Official qualification](https://www.oxfordaqa.com/qualification/international-gcse-mathematics-9260/) · [Official specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-gcse-mathematics-specification.pdf). Each lesson identifies its scope, question provenance and sources.
+
+## Earlier notes and PDFs {#legacy-reference}
+
+<details markdown="1">
+<summary>Open the earlier reference notes and resource directory</summary>
+
+These are revision summaries. Some quick checks show answers beside the questions; use them for reference rather than as independent assessment. The PDFs retain their credit to Lynn. A resource filename alone does not establish an official paper identity.
+
+<h3 id="-number">🔢 Number</h3>
 
 
-## Structure and calculation
+<h3 id="structure-and-calculation">Structure and calculation</h3>
 
 
 - **Index laws** for multiplication and division, including **fractional powers**.
@@ -28,19 +87,19 @@ permalink: /igcse/mathematics/
 - **Sets**: use notation n(A), A′, A ∪ B, A ∩ B, ξ; understand and use **Venn diagrams** to solve problems.
 - **Upper and lower bounds**: calculate and use.
 
-## Fractions, decimals and percentages
+<h3 id="fractions-decimals-and-percentages">Fractions, decimals and percentages</h3>
 
 
 - Convert between fractions and **recurring decimals**.
 - **Reverse percentage problems**.
 - **Compound interest formula**: $$P\left(1 + \frac{r}{100}\right)^n$$
 
-## Ratio and proportion
+<h3 id="ratio-and-proportion">Ratio and proportion</h3>
 
 
 - **Exponential growth and decay**.
 
-## ✅ Number Quick Check
+<h3 id="-number-quick-check">✅ Number Quick Check</h3>
 
 
 1. Rationalise $$\frac{1}{\sqrt{3}}$$. **(√3/3)**
@@ -49,10 +108,10 @@ permalink: /igcse/mathematics/
 
 ---
 
-# 🔤 Algebra
+<h3 id="-algebra">🔤 Algebra</h3>
 
 
-## Notation and manipulation
+<h3 id="notation-and-manipulation">Notation and manipulation</h3>
 
 
 - Transform **complex formulae**, including when the subject appears **twice**.
@@ -62,7 +121,7 @@ permalink: /igcse/mathematics/
 - Manipulation of rational expressions: + − × ÷ for algebraic fractions with **linear or quadratic** denominators.
 - Algebraic **proofs**.
 
-## Functions, graphs and calculus
+<h3 id="functions-graphs-and-calculus">Functions, graphs and calculus</h3>
 
 
 - **Function notation** f(x) = …; terms **domain** and **range**; composite function **fg** and inverse function **f⁻¹**.
@@ -76,7 +135,7 @@ permalink: /igcse/mathematics/
 - Calculate or estimate **gradients of graphs** and **areas under graphs** (incl. quadratic and other non-linear graphs); interpret results (e.g. distance–time, velocity–time graphs).
 - Express **direct and inverse variation** in algebraic terms; find unknown quantities.
 
-## Solving equations and inequalities
+<h3 id="solving-equations-and-inequalities">Solving equations and inequalities</h3>
 
 
 - Solve quadratics by **completing the square** and the **quadratic formula**: $$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
@@ -84,12 +143,12 @@ permalink: /igcse/mathematics/
 - Solve linear inequalities in **one or two variables**, and **quadratic** inequalities in one variable.
 - Represent solution sets on a number line **and on a graph** — dashed line for strict inequalities, solid line for included boundaries.
 
-## Sequences
+<h3 id="sequences">Sequences</h3>
 
 
 - **Quadratic sequences**: deduce the nth term (and other expressions).
 
-## ✅ Algebra Quick Check
+<h3 id="-algebra-quick-check">✅ Algebra Quick Check</h3>
 
 
 1. Factorise 2x² + 7x + 3. **((2x + 1)(x + 3))**
@@ -99,10 +158,10 @@ permalink: /igcse/mathematics/
 
 ---
 
-# 📐 Geometry and measures
+<h3 id="-geometry-and-measures">📐 Geometry and measures</h3>
 
 
-## Properties and constructions
+<h3 id="properties-and-constructions">Properties and constructions</h3>
 
 
 - **Circle theorems**: apply and use to prove related results:
@@ -116,7 +175,7 @@ permalink: /igcse/mathematics/
   - alternate segment theorem
 - **Geometrical reasoning and proof**: use standard theorems to justify results.
 
-## Mensuration and calculation
+<h3 id="mensuration-and-calculation">Mensuration and calculation</h3>
 
 
 - **Surface area and volume** of spheres, pyramids, cones and composite solids, including **frustums** of pyramids and cones.
@@ -135,7 +194,7 @@ permalink: /igcse/mathematics/
 | $$a^2 = b^2 + c^2 - 2bc\cos A$$ | cosine rule |
 | $$\text{Area} = \frac{1}{2}ab\sin C$$ | triangle area |
 
-## Transformations, matrices and vectors
+<h3 id="transformations-matrices-and-vectors">Transformations, matrices and vectors</h3>
 
 
 - **Combined transformations** and **enlargements by fractional and negative scale factors**.
@@ -144,7 +203,7 @@ permalink: /igcse/mathematics/
 - Transformations of the **unit square** in the x–y plane represented by a 2×2 matrix: rotations of 90°, 180°, 270° about the origin; reflections in x = 0, y = 0, y = x, y = −x; enlargements centred on the origin.
 - **Combination of transformations** using matrix multiplication.
 
-## ✅ Geometry Quick Check
+<h3 id="-geometry-quick-check">✅ Geometry Quick Check</h3>
 
 
 1. In a cyclic quadrilateral, what do opposite angles sum to? **(180°)**
@@ -153,23 +212,23 @@ permalink: /igcse/mathematics/
 
 ---
 
-# 📊 Statistics and probability
+<h3 id="-statistics-and-probability">📊 Statistics and probability</h3>
 
 
-## Presentation and analysis
+<h3 id="presentation-and-analysis">Presentation and analysis</h3>
 
 
 - **Histograms with unequal class intervals**, **cumulative frequency diagrams**, **box plots**.
 - **Quartiles, inter-quartile range and percentiles**.
 
-## Probability
+<h3 id="probability">Probability</h3>
 
 
 - Calculate the probability of **independent combined events**, including using **tree diagrams**.
 - For independent events A and B: $$P(A \cap B) = P(A) \times P(B)$$
 - Calculate **conditional probabilities**, including using tree diagrams and other representations.
 
-## ✅ Statistics Quick Check
+<h3 id="-statistics-quick-check">✅ Statistics Quick Check</h3>
 
 
 1. What is the inter-quartile range? **(Upper quartile − lower quartile)**
@@ -178,47 +237,47 @@ permalink: /igcse/mathematics/
 
 ---
 
-# Revision Resources
+<h3 id="revision-resources">Revision Resources</h3>
 
 
-## Angles
+<h3 id="angles">Angles</h3>
 
 [Angles](./assets/angles.pdf)
 
-## Working in 2D/3D
+<h3 id="working-in-2d3d">Working in 2D/3D</h3>
 
 [Working in 2D](./assets/working_in_2D.pdf)  
 [Working in 3D](./assets/working_in_3D.pdf)
 
-## Caculations
+<h3 id="caculations">Caculations</h3>
 
 [Caculations](./assets/caculations.pdf)
 
-## Differentiation
+<h3 id="differentiation">Differentiation</h3>
 
 [Differentiation](./assets/differentiation.pdf)
 
-## Transformations, Matrices and Vectors
+<h3 id="transformations-matrices-and-vectors-1">Transformations, Matrices and Vectors</h3>
 
 [Trigonometry & Vectors](./assets/trigonometry_and_vectors.pdf)  
 [Matrices](./assets/matrices.pdf)
 
-## Sequences (Linear Sequence, Quadratic Sequence)
+<h3 id="sequences-linear-sequence-quadratic-sequence">Sequences (Linear Sequence, Quadratic Sequence)</h3>
 
 [Sequences](./assets/sequences.pdf)
 
-## Measures and Accuracy
+<h3 id="measures-and-accuracy">Measures and Accuracy</h3>
 
 [Measures and Accuracy](./assets/measures_and_accuracy.pdf)
 
-## Circles
+<h3 id="circles">Circles</h3>
 
 [Circles](./assets/circles.pdf)
 
-# Past Papers (Topic Test, Mock Test, Homeworks)
+<h3 id="past-papers-topic-test-mock-test-homeworks">Past Papers (Topic Test, Mock Test, Homeworks)</h3>
 
 
-## (Extend) Topic Test 1
+<h3 id="extend-topic-test-1">(Extend) Topic Test 1</h3>
 
 [(Extend) Topic Test 1 Paper](./assets/topic_test_1/IG_topic_test_1_scanned.pdf)  
 [(Extend) Commentary](./assets/topic_test_1/topic_test_1_commentary.pdf)
@@ -228,3 +287,6 @@ permalink: /igcse/mathematics/
 ---
 
 *OxfordAQA International GCSE Mathematics (9260) Extension. Latest spec: [oxfordaqa.com/9260](https://oxfordaqa.com/9260).*
+
+
+</details>

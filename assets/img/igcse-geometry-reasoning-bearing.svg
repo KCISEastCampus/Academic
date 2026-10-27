@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="80 0 360 320" role="img" aria-labelledby="title desc">
+<title id="title">Bearing starts at north at the departure point</title><desc id="desc">Two parallel north arrows are drawn at A and B. AB points northeast. A small clockwise arc at A indicates which direction to measure, without giving a numerical answer.</desc>
+<rect width="520" height="320" fill="#fff"/>
+<g fill="none" stroke="#18334a" stroke-width="2.5" stroke-linejoin="round"><path d="M130 270V50 M122 66L130 50L138 66 M130 270L380 130 M380 130V20 M372 36L380 20L388 36 M130 210A60 60 0 0 1 182.36 240.68 M173 237L182.36 240.68L179 250"/><text x="105" y="294" fill="#18334a" stroke="none" font-family="Arial,sans-serif" font-size="21">A</text><text x="385" y="149" fill="#18334a" stroke="none" font-family="Arial,sans-serif" font-size="21">B</text><text x="115" y="43" fill="#18334a" stroke="none" font-family="Arial,sans-serif" font-size="21">N</text><text x="397" y="35" fill="#18334a" stroke="none" font-family="Arial,sans-serif" font-size="21">N</text></g>
+</svg>

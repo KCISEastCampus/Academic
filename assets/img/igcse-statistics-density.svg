@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 320" role="img" aria-labelledby="title desc">
+<title id="title">Illustrative journey times: unequal class widths</title>
+<desc id="desc">Histogram with time in minutes on the horizontal axis and frequency density in people per minute vertically. The intervals are 0 to 10, 10 to 20 and 20 to 40. Heights are 0.4, 0.8 and 0.4. All data are constructed for learning.</desc>
+<rect width="520" height="320" fill="#fff"/>
+<g font-family="Arial,sans-serif" font-size="22" fill="#182f4b">
+<text x="68" y="24">Frequency density (people/min)</text>
+<g stroke="#d3dbe4"><path d="M70 210H470M70 170H470M70 130H470M70 90H470"/></g>
+<g fill="#b9d8ed" stroke="#234d6a" stroke-width="2"><rect x="70" y="170" width="100" height="80"/><rect x="170" y="90" width="100" height="160"/><rect x="270" y="170" width="200" height="80"/></g>
+<path d="M70 50V250H485" stroke="#182f4b" fill="none" stroke-width="2"/>
+<g text-anchor="end"><text x="60" y="255">0</text><text x="60" y="215">0.2</text><text x="60" y="175">0.4</text><text x="60" y="135">0.6</text><text x="60" y="95">0.8</text><text x="60" y="55">1.0</text></g>
+<g text-anchor="middle"><text x="70" y="276">0</text><text x="170" y="276">10</text><text x="270" y="276">20</text><text x="370" y="276">30</text><text x="470" y="276">40</text><text x="270" y="305">Journey time (min)</text></g>
+</g></svg>

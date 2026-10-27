@@ -1,0 +1,226 @@
+[
+  [
+    "number-route",
+    "Number and proportion",
+    "数与比例",
+    [
+      [
+        "number-operations",
+        "Number operations",
+        "数与运算",
+        "Order numbers and calculate with signs, fractions and place value.",
+        "比较大小，理解正负号、分数和数位，完成四则运算。"
+      ],
+      [
+        "fractions-decimals-and-percentages",
+        "Fractions, decimals and percentages",
+        "分数、小数和百分数",
+        "Connect the three forms, find an amount and compare shares.",
+        "理解三种写法，求数量、比较比例。"
+      ],
+      [
+        "powers-roots-and-standard-form",
+        "Powers, roots and standard form",
+        "幂、根与标准形式",
+        "Connect powers and roots, including fractional powers and exact surds.",
+        "连接幂和根，理解分数指数并使用精确根式。"
+      ],
+      [
+        "accuracy-and-bounds",
+        "Accuracy and bounds",
+        "精度与上下界",
+        "Round and estimate; use limits to judge what a measurement can tell us.",
+        "会舍入和估算，判断测量值能支持什么结论。"
+      ],
+      [
+        "recurring-decimals",
+        "Recurring decimals",
+        "循环小数",
+        "Explain how a repeating decimal becomes an exact fraction.",
+        "解释循环小数为什么能化为精确分数。"
+      ],
+      [
+        "percentage-change",
+        "Percentage change",
+        "百分数变化",
+        "Follow the reference amount through discounts, interest and reverse problems.",
+        "弄清每次比较的整体，处理折扣、利息和逆向问题。"
+      ],
+      [
+        "ratio-and-proportion",
+        "Ratio and proportion",
+        "比与比例",
+        "Share a total, compare rates and decide how two quantities vary.",
+        "按比分配，比较单位率，判断两种量如何一起变化。"
+      ]
+    ]
+  ],
+  [
+    "algebra-route",
+    "Algebra and graphs",
+    "代数与图像",
+    [
+      [
+        "expressions-and-formulae",
+        "Expressions and formulae",
+        "式子与公式",
+        "Translate words into symbols and change the subject without changing meaning.",
+        "把文字写成式子，在保持等价的前提下改变公式主项。"
+      ],
+      [
+        "algebraic-fractions-and-proof",
+        "Algebraic fractions and proof",
+        "代数分式与证明",
+        "Simplify with conditions and justify claims for every allowed value.",
+        "说明分母条件，化简式子，用推理支持一般结论。"
+      ],
+      [
+        "equations-and-inequalities",
+        "Equations and inequalities",
+        "方程与不等式",
+        "Choose transformations and describe every permitted solution.",
+        "选择合理变形，完整表达解集。"
+      ],
+      [
+        "coordinates-and-lines",
+        "Coordinates and straight lines",
+        "坐标与直线",
+        "Connect points, gradients, intercepts and line equations.",
+        "联系点、斜率、截距和直线方程。"
+      ],
+      [
+        "quadratics-and-simultaneous-equations",
+        "Quadratics and simultaneous equations",
+        "二次关系与联立方程",
+        "Connect factors, roots, turning points and intersections.",
+        "联系因式、根、顶点和交点。"
+      ],
+      [
+        "functions-and-graphs",
+        "Functions and graphs",
+        "函数与图像",
+        "Connect inputs and outputs to composition, inverses and graphs.",
+        "先理解输入和输出，再连接复合函数、反函数与图像。"
+      ],
+      [
+        "sequences",
+        "Sequences",
+        "数列",
+        "Move between a pattern, a term rule and a position rule.",
+        "从规律找到递推规则和第几项的表达式。"
+      ],
+      [
+        "differentiation-and-motion",
+        "Gradients, motion and differentiation",
+        "斜率、运动与微分",
+        "Interpret motion graphs and use derivatives for tangents and stationary points.",
+        "解释运动图像，用导数研究切线和驻点。"
+      ]
+    ]
+  ],
+  [
+    "geometry-route",
+    "Shapes, reasoning and construction",
+    "图形、推理与作图",
+    [
+      [
+        "angles-and-polygons",
+        "Angles and polygons",
+        "角与多边形",
+        "Use marked facts to explain angle and symmetry conclusions.",
+        "根据图中条件解释角度和对称性。"
+      ],
+      [
+        "congruence-and-similarity",
+        "Congruence and similarity",
+        "全等与相似",
+        "Decide what stays equal and what changes in a scaled figure.",
+        "判断哪些量相等，放大缩小后哪些量改变。"
+      ],
+      [
+        "circles-and-proof",
+        "Circles and proof",
+        "圆与几何证明",
+        "Connect circle parts and theorems into complete arguments.",
+        "认清圆的各部分，把定理连接成完整论证。"
+      ],
+      [
+        "constructions-loci-and-bearings",
+        "Constructions, loci and bearings",
+        "作图、轨迹与方位角",
+        "Construct from conditions and read distances and directions on a plan.",
+        "根据条件完成尺规作图，读懂地图上的距离和方向。"
+      ]
+    ]
+  ],
+  [
+    "measure-route",
+    "Measurement and transformations",
+    "测量与变换",
+    [
+      [
+        "units-area-and-volume",
+        "Units, area and volume",
+        "单位、面积与体积",
+        "Choose units, draw views and separate boundary, surface and volume.",
+        "选择单位、绘制视图，分清周长、表面积和体积。"
+      ],
+      [
+        "pythagoras-and-trigonometry",
+        "Pythagoras and trigonometry",
+        "勾股定理与三角",
+        "Identify the triangle and choose a relationship that fits its information.",
+        "先找对三角形，再根据已知条件选关系式。"
+      ],
+      [
+        "transformations",
+        "Transformations",
+        "图形变换",
+        "Describe a movement or scaling fully and check its effect on points.",
+        "完整描述移动或缩放，并用点的像核验。"
+      ],
+      [
+        "vectors-and-matrices",
+        "Vectors and matrices",
+        "向量与矩阵",
+        "Track displacements, multiply matrices and check transformation order.",
+        "跟踪位移，进行矩阵乘法，核对变换次序。"
+      ]
+    ]
+  ],
+  [
+    "data-route",
+    "Data and probability",
+    "数据与概率",
+    [
+      [
+        "data-and-averages",
+        "Data and averages",
+        "数据与平均数",
+        "Choose a useful summary and explain what it hides.",
+        "选择合适的统计量，也说明它没有告诉我们什么。"
+      ],
+      [
+        "statistical-diagrams",
+        "Statistical diagrams",
+        "统计图表",
+        "Draw and read displays, then compare distributions with evidence.",
+        "绘制和读取图表，用数据比较分布。"
+      ],
+      [
+        "sets-and-probability",
+        "Sets and probability",
+        "集合与概率",
+        "Define the possible outcomes before counting favourable ones.",
+        "先确定所有可能情况，再数符合条件的情况。"
+      ],
+      [
+        "combined-and-conditional-probability",
+        "Combined and conditional probability",
+        "组合事件与条件概率",
+        "Decide whether the second event changes what is possible.",
+        "判断第二件事发生时，可选情况有没有改变。"
+      ]
+    ]
+  ]
+]

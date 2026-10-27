@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 190" role="img" aria-labelledby="title desc">
+<title id="title">Masses recorded as 2.4 kg to the nearest 0.1 kg</title>
+<desc id="desc">Number line from 2.30 to 2.50 kg. The interval starts at an included filled dot at 2.35 and ends at an excluded open circle at 2.45. The recorded value 2.4 lies halfway between.</desc>
+<rect width="600" height="190" rx="8" fill="#fff"/>
+<g font-family="Arial,sans-serif" font-size="21" fill="#172b4d" text-anchor="middle">
+<text x="300" y="31">Recorded: 2.4 kg</text>
+<path d="M60 100H540" fill="none" stroke="#172b4d" stroke-width="2"/>
+<path d="M60 91V109M180 91V109M300 91V109M420 91V109M540 91V109" stroke="#172b4d" stroke-width="2"/>
+<path d="M180 100H420" stroke="#176b89" stroke-width="9"/>
+<circle cx="180" cy="100" r="8" fill="#172b4d"/>
+<circle cx="420" cy="100" r="8" fill="#fff" stroke="#172b4d" stroke-width="3"/>
+<text x="60" y="141">2.30</text><text x="180" y="141">2.35</text><text x="300" y="141">2.40</text><text x="420" y="141">2.45</text><text x="540" y="141">2.50</text>
+<text x="180" y="174">included</text><text x="420" y="174">excluded</text>
+</g></svg>

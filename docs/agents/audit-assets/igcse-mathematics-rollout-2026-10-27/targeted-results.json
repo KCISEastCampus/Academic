@@ -1,0 +1,134 @@
+{
+  "readings": [
+    {
+      "slug": "number-operations",
+      "width": 390,
+      "start": "fraction-arithmetic",
+      "end": "practice-fractions",
+      "height": 3167
+    },
+    {
+      "slug": "accuracy-and-bounds",
+      "width": 390,
+      "start": "limits",
+      "end": "practice-limits",
+      "height": 816
+    },
+    {
+      "slug": "circles-and-proof",
+      "width": 390,
+      "start": "tangents-chords",
+      "end": "example-proof",
+      "height": 1645
+    },
+    {
+      "slug": "statistical-diagrams",
+      "width": 390,
+      "start": "unequal-histograms",
+      "end": "practice-density",
+      "height": 1970
+    },
+    {
+      "slug": "differentiation-and-motion",
+      "width": 390,
+      "start": "gradient-function",
+      "end": "practice-derivative",
+      "height": 1165
+    },
+    {
+      "slug": "vectors-and-matrices",
+      "width": 390,
+      "start": "matrix-products",
+      "end": "check-products",
+      "height": 1736
+    },
+    {
+      "slug": "",
+      "width": 390,
+      "theme": "light",
+      "viewport": true
+    },
+    {
+      "slug": "",
+      "width": 1365,
+      "theme": "dark",
+      "viewport": true
+    },
+    {
+      "slug": "constructions-loci-and-bearings/",
+      "width": 390,
+      "theme": "dark",
+      "viewport": true
+    },
+    {
+      "slug": "statistical-diagrams/",
+      "width": 1365,
+      "theme": "light",
+      "viewport": true
+    },
+    {
+      "slug": "units-area-and-volume/",
+      "width": 390,
+      "theme": "light",
+      "viewport": true
+    }
+  ],
+  "scrolling": [
+    {
+      "slug": "vectors-and-matrices/",
+      "index": 2,
+      "keyboardMoved": true
+    },
+    {
+      "slug": "vectors-and-matrices/",
+      "index": 6,
+      "keyboardMoved": true
+    },
+    {
+      "slug": "algebraic-fractions-and-proof/",
+      "index": 0,
+      "keyboardMoved": true
+    },
+    {
+      "slug": "algebraic-fractions-and-proof/",
+      "index": 2,
+      "keyboardMoved": true
+    },
+    {
+      "slug": "statistical-diagrams/",
+      "index": 3,
+      "keyboardMoved": true
+    },
+    {
+      "slug": "statistical-diagrams/",
+      "index": 4,
+      "keyboardMoved": true
+    }
+  ],
+  "journeys": [
+    {
+      "slug": "number-operations/",
+      "entryAttemptHelpReview": true
+    },
+    {
+      "slug": "circles-and-proof/",
+      "entryAttemptHelpReview": true
+    },
+    {
+      "slug": "statistical-diagrams/",
+      "entryAttemptHelpReview": true
+    },
+    {
+      "languageSwitchKeepsProofPosition": true
+    },
+    {
+      "language": "",
+      "oldFragmentOpensReference": true
+    },
+    {
+      "language": "zh/",
+      "oldFragmentOpensReference": true
+    }
+  ],
+  "passed": true
+}

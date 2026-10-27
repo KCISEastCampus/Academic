@@ -1,0 +1,238 @@
+{
+  "at": "2026-10-27T00:54:47.296Z",
+  "note": "232 final course views passed before localized breadcrumb correction; article bytes must remain equal.",
+  "pages": {
+    "/igcse/mathematics/": {
+      "html": "76c1414077095eee44590dedc5d6a80a36e80666bd775196fb263d8bd61cf0ca",
+      "article": "7254d68596bcd2f2e3149ab4340e7a7e5b45c364e0e058e2eb89e143d744c587"
+    },
+    "/igcse/mathematics/number-operations/": {
+      "html": "9f88b277410c822994df37f233d282a3bea64b8f1a15fcac171c05f31f0c687d",
+      "article": "12453705fcdb01a43a102324a7bcaf9d2f14d664af5a945f1f352e6c5dbb25f6"
+    },
+    "/igcse/mathematics/fractions-decimals-and-percentages/": {
+      "html": "4fe02ca0ef12d054d410a5b5b72e5fe5b7e92c9923e377f2ba64f9d87063895c",
+      "article": "e57d84000184c560499378100494722480dfc4cfe34c213dc28187e012a104a9"
+    },
+    "/igcse/mathematics/powers-roots-and-standard-form/": {
+      "html": "006caead3f54caaaf93f998e4643a6a6cf4a3689803ff7273e71d0aaec852bf0",
+      "article": "a8e3fa3abd2157df0d96e9aa49824981bc5293cefda2ad7f7d32a4a9a47ce79a"
+    },
+    "/igcse/mathematics/accuracy-and-bounds/": {
+      "html": "bccd706e16f5466cfbff524d8106b14ea19b26a4c848b6df8365ab90732e71e0",
+      "article": "778e6ebef934de0dd8e0091646f1c34d813208c4c4ef86221b8cd46f36df97c4"
+    },
+    "/igcse/mathematics/recurring-decimals/": {
+      "html": "9a9a4d47e4c30e51085768b043ac10f2ed9946e0d6cfc88a4b2ff9bee9d1c2c6",
+      "article": "78337d37d9477626af09ae1e3c1af7c72aa76707971a393fc4ab6db7d8204494"
+    },
+    "/igcse/mathematics/percentage-change/": {
+      "html": "e9753798eaa3745ba2901d770e0e880d704e663d6d5fdc44eaf8fa60e42d31b9",
+      "article": "acd34ae73aa98c9ed44e5d95df9ac4955771b790d0ca3b5041db5d7ac3c6dddb"
+    },
+    "/igcse/mathematics/ratio-and-proportion/": {
+      "html": "78dd0a614274f1efc76093a0462c6ea7850a2dfdf12c546fca111bdeec4194ca",
+      "article": "5bce89600fd56d6b9a717720f5f85b1a9fb84df3d82049a25b509c2842b3aa7e"
+    },
+    "/igcse/mathematics/expressions-and-formulae/": {
+      "html": "14105a5bb5def15bf1704ef0f133c7ae7c3c5ce22b72b73f1380e5929586217a",
+      "article": "ae169746f4b49ae77378d8c3400a7baba3c04728f76f7f7a20181cb258800233"
+    },
+    "/igcse/mathematics/algebraic-fractions-and-proof/": {
+      "html": "aa5c1f68e4667169c02607dc39fa5def8414ad0928ad5993981e572e41337e98",
+      "article": "301f6ef890c1b1771518218c55807d720898b23c204433539b0af72026a4e6ae"
+    },
+    "/igcse/mathematics/equations-and-inequalities/": {
+      "html": "7bca0988c0650708bcb79d043225d17fe1d35b095a69e941e402957f394e3d15",
+      "article": "4b650d4123ec42809eb6041a0030bed24769ed642496b8d9612570ce8912f26e"
+    },
+    "/igcse/mathematics/coordinates-and-lines/": {
+      "html": "2aeb28dc1a53a9b552aa2427cdfdaf8ec237edb6381d67b810063bf6898a512b",
+      "article": "1aad820fb9a875b68ab89a26c1e3269a4f0fcdda937ea8e42da151dcaa604e57"
+    },
+    "/igcse/mathematics/quadratics-and-simultaneous-equations/": {
+      "html": "eaab5481ac118c1067445542ff1b2092350d46a948a9cd95abb7ad2d13574967",
+      "article": "10b92247bec36ece6cc4007c9a06fb449b6bab1b1d103a4250e0b27f012a286f"
+    },
+    "/igcse/mathematics/functions-and-graphs/": {
+      "html": "a4deb3faa6b7d1dca3a44b6cc43c791bd1277b9457fe384c1d91a12aedb8b8b4",
+      "article": "aad9b5c66050115380131a6559ba75c143c556a089b43558947b466561f87c32"
+    },
+    "/igcse/mathematics/sequences/": {
+      "html": "aa8b85e24705348068358ff284ca696f83f5229e0e8a58ec9890439d08d29e21",
+      "article": "09cb1251295222c6a73955f58b5df5c6de6698161318dd501e3de07b1a0e3db8"
+    },
+    "/igcse/mathematics/differentiation-and-motion/": {
+      "html": "7042ab13cdc0bef361b273e53e25ae8738252097f469ae35ab5fc285969f95f0",
+      "article": "dec6ede075a380dcb1ea3f62ebf29000e495e54dae77fe29851a59ae6ab7461a"
+    },
+    "/igcse/mathematics/angles-and-polygons/": {
+      "html": "6aac89e1cf93600007f8290f5c2a138bd7986ed33aff8710fe8af64b77abe4c4",
+      "article": "159fa1453720d09e40fca92d5ef60326daf5f2a73b8f6c9e430eee62aa4be99b"
+    },
+    "/igcse/mathematics/congruence-and-similarity/": {
+      "html": "30bf007382bbde6e3f50b64a40c5108736de5542f87de84064ef5a3f6902ec0c",
+      "article": "aac0c40723d96138a533a5dd9d01b0a3cce963c69274934abf635c42679f3273"
+    },
+    "/igcse/mathematics/circles-and-proof/": {
+      "html": "d203a9f01556a676f9cac1da63d491c8c01bd2b60aae33dace205b2912a79978",
+      "article": "b138caa97fad5c1eb654f49d5c61a8111bbedd95c8b39e3d267115d5494ad636"
+    },
+    "/igcse/mathematics/constructions-loci-and-bearings/": {
+      "html": "bc0c0365051831da954d0b21bc77f61a204b97c2f55cff3bb1646c17bdc4fbb1",
+      "article": "94c3633b0ea17cff684143ac6fdceb046864f1b7dbcfbcc31572451ab899bf95"
+    },
+    "/igcse/mathematics/units-area-and-volume/": {
+      "html": "b17a2d11c79e14303abe0a81836ae77bd81f6a2ea3fa649a465bc75fca137e4a",
+      "article": "8376f9213177281b49f124a3d5e536355882d5a03e2b7fff38cc95e1e7d1545e"
+    },
+    "/igcse/mathematics/pythagoras-and-trigonometry/": {
+      "html": "643bf4eeff0217ae2f952e56bd08b2af783dd7dbcff5dfa715a50e85a182f496",
+      "article": "b100d830b2ac3c62b0df440ebb8666a8d910743f2ed3222160fa6ba61f815864"
+    },
+    "/igcse/mathematics/transformations/": {
+      "html": "ab998abc6ac3fed2f2e9fd3eb0504f4bb15b39d04bc00f7dad3f399caaa957fd",
+      "article": "bf2e3bab9c4dc62917b3890ff61b4f49ba90acb60dcd52d1e397d83373f5af44"
+    },
+    "/igcse/mathematics/vectors-and-matrices/": {
+      "html": "eee3ee156cc4578c2c14b0551ea8e1281b336378e03077f7ebc5348dc5f181ce",
+      "article": "f7ecb8fa54f3c1e155865c36c7efa5a1707aef0d8a55b6d7a22b3672c59b7569"
+    },
+    "/igcse/mathematics/data-and-averages/": {
+      "html": "b1539826431f97f65f5184de94194cab0c9a9df248f8c55e01f532523ff8d596",
+      "article": "2d413a194cf4a8d3c6bef42c5c631b014899367e91a85de963cf805f610d380c"
+    },
+    "/igcse/mathematics/statistical-diagrams/": {
+      "html": "91c769b5f935088d7f3b63d3c51ed1853364040a3a7b577057ce5f9fe1532e98",
+      "article": "c256d2854ed67ef5df9693583b892b1ed56d7337b96f9fa1317a79ca646ff132"
+    },
+    "/igcse/mathematics/sets-and-probability/": {
+      "html": "87930809ca8141227a7cd772ac63ba9efce9670e037d1784ee6f02d913aea430",
+      "article": "385dd2ba4222ecdc98d7d0c52fe901ca4c0063bdc50da91de39424f44f1d6edb"
+    },
+    "/igcse/mathematics/combined-and-conditional-probability/": {
+      "html": "bae52b0879da02847144afb072d9302bc39d7ce8b522cc7e628fedf7304431ff",
+      "article": "8a498751741baf572997cba3f4fc686581087b3df31e132a85930bfccdcf8210"
+    },
+    "/igcse/mathematics/mixed-review/": {
+      "html": "74027e7bfdfcf7c52488b3bd869c7c927a17877ddc94a60a277cb430d4236afa",
+      "article": "77f0189a38639d6c44b598caa5304bafd11475d44a2cbc4181f47c3c1af25658"
+    },
+    "/zh/igcse/mathematics/": {
+      "html": "5cb8bb483f81362a43cd4524b725fe92d03d334e5eb942d3ee2febb74abf1424",
+      "article": "85fcc5095edf277aab55e2ccd686358b9e9a91e33d710238f79820b709205c85"
+    },
+    "/zh/igcse/mathematics/number-operations/": {
+      "html": "22b025530a156aaf9b77ea72c18567bfe97e285d811e07317b074376cd8e8a53",
+      "article": "ebddfab509a58e5a117698e37f5683f6efb1bf695e355cff4b48bfab17977c9b"
+    },
+    "/zh/igcse/mathematics/fractions-decimals-and-percentages/": {
+      "html": "548b3a96248d9eff517412f888336ca7bd9d2f2eb3f93eb72d50e7d406aa5d23",
+      "article": "c094245fbde6fbc177acb3bc97da2f738d0407fcd91e565520d93f9a97f2a10a"
+    },
+    "/zh/igcse/mathematics/powers-roots-and-standard-form/": {
+      "html": "de7509c3193e2f61521b29f19b64e8ce90c5cb311595f14775fbedc9bdc07bf6",
+      "article": "9136b5a92aec78f7df09e2af55c00d2173b29cc0d28b24cba811fad1852d6575"
+    },
+    "/zh/igcse/mathematics/accuracy-and-bounds/": {
+      "html": "e946e975f0887c3c85f9134a9eed81bedb9f6d1ba2ce2c12fe790ca3c8b5f079",
+      "article": "d4fdf2dcc9e1c191e34a687fb7faffffc87ea2c6cbbb104fb008cd8012e0adc5"
+    },
+    "/zh/igcse/mathematics/recurring-decimals/": {
+      "html": "9fa6f77f5664b277ec4d2b66ca0e091860056f6ecc2303ce6334dc23a645e2f8",
+      "article": "6bf7794a8224789869199b7c68d46292221e7b68009eff910ebe28e2947feaca"
+    },
+    "/zh/igcse/mathematics/percentage-change/": {
+      "html": "ce6cdec5f754a887d7002861420f9b6e556097dd398908196c38d9074981180c",
+      "article": "a862732afc43a2e9b5964eb993bc8a3a132e522f8d28b865b9680ac4caf642da"
+    },
+    "/zh/igcse/mathematics/ratio-and-proportion/": {
+      "html": "2d0878e6866026238391137169c56bc05edb2cacbe27c145a2a25187f19e09ff",
+      "article": "f2913c330f91dda8cdc5abb9ef151ee9a1ec1ac079f4f6060799a860861415ba"
+    },
+    "/zh/igcse/mathematics/expressions-and-formulae/": {
+      "html": "6bd09ba3fc11b1131d230765ed63578813ba352ca431b0259a20e7e49db2618d",
+      "article": "a274c4e2eed17e26a94137b1ecd71666e7b24f3194c8473e9c0d9b6572c66559"
+    },
+    "/zh/igcse/mathematics/algebraic-fractions-and-proof/": {
+      "html": "e3e39fbcf530deacad6c599f819ccd2ba82cf5661d49262b3c808a62b5d67ee8",
+      "article": "0baeee687d92014cf034657edbc55b1fbea761e6ec0ec3ca1f10b3031138b8bf"
+    },
+    "/zh/igcse/mathematics/equations-and-inequalities/": {
+      "html": "7b27b80f9575a6b8bbc5b58803526715f47a7f47504eba1a51c2ef95e8e2fc40",
+      "article": "a88fd9418edd70174bd8adcdb3f5f1fc4842b240a14043a92f36aabf48a6fc7c"
+    },
+    "/zh/igcse/mathematics/coordinates-and-lines/": {
+      "html": "b40f40bf3428f36f57bad82c852c1d306846890d82ec32a604d69c92feae29ea",
+      "article": "2ab308d6a243d469f19d5d46a3a3d5232bf7df4a04fa722eb2ec2171fc8d980a"
+    },
+    "/zh/igcse/mathematics/quadratics-and-simultaneous-equations/": {
+      "html": "5480c923153e8189babbe70db8ca3da29193c1ab871861166ba105aaf7498bed",
+      "article": "282dbea858b944749336913a6ef0d64c59b217a27a03fc27013715375ee46d2f"
+    },
+    "/zh/igcse/mathematics/functions-and-graphs/": {
+      "html": "86c4112892311f3f469252d3917bab929b545d45f09943272e36745cd2679f1f",
+      "article": "2e9fb2eb99d21ea4ade8620635122126f70b78255008b98cc894d8660de2a099"
+    },
+    "/zh/igcse/mathematics/sequences/": {
+      "html": "0e4991ff474a2427660d7406c9e84b36fec928e108430a992589209c8edade07",
+      "article": "22ee747521b794b95739e5da892b9f8401d3871c47918397d1d4e7f6ccddc5d2"
+    },
+    "/zh/igcse/mathematics/differentiation-and-motion/": {
+      "html": "c5c0553023b573ed7ac0a24e087d73ed7b39382316307aba5e0865c40c15891e",
+      "article": "f7eb7b5cfc62ca7c70ce50c2e5393fa71dbd4614f40cc9359e7f2bdbe7f2534b"
+    },
+    "/zh/igcse/mathematics/angles-and-polygons/": {
+      "html": "10f62edf3d78db3f142e2d291cc349f71c84101091f8d37ebb8efc3a4fc6330f",
+      "article": "39f067dc861d761ac1ec99e60b3338a4d3202f2a9e98b72484593d0e4c219994"
+    },
+    "/zh/igcse/mathematics/congruence-and-similarity/": {
+      "html": "189621d10851c7668e501ed50c655c5f037d280333794ff67e89a5c6ffb7488b",
+      "article": "5ecb8d7c357885e8f2bf33ad461c609a16596d5c4ec1a267087aeb8f162be133"
+    },
+    "/zh/igcse/mathematics/circles-and-proof/": {
+      "html": "73526beabb2ba2771a49f1a28a4472dff295ea1d1c6ba38b7b0546bf08a76174",
+      "article": "834b833effb58388e5fe2a4a374464505ade3365c1df022722e235c6030557ea"
+    },
+    "/zh/igcse/mathematics/constructions-loci-and-bearings/": {
+      "html": "c20472efb9ebda7453b788b02230a4e81348f77c6a1cc54b05a1cfb8cc169a15",
+      "article": "2114b47d5e417ddc9c46bcfc4f04ef5388a7ad9e415bb3150e2e73a2d58ac518"
+    },
+    "/zh/igcse/mathematics/units-area-and-volume/": {
+      "html": "31d033b1ffccb24992a5e8df8790ff02cf5a1e58de38d9f92c52b04b349d9016",
+      "article": "9e97a15220ace767cedc8281005c468921f43a0b2c50f501814a74f065a2edfd"
+    },
+    "/zh/igcse/mathematics/pythagoras-and-trigonometry/": {
+      "html": "735c3800a6ed245b1664d4972ba7eb1a10466e4fa6ce5bf8071ec0958ec1dcb9",
+      "article": "3c9135ca9ac8ca4ee69738164c72718b9470792335f1d5824971ab3e17f93de7"
+    },
+    "/zh/igcse/mathematics/transformations/": {
+      "html": "eef074d9f82459e2b7f8dd8a1ff13d283ad5a8d7060f31fdc741a817f4b341d0",
+      "article": "2d12dad3c18a08125fb251894554f1c21a099b21db03c117fd180355e5bf50d9"
+    },
+    "/zh/igcse/mathematics/vectors-and-matrices/": {
+      "html": "048dad446f9a30b9abba0982aa5953d18d04e77ac13f7dde1f744b46be8cc0a3",
+      "article": "03e5df99cbc6d1545e2aa70815925db4a24068275083bcad2b792ec108828a2e"
+    },
+    "/zh/igcse/mathematics/data-and-averages/": {
+      "html": "534af7b07b95b5a7b5ce7e232fb528e755c1a7a8cbf237aa6ba00b2b8b18f999",
+      "article": "f57b1c4f98b0fec29693d528d0fd85d49dea13865917b7d7791fa88197ec3976"
+    },
+    "/zh/igcse/mathematics/statistical-diagrams/": {
+      "html": "5026faaac62da54e9322f5df492b8da6ea402560e557610ed084dc8795bd771a",
+      "article": "45735517ebbf1164cc06561738f8f2a51415cfbee622c9b2c3c40cadcdc0ca79"
+    },
+    "/zh/igcse/mathematics/sets-and-probability/": {
+      "html": "3bec39d6b03ff2a5c63035f867ea958d08c7ec131ae921e0eb8b7fc0bef6a205",
+      "article": "6b5747afdb1943e6323afe7de44e1a8dc217dbc9b4e1ce527b8e92aa03f8d0fc"
+    },
+    "/zh/igcse/mathematics/combined-and-conditional-probability/": {
+      "html": "b1739042477ccf1447136c74dac440acf42c897a1d66c16587a547bd896a2085",
+      "article": "835800ec3bff7fe15c98919e23526ec6d5bbf718b632c66ae3fd6528467f949e"
+    },
+    "/zh/igcse/mathematics/mixed-review/": {
+      "html": "9214c5c45d0424a0d1e40a3106c59a6dbdae8ffe6a1d5f172bce05c789f27819",
+      "article": "766b16da1844d2652a7e14582a49084590c50b77e33d91dfc67de74146aeb185"
+    }
+  }
+}

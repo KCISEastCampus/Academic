@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-26",
+  "sourceFiles": {
+    "igcse/mathematics/index.md": "d584b9fa36779e5ed39ff5f0fbdfd7df71b85988cb7a453960ebfccb399b24a0",
+    "zh/igcse/mathematics/index.md": "bfcd3af48bb9a5bf3c0d6d0ee167da1a0ab5495fe9574b113a535c72cd39d5c6",
+    "igcse/mathematics/fractions-decimals-and-percentages.md": "d3a86de49ff353088c63755886ad373414f82058059e480397b6bdbd2157959a",
+    "zh/igcse/mathematics/fractions-decimals-and-percentages.md": "4c6ac20bd0c002afe91f1a92bc31ee820a8f57e53942f992e95844acacafbc70",
+    "assets/img/igcse-fraction-strip.svg": "268bd45090c500350d0064406d1da0a9871974a6187c7b3eae202eab410b63e0",
+    "scripts/test-igcse-mathematics-sample.js": "40576490bdcd36ff30738beb27861d4b7aaaa53a3a416702b7fa58df4b98c7d2",
+    "scripts/test-subject-index-translations.js": "914580ec4b23b3179f2d955bf4677d75883737060782a27bbe80b2ed4e833ea7",
+    ".github/workflows/test.yml": "c3e1aac8ca225d88ca0edfaf9298731457cddc375da38d2c85cdb0e4376a4386",
+    "docs/agents/research-igcse-mathematics-route-2026-10-26.md": "122826e8f17c7dc012ac42b307768cc7b3ec5732e98119c583e589b6b1d7d66f",
+    "docs/agents/review-igcse-mathematics-sample-2026-10-26.md": "36e50e7b566aeb3eaf83bd030f63d535d9b25dd5767d903c4b9346420d126958",
+    "docs/agents/implementation-igcse-mathematics-sample-2026-10-26.md": "0ada1bc2a986b3e8dc2b95885dc493ba84d50b297541be1f4301d4b4ed9b1efd",
+    "assets/css/reading.css": "177c376f70a9685f629b177f24c7641cdd08449d49869a29785775126997f72a",
+    "assets/css/home.css": "5093b25192814630df184cb43f7d50819530c1edefcd20e266ac414e1c0daeaa",
+    "_layouts/subjects.html": "293db2c33a7e9d0858caf551013030cb136af11b7aaf6f97397c90c0ad7d940e"
+  },
+  "generatedFiles": {
+    "_site/igcse/mathematics/index.html": "d9107b8b661c73918964f504acba31905a3b757616a0efbf4c2da7215891cbac",
+    "_site/zh/igcse/mathematics/index.html": "c56c6fb2ccc207ef079152c9740459078c149aa5a6d5035957da0a3c442d3b4b",
+    "_site/igcse/mathematics/fractions-decimals-and-percentages/index.html": "c0c231d0d8fa1bd7d4c1a950efb73fe8b775ed02dcd3bd1f349f14d253e82405",
+    "_site/zh/igcse/mathematics/fractions-decimals-and-percentages/index.html": "d4bfa374eddd1753a322e1ef3305770153f941dae6eabb17fa89139f2e46db15"
+  },
+  "buildSeconds": 31.385,
+  "applicableTestsPassed": 7,
+  "browserViews": 16,
+  "journeys": 3,
+  "localLinks": 65,
+  "studentTrial": false,
+  "published": false
+}

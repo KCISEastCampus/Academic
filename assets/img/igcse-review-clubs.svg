@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 250" role="img" aria-labelledby="title desc">
+<title id="title">Club selection Venn diagram solution</title>
+<desc id="desc">The rectangle contains twenty students. Cycling only contains three, swimming only seven, the overlap five and neither five. The cycling circle has eight students in total.</desc>
+<rect x="1" y="1" width="358" height="248" rx="10" fill="#fff" stroke="#687987"/>
+<g stroke="#1e536e" stroke-width="2" fill="none"><circle cx="132" cy="122" r="77"/><circle cx="228" cy="122" r="77"/></g>
+<g font-family="Arial,sans-serif" font-size="20" fill="#122c3d" text-anchor="middle">
+<text x="111" y="33">Cycle C</text><text x="250" y="33">Swim S</text>
+<text x="105" y="130">3</text><text x="180" y="130">5</text><text x="256" y="130">7</text>
+<text x="285" y="228">5 neither</text><text x="60" y="228">Total 20</text>
+</g>
+</svg>
