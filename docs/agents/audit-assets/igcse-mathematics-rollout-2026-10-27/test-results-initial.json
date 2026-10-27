@@ -1,0 +1,32 @@
+[
+  {
+    "test": "igcse-mathematics-sample",
+    "exitCode": 0,
+    "output": "IGCSE mathematics sample: paired questions/math, task boundaries, recovery links and calculations passed.\n"
+  },
+  {
+    "test": "igcse-mathematics-content",
+    "exitCode": 0,
+    "output": "IGCSE mathematics: 58 pages, 299 bounded tasks, 1693 paired TeX fragments, 876 local links checked. Content review and student trials remain separate evidence.\n"
+  },
+  {
+    "test": "igcse-mathematics-calculations",
+    "exitCode": 0,
+    "output": "IGCSE mixed review: independent conversion, constraint, count, geometry, data and derivative checks passed.\n"
+  },
+  {
+    "test": "subject-index-translations",
+    "exitCode": 0,
+    "output": "Bilingual subject index checks passed for 6 pages: front matter, switches, anchors, links and UI text.\nChinese homepage and course pages link to all six indexes.\n"
+  },
+  {
+    "test": "reading-layout",
+    "exitCode": 0,
+    "output": "Reading sample passed: bilingual examples, stable anchors, closed practice solutions and scoped layout.\nMA03 reading roles passed for 32 bilingual course pages.\n"
+  },
+  {
+    "test": "frontend-ux",
+    "exitCode": 0,
+    "output": "Frontend UX passed: shared search, landmarks/skip links, course discovery, bilingual card names and destinations, fallback language and link contrast.\n"
+  }
+]

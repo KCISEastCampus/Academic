@@ -1,0 +1,92 @@
+[
+  {
+    "test": "igcse-mathematics-sample",
+    "exitCode": 0,
+    "output": "IGCSE mathematics sample: paired questions/math, task boundaries, recovery links and calculations passed."
+  },
+  {
+    "test": "igcse-mathematics-content",
+    "exitCode": 0,
+    "output": "IGCSE mathematics: 58 pages, 309 bounded tasks, 1823 paired TeX fragments, 929 local links checked. Content review and student trials remain separate evidence."
+  },
+  {
+    "test": "igcse-mathematics-calculations",
+    "exitCode": 0,
+    "output": "IGCSE mixed review: independent conversion, constraint, count, geometry, data and derivative checks passed."
+  },
+  {
+    "test": "subject-index-translations",
+    "exitCode": 0,
+    "output": "Bilingual subject index checks passed for 6 pages: front matter, switches, anchors, links and UI text.\nChinese homepage and course pages link to all six indexes."
+  },
+  {
+    "test": "reading-layout",
+    "exitCode": 0,
+    "output": "Reading sample passed: bilingual examples, stable anchors, closed practice solutions and scoped layout.\nMA03 reading roles passed for 32 bilingual course pages."
+  },
+  {
+    "test": "frontend-ux",
+    "exitCode": 0,
+    "output": "Frontend UX passed: shared search, landmarks/skip links, course discovery, bilingual card names and destinations, fallback language and link contrast."
+  },
+  {
+    "test": "frontend-loading",
+    "exitCode": 0,
+    "output": "Frontend loading passed: nonblocking notices, lazy counters, conditional diagrams, reusable style preload and valid parent breadcrumbs."
+  },
+  {
+    "test": "site-language",
+    "exitCode": 0,
+    "output": "Site language passed: preferences, safe reversible links, explicit switching, document language, storage fallback and 218 built page pairs."
+  },
+  {
+    "test": "search-language",
+    "exitCode": 0,
+    "output": "Search language passed: selected UI status, page-language fallback and matching indexed destinations."
+  },
+  {
+    "test": "search-excerpts",
+    "exitCode": 0,
+    "output": "Search excerpts passed: complete prose, formula sentence omission, course context and length limit in both engines."
+  },
+  {
+    "test": "search-interaction",
+    "exitCode": 0,
+    "output": "Search interaction passed: dialog focus, keyboard links, stale queries, close cancellation, fallback language and retry."
+  },
+  {
+    "test": "theme-init",
+    "exitCode": 0,
+    "output": "Theme initialization passed: fresh visits, saved preferences, invalid values and blocked storage."
+  },
+  {
+    "test": "image-modal",
+    "exitCode": 0,
+    "output": "Image modal passed: named native dialog, original image, link preservation, focus restoration and scroll ownership. Browser checks cover native keyboard behaviour."
+  },
+  {
+    "test": "accessibility",
+    "exitCode": 0,
+    "output": "Accessibility passed: TOC focus, visibility, Escape, refresh, resize, themes and native skip navigation."
+  },
+  {
+    "test": "toc-refresh",
+    "exitCode": 0,
+    "output": "TOC passed: nested search, refresh cleanup, mobile backdrop, background focus exclusion and focus restoration."
+  },
+  {
+    "test": "back-to-top",
+    "exitCode": 0,
+    "output": "Back-to-top passed: nested footers, footer clearance, short viewports, missing footer and visibility."
+  },
+  {
+    "test": "reading-progress",
+    "exitCode": 0,
+    "output": "Reading progress passed: document coordinates, cached scrolling, dynamic content, resize and observer fallback."
+  },
+  {
+    "test": "math-hierarchy",
+    "exitCode": 0,
+    "output": "Mathematics hierarchy: 134 subject/unit/lesson breadcrumbs, grouped discovery and both search classifications passed."
+  }
+]

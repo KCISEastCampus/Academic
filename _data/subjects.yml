@@ -144,8 +144,8 @@ igcse:
   - id: mathematics
     name: IG Math
     name_zh: IGCSE 数学
-    description: Extension notes · English
-    description_zh: 中文目录 → 英文笔记（Extension）
+    description: Bilingual Extension learning route
+    description_zh: Extension 双语学习路线
     icon: "📘"
     path: /igcse/mathematics/
 

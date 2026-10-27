@@ -106,7 +106,7 @@ for (const subject of subjectIndexes) {
   assert(zh.includes('placeholder="搜索目录…"'), `${subject}: Chinese search`);
   assert(zh.includes('aria-label="阅读此页英文版"'), `${subject}: Chinese switch label`);
   const translated = ['alevel/as-physics', 'igcse/physics'].includes(subject);
-  const scope = subject === 'alevel/as-mathematics' ? '中文页保留英文练习题，也可切换至英文课程。' : translated ? '本页为中文复习笔记' : '本页提供中文主题目录';
+  const scope = ['alevel/as-mathematics', 'igcse/mathematics'].includes(subject) ? '中文页保留英文练习题，也可切换至英文课程。' : translated ? '本页为中文复习笔记' : '本页提供中文主题目录';
   assert(zhBody.includes(scope), `${subject}: translation scope`);
   assert(!zhBody.includes('{{'), `${subject}: unrendered UI text`);
 }

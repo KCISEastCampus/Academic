@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 730" role="img" aria-labelledby="title desc">
+  <title id="title">Circle angle configurations</title>
+  <desc id="desc">Three panels from top to bottom: angles AOB and ACB on chord AB; diameter AB with C on the circle; cyclic quadrilateral ABCD. The panels are stacked for readable labels.</desc>
+  <rect width="260" height="730" fill="#fff" />
+  <g fill="none" stroke="#18334a" stroke-width="2.5" stroke-linejoin="round" transform="translate(30 0)">
+    <circle cx="100" cy="125" r="75" />
+    <path d="M35.05 162.5 L164.95 162.5 L100 50Z M35.05 162.5L100 125L164.95 162.5" />
+    <text x="12" y="183" fill="#18334a" stroke="none" font-family="Arial,sans-serif" font-size="24">A</text>
+    <text x="167" y="184" fill="#18334a" stroke="none" font-family="Arial,sans-serif" font-size="24">B</text>
+    <text x="94" y="43" fill="#18334a" stroke="none" font-family="Arial,sans-serif" font-size="24">C</text>
+    <text x="91" y="120" fill="#18334a" stroke="none" font-family="Arial,sans-serif" font-size="24">O</text>
+  </g>
+  <g fill="none" stroke="#18334a" stroke-width="2.5" stroke-linejoin="round" transform="translate(-170 245)">
+    <circle cx="300" cy="125" r="75" />
+    <path d="M225 125H375L337.5 60.05Z" />
+    <text x="207" y="143" fill="#18334a" stroke="none" font-family="Arial,sans-serif" font-size="24">A</text>
+    <text x="375" y="143" fill="#18334a" stroke="none" font-family="Arial,sans-serif" font-size="24">B</text>
+    <text x="340" y="55" fill="#18334a" stroke="none" font-family="Arial,sans-serif" font-size="24">C</text>
+    <text x="293" y="145" fill="#18334a" stroke="none" font-family="Arial,sans-serif" font-size="24">O</text>
+  </g>
+  <g fill="none" stroke="#18334a" stroke-width="2.5" stroke-linejoin="round" transform="translate(-370 490)">
+    <circle cx="500" cy="125" r="75" />
+    <path d="M435.05 162.5L462.5 60.05L564.95 87.5L537.5 189.95Z" />
+    <text x="413" y="181" fill="#18334a" stroke="none" font-family="Arial,sans-serif" font-size="24">A</text>
+    <text x="447" y="53" fill="#18334a" stroke="none" font-family="Arial,sans-serif" font-size="24">B</text>
+    <text x="570" y="85" fill="#18334a" stroke="none" font-family="Arial,sans-serif" font-size="24">C</text>
+    <text x="541" y="213" fill="#18334a" stroke="none" font-family="Arial,sans-serif" font-size="24">D</text>
+  </g>
+</svg>

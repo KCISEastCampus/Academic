@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Solution: histogram areas recover the frequencies</title>
+  <desc id="desc">Journey times in minutes use interval boundaries zero, four, ten and twenty. Touching bars have density heights 1.5, 1.5 and 1 people per minute. Width times density gives frequencies six, nine and ten, total twenty-five. The first two bars have equal height but different area.</desc>
+  <rect width="640" height="360" fill="#fff"/>
+  <g font-family="Arial,sans-serif" font-size="26" fill="#172438">
+    <text x="70" y="23">Frequency density (people/min)</text>
+    <g stroke="#dce3ec" stroke-width="1">
+      <path d="M70 220H570 M70 160H570 M70 100H570 M70 40H570"/>
+    </g>
+    <g fill="#dce9f6" stroke="#174c86" stroke-width="2">
+      <rect x="70" y="100" width="100" height="180"/>
+      <rect x="170" y="100" width="150" height="180"/>
+      <rect x="320" y="160" width="250" height="120"/>
+    </g>
+    <path d="M70 35V280H590" stroke="#172438" stroke-width="2" fill="none"/>
+    <g text-anchor="end">
+      <text x="58" y="285">0</text><text x="58" y="225">0.5</text>
+      <text x="58" y="165">1</text><text x="58" y="105">1.5</text><text x="58" y="45">2</text>
+    </g>
+    <g text-anchor="middle">
+      <text x="70" y="305">0</text><text x="170" y="305">4</text>
+      <text x="320" y="305">10</text><text x="570" y="305">20</text>
+      <text x="120" y="177"><tspan x="120">area</tspan><tspan x="120" dy="32">6</tspan></text><text x="245" y="177"><tspan x="245">area</tspan><tspan x="245" dy="32">9</tspan></text><text x="445" y="210"><tspan x="445">area</tspan><tspan x="445" dy="32">10</tspan></text>
+      <text x="320" y="337">Journey time (min)</text>
+    </g>
+    <path d="M70 280V286 M170 280V286 M320 280V286 M570 280V286" stroke="#172438"/>
+  </g>
+</svg>

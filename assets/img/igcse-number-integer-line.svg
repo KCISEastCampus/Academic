@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 130" role="img" aria-labelledby="title desc">
+<title id="title">Integers increase to the right</title><desc id="desc">Equally spaced ticks labelled minus four, minus three, minus two, minus one, zero, one, two, three and four. An arrow at the right shows increasing values.</desc>
+<rect width="600" height="130" rx="8" fill="#fff"/>
+<path d="M40 55H570L560 49M570 55L560 61" fill="none" stroke="#172b4d" stroke-width="2"/>
+<path d="M50 47V63M110 47V63M170 47V63M230 47V63M290 43V67M350 47V63M410 47V63M470 47V63M530 47V63" stroke="#172b4d" stroke-width="2"/>
+<g font-family="Arial,sans-serif" font-size="23" fill="#172b4d" text-anchor="middle">
+<text x="50" y="98">−4</text><text x="110" y="98">−3</text><text x="170" y="98">−2</text><text x="230" y="98">−1</text><text x="290" y="98">0</text><text x="350" y="98">1</text><text x="410" y="98">2</text><text x="470" y="98">3</text><text x="530" y="98">4</text>
+</g></svg>

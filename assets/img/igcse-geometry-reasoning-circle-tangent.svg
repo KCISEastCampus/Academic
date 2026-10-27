@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 520" role="img" aria-labelledby="title desc">
+  <title id="title">Tangents and the alternate segment</title>
+  <desc id="desc">Upper panel: circle centre O with tangents from P meeting at A and B. Lower panel: tangent ray AT, chord AB and point C on the opposite side of AB from T. Panels are stacked so labels remain readable on a narrow screen.</desc>
+  <rect width="320" height="520" fill="#fff" />
+  <g fill="none" stroke="#18334a" stroke-width="2.5" stroke-linejoin="round" transform="translate(20 -20)">
+    <circle cx="95" cy="145" r="75" />
+    <path d="M132.5 80.048L245 145L132.5 209.952 M95 145L132.5 80.048 M95 145L132.5 209.952 M95 145L245 145" />
+    <path d="M126 91.3L137.3 97.8L143.8 86.5 M126 198.7L137.3 192.2L143.8 203.5" />
+    <text x="82" y="139" fill="#18334a" stroke="none" font-family="Arial,sans-serif" font-size="24">O</text>
+    <text x="126" y="68" fill="#18334a" stroke="none" font-family="Arial,sans-serif" font-size="24">A</text>
+    <text x="125" y="235" fill="#18334a" stroke="none" font-family="Arial,sans-serif" font-size="24">B</text>
+    <text x="250" y="153" fill="#18334a" stroke="none" font-family="Arial,sans-serif" font-size="24">P</text>
+  </g>
+  <g fill="none" stroke="#18334a" stroke-width="2.5" stroke-linejoin="round" transform="translate(-300 250)">
+    <circle cx="445" cy="130" r="85" />
+    <path d="M335 215H585 M445 215L521.4 92.7L360 130Z" />
+    <text x="433" y="240" fill="#18334a" stroke="none" font-family="Arial,sans-serif" font-size="24">A</text>
+    <text x="523" y="87" fill="#18334a" stroke="none" font-family="Arial,sans-serif" font-size="24">B</text>
+    <text x="338" y="127" fill="#18334a" stroke="none" font-family="Arial,sans-serif" font-size="24">C</text>
+    <text x="565" y="241" fill="#18334a" stroke="none" font-family="Arial,sans-serif" font-size="24">T</text>
+  </g>
+</svg>

@@ -27,6 +27,9 @@ jobs:
         run: |
           node scripts/test-site-language.js
           node scripts/test-subject-index-translations.js
+          node scripts/test-igcse-mathematics-sample.js
+          node scripts/test-igcse-mathematics-content.js
+          node scripts/test-igcse-mathematics-calculations.js
           node scripts/test-search-language.js
           node scripts/test-search-excerpts.js
           node scripts/test-search-interaction.js
