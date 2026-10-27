@@ -60,13 +60,13 @@ A rapid aqueous reaction in an open insulated cup has limiting reaction amount 0
 <div class="lesson-check" markdown="1">
 <h3 id="mixed-d">一条曲线与一个密闭容器</h3>
 <!-- task:mixed-d -->
-A constructed gas-production record gives times 0,10,20,30,40 s and gas volumes 0,18,30,38,40 cm3. Find average volume-production rate over 0–20 s. A tangent at 20 s passes through(15 s,25 cm3) and(25 s,35 cm3): find instantaneous rate there. Distinguish either rate from the final gas amount. Sketch equal-particle-number Maxwell–Boltzmann curves for T2 > T1, mark Ea and explain a temperature increase and a catalyst separately. In another sealed 2.00 dm3 vessel at constant temperature, H2(g)+I2(g)⇌2HI(g) reaches equilibrium: initially 0.100 mol each H2/I2, no HI; equilibrium HI is 0.120 mol. Calculate Kc and its units. The forward reaction is endothermic: predict the effect of higher temperature on Kc and compare adding a catalyst. Explain why equal equilibrium concentrations are unnecessary.
+A constructed gas-production record gives times 0,10,20,30,40 s and gas volumes 0,18,30,38,40 cm3. Find average volume-production rate over 0–20 s. A tangent at 20 s passes through(15 s,25 cm3) and(25 s,35 cm3): find instantaneous rate there. Distinguish either rate from the final gas amount. Sketch equal-particle-number Maxwell–Boltzmann curves for T2 > T1, mark Ea and explain a temperature increase and a catalyst separately. In another sealed 2.00 dm3 vessel at constant temperature, H2(g)+I2(g)⇌2HI(g) reaches equilibrium: initially 0.100 mol each H2/I2, no HI; equilibrium HI is 0.120 mol. Calculate Kc and its units. The forward reaction is exothermic: predict the effect of higher temperature on Kc and compare adding a catalyst. Explain why equal equilibrium concentrations are unnecessary.
 <!-- /task:mixed-d -->
 <details markdown="1"><summary>提示</summary>
 区分斜率、最终反应量、平衡组成及平衡常数。
 </details>
 <details markdown="1"><summary>解答与检查</summary>
-平均30/20=**1.50cm³s−1**，切线(35−25)/(25−15)=**1.00cm³s−1**；最终40cm³与量有关，不是速率。MB 总面积相等，高温峰低宽、高能比例更大，升温不改 Ea；催化改路径降 Ea，同温分布不改。HI = .120消耗各.0600mol，H₂/I₂各余.0400mol；浓度 .0200/.0200/.0600，Kc=.0600²/(.0200²)=**9.00**，按浓度约定单位相消。升温有利吸热方向，Kc增大；催化不改Kc及平衡组成。平衡是正逆速率相同，不是浓度相同。用了初始量回[平衡量](/zh/alevel/as-chemistry/equilibrium/)，把升温当降Ea回[能量分布](/zh/alevel/as-chemistry/kinetics/)，延后B换平衡重试。
+平均30/20=**1.50cm³s−1**，切线(35−25)/(25−15)=**1.00cm³s−1**；最终40cm³与量有关，不是速率。MB 总面积相等，高温峰低宽、高能比例更大，升温不改 Ea；催化改路径降 Ea，同温分布不改。HI = .120消耗各.0600mol，H₂/I₂各余.0400mol；浓度 .0200/.0200/.0600，Kc=.0600²/(.0200²)=**9.00**，按浓度约定单位相消。升温有利逆向吸热反应，Kc减小；催化不改Kc及平衡组成。平衡是正逆速率相同，不是浓度相同。用了初始量回[平衡量](/zh/alevel/as-chemistry/equilibrium/)，把升温当降Ea回[能量分布](/zh/alevel/as-chemistry/kinetics/)，延后B换平衡重试。
 </details>
 </div>
 
