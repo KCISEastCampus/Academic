@@ -1,0 +1,11 @@
+{
+  "observedOn": "2026-10-28",
+  "localHead": "b9b356544d8bcc030b620bf31b04605cb5b80f6b",
+  "files": {
+    "alevel/a2-further-mathematics/second-order-differential-equations.md": "9196b660a1d8b03b503cbc85f95f73581d7cbfab245877c6ac466f71dec4d985",
+    "zh/alevel/a2-further-mathematics/second-order-differential-equations.md": "f41149906bc08d5dc43910fd6bbe4cba042d50ac6b356fddc546d9d29f9d98b7",
+    "assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-question-paper.pdf": "057b5838cf490f74f9fdd747dee7a68a1b24fe417ecbf04f81e867fa5470b4ad",
+    "assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-mark-scheme.pdf": "0dd402749f4a8e86c11ea75f1efcba05a12e6bcbaa52b6d6b5500adc688520c2"
+  },
+  "limits": "Local source/PDF snapshots; live page observation is recorded separately, not a claim that live HTML bytes equal this source."
+}

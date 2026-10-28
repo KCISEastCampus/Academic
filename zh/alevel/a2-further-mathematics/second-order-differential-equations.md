@@ -18,6 +18,8 @@ reading_layout: true
 
 先读[方程在说什么](#equation-and-conditions)，跟着[例 1](#example-1-distinct-roots)求出一个完整答案，再比较其他根型。右边不为零时，再学习[把解分成两部分](#cf-and-pi)。复习时可直接做[练习](#practice)。
 
+如果卡在 PI 怎样选，直接从 [PI 表格和短题](#pi-trials)开始。
+
 **开始前：**会对指数和三角函数求导，会用[乘积法则](/zh/alevel/a2-mathematics/differentiation/#products-and-quotients)。解二次方程出现负判别式时，可回看[复二次根](/zh/alevel/as-further-mathematics/complex-numbers-and-roots/#conjugate)里的配方示范。后半章接着[一阶 CF 与 PI](/zh/alevel/a2-further-mathematics/first-order-differential-equations/#cf-and-pi)学习；直接积分的例子会用到[幂函数积分](/zh/alevel/a2-mathematics/integration/#power-integrals)。
 
 ## 方程形式与给定条件 {#equation-and-conditions}
@@ -151,18 +153,74 @@ $$\boxed{y=y_c+y_p.}$$
 
 **PI 与满足给定条件的解（particular solution）是不同概念。**PI 用来组成通解；满足给定条件的解通常还含有 CF 中的项，只是其中的常数已被确定。两个任意常数应放在 CF 中，不要在 PI 中再引入任意常数。
 
-## 如何设特解并检验 {#pi-trials}
+## 怎样选 PI，再检查它 {#pi-trials}
 
-先看右边是什么函数，选一种求导后能配出它的形式。系数先留作字母，再通过求导、代入和比较系数把它们算出来。这叫**待定系数法（undetermined coefficients）**。下面的表是选形式的起点；代入后能否得到右边，才是检验。
+目标很简单：**找一个函数，代回方程左边，能得到题目右边。**先用表格选一个形式，再检查 CF，最后把系数算出来。把不知道的系数先写成字母、再通过代入求出来，叫**待定系数法（undetermined coefficients）**。
 
-| 非齐次项 | 尚未检查与 CF 是否重复时，先设的特解形式 |
-|---|---|
+第一次学，顺着下面的示范和短题走；只想查用法，可以看[选形表](#pi-table)和[重复检查](#resonance)。短题都是自拟题，无官方分值；先动笔，再按需打开提示和解答。
+
+### 先用这张表选形式 {#pi-table}
+
+表里的 $p,q,r,K,k$ 是题目已给的常数；$C,D,E,C_0,\ldots,C_n$ 是我们要算出的系数，不是最终答案里额外的任意常数。
+
+| 方程右边 $f(x)$ | PI $y_p$ 先从这个形式开始 |
+| --- | --- |
+| 常数 $p$ | $C$ |
+| $p+qx$ | $C+Dx$ |
+| $p+qx+rx^2$ | $C+Dx+Ex^2$ |
+| 三次或四次多项式，$n=3$ 或 $4$ | $C_0+C_1x+\cdots+C_nx^n$ |
 | $Ke^{kx}$ | $Ce^{kx}$ |
-| $K\cos\omega x$ 或 $K\sin\omega x$，$\omega\ne0$ | $C\cos\omega x+D\sin\omega x$ |
-| 次数为 $n\le4$ 的多项式 | $C_nx^n+\cdots+C_1x+C_0$ |
-| 线性组合 | 将各部分对应的特解形式相加，再确定系数 |
+| $p\cos\omega x+q\sin\omega x$，$\omega\ne0$ | $C\cos\omega x+D\sin\omega x$ |
+| 上面几类相加 | 分别选形式，再相加；各部分分别检查 |
 
-三角函数的特解形式应同时含有正弦项和余弦项，即使右边只有其中一种：$by^{\prime}$ 项可能使两者同时出现。多项式的特解形式应包含所有低次项，因为求导会产生低次项。
+右边没有写出的项，也先留位置：遇到 $4x^2$，先写 $C+Dx+Ex^2$；遇到 $\sin2x$，先写 $C\cos2x+D\sin2x$。哪些系数等于零，要等代入后再决定。
+
+**查完表，还没选完。**如果这个形式与 CF 重复，就要先调整，不能直接求系数。[重复检查](#resonance)会说明什么时候多乘 $x$ 或 $x^2$。先从不需要调整的例子开始。
+
+<section class="worked-example" markdown="1">
+
+### 例题 4：指数函数特解 {#example-4-exponential-pi}
+
+> **Original example.** Find the general solution of $y^{\prime\prime}-y=6e^{2x}$.
+
+本题为自拟示范。先把下面的 CF 当作已给，专心看 PI 怎样找。指数函数求导后仍是同一种指数，所以表格建议保留右边的指数形式，只把前面的系数留作未知数。
+
+齐次通解为 $y_c=Ae^x+Be^{-x}$。设 $y_p=Ce^{2x}$，代入得
+
+$$\begin{aligned}
+y_p&=Ce^{2x},\qquad y_p^{\prime}=2Ce^{2x},\qquad y_p^{\prime\prime}=4Ce^{2x},\\
+y_p^{\prime\prime}-y_p&=(4C-C)e^{2x}=6e^{2x}.
+\end{aligned}$$
+
+所以 $C=2$。因此
+
+$$\boxed{y=Ae^x+Be^{-x}+2e^{2x}}.$$
+
+CF 代入方程左边得零；将 $2e^{2x}$ 代入，得到 $6e^{2x}$，因此 $y^{\prime\prime}-y$ 恰好等于题目给定的非齐次项。
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 试一试 {#pi-try-exponential}
+
+> **Self-written task.** For $y^{\prime\prime}-y=5e^{3x}$, the CF is $Ae^x+Be^{-x}$. Find a PI and verify it by substitution.
+
+<details markdown="1">
+<summary>提示</summary>
+
+保留右边指数中的系数。先与已给的 CF 比较，再求导。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检验</summary>
+
+先设 $y_p=Ce^{3x}$；CF 没有这个指数项。求导得 $y_p^{\prime}=3Ce^{3x}$、$y_p^{\prime\prime}=9Ce^{3x}$。左边为 $8Ce^{3x}=5e^{3x}$，所以 $C=5/8$，PI 为 $y_p=5e^{3x}/8$。代回确实得到右边。这里只找一个 PI，不用加条件或额外任意常数。
+
+</details>
+
+</section>
 
 <section class="worked-example" markdown="1">
 
@@ -184,53 +242,25 @@ y&=\boxed{A\cos x+B\sin x+x^2-1}.
 
 </section>
 
-<section class="worked-example" markdown="1">
+<section class="lesson-check" markdown="1">
 
-### 零为重根时 {#zero-root-demonstration}
+### 检查一个解法 {#pi-try-polynomial}
 
-> **Self-written example.** Find the general solution of $y^{\prime\prime}=2x$.
+> **Self-written task.** For $y^{\prime\prime}+3y^{\prime}+2y=x$, the CF is $Ae^{-x}+Be^{-2x}$. A learner tries $y_p=Cx$. Can this work for all $x$? Find a PI.
 
-这是自拟示范，无官方分值。这里只有二阶导数，直接积分两次最方便：第一次找出一阶导数，第二次找出函数。每次积分各带来一个常数。辅助多项式是 $m^2$，对应的 CF 正是 $A+Bx$。
+<details markdown="1">
+<summary>提示</summary>
 
-$$\begin{aligned}
-y^{\prime}&=\int2x\,\mathrm dx=2\frac{x^2}{2}+B=x^2+B,\\
-y&=\int(x^2+B)\,\mathrm dx=\frac{x^3}{3}+Bx+A.
-\end{aligned}$$
+把代入后的结果写全，尤其不要漏掉常数项。
 
-PI $x^3/3$ 的二阶导数为 $2x$。非齐次项一次，PI 却三次；把一次试探式乘以 $x^2$ 才消除重零根的重复。Q7 还要使用边界条件。
+</details>
 
-</section>
+<details markdown="1">
+<summary>解答与检验</summary>
 
-### 共振：所设形式与齐次通解重复 {#resonance}
+原来的代入结果为 $3C+2Cx$。比较一次项要 $2C=1$，比较常数项却要 $3C=0$，两者不能同时成立。改设 $y_p=Cx+D$。一阶、二阶导数分别为 $C$、$0$，左边为 $2Cx+(3C+2D)=x+0$。所以 $C=1/2$、$D=-3/4$，得到 $y_p=x/2-3/4$。检验：$0+3/2+x-3/2=x$。保留常数项，才能抵消求导后多出来的常数。
 
-如果试设形式已经在 CF 里，代入左边就会互相抵消，只剩零。无论怎样调系数，都配不出非零的右边。这种重复叫**共振（resonance）**。要换一种形式：给重复的整部分多乘一个 $x$；如果仍然抵消，再乘一个。具体规则如下，后面的例子会实际检验：
-
-- 对于 $e^{kx}$，应取 $xCe^{kx}$ 来处理辅助方程中 $k$ 为单根（simple root）的情况；若是重根，则取 $x^2Ce^{kx}$。
-- 对于只有正弦或余弦函数的非齐次项，若辅助方程的根为 $\pm i\omega$，则取 $x(C\cos\omega x+D\sin\omega x)$。
-- 对于多项式非齐次项，考察 $m=0$ 在辅助方程中的重数 $s$，并将所设的多项式乘以 $x^s$。这里 $s$ 为 0、1 或 2；零不是辅助方程的根时，重数记为 0。
-
-例如，若 $c=0$ 但 $b\ne0$，常数非齐次项需要用一次函数作为 PI。若 $b=c=0$，方程为 $ay^{\prime\prime}=f(x)$，直接积分两次最简便。此时，四次多项式非齐次项可以对应六次多项式 PI：次数限制针对的是 $f(x)$，并非解的次数。
-
-<section class="worked-example" markdown="1">
-
-### 例题 4：指数函数特解 {#example-4-exponential-pi}
-
-> **Original example.** Find the general solution of $y^{\prime\prime}-y=6e^{2x}$.
-
-本题为自拟示范。先求右边为零时的 CF。再看题目的右边：指数函数求导后形式不变，因此可以从相同的指数形式开始试 PI。
-
-齐次通解为 $y_c=Ae^x+Be^{-x}$。设 $y_p=Ce^{2x}$，代入得
-
-$$\begin{aligned}
-y_p&=Ce^{2x},\qquad y_p^{\prime}=2Ce^{2x},\qquad y_p^{\prime\prime}=4Ce^{2x},\\
-y_p^{\prime\prime}-y_p&=(4C-C)e^{2x}=6e^{2x}.
-\end{aligned}$$
-
-所以 $C=2$。因此
-
-$$\boxed{y=Ae^x+Be^{-x}+2e^{2x}}.$$
-
-CF 代入方程左边得零；将 $2e^{2x}$ 代入，得到 $6e^{2x}$，因此 $y^{\prime\prime}-y$ 恰好等于题目给定的非齐次项。
+</details>
 
 </section>
 
@@ -242,7 +272,7 @@ CF 代入方程左边得零；将 $2e^{2x}$ 代入，得到 $6e^{2x}$，因此 $
 
 本题为自拟示范。右边虽然只有余弦，求一次导数却会出现正弦。因此 PI 先同时保留这两项，再由代入结果决定各自的系数。
 
-辅助方程的根为 $(-1\pm i\sqrt7)/2$，因此
+这里先给出 CF；现在只需专心找 PI：
 
 $$y_c=e^{-x/2}\left(A\cos\frac{\sqrt7x}{2}+B\sin\frac{\sqrt7x}{2}\right).$$
 
@@ -261,6 +291,34 @@ $$\boxed{\begin{aligned}y={}&e^{-x/2}\left(A\cos\frac{\sqrt7x}{2}+B\sin\frac{\sq
 比较系数的结果确认，将 PI 代入方程左边，恰好得到 $3\cos x$。
 
 </section>
+
+<section class="lesson-check" markdown="1">
+
+### 再检查一个解法 {#pi-try-trig}
+
+> **Self-written task.** For $y^{\prime\prime}+y^{\prime}+y=\sin x$, you are told that the CF has no pure sine–cosine terms. A learner tries $y_p=C\sin x$. Test this proposal, then find a PI.
+
+<details markdown="1">
+<summary>提示</summary>
+
+求两次导数，把左边三项都加起来。如果不能配出需要的正弦，重新设形式时把正余弦都留着。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检验</summary>
+
+原来的代入结果是 $-C\sin x+C\cos x+C\sin x=C\cos x$，不可能恒等于 $\sin x$，也就是不能对所有 $x$ 都成立。改设 $y_p=C\cos x+D\sin x$，左边成为 $D\cos x-C\sin x$。因此 $D=0$、$C=-1$，PI 为 $y_p=-\cos x$。检验：$y_p^{\prime}=\sin x$、$y_p^{\prime\prime}=\cos x$，所以 $\cos x+\sin x-\cos x=\sin x$。某个系数最后可以是零，但不能在代入前就把它删掉。
+
+</details>
+
+</section>
+
+### 再检查：是不是被 CF 抵消了？ {#resonance}
+
+右边帮我们选函数种类；左边决定这个形式能不能用。如果一个试探函数已经属于 CF，它代回左边就会得到零。系数再怎么换，也不能把零变成题目需要的非零结果。这时要换形式。
+
+这种重复常叫**共振（resonance）**。这里先理解式子为什么相消，不需要另外学习物理模型。先看一次失败，再整理规则。
 
 <section class="worked-example" markdown="1">
 
@@ -281,40 +339,164 @@ PI 恰好贡献 $4e^x$。这里只需一个 $x$，因为 1 为单根；接下来
 
 </section>
 
+<section class="lesson-check" markdown="1">
+
+### 比较两个方程 {#pi-compare}
+
+> **Self-written task.** Choose a PI trial for each equation, then find a PI: (i) $y^{\prime\prime}-y=4e^x$, with CF $Ae^x+Be^{-x}$; (ii) $y^{\prime\prime}+y=4e^x$, with CF $A\cos x+B\sin x$. Explain why the same right side does not lead to the same trial.
+
+<details markdown="1">
+<summary>提示</summary>
+
+分别检查指数项与各自的 CF 是否重复，再写出试探式代回左边的结果。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检验</summary>
+
+（i）$Ce^x$ 代入得零。换成 $Cxe^x$ 后，左边为 $2Ce^x$，所以 PI 为 $2xe^x$。（ii）$Ce^x$ 不属于这个 CF，代入左边得到 $2Ce^x$，所以 PI 为 $2e^x$。右边决定起步的函数种类；是否重复，要根据左边对应的 CF 来查。
+
+</details>
+
+</section>
+
+### 到底多乘几个 $x$？ {#pi-overlap-check}
+
+用求 CF 时得到的辅助方程来查。对于这里的二阶方程，按下面检查即可：
+
+| 右边的这一部分 | 怎样检查、调整表里的形式 |
+| --- | --- |
+| $Ke^{kx}$ | $k$ 不是根：保留 $Ce^{kx}$；是单根：用 $Cxe^{kx}$；是重根：用 $Cx^2e^{kx}$ |
+| 多项式 | 查根 $0$：没有零根，不额外乘；零是单根，整个多项式乘 $x$；零是重根，整个多项式乘 $x^2$ |
+| 频率为 $\omega\ne0$ 的正余弦 | 若 CF 已含这个频率的一对正余弦、且没有指数因子，整对乘 $x$；否则保留原来的一对 |
+| 几类相加 | 各部分分别查；一部分需要调整，不代表其余部分也要乘 |
+
+多项式即使只有常数项与 CF 重复，也会影响选法。不能只看整个式子是不是与 CF 一模一样。下面的零根例子会说明，为什么要调整**整个多项式**。
+
+因此，零是重根时，四次的右边可能需要六次 PI。次数限制针对 $f(x)$，不是针对 PI。
+
 <section class="worked-example" markdown="1">
 
 ### 例题 6：重根对应的共振 {#example-6-repeated-resonance}
 
 > **Original example.** Find the general solution of $y^{\prime\prime}-4y^{\prime}+4y=8e^{2x}$. Explain why neither $Ce^{2x}$ nor $Cxe^{2x}$ is a suitable PI.
 
-本题为自拟示范。先检查题目提出的两种形式为什么都失败，再寻找不会被左边抵消的形式。
+本题为自拟示范。辅助方程为 $(m-2)^2=0$，因此 $y_c=(A+Bx)e^{2x}$。每次只看一个试探式，算完它的导数，再看代回左边得到什么。
 
-辅助方程为 $(m-2)^2=0$，所以 $y_c=(A+Bx)e^{2x}$。题目提出的两种形式代入微分方程左边，都只能得到零。
+**先试：**$v=Ce^{2x}$。
 
+$$v^{\prime}=2Ce^{2x},\qquad v^{\prime\prime}=4Ce^{2x}.$$
 
-先实际检验两种失败试探式，不能只凭“乘过 x”判断：
+$$v^{\prime\prime}-4v^{\prime}+4v=(4-8+4)Ce^{2x}=0.$$
+
+得到零，不能产生题目需要的 $8e^{2x}$。
+
+**再试：**$w=Cxe^{2x}$。用乘积法则求导：
 
 $$\begin{aligned}
-v&=Ce^{2x},\quad v^{\prime}=2Ce^{2x},\quad v^{\prime\prime}=4Ce^{2x},\\
-v^{\prime\prime}-4v^{\prime}+4v&=C(4-8+4)e^{2x}=0,\\
-w&=Cxe^{2x},\quad w^{\prime}=C(1+2x)e^{2x},\quad w^{\prime\prime}=C(4+4x)e^{2x},\\
-w^{\prime\prime}-4w^{\prime}+4w&=C[(4+4x)-4(1+2x)+4x]e^{2x}=0.
+w^{\prime}&=C(1+2x)e^{2x},\\
+w^{\prime\prime}&=C(4+4x)e^{2x}.
 \end{aligned}$$
 
-设 $y_p=Cx^2e^{2x}$，则
+代入后，先合并指数前的系数：
+
+$$\begin{aligned}
+w^{\prime\prime}-4w^{\prime}+4w
+&=C[(4+4x)-4(1+2x)+4x]e^{2x}\\
+&=0.
+\end{aligned}$$
+
+还是零。这两个试探式都已经属于 CF，所以只多乘一个 $x$ 还不够。
+
+**再多乘一次：**$y_p=Cx^2e^{2x}$。
 
 $$\begin{aligned}
 y_p^{\prime}&=C(2x+2x^2)e^{2x},\\
-y_p^{\prime\prime}&=C(2+8x+4x^2)e^{2x},\\
-y_p^{\prime\prime}-4y_p^{\prime}+4y_p&=C[(2+8x+4x^2)-4(2x+2x^2)+4x^2]e^{2x}\\
+y_p^{\prime\prime}&=C(2+8x+4x^2)e^{2x}.
+\end{aligned}$$
+
+把共同的指数放在外面，先整理系数：
+
+$$\begin{aligned}
+y_p^{\prime\prime}-4y_p^{\prime}+4y_p
+&=C[(2+8x+4x^2)\\
+&\quad-4(2x+2x^2)+4x^2]e^{2x}\\
 &=2Ce^{2x}.
 \end{aligned}$$
 
-因此 $C=4$，得到
+这次可以配出右边了：$2C=8$，所以 $C=4$。通解为
 
 $$\boxed{y=(A+Bx+4x^2)e^{2x}}.$$
 
-需要额外乘以 $x^2$，因为 $e^{2x}$ 和 $xe^{2x}$ 都已经出现在 CF 中。
+这里是重根，需要多乘 $x^2$。最后仍以代入结果确认，不能只看形式“像不像”。
+
+</section>
+
+<section class="worked-example" markdown="1">
+
+### 零是单根时 {#zero-root-simple}
+
+> **Self-written example.** Find a PI of $y^{\prime\prime}+y^{\prime}=2x$.
+
+先给出 CF：$A+Be^{-x}$，辅助方程中零是单根。按表先试 $Cx+D$。它的一阶导数是 $C$，二阶导数是 $0$，所以左边只剩 $C$，不可能恒等于 $2x$，也就是不能对所有 $x$ 都成立。
+
+把**整个**一次式乘以 $x$：
+
+$$\begin{aligned}
+y_p&=x(Cx+D)=Cx^2+Dx,\\
+y_p^{\prime}&=2Cx+D,\qquad y_p^{\prime\prime}=2C,\\
+y_p^{\prime\prime}+y_p^{\prime}&=2Cx+(2C+D).
+\end{aligned}$$
+
+与 $2x+0$ 比较：$2C=2$，$2C+D=0$。得到 $C=1$、$D=-2$，所以 $y_p=x^2-2x$。检验：$2+(2x-2)=2x$。原来的试探式虽然只有常数部分与 CF 重复，仍要调整整个式子。
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 自己选一次 {#pi-try-zero}
+
+> **Self-written task.** Find a PI of $y^{\prime\prime}+2y^{\prime}=6x+4$. State and justify your trial before determining its coefficients.
+
+<details markdown="1">
+<summary>提示</summary>
+
+先看辅助方程。按表直接试一次式，代入后会得到什么？
+
+</details>
+
+<details markdown="1">
+<summary>解答与检验</summary>
+
+辅助方程为 $m(m+2)=0$，因此 $y_c=A+Be^{-2x}$。零是单根；从表里的一次式起步，把整个式子乘以 $x$：
+
+$$\begin{aligned}
+y_p&=x(Cx+D)=Cx^2+Dx,\\
+y_p^{\prime}&=2Cx+D,\qquad y_p^{\prime\prime}=2C,\\
+y_p^{\prime\prime}+2y_p^{\prime}&=4Cx+(2C+2D)=6x+4.
+\end{aligned}$$
+
+所以 $C=3/2$、$D=1/2$，PI 为 $y_p=3x^2/2+x/2$。检验：$3+2(3x+1/2)=6x+4$。若选了一次式，回看[零是单根的示范](#zero-root-simple)；若形式正确，再单独检查常数项的比较。
+
+</details>
+
+</section>
+
+<section class="worked-example" markdown="1">
+
+### 零为重根时 {#zero-root-demonstration}
+
+> **Self-written example.** Find the general solution of $y^{\prime\prime}=2x$.
+
+这是自拟示范，无官方分值。这里只有二阶导数，直接积分两次最方便：第一次找出一阶导数，第二次找出函数。每次积分各带来一个常数。辅助多项式是 $m^2$，对应的 CF 正是 $A+Bx$。
+
+$$\begin{aligned}
+y^{\prime}&=\int2x\,\mathrm dx=2\frac{x^2}{2}+B=x^2+B,\\
+y&=\int(x^2+B)\,\mathrm dx=\frac{x^3}{3}+Bx+A.
+\end{aligned}$$
+
+PI $x^3/3$ 的二阶导数为 $2x$。非齐次项一次，PI 却三次；把一次试探式乘以 $x^2$ 才消除重零根的重复。Q7 还要使用边界条件。
 
 </section>
 
@@ -338,6 +520,10 @@ PI 贡献 $2\cos x$，因为含 $x$ 的项已相消。Q6 改变频率与非齐�
 
 </section>
 
+### 再把几部分合起来 {#pi-combine}
+
+先关闭帮助，独立完成 [Q5](#practice-5)。它只给方程，需要自己找 CF 和 PI，暂时没有条件要处理。完成后回到这里。右边有几类函数，就分别选形式、查重复，再把各部分的 PI 相加。先得到完整通解，最后才用条件。下面这题再加入混合项和条件。
+
 <section class="lesson-check" markdown="1">
 
 ### 例题 7：混合非齐次项与无穷远处的条件 {#example-7-mixed-forcing}
@@ -346,7 +532,7 @@ PI 贡献 $2\cos x$，因为含 $x$ 的项已相消。Q6 改变频率与非齐�
 
 > **Adapted example.** For $x\ge0$, solve $y^{\prime\prime}+y^{\prime}-2y=4x-6e^{-2x}$, given $y(0)=2$ and $y^{\prime}\to-2$ as $x\to\infty$.
 
-本题为改编题，改变了 OxfordAQA 2018 年样卷 FM03 第 7 题的方程与条件，保留了多项式 PI 加上发生共振的指数函数 PI 的方法，然后对完整的解使用给定条件。本题并非官方原题。
+本题改编自 OxfordAQA 2018 年样卷 FM03 第 7 题，方程与条件已改变，并非官方原题。
 
 <details markdown="1">
 <summary>提示</summary>
@@ -400,7 +586,9 @@ $$\boxed{y=(3+2x)e^{-2x}-2x-1},\qquad x\ge0.$$
 
 ## 练习 {#practice}
 
-按 Q5、Q2、Q6、Q1、Q7、Q3、Q4 的顺序混合练习。打开提示前，说明辅助方程的根如何决定 CF，以及所选 PI 试探式为何不与 CF 重复。
+第一次学，先完成前面的 [PI 短题](#pi-try-exponential)，再做完整题。Q1–3 练 CF 与条件；Q4–7 把 PI 放回完整解题。
+
+学会各类型后，可按 Q5、Q2、Q6、Q1、Q7、Q3、Q4 的顺序做混合复习。打开提示前，说明辅助方程的根如何决定 CF，以及所选 PI 试探式为何不与 CF 重复。
 
 以下七题均为自拟题。适用时，指出 CF 与 PI。先写通解，再使用给定条件；最后检验方程和每一个条件。
 
@@ -523,6 +711,8 @@ $$\boxed{y=A\cos x+B\sin x+x^4-12x^2+24}.$$
 ### 练习 5 {#practice-5}
 
 > Find the general solution of $y^{\prime\prime}-3y^{\prime}+2y=5e^x$.
+
+完成尝试并检查后，继续做[综合题](#example-7-mixed-forcing)。
 
 <details markdown="1">
 <summary>提示</summary>
@@ -647,6 +837,41 @@ $$\boxed{y=x^3+2x^2+1},\qquad 0\le x\le1.$$
 
 <section class="lesson-check" markdown="1">
 
+### 重新试一题 {#pi-target-retry}
+
+> **Self-written task.** For $y^{\prime\prime}-2y^{\prime}+y=7e^x$, the CF is $(A+Bx)e^x$. Find a PI. Explain why the simpler exponential trials cannot work, and verify your answer. You do not need to find arbitrary constants.
+
+<details markdown="1">
+<summary>提示</summary>
+
+检查 $Ce^x$ 和 $Cxe^x$。属于 CF 的试探式代入后只能得到零，换系数也没有用。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检验</summary>
+
+$Ce^x$ 和 $Cxe^x$ 都属于 CF，代入后只能得到零。改试 $y_p=Cx^2e^x$。
+
+$$\begin{aligned}
+y_p^{\prime}&=C(2x+x^2)e^x,\\
+y_p^{\prime\prime}&=C(2+4x+x^2)e^x,\\
+y_p^{\prime\prime}-2y_p^{\prime}+y_p
+&=C[(2+4x+x^2)\\
+&\quad-2(2x+x^2)+x^2]e^x\\
+&=2Ce^x=7e^x.
+\end{aligned}$$
+
+所以 $C=7/2$，PI 为 $y_p=7x^2e^x/2$。上面的代入已验证这个 PI；这里不需要再求 CF 的常数。若形式选错，返回[重复检查](#pi-overlap-check)；若求导出错，返回[例题 6](#example-6-repeated-resonance)。
+
+</details>
+
+</section>
+
+下面保留一题后续综合：它还要求从 CF 反建方程、再用条件。先完成上面只练 PI 的重试，再做这题。
+
+<section class="lesson-check" markdown="1">
+
 **Independent retry:** A homogeneous constant-coefficient equation has general solution $y=(A+Bx)e^{-x}$ and leading coefficient 1. Recover its differential equation. Then solve the equation with the same left side and right side $6e^{-x}$, given $y(0)=1$ and $y^{\prime}(0)=0$.
 
 <details markdown="1">
@@ -721,3 +946,5 @@ y&=\boxed{(1+x+3x^2)e^{-x}}.
 本课范围依据 [OxfordAQA 国际 A-level 高等数学课程大纲 FP2.11，印刷页码 20](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf)。例题 7 改编自 2018 年样卷 FM03 第 7 题的方法，并对照官方评分细则第 7 题核对：代入 PI、比较系数、加上 CF，再使用给定条件，并说明趋于零的乘积极限。本题改变了方程与数值，不对应官方配分。其余例题和练习均为自拟题。
 
 [OxfordAQA Specimen 2018, Q7, QP PDF p. 12](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-specimen-paper-2019-v3.pdf#page=12); [MS Q7, PDF p. 10](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-mark-scheme-2016-v1.pdf#page=10). 本轮重新读取对应题干及评分材料（2026-10-23，PDF 文本）；只借用已注明的方法，不把改编题或新增自拟任务称为原题。
+
+PI 学习更新，2026-10-28：起步形式表据教师提供的图片重新整理（未给书名或版本），补充 CF 重复检查与 FP2.11 多项式范围。本轮重新阅读并查看相关配对 QP／MS 原页：Specimen 2018 Q7（QP pp.12–13、MS p.10）、June 2024 Q8（QP／MS p.12）、January 2025 Q12（QP p.24、MS p.19）。这些材料用于安排训练重点，不代表完整考频统计。新增短题均为自拟，无官方分值。
