@@ -1,0 +1,36 @@
+{
+  "observedAt": "2026-10-28T11:09:34.349Z",
+  "purpose": "Focused reading inspection only, not full technical or student learning validation",
+  "rows": [
+    {
+      "url": "https://academic.kcisec.site/zh/alevel/a2-further-mathematics/second-order-differential-equations/",
+      "width": 390,
+      "status": 200,
+      "title": "二阶微分方程 | A-level Homepage",
+      "startText": "如何设特解并检验",
+      "examplesBeforeFirstPITask": 7,
+      "piStartY": 6491.828125,
+      "firstTaskY": 13379.5,
+      "detailsOpen": 0,
+      "mathErrors": 0,
+      "bodyWidth": 390,
+      "viewport": 390,
+      "table": "非齐次项\t尚未检查与 CF 是否重复时，先设的特解形式\n\n𝐾\n𝑒\n𝑘\n𝑥\n\t\n𝐶\n𝑒\n𝑘\n𝑥\n\n\n𝐾\ncos\n⁡\n𝜔\n𝑥\n 或 \n𝐾\nsin\n⁡\n𝜔\n𝑥\n，\n𝜔\n≠\n0\n\t\n𝐶\ncos\n⁡\n𝜔\n𝑥\n+\n𝐷\nsin\n⁡\n𝜔\n𝑥\n\n次数为 \n𝑛\n≤\n4\n 的多项式\t\n𝐶\n𝑛\n𝑥\n𝑛\n+\n⋯\n+\n𝐶\n1\n𝑥\n+\n𝐶\n0\n\n线性组合\t将各部分对应的特解形式相加，再确定系数"
+    },
+    {
+      "url": "https://academic.kcisec.site/zh/alevel/a2-further-mathematics/second-order-differential-equations/",
+      "width": 1365,
+      "status": 200,
+      "title": "二阶微分方程 | A-level Homepage",
+      "startText": "如何设特解并检验",
+      "examplesBeforeFirstPITask": 7,
+      "piStartY": 5268.9375,
+      "firstTaskY": 11275.375,
+      "detailsOpen": 0,
+      "mathErrors": 0,
+      "bodyWidth": 1365,
+      "viewport": 1365,
+      "table": "非齐次项\t尚未检查与 CF 是否重复时，先设的特解形式\n\n𝐾\n𝑒\n𝑘\n𝑥\n\t\n𝐶\n𝑒\n𝑘\n𝑥\n\n\n𝐾\ncos\n⁡\n𝜔\n𝑥\n 或 \n𝐾\nsin\n⁡\n𝜔\n𝑥\n，\n𝜔\n≠\n0\n\t\n𝐶\ncos\n⁡\n𝜔\n𝑥\n+\n𝐷\nsin\n⁡\n𝜔\n𝑥\n\n次数为 \n𝑛\n≤\n4\n 的多项式\t\n𝐶\n𝑛\n𝑥\n𝑛\n+\n⋯\n+\n𝐶\n1\n𝑥\n+\n𝐶\n0\n\n线性组合\t将各部分对应的特解形式相加，再确定系数"
+    }
+  ]
+}

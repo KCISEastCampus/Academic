@@ -1,0 +1,14 @@
+{
+  "url": "http://172.26.108.40:8844/zh/alevel/a2-further-mathematics/second-order-differential-equations/",
+  "status": 200,
+  "tablePresent": true,
+  "newTaskPresent": true,
+  "listener": "0.0.0.0",
+  "ruleEnabled": "True",
+  "localAddress": "172.26.108.40",
+  "remoteAddress": "LocalSubnet",
+  "interface": "WLAN",
+  "port": "8844",
+  "peerDeviceTested": false,
+  "checkedAt": "2026-10-28T19:56:59.9863815+08:00"
+}

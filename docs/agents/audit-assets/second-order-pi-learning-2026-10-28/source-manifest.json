@@ -1,0 +1,47 @@
+{
+  "base": "56b8a40565e62ad69b1ffb8eb034d200807186bb",
+  "files": [
+    {
+      "path": "alevel/a2-further-mathematics/second-order-differential-equations.md",
+      "sha256": "ca63d525a79774632a17f231e388b66cc25334642a4d3c144432921645715c32",
+      "oldIds": 29,
+      "currentIds": 39,
+      "oldPrompts": 18,
+      "currentPrompts": 25,
+      "preserved": true,
+      "generatedHtmlSha256": "fa08755b7188fe2f03addbc00f0d0e1cf3caf7bb2b513159e457817002eb923e"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/second-order-differential-equations.md",
+      "sha256": "2614694be9141e7aa0b2a07d065c81bb03d9acd2806f38b20bc0024c7e4271bb",
+      "oldIds": 29,
+      "currentIds": 39,
+      "oldPrompts": 18,
+      "currentPrompts": 25,
+      "preserved": true,
+      "generatedHtmlSha256": "f60d517445ed40a7f068d0d9895bfcb280cc8ef303f28d4b7863a2ad8dcb8d14"
+    },
+    {
+      "path": "scripts/test-further-second-order.js",
+      "sha256": "943d0c743852154d8fab14e96c554e466150469c2ba3a1decf10a61c00f32c02"
+    }
+  ],
+  "protected": [
+    {
+      "path": "assets/css/reading.css",
+      "sha256": "177c376f70a9685f629b177f24c7641cdd08449d49869a29785775126997f72a",
+      "unchangedFromHead": true
+    },
+    {
+      "path": "assets/css/home.css",
+      "sha256": "5093b25192814630df184cb43f7d50819530c1edefcd20e266ac414e1c0daeaa",
+      "unchangedFromHead": true
+    },
+    {
+      "path": "_layouts/subjects.html",
+      "sha256": "293db2c33a7e9d0858caf551013030cb136af11b7aaf6f97397c90c0ad7d940e",
+      "unchangedFromHead": true
+    }
+  ],
+  "limits": "Uncommitted local learning preview. Source hashes independently reviewed. Browser and LAN evidence recorded separately; no peer-device or student learning trial."
+}

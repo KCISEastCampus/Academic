@@ -1,0 +1,23 @@
+{
+  "method": "Exact rational coefficient checks using the product rule and coefficient comparison; supports the written algebra, not student trial evidence",
+  "passed": 17,
+  "cases": [
+    "normal exponential",
+    "wrong exponent family",
+    "overlapping exponential",
+    "single-root repair",
+    "fresh exponential",
+    "same RHS different left",
+    "first repeated-root failure",
+    "second repeated-root failure",
+    "repeated-root repair",
+    "polynomial failure",
+    "polynomial repair",
+    "2018 polynomial PI",
+    "2018 exponential PI",
+    "2025 resonant exponential PI",
+    "paired trig",
+    "2025 trig",
+    "2025 initial values"
+  ]
+}

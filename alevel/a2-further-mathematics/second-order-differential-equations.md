@@ -16,6 +16,8 @@ A first-order equation relates a function to its rate of change. This chapter ad
 
 Start with [what the equation says](#equation-and-conditions), follow a complete solution in [Example 1](#example-1-distinct-roots), then compare the other root types. When the right side is nonzero, learn to [build the answer in two parts](#cf-and-pi). For revision, go straight to [practice](#practice).
 
+For help choosing a PI, start at the [PI table and short attempts](#pi-trials).
+
 **Before you start:** differentiate exponentials and trigonometric functions, and use the [product rule](/alevel/a2-mathematics/differentiation/#products-and-quotients). If a quadratic has a negative discriminant, revisit the completing-the-square example in [complex quadratic roots](/alevel/as-further-mathematics/complex-numbers-and-roots/#conjugate). The second half builds on [first-order CF and PI](/alevel/a2-further-mathematics/first-order-differential-equations/#cf-and-pi); the direct-integration example also uses [power integrals](/alevel/a2-mathematics/integration/#power-integrals).
 
 ## The Equation and Its Conditions {#equation-and-conditions}
@@ -151,16 +153,72 @@ The CF contributes zero to the left side and the PI contributes $f(x)$. Converse
 
 ## Choosing and Checking a PI Trial {#pi-trials}
 
-Look at the function on the right and choose a form whose derivatives can combine to produce it. Leave its coefficients as letters, then find them by differentiating, substituting and matching coefficients. This is **undetermined coefficients**. The table suggests a starting form; substitution checks whether it works.
+The aim is simple: **find a function that gives the right side when put into the left side.** Start with a form from the table, check the CF, then calculate its coefficients. Finding these unknown coefficients is called **undetermined coefficients**.
 
-| Forcing function | First trial before checking overlap with the CF |
-|---|---|
+If you are new to this, follow the examples and short attempts below. If you only need a reminder, use the [table](#pi-table) and the [overlap check](#resonance). The short attempts are self-written, with no official marks; leave their hints and solutions closed until you have tried.
+
+### A table to start from {#pi-table}
+
+Here $p,q,r,K,k$ are given constants. $C,D,E,C_0,\ldots,C_n$ are coefficients to find; they are not extra arbitrary constants in the final answer.
+
+| Right side $f(x)$ | Starting form for $y_p$ |
+| --- | --- |
+| A constant $p$ | $C$ |
+| $p+qx$ | $C+Dx$ |
+| $p+qx+rx^2$ | $C+Dx+Ex^2$ |
+| A polynomial of degree $n=3$ or $4$ | $C_0+C_1x+\cdots+C_nx^n$ |
 | $Ke^{kx}$ | $Ce^{kx}$ |
-| $K\cos\omega x$ or $K\sin\omega x$, $\omega\ne0$ | $C\cos\omega x+D\sin\omega x$ |
-| Polynomial of degree $n\le4$ | $C_nx^n+\cdots+C_1x+C_0$ |
-| A linear combination | Add the corresponding trials and determine their coefficients |
+| $p\cos\omega x+q\sin\omega x$, $\omega\ne0$ | $C\cos\omega x+D\sin\omega x$ |
+| A sum of these types | Add their forms, then check each part |
 
-Use both sine and cosine in a trigonometric trial, even if only one appears on the right: the $by^{\prime}$ term can mix them. Include every lower power in a polynomial trial because differentiation creates lower powers.
+Missing terms on the right still need a place in the trial: for $4x^2$, begin with $C+Dx+Ex^2$; for $\sin2x$, begin with $C\cos2x+D\sin2x$. Substitution will decide which coefficients are zero.
+
+**The table is only the first step.** If a form overlaps with the CF, adjust it before solving for its coefficients. The [overlap check](#resonance) explains when to multiply by $x$ or $x^2$. We first practise cases that do not need that adjustment.
+
+<section class="worked-example" markdown="1">
+
+### Example 4: an exponential PI {#example-4-exponential-pi}
+
+> **Original example.** Find the general solution of $y^{\prime\prime}-y=6e^{2x}$.
+
+This is a self-written demonstration. Take the CF below as given for now and focus on finding the PI. Differentiating an exponential keeps the same exponential, so the table suggests the same rate with an unknown coefficient.
+
+The CF is $y_c=Ae^x+Be^{-x}$. For $y_p=Ce^{2x}$, substitution gives
+
+$$\begin{aligned}
+y_p&=Ce^{2x},\qquad y_p^{\prime}=2Ce^{2x},\qquad y_p^{\prime\prime}=4Ce^{2x},\\
+y_p^{\prime\prime}-y_p&=(4C-C)e^{2x}=6e^{2x}.
+\end{aligned}$$
+
+so $C=2$. Therefore
+
+$$\boxed{y=Ae^x+Be^{-x}+2e^{2x}}.$$
+
+The CF contributes zero and $2e^{2x}$ contributes $6e^{2x}$ to $y^{\prime\prime}-y$.
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Try it {#pi-try-exponential}
+
+> **Self-written task.** For $y^{\prime\prime}-y=5e^{3x}$, the CF is $Ae^x+Be^{-x}$. Find a PI and verify it by substitution.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Use the exponential rate on the right. Check it against the given CF before differentiating.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+Try $y_p=Ce^{3x}$: the CF does not contain this exponential. Then $y_p^{\prime}=3Ce^{3x}$ and $y_p^{\prime\prime}=9Ce^{3x}$. The left side is $8Ce^{3x}=5e^{3x}$, so $C=5/8$ and $y_p=5e^{3x}/8$. Substitution gives the required right side. No conditions or extra arbitrary constants are needed for this PI.
+
+</details>
+
+</section>
 
 <section class="worked-example" markdown="1">
 
@@ -182,53 +240,25 @@ Check: the PI contributes $2+(x^2-1)=x^2+1$; the CF contributes zero. In practic
 
 </section>
 
-<section class="worked-example" markdown="1">
+<section class="lesson-check" markdown="1">
 
-### When zero is a repeated root {#zero-root-demonstration}
+### Check a proposed answer {#pi-try-polynomial}
 
-> **Self-written example.** Find the general solution of $y^{\prime\prime}=2x$.
+> **Self-written task.** For $y^{\prime\prime}+3y^{\prime}+2y=x$, the CF is $Ae^{-x}+Be^{-2x}$. A learner tries $y_p=Cx$. Can this work for all $x$? Find a PI.
 
-This is a self-written demonstration with no official marks. Only the second derivative appears, so integrate twice: first recover the first derivative, then the function. Each integration introduces one constant. The auxiliary polynomial is $m^2$, whose CF is $A+Bx$.
+<details markdown="1">
+<summary>Hint</summary>
 
-$$\begin{aligned}
-y^{\prime}&=\int2x\,\mathrm dx=2\frac{x^2}{2}+B=x^2+B,\\
-y&=\int(x^2+B)\,\mathrm dx=\frac{x^3}{3}+Bx+A.
-\end{aligned}$$
+Write the whole result after substitution, including its constant term.
 
-The PI $x^3/3$ has second derivative $2x$. Its degree is 3 although the forcing has degree 1; multiplying a linear trial by $x^2$ removes the repeated-zero-root overlap. In Q7 also use the boundary values.
+</details>
 
-</section>
+<details markdown="1">
+<summary>Solution and check</summary>
 
-### Resonance: when a trial duplicates the CF {#resonance}
+The trial gives $3C+2Cx$. Matching the linear term requires $2C=1$, while the constant term requires $3C=0$: impossible. Use $y_p=Cx+D$ instead. Its first and second derivatives are $C$ and $0$, so the left side is $2Cx+(3C+2D)=x+0$. Hence $C=1/2$, $D=-3/4$ and $y_p=x/2-3/4$. Check: $0+3/2+x-3/2=x$. The missing constant was needed to cancel the constant created by differentiation.
 
-A trial already in the CF cancels to zero on the left. No choice of its coefficient can make a nonzero right side. This overlap is called **resonance**. Change the form by multiplying the whole overlapping part by $x$; if it still cancels, multiply once more. The rules below are checked in the examples that follow:
-
-- For $e^{kx}$, use $xCe^{kx}$ when $k$ is a simple auxiliary root, or $x^2Ce^{kx}$ when it is a repeated root.
-- For pure sine–cosine forcing, if the auxiliary roots are $\pm i\omega$, use $x(C\cos\omega x+D\sin\omega x)$.
-- For polynomial forcing, take the multiplicity of $m=0$ in the auxiliary equation to be $s$, and multiply the polynomial trial by $x^s$. Here $s$ is 0, 1 or 2; use 0 when zero is not an auxiliary root.
-
-For example, if $c=0$ but $b\ne0$, a constant forcing needs a linear PI. If $b=c=0$, the equation is $ay^{\prime\prime}=f(x)$ and direct integration twice is simplest. A forcing polynomial of degree 4 can then have a PI of degree 6: the degree restriction concerns $f(x)$, not the answer.
-
-<section class="worked-example" markdown="1">
-
-### Example 4: an exponential PI {#example-4-exponential-pi}
-
-> **Original example.** Find the general solution of $y^{\prime\prime}-y=6e^{2x}$.
-
-This is a self-written demonstration. First find the CF by setting the right side to zero. For the PI, start with the exponential on the right because differentiation keeps its form.
-
-The CF is $y_c=Ae^x+Be^{-x}$. For $y_p=Ce^{2x}$, substitution gives
-
-$$\begin{aligned}
-y_p&=Ce^{2x},\qquad y_p^{\prime}=2Ce^{2x},\qquad y_p^{\prime\prime}=4Ce^{2x},\\
-y_p^{\prime\prime}-y_p&=(4C-C)e^{2x}=6e^{2x}.
-\end{aligned}$$
-
-so $C=2$. Therefore
-
-$$\boxed{y=Ae^x+Be^{-x}+2e^{2x}}.$$
-
-The CF contributes zero and $2e^{2x}$ contributes $6e^{2x}$ to $y^{\prime\prime}-y$.
+</details>
 
 </section>
 
@@ -240,7 +270,7 @@ The CF contributes zero and $2e^{2x}$ contributes $6e^{2x}$ to $y^{\prime\prime}
 
 This is a self-written demonstration. The right side contains only cosine, but differentiating once introduces sine. Keep both terms in the PI trial and let substitution determine their coefficients.
 
-The auxiliary roots are $(-1\pm i\sqrt7)/2$, giving
+The CF is given here, so you can focus on the PI:
 
 $$y_c=e^{-x/2}\left(A\cos\frac{\sqrt7x}{2}+B\sin\frac{\sqrt7x}{2}\right).$$
 
@@ -259,6 +289,34 @@ $$\boxed{\begin{aligned}y={}&e^{-x/2}\left(A\cos\frac{\sqrt7x}{2}+B\sin\frac{\sq
 The matched coefficients confirm that the PI contributes exactly $3\cos x$.
 
 </section>
+
+<section class="lesson-check" markdown="1">
+
+### Check another proposal {#pi-try-trig}
+
+> **Self-written task.** For $y^{\prime\prime}+y^{\prime}+y=\sin x$, you are told that the CF has no pure sine–cosine terms. A learner tries $y_p=C\sin x$. Test this proposal, then find a PI.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Differentiate twice and add all three terms. If the required sine term is missing, keep both trigonometric terms in a new trial.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+The proposal gives $-C\sin x+C\cos x+C\sin x=C\cos x$, which cannot equal $\sin x$ for all $x$. For $y_p=C\cos x+D\sin x$, the left side is $D\cos x-C\sin x$. Thus $D=0$, $C=-1$, and $y_p=-\cos x$. Check: $y_p^{\prime}=\sin x$, $y_p^{\prime\prime}=\cos x$, so $\cos x+\sin x-\cos x=\sin x$. One coefficient can end up zero; do not assume that before substitution.
+
+</details>
+
+</section>
+
+### Check whether the CF removes your trial {#resonance}
+
+The right side helps you choose a function family. The left side decides whether that trial works. If a trial belongs to the CF, it produces zero on the left, whatever its coefficient is. Changing the coefficient cannot fix this: the form must change.
+
+This overlap is often called **resonance**. Here we use the word for the algebraic overlap; no physical model is needed. First see what cancels, then summarise the rule.
 
 <section class="worked-example" markdown="1">
 
@@ -279,40 +337,164 @@ The PI contributes exactly $4e^x$. One factor of $x$ suffices here because 1 is 
 
 </section>
 
+<section class="lesson-check" markdown="1">
+
+### Two equations {#pi-compare}
+
+> **Self-written task.** Choose a PI trial for each equation, then find a PI: (i) $y^{\prime\prime}-y=4e^x$, with CF $Ae^x+Be^{-x}$; (ii) $y^{\prime\prime}+y=4e^x$, with CF $A\cos x+B\sin x$. Explain why the same right side does not lead to the same trial.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Compare the exponential with each CF. Write the left-side result for your trial.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+(i) $Ce^x$ gives zero. For $Cxe^x$, the left side is $2Ce^x$, so a PI is $2xe^x$. (ii) $Ce^x$ is not in the CF; the left side is $2Ce^x$, so a PI is $2e^x$. The right side sets the starting function family, but the CF check depends on the left side.
+
+</details>
+
+</section>
+
+### How much extra $x$ is needed? {#pi-overlap-check}
+
+Use the auxiliary equation you found for the CF. In a second-order equation, the following checks are enough:
+
+| Part of the right side | Check and adjust the table's starting form |
+| --- | --- |
+| $Ke^{kx}$ | If $k$ is not a root, keep $Ce^{kx}$. For a simple root use $Cxe^{kx}$; for a repeated root use $Cx^2e^{kx}$ |
+| A polynomial | Check the root $0$: no zero root means no extra factor; a simple zero root means multiply the whole polynomial trial by $x$; a repeated zero root means multiply it by $x^2$ |
+| Sine/cosine with frequency $\omega\ne0$ | If the CF contains that same sine–cosine pair without an exponential factor, multiply the whole pair by $x$; otherwise keep the starting pair |
+| A sum | Check each part separately; an adjustment to one part need not apply to the others |
+
+For a polynomial, even overlap of only its constant term matters. Do not compare just the entire written expression with the CF. The zero-root example below shows why the **whole polynomial** must be adjusted.
+
+A degree-4 right side can therefore need a degree-6 PI when zero is a repeated root. The degree limit applies to $f(x)$, not to the PI.
+
 <section class="worked-example" markdown="1">
 
 ### Example 6: resonance at a repeated root {#example-6-repeated-resonance}
 
 > **Original example.** Find the general solution of $y^{\prime\prime}-4y^{\prime}+4y=8e^{2x}$. Explain why neither $Ce^{2x}$ nor $Cxe^{2x}$ is a suitable PI.
 
-This is a self-written demonstration. Check why both suggested trials fail before choosing a form that the left side will not cancel.
+This is a self-written demonstration. The auxiliary equation is $(m-2)^2=0$, giving $y_c=(A+Bx)e^{2x}$. Follow each trial from its derivatives to its contribution.
 
-The auxiliary equation is $(m-2)^2=0$, so $y_c=(A+Bx)e^{2x}$. Both proposed trials contribute zero to the differential equation.
+**First trial:** $v=Ce^{2x}$.
 
+$$v^{\prime}=2Ce^{2x},\qquad v^{\prime\prime}=4Ce^{2x}.$$
 
-Test both failed trials explicitly; multiplying by x once is not itself a guarantee:
+$$v^{\prime\prime}-4v^{\prime}+4v=(4-8+4)Ce^{2x}=0.$$
+
+That cannot produce $8e^{2x}$.
+
+**Next trial:** $w=Cxe^{2x}$. Use the product rule:
 
 $$\begin{aligned}
-v&=Ce^{2x},\quad v^{\prime}=2Ce^{2x},\quad v^{\prime\prime}=4Ce^{2x},\\
-v^{\prime\prime}-4v^{\prime}+4v&=C(4-8+4)e^{2x}=0,\\
-w&=Cxe^{2x},\quad w^{\prime}=C(1+2x)e^{2x},\quad w^{\prime\prime}=C(4+4x)e^{2x},\\
-w^{\prime\prime}-4w^{\prime}+4w&=C[(4+4x)-4(1+2x)+4x]e^{2x}=0.
+w^{\prime}&=C(1+2x)e^{2x},\\
+w^{\prime\prime}&=C(4+4x)e^{2x}.
 \end{aligned}$$
 
-For $y_p=Cx^2e^{2x}$,
+The coefficient after substitution is
+
+$$\begin{aligned}
+w^{\prime\prime}-4w^{\prime}+4w
+&=C[(4+4x)-4(1+2x)+4x]e^{2x}\\
+&=0.
+\end{aligned}$$
+
+This also cancels. Both trials already belong to the CF, so one extra $x$ was not enough.
+
+**Try one more factor:** $y_p=Cx^2e^{2x}$.
 
 $$\begin{aligned}
 y_p^{\prime}&=C(2x+2x^2)e^{2x},\\
-y_p^{\prime\prime}&=C(2+8x+4x^2)e^{2x},\\
-y_p^{\prime\prime}-4y_p^{\prime}+4y_p&=C[(2+8x+4x^2)-4(2x+2x^2)+4x^2]e^{2x}\\
+y_p^{\prime\prime}&=C(2+8x+4x^2)e^{2x}.
+\end{aligned}$$
+
+Keep the exponential outside while collecting the coefficient:
+
+$$\begin{aligned}
+y_p^{\prime\prime}-4y_p^{\prime}+4y_p
+&=C[(2+8x+4x^2)\\
+&\quad-4(2x+2x^2)+4x^2]e^{2x}\\
 &=2Ce^{2x}.
 \end{aligned}$$
 
-Hence $C=4$ and
+Now it can match the right side: $2C=8$, so $C=4$. The general solution is
 
 $$\boxed{y=(A+Bx+4x^2)e^{2x}}.$$
 
-The extra factor is $x^2$, because both $e^{2x}$ and $xe^{2x}$ already occur in the CF.
+The repeated root required $x^2$. The substitution, not the appearance of the trial, confirms that it works.
+
+</section>
+
+<section class="worked-example" markdown="1">
+
+### When zero is a simple root {#zero-root-simple}
+
+> **Self-written example.** Find a PI of $y^{\prime\prime}+y^{\prime}=2x$.
+
+The CF is given as $A+Be^{-x}$: zero is a simple auxiliary root. The table starts with $Cx+D$. Its derivatives are $C$ and $0$, so the left side is just $C$. It cannot equal $2x$ for all $x$.
+
+Multiply the **whole** linear trial by $x$:
+
+$$\begin{aligned}
+y_p&=x(Cx+D)=Cx^2+Dx,\\
+y_p^{\prime}&=2Cx+D,\qquad y_p^{\prime\prime}=2C,\\
+y_p^{\prime\prime}+y_p^{\prime}&=2Cx+(2C+D).
+\end{aligned}$$
+
+Match with $2x+0$: $2C=2$ and $2C+D=0$. Thus $C=1$, $D=-2$, and $y_p=x^2-2x$. Check: $2+(2x-2)=2x$. Only the constant in the starting trial overlapped with the CF, but the whole trial needed adjusting.
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Your choice {#pi-try-zero}
+
+> **Self-written task.** Find a PI of $y^{\prime\prime}+2y^{\prime}=6x+4$. State and justify your trial before determining its coefficients.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Check the auxiliary equation. What happens if you substitute a linear trial from the table?
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+The auxiliary equation is $m(m+2)=0$, so $y_c=A+Be^{-2x}$. Zero is simple; start from the table's linear form and multiply the whole form by $x$:
+
+$$\begin{aligned}
+y_p&=x(Cx+D)=Cx^2+Dx,\\
+y_p^{\prime}&=2Cx+D,\qquad y_p^{\prime\prime}=2C,\\
+y_p^{\prime\prime}+2y_p^{\prime}&=4Cx+(2C+2D)=6x+4.
+\end{aligned}$$
+
+Hence $C=3/2$, $D=1/2$, and $y_p=3x^2/2+x/2$. Check: $3+2(3x+1/2)=6x+4$. If you chose a linear trial, revisit [the simple-zero-root example](#zero-root-simple); if the form was right, check the constant coefficient separately.
+
+</details>
+
+</section>
+
+<section class="worked-example" markdown="1">
+
+### When zero is a repeated root {#zero-root-demonstration}
+
+> **Self-written example.** Find the general solution of $y^{\prime\prime}=2x$.
+
+This is a self-written demonstration with no official marks. Only the second derivative appears, so integrate twice: first recover the first derivative, then the function. Each integration introduces one constant. The auxiliary polynomial is $m^2$, whose CF is $A+Bx$.
+
+$$\begin{aligned}
+y^{\prime}&=\int2x\,\mathrm dx=2\frac{x^2}{2}+B=x^2+B,\\
+y&=\int(x^2+B)\,\mathrm dx=\frac{x^3}{3}+Bx+A.
+\end{aligned}$$
+
+The PI $x^3/3$ has second derivative $2x$. Its degree is 3 although the forcing has degree 1; multiplying a linear trial by $x^2$ removes the repeated-zero-root overlap. In Q7 also use the boundary values.
 
 </section>
 
@@ -336,6 +518,10 @@ The PI contributes $2\cos x$ after cancellation of the terms containing $x$. In 
 
 </section>
 
+### Put the parts together {#pi-combine}
+
+First complete [Q5](#practice-5) with its help closed. It gives only the equation: choose the CF and PI yourself, with no conditions to handle. Then return here. For a mixed right side, choose and check each part separately, then add their PI contributions. Find the full general solution before applying conditions. The next task adds the mixed right side and conditions.
+
 <section class="lesson-check" markdown="1">
 
 ### Example 7: mixed forcing and an asymptotic condition {#example-7-mixed-forcing}
@@ -344,7 +530,7 @@ Keep the help closed and try this yourself. It brings together methods already s
 
 > **Adapted example.** For $x\ge0$, solve $y^{\prime\prime}+y^{\prime}-2y=4x-6e^{-2x}$, given $y(0)=2$ and $y^{\prime}\to-2$ as $x\to\infty$.
 
-This changes the equation and conditions from OxfordAQA Specimen 2018 FM03, Question 7. It retains the method of a polynomial PI plus a resonant exponential PI, followed by conditions on the complete solution. It is not the official question.
+Adapted from OxfordAQA Specimen 2018 FM03, Question 7, with a changed equation and conditions. This is not the official question.
 
 <details markdown="1">
 <summary>Hint</summary>
@@ -398,7 +584,7 @@ Check: its exponential part contributes $-6e^{-2x}$ to the equation and its poly
 
 ## Practice Questions {#practice}
 
-All seven questions below are original practice questions. Identify the CF and PI where appropriate. State the general solution before applying conditions, and check the equation and every condition. Work in the order Q5, Q2, Q6, Q1, Q7, Q3, Q4 so the tasks are mixed. Before opening a hint, explain how the auxiliary roots determine the CF and why your PI trial is independent of it.
+All seven questions below are original practice questions. Identify the CF and PI where appropriate. State the general solution before applying conditions, and check the equation and every condition. After learning each type, use Q5, Q2, Q6, Q1, Q7, Q3, Q4 for mixed revision. Before opening a hint, explain how the auxiliary roots determine the CF and why your PI trial is independent of it.
 
 <section class="lesson-check" markdown="1">
 
@@ -519,6 +705,8 @@ Check: the polynomial has $y_p^{\prime\prime}=12x^2-24$, so $y_p^{\prime\prime}+
 ### Question 5 {#practice-5}
 
 > Find the general solution of $y^{\prime\prime}-3y^{\prime}+2y=5e^x$.
+
+After your attempt and check, continue with [the combined task](#example-7-mixed-forcing).
 
 <details markdown="1">
 <summary>Hint</summary>
@@ -643,6 +831,41 @@ Substitution gives zero for every $C$, since this trial is in the CF. Use $Cx^2e
 
 <section class="lesson-check" markdown="1">
 
+### A new attempt {#pi-target-retry}
+
+> **Self-written task.** For $y^{\prime\prime}-2y^{\prime}+y=7e^x$, the CF is $(A+Bx)e^x$. Find a PI. Explain why the simpler exponential trials cannot work, and verify your answer. You do not need to find arbitrary constants.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Check both $Ce^x$ and $Cxe^x$. If a trial belongs to the CF, no choice of its coefficient will produce the nonzero right side.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+Both $Ce^x$ and $Cxe^x$ belong to the CF and give zero. Try $y_p=Cx^2e^x$.
+
+$$\begin{aligned}
+y_p^{\prime}&=C(2x+x^2)e^x,\\
+y_p^{\prime\prime}&=C(2+4x+x^2)e^x,\\
+y_p^{\prime\prime}-2y_p^{\prime}+y_p
+&=C[(2+4x+x^2)\\
+&\quad-2(2x+x^2)+x^2]e^x\\
+&=2Ce^x=7e^x.
+\end{aligned}$$
+
+Thus $C=7/2$ and $y_p=7x^2e^x/2$. The displayed substitution verifies the PI; the CF is not needed to determine more constants here. If the form was wrong, revisit [the overlap check](#pi-overlap-check); if the derivative was wrong, revisit [Example 6](#example-6-repeated-resonance).
+
+</details>
+
+</section>
+
+The task below is a later combined check: it also asks you to reconstruct the equation and use conditions. Do it after the PI-only retry.
+
+<section class="lesson-check" markdown="1">
+
 **Independent retry:** A homogeneous constant-coefficient equation has general solution $y=(A+Bx)e^{-x}$ and leading coefficient 1. Recover its differential equation. Then solve the equation with the same left side and right side $6e^{-x}$, given $y(0)=1$ and $y^{\prime}(0)=0$.
 
 <details markdown="1">
@@ -717,3 +940,5 @@ Scope check on 2026-10-23: the current 9665 qualification page led to specificat
 The scope follows [OxfordAQA's International A-level Further Mathematics specification, FP2.11, printed p. 20](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf). Example 7 adapts the approach in Specimen 2018 FM03, Question 7, checked against the official mark scheme, Question 7: substitute a PI, match coefficients, add the CF, then apply the conditions and justify the decaying product limit. The equation and numbers are changed; no official mark allocation is implied. All other worked examples and practice questions are original.
 
 [OxfordAQA Specimen 2018, Q7, QP PDF p. 12](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-specimen-paper-2019-v3.pdf#page=12); [MS Q7, PDF p. 10](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-mark-scheme-2016-v1.pdf#page=10). Question and matching mark scheme reread on 2026-10-23 (PDF text). Only the identified method is adapted; the adapted question and additional self-written tasks are not official questions.
+
+PI learning update, 2026-10-28: the starting-form table was reorganised from a teacher-provided image (book/version unspecified), with CF-overlap conditions and FP2.11 polynomial scope added. Relevant paired QP/MS pages were reread and viewed: Specimen 2018 Q7 (QP pp.12–13, MS p.10), June 2024 Q8 (QP/MS p.12), January 2025 Q12 (QP p.24, MS p.19). These inform the practice priorities; no complete frequency study is claimed. The new short tasks are self-written and carry no official marks.

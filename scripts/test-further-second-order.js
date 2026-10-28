@@ -59,6 +59,33 @@ for (const [a, b, c, rhs, solution, constants, conditions] of families) {
   }
 }
 
+// The PI-only tasks isolate form choice from CF and initial-condition work.
+const piTasks = [
+  ['pi-try-exponential', 'y^{\\prime\\prime}-y=5e^{3x}', 'y_p=5e^{3x}/8', 1, 0, -1, x => 5 * Math.exp(3 * x), x => 5 / 8 * Math.exp(3 * x)],
+  ['pi-try-polynomial', 'y^{\\prime\\prime}+3y^{\\prime}+2y=x', 'y_p=x/2-3/4', 1, 3, 2, x => x, x => x / 2 - 3 / 4],
+  ['pi-try-trig', 'y^{\\prime\\prime}+y^{\\prime}+y=\\sin x', 'y_p=-\\cos x', 1, 1, 1, Math.sin, x => -Math.cos(x)],
+  ['zero-root-simple', 'y^{\\prime\\prime}+y^{\\prime}=2x', 'y_p=x^2-2x', 1, 1, 0, x => 2 * x, x => x * x - 2 * x],
+  ['pi-try-zero', 'y^{\\prime\\prime}+2y^{\\prime}=6x+4', 'y_p=3x^2/2+x/2', 1, 2, 0, x => 6 * x + 4, x => 1.5 * x * x + x / 2],
+  ['pi-target-retry', 'y^{\\prime\\prime}-2y^{\\prime}+y=7e^x', 'y_p=7x^2e^x/2', 1, -2, 1, x => 7 * Math.exp(x), x => 7 / 2 * x * x * Math.exp(x)]
+];
+for (const [id, equation, answer, a, b, c, rhs, solution] of piTasks) {
+  for (const source of [en, zh]) {
+    const section = source.split('{#' + id + '}')[1]?.split('</section>')[0];
+    assert(section, 'Missing PI learning task ' + id);
+    assert(section.replace(/\s/g, '').includes(equation.replace(/\s/g, '')), id + ': source equation changed');
+    assert(section.replace(/\s/g, '').includes(answer.replace(/\s/g, '')), id + ': source answer changed');
+  }
+  for (const x of [-.75, 0, .4, 1]) {
+    const [dy, d2y] = derivatives(solution, x);
+    close(a * d2y + b * dy + c * solution(x), rhs(x));
+  }
+}
+assert(en.indexOf('{#pi-try-exponential}') < en.indexOf('{#resonance}'),
+  'A first PI attempt must precede the overlap cases');
+assert(en.includes('multiply the whole polynomial trial by $x$'));
+assert(en.includes('a repeated zero root means multiply it by $x^2$'));
+console.log('PI-only mathematical checks passed: ' + piTasks.length);
+
 const math = source => source.match(/\$\$[\s\S]*?\$\$|\$[^$\r\n]+\$/g) || [];
 const ids = source => Array.from(source.matchAll(/\{#([^}]+)\}/g), match => match[1]);
 assert.deepEqual(math(zh), math(en), 'Chinese formulas must match English in order');
