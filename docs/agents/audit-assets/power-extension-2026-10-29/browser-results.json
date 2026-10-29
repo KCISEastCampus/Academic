@@ -1,0 +1,144 @@
+{
+  "origin": "http://172.31.226.8:8844",
+  "observedAt": "2026-10-29T02:20:34.966Z",
+  "rows": [
+    {
+      "lang": "zh",
+      "width": 390,
+      "theme": "light",
+      "status": 200,
+      "open": 0,
+      "nested": 0,
+      "mathErrors": 0,
+      "overflow": false,
+      "closedHelpKeyboard": true,
+      "openAllMathErrors": 0,
+      "scroll": {
+        "focused": true,
+        "moved": true
+      }
+    },
+    {
+      "lang": "zh",
+      "width": 390,
+      "theme": "dark",
+      "status": 200,
+      "open": 0,
+      "nested": 0,
+      "mathErrors": 0,
+      "overflow": false,
+      "closedHelpKeyboard": true,
+      "openAllMathErrors": 0,
+      "scroll": {
+        "focused": true,
+        "moved": true
+      }
+    },
+    {
+      "lang": "zh",
+      "width": 1365,
+      "theme": "light",
+      "status": 200,
+      "open": 0,
+      "nested": 0,
+      "mathErrors": 0,
+      "overflow": false,
+      "closedHelpKeyboard": true,
+      "openAllMathErrors": 0,
+      "scroll": null
+    },
+    {
+      "lang": "zh",
+      "width": 1365,
+      "theme": "dark",
+      "status": 200,
+      "open": 0,
+      "nested": 0,
+      "mathErrors": 0,
+      "overflow": false,
+      "closedHelpKeyboard": true,
+      "openAllMathErrors": 0,
+      "scroll": null
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "status": 200,
+      "open": 0,
+      "nested": 0,
+      "mathErrors": 0,
+      "overflow": false,
+      "closedHelpKeyboard": true,
+      "openAllMathErrors": 0,
+      "scroll": {
+        "focused": true,
+        "moved": true
+      }
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "status": 200,
+      "open": 0,
+      "nested": 0,
+      "mathErrors": 0,
+      "overflow": false,
+      "closedHelpKeyboard": true,
+      "openAllMathErrors": 0,
+      "scroll": {
+        "focused": true,
+        "moved": true
+      }
+    },
+    {
+      "lang": "en",
+      "width": 1365,
+      "theme": "light",
+      "status": 200,
+      "open": 0,
+      "nested": 0,
+      "mathErrors": 0,
+      "overflow": false,
+      "closedHelpKeyboard": true,
+      "openAllMathErrors": 0,
+      "scroll": null
+    },
+    {
+      "lang": "en",
+      "width": 1365,
+      "theme": "dark",
+      "status": 200,
+      "open": 0,
+      "nested": 0,
+      "mathErrors": 0,
+      "overflow": false,
+      "closedHelpKeyboard": true,
+      "openAllMathErrors": 0,
+      "scroll": null
+    }
+  ],
+  "journeys": [
+    {
+      "lang": "zh",
+      "courseRouteReturn": true
+    },
+    {
+      "lang": "zh",
+      "languageSwitchAnchor": true
+    },
+    {
+      "lang": "en",
+      "courseRouteReturn": true
+    },
+    {
+      "lang": "en",
+      "languageSwitchAnchor": true
+    }
+  ],
+  "uniqueTargets": 30,
+  "paths": 10,
+  "linkErrors": [],
+  "limits": "Host browser through LAN address; no peer-device, physical-phone, complete accessibility or student learning trial."
+}

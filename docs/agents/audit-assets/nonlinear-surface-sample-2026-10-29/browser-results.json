@@ -1,0 +1,155 @@
+{
+  "origin": "http://172.31.226.8:8844",
+  "observedAt": "2026-10-29T01:20:46.502Z",
+  "rows": [
+    {
+      "lang": "zh",
+      "width": 390,
+      "theme": "light",
+      "status": 200,
+      "openHelp": 0,
+      "nestedTasks": 0,
+      "mathErrors": 0,
+      "overflow": false,
+      "visibleExample": true,
+      "imageLoaded": true,
+      "keyboardHint": true,
+      "formulaScroll": {
+        "focused": true,
+        "moved": true
+      },
+      "openAllMathErrors": 0
+    },
+    {
+      "lang": "zh",
+      "width": 390,
+      "theme": "dark",
+      "status": 200,
+      "openHelp": 0,
+      "nestedTasks": 0,
+      "mathErrors": 0,
+      "overflow": false,
+      "visibleExample": true,
+      "imageLoaded": true,
+      "keyboardHint": true,
+      "formulaScroll": {
+        "focused": true,
+        "moved": true
+      },
+      "openAllMathErrors": 0
+    },
+    {
+      "lang": "zh",
+      "width": 1365,
+      "theme": "light",
+      "status": 200,
+      "openHelp": 0,
+      "nestedTasks": 0,
+      "mathErrors": 0,
+      "overflow": false,
+      "visibleExample": true,
+      "imageLoaded": true,
+      "keyboardHint": true,
+      "formulaScroll": null,
+      "openAllMathErrors": 0
+    },
+    {
+      "lang": "zh",
+      "width": 1365,
+      "theme": "dark",
+      "status": 200,
+      "openHelp": 0,
+      "nestedTasks": 0,
+      "mathErrors": 0,
+      "overflow": false,
+      "visibleExample": true,
+      "imageLoaded": true,
+      "keyboardHint": true,
+      "formulaScroll": null,
+      "openAllMathErrors": 0
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "status": 200,
+      "openHelp": 0,
+      "nestedTasks": 0,
+      "mathErrors": 0,
+      "overflow": false,
+      "visibleExample": true,
+      "imageLoaded": true,
+      "keyboardHint": true,
+      "formulaScroll": {
+        "focused": true,
+        "moved": true
+      },
+      "openAllMathErrors": 0
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "status": 200,
+      "openHelp": 0,
+      "nestedTasks": 0,
+      "mathErrors": 0,
+      "overflow": false,
+      "visibleExample": true,
+      "imageLoaded": true,
+      "keyboardHint": true,
+      "formulaScroll": {
+        "focused": true,
+        "moved": true
+      },
+      "openAllMathErrors": 0
+    },
+    {
+      "lang": "en",
+      "width": 1365,
+      "theme": "light",
+      "status": 200,
+      "openHelp": 0,
+      "nestedTasks": 0,
+      "mathErrors": 0,
+      "overflow": false,
+      "visibleExample": true,
+      "imageLoaded": true,
+      "keyboardHint": true,
+      "formulaScroll": null,
+      "openAllMathErrors": 0
+    },
+    {
+      "lang": "en",
+      "width": 1365,
+      "theme": "dark",
+      "status": 200,
+      "openHelp": 0,
+      "nestedTasks": 0,
+      "mathErrors": 0,
+      "overflow": false,
+      "visibleExample": true,
+      "imageLoaded": true,
+      "keyboardHint": true,
+      "formulaScroll": null,
+      "openAllMathErrors": 0
+    }
+  ],
+  "journeys": [
+    {
+      "lang": "zh",
+      "prerequisiteAndReturn": true
+    },
+    {
+      "languageSwitchPreservedAnchor": true
+    },
+    {
+      "lang": "en",
+      "prerequisiteAndReturn": true
+    }
+  ],
+  "uniqueTargets": 44,
+  "distinctPaths": 14,
+  "linkErrors": [],
+  "limits": "Host Chromium via LAN URL; no peer-device, physical-phone, full accessibility or student learning trial."
+}

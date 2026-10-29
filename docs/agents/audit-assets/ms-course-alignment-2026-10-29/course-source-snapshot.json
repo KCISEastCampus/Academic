@@ -1,0 +1,399 @@
+{
+  "localHead": "59c15fb658e187414f1d09ac7c4620c334942120",
+  "observedOn": "2026-10-29",
+  "pages": [
+    {
+      "path": "alevel/a2-further-mathematics/arc-length-and-surface-area.md",
+      "sha256": "427d5dc457ff4d08f87de82adbce17a349e120af15fdc1c959c886b75718c4f7"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/de-moivres-theorem.md",
+      "sha256": "dfa02feba4106ba6c71904abe00f134e7e65ff155e96b9959538db39a611cec5"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/eigenvalues-and-eigenvectors.md",
+      "sha256": "b922a49b41f1350189949d4ff38799ad9a1b6a4296d22b63378c6337dc32aed0"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/finite-series.md",
+      "sha256": "8cef631e9a4cc8a6cd70e0fcf909ff626a9f7fd8b1c495c4e94c5dca2eb5ba19"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/first-order-differential-equations.md",
+      "sha256": "94fe683c82619befbe016c7b1b0d473b3118a32e376cdd090d55d14644f50a10"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/hyperbolic-functions.md",
+      "sha256": "123a3fbbfcca38b6a42f6c53e8d9620791394886c80b2a49e5a3253f386410f6"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/index.md",
+      "sha256": "b19e52419e6a247f878e7ca6f1af3926639eb497142a5efc6fe3e4188a7b5ad2"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/inverse-trigonometric-functions.md",
+      "sha256": "7777493e7f9b92cad11a3a2b41ea1df3eb7c081f3967b0a59a33a8ab62bd9669"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/linear-equations.md",
+      "sha256": "85c6cfb0b3bd118bdd2397a070677f72bac145d3704bcd26755a7add366fab93"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/lines-and-planes.md",
+      "sha256": "42a32a4c9cbd2397423b54bc0aabbed5de876dd137382d20a083d4cc712f1894"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/matrix-algebra.md",
+      "sha256": "331f725bae2107371cb33fa91fcaaa4a26796a977214f120d863d1c72236e572"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/polar-coordinates.md",
+      "sha256": "a4b6ac93e2c58353e1ec0abbef5d0fa7d6743a5e0908e2255b9cfc0f7968f08d"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/proof-by-induction.md",
+      "sha256": "540ada6f1bf1e4a76fefaa12c1fa48e258388f8de7fd881c6978579f027bb816"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/roots-and-polynomials.md",
+      "sha256": "af86af09b365357d07d65cb7ce26fbe63b4523d714b1632047e8587d40598f70"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/second-order-differential-equations.md",
+      "sha256": "ca63d525a79774632a17f231e388b66cc25334642a4d3c144432921645715c32"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/series-and-limits.md",
+      "sha256": "74363074ac7d4dbbaf6e5d60d80da1cba9bd76473ac4d2ad61146b85023a5999"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/association-tests.md",
+      "sha256": "a38b55df4af7dec72bb401dd09881cbc31e9b9b737a8b2dfc45aa84638bc5bd4"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/comparing-means.md",
+      "sha256": "270ec25d6b7fd020b4406d896e76d2476b6b133b151a4291283c8b58a0b50efa"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/confidence-intervals.md",
+      "sha256": "ebbbec9e001fb747ecae1474b37523d2447550ed639e16d8de41bf1f27ff8544"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/estimators.md",
+      "sha256": "9230aa1e72a33ccf26812c85d67d123616bd680752d2f185728493226b416762"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/goodness-of-fit.md",
+      "sha256": "9adba1a85daceba2e69466c9b8b07372247d8bf42de7dd9141163f800c703995"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/index.md",
+      "sha256": "35d7ecfad5a1443faee5a6d3ac1f51e094d418f577dad4728360d8f3c5785737"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/moment-generating-functions.md",
+      "sha256": "d0980ca099a2c124fd5a94263c6382659261b0dfa002370adbc50cc1eefc196b"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/paired-tests.md",
+      "sha256": "4836c24bb937a717e0ea91847401d9cb74cd6b41db631104afe053ef7c985ead"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/standard-mgfs.md",
+      "sha256": "6df5201b42b66ddf7bf3ae31648e1617f8e55789e6b15293e5887b8a0ed7e7fe"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/test-power.md",
+      "sha256": "6f386fa8c3ebdb45ad5c8adf1ffbc86c3c067ddf324bedcf575b733d1a397d77"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/statistics/variance-tests.md",
+      "sha256": "0ebb123d56172789ad7afc8143a05da711a36ffca5a3836a84fc9cf1a09d35a3"
+    },
+    {
+      "path": "alevel/a2-further-mathematics/vector-products-and-coplanarity.md",
+      "sha256": "61d4861de974a4c0623b460b8948893dcebfebbe2f3b657ae9a6f8cf66002db7"
+    },
+    {
+      "path": "alevel/as-further-mathematics/bayes.md",
+      "sha256": "45b54cf4255af7220614c8ebd5d690c50cb31487b4a4d82063c5794756e4ced9"
+    },
+    {
+      "path": "alevel/as-further-mathematics/complex-numbers-and-roots.md",
+      "sha256": "6d507d3d89353c34d7e2a706a30c66889027a6b68f153b7461fef6a4bdb2d4ee"
+    },
+    {
+      "path": "alevel/as-further-mathematics/conics-and-loci.md",
+      "sha256": "9b8ffdd79a632f38270343d3123521d867ada8839be65e1284c8b4c4cbcfa479"
+    },
+    {
+      "path": "alevel/as-further-mathematics/dimensions.md",
+      "sha256": "d36e3fdadf425d26503ce1ac9e202cf4bafc1bb72e067183858dd04c20958fb1"
+    },
+    {
+      "path": "alevel/as-further-mathematics/discrete-uniform.md",
+      "sha256": "c5d8e58aa55e17ccd447f761e8b704d23c83dfa9860c83c4f4debe6fa3c683fe"
+    },
+    {
+      "path": "alevel/as-further-mathematics/euler-method.md",
+      "sha256": "faf9f1b3e04298e49b6d08b8c39886403067af35b3e0d8adee3641811ed223cd"
+    },
+    {
+      "path": "alevel/as-further-mathematics/generating-functions.md",
+      "sha256": "a9927e6d83dbb6bac1e7bc63c68220ff5aa1cc860c6872231d6d7d0c348e8449"
+    },
+    {
+      "path": "alevel/as-further-mathematics/geometric-distribution.md",
+      "sha256": "95223c3651268752a06ca115aef568a0b986b59d8b2fec9939cd65a12d217f33"
+    },
+    {
+      "path": "alevel/as-further-mathematics/improper-integrals.md",
+      "sha256": "ad7e33731c0394e544f2e1fc24ae8593e6742a951853c2710b692edc587fad5e"
+    },
+    {
+      "path": "alevel/as-further-mathematics/impulse-and-collisions.md",
+      "sha256": "b6d19d0e5c403fb79521e01dec4c924509e548e59e0647ba56d6e12233d8fad2"
+    },
+    {
+      "path": "alevel/as-further-mathematics/index.md",
+      "sha256": "9d98991de03fb1073a2bdf41905d52e87ab89ed74cdba991bb34aa97b41ad6e3"
+    },
+    {
+      "path": "alevel/as-further-mathematics/linear-combinations.md",
+      "sha256": "9b58d0ed56773639f3895d62659300462c595bc8e35e7dac71f698fed3958203"
+    },
+    {
+      "path": "alevel/as-further-mathematics/linearisation.md",
+      "sha256": "bf77e2a95e21b610eafa5bf26ac0b6602a842aa235aafcac0d390c507dd736c5"
+    },
+    {
+      "path": "alevel/as-further-mathematics/matrix-algebra.md",
+      "sha256": "f16cee9b6f02b6ec395258c0efc79698f7a1a240ddf03425b745d1490446a87a"
+    },
+    {
+      "path": "alevel/as-further-mathematics/numerical-roots.md",
+      "sha256": "538ff874bb1111b4a9ac6ba01fb1aeb97aab9ce3b08b924027679c5db026d87b"
+    },
+    {
+      "path": "alevel/as-further-mathematics/rates-and-approximations.md",
+      "sha256": "406b836fa451f87c5760cececabe6ef8faaa0a99c8e9c0a4d5b2c58682a95770"
+    },
+    {
+      "path": "alevel/as-further-mathematics/rational-functions.md",
+      "sha256": "8c9edb73daee541d429f6bd4af13ad9184f6d47b5c1510b49a81f0f1ddae9c54"
+    },
+    {
+      "path": "alevel/as-further-mathematics/relative-motion.md",
+      "sha256": "6b6ed0ead2b7ff7a94ee002adb5f6548b685933621d359b874995181751ec99d"
+    },
+    {
+      "path": "alevel/as-further-mathematics/series.md",
+      "sha256": "d819e2d926d669f3eaecfcdfa3cf34f03fe418a0bf791af80d5cb50a41211fa5"
+    },
+    {
+      "path": "alevel/as-further-mathematics/transformations.md",
+      "sha256": "c85fe5fc0af6736935bff1d4f624888983e7cae22f01bc3b1ceaee3b843b1a2c"
+    },
+    {
+      "path": "alevel/as-further-mathematics/trigonometric-solutions.md",
+      "sha256": "cf27be1509c98db16594aff0f28e361c06b3c452b422a5f2f305263c7822e499"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/arc-length-and-surface-area.md",
+      "sha256": "db3b34aa928ad50259d6f5f117d84241a6e675f7f5c466e45a6e73fc379e4a64"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/de-moivres-theorem.md",
+      "sha256": "6e7602e7989456317f97e1922863866a131c71b5606e66b5a039582e33b01767"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/eigenvalues-and-eigenvectors.md",
+      "sha256": "2388afa4d728f04d5d078478181c1c8665809b4fc2b505aa236688d67187c827"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/finite-series.md",
+      "sha256": "34387a7c24e0c09522f215ee7b3655700a8d7e168f19f5ef248fceba72cf65eb"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/first-order-differential-equations.md",
+      "sha256": "85be1d8f5b607ea90014b222c3e7d8a65bbff6c0738868131e3e637a7e6989d4"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/hyperbolic-functions.md",
+      "sha256": "e5af82205d81291a8680ea8ad362621f8cd4e9f930b5f1bebbd0f2ff0525c149"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/index.md",
+      "sha256": "9db4b5ee9b322c08f5dca12bcf663a739ae64c8d3770119c1684b2dbbf1a3dd1"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/inverse-trigonometric-functions.md",
+      "sha256": "01fecb8e18759f0930b11af206eb6b042de3cc791dbe50ce9e9ee2239f23ab48"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/linear-equations.md",
+      "sha256": "d6f4100ccb2f27d886e4990bd90582544fa2f3daff063a750f1f8f28daae944d"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/lines-and-planes.md",
+      "sha256": "7fa111bc4f2c95e15ca0a7410680ecf357accb2681735128051a71cc56c395ec"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/matrix-algebra.md",
+      "sha256": "763774c8dacda8d752fa4e2828c66c8cfac95e8d8aba25bf104c6d09d3231b65"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/polar-coordinates.md",
+      "sha256": "7405b879a8a3edee48d91b18c4ccc8d63e43ccd54d3df9bd523621e3fac7f367"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/proof-by-induction.md",
+      "sha256": "215ae1f4b76bb1e4fdda00be1e2ef331849ef1e37b71fd65588e15be5a83a5e8"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/roots-and-polynomials.md",
+      "sha256": "d0a632d368f98753caa2587e66065b92e02646f9fc27509910a3ff54f34822ce"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/second-order-differential-equations.md",
+      "sha256": "2614694be9141e7aa0b2a07d065c81bb03d9acd2806f38b20bc0024c7e4271bb"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/series-and-limits.md",
+      "sha256": "caea1bbec4576b09e725015d104f5f2c42ecdf8965b33cccbb44d5f1eff7779b"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/association-tests.md",
+      "sha256": "ebd29cd8ffde4cc16885c85cf5267625d82be0394e490c13e277dabf5a444c71"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/comparing-means.md",
+      "sha256": "bd7f300cc6f10c074983a5e728ce822f5c90df4f26e5135d070d8164be979c2c"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/confidence-intervals.md",
+      "sha256": "ebb8932c21d8465f990209811e1fe0c4b925ecff01d3889b45d876cf1d287ecf"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/estimators.md",
+      "sha256": "d8545513cae3f3bbea6944adc6627ab7329c81ab1579e18755f66a0c28220591"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/goodness-of-fit.md",
+      "sha256": "418800fad51a0a89303d7f789ed3b804e2be42fb9100d31f17d6e4920dcfa501"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/index.md",
+      "sha256": "a8fe9c27bcad31c72cac0088404c722e30eed0cdb298a8de429e0f16e3216867"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/moment-generating-functions.md",
+      "sha256": "41bce9c63c1baf44bf8c27d302ffeef1db6312f36f7dac328e333a23b2b3783c"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/paired-tests.md",
+      "sha256": "1afdbee0e1242d275810be469faf44cf32e34681b2352e994153909ca8f03df1"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/standard-mgfs.md",
+      "sha256": "270aac6450f481522ca9215c51a1ee647a433b54fdcfc04469d6c3a718d439a3"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/test-power.md",
+      "sha256": "d6dfc51ed478a03fdde3ac725582555be7c7677e52c4ac99c2f534c261bbbb8c"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/variance-tests.md",
+      "sha256": "c329743c24eb4fac1acc4eaf4168602db6887703967d409c59a5c91f1d443c0b"
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/vector-products-and-coplanarity.md",
+      "sha256": "6b9ed2dc922f107b22f5f364894e6e6111ee0a16e4a075659485796f254008c6"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/bayes.md",
+      "sha256": "aabefdcb246df076e4ed085ccf5e1fca5a6a72a642e4da50326e8bc6e97c676a"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/complex-numbers-and-roots.md",
+      "sha256": "50dc238e110289abc035e33e49ec394e181aa9c20714a88b1f6e4ac4dc0ad8ed"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/conics-and-loci.md",
+      "sha256": "585a09e736d29c2f67a9f73b28535358dfded1d3697fccb47a95850297de5e80"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/dimensions.md",
+      "sha256": "f072c76e9fffd11e8356f451ab20b5b161a448a8831afbd886c86f6b58dafa8b"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/discrete-uniform.md",
+      "sha256": "393618c6502b5c2fc7e42dba3e16ad1c699676cf43404d4dbc470fa9a9d7d96b"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/euler-method.md",
+      "sha256": "a7d7dec7821e27dbd12427373257cbafa977ad4d521433060e2caab62a6eba25"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/generating-functions.md",
+      "sha256": "2fea67c513c663823affd2565941be47c48e45322eae7fb7b202037e164fd08b"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/geometric-distribution.md",
+      "sha256": "4cece2fc3ff1e53333c695e974c4c66c49b537aa609caee7f455bb92c7cb1f44"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/improper-integrals.md",
+      "sha256": "5f77909b49692338a4d9c1cf789d2efd7674774b640a8c76c03433ad3f338931"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/impulse-and-collisions.md",
+      "sha256": "191942297ff416529fbb6051de8c471f92355918a0d4f56932a55fd28bfe88a6"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/index.md",
+      "sha256": "6c2f46f3e8c190a142d65066b6054c8585c5fee08eef36d315a3d47f302a8d26"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/linear-combinations.md",
+      "sha256": "30161f703459a5f889acf5e833d3aa9c91af9d1c98fdcbe13a4f8f2a106b771a"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/linearisation.md",
+      "sha256": "8afb7ed8b87ac5a5bb8f761e99ae5e5b4fa277ba9e41673bd95ed043d7171987"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/matrix-algebra.md",
+      "sha256": "a10ef961c42651f43d0048c5108df0fb9716c43d24de80ed433486564ffa13db"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/numerical-roots.md",
+      "sha256": "dcf9cfa310781e26e68c7e6b2d3e425f933c33db9ba1359ca3d7d3b26ade4f45"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/rates-and-approximations.md",
+      "sha256": "89916c1449cf82665388bca22299543668405bf12bcf89747b8a978e9733add9"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/rational-functions.md",
+      "sha256": "402d0c3533af97d102b3075b599ecff5d7ad4ee5dbc1aeefc148ad8712071113"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/relative-motion.md",
+      "sha256": "d4ab893e3326c8c691d40d2805bd7e5d5c472eba2e927ce5b76fe44b102c304b"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/series.md",
+      "sha256": "8418d3cc0a4b903ac4d37952aad09425eb88f531fbf0de5e0c33fb990baf600e"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/transformations.md",
+      "sha256": "50e889b55a414bc63f5000b76c976d78b2c1c8dd641d3f4c4626ccee072c4964"
+    },
+    {
+      "path": "zh/alevel/as-further-mathematics/trigonometric-solutions.md",
+      "sha256": "deda870a32cf34d7b831661f9fe4693d580390831e6d177d7cb9bb45fb31a58f"
+    }
+  ],
+  "limits": "Source snapshot only, no course edit, browser review or student learning evidence in this research."
+}

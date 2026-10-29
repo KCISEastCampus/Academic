@@ -1,0 +1,67 @@
+{
+  "at": "2026-10-29T02:22:39.642970+00:00",
+  "base": "59c15fb658e187414f1d09ac7c4620c334942120",
+  "sourceSha256": {
+    "alevel/a2-further-mathematics/arc-length-and-surface-area.md": "c2e90019e117eab64412bf54bc78ed658e80a66bdf3f56c54911661b91a8da5a",
+    "zh/alevel/a2-further-mathematics/arc-length-and-surface-area.md": "ab8c6847b59e69527e89b8f0cba092e018a8a3e15d3c84c71e17bd13c1993624",
+    "scripts/test-further-surface-area.js": "bf449ff3dc9e3628bdacc949b372cf061bd2663dfeead6c4598a61d3e6fb53d2"
+  },
+  "htmlSha256": {
+    "alevel/a2-further-mathematics/arc-length-and-surface-area.md": "04f913e69fce4690614474281c876a527e1270adff1cddb680ac5d1890b746cd",
+    "zh/alevel/a2-further-mathematics/arc-length-and-surface-area.md": "3d8bd6dfa08860dfd8c981c3e2911c4ae59e6fb3ce4c8c52cefa03272f4e6555"
+  },
+  "protectedSha256": {
+    "assets/css/reading.css": "177c376f70a9685f629b177f24c7641cdd08449d49869a29785775126997f72a",
+    "assets/css/home.css": "5093b25192814630df184cb43f7d50819530c1edefcd20e266ac414e1c0daeaa",
+    "_layouts/subjects.html": "293db2c33a7e9d0858caf551013030cb136af11b7aaf6f97397c90c0ad7d940e"
+  },
+  "preservation": [
+    {
+      "path": "alevel/a2-further-mathematics/arc-length-and-surface-area.md",
+      "oldExplicitIds": 22,
+      "newExplicitIds": 29,
+      "oldQuestionLines": 13,
+      "newQuestionLines": 17,
+      "changedOldQuestionLines": 3
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/arc-length-and-surface-area.md",
+      "oldExplicitIds": 22,
+      "newExplicitIds": 29,
+      "oldQuestionLines": 13,
+      "newQuestionLines": 17,
+      "changedOldQuestionLines": 3
+    }
+  ],
+  "studentTrial": false,
+  "peerDeviceVerified": false,
+  "published": false,
+  "textbook": {
+    "path": "D:\\ProgramData\\wx_files\\xwechat_files\\wxid_zi5zliwbv1qz22_ef80\\msg\\file\\2026-10\\Textbook(1).pdf",
+    "sha256": "b503f4b5b5689d4c7c4c24726d8e9fd4d4edf23810e34ce9b1f731e9f981e675",
+    "printedPagesRead": [
+      283,
+      284,
+      285,
+      286,
+      287
+    ],
+    "pdfPagesRead": [
+      287,
+      288,
+      289,
+      290,
+      291
+    ],
+    "isbn": "978-0-19-837600-2"
+  },
+  "browser": {
+    "views": 8,
+    "links": 44,
+    "journeys": 3
+  },
+  "reviewSha256": {
+    "docs/agents/review-fm03-surface-scope-standards-2026-10-29.md": "163833da67840c7e04aa06274f762ae23284f023e8022d290a33294662c06848",
+    "docs/agents/review-fm03-surface-scope-spec-2026-10-29.md": "a2bbba1c4c33a99e6e33bbf4723a0093cedacfa21d171aa03ebf8ecd9ecfac58"
+  }
+}

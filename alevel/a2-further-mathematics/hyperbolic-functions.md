@@ -1000,6 +1000,8 @@ The derivative is $k/\sqrt{1+k^2x^2}$, so at zero $k=2$. The value condition bec
 
 **After practice:** repeat any solution you could not complete without its hint. For every equation in $e^x$, check positivity before taking a logarithm; for every inverse function, check its domain before differentiating or integrating.
 
+Apply inverse cosh and its derivative in [a complete nonlinear-surface calculation](/alevel/a2-further-mathematics/arc-length-and-surface-area/#nonlinear-surfaces), then attempt its new parametric task with help closed.
+
 **Learning path:** [Previous lesson: arc length and surface area](/alevel/a2-further-mathematics/arc-length-and-surface-area/) · [Next lesson: first-order differential equations](/alevel/a2-further-mathematics/first-order-differential-equations/) · [Further Pure Mathematics](/alevel/a2-further-mathematics/).
 
 ## Sources {#sources}

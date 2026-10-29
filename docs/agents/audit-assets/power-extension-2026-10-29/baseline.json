@@ -1,0 +1,12 @@
+{
+  "observedAt": "2026-10-29T01:40:57.342825+00:00",
+  "base": "59c15fb658e187414f1d09ac7c4620c334942120",
+  "files": {
+    "alevel/a2-further-mathematics/statistics/test-power.md": "6f386fa8c3ebdb45ad5c8adf1ffbc86c3c067ddf324bedcf575b733d1a397d77",
+    "zh/alevel/a2-further-mathematics/statistics/test-power.md": "d6dfc51ed478a03fdde3ac725582555be7c7677e52c4ac99c2f534c261bbbb8c",
+    "scripts/test-fm04-calculations.js": "f05df21ba7d248010c90ee0647e129be389efab77e4bad718b807ead22c9acd9",
+    "assets/css/reading.css": "177c376f70a9685f629b177f24c7641cdd08449d49869a29785775126997f72a",
+    "assets/css/home.css": "5093b25192814630df184cb43f7d50819530c1edefcd20e266ac414e1c0daeaa",
+    "_layouts/subjects.html": "293db2c33a7e9d0858caf551013030cb136af11b7aaf6f97397c90c0ad7d940e"
+  }
+}

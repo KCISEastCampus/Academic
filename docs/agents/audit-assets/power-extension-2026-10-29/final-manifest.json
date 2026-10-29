@@ -1,0 +1,48 @@
+{
+  "at": "2026-10-29T02:22:39.922665+00:00",
+  "base": "59c15fb658e187414f1d09ac7c4620c334942120",
+  "sourceSha256": {
+    "alevel/a2-further-mathematics/statistics/test-power.md": "94c3116996e7b20287571f6b3df30ad668f6598a3e640c1a77f13322fa67632b",
+    "zh/alevel/a2-further-mathematics/statistics/test-power.md": "9b242e516e291b5d092dbd735c828662a91d14a94262f9452f9f49005f3b408d",
+    "scripts/test-fm04-calculations.js": "74a5311b31f81f097766149b46498ce41ee3af81fa9ed6cc4a59863577db85a8"
+  },
+  "htmlSha256": {
+    "alevel/a2-further-mathematics/statistics/test-power.md": "6bd57e97f80f6ed3867d98aad0df7a0c973b394223f8f993bbe9ba7be4798bee",
+    "zh/alevel/a2-further-mathematics/statistics/test-power.md": "52255ec97301bb536a63d28af4f505047be9f939ad9ece32734d257a0833d834"
+  },
+  "protectedSha256": {
+    "assets/css/reading.css": "177c376f70a9685f629b177f24c7641cdd08449d49869a29785775126997f72a",
+    "assets/css/home.css": "5093b25192814630df184cb43f7d50819530c1edefcd20e266ac414e1c0daeaa",
+    "_layouts/subjects.html": "293db2c33a7e9d0858caf551013030cb136af11b7aaf6f97397c90c0ad7d940e"
+  },
+  "preservation": [
+    {
+      "path": "alevel/a2-further-mathematics/statistics/test-power.md",
+      "oldExplicitIds": 11,
+      "newExplicitIds": 20,
+      "oldQuestionLines": 6,
+      "newQuestionLines": 13,
+      "changedOldQuestionLines": 0
+    },
+    {
+      "path": "zh/alevel/a2-further-mathematics/statistics/test-power.md",
+      "oldExplicitIds": 11,
+      "newExplicitIds": 20,
+      "oldQuestionLines": 6,
+      "newQuestionLines": 13,
+      "changedOldQuestionLines": 0
+    }
+  ],
+  "studentTrial": false,
+  "peerDeviceVerified": false,
+  "published": false,
+  "browser": {
+    "views": 8,
+    "links": 30,
+    "journeys": 4
+  },
+  "reviewSha256": {
+    "docs/agents/review-fm04-power-extension-standards-2026-10-29.md": "3998f9996a7509322a1cbc19efa559ccfc55d8dfc384ef2292f0a92d56794941",
+    "docs/agents/review-fm04-power-extension-spec-2026-10-29.md": "1a7c17d4913c66aff41a595dad0e3078339fed1db7b29350f953c1626d460bbc"
+  }
+}

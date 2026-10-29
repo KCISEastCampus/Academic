@@ -1,0 +1,31 @@
+{
+  "paperId": "202605_FM2",
+  "examCode": "FM05",
+  "qpUrl": "https://drive.google.com/file/d/1TmS9jRUCrz_QoUySdta4myYkZDwTSyQR/view?usp=drivesdk",
+  "qpReading": "extracted original text: cover and Q5 (printed pp10-11), not original QP page image",
+  "msReading": "original PDF cover, abbreviations p3, Q5(a-b) p9 rendered and viewed; Q5(c) p10 text",
+  "version": "1.0 Final",
+  "msSha256": "d5b9dc2fc510942597146a0a3f17854c57d001e9d2e0c328d24f8c39b802a279",
+  "keyScoringActions": {
+    "5(a)": "M1 Hooke law, A1 equilibrium extension",
+    "5(b)": "B1 tension in displaced position, M1 full force equation, A1 simplified acceleration equation, E1 acceleration opposite and proportional to displacement"
+  },
+  "gapScope": "FM05 course absent in current A2 overview, separate course-building need; not evidence of an FM03 or MA05 error",
+  "msSource": "C:/Users/mi/Documents/Codex/2026-09-15/codex-threads-01a0a49b-cef9-7c92-95e1/work/further-math-frequency/sources/MS_202605_FM2.pdf",
+  "ledgerSpotCheck": {
+    "question": "202605_FM2 Q5",
+    "allocation": [
+      {
+        "chapter": "FM2.3",
+        "marks": 2,
+        "part": "a"
+      },
+      {
+        "chapter": "FM2.6",
+        "marks": 11,
+        "part": "b-c"
+      }
+    ],
+    "matchesOriginalMs": true
+  }
+}

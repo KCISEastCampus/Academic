@@ -7,7 +7,7 @@ subject: a2-further-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-further-mathematics/arc-length-and-surface-area/
 permalink: /zh/alevel/a2-further-mathematics/arc-length-and-surface-area/
-toc_headings: "#method, #cartesian-arc-length, #parametric-arc-length, #surface-area-about-the-x-axis, #worked-examples, #practice, #diagnose-and-retry, #quick-reference, #sources"
+toc_headings: "#method, #cartesian-arc-length, #parametric-arc-length, #surface-area-about-the-x-axis, #worked-examples, #practice, #diagnose-and-retry, #nonlinear-surfaces, #quick-reference, #sources"
 study_page: true
 reading_layout: true
 ---
@@ -19,6 +19,8 @@ reading_layout: true
 - **学习：**从[方法](#method)开始，再按顺序学习各例题。
 - **作业帮助：**查阅[直角坐标弧长](#cartesian-arc-length)、[参数形式下的弧长](#parametric-arc-length)或[绕 x 轴的旋转曲面面积](#surface-area-about-the-x-axis)。
 - **复习：**先完成[练习](#practice)，再查看[快速参考](#quick-reference)。
+
+- **学过双曲函数后：**回来完成[曲面面积：从列式到精确答案](#nonlinear-surfaces)。
 
 教材：第 23 章，第 282–287 页，*International A Level Further Mathematics*。
 
@@ -82,37 +84,35 @@ $$L=\int_\alpha^\beta\frac{\mathrm ds}{\mathrm dt}\,\mathrm dt.$$
 
 ## 绕 x 轴的旋转曲面面积 {#surface-area-about-the-x-axis}
 
-先用一条很短的直线段近似曲线的一小段。它绕 x 轴旋转一周，会扫出一条窄带；沿窄带表面的宽度是这段线长，不是水平宽度。线段足够短时，半径变化很小，窄带面积就近似等于圆周长乘这段线长。继续细分并相加，极限就是旋转曲面的面积。
+把曲线的一小段看作短直线。它绕x轴转一周，会扫出一条很窄的曲面带；带的宽度沿着曲线量，也就是小弧长，而不是水平宽度。小段足够短时，半径几乎不变，所以小带的面积约为“周长×小弧长”。把小带不断分细再相加，就得到下面的积分。
 
-曲线上每一点到 x 轴的距离是旋转半径 $\lvert y\rvert$，所以圆周长为 $2\pi\lvert y\rvert$。与它相乘的长度，正是求弧长时使用的同一个弧长微元（arc-length element）$\mathrm ds$：
+本节的生成曲线均满足 $y\ge0$，所以半径就是 $y$，周长就是 $2\pi y$。再乘上前面用过的小弧长 $\mathrm ds$：
 
-$$r=\lvert y\rvert,\qquad S=\int 2\pi r\,\mathrm ds.$$
+$$r=y,\qquad S=\int 2\pi y\,\mathrm ds.$$
 
-**直角坐标形式：**
+**直角坐标形式:**
 
-$$S=2\pi\int_a^b\lvert y\rvert\sqrt{1+\left(\frac{\mathrm dy}{\mathrm dx}\right)^2}\,\mathrm dx.$$
+$$S=2\pi\int_a^b y\sqrt{1+\left(\frac{\mathrm dy}{\mathrm dx}\right)^2}\,\mathrm dx,\qquad y\ge0.$$
 
-**参数形式：**
+**参数形式:**
 
-$$S=2\pi\int_\alpha^\beta\lvert y(t)\rvert\frac{\mathrm ds}{\mathrm dt}\,\mathrm dt.$$
+$$S=2\pi\int_\alpha^\beta y(t)\frac{\mathrm ds}{\mathrm dt}\,\mathrm dt,\qquad y(t)\ge0.$$
 
-这些公式用于绕 x 轴旋转完整一周的情形，曲线须光滑，或按光滑弧段分别处理。直角坐标形式下代入相应的弧长微元，参数形式下代入参数弧长微元。
+直角坐标式代入直角坐标的小弧长，参数式则要包含两个坐标的导数。两种公式都表示绕x轴完整旋转一周的曲面面积。
 
-**列好积分后，检查积分限（limits of integration）与绝对值（absolute value）。**
+**列好积分后，检查三件事。**
 
-- 直角坐标形式下使用递增的 x 积分限。参数方程使用递增的 t 积分限。平方根因子表示速率，因此这样选择可确保弧长非负。
-- 曲线穿过 x 轴时，半径仍然是 $\lvert y\rvert$。如果分段更便于处理绝对值，可在穿轴点处分段积分。
-- 如果平方根可化为 $\sqrt{g^2}$，先写成 $\lvert g\rvert$。检查整个区间后，才去掉绝对值。
-- 参数区间必须只描绘目标弧段一次。如果参数重复描过曲线的一部分，积分也会重复计算那一段。
-- 计算旋转曲面面积时，还要检查母线（generating curve）的不同部分是否扫过同一片曲面。例如，上半圆和下半圆分别绕直径旋转时，都会扫出同一个球面。这与同一弧段被描绘两遍是两个不同的问题。
+- 在整个区间核对 $y\ge0$；本节直接使用这个非负高度作半径。
+- 直角坐标用递增的x积分限，参数式用递增的t积分限；平方根因子是非负速率。
+- 所选区间只生成目标曲面一次；不要反复描同一段，也不要额外乘一次旋转。
 
-公式计算的是曲面本身，不包括圆形端盖（end caps）。只有当题目要求立体完整边界的面积时，才需要将端盖计入。
+公式只算弯曲的表面，不自动加两端圆盘。只有题目要求整个立体的完整外表面时，才另算端盖。
 
 ## 例题 {#worked-examples}
 
 <section class="worked-example" markdown="1">
 
-### 例题 2 — 保留平方根中的绝对值 {#example-2--keep-the-absolute-value}
+### 例题 2 — 按题目区间化简根式 {#example-2--keep-the-absolute-value}
 
 **Question:** Find the length of $y=\frac{x^2}{4}-\frac12\ln x$ for $1\le x\le2$.
 
@@ -124,7 +124,6 @@ $$\frac{\mathrm dy}{\mathrm dx}=\frac{x^2-1}{2x},\qquad
 因此
 
 $$\sqrt{1+\left(\frac{\mathrm dy}{\mathrm dx}\right)^2}
-=\frac{\lvert x^2+1\rvert}{2\lvert x\rvert}
 =\frac{x^2+1}{2x},\qquad 1\le x\le2.$$
 
 最后一个等号利用了 $x>0$ 和整个区间内 $x^2+1>0$。
@@ -157,7 +156,6 @@ $$\begin{aligned}
 \frac{\mathrm ds}{\mathrm dt}
 &=\sqrt{\sin^2t\tan^2t+\sin^2t}\\
 &=\sqrt{\sin^2t\sec^2t}\\
-&=\lvert \sin t\rvert\,\lvert \sec t\rvert\\
 &=\tan t,\qquad 0\le t\le\frac{\pi}{3}.
 \end{aligned}$$
 
@@ -197,27 +195,24 @@ S&=2\pi\int_1^3(4-x)\sqrt{1+(-1)^2}\,\mathrm dx\\
 
 <section class="worked-example" markdown="1">
 
-### 例题 5 — 曲线穿过 x 轴时的参数曲面面积 {#example-5--radius-absolute-value}
+### 例题 5 — 参数曲线生成圆台 {#example-5--radius-absolute-value}
 
-**Question:** Find the area swept out when $x=t$, $y=t-1$, $0\le t\le2$, is revolved about the x-axis.
+**Question:** Find the curved surface area generated when $x=t$, $y=t+1$, $0\le t\le2$, is revolved once about the x-axis. Exclude end caps.
 
-旋转半径是 $\lvert t-1\rvert$，而不是 $t-1$。速率为常数：
+区间上 $y=t+1\ge0$，所以半径就是 $t+1$。两个坐标的导数给出速率：
 
 $$\frac{\mathrm dx}{\mathrm dt}=1,\qquad
 \frac{\mathrm dy}{\mathrm dt}=1,\qquad
 \frac{\mathrm ds}{\mathrm dt}=\sqrt2.$$
 
-在穿轴点 $t=1$ 处分段：
-
 $$\begin{aligned}
-S&=2\pi\sqrt2\int_0^2\lvert t-1\rvert\,\mathrm dt\\
-&=2\pi\sqrt2\left(\int_0^1(1-t)\,\mathrm dt+\int_1^2(t-1)\,\mathrm dt\right)\\
-&=2\pi\sqrt2\left(\left[t-\frac{t^2}{2}\right]_0^1+\left[\frac{t^2}{2}-t\right]_1^2\right)\\
-&=2\pi\sqrt2\left[\left(1-\frac12-0\right)+\left((2-2)-(\tfrac12-1)\right)\right]\\
-&=\boxed{2\pi\sqrt2}.
+S&=2\pi\sqrt2\int_0^2(t+1)\,\mathrm dt\\
+&=2\pi\sqrt2\left[\frac{t^2}{2}+t\right]_0^2\\
+&=2\pi\sqrt2[(2+2)-0]\\
+&=\boxed{8\pi\sqrt2}.
 \end{aligned}$$
 
-这条曲线生成两个尖端相接的圆锥曲面。两端的圆形边界属于曲面的边缘，并非端盖。
+这是一只圆台的侧面。两端圆盘没有计入。
 
 </section>
 
@@ -251,7 +246,7 @@ S&=2\pi\int_0^{\frac{\pi}{2}}(2\sin t)(2)\,\mathrm dt\\
 
 **独立练习 · 25–30 分钟**
 
-每题先写出公式和积分限，再开始计算。说明如何处理绝对值，并检查速率是否非负。以下是自拟练习题，并非官方考试题；没有官方分值。
+每题先写出公式和积分限，再开始计算。先核对曲线高度非负，再检查速率与积分限。以下是自拟练习题，并非官方考试题；没有官方分值。
 
 <section class="lesson-check" markdown="1">
 
@@ -383,28 +378,25 @@ S&=2\pi\int_0^2x\sqrt{1+1^2}\,\mathrm dx\\
 
 <section class="lesson-check" markdown="1">
 
-### Q5 — 曲线在 x 轴两侧的旋转曲面面积 {#q5--surface-crosses-the-axis}
+### Q5 — 从轴上起点到圆周 {#q5--surface-crosses-the-axis}
 
-**Question:** Find the area swept out when $y=x-2$, $0\le x\le4$, is revolved about the x-axis.
+**Question:** Find the curved surface area generated when $y=x-2$, $2\le x\le4$, is revolved once about the x-axis. Exclude end caps.
 
-<details markdown="1">
-<summary>提示</summary>
+<details markdown="1"><summary>提示</summary>
 
-半径是 $\lvert x-2\rvert$。在 $x=2$ 处分段积分。
+先核对曲线高度，再把半径与弧长因子相乘。
 
 </details>
 
-<details markdown="1">
-<summary>解答</summary>
+<details markdown="1"><summary>解答与检查</summary>
 
-斜率为 1，因此速率因子为 $\sqrt2$。所以
+本区间有 $y=x-2\ge0$，半径是 $x-2$；斜率为1，弧长因子为 $\sqrt2$。
 
 $$\begin{aligned}
-S&=2\pi\sqrt2\int_0^4\lvert x-2\rvert\,\mathrm dx\\
-&=2\pi\sqrt2\left(\int_0^2(2-x)\,\mathrm dx+\int_2^4(x-2)\,\mathrm dx\right)\\
-&=2\pi\sqrt2\left(\left[2x-\frac{x^2}{2}\right]_0^2+\left[\frac{x^2}{2}-2x\right]_2^4\right)\\
-&=2\pi\sqrt2\left[((4-2)-0)+((8-8)-(2-4))\right]\\
-&=\boxed{8\pi\sqrt2}.
+S&=2\pi\sqrt2\int_2^4(x-2)\,\mathrm dx\\
+&=2\pi\sqrt2\left[\frac{(x-2)^2}{2}\right]_2^4\\
+&=2\pi\sqrt2(2-0)\\
+&=\boxed{4\pi\sqrt2}.
 \end{aligned}$$
 
 </details>
@@ -413,43 +405,30 @@ S&=2\pi\sqrt2\int_0^4\lvert x-2\rvert\,\mathrm dx\\
 
 <section class="lesson-check" markdown="1">
 
-### Q6 — 两段弧是否会生成两个不同的曲面？ {#q6--avoid-counting-the-same-surface-twice}
+### Q6 — 半圆及其生成的曲面 {#q6--avoid-counting-the-same-surface-twice}
 
-**Question:** The full circle $x=\cos t$, $y=\sin t$, $0\le t\le2\pi$, is revolved about the x-axis. Find the length of the circle and the distinct surface area generated. Explain which parameter interval you use for the surface area.
+**Question:** The upper semicircle $x=\cos t$, $y=\sin t$, $0\le t\le\pi$, is revolved once about the x-axis. Find its arc length and the surface area generated. Identify the surface and explain whether any end disks are needed.
 
-<details markdown="1">
-<summary>提示</summary>
+<details markdown="1"><summary>提示</summary>
 
-参数区间 $0\le t\le2\pi$ 描过圆周一次。旋转后，上半圆和下半圆会扫过同一个球面。
+参数覆盖的是上半圆；先分别写出弧长与面积积分。
 
 </details>
 
-<details markdown="1">
-<summary>解答</summary>
+<details markdown="1"><summary>解答与检查</summary>
 
-速率为 1，因此整个圆的长度为
+这里 $\sin t\ge0$。先算半圆的弧长，再用曲线高度作为旋转半径：
 
-$$L=\int_0^{2\pi}1\,\mathrm dt=[t]_0^{2\pi}=2\pi-0=2\pi.$$
-
-求不重复计数的曲面面积时，只取上半圆 $0\le t\le\pi$：
+$$\frac{\mathrm ds}{\mathrm dt}=\sqrt{\sin^2t+\cos^2t}=1,\qquad
+L=\int_0^\pi1\,\mathrm dt=\pi.$$
 
 $$\begin{aligned}
 S&=2\pi\int_0^\pi\sin t\,\mathrm dt\\
 &=2\pi[-\cos t]_0^\pi\\
-&=2\pi(-\cos\pi+\cos0)=2\pi(1+1)\\
-&=\boxed{4\pi}.
+&=2\pi(1+1)=\boxed{4\pi}.
 \end{aligned}$$
 
-若计算曲面面积时用 $0\le t\le2\pi$，就把球面计算两次：
-
-$$\begin{aligned}
-2\pi\int_0^{2\pi}\lvert\sin t\rvert\,\mathrm dt
-&=2\pi\left(\int_0^\pi\sin t\,\mathrm dt-\int_\pi^{2\pi}\sin t\,\mathrm dt\right)\\
-&=2\pi\left([ -\cos t]_0^\pi+[\cos t]_\pi^{2\pi}\right)\\
-&=2\pi[(1-(-1))+(1-(-1))]=8\pi.
-\end{aligned}$$
-
-所以曲面积的参数区间必须另行选择。求弧长时，圆周本身并没有被重复描绘；重复发生在上下两半圆旋转后彼此重叠。
+上半圆完整生成一个单位球面。两个端点都在轴上，没有还需添加的圆盘；弧长与球面面积量的是不同对象。
 
 </details>
 
@@ -556,22 +535,242 @@ S&=10\pi\int_0^1(1+4t)\,\mathrm dt\\
 
 **学后下一步：**先关闭本章答案，去课程入口完成[跨主题综合](/zh/alevel/a2-further-mathematics/#mixed-review)；完成后续学习，再做[延后任务](/zh/alevel/a2-further-mathematics/#later-review)。记录首次是否独立、使用了什么提示、错误原因及重试结果；若方法或条件出错，按本章“练习后”返回对应示范，再关闭解答重试。
 
+## 曲面面积：把计算做完整 {#nonlinear-surfaces}
+
+这一段放在学过[反双曲 cosh 及其分支](/zh/alevel/a2-further-mathematics/hyperbolic-functions/#inverse-cosh)和[它的导数](/zh/alevel/a2-further-mathematics/hyperbolic-functions/#inverse-derivatives)之后学习，还会用到[分部积分](/zh/alevel/a2-mathematics/integration/#integration-by-parts)。前面的弧长基础题不需要先学这些内容。
+
+### 先分清每个因子在量什么 {#surface-plan}
+
+曲线弯了以后，高度和斜率都可能变化。先别急着积分，先找三样东西：曲线到旋转轴的距离、**沿曲线走的一小段长度**，以及积分限用的是哪个变量。水平挪动的一小步，只是这一小段长度的一部分。
+
+下面的示范把这三件事与积分连起来。看完后，再用参数形式自己完成一题，题目不会指定积分方法。
+
+<section class="worked-example" markdown="1">
+
+### 一道曲面面积题，从头做到尾 {#nonlinear-surface-example}
+
+**Question (adapted):** The curve $C$ has equation $y=\cosh^{-1}x$, $1\le x\le2$. Find the exact curved surface area generated by one complete revolution about the x-axis. Exclude end caps.
+
+这是根据 January 2026 FM03 Q5 制作的教学改编，把上端点从 3 改成了 2，不分配官方分值。这里的 $\cosh^{-1}x$ 表示反函数，不是 $\cosh x$ 的倒数。
+
+**先找半径和小弧长。**所选的反 cosh 分支满足 $y\ge0$，所以半径就是 $y$。图中竖直的双向箭头量的是这个半径；加粗的曲线段是 $\mathrm ds$，水平虚线只是它的水平投影 $\mathrm dx$。
+
+![生成曲线在x轴上方，从x=1到x=2；竖直箭头标出半径y，加粗曲线段标为ds，其较短的水平虚线投影标为dx。](/assets/img/further-nonlinear-surface-elements.svg){: width="420" height="300" }
+
+在 $x>1$ 时，
+
+$$\frac{\mathrm dy}{\mathrm dx}=\frac1{\sqrt{x^2-1}}.$$
+
+因此，弧长因子为
+
+$$\begin{aligned}
+\sqrt{1+\left(\frac{\mathrm dy}{\mathrm dx}\right)^2}
+&=\sqrt{1+\frac1{x^2-1}}\\
+&=\sqrt{\frac{x^2}{x^2-1}}\\
+&=\frac{x}{\sqrt{x^2-1}},\qquad x>1.
+\end{aligned}$$
+
+最后一步用到了 $x>0$：这里 $x^2$ 的正平方根就是正的 x。把圆周长乘上这个弧长因子：
+
+$$S=2\pi\int_1^2\cosh^{-1}x\,\frac{x}{\sqrt{x^2-1}}\,\mathrm dx.$$
+
+在 $x=1$ 处，导数没有定义。积分下端按 $x>1$ 一侧的极限理解；先找出原函数，最后再处理这个端点。
+
+**接下来，选积分方法。**这里有两个能配合起来的部分。把 $\cosh^{-1}x$ 求导，会在分母出现一个根式；另一部分积分后，恰好得到相同的根式：
+
+$$\frac{\mathrm d}{\mathrm dx}\sqrt{x^2-1}
+=\frac{x}{\sqrt{x^2-1}}.$$
+
+这样配对，剩下的积分会变简单，所以选择分部积分：
+
+$$\begin{aligned}
+u&=\cosh^{-1}x,\\
+\mathrm dv&=\frac{x}{\sqrt{x^2-1}}\,\mathrm dx,\\
+\mathrm du&=\frac1{\sqrt{x^2-1}}\,\mathrm dx,\\
+v&=\sqrt{x^2-1}.
+\end{aligned}$$
+
+代入分部积分公式。剩下的积分中，上下两个根式正好约去：
+
+$$\begin{aligned}
+\int\cosh^{-1}x\,\frac{x}{\sqrt{x^2-1}}\,\mathrm dx
+&=\sqrt{x^2-1}\cosh^{-1}x\\
+&\quad-\int\frac{\sqrt{x^2-1}}{\sqrt{x^2-1}}\,\mathrm dx\\
+&=\sqrt{x^2-1}\cosh^{-1}x-x+C.
+\end{aligned}$$
+
+**最后，分别计算上下端。**把不带任意常数的原函数记为
+
+$$F(x)=\sqrt{x^2-1}\cosh^{-1}x-x.$$
+
+上端用反 cosh 的对数形式。下端则看极限：乘积中的两个因子都趋于零。
+
+$$\begin{aligned}
+F(2)&=\sqrt3\ln(2+\sqrt3)-2,\\
+\lim_{x\to1^+}F(x)&=0-1=-1.
+\end{aligned}$$
+
+所以
+
+$$\begin{aligned}
+S&=2\pi\left[\sqrt3\ln(2+\sqrt3)-2-(-1)\right]\\
+&=\boxed{2\pi\left[\sqrt3\ln(2+\sqrt3)-1\right]}.
+\end{aligned}$$
+
+回头检查整条推理：把 $F$ 求导，会回到被积函数；半径和面积都非负。每个 x 只对应一个半径，因此这一支不会把同一块曲面生成两次。我们也没有加上两端圆盘。
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 换一种表示，自己来 {#nonlinear-surface-task}
+
+**Question:** A curve is given by $x=\cosh t$, $y=t$, $0\le t\le\ln2$. Find its exact arc length and the exact curved surface area generated by one complete revolution about the x-axis. Exclude end caps. Explain why $t=0$ is allowed even though $\mathrm dy/\mathrm dx$ has no finite value there.
+
+这是自拟题。先写好自己的列式和积分方法，再打开帮助。
+
+<details markdown="1">
+<summary>提示</summary>
+
+两个坐标都要求导。用双曲恒等式化简正平方根，再判断求面积时还需要乘什么。
+
+</details>
+
+<details markdown="1">
+<summary>解答与检查</summary>
+
+$$\begin{aligned}
+\frac{\mathrm dx}{\mathrm dt}&=\sinh t,\qquad
+\frac{\mathrm dy}{\mathrm dt}=1,\\
+\frac{\mathrm ds}{\mathrm dt}&=\sqrt{\sinh^2t+1}=\cosh t.
+\end{aligned}$$
+
+最后一步用到了 cosh 恒为正。因此
+
+$$L=\int_0^{\ln2}\cosh t\,\mathrm dt
+=[\sinh t]_0^{\ln2}=\frac34.$$
+
+半径为 $t\ge0$，所以面积还需要另一个因子：
+
+$$S=2\pi\int_0^{\ln2}t\cosh t\,\mathrm dt.$$
+
+取 $u=t$、$\mathrm dv=\cosh t\,\mathrm dt$ 做分部积分，则 $\mathrm du=\mathrm dt$、$v=\sinh t$：
+
+$$\int t\cosh t\,\mathrm dt
+=t\sinh t-\int\sinh t\,\mathrm dt
+=t\sinh t-\cosh t+C.$$
+
+由指数定义可得
+
+$$\sinh(\ln2)=\frac34,\qquad\cosh(\ln2)=\frac54.$$
+
+所以
+
+$$\begin{aligned}
+S&=2\pi\left[t\sinh t-\cosh t\right]_0^{\ln2}\\
+&=2\pi\left[\frac34\ln2-\frac54-(0-1)\right]\\
+&=\boxed{\frac\pi2(3\ln2-1)}.
+\end{aligned}$$
+
+在 $t=0$ 时，两个坐标的导数分别为 $0$ 和 $1$，所以速率是 $1$，既不是零，也不是无穷大，参数形式的弧长微元可以正常使用。商 $\mathrm dy/\mathrm dx=1/\sinh t$ 在这里没有有限值，只说明不能在这个端点使用该直角坐标导数，并不表示曲线不能包含这个点。
+
+若弧长和面积用了同一个被积函数，回看[半径与小弧长](#surface-plan)。若几何列式正确，却停在积分处，回看[为什么选分部积分](#nonlinear-surface-example)。然后收起解答，独立做下面的新题。
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### 换个参数，再试一次 {#nonlinear-surface-retry}
+
+**Question:** A curve is given by $x=\cosh(2t)$, $y=2t$, $0\le t\le\frac12\ln3$. Find the exact curved surface area generated by one complete revolution about the x-axis. State the radius and explain why the chosen interval generates the surface once. Exclude end caps.
+
+<details markdown="1"><summary>提示</summary>
+
+这是自拟重试题。先自己写两个坐标的导数，检查它们是否都出现了，再考虑积分。
+
+</details>
+
+<details markdown="1"><summary>解答与检查</summary>
+
+半径为 $2t\ge0$。两个坐标都要对t求导：
+
+$$\frac{\mathrm dx}{\mathrm dt}=2\sinh(2t),\qquad
+\frac{\mathrm dy}{\mathrm dt}=2,\qquad
+\frac{\mathrm ds}{\mathrm dt}
+=\sqrt{4\sinh^2(2t)+4}=2\cosh(2t).$$
+
+$$S=2\pi\int_0^{\frac12\ln3}(2t)(2\cosh(2t))\,\mathrm dt.$$
+
+取 $u=2t$，则 $\mathrm du=2\,\mathrm dt$，新限是0与 $\ln3$：
+
+$$\begin{aligned}
+S&=2\pi\int_0^{\ln3}u\cosh u\,\mathrm du\\
+&=2\pi[u\sinh u-\cosh u]_0^{\ln3}\\
+&=2\pi\left[\frac43\ln3-\frac53-(0-1)\right]\\
+&=\boxed{\frac{4\pi}{3}(2\ln3-1)}.
+\end{aligned}$$
+
+在 $t>0$ 时，x持续增大，各圆形截面只生成一次。端点速率仍为2，曲线可包含该端点。若漏掉导数中的2，先回看[参数弧长](#parametric-arc-length)；若积分选法卡住，回看[完整示范](#nonlinear-surface-example)，然后收起答案重新列式。
+
+</details>
+
+</section>
+
+### 学过另一个主题后，再回来 {#nonlinear-surface-later-review}
+
+下面是自拟题。稍后回来时，关闭前面的例题和解答，根据这一次的被积函数选择方法。
+
+<section class="lesson-check" markdown="1">
+
+#### 一道新问题 {#nonlinear-surface-later}
+
+**Question:** Find the exact curved surface area generated when $y=x^3/3$, $0\le x\le1$, is revolved once about the x-axis. Exclude end caps and explain your integration choice.
+
+<details markdown="1">
+<summary>提示</summary>
+
+先建立半径和弧长因子，再观察根式里面的式子及其导数。
+
+</details>
+
+<details markdown="1">
+<summary>解答与回补</summary>
+
+这里半径为 $x^3/3\ge0$，斜率为 $x^2$。所以
+
+$$S=\frac{2\pi}{3}\int_0^1x^3\sqrt{1+x^4}\,\mathrm dx.$$
+
+取 $u=1+x^4$，则 $\mathrm du=4x^3\,\mathrm dx$，积分限变为 $1$ 和 $2$：
+
+$$\begin{aligned}
+S&=\frac\pi6\int_1^2u^{1/2}\,\mathrm du\\
+&=\frac\pi6\left[\frac23u^{3/2}\right]_1^2\\
+&=\boxed{\frac\pi9(2\sqrt2-1)}.
+\end{aligned}$$
+
+这个换元把外面剩余的 x 的幂一起换掉了。前面的例题适合分部积分，这一次的被积函数则提供了另一种有用的结构。换元卡住时，回补[变量与积分限的转换](/zh/alevel/a2-mathematics/integration/#substitution)，再关上本题解答解释自己的列式。
+
+</details>
+
+</section>
+
 ## 快速参考 {#quick-reference}
 
 | 任务 | 公式或第一步 | 检查 |
 |---|---|---|
 | 直角坐标弧长 | $\displaystyle L=\int_a^b\sqrt{1+\left(\frac{\mathrm dy}{\mathrm dx}\right)^2}\,\mathrm dx$ | 积分限是 x 值；使用 $a\le b$ |
 | 参数弧长 | $\displaystyle L=\int_\alpha^\beta\sqrt{\left(\frac{\mathrm dx}{\mathrm dt}\right)^2+\left(\frac{\mathrm dy}{\mathrm dt}\right)^2}\,\mathrm dt$ | 包含两个导数并使用递增的 t 积分限 |
-| 直角坐标曲线绕 x 轴旋转 | $\displaystyle S=2\pi\int_a^b\lvert y\rvert\sqrt{1+\left(\frac{\mathrm dy}{\mathrm dx}\right)^2}\,\mathrm dx$ | 半径是 $\lvert y\rvert$ |
-| 参数曲线绕 x 轴旋转 | $\displaystyle S=2\pi\int_\alpha^\beta\lvert y\rvert\sqrt{\left(\frac{\mathrm dx}{\mathrm dt}\right)^2+\left(\frac{\mathrm dy}{\mathrm dt}\right)^2}\,\mathrm dt$ | 半径是 $\lvert y\rvert$；速率非负 |
-| 平方根中的完全平方 | $\sqrt{g^2}=\lvert g\rvert$ | 去掉绝对值前先判断 $g$ 的符号 |
-| 曲线穿过 x 轴 | 在 $y=0$ 处拆分，或保留 $\lvert y\rvert$ 积分 | 不要使用负半径 |
+| 直角坐标曲线绕 x 轴旋转 | $\displaystyle S=2\pi\int_a^b y\sqrt{1+\left(\frac{\mathrm dy}{\mathrm dx}\right)^2}\,\mathrm dx$ | 本节 $y\ge0$，半径是 $y$ |
+| 参数曲线绕 x 轴旋转 | $\displaystyle S=2\pi\int_\alpha^\beta y\sqrt{\left(\frac{\mathrm dx}{\mathrm dt}\right)^2+\left(\frac{\mathrm dy}{\mathrm dt}\right)^2}\,\mathrm dt$ | 本节 $y\ge0$；速率非负 |
+| 化简平方根 | 若 $g\ge0$，则 $\sqrt{g^2}=g$ | 先用题目区间确认符号 |
 | 参数或曲面部分重复 | 选择只覆盖目标对象一次的积分区间 | 区分重复描曲线与旋转后曲面重叠 |
 {: .wide-table}
 
-**练习后：**如果弧长公式用错，重做第 1–3 题。如果半径符号出错，重做第 4–5 题。如果重复计算了重叠曲面，复习第 6 题。如果需要组合使用两个公式，再做一次第 7 题。
+**练习后：**如果弧长公式用错，重做第1–3题。如果把半径和弧长因子混淆，重做第4–5题。球面与弧长分不清时，复习第6题；组合两个公式时，再做第7题。
 
-**你应当能够：**计算直角坐标与参数形式下的弧长，使用 $\lvert y\rvert$ 作为绕 x 轴旋转时的半径，并区分曲面本身、端盖和重叠曲面。
+**你应当能够：**计算直角坐标与参数形式下的弧长；在 $y\ge0$ 的本节曲线中用 $y$ 作半径，区分曲面与端盖。
 
 ## 来源与范围 {#sources}
 
@@ -580,5 +779,9 @@ S&=10\pi\int_0^1(1+4t)\,\mathrm dt\\
 本课依据 [OxfordAQA Further Mathematics 9665 课程大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf)中 FP2.8（印刷页码第 18 页）的要求：掌握直角坐标或参数形式下的弧长与旋转曲面面积。例题 3 改编自官方样题；练习题为自拟题，没有官方分值。
 
 [OxfordAQA Specimen 2018, Q11, QP PDF p. 18](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-specimen-paper-2019-v3.pdf#page=18); [MS Q11, PDF p. 14](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-mark-scheme-2016-v1.pdf#page=14). 本轮重新读取对应题干及评分材料（2026-10-23，PDF 文本）；只借用已注明的方法，不把改编题或新增自拟任务称为原题。
+
+非线性曲面样段改编自 [January 2026 FM03 Q5，QP 第 8–9 页](https://drive.google.com/file/d/1-_yFvduaO6Eg5a_kKpJvC63OdJMDvvQp/view)，并对照[配套 MS 第 8–9 页，Version 1.0 Final](https://drive.google.com/file/d/1wp5xXrzRjW3q3TgYkzf3FkbHhNDUsO0D/view)。2026-10-29 重新阅读这些部分，并目视核对 QP 第 8 页、MS 第 9 页。改编题改变了上端点；后面的题目和图均为自拟，不分配官方分值。
+
+教材对照：Oxford University Press（2017），International A Level Further Mathematics with Mechanics，23.2节，印刷页285–287（所提供PDF页289–291）。本节按该处的公式和练习条件使用 $y\ge0$ 的生成曲线；新增例题仍标为改编或自拟。
 
 **学习路径：**[上一节：反三角函数的微积分](/zh/alevel/a2-further-mathematics/inverse-trigonometric-functions/) · [下一节：双曲函数](/zh/alevel/a2-further-mathematics/hyperbolic-functions/) · [返回高等纯数学课程](/zh/alevel/a2-further-mathematics/)
