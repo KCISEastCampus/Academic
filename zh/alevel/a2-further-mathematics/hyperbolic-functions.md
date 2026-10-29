@@ -1002,6 +1002,8 @@ y&=\pm\ln(2+\sqrt3),\\
 
 **练习之后：**把无法在不看提示的情况下完成的解答重新做一遍。对于每个含 $e^x$ 的方程，取对数前先检查正性；对于每个反函数，求导或积分前先检查定义域。
 
+用刚学的反 cosh 及其导数完成[一道非线性曲面面积题](/zh/alevel/a2-further-mathematics/arc-length-and-surface-area/#nonlinear-surfaces)，再关闭帮助，尝试其中的新参数曲线任务。
+
 **学习路径：**[上一课：弧长与旋转曲面面积](/zh/alevel/a2-further-mathematics/arc-length-and-surface-area/) · [下一课：一阶微分方程](/zh/alevel/a2-further-mathematics/first-order-differential-equations/) · [高等纯数学](/zh/alevel/a2-further-mathematics/)。
 
 ## 资料来源 {#sources}

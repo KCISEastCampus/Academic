@@ -1,0 +1,507 @@
+{
+  "checks": [
+    {
+      "paper": "201806_FP1",
+      "textPresent": true,
+      "coverCodeFound": false,
+      "maximumMark": null,
+      "expected": 80
+    },
+    {
+      "paper": "201806_FPSM1",
+      "textPresent": true,
+      "coverCodeFound": false,
+      "maximumMark": null,
+      "expected": 80
+    },
+    {
+      "paper": "201901_FP1",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "201901_FPSM1",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "201906_FM2",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "201906_FP1",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "201906_FP2",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 120,
+      "expected": 120
+    },
+    {
+      "paper": "201906_FPSM1",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "201906_FS2",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202001_FM2",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202001_FP1",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202001_FP2",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 120,
+      "expected": 120
+    },
+    {
+      "paper": "202001_FPSM1",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202001_FS2",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202101_FM2",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202101_FP1",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202101_FP2",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 120,
+      "expected": 120
+    },
+    {
+      "paper": "202101_FS2",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202201_FM2",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202201_FP1",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202201_FP2",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 120,
+      "expected": 120
+    },
+    {
+      "paper": "202201_FPSM1",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202201_FS2",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202206_FM2",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202206_FP1",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202206_FP2",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 120,
+      "expected": 120
+    },
+    {
+      "paper": "202206_FPSM1",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202206_FS2",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202301_FM2",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202301_FP1",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202301_FP2",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 120,
+      "expected": 120
+    },
+    {
+      "paper": "202301_FPSM1",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202301_FS2",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202306_FM2",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202306_FP1",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202306_FP2",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 120,
+      "expected": 120
+    },
+    {
+      "paper": "202306_FPSM1",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202306_FS2",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202401_FM2",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202401_FP1",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202401_FP2",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 120,
+      "expected": 120
+    },
+    {
+      "paper": "202401_FPSM1",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202401_FS2",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202406_FM2",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202406_FP1",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202406_FP2",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 120,
+      "expected": 120
+    },
+    {
+      "paper": "202406_FPSM1",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202406_FS2",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202501_FM2",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202501_FP1",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202501_FP2",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 120,
+      "expected": 120
+    },
+    {
+      "paper": "202501_FPSM1",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202501_FS2",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202505_FM2",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202505_FP1",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202505_FP2",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 120,
+      "expected": 120
+    },
+    {
+      "paper": "202505_FPSM1",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202505_FS2",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202601_FM2",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202601_FP1",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202601_FP2",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 120,
+      "expected": 120
+    },
+    {
+      "paper": "202601_FPSM1",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202601_FS2",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202605_FM2",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202605_FP1",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202605_FP2",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 120,
+      "expected": 120
+    },
+    {
+      "paper": "202605_FPSM1",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    },
+    {
+      "paper": "202605_FS2",
+      "textPresent": true,
+      "coverCodeFound": true,
+      "maximumMark": 80,
+      "expected": 80
+    }
+  ],
+  "count": 68,
+  "textPresent": 68,
+  "markExtracted": 66,
+  "codeFound": 66,
+  "conflicts": [],
+  "limits": "Automated extracted-cover metadata check, not visual paper authentication or mark-by-mark verification.",
+  "visualCoverFollowup": [
+    {
+      "paper": "201806_FP1",
+      "date": "31 May 2018",
+      "code": "FM01",
+      "marks": 80,
+      "page": 1
+    },
+    {
+      "paper": "201806_FPSM1",
+      "date": "4 June 2018",
+      "code": "FM02",
+      "marks": 80,
+      "sectionMarks": [
+        40,
+        20,
+        20
+      ],
+      "page": 1
+    }
+  ]
+}

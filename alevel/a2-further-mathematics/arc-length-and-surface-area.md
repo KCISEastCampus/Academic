@@ -5,7 +5,7 @@ mathjax: true
 grade: a2
 subject: a2-further-mathematics
 permalink: /alevel/a2-further-mathematics/arc-length-and-surface-area/
-toc_headings: "#method, #cartesian-arc-length, #parametric-arc-length, #surface-area-about-the-x-axis, #worked-examples, #practice, #diagnose-and-retry, #quick-reference, #sources"
+toc_headings: "#method, #cartesian-arc-length, #parametric-arc-length, #surface-area-about-the-x-axis, #worked-examples, #practice, #diagnose-and-retry, #nonlinear-surfaces, #quick-reference, #sources"
 study_page: true
 reading_layout: true
 ---
@@ -17,6 +17,7 @@ Find the length of a curve in Cartesian or parametric form. Then use that length
 - **Learning:** start with the [method](#method), then work through the examples.
 - **Homework help:** choose [Cartesian arc length](#cartesian-arc-length), [parametric arc length](#parametric-arc-length) or [surface area](#surface-area-about-the-x-axis).
 - **Revision:** try [practice](#practice) before opening the solutions, then use the [quick reference](#quick-reference).
+- **After hyperbolic functions:** return to [a curved surface, from setup to exact answer](#nonlinear-surfaces).
 
 Textbook: Chapter 23, pp. 282–287, in *International A Level Further Mathematics*.
 
@@ -80,37 +81,35 @@ Do not use only $\frac{\mathrm dx}{\mathrm dt}$ or only $\frac{\mathrm dy}{\math
 
 ## Surface Area About the x-axis {#surface-area-about-the-x-axis}
 
-Approximate a short piece of the curve by a straight segment. Rotating it once about the x-axis sweeps out a narrow band. The width along that band is the segment's length, not its horizontal width. For a sufficiently short piece, the radius changes very little, so the band's area is approximately its circumference times that length. Refining the pieces and adding their areas gives the surface-area integral.
+Approximate a small piece of the curve by a straight segment. One turn about the x-axis sweeps out a narrow band. Its width follows the curve, rather than the horizontal direction. On a short enough piece the radius barely changes, so its area is approximately circumference times the small curved length. Refining and adding the bands gives the integral.
 
-At each point the rotation radius is the distance from the x-axis, $\lvert y\rvert$. Thus the circumference is $2\pi\lvert y\rvert$, and the length element to multiply it by is the same $\mathrm ds$ used for arc length:
+Every generating curve in this section satisfies $y\ge0$. Its radius is therefore $y$ and its circumference is $2\pi y$. Multiply by the same small length $\mathrm ds$ used for arc length:
 
-$$r=\lvert y\rvert,\qquad S=\int 2\pi r\,\mathrm ds.$$
+$$r=y,\qquad S=\int 2\pi y\,\mathrm ds.$$
 
 **Cartesian form:**
 
-$$S=2\pi\int_a^b\lvert y\rvert\sqrt{1+\left(\frac{\mathrm dy}{\mathrm dx}\right)^2}\,\mathrm dx.$$
+$$S=2\pi\int_a^b y\sqrt{1+\left(\frac{\mathrm dy}{\mathrm dx}\right)^2}\,\mathrm dx,\qquad y\ge0.$$
 
 **Parametric form:**
 
-$$S=2\pi\int_\alpha^\beta\lvert y(t)\rvert\frac{\mathrm ds}{\mathrm dt}\,\mathrm dt.$$
+$$S=2\pi\int_\alpha^\beta y(t)\frac{\mathrm ds}{\mathrm dt}\,\mathrm dt,\qquad y(t)\ge0.$$
 
-These formulas describe a complete turn about the x-axis, for a smooth arc or smooth pieces treated separately. In Cartesian coordinates, substitute the Cartesian length element; in parametric coordinates, substitute the parametric length element.
+Use the Cartesian length element in the Cartesian formula, and both coordinate derivatives in the parametric one. Both formulas describe one complete turn about the x-axis.
 
-**Check the limits and absolute values after setting up the integral.**
+**After setting up the integral, check three things.**
 
-- Use increasing x-limits in a Cartesian integral. For a parametric curve, use increasing t-limits. The square-root factor is a speed, so these choices make the length non-negative.
-- If the curve crosses the x-axis, the radius is still $\lvert y\rvert$. Split the integral at a crossing if that makes the absolute value easier to evaluate.
-- If a square root simplifies to $\sqrt{g^2}$, write $\lvert g\rvert$ first. Remove the absolute value only after checking the interval.
-- The parameter interval must trace the requested arc once. If the parameter retraces part of the curve, the integral counts that part again.
-- For surface area, also check whether different parts of the generating curve sweep over the same surface patch. Count each patch once. For example, the upper and lower semicircles both sweep out the same sphere when revolved about their diameter. This is a separate issue from tracing the same arc twice.
+- Check $y\ge0$ on the whole interval; this section uses that non-negative height directly as the radius.
+- Use increasing x-limits for a Cartesian integral and increasing t-limits for a parametric one; the square-root factor is a non-negative speed.
+- Generate the required surface once. Do not retrace the same piece or add another rotation.
 
-The formula gives the curved surface only. It does not add circular end caps; include caps only if a question asks for the area of a solid's complete boundary.
+The formula gives the curved surface only, without circular end caps. Add caps separately only if the question asks for the complete boundary of a solid.
 
 ## Worked Examples {#worked-examples}
 
 <section class="worked-example" markdown="1">
 
-### Example 2 — Keep the absolute value from a square root {#example-2--keep-the-absolute-value}
+### Example 2 — Use the interval to simplify the square root {#example-2--keep-the-absolute-value}
 
 **Question:** Find the length of $y=\frac{x^2}{4}-\frac12\ln x$ for $1\le x\le2$.
 
@@ -122,7 +121,6 @@ $$\frac{\mathrm dy}{\mathrm dx}=\frac{x^2-1}{2x},\qquad
 Therefore
 
 $$\sqrt{1+\left(\frac{\mathrm dy}{\mathrm dx}\right)^2}
-=\frac{\lvert x^2+1\rvert}{2\lvert x\rvert}
 =\frac{x^2+1}{2x},\qquad 1\le x\le2.$$
 
 The final equality uses $x>0$ and $x^2+1>0$ on the whole interval.
@@ -155,7 +153,6 @@ $$\begin{aligned}
 \frac{\mathrm ds}{\mathrm dt}
 &=\sqrt{\sin^2t\tan^2t+\sin^2t}\\
 &=\sqrt{\sin^2t\sec^2t}\\
-&=\lvert \sin t\rvert\,\lvert \sec t\rvert\\
 &=\tan t,\qquad 0\le t\le\frac{\pi}{3}.
 \end{aligned}$$
 
@@ -195,27 +192,24 @@ S&=2\pi\int_1^3(4-x)\sqrt{1+(-1)^2}\,\mathrm dx\\
 
 <section class="worked-example" markdown="1">
 
-### Example 5 — Parametric surface area when the curve crosses the axis {#example-5--radius-absolute-value}
+### Example 5 — A parametric line generates a frustum {#example-5--radius-absolute-value}
 
-**Question:** Find the area swept out when $x=t$, $y=t-1$, $0\le t\le2$, is revolved about the x-axis.
+**Question:** Find the curved surface area generated when $x=t$, $y=t+1$, $0\le t\le2$, is revolved once about the x-axis. Exclude end caps.
 
-The radius is $\lvert t-1\rvert$, not $t-1$. The speed is constant:
+On this interval $y=t+1\ge0$, so the radius is $t+1$. Both coordinate derivatives give the speed:
 
 $$\frac{\mathrm dx}{\mathrm dt}=1,\qquad
 \frac{\mathrm dy}{\mathrm dt}=1,\qquad
 \frac{\mathrm ds}{\mathrm dt}=\sqrt2.$$
 
-Split at the crossing $t=1$:
-
 $$\begin{aligned}
-S&=2\pi\sqrt2\int_0^2\lvert t-1\rvert\,\mathrm dt\\
-&=2\pi\sqrt2\left(\int_0^1(1-t)\,\mathrm dt+\int_1^2(t-1)\,\mathrm dt\right)\\
-&=2\pi\sqrt2\left(\left[t-\frac{t^2}{2}\right]_0^1+\left[\frac{t^2}{2}-t\right]_1^2\right)\\
-&=2\pi\sqrt2\left[\left(1-\frac12-0\right)+\left((2-2)-(\tfrac12-1)\right)\right]\\
-&=\boxed{2\pi\sqrt2}.
+S&=2\pi\sqrt2\int_0^2(t+1)\,\mathrm dt\\
+&=2\pi\sqrt2\left[\frac{t^2}{2}+t\right]_0^2\\
+&=2\pi\sqrt2[(2+2)-0]\\
+&=\boxed{8\pi\sqrt2}.
 \end{aligned}$$
 
-This is the curved area of two cones joined at their tips. The two circular ends are boundaries of the surface, not end caps.
+This is the curved side of a frustum. The two end disks are not included.
 
 </section>
 
@@ -249,7 +243,7 @@ This arc generates the curved surface of a hemisphere. Its flat circular base is
 
 **Independent practice · 25–30 minutes**
 
-For each question, write the correct formula and limits before calculating. Show how you handle absolute values, and check that the speed is non-negative. These are original practice questions, not official exam questions; no official marks are assigned.
+For each question, write the correct formula and limits before calculating. Check the non-negative height, speed and integration limits. These are original practice questions, not official exam questions; no official marks are assigned.
 
 <section class="lesson-check" markdown="1">
 
@@ -381,28 +375,25 @@ S&=2\pi\int_0^2x\sqrt{1+1^2}\,\mathrm dx\\
 
 <section class="lesson-check" markdown="1">
 
-### Q5 — Surface area on both sides of the x-axis {#q5--surface-crosses-the-axis}
+### Q5 — From the axis to the rim {#q5--surface-crosses-the-axis}
 
-**Question:** Find the area swept out when $y=x-2$, $0\le x\le4$, is revolved about the x-axis.
+**Question:** Find the curved surface area generated when $y=x-2$, $2\le x\le4$, is revolved once about the x-axis. Exclude end caps.
 
-<details markdown="1">
-<summary>Hint</summary>
+<details markdown="1"><summary>Hint</summary>
 
-The radius is $\lvert x-2\rvert$. Split the integral at $x=2$.
+Check the height, then multiply the radius by the length factor.
 
 </details>
 
-<details markdown="1">
-<summary>Solution</summary>
+<details markdown="1"><summary>Solution and check</summary>
 
-The gradient is 1, so the speed factor is $\sqrt2$. Thus
+Here $y=x-2\ge0$, so the radius is $x-2$; the gradient is 1 and the length factor is $\sqrt2$.
 
 $$\begin{aligned}
-S&=2\pi\sqrt2\int_0^4\lvert x-2\rvert\,\mathrm dx\\
-&=2\pi\sqrt2\left(\int_0^2(2-x)\,\mathrm dx+\int_2^4(x-2)\,\mathrm dx\right)\\
-&=2\pi\sqrt2\left(\left[2x-\frac{x^2}{2}\right]_0^2+\left[\frac{x^2}{2}-2x\right]_2^4\right)\\
-&=2\pi\sqrt2\left[((4-2)-0)+((8-8)-(2-4))\right]\\
-&=\boxed{8\pi\sqrt2}.
+S&=2\pi\sqrt2\int_2^4(x-2)\,\mathrm dx\\
+&=2\pi\sqrt2\left[\frac{(x-2)^2}{2}\right]_2^4\\
+&=2\pi\sqrt2(2-0)\\
+&=\boxed{4\pi\sqrt2}.
 \end{aligned}$$
 
 </details>
@@ -411,43 +402,30 @@ S&=2\pi\sqrt2\int_0^4\lvert x-2\rvert\,\mathrm dx\\
 
 <section class="lesson-check" markdown="1">
 
-### Q6 — Do two arcs generate two different surfaces? {#q6--avoid-counting-the-same-surface-twice}
+### Q6 — A semicircle and its surface {#q6--avoid-counting-the-same-surface-twice}
 
-**Question:** The full circle $x=\cos t$, $y=\sin t$, $0\le t\le2\pi$, is revolved about the x-axis. Find the length of the circle and the distinct surface area generated. Explain which parameter interval you use for the surface area.
+**Question:** The upper semicircle $x=\cos t$, $y=\sin t$, $0\le t\le\pi$, is revolved once about the x-axis. Find its arc length and the surface area generated. Identify the surface and explain whether any end disks are needed.
 
-<details markdown="1">
-<summary>Hint</summary>
+<details markdown="1"><summary>Hint</summary>
 
-The circle is traced once over $0\le t\le2\pi$. On rotation, the upper and lower semicircles sweep over the same sphere.
+The interval covers the upper semicircle. Set up separate length and area integrals.
 
 </details>
 
-<details markdown="1">
-<summary>Solution</summary>
+<details markdown="1"><summary>Solution and check</summary>
 
-The speed is 1, so the full circle has length
+Here $\sin t\ge0$. Find the semicircle length, then use the height as the rotation radius:
 
-$$L=\int_0^{2\pi}1\,\mathrm dt=[t]_0^{2\pi}=2\pi-0=2\pi.$$
-
-For the distinct surface area, use just the upper semicircle, $0\le t\le\pi$:
+$$\frac{\mathrm ds}{\mathrm dt}=\sqrt{\sin^2t+\cos^2t}=1,\qquad
+L=\int_0^\pi1\,\mathrm dt=\pi.$$
 
 $$\begin{aligned}
 S&=2\pi\int_0^\pi\sin t\,\mathrm dt\\
 &=2\pi[-\cos t]_0^\pi\\
-&=2\pi(-\cos\pi+\cos0)=2\pi(1+1)\\
-&=\boxed{4\pi}.
+&=2\pi(1+1)=\boxed{4\pi}.
 \end{aligned}$$
 
-Using $0\le t\le2\pi$ would count the sphere twice:
-
-$$\begin{aligned}
-2\pi\int_0^{2\pi}\lvert\sin t\rvert\,\mathrm dt
-&=2\pi\left(\int_0^\pi\sin t\,\mathrm dt-\int_\pi^{2\pi}\sin t\,\mathrm dt\right)\\
-&=2\pi\left([ -\cos t]_0^\pi+[\cos t]_\pi^{2\pi}\right)\\
-&=2\pi[(1-(-1))+(1-(-1))]=8\pi.
-\end{aligned}$$
-
-This is why the surface interval must be restricted. The curve itself is not retraced for its arc length; the duplication happens when the two halves are revolved.
+The upper semicircle generates one complete unit sphere. Both endpoints lie on the axis, so there are no end disks to add. Arc length and surface area measure different objects.
 
 </details>
 
@@ -554,22 +532,242 @@ The segment traces the generating arc once; the two circular end disks are exclu
 
 **Next after practice:** close this chapter and attempt the course [mixed review](/alevel/a2-further-mathematics/#mixed-review). After subsequent learning, attempt the [later retrieval tasks](/alevel/a2-further-mathematics/#later-review). Record whether the first attempt was independent, any hint used, the error and the retry result. If a method or condition was wrong, use this chapter’s after-practice route to repair that skill, then retry with solutions closed.
 
+## Nonlinear surfaces: finish the calculation {#nonlinear-surfaces}
+
+Return to this part after learning [inverse cosh and its branch](/alevel/a2-further-mathematics/hyperbolic-functions/#inverse-cosh) and [its derivative](/alevel/a2-further-mathematics/hyperbolic-functions/#inverse-derivatives). You will also use [integration by parts](/alevel/a2-mathematics/integration/#integration-by-parts). The earlier arc-length questions do not require this preparation.
+
+### Decide what each factor measures {#surface-plan}
+
+For a curved generating arc, both its height and its slope can change. Before integrating, identify three things: the distance to the rotation axis, the length of a small piece **along the curve**, and the variable used for the limits. A horizontal step is only one part of that small curved length.
+
+The worked problem below joins those decisions to the integration. Afterwards, try a parametric curve without being told which integration method to use.
+
+<section class="worked-example" markdown="1">
+
+### A curved surface, from start to finish {#nonlinear-surface-example}
+
+**Question (adapted):** The curve $C$ has equation $y=\cosh^{-1}x$, $1\le x\le2$. Find the exact curved surface area generated by one complete revolution about the x-axis. Exclude end caps.
+
+This teaching adaptation uses January 2026 FM03 Q5, with the upper endpoint changed from 3 to 2. No official marks are assigned to the adaptation. Here $\cosh^{-1}x$ means the inverse function, not the reciprocal of $\cosh x$.
+
+**First, identify the radius and the small length.** The chosen inverse-cosh branch has $y\ge0$, so the radius is $y$. In the sketch, the vertical arrow measures that radius. The thick curved piece is $\mathrm ds$; the dashed horizontal projection is $\mathrm dx$.
+
+![Generating curve above the x-axis from x=1 to x=2, with a vertical radius y, a thick curved segment ds and its shorter dashed horizontal projection dx.](/assets/img/further-nonlinear-surface-elements.svg){: width="420" height="300" }
+
+For $x>1$,
+
+$$\frac{\mathrm dy}{\mathrm dx}=\frac1{\sqrt{x^2-1}}.$$
+
+The length factor is therefore
+
+$$\begin{aligned}
+\sqrt{1+\left(\frac{\mathrm dy}{\mathrm dx}\right)^2}
+&=\sqrt{1+\frac1{x^2-1}}\\
+&=\sqrt{\frac{x^2}{x^2-1}}\\
+&=\frac{x}{\sqrt{x^2-1}},\qquad x>1.
+\end{aligned}$$
+
+The last step uses $x>0$: the square root of $x^2$ is positive here. Multiply the circumference by this length factor:
+
+$$S=2\pi\int_1^2\cosh^{-1}x\,\frac{x}{\sqrt{x^2-1}}\,\mathrm dx.$$
+
+The derivative is not defined at $x=1$. Read the lower endpoint as a limit from $x>1$; we will evaluate it after finding the antiderivative.
+
+**Next, choose the integration method.** There are two useful pieces. Differentiating $\cosh^{-1}x$ gives a root in the denominator. Integrating the other piece gives the matching root in the numerator:
+
+$$\frac{\mathrm d}{\mathrm dx}\sqrt{x^2-1}
+=\frac{x}{\sqrt{x^2-1}}.$$
+
+That pairing makes the remaining integral simple, so use integration by parts:
+
+$$\begin{aligned}
+u&=\cosh^{-1}x,\\
+\mathrm dv&=\frac{x}{\sqrt{x^2-1}}\,\mathrm dx,\\
+\mathrm du&=\frac1{\sqrt{x^2-1}}\,\mathrm dx,\\
+v&=\sqrt{x^2-1}.
+\end{aligned}$$
+
+Substitute into the parts formula. The two root factors cancel in the remaining integral:
+
+$$\begin{aligned}
+\int\cosh^{-1}x\,\frac{x}{\sqrt{x^2-1}}\,\mathrm dx
+&=\sqrt{x^2-1}\cosh^{-1}x\\
+&\quad-\int\frac{\sqrt{x^2-1}}{\sqrt{x^2-1}}\,\mathrm dx\\
+&=\sqrt{x^2-1}\cosh^{-1}x-x+C.
+\end{aligned}$$
+
+**Finally, evaluate both ends.** Write the antiderivative without its arbitrary constant as
+
+$$F(x)=\sqrt{x^2-1}\cosh^{-1}x-x.$$
+
+At the upper endpoint, use the logarithmic form of inverse cosh. At the lower endpoint, both factors in the product approach zero:
+
+$$\begin{aligned}
+F(2)&=\sqrt3\ln(2+\sqrt3)-2,\\
+\lim_{x\to1^+}F(x)&=0-1=-1.
+\end{aligned}$$
+
+Hence
+
+$$\begin{aligned}
+S&=2\pi\left[\sqrt3\ln(2+\sqrt3)-2-(-1)\right]\\
+&=\boxed{2\pi\left[\sqrt3\ln(2+\sqrt3)-1\right]}.
+\end{aligned}$$
+
+Check the whole argument: differentiating $F$ returns the integrand; the radius and area are non-negative. Each x-value supplies one radius, so this branch does not generate the same surface patch twice. No end disks have been added.
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### Try a different representation {#nonlinear-surface-task}
+
+**Question:** A curve is given by $x=\cosh t$, $y=t$, $0\le t\le\ln2$. Find its exact arc length and the exact curved surface area generated by one complete revolution about the x-axis. Exclude end caps. Explain why $t=0$ is allowed even though $\mathrm dy/\mathrm dx$ has no finite value there.
+
+This is a self-written task. Write your setup and choice of integration method before opening help.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Differentiate both coordinates. Use the hyperbolic identity to simplify the positive square root, then decide which factor must be added for surface area.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and check</summary>
+
+$$\begin{aligned}
+\frac{\mathrm dx}{\mathrm dt}&=\sinh t,\qquad
+\frac{\mathrm dy}{\mathrm dt}=1,\\
+\frac{\mathrm ds}{\mathrm dt}&=\sqrt{\sinh^2t+1}=\cosh t.
+\end{aligned}$$
+
+The last equality uses the positivity of cosh. Thus
+
+$$L=\int_0^{\ln2}\cosh t\,\mathrm dt
+=[\sinh t]_0^{\ln2}=\frac34.$$
+
+The radius is $t\ge0$, so the area needs another factor:
+
+$$S=2\pi\int_0^{\ln2}t\cosh t\,\mathrm dt.$$
+
+Use parts with $u=t$ and $\mathrm dv=\cosh t\,\mathrm dt$. Then $\mathrm du=\mathrm dt$ and $v=\sinh t$:
+
+$$\int t\cosh t\,\mathrm dt
+=t\sinh t-\int\sinh t\,\mathrm dt
+=t\sinh t-\cosh t+C.$$
+
+From the exponential definitions,
+
+$$\sinh(\ln2)=\frac34,\qquad\cosh(\ln2)=\frac54.$$
+
+Therefore
+
+$$\begin{aligned}
+S&=2\pi\left[t\sinh t-\cosh t\right]_0^{\ln2}\\
+&=2\pi\left[\frac34\ln2-\frac54-(0-1)\right]\\
+&=\boxed{\frac\pi2(3\ln2-1)}.
+\end{aligned}$$
+
+At $t=0$ the two coordinate derivatives are $0$ and $1$, so the speed is $1$, not zero or infinite. The parametric length element is regular. The quotient $\mathrm dy/\mathrm dx=1/\sinh t$ has no finite value there, which prevents using that Cartesian derivative at the endpoint; it does not exclude the point from the curve.
+
+If the length and area used the same integrand, return to [the radius and small length](#surface-plan). If the geometry was right but the integration stopped, revisit [the parts choice](#nonlinear-surface-example). Then close this solution and attempt the new task below.
+
+</details>
+
+</section>
+
+<section class="lesson-check" markdown="1">
+
+### A new parameterisation to check {#nonlinear-surface-retry}
+
+**Question:** A curve is given by $x=\cosh(2t)$, $y=2t$, $0\le t\le\frac12\ln3$. Find the exact curved surface area generated by one complete revolution about the x-axis. State the radius and explain why the chosen interval generates the surface once. Exclude end caps.
+
+<details markdown="1"><summary>Hint</summary>
+
+This is a self-written retry. Write both coordinate derivatives and check that both appear before choosing how to integrate.
+
+</details>
+
+<details markdown="1"><summary>Solution and check</summary>
+
+The radius is $2t\ge0$. Differentiate both coordinates with respect to t:
+
+$$\frac{\mathrm dx}{\mathrm dt}=2\sinh(2t),\qquad
+\frac{\mathrm dy}{\mathrm dt}=2,\qquad
+\frac{\mathrm ds}{\mathrm dt}
+=\sqrt{4\sinh^2(2t)+4}=2\cosh(2t).$$
+
+$$S=2\pi\int_0^{\frac12\ln3}(2t)(2\cosh(2t))\,\mathrm dt.$$
+
+Set $u=2t$, so $\mathrm du=2\,\mathrm dt$ and the new limits are 0 and $\ln3$:
+
+$$\begin{aligned}
+S&=2\pi\int_0^{\ln3}u\cosh u\,\mathrm du\\
+&=2\pi[u\sinh u-\cosh u]_0^{\ln3}\\
+&=2\pi\left[\frac43\ln3-\frac53-(0-1)\right]\\
+&=\boxed{\frac{4\pi}{3}(2\ln3-1)}.
+\end{aligned}$$
+
+For $t>0$, x increases and each circular cross-section is generated once. The endpoint speed is still 2, so that endpoint is allowed. If a derivative lost its factor 2, revisit [parametric arc length](#parametric-arc-length); if integration stalled, revisit [the complete example](#nonlinear-surface-example), then close the answer and rebuild the setup.
+
+</details>
+
+</section>
+
+### Return after another topic {#nonlinear-surface-later-review}
+
+The next task is self-written. Attempt it on a later visit with the examples and previous solutions closed. Choose a method from the new integrand.
+
+<section class="lesson-check" markdown="1">
+
+#### A fresh problem {#nonlinear-surface-later}
+
+**Question:** Find the exact curved surface area generated when $y=x^3/3$, $0\le x\le1$, is revolved once about the x-axis. Exclude end caps and explain your integration choice.
+
+<details markdown="1">
+<summary>Hint</summary>
+
+Build the radius and length factor first. Then inspect the expression inside the square root and its derivative.
+
+</details>
+
+<details markdown="1">
+<summary>Solution and recovery</summary>
+
+Here the radius is $x^3/3\ge0$ and the gradient is $x^2$. Thus
+
+$$S=\frac{2\pi}{3}\int_0^1x^3\sqrt{1+x^4}\,\mathrm dx.$$
+
+Choose $u=1+x^4$, so $\mathrm du=4x^3\,\mathrm dx$. The limits become $1$ and $2$:
+
+$$\begin{aligned}
+S&=\frac\pi6\int_1^2u^{1/2}\,\mathrm du\\
+&=\frac\pi6\left[\frac23u^{3/2}\right]_1^2\\
+&=\boxed{\frac\pi9(2\sqrt2-1)}.
+\end{aligned}$$
+
+The substitution absorbs the remaining power of x. The earlier example needed parts; the new integrand supplies a different useful structure. If the substitution stalled, repair [change of variable and limits](/alevel/a2-mathematics/integration/#substitution), then explain the setup again with this solution closed.
+
+</details>
+
+</section>
+
 ## Quick Reference {#quick-reference}
 
 | Task | Formula or first step | Check |
 |---|---|---|
 | Cartesian arc length | $\displaystyle L=\int_a^b\sqrt{1+\left(\frac{\mathrm dy}{\mathrm dx}\right)^2}\,\mathrm dx$ | Limits are x-values; use $a\le b$ |
 | Parametric arc length | $\displaystyle L=\int_\alpha^\beta\sqrt{\left(\frac{\mathrm dx}{\mathrm dt}\right)^2+\left(\frac{\mathrm dy}{\mathrm dt}\right)^2}\,\mathrm dt$ | Include both derivatives and use increasing t-limits |
-| Cartesian surface about x-axis | $\displaystyle S=2\pi\int_a^b\lvert y\rvert\sqrt{1+\left(\frac{\mathrm dy}{\mathrm dx}\right)^2}\,\mathrm dx$ | Radius is $\lvert y\rvert$ |
-| Parametric surface about x-axis | $\displaystyle S=2\pi\int_\alpha^\beta\lvert y\rvert\sqrt{\left(\frac{\mathrm dx}{\mathrm dt}\right)^2+\left(\frac{\mathrm dy}{\mathrm dt}\right)^2}\,\mathrm dt$ | Radius is $\lvert y\rvert$; speed is non-negative |
-| A square root of a square | $\sqrt{g^2}=\lvert g\rvert$ | Check the sign of $g$ before removing the absolute value |
-| Curve crosses the x-axis | Split where $y=0$, or integrate with $\lvert y\rvert$ | Do not use a negative radius |
+| Cartesian surface about x-axis | $\displaystyle S=2\pi\int_a^b y\sqrt{1+\left(\frac{\mathrm dy}{\mathrm dx}\right)^2}\,\mathrm dx$ | Here $y\ge0$; radius is $y$ |
+| Parametric surface about x-axis | $\displaystyle S=2\pi\int_\alpha^\beta y\sqrt{\left(\frac{\mathrm dx}{\mathrm dt}\right)^2+\left(\frac{\mathrm dy}{\mathrm dt}\right)^2}\,\mathrm dt$ | Here $y\ge0$; speed is non-negative |
+| Simplifying a square root | If $g\ge0$, then $\sqrt{g^2}=g$ | Check the sign on the stated interval first |
 | A repeated parameter or surface patch | Choose an interval that covers the requested object once | Distinguish retracing the curve from overlapping after rotation |
 {: .wide-table}
 
-**After practice:** if the length formula was wrong, repeat Questions 1–3. If the radius sign was wrong, repeat Questions 4–5. If you counted an overlapping surface twice, revisit Question 6. If you need to combine both formulas, retry Question 7.
+**After practice:** for length errors, repeat Questions 1–3. For confusion between radius and length factor, repeat Questions 4–5. For the sphere versus arc length, revisit Question 6; to combine both formulas, retry Question 7.
 
-**You should be able to:** calculate Cartesian and parametric arc lengths, use $\lvert y\rvert$ as the radius about the x-axis, and distinguish the curved surface from end caps or overlapping patches.
+**You should be able to:** calculate Cartesian and parametric arc lengths; for curves with $y\ge0$ in this section, use $y$ as the radius; distinguish curved surfaces from end caps.
 
 ## Sources and scope {#sources}
 
@@ -578,5 +776,9 @@ Scope check on 2026-10-23: the current 9665 qualification page led to specificat
 This lesson follows FP2.8 (printed p. 18) of the [OxfordAQA Further Mathematics 9665 specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf). The specification covers arc length and surface area in Cartesian or parametric coordinates. Example 3 is adapted from the official specimen paper; practice questions are original and have no official marks.
 
 [OxfordAQA Specimen 2018, Q11, QP PDF p. 18](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-specimen-paper-2019-v3.pdf#page=18); [MS Q11, PDF p. 14](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-mark-scheme-2016-v1.pdf#page=14). Question and matching mark scheme reread on 2026-10-23 (PDF text). Only the identified method is adapted; the adapted question and additional self-written tasks are not official questions.
+
+The nonlinear-surface section adapts [January 2026 FM03 Q5, QP pp. 8–9](https://drive.google.com/file/d/1-_yFvduaO6Eg5a_kKpJvC63OdJMDvvQp/view) and was checked against [its mark scheme, pp. 8–9, Version 1.0 Final](https://drive.google.com/file/d/1wp5xXrzRjW3q3TgYkzf3FkbHhNDUsO0D/view). These sections were reread on 2026-10-29; QP p. 8 and MS p. 9 were also visually checked. The adaptation changes the upper endpoint; the following tasks and diagram are self-written. No official marks are assigned to them.
+
+Textbook alignment: Oxford University Press (2017), International A Level Further Mathematics with Mechanics, section 23.2, printed pp. 285–287 (supplied PDF pp. 289–291). This section follows its formulas and exercise conditions using generating curves with $y\ge0$; new examples remain labelled adapted or self-written.
 
 **Learning path:** [Previous: The calculus of inverse trigonometric functions](/alevel/a2-further-mathematics/inverse-trigonometric-functions/) · [Next: Hyperbolic functions](/alevel/a2-further-mathematics/hyperbolic-functions/) · [Back to the course](/alevel/a2-further-mathematics/).

@@ -58,4 +58,45 @@ near(1/Math.sqrt(9/100+16/144),2.2298824387,1e-9);
 near(3/Math.sqrt(100/100+64/100),2.3426064283,1e-9);
 near(2/Math.sqrt(36/100+64/144),2.2298824387,1e-9);
 near((48/6)/2**2,2); near((40.5/6)/1.5**2,3);
-console.log('FM04 independent MGF quadrature, discrete tails, inference and mixed-task arithmetic passed.');
+// Fixed-rule inverse problems and the complete two-sided integer events.
+const cutoff = 100 + 1.644854;
+near(phi(cutoff - 101.214126328), 2/3, 2e-7);
+assert(1-phi(cutoff-101.1) < 1-phi(cutoff-101.3));
+near(phi(50-1.644854-49.029636123), 1/4, 2e-7);
+near(phi((-1.959964*Math.sqrt(2)+1.817935096)/Math.sqrt(2)), 1/4, 2e-7);
+near(phi((1.644854*Math.sqrt(2)-(41.135942144-40))/Math.sqrt(2)), .8, 2e-7);
+const lower = (n,p,k) => 1-tail(n,p,k+1);
+for (const [n,p,left,right,size] of [[20,.2,0,9,.021511001367], [12,.3,0,7,.052442130259], [10,.4,1,8,.0586519552]]) {
+  const budget = n===20 ? .025 : .05;
+  assert(lower(n,p,left)<=budget && lower(n,p,left+1)>budget);
+  assert(tail(n,p,right)<=budget && tail(n,p,right-1)>budget);
+  near(lower(n,p,left)+tail(n,p,right),size,1e-10);
+}
+near(tail(20,.15,1)-tail(20,.15,9),.959911560531,1e-10);
+near(tail(12,.5,1)-tail(12,.5,7),2509/4096);
+near(lower(12,.5,0)+tail(12,.5,7),1587/4096);
+near(lower(10,.6,1)+tail(10,.6,8),.1689674752);
+assert(tail(10,.4,7)>.05, 'The report used an upper tail that exceeds its stated budget');
+
+// Bind the independently calculated values to the actual problem and answer.
+{
+  const fs=require('node:fs'), path=require('node:path');
+  const required=[
+    ['inverse-example',['N(\\mu,16)','m<50','49.030']],
+    ['task-inverse',['N(\\mu,36)','z_{2/3}','101.214']],
+    ['discrete-example',['\\operatorname{Bin}(20,p)','p=0.15','0.021511','0.959912']],
+    ['task-discrete',['\\operatorname{Bin}(12,p)','p=0.3','2509','1587']],
+    ['retry-inverse',['N(\\delta,2)','-1.959964','-1.818']],
+    ['retry-discrete',['\\operatorname{Bin}(10,p)','p=0.4','0.0586519552','0.1689674752']],
+    ['later-inverse',['\\mu_B','0.841621','41.136']]
+  ];
+  for(const prefix of ['', 'zh/']) {
+    const source=fs.readFileSync(path.join(__dirname,'..',prefix+'alevel/a2-further-mathematics/statistics/test-power.md'),'utf8');
+    for(const [id,tokens] of required) {
+      const part=source.split('{#'+id+'}')[1]?.split('</section>')[0];
+      assert(part, 'Missing power learning task '+id);
+      for(const token of tokens) assert(part.includes(token),id+': source equation/answer '+token);
+    }
+  }
+}
+console.log('FM04 MGF, inference, fixed-rule inverse power, adjacent integer boundaries and bound source answers passed.');

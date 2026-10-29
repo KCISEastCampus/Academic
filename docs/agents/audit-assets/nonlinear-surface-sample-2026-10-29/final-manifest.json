@@ -1,0 +1,57 @@
+{
+  "observedAt": "2026-10-29T01:22:13.313705+00:00",
+  "base": "59c15fb658e187414f1d09ac7c4620c334942120",
+  "sourceSha256": {
+    "alevel/a2-further-mathematics/arc-length-and-surface-area.md": "818c828d7da0172f47edf92e57185dafb8b400604c37a2e14e8e5d35abdf6bff",
+    "zh/alevel/a2-further-mathematics/arc-length-and-surface-area.md": "7fe7babd7cfe2726e8ec84d19baa59d404ea1f49c014d13e3a0eb59afe4281bd",
+    "alevel/a2-further-mathematics/hyperbolic-functions.md": "31560253ec06e140f47fd1ff6f6a2d553c16be377778479706ae19eb78862fbf",
+    "zh/alevel/a2-further-mathematics/hyperbolic-functions.md": "ffb48932874a11130a0a76c41f086169f4eb6f4489290d7596136674777625c3",
+    "assets/css/reading.css": "177c376f70a9685f629b177f24c7641cdd08449d49869a29785775126997f72a",
+    "assets/css/home.css": "5093b25192814630df184cb43f7d50819530c1edefcd20e266ac414e1c0daeaa",
+    "_layouts/subjects.html": "293db2c33a7e9d0858caf551013030cb136af11b7aaf6f97397c90c0ad7d940e",
+    "scripts/test-further-surface-area.js": "0b4675d94c85e2bc06ced2c087cd08b3511a11562dd78bbb492a41af1b0cb20a",
+    "assets/img/further-nonlinear-surface-elements.svg": "ba43605d79f3c56ba9771c70d4c6ac79db371d4823d325c7e1f3a2f95a5a0442"
+  },
+  "generatedHtmlSha256": {
+    "alevel/a2-further-mathematics/arc-length-and-surface-area.md": "0d31b216377af08a0ebcd2be92672578d2f031397f90fe17d740cfad907a290c",
+    "zh/alevel/a2-further-mathematics/arc-length-and-surface-area.md": "c55cdfcaed586fe844abf1b9766309040b334ac354f00362cbab5e56a4ee1d3a",
+    "alevel/a2-further-mathematics/hyperbolic-functions.md": "33ecc390261d8b4c02925aa1fec2eddbf6b9de552c39f52c5c7d628742ce9490",
+    "zh/alevel/a2-further-mathematics/hyperbolic-functions.md": "61c6b6aa483853e4cb57e7e314fb55844ba0eed9bf5c5c9b153706c660fc25c6"
+  },
+  "protectedUnchanged": [
+    "assets/css/reading.css",
+    "assets/css/home.css",
+    "_layouts/subjects.html"
+  ],
+  "reviewSha256": {
+    "docs/agents/review-fm03-nonlinear-surface-standards-2026-10-29.md": "5dd82a5c25141b3e9bf2a171b383069edd32361372f77462a99ede2118dbef8a",
+    "docs/agents/review-fm03-nonlinear-surface-spec-2026-10-29.md": "920a7f8065cce2707ff8117e3eaeb09d94e87bc9c14c35c3aa0ab5870070cee9"
+  },
+  "finalSvgReview": "docs/agents/review-fm03-nonlinear-surface-standards-2026-10-29.md",
+  "specSvgBoundary": "Spec reviewed previous SVG; same course and test bytes; final SVG incrementally reviewed by Standards.",
+  "technical": {
+    "finalBuildSeconds": 48.486,
+    "tests": [
+      "test-further-surface-area.js",
+      "test-further-bilingual.js",
+      "test-further-retry.js",
+      "test-reading-layout.js",
+      "test-frontend-ux.js"
+    ],
+    "browserViews": 8,
+    "localTargets": 44,
+    "paths": 14,
+    "journeys": 3,
+    "wideFormulaKeyboardViews": 4,
+    "expandedReadingTasks": 3,
+    "pagefindPages": 477,
+    "pagefindWords": 61393,
+    "desktopTocClickVerified": true
+  },
+  "preview": {
+    "origin": "http://172.31.226.8:8844",
+    "peerDeviceVerified": false
+  },
+  "studentTrial": "not conducted",
+  "published": false
+}

@@ -1,0 +1,23 @@
+{
+  "observedOn": "2026-10-29",
+  "referencedThread": "01a1823e-1c83-7652-829a-9e134450bd55",
+  "sourceDirectory": "C:\\Users\\mi\\Documents\\Codex\\2026-09-15\\codex-threads-01a0a49b-cef9-7c92-95e1\\work\\further-math-frequency\\results",
+  "inputSha256": {
+    "paper_sources.csv": "4e544a91f4c0a3c13e89c33c41b2f276ffbbe260bd86604e50ccfb1fc1af5434",
+    "question_chapter_ledger.csv": "7041046596ed0beef408737b7cb7f94138ce00330d06ac36d58c8f921af531ef",
+    "overall_chapter_statistics.csv": "d8371ac43527714f1fb4e1532c5d2e68c6f94475d9a35a38aae7181bc122588c",
+    "coverage.csv": "bc5944325dc57a4ea84d8fc0f3d884c6743fe9faecbebb50c51ab4ab7f74d05b"
+  },
+  "papers": 68,
+  "pairedPapers": 67,
+  "missingMs": [
+    "202201_FS2"
+  ],
+  "questions": 713,
+  "allocationRows": 793,
+  "totalRawMarks": 5960,
+  "allPerPaperSumsMatch": true,
+  "allChapterAggregatesMatch": true,
+  "limits": "Arithmetic and inventories checked across the supplied derived ledger. Chapter allocations remain analyst judgements, not independently reclassified all 713 questions or a prediction of future exams. Paired-indexed means source availability, not full reread in this audit.",
+  "all713QuestionSumsMatch": true
+}
