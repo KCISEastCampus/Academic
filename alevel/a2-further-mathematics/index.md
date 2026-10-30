@@ -44,6 +44,8 @@ For a first reading, follow one explanation and its complete example, then try t
 
 ## Course Outline
 
+{% include exam_topic_practice.html topic="polar-coordinates" %}
+
 The lessons follow the A2 Pure part of *International A Level Further Mathematics*. Chapter 18 and Chapter 25 each cover two syllabus topics.
 
 - **Algebra, proof and series:** roots and polynomials; proof by induction; finite series; series and limits.

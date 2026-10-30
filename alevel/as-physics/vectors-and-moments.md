@@ -375,6 +375,8 @@ East component = −10cos30° = −8.66 N, north = +5.00 N. Inclined cord Tcos60
 </details>
 </div>
 
+{% include exam_topic_practice.html %}
+
 <h2 id="sources-and-next">Scope and next step</h2>
 
 Scope: OxfordAQA International AS Physics 9630, PH01 Sections 3.2.1–3.2.2. The official Q06.1, adapted Q08.1 and symmetric-support example reference PH01 June 2024; the paired mark scheme has been checked. Other tasks are self-written, with no official marks assigned. Schematics and values are constructed teaching material.

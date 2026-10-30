@@ -381,6 +381,8 @@ Retry: a 10 N vector points 30° north of west. Find east/north components. A 40
 </details>
 </div>
 
+{% include exam_topic_practice.html %}
+
 <h2 id="sources-and-next">范围与下一步</h2>
 
 范围：OxfordAQA International AS Physics 9630，PH01 3.2.1–3.2.2。官方Q06.1、改编Q08.1与对称支承示范参考PH01 June 2024，已核对配套评分标准。其他任务均为自拟，不赋官方分值；图示与数值是教学构造。

@@ -46,6 +46,8 @@ This route covers OxfordAQA 9630 AS Unit 1 (3.1–3.3) and Unit 2 (3.4–3.5), w
 
 Web tasks do not certify apparatus work. Attempt independently, repair the specific error and retry changed conditions; use mixed reviews in a later session. English stems match across languages; Chinese explanations retain English output requirements. Older anchors below remain reference notes; use the route above for guided learning.
 
+{% include exam_topic_practice.html topic="moments" %}
+
 <h2 id="reference-notes">Reference notes and resources</h2>
 
 The existing topic notes, examples and resources follow. Practical summaries do not certify completion of a physical practical.

@@ -4,6 +4,11 @@ en:
   timetable: Timetable
   student_council: Student Council
   contributors: Contributors
+  question_finder: Questions & papers
+  question_finder_description: Find questions and build papers
+  exam_topic_questions: Find questions and build a paper
+  exam_topic_scope: Results include whole questions that may span other chapters.
+  exam_topic_drafts: Opening this link changes filters and keeps your existing paper draft.
   main_navigation: Main navigation
   footer_navigation: Footer navigation
   toggle_theme: Toggle theme
@@ -120,6 +125,11 @@ zh-CN:
   timetable: 考试时间表
   student_council: 学生会
   contributors: 贡献者
+  question_finder: 找题组卷
+  question_finder_description: 查找题目并组合试卷
+  exam_topic_questions: 按本主题找题与组卷
+  exam_topic_scope: 结果包含可能跨章的整题。
+  exam_topic_drafts: 打开链接只切换题目筛选，保留已有组卷草稿。
   main_navigation: 主导航
   footer_navigation: 页脚导航
   toggle_theme: 切换明暗主题
