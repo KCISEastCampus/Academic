@@ -723,3 +723,5 @@ The latter function itself has domain $-2\le x\le2$. If an error returns, use th
 
 
 **Next step:** when you can complete the mixed task independently, continue to [parametric equations](/alevel/a2-mathematics/parametric-equations/), using the chain relationship for two parameter rates. Sources and scope: [9660 specification v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf), P2.6; process requirements checked against January 2025 MA03 [QP](https://aqamat.alevelclouds.com/25_01_QP_P2.pdf) Q3, Q11 and the matching [MS](https://aqamat.alevelclouds.com/25_01_MS_P2.pdf). This page’s tasks remain self-written.
+
+{% include exam_topic_practice.html %}

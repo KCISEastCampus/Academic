@@ -487,3 +487,5 @@ The scope is [OxfordAQA 9660 specification v5.2, M2.1](https://www.oxfordaqa.com
 **You should be able to:** explain assumptions in context, use separate force equations and state a useful limitation of a model.
 
 **Learning path:** [Mechanics topic index](/alevel/a2-mathematics/mechanics/) · [Next: Vectors and Kinematics](/alevel/a2-mathematics/mechanics/vectors-and-kinematics/).
+
+{% include exam_topic_practice.html %}

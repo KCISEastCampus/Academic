@@ -371,3 +371,5 @@ The first is goodness of fit with no fitted parameters. The second is associatio
 </section>
 
 [Mixed course review](/alevel/a2-further-mathematics/statistics/#review) · [Course route](/alevel/a2-further-mathematics/statistics/)
+
+{% include exam_topic_practice.html %}

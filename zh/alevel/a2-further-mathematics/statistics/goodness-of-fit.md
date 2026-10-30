@@ -437,3 +437,5 @@ $$
 拟合优度把一个变量与模型概率比较。接下来对比两个分类变量的关联：其期望表来自行列总数。
 
 [关联检验](/zh/alevel/a2-further-mathematics/statistics/association-tests/) · [课程路线](/zh/alevel/a2-further-mathematics/statistics/)
+
+{% include exam_topic_practice.html %}

@@ -295,3 +295,5 @@ Scope follows 9665 v5.2. The paired questions and mark schemes below informed th
 </details>
 
 [Previous](/alevel/as-further-mathematics/improper-integrals/) · [Course route](/alevel/as-further-mathematics/#learning-route) · [Next](/alevel/as-further-mathematics/transformations/)
+
+{% include exam_topic_practice.html %}

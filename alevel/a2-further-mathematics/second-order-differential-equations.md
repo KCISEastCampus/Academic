@@ -942,3 +942,5 @@ The scope follows [OxfordAQA's International A-level Further Mathematics specifi
 [OxfordAQA Specimen 2018, Q7, QP PDF p. 12](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-specimen-paper-2019-v3.pdf#page=12); [MS Q7, PDF p. 10](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-mark-scheme-2016-v1.pdf#page=10). Question and matching mark scheme reread on 2026-10-23 (PDF text). Only the identified method is adapted; the adapted question and additional self-written tasks are not official questions.
 
 PI learning update, 2026-10-28: the starting-form table was reorganised from a teacher-provided image (book/version unspecified), with CF-overlap conditions and FP2.11 polynomial scope added. Relevant paired QP/MS pages were reread and viewed: Specimen 2018 Q7 (QP pp.12–13, MS p.10), June 2024 Q8 (QP/MS p.12), January 2025 Q12 (QP p.24, MS p.19). These inform the practice priorities; no complete frequency study is claimed. The new short tasks are self-written and carry no official marks.
+
+{% include exam_topic_practice.html %}

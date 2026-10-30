@@ -393,3 +393,5 @@ H0 为均值4，H1 为均值小于4。漏掉改善是 II 类：实际小于4却�
 OxfordAQA Mathematics 9660 v5.2，S2.6，印刷第27页（PDF第26页）：[资格页](https://www.oxfordaqa.com/qualification/international-as-and-a-level-mathematics-9660/)与[大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf)。本页覆盖检验语言、错误和精确二项/泊松检验，均值检验在下一课。示范改编并扩展 Q1(b)、Q1(d)：[January 2025 QP 第2–4页](/assets/pdf/fx-cg50/references/oxfordaqa-ma04-2025-january-question-paper.pdf#page=2)，[配套 MS 第4–5页](/assets/pdf/fx-cg50/references/oxfordaqa-ma04-2025-january-mark-scheme.pdf#page=4)。其他题自拟。数值核验不代表计算器按键或学习效果已验证。
 
 </details>
+
+{% include exam_topic_practice.html %}

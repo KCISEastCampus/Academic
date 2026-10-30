@@ -895,3 +895,5 @@ $$R_1=80+P-R_5=60-\frac14P.$$
 页首精度约定适用于本页自拟题。January 2025 原卷要求计算器最终答案默认保留两位有效数字，题内另有规定时从其规定。做官方题应遵循实际试卷及题目指令。
 
 **学习路线：**[上一课：力、平衡与摩擦](/zh/alevel/a2-mathematics/mechanics/forces-equilibrium-and-friction/) · [力学目录](/zh/alevel/a2-mathematics/mechanics/) · [下一课：重心](/zh/alevel/a2-mathematics/mechanics/centres-of-mass/)。
+
+{% include exam_topic_practice.html %}

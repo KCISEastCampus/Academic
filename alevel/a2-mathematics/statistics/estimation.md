@@ -516,3 +516,5 @@ OxfordAQA 9660 v5.2, S2.5, printed p.26 / PDF p.25: [qualification](https://www.
 The sauce example is adapted from [January 2025 Q7(a), QP p.20](/assets/pdf/fx-cg50/references/oxfordaqa-ma04-2025-january-question-paper.pdf#page=20), checked against [final MS p.15](/assets/pdf/fx-cg50/references/oxfordaqa-ma04-2025-january-mark-scheme.pdf#page=15). Task 4 adapts [Q3, QP p.10](/assets/pdf/fx-cg50/references/oxfordaqa-ma04-2025-january-question-paper.pdf#page=10), checked against [MS p.9](/assets/pdf/fx-cg50/references/oxfordaqa-ma04-2025-january-mark-scheme.pdf#page=9). Rewritten tasks are adapted questions, not verbatim originals. Other tasks are constructed without official marks. Numerical checks do not verify calculator keystrokes or student learning.
 
 </details>
+
+{% include exam_topic_practice.html %}

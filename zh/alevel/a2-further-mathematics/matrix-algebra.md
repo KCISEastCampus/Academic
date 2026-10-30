@@ -752,3 +752,5 @@ U：绕 x 轴正向 90° 旋转，从 x 正半轴朝原点看为逆时针。V：
 范围依据 OxfordAQA International A-level Further Mathematics **9665** [大纲 Version 5.2，FP2.13，印刷 p.21／PDF p.20](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf#page=20)，以 FPP1.1 的矩阵运算为先修。本课覆盖坐标轴旋转、六个指定反射平面、放大、组合、三阶行列式与逆矩阵、体积倍率及不变点／线；特征值在线性方程组之后学习。
 
 制作改编题前已读 [June 2024 QP Q1 p.3、Q11(a) p.18](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-question-paper.pdf)及 [MS pp.4,16](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-mark-scheme.pdf)，以及 [January 2025 QP Q3 pp.6–7、Q13 pp.26–27](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-question-paper.pdf)及 [MS pp.6,20–21](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-mark-scheme.pdf)。改编题修改了矩阵、角度或参数；其他任务均为自拟题，不赋予官方分值。正确数值答案不能代替“show”所要求的证明，也不能跳过题目指定使用前问逆矩阵的要求。
+
+{% include exam_topic_practice.html %}

@@ -627,3 +627,5 @@ This lesson follows Section 3.9.1 and Required Practical 6 of the [OxfordAQA Phy
 Questions 6–8 are adapted from OxfordAQA PH03 January 2020 Question 2 and June 2024 Question 5. Official mark schemes were consulted before drafting. Numerical readings are supplied explicitly; adapted answers were independently checked rather than copied from textbook answers. The additional raw-record investigation is self-written with constructed data and has no official mark allocation. It practises data analysis, not completion of the physical practical. Later PH03 radioactivity and magnetic-field lessons are not part of this page.
 
 </details>
+
+{% include exam_topic_practice.html %}

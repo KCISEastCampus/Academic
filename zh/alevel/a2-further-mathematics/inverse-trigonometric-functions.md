@@ -923,3 +923,5 @@ y(0)&=\tan^{-1}0+C=\pi/6\quad\Longrightarrow\quad C=\pi/6.
 本课范围依据 [OxfordAQA Further Mathematics 9665 课程大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf) FP2.7。例题为教学材料。第 6–8 题保留所提供教材中的 AQA 原题与分值；本课解答在不定积分中使用 $+C$。
 
 **学习路径：**[上一课：极坐标](/zh/alevel/a2-further-mathematics/polar-coordinates/) · [下一课：弧长与旋转曲面面积](/zh/alevel/a2-further-mathematics/arc-length-and-surface-area/) · [返回课程](/zh/alevel/a2-further-mathematics/)。
+
+{% include exam_topic_practice.html %}

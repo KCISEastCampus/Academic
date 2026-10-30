@@ -767,3 +767,5 @@ $N(t)=640(1/2)^{t/3}$。令数量等于 $80$ 得 $(1/2)^{t/3}=1/8$，所以 $t=9
 范围：OxfordAQA 9660 MA03 P2.5，连接 P2.1 的反函数、复合与图像，[大纲 v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf)印刷 pp21、23。制作时实读 January 2025 MA03 Q10(b)(i) 的 [QP pp18–19](https://aqamat.alevelclouds.com/25_01_QP_P2.pdf) 与 [MS p15](https://aqamat.alevelclouds.com/25_01_MS_P2.pdf)，核对建立指数二次方程及明确舍去负的指数值；这不代表每个模型或对数任务都由该题核验，本页题目为独立核算的自拟题。原教材定位：第 4 章第 4.1–4.4 节及复习、印刷 pp50–57；本轮未重查原书。微分方程推导在后续链接页。
 
 </details>
+
+{% include exam_topic_practice.html %}

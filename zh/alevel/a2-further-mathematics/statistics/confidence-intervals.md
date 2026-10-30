@@ -352,3 +352,5 @@ $$
 本课比较一个总体均值与一个假设值。后续推断会改变模型与目标；两个独立总体或配对观察不能直接沿用本课的单样本标准误。
 
 [检验功效](/zh/alevel/a2-further-mathematics/statistics/test-power/) · [课程路线](/zh/alevel/a2-further-mathematics/statistics/)
+
+{% include exam_topic_practice.html %}

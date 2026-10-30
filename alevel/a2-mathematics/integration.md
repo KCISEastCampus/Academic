@@ -631,3 +631,5 @@ The January 2025 MA03 [question paper](https://aqamat.alevelclouds.com/25_01_QP_
 </details>
 
 **Learning path:** [Previous: Parametric Equations](/alevel/a2-mathematics/parametric-equations/) · [Next: Integration — Trigonometric Integrals and Applications](/alevel/a2-mathematics/integration-applications/).
+
+{% include exam_topic_practice.html %}

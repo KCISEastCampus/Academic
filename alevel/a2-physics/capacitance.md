@@ -451,3 +451,5 @@ Textbook support: Jim Breithaupt, *Oxford International AQA Examinations: Intern
 Questions 6–8 are adapted from OxfordAQA PH03 January 2020 Questions 23 and 22, and June 2024 Question 17. Official mark schemes were consulted before drafting. Answers, energy changes and connection conditions were checked independently rather than copied from textbook answer lists.
 
 </details>
+
+{% include exam_topic_practice.html %}

@@ -905,3 +905,5 @@ The January 2025 paper defaults to two significant figures for calculator answer
 - **Check the result:** signs, units, direction of motion, height above the chosen level and whether contact is maintained.
 
 **Learning path:** [Previous: Projectiles](/alevel/a2-mathematics/mechanics/projectiles/) · [Next: Uniform Circular Motion](/alevel/a2-mathematics/mechanics/uniform-circular-motion/) · [Mechanics topic index](/alevel/a2-mathematics/mechanics/).
+
+{% include exam_topic_practice.html %}

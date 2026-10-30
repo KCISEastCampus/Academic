@@ -730,3 +730,5 @@ $$4T_Q=6g\left(\frac83\right),\qquad\boxed{T_Q=39.2\,\mathrm N},\qquad\boxed{T_P
 页首精度约定适用于本页自拟题。January 2025 原卷要求计算器最终答案默认保留两位有效数字，题内另有规定时从其规定；Q6(b) 明确要求精确坐标。做官方题应逐项遵循原指令。
 
 **学习路线：**[上一课：力矩与刚体平衡](/zh/alevel/a2-mathematics/mechanics/moments-and-rigid-objects/) · [力学目录](/zh/alevel/a2-mathematics/mechanics/) · [下一课：牛顿运动定律](/zh/alevel/a2-mathematics/mechanics/newtons-laws-of-motion/)。
+
+{% include exam_topic_practice.html %}

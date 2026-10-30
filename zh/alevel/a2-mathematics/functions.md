@@ -614,3 +614,5 @@ $$h^{-1}(x)=1-\sqrt{x-1},\qquad x\geq1,\qquad h^{-1}(x)\leq1.$$
 </details>
 
 **学习路径：**[主题目录](/zh/alevel/a2-mathematics/) · [下一节：绝对值函数与变换](/zh/alevel/a2-mathematics/modulus-and-transformations/)。
+
+{% include exam_topic_practice.html %}

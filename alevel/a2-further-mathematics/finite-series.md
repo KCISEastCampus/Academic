@@ -612,3 +612,5 @@ The lesson follows FP2.5 of the [OxfordAQA Further Mathematics 9665 specificatio
 **After this lesson:** close the chapter solutions and attempt the course [mixed review](/alevel/a2-further-mathematics/#mixed-review). Return at the interval specified there for the [later review](/alevel/a2-further-mathematics/#later-review). Keep your independent work and check it by objective; revisit the linked prerequisite and retry any objective that required a hint.
 
 **Learning path:** [Previous: Proof by Induction](/alevel/a2-further-mathematics/proof-by-induction/) · [Back to the course](/alevel/a2-further-mathematics/) · [Next: Series and Limits](/alevel/a2-further-mathematics/series-and-limits/).
+
+{% include exam_topic_practice.html %}

@@ -279,3 +279,5 @@ $$
 ## 决定下一步 {#next-step}
 
 若困难是判断设计，对照[独立均值检验条件](/zh/alevel/a2-further-mathematics/statistics/comparing-means/#conditions)与[本页配对条件](#conditions)，再做设计判断题。若困难是分母或自由度，先回补[单总体t模型](/zh/alevel/a2-mathematics/statistics/mean-tests/#unknown-normal)，再做新重试。记下首次答案、用过的帮助、订正和稍后作答；读懂解答还不能证明自己能独立选法。
+
+{% include exam_topic_practice.html %}

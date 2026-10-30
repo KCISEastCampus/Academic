@@ -472,3 +472,4 @@ P(W=2\mid W\ge1)&=\frac{ca^2}{a}=a(1-a).
 </details>
 
 [上一课](/zh/alevel/as-further-mathematics/discrete-uniform/) · [课程路线](/zh/alevel/as-further-mathematics/#learning-route) · [下一课](/zh/alevel/as-further-mathematics/generating-functions/)
+{% include exam_topic_practice.html %}

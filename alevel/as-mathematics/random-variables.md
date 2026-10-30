@@ -308,3 +308,5 @@ Specification §3.2 S1.2; MA02 January 2025 Q6(c), Q8, MS pp13,15.
 Success means independently explaining the method and checking its conditions, not just reading a solution. Student learning outcomes have not been trialled.
 
 </details>
+
+{% include exam_topic_practice.html %}

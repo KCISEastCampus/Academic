@@ -1097,3 +1097,5 @@ The lesson follows FP2.6 of the [OxfordAQA Further Mathematics 9665 specificatio
 **After this lesson:** close the chapter solutions and attempt the course [mixed review](/alevel/a2-further-mathematics/#mixed-review). Return at the interval specified there for the [later review](/alevel/a2-further-mathematics/#later-review). Keep your independent work and check it by objective; revisit the linked prerequisite and retry any objective that required a hint.
 
 **Learning path:** [Previous: Finite Series](/alevel/a2-further-mathematics/finite-series/) · [Next: De Moivre's Theorem](/alevel/a2-further-mathematics/de-moivres-theorem/) · [Back to the course](/alevel/a2-further-mathematics/).
+
+{% include exam_topic_practice.html %}

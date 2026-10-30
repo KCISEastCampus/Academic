@@ -278,3 +278,5 @@ Do not reject. At 10%, there is insufficient evidence that the new instrument ha
 ## Decide your next step {#next-step}
 
 If the main difficulty was choosing the sampling design, compare [independent mean conditions](/alevel/a2-further-mathematics/statistics/comparing-means/#conditions) with [the paired conditions above](#conditions), then return to the design question. If the difficulty was the denominator or degrees of freedom, revisit [the single-mean t model](/alevel/a2-mathematics/statistics/mean-tests/#unknown-normal) before the fresh attempt. Keep a note of your first answer, any help, the correction and your later attempt; reading a solution is not yet evidence that you can choose the method independently.
+
+{% include exam_topic_practice.html %}

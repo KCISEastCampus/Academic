@@ -633,3 +633,5 @@ $$\begin{aligned}
 **学习路径：**[返回课程目录](/zh/alevel/a2-further-mathematics/) · [下一课：数学归纳法](/zh/alevel/a2-further-mathematics/proof-by-induction/)。
 
 **学后下一步：**完成本课[稍后任务](#later-review)，再到课程入口的[跨主题综合](/zh/alevel/a2-further-mathematics/#mixed-review)与[延后回顾](/zh/alevel/a2-further-mathematics/#later-review)，记录首次作答、提示使用和重试结果。
+
+{% include exam_topic_practice.html %}

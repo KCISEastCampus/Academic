@@ -385,3 +385,5 @@ $$
 好的点估计量仍只给出一个数；下一课把抽样波动转化为总体均值的区间。
 
 [置信区间](/zh/alevel/a2-further-mathematics/statistics/confidence-intervals/) · [课程路线](/zh/alevel/a2-further-mathematics/statistics/)
+
+{% include exam_topic_practice.html %}

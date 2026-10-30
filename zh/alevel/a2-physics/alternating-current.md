@@ -216,3 +216,5 @@ A sine wave appears twice as wide between matching peaks after a control is chan
 ## 来源与范围 {#sources}
 
 OxfordAQA 9630 PH03，[大纲正文 v4.4](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf) 3.10.5，印刷第 26 页/PDF 第 25 页，2026-10-21 核对。练习 1–2 改编 June 2024 QP Q6.3–6.5 第 19–22 页，配对 MS 第 17–18 页。已检查原相位/示波器图；本页明确重述尺寸和起始方向。示波器图、其他任务及例题均自拟。教材辅助参考 Jim Breithaupt 第 21.4 节印刷第 381 页。此处使用正弦有效值和纯电阻功率模型，不新增阻抗或功率因数计算章节。
+
+{% include exam_topic_practice.html %}

@@ -139,3 +139,5 @@ Mark separately: model choice, transformations/graphs, numerical checks, experim
 OxfordAQA 9630 PH02 / 3.4–3.5, with 3.1–3.3 applications. Tasks are self-written; numerical/schematic records are constructed. Checking criteria are not official marks. [Official specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf).
 
 [Previous](/alevel/as-physics/photons-and-wave-particle-duality/) · [Next](/alevel/as-physics/measurements-and-uncertainties/) · [Course](/alevel/as-physics/)
+
+{% include exam_topic_practice.html %}

@@ -492,3 +492,5 @@ z&=(30.8-30)/0.4=2.
 OxfordAQA Mathematics 9660 v5.2，S2.6，印刷第27页（PDF第26页）：[资格页](https://www.oxfordaqa.com/qualification/international-as-and-a-level-mathematics-9660/)与[大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf)。本课覆盖三类均值检验，包括大样本已知及未知方差的 z 近似；检验语言及精确计数检验见上一课。圈速例改编 [January 2025 Q3，QP 第10页](/assets/pdf/fx-cg50/references/oxfordaqa-ma04-2025-january-question-paper.pdf#page=10)，配对 [MS 第9页](/assets/pdf/fx-cg50/references/oxfordaqa-ma04-2025-january-mark-scheme.pdf#page=9)。包装例改编 [Q7(a)(b)，QP 第20–21页](/assets/pdf/fx-cg50/references/oxfordaqa-ma04-2025-january-question-paper.pdf#page=20)，配对 [MS 第15–16页](/assets/pdf/fx-cg50/references/oxfordaqa-ma04-2025-january-mark-scheme.pdf#page=15)。临界值片段是供学习使用的数学分位数近似，不是官方表格原件。其余题自拟；不声称计算器按键或学习效果已验证。
 
 </details>
+
+{% include exam_topic_practice.html %}

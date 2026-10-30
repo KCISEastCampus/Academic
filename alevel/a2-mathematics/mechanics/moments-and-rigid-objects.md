@@ -893,3 +893,5 @@ Scope: [OxfordAQA Mathematics 9660 specification v5.2](https://www.oxfordaqa.com
 The rounding convention at the start applies to this page's self-written tasks. In the January 2025 paper, calculator final answers default to two significant figures unless a question states otherwise. Follow the actual paper and question when attempting official work.
 
 **Learning path:** [Previous: Forces, Equilibrium and Friction](/alevel/a2-mathematics/mechanics/forces-equilibrium-and-friction/) · [Mechanics topic index](/alevel/a2-mathematics/mechanics/) · [Next: Centres of Mass](/alevel/a2-mathematics/mechanics/centres-of-mass/).
+
+{% include exam_topic_practice.html %}

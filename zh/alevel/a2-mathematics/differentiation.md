@@ -725,3 +725,5 @@ $$\frac{d}{dx}\sin^{-1}(x/2)=\frac1{\sqrt{4-x^2}},\qquad -2<x<2.$$
 
 
 **下一步：**能独立完成混合题后，进入[参数方程](/zh/alevel/a2-mathematics/parametric-equations/)，把这里的链式关系用于两个参数变化率。来源与范围：[9660 大纲 v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf)，P2.6；过程要求参考 January 2025 MA03 [QP](https://aqamat.alevelclouds.com/25_01_QP_P2.pdf) Q3、Q11 与配套 [MS](https://aqamat.alevelclouds.com/25_01_MS_P2.pdf)。本页题目仍为自拟题。
+
+{% include exam_topic_practice.html %}

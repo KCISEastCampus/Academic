@@ -85,13 +85,23 @@ A responsive educational website for KangChiao International School East Campus 
 	```
 4. Open `http://localhost:4000`.
 
-## Topic question finder pilot
+## Topic question finder integration
 
-The English and Chinese Polar Coordinates (FP2.3) and Moments (U1:3.2.2) lessons link to the question finder after practice. Their course entrances use the same component. `_data/exam_topics.json` is an exact copy of the approved `academic-topics.json`; keep its topic, course, unit and chapter IDs unchanged. The component hides when no complete mapping exists. Results include whole questions that can span chapters. Entry URLs set filters and lesson language without resetting the paper draft.
+Physics, Mathematics and Further Mathematics have 128 reviewed mappings across 127 existing lessons and their Chinese versions. `_data/exam_topics.json` is an exact copy of the exam library's canonical `academic-topics.json`. Keep existing IDs stable. Every mapping has one `unit`, a primary `chapter`, and optionally `chapters` containing all matching codes from that same unit. The component encodes those codes as a comma-separated `chapters` filter, lists all mappings for the current lesson in one block, and hides when no complete mapping exists. Results are whole questions that may span chapters; filter links preserve the existing paper draft. The two original pilot course entrance links remain.
 
-From the current `main` snapshot, run `bundle exec jekyll build`, then `node scripts/test-exam-topic-integration.js`. Pass the canonical JSON path as an optional final argument to also compare the files byte for byte; CI pins the approved source SHA-256. Preview with `bundle exec jekyll serve --host 127.0.0.1 --port 4000` and open `/alevel/a2-further-mathematics/polar-coordinates/` or `/alevel/as-physics/vectors-and-moments/#moments`, plus their `/zh/` counterparts. If this clone's `.bundle/config` points to an empty `vendor/bundle` but matching gems are already installed globally, set `$env:BUNDLE_IGNORE_CONFIG='true'` for that PowerShell session first.
+The [mapping evidence](docs/agents/exam-topics-mapping-2026-10-31.md) records scope, real dist IDs and skipped pages. Offline checks use only Node and the checked-out source:
 
-This pilot adds navigation only; lesson text, prompts, anchors, sources, reading layout and closed feedback are retained. Local build and browser checks do not establish student learning outcomes or verify the external composer's draft persistence end to end.
+```powershell
+node scripts/test-exam-topic-integration.js --source-only
+# Also compare canonical bytes and validate every ID against the actual exam dist:
+node scripts/test-exam-topic-integration.js --source-only --canonical="C:/path/to/exam-root/academic-topics.json" --exam-root="C:/path/to/exam-root"
+```
+
+For full verification, run `bundle exec jekyll build --trace`, then `node scripts/test-exam-topic-integration.js` (the optional canonical/exam-root arguments also work here). This checks generated lesson URLs, placement after all feedback, language, whole-question scope, draft preservation, multi-chapter entries and real Ruby Liquid fixtures for missing/partial mappings. CI runs both source and built checks; the approved canonical bytes are pinned with SHA-256. The JSON file uses LF to preserve byte equality across checkouts.
+
+Preview with `bundle exec jekyll serve --host 127.0.0.1 --port 4000`. Check desktop/mobile and light/dark at the original two pilots and their `/zh/` counterparts, plus a multi-chapter page such as `/alevel/as-further-mathematics/complex-numbers-and-roots/` and an FPSM1 page such as `/alevel/as-further-mathematics/bayes/`. If the clone's `.bundle/config` points to an empty `vendor/bundle` but matching gems are installed globally, set `$env:BUNDLE_IGNORE_CONFIG='true'` in that PowerShell session first. The local installed Ruby is `D:/Ruby34-x64/bin`; no dependency copy or configuration edit is required.
+
+The expansion branch starts at `73bb9a1`. This adds navigation only; lesson text, prompts, anchors, sources, reading layout and closed feedback are retained. Night-time source checks do not claim a fresh Jekyll build or browser verification: those are deferred when the installed runtime needs elevation, and the old `_site` is not acceptance evidence. Student learning outcomes and the external composer's draft persistence require separate evidence.
 
 ## Chemistry course content
 

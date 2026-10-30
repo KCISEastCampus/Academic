@@ -99,3 +99,5 @@ C = arcsin(1.40/1.60) = 61.0°. Incidence 60.0° is below C, so transmission occ
 OxfordAQA 9630 3.5.8. Tasks are self-written; numerical/schematic records are constructed. Checking criteria are not official marks. [Official specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf).
 
 [Previous](/alevel/as-physics/interference-and-diffraction/) · [Next](/alevel/as-physics/photons-and-wave-particle-duality/) · [Course](/alevel/as-physics/)
+
+{% include exam_topic_practice.html %}

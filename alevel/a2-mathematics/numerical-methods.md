@@ -946,3 +946,5 @@ Scope: OxfordAQA 9660 / MA03 P2.9. Working has been checked against January 2025
 **Next step:** after the next topic, return to [later review](#later-review) and attempt the mixed tasks with notes closed.
 
 **Learning path:** [Previous: Differential Equations](/alevel/a2-mathematics/differential-equations/) · [Next: Vectors](/alevel/a2-mathematics/vectors/).
+
+{% include exam_topic_practice.html %}

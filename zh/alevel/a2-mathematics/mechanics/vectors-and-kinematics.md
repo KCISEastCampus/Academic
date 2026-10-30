@@ -780,3 +780,5 @@ $$\text{distance travelled}=\int_0^2 1\,\mathrm dt=2\,\mathrm m.$$
 **你应能：**处理二维与三维运动、使用任意给定时刻的条件、区分速度与速率，并求轨迹的直角坐标方程。
 
 **学习路线：**[上一课：数学建模](/zh/alevel/a2-mathematics/mechanics/mathematical-modelling/) · [力学目录](/zh/alevel/a2-mathematics/mechanics/) · [下一课：力、平衡与摩擦](/zh/alevel/a2-mathematics/mechanics/forces-equilibrium-and-friction/)。
+
+{% include exam_topic_practice.html %}

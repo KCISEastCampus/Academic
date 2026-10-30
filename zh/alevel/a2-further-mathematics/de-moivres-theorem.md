@@ -1213,3 +1213,5 @@ A&=\frac12\int_0^{2\pi/3}2^2\,\mathrm d\theta
 **学习路径：**[上一课：级数与极限](/zh/alevel/a2-further-mathematics/series-and-limits/) · [下一课：极坐标](/zh/alevel/a2-further-mathematics/polar-coordinates/) · [返回课程](/zh/alevel/a2-further-mathematics/)。
 
 **学后下一步：**完成本课[稍后任务](#later-review)，再到课程入口的[跨主题综合](/zh/alevel/a2-further-mathematics/#mixed-review)与[延后回顾](/zh/alevel/a2-further-mathematics/#later-review)，记录首次作答、提示使用和重试结果。
+
+{% include exam_topic_practice.html %}

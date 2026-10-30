@@ -678,3 +678,5 @@ The classroom examples, practice, retries and review are self-written teaching m
 </details>
 
 **Learning path:** [Previous: Modulus Functions and Transformations](/alevel/a2-mathematics/modulus-and-transformations/) · [Next: Partial Fractions](/alevel/a2-mathematics/partial-fractions/).
+
+{% include exam_topic_practice.html %}

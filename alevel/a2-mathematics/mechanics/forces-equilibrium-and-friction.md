@@ -831,3 +831,5 @@ Textbook alignment: Chapter 11, Sections 11.1–11.3 (printed pp.158–170, befo
 **You should be able to:** find resultants, solve concurrent-force equilibrium problems, distinguish actual friction from its limiting value and check both possible slipping directions.
 
 **Learning path:** [Previous: Vectors and Kinematics](/alevel/a2-mathematics/mechanics/vectors-and-kinematics/) · [Next: Moments and Rigid Objects in Equilibrium](/alevel/a2-mathematics/mechanics/moments-and-rigid-objects/) · [Mechanics topic index](/alevel/a2-mathematics/mechanics/).
+
+{% include exam_topic_practice.html %}

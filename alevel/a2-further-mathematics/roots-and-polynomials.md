@@ -629,3 +629,5 @@ The lesson follows FP2.1 of the [OxfordAQA Further Mathematics 9665 specificatio
 **Learning path:** [Back to the course](/alevel/a2-further-mathematics/) · [Next: Proof by Induction](/alevel/a2-further-mathematics/proof-by-induction/).
 
 **Next steps:** complete this lesson's [later task](#later-review), then attempt the course [mixed review](/alevel/a2-further-mathematics/#mixed-review) and [delayed review](/alevel/a2-further-mathematics/#later-review). Record your first attempt, hints used and retry result.
+
+{% include exam_topic_practice.html %}

@@ -378,3 +378,5 @@ FM01 样卷身份：QP 正文为 **Specimen 2018 Morning**，文件名含 2019/v
 </details>
 
 [课程路线](/zh/alevel/as-further-mathematics/#learning-route) · [下一课](/zh/alevel/as-further-mathematics/conics-and-loci/)
+
+{% include exam_topic_practice.html %}

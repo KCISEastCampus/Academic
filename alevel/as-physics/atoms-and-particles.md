@@ -109,3 +109,5 @@ Positron q/m = +1.76 × 10¹¹ C/kg. The helium ion has 3 electrons and q/m = �
 OxfordAQA 9630 §3.3.1–3.3.2. Tasks are self-written; numerical/schematic records are constructed. Checking criteria are not official marks. [Official specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf).
 
 [Previous](/alevel/as-physics/materials-and-young-modulus/) · [Next](/alevel/as-physics/radiation-and-safety/) · [Course](/alevel/as-physics/)
+
+{% include exam_topic_practice.html %}

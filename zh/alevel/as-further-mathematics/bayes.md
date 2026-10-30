@@ -359,3 +359,5 @@ $$
 - FM02 June 2024 Q6; QP p.13, MS p.12. [FM02 June 2024 QP](/assets/pdf/fx-cg50/references/oxfordaqa-fm02-2024-june-question-paper.pdf) · [Final MS](/assets/pdf/fx-cg50/references/oxfordaqa-fm02-2024-june-mark-scheme.pdf).
 
 [上一课](/zh/alevel/as-further-mathematics/euler-method/) · [课程路线](/zh/alevel/as-further-mathematics/#learning-route) · [下一课](/zh/alevel/as-further-mathematics/discrete-uniform/)
+
+{% include exam_topic_practice.html %}

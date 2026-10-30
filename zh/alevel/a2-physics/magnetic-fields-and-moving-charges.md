@@ -405,3 +405,5 @@ $$\frac{v_B}{v_A}=\frac1{\sqrt2},\qquad \frac{r_B}{r_A}=\sqrt2,\qquad \frac{T_B}
 练习 5 改编自 OxfordAQA 9630 PH03 Specimen 2019/V2.0 Q4.2–4.5，已配对阅读 QP 第 10–11 页和 MS 第 8–9 页。题干和几何条件在此重新组织、明确，配图为原创示意。不能用文件名覆盖正文的 Specimen 2019/V2.0 身份。
 
 教材辅助参考：Jim Breithaupt，*Oxford International AQA Examinations: International A Level Physics*，第 20 章 20.1–20.3，印刷第 357–366 页。天平活动为原创构造数据，借鉴 June 2024 PH03 Q16 的导线/磁体反作用情境（QP 第 31 页/MS 第 21 页），重新指定电流和读数方向。它不是研究变压器效率的 RP7，也不代表实际实验已完成。答案、方向和能量关系均独立核验。
+
+{% include exam_topic_practice.html %}

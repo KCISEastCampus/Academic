@@ -404,3 +404,5 @@ $3>2.347878$，在右尾拒绝；5% 水平下有足够证据支持 A 的总体�
 接下来区分：总体波动的主张、整个分布的拟合、两个分类变量的关联。始终说明抽样单位、条件及情境结论。
 
 [拟合优度](/zh/alevel/a2-further-mathematics/statistics/goodness-of-fit/) · [课程路线](/zh/alevel/a2-further-mathematics/statistics/)
+
+{% include exam_topic_practice.html %}

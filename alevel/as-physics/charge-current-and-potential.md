@@ -81,3 +81,5 @@ $I=2.0\,\mathrm{A}$, $V=3.0\,\mathrm{V}$, $R=1.5\,\Omega$. Source current equals
 OxfordAQA 9630 §3.4.1. Tasks are self-written; numerical/schematic records are constructed. Checking criteria are not official marks. [Official specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf).
 
 [Previous](/alevel/as-physics/unit-1-review/) · [Next](/alevel/as-physics/resistance-and-resistivity/) · [Course](/alevel/as-physics/)
+
+{% include exam_topic_practice.html %}

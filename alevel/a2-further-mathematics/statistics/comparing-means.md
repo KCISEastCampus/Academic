@@ -223,3 +223,5 @@ On a later visit, try [the fresh investigations](../#later-c) and [the method-se
 ## Next step {#next-step}
 
 [Paired observations](/alevel/a2-further-mathematics/statistics/paired-tests/) · [Course route](/alevel/a2-further-mathematics/statistics/)
+
+{% include exam_topic_practice.html %}

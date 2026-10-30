@@ -489,3 +489,5 @@ This lesson covers **FM1.1**, constant velocity in two dimensions, within **9665
 </details>
 
 [Previous](/alevel/as-further-mathematics/linear-combinations/) · [Course route](/alevel/as-further-mathematics/#learning-route) · [Next](/alevel/as-further-mathematics/dimensions/)
+
+{% include exam_topic_practice.html %}

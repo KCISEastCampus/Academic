@@ -471,3 +471,5 @@ The current 9665 qualification page links to the specification below. For this r
 </details>
 
 [Previous](/alevel/as-further-mathematics/discrete-uniform/) · [Course route](/alevel/as-further-mathematics/#learning-route) · [Next](/alevel/as-further-mathematics/generating-functions/)
+
+{% include exam_topic_practice.html %}

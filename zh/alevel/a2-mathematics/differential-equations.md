@@ -618,3 +618,5 @@ $T=35$ 时指数因子为 $1/4$，因此 $t=4$ 分钟。对所有 $t\ge0$，$20<
 
 
 **下一步：**能从文字独立列式、用条件求解并检查范围后，进入[数值方法](/zh/alevel/a2-mathematics/numerical-methods/)，比较解析结果与带精度证据的近似。之后回到[本页回顾](#later-review)。范围依据：[9660 大纲 v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf)，P2.8（及增长衰减 P2.5）；实读 January 2025 MA03 [QP](https://aqamat.alevelclouds.com/25_01_QP_P2.pdf) Q12(b) 和配套 [MS](https://aqamat.alevelclouds.com/25_01_MS_P2.pdf)，保留分离、两个积分、条件及解出变量的过程要求。所有情境数据与题目均为自拟。
+
+{% include exam_topic_practice.html %}

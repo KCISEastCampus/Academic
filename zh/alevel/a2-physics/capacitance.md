@@ -453,3 +453,5 @@ An air-gap capacitor initially stores charge $Q_0$ and has field strength $E_0$.
 练习 6–8 改编自 PH03 January 2020 Q23、Q22 和 June 2024 Q17。英文原页说明编写时参考过官方评分标准；答案、能量变化和连接条件经过独立检查，未直接照抄教材答案。
 
 </details>
+
+{% include exam_topic_practice.html %}

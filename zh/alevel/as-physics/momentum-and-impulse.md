@@ -227,3 +227,5 @@ A 2.0 kg trolley moves right at 3.0 m/s. A steady 2.0 N horizontal resistance br
 已查阅 [PH01 specimen 试卷](https://www.oxfordaqa.com/wp-content/uploads/2026/07/9630-PH01-international-as-physics-specimen-paper-2016-v2.pdf)（正文标 Specimen 2018、V1.1）的 Q06.3–06.5 及[配套评分标准](https://www.oxfordaqa.com/wp-content/uploads/2026/07/9630-PH01-international-as-physics-mark-scheme-2016-v2.pdf)，核对动量方向、撞击力与接触时间的论证。本课使用不同的自拟题，不转载官方题目或分值。反弹示范在区分接触力和合力时明确保留了重力。
 
 [上一课：牛顿定律](/zh/alevel/as-physics/newtons-laws/) · [AS 物理](/zh/alevel/as-physics/) · [下一课：功、能与功率](/zh/alevel/as-physics/work-energy-power/) · [Unit 1 综合复习](/zh/alevel/as-physics/unit-1-review/)
+
+{% include exam_topic_practice.html %}

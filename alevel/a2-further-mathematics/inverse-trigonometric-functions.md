@@ -921,3 +921,5 @@ Scope check on 2026-10-23: the current 9665 qualification page led to specificat
 The lesson follows FP2.7 of the [OxfordAQA Further Mathematics 9665 specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf). Worked examples are teaching material. Questions 6–8 retain the AQA questions and marks from the supplied textbook; our solutions use $+C$ for indefinite integrals.
 
 **Learning path:** [Previous: Polar Coordinates](/alevel/a2-further-mathematics/polar-coordinates/) · [Next: Arc Length and Surface Area](/alevel/a2-further-mathematics/arc-length-and-surface-area/) · [Back to the course](/alevel/a2-further-mathematics/).
+
+{% include exam_topic_practice.html %}

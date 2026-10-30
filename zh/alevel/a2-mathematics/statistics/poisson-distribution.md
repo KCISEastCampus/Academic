@@ -642,3 +642,5 @@ OxfordAQA Mathematics 9660 v5.2，S2.1，印刷第 25 页（PDF 第 24 页）：
 原题 Q4(b)(i)(ii)：[MA04 January 2025 试卷，第 12–13 页](/assets/pdf/fx-cg50/references/oxfordaqa-ma04-2025-january-question-paper.pdf#page=12)；实际配对阅读[最终评分标准，第 10 页](/assets/pdf/fx-cg50/references/oxfordaqa-ma04-2025-january-mark-scheme.pdf#page=10)。保留英文题干、数据与要求，解答补充解释。另实际阅读 Q1(c)（试卷第 3 页、评分标准第 4–5 页），核对近似条件和均值。其余示范与练习均自拟，无官方分值；未验证计算器按键流程或学生学习效果。
 
 </details>
+
+{% include exam_topic_practice.html %}

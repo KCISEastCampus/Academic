@@ -726,3 +726,5 @@ Scope: [OxfordAQA Mathematics 9660 specification v5.2](https://www.oxfordaqa.com
 The rounding convention at the start applies to this page's self-written tasks. The January 2025 paper defaults to two significant figures for calculator final answers unless stated otherwise; Q6(b) explicitly asks for exact coordinates. Follow each original instruction when attempting official questions.
 
 **Learning path:** [Previous: Moments and Rigid Objects in Equilibrium](/alevel/a2-mathematics/mechanics/moments-and-rigid-objects/) · [Mechanics topic index](/alevel/a2-mathematics/mechanics/) · [Next: Newton's Laws of Motion](/alevel/a2-mathematics/mechanics/newtons-laws-of-motion/).
+
+{% include exam_topic_practice.html %}

@@ -225,3 +225,5 @@ Scope: OxfordAQA International AS Physics 9630, PH01 §3.2.6, one-dimensional mo
 The [PH01 specimen paper](https://www.oxfordaqa.com/wp-content/uploads/2026/07/9630-PH01-international-as-physics-specimen-paper-2016-v2.pdf), body labelled Specimen 2018, V1.1, Q06.3–06.5, and its [paired mark scheme](https://www.oxfordaqa.com/wp-content/uploads/2026/07/9630-PH01-international-as-physics-mark-scheme-2016-v2.pdf) were consulted for momentum direction, impact force and contact-time reasoning. These lessons use different, self-written tasks; no official question or mark allocation is reproduced. The bounce example explicitly retains weight when distinguishing contact force from resultant.
 
 [Previous: Newton’s Laws](/alevel/as-physics/newtons-laws/) · [AS Physics](/alevel/as-physics/) · [Next: Work, Energy and Power](/alevel/as-physics/work-energy-power/) · [Unit 1 mixed review](/alevel/as-physics/unit-1-review/)
+
+{% include exam_topic_practice.html %}

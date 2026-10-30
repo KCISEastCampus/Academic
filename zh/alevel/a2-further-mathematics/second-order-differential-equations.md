@@ -948,3 +948,5 @@ y&=\boxed{(1+x+3x^2)e^{-x}}.
 [OxfordAQA Specimen 2018, Q7, QP PDF p. 12](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-specimen-paper-2019-v3.pdf#page=12); [MS Q7, PDF p. 10](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-mark-scheme-2016-v1.pdf#page=10). 本轮重新读取对应题干及评分材料（2026-10-23，PDF 文本）；只借用已注明的方法，不把改编题或新增自拟任务称为原题。
 
 PI 学习更新，2026-10-28：起步形式表据教师提供的图片重新整理（未给书名或版本），补充 CF 重复检查与 FP2.11 多项式范围。本轮重新阅读并查看相关配对 QP／MS 原页：Specimen 2018 Q7（QP pp.12–13、MS p.10）、June 2024 Q8（QP／MS p.12）、January 2025 Q12（QP p.24、MS p.19）。这些材料用于安排训练重点，不代表完整考频统计。新增短题均为自拟，无官方分值。
+
+{% include exam_topic_practice.html %}

@@ -587,3 +587,5 @@ Scope: 9660 MA03 P2.4 identities and P2.7 applications; area is prerequisite rev
 [9660 specification v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf) · [January 2025 QP](https://aqamat.alevelclouds.com/25_01_QP_P2.pdf) / [MS](https://aqamat.alevelclouds.com/25_01_MS_P2.pdf)
 
 </details>
+
+{% include exam_topic_practice.html %}

@@ -403,3 +403,5 @@ If you used the raw variance ratio for an SD claim, revisit [the nonunit ratio](
 Next distinguish a claim about population spread from a claim about a whole distribution or two categorical variables. Keep the sampled units, assumptions and contextual conclusion explicit.
 
 [Goodness of fit](/alevel/a2-further-mathematics/statistics/goodness-of-fit/) · [Course route](/alevel/a2-further-mathematics/statistics/)
+
+{% include exam_topic_practice.html %}

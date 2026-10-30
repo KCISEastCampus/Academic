@@ -817,3 +817,5 @@ Solve $\cos2x=\cos x$ for $0\le x\le2\pi$. Explain why no solution is lost or ad
 范围：OxfordAQA 9660 MA03 P2.4，连接 P2.1 的反函数/图像和 P2.3 的参数，[大纲 v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf)印刷 pp21–22。制作时实读 January 2025 MA03 Q7(a)(i)–(ii)、Q7(b) 的 [QP pp14–15](https://aqamat.alevelclouds.com/25_01_QP_P2.pdf) 与 [MS p12](https://aqamat.alevelclouds.com/25_01_MS_P2.pdf)，核对系数符号、区间分支与倒数函数二次式。本页题目仍均为自拟题。原教材定位：第 3 章第 3.1–3.6 节、印刷 pp32–49；本轮未重查原书。不要求反三角函数加法公式；积分应用连到后续积分页。
 
 </details>
+
+{% include exam_topic_practice.html %}

@@ -177,3 +177,5 @@ P、Q 相位差 270° = 3π/2 rad，模 360° 与 −90° 等价；交换有序�
 OxfordAQA 9630 3.5.3–3.5.5. 题目自拟，数值／示意数据为构造，核查点不是官方评分标准。 [官方大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf).
 
 [上一课](/zh/alevel/as-physics/oscillations-and-resonance/) · [下一课](/zh/alevel/as-physics/interference-and-diffraction/) · [课程](/zh/alevel/as-physics/)
+
+{% include exam_topic_practice.html %}

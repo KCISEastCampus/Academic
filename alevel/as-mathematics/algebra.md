@@ -687,3 +687,5 @@ OxfordAQA 9660 v5.2, §3.1 P1.1. For exact forms, MA01 January 2025 Q1(a)(b) and
 Success means independently explaining the method and checking its conditions, not just reading a solution. Student learning outcomes have not been trialled.
 
 </details>
+
+{% include exam_topic_practice.html %}

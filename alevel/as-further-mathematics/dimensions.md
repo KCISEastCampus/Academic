@@ -310,3 +310,5 @@ OxfordAQA 9665 v5.2, FM1.2; no migration to 9765. The paired official material w
 - FM02 June 2024 Q10(a)(b): [QP p.19](/assets/pdf/fx-cg50/references/oxfordaqa-fm02-2024-june-question-paper.pdf#page=19), [Final MS p.17](/assets/pdf/fx-cg50/references/oxfordaqa-fm02-2024-june-mark-scheme.pdf#page=17).
 
 [Previous](/alevel/as-further-mathematics/relative-motion/) · [Course route](/alevel/as-further-mathematics/#learning-route) · [Next](/alevel/as-further-mathematics/impulse-and-collisions/)
+
+{% include exam_topic_practice.html %}

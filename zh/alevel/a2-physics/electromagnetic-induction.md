@@ -266,3 +266,5 @@ A magnet falls through a conducting nonmagnetic tube more slowly than through a 
 ## 来源与范围 {#sources}
 
 范围：OxfordAQA 9630 PH03，[大纲正文 v4.4](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf) 3.10.3–3.10.4，印刷第 25–26 页/PDF 第 24–25 页，2026-10-21 核对。January 2020 改编题配对读取 QP 第 17–20/40/42 页与 MS 第 8–9 页；Q34 为图像相位转换提供直接依据。例题 1 配对读取 June 2024 QP 第 19 页与 MS 第 16 页。Jim Breithaupt 第 21.2–21.3 节印刷第 374/378 页辅助说明，其余题目、数据和图示为自拟材料。图像面积是定律的教学推论。本页不是另一个编号必做实验，也不代表完成了实物操作。
+
+{% include exam_topic_practice.html %}

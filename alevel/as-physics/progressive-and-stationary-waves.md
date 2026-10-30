@@ -175,3 +175,5 @@ P–Q phase difference = 270° = 3π/2 rad, equivalent to −90° modulo 360° (
 OxfordAQA 9630 3.5.3–3.5.5. Tasks are self-written; numerical/schematic records are constructed. Checking criteria are not official marks. [Official specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf).
 
 [Previous](/alevel/as-physics/oscillations-and-resonance/) · [Next](/alevel/as-physics/interference-and-diffraction/) · [Course](/alevel/as-physics/)
+
+{% include exam_topic_practice.html %}

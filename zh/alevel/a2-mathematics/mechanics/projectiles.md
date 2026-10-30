@@ -784,3 +784,5 @@ $$\mathbf v=5\sqrt3\mathbf i-15\mathbf j\,\mathrm{m\,s^{-1}},\qquad
 范围：[OxfordAQA 9660 specification v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf#page=28)，M2.5，printed 29 / PDF 28（1-based）；整个 M2 为 printed 27–30 / PDF 26–29。教材第13章 §13.3，printed 207–215。实际配对读过 MA05 January 2025 **Q4**（[QP8–9](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-question-paper.pdf#page=8)、[MS9–10](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-mark-scheme.pdf#page=9)）及 **Q7**（[QP14–15](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-question-paper.pdf#page=14)、[MS13–14, Version 1.0 Final](/assets/pdf/fx-cg50/references/oxfordaqa-ma05-2025-january-mark-scheme.pdf#page=13)）。Q4 要消去同一时间并处理两次过高度；Q7 先离开光滑屋顶再飞向水平地面，(a) 指定能量法。所有本课任务仍为 Self-written / 自拟题，无官方分值；不扩入斜面落点或含阻力抛体。真题精度依原题，January 2025 默认2 s.f.，另有要求除外。
 
 **学习路线：**[上一课：牛顿运动定律](/zh/alevel/a2-mathematics/mechanics/newtons-laws-of-motion/) · [下一课：功与能](/zh/alevel/a2-mathematics/mechanics/work-and-energy/) · [力学单元入口](/zh/alevel/a2-mathematics/mechanics/)。
+
+{% include exam_topic_practice.html %}

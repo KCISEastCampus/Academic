@@ -833,3 +833,5 @@ $$U+f-40=0,\qquad f=40-U.$$
 **你应能：**求合力、解决共点力平衡、区分实际摩擦与极限值，并检查两种滑动趋势。
 
 **学习路线：**[上一课：向量与运动学](/zh/alevel/a2-mathematics/mechanics/vectors-and-kinematics/) · [下一课：力矩与刚体平衡](/zh/alevel/a2-mathematics/mechanics/moments-and-rigid-objects/) · [力学目录](/zh/alevel/a2-mathematics/mechanics/)。
+
+{% include exam_topic_practice.html %}

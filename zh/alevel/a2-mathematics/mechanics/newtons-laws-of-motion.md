@@ -876,3 +876,5 @@ $$\lvert\mathbf F(0)\rvert=\sqrt{(-2)^2+4^2}=\sqrt{20}\,\mathrm N\approx4.47\,\m
 页首精度约定适用于本页自拟题。January 2025 原卷要求计算器最终答案默认保留两位有效数字，题内另有规定时从其规定；Q9 明确要求三位有效数字。做官方题应遵循原卷及题目指令。
 
 **学习路线：**[上一课：重心](/zh/alevel/a2-mathematics/mechanics/centres-of-mass/) · [力学目录](/zh/alevel/a2-mathematics/mechanics/) · [下一课：抛体运动](/zh/alevel/a2-mathematics/mechanics/projectiles/)。
+
+{% include exam_topic_practice.html %}

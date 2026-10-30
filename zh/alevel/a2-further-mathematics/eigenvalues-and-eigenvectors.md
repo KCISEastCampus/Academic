@@ -578,3 +578,5 @@ $$K\begin{pmatrix}t\\t\\1\end{pmatrix}=\begin{pmatrix}t\\t\\2\end{pmatrix}.$$
 范围依据 OxfordAQA International A-level Further Mathematics **9665** [大纲 Version 5.2，FP2.13，印刷 p.21／PDF p.20](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf#page=20)：二阶、三阶矩阵的特征方程、特征值与特征向量，仅考虑实特征值，包括重复值。
 
 参数例题改编自 [June 2024 FM03 Q11(b)，QP pp.20–21](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-question-paper.pdf)的任务结构，已对照 [MS pp.16–17](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-mark-scheme.pdf)：先推导特征方程，再把根系数与条件相连，求特征值，最后求最小特征值对应的特征向量。本课已改矩阵和根条件，不是官方原题，也没有官方分值。其他例练均为自拟题。重复根任务依据大纲明确范围补足，不假定这一道正式题覆盖全部情况。
+
+{% include exam_topic_practice.html %}

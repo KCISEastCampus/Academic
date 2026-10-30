@@ -358,3 +358,5 @@ Retry: the car is braking while still moving right. Give the road-friction direc
 范围：OxfordAQA International AS Physics 9630，PH01 的 3.2.4，包含匀强重力场中的独立分运动，以及摩擦、升力、阻力、终端速率和车辆极限速率的定性理解。足球任务改编自 PH01 June 2024 Q08.1–08.6，已核对配套评分标准。受力模型任务通过自拟情境扩展相关概念，其他任务与记录均为自拟，不套用虚构官方分值。范围依据[官方大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf)。
 
 [上一课：直线运动](/zh/alevel/as-physics/straight-line-motion/) · [下一课：牛顿定律](/zh/alevel/as-physics/newtons-laws/) · [返回 AS 物理](/zh/alevel/as-physics/)。
+
+{% include exam_topic_practice.html %}

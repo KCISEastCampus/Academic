@@ -644,3 +644,5 @@ Scope follows 9665 v5.2. The paired questions and mark schemes below informed th
 - FM02 June 2024 Q7; QP pp.14–15, MS p.13. [FM02 June 2024 QP](/assets/pdf/fx-cg50/references/oxfordaqa-fm02-2024-june-question-paper.pdf) · [Final MS](/assets/pdf/fx-cg50/references/oxfordaqa-fm02-2024-june-mark-scheme.pdf).
 
 [Previous](/alevel/as-further-mathematics/geometric-distribution/) · [Course route](/alevel/as-further-mathematics/#learning-route) · [Next](/alevel/as-further-mathematics/linear-combinations/)
+
+{% include exam_topic_practice.html %}

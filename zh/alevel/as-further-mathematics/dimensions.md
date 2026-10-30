@@ -331,3 +331,5 @@ $$\begin{aligned}{}[A]&=MLT^{-3},\quad\text{SI}:\ \mathrm{N\,s^{-1}},\\{}[B]&=ML
 - FM02 June 2024 Q10(a)(b): [QP p.19](/assets/pdf/fx-cg50/references/oxfordaqa-fm02-2024-june-question-paper.pdf#page=19), [Final MS p.17](/assets/pdf/fx-cg50/references/oxfordaqa-fm02-2024-june-mark-scheme.pdf#page=17).
 
 [上一课](/zh/alevel/as-further-mathematics/relative-motion/) · [课程路线](/zh/alevel/as-further-mathematics/#learning-route) · [下一课](/zh/alevel/as-further-mathematics/impulse-and-collisions/)
+
+{% include exam_topic_practice.html %}

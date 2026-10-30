@@ -141,3 +141,5 @@ Choose one of RP3, RP4 or RP5. Write an English explanation connecting the raw r
 OxfordAQA 9630 PH02 / 3.4–3.5, with 3.1–3.3 applications. 题目自拟，数值／示意数据为构造，核查点不是官方评分标准。 [官方大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf).
 
 [上一课](/zh/alevel/as-physics/photons-and-wave-particle-duality/) · [下一课](/zh/alevel/as-physics/measurements-and-uncertainties/) · [课程](/zh/alevel/as-physics/)
+
+{% include exam_topic_practice.html %}

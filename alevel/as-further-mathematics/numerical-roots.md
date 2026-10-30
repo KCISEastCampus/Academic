@@ -363,3 +363,5 @@ Scope follows 9665 v5.2. The paired questions and mark schemes below informed th
 </details>
 
 [Previous](/alevel/as-further-mathematics/linearisation/) · [Course route](/alevel/as-further-mathematics/#learning-route) · [Next](/alevel/as-further-mathematics/euler-method/)
+
+{% include exam_topic_practice.html %}

@@ -112,3 +112,5 @@ Useful power = 30 W and efficiency = 50%. Doubling speed doubles useful power to
 OxfordAQA 9630 §3.2.7–3.2.8. Tasks are self-written; numerical/schematic records are constructed. Checking criteria are not official marks. [Official specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf).
 
 [Previous](/alevel/as-physics/momentum-and-impulse/) · [Next](/alevel/as-physics/materials-and-young-modulus/) · [Course](/alevel/as-physics/)
+
+{% include exam_topic_practice.html %}

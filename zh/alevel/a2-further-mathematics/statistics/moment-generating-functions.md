@@ -396,3 +396,5 @@ OxfordAQA 9665 v5.2，FS2.1。本样章包括有限分布起步、矩、仿射�
 制作前阅读了 *International A Level Further Mathematics with Statistics*（Oxford，2017）第29章印刷370–374页，以及 January 2025 FM04 Q8 和对应评分标准17–18页。June 2025 Q2/MS5–6页用于规划后续积分路线。本页题目与解答全部自拟，不附官方分值。资格与范围见[当前资格页](https://www.oxfordaqa.com/qualification/international-as-and-a-level-further-mathematics-9665/)和[大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf)。
 
 </details>
+
+{% include exam_topic_practice.html %}

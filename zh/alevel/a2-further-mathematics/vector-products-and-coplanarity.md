@@ -418,3 +418,5 @@ $$\begin{aligned}
 - [January 2025 FM03 QP，Q1 第 2–3 页](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-question-paper.pdf#page=2)与[配套 MS 第 4 页](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-mark-scheme.pdf#page=4)：上文以相邻边说明替代原图的改编例题。两个正负参数分支均独立重算。
 
 尚未核对公式册中的具体收录项目，因此本课解释推导，不另设必须背诵的公式清单。解答与自拟题由作者编写，来源分值仅属于未改动的官方原题。未宣称核验过计算器按键或课堂学习效果。
+
+{% include exam_topic_practice.html %}

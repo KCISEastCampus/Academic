@@ -561,3 +561,5 @@ Textbook support: Jim Breithaupt, *Oxford International AQA Examinations: Intern
 Questions 6–8 are adapted from OxfordAQA PH03 January 2020 Question 16 and June 2024 Questions 4 and 18. The official mark schemes were consulted before drafting. The oil-drop geometry and assumptions are stated explicitly instead of relying on the paper's diagram. All numerical answers and directions were derived and checked independently rather than copied from textbook answer lists.
 
 </details>
+
+{% include exam_topic_practice.html %}

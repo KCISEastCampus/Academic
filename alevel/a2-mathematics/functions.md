@@ -612,3 +612,5 @@ The classroom examples, practice, retries and review are self-written teaching m
 </details>
 
 **Learning path:** [Topic index](/alevel/a2-mathematics/) · [Next: Modulus Functions and Transformations](/alevel/a2-mathematics/modulus-and-transformations/).
+
+{% include exam_topic_practice.html %}

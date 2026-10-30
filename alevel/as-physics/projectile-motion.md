@@ -356,3 +356,5 @@ Road friction on braking wheels acts backward/left. The specified lift on the le
 Scope: OxfordAQA International AS Physics 9630, PH01 Section 3.2.4: independent components in a uniform gravitational field, with qualitative friction, lift, drag, terminal speed and limiting vehicle speed. The football sequence adapts PH01 June 2024 Q08.1–08.6 with the paired mark scheme checked. The force-model task extends the conceptual ideas using self-written contexts. Other tasks and records are self-written; none are assigned invented official marks. Scope follows the [official specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf).
 
 [Previous: Straight-line Motion](/alevel/as-physics/straight-line-motion/) · [Next: Newton’s Laws](/alevel/as-physics/newtons-laws/) · [Back to AS Physics](/alevel/as-physics/).
+
+{% include exam_topic_practice.html %}

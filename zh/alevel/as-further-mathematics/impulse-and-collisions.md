@@ -420,3 +420,5 @@ $$\begin{aligned}J&=\tfrac12(0.4)h=\tfrac h5\ \mathrm{N\,s},\\v&=\tfrac h5-3\ \m
 - FM02 June 2024 Q11(a)(b), Q12(a)(b): [QP pp.21–23](/assets/pdf/fx-cg50/references/oxfordaqa-fm02-2024-june-question-paper.pdf#page=21), [Final MS pp.18–20](/assets/pdf/fx-cg50/references/oxfordaqa-fm02-2024-june-mark-scheme.pdf#page=18).
 
 [上一课](/zh/alevel/as-further-mathematics/dimensions/) · [课程路线](/zh/alevel/as-further-mathematics/#learning-route)
+
+{% include exam_topic_practice.html %}

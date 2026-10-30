@@ -553,3 +553,5 @@ The classroom examples, practice, retries and review are self-written teaching m
 </details>
 
 **Learning path:** [Previous: Algebraic Fractions and Division](/alevel/a2-mathematics/algebraic-fractions-and-division/) · [Next: Binomial Series](/alevel/a2-mathematics/binomial-series/).
+
+{% include exam_topic_practice.html %}

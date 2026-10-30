@@ -391,3 +391,5 @@ Continue to [mean tests](/alevel/a2-mathematics/statistics/mean-tests/), where a
 OxfordAQA Mathematics 9660 v5.2, S2.6, printed page 27 (PDF page 26): [qualification](https://www.oxfordaqa.com/qualification/international-as-and-a-level-mathematics-9660/) and [specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf). This page covers testing language, errors and exact binomial/Poisson tests; mean tests follow. Examples adapt and extend Q1(b) and Q1(d): [January 2025 QP pages 2–4](/assets/pdf/fx-cg50/references/oxfordaqa-ma04-2025-january-question-paper.pdf#page=2), [paired MS pages 4–5](/assets/pdf/fx-cg50/references/oxfordaqa-ma04-2025-january-mark-scheme.pdf#page=4). Other tasks are original. Numerical checking does not verify calculator key sequences or learning effects.
 
 </details>
+
+{% include exam_topic_practice.html %}

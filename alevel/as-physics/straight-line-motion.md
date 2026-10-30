@@ -401,3 +401,5 @@ The free-intercept slope is unchanged and intercept is +0.020 m. A single-height
 Scope: OxfordAQA International AS Physics 9630, PH01 Section 3.2.3 and Required practical 1. The graph task references PH01 June 2024 Q04.1 and its paired mark scheme; its altered graph is explicitly adapted. All other tasks and freefall records are self-written or constructed. No official marks or physical-practical completion are claimed. Scope follows the [official specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf).
 
 [Previous: Vectors and Moments](/alevel/as-physics/vectors-and-moments/) · [Back to AS Physics](/alevel/as-physics/) · [Next: Projectile Motion](/alevel/as-physics/projectile-motion/).
+
+{% include exam_topic_practice.html %}

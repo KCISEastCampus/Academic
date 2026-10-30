@@ -512,3 +512,5 @@ Textbook support: Jim Breithaupt, *Oxford International AQA Examinations: Intern
 Questions 7–8 are adapted from OxfordAQA PH03 January 2020 Question 4 and June 2024 Question 3. The official mark schemes were consulted before drafting. The energy maximum in Question 8 is a supplied representative value from the mark scheme's accepted range, not a new reading of the original diagram. All answers were derived and checked independently rather than copied from textbook answer lists.
 
 </details>
+
+{% include exam_topic_practice.html %}

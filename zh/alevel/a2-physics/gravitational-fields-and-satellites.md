@@ -514,3 +514,5 @@ $$\boxed{v=2.2\times10^3\,\mathrm{m\,s^{-1}}}.$$
 练习 7–8 改编自 PH03 January 2020 Q4、June 2024 Q3。英文原页说明编写时参考过官方评分标准；练习 8 的势能最大值是评分标准认可范围内的代表值，并非本页重新从原图读数。答案经独立推导和检查，未直接照抄教材答案。
 
 </details>
+
+{% include exam_topic_practice.html %}

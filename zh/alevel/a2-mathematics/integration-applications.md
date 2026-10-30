@@ -589,3 +589,5 @@ $$V=\pi\int_0^{\pi/2}\sin^2x\cos^2x\,dx=\pi\left[\frac{x}{8}-\frac{\sin(4x)}{32}
 [9660 specification v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf) · [January 2025 QP](https://aqamat.alevelclouds.com/25_01_QP_P2.pdf) / [MS](https://aqamat.alevelclouds.com/25_01_MS_P2.pdf)
 
 </details>
+
+{% include exam_topic_practice.html %}

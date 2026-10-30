@@ -631,3 +631,5 @@ Describe how to connect the ammeter, resistor, capacitor and changeover switch t
 练习 6–8 改编自 PH03 January 2020 Q2、June 2024 Q5。英文原页说明编写时参考过官方评分标准；本页明确提供数值读数，改编答案经独立检查，未照抄教材答案。新增原始记录探究是自拟题，使用构造数据，不设置官方分值；数据分析练习不表示实际实验已完成。后续放射性和磁场不属于本学习页。
 
 </details>
+
+{% include exam_topic_practice.html %}

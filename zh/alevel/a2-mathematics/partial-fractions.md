@@ -553,3 +553,5 @@ $$\int_2^3\frac1{(x-1)(x+1)}\,dx=\left[\frac12\ln\lvert x-1\rvert-\frac12\ln\lve
 </details>
 
 **学习路径：**[上一节：代数分式与多项式除法](/zh/alevel/a2-mathematics/algebraic-fractions-and-division/) · [下一节：二项式级数](/zh/alevel/a2-mathematics/binomial-series/)。
+
+{% include exam_topic_practice.html %}

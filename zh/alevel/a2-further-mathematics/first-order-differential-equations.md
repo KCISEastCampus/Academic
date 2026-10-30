@@ -704,3 +704,5 @@ $$y=\frac{x^2-x^{-1}}3,\qquad x>0.$$
 本课范围依据 OxfordAQA [International A-level Further Mathematics 课程大纲 FP2.10，印刷页码 19](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf)：一阶线性方程、积分因子、CF 加 PI，以及通解和满足条件的解。例 3 改编自 OxfordAQA 2018 年 FM03 样卷第 5 题的求解方法，并对照官方评分细则第 5 题核对。解答明确展示标准形式、积分因子、乘积的导数、积分及条件的使用。改编题修改了方程与条件，不表示它具有官方分值。
 
 [OxfordAQA Specimen 2018, Q5, QP PDF p. 10](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-specimen-paper-2019-v3.pdf#page=10); [MS Q5, PDF p. 8](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-mark-scheme-2016-v1.pdf#page=8). 本轮重新读取 Q5 及评分材料中的方法（2026-10-23）；只借用已注明的方法，不把改编题或新增自拟任务称为原题。
+
+{% include exam_topic_practice.html %}

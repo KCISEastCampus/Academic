@@ -640,3 +640,5 @@ OxfordAQA Mathematics 9660 v5.2, S2.1, printed page 25 (PDF page 24): [current q
 Original Q4(b)(i)(ii): [MA04 January 2025 question paper, pages 12–13](/assets/pdf/fx-cg50/references/oxfordaqa-ma04-2025-january-question-paper.pdf#page=12), read with [final mark scheme, page 10](/assets/pdf/fx-cg50/references/oxfordaqa-ma04-2025-january-mark-scheme.pdf#page=10). English wording, data and requirements are retained; solutions add explanation. Q1(c), question paper page 3 and mark scheme pages 4–5, was also read to check the approximation conditions and mean. Other examples and tasks are self-written, with no official marks. No calculator key sequence or student learning outcome has been device- or classroom-validated here.
 
 </details>
+
+{% include exam_topic_practice.html %}
