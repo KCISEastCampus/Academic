@@ -578,3 +578,5 @@ $dx/dt=2t$，$dy/dt=3t^2-3$。水平切线对应 $t=\pm1$，两个点为 $(1,2)$
 
 
 **下一步：**能从参数范围独立确定轨迹和直线后，进入[积分：方法选择](/zh/alevel/a2-mathematics/integration/)。保留本页[稍后回顾](#later-review)作为返回位置。范围依据：[9660 大纲 v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf)，P2.3 与 P2.6；实读 January 2025 MA03 [QP](https://aqamat.alevelclouds.com/25_01_QP_P2.pdf) Q13 及配套 [MS](https://aqamat.alevelclouds.com/25_01_MS_P2.pdf)，参考的是求导、求点、直线与消参的过程要求。本页题目均为自拟题。
+
+{% include exam_topic_practice.html %}

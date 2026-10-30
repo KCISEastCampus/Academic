@@ -160,3 +160,5 @@ Retry: a machine has a natural frequency near 5 Hz. It is driven at 12 Hz by a l
 OxfordAQA 9630 3.5.1–3.5.2 / RP4. 题目自拟，数值／示意数据为构造，核查点不是官方评分标准。 [官方大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf).
 
 [上一课](/zh/alevel/as-physics/emf-and-internal-resistance/) · [下一课](/zh/alevel/as-physics/progressive-and-stationary-waves/) · [课程](/zh/alevel/as-physics/)
+
+{% include exam_topic_practice.html %}

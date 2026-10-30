@@ -322,3 +322,5 @@ Thus $E(\bar X)=\lambda$ and $\operatorname{Var}(\bar X)=\lambda/n$. It is unbia
 ## Next step {#next-step}
 
 [Estimators: compare rules](/alevel/a2-further-mathematics/statistics/estimators/) 路 [Course route](/alevel/a2-further-mathematics/statistics/)
+
+{% include exam_topic_practice.html %}

@@ -262,3 +262,5 @@ The 7.20 fm value is the stated empirical radius model; 30 fm is the external tu
 ## Sources and scope {#sources}
 
 OxfordAQA 9630 PH04, [specification body v4.4](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf) Section 3.12.1, printed p.28/PDF p.27, checked 21 October 2026. January 2024 QP pp.17/20 and paired MS pp.18–19 support Example 3 and Questions 1–2. June 2024 QP p.25 and MS p.21 support the diffraction-pattern discussion; the original figures were viewed. Jim Breithaupt Section 24.1, printed pp.420–421/PDF pp.436–437, supports teaching organisation. Other examples, records, tasks and SVGs are self-written; the size relation in Example 2 is supplied for that task. This sample covers nuclear radius; later PH04 topics remain in the course index.
+
+{% include exam_topic_practice.html %}

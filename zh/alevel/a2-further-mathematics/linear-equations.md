@@ -462,3 +462,5 @@ $$B=\begin{pmatrix}0&1&0\\0&0&0\\0&0&1\end{pmatrix}.$$
 本轮于 **2026-10-23** 重读下列 9665 大纲、January 2025 Q8 与 Q13(b) 所列 QP／MS 原文。
 
 范围依据 [OxfordAQA Further Mathematics 9665，Version 5.2，FP2.14，印刷第 21 页 / PDF 第 20 页](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf#page=20)。例 5 改编自 [January 2025 FM03 Q8，原卷第 14–15 页](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-question-paper.pdf#page=14)，已对照[配套官方 MS 第 13 页](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-mark-scheme.pdf#page=13)。指定方法的区别也对照了同卷 Q13(b)，原卷第 27 页 / MS 第 21 页。其余例题、练习、反馈与解答均为自拟，讲解不称官方评分标准。平面配置图是构造示意，不是实测数据。
+
+{% include exam_topic_practice.html %}

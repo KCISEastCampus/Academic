@@ -372,3 +372,5 @@ $$
 </section>
 
 [课程综合回顾](/zh/alevel/a2-further-mathematics/statistics/#review) · [课程路线](/zh/alevel/a2-further-mathematics/statistics/)
+
+{% include exam_topic_practice.html %}

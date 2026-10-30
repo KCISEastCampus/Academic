@@ -264,3 +264,5 @@ $$R=1.20(216)^{1/3}=7.20\,\mathrm{fm},\qquad \rho=\frac{216(1.66\times10^{-27})}
 ## 来源与范围 {#sources}
 
 OxfordAQA 9630 PH04，[大纲正文 v4.4](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf) 3.12.1，印刷第 28 页/PDF 第 27 页，2026-10-21 核对。January 2024 QP 第 17/20 页与配套 MS 第 18–19 页支持例题 3 和练习 1–2；June 2024 QP 第 25 页与 MS 第 21 页支持衍射图样讨论，已目视原图。Jim Breithaupt 第 24.1 节印刷第 420–421 页/PDF 第 436–437 页辅助教学组织。其余示范、记录、任务与 SVG 为自拟；例题 2 的尺寸关系是题给模型。本页属于首批核能学习样章，不代表完整 PH04。
+
+{% include exam_topic_practice.html %}

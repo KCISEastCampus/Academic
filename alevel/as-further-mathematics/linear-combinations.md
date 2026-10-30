@@ -440,3 +440,5 @@ Scope follows 9665 v5.2. The paired questions and mark schemes below informed th
 - FM02 June 2024 Q8(b)(ii); QP p.17, MS p.15. [FM02 June 2024 QP](/assets/pdf/fx-cg50/references/oxfordaqa-fm02-2024-june-question-paper.pdf) · [Final MS](/assets/pdf/fx-cg50/references/oxfordaqa-fm02-2024-june-mark-scheme.pdf).
 
 [Previous](/alevel/as-further-mathematics/generating-functions/) · [Course route](/alevel/as-further-mathematics/#learning-route) · [Next](/alevel/as-further-mathematics/relative-motion/)
+
+{% include exam_topic_practice.html %}

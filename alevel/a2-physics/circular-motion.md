@@ -436,3 +436,5 @@ Textbook support: Jim Breithaupt, *Oxford International AQA Examinations: Intern
 The aircraft and space station practice is adapted from OxfordAQA PH03 January 2020 Question 3 and June 2024 Question 1. Explanations were checked against their official mark schemes. Calculations were independently verified; they are not copied from textbook answer lists.
 
 </details>
+
+{% include exam_topic_practice.html %}

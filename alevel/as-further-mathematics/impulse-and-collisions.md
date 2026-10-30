@@ -399,3 +399,5 @@ OxfordAQA 9665 v5.2, FM1.3; no migration to 9765. The following questions and th
 - FM02 June 2024 Q11(a)(b), Q12(a)(b): [QP pp.21–23](/assets/pdf/fx-cg50/references/oxfordaqa-fm02-2024-june-question-paper.pdf#page=21), [Final MS pp.18–20](/assets/pdf/fx-cg50/references/oxfordaqa-fm02-2024-june-mark-scheme.pdf#page=18).
 
 [Previous](/alevel/as-further-mathematics/dimensions/) · [Course route](/alevel/as-further-mathematics/#learning-route)
+
+{% include exam_topic_practice.html %}

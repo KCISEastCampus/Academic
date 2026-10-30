@@ -264,3 +264,5 @@ Changing flux drives eddy currents in the conductor. Their magnetic effects oppo
 ## Sources and scope {#sources}
 
 Scope: OxfordAQA 9630 PH03, [specification body v4.4](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf), Sections 3.10.3–3.10.4, printed pp.25–26/PDF pp.24–25, checked 21 October 2026. Adapted January 2020 questions pair QP pp.17–20/40/42 with MS pp.8–9; the graph-phase task has direct Q34 evidence. Example 1 pairs June 2024 QP p.19 with MS p.16. Jim Breithaupt Chapter 21.2–21.3, printed pp.374/378, supports explanation only. Other tasks, numbers and drawings are original teaching material. The linkage-graph area is a derived teaching connection. This page is not a numbered required practical and does not claim physical experiment completion.
+
+{% include exam_topic_practice.html %}

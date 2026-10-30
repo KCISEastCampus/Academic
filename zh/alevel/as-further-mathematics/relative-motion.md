@@ -510,3 +510,5 @@ d^2&=(8-2t)^2+(1-t)^2\\
 </details>
 
 [上一课](/zh/alevel/as-further-mathematics/linear-combinations/) · [课程路线](/zh/alevel/as-further-mathematics/#learning-route) · [下一课](/zh/alevel/as-further-mathematics/dimensions/)
+
+{% include exam_topic_practice.html %}

@@ -310,3 +310,5 @@ $$\begin{aligned}\frac{10}3&=2+\frac3x,\\x&=\frac94.\end{aligned}$$
 </details>
 
 [上一课](/zh/alevel/as-further-mathematics/transformations/) · [课程路线](/zh/alevel/as-further-mathematics/#learning-route) · [下一课](/zh/alevel/as-further-mathematics/numerical-roots/)
+
+{% include exam_topic_practice.html %}

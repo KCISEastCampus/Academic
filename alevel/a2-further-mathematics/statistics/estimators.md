@@ -384,3 +384,5 @@ R=(X̄₅+Ȳ₁₅)/2 is unbiased with Var(R)=σ²/15, so efficiency of T relati
 A good point estimator still gives only one number. Next ask how sampling variation determines an interval for μ.
 
 [Confidence intervals](/alevel/a2-further-mathematics/statistics/confidence-intervals/) · [Course route](/alevel/a2-further-mathematics/statistics/)
+
+{% include exam_topic_practice.html %}

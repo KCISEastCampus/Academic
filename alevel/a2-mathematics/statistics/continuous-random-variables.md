@@ -563,3 +563,5 @@ Continue to [exponential distribution](/alevel/a2-mathematics/statistics/exponen
 OxfordAQA 9660 v5.2, S2.2, printed pp.25–26 / PDF pp.24–25: [official specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf). The piecewise-density example is adapted from January 2025 Q2: [question paper, PDF pp.6–8](/assets/pdf/fx-cg50/references/oxfordaqa-ma04-2025-january-question-paper.pdf#page=6), [paired final mark scheme, PDF pp.6–8](/assets/pdf/fx-cg50/references/oxfordaqa-ma04-2025-january-mark-scheme.pdf#page=6). The density and normalising constant are retained; the CDF request is new. It is not a verbatim official question. Other tasks are author-created. No calculator button sequence or student learning outcome is claimed as verified.
 
 </details>
+
+{% include exam_topic_practice.html %}

@@ -184,3 +184,5 @@ X 射线最大能量为 25、50 keV；减速释放不同份额电子能量，形
 OxfordAQA 9630 3.5.9–3.5.11. 题目自拟，数值／示意数据为构造，核查点不是官方评分标准。 [官方大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf).
 
 [上一课](/zh/alevel/as-physics/refraction-and-optical-fibres/) · [下一课](/zh/alevel/as-physics/unit-2-review/) · [课程](/zh/alevel/as-physics/)
+
+{% include exam_topic_practice.html %}

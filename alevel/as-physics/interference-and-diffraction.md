@@ -160,3 +160,5 @@ Use the order in the grating formula. For fixed slits w is proportional to D.
 OxfordAQA 9630 3.5.6–3.5.7 / RP5. Tasks are self-written; numerical/schematic records are constructed. Checking criteria are not official marks. [Official specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf).
 
 [Previous](/alevel/as-physics/progressive-and-stationary-waves/) · [Next](/alevel/as-physics/refraction-and-optical-fibres/) · [Course](/alevel/as-physics/)
+
+{% include exam_topic_practice.html %}

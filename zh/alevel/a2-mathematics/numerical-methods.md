@@ -948,3 +948,5 @@ $$h=0.5,\qquad I\approx\frac{0.5}{3}[1+1+4(2+2)+2(3)]=4.$$
 **下一步：**学完下一主题后回到[稍后回顾](#later-review)，先不看笔记完成混合任务。
 
 **学习路径：**[上一节：微分方程](/zh/alevel/a2-mathematics/differential-equations/) · [下一节：向量](/zh/alevel/a2-mathematics/vectors/)。
+
+{% include exam_topic_practice.html %}

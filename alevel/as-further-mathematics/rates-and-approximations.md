@@ -394,3 +394,5 @@ FM01 specimen identity: the QP body says **Specimen 2018 Morning**; its filename
 </details>
 
 [Previous](/alevel/as-further-mathematics/series/) · [Course route](/alevel/as-further-mathematics/#learning-route) · [Next](/alevel/as-further-mathematics/improper-integrals/)
+
+{% include exam_topic_practice.html %}

@@ -169,3 +169,5 @@ Specification §3.2 S1.1; MA02 January 2025 Q7, QP pp14–15, MS p14. Its incons
 Success means independently explaining the method and checking its conditions, not just reading a solution. Student learning outcomes have not been trialled.
 
 </details>
+
+{% include exam_topic_practice.html %}

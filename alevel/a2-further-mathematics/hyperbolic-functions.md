@@ -1024,3 +1024,5 @@ Scope check on 2026-10-23: the current 9665 qualification page led to specificat
 The scope follows OxfordAQA's [International A-level Further Mathematics specification, FP2.9, printed p. 19](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf). Example 3 adapts the solution method from OxfordAQA Specimen 2018 FM03, Question 2, checked against its official mark scheme, Question 2. The example changes the equation; it is not an official question and no official mark allocation is implied.
 
 [OxfordAQA Specimen 2018, Q2, QP PDF p. 4](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-specimen-paper-2019-v3.pdf#page=4); [MS Q2, PDF p. 5](https://www.oxfordaqa.com/oaqaresources/maths/assessment/9665-FM03-international-a-level-further-mathematics-mark-scheme-2016-v1.pdf#page=5). Question and matching mark scheme reread on 2026-10-23 (PDF text). Only the identified method is adapted; the adapted question and additional self-written tasks are not official questions.
+
+{% include exam_topic_practice.html %}

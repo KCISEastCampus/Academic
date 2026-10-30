@@ -380,3 +380,5 @@ Retry: F/N = 0, 2, 4 and U/V = 0.40, 2.50, 4.40, each output bounded by ±0.20 V
 范围以[官方大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf)为准。题目、数据和反馈为自拟，未赋予官方分值。不把三角／对数函数的不确定度合成或统计置信区间作为本课要求。
 
 [下一课：向量与力矩](/zh/alevel/as-physics/vectors-and-moments/) · [返回 AS 物理](/zh/alevel/as-physics/) · [现有力学笔记](/zh/alevel/as-physics/#2--mechanics-321--328) · [在 A2 电容记录中应用测量判断](/zh/alevel/a2-physics/capacitor-charge-and-discharge/#data-rc-records)。
+
+{% include exam_topic_practice.html %}

@@ -874,3 +874,5 @@ Paired assessment references actually read: **9660/MA05 Unit M2, January 2025, Q
 The rounding convention at the start applies to this page's self-written tasks. The January 2025 paper defaults to two significant figures for calculator final answers unless stated otherwise; Q9 specifically asks for three significant figures. Follow the original paper and question when using official work.
 
 **Learning path:** [Previous: Centres of Mass](/alevel/a2-mathematics/mechanics/centres-of-mass/) · [Mechanics topic index](/alevel/a2-mathematics/mechanics/) · [Next: Projectiles](/alevel/a2-mathematics/mechanics/projectiles/).
+
+{% include exam_topic_practice.html %}

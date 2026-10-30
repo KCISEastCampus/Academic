@@ -436,3 +436,5 @@ Deleting and renormalising changes the target to a conditional distribution belo
 A distributional fit compares one variable with model probabilities. Next compare this with two categorical variables, where the expected table comes from row and column totals instead.
 
 [Association tests](/alevel/a2-further-mathematics/statistics/association-tests/) · [Course route](/alevel/a2-further-mathematics/statistics/)
+
+{% include exam_topic_practice.html %}

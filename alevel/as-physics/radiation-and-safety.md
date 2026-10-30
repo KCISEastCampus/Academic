@@ -143,3 +143,5 @@ First net rates are 800, 400, 100, 15. The successive reductions support alpha, 
 OxfordAQA 9630 §3.3.3. Tasks are self-written; numerical/schematic records are constructed. Checking criteria are not official marks. [Official specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf).
 
 [Previous](/alevel/as-physics/atoms-and-particles/) · [Next](/alevel/as-physics/unit-1-review/) · [Course](/alevel/as-physics/)
+
+{% include exam_topic_practice.html %}

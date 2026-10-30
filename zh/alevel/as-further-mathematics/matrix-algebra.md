@@ -296,3 +296,5 @@ $$\det(P-tI_2)=(1-t)^2=0\Longleftrightarrow t=1.$$
 </details>
 
 [上一课](/zh/alevel/as-further-mathematics/improper-integrals/) · [课程路线](/zh/alevel/as-further-mathematics/#learning-route) · [下一课](/zh/alevel/as-further-mathematics/transformations/)
+
+{% include exam_topic_practice.html %}

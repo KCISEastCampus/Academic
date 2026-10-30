@@ -120,3 +120,5 @@ $V=1.20-0.20I$，所以电动势 1.20 V、内阻 0.20 Ω。电流为 0.80 A 时�
 OxfordAQA 9630 §3.4.6、RP3，见[官方大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf)。题目自拟，数据构造，图为示意；核查点不是官方分值。下次进入 [Unit 2 综合](/zh/alevel/as-physics/unit-2-review/)时先关闭本课答案。
 
 [上一课：直流电路与分压](/zh/alevel/as-physics/dc-circuits-and-potential-dividers/) · [下一课：振动与共振](/zh/alevel/as-physics/oscillations-and-resonance/) · [课程](/zh/alevel/as-physics/)
+
+{% include exam_topic_practice.html %}

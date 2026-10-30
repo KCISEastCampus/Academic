@@ -658,3 +658,5 @@ If you can choose the input, combine coefficients and justify the range without 
 Scope: OxfordAQA 9660 MA03, P2.2, [specification v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf), printed p21. Preparation checked January 2025 MA03 Q14(a)–(c), [QP pp26–27](https://aqamat.alevelclouds.com/25_01_QP_P2.pdf) and [MS pp21–22](https://aqamat.alevelclouds.com/25_01_MS_P2.pdf), for normalisation, expansion and combining coefficients. The questions on this page remain self-written. Original textbook locator: Chapter 2, Sections 2.1–2.2, printed pp24–30; not rechecked against the book in this revision. Endpoint convergence and formal remainder bounds are outside this lesson.
 
 </details>
+
+{% include exam_topic_practice.html %}

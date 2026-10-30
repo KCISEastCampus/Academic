@@ -224,3 +224,5 @@ $\lvert z\rvert>1.959964$，拒绝；近似检验提供总体平均送货时间�
 ## 下一步 {#next-step}
 
 [配对观测](/zh/alevel/a2-further-mathematics/statistics/paired-tests/) · [课程路线](/zh/alevel/a2-further-mathematics/statistics/)
+
+{% include exam_topic_practice.html %}

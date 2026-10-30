@@ -815,3 +815,5 @@ When you can justify the domain and complete solution set without a method label
 Scope: OxfordAQA 9660 MA03 P2.4, with P2.1 inverse/graph and P2.3 parameter connections, [specification v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf), printed pp21–22. Preparation checked January 2025 MA03 Q7(a)(i)–(ii), Q7(b), [QP pp14–15](https://aqamat.alevelclouds.com/25_01_QP_P2.pdf) and [MS p12](https://aqamat.alevelclouds.com/25_01_MS_P2.pdf), for coefficient signs, interval branches and a reciprocal quadratic. All page questions remain self-written. Original textbook locator: Chapter 3, Sections 3.1–3.6, printed pp32–49; not rechecked against the book in this revision. Inverse-function addition formulae are not required here. Integration uses are linked to the later integration lesson.
 
 </details>
+
+{% include exam_topic_practice.html %}

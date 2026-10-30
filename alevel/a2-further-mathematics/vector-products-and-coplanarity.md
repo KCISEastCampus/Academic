@@ -416,3 +416,5 @@ The specification and the listed QP/MS passages below were reread on **23 Octobe
 - [January 2025 FM03 QP, Q1 pp. 2–3](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-question-paper.pdf#page=2) and [paired MS p. 4](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-mark-scheme.pdf#page=4): adapted diagram-to-edge example above. Both signed parameter cases were independently recalculated.
 
 The formula booklet has not been checked for the inclusion of individual formulas, so this lesson explains their derivation rather than adding a list of formulas to memorise. Worked answers and original tasks are author-written; source marks apply only to the unchanged official question. No calculator button sequence or classroom learning outcome is claimed as verified.
+
+{% include exam_topic_practice.html %}

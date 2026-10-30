@@ -907,3 +907,5 @@ January 2025 卷的计算器答案默认两位有效数字，题内另有规定�
 - **核验：**检查符号、单位、运动方向、相对零点的高度和接触能否保持。
 
 **学习路线：**[上一课：抛体](/zh/alevel/a2-mathematics/mechanics/projectiles/) · [下一课：匀速圆周运动](/zh/alevel/a2-mathematics/mechanics/uniform-circular-motion/) · [力学单元入口](/zh/alevel/a2-mathematics/mechanics/)。
+
+{% include exam_topic_practice.html %}

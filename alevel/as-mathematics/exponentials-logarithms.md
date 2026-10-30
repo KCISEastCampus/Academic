@@ -164,3 +164,5 @@ Specification §3.2 PP1.3; algebraic evidence principles from paired MA01/MA02 J
 Success means independently explaining the method and checking its conditions, not just reading a solution. Student learning outcomes have not been trialled.
 
 </details>
+
+{% include exam_topic_practice.html %}

@@ -395,3 +395,5 @@ OxfordAQA 9665 v5.2, FS2.1: this sample covers finite-distribution foundations, 
 Teaching preparation used *International A Level Further Mathematics with Statistics* (Oxford, 2017), Chapter 29, printed pp.370–374; and the paired January 2025 FM04 Q8 and mark scheme pp.17–18. June 2025 Q2/MS pp.5–6 informed the later integration route. All lesson questions and solutions are self-written, with no official marks. See the [current qualification](https://www.oxfordaqa.com/qualification/international-as-and-a-level-further-mathematics-9665/) and [specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf).
 
 </details>
+
+{% include exam_topic_practice.html %}

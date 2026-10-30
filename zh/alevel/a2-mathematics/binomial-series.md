@@ -660,3 +660,5 @@ $H(x)=1+2x+\frac52x^2+4x^3+\cdots$，范围为 $-1/2<x<1/2$。在 $0.01$ 处的�
 范围：OxfordAQA 9660 MA03，P2.2，[大纲 v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf)印刷 p21。制作时实读 January 2025 MA03 Q14(a)–(c) 的 [QP pp26–27](https://aqamat.alevelclouds.com/25_01_QP_P2.pdf) 与 [MS pp21–22](https://aqamat.alevelclouds.com/25_01_MS_P2.pdf)，核对归一化、展开和系数合并步骤。本页题目仍均为自拟题。原教材定位：第 2 章第 2.1–2.2 节、印刷 pp24–30；本轮未重查原书。端点收敛及严格余项界不在本课范围内。
 
 </details>
+
+{% include exam_topic_practice.html %}

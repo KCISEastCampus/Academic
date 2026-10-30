@@ -616,3 +616,5 @@ At $T=35$, the exponential factor is $1/4$, so $t=4$ minutes. For all $t\ge0$, $
 
 
 **Next step:** when you can form an equation from words, solve using conditions and check the range independently, continue to [numerical methods](/alevel/a2-mathematics/numerical-methods/), comparing analytical results with approximations supported by accuracy evidence. Then return to [this review](#later-review). Scope: [9660 specification v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf), P2.8 (and P2.5 growth/decay); January 2025 MA03 [QP](https://aqamat.alevelclouds.com/25_01_QP_P2.pdf) Q12(b) and the matching [MS](https://aqamat.alevelclouds.com/25_01_MS_P2.pdf) were read for separation, both integrals, conditions and isolating the variable. All scenarios and tasks here are self-written.
+
+{% include exam_topic_practice.html %}

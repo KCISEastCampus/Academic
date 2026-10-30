@@ -182,3 +182,5 @@ Scope: OxfordAQA International AS Physics 9630, PH01 §3.2.5. Scope checked agai
 [Previous: Projectile Motion](/alevel/as-physics/projectile-motion/) · [Next: Momentum and Impulse](/alevel/as-physics/momentum-and-impulse/) · [AS Physics](/alevel/as-physics/)
 
 On the next page, the force may vary too quickly to use a single constant acceleration. You will use its effect over time, then revisit this page’s force choices in the [later mixed review](/alevel/as-physics/momentum-and-impulse/#later-review).
+
+{% include exam_topic_practice.html %}

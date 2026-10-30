@@ -184,3 +184,5 @@ A 4.0 kg package rests on a lift floor. The lift is moving downwards and acceler
 [上一课：抛体运动](/zh/alevel/as-physics/projectile-motion/) · [下一课：动量与冲量](/zh/alevel/as-physics/momentum-and-impulse/) · [AS 物理](/zh/alevel/as-physics/)
 
 下一课的力可能变化得很快，不能一直沿用同一个加速度。你将研究力在一段时间里的效果，并在[延后综合题](/zh/alevel/as-physics/momentum-and-impulse/#later-review)中重新选择本课的受力模型。
+
+{% include exam_topic_practice.html %}

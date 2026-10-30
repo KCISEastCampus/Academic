@@ -377,3 +377,5 @@ FM01 specimen identity: the QP body says **Specimen 2018 Morning**; its filename
 </details>
 
 [Course route](/alevel/as-further-mathematics/#learning-route) · [Next](/alevel/as-further-mathematics/conics-and-loci/)
+
+{% include exam_topic_practice.html %}

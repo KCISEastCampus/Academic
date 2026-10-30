@@ -565,3 +565,5 @@ E(Y^2)&=\int_0^1 2x^5\,dx=\frac13,\\
 OxfordAQA 9660 v5.2，S2.2，印刷25–26页／PDF24–25页：[官方大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf)。分段密度示范改编自January 2025 Q2：[试卷PDF6–8页](/assets/pdf/fx-cg50/references/oxfordaqa-ma04-2025-january-question-paper.pdf#page=6)、[配对最终评分标准PDF6–8页](/assets/pdf/fx-cg50/references/oxfordaqa-ma04-2025-january-mark-scheme.pdf#page=6)。保留密度与归一化常数，新增CDF要求，不称官方原题。其他任务自拟。未宣称计算器按键流程或学生学习效果已经验证。
 
 </details>
+
+{% include exam_topic_practice.html %}

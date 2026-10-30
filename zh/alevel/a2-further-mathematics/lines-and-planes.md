@@ -635,3 +635,5 @@ $$x-y=(1+t)-t=1,\qquad 2(x-y)=2.$$
 - [January 2025 FM03 QP Q11，第 20–23 页](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-question-paper.pdf#page=20)与[配套 MS 第 17–18 页](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-mark-scheme.pdf#page=17)：直线交点、平面方程、反射及精确点面距离。
 
 官方题保留英文题干、数据、指定方法／形式和原分值；解答解释与其他任务由作者编写。距离与反射通过投影推导，并有正式卷直接证据。尚未核对公式册具体条目，故不把这些推导关系标为新增必背要求。未新增计算器按键、未声称异面直线距离是大纲独立条目，也未宣称课堂学习效果已验证。
+
+{% include exam_topic_practice.html %}

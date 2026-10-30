@@ -289,3 +289,5 @@ $$I_{p,\mathrm{rms}}=\frac{12}{24/\sqrt2}\approx0.71\,\mathrm A,\qquad f_s=50\,\
 ## 来源与范围 {#sources}
 
 OxfordAQA 9630 PH03，[大纲正文 v4.4](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf) 3.10.6 与 RP7，印刷第 26/38 页（PDF 第 25/37 页），2026-10-21 核对。例题 1 改编 January 2020 QP Q35 第 43 页，配对 MS 第 9 页。练习 2 改编 Specimen 2019/V2.0 Q5，QP 第 12 页与 MS 第 10 页。练习 5 改编 June 2024 QP Q20 第 33 页及 MS 第 21 页。RP7 方法与四列示例读数选自[实验手册 v2，September 2018](https://www.oxfordaqa.com/oaqaresources/science/teaching/a-level-practical-handbook-physics.pdf) 第 72–74 页；其计算列在此重算，任务未预给。效率按当前大纲的输出/输入定义；教学假定不确定度与原始记录分开说明。Jim Breithaupt 第 21.5 节印刷第 384 页辅助共同磁通解释。其他题目和配图为自拟，不认证完成实物 RP7 或学生学习试用。
+
+{% include exam_topic_practice.html %}

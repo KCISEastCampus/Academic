@@ -438,3 +438,5 @@ $$m=\frac{p}{v}=\frac{2500}{\sqrt{9.81(150)}}\approx\boxed{65\,\mathrm{kg}}.$$
 飞机与空间站练习改编自 OxfordAQA PH03 January 2020 Q3、June 2024 Q1。英文原页说明讲解曾对照官方评分标准；汉化保留其数据和公式，数值由现有物理回归检查复核，不把教材答案表直接当作依据。
 
 </details>
+
+{% include exam_topic_practice.html %}

@@ -158,3 +158,5 @@ The 5 Hz trial is near resonance; a large 12 Hz driving force alone is not reson
 OxfordAQA 9630 3.5.1–3.5.2 / RP4. Tasks are self-written; numerical/schematic records are constructed. Checking criteria are not official marks. [Official specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf).
 
 [Previous](/alevel/as-physics/emf-and-internal-resistance/) · [Next](/alevel/as-physics/progressive-and-stationary-waves/) · [Course](/alevel/as-physics/)
+
+{% include exam_topic_practice.html %}

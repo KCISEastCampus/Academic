@@ -513,3 +513,5 @@ OxfordAQA Mathematics 9660 v5.2 S2.3, printed page 26 (PDF page 25), checked fro
 Original Q4(c), with the shared context: [MA04 January 2025 question paper, pages 12–13](/assets/pdf/fx-cg50/references/oxfordaqa-ma04-2025-january-question-paper.pdf#page=12), actually read with [final mark scheme, pages 10–11](/assets/pdf/fx-cg50/references/oxfordaqa-ma04-2025-january-mark-scheme.pdf#page=10). The rate and tail were independently recalculated. All other tasks and examples are self-written and have no official marks. Calculations do not claim verified calculator key sequences or evidence of student mastery.
 
 </details>
+
+{% include exam_topic_practice.html %}

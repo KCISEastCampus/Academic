@@ -108,3 +108,5 @@ E = 200 × 10⁶/0.0010 = 2.0 × 10¹¹ Pa. Breaking stress is 300 MPa. The comp
 OxfordAQA 9630 §3.2.9–3.2.10; RP2. Tasks are self-written; numerical/schematic records are constructed. Checking criteria are not official marks. [Official specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf).
 
 [Previous](/alevel/as-physics/work-energy-power/) · [Next](/alevel/as-physics/atoms-and-particles/) · [Course](/alevel/as-physics/)
+
+{% include exam_topic_practice.html %}

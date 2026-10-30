@@ -633,3 +633,5 @@ The specification and listed official QP/MS passages were reread on **23 October
 - [January 2025 FM03 QP Q11, pp. 20–23](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-question-paper.pdf#page=20) and [paired MS pp. 17–18](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-mark-scheme.pdf#page=17): line intersection, plane equation, reflection and exact point–plane distance.
 
 The official questions retain their English wording, data, method/form requirements and source marks; the worked explanations and other tasks are author-written. Distances and reflection are taught by projection, with direct formal-paper evidence. The formula booklet has not been checked for individual entries, so these derived relations are not labelled additional memorisation requirements. No new calculator button sequence, skew-line distance syllabus item or classroom learning outcome is claimed.
+
+{% include exam_topic_practice.html %}

@@ -522,3 +522,5 @@ c&=69+3(1.2816)\\
 OxfordAQA 9660 v5.2 S2.4，印刷26页／PDF25页：[官方大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf)。两参数示范改编自January 2025 Q5(a)：[试卷PDF14页](/assets/pdf/fx-cg50/references/oxfordaqa-ma04-2025-january-question-paper.pdf#page=14)、[配对最终评分标准PDF12页](/assets/pdf/fx-cg50/references/oxfordaqa-ma04-2025-january-mark-scheme.pdf#page=12)。保留数值条件，缩短情境，不称官方原题。Q5(b)在PDF15页使用样本均值，归入估计课。其他任务自拟。教学表给标准正态累计概率与分位数；未宣称计算器具体操作或学生学习效果已验证。
 
 </details>
+
+{% include exam_topic_practice.html %}

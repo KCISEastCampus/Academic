@@ -689,3 +689,5 @@ OxfordAQA 9660 v5.2，§3.1 P1.1。精确形式部分实际参照 MA01 January 2
 完成标准是能独立解释方法与检查条件，不是看完解答。未经过学生试用，不据此宣称学习效果已验证。
 
 </details>
+
+{% include exam_topic_practice.html %}

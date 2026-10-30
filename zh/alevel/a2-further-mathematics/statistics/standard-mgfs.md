@@ -323,3 +323,5 @@ $$
 ## 下一步 {#next-step}
 
 [估计量：比较不同规则](/zh/alevel/a2-further-mathematics/statistics/estimators/) · [课程路线](/zh/alevel/a2-further-mathematics/statistics/)
+
+{% include exam_topic_practice.html %}

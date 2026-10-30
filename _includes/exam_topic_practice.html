@@ -1,22 +1,30 @@
 {%- assign exam_lang = 'en' -%}
 {%- if page.lang == 'zh-CN' -%}{%- assign exam_lang = 'zh' -%}{%- endif -%}
 {%- assign exam_ui = site.data.ui[page.lang] | default: site.data.ui.en -%}
-{%- assign exam_topic = nil -%}
-{%- for topic in site.data.exam_topics -%}
-  {%- assign lesson_path = topic.lessons[exam_lang] | split: '#' | first -%}
-  {%- if include.topic == topic.id or include.topic == nil and page.url == lesson_path -%}
-    {%- assign exam_topic = topic -%}
-    {%- break -%}
-  {%- endif -%}
-{%- endfor -%}
-{%- assign exam_course = exam_topic.course | default: false -%}
-{%- assign exam_unit = exam_topic.unit | default: false -%}
-{%- assign exam_chapter = exam_topic.chapter | default: false -%}
-{%- assign exam_lesson = exam_topic.lessons[exam_lang] | default: false -%}
-{%- if exam_course and exam_unit and exam_chapter and exam_lesson -%}
-  {%- capture exam_url -%}https://ericstone.top/exams/{{ exam_course | uri_escape }}/?unit={{ exam_unit | url_encode }}&view=questions&units={{ exam_unit | url_encode }}&chapters={{ exam_chapter | url_encode }}&lesson_lang={{ exam_lang }}{%- endcapture -%}
+{%- capture exam_links -%}
+  {%- for topic in site.data.exam_topics -%}
+    {%- assign lesson_path = topic.lessons[exam_lang] | split: '#' | first -%}
+    {%- if include.topic == topic.id or include.topic == nil and page.url == lesson_path -%}
+      {%- assign exam_course = topic.course | default: false -%}
+      {%- assign exam_unit = topic.unit | default: false -%}
+      {%- assign exam_chapter = topic.chapter | default: false -%}
+      {%- assign exam_lesson = topic.lessons[exam_lang] | default: false -%}
+      {%- if topic.chapters -%}
+        {%- assign exam_chapters = topic.chapters | join: ',' -%}
+      {%- else -%}
+        {%- assign exam_chapters = topic.chapter -%}
+      {%- endif -%}
+      {%- if exam_course and exam_unit and exam_chapter and exam_lesson and exam_chapters != empty -%}
+        {%- capture exam_url -%}https://ericstone.top/exams/{{ exam_course | uri_escape }}/?unit={{ exam_unit | url_encode }}&view=questions&units={{ exam_unit | url_encode }}&chapters={{ exam_chapters | url_encode }}&lesson_lang={{ exam_lang }}{%- endcapture -%}
+  <p><a href="{{ exam_url | escape }}">{{ topic.title | escape }} · {{ exam_ui.exam_topic_questions }} ({{ topic.chapter | escape }})</a></p>
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+{%- assign exam_links = exam_links | strip -%}
+{%- if exam_links != empty -%}
 <aside class="exam-topic-practice lesson-notes small" aria-label="{{ exam_ui.exam_topic_questions | escape }}">
-  <p><a href="{{ exam_url | escape }}">{{ exam_topic.title | escape }} · {{ exam_ui.exam_topic_questions }} ({{ exam_topic.chapter | escape }})</a></p>
+  {{ exam_links }}
   <p>{{ exam_ui.exam_topic_scope }}</p>
   <p>{{ exam_ui.exam_topic_drafts }}</p>
 </aside>

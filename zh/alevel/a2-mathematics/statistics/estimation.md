@@ -518,3 +518,5 @@ OxfordAQA 9660 v5.2，S2.5，印刷第26页／PDF第25页：[资格页](https://
 酱料包示范改编自[January 2025 Q7(a)，QP第20页](/assets/pdf/fx-cg50/references/oxfordaqa-ma04-2025-january-question-paper.pdf#page=20)，核对[最终MS第15页](/assets/pdf/fx-cg50/references/oxfordaqa-ma04-2025-january-mark-scheme.pdf#page=15)。任务4改编自[Q3，QP第10页](/assets/pdf/fx-cg50/references/oxfordaqa-ma04-2025-january-question-paper.pdf#page=10)，核对[MS第9页](/assets/pdf/fx-cg50/references/oxfordaqa-ma04-2025-january-mark-scheme.pdf#page=9)。重写题干故称改编题，不称逐字原题。其余自拟，无官方分值。数值核算不等于计算器按键验证或学习效果证据。
 
 </details>
+
+{% include exam_topic_practice.html %}

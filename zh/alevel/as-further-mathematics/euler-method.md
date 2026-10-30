@@ -308,3 +308,5 @@ $$\begin{aligned}y_{\text{back}}&=1.48-0.2(0.4+1.48)\\&=1.104.\end{aligned}$$
 </details>
 
 [上一课](/zh/alevel/as-further-mathematics/numerical-roots/) · [课程路线](/zh/alevel/as-further-mathematics/#learning-route) · [下一课](/zh/alevel/as-further-mathematics/bayes/)
+
+{% include exam_topic_practice.html %}

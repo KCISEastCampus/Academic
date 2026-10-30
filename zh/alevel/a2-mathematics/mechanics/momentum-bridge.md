@@ -342,3 +342,5 @@ $$E_{\mathrm{after}}=6\,\mathrm J\quad\text{or}\quad54\,\mathrm J.$$
 范围：[9660 specification v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf)，M1.4、M2.6 及 AS 先修。January 2025 卷默认计算器最终答案保留两位有效数字，题内要求可覆盖；这不替代本页开头为自拟题声明的精度约定。
 
 继续学习[功与能](/zh/alevel/a2-mathematics/mechanics/work-and-energy/)，或返回 [AS 数学](/zh/alevel/as-mathematics/)。前进前请用英文补全：**“Momentum is conserved because …; kinetic energy …; the negative sign means …”**，理由须来自所选系统与模型。
+
+{% include exam_topic_practice.html %}

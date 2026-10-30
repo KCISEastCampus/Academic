@@ -364,3 +364,5 @@ $$x_1=3-\frac36=2.5.$$
 </details>
 
 [上一课](/zh/alevel/as-further-mathematics/linearisation/) · [课程路线](/zh/alevel/as-further-mathematics/#learning-route) · [下一课](/zh/alevel/as-further-mathematics/euler-method/)
+
+{% include exam_topic_practice.html %}

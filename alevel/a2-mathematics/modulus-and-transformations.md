@@ -576,3 +576,5 @@ The classroom examples, practice, retries and review are self-written teaching m
 </details>
 
 **Learning path:** [Previous: Functions](/alevel/a2-mathematics/functions/) · [Next: Algebraic Fractions and Division](/alevel/a2-mathematics/algebraic-fractions-and-division/).
+
+{% include exam_topic_practice.html %}

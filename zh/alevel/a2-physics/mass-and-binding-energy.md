@@ -284,3 +284,5 @@ Write a short explanation of how fusion of suitable light nuclei or fission of s
 ## 来源与范围 {#sources}
 
 OxfordAQA 9630 PH04，[大纲正文 v4.4](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf) 3.12.2，印刷第 28 页/PDF 第 27 页，2026-10-21 核对。June 2024 QP 第 8–9/24 页与配套 MS 第 11/20 页支持例题 1/3、反应数据任务及练习 3；已目视原表与图。本页明确原子质量标签及练习 3 的简化反应模型，避免复制有歧义的粒子标签。Jim Breithaupt 第 24.2–24.3 节印刷第 422–427 页/PDF 第 438–443 页辅助讲解，没有复刻整道教材题。其他示范、任务及教学结合能曲线为自拟。反应堆运行、安全及太阳氢循环仍需后续学习页，本页不代表那些条目完成。
+
+{% include exam_topic_practice.html %}

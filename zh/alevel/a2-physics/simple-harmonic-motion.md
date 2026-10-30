@@ -640,3 +640,5 @@ $$f'_0=f_0/\sqrt2\approx\boxed{2.3\,\mathrm{Hz}}.$$
 练习 8 为自拟题，将 AS 大纲 3.5.1–3.5.2 与 PH03 的实际应用连接。本次已配对阅读 Specimen 2019 样卷 Q6.6–6.7 及评分标准 p.11 的相关部分；本页不引入阻尼微分方程。
 
 </details>
+
+{% include exam_topic_practice.html %}

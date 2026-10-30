@@ -118,3 +118,5 @@ $V=1.20-0.20I$, so emf is 1.20 V and internal resistance 0.20 Ω. At 0.80 A, $V=
 OxfordAQA 9630 §3.4.6 and RP3; see the [official specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf). Self-written tasks, constructed data and schematic; checking criteria are not official marks. Later, start [Unit 2 review](/alevel/as-physics/unit-2-review/) with these answers closed.
 
 [Previous: DC Circuits and Potential Dividers](/alevel/as-physics/dc-circuits-and-potential-dividers/) · [Next: Oscillations and Resonance](/alevel/as-physics/oscillations-and-resonance/) · [Course](/alevel/as-physics/)
+
+{% include exam_topic_practice.html %}

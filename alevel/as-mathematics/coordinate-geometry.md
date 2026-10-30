@@ -217,3 +217,5 @@ Specification §3.1 P1.2; line/curve and repeated-root reasoning.
 Success means independently explaining the method and checking its conditions, not just reading a solution. Student learning outcomes have not been trialled.
 
 </details>
+
+{% include exam_topic_practice.html %}

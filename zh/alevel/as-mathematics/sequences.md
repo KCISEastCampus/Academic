@@ -496,3 +496,5 @@ Specification §3.1 P1.5; MA01 January 2025 Q3 (MS pp8–9), Q6 (pp14–15) and 
 完成标准是能独立解释方法与检查条件，不是看完解答。未经过学生试用，不据此宣称学习效果已验证。
 
 </details>
+
+{% include exam_topic_practice.html %}

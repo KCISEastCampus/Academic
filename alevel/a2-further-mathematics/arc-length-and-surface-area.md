@@ -782,3 +782,5 @@ The nonlinear-surface section adapts [January 2026 FM03 Q5, QP pp. 8–9](https:
 Textbook alignment: Oxford University Press (2017), International A Level Further Mathematics with Mechanics, section 23.2, printed pp. 285–287 (supplied PDF pp. 289–291). This section follows its formulas and exercise conditions using generating curves with $y\ge0$; new examples remain labelled adapted or self-written.
 
 **Learning path:** [Previous: The calculus of inverse trigonometric functions](/alevel/a2-further-mathematics/inverse-trigonometric-functions/) · [Next: Hyperbolic functions](/alevel/a2-further-mathematics/hyperbolic-functions/) · [Back to the course](/alevel/a2-further-mathematics/).
+
+{% include exam_topic_practice.html %}

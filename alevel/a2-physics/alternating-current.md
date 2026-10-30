@@ -214,3 +214,5 @@ Halving source frequency doubles its period at fixed time base. Alternatively, h
 ## Sources and scope {#sources}
 
 OxfordAQA 9630 PH03, [specification body v4.4](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf) Section 3.10.5, printed p.26/PDF p.25, checked 21 October 2026. Questions 1–2 adapt June 2024 QP Q6.3–6.5, pp.19–22, paired with MS pp.17–18. Its original phase/scope figures were inspected; the task here restates dimensions and starting orientation. The scope drawing, other tasks and numerical examples are self-written. Textbook support: Jim Breithaupt Section 21.4, printed p.381. Only sinusoidal rms and resistive power models are required here; there is no added impedance or power-factor calculation topic.
+
+{% include exam_topic_practice.html %}

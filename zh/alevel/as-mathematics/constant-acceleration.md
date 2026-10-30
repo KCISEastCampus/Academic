@@ -148,3 +148,5 @@ Specification §3.2 M1.1; MA02 January 2025 Q10 motion-graph evidence, MS pp17�
 完成标准是能独立解释方法与检查条件，不是看完解答。未经过学生试用，不据此宣称学习效果已验证。
 
 </details>
+
+{% include exam_topic_practice.html %}

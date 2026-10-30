@@ -1189,3 +1189,5 @@ All page tasks are **Self-written**, without official marks. The January 2025 pa
 - **Check speed and direction:** constant speed still allows acceleration. Energy alone cannot supply the force or contact condition for circular motion.
 
 **Learning path:** [Previous: Work and Energy](/alevel/a2-mathematics/mechanics/work-and-energy/) · [Mechanics topic index](/alevel/a2-mathematics/mechanics/) · [Mechanics quick reference](/alevel/a2-mathematics/mechanics/quick-reference/). This completes the textbook learning sequence for A2 Mechanics. Revisit [practice](#practice) and use the topic index to review any earlier method you needed.
+
+{% include exam_topic_practice.html %}

@@ -111,3 +111,5 @@ Retry with help closed: a positron has mass 9.11 × 10⁻³¹ kg and charge +1.6
 OxfordAQA 9630 §3.3.1–3.3.2. 题目自拟，数值／示意数据为构造，核查点不是官方评分标准。 [官方大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf).
 
 [上一课](/zh/alevel/as-physics/materials-and-young-modulus/) · [下一课](/zh/alevel/as-physics/radiation-and-safety/) · [课程](/zh/alevel/as-physics/)
+
+{% include exam_topic_practice.html %}

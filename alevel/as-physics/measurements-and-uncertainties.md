@@ -378,3 +378,5 @@ Scope: OxfordAQA International AS Physics 9630, PH01, Sections 3.1.1–3.1.3. Th
 See the [official specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf). Tasks, values and feedback are self-written, with no official marks. Trigonometric/logarithmic uncertainty combinations and statistical confidence intervals are not introduced as requirements.
 
 [Next: Vectors and Moments](/alevel/as-physics/vectors-and-moments/) · [Back to AS Physics](/alevel/as-physics/) · [Existing mechanics notes](/alevel/as-physics/#2--mechanics-321--328) · [Apply measurement judgement in A2 capacitor records](/alevel/a2-physics/capacitor-charge-and-discharge/#data-rc-records).
+
+{% include exam_topic_practice.html %}

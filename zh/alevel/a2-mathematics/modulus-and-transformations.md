@@ -578,3 +578,5 @@ $$(x-2)^2\geq4(x+1)^2\iff -3x(x+4)\geq0.$$
 </details>
 
 **学习路径：**[上一节：函数](/zh/alevel/a2-mathematics/functions/) · [下一节：代数分式与多项式除法](/zh/alevel/a2-mathematics/algebraic-fractions-and-division/)。
+
+{% include exam_topic_practice.html %}

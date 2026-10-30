@@ -182,3 +182,5 @@ X-ray maxima are 25 and 50 keV. Deceleration releases variable fractions of inci
 OxfordAQA 9630 3.5.9–3.5.11. Tasks are self-written; numerical/schematic records are constructed. Checking criteria are not official marks. [Official specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf).
 
 [Previous](/alevel/as-physics/refraction-and-optical-fibres/) · [Next](/alevel/as-physics/unit-2-review/) · [Course](/alevel/as-physics/)
+
+{% include exam_topic_practice.html %}

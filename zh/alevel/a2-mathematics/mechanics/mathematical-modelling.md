@@ -489,3 +489,5 @@ $$540-50(9.8)=50a\quad\Rightarrow\quad a=1\,\mathrm{m\,s^{-2}}\text{ upwards}.$$
 **你应能：**结合情境解释假设、分别列物体方程，并说明一个有效的模型限制。
 
 **学习路线：**[力学目录](/zh/alevel/a2-mathematics/mechanics/) · [下一课：向量与运动学](/zh/alevel/a2-mathematics/mechanics/vectors-and-kinematics/)。
+
+{% include exam_topic_practice.html %}

@@ -778,3 +778,5 @@ Scope: [OxfordAQA 9660 v5.2, M2.2, connecting to M2.4](https://www.oxfordaqa.com
 **You should be able to:** work with motion in two and three dimensions, use conditions at any given time, distinguish speed from velocity and find a Cartesian path.
 
 **Learning path:** [Previous: Mathematical Modelling](/alevel/a2-mathematics/mechanics/mathematical-modelling/) · [Mechanics topic index](/alevel/a2-mathematics/mechanics/) · [Next: Forces, Equilibrium and Friction](/alevel/a2-mathematics/mechanics/forces-equilibrium-and-friction/).
+
+{% include exam_topic_practice.html %}

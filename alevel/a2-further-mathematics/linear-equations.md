@@ -460,3 +460,5 @@ For a numerical check after the argument, use the [fx-CG50 matrix guide](/alevel
 The 9665 specification and the listed January 2025 Q8 and Q13(b) QP/MS passages were reread on **23 October 2026**.
 
 The scope is [OxfordAQA Further Mathematics 9665, Version 5.2, FP2.14, printed p.21 / PDF p.20](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf#page=20). Example 5 is adapted from [January 2025 FM03 Q8, pp.14–15](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-question-paper.pdf#page=14), checked against [its official MS p.13](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-mark-scheme.pdf#page=13). The specified-method distinction was also checked in the same paper, Q13(b), QP p.27 / MS p.21. The remaining examples, practice, feedback and solutions are self-written; the explanations are not an official mark scheme. The configuration diagram is a constructed schematic, not measured data.
+
+{% include exam_topic_practice.html %}

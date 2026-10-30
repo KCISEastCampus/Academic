@@ -506,3 +506,5 @@ Textbook: Oxford University Press (2017), International A Level Further Mathemat
 [9665 Specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf) · [June 2026 QP](https://drive.google.com/file/d/1tL6Bbjx9_3rs3oq0CxUetH0DBTvkE43r/view) · [June 2025 QP](https://drive.google.com/file/d/1FTxQ-X2OSM6MRZHAAKbTk8-Gp1Vqx7z4/view) · [June 2025 MS](https://drive.google.com/file/d/1VRTlOTfUIP2agmgWRMxOBJLAUS1AwvQA/view)
 
 </details>
+
+{% include exam_topic_practice.html %}

@@ -1191,3 +1191,5 @@ $$\omega=\frac{6000}{9.0\times10^6}=\frac1{1500}\,\mathrm{rad\,s^{-1}},\qquad\ta
 - **检查速率和方向：**速率恒定仍可有加速度；能量本身不能给出圆周运动所需的受力或接触条件。
 
 **学习路线：**[上一课：功与能](/zh/alevel/a2-mathematics/mechanics/work-and-energy/) · [力学单元入口](/zh/alevel/a2-mathematics/mechanics/) · [力学速查（英文）](/alevel/a2-mathematics/mechanics/quick-reference/)。至此完成教材 A2 力学的学习顺序；返回[练习](#practice)，并用单元入口复习曾需调用的先前方法。
+
+{% include exam_topic_practice.html %}

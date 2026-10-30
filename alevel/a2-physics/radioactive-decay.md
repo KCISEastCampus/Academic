@@ -578,3 +578,5 @@ Supplementary textbook reference: Jim Breithaupt, *International A Level Physics
 Background correction and controlled geometry connect AS radiation knowledge to PH03 exponential analysis. Fixed-interval averaging, detector calibration and the base-10 conversion support interpretation; they do not introduce another numbered required practical. Mean lifetime is not treated here as a separately specified requirement. PH04 binding energy, fission and fusion are outside this lesson. Constructed data, web preparation and a successful page build do not establish completion of a physical practical or verified student learning.
 
 </details>
+
+{% include exam_topic_practice.html %}

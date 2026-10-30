@@ -765,3 +765,5 @@ If you can choose a model, state its limits and solve on the original domain wit
 Scope: OxfordAQA 9660 MA03 P2.5, with P2.1 inverse/composite/graph connections, [specification v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf), printed pp21, 23. Preparation checked January 2025 MA03 Q10(b)(i), [QP pp18–19](https://aqamat.alevelclouds.com/25_01_QP_P2.pdf) and [MS p15](https://aqamat.alevelclouds.com/25_01_MS_P2.pdf), for forming an exponential quadratic and explicitly rejecting a negative exponential value. This does not verify every model or logarithm task against that question; these are independently checked self-written tasks. Original textbook locator: Chapter 4, Sections 4.1–4.4 and review, printed pp50–57; not rechecked against the book in this revision. Differential-equation derivations are in the later linked lesson.
 
 </details>
+
+{% include exam_topic_practice.html %}

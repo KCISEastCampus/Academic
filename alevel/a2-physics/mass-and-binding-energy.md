@@ -282,3 +282,5 @@ For a suitable reaction, the products have greater total binding energy and lowe
 ## Sources and scope {#sources}
 
 OxfordAQA 9630 PH04, [specification body v4.4](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf) Section 3.12.2, printed p.28/PDF p.27, checked 21 October 2026. June 2024 QP pp.8–9/24 paired with MS pp.11/20 supports Examples 1/3, the reaction-data task and Question 3. Original QP tables and graph were viewed. Atomic-mass labels and the Question 3 reaction model are made explicit here rather than copying ambiguous particle labels. Jim Breithaupt Sections 24.2–24.3, printed pp.422–427/PDF pp.438–443, supports explanation; no whole textbook question is reproduced. Other examples and tasks are self-written, including the illustrative binding curve. Reactor operation, safety and the solar hydrogen cycle require later lessons; this page does not complete those sections on its own.
+
+{% include exam_topic_practice.html %}

@@ -673,3 +673,5 @@ $$g^{(4)}(0)=2^{4/2}e^0\cos\pi=-4,\qquad
 **学后下一步：**先关闭本章答案，完成课程入口的[跨主题综合任务](/zh/alevel/a2-further-mathematics/#mixed-review)；按入口规定的间隔再做[延后回顾任务](/zh/alevel/a2-further-mathematics/#later-review)。保留独立作答，按目标核对；需要提示的目标再回对应回补段后重试。
 
 **学习路径：**[上一课：根与多项式](/zh/alevel/a2-further-mathematics/roots-and-polynomials/) · [返回课程](/zh/alevel/a2-further-mathematics/) · [下一课：有限级数](/zh/alevel/a2-further-mathematics/finite-series/)。
+
+{% include exam_topic_practice.html %}

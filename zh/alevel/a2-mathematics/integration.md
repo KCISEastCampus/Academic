@@ -633,3 +633,5 @@ $$\int\frac{x^2}{\sqrt{x^3+1}}\,dx
 </details>
 
 **学习路径：**[上一节：参数方程](/zh/alevel/a2-mathematics/parametric-equations/) · [下一节：积分：三角积分与应用](/zh/alevel/a2-mathematics/integration-applications/)。
+
+{% include exam_topic_practice.html %}

@@ -563,3 +563,5 @@ $$\boxed{E_p=+0.075\,\mathrm J}.$$
 练习 6–8 改编自 PH03 January 2020 Q16、June 2024 Q4 和 Q18。英文原页说明编写时参考过官方评分标准；油滴几何和假设已明确写出，不依赖原试卷图。数值和方向经独立推导检查，未直接照抄教材答案。
 
 </details>
+
+{% include exam_topic_practice.html %}

@@ -576,3 +576,5 @@ Follow the table order for arrows rather than always moving right. The relation 
 
 
 **Next step:** when you can determine a trace and its lines from the parameter range independently, continue to [integration: choosing a method](/alevel/a2-mathematics/integration/). Keep [later review](#later-review) as your return point. Scope: [9660 specification v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf), P2.3 and P2.6; January 2025 MA03 [QP](https://aqamat.alevelclouds.com/25_01_QP_P2.pdf) Q13 and its [MS](https://aqamat.alevelclouds.com/25_01_MS_P2.pdf) were read for the derivative, point, line and elimination process requirements. All tasks here remain self-written.
+
+{% include exam_topic_practice.html %}

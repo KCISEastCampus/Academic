@@ -680,3 +680,5 @@ $$\frac{x^3-2x^2+x-2}{x^2-4}=x-2+\frac5{x+2},\qquad x\ne-2,2.$$
 </details>
 
 **学习路径：**[上一节：绝对值函数与变换](/zh/alevel/a2-mathematics/modulus-and-transformations/) · [下一节：部分分式](/zh/alevel/a2-mathematics/partial-fractions/)。
+
+{% include exam_topic_practice.html %}

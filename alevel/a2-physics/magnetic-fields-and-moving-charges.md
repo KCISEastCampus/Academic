@@ -403,3 +403,5 @@ Questions 2, 4 and 6 use January 2020 PH03 Q27, Q28 and Q30 respectively: QP pp.
 Question 5 adapts OxfordAQA 9630 PH03 Specimen 2019/V2.0 Q4.2–4.5: QP pp.10–11 and paired MS pp.8–9. The text and geometry are regrouped explicitly here; the drawing is original and schematic. The filenames do not override the documents' Specimen 2019/V2.0 identity.
 
 Textbook support: Jim Breithaupt, *Oxford International AQA Examinations: International A Level Physics*, Chapter 20, Sections 20.1–20.3, printed pp.357–366. The balance activity is original constructed data, informed by the wire/magnet reaction context of June 2024 PH03 Q16 (QP p.31/MS p.21); it changes the specified current and reading direction. It is not RP7, which concerns transformer efficiency, and does not certify practical completion. All numerical answers, directions and energy balances were checked independently.
+
+{% include exam_topic_practice.html %}

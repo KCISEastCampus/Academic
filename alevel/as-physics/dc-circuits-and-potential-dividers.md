@@ -108,3 +108,5 @@ Lower equivalent resistance is $4\parallel8=8/3$ kΩ, giving $V_{\mathrm{out}}=8
 OxfordAQA 9630 §3.4.4–3.4.5. Tasks are self-written; numerical/schematic records are constructed. Checking criteria are not official marks. [Official specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf).
 
 [Previous](/alevel/as-physics/resistance-and-resistivity/) · [Next](/alevel/as-physics/emf-and-internal-resistance/) · [Course](/alevel/as-physics/)
+
+{% include exam_topic_practice.html %}

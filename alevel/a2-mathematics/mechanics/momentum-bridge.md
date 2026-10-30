@@ -340,3 +340,5 @@ The reference for assessment is **OxfordAQA 9660/MA05, January 2025, Q8(a–c)**
 Scope: [9660 specification v5.2](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf), M1.4 and M2.6 with AS prerequisites. The January 2025 paper defaults to two significant figures for calculator final answers unless a question says otherwise; this does not replace the self-written convention stated above.
 
 Continue to [Work and Energy](/alevel/a2-mathematics/mechanics/work-and-energy/) or return to [AS Mathematics](/alevel/as-mathematics/). Before moving on, explain in English: **“Momentum is conserved because …; kinetic energy …; the negative sign means …”**, supplying reasons from the chosen system and model.
+
+{% include exam_topic_practice.html %}

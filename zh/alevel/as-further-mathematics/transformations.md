@@ -306,3 +306,5 @@ $$\begin{aligned}J&=\begin{pmatrix}-1&-2\\0&1\end{pmatrix},\\J^{-1}&=J.\end{alig
 </details>
 
 [上一课](/zh/alevel/as-further-mathematics/matrix-algebra/) · [课程路线](/zh/alevel/as-further-mathematics/#learning-route) · [下一课](/zh/alevel/as-further-mathematics/linearisation/)
+
+{% include exam_topic_practice.html %}

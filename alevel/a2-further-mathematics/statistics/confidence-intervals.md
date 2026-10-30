@@ -351,3 +351,5 @@ All nine observations are independent and share the same normal population, so t
 A confidence interval compares one population mean with a proposed value. The subsequent inference lessons extend the model and target; do not automatically reuse this one-sample standard error for two independent populations or paired observations.
 
 [Test power](/alevel/a2-further-mathematics/statistics/test-power/) · [Course route](/alevel/a2-further-mathematics/statistics/)
+
+{% include exam_topic_practice.html %}

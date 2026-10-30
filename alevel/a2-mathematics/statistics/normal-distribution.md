@@ -520,3 +520,5 @@ Continue to [estimation](/alevel/a2-mathematics/statistics/estimation/). A sampl
 OxfordAQA 9660 v5.2 S2.4, printed p.26 / PDF p.25: [official specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-mathematics-specification.pdf). Two-parameter example adapted from January 2025 Q5(a): [question paper PDF p.14](/assets/pdf/fx-cg50/references/oxfordaqa-ma04-2025-january-question-paper.pdf#page=14), [paired final mark scheme PDF p.12](/assets/pdf/fx-cg50/references/oxfordaqa-ma04-2025-january-mark-scheme.pdf#page=12). The numerical conditions are retained with shortened context; this is not a verbatim original question. Q5(b), PDF p.15, uses a sample mean and belongs with estimation. Other tasks are author-created. The teaching tables show standard normal cumulative probabilities and quantiles; no calculator-specific operation or student learning outcome is claimed as verified.
 
 </details>
+
+{% include exam_topic_practice.html %}

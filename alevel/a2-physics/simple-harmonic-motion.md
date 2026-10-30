@@ -638,3 +638,5 @@ Questions 6–7 are adapted from OxfordAQA PH03 January 2020 Question 1 and June
 Question 8 is self-written. Its qualitative targets connect AS specification 3.5.1–3.5.2 to the direct PH03 application in the Specimen 2019 question paper, Q6.6–6.7, and the paired mark scheme, p.11. These parts were read for this addition; no damped differential equation is introduced.
 
 </details>
+
+{% include exam_topic_practice.html %}

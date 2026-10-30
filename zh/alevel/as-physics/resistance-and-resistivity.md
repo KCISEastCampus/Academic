@@ -101,3 +101,5 @@ Another wire of the same material is three times as long and has half the origin
 OxfordAQA 9630 §3.4.2–3.4.3. 题目自拟，数值／示意数据为构造，核查点不是官方评分标准。 [官方大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-international-as-and-a-level-physics-specification.pdf).
 
 [上一课](/zh/alevel/as-physics/charge-current-and-potential/) · [下一课](/zh/alevel/as-physics/dc-circuits-and-potential-dividers/) · [课程](/zh/alevel/as-physics/)
+
+{% include exam_topic_practice.html %}

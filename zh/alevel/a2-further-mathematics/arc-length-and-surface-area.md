@@ -785,3 +785,5 @@ S&=\frac\pi6\int_1^2u^{1/2}\,\mathrm du\\
 教材对照：Oxford University Press（2017），International A Level Further Mathematics with Mechanics，23.2节，印刷页285–287（所提供PDF页289–291）。本节按该处的公式和练习条件使用 $y\ge0$ 的生成曲线；新增例题仍标为改编或自拟。
 
 **学习路径：**[上一节：反三角函数的微积分](/zh/alevel/a2-further-mathematics/inverse-trigonometric-functions/) · [下一节：双曲函数](/zh/alevel/a2-further-mathematics/hyperbolic-functions/) · [返回高等纯数学课程](/zh/alevel/a2-further-mathematics/)
+
+{% include exam_topic_practice.html %}

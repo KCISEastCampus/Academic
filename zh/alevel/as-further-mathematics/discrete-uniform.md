@@ -408,3 +408,5 @@ $$
 - FM02 June 2024 Q8(b)(i); QP pp.16–17, MS p.14. [FM02 June 2024 QP](/assets/pdf/fx-cg50/references/oxfordaqa-fm02-2024-june-question-paper.pdf) · [Final MS](/assets/pdf/fx-cg50/references/oxfordaqa-fm02-2024-june-mark-scheme.pdf).
 
 [上一课](/zh/alevel/as-further-mathematics/bayes/) · [课程路线](/zh/alevel/as-further-mathematics/#learning-route) · [下一课](/zh/alevel/as-further-mathematics/geometric-distribution/)
+
+{% include exam_topic_practice.html %}

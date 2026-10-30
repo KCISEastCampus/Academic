@@ -206,3 +206,5 @@ Specification §3.2 PP1.1; MA02 January 2025 Q3, QP pp6–7, MS pp7–8.
 Success means independently explaining the method and checking its conditions, not just reading a solution. Student learning outcomes have not been trialled.
 
 </details>
+
+{% include exam_topic_practice.html %}
