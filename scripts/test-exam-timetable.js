@@ -53,12 +53,12 @@ const translatedPages = fs.readdirSync(path.join(root, 'zh'), { recursive: true 
     url: source.match(/^permalink: (.+)$/m)?.[1].trim()
   }))
   .filter(page => page.original && page.url);
-const navUrls = ['/', '/alevel/', '/igcse/', '/timetable/', '/student-council/', '/contributors/'];
+const navUrls = ['/', '/alevel/', '/igcse/', '/timetable/', '/student-council/', '/contributors/', 'https://ericstone.top/exams/'];
 for (const page of translatedPages) {
   const nav = built(page.url).match(/<div class="site-nav-links"[^>]*>([\s\S]*?)<\/div>/)[1];
   const links = [...nav.matchAll(/<a href="([^"]+)"/g)].map(match => match[1]);
   assert.deepEqual(links, navUrls.map(url => translatedPages.find(page => page.original === url)?.url || url), page.url);
-  for (const url of links) assert(fs.existsSync(path.join(root, '_site', url, 'index.html')), `Broken navigation: ${page.url} -> ${url}`);
+  for (const url of links.filter(url => url.startsWith('/'))) assert(fs.existsSync(path.join(root, '_site', url, 'index.html')), `Broken navigation: ${page.url} -> ${url}`);
 }
 console.log('Timetable data passed: 41 unique papers, valid dates/cohorts/durations, CH02 regression and official PDF link.');
 console.log(`Bilingual timetable and navigation passed on ${translatedPages.length} Chinese pages: paired switches, hreflang, active links, shared data and existing destinations.`);
