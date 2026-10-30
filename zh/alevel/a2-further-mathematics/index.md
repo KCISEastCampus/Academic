@@ -46,6 +46,8 @@ OxfordAQA 9665 · A2 高等纯数学 · FP2 / FM03。每课先解释新概念是
 
 ## 课程概览 {#course-outline}
 
+{% include exam_topic_practice.html topic="polar-coordinates" %}
+
 这些课程按 *International A Level Further Mathematics* 的 A2 纯数学部分编排。教材第 18 章与第 25 章各涵盖两个大纲主题。
 
 - **代数、证明与级数：**根与多项式、数学归纳法、有限级数、级数与极限。

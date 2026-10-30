@@ -877,6 +877,8 @@ A&=A_R+A_L=\boxed{3\pi}.
 
 **你应能够：**转换点的坐标与曲线方程，绘制正半径曲线，找出全部交点，并利用草图为指定区域建立面积积分。
 
+{% include exam_topic_practice.html %}
+
 本课范围依据 [OxfordAQA Further Mathematics 9665 课程大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf) FP2.3。例题为教学材料。第 6–7 题保留所提供教材中的 AQA 原题与分值；第 8 题为题图重绘的改编题，6 分是原题分值。
 
 **学习路径：**[上一课：棣莫弗定理](/zh/alevel/a2-further-mathematics/de-moivres-theorem/) · [下一课：反三角函数的微积分](/zh/alevel/a2-further-mathematics/inverse-trigonometric-functions/) · [返回课程](/zh/alevel/a2-further-mathematics/)。

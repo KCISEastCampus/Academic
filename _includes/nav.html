@@ -33,6 +33,7 @@
         {% endif %}
         <a href="{{ target_url | relative_url }}" class="site-nav-link {% if active %}active{% endif %}"{% if active %} aria-current="{% if current_url == nav_url %}page{% else %}location{% endif %}"{% endif %} data-ui="{{ nav_keys[forloop.index0] }}">{{ nav_labels[forloop.index0] }}</a>
       {% endfor %}
+      <a href="https://ericstone.top/exams/" class="site-nav-link" data-ui="question_finder" data-ui-title="question_finder_description" title="{{ ui.question_finder_description }}">{{ ui.question_finder }}</a>
     </div>
     <div class="site-nav-actions">
       <button type="button" class="site-nav-theme-btn" data-open-search data-ui-aria="search" aria-label="{{ ui.search }}"

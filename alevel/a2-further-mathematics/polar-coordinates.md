@@ -875,6 +875,8 @@ Check using the difference of the two circle areas. Squaring and subtracting the
 
 **You should be able to:** convert points and equations, sketch positive-radius curves, identify every intersection and use a sketch to set up the area integral for the required region.
 
+{% include exam_topic_practice.html %}
+
 The lesson follows FP2.3 of the [OxfordAQA Further Mathematics 9665 specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf). Worked examples are teaching material. Questions 6–7 retain the AQA questions and marks from the supplied textbook. Question 8 is adapted with a redrawn diagram; the 6 marks are those of the original question.
 
 **Learning path:** [Previous: De Moivre's Theorem](/alevel/a2-further-mathematics/de-moivres-theorem/) · [Next: Calculus of Inverse Trigonometric Functions](/alevel/a2-further-mathematics/inverse-trigonometric-functions/) · [Back to the course](/alevel/a2-further-mathematics/).
