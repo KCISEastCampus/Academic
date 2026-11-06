@@ -77,6 +77,17 @@ layout: none
     <!-- Quick Navigation Links -->
     <section class="quick-nav-section fade-in">
       <div class="quick-nav-container">
+        <a href="{% if page.lang == 'zh-CN' %}/zh{% endif %}/study-methods/" class="quick-nav-item">
+          <div class="nav-icon">
+            <i class="bi bi-journal-check" aria-hidden="true"></i>
+          </div>
+          <div class="nav-content">
+            <h3 data-ui="study_methods">{{ ui.study_methods }}</h3>
+            <p data-ui="study_methods_description">{{ ui.study_methods_description }}</p>
+          </div>
+          <i class="bi bi-chevron-right nav-arrow" aria-hidden="true"></i>
+        </a>
+
         <a href="/admissions/tmua-esat/" class="quick-nav-item" title="{{ ui.admissions_notes }}" data-ui-title="admissions_notes">
           <div class="nav-icon">
             <i class="bi bi-calculator" aria-hidden="true"></i>
