@@ -4,6 +4,8 @@ en:
   timetable: Timetable
   student_council: Student Council
   contributors: Contributors
+  study_methods: Study methods
+  study_methods_description: Understand, practise and review with a plan
   question_finder: Questions & papers
   question_finder_description: Find questions and build papers
   exam_topic_questions: Find questions and build a paper
@@ -125,6 +127,8 @@ zh-CN:
   timetable: 考试时间表
   student_council: 学生会
   contributors: 贡献者
+  study_methods: 学习方法
+  study_methods_description: 从看懂到会做，找到自己的下一步
   question_finder: 找题组卷
   question_finder_description: 查找题目并组合试卷
   exam_topic_questions: 按本主题找题与组卷
