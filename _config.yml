@@ -41,6 +41,7 @@ plugins:
 
 # Exclude non-content files from the built site
 exclude:
+  - assets/documents/study-methods-original.pdf
   - scripts
   - chars_site.txt
 
