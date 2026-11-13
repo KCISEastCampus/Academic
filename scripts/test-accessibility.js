@@ -147,13 +147,13 @@ for (const file of ['_includes/nav.html', '_includes/theme_button.html']) {
 const smoothComponent = read('assets/js/interactive_effects.js').match(/const smoothScroll = (\{[\s\S]*?\n  \});/)[1];
 for (const skip of [true, false]) {
   let prevented = false, scrolled = false;
-  const link = { classList: { contains: () => skip }, getAttribute: () => '#content-container' };
+  const link = { classList: { contains: () => skip }, getAttribute: () => '#content-container', hasAttribute: () => false };
   const smoothScroll = vm.runInNewContext(`(${smoothComponent})`, {
     document: { getElementById: () => ({}) },
     history: { pushState() {} },
     utils: { smoothScrollTo() { scrolled = true; } }
   });
-  smoothScroll.handleClick({ target: { closest: () => link }, preventDefault() { prevented = true; } });
+  smoothScroll.handleClick({ button: 0, target: { closest: () => link }, preventDefault() { prevented = true; } });
   assert.equal(prevented, !skip, 'Skip links keep native focus navigation');
   assert.equal(scrolled, !skip, 'Ordinary content anchors keep smooth scrolling');
 }

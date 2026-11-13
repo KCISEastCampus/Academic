@@ -73,7 +73,7 @@
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: 'smooth'
+        behavior: utils.prefersReducedMotion() ? 'instant' : 'smooth'
       });
     },
 
@@ -238,9 +238,11 @@
     },
 
     handleClick: function(e) {
+      if (e.defaultPrevented || e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
       const link = e.target.closest('a[href^="#"]');
       // Native fragment navigation also transfers focus for skip links.
-      if (!link || link.classList.contains('skip-link')) return;
+      if (!link || link.classList.contains('skip-link') || link.hasAttribute('download') ||
+          (link.target && link.target.toLowerCase() !== '_self')) return;
 
       const targetId = link.getAttribute('href').substring(1);
       const targetElement = document.getElementById(targetId);

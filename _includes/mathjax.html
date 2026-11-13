@@ -92,32 +92,67 @@
       'https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js'
     ];
 
-    const script = document.createElement('script');
-    script.id = 'MathJax-script';
-    script.defer = true;
-    script.crossOrigin = 'anonymous';
-
     let index = 0;
+    let finished = false;
+
+    const showFailure = () => {
+      const showNotice = () => {
+        if (document.getElementById('mathjax-load-status')) return;
+        const notice = document.createElement('p');
+        notice.id = 'mathjax-load-status';
+        notice.className = 'alert alert-warning';
+        notice.setAttribute('role', 'status');
+        notice.textContent = document.documentElement.lang === 'zh-CN'
+          ? '公式显示组件加载失败，部分公式可能显示为原始文本。请检查网络后刷新页面。'
+          : 'Math display could not load. Some formulas may appear as source text. Check your connection and reload the page.';
+        const container = document.getElementById('content-container') || document.body;
+        container.prepend(notice);
+      };
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', showNotice, {once: true});
+      } else {
+        showNotice();
+      }
+    };
+
+    // Retry the entry bundle only; configured fonts and loader subresources keep their paths.
     const tryNext = () => {
+      if (finished) return;
       if (index >= sources.length) {
+        finished = true;
         console.error('MathJax failed to load from all sources');
+        showFailure();
         return;
       }
       const src = sources[index++];
-  console.info('Loading MathJax from', src);
+      // A started script cannot execute again after changing src: create a fresh element.
+      const script = document.createElement('script');
+      script.id = 'MathJax-script';
+      script.defer = true;
+      script.crossOrigin = 'anonymous';
+      let settled = false;
+      const settle = () => {
+        if (settled || finished) return false;
+        settled = true;
+        script.onload = script.onerror = null;
+        return true;
+      };
+      script.onload = () => {
+        if (!settle()) return;
+        finished = true;
+        console.log('MathJax loaded from', src);
+      };
+      script.onerror = () => {
+        if (!settle()) return;
+        console.warn('MathJax failed to load from', src);
+        script.remove();
+        tryNext();
+      };
+      console.info('Loading MathJax from', src);
       script.src = src;
-    };
-
-    script.onload = () => {
-      console.log('MathJax loaded from', script.src);
-    };
-
-    script.onerror = () => {
-      console.warn('MathJax failed to load from', script.src);
-      tryNext();
+      document.head.appendChild(script);
     };
 
     tryNext();
-    document.head.appendChild(script);
   })();
 </script>
