@@ -1,4 +1,5 @@
-// Full: run after Jekyll. Offline: --source-only --canonical=... --exam-root=...
+// Full: run after Jekyll; --site-dir=... selects an alternate generated output directory.
+// Offline: --source-only --canonical=... --exam-root=...
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
@@ -145,7 +146,8 @@ rendered.forEach((html, index) => {
   if (selected.length) checkLinks(html, selected, lang);
   else assert.equal(html.trim(), '', 'Missing/incomplete/unknown mapping or empty chapter selection hides the component');
 });
-const built = route => read(`_site${route}index.html`);
+const siteDir = path.resolve(root, option('site-dir') || '_site');
+const built = route => fs.readFileSync(path.join(siteDir, route.slice(1), 'index.html'), 'utf8').replace(/\r\n/g, '\n');
 const body = html => html.split('id="content-container"')[1].split('<div id="toc"')[0];
 for (const page of pages.values()) {
   const html = built(page.route), content = body(html), blocks = components(content);

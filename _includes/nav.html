@@ -74,16 +74,26 @@
     var links = document.getElementById('siteNavLinks');
     var navThemeBtn = document.getElementById('navThemeBtn');
     var preferences = document.getElementById('siteNavPreferences');
-    if (preferences && links) {
+    if (preferences && links && toggle) {
       var actions = preferences.parentElement;
+      var navInner = links.parentElement;
+      var preferenceNext = preferences.nextSibling;
       var mobileNav = window.matchMedia('(max-width: 1024px)');
-      function placePreferences() {
-        var focused = preferences.contains(document.activeElement) ? document.activeElement : null;
-        (mobileNav.matches ? links : actions).appendChild(preferences);
-        if (focused) (mobileNav.matches && !links.classList.contains('show') ? toggle : focused).focus();
+      function placeNavigation() {
+        var focused = links.contains(document.activeElement) || actions.contains(document.activeElement)
+          ? document.activeElement : null;
+        // Match DOM/Tab order to the mobile disclosure and restore desktop order.
+        navInner.insertBefore(links, mobileNav.matches ? actions.nextSibling : actions);
+        if (mobileNav.matches) links.appendChild(preferences);
+        else actions.insertBefore(preferences, preferenceNext);
+        if (focused) {
+          if (mobileNav.matches && links.contains(focused) && !links.classList.contains('show')) toggle.focus();
+          else if (!mobileNav.matches && focused === toggle) links.querySelector('.site-nav-link').focus();
+          else focused.focus();
+        }
       }
-      placePreferences();
-      mobileNav.addEventListener('change', placePreferences);
+      placeNavigation();
+      mobileNav.addEventListener('change', placeNavigation);
     }
     var languageSwitch = document.getElementById('languageSwitch');
     if (languageSwitch) {

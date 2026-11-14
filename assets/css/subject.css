@@ -1182,6 +1182,17 @@ html[data-bs-theme="dark"] .image-modal-close:hover {
   -webkit-overflow-scrolling: touch;
 }
 
+#content-container .table-wrapper:focus-visible {
+  outline: 3px solid var(--link-text);
+  outline-offset: 2px;
+}
+
+@media (forced-colors: active) {
+  #content-container .table-wrapper:focus-visible {
+    outline-color: Highlight;
+  }
+}
+
 #content-container table {
   width: 100%;
   min-width: 0;
