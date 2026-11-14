@@ -138,7 +138,9 @@ assert.equal(blocked.assigned.length, 1, 'Session selection works even when pers
 assert.deepEqual(blocked.writes, []);
 vm.runInNewContext(source, { document: { getElementById: () => null } });
 
-const site = path.join(root, '_site');
+// Match alternate Jekyll destinations without consulting an older _site.
+const siteArg = process.argv.find(arg => arg.startsWith('--site-dir='));
+const site = path.resolve(root, siteArg ? siteArg.slice('--site-dir='.length) : '_site');
 assert.equal(fs.readFileSync(path.join(site, 'assets/js/site-language.js'), 'utf8'), source, 'Build the site before checking generated pages');
 let generated;
 for (const [url, language, alternate] of [

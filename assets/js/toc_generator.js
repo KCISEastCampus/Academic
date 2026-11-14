@@ -46,6 +46,7 @@ function generateTOC() {
   let lastSyncAt = 0;
 
   tocContent.addEventListener("click", (event) => {
+    if (event.defaultPrevented || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
     const collapseBtn = event.target.closest(".toc-collapse");
     if (collapseBtn) {
       event.preventDefault();
@@ -54,17 +55,19 @@ function generateTOC() {
     }
 
     const link = event.target.closest("a[data-toc-link]");
-    if (!link) return;
+    if (!link || link.hasAttribute('download') ||
+        (link.target && link.target.toLowerCase() !== '_self')) return;
 
-    event.preventDefault();
     const targetId = link.getAttribute("href").slice(1);
     const targetElement = document.getElementById(targetId);
     if (!targetElement) return;
+    event.preventDefault();
 
     if (window.innerWidth <= 1024) toggleTOC(false);
 
     isProgrammaticScroll = true;
-    targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    targetElement.scrollIntoView({ behavior: reducedMotion ? "instant" : "smooth", block: "start" });
     history.replaceState(null, "", `#${targetId}`);
     setActiveLink(link, false);
 

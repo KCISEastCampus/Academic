@@ -59,6 +59,9 @@ html[data-bs-theme="dark"] .site-nav {
   gap: 0.15rem;
   justify-content: center;
   flex: 1;
+  /* Let desktop links wrap within the space left by the brand and controls. */
+  min-width: 0;
+  flex-wrap: wrap;
 }
 
 .site-nav-link {
@@ -172,6 +175,12 @@ html[data-bs-theme="dark"] .theme-icon-nav-moon {
   color: var(--text);
   cursor: pointer;
   font-size: 1.2rem;
+}
+
+/* Keep the desktop row compact before the mobile disclosure takes over. */
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .site-nav-inner { gap: 0.5rem; }
+  .site-nav-link { padding-inline: 0.2rem; }
 }
 
 @media (max-width: 1024px) {

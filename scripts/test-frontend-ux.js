@@ -1,7 +1,9 @@
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
-const site = path.join(__dirname, '../_site');
+// Match alternate Jekyll destinations without consulting an older _site.
+const siteArg = process.argv.find(arg => arg.startsWith('--site-dir='));
+const site = path.resolve(__dirname, '..', siteArg ? siteArg.slice('--site-dir='.length) : '_site');
 const read = file => fs.readFileSync(path.join(site, file), 'utf8');
 
 for (const file of ['index.html', 'zh/index.html', 'alevel/index.html', 'igcse/index.html',
