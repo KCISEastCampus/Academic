@@ -20,6 +20,8 @@ How can a perpendicular direction measure area, volume and whether points share 
 
 **Goals:** calculate a cross product and check its direction; obtain triangle and parallelogram areas; calculate a scalar triple product; test coplanarity of vectors or four points; retain every parameter value allowed by a volume condition.
 
+Textbook: Chapter 26, Sections 26.1–26.2 and 26.6, printed pp. 320–328 and 338–341, in *International A Level Further Mathematics*.
+
 **Before you start:** revise components, magnitudes, displacement vectors and the scalar product in [MA03 Vectors](/alevel/a2-mathematics/vectors/). You need a right-handed orthonormal coordinate system. All coordinates below are mathematical examples, not measured data.
 
 Labels **Original diagnostic**, **Original example** and **Original task** identify author-written material. Official questions and adaptations have separate source labels.

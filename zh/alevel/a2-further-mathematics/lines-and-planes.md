@@ -22,6 +22,8 @@ reading_layout: true
 
 **目标：**把方向比归一化；写出包括叉积形式在内的三种直线方程；连接两种平面式；求交点、交线并区分平行与包含；求线面角和面面角；推导点线、点面距离及反射像。
 
+教材：*International A Level Further Mathematics*，第 26 章，第 26.3–26.5 节，印刷页码 329–337。
+
 **开始前：**复习 [MA03 向量](/zh/alevel/a2-mathematics/vectors/)与[向量积及共面](/zh/alevel/a2-further-mathematics/vector-products-and-coplanarity/)。需要点积、叉积、联立方程与非零方向向量。新例题均使用构造的数学数据。
 
 标为 **Original example** 和 **Original task** 的内容均为自拟；官方原题另列资格、考季、题号及配套评分材料定位。

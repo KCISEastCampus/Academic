@@ -20,6 +20,8 @@ A matrix can move points by changing their coordinates. This lesson starts with 
 
 **Goals:** justify a product's dimensions; find a third-order determinant and inverse; describe the specified spatial transformations completely; distinguish a fixed point, a line mapped onto itself and a collapsed line.
 
+Textbook: Chapter 28, Sections 28.1–28.2, printed pp. 354–360, in *International A Level Further Mathematics*.
+
 **Before you start:** revise AS matrix addition, scalar multiplication, multiplication, transpose and second-order inverses in [AS Further Mathematics](/alevel/as-further-mathematics/), and coordinate vectors in [lines and planes](/alevel/a2-further-mathematics/lines-and-planes/). Matrices act on **column vectors** throughout. All entries and parameters here are real unless stated otherwise.
 
 Recover the exact prerequisite: [row–column multiplication](/alevel/as-further-mathematics/matrix-algebra/#demonstration) for dimension or entry errors, [what an inverse undoes](/alevel/as-further-mathematics/matrix-algebra/#inverse) for transpose/inverse confusion, and [following an input through the maps](/alevel/as-further-mathematics/transformations/#demonstration) for order errors. Then attempt the [noncommuting retry](#order-retry).
@@ -191,6 +193,37 @@ $$(NN^{-1})_{11}=\frac{1(1)+2(2)+0(-2)}5=1,\qquad
 $$NC^{\mathsf T}=\begin{pmatrix}5&0&0\\0&5&0\\0&0&5\end{pmatrix},\qquad
 C^{\mathsf T}N=\begin{pmatrix}5&0&0\\0&5&0\\0&0&5\end{pmatrix}
 \quad\Longrightarrow\quad NN^{-1}=N^{-1}N=I.$$
+
+</section>
+
+For a square coefficient matrix, $\det A\ne0$ means that $A^{-1}$ exists. Left multiplication gives
+
+$$A\mathbf x=\mathbf b\ \Rightarrow\ A^{-1}A\mathbf x=A^{-1}\mathbf b\ \Rightarrow\ \boxed{\mathbf x=A^{-1}\mathbf b}.$$
+
+The order matters: the unknown is a column vector, and $\mathbf bA^{-1}$ is not a conformable product. Invertibility also proves uniqueness: if $A\mathbf u=A\mathbf v$, multiply by $A^{-1}$ to obtain $\mathbf u=\mathbf v$.
+
+<section class="worked-example" markdown="1">
+
+### Using a supplied inverse to solve a system {#supplied-inverse-solution}
+
+**Question:** Given the matrices below, verify the supplied inverse and use it to solve $A\mathbf x=\mathbf b$.
+
+$$A=\begin{pmatrix}1&1&0\\0&1&1\\1&0&1\end{pmatrix},\qquad
+A^{-1}=\frac12\begin{pmatrix}1&-1&1\\1&1&-1\\-1&1&1\end{pmatrix},\qquad
+\mathbf b=\begin{pmatrix}5\\7\\6\end{pmatrix}.$$
+
+Write M for the integer numerator. Row–column multiplication gives:
+
+$$AM=\begin{pmatrix}1+1&-1+1&1-1\\1-1&1+1&-1+1\\1-1&-1+1&1+1\end{pmatrix}=2I,$$
+
+$$MA=\begin{pmatrix}1+1&1-1&-1+1\\1-1&1+1&1-1\\-1+1&-1+1&1+1\end{pmatrix}=2I.$$
+
+Thus the supplied matrix is a two-sided inverse. Left-multiply the right side as requested:
+
+$$\mathbf x=\frac12\begin{pmatrix}5-7+6\\5+7-6\\-5+7+6\end{pmatrix}
+=\begin{pmatrix}2\\3\\4\end{pmatrix}.$$
+
+Check $2+3=5$, $3+4=7$ and $2+4=6$. If a question says **use your inverse**, show that multiplication. Although the specification generally permits any solution method, a particular question can require a link to the earlier inverse.
 
 </section>
 
@@ -703,15 +736,15 @@ U is a positive 90° rotation about the x-axis, anticlockwise viewed from the po
 
 **Calculator check / written evidence:** numerical products, determinants and inverses can check an answer. The written solution must still establish dimensions, cofactor construction when requested, parameter restrictions, composition order and geometric descriptions. Symbolic identities require reasoning for all allowed parameters; a few numerical trials do not prove them. No new calculator button sequence is required here.
 
-**Next output:** complete the [new-input joint task](#inverse-system-task), then interpret its equation and plane geometry in [linear equations](/alevel/a2-further-mathematics/linear-equations/#joint-inverse-task). Use [Three maps](#transformation-check) for identification and the [independent retry](#independent-retry) for invariance errors. Then complete the course [mixed review](/alevel/a2-further-mathematics/#mixed-review) and, after intervening study, its [later review](/alevel/a2-further-mathematics/#later-review).
+**Next output:** complete the [new-input joint task](#inverse-system-task); its singular case is classified in [linear equations and three planes](/alevel/a2-further-mathematics/linear-equations/#singular-systems). Use [Three maps](#transformation-check) for identification and the [independent retry](#independent-retry) for invariance errors. Then complete the course [mixed review](/alevel/a2-further-mathematics/#mixed-review) and, after intervening study, its [later review](/alevel/a2-further-mathematics/#later-review).
 
-**Learning path:** [Previous: lines and planes](/alevel/a2-further-mathematics/lines-and-planes/) · [Next: linear equations](/alevel/a2-further-mathematics/linear-equations/) · [Further Pure Mathematics](/alevel/a2-further-mathematics/).
+**Learning path:** [Previous: linear equations](/alevel/a2-further-mathematics/linear-equations/) · [Next: eigenvalues and eigenvectors](/alevel/a2-further-mathematics/eigenvalues-and-eigenvectors/) · [Further Pure Mathematics](/alevel/a2-further-mathematics/).
 
 ## Sources {#sources}
 
 The listed specification and QP/MS passages were reread on **23 October 2026**; these adaptations target 9665.
 
-Scope: OxfordAQA International A-level Further Mathematics **9665**, [specification Version 5.2, FP2.13, printed p.21 / PDF p.20](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf#page=20), with FPP1.1 matrix operations as prerequisites. Coordinate-axis rotations, the six listed reflection planes, enlargements, compositions, third-order determinants/inverses, volume factors and invariant points/lines are covered here; eigenvalues follow after linear equations.
+Scope: OxfordAQA International A-level Further Mathematics **9665**, [specification Version 5.2, FP2.13, printed p.21 / PDF p.20](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf#page=20), with FPP1.1 matrix operations as prerequisites. Coordinate-axis rotations, the six listed reflection planes, enlargements, compositions, third-order determinants/inverses, volume factors and invariant points/lines are covered here; eigenvalues follow in 28.3.
 
 Adaptations were made after reading [June 2024 QP Q1 p.3 and Q11(a) p.18](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-question-paper.pdf) with [MS pp.4,16](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-mark-scheme.pdf), and [January 2025 QP Q3 pp.6–7 and Q13 pp.26–27](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-question-paper.pdf) with [MS pp.6,20–21](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-mark-scheme.pdf). The displayed adaptations change matrices, angles or parameters; all other tasks are original. No official marks are assigned to these tasks. A correct numerical answer does not replace a proof requested by “show” or a specified use of a preceding inverse.
 

@@ -20,6 +20,8 @@ A matrix usually changes a vector's length and direction. Some vectors are only 
 
 **Goals:** form and expand second- and third-order characteristic equations; find real eigenvalues and their nonzero eigenvectors; explain zero, negative and repeated eigenvalues; verify the number of independent directions from equations rather than root multiplicity.
 
+Textbook: Chapter 28, Section 28.3, printed pp. 361–366, in *International A Level Further Mathematics*.
+
 **Before you start:** complete [matrix algebra](/alevel/a2-further-mathematics/matrix-algebra/), [linear equations](/alevel/a2-further-mathematics/linear-equations/) and [roots and polynomials](/alevel/a2-further-mathematics/roots-and-polynomials/). You need determinants, homogeneous equations, factorisation and roots–coefficients relationships. FP2.13 considers **real eigenvalues**, including repeated values; diagonalisation is not needed for this lesson.
 
 A general real matrix can also have non-real eigenvalues; this lesson stays within the real-eigenvalue cases specified for FP2.13. All free parameters below are real.
@@ -543,7 +545,7 @@ It maps to a different parallel line. Its direction is an eigenvector, but its b
 
 **Calculator check / written evidence:** a calculator can check numerical roots and matrix–vector products. It cannot replace a requested determinant expansion, a roots–coefficients proof for a parameter, the nonzero-vector condition or an explanation of repeated roots. This lesson does not add a calculator key sequence or require a diagonalisation theorem.
 
-**Learning path:** [Previous: linear equations](/alevel/a2-further-mathematics/linear-equations/) · [Matrix algebra](/alevel/a2-further-mathematics/matrix-algebra/) · [Further Pure Mathematics](/alevel/a2-further-mathematics/).
+**Learning path:** [Previous: matrix algebra](/alevel/a2-further-mathematics/matrix-algebra/) · [Linear equations](/alevel/a2-further-mathematics/linear-equations/) · [Further Pure Mathematics](/alevel/a2-further-mathematics/).
 
 ## Sources {#sources}
 

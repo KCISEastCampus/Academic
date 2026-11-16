@@ -5,24 +5,26 @@ mathjax: true
 grade: a2
 subject: a2-further-mathematics
 permalink: /alevel/a2-further-mathematics/linear-equations/
-toc_headings: "#constraints-and-elimination, #inverse-matrices, #singular-systems, #parameters, #practice, #feedback-and-retry, #continue-learning, #sources"
+toc_headings: "#constraints-and-elimination, #singular-systems, #parameters, #practice, #feedback-and-retry, #continue-learning, #sources"
 study_page: true
 reading_layout: true
 ---
 
 [Further Pure Mathematics](/alevel/a2-further-mathematics/) · FP2.14 Solution of linear equations
 
-Decide whether simultaneous linear constraints have one solution, no solution or infinitely many solutions. Connect elimination and inverse matrices to the common points of planes.
+Decide whether simultaneous linear constraints have one solution, no solution or infinitely many solutions. Connect elimination, determinant tests and parameter families to the common points of planes.
 
-- **Learning:** start with [constraints and elimination](#constraints-and-elimination), then compare [inverse matrices](#inverse-matrices), [singular systems](#singular-systems) and [parameters](#parameters).
+- **Learning:** start with [constraints and elimination](#constraints-and-elimination), then compare [singular systems](#singular-systems) and [parameters](#parameters).
 - **Homework help:** keep exceptional parameter values before dividing; a zero determinant does not decide whether solutions exist.
 - **Revision:** attempt [practice](#practice) before opening hints or solutions, then use [feedback and retry](#feedback-and-retry).
 
-**Before you start:** solve two simultaneous equations, interpret [lines and planes](/alevel/a2-further-mathematics/lines-and-planes/), and revise [matrix multiplication and inverses](/alevel/a2-further-mathematics/matrix-algebra/). This lesson covers at most three linear equations in at most three unknowns.
+Textbook: Chapter 27, Sections 27.1–27.2, printed pp. 346–350, in *International A Level Further Mathematics*.
+
+**Before you start:** solve two simultaneous equations, interpret [lines and planes](/alevel/a2-further-mathematics/lines-and-planes/). This lesson covers at most three linear equations in at most three unknowns.
 
 Examples and exercises are self-written unless labelled adapted. No official marks are assigned. The adapted examination example is identified with its question paper and the official mark scheme actually consulted under [sources](#sources).
 
-If two-variable elimination is insecure, begin with the [starting check](#starting-check). If the right side was not transformed, recover [equivalent equations](#equivalent-equations), then retry [Question 2](#question-2). If you can only use a supplied inverse, recover the [third-order inverse demonstration](/alevel/a2-further-mathematics/matrix-algebra/#worked-inverse), then complete the [joint task](#joint-inverse-task) independently. For the geometry, recover [normals and planes](/alevel/a2-further-mathematics/lines-and-planes/#planes).
+If two-variable elimination is insecure, begin with the [starting check](#starting-check). If the right side was not transformed, recover [equivalent equations](#equivalent-equations), then retry [Question 2](#question-2). If a singular case is classified wrongly, recover the [worked singular system](#example-2) and the [three configurations](#plane-configurations) before retrying. For the geometry, recover [normals and planes](/alevel/a2-further-mathematics/lines-and-planes/#planes).
 
 ## Constraints and Elimination {#constraints-and-elimination}
 
@@ -100,55 +102,13 @@ No: it is the first reduced equation multiplied by $-1$. Replacing $-3y-z=-9$ by
 
 </section>
 
-## Inverse Matrices {#inverse-matrices}
-
-For a square coefficient matrix, $\det A\ne0$ means that $A^{-1}$ exists. Left multiplication gives
-
-$$A\mathbf x=\mathbf b\ \Rightarrow\ A^{-1}A\mathbf x=A^{-1}\mathbf b\ \Rightarrow\ \boxed{\mathbf x=A^{-1}\mathbf b}.$$
-
-The order matters: the unknown is a column vector, and $\mathbf bA^{-1}$ is not a conformable product. Invertibility also proves uniqueness: if $A\mathbf u=A\mathbf v$, multiply by $A^{-1}$ to obtain $\mathbf u=\mathbf v$.
-
-<section class="worked-example" markdown="1">
-
-### Example 2: use a supplied inverse {#example-2}
-
-**Question:** Given the matrices below, verify the supplied inverse and use it to solve $A\mathbf x=\mathbf b$.
-
-$$A=\begin{pmatrix}1&1&0\\0&1&1\\1&0&1\end{pmatrix},\qquad
-A^{-1}=\frac12\begin{pmatrix}1&-1&1\\1&1&-1\\-1&1&1\end{pmatrix},\qquad
-\mathbf b=\begin{pmatrix}5\\7\\6\end{pmatrix}.$$
-
-Write M for the integer numerator. Row–column multiplication gives:
-
-$$AM=\begin{pmatrix}1+1&-1+1&1-1\\1-1&1+1&-1+1\\1-1&-1+1&1+1\end{pmatrix}=2I,\qquad
-MA=\begin{pmatrix}1+1&1-1&-1+1\\1-1&1+1&1-1\\-1+1&-1+1&1+1\end{pmatrix}=2I.$$
-
-Thus the supplied matrix is a two-sided inverse. Left-multiply the right side as requested:
-
-$$\mathbf x=\frac12\begin{pmatrix}5-7+6\\5+7-6\\-5+7+6\end{pmatrix}
-=\begin{pmatrix}2\\3\\4\end{pmatrix}.$$
-
-Check $2+3=5$, $3+4=7$ and $2+4=6$. If a question says **use your inverse**, show that multiplication. Although FP2.14 generally permits any solution method, a particular question can require a link to earlier work.
-
-</section>
-
-<section class="lesson-check" markdown="1">
-
-### Joint task: construct the inverse, then use it {#joint-inverse-task}
-
-Complete the matrix lesson's [new-input joint task](/alevel/a2-further-mathematics/matrix-algebra/#inverse-system-task), keeping its hint and solution closed. Construct the inverse from the determinant, all nine cofactors and the transpose, then **use your inverse from (a)** on the right side and classify consistency at the singular parameter. Using a supplied inverse in Example 2 does not complete this output.
-
-Keep your construction from (a) beside the actual matrix multiplication in (b). Substitute into all three original equations and link each parameter case to a unique point, a common line or an empty common set. The question and its separately closed hint and answer have one shared location.
-
-</section>
-
 ## Singular Systems and Geometry {#singular-systems}
 
-A square matrix with $\det A=0$ is **singular**. It has no inverse, so the inverse method is unavailable. This does **not** say whether $A\mathbf x=\mathbf b$ is consistent.
+A square matrix with $\det A=0$ is **singular**: no inverse exists, so a determinant cannot be inverted to read off a solution. This does **not** say whether $A\mathbf x=\mathbf b$ is consistent.
 
 <section class="worked-example" markdown="1">
 
-### Example 3: keep the right-hand side {#example-3}
+### Example 2: keep the right-hand side {#example-2}
 
 **Question:** Compare the solution sets of the systems below. In system B only the right-hand side of the second equation has changed.
 
@@ -184,7 +144,7 @@ For fewer equations or a zero coefficient row, count the remaining independent r
 
 <section class="worked-example" markdown="1">
 
-### Example 4: one model, three outcomes {#example-4}
+### Example 3: one model, three outcomes {#example-3}
 
 **Question:** Discuss all real values of $k$ and $h$ for the following system. Give any infinite family parametrically.
 
@@ -216,7 +176,7 @@ Substitute the general family into all three equations when $k=0$, $h=9$: the le
 
 <section class="worked-example" markdown="1">
 
-### Example 5: an examination-style justification {#example-5}
+### Example 4: an examination-style justification {#example-4}
 
 **Adapted example:** Based on OxfordAQA 9665/FM03 January 2025 Q8, QP pp.14–15, checked against MS p.13. The task wording is shortened; the equations and parameter are retained. No official mark allocation is implied.
 
@@ -415,7 +375,7 @@ The equations are $v_2=0$, $0=0$, $v_3=0$. Hence $\mathbf v=(t,0,0)$ for every r
 
 | If your work shows… | Diagnose the cause | What to do next |
 | --- | --- | --- |
-| “Zero determinant means no solutions” | Singularity was confused with inconsistency. | Compare both systems in Example 3, including their right-hand sides. |
+| “Zero determinant means no solutions” | Singularity was confused with inconsistency. | Compare both systems in Example 2, including their right-hand sides. |
 | One point given for an infinite family | A free parameter was arbitrarily fixed. | Parametrise the common set and substitute every parameter value symbolically. |
 | A missing exceptional parameter | Division removed a possible case. | Split into zero/nonzero cases before dividing. |
 | “No solution means parallel planes” | A common intersection was confused with pairwise intersections. | Compare each pair of normals and then the common set. |
@@ -440,7 +400,7 @@ The reduced equation is $kz=1$. For $k\ne0$ there is one solution $(1/k,3-2/k,1/
 
 | Situation | Decision and evidence |
 | --- | --- |
-| Square coefficient matrix with nonzero determinant | Unique solution; use elimination or $A^{-1}\mathbf b$, unless a method is specified. |
+| Square coefficient matrix with nonzero determinant | Unique solution; use elimination, or the inverse route from Chapter 28, unless a method is specified. |
 | Zero determinant | Inverse unavailable; continue elimination and test consistency. |
 | Reduced contradiction | No solution; quote the actual contradiction. |
 | Consistent reduced system with free variables | Give the complete parametric family and its common geometry. |
@@ -451,7 +411,7 @@ The reduced equation is $kz=1$. For $k\ne0$ there is one solution $(1/k,3-2/k,1/
 
 **Next output:** after a division or singularity error, recover Examples 3–4 and attempt the [changed-right-side retry](#parameter-retry) with help closed. If a nonzero solution is unclear, complete [Question 6](#question-6) before eigenvectors. Complete the course [mixed review](/alevel/a2-further-mathematics/#mixed-review) and, after intervening study, its [later review](/alevel/a2-further-mathematics/#later-review), connecting solution sets with eigenvectors and the geometry of a reflection.
 
-Previous: [Matrix algebra](/alevel/a2-further-mathematics/matrix-algebra/). Next: [Eigenvalues and eigenvectors](/alevel/a2-further-mathematics/eigenvalues-and-eigenvectors/), where a singular homogeneous system must have a **nonzero** solution.
+Previous: [Lines and planes](/alevel/a2-further-mathematics/lines-and-planes/). Next: [Matrix algebra](/alevel/a2-further-mathematics/matrix-algebra/), where a third-order inverse is constructed and then used to solve a system.
 
 For a numerical check after the argument, use the [fx-CG50 matrix guide](/alevel/fx-cg50/further-mathematics/#fm-matrices). A numerical output or an error message does not prove the classification for all parameter values.
 
@@ -459,6 +419,6 @@ For a numerical check after the argument, use the [fx-CG50 matrix guide](/alevel
 
 The 9665 specification and the listed January 2025 Q8 and Q13(b) QP/MS passages were reread on **23 October 2026**.
 
-The scope is [OxfordAQA Further Mathematics 9665, Version 5.2, FP2.14, printed p.21 / PDF p.20](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf#page=20). Example 5 is adapted from [January 2025 FM03 Q8, pp.14–15](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-question-paper.pdf#page=14), checked against [its official MS p.13](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-mark-scheme.pdf#page=13). The specified-method distinction was also checked in the same paper, Q13(b), QP p.27 / MS p.21. The remaining examples, practice, feedback and solutions are self-written; the explanations are not an official mark scheme. The configuration diagram is a constructed schematic, not measured data.
+The scope is [OxfordAQA Further Mathematics 9665, Version 5.2, FP2.14, printed p.21 / PDF p.20](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf#page=20). Example 4 is adapted from [January 2025 FM03 Q8, pp.14–15](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-question-paper.pdf#page=14), checked against [its official MS p.13](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-mark-scheme.pdf#page=13). The specified-method distinction was also checked in the same paper, Q13(b), QP p.27 / MS p.21. The remaining examples, practice, feedback and solutions are self-written; the explanations are not an official mark scheme. The configuration diagram is a constructed schematic, not measured data.
 
 {% include exam_topic_practice.html %}
