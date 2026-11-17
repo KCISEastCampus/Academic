@@ -57,18 +57,18 @@ The readings describe the same plant's trajectory and share its genotype, histor
 
 | Practical | Preparation and interpretation route |
 | --- | --- |
-| RP1 enzyme activity | [AS bridge](/alevel/a2-biology/prerequisites/#proteins) → initial rates and controls in [experimental design](/alevel/a2-biology/experimental-design/) |
-| RP2 plant tissue water exchange | [Membranes and water potential](/alevel/a2-biology/prerequisites/#membranes) → percentage mass change and sampling |
-| RP3 pigment chromatography | [Photosynthesis](/alevel/a2-biology/photosynthesis/) → solvent choice, solvent front and Rf |
-| RP4 root-tip mitosis | [Cell division](/alevel/a2-biology/prerequisites/#division) → preparation, cell counts and mitotic index |
-| RP5 heart rate | [Homeostasis](/alevel/a2-biology/homeostasis/) → paired comparisons, recovery and participant safety |
-| RP6 potometer | [Plant transport](/alevel/a2-biology/prerequisites/#transport) → water uptake, volume rate and the transpiration approximation |
-| RP7 photosynthetic limiting factors | [Photosynthesis](/alevel/a2-biology/photosynthesis/) → light, carbon dioxide, temperature and measured proxy |
-| RP8 respiration | [Respiration](/alevel/a2-biology/respiration/) → gas balance, absorbent and normalisation |
-| RP9 seedling competition | [Ecology](/alevel/a2-biology/ecology/) → density, independent containers and growth measures |
-| RP10 directional growth | [Plant responses](/alevel/a2-biology/plant-responses/) → light/gravity separation, angle and organ response |
+| [RP1 Temperature and trypsin](/alevel/a2-biology/experimental-design/#rp1) | [AS bridge](/alevel/a2-biology/prerequisites/#proteins) → time until the X is visible and temperature control |
+| [RP2 Potato tissue water potential](/alevel/a2-biology/experimental-design/#rp2) | [Membranes and water potential](/alevel/a2-biology/prerequisites/#membranes) → percentage mass change and sampling |
+| [RP3 Pigment chromatography](/alevel/a2-biology/experimental-design/#rp3) | [Photosynthesis](/alevel/a2-biology/photosynthesis/) → solvent choice, solvent front and Rf |
+| [RP4 Root-tip mitosis](/alevel/a2-biology/experimental-design/#rp4) | [Cell division](/alevel/a2-biology/prerequisites/#division) → preparation, cell counts and mitotic index |
+| [RP5 Exercise and pulse recovery](/alevel/a2-biology/experimental-design/#rp5) | [Homeostasis](/alevel/a2-biology/homeostasis/) → paired comparisons, recovery and participant safety |
+| [RP6 Potometer and water uptake](/alevel/a2-biology/experimental-design/#rp6) | [Plant transport](/alevel/a2-biology/prerequisites/#transport) → water uptake, volume rate and the transpiration approximation |
+| [RP7 Light and photosynthesis](/alevel/a2-biology/experimental-design/#rp7) | [Photosynthesis](/alevel/a2-biology/photosynthesis/) → light, carbon dioxide, temperature and measured proxy |
+| [RP8 Temperature and yeast respiration](/alevel/a2-biology/experimental-design/#rp8) | [Respiration](/alevel/a2-biology/respiration/) → dye reduction and rate proxies |
+| [RP9 Sowing density and early growth](/alevel/a2-biology/experimental-design/#rp9) | [Ecology](/alevel/a2-biology/ecology/) → density, independent containers and growth measures |
+| [RP10 Root growth and gravity](/alevel/a2-biology/experimental-design/#rp10) | [Plant responses](/alevel/a2-biology/plant-responses/) → light/gravity separation, angle and organ response |
 
-All ten are developed in [experimental design](/alevel/a2-biology/experimental-design/). These pages prepare you to make decisions and analyse evidence; actual practical work remains necessary.
+The [experimental design page](/alevel/a2-biology/experimental-design/) covers the OxfordAQA handbook methods and the purpose of each step.
 
 ## Evidence of readiness {#readiness}
 
