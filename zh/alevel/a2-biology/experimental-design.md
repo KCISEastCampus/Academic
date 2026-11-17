@@ -56,6 +56,8 @@ RP1–10 的操作摘要沿用 OxfordAQA 9610《实验手册》（©2019）的�
 - **10–11。**从混合计时到首次看清 X，分别记录每次时间。胰蛋白酶分解酪蛋白后，悬液逐渐变清。统一终点便于比较，保留各读数可看出波动。
 - **12–14。**在 30、40、50、60 °C 用同样方法测量。列表保留各次时间，并将 1/时间等相对速率指标对温度作图，比较各组达到同一终点的快慢。
 
+<p lang="en">One group puts room-temperature reagents straight into a 50 °C bath and mixes immediately. Explain why its recorded time cannot be interpreted as a reaction time at 50 °C.</p>
+
 **自拟练习。**一组学生把室温试剂放进 50 °C 水浴后立即混合。解释为什么测得的时间不能代表试剂在 50 °C 时的反应时间。
 
 <details markdown="1"><summary>提示</summary>
@@ -80,6 +82,8 @@ RP1–10 的操作摘要沿用 OxfordAQA 9610《实验手册》（©2019）的�
 - **4–5。**用同一取样器从同一马铃薯切取六段去皮组织，修成等长，控制来源和形状。称量前吸去表面液体，避免挤出组织内的水。让样品与管号对应，逐段称量得到各自的初始质量。
 - **6–7。**迅速将样品放入对应溶液，计时 20 分钟，再用相同方式吸干表面后复称。统一浸泡时长和吸干方法，使质量变化可比。
 - **8–9。**计算 100 ×（最终质量 − 初始质量）/初始质量，比较起始质量不同的样品。对浓度作图，估计相对质量变化为零时的浓度，此时溶液与组织的水势近似相等。
+
+<p lang="en">A chip goes from 2.40 g to 2.28 g after blotting. Calculate its percentage mass change. Predict how weighing it with solution still on its surface would affect the result.</p>
 
 **自拟练习。**一段马铃薯样品的质量从 2.40 g 降至吸干表面后的 2.28 g。计算质量百分变化。预测末次称量时若表面仍沾有溶液，结果会怎样变化。
 
@@ -107,6 +111,8 @@ RP1–10 的操作摘要沿用 OxfordAQA 9610《实验手册》（©2019）的�
 - **6–8。**溶剂即将到纸顶时取出纸，并在挥发前立即标记溶剂前沿。重新盖塞，减少溶剂挥发。晾干纸后描出色斑轮廓，便于保留测距位置。
 - **9–10 及计算。**叶片 B 用相同条件重复。用起点至色斑中心的距离除以起点至溶剂前沿的距离，得到相对迁移距离 Rf。
 
+<p lang="en">A spot travels 36 mm and the solvent front travels 60 mm. Calculate Rf and evaluate a claim that a spot with the same Rf in a different solvent must be the same pigment.</p>
+
 **自拟练习。**一个色斑移动了 36 mm，溶剂前沿移动了 60 mm。计算 Rf，并评价这一断言：用另一种溶剂得到相同 Rf 的色斑，一定含有同一种色素。
 
 <details markdown="1"><summary>提示</summary>
@@ -132,6 +138,8 @@ Rf = 36/60 = 0.60，无单位。换溶剂会改变相对迁移距离。应在同
 - **6–8。**用甲苯胺蓝染色，提高染色体对比度。用解剖针拨散组织，在盖玻片上轻压铺开，并用折叠滤纸吸去多余染液。薄而分散的细胞便于辨认和计数。
 - **9–11。**观察多个视野，扩大取样范围。列表记录分裂细胞数和总细胞数，再用两者相除计算有丝分裂指数。
 
+<p lang="en">A student chooses only microscope fields where chromosomes are easy to spot. Predict the effect on the mitotic index and propose a sampling rule.</p>
+
 **自拟练习。**学生只选择容易看到染色体的显微镜视野。预测这会怎样影响有丝分裂指数，并提出一条取样规则。
 
 <details markdown="1"><summary>提示</summary>
@@ -156,6 +164,8 @@ Rf = 36/60 = 0.60，无单位。换溶剂会改变相对迁移距离。应在同
 - **4。**在教师许可下扶稳后反复下蹲起立，自选运动时长且最多 5 分钟。运动是施加的处理，记录时长有助于解释反应大小。
 - **5。**停止运动后立即测量，连续 5 分钟每隔 30 秒数 20 秒。立即且更密集地测量，便于捕捉运动后较高的脉搏以及随后的恢复过程。
 - **6–7。**记录时间和计数。将每个 20 秒计数乘以三，换算成每分钟搏动次数，再对时间作图，比较静息与恢复阶段。
+
+<p lang="en">A participant has 24 beats in the first 20 s after exercise. Estimate the pulse in beats per minute. Compare the effect of a one-beat counting error and the effect of ongoing recovery if the count is extended to 60 s.</p>
 
 **自拟练习。**一名受试者运动后最初 20 秒内脉搏为 24 次。估算每分钟搏动次数。若把计数时长延长到 60 秒，比较错数一次及运动后持续恢复分别对读数有什么影响。
 
@@ -183,6 +193,8 @@ Rf = 36/60 = 0.60，无单位。换溶剂会改变相对迁移距离。应在同
 - **6–7。**擦干毛细管外壁以便读数，确认弯月面向植物移动。记录环境温度、初始位置，之后每 3 分钟读取位置，总计约 12 分钟。用同一个连续计时记录，便于计算单位时间的位移。
 - **8–10。**列表记录并绘制位移随时间变化图。若报告体积，用位移乘以毛细管横截面积。可改变一项环境条件重测，使其他条件可比。枝条可能保留部分水，因此吸水速率是蒸腾速率的代理指标。
 
+<p lang="en">Two shoots produce the same meniscus displacement in 12 min, but tube A has twice the internal radius of tube B. Compare the uptake rates and give a reason the rates may differ from transpiration.</p>
+
 **自拟练习。**两根枝条在 12 分钟内使弯月面移动了同样距离，但 A 管内半径是 B 管的两倍。比较吸水速率，并说明它们与蒸腾速率可能不同的原因。
 
 <details markdown="1"><summary>提示</summary>
@@ -206,6 +218,8 @@ Rf = 36/60 = 0.60，无单位。换溶剂会改变相对迁移距离。应在同
 - **1–3。**将试管装满 1% 碳酸氢钠溶液，为光合作用提供二氧化碳。取约 5 cm 的水生植物，在液面下斜剪，减少空气进入并露出切面。让茎的切口朝上且约在管中段，便于观察向上冒出的气泡。
 - **4–6。**先将试管放在距灯泡 10 cm 处。等待 5 分钟，让植物的反应在该光照条件下趋于稳定，再数 1 分钟的气泡。重复计数，检查相同条件下的读数波动。
 - **7–10。**在 5–30 cm 范围取得更多读数，用 1/d² 估计相对光照强度，列表并用适当的相关检验分析关联。气泡大小可能不同，计数只能近似反映产气速率。比较光照时也应监测温度，因为灯可能使水升温。
+
+<p lang="en">Counts level off at high light. Design a comparison to assess whether dissolved carbon dioxide availability limits the rate there. Give one other possible cause of the plateau.</p>
 
 **自拟练习。**光照较强时，气泡计数达到平台。设计一个比较，检验此时溶解的二氧化碳是否限制速率。再指出平台的另一种可能成因。
 
@@ -231,6 +245,8 @@ Rf = 36/60 = 0.60，无单位。换溶剂会改变相对迁移距离。应在同
 - **6–8。**先在一管加 2 cm³ 亚甲蓝，立即摇匀 10 秒，放回水浴并记下时间。各次采用同样的初始混合，之后不再摇晃，避免额外通气影响读数。记录蓝色消失所需的时间，用染料被还原而褪色来间接反映代谢活动。
 - **9–10。**用其余四管重复，估计同一温度下的波动。按相同顺序在教师指定的其他温度下重做，以比较温度差异。同批混合液分装的各管共享制备条件。
 
+<p lang="en">Tubes at the higher temperature take longer to lose colour. The student shook only those tubes again partway through. Explain an alternative cause of the result and design a fair comparison.</p>
+
 **自拟练习。**温度较高的一组褪色更慢，但学生只将这一组试管在计时途中再次摇匀。说明结果的另一种可能解释，并设计公平的比较。
 
 <details markdown="1"><summary>提示</summary>
@@ -254,6 +270,8 @@ Rf = 36/60 = 0.60，无单位。换溶剂会改变相对迁移距离。应在同
 - **1–4。**在培养皿上画分区，使种子有规律地分布。每皿滤纸加等量水至湿润且无积水，统一初始水分并保留气体交换。各皿每区分别播 1 至 5 粒，形成不同的播种密度。盖好后集中放在暗处，减少失水并统一光照条件。
 - **5–6。**每天在同一时间记录发芽数，使观测间隔可比。约三天后分别测量芽和根的生长，以比较相同日龄的早期生长。
 - **7–8。**按培养皿记录播种数、发芽数和长度。用发芽比例比较起始粒数不同的组。手册要求进行统计检验。若要推断播种密度的作用，每种密度应有多个独立处理的培养皿，因为同皿种子共享环境。
+
+<p lang="en">One dish has 8 of 10 seeds germinate and another has 12 of 20. Which has the higher germination proportion? Explain how to redesign the comparison to estimate variation at each density.</p>
 
 **自拟练习。**一皿播种 10 粒，发芽 8 粒；另一皿播种 20 粒，发芽 12 粒。哪一皿发芽比例更高？怎样重新设计，才能估计各密度下的发芽比例有多大波动？
 
@@ -280,6 +298,8 @@ Rf = 36/60 = 0.60，无单位。换溶剂会改变相对迁移距离。应在同
 - **8–9。**所有盒放暗处，减小定向光照的干扰。每天检查，用滴管按需补水且避免拨动幼苗，保持湿度和测量位置。
 - **10–11。**每天按同一标度测量根的生长角度（下 0°、左 90°、上 180°、右 270°）。按盒号、种子和日期记录，使角度变化可与转动时间对应。
 
+<p lang="en">Rotating cases are checked next to a window each day, and fixed cases are checked under dim, diffuse light. Explain a competing explanation for differences in root direction and specify a comparable observation procedure.</p>
+
 **自拟练习。**每天在窗边观察转动组，在昏暗的漫射光下观察固定组。解释根生长方向差异的一种其他原因，并提出可比的观察程序。
 
 <details markdown="1"><summary>提示</summary>
@@ -296,6 +316,8 @@ Rf = 36/60 = 0.60，无单位。换溶剂会改变相对迁移距离。应在同
 
 ## 独立设计与纠错 {#independent-design}
 
+<p lang="en">In RP7, one student moves the lamp closer and immediately begins a 30 s bubble count. At the previous distance, they waited 5 min and counted for 1 min. Explain two changes needed to make the readings comparable. Then explain why the waiting period in RP1 serves a different purpose.</p>
+
 **自拟题。**在 RP7 中，某学生将灯移近后立即数 30 秒的气泡。他在上一距离等了 5 分钟，数了 1 分钟。说明需要改动的两个操作及其目的，再解释 RP1 的等待有什么不同。试着用英文作答。
 
 <details markdown="1">
@@ -304,6 +326,8 @@ Rf = 36/60 = 0.60，无单位。换溶剂会改变相对迁移距离。应在同
 改变光照后同样等 5 分钟，减少植物反应仍在变化对读数的影响。仍数 1 分钟，使取样时段一致。RP1 的 10 分钟是为了让分开盛放的试剂在反应开始前达到水浴设定温度。
 
 </details>
+
+<p lang="en">A student claims that growing plants in moving air has a lasting effect on shoot water uptake. Design a comparison that distinguishes the effect of air movement during growth from its immediate effect during measurement. Specify the experimental units, allocation, controls, raw records and one limitation.</p>
 
 **自拟迁移题。**一名学生认为，在流动空气中生长会对枝条吸水产生持久影响。设计比较，将生长期空气流动的影响与测量时空气流动的即时影响区分开来。说明实验单位、分配方式、控制条件、原始记录和一项限制。
 
@@ -318,6 +342,8 @@ Rf = 36/60 = 0.60，无单位。换溶剂会改变相对迁移距离。应在同
 将独立生长箱随机分到流动或静止空气组，每组设多个箱，保持光照、湿度、温度和供水可比。从每个箱取不同枝条，分别分配到两种测量风速，统一适应时长。记录生长箱和枝条编号、生长和测量时的空气处理、叶面积、毛细管半径、弯月面位置及时间。在相同测量风速下比较不同生长处理，在相同生长处理内比较不同测量风速。汇总时保留生长箱的归属。测量条件相同时仍观察到差异，可支持生长处理的效应持续到观测时段，原有水分状态也可能影响结果。
 
 </details>
+
+<p lang="en">Six runs with the same potometer agree closely, but water escapes from a joint during every run. Explain what the agreement shows and propose a check before repeating the comparison.</p>
 
 **自拟纠错重试。**同一台蒸腾计测了六次，读数彼此很接近，但每次接头都漏水。解释这些读数的一致性说明了什么，并提出重做比较前应进行的一项检查。
 
