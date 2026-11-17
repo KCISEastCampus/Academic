@@ -58,18 +58,18 @@ BL05 要求你自己选择并连接知识。必须使用题目的具体背景；
 
 | 实验 | 准备与解释路径 |
 | --- | --- |
-| RP1 酶活性 | [AS 桥接](/zh/alevel/a2-biology/prerequisites/#proteins) → [实验设计](/zh/alevel/a2-biology/experimental-design/)中的初始速率与控制 |
-| RP2 植物组织水分交换 | [膜与水势](/zh/alevel/a2-biology/prerequisites/#membranes) → 质量百分变化与抽样 |
-| RP3 色素层析 | [光合作用](/zh/alevel/a2-biology/photosynthesis/) → 溶剂、溶剂前沿与 Rf |
-| RP4 根尖有丝分裂 | [细胞分裂](/zh/alevel/a2-biology/prerequisites/#division) → 制片、细胞计数与有丝分裂指数 |
-| RP5 心率 | [稳态](/zh/alevel/a2-biology/homeostasis/) → 配对比较、恢复与受试者安全 |
-| RP6 气泡式蒸腾计 | [植物运输](/zh/alevel/a2-biology/prerequisites/#transport) → 吸水、体积速率与蒸腾近似 |
-| RP7 光合限制因素 | [光合作用](/zh/alevel/a2-biology/photosynthesis/) → 光、二氧化碳、温度和实际测量指标 |
-| RP8 呼吸 | [呼吸](/zh/alevel/a2-biology/respiration/) → 气体收支、吸收剂与标准化 |
-| RP9 幼苗竞争 | [生态](/zh/alevel/a2-biology/ecology/) → 密度、独立容器与生长指标 |
-| RP10 定向生长 | [植物响应](/zh/alevel/a2-biology/plant-responses/) → 区分光与重力、角度和器官响应 |
+| [RP1 温度与胰蛋白酶](/zh/alevel/a2-biology/experimental-design/#rp1) | [AS 桥接](/zh/alevel/a2-biology/prerequisites/#proteins) → 达到统一目测终点的时间与温度控制 |
+| [RP2 马铃薯组织水势](/zh/alevel/a2-biology/experimental-design/#rp2) | [膜与水势](/zh/alevel/a2-biology/prerequisites/#membranes) → 质量百分变化与抽样 |
+| [RP3 色素层析](/zh/alevel/a2-biology/experimental-design/#rp3) | [光合作用](/zh/alevel/a2-biology/photosynthesis/) → 溶剂、溶剂前沿与 Rf |
+| [RP4 根尖有丝分裂](/zh/alevel/a2-biology/experimental-design/#rp4) | [细胞分裂](/zh/alevel/a2-biology/prerequisites/#division) → 制片、细胞计数与有丝分裂指数 |
+| [RP5 运动与脉搏恢复](/zh/alevel/a2-biology/experimental-design/#rp5) | [稳态](/zh/alevel/a2-biology/homeostasis/) → 配对比较、恢复与受试者安全 |
+| [RP6 蒸腾计与吸水速率](/zh/alevel/a2-biology/experimental-design/#rp6) | [植物运输](/zh/alevel/a2-biology/prerequisites/#transport) → 吸水、体积速率与蒸腾近似 |
+| [RP7 光照与光合作用](/zh/alevel/a2-biology/experimental-design/#rp7) | [光合作用](/zh/alevel/a2-biology/photosynthesis/) → 光、二氧化碳、温度和实际测量指标 |
+| [RP8 温度与酵母呼吸](/zh/alevel/a2-biology/experimental-design/#rp8) | [呼吸](/zh/alevel/a2-biology/respiration/) → 染料还原与速率代理指标 |
+| [RP9 播种密度与早期生长](/zh/alevel/a2-biology/experimental-design/#rp9) | [生态](/zh/alevel/a2-biology/ecology/) → 密度、独立容器与生长指标 |
+| [RP10 根的生长方向与重力](/zh/alevel/a2-biology/experimental-design/#rp10) | [植物响应](/zh/alevel/a2-biology/plant-responses/) → 区分光与重力、角度和器官响应 |
 
-十项实验均在[实验设计](/zh/alevel/a2-biology/experimental-design/)中展开。网页帮助准备决策与分析证据，实际实验仍须完成。
+[实验设计](/zh/alevel/a2-biology/experimental-design/)收录 OxfordAQA 手册实验示例及各步骤的目的。
 
 ## 怎样判断准备充分 {#readiness}
 
