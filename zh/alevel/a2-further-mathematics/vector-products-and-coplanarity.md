@@ -22,6 +22,8 @@ reading_layout: true
 
 **目标：**计算叉积并检查方向；求三角形及平行四边形面积；计算标量三重积；判断向量或四点是否共面；在体积条件下保留全部参数解。
 
+教材：*International A Level Further Mathematics*，第 26 章，第 26.1–26.2、26.6 节，印刷页码 320–328、338–341。
+
 **开始前：**复习 [MA03 向量](/zh/alevel/a2-mathematics/vectors/)中的分量、模、位移向量与点积。使用右手正交单位坐标系。本课坐标均为数学例题数据，不是实测数据。
 
 标为 **Original diagnostic**、**Original example** 和 **Original task** 的内容均为自拟；官方原题与改编题另列来源标识。

@@ -22,6 +22,8 @@ reading_layout: true
 
 **目标：**建立并展开二阶、三阶特征方程；求实特征值及对应的非零特征向量；解释零、负值和重复特征值；从方程判断独立方向数，而非直接数根的重数。
 
+教材：*International A Level Further Mathematics*，第 28 章，第 28.3 节，印刷页码 361–366。
+
 **开始前：**完成[矩阵代数](/zh/alevel/a2-further-mathematics/matrix-algebra/)、[线性方程组](/zh/alevel/a2-further-mathematics/linear-equations/)及[根与多项式](/zh/alevel/a2-further-mathematics/roots-and-polynomials/)。需要行列式、齐次方程组、因式分解及根与系数关系。FP2.13 的范围为**实特征值**，包括重复值；本课不需要对角化。
 
 一般实矩阵也可能具有非实特征值；本课只处理 FP2.13 规定的实特征值情形。下文所有自由参数均为实数。
@@ -569,7 +571,7 @@ $$K\begin{pmatrix}t\\t\\1\end{pmatrix}=\begin{pmatrix}t\\t\\2\end{pmatrix}.$$
 
 **计算器能检查什么／答卷须写什么：**计算器可以核验数值根和矩阵向量乘积，但不能替代题目要求的行列式展开、用根与系数关系证明参数、非零向量条件或重根解释。本课不新增按键流程，也不要求对角化定理。
 
-**学习路径：**[上一课：线性方程组](/zh/alevel/a2-further-mathematics/linear-equations/) · [矩阵代数](/zh/alevel/a2-further-mathematics/matrix-algebra/) · [高等纯数学](/zh/alevel/a2-further-mathematics/)。
+**学习路径：**[上一课：矩阵代数](/zh/alevel/a2-further-mathematics/matrix-algebra/) · [线性方程组](/zh/alevel/a2-further-mathematics/linear-equations/) · [高等纯数学](/zh/alevel/a2-further-mathematics/)。
 
 ## 资料来源 {#sources}
 

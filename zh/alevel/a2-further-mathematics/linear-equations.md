@@ -7,24 +7,26 @@ subject: a2-further-mathematics
 lang: zh-CN
 translation_of: /alevel/a2-further-mathematics/linear-equations/
 permalink: /zh/alevel/a2-further-mathematics/linear-equations/
-toc_headings: "#constraints-and-elimination, #inverse-matrices, #singular-systems, #parameters, #practice, #feedback-and-retry, #continue-learning, #sources"
+toc_headings: "#constraints-and-elimination, #singular-systems, #parameters, #practice, #feedback-and-retry, #continue-learning, #sources"
 study_page: true
 reading_layout: true
 ---
 
 [高等纯数学](/zh/alevel/a2-further-mathematics/) · FP2.14 线性方程组的解（Solution of linear equations）
 
-判断一组线性约束有唯一解、无解还是无穷多解，把消元法与逆矩阵方法连接到平面的公共交集。
+判断一组线性约束有唯一解、无解还是无穷多解，把消元法、行列式判断与参数讨论连接到平面的公共交集。
 
-- **学习：**从[约束与消元](#constraints-and-elimination)开始，再比较[逆矩阵](#inverse-matrices)、[奇异方程组](#singular-systems)与[含参数的讨论](#parameters)。
+- **学习：**从[约束与消元](#constraints-and-elimination)开始，再比较[奇异方程组](#singular-systems)与[含参数的讨论](#parameters)。
 - **作业帮助：**除以含参数的式子前先保留例外值；行列式为零不能单独判断解是否存在。
 - **复习：**先做[练习](#practice)，再打开提示或解答；按[反馈与重试](#feedback-and-retry)定位错误后重新尝试。
 
-**开始前：**会解二元联立方程，理解[直线与平面](/zh/alevel/a2-further-mathematics/lines-and-planes/)，并复习[矩阵乘法与逆矩阵](/zh/alevel/a2-further-mathematics/matrix-algebra/)。本课讨论至多三个未知数、至多三个线性方程。
+教材：*International A Level Further Mathematics*，第 27 章，第 27.1–27.2 节，印刷页码 346–350。
+
+**开始前：**会解二元联立方程，理解[直线与平面](/zh/alevel/a2-further-mathematics/lines-and-planes/)。本课讨论至多三个未知数、至多三个线性方程。
 
 未标改编的例题与练习均为自拟题，不给官方分值。改编考试示例的原卷、题号和实际读过的官方评分标准见[来源](#sources)。
 
-若二元消元尚不稳，先做下面[起步检查](#starting-check)；右端未同步运算，回[等价变形](#equivalent-equations)后重做[第 2 题](#question-2)。若只会使用现成的逆，先回[三阶求逆示范](/zh/alevel/a2-further-mathematics/matrix-algebra/#worked-inverse)，再独立完成[共同任务](#joint-inverse-task)。平面几何不清则回[法向与平面](/zh/alevel/a2-further-mathematics/lines-and-planes/#planes)。
+若二元消元尚不稳，先做下面[起步检查](#starting-check)；右端未同步运算，回[等价变形](#equivalent-equations)后重做[第 2 题](#question-2)。若奇异情形分类出错，先回[例题 2](#example-2)与[三种配置](#plane-configurations)，再重新尝试。平面几何不清则回[法向与平面](/zh/alevel/a2-further-mathematics/lines-and-planes/#planes)。
 
 ## 约束与消元 {#constraints-and-elimination}
 
@@ -102,55 +104,13 @@ $$-3(2z-4)-z=-9\ \Rightarrow\ -7z=-21\ \Rightarrow\ z=3.$$
 
 </section>
 
-## 逆矩阵法 {#inverse-matrices}
-
-方阵系数矩阵满足 $\det A\ne0$ 时，$A^{-1}$ 存在。左乘得到
-
-$$A\mathbf x=\mathbf b\ \Rightarrow\ A^{-1}A\mathbf x=A^{-1}\mathbf b\ \Rightarrow\ \boxed{\mathbf x=A^{-1}\mathbf b}.$$
-
-乘法顺序不能交换：未知量是列向量，$\mathbf bA^{-1}$ 的维数并不相容。可逆性也证明唯一性：若 $A\mathbf u=A\mathbf v$，左乘 $A^{-1}$ 得 $\mathbf u=\mathbf v$。
-
-<section class="worked-example" markdown="1">
-
-### 例 2：使用给定的逆矩阵 {#example-2}
-
-**Question:** Given the matrices below, verify the supplied inverse and use it to solve $A\mathbf x=\mathbf b$.
-
-$$A=\begin{pmatrix}1&1&0\\0&1&1\\1&0&1\end{pmatrix},\qquad
-A^{-1}=\frac12\begin{pmatrix}1&-1&1\\1&1&-1\\-1&1&1\end{pmatrix},\qquad
-\mathbf b=\begin{pmatrix}5\\7\\6\end{pmatrix}.$$
-
-令 M 为分子中的整数矩阵，行乘列得到：
-
-$$AM=\begin{pmatrix}1+1&-1+1&1-1\\1-1&1+1&-1+1\\1-1&-1+1&1+1\end{pmatrix}=2I,\qquad
-MA=\begin{pmatrix}1+1&1-1&-1+1\\1-1&1+1&1-1\\-1+1&-1+1&1+1\end{pmatrix}=2I.$$
-
-因此给定矩阵确为双侧逆。按题目指定方法左乘右端：
-
-$$\mathbf x=\frac12\begin{pmatrix}5-7+6\\5+7-6\\-5+7+6\end{pmatrix}
-=\begin{pmatrix}2\\3\\4\end{pmatrix}.$$
-
-核对 $2+3=5$、$3+4=7$ 与 $2+4=6$。题目若要求 **use your inverse**，就应展示这个乘法。FP2.14 一般接受不同解法，并不取消某道题连接前面结果的具体要求。
-
-</section>
-
-<section class="lesson-check" markdown="1">
-
-### 共同任务：自行构造逆，再用于方程 {#joint-inverse-task}
-
-完成矩阵课的[新输入共同任务](/zh/alevel/a2-further-mathematics/matrix-algebra/#inverse-system-task)，保持其提示和解答关闭。它要求自己从行列式、九个代数余子式及转置构造逆，再 **use your inverse from (a)** 解右端，并讨论奇异参数下的一致性。只完成本课例 2 的“给定逆乘右端”，还没有完成这项产出。
-
-保留 (a) 的求逆工作与 (b) 的实际矩阵乘法，逐行代回三个原方程；把唯一解、公共直线或无公共点与各参数条件对应。题目与分别关闭的提示／答案集中在同一入口，不另复制一套结果。
-
-</section>
-
 ## 奇异方程组与几何 {#singular-systems}
 
-方阵满足 $\det A=0$ 时称为**奇异矩阵（singular matrix）**。它没有逆矩阵，所以不能使用逆矩阵法；但这**并不能**判断 $A\mathbf x=\mathbf b$ 是否有解。
+方阵满足 $\det A=0$ 时称为**奇异矩阵（singular matrix）**：没有逆矩阵存在，因此不能靠求逆直接读出解；但这**并不能**判断 $A\mathbf x=\mathbf b$ 是否有解。
 
 <section class="worked-example" markdown="1">
 
-### 例 3：右端项不能丢 {#example-3}
+### 例 2：右端项不能丢 {#example-2}
 
 **Question:** Compare the solution sets of the systems below. In system B only the right-hand side of the second equation has changed.
 
@@ -186,7 +146,7 @@ $$\boxed{\mathbf x=\begin{pmatrix}2\\-1\\0\end{pmatrix}+t\begin{pmatrix}-1\\0\\1
 
 <section class="worked-example" markdown="1">
 
-### 例 4：一个模型的三种结果 {#example-4}
+### 例 3：一个模型的三种结果 {#example-3}
 
 **Question:** Discuss all real values of $k$ and $h$ for the following system. Give any infinite family parametrically.
 
@@ -218,7 +178,7 @@ $$\boxed{\mathbf x=\begin{pmatrix}0\\3\\0\end{pmatrix}+t\begin{pmatrix}1\\-2\\1\
 
 <section class="worked-example" markdown="1">
 
-### 例 5：考试题中的完整论证 {#example-5}
+### 例 4：考试题中的完整论证 {#example-4}
 
 **改编题：**依据 OxfordAQA 9665/FM03 January 2025 Q8，原卷第 14–15 页，已对照配套 MS 第 13 页。任务措辞缩写，保留原方程与参数，不沿用官方分值。
 
@@ -417,7 +377,7 @@ $$B=\begin{pmatrix}0&1&0\\0&0&0\\0&0&1\end{pmatrix}.$$
 
 | 如果你的作答出现…… | 原因 | 下一步 |
 | --- | --- | --- |
-| “行列式为零，所以无解” | 把奇异性和不一致混同。 | 比较例 3 两组系统，连同右端一起检查。 |
+| “行列式为零，所以无解” | 把奇异性和不一致混同。 | 比较例 2 两组系统，连同右端一起检查。 |
 | 无穷多解只写一个点 | 擅自固定了自由参数。 | 参数化整个公共集，符号代回验证。 |
 | 漏掉例外参数 | 除法删除了一种情形。 | 除之前先分零/非零两支。 |
 | “无解意味着平面平行” | 把共同相交与两两相交混同。 | 逐对检查法向量，再判断公共集。 |
@@ -442,7 +402,7 @@ $$B=\begin{pmatrix}0&1&0\\0&0&0\\0&0&1\end{pmatrix}.$$
 
 | 情形 | 判断与证据 |
 | --- | --- |
-| 方阵系数行列式非零 | 唯一解；用消元或 $A^{-1}\mathbf b$，题目指定方法时从其要求。 |
+| 方阵系数行列式非零 | 唯一解；用消元，或用第 28 章建立的逆矩阵方法，题目指定方法时从其要求。 |
 | 行列式为零 | 逆矩阵不可用，继续消元检查一致性。 |
 | 消元产生矛盾 | 无解，写出实际矛盾。 |
 | 一致且有自由变量 | 写完整参数解及公共几何对象。 |
@@ -451,9 +411,9 @@ $$B=\begin{pmatrix}0&1&0\\0&0&0\\0&0&1\end{pmatrix}.$$
 
 ## 继续学习 {#continue-learning}
 
-**学后下一步：**参数除法或奇异分类出错，先回例 3／例 4，再关闭帮助做[换右端重试](#parameter-retry)；“非零解”不清，先做[第 6 题](#question-6)，再进入特征向量。完成课程[跨主题综合](/zh/alevel/a2-further-mathematics/#mixed-review)，隔开学习后做[延后任务](/zh/alevel/a2-further-mathematics/#later-review)，把解集与特征向量、反射的几何意义联系起来。
+**学后下一步：**参数除法或奇异分类出错，先回例 2／例 3，再关闭帮助做[换右端重试](#parameter-retry)；“非零解”不清，先做[第 6 题](#question-6)，再进入特征向量。完成课程[跨主题综合](/zh/alevel/a2-further-mathematics/#mixed-review)，隔开学习后做[延后任务](/zh/alevel/a2-further-mathematics/#later-review)，把解集与特征向量、反射的几何意义联系起来。
 
-上一篇：[矩阵代数](/zh/alevel/a2-further-mathematics/matrix-algebra/)。下一篇：[特征值与特征向量](/zh/alevel/a2-further-mathematics/eigenvalues-and-eigenvectors/)，届时齐次方程组必须有**非零**解。
+上一篇：[直线与平面](/zh/alevel/a2-further-mathematics/lines-and-planes/)。下一篇：[矩阵代数](/zh/alevel/a2-further-mathematics/matrix-algebra/)，其中会构造三阶逆矩阵并用它解方程组。
 
 完成推理后，可用 [fx-CG50 矩阵指南](/alevel/fx-cg50/further-mathematics/#fm-matrices)检查数值。数值输出或报错都不能证明所有参数情形的分类。
 
@@ -461,6 +421,6 @@ $$B=\begin{pmatrix}0&1&0\\0&0&0\\0&0&1\end{pmatrix}.$$
 
 本轮于 **2026-10-23** 重读下列 9665 大纲、January 2025 Q8 与 Q13(b) 所列 QP／MS 原文。
 
-范围依据 [OxfordAQA Further Mathematics 9665，Version 5.2，FP2.14，印刷第 21 页 / PDF 第 20 页](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf#page=20)。例 5 改编自 [January 2025 FM03 Q8，原卷第 14–15 页](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-question-paper.pdf#page=14)，已对照[配套官方 MS 第 13 页](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-mark-scheme.pdf#page=13)。指定方法的区别也对照了同卷 Q13(b)，原卷第 27 页 / MS 第 21 页。其余例题、练习、反馈与解答均为自拟，讲解不称官方评分标准。平面配置图是构造示意，不是实测数据。
+范围依据 [OxfordAQA Further Mathematics 9665，Version 5.2，FP2.14，印刷第 21 页 / PDF 第 20 页](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf#page=20)。例 4 改编自 [January 2025 FM03 Q8，原卷第 14–15 页](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-question-paper.pdf#page=14)，已对照[配套官方 MS 第 13 页](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-mark-scheme.pdf#page=13)。指定方法的区别也对照了同卷 Q13(b)，原卷第 27 页 / MS 第 21 页。其余例题、练习、反馈与解答均为自拟，讲解不称官方评分标准。平面配置图是构造示意，不是实测数据。
 
 {% include exam_topic_practice.html %}

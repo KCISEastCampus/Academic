@@ -22,25 +22,42 @@ New to MGFs? Start at [the first lesson](moment-generating-functions/). Ready fo
 
 ## What each lesson helps you do {#route}
 
-- [MGFs: mean and spread](moment-generating-functions/) — Build a function from probabilities; distinguish independent copies from repeated use of one variable.
+The lessons follow the textbook's A2 Statistics chapters 29–33 in book order. Section numbers and page ranges are printed book pages.
 
-- [Continuous and standard MGFs](standard-mgfs/) — Derive Poisson, exponential and normal functions, check existence ranges, and identify sums.
+### Chapter 29: Moment Generating Functions {#chapter-29-moment-generating-functions}
+*29.1–29.3 · pp. 370–382*
 
-- [Compare estimation rules](estimators/) — Separate bias, consistency and efficiency; justify a combined estimator.
+- [MGFs: mean and spread](moment-generating-functions/) (29.1) — Build a function from probabilities; distinguish independent copies from repeated use of one variable.
 
-- [Put uncertainty around a mean](confidence-intervals/) — Choose z or t from the information, interpret the interval, and plan sample size.
+- [Continuous and standard MGFs](standard-mgfs/) (29.2–29.3) — Derive Poisson, exponential and normal functions, check existence ranges, and identify sums.
 
-- [Will a test detect a change?](test-power/) — Fix the rejection rule, then calculate misses under a specified alternative.
+### Chapter 30: Estimators {#chapter-30-estimators}
+*30.1–30.2 · pp. 384–393*
 
-- [Compare independent groups](comparing-means/) — Choose a standard error and justify z or pooled t.
+- [Compare estimation rules](estimators/) (30.1–30.2) — Separate bias, consistency and efficiency; justify a combined estimator.
 
-- [Keep natural pairs together](paired-tests/) — Use each pair to form one difference and test its mean.
+### Chapter 31: Estimation {#chapter-31-estimation}
+*31.1–31.3 · pp. 398–412*
 
-- [Compare variation](variance-tests/) — Distinguish one variance from a ratio; align tails, numerator and degrees of freedom.
+- [Put uncertainty around a mean](confidence-intervals/) (31.1–31.3) — Choose z or t from the information, interpret the interval, and plan sample size.
 
-- [Does a probability model fit?](goodness-of-fit/) — Turn discrete or continuous probabilities into expected counts, pool and account for fitted parameters.
+### Chapter 32: Further Hypothesis Testing 1: Means and Variances {#chapter-32-further-hypothesis-testing-1-means-and-variances}
+*32.1–32.4 · pp. 415–439*
 
-- [Are categories associated?](association-tests/) — Calculate a contingency-table test, including Yates correction for a 2×2 table.
+- [Will a test detect a change?](test-power/) (32.1) — Fix the rejection rule, then calculate misses under a specified alternative.
+
+- [Compare independent groups](comparing-means/) (32.2) — Choose a standard error and justify z or pooled t.
+
+- [Keep natural pairs together](paired-tests/) (32.3) — Use each pair to form one difference and test its mean.
+
+- [Compare variation](variance-tests/) (32.4) — Distinguish one variance from a ratio; align tails, numerator and degrees of freedom.
+
+### Chapter 33: Further Hypothesis Testing 2: Goodness of Fit and No Association {#chapter-33-further-hypothesis-testing-2-goodness-of-fit-and-no-association}
+*33.1–33.2 · pp. 442–456*
+
+- [Does a probability model fit?](goodness-of-fit/) (33.1) — Turn discrete or continuous probabilities into expected counts, pool and account for fitted parameters.
+
+- [Are categories associated?](association-tests/) (33.2) — Calculate a contingency-table test, including Yates correction for a 2×2 table.
 
 ## Mix the methods after studying {#review}
 

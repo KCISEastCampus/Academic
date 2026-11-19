@@ -22,6 +22,8 @@ reading_layout: true
 
 **目标：**说明乘积维数是否相容；求三阶行列式与逆矩阵；完整描述规定的空间变换；区分固定点、整条映回自身的直线与被压成一点的直线。
 
+教材：*International A Level Further Mathematics*，第 28 章，第 28.1–28.2 节，印刷页码 354–360。
+
 **开始前：**复习 [AS 高数（英文先修）](/alevel/as-further-mathematics/)的矩阵加法、数乘、乘法、转置及二阶逆矩阵，以及[直线与平面](/zh/alevel/a2-further-mathematics/lines-and-planes/)中的坐标向量。全文使用矩阵左乘**列向量（column vector）**的约定。除非另作说明，元素和参数均为实数。
 
 先修回补：乘积维数或元素计算出错，回 [AS 矩阵行列乘法](/zh/alevel/as-further-mathematics/matrix-algebra/#demonstration)；转置与逆混淆，回[逆的作用](/zh/alevel/as-further-mathematics/matrix-algebra/#inverse)；作用顺序出错，回[追踪输入](/zh/alevel/as-further-mathematics/transformations/#demonstration)，然后做本课[非交换重试](#order-retry)。先修不必从整个 AS 目录重找。
@@ -203,6 +205,37 @@ $$(NN^{-1})_{11}=\frac{1(1)+2(2)+0(-2)}5=1,\qquad
 $$NC^{\mathsf T}=\begin{pmatrix}5&0&0\\0&5&0\\0&0&5\end{pmatrix},\qquad
 C^{\mathsf T}N=\begin{pmatrix}5&0&0\\0&5&0\\0&0&5\end{pmatrix}
 \quad\Longrightarrow\quad NN^{-1}=N^{-1}N=I.$$
+
+</section>
+
+方阵系数矩阵满足 $\det A\ne0$ 时，$A^{-1}$ 存在。左乘得到
+
+$$A\mathbf x=\mathbf b\ \Rightarrow\ A^{-1}A\mathbf x=A^{-1}\mathbf b\ \Rightarrow\ \boxed{\mathbf x=A^{-1}\mathbf b}.$$
+
+乘法顺序不能交换：未知量是列向量，$\mathbf bA^{-1}$ 的维数并不相容。可逆性也证明唯一性：若 $A\mathbf u=A\mathbf v$，左乘 $A^{-1}$ 得 $\mathbf u=\mathbf v$。
+
+<section class="worked-example" markdown="1">
+
+### 用给定的逆矩阵解方程组 {#supplied-inverse-solution}
+
+**Question:** Given the matrices below, verify the supplied inverse and use it to solve $A\mathbf x=\mathbf b$.
+
+$$A=\begin{pmatrix}1&1&0\\0&1&1\\1&0&1\end{pmatrix},\qquad
+A^{-1}=\frac12\begin{pmatrix}1&-1&1\\1&1&-1\\-1&1&1\end{pmatrix},\qquad
+\mathbf b=\begin{pmatrix}5\\7\\6\end{pmatrix}.$$
+
+令 M 为分子中的整数矩阵，行乘列得到：
+
+$$AM=\begin{pmatrix}1+1&-1+1&1-1\\1-1&1+1&-1+1\\1-1&-1+1&1+1\end{pmatrix}=2I,$$
+
+$$MA=\begin{pmatrix}1+1&1-1&-1+1\\1-1&1+1&1-1\\-1+1&-1+1&1+1\end{pmatrix}=2I.$$
+
+因此给定矩阵确为双侧逆。按题目指定方法左乘右端：
+
+$$\mathbf x=\frac12\begin{pmatrix}5-7+6\\5+7-6\\-5+7+6\end{pmatrix}
+=\begin{pmatrix}2\\3\\4\end{pmatrix}.$$
+
+核对 $2+3=5$、$3+4=7$ 与 $2+4=6$。题目若要求 **use your inverse**，就应展示这个乘法。考纲一般接受不同解法，并不取消某道题连接前面结果的具体要求。
 
 </section>
 
@@ -741,15 +774,15 @@ U：绕 x 轴正向 90° 旋转，从 x 正半轴朝原点看为逆时针。V：
 
 **计算器能检查什么／答卷须写什么：**数值乘积、行列式与逆矩阵可以用来核验答案。书面解答仍须说明维数、题目要求时的余子式构造、参数限制、组合次序和几何描述。符号恒等式需要对所有允许参数成立的推理；少量数值试验不是证明。本课不新增计算器按键流程。
 
-**学后下一步：**完成[新输入共同任务](#inverse-system-task)后，在[线性方程组](/zh/alevel/a2-further-mathematics/linear-equations/#joint-inverse-task)解释同一乘法的方程与平面意义；变换识别用[三个映射](#transformation-check)，不变性错因用[独立重试](#independent-retry)。随后完成课程[跨主题综合](/zh/alevel/a2-further-mathematics/#mixed-review)与隔开学习后的[延后任务](/zh/alevel/a2-further-mathematics/#later-review)。
+**学后下一步：**完成[新输入共同任务](#inverse-system-task)；其中退化情形按[线性方程组](/zh/alevel/a2-further-mathematics/linear-equations/#singular-systems)分类；变换识别用[三个映射](#transformation-check)，不变性错因用[独立重试](#independent-retry)。随后完成课程[跨主题综合](/zh/alevel/a2-further-mathematics/#mixed-review)与隔开学习后的[延后任务](/zh/alevel/a2-further-mathematics/#later-review)。
 
-**学习路径：**[上一课：直线与平面](/zh/alevel/a2-further-mathematics/lines-and-planes/) · [下一课：线性方程组](/zh/alevel/a2-further-mathematics/linear-equations/) · [高等纯数学](/zh/alevel/a2-further-mathematics/)。
+**学习路径：**[上一课：线性方程组](/zh/alevel/a2-further-mathematics/linear-equations/) · [下一课：特征值与特征向量](/zh/alevel/a2-further-mathematics/eigenvalues-and-eigenvectors/) · [高等纯数学](/zh/alevel/a2-further-mathematics/)。
 
 ## 资料来源 {#sources}
 
 本轮于 **2026-10-23** 重新读取所列大纲与 QP／MS 原文；改编仍以 9665 为目标。
 
-范围依据 OxfordAQA International A-level Further Mathematics **9665** [大纲 Version 5.2，FP2.13，印刷 p.21／PDF p.20](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf#page=20)，以 FPP1.1 的矩阵运算为先修。本课覆盖坐标轴旋转、六个指定反射平面、放大、组合、三阶行列式与逆矩阵、体积倍率及不变点／线；特征值在线性方程组之后学习。
+范围依据 OxfordAQA International A-level Further Mathematics **9665** [大纲 Version 5.2，FP2.13，印刷 p.21／PDF p.20](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf#page=20)，以 FPP1.1 的矩阵运算为先修。本课覆盖坐标轴旋转、六个指定反射平面、放大、组合、三阶行列式与逆矩阵、体积倍率及不变点／线；特征值在 28.3 学习。
 
 制作改编题前已读 [June 2024 QP Q1 p.3、Q11(a) p.18](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-question-paper.pdf)及 [MS pp.4,16](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2024-june-mark-scheme.pdf)，以及 [January 2025 QP Q3 pp.6–7、Q13 pp.26–27](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-question-paper.pdf)及 [MS pp.6,20–21](/assets/pdf/fx-cg50/references/oxfordaqa-fm03-2025-january-mark-scheme.pdf)。改编题修改了矩阵、角度或参数；其他任务均为自拟题，不赋予官方分值。正确数值答案不能代替“show”所要求的证明，也不能跳过题目指定使用前问逆矩阵的要求。
 

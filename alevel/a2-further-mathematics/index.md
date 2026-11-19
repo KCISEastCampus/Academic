@@ -13,28 +13,77 @@ study_page: true
 [All A2 Further Mathematics units](/alevel/a2-further-mathematics-overview/)
 {:.lesson-meta}
 
-OxfordAQA 9665 · A2 Further Pure Mathematics · FP2 / FM03. Each lesson starts by explaining what the new idea means, then shows how to use it. Start with roots and polynomials, or return to the [mixed tasks](#mixed-review) if you have already studied the topics.
+OxfordAQA 9665 · A2 Further Pure Mathematics · FP2 / FM03. The lessons follow the textbook’s A2 Pure chapters 17–28 in book order. Each lesson starts by explaining what the new idea means, then shows how to use it. Start with roots and polynomials, or return to the [mixed tasks](#mixed-review) if you have already studied the topics.
 
 ## Start Here
 
-1. **[Roots and Polynomials](/alevel/a2-further-mathematics/roots-and-polynomials/)** — Use roots and coefficients, find complex roots and decide how many roots are real.
-2. **[Proof by Induction](/alevel/a2-further-mathematics/proof-by-induction/)** — Prove statements about series, sequences, divisibility, powers and derivatives.
-3. **[Finite Series](/alevel/a2-further-mathematics/finite-series/)** — Use partial fractions and differencing to find exact sums.
-4. **[Series and Limits](/alevel/a2-further-mathematics/series-and-limits/)** — Expand functions, find limits and evaluate improper integrals.
-5. **[De Moivre's Theorem](/alevel/a2-further-mathematics/de-moivres-theorem/)** — Find complex powers and roots, derive trigonometric identities and use them in integration.
-6. **[Polar Coordinates](/alevel/a2-further-mathematics/polar-coordinates/)** — Convert coordinates, sketch curves and calculate areas with the correct angular limits.
-7. **[Calculus of Inverse Trigonometric Functions](/alevel/a2-further-mathematics/inverse-trigonometric-functions/)** — Choose principal values, differentiate inverse functions and find exact integrals.
-8. **[Arc Length and Surface Area](/alevel/a2-further-mathematics/arc-length-and-surface-area/)** — Find curve lengths and curved surface areas from Cartesian or parametric equations.
-9. **[Hyperbolic Functions](/alevel/a2-further-mathematics/hyperbolic-functions/)** — Use exponential definitions, prove identities and apply inverse functions in calculus.
-10. **[First-order Differential Equations](/alevel/a2-further-mathematics/first-order-differential-equations/)** — Use an integrating factor or a complementary function and particular integral, then apply the given condition.
-11. **[Second-order Differential Equations](/alevel/a2-further-mathematics/second-order-differential-equations/)** — Use the auxiliary equation and a particular integral, then apply initial or boundary conditions.
-12. **[Vector Products and Coplanarity](/alevel/a2-further-mathematics/vector-products-and-coplanarity/)** — Connect perpendicular directions, areas, volumes and coplanarity.
-13. **[Lines and Planes](/alevel/a2-further-mathematics/lines-and-planes/)** — Write the same line or plane in different ways; find where objects meet, and calculate angles and distances.
-14. **[Matrix Algebra](/alevel/a2-further-mathematics/matrix-algebra/)** — Calculate how coordinates change, find when the change can be undone, and identify fixed points and lines mapped onto themselves.
-15. **[Linear Equations and Three Planes](/alevel/a2-further-mathematics/linear-equations/)** — Decide whether planes share one point, many points or none, including special parameter values.
-16. **[Eigenvalues and Eigenvectors](/alevel/a2-further-mathematics/eigenvalues-and-eigenvectors/)** — Find vectors that a matrix multiplies by a single number, and explain what that number tells you.
+The twelve chapters below are the A2 Pure part of the textbook, in book order. Section numbers and page ranges are printed book pages.
 
-Follow the lessons in order, or choose the topic you need. Together the lessons cover all fourteen syllabus topics FP2.1–FP2.14; some topics need more than one lesson.
+### Chapter 17: Roots and Polynomials {#chapter-17-roots-and-polynomials}
+*17.1–17.2 · pp. 198–206*
+
+[Roots and Polynomials](/alevel/a2-further-mathematics/roots-and-polynomials/) — Use roots and coefficients, find complex roots and decide how many roots are real.
+
+### Chapter 18: Proof by Induction and Finite Series {#chapter-18-proof-by-induction-and-finite-series}
+*18.1–18.2 · pp. 208–217*
+
+- [Proof by Induction](/alevel/a2-further-mathematics/proof-by-induction/) (18.1) — Prove statements about series, sequences, divisibility, powers and derivatives.
+- [Finite Series](/alevel/a2-further-mathematics/finite-series/) (18.2) — Use partial fractions and differencing to find exact sums.
+
+### Chapter 19: Series and Limits {#chapter-19-series-and-limits}
+*19.1–19.4 · pp. 220–231*
+
+[Series and Limits](/alevel/a2-further-mathematics/series-and-limits/) — Expand functions, find limits and evaluate improper integrals.
+
+### Chapter 20: De Moivre's Theorem {#chapter-20-de-moivres-theorem}
+*20.1–20.3 · pp. 234–253*
+
+[De Moivre's Theorem](/alevel/a2-further-mathematics/de-moivres-theorem/) — Find complex powers and roots, derive trigonometric identities and use them in integration.
+
+### Chapter 21: Polar Coordinates {#chapter-21-polar-coordinates}
+*21.1–21.3 · pp. 256–267*
+
+[Polar Coordinates](/alevel/a2-further-mathematics/polar-coordinates/) — Convert coordinates, sketch curves and calculate areas with the correct angular limits.
+
+### Chapter 22: The Calculus of Inverse Trigonometric Functions {#chapter-22-the-calculus-of-inverse-trigonometric-functions}
+*22.1–22.2 · pp. 270–281*
+
+[Calculus of Inverse Trigonometric Functions](/alevel/a2-further-mathematics/inverse-trigonometric-functions/) — Choose principal values, differentiate inverse functions and find exact integrals.
+
+### Chapter 23: Arc Length and Area of Surface of Revolution {#chapter-23-arc-length-and-area-of-surface-of-revolution}
+*23.1–23.2 · pp. 282–287*
+
+[Arc Length and Surface Area](/alevel/a2-further-mathematics/arc-length-and-surface-area/) — Find curve lengths and curved surface areas from Cartesian or parametric equations.
+
+### Chapter 24: Hyperbolic Functions {#chapter-24-hyperbolic-functions}
+*24.1–24.3 · pp. 288–305*
+
+[Hyperbolic Functions](/alevel/a2-further-mathematics/hyperbolic-functions/) — Use exponential definitions, prove identities and apply inverse functions in calculus.
+
+### Chapter 25: Differential Equations of First and Second Order {#chapter-25-differential-equations-of-first-and-second-order}
+*25.1–25.3 · pp. 306–319*
+
+- [First-order Differential Equations](/alevel/a2-further-mathematics/first-order-differential-equations/) (25.1 and 25.3) — Use an integrating factor or a complementary function and particular integral, then apply the given condition.
+- [Second-order Differential Equations](/alevel/a2-further-mathematics/second-order-differential-equations/) (25.2) — Use the auxiliary equation and a particular integral, then apply initial or boundary conditions.
+
+### Chapter 26: Vectors and Three-Dimensional Coordinate Geometry {#chapter-26-vectors-and-three-dimensional-coordinate-geometry}
+*26.1–26.6 · pp. 320–344*
+
+- [Vector Products and Coplanarity](/alevel/a2-further-mathematics/vector-products-and-coplanarity/) (26.1–26.2 and 26.6) — Connect perpendicular directions, areas, volumes and coplanarity.
+- [Lines and Planes](/alevel/a2-further-mathematics/lines-and-planes/) (26.3–26.5) — Write the same line or plane in different ways; find where objects meet, and calculate angles and distances.
+
+### Chapter 27: Solutions of Linear Equations {#chapter-27-solutions-of-linear-equations}
+*27.1–27.2 · pp. 346–352*
+
+[Linear Equations and Three Planes](/alevel/a2-further-mathematics/linear-equations/) — Decide whether planes share one point, many points or none, including special parameter values.
+
+### Chapter 28: Matrix Algebra {#chapter-28-matrix-algebra}
+*28.1–28.3 · pp. 354–368*
+
+- [Matrix Algebra](/alevel/a2-further-mathematics/matrix-algebra/) (28.1–28.2) — Calculate how coordinates change, find when the change can be undone, and identify fixed points and lines mapped onto themselves.
+- [Eigenvalues and Eigenvectors](/alevel/a2-further-mathematics/eigenvalues-and-eigenvectors/) (28.3) — Find vectors that a matrix multiplies by a single number, and explain what that number tells you.
+
+Follow the chapters in book order, or use a chapter heading to jump to the topic you need. Together the lessons cover all fourteen syllabus topics FP2.1–FP2.14; chapters 18, 25, 26 and 28 need two lessons each.
 
 For a first reading, follow one explanation and its complete example, then try the next student task with help closed. If a step is unfamiliar, use that lesson's link back to the exact prerequisite. The quick-reference sections are for returning to ideas you have already learned.
 
@@ -58,27 +107,25 @@ The lessons follow the A2 Pure part of *International A Level Further Mathematic
 
 Page numbers are printed textbook pages, not PDF page numbers. The FP2 labels follow Section 3.3 of the [OxfordAQA Further Mathematics 9665 specification](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf).
 
-| Syllabus topic | Textbook chapter and pages | Lesson |
+| Textbook chapter and pages | Syllabus topic | Lesson |
 |---|---|---|
-| FP2.1 Roots and polynomials | 17: Roots and Polynomials, pp. 198–206 | [Open lesson](/alevel/a2-further-mathematics/roots-and-polynomials/) |
-| FP2.4 Proof by induction | 18.1: Proof by induction, pp. 208–215; practice on pp. 217–218 | [Open lesson](/alevel/a2-further-mathematics/proof-by-induction/) |
-| FP2.5 Finite series | 18.2: Finite series, pp. 215–216; practice on pp. 217–218 | [Open lesson](/alevel/a2-further-mathematics/finite-series/) |
-| FP2.6 Series and limits | 19: Series and Limits, pp. 220–230; practice on pp. 231–232 | [Open lesson](/alevel/a2-further-mathematics/series-and-limits/) |
-| FP2.2 De Moivre's theorem | 20: De Moivre's Theorem, pp. 234–252; practice on pp. 253–254 | [Open lesson](/alevel/a2-further-mathematics/de-moivres-theorem/) |
-| FP2.3 Polar coordinates | 21: Polar Coordinates, pp. 256–266; practice on pp. 267–269 | [Open lesson](/alevel/a2-further-mathematics/polar-coordinates/) |
-| FP2.7 Calculus of inverse trigonometrical functions | 22: The Calculus of Inverse Trigonometric Functions, pp. 270–279; practice on pp. 280–281 | [Open lesson](/alevel/a2-further-mathematics/inverse-trigonometric-functions/) |
-| FP2.8 Arc length and surface area | 23: Arc Length and Area of Surface of Revolution, pp. 282–287 | [Open lesson](/alevel/a2-further-mathematics/arc-length-and-surface-area/) |
-| FP2.9 Hyperbolic functions | 24: Hyperbolic Functions, pp. 288–305 | [Open lesson](/alevel/a2-further-mathematics/hyperbolic-functions/) |
-| FP2.10 First-order differential equations | 25.1 and 25.3, pp. 306–307 and 318–319 | [Open lesson](/alevel/a2-further-mathematics/first-order-differential-equations/) |
-| FP2.11 Second-order differential equations | 25.2, pp. 308–317; review questions on p. 319 | [Open lesson](/alevel/a2-further-mathematics/second-order-differential-equations/) |
-| FP2.12 Vectors and three-dimensional coordinate geometry | 26: Vectors and Three-Dimensional Coordinate Geometry, pp. 320–344 | [Vector products](/alevel/a2-further-mathematics/vector-products-and-coplanarity/) · [Lines and planes](/alevel/a2-further-mathematics/lines-and-planes/) |
-| FP2.14 Solution of linear equations | 27: Solutions of Linear Equations, pp. 346–352 | [Open lesson](/alevel/a2-further-mathematics/linear-equations/) |
-| FP2.13 Matrix algebra | 28: Matrix Algebra, pp. 354–368 | [Matrix algebra](/alevel/a2-further-mathematics/matrix-algebra/) · [Eigenvalues and eigenvectors](/alevel/a2-further-mathematics/eigenvalues-and-eigenvectors/) |
+| 17: Roots and Polynomials, pp. 198–206 | FP2.1 Roots and polynomials | [Roots and polynomials](/alevel/a2-further-mathematics/roots-and-polynomials/) |
+| 18.1: Proof by induction, pp. 208–215; practice on pp. 217–218 | FP2.4 Proof by induction | [Proof by induction](/alevel/a2-further-mathematics/proof-by-induction/) |
+| 18.2: Finite series, pp. 215–216; practice on pp. 217–218 | FP2.5 Finite series | [Finite series](/alevel/a2-further-mathematics/finite-series/) |
+| 19: Series and Limits, pp. 220–230; practice on pp. 231–232 | FP2.6 Series and limits | [Series and limits](/alevel/a2-further-mathematics/series-and-limits/) |
+| 20: De Moivre's Theorem, pp. 234–252; practice on pp. 253–254 | FP2.2 De Moivre's theorem | [De Moivre's theorem](/alevel/a2-further-mathematics/de-moivres-theorem/) |
+| 21: Polar Coordinates, pp. 256–266; practice on pp. 267–269 | FP2.3 Polar coordinates | [Polar coordinates](/alevel/a2-further-mathematics/polar-coordinates/) |
+| 22: The Calculus of Inverse Trigonometric Functions, pp. 270–279; practice on pp. 280–281 | FP2.7 Calculus of inverse trigonometrical functions | [Inverse trigonometric functions](/alevel/a2-further-mathematics/inverse-trigonometric-functions/) |
+| 23: Arc Length and Area of Surface of Revolution, pp. 282–287 | FP2.8 Arc length and surface area | [Arc length and surface area](/alevel/a2-further-mathematics/arc-length-and-surface-area/) |
+| 24: Hyperbolic Functions, pp. 288–305 | FP2.9 Hyperbolic functions | [Hyperbolic functions](/alevel/a2-further-mathematics/hyperbolic-functions/) |
+| 25.1 and 25.3: First-order equations, pp. 306–307 and 318–319 | FP2.10 First-order differential equations | [First-order differential equations](/alevel/a2-further-mathematics/first-order-differential-equations/) |
+| 25.2: Second-order equations, pp. 308–317; review on p. 319 | FP2.11 Second-order differential equations | [Second-order differential equations](/alevel/a2-further-mathematics/second-order-differential-equations/) |
+| 26: Vectors and Three-Dimensional Coordinate Geometry, pp. 320–344 | FP2.12 Vectors and three-dimensional coordinate geometry | [Vector products](/alevel/a2-further-mathematics/vector-products-and-coplanarity/) · [Lines and planes](/alevel/a2-further-mathematics/lines-and-planes/) |
+| 27: Solutions of Linear Equations, pp. 346–352 | FP2.14 Solution of linear equations | [Linear equations](/alevel/a2-further-mathematics/linear-equations/) |
+| 28: Matrix Algebra, pp. 354–368 | FP2.13 Matrix algebra | [Matrix algebra](/alevel/a2-further-mathematics/matrix-algebra/) · [Eigenvalues and eigenvectors](/alevel/a2-further-mathematics/eigenvalues-and-eigenvectors/) |
 {: .wide-table}
 
 </details>
-
-Matrix algebra comes before linear equations in the learning route so that inverse matrices are explained before they are used. This is a teaching sequence, not a change to the syllabus numbering or textbook chapters.
 
 **Studying a different course?** [AS Further Mathematics](/alevel/as-further-mathematics/) · [A2 Pure Mathematics (MA03)](/alevel/a2-mathematics/).
 

@@ -20,6 +20,8 @@ How do equations describe the same line or plane, and how can geometry check a c
 
 **Goals:** normalise direction ratios; write three line forms, including a cross-product equation; connect two plane forms; solve intersections and distinguish parallel/contained cases; find line–plane and plane–plane angles; derive point–line and point–plane distances and reflection images.
 
+Textbook: Chapter 26, Sections 26.3–26.5, printed pp. 329–337, in *International A Level Further Mathematics*.
+
 **Before you start:** revise [MA03 Vectors](/alevel/a2-mathematics/vectors/) and [vector products and coplanarity](/alevel/a2-further-mathematics/vector-products-and-coplanarity/). You need scalar and vector products, simultaneous equations and nonzero direction vectors. All new examples are constructed mathematical data.
 
 Labels **Original example** and **Original task** identify author-written material. Official questions have separate qualification, session, question and mark-scheme references.

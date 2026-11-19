@@ -15,28 +15,77 @@ study_page: true
 [全部 A2 高数单元](/zh/alevel/a2-further-mathematics-overview/)
 {:.lesson-meta}
 
-OxfordAQA 9665 · A2 高等纯数学 · FP2 / FM03。每课先解释新概念是什么意思，再示范怎样使用。从根与多项式开始；已学过的同学可直接进入[跨章综合](#mixed-review)。
+OxfordAQA 9665 · A2 高等纯数学 · FP2 / FM03。课程按教材 A2 纯数学第 17–28 章的书上章次排列。每课先解释新概念是什么意思，再示范怎样使用。从根与多项式开始；已学过的同学可直接进入[跨章综合](#mixed-review)。
 
 ## 从这里开始 {#start-here}
 
-1. **[根与多项式](/zh/alevel/a2-further-mathematics/roots-and-polynomials/)** — 运用根与系数的关系，求复数根，并判断实数根的个数。
-2. **[数学归纳法](/zh/alevel/a2-further-mathematics/proof-by-induction/)** — 证明有关级数、数列、整除性、幂和导数的命题。
-3. **[有限级数](/zh/alevel/a2-further-mathematics/finite-series/)** — 利用部分分式和差分求出精确的和。
-4. **[级数与极限](/zh/alevel/a2-further-mathematics/series-and-limits/)** — 展开函数、求极限，并计算反常积分。
-5. **[棣莫弗定理](/zh/alevel/a2-further-mathematics/de-moivres-theorem/)** — 求复数的幂与根，推导三角恒等式，并将其用于积分。
-6. **[极坐标](/zh/alevel/a2-further-mathematics/polar-coordinates/)** — 转换坐标、描绘曲线，并选取正确的角度范围计算面积。
-7. **[反三角函数的微积分](/zh/alevel/a2-further-mathematics/inverse-trigonometric-functions/)** — 选择主值，对反函数求导，并求精确的积分值。
-8. **[弧长与旋转曲面面积](/zh/alevel/a2-further-mathematics/arc-length-and-surface-area/)** — 根据直角坐标方程或参数方程，计算曲线的长度与旋转曲面的面积。
-9. **[双曲函数](/zh/alevel/a2-further-mathematics/hyperbolic-functions/)** — 运用指数定义、证明恒等式，并在微积分中使用反双曲函数。
-10. **[一阶微分方程](/zh/alevel/a2-further-mathematics/first-order-differential-equations/)** — 使用积分因子法，或将齐次通解与一个特解相加，再代入题目给定的条件。
-11. **[二阶微分方程](/zh/alevel/a2-further-mathematics/second-order-differential-equations/)** — 利用辅助方程求齐次通解，选取合适的特解，再代入初始条件或边界条件。
-12. **[向量积与共面](/zh/alevel/a2-further-mathematics/vector-products-and-coplanarity/)** — 连接垂直方向、面积、体积与共面条件。
-13. **[直线与平面](/zh/alevel/a2-further-mathematics/lines-and-planes/)** — 用不同方式写同一直线或平面，求它们在哪里相交，再算夹角和距离。
-14. **[矩阵代数](/zh/alevel/a2-further-mathematics/matrix-algebra/)** — 计算坐标怎样变化，判断能不能还原，找出保持原位的点或整条映回自身的直线。
-15. **[线性方程组与三个平面](/zh/alevel/a2-further-mathematics/linear-equations/)** — 判断平面共有一个点、许多点，还是没有公共点，包括参数取特殊值的情形。
-16. **[特征值与特征向量](/zh/alevel/a2-further-mathematics/eigenvalues-and-eigenvectors/)** — 找出变换后只是乘了某个倍数的向量，并解释这个倍数告诉我们什么。
+下面十二章是教材 A2 纯数学部分，按书上的章次排列。节号与页码均指印刷页码。
 
-可以按顺序学习，也可以选择当前需要的主题。课程合起来覆盖 FP2.1–FP2.14 全部十四个大纲主题；部分主题分成两节讲解。
+### 第 17 章：根与多项式 {#chapter-17-roots-and-polynomials}
+*17.1–17.2 · 第 198–206 页*
+
+[根与多项式](/zh/alevel/a2-further-mathematics/roots-and-polynomials/) — 运用根与系数的关系，求复数根，并判断实数根的个数。
+
+### 第 18 章：数学归纳法与有限级数 {#chapter-18-proof-by-induction-and-finite-series}
+*18.1–18.2 · 第 208–217 页*
+
+- [数学归纳法](/zh/alevel/a2-further-mathematics/proof-by-induction/)（18.1）— 证明有关级数、数列、整除性、幂和导数的命题。
+- [有限级数](/zh/alevel/a2-further-mathematics/finite-series/)（18.2）— 利用部分分式和差分求出精确的和。
+
+### 第 19 章：级数与极限 {#chapter-19-series-and-limits}
+*19.1–19.4 · 第 220–231 页*
+
+[级数与极限](/zh/alevel/a2-further-mathematics/series-and-limits/) — 展开函数、求极限，并计算反常积分。
+
+### 第 20 章：棣莫弗定理 {#chapter-20-de-moivres-theorem}
+*20.1–20.3 · 第 234–253 页*
+
+[棣莫弗定理](/zh/alevel/a2-further-mathematics/de-moivres-theorem/) — 求复数的幂与根，推导三角恒等式，并将其用于积分。
+
+### 第 21 章：极坐标 {#chapter-21-polar-coordinates}
+*21.1–21.3 · 第 256–267 页*
+
+[极坐标](/zh/alevel/a2-further-mathematics/polar-coordinates/) — 转换坐标、描绘曲线，并选取正确的角度范围计算面积。
+
+### 第 22 章：反三角函数的微积分 {#chapter-22-the-calculus-of-inverse-trigonometric-functions}
+*22.1–22.2 · 第 270–281 页*
+
+[反三角函数的微积分](/zh/alevel/a2-further-mathematics/inverse-trigonometric-functions/) — 选择主值，对反函数求导，并求精确的积分值。
+
+### 第 23 章：弧长与旋转曲面面积 {#chapter-23-arc-length-and-area-of-surface-of-revolution}
+*23.1–23.2 · 第 282–287 页*
+
+[弧长与旋转曲面面积](/zh/alevel/a2-further-mathematics/arc-length-and-surface-area/) — 根据直角坐标方程或参数方程，计算曲线的长度与旋转曲面的面积。
+
+### 第 24 章：双曲函数 {#chapter-24-hyperbolic-functions}
+*24.1–24.3 · 第 288–305 页*
+
+[双曲函数](/zh/alevel/a2-further-mathematics/hyperbolic-functions/) — 运用指数定义、证明恒等式，并在微积分中使用反双曲函数。
+
+### 第 25 章：一阶与二阶微分方程 {#chapter-25-differential-equations-of-first-and-second-order}
+*25.1–25.3 · 第 306–319 页*
+
+- [一阶微分方程](/zh/alevel/a2-further-mathematics/first-order-differential-equations/)（25.1 与 25.3）— 使用积分因子法，或将齐次通解与一个特解相加，再代入题目给定的条件。
+- [二阶微分方程](/zh/alevel/a2-further-mathematics/second-order-differential-equations/)（25.2）— 利用辅助方程求齐次通解，选取合适的特解，再代入初始条件或边界条件。
+
+### 第 26 章：向量与三维坐标几何 {#chapter-26-vectors-and-three-dimensional-coordinate-geometry}
+*26.1–26.6 · 第 320–344 页*
+
+- [向量积与共面](/zh/alevel/a2-further-mathematics/vector-products-and-coplanarity/)（26.1–26.2 与 26.6）— 连接垂直方向、面积、体积与共面条件。
+- [直线与平面](/zh/alevel/a2-further-mathematics/lines-and-planes/)（26.3–26.5）— 用不同方式写同一直线或平面，求它们在哪里相交，再算夹角和距离。
+
+### 第 27 章：线性方程组的解 {#chapter-27-solutions-of-linear-equations}
+*27.1–27.2 · 第 346–352 页*
+
+[线性方程组与三个平面](/zh/alevel/a2-further-mathematics/linear-equations/) — 判断平面共有一个点、许多点，还是没有公共点，包括参数取特殊值的情形。
+
+### 第 28 章：矩阵代数 {#chapter-28-matrix-algebra}
+*28.1–28.3 · 第 354–368 页*
+
+- [矩阵代数](/zh/alevel/a2-further-mathematics/matrix-algebra/)（28.1–28.2）— 计算坐标怎样变化，判断能不能还原，找出保持原位的点或整条映回自身的直线。
+- [特征值与特征向量](/zh/alevel/a2-further-mathematics/eigenvalues-and-eigenvectors/)（28.3）— 找出变换后只是乘了某个倍数的向量，并解释这个倍数告诉我们什么。
+
+可以按书上章次顺序学习，也可以点章标题直接跳到需要的主题。课程合起来覆盖 FP2.1–FP2.14 全部十四个大纲主题；第 18、25、26、28 章各分成两节讲解。
 
 第一次学时，先读懂一段解释和一个完整示范，再收起帮助做后面的学生题。某一步不熟，就用该页链接回补具体先修。速查区留给已经学过、需要回看的时候使用。
 
@@ -60,27 +109,25 @@ OxfordAQA 9665 · A2 高等纯数学 · FP2 / FM03。每课先解释新概念是
 
 页码指教材的印刷页码，不是 PDF 页码。FP2 编号依据 [OxfordAQA 高等数学 9665 课程大纲](https://www.oxfordaqa.com/wp-content/uploads/2026/07/oxfordaqa-a-level-further-mathematics-specification.pdf)第 3.3 节。
 
-| 大纲主题 | 教材章节与页码 | 课程 |
+| 教材章节与页码 | 大纲主题 | 课程 |
 |---|---|---|
-| FP2.1 根与多项式 | 第 17 章，第 198–206 页 | <a href="/zh/alevel/a2-further-mathematics/roots-and-polynomials/" hreflang="zh-CN" lang="zh-CN">中文课程</a> |
-| FP2.4 数学归纳法 | 第 18.1 节，第 208–215 页；练习在第 217–218 页 | <a href="/zh/alevel/a2-further-mathematics/proof-by-induction/" hreflang="zh-CN" lang="zh-CN">中文课程</a> |
-| FP2.5 有限级数 | 第 18.2 节，第 215–216 页；练习在第 217–218 页 | <a href="/zh/alevel/a2-further-mathematics/finite-series/" hreflang="zh-CN" lang="zh-CN">中文课程</a> |
-| FP2.6 级数与极限 | 第 19 章，第 220–230 页；练习在第 231–232 页 | <a href="/zh/alevel/a2-further-mathematics/series-and-limits/" hreflang="zh-CN" lang="zh-CN">中文课程</a> |
-| FP2.2 棣莫弗定理 | 第 20 章，第 234–252 页；练习在第 253–254 页 | <a href="/zh/alevel/a2-further-mathematics/de-moivres-theorem/" hreflang="zh-CN" lang="zh-CN">中文课程</a> |
-| FP2.3 极坐标 | 第 21 章，第 256–266 页；练习在第 267–269 页 | <a href="/zh/alevel/a2-further-mathematics/polar-coordinates/" hreflang="zh-CN" lang="zh-CN">中文课程</a> |
-| FP2.7 反三角函数的微积分 | 第 22 章，第 270–279 页；练习在第 280–281 页 | <a href="/zh/alevel/a2-further-mathematics/inverse-trigonometric-functions/" hreflang="zh-CN" lang="zh-CN">中文课程</a> |
-| FP2.8 弧长与旋转曲面面积 | 第 23 章，第 282–287 页 | <a href="/zh/alevel/a2-further-mathematics/arc-length-and-surface-area/" hreflang="zh-CN" lang="zh-CN">中文课程</a> |
-| FP2.9 双曲函数 | 第 24 章，第 288–305 页 | <a href="/zh/alevel/a2-further-mathematics/hyperbolic-functions/" hreflang="zh-CN" lang="zh-CN">中文课程</a> |
-| FP2.10 一阶微分方程 | 第 25.1 与 25.3 节，第 306–307 与 318–319 页 | <a href="/zh/alevel/a2-further-mathematics/first-order-differential-equations/" hreflang="zh-CN" lang="zh-CN">中文课程</a> |
-| FP2.11 二阶微分方程 | 第 25.2 节，第 308–317 页；复习题在第 319 页 | <a href="/zh/alevel/a2-further-mathematics/second-order-differential-equations/" hreflang="zh-CN" lang="zh-CN">中文课程</a> |
-| FP2.12 向量与三维坐标几何 | 第 26 章，第 320–344 页 | <a href="/zh/alevel/a2-further-mathematics/vector-products-and-coplanarity/" hreflang="zh-CN" lang="zh-CN">向量积与共面</a> · <a href="/zh/alevel/a2-further-mathematics/lines-and-planes/" hreflang="zh-CN" lang="zh-CN">直线与平面</a> |
-| FP2.14 线性方程组的解 | 第 27 章，第 346–352 页 | <a href="/zh/alevel/a2-further-mathematics/linear-equations/" hreflang="zh-CN" lang="zh-CN">中文课程</a> |
-| FP2.13 矩阵代数 | 第 28 章，第 354–368 页 | <a href="/zh/alevel/a2-further-mathematics/matrix-algebra/" hreflang="zh-CN" lang="zh-CN">矩阵代数</a> · <a href="/zh/alevel/a2-further-mathematics/eigenvalues-and-eigenvectors/" hreflang="zh-CN" lang="zh-CN">特征值与特征向量</a> |
+| 第 17 章：根与多项式，第 198–206 页 | FP2.1 根与多项式 | <a href="/zh/alevel/a2-further-mathematics/roots-and-polynomials/" hreflang="zh-CN" lang="zh-CN">根与多项式</a> |
+| 第 18.1 节：数学归纳法，第 208–215 页；练习在第 217–218 页 | FP2.4 数学归纳法 | <a href="/zh/alevel/a2-further-mathematics/proof-by-induction/" hreflang="zh-CN" lang="zh-CN">数学归纳法</a> |
+| 第 18.2 节：有限级数，第 215–216 页；练习在第 217–218 页 | FP2.5 有限级数 | <a href="/zh/alevel/a2-further-mathematics/finite-series/" hreflang="zh-CN" lang="zh-CN">有限级数</a> |
+| 第 19 章：级数与极限，第 220–230 页；练习在第 231–232 页 | FP2.6 级数与极限 | <a href="/zh/alevel/a2-further-mathematics/series-and-limits/" hreflang="zh-CN" lang="zh-CN">级数与极限</a> |
+| 第 20 章：棣莫弗定理，第 234–252 页；练习在第 253–254 页 | FP2.2 棣莫弗定理 | <a href="/zh/alevel/a2-further-mathematics/de-moivres-theorem/" hreflang="zh-CN" lang="zh-CN">棣莫弗定理</a> |
+| 第 21 章：极坐标，第 256–266 页；练习在第 267–269 页 | FP2.3 极坐标 | <a href="/zh/alevel/a2-further-mathematics/polar-coordinates/" hreflang="zh-CN" lang="zh-CN">极坐标</a> |
+| 第 22 章：反三角函数的微积分，第 270–279 页；练习在第 280–281 页 | FP2.7 反三角函数的微积分 | <a href="/zh/alevel/a2-further-mathematics/inverse-trigonometric-functions/" hreflang="zh-CN" lang="zh-CN">反三角函数的微积分</a> |
+| 第 23 章：弧长与旋转曲面面积，第 282–287 页 | FP2.8 弧长与旋转曲面面积 | <a href="/zh/alevel/a2-further-mathematics/arc-length-and-surface-area/" hreflang="zh-CN" lang="zh-CN">弧长与旋转曲面面积</a> |
+| 第 24 章：双曲函数，第 288–305 页 | FP2.9 双曲函数 | <a href="/zh/alevel/a2-further-mathematics/hyperbolic-functions/" hreflang="zh-CN" lang="zh-CN">双曲函数</a> |
+| 第 25.1 与 25.3 节：一阶方程，第 306–307 与 318–319 页 | FP2.10 一阶微分方程 | <a href="/zh/alevel/a2-further-mathematics/first-order-differential-equations/" hreflang="zh-CN" lang="zh-CN">一阶微分方程</a> |
+| 第 25.2 节：二阶方程，第 308–317 页；复习题在第 319 页 | FP2.11 二阶微分方程 | <a href="/zh/alevel/a2-further-mathematics/second-order-differential-equations/" hreflang="zh-CN" lang="zh-CN">二阶微分方程</a> |
+| 第 26 章：向量与三维坐标几何，第 320–344 页 | FP2.12 向量与三维坐标几何 | <a href="/zh/alevel/a2-further-mathematics/vector-products-and-coplanarity/" hreflang="zh-CN" lang="zh-CN">向量积与共面</a> · <a href="/zh/alevel/a2-further-mathematics/lines-and-planes/" hreflang="zh-CN" lang="zh-CN">直线与平面</a> |
+| 第 27 章：线性方程组的解，第 346–352 页 | FP2.14 线性方程组的解 | <a href="/zh/alevel/a2-further-mathematics/linear-equations/" hreflang="zh-CN" lang="zh-CN">线性方程组</a> |
+| 第 28 章：矩阵代数，第 354–368 页 | FP2.13 矩阵代数 | <a href="/zh/alevel/a2-further-mathematics/matrix-algebra/" hreflang="zh-CN" lang="zh-CN">矩阵代数</a> · <a href="/zh/alevel/a2-further-mathematics/eigenvalues-and-eigenvectors/" hreflang="zh-CN" lang="zh-CN">特征值与特征向量</a> |
 {: .wide-table}
 
 </details>
-
-学习路线把矩阵代数放在线性方程组之前，先解释逆矩阵再运用它；这只是教学顺序，不改变大纲编号与教材章次。
 
 **学习其他课程？**[AS 高等数学](/zh/alevel/as-further-mathematics/) · [A2 纯数学（MA03）](/zh/alevel/a2-mathematics/)。
 

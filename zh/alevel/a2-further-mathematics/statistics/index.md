@@ -23,25 +23,42 @@ OxfordAQA 9665 · FM04 / Further Statistics 2。从一张概率表开始，再�
 
 ## 每一课解决什么问题 {#route}
 
-- [MGF：找回均值与方差](moment-generating-functions/) — 从概率建立函数；分清独立副本与同一变量重复使用。
+下面五章是教材 A2 统计部分，按书上的章次排列。节号与页码均指印刷页码。
 
-- [连续与常用 MGF](standard-mgfs/) — 推导 Poisson、指数和正态 MGF，检查输入范围并识别独立和。
+### 第 29 章：矩母函数 {#chapter-29-moment-generating-functions}
+*29.1–29.3 · 第 370–382 页*
 
-- [比较估计规则](estimators/) — 分清偏差、一致性和效率，说明组合估计量的依据。
+- [MGF：找回均值与方差](moment-generating-functions/)（29.1）— 从概率建立函数；分清独立副本与同一变量重复使用。
 
-- [给均值估计配上区间](confidence-intervals/) — 根据条件选择 z 或 t，解释区间并规划样本量。
+- [连续与常用 MGF](standard-mgfs/)（29.2–29.3）— 推导 Poisson、指数和正态 MGF，检查输入范围并识别独立和。
 
-- [检验有多大机会发现变化](test-power/) — 先固定拒绝规则，再计算指定备择下漏掉变化的概率。
+### 第 30 章：估计量 {#chapter-30-estimators}
+*30.1–30.2 · 第 384–393 页*
 
-- [比较两个独立组](comparing-means/) — 选择标准误，说明为什么能用 z 或合并 t。
+- [比较估计规则](estimators/)（30.1–30.2）— 分清偏差、一致性和效率，说明组合估计量的依据。
 
-- [保留自然配对](paired-tests/) — 每一对形成一个差值，再检验差的均值。
+### 第 31 章：区间估计 {#chapter-31-estimation}
+*31.1–31.3 · 第 398–412 页*
 
-- [比较变动大小](variance-tests/) — 分清单个方差与方差比，核对尾部、分子和自由度。
+- [给均值估计配上区间](confidence-intervals/)（31.1–31.3）— 根据条件选择 z 或 t，解释区间并规划样本量。
 
-- [概率模型是否吻合](goodness-of-fit/) — 把离散或连续概率变成期望频数，检查合并与估计参数。
+### 第 32 章：进一步假设检验（一）：均值与方差 {#chapter-32-further-hypothesis-testing-1-means-and-variances}
+*32.1–32.4 · 第 415–439 页*
 
-- [两个分类是否有关联](association-tests/) — 完成列联表检验，并处理 2×2 表的 Yates 校正。
+- [检验有多大机会发现变化](test-power/)（32.1）— 先固定拒绝规则，再计算指定备择下漏掉变化的概率。
+
+- [比较两个独立组](comparing-means/)（32.2）— 选择标准误，说明为什么能用 z 或合并 t。
+
+- [保留自然配对](paired-tests/)（32.3）— 每一对形成一个差值，再检验差的均值。
+
+- [比较变动大小](variance-tests/)（32.4）— 分清单个方差与方差比，核对尾部、分子和自由度。
+
+### 第 33 章：进一步假设检验（二）：拟合优度与独立性 {#chapter-33-further-hypothesis-testing-2-goodness-of-fit-and-no-association}
+*33.1–33.2 · 第 442–456 页*
+
+- [概率模型是否吻合](goodness-of-fit/)（33.1）— 把离散或连续概率变成期望频数，检查合并与估计参数。
+
+- [两个分类是否有关联](association-tests/)（33.2）— 完成列联表检验，并处理 2×2 表的 Yates 校正。
 
 ## 学完后，混合选择方法 {#review}
 
