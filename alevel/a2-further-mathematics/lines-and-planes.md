@@ -624,7 +624,7 @@ The first identity holds for every parameter, so $L\cap\Pi=L$. The second comple
 
 **Next output:** use the [direction retry](#direction-retry) after a cosine error, the [coordinate retry](#coordinate-retry) after an unchecked coordinate, and the [branch retry](#branch-retry) after missing containment or coincidence. If you only quoted distance formulas, recover their derivation and attempt [Question 5](#practice-5), with help closed. Then do the course [mixed review](/alevel/a2-further-mathematics/#mixed-review) and, after intervening study, its [later review](/alevel/a2-further-mathematics/#later-review), justifying a reflecting plane using its normal.
 
-**Learning route:** [Previous: vector products and coplanarity](/alevel/a2-further-mathematics/vector-products-and-coplanarity/) · [Next: matrix algebra](/alevel/a2-further-mathematics/matrix-algebra/) · [Further Pure Mathematics](/alevel/a2-further-mathematics/).
+**Learning route:** [Previous: vector products and coplanarity](/alevel/a2-further-mathematics/vector-products-and-coplanarity/) · [Next: linear equations](/alevel/a2-further-mathematics/linear-equations/) · [Further Pure Mathematics](/alevel/a2-further-mathematics/).
 
 ## Sources and Scope {#sources}
 
