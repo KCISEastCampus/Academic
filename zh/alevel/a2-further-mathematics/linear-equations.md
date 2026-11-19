@@ -26,7 +26,7 @@ reading_layout: true
 
 未标改编的例题与练习均为自拟题，不给官方分值。改编考试示例的原卷、题号和实际读过的官方评分标准见[来源](#sources)。
 
-若二元消元尚不稳，先做下面[起步检查](#starting-check)；右端未同步运算，回[等价变形](#equivalent-equations)后重做[第 2 题](#question-2)。若奇异情形分类出错，先回[例题 2](#example-2)与[三种配置](#plane-configurations)，再重新尝试。平面几何不清则回[法向与平面](/zh/alevel/a2-further-mathematics/lines-and-planes/#planes)。
+若二元消元尚不稳，先做下面[起步检查](#starting-check)；右端未同步运算，回[等价变形](#equivalent-equations)后重做[第 2 题](#question-2)。若奇异情形分类出错，先回[例题 2](#example-3)与[三种配置](#plane-configurations)，再重新尝试。平面几何不清则回[法向与平面](/zh/alevel/a2-further-mathematics/lines-and-planes/#planes)。
 
 ## 约束与消元 {#constraints-and-elimination}
 
@@ -110,7 +110,7 @@ $$-3(2z-4)-z=-9\ \Rightarrow\ -7z=-21\ \Rightarrow\ z=3.$$
 
 <section class="worked-example" markdown="1">
 
-### 例 2：右端项不能丢 {#example-2}
+### 例 2：右端项不能丢 {#example-3}
 
 **Question:** Compare the solution sets of the systems below. In system B only the right-hand side of the second equation has changed.
 
@@ -146,7 +146,7 @@ $$\boxed{\mathbf x=\begin{pmatrix}2\\-1\\0\end{pmatrix}+t\begin{pmatrix}-1\\0\\1
 
 <section class="worked-example" markdown="1">
 
-### 例 3：一个模型的三种结果 {#example-3}
+### 例 3：一个模型的三种结果 {#example-4}
 
 **Question:** Discuss all real values of $k$ and $h$ for the following system. Give any infinite family parametrically.
 
@@ -178,7 +178,7 @@ $$\boxed{\mathbf x=\begin{pmatrix}0\\3\\0\end{pmatrix}+t\begin{pmatrix}1\\-2\\1\
 
 <section class="worked-example" markdown="1">
 
-### 例 4：考试题中的完整论证 {#example-4}
+### 例 4：考试题中的完整论证 {#example-5}
 
 **改编题：**依据 OxfordAQA 9665/FM03 January 2025 Q8，原卷第 14–15 页，已对照配套 MS 第 13 页。任务措辞缩写，保留原方程与参数，不沿用官方分值。
 
@@ -410,6 +410,8 @@ $$B=\begin{pmatrix}0&1&0\\0&0&0\\0&0&1\end{pmatrix}.$$
 | 几何解释 | 说明公共交集；两两关系须有法向量/方程证据。 |
 
 ## 继续学习 {#continue-learning}
+
+<span id="example-2"></span><span id="inverse-matrices"></span><span id="joint-inverse-task"></span>**已移至第 28 章：**给定逆矩阵的例题与配套共同任务现在位于[矩阵代数](/zh/alevel/a2-further-mathematics/matrix-algebra/#supplied-inverse-solution)。
 
 **学后下一步：**参数除法或奇异分类出错，先回例 2／例 3，再关闭帮助做[换右端重试](#parameter-retry)；“非零解”不清，先做[第 6 题](#question-6)，再进入特征向量。完成课程[跨主题综合](/zh/alevel/a2-further-mathematics/#mixed-review)，隔开学习后做[延后任务](/zh/alevel/a2-further-mathematics/#later-review)，把解集与特征向量、反射的几何意义联系起来。
 
