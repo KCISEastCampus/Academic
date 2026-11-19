@@ -24,7 +24,7 @@ Textbook: Chapter 27, Sections 27.1–27.2, printed pp. 346–350, in *Internati
 
 Examples and exercises are self-written unless labelled adapted. No official marks are assigned. The adapted examination example is identified with its question paper and the official mark scheme actually consulted under [sources](#sources).
 
-If two-variable elimination is insecure, begin with the [starting check](#starting-check). If the right side was not transformed, recover [equivalent equations](#equivalent-equations), then retry [Question 2](#question-2). If a singular case is classified wrongly, recover the [worked singular system](#example-2) and the [three configurations](#plane-configurations) before retrying. For the geometry, recover [normals and planes](/alevel/a2-further-mathematics/lines-and-planes/#planes).
+If two-variable elimination is insecure, begin with the [starting check](#starting-check). If the right side was not transformed, recover [equivalent equations](#equivalent-equations), then retry [Question 2](#question-2). If a singular case is classified wrongly, recover the [worked singular system](#example-3) and the [three configurations](#plane-configurations) before retrying. For the geometry, recover [normals and planes](/alevel/a2-further-mathematics/lines-and-planes/#planes).
 
 ## Constraints and Elimination {#constraints-and-elimination}
 
@@ -108,7 +108,7 @@ A square matrix with $\det A=0$ is **singular**: no inverse exists, so a determi
 
 <section class="worked-example" markdown="1">
 
-### Example 2: keep the right-hand side {#example-2}
+### Example 2: keep the right-hand side {#example-3}
 
 **Question:** Compare the solution sets of the systems below. In system B only the right-hand side of the second equation has changed.
 
@@ -144,7 +144,7 @@ For fewer equations or a zero coefficient row, count the remaining independent r
 
 <section class="worked-example" markdown="1">
 
-### Example 3: one model, three outcomes {#example-3}
+### Example 3: one model, three outcomes {#example-4}
 
 **Question:** Discuss all real values of $k$ and $h$ for the following system. Give any infinite family parametrically.
 
@@ -176,7 +176,7 @@ Substitute the general family into all three equations when $k=0$, $h=9$: the le
 
 <section class="worked-example" markdown="1">
 
-### Example 4: an examination-style justification {#example-4}
+### Example 4: an examination-style justification {#example-5}
 
 **Adapted example:** Based on OxfordAQA 9665/FM03 January 2025 Q8, QP pp.14–15, checked against MS p.13. The task wording is shortened; the equations and parameter are retained. No official mark allocation is implied.
 
@@ -408,6 +408,8 @@ The reduced equation is $kz=1$. For $k\ne0$ there is one solution $(1/k,3-2/k,1/
 | Geometrical interpretation | Describe the common set and support any pairwise claim with normals/equations. |
 
 ## Continue Learning {#continue-learning}
+
+<span id="example-2"></span><span id="inverse-matrices"></span><span id="joint-inverse-task"></span>**Moved to Chapter 28:** the supplied-inverse example and its joint task are now part of [matrix algebra](/alevel/a2-further-mathematics/matrix-algebra/#supplied-inverse-solution).
 
 **Next output:** after a division or singularity error, recover Examples 3–4 and attempt the [changed-right-side retry](#parameter-retry) with help closed. If a nonzero solution is unclear, complete [Question 6](#question-6) before eigenvectors. Complete the course [mixed review](/alevel/a2-further-mathematics/#mixed-review) and, after intervening study, its [later review](/alevel/a2-further-mathematics/#later-review), connecting solution sets with eigenvectors and the geometry of a reflection.
 

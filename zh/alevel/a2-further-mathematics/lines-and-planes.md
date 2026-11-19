@@ -626,7 +626,7 @@ $$x-y=(1+t)-t=1,\qquad 2(x-y)=2.$$
 
 **学后下一步：**余弦错因接[方向重试](#direction-retry)；漏坐标接[三坐标重试](#coordinate-retry)；漏包含／重合接[分支重试](#branch-retry)；只会套距离公式则回推导后做[第 5 题](#practice-5)。各题都先关闭帮助。然后做课程[跨主题综合](/zh/alevel/a2-further-mathematics/#mixed-review)，隔开学习后做[延后任务](/zh/alevel/a2-further-mathematics/#later-review)，用法向说明反射平面。
 
-**学习路径：**[上一课：向量积与共面](/zh/alevel/a2-further-mathematics/vector-products-and-coplanarity/) · [下一课：矩阵代数](/zh/alevel/a2-further-mathematics/matrix-algebra/) · [高等纯数学](/zh/alevel/a2-further-mathematics/)。
+**学习路径：**[上一课：向量积与共面](/zh/alevel/a2-further-mathematics/vector-products-and-coplanarity/) · [下一课：线性方程组](/zh/alevel/a2-further-mathematics/linear-equations/) · [高等纯数学](/zh/alevel/a2-further-mathematics/)。
 
 ## 来源与范围 {#sources}
 
